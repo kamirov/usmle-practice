@@ -19,6 +19,11 @@ internal class ObsidianVaultRepository(
 
     fun hasLinkedVault(): Boolean = prefs.contains(KEY_TREE_URI)
 
+    fun loadRootNotesSync(): VaultScreenState {
+        val uri = getSavedTreeUri() ?: return VaultScreenState.Unlinked
+        return readRootNotes(uri)
+    }
+
     suspend fun loadRootNotes(): VaultScreenState = withContext(Dispatchers.IO) {
         val uri = getSavedTreeUri()
             ?: return@withContext VaultScreenState.Unlinked
@@ -62,8 +67,8 @@ internal class ObsidianVaultRepository(
         readRootNotes(uri)
     }
 
-    suspend fun loadParsedNoteViewData(note: VaultNote): ParsedNoteLoadResult = withContext(Dispatchers.IO) {
-        when (val result = readNoteContent(note)) {
+    fun loadParsedNoteViewDataSync(note: VaultNote): ParsedNoteLoadResult =
+        when (val result = readNoteContentSync(note)) {
             is NoteContentResult.Success -> ParsedNoteLoadResult.Success(
                 buildParsedNoteViewData(
                     noteName = result.noteName,
@@ -73,6 +78,9 @@ internal class ObsidianVaultRepository(
 
             is NoteContentResult.Error -> ParsedNoteLoadResult.Error(result.message)
         }
+
+    suspend fun loadParsedNoteViewData(note: VaultNote): ParsedNoteLoadResult = withContext(Dispatchers.IO) {
+        loadParsedNoteViewDataSync(note)
     }
 
     suspend fun loadRandomWidgetState(): WidgetNoteState = withContext(Dispatchers.IO) {
@@ -111,10 +119,10 @@ internal class ObsidianVaultRepository(
         }
     }
 
-    private suspend fun readNoteContent(note: VaultNote): NoteContentResult = withContext(Dispatchers.IO) {
+    private fun readNoteContentSync(note: VaultNote): NoteContentResult {
         Log.d(TAG, "Reading note content for ${note.name}")
 
-        try {
+        return try {
             val content = contentResolver.openInputStream(note.uri)?.bufferedReader().use { reader ->
                 reader?.readText()
             }
@@ -138,6 +146,10 @@ internal class ObsidianVaultRepository(
             Log.e(TAG, "Unexpected error while reading note ${note.name}", e)
             NoteContentResult.Error("Unexpected error while reading the selected note.")
         }
+    }
+
+    private suspend fun readNoteContent(note: VaultNote): NoteContentResult = withContext(Dispatchers.IO) {
+        readNoteContentSync(note)
     }
 
     private fun getSavedTreeUri(): Uri? =
@@ -283,6 +295,7 @@ internal sealed interface ParsedNoteLoadResult {
 internal sealed interface WidgetNoteState {
     data class Note(
         val note: ParsedNoteViewData,
+        val expandedIndex: Int? = null,
     ) : WidgetNoteState
 
     data class Message(
