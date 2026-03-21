@@ -67,7 +67,10 @@ internal class ObsidianVaultRepository(
         readRootNotes(uri)
     }
 
-    fun loadParsedNoteViewDataSync(note: VaultNote): ParsedNoteLoadResult =
+    fun loadParsedNoteViewDataSync(
+        note: VaultNote,
+        vaultName: String? = null,
+    ): ParsedNoteLoadResult =
         when (val result = readNoteContentSync(note)) {
             is NoteContentResult.Success -> ParsedNoteLoadResult.Success(
                 buildParsedNoteViewData(
@@ -75,6 +78,7 @@ internal class ObsidianVaultRepository(
                     rawContent = result.content,
                     noteUriString = note.uri.toString(),
                     notePathKey = note.notePathKey,
+                    vaultName = vaultName,
                 )
             )
 
@@ -126,7 +130,12 @@ internal class ObsidianVaultRepository(
                             message = "No parseable Markdown Q/A notes were found in this vault.",
                         )
                     } else {
-                        when (val noteResult = loadParsedNoteViewDataSync(selectedNote)) {
+                        when (
+                            val noteResult = loadParsedNoteViewDataSync(
+                                note = selectedNote,
+                                vaultName = loadSavedVaultName(),
+                            )
+                        ) {
                             is ParsedNoteLoadResult.Success -> {
                                 WidgetSelectionStore.saveLastNotePath(context, selectedNote.notePathKey)
                                 WidgetNoteState.Note(noteResult.note)
@@ -182,6 +191,12 @@ internal class ObsidianVaultRepository(
 
     private fun getSavedTreeUri(): Uri? =
         prefs.getString(KEY_TREE_URI, null)?.let(Uri::parse)
+
+    private fun loadSavedVaultName(): String? =
+        getSavedTreeUri()
+            ?.let { treeUri -> DocumentFile.fromTreeUri(context, treeUri)?.name }
+            ?.trim()
+            ?.takeIf(String::isNotEmpty)
 
     private fun readRootNotes(uri: Uri): VaultScreenState {
         Log.d(TAG, "Reading root notes from vault tree uri: $uri")

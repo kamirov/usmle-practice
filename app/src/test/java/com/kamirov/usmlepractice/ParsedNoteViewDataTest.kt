@@ -33,6 +33,7 @@ class ParsedNoteViewDataTest {
             ),
             viewData.qaItems,
         )
+        assertEquals(null, viewData.vaultName)
     }
 
     @Test
@@ -73,5 +74,26 @@ class ParsedNoteViewDataTest {
             viewData.fallbackMessage,
         )
         assertTrue(viewData.qaItems.isEmpty())
+    }
+
+    @Test
+    fun buildParsedNoteViewData_keepsVaultMetadata() {
+        val viewData = buildParsedNoteViewData(
+            noteName = "Cardiology.md",
+            rawContent = """
+                ## Questions
+                1. Q
+
+                ## Answers
+                1. A
+            """.trimIndent(),
+            noteUriString = "content://test/cardiology",
+            notePathKey = "Medicine/Cardiology.md",
+            vaultName = "USMLE Vault",
+        )
+
+        assertEquals("content://test/cardiology", viewData.noteUriString)
+        assertEquals("Medicine/Cardiology.md", viewData.notePathKey)
+        assertEquals("USMLE Vault", viewData.vaultName)
     }
 }

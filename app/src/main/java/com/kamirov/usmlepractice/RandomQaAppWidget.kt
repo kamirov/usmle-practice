@@ -88,6 +88,8 @@ class RandomQaAppWidgetReceiver : AppWidgetProvider() {
                     context = context,
                     intent = WidgetLaunchers.buildObsidianIntent(
                         context = context,
+                        vaultName = currentState.note.vaultName,
+                        notePathKey = currentState.note.notePathKey,
                         noteUriString = currentState.note.noteUriString,
                     ),
                 )
@@ -312,6 +314,7 @@ private object WidgetPreferencesStore {
     private const val KEY_PREFIX_EXPANDED_INDEX = "expanded_index_"
     private const val KEY_PREFIX_URI = "uri_"
     private const val KEY_PREFIX_PATH = "path_"
+    private const val KEY_PREFIX_VAULT = "vault_"
 
     fun saveWidgetState(
         context: Context,
@@ -328,6 +331,7 @@ private object WidgetPreferencesStore {
                     remove(KEY_PREFIX_EXPANDED_INDEX + appWidgetId)
                     remove(KEY_PREFIX_URI + appWidgetId)
                     remove(KEY_PREFIX_PATH + appWidgetId)
+                    remove(KEY_PREFIX_VAULT + appWidgetId)
                 }
 
                 is WidgetNoteState.Note -> {
@@ -336,6 +340,7 @@ private object WidgetPreferencesStore {
                     putString(KEY_PREFIX_BODY + appWidgetId, state.note.rawContent)
                     putString(KEY_PREFIX_URI + appWidgetId, state.note.noteUriString)
                     putString(KEY_PREFIX_PATH + appWidgetId, state.note.notePathKey)
+                    putString(KEY_PREFIX_VAULT + appWidgetId, state.note.vaultName)
                     if (state.expandedIndex == null) {
                         remove(KEY_PREFIX_EXPANDED_INDEX + appWidgetId)
                     } else {
@@ -362,6 +367,7 @@ private object WidgetPreferencesStore {
                     rawContent = body,
                     noteUriString = prefs.getString(KEY_PREFIX_URI + appWidgetId, null),
                     notePathKey = prefs.getString(KEY_PREFIX_PATH + appWidgetId, title) ?: title,
+                    vaultName = prefs.getString(KEY_PREFIX_VAULT + appWidgetId, null),
                 ),
                 expandedIndex = if (prefs.contains(KEY_PREFIX_EXPANDED_INDEX + appWidgetId)) {
                     prefs.getInt(KEY_PREFIX_EXPANDED_INDEX + appWidgetId, -1).takeIf { it >= 0 }
@@ -389,6 +395,7 @@ private object WidgetPreferencesStore {
             .remove(KEY_PREFIX_EXPANDED_INDEX + appWidgetId)
             .remove(KEY_PREFIX_URI + appWidgetId)
             .remove(KEY_PREFIX_PATH + appWidgetId)
+            .remove(KEY_PREFIX_VAULT + appWidgetId)
             .apply()
     }
 }
@@ -467,18 +474,34 @@ private object WidgetLaunchers {
 
     fun buildObsidianIntent(
         context: Context,
+        vaultName: String?,
+        notePathKey: String,
         noteUriString: String?,
     ): Intent? {
-        val noteUri = noteUriString?.takeIf(String::isNotBlank)?.let(Uri::parse) ?: return null
-        val obsidianIntent = buildViewIntent(noteUri).apply {
-            setPackage(OBSIDIAN_PACKAGE)
+        val obsidianDeepLink = buildObsidianOpenUri(
+            vaultName = vaultName,
+            notePathKey = notePathKey,
+        )
+        val obsidianIntent = obsidianDeepLink?.let { deepLink ->
+            Intent(Intent.ACTION_VIEW, deepLink).apply {
+                setPackage(OBSIDIAN_PACKAGE)
+                addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+            }
         }
-        if (obsidianIntent.resolveActivity(context.packageManager) != null) {
+        if (obsidianIntent != null && obsidianIntent.resolveActivity(context.packageManager) != null) {
             return obsidianIntent
         }
 
-        val fallbackIntent = buildViewIntent(noteUri)
-        return fallbackIntent.takeIf { it.resolveActivity(context.packageManager) != null }
+        val noteUri = noteUriString?.takeIf(String::isNotBlank)?.let(Uri::parse) ?: return null
+        val fallbackIntent = buildViewIntent(noteUri).apply {
+            setPackage(OBSIDIAN_PACKAGE)
+        }
+        if (fallbackIntent.resolveActivity(context.packageManager) != null) {
+            return fallbackIntent
+        }
+
+        val genericIntent = buildViewIntent(noteUri)
+        return genericIntent.takeIf { it.resolveActivity(context.packageManager) != null }
     }
 
     private fun buildViewIntent(uri: Uri): Intent =
@@ -488,6 +511,20 @@ private object WidgetLaunchers {
             addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
             addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
         }
+}
+
+internal fun buildObsidianOpenUri(
+    vaultName: String?,
+    notePathKey: String?,
+): Uri? {
+    val safeVaultName = vaultName?.trim()?.takeIf(String::isNotEmpty) ?: return null
+    val safeNotePathKey = notePathKey?.trim()?.takeIf(String::isNotEmpty) ?: return null
+    return Uri.Builder()
+        .scheme("obsidian")
+        .authority("open")
+        .appendQueryParameter("vault", safeVaultName)
+        .appendQueryParameter("file", safeNotePathKey)
+        .build()
 }
 
 private fun ParsedNoteViewData.displayTitle(): String =

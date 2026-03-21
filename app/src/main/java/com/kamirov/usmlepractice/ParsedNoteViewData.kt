@@ -7,6 +7,7 @@ internal data class ParsedNoteViewData(
     val rawContent: String,
     val noteUriString: String? = null,
     val notePathKey: String = noteName,
+    val vaultName: String? = null,
 ) {
     val hasStructuredQa: Boolean
         get() = qaItems.isNotEmpty()
@@ -36,6 +37,7 @@ internal fun buildParsedNoteViewData(
     rawContent: String,
     noteUriString: String? = null,
     notePathKey: String = noteName,
+    vaultName: String? = null,
 ): ParsedNoteViewData {
     val qaItems = parseQaItems(rawContent).orEmpty()
 
@@ -50,5 +52,6 @@ internal fun buildParsedNoteViewData(
         rawContent = rawContent,
         noteUriString = noteUriString,
         notePathKey = notePathKey,
+        vaultName = vaultName,
     )
 }
