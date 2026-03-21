@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">USMLE Practice</string>
+    <string name="random_qa_widget_name">Random Q&amp;A Note</string>
+    <string name="random_qa_widget_description">Shows a random parsed Obsidian Q&amp;A note from the vault root.</string>
 </resources>

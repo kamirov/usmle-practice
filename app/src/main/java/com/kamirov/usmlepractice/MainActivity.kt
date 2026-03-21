@@ -57,7 +57,7 @@ private fun ObsidianVaultApp() {
     val appContext = LocalContext.current.applicationContext
     val repository = remember(appContext) { ObsidianVaultRepository(context = appContext) }
     var screenState by remember { mutableStateOf<VaultScreenState>(VaultScreenState.Loading) }
-    var selectedNote by remember { mutableStateOf<SelectedNoteContent?>(null) }
+    var selectedNote by remember { mutableStateOf<ParsedNoteViewData?>(null) }
     val scope = rememberCoroutineScope()
 
     fun reloadNotes() {
@@ -101,19 +101,16 @@ private fun ObsidianVaultApp() {
             onPickRandomNote = { notes ->
                 if (notes.isNotEmpty()) {
                     scope.launch {
-                        when (val result = repository.readNoteContent(notes.random(Random.Default))) {
-                            is NoteContentResult.Success -> {
-                                selectedNote = SelectedNoteContent(
-                                    noteName = result.noteName,
-                                    qaItems = parseQaItems(result.content),
-                                    rawContent = result.content,
-                                )
+                        when (val result = repository.loadParsedNoteViewData(notes.random(Random.Default))) {
+                            is ParsedNoteLoadResult.Success -> {
+                                selectedNote = result.note
                             }
 
-                            is NoteContentResult.Error -> {
-                                selectedNote = SelectedNoteContent(
+                            is ParsedNoteLoadResult.Error -> {
+                                selectedNote = ParsedNoteViewData(
                                     noteName = "Could not open note",
-                                    qaItems = null,
+                                    qaItems = emptyList(),
+                                    fallbackMessage = result.message,
                                     rawContent = result.message,
                                 )
                             }
@@ -129,7 +126,7 @@ private fun ObsidianVaultApp() {
 @Composable
 private fun VaultScreen(
     state: VaultScreenState,
-    selectedNote: SelectedNoteContent?,
+    selectedNote: ParsedNoteViewData?,
     contentPadding: PaddingValues,
     onLinkVault: () -> Unit,
     onChangeVault: () -> Unit,
@@ -229,7 +226,7 @@ private fun MessageState(
 @Composable
 private fun LoadedState(
     notes: List<VaultNote>,
-    selectedNote: SelectedNoteContent?,
+    selectedNote: ParsedNoteViewData?,
     emptyMessage: String?,
     contentPadding: PaddingValues,
     onChangeVault: () -> Unit,
@@ -312,13 +309,13 @@ private fun LoadedState(
 
 @Composable
 private fun SelectedNoteView(
-    selectedNote: SelectedNoteContent,
+    selectedNote: ParsedNoteViewData,
     modifier: Modifier = Modifier,
 ) {
-    if (selectedNote.qaItems.isNullOrEmpty()) {
+    if (!selectedNote.hasStructuredQa) {
         Column(modifier = modifier) {
             Text(
-                text = "Could not parse ## Questions and ## Answers into a Q/A view.",
+                text = selectedNote.fallbackMessage ?: "Could not parse ## Questions and ## Answers into a Q/A view.",
                 style = MaterialTheme.typography.bodyMedium,
             )
             Text(
@@ -405,9 +402,3 @@ private fun LoadedPreview() {
         )
     }
 }
-
-private data class SelectedNoteContent(
-    val noteName: String,
-    val qaItems: List<QaItem>?,
-    val rawContent: String,
-)
