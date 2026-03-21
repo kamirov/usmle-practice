@@ -5,7 +5,37 @@ internal data class QaItem(
     val answer: String,
 )
 
+internal data class ParsedQaSections(
+    val questions: List<String>,
+    val answers: List<String>,
+)
+
 internal fun parseQaItems(content: String): List<QaItem>? {
+    val sections = parseQaSections(content) ?: return null
+
+    return sections.questions.mapIndexed { index, question ->
+        QaItem(
+            question = question,
+            answer = sections.answers.getOrElse(index) { "" },
+        )
+    }
+}
+
+internal fun parseBalancedQaItems(content: String): List<QaItem>? {
+    val sections = parseQaSections(content) ?: return null
+    if (sections.questions.size != sections.answers.size) {
+        return null
+    }
+
+    return sections.questions.mapIndexed { index, question ->
+        QaItem(
+            question = question,
+            answer = sections.answers[index],
+        )
+    }
+}
+
+internal fun parseQaSections(content: String): ParsedQaSections? {
     val lines = content.lines()
     val questions = parseNumberedSection(
         lines = lines,
@@ -20,12 +50,10 @@ internal fun parseQaItems(content: String): List<QaItem>? {
         return null
     }
 
-    return questions.mapIndexed { index, question ->
-        QaItem(
-            question = question,
-            answer = answers.getOrElse(index) { "" },
-        )
-    }
+    return ParsedQaSections(
+        questions = questions,
+        answers = answers,
+    )
 }
 
 private fun parseNumberedSection(

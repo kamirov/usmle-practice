@@ -73,6 +73,8 @@ internal class ObsidianVaultRepository(
                 buildParsedNoteViewData(
                     noteName = result.noteName,
                     rawContent = result.content,
+                    noteUriString = note.uri.toString(),
+                    notePathKey = note.notePathKey,
                 )
             )
 
@@ -84,7 +86,11 @@ internal class ObsidianVaultRepository(
     }
 
     suspend fun loadRandomWidgetState(): WidgetNoteState = withContext(Dispatchers.IO) {
-        when (val rootState = loadRootNotes()) {
+        loadRandomWidgetStateSync()
+    }
+
+    fun loadRandomWidgetStateSync(): WidgetNoteState =
+        when (val widgetNotesState = loadWidgetNotesSync()) {
             VaultScreenState.Unlinked -> WidgetNoteState.Message(
                 title = "Vault not linked",
                 message = "Open the app and link your Obsidian vault.",
@@ -97,26 +103,48 @@ internal class ObsidianVaultRepository(
 
             is VaultScreenState.Error -> WidgetNoteState.Message(
                 title = "Could not read vault",
-                message = rootState.message,
+                message = widgetNotesState.message,
             )
 
             is VaultScreenState.Loaded -> {
-                if (rootState.notes.isEmpty()) {
+                if (widgetNotesState.notes.isEmpty()) {
                     WidgetNoteState.Message(
                         title = "No notes",
-                        message = rootState.emptyMessage ?: "No non-empty root-level Markdown notes were found.",
+                        message = widgetNotesState.emptyMessage
+                            ?: "No parseable Markdown Q/A notes were found in this vault.",
                     )
                 } else {
-                    when (val noteResult = loadParsedNoteViewData(rootState.notes.random(Random.Default))) {
-                        is ParsedNoteLoadResult.Success -> WidgetNoteState.Note(noteResult.note)
-                        is ParsedNoteLoadResult.Error -> WidgetNoteState.Message(
-                            title = "Could not open note",
-                            message = noteResult.message,
+                    val selectedNote = selectNextWidgetNote(
+                        notes = widgetNotesState.notes,
+                        previousNotePath = WidgetSelectionStore.loadLastNotePath(context),
+                        random = Random.Default,
+                    )
+
+                    if (selectedNote == null) {
+                        WidgetNoteState.Message(
+                            title = "No notes",
+                            message = "No parseable Markdown Q/A notes were found in this vault.",
                         )
+                    } else {
+                        when (val noteResult = loadParsedNoteViewDataSync(selectedNote)) {
+                            is ParsedNoteLoadResult.Success -> {
+                                WidgetSelectionStore.saveLastNotePath(context, selectedNote.notePathKey)
+                                WidgetNoteState.Note(noteResult.note)
+                            }
+
+                            is ParsedNoteLoadResult.Error -> WidgetNoteState.Message(
+                                title = "Could not open note",
+                                message = noteResult.message,
+                            )
+                        }
                     }
                 }
             }
         }
+
+    fun loadWidgetNotesSync(): VaultScreenState {
+        val uri = getSavedTreeUri() ?: return VaultScreenState.Unlinked
+        return readWidgetNotes(uri)
     }
 
     private fun readNoteContentSync(note: VaultNote): NoteContentResult {
@@ -210,6 +238,92 @@ internal class ObsidianVaultRepository(
         }
     }
 
+    private fun readWidgetNotes(uri: Uri): VaultScreenState {
+        Log.d(TAG, "Reading recursive widget notes from vault tree uri: $uri")
+
+        try {
+            val vaultRoot = DocumentFile.fromTreeUri(context, uri)
+                ?: return clearInvalidVault(
+                    "The saved vault folder is no longer available. Link the Obsidian vault again."
+                )
+
+            val notes = collectWidgetVaultNotes(
+                directory = vaultRoot,
+                pathSegments = emptyList(),
+            )
+
+            return if (notes.isEmpty()) {
+                VaultScreenState.Loaded(
+                    notes = emptyList(),
+                    emptyMessage = "No Markdown notes with balanced ## Questions and ## Answers were found.",
+                )
+            } else {
+                VaultScreenState.Loaded(notes = notes.sortedWith(compareBy(String.CASE_INSENSITIVE_ORDER) { it.name }))
+            }
+        } catch (e: SecurityException) {
+            Log.w(TAG, "Read access revoked while scanning recursive widget notes", e)
+            return clearInvalidVault(
+                "Read access to the saved vault was revoked. Link the Obsidian vault again."
+            )
+        } catch (e: RuntimeException) {
+            Log.e(TAG, "Unexpected error while scanning recursive widget notes", e)
+            return VaultScreenState.Error(
+                message = "Unexpected error while reading the selected folder. Try linking the Obsidian vault again.",
+                hasLinkedVault = hasLinkedVault(),
+            )
+        }
+    }
+
+    private fun collectWidgetVaultNotes(
+        directory: DocumentFile,
+        pathSegments: List<String>,
+    ): List<VaultNote> {
+        val children = directory.listFiles().toList()
+        if (children.isEmpty()) {
+            return emptyList()
+        }
+
+        val notes = mutableListOf<VaultNote>()
+        children.forEach { child ->
+            val childName = child.name?.trim().orEmpty()
+            if (childName.isEmpty()) {
+                return@forEach
+            }
+
+            if (child.isDirectory) {
+                notes += collectWidgetVaultNotes(
+                    directory = child,
+                    pathSegments = pathSegments + childName,
+                )
+                return@forEach
+            }
+
+            if (!child.isFile || !isMarkdownFileName(childName) || !isNonEmptyFile(child.length())) {
+                return@forEach
+            }
+
+            val note = VaultNote(
+                name = childName,
+                uri = child.uri,
+                notePathKey = (pathSegments + childName).joinToString("/"),
+            )
+
+            when (val result = readNoteContentSync(note)) {
+                is NoteContentResult.Success -> {
+                    if (parseBalancedQaItems(result.content).isNullOrEmpty()) {
+                        return@forEach
+                    }
+
+                    notes += note
+                }
+
+                is NoteContentResult.Error -> Unit
+            }
+        }
+
+        return notes
+    }
+
     private fun clearInvalidVault(message: String): VaultScreenState {
         prefs.edit().remove(KEY_TREE_URI).apply()
         return VaultScreenState.Error(
@@ -235,6 +349,7 @@ internal data class VaultEntryMetadata(
 internal data class VaultNote(
     val name: String,
     val uri: Uri,
+    val notePathKey: String = name,
 )
 
 internal fun rootMarkdownNotes(entries: List<VaultEntryMetadata>): List<VaultNote> =
@@ -256,6 +371,24 @@ internal fun isMarkdownFileName(name: String?): Boolean =
 
 internal fun isNonEmptyFile(sizeInBytes: Long?): Boolean =
     sizeInBytes != null && sizeInBytes > 0L
+
+internal fun selectNextWidgetNote(
+    notes: List<VaultNote>,
+    previousNotePath: String?,
+    random: Random,
+): VaultNote? {
+    if (notes.isEmpty()) {
+        return null
+    }
+
+    val filteredNotes = previousNotePath
+        ?.takeIf(String::isNotBlank)
+        ?.let { lastPath -> notes.filterNot { it.notePathKey == lastPath } }
+        .orEmpty()
+
+    val pool = if (filteredNotes.isNotEmpty()) filteredNotes else notes
+    return pool.random(random)
+}
 
 internal sealed interface VaultScreenState {
     data object Loading : VaultScreenState
@@ -295,6 +428,7 @@ internal sealed interface ParsedNoteLoadResult {
 internal sealed interface WidgetNoteState {
     data class Note(
         val note: ParsedNoteViewData,
+        val widgetQaItems: List<WidgetQaItem> = note.widgetQaItems(),
         val expandedIndex: Int? = null,
     ) : WidgetNoteState
 
@@ -302,4 +436,20 @@ internal sealed interface WidgetNoteState {
         val title: String,
         val message: String,
     ) : WidgetNoteState
+}
+
+private object WidgetSelectionStore {
+    private const val PREFS_NAME = "random_qa_widget_selection"
+    private const val KEY_LAST_NOTE_PATH = "last_note_path"
+
+    fun loadLastNotePath(context: Context): String? =
+        context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
+            .getString(KEY_LAST_NOTE_PATH, null)
+
+    fun saveLastNotePath(context: Context, notePath: String) {
+        context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
+            .edit()
+            .putString(KEY_LAST_NOTE_PATH, notePath)
+            .apply()
+    }
 }

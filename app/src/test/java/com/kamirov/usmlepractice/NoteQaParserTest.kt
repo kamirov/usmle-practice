@@ -66,4 +66,34 @@ class NoteQaParserTest {
 
         assertNull(parseQaItems(content))
     }
+
+    @Test
+    fun parseBalancedQaItems_returnsNullWhenCountsDoNotMatch() {
+        val content = """
+            ## Questions
+            1. First question
+            2. Second question
+
+            ## Answers
+            1. First answer
+        """.trimIndent()
+
+        assertNull(parseBalancedQaItems(content))
+    }
+
+    @Test
+    fun parseBalancedQaItems_returnsItemsWhenCountsMatch() {
+        val content = """
+            ## Questions
+            1. First question
+
+            ## Answers
+            1. First answer
+        """.trimIndent()
+
+        assertEquals(
+            listOf(QaItem("First question", "First answer")),
+            parseBalancedQaItems(content),
+        )
+    }
 }

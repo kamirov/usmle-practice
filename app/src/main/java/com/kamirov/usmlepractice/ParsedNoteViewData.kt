@@ -5,16 +5,37 @@ internal data class ParsedNoteViewData(
     val qaItems: List<QaItem>,
     val fallbackMessage: String? = null,
     val rawContent: String,
+    val noteUriString: String? = null,
+    val notePathKey: String = noteName,
 ) {
     val hasStructuredQa: Boolean
         get() = qaItems.isNotEmpty()
 
     fun previewItems(maxItems: Int): List<QaItem> = qaItems.take(maxItems)
+
+    fun widgetQaItems(): List<WidgetQaItem> = qaItems.map { item ->
+        WidgetQaItem(
+            questionId = buildWidgetQuestionId(
+                notePathKey = notePathKey,
+                question = item.question,
+            ),
+            question = item.question,
+            answer = item.answer,
+        )
+    }
 }
+
+internal data class WidgetQaItem(
+    val questionId: String,
+    val question: String,
+    val answer: String,
+)
 
 internal fun buildParsedNoteViewData(
     noteName: String,
     rawContent: String,
+    noteUriString: String? = null,
+    notePathKey: String = noteName,
 ): ParsedNoteViewData {
     val qaItems = parseQaItems(rawContent).orEmpty()
 
@@ -27,5 +48,7 @@ internal fun buildParsedNoteViewData(
             null
         },
         rawContent = rawContent,
+        noteUriString = noteUriString,
+        notePathKey = notePathKey,
     )
 }
