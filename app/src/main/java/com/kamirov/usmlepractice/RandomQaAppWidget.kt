@@ -199,26 +199,6 @@ private object RandomQaRemoteViewsRenderer {
         val difficultIds = WidgetDifficultQuestionsStore.loadQuestionIds(context)
 
         views.setTextViewText(R.id.widget_note_title, state.note.displayTitle())
-        views.setOnClickPendingIntent(
-            R.id.widget_open_button,
-            actionPendingIntent(
-                context = context,
-                appWidgetId = appWidgetId,
-                action = RandomQaAppWidgetReceiver.ACTION_OPEN_NOTE,
-                rowIndex = null,
-                requestCodeOffset = REQUEST_OPEN_NOTE,
-            ),
-        )
-        views.setOnClickPendingIntent(
-            R.id.widget_topic_chatgpt_button,
-            actionPendingIntent(
-                context = context,
-                appWidgetId = appWidgetId,
-                action = RandomQaAppWidgetReceiver.ACTION_OPEN_TOPIC_CHATGPT,
-                rowIndex = null,
-                requestCodeOffset = REQUEST_OPEN_TOPIC_CHATGPT,
-            ),
-        )
         views.removeAllViews(R.id.widget_question_container)
 
         state.widgetQaItems.forEachIndexed { index, item ->
@@ -264,16 +244,6 @@ private object RandomQaRemoteViewsRenderer {
                     action = RandomQaAppWidgetReceiver.ACTION_TOGGLE_DIFFICULT,
                     rowIndex = index,
                     requestCodeOffset = REQUEST_TOGGLE_DIFFICULT,
-                ),
-            )
-            rowView.setOnClickPendingIntent(
-                R.id.widget_row_chatgpt_button,
-                actionPendingIntent(
-                    context = context,
-                    appWidgetId = appWidgetId,
-                    action = RandomQaAppWidgetReceiver.ACTION_OPEN_ROW_CHATGPT,
-                    rowIndex = index,
-                    requestCodeOffset = REQUEST_OPEN_ROW_CHATGPT,
                 ),
             )
 
@@ -533,6 +503,3 @@ private const val MODE_MESSAGE = "message"
 private const val MODE_NOTE = "note"
 private const val REQUEST_TOGGLE_QUESTION = 10_000
 private const val REQUEST_TOGGLE_DIFFICULT = 20_000
-private const val REQUEST_OPEN_NOTE = 30_000
-private const val REQUEST_OPEN_TOPIC_CHATGPT = 40_000
-private const val REQUEST_OPEN_ROW_CHATGPT = 50_000

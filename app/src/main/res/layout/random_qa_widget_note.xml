@@ -22,28 +22,6 @@
             android:maxLines="2"
             android:textColor="@android:color/white"
             android:textSize="18sp" />
-
-        <ImageView
-            android:id="@+id/widget_open_button"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="8dp"
-            android:background="@drawable/widget_action_button_bg"
-            android:contentDescription="@string/widget_open_note"
-            android:padding="7dp"
-            android:scaleType="fitCenter"
-            android:src="@drawable/widget_obsidian_logo" />
-
-        <ImageView
-            android:id="@+id/widget_topic_chatgpt_button"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="8dp"
-            android:background="@drawable/widget_action_button_bg"
-            android:contentDescription="@string/widget_open_topic_chat"
-            android:padding="7dp"
-            android:scaleType="fitCenter"
-            android:src="@drawable/widget_chatgpt_logo" />
     </LinearLayout>
 
     <LinearLayout
