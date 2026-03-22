@@ -58,6 +58,12 @@ private class RandomQaWidgetRemoteViewsFactory(
         val isDifficult = item.questionId in difficultIds
 
         return RemoteViews(context.packageName, R.layout.random_qa_widget_question_row).apply {
+            val rowToggleIntent = collectionFillInIntent(
+                action = RandomQaAppWidgetReceiver.ACTION_TOGGLE_QUESTION,
+                appWidgetId = appWidgetId,
+                rowIndex = position,
+                actionKind = ACTION_KIND_ROW_TOGGLE,
+            )
             setTextViewText(R.id.widget_question_index, "${position + 1}.")
             setTextViewText(R.id.widget_question_text, formatWidgetMarkdown(item.question))
             setTextViewText(R.id.widget_checkbox, if (isDifficult) "✓" else "")
@@ -85,15 +91,8 @@ private class RandomQaWidgetRemoteViewsFactory(
             }
 
             if (!currentState.isRefreshing) {
-                setOnClickFillInIntent(
-                    R.id.widget_question_row,
-                    collectionFillInIntent(
-                        action = RandomQaAppWidgetReceiver.ACTION_TOGGLE_QUESTION,
-                        appWidgetId = appWidgetId,
-                        rowIndex = position,
-                        actionKind = ACTION_KIND_ROW_TOGGLE,
-                    ),
-                )
+                setOnClickFillInIntent(R.id.widget_question_root, rowToggleIntent)
+                setOnClickFillInIntent(R.id.widget_question_row, rowToggleIntent)
                 if (isExpanded) {
                     setOnClickFillInIntent(
                         R.id.widget_difficult_button,
@@ -164,6 +163,12 @@ private class ReviewQuestionsWidgetRemoteViewsFactory(
         val isExpanded = currentState.expandedItemId == item.id
 
         return RemoteViews(context.packageName, R.layout.review_questions_widget_question_row).apply {
+            val rowToggleIntent = collectionFillInIntent(
+                action = ReviewQuestionsAppWidgetReceiver.ACTION_TOGGLE_REVIEW_ANSWER,
+                appWidgetId = appWidgetId,
+                rowIndex = position,
+                actionKind = ACTION_KIND_ROW_TOGGLE,
+            )
             setTextViewText(R.id.widget_checkbox, "✓")
             setInt(R.id.widget_checkbox, "setBackgroundResource", R.drawable.widget_checkbox_checked_bg)
             setTextViewText(R.id.widget_question_topic, item.topic.ifBlank { "Unknown topic" })
@@ -181,15 +186,8 @@ private class ReviewQuestionsWidgetRemoteViewsFactory(
             }
 
             if (!currentState.isRefreshing) {
-                setOnClickFillInIntent(
-                    R.id.widget_review_question_row,
-                    collectionFillInIntent(
-                        action = ReviewQuestionsAppWidgetReceiver.ACTION_TOGGLE_REVIEW_ANSWER,
-                        appWidgetId = appWidgetId,
-                        rowIndex = position,
-                        actionKind = ACTION_KIND_ROW_TOGGLE,
-                    ),
-                )
+                setOnClickFillInIntent(R.id.widget_review_question_root, rowToggleIntent)
+                setOnClickFillInIntent(R.id.widget_review_question_row, rowToggleIntent)
                 if (isExpanded) {
                     setOnClickFillInIntent(
                         R.id.widget_remove_button,
@@ -237,10 +235,10 @@ internal fun widgetCollectionPendingIntentTemplate(
     context,
     0,
     Intent(context, receiverClass),
-    PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE,
+    PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_MUTABLE,
 )
 
-private fun collectionFillInIntent(
+internal fun collectionFillInIntent(
     action: String,
     appWidgetId: Int,
     rowIndex: Int? = null,
