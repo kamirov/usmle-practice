@@ -445,11 +445,13 @@ internal sealed interface WidgetNoteState {
         val note: ParsedNoteViewData,
         val widgetQaItems: List<WidgetQaItem> = note.widgetQaItems(),
         val expandedIndex: Int? = null,
+        val isRefreshing: Boolean = false,
     ) : WidgetNoteState
 
     data class Message(
         val title: String,
         val message: String,
+        val isRefreshing: Boolean = false,
     ) : WidgetNoteState
 }
 

@@ -1,5 +1,6 @@
 package com.kamirov.usmlepractice
 
+import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue
 import org.junit.Test
@@ -25,4 +26,39 @@ class WidgetRefreshActionTest {
         assertFalse(isPerWidgetAction("android.intent.action.MAIN"))
         assertFalse(isPerWidgetAction(null))
     }
+
+    @Test
+    fun shouldStartRefresh_returnsTrueForIdleNoteState() {
+        assertTrue(shouldStartRefresh(testNoteState(isRefreshing = false)))
+    }
+
+    @Test
+    fun shouldStartRefresh_returnsFalseWhenAlreadyRefreshing() {
+        assertFalse(shouldStartRefresh(testNoteState(isRefreshing = true)))
+    }
+
+    @Test
+    fun noteTitleForDisplay_returnsRefreshingTitleWhenRefreshing() {
+        assertEquals(
+            "Refreshing...",
+            noteTitleForDisplay(testNoteState(isRefreshing = true)),
+        )
+    }
+
+    @Test
+    fun noteTitleForDisplay_returnsDisplayTitleWhenIdle() {
+        assertEquals(
+            "Cardiology",
+            noteTitleForDisplay(testNoteState(isRefreshing = false)),
+        )
+    }
+
+    private fun testNoteState(isRefreshing: Boolean): WidgetNoteState.Note =
+        WidgetNoteState.Note(
+            note = buildParsedNoteViewData(
+                noteName = "Cardiology.md",
+                rawContent = "## Questions\n- What?\n\n## Answers\n- Answer.",
+            ),
+            isRefreshing = isRefreshing,
+        )
 }

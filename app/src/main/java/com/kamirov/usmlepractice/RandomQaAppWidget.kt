@@ -3,6 +3,7 @@ package com.kamirov.usmlepractice
 import android.app.PendingIntent
 import android.appwidget.AppWidgetManager
 import android.appwidget.AppWidgetProvider
+import android.content.BroadcastReceiver.PendingResult
 import android.content.ClipData
 import android.content.Context
 import android.content.Intent
@@ -35,9 +36,10 @@ class RandomQaAppWidgetReceiver : AppWidgetProvider() {
         when (intent.action) {
             ACTION_REFRESH_NOTE -> {
                 val appWidgetId = requireAppWidgetId(intent) ?: return
-                refreshSingleWidget(
+                startRefreshSingleWidget(
                     context = context,
                     appWidgetId = appWidgetId,
+                    pendingResult = goAsync(),
                 )
             }
 
@@ -188,6 +190,31 @@ private fun refreshSingleWidget(
     )
 }
 
+private fun startRefreshSingleWidget(
+    context: Context,
+    appWidgetId: Int,
+    pendingResult: PendingResult,
+) {
+    val currentState = WidgetPreferencesStore.loadWidgetState(context, appWidgetId)
+    if (!shouldStartRefresh(currentState)) {
+        pendingResult.finish()
+        return
+    }
+
+    rerenderWidget(context, appWidgetId, requireNotNull(currentState).toRefreshingState())
+
+    Thread {
+        try {
+            refreshSingleWidget(
+                context = context,
+                appWidgetId = appWidgetId,
+            )
+        } finally {
+            pendingResult.finish()
+        }
+    }.start()
+}
+
 private fun rerenderWidget(
     context: Context,
     appWidgetId: Int,
@@ -213,6 +240,18 @@ internal fun isPerWidgetAction(action: String?): Boolean =
         action == RandomQaAppWidgetReceiver.ACTION_OPEN_NOTE ||
         action == RandomQaAppWidgetReceiver.ACTION_OPEN_TOPIC_CHATGPT ||
         action == RandomQaAppWidgetReceiver.ACTION_OPEN_ROW_CHATGPT
+
+internal fun shouldStartRefresh(state: WidgetNoteState?): Boolean =
+    state is WidgetNoteState.Note && !state.isRefreshing
+
+internal fun WidgetNoteState.toRefreshingState(): WidgetNoteState =
+    when (this) {
+        is WidgetNoteState.Note -> copy(isRefreshing = true)
+        is WidgetNoteState.Message -> copy(isRefreshing = true)
+    }
+
+internal fun noteTitleForDisplay(state: WidgetNoteState.Note): String =
+    if (state.isRefreshing) REFRESHING_TITLE else state.note.displayTitle()
 
 private object RandomQaRemoteViewsRenderer {
     fun render(
@@ -247,17 +286,23 @@ private object RandomQaRemoteViewsRenderer {
         val views = RemoteViews(context.packageName, R.layout.random_qa_widget_note)
         val difficultIds = WidgetDifficultQuestionsStore.loadQuestionIds(context)
 
-        views.setTextViewText(R.id.widget_note_title, state.note.displayTitle())
-        views.setOnClickPendingIntent(
-            R.id.widget_refresh_button,
-            actionPendingIntent(
-                context = context,
-                appWidgetId = appWidgetId,
-                action = RandomQaAppWidgetReceiver.ACTION_REFRESH_NOTE,
-                rowIndex = null,
-                requestCodeOffset = REQUEST_REFRESH_NOTE,
-            ),
+        views.setTextViewText(R.id.widget_note_title, noteTitleForDisplay(state))
+        views.setViewVisibility(
+            R.id.widget_loading_overlay,
+            if (state.isRefreshing) View.VISIBLE else View.GONE,
         )
+        if (!state.isRefreshing) {
+            views.setOnClickPendingIntent(
+                R.id.widget_refresh_button,
+                actionPendingIntent(
+                    context = context,
+                    appWidgetId = appWidgetId,
+                    action = RandomQaAppWidgetReceiver.ACTION_REFRESH_NOTE,
+                    rowIndex = null,
+                    requestCodeOffset = REQUEST_REFRESH_NOTE,
+                ),
+            )
+        }
         views.removeAllViews(R.id.widget_question_container)
 
         state.widgetQaItems.forEachIndexed { index, item ->
@@ -285,26 +330,28 @@ private object RandomQaRemoteViewsRenderer {
                 rowView.setViewVisibility(R.id.widget_answer_container, View.GONE)
             }
 
-            rowView.setOnClickPendingIntent(
-                R.id.widget_question_row,
-                actionPendingIntent(
-                    context = context,
-                    appWidgetId = appWidgetId,
-                    action = RandomQaAppWidgetReceiver.ACTION_TOGGLE_QUESTION,
-                    rowIndex = index,
-                    requestCodeOffset = REQUEST_TOGGLE_QUESTION,
-                ),
-            )
-            rowView.setOnClickPendingIntent(
-                R.id.widget_checkbox,
-                actionPendingIntent(
-                    context = context,
-                    appWidgetId = appWidgetId,
-                    action = RandomQaAppWidgetReceiver.ACTION_TOGGLE_DIFFICULT,
-                    rowIndex = index,
-                    requestCodeOffset = REQUEST_TOGGLE_DIFFICULT,
-                ),
-            )
+            if (!state.isRefreshing) {
+                rowView.setOnClickPendingIntent(
+                    R.id.widget_question_row,
+                    actionPendingIntent(
+                        context = context,
+                        appWidgetId = appWidgetId,
+                        action = RandomQaAppWidgetReceiver.ACTION_TOGGLE_QUESTION,
+                        rowIndex = index,
+                        requestCodeOffset = REQUEST_TOGGLE_QUESTION,
+                    ),
+                )
+                rowView.setOnClickPendingIntent(
+                    R.id.widget_checkbox,
+                    actionPendingIntent(
+                        context = context,
+                        appWidgetId = appWidgetId,
+                        action = RandomQaAppWidgetReceiver.ACTION_TOGGLE_DIFFICULT,
+                        rowIndex = index,
+                        requestCodeOffset = REQUEST_TOGGLE_DIFFICULT,
+                    ),
+                )
+            }
 
             views.addView(R.id.widget_question_container, rowView)
         }
@@ -343,6 +390,7 @@ private object WidgetPreferencesStore {
     private const val KEY_PREFIX_URI = "uri_"
     private const val KEY_PREFIX_PATH = "path_"
     private const val KEY_PREFIX_VAULT = "vault_"
+    private const val KEY_PREFIX_REFRESHING = "refreshing_"
 
     fun saveWidgetState(
         context: Context,
@@ -356,6 +404,7 @@ private object WidgetPreferencesStore {
                     putString(KEY_PREFIX_MODE + appWidgetId, MODE_MESSAGE)
                     putString(KEY_PREFIX_TITLE + appWidgetId, state.title)
                     putString(KEY_PREFIX_BODY + appWidgetId, state.message)
+                    putBoolean(KEY_PREFIX_REFRESHING + appWidgetId, state.isRefreshing)
                     remove(KEY_PREFIX_EXPANDED_INDEX + appWidgetId)
                     remove(KEY_PREFIX_URI + appWidgetId)
                     remove(KEY_PREFIX_PATH + appWidgetId)
@@ -369,6 +418,7 @@ private object WidgetPreferencesStore {
                     putString(KEY_PREFIX_URI + appWidgetId, state.note.noteUriString)
                     putString(KEY_PREFIX_PATH + appWidgetId, state.note.notePathKey)
                     putString(KEY_PREFIX_VAULT + appWidgetId, state.note.vaultName)
+                    putBoolean(KEY_PREFIX_REFRESHING + appWidgetId, state.isRefreshing)
                     if (state.expandedIndex == null) {
                         remove(KEY_PREFIX_EXPANDED_INDEX + appWidgetId)
                     } else {
@@ -387,6 +437,7 @@ private object WidgetPreferencesStore {
         val mode = prefs.getString(KEY_PREFIX_MODE + appWidgetId, null) ?: return null
         val title = prefs.getString(KEY_PREFIX_TITLE + appWidgetId, null) ?: return null
         val body = prefs.getString(KEY_PREFIX_BODY + appWidgetId, null) ?: return null
+        val isRefreshing = prefs.getBoolean(KEY_PREFIX_REFRESHING + appWidgetId, false)
 
         return if (mode == MODE_NOTE) {
             WidgetNoteState.Note(
@@ -402,11 +453,13 @@ private object WidgetPreferencesStore {
                 } else {
                     null
                 },
+                isRefreshing = isRefreshing,
             )
         } else {
             WidgetNoteState.Message(
                 title = title,
                 message = body,
+                isRefreshing = isRefreshing,
             )
         }
     }
@@ -424,6 +477,7 @@ private object WidgetPreferencesStore {
             .remove(KEY_PREFIX_URI + appWidgetId)
             .remove(KEY_PREFIX_PATH + appWidgetId)
             .remove(KEY_PREFIX_VAULT + appWidgetId)
+            .remove(KEY_PREFIX_REFRESHING + appWidgetId)
             .apply()
     }
 }
@@ -560,6 +614,7 @@ private fun ParsedNoteViewData.displayTitle(): String =
 
 private const val MODE_MESSAGE = "message"
 private const val MODE_NOTE = "note"
+private const val REFRESHING_TITLE = "Refreshing..."
 private const val REQUEST_REFRESH_NOTE = 5_000
 private const val REQUEST_TOGGLE_QUESTION = 10_000
 private const val REQUEST_TOGGLE_DIFFICULT = 20_000
