@@ -63,6 +63,16 @@ internal class TroubleQuestionRepository internal constructor(
 
     fun contains(id: String): Boolean = id in loadIds()
 
+    fun remove(id: String): Boolean {
+        val currentStore = loadStoreForMutation()
+        val nextItems = currentStore.items.filterNot { it.id == id }
+        val removed = nextItems.size != currentStore.items.size
+        if (removed) {
+            saveStore(TroubleQuestionStore(items = nextItems))
+        }
+        return removed
+    }
+
     fun toggle(
         noteTitle: String,
         notePathKey: String,
@@ -171,6 +181,14 @@ internal fun shuffleTroubleQuestionItems(
     }
     return copy
 }
+
+internal fun selectReviewQuestionIds(
+    items: List<TroubleQuestionItem>,
+    maxVisible: Int,
+    random: Random,
+): List<String> = shuffleTroubleQuestionItems(items, random)
+    .take(maxVisible)
+    .map { it.id }
 
 internal interface TroubleQuestionStorage {
     fun read(): String?

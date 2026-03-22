@@ -129,6 +129,36 @@ class TroubleQuestionStoreTest {
     }
 
     @Test
+    fun remove_deletesItemById() {
+        val repository = TroubleQuestionRepository(
+            storage = FakeTroubleQuestionStorage(),
+            clock = { "2026-03-21T12:00:00Z" },
+        )
+
+        repository.mark(
+            noteTitle = "Cardiology.md",
+            notePathKey = "Medicine/Cardiology.md",
+            item = testWidgetQaItem(),
+        )
+
+        assertTrue(repository.remove("question-1"))
+        assertEquals(
+            TroubleQuestionLoadResult.Success(emptyList()),
+            repository.loadAll(),
+        )
+    }
+
+    @Test
+    fun remove_returnsFalseWhenIdDoesNotExist() {
+        val repository = TroubleQuestionRepository(
+            storage = FakeTroubleQuestionStorage(),
+            clock = { "2026-03-21T12:00:00Z" },
+        )
+
+        assertFalse(repository.remove("missing"))
+    }
+
+    @Test
     fun mark_updatesTimestampAndIncrementsTimesMarkedForExistingItem() {
         val clockValues = ArrayDeque(
             listOf(
@@ -170,6 +200,23 @@ class TroubleQuestionStoreTest {
         val shuffled = shuffleTroubleQuestionItems(items, kotlin.random.Random(0))
 
         assertEquals(listOf("2", "3", "1"), shuffled.map { it.id })
+    }
+
+    @Test
+    fun selectReviewQuestionIds_capsVisibleItems() {
+        val selectedIds = selectReviewQuestionIds(
+            items = listOf(
+                troubleItem(id = "1"),
+                troubleItem(id = "2"),
+                troubleItem(id = "3"),
+                troubleItem(id = "4"),
+                troubleItem(id = "5"),
+            ),
+            maxVisible = 4,
+            random = kotlin.random.Random(1),
+        )
+
+        assertEquals(4, selectedIds.size)
     }
 
     private fun testWidgetQaItem(): WidgetQaItem = WidgetQaItem(

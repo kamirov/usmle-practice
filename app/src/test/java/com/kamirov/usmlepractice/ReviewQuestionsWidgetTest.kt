@@ -1,0 +1,88 @@
+package com.kamirov.usmlepractice
+
+import org.junit.Assert.assertEquals
+import org.junit.Assert.assertFalse
+import org.junit.Assert.assertNull
+import org.junit.Assert.assertTrue
+import org.junit.Test
+
+class ReviewQuestionsWidgetTest {
+    @Test
+    fun toggleExpandedReviewItemId_expandsCollapsedItem() {
+        assertEquals("q1", toggleExpandedReviewItemId(currentExpandedItemId = null, tappedItemId = "q1"))
+    }
+
+    @Test
+    fun toggleExpandedReviewItemId_collapsesExpandedItem() {
+        assertNull(toggleExpandedReviewItemId(currentExpandedItemId = "q1", tappedItemId = "q1"))
+    }
+
+    @Test
+    fun toggleExpandedReviewItemId_switchesExpandedItem() {
+        assertEquals("q2", toggleExpandedReviewItemId(currentExpandedItemId = "q1", tappedItemId = "q2"))
+    }
+
+    @Test
+    fun shouldStartReviewRefresh_returnsTrueWhenIdle() {
+        assertTrue(
+            shouldStartReviewRefresh(
+                ReviewQuestionsWidgetState.Loaded(
+                    visibleIds = listOf("q1"),
+                    isRefreshing = false,
+                )
+            )
+        )
+    }
+
+    @Test
+    fun shouldStartReviewRefresh_returnsFalseWhenRefreshing() {
+        assertFalse(
+            shouldStartReviewRefresh(
+                ReviewQuestionsWidgetState.Loaded(
+                    visibleIds = listOf("q1"),
+                    isRefreshing = true,
+                )
+            )
+        )
+    }
+
+    @Test
+    fun toRefreshingState_marksLoadedStateRefreshing() {
+        val state = ReviewQuestionsWidgetState.Loaded(visibleIds = listOf("q1")).toRefreshingState()
+
+        assertEquals(
+            ReviewQuestionsWidgetState.Loaded(
+                visibleIds = listOf("q1"),
+                expandedItemId = null,
+                isRefreshing = true,
+            ),
+            state,
+        )
+    }
+
+    @Test
+    fun orderedReviewItems_preservesVisibleIdOrderAndSkipsMissingItems() {
+        val ordered = orderedReviewItems(
+            items = listOf(
+                troubleItem(id = "q1"),
+                troubleItem(id = "q2"),
+                troubleItem(id = "q3"),
+            ),
+            visibleIds = listOf("q3", "missing", "q1"),
+        )
+
+        assertEquals(listOf("q3", "q1"), ordered.map { it.id })
+    }
+
+    private fun troubleItem(id: String): TroubleQuestionItem = TroubleQuestionItem(
+        id = id,
+        topic = "Topic $id",
+        question = "Question $id",
+        answer = "Answer $id",
+        notePath = "Deck/$id.md",
+        noteFile = "$id.md",
+        createdAt = "created-$id",
+        updatedAt = "updated-$id",
+        timesMarked = 1,
+    )
+}

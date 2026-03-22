@@ -78,6 +78,7 @@ class RandomQaAppWidgetReceiver : AppWidgetProvider() {
                     notePathKey = currentState.note.notePathKey,
                     item = item,
                 )
+                ReviewQuestionsAppWidgetReceiver.requestWidgetRefresh(context)
                 rerenderWidget(context, appWidgetId, currentState)
             }
 
@@ -238,7 +239,10 @@ internal fun isPerWidgetAction(action: String?): Boolean =
         action == RandomQaAppWidgetReceiver.ACTION_TOGGLE_DIFFICULT ||
         action == RandomQaAppWidgetReceiver.ACTION_OPEN_NOTE ||
         action == RandomQaAppWidgetReceiver.ACTION_OPEN_TOPIC_CHATGPT ||
-        action == RandomQaAppWidgetReceiver.ACTION_OPEN_ROW_CHATGPT
+        action == RandomQaAppWidgetReceiver.ACTION_OPEN_ROW_CHATGPT ||
+        action == ReviewQuestionsAppWidgetReceiver.ACTION_REFRESH_REVIEW_QUESTIONS ||
+        action == ReviewQuestionsAppWidgetReceiver.ACTION_TOGGLE_REVIEW_ANSWER ||
+        action == ReviewQuestionsAppWidgetReceiver.ACTION_REMOVE_REVIEW_QUESTION
 
 internal fun shouldStartRefresh(state: WidgetNoteState?): Boolean =
     state is WidgetNoteState.Note && !state.isRefreshing

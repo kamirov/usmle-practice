@@ -3,6 +3,9 @@
     <string name="random_qa_widget_name">Random Q&amp;A Note</string>
     <string name="random_qa_widget_description">Shows a random parsed Obsidian Q&amp;A note from the linked vault.</string>
     <string name="random_qa_widget_loading">Loading a note from your Obsidian vault.</string>
+    <string name="review_questions_widget_name">Review Questions</string>
+    <string name="review_questions_widget_description">Shows trouble questions saved from your study widgets.</string>
+    <string name="review_questions_widget_loading">Loading review questions from your trouble-question store.</string>
     <string name="widget_open_note">Open note in Obsidian</string>
     <string name="widget_open_topic_chat">Ask ChatGPT about this topic</string>
     <string name="widget_open_row_chat">Ask ChatGPT about this question</string>
