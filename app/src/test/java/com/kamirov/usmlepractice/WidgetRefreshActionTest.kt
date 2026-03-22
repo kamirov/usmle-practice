@@ -56,6 +56,17 @@ class WidgetRefreshActionTest {
         )
     }
 
+    @Test
+    fun randomQaItemId_isStableForSameItem() {
+        val item = WidgetQaItem(
+            questionId = "question-1",
+            question = "What is the diagnosis?",
+            answer = "Acute pericarditis",
+        )
+
+        assertEquals(randomQaItemId(item), randomQaItemId(item.copy()))
+    }
+
     private fun testNoteState(isRefreshing: Boolean): WidgetNoteState.Note =
         WidgetNoteState.Note(
             note = buildParsedNoteViewData(

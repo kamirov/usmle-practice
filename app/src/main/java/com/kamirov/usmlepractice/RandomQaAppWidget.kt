@@ -59,17 +59,7 @@ class RandomQaAppWidgetReceiver : AppWidgetProvider() {
                     is WidgetNoteState.Message -> currentState
                 }
 
-                WidgetPreferencesStore.saveWidgetState(context, appWidgetId, nextState)
-                if (nextState is WidgetNoteState.Note) {
-                    RandomQaRemoteViewsRenderer.refreshQuestionList(
-                        context = context,
-                        appWidgetManager = AppWidgetManager.getInstance(context),
-                        appWidgetId = appWidgetId,
-                        state = nextState,
-                    )
-                } else {
-                    rerenderWidget(context, appWidgetId, nextState)
-                }
+                rerenderWidget(context, appWidgetId, nextState)
             }
 
             ACTION_TOGGLE_DIFFICULT -> {
@@ -89,13 +79,7 @@ class RandomQaAppWidgetReceiver : AppWidgetProvider() {
                     item = item,
                 )
                 ReviewQuestionsAppWidgetReceiver.requestWidgetRefresh(context)
-                WidgetPreferencesStore.saveWidgetState(context, appWidgetId, currentState)
-                RandomQaRemoteViewsRenderer.refreshQuestionList(
-                    context = context,
-                    appWidgetManager = AppWidgetManager.getInstance(context),
-                    appWidgetId = appWidgetId,
-                    state = currentState,
-                )
+                rerenderWidget(context, appWidgetId, currentState)
             }
 
             ACTION_OPEN_NOTE -> {
@@ -285,23 +269,6 @@ private object RandomQaRemoteViewsRenderer {
         }
 
         appWidgetManager.updateAppWidget(appWidgetId, views)
-        appWidgetManager.notifyAppWidgetViewDataChanged(appWidgetId, R.id.widget_question_list)
-    }
-
-    fun refreshQuestionList(
-        context: Context,
-        appWidgetManager: AppWidgetManager,
-        appWidgetId: Int,
-        state: WidgetNoteState.Note,
-    ) {
-        val views = RemoteViews(context.packageName, R.layout.random_qa_widget_note).apply {
-            setTextViewText(
-                R.id.widget_empty_text,
-                widgetListEmptyMessage(state.widgetQaItems, state.note.fallbackMessage),
-            )
-        }
-        appWidgetManager.partiallyUpdateAppWidget(appWidgetId, views)
-        appWidgetManager.notifyAppWidgetViewDataChanged(appWidgetId, R.id.widget_question_list)
     }
 
     private fun buildMessageViews(
@@ -337,7 +304,14 @@ private object RandomQaRemoteViewsRenderer {
                 ),
             )
         }
-        views.setRemoteAdapter(R.id.widget_question_list, randomQaCollectionIntent(context, appWidgetId))
+        views.setRemoteAdapter(
+            R.id.widget_question_list,
+            buildRandomQaCollectionItems(
+                context = context,
+                appWidgetId = appWidgetId,
+                state = state,
+            ),
+        )
         views.setPendingIntentTemplate(
             R.id.widget_question_list,
             widgetCollectionPendingIntentTemplate(context, RandomQaAppWidgetReceiver::class.java),

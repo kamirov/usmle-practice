@@ -76,6 +76,13 @@ class ReviewQuestionsWidgetTest {
     }
 
     @Test
+    fun reviewQuestionItemId_isStableForSameItem() {
+        val item = troubleItem(id = "q1")
+
+        assertEquals(reviewQuestionItemId(item), reviewQuestionItemId(item.copy()))
+    }
+
+    @Test
     fun selectReviewQuestionIds_returnsAllItemsWithoutCap() {
         val ids = selectReviewQuestionIds(
             items = listOf(

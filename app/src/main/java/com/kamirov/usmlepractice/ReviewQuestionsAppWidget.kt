@@ -54,10 +54,8 @@ class ReviewQuestionsAppWidgetReceiver : AppWidgetProvider() {
                 val nextState = currentState.copy(
                     expandedItemId = toggleExpandedReviewItemId(currentState.expandedItemId, visibleId)
                 )
-                ReviewQuestionsWidgetPreferencesStore.saveWidgetState(context, appWidgetId, nextState)
-                ReviewQuestionsRemoteViewsRenderer.refreshQuestionList(
+                rerenderReviewWidget(
                     context = context,
-                    appWidgetManager = AppWidgetManager.getInstance(context),
                     appWidgetId = appWidgetId,
                     state = nextState,
                 )
@@ -80,10 +78,8 @@ class ReviewQuestionsAppWidgetReceiver : AppWidgetProvider() {
                     expandedItemId = nextExpandedItemId,
                 )
 
-                ReviewQuestionsWidgetPreferencesStore.saveWidgetState(context, appWidgetId, nextState)
-                ReviewQuestionsRemoteViewsRenderer.refreshQuestionList(
+                rerenderReviewWidget(
                     context = context,
-                    appWidgetManager = AppWidgetManager.getInstance(context),
                     appWidgetId = appWidgetId,
                     state = nextState,
                 )
@@ -246,24 +242,6 @@ private object ReviewQuestionsRemoteViewsRenderer {
         }
 
         appWidgetManager.updateAppWidget(appWidgetId, views)
-        appWidgetManager.notifyAppWidgetViewDataChanged(appWidgetId, R.id.widget_question_list)
-    }
-
-    fun refreshQuestionList(
-        context: Context,
-        appWidgetManager: AppWidgetManager,
-        appWidgetId: Int,
-        state: ReviewQuestionsWidgetState.Loaded,
-    ) {
-        val allItems = when (val result = TroubleQuestionRepository(context).loadAll()) {
-            is TroubleQuestionLoadResult.Success -> result.items
-            is TroubleQuestionLoadResult.Error -> emptyList()
-        }
-        val views = RemoteViews(context.packageName, R.layout.review_questions_widget_note).apply {
-            setTextViewText(R.id.widget_empty_text, reviewListEmptyMessage(allItems, state.visibleIds))
-        }
-        appWidgetManager.partiallyUpdateAppWidget(appWidgetId, views)
-        appWidgetManager.notifyAppWidgetViewDataChanged(appWidgetId, R.id.widget_question_list)
     }
 
     private fun buildMessageViews(
@@ -313,7 +291,15 @@ private object ReviewQuestionsRemoteViewsRenderer {
                 ),
             )
         }
-        views.setRemoteAdapter(R.id.widget_question_list, reviewQuestionsCollectionIntent(context, appWidgetId))
+        views.setRemoteAdapter(
+            R.id.widget_question_list,
+            buildReviewQuestionsCollectionItems(
+                context = context,
+                appWidgetId = appWidgetId,
+                state = state,
+                items = orderedReviewItems(allItems, state.visibleIds),
+            ),
+        )
         views.setPendingIntentTemplate(
             R.id.widget_question_list,
             widgetCollectionPendingIntentTemplate(context, ReviewQuestionsAppWidgetReceiver::class.java),

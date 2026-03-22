@@ -49,15 +49,6 @@
                 android:resource="@xml/review_questions_widget_info" />
         </receiver>
 
-        <service
-            android:name=".RandomQaWidgetRemoteViewsService"
-            android:exported="false"
-            android:permission="android.permission.BIND_REMOTEVIEWS" />
-
-        <service
-            android:name=".ReviewQuestionsWidgetRemoteViewsService"
-            android:exported="false"
-            android:permission="android.permission.BIND_REMOTEVIEWS" />
     </application>
 
 </manifest>
