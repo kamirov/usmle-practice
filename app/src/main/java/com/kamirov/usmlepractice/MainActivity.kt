@@ -1,12 +1,9 @@
 package com.kamirov.usmlepractice
 
-import android.net.Uri
 import android.os.Bundle
 import androidx.activity.ComponentActivity
-import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.activity.result.contract.ActivityResultContracts.OpenDocumentTree
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -14,13 +11,11 @@ import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
-import androidx.compose.material3.Card
 import androidx.compose.material3.Button
+import androidx.compose.material3.Card
 import androidx.compose.material3.CircularProgressIndicator
-import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
@@ -30,17 +25,16 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
-import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.kamirov.usmlepractice.ui.theme.USMLEPracticeTheme
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import kotlin.random.Random
 
 class MainActivity : ComponentActivity() {
@@ -49,123 +43,69 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             USMLEPracticeTheme {
-                ObsidianVaultApp()
+                TroubleQuestionApp()
             }
         }
     }
 }
 
 @Composable
-private fun ObsidianVaultApp() {
-    val appContext = LocalContext.current.applicationContext
-    val repository = remember(appContext) { ObsidianVaultRepository(context = appContext) }
-    var screenState by remember { mutableStateOf<VaultScreenState>(VaultScreenState.Loading) }
-    var selectedNote by remember { mutableStateOf<ParsedNoteViewData?>(null) }
+private fun TroubleQuestionApp() {
+    val appContext = androidx.compose.ui.platform.LocalContext.current.applicationContext
+    val repository = remember(appContext) { TroubleQuestionRepository(appContext) }
     val scope = rememberCoroutineScope()
+    var screenState by remember { mutableStateOf<TroubleQuestionScreenState>(TroubleQuestionScreenState.Loading) }
 
-    fun reloadNotes() {
+    fun reload() {
         scope.launch {
-            screenState = VaultScreenState.Loading
-            selectedNote = null
-            screenState = repository.loadRootNotes()
-        }
-    }
-
-    val treePicker = rememberLauncherForActivityResult(OpenDocumentTree()) { uri: Uri? ->
-        if (uri == null) {
-            if (!repository.hasLinkedVault()) {
-                screenState = VaultScreenState.Unlinked
+            screenState = TroubleQuestionScreenState.Loading
+            screenState = withContext(Dispatchers.IO) {
+                repository.shuffledItems(Random.Default).toScreenState()
             }
-            return@rememberLauncherForActivityResult
-        }
-
-        scope.launch {
-            screenState = VaultScreenState.Loading
-            selectedNote = null
-            screenState = repository.linkVault(uri)
         }
     }
 
     LaunchedEffect(Unit) {
-        screenState = repository.loadRootNotes()
+        reload()
     }
 
     Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-        VaultScreen(
+        TroubleQuestionScreen(
             state = screenState,
-            selectedNote = selectedNote,
             contentPadding = innerPadding,
-            onLinkVault = { treePicker.launch(null) },
-            onChangeVault = {
-                selectedNote = null
-                treePicker.launch(null)
-            },
-            onRetry = ::reloadNotes,
-            onPickRandomNote = { notes ->
-                if (notes.isNotEmpty()) {
-                    scope.launch {
-                        when (val result = repository.loadParsedNoteViewData(notes.random(Random.Default))) {
-                            is ParsedNoteLoadResult.Success -> {
-                                selectedNote = result.note
-                            }
-
-                            is ParsedNoteLoadResult.Error -> {
-                                selectedNote = ParsedNoteViewData(
-                                    noteName = "Could not open note",
-                                    qaItems = emptyList(),
-                                    fallbackMessage = result.message,
-                                    rawContent = result.message,
-                                )
-                            }
-                        }
-                    }
-                }
-            },
-            onShowList = { selectedNote = null },
+            onRefresh = ::reload,
         )
     }
 }
 
 @Composable
-private fun VaultScreen(
-    state: VaultScreenState,
-    selectedNote: ParsedNoteViewData?,
+private fun TroubleQuestionScreen(
+    state: TroubleQuestionScreenState,
     contentPadding: PaddingValues,
-    onLinkVault: () -> Unit,
-    onChangeVault: () -> Unit,
-    onRetry: () -> Unit,
-    onPickRandomNote: (List<VaultNote>) -> Unit,
-    onShowList: () -> Unit,
+    onRefresh: () -> Unit,
 ) {
     when (state) {
-        VaultScreenState.Loading -> LoadingState(contentPadding)
-        VaultScreenState.Unlinked -> MessageState(
-            title = "Link your Obsidian vault",
-            message = "Pick the same vault folder Obsidian uses on this Android device. The app can pick a random non-empty root-level Markdown note and show its contents.",
-            contentPadding = contentPadding,
-            primaryActionLabel = "Link Obsidian vault",
-            onPrimaryAction = onLinkVault,
-        )
-
-        is VaultScreenState.Error -> MessageState(
-            title = "Could not read vault",
+        TroubleQuestionScreenState.Loading -> LoadingState(contentPadding)
+        is TroubleQuestionScreenState.Empty -> MessageState(
+            title = state.title,
             message = state.message,
             contentPadding = contentPadding,
-            primaryActionLabel = if (state.hasLinkedVault) "Retry" else "Link Obsidian vault",
-            onPrimaryAction = if (state.hasLinkedVault) onRetry else onLinkVault,
-            secondaryActionLabel = if (state.hasLinkedVault) "Change vault" else null,
-            onSecondaryAction = if (state.hasLinkedVault) onChangeVault else null,
+            primaryActionLabel = "Refresh",
+            onPrimaryAction = onRefresh,
         )
 
-        is VaultScreenState.Loaded -> LoadedState(
-            notes = state.notes,
-            selectedNote = selectedNote,
-            emptyMessage = state.emptyMessage,
+        is TroubleQuestionScreenState.Error -> MessageState(
+            title = "Could not load trouble questions",
+            message = state.message,
             contentPadding = contentPadding,
-            onChangeVault = onChangeVault,
-            onRefresh = onRetry,
-            onPickRandomNote = onPickRandomNote,
-            onShowList = onShowList,
+            primaryActionLabel = "Refresh",
+            onPrimaryAction = onRefresh,
+        )
+
+        is TroubleQuestionScreenState.Loaded -> LoadedState(
+            items = state.items,
+            contentPadding = contentPadding,
+            onRefresh = onRefresh,
         )
     }
 }
@@ -189,8 +129,6 @@ private fun MessageState(
     contentPadding: PaddingValues,
     primaryActionLabel: String,
     onPrimaryAction: () -> Unit,
-    secondaryActionLabel: String? = null,
-    onSecondaryAction: (() -> Unit)? = null,
 ) {
     Column(
         modifier = Modifier
@@ -215,27 +153,14 @@ private fun MessageState(
         ) {
             Text(primaryActionLabel)
         }
-        if (secondaryActionLabel != null && onSecondaryAction != null) {
-            Button(
-                onClick = onSecondaryAction,
-                modifier = Modifier.padding(top = 12.dp),
-            ) {
-                Text(secondaryActionLabel)
-            }
-        }
     }
 }
 
 @Composable
 private fun LoadedState(
-    notes: List<VaultNote>,
-    selectedNote: ParsedNoteViewData?,
-    emptyMessage: String?,
+    items: List<TroubleQuestionItem>,
     contentPadding: PaddingValues,
-    onChangeVault: () -> Unit,
     onRefresh: () -> Unit,
-    onPickRandomNote: (List<VaultNote>) -> Unit,
-    onShowList: () -> Unit,
 ) {
     Column(
         modifier = Modifier
@@ -244,127 +169,52 @@ private fun LoadedState(
             .padding(horizontal = 20.dp, vertical = 16.dp),
     ) {
         Text(
-            text = "Obsidian root notes",
+            text = "Trouble questions",
             style = MaterialTheme.typography.headlineSmall,
             fontWeight = FontWeight.SemiBold,
         )
         Text(
-            text = selectedNote?.noteName ?: "Pick a random non-empty Markdown note from the vault root.",
+            text = "Questions you checked in the widget across your Obsidian notes.",
             style = MaterialTheme.typography.bodyMedium,
             modifier = Modifier.padding(top = 6.dp),
         )
-        Column(
+        Button(
+            onClick = onRefresh,
             modifier = Modifier.padding(top = 16.dp),
+        ) {
+            Text("Refresh")
+        }
+
+        LazyColumn(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(top = 20.dp),
             verticalArrangement = Arrangement.spacedBy(12.dp),
         ) {
-            Button(
-                onClick = { onPickRandomNote(notes) },
-                enabled = notes.isNotEmpty(),
-            ) {
-                Text("Pick random note")
-            }
-            Button(onClick = onRefresh) {
-                Text("Refresh")
-            }
-            if (selectedNote != null) {
-                Button(onClick = onShowList) {
-                    Text("Show note list")
-                }
-            }
-            Button(onClick = onChangeVault) {
-                Text("Change vault")
-            }
-        }
-
-        if (emptyMessage != null) {
-            Text(
-                text = emptyMessage,
-                style = MaterialTheme.typography.bodyLarge,
-                modifier = Modifier.padding(top = 24.dp),
-            )
-        } else if (selectedNote != null) {
-            SelectedNoteView(
-                selectedNote = selectedNote,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(top = 20.dp),
-            )
-        } else {
-            LazyColumn(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(top = 20.dp),
-                verticalArrangement = Arrangement.spacedBy(8.dp),
-            ) {
-                items(notes, key = { it.uri.toString() }) { note ->
-                    Column {
-                        Text(
-                            text = note.name,
-                            style = MaterialTheme.typography.bodyLarge,
-                        )
-                        HorizontalDivider(modifier = Modifier.padding(top = 8.dp))
-                    }
-                }
-            }
-        }
-    }
-}
-
-@Composable
-private fun SelectedNoteView(
-    selectedNote: ParsedNoteViewData,
-    modifier: Modifier = Modifier,
-) {
-    if (!selectedNote.hasStructuredQa) {
-        Column(modifier = modifier) {
-            Text(
-                text = selectedNote.fallbackMessage ?: "Could not parse ## Questions and ## Answers into a Q/A view.",
-                style = MaterialTheme.typography.bodyMedium,
-            )
-            Text(
-                text = selectedNote.rawContent,
-                style = MaterialTheme.typography.bodyLarge,
-                modifier = Modifier.padding(top = 12.dp),
-            )
-        }
-        return
-    }
-
-    var expandedIndex by rememberSaveable(selectedNote.noteName) { mutableStateOf<Int?>(null) }
-
-    LazyColumn(
-        modifier = modifier,
-        verticalArrangement = Arrangement.spacedBy(12.dp),
-    ) {
-        items(
-            items = selectedNote.accordionRows(expandedIndex),
-            key = { "${it.index}-${it.item.question}" },
-        ) { row ->
-            Card(
-                modifier = Modifier.fillMaxWidth(),
-            ) {
-                Column(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .clickable {
-                            expandedIndex = toggleExpandedIndex(expandedIndex, row.index)
+            items(items, key = { it.id }) { item ->
+                Card(modifier = Modifier.fillMaxWidth()) {
+                    Column(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(16.dp),
+                    ) {
+                        if (item.topic.isNotBlank()) {
+                            Text(
+                                text = item.topic,
+                                style = MaterialTheme.typography.labelLarge,
+                                fontWeight = FontWeight.SemiBold,
+                            )
                         }
-                        .padding(16.dp),
-                ) {
-                    Text(
-                        text = "${row.index + 1}. ${row.item.question}",
-                        style = MaterialTheme.typography.bodyLarge,
-                        fontWeight = FontWeight.SemiBold,
-                        maxLines = if (row.isExpanded) Int.MAX_VALUE else 2,
-                        overflow = TextOverflow.Ellipsis,
-                    )
-
-                    if (row.isExpanded) {
-                        HorizontalDivider(modifier = Modifier.padding(top = 12.dp))
                         Text(
-                            text = row.item.answer.ifBlank { "No answer provided." },
+                            text = item.question,
                             style = MaterialTheme.typography.bodyLarge,
-                            modifier = Modifier.padding(top = 12.dp),
+                            fontWeight = FontWeight.SemiBold,
+                            modifier = Modifier.padding(top = 8.dp),
+                        )
+                        Text(
+                            text = item.answer.ifBlank { "No answer provided." },
+                            style = MaterialTheme.typography.bodyLarge,
+                            modifier = Modifier.padding(top = 10.dp),
                         )
                     }
                 }
@@ -372,20 +222,49 @@ private fun SelectedNoteView(
         }
     }
 }
+
+internal sealed interface TroubleQuestionScreenState {
+    data object Loading : TroubleQuestionScreenState
+    data class Loaded(
+        val items: List<TroubleQuestionItem>,
+    ) : TroubleQuestionScreenState
+
+    data class Empty(
+        val title: String,
+        val message: String,
+    ) : TroubleQuestionScreenState
+
+    data class Error(
+        val message: String,
+    ) : TroubleQuestionScreenState
+}
+
+internal fun TroubleQuestionLoadResult.toScreenState(): TroubleQuestionScreenState =
+    when (this) {
+        is TroubleQuestionLoadResult.Error -> TroubleQuestionScreenState.Error(message)
+        is TroubleQuestionLoadResult.Success -> {
+            if (items.isEmpty()) {
+                TroubleQuestionScreenState.Empty(
+                    title = "No trouble questions yet",
+                    message = "Check a question in the widget and it will appear here.",
+                )
+            } else {
+                TroubleQuestionScreenState.Loaded(items)
+            }
+        }
+    }
 
 @Preview(showBackground = true)
 @Composable
-private fun UnlinkedPreview() {
+private fun EmptyPreview() {
     USMLEPracticeTheme {
-        VaultScreen(
-            state = VaultScreenState.Unlinked,
-            selectedNote = null,
+        TroubleQuestionScreen(
+            state = TroubleQuestionScreenState.Empty(
+                title = "No trouble questions yet",
+                message = "Check a question in the widget and it will appear here.",
+            ),
             contentPadding = PaddingValues(),
-            onLinkVault = {},
-            onChangeVault = {},
-            onRetry = {},
-            onPickRandomNote = {},
-            onShowList = {},
+            onRefresh = {},
         )
     }
 }
@@ -394,21 +273,24 @@ private fun UnlinkedPreview() {
 @Composable
 private fun LoadedPreview() {
     USMLEPracticeTheme {
-        VaultScreen(
-            state = VaultScreenState.Loaded(
-                notes = listOf(
-                    VaultNote("Cardiology.md", Uri.parse("content://preview/cardiology")),
-                    VaultNote("Derm Review.md", Uri.parse("content://preview/derm")),
-                    VaultNote("Neuro.md", Uri.parse("content://preview/neuro")),
+        TroubleQuestionScreen(
+            state = TroubleQuestionScreenState.Loaded(
+                items = listOf(
+                    TroubleQuestionItem(
+                        id = "1",
+                        topic = "Cardiology",
+                        question = "Why does troponin stay elevated longer than CK-MB?",
+                        answer = "Troponin remains elevated for days after myocardial injury.",
+                        notePath = "Medicine/Cardiology.md",
+                        noteFile = "Cardiology.md",
+                        createdAt = "2026-03-21T10:00:00Z",
+                        updatedAt = "2026-03-21T10:00:00Z",
+                        timesMarked = 1,
+                    )
                 ),
             ),
-            selectedNote = null,
             contentPadding = PaddingValues(),
-            onLinkVault = {},
-            onChangeVault = {},
-            onRetry = {},
-            onPickRandomNote = {},
-            onShowList = {},
+            onRefresh = {},
         )
     }
 }

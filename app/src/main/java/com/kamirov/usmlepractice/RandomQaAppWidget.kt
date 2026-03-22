@@ -73,8 +73,7 @@ class RandomQaAppWidgetReceiver : AppWidgetProvider() {
                     ?: return
                 val item = currentState.widgetQaItems.getOrNull(tappedIndex) ?: return
 
-                WidgetDifficultQuestionsStore.toggleQuestion(
-                    context = context,
+                TroubleQuestionRepository(context).toggle(
                     noteTitle = currentState.note.noteName,
                     notePathKey = currentState.note.notePathKey,
                     item = item,
@@ -284,7 +283,7 @@ private object RandomQaRemoteViewsRenderer {
         state: WidgetNoteState.Note,
     ): RemoteViews {
         val views = RemoteViews(context.packageName, R.layout.random_qa_widget_note)
-        val difficultIds = WidgetDifficultQuestionsStore.loadQuestionIds(context)
+        val difficultIds = TroubleQuestionRepository(context).loadIds()
 
         views.setTextViewText(R.id.widget_note_title, noteTitleForDisplay(state))
         views.setViewVisibility(
@@ -482,55 +481,6 @@ private object WidgetPreferencesStore {
     }
 }
 
-private object WidgetDifficultQuestionsStore {
-    private const val PREFS_NAME = "random_qa_widget_difficult"
-    private const val KEY_IDS = "ids"
-    private const val KEY_PREFIX_NOTE_TITLE = "note_title_"
-    private const val KEY_PREFIX_NOTE_PATH = "note_path_"
-    private const val KEY_PREFIX_QUESTION = "question_"
-    private const val KEY_PREFIX_ANSWER = "answer_"
-
-    fun loadQuestionIds(context: Context): Set<String> =
-        context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
-            .getStringSet(KEY_IDS, emptySet())
-            ?.toSet()
-            .orEmpty()
-
-    fun toggleQuestion(
-        context: Context,
-        noteTitle: String,
-        notePathKey: String,
-        item: WidgetQaItem,
-    ): Boolean {
-        val prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
-        val currentIds = prefs.getStringSet(KEY_IDS, emptySet())?.toMutableSet() ?: mutableSetOf()
-        val nextIsDifficult = if (item.questionId in currentIds) {
-            currentIds.remove(item.questionId)
-            false
-        } else {
-            currentIds.add(item.questionId)
-            true
-        }
-
-        prefs.edit().apply {
-            putStringSet(KEY_IDS, currentIds)
-            if (nextIsDifficult) {
-                putString(KEY_PREFIX_NOTE_TITLE + item.questionId, noteTitle)
-                putString(KEY_PREFIX_NOTE_PATH + item.questionId, notePathKey)
-                putString(KEY_PREFIX_QUESTION + item.questionId, item.question)
-                putString(KEY_PREFIX_ANSWER + item.questionId, item.answer)
-            } else {
-                remove(KEY_PREFIX_NOTE_TITLE + item.questionId)
-                remove(KEY_PREFIX_NOTE_PATH + item.questionId)
-                remove(KEY_PREFIX_QUESTION + item.questionId)
-                remove(KEY_PREFIX_ANSWER + item.questionId)
-            }
-        }.apply()
-
-        return nextIsDifficult
-    }
-}
-
 private object WidgetLaunchers {
     private const val CHATGPT_PACKAGE = "com.openai.chatgpt"
     private const val OBSIDIAN_PACKAGE = "md.obsidian"
@@ -609,8 +559,7 @@ internal fun buildObsidianOpenUri(
         .build()
 }
 
-private fun ParsedNoteViewData.displayTitle(): String =
-    noteName.replace(Regex("\\.md$", RegexOption.IGNORE_CASE), "")
+private fun ParsedNoteViewData.displayTitle(): String = noteName.displayTopicTitle()
 
 private const val MODE_MESSAGE = "message"
 private const val MODE_NOTE = "note"
