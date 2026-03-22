@@ -1,5 +1,6 @@
 package com.kamirov.usmlepractice
 
+import android.app.AlarmManager
 import android.app.PendingIntent
 import android.appwidget.AppWidgetManager
 import android.appwidget.AppWidgetProvider
@@ -8,6 +9,7 @@ import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
+import android.os.SystemClock
 import android.view.View
 import android.widget.RemoteViews
 
@@ -18,33 +20,40 @@ class RandomQaAppWidgetReceiver : AppWidgetProvider() {
         appWidgetIds: IntArray,
     ) {
         super.onUpdate(context, appWidgetManager, appWidgetIds)
-        val repository = ObsidianVaultRepository(context)
+        refreshWidgetIds(
+            context = context,
+            appWidgetManager = appWidgetManager,
+            appWidgetIds = appWidgetIds,
+        )
+        WidgetRefreshScheduler.ensureScheduled(context)
+    }
 
-        appWidgetIds.forEach { appWidgetId ->
-            val state = repository.loadRandomWidgetStateSync()
-            WidgetPreferencesStore.saveWidgetState(context, appWidgetId, state)
-            RandomQaRemoteViewsRenderer.render(context, appWidgetManager, appWidgetId, state)
-        }
+    override fun onEnabled(context: Context) {
+        super.onEnabled(context)
+        WidgetRefreshScheduler.ensureScheduled(context)
     }
 
     override fun onDeleted(context: Context, appWidgetIds: IntArray) {
         super.onDeleted(context, appWidgetIds)
         appWidgetIds.forEach { WidgetPreferencesStore.clearWidgetState(context, it) }
+        WidgetRefreshScheduler.updateScheduling(context)
+    }
+
+    override fun onDisabled(context: Context) {
+        super.onDisabled(context)
+        WidgetRefreshScheduler.cancel(context)
     }
 
     override fun onReceive(context: Context, intent: Intent) {
         super.onReceive(context, intent)
 
-        val appWidgetId = intent.getIntExtra(
-            AppWidgetManager.EXTRA_APPWIDGET_ID,
-            AppWidgetManager.INVALID_APPWIDGET_ID,
-        )
-        if (appWidgetId == AppWidgetManager.INVALID_APPWIDGET_ID) {
-            return
-        }
-
         when (intent.action) {
+            ACTION_SCHEDULED_REFRESH -> {
+                WidgetRefreshScheduler.handleScheduledRefresh(context)
+            }
+
             ACTION_TOGGLE_QUESTION -> {
+                val appWidgetId = requireAppWidgetId(intent) ?: return
                 val tappedIndex = intent.getIntExtra(EXTRA_TAPPED_INDEX, -1)
                 if (tappedIndex < 0) {
                     return
@@ -63,6 +72,7 @@ class RandomQaAppWidgetReceiver : AppWidgetProvider() {
             }
 
             ACTION_TOGGLE_DIFFICULT -> {
+                val appWidgetId = requireAppWidgetId(intent) ?: return
                 val tappedIndex = intent.getIntExtra(EXTRA_TAPPED_INDEX, -1)
                 if (tappedIndex < 0) {
                     return
@@ -82,6 +92,7 @@ class RandomQaAppWidgetReceiver : AppWidgetProvider() {
             }
 
             ACTION_OPEN_NOTE -> {
+                val appWidgetId = requireAppWidgetId(intent) ?: return
                 val currentState = WidgetPreferencesStore.loadWidgetState(context, appWidgetId) as? WidgetNoteState.Note
                     ?: return
                 launchIntent(
@@ -96,6 +107,7 @@ class RandomQaAppWidgetReceiver : AppWidgetProvider() {
             }
 
             ACTION_OPEN_TOPIC_CHATGPT -> {
+                val appWidgetId = requireAppWidgetId(intent) ?: return
                 val currentState = WidgetPreferencesStore.loadWidgetState(context, appWidgetId) as? WidgetNoteState.Note
                     ?: return
                 launchIntent(
@@ -108,6 +120,7 @@ class RandomQaAppWidgetReceiver : AppWidgetProvider() {
             }
 
             ACTION_OPEN_ROW_CHATGPT -> {
+                val appWidgetId = requireAppWidgetId(intent) ?: return
                 val tappedIndex = intent.getIntExtra(EXTRA_TAPPED_INDEX, -1)
                 if (tappedIndex < 0) {
                     return
@@ -129,6 +142,7 @@ class RandomQaAppWidgetReceiver : AppWidgetProvider() {
     }
 
     companion object {
+        const val ACTION_SCHEDULED_REFRESH = "com.kamirov.usmlepractice.action.SCHEDULED_REFRESH"
         const val ACTION_TOGGLE_QUESTION = "com.kamirov.usmlepractice.action.TOGGLE_QUESTION"
         const val ACTION_TOGGLE_DIFFICULT = "com.kamirov.usmlepractice.action.TOGGLE_DIFFICULT"
         const val ACTION_OPEN_NOTE = "com.kamirov.usmlepractice.action.OPEN_NOTE"
@@ -141,9 +155,29 @@ class RandomQaAppWidgetReceiver : AppWidgetProvider() {
             val componentName = ComponentName(context, RandomQaAppWidgetReceiver::class.java)
             val appWidgetIds = appWidgetManager.getAppWidgetIds(componentName)
             if (appWidgetIds.isNotEmpty()) {
-                RandomQaAppWidgetReceiver().onUpdate(context, appWidgetManager, appWidgetIds)
+                refreshWidgetIds(context, appWidgetManager, appWidgetIds)
             }
         }
+    }
+}
+
+private fun requireAppWidgetId(intent: Intent): Int? =
+    intent.getIntExtra(
+        AppWidgetManager.EXTRA_APPWIDGET_ID,
+        AppWidgetManager.INVALID_APPWIDGET_ID,
+    ).takeIf { it != AppWidgetManager.INVALID_APPWIDGET_ID }
+
+private fun refreshWidgetIds(
+    context: Context,
+    appWidgetManager: AppWidgetManager,
+    appWidgetIds: IntArray,
+) {
+    val repository = ObsidianVaultRepository(context)
+
+    appWidgetIds.forEach { appWidgetId ->
+        val state = repository.loadRandomWidgetStateSync()
+        WidgetPreferencesStore.saveWidgetState(context, appWidgetId, state)
+        RandomQaRemoteViewsRenderer.render(context, appWidgetManager, appWidgetId, state)
     }
 }
 
@@ -163,6 +197,89 @@ private fun launchIntent(
 ) {
     intent ?: return
     context.startActivity(intent)
+}
+
+private object WidgetRefreshScheduler {
+    private const val REFRESH_INTERVAL_MILLIS = 60_000L
+    private const val REFRESH_WINDOW_MILLIS = 15_000L
+
+    fun ensureScheduled(context: Context) {
+        if (!hasAnyWidgets(context)) {
+            cancel(context)
+            return
+        }
+
+        scheduleNextRefresh(
+            context = context,
+            triggerAtElapsedRealtime = nextRefreshElapsedRealtime(SystemClock.elapsedRealtime()),
+        )
+    }
+
+    fun updateScheduling(context: Context) {
+        if (hasAnyWidgets(context)) {
+            ensureScheduled(context)
+        } else {
+            cancel(context)
+        }
+    }
+
+    fun handleScheduledRefresh(context: Context) {
+        if (!hasAnyWidgets(context)) {
+            cancel(context)
+            return
+        }
+
+        RandomQaAppWidgetReceiver.requestWidgetRefresh(context)
+        scheduleNextRefresh(
+            context = context,
+            triggerAtElapsedRealtime = nextRefreshElapsedRealtime(SystemClock.elapsedRealtime()),
+        )
+    }
+
+    fun cancel(context: Context) {
+        val alarmManager = context.getSystemService(AlarmManager::class.java) ?: return
+        alarmManager.cancel(refreshPendingIntent(context))
+    }
+
+    private fun scheduleNextRefresh(
+        context: Context,
+        triggerAtElapsedRealtime: Long,
+    ) {
+        val alarmManager = context.getSystemService(AlarmManager::class.java) ?: return
+        alarmManager.setWindow(
+            AlarmManager.ELAPSED_REALTIME,
+            triggerAtElapsedRealtime,
+            REFRESH_WINDOW_MILLIS,
+            refreshPendingIntent(context),
+        )
+    }
+
+    private fun refreshPendingIntent(context: Context): PendingIntent {
+        val intent = Intent(context, RandomQaAppWidgetReceiver::class.java).apply {
+            action = RandomQaAppWidgetReceiver.ACTION_SCHEDULED_REFRESH
+        }
+        return PendingIntent.getBroadcast(
+            context,
+            REQUEST_SCHEDULED_REFRESH,
+            intent,
+            PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE,
+        )
+    }
+}
+
+internal fun nextRefreshElapsedRealtime(
+    nowElapsedRealtime: Long,
+    refreshIntervalMillis: Long = 60_000L,
+): Long = nowElapsedRealtime + refreshIntervalMillis
+
+internal fun hasAnyWidgets(
+    appWidgetIds: IntArray,
+): Boolean = appWidgetIds.isNotEmpty()
+
+private fun hasAnyWidgets(context: Context): Boolean {
+    val appWidgetManager = AppWidgetManager.getInstance(context)
+    val componentName = ComponentName(context, RandomQaAppWidgetReceiver::class.java)
+    return hasAnyWidgets(appWidgetManager.getAppWidgetIds(componentName))
 }
 
 private object RandomQaRemoteViewsRenderer {
@@ -501,5 +618,6 @@ private fun ParsedNoteViewData.displayTitle(): String =
 
 private const val MODE_MESSAGE = "message"
 private const val MODE_NOTE = "note"
+private const val REQUEST_SCHEDULED_REFRESH = 30_000
 private const val REQUEST_TOGGLE_QUESTION = 10_000
 private const val REQUEST_TOGGLE_DIFFICULT = 20_000
