@@ -45,17 +45,16 @@
             android:textColor="@android:color/white"
             android:textSize="14sp" />
 
-        <TextView
+        <ImageView
             android:id="@+id/widget_row_chatgpt_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_marginStart="8dp"
             android:background="@drawable/widget_action_button_bg"
-            android:fontFamily="sans-serif-medium"
-            android:paddingHorizontal="8dp"
-            android:paddingVertical="5dp"
-            android:textColor="@android:color/white"
-            android:textSize="11sp" />
+            android:contentDescription="@string/widget_open_row_chat"
+            android:padding="7dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/widget_chatgpt_logo" />
 
         <TextView
             android:id="@+id/widget_chevron"

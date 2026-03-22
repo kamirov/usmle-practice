@@ -23,31 +23,27 @@
             android:textColor="@android:color/white"
             android:textSize="18sp" />
 
-        <TextView
+        <ImageView
             android:id="@+id/widget_open_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_marginStart="8dp"
             android:background="@drawable/widget_action_button_bg"
-            android:fontFamily="sans-serif-medium"
-            android:paddingHorizontal="10dp"
-            android:paddingVertical="6dp"
-            android:text="Open"
-            android:textColor="@android:color/white"
-            android:textSize="12sp" />
+            android:contentDescription="@string/widget_open_note"
+            android:padding="7dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/widget_obsidian_logo" />
 
-        <TextView
+        <ImageView
             android:id="@+id/widget_topic_chatgpt_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_marginStart="8dp"
             android:background="@drawable/widget_action_button_bg"
-            android:fontFamily="sans-serif-medium"
-            android:paddingHorizontal="10dp"
-            android:paddingVertical="6dp"
-            android:text="Chat"
-            android:textColor="@android:color/white"
-            android:textSize="12sp" />
+            android:contentDescription="@string/widget_open_topic_chat"
+            android:padding="7dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/widget_chatgpt_logo" />
     </LinearLayout>
 
     <LinearLayout

@@ -234,7 +234,6 @@ private object RandomQaRemoteViewsRenderer {
                 "setBackgroundResource",
                 if (isDifficult) R.drawable.widget_checkbox_checked_bg else R.drawable.widget_checkbox_unchecked_bg,
             )
-            rowView.setTextViewText(R.id.widget_row_chatgpt_button, "Ask")
             rowView.setTextViewText(R.id.widget_chevron, if (isExpanded) "▾" else "▸")
 
             if (isExpanded) {
