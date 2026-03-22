@@ -79,5 +79,18 @@
             android:lineSpacingExtra="2dp"
             android:textColor="#E6FFFFFF"
             android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/widget_remove_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/widget_action_button_bg"
+            android:fontFamily="sans-serif-medium"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="8dp"
+            android:text="@string/widget_remove_review_question"
+            android:textColor="@android:color/white"
+            android:textSize="13sp" />
     </LinearLayout>
 </LinearLayout>

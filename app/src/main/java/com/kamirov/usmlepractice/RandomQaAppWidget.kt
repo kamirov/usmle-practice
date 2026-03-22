@@ -269,6 +269,7 @@ private object RandomQaRemoteViewsRenderer {
         }
 
         appWidgetManager.updateAppWidget(appWidgetId, views)
+        appWidgetManager.notifyAppWidgetViewDataChanged(appWidgetId, R.id.widget_question_list)
     }
 
     private fun buildMessageViews(
@@ -287,8 +288,6 @@ private object RandomQaRemoteViewsRenderer {
         state: WidgetNoteState.Note,
     ): RemoteViews {
         val views = RemoteViews(context.packageName, R.layout.random_qa_widget_note)
-        val difficultIds = TroubleQuestionRepository(context).loadIds()
-
         views.setTextViewText(R.id.widget_note_title, noteTitleForDisplay(state))
         views.setViewVisibility(
             R.id.widget_loading_overlay,
@@ -306,58 +305,16 @@ private object RandomQaRemoteViewsRenderer {
                 ),
             )
         }
-        views.removeAllViews(R.id.widget_question_container)
-
-        state.widgetQaItems.forEachIndexed { index, item ->
-            val rowView = RemoteViews(context.packageName, R.layout.random_qa_widget_question_row)
-            val isExpanded = state.expandedIndex == index
-            val isDifficult = item.questionId in difficultIds
-
-            rowView.setTextViewText(R.id.widget_question_index, "${index + 1}.")
-            rowView.setTextViewText(R.id.widget_question_text, formatWidgetMarkdown(item.question))
-            rowView.setTextViewText(R.id.widget_checkbox, if (isDifficult) "✓" else "")
-            rowView.setInt(
-                R.id.widget_checkbox,
-                "setBackgroundResource",
-                if (isDifficult) R.drawable.widget_checkbox_checked_bg else R.drawable.widget_checkbox_unchecked_bg,
-            )
-            rowView.setTextViewText(R.id.widget_chevron, if (isExpanded) "▾" else "▸")
-
-            if (isExpanded) {
-                rowView.setViewVisibility(R.id.widget_answer_container, View.VISIBLE)
-                rowView.setTextViewText(
-                    R.id.widget_answer_text,
-                    formatWidgetMarkdown(item.answer.ifBlank { "No answer provided." }),
-                )
-            } else {
-                rowView.setViewVisibility(R.id.widget_answer_container, View.GONE)
-            }
-
-            if (!state.isRefreshing) {
-                rowView.setOnClickPendingIntent(
-                    R.id.widget_question_row,
-                    actionPendingIntent(
-                        context = context,
-                        appWidgetId = appWidgetId,
-                        action = RandomQaAppWidgetReceiver.ACTION_TOGGLE_QUESTION,
-                        rowIndex = index,
-                        requestCodeOffset = REQUEST_TOGGLE_QUESTION,
-                    ),
-                )
-                rowView.setOnClickPendingIntent(
-                    R.id.widget_checkbox,
-                    actionPendingIntent(
-                        context = context,
-                        appWidgetId = appWidgetId,
-                        action = RandomQaAppWidgetReceiver.ACTION_TOGGLE_DIFFICULT,
-                        rowIndex = index,
-                        requestCodeOffset = REQUEST_TOGGLE_DIFFICULT,
-                    ),
-                )
-            }
-
-            views.addView(R.id.widget_question_container, rowView)
-        }
+        views.setRemoteAdapter(R.id.widget_question_list, randomQaCollectionIntent(context, appWidgetId))
+        views.setPendingIntentTemplate(
+            R.id.widget_question_list,
+            widgetCollectionPendingIntentTemplate(context, RandomQaAppWidgetReceiver::class.java),
+        )
+        views.setEmptyView(R.id.widget_question_list, R.id.widget_empty_text)
+        views.setTextViewText(
+            R.id.widget_empty_text,
+            widgetListEmptyMessage(state.widgetQaItems, state.note.fallbackMessage),
+        )
 
         return views
     }
@@ -384,7 +341,7 @@ private object RandomQaRemoteViewsRenderer {
     }
 }
 
-private object WidgetPreferencesStore {
+internal object WidgetPreferencesStore {
     private const val PREFS_NAME = "random_qa_widget_prefs"
     private const val KEY_PREFIX_MODE = "mode_"
     private const val KEY_PREFIX_TITLE = "title_"

@@ -9,4 +9,7 @@
     <string name="widget_open_note">Open note in Obsidian</string>
     <string name="widget_open_topic_chat">Ask ChatGPT about this topic</string>
     <string name="widget_open_row_chat">Ask ChatGPT about this question</string>
+    <string name="widget_mark_difficult">Mark as review</string>
+    <string name="widget_unmark_difficult">Remove from review</string>
+    <string name="widget_remove_review_question">Remove question</string>
 </resources>

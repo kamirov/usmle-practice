@@ -190,7 +190,6 @@ private fun buildReviewWidgetState(
                 ReviewQuestionsWidgetState.Loaded(
                     visibleIds = selectReviewQuestionIds(
                         items = result.items,
-                        maxVisible = MAX_REVIEW_QUESTIONS_VISIBLE,
                         random = random,
                     ),
                 )
@@ -242,6 +241,7 @@ private object ReviewQuestionsRemoteViewsRenderer {
         }
 
         appWidgetManager.updateAppWidget(appWidgetId, views)
+        appWidgetManager.notifyAppWidgetViewDataChanged(appWidgetId, R.id.widget_question_list)
     }
 
     private fun buildMessageViews(
@@ -272,7 +272,7 @@ private object ReviewQuestionsRemoteViewsRenderer {
                 ),
             )
         }
-        val items = orderedReviewItems((result as TroubleQuestionLoadResult.Success).items, state.visibleIds)
+        val allItems = (result as TroubleQuestionLoadResult.Success).items
 
         views.setTextViewText(R.id.widget_note_title, REVIEW_QUESTIONS_TITLE)
         views.setViewVisibility(
@@ -291,63 +291,13 @@ private object ReviewQuestionsRemoteViewsRenderer {
                 ),
             )
         }
-
-        views.removeAllViews(R.id.widget_question_container)
-        if (items.isEmpty()) {
-            val emptyView = RemoteViews(context.packageName, R.layout.review_questions_widget_empty_row)
-            emptyView.setTextViewText(
-                R.id.widget_review_empty_text,
-                if (result.items.isEmpty()) "No review questions yet." else "No review questions in this set. Tap Refresh."
-            )
-            views.addView(R.id.widget_question_container, emptyView)
-            return views
-        }
-
-        items.forEachIndexed { index, item ->
-            val rowView = RemoteViews(context.packageName, R.layout.review_questions_widget_question_row)
-            val isExpanded = state.expandedItemId == item.id
-
-            rowView.setTextViewText(R.id.widget_checkbox, "✓")
-            rowView.setInt(R.id.widget_checkbox, "setBackgroundResource", R.drawable.widget_checkbox_checked_bg)
-            rowView.setTextViewText(R.id.widget_question_topic, item.topic.ifBlank { "Unknown topic" })
-            rowView.setTextViewText(R.id.widget_question_text, formatWidgetMarkdown(item.question))
-            rowView.setTextViewText(R.id.widget_chevron, if (isExpanded) "▾" else "▸")
-
-            if (isExpanded) {
-                rowView.setViewVisibility(R.id.widget_answer_container, View.VISIBLE)
-                rowView.setTextViewText(
-                    R.id.widget_answer_text,
-                    formatWidgetMarkdown(item.answer.ifBlank { "No answer provided." }),
-                )
-            } else {
-                rowView.setViewVisibility(R.id.widget_answer_container, View.GONE)
-            }
-
-            if (!state.isRefreshing) {
-                rowView.setOnClickPendingIntent(
-                    R.id.widget_review_question_row,
-                    reviewActionPendingIntent(
-                        context = context,
-                        appWidgetId = appWidgetId,
-                        action = ReviewQuestionsAppWidgetReceiver.ACTION_TOGGLE_REVIEW_ANSWER,
-                        rowIndex = index,
-                        requestCodeOffset = REQUEST_TOGGLE_REVIEW_ANSWER,
-                    ),
-                )
-                rowView.setOnClickPendingIntent(
-                    R.id.widget_checkbox,
-                    reviewActionPendingIntent(
-                        context = context,
-                        appWidgetId = appWidgetId,
-                        action = ReviewQuestionsAppWidgetReceiver.ACTION_REMOVE_REVIEW_QUESTION,
-                        rowIndex = index,
-                        requestCodeOffset = REQUEST_REMOVE_REVIEW_QUESTION,
-                    ),
-                )
-            }
-
-            views.addView(R.id.widget_question_container, rowView)
-        }
+        views.setRemoteAdapter(R.id.widget_question_list, reviewQuestionsCollectionIntent(context, appWidgetId))
+        views.setPendingIntentTemplate(
+            R.id.widget_question_list,
+            widgetCollectionPendingIntentTemplate(context, ReviewQuestionsAppWidgetReceiver::class.java),
+        )
+        views.setEmptyView(R.id.widget_question_list, R.id.widget_empty_text)
+        views.setTextViewText(R.id.widget_empty_text, reviewListEmptyMessage(allItems, state.visibleIds))
 
         return views
     }
@@ -382,7 +332,7 @@ internal fun orderedReviewItems(
     return visibleIds.mapNotNull(byId::get)
 }
 
-private object ReviewQuestionsWidgetPreferencesStore {
+internal object ReviewQuestionsWidgetPreferencesStore {
     private const val PREFS_NAME = "review_questions_widget_prefs"
     private const val KEY_PREFIX_MODE = "mode_"
     private const val KEY_PREFIX_VISIBLE_IDS = "visible_ids_"
@@ -461,9 +411,6 @@ private object ReviewQuestionsWidgetPreferencesStore {
 }
 
 private const val REVIEW_QUESTIONS_TITLE = "Review Questions"
-private const val MAX_REVIEW_QUESTIONS_VISIBLE = 4
 private const val MODE_REVIEW_LOADED = "loaded"
 private const val MODE_REVIEW_MESSAGE = "message"
 private const val REQUEST_REFRESH_REVIEW = 30_000
-private const val REQUEST_TOGGLE_REVIEW_ANSWER = 40_000
-private const val REQUEST_REMOVE_REVIEW_QUESTION = 50_000

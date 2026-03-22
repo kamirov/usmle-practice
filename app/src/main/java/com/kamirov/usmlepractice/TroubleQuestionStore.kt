@@ -184,10 +184,8 @@ internal fun shuffleTroubleQuestionItems(
 
 internal fun selectReviewQuestionIds(
     items: List<TroubleQuestionItem>,
-    maxVisible: Int,
     random: Random,
 ): List<String> = shuffleTroubleQuestionItems(items, random)
-    .take(maxVisible)
     .map { it.id }
 
 internal interface TroubleQuestionStorage {

@@ -203,7 +203,7 @@ class TroubleQuestionStoreTest {
     }
 
     @Test
-    fun selectReviewQuestionIds_capsVisibleItems() {
+    fun selectReviewQuestionIds_returnsAllVisibleItems() {
         val selectedIds = selectReviewQuestionIds(
             items = listOf(
                 troubleItem(id = "1"),
@@ -212,11 +212,10 @@ class TroubleQuestionStoreTest {
                 troubleItem(id = "4"),
                 troubleItem(id = "5"),
             ),
-            maxVisible = 4,
             random = kotlin.random.Random(1),
         )
 
-        assertEquals(4, selectedIds.size)
+        assertEquals(5, selectedIds.size)
     }
 
     private fun testWidgetQaItem(): WidgetQaItem = WidgetQaItem(
