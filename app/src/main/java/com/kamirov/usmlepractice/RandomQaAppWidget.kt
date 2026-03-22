@@ -207,7 +207,7 @@ private object RandomQaRemoteViewsRenderer {
             val isDifficult = item.questionId in difficultIds
 
             rowView.setTextViewText(R.id.widget_question_index, "${index + 1}.")
-            rowView.setTextViewText(R.id.widget_question_text, item.question)
+            rowView.setTextViewText(R.id.widget_question_text, formatWidgetMarkdown(item.question))
             rowView.setTextViewText(R.id.widget_checkbox, if (isDifficult) "✓" else "")
             rowView.setInt(
                 R.id.widget_checkbox,
@@ -220,7 +220,7 @@ private object RandomQaRemoteViewsRenderer {
                 rowView.setViewVisibility(R.id.widget_answer_container, View.VISIBLE)
                 rowView.setTextViewText(
                     R.id.widget_answer_text,
-                    item.answer.ifBlank { "No answer provided." },
+                    formatWidgetMarkdown(item.answer.ifBlank { "No answer provided." }),
                 )
             } else {
                 rowView.setViewVisibility(R.id.widget_answer_container, View.GONE)
