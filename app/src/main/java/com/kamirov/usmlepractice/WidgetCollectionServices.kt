@@ -10,8 +10,6 @@ internal const val EXTRA_WIDGET_ACTION_KIND = "extra_widget_action_kind"
 
 private const val ACTION_KIND_ROW_TOGGLE = "row_toggle"
 private const val ACTION_KIND_TOGGLE_DIFFICULT = "toggle_difficult"
-private const val ACTION_KIND_OPEN_NOTE = "open_note"
-private const val ACTION_KIND_OPEN_ROW_CHAT = "open_row_chat"
 private const val ACTION_KIND_REMOVE_REVIEW = "remove_review"
 
 internal fun buildRandomQaCollectionItems(
@@ -50,12 +48,6 @@ internal fun buildRandomQaCollectionItems(
                     R.id.widget_answer_text,
                     formatWidgetMarkdown(item.answer.ifBlank { "No answer provided." }),
                 )
-                setTextViewText(
-                    R.id.widget_difficult_button,
-                    context.getString(
-                        if (isDifficult) R.string.widget_unmark_difficult else R.string.widget_mark_difficult
-                    ),
-                )
             } else {
                 setViewVisibility(R.id.widget_answer_container, View.GONE)
             }
@@ -63,34 +55,15 @@ internal fun buildRandomQaCollectionItems(
             if (!state.isRefreshing) {
                 setOnClickFillInIntent(R.id.widget_question_root, rowToggleIntent)
                 setOnClickFillInIntent(R.id.widget_question_row, rowToggleIntent)
-                if (isExpanded) {
-                    setOnClickFillInIntent(
-                        R.id.widget_difficult_button,
-                        collectionFillInIntent(
-                            action = RandomQaAppWidgetReceiver.ACTION_TOGGLE_DIFFICULT,
-                            appWidgetId = appWidgetId,
-                            rowIndex = index,
-                            actionKind = ACTION_KIND_TOGGLE_DIFFICULT,
-                        ),
-                    )
-                    setOnClickFillInIntent(
-                        R.id.widget_open_note_button,
-                        collectionFillInIntent(
-                            action = RandomQaAppWidgetReceiver.ACTION_OPEN_NOTE,
-                            appWidgetId = appWidgetId,
-                            actionKind = ACTION_KIND_OPEN_NOTE,
-                        ),
-                    )
-                    setOnClickFillInIntent(
-                        R.id.widget_open_chat_button,
-                        collectionFillInIntent(
-                            action = RandomQaAppWidgetReceiver.ACTION_OPEN_ROW_CHATGPT,
-                            appWidgetId = appWidgetId,
-                            rowIndex = index,
-                            actionKind = ACTION_KIND_OPEN_ROW_CHAT,
-                        ),
-                    )
-                }
+                setOnClickFillInIntent(
+                    R.id.widget_checkbox,
+                    collectionFillInIntent(
+                        action = RandomQaAppWidgetReceiver.ACTION_TOGGLE_DIFFICULT,
+                        appWidgetId = appWidgetId,
+                        rowIndex = index,
+                        actionKind = ACTION_KIND_TOGGLE_DIFFICULT,
+                    ),
+                )
             }
         }
 
@@ -138,17 +111,15 @@ internal fun buildReviewQuestionsCollectionItems(
             if (!state.isRefreshing) {
                 setOnClickFillInIntent(R.id.widget_review_question_root, rowToggleIntent)
                 setOnClickFillInIntent(R.id.widget_review_question_row, rowToggleIntent)
-                if (isExpanded) {
-                    setOnClickFillInIntent(
-                        R.id.widget_remove_button,
-                        collectionFillInIntent(
-                            action = ReviewQuestionsAppWidgetReceiver.ACTION_REMOVE_REVIEW_QUESTION,
-                            appWidgetId = appWidgetId,
-                            rowIndex = index,
-                            actionKind = ACTION_KIND_REMOVE_REVIEW,
-                        ),
-                    )
-                }
+                setOnClickFillInIntent(
+                    R.id.widget_checkbox,
+                    collectionFillInIntent(
+                        action = ReviewQuestionsAppWidgetReceiver.ACTION_REMOVE_REVIEW_QUESTION,
+                        appWidgetId = appWidgetId,
+                        rowIndex = index,
+                        actionKind = ACTION_KIND_REMOVE_REVIEW,
+                    ),
+                )
             }
         }
 
@@ -187,8 +158,6 @@ internal fun reviewQuestionItemId(item: TroubleQuestionItem): Long = item.id.has
 internal fun isWidgetCollectionAction(actionKind: String?): Boolean =
     actionKind == ACTION_KIND_ROW_TOGGLE ||
         actionKind == ACTION_KIND_TOGGLE_DIFFICULT ||
-        actionKind == ACTION_KIND_OPEN_NOTE ||
-        actionKind == ACTION_KIND_OPEN_ROW_CHAT ||
         actionKind == ACTION_KIND_REMOVE_REVIEW
 
 internal fun widgetListEmptyMessage(items: List<WidgetQaItem>, fallbackMessage: String?): String =
