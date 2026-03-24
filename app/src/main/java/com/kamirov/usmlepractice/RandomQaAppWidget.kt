@@ -7,9 +7,12 @@ import android.content.BroadcastReceiver.PendingResult
 import android.content.ClipData
 import android.content.Context
 import android.content.Intent
+import android.content.ActivityNotFoundException
 import android.net.Uri
 import android.view.View
 import android.widget.RemoteViews
+import java.net.URLEncoder
+import java.nio.charset.StandardCharsets
 
 class RandomQaAppWidgetReceiver : AppWidgetProvider() {
     override fun onUpdate(
@@ -129,6 +132,26 @@ class RandomQaAppWidgetReceiver : AppWidgetProvider() {
                     ),
                 )
             }
+
+            ACTION_OPEN_ROW_BROWSER -> {
+                val appWidgetId = requireAppWidgetId(intent) ?: return
+                val tappedIndex = intent.getIntExtra(EXTRA_TAPPED_INDEX, -1)
+                if (tappedIndex < 0) {
+                    return
+                }
+
+                val currentState = WidgetPreferencesStore.loadWidgetState(context, appWidgetId) as? WidgetNoteState.Note
+                    ?: return
+                val item = currentState.widgetQaItems.getOrNull(tappedIndex) ?: return
+
+                launchIntent(
+                    context = context,
+                    intent = WidgetLaunchers.buildGoogleSearchIntent(
+                        context = context,
+                        query = item.question,
+                    ),
+                )
+            }
         }
     }
 
@@ -139,6 +162,7 @@ class RandomQaAppWidgetReceiver : AppWidgetProvider() {
         const val ACTION_OPEN_NOTE = "com.kamirov.usmlepractice.action.OPEN_NOTE"
         const val ACTION_OPEN_TOPIC_CHATGPT = "com.kamirov.usmlepractice.action.OPEN_TOPIC_CHATGPT"
         const val ACTION_OPEN_ROW_CHATGPT = "com.kamirov.usmlepractice.action.OPEN_ROW_CHATGPT"
+        const val ACTION_OPEN_ROW_BROWSER = "com.kamirov.usmlepractice.action.OPEN_ROW_BROWSER"
         const val EXTRA_TAPPED_INDEX = "extra_tapped_index"
 
         fun requestWidgetRefresh(context: Context) {
@@ -225,12 +249,16 @@ private fun rerenderWidget(
     RandomQaRemoteViewsRenderer.render(context, appWidgetManager, appWidgetId, state)
 }
 
-private fun launchIntent(
+internal fun launchIntent(
     context: Context,
     intent: Intent?,
 ) {
     intent ?: return
-    context.startActivity(intent)
+    try {
+        context.startActivity(intent)
+    } catch (_: ActivityNotFoundException) {
+        return
+    }
 }
 
 internal fun isPerWidgetAction(action: String?): Boolean =
@@ -240,9 +268,11 @@ internal fun isPerWidgetAction(action: String?): Boolean =
         action == RandomQaAppWidgetReceiver.ACTION_OPEN_NOTE ||
         action == RandomQaAppWidgetReceiver.ACTION_OPEN_TOPIC_CHATGPT ||
         action == RandomQaAppWidgetReceiver.ACTION_OPEN_ROW_CHATGPT ||
+        action == RandomQaAppWidgetReceiver.ACTION_OPEN_ROW_BROWSER ||
         action == ReviewQuestionsAppWidgetReceiver.ACTION_REFRESH_REVIEW_QUESTIONS ||
         action == ReviewQuestionsAppWidgetReceiver.ACTION_TOGGLE_REVIEW_ANSWER ||
-        action == ReviewQuestionsAppWidgetReceiver.ACTION_REMOVE_REVIEW_QUESTION
+        action == ReviewQuestionsAppWidgetReceiver.ACTION_REMOVE_REVIEW_QUESTION ||
+        action == ReviewQuestionsAppWidgetReceiver.ACTION_OPEN_REVIEW_BROWSER
 
 internal fun shouldStartRefresh(state: WidgetNoteState?): Boolean =
     state is WidgetNoteState.Note && !state.isRefreshing
@@ -448,7 +478,7 @@ internal object WidgetPreferencesStore {
     }
 }
 
-private object WidgetLaunchers {
+internal object WidgetLaunchers {
     private const val CHATGPT_PACKAGE = "com.openai.chatgpt"
     private const val OBSIDIAN_PACKAGE = "md.obsidian"
 
@@ -469,6 +499,16 @@ private object WidgetLaunchers {
             addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
         }
         return webIntent.takeIf { it.resolveActivity(context.packageManager) != null }
+    }
+
+    fun buildGoogleSearchIntent(
+        context: Context,
+        query: String,
+    ): Intent? {
+        val url = buildGoogleSearchUri(query) ?: return null
+        return Intent(Intent.ACTION_VIEW, url).apply {
+            addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+        }
     }
 
     fun buildObsidianIntent(
@@ -515,16 +555,28 @@ private object WidgetLaunchers {
 internal fun buildObsidianOpenUri(
     vaultName: String?,
     notePathKey: String?,
-): Uri? {
+): Uri? = buildObsidianOpenUrl(vaultName, notePathKey)?.let(Uri::parse)
+
+internal fun buildGoogleSearchUri(query: String?): Uri? {
+    return buildGoogleSearchUrl(query)?.let(Uri::parse)
+}
+
+internal fun buildObsidianOpenUrl(
+    vaultName: String?,
+    notePathKey: String?,
+): String? {
     val safeVaultName = vaultName?.trim()?.takeIf(String::isNotEmpty) ?: return null
     val safeNotePathKey = notePathKey?.trim()?.takeIf(String::isNotEmpty) ?: return null
-    return Uri.Builder()
-        .scheme("obsidian")
-        .authority("open")
-        .appendQueryParameter("vault", safeVaultName)
-        .appendQueryParameter("file", safeNotePathKey)
-        .build()
+    return "obsidian://open?vault=${encodeUriComponent(safeVaultName)}&file=${encodeUriComponent(safeNotePathKey)}"
 }
+
+internal fun buildGoogleSearchUrl(query: String?): String? {
+    val safeQuery = query?.trim()?.takeIf(String::isNotEmpty) ?: return null
+    return "https://www.google.com/search?q=${encodeUriComponent(safeQuery)}"
+}
+
+private fun encodeUriComponent(value: String): String =
+    URLEncoder.encode(value, StandardCharsets.UTF_8).replace("+", "%20")
 
 private fun ParsedNoteViewData.displayTitle(): String = noteName.displayTopicTitle()
 

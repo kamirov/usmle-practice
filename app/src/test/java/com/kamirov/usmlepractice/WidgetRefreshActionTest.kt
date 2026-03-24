@@ -18,9 +18,16 @@ class WidgetRefreshActionTest {
         assertTrue(isPerWidgetAction(RandomQaAppWidgetReceiver.ACTION_OPEN_NOTE))
         assertTrue(isPerWidgetAction(RandomQaAppWidgetReceiver.ACTION_OPEN_TOPIC_CHATGPT))
         assertTrue(isPerWidgetAction(RandomQaAppWidgetReceiver.ACTION_OPEN_ROW_CHATGPT))
+        assertTrue(isPerWidgetAction(RandomQaAppWidgetReceiver.ACTION_OPEN_ROW_BROWSER))
         assertTrue(isPerWidgetAction(ReviewQuestionsAppWidgetReceiver.ACTION_REFRESH_REVIEW_QUESTIONS))
         assertTrue(isPerWidgetAction(ReviewQuestionsAppWidgetReceiver.ACTION_TOGGLE_REVIEW_ANSWER))
         assertTrue(isPerWidgetAction(ReviewQuestionsAppWidgetReceiver.ACTION_REMOVE_REVIEW_QUESTION))
+        assertTrue(isPerWidgetAction(ReviewQuestionsAppWidgetReceiver.ACTION_OPEN_REVIEW_BROWSER))
+    }
+
+    @Test
+    fun isWidgetCollectionAction_returnsTrueForBrowserAction() {
+        assertTrue(isWidgetCollectionAction("open_browser"))
     }
 
     @Test

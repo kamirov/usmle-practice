@@ -84,6 +84,29 @@ class ReviewQuestionsAppWidgetReceiver : AppWidgetProvider() {
                     state = nextState,
                 )
             }
+
+            ACTION_OPEN_REVIEW_BROWSER -> {
+                val appWidgetId = requireAppWidgetId(intent) ?: return
+                val tappedIndex = intent.getIntExtra(RandomQaAppWidgetReceiver.EXTRA_TAPPED_INDEX, -1)
+                if (tappedIndex < 0) return
+
+                val currentState = ReviewQuestionsWidgetPreferencesStore.loadWidgetState(context, appWidgetId)
+                    as? ReviewQuestionsWidgetState.Loaded ?: return
+                val visibleId = currentState.visibleIds.getOrNull(tappedIndex) ?: return
+                val items = when (val result = TroubleQuestionRepository(context).loadAll()) {
+                    is TroubleQuestionLoadResult.Success -> result.items
+                    is TroubleQuestionLoadResult.Error -> return
+                }
+                val item = items.firstOrNull { it.id == visibleId } ?: return
+
+                launchIntent(
+                    context = context,
+                    intent = WidgetLaunchers.buildGoogleSearchIntent(
+                        context = context,
+                        query = item.question,
+                    ),
+                )
+            }
         }
     }
 
@@ -94,6 +117,8 @@ class ReviewQuestionsAppWidgetReceiver : AppWidgetProvider() {
             "com.kamirov.usmlepractice.action.TOGGLE_REVIEW_ANSWER"
         const val ACTION_REMOVE_REVIEW_QUESTION =
             "com.kamirov.usmlepractice.action.REMOVE_REVIEW_QUESTION"
+        const val ACTION_OPEN_REVIEW_BROWSER =
+            "com.kamirov.usmlepractice.action.OPEN_REVIEW_BROWSER"
 
         fun requestWidgetRefresh(context: Context) {
             val appWidgetManager = AppWidgetManager.getInstance(context)

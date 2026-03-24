@@ -11,6 +11,7 @@ internal const val EXTRA_WIDGET_ACTION_KIND = "extra_widget_action_kind"
 private const val ACTION_KIND_ROW_TOGGLE = "row_toggle"
 private const val ACTION_KIND_TOGGLE_DIFFICULT = "toggle_difficult"
 private const val ACTION_KIND_REMOVE_REVIEW = "remove_review"
+private const val ACTION_KIND_OPEN_BROWSER = "open_browser"
 
 internal fun buildRandomQaCollectionItems(
     context: Context,
@@ -62,6 +63,15 @@ internal fun buildRandomQaCollectionItems(
                         appWidgetId = appWidgetId,
                         rowIndex = index,
                         actionKind = ACTION_KIND_TOGGLE_DIFFICULT,
+                    ),
+                )
+                setOnClickFillInIntent(
+                    R.id.widget_browser_button,
+                    collectionFillInIntent(
+                        action = RandomQaAppWidgetReceiver.ACTION_OPEN_ROW_BROWSER,
+                        appWidgetId = appWidgetId,
+                        rowIndex = index,
+                        actionKind = ACTION_KIND_OPEN_BROWSER,
                     ),
                 )
             }
@@ -120,6 +130,15 @@ internal fun buildReviewQuestionsCollectionItems(
                         actionKind = ACTION_KIND_REMOVE_REVIEW,
                     ),
                 )
+                setOnClickFillInIntent(
+                    R.id.widget_browser_button,
+                    collectionFillInIntent(
+                        action = ReviewQuestionsAppWidgetReceiver.ACTION_OPEN_REVIEW_BROWSER,
+                        appWidgetId = appWidgetId,
+                        rowIndex = index,
+                        actionKind = ACTION_KIND_OPEN_BROWSER,
+                    ),
+                )
             }
         }
 
@@ -158,7 +177,8 @@ internal fun reviewQuestionItemId(item: TroubleQuestionItem): Long = item.id.has
 internal fun isWidgetCollectionAction(actionKind: String?): Boolean =
     actionKind == ACTION_KIND_ROW_TOGGLE ||
         actionKind == ACTION_KIND_TOGGLE_DIFFICULT ||
-        actionKind == ACTION_KIND_REMOVE_REVIEW
+        actionKind == ACTION_KIND_REMOVE_REVIEW ||
+        actionKind == ACTION_KIND_OPEN_BROWSER
 
 internal fun widgetListEmptyMessage(items: List<WidgetQaItem>, fallbackMessage: String?): String =
     fallbackMessage ?: if (items.isEmpty()) "No questions found in this note." else ""
