@@ -64,6 +64,31 @@ class WidgetRefreshActionTest {
     }
 
     @Test
+    fun reviewLimitReachedWidgetState_returnsExpectedBlockedMessage() {
+        assertEquals(
+            WidgetNoteState.Message(
+                title = "Random Q&A Note",
+                message = "You have 10 review questions. Clear 1 before practicing new ones.",
+            ),
+            reviewLimitReachedWidgetState(10),
+        )
+    }
+
+    @Test
+    fun isReviewQuestionLimitReached_returnsTrueAtConfiguredLimit() {
+        assertTrue(isReviewQuestionLimitReached(MAX_REVIEW_QUESTIONS))
+        assertTrue(isReviewQuestionLimitReached(MAX_REVIEW_QUESTIONS + 1))
+        assertFalse(isReviewQuestionLimitReached(MAX_REVIEW_QUESTIONS - 1))
+    }
+
+    @Test
+    fun reviewQuestionsToClearForPractice_returnsOverflowNeededToUnlock() {
+        assertEquals(0, reviewQuestionsToClearForPractice(MAX_REVIEW_QUESTIONS - 1))
+        assertEquals(1, reviewQuestionsToClearForPractice(MAX_REVIEW_QUESTIONS))
+        assertEquals(3, reviewQuestionsToClearForPractice(MAX_REVIEW_QUESTIONS + 2))
+    }
+
+    @Test
     fun randomQaItemId_isStableForSameItem() {
         val item = WidgetQaItem(
             questionId = "question-1",

@@ -76,13 +76,25 @@ class RandomQaAppWidgetReceiver : AppWidgetProvider() {
                     ?: return
                 val item = currentState.widgetQaItems.getOrNull(tappedIndex) ?: return
 
-                TroubleQuestionRepository(context).toggle(
-                    noteTitle = currentState.note.noteName,
-                    notePathKey = currentState.note.notePathKey,
-                    item = item,
-                )
-                ReviewQuestionsAppWidgetReceiver.requestWidgetRefresh(context)
-                rerenderWidget(context, appWidgetId, currentState)
+                when (
+                    TroubleQuestionRepository(context).toggle(
+                        noteTitle = currentState.note.noteName,
+                        notePathKey = currentState.note.notePathKey,
+                        item = item,
+                    )
+                ) {
+                    TroubleQuestionToggleResult.Added,
+                    TroubleQuestionToggleResult.Removed -> {
+                        ReviewQuestionsAppWidgetReceiver.requestWidgetRefresh(context)
+                        rerenderWidget(context, appWidgetId, currentState)
+                    }
+
+                    TroubleQuestionToggleResult.RejectedAtCapacity -> rerenderWidget(
+                        context,
+                        appWidgetId,
+                        currentState,
+                    )
+                }
             }
 
             ACTION_OPEN_NOTE -> {
@@ -201,6 +213,12 @@ private fun refreshWidgetIds(
         RandomQaRemoteViewsRenderer.render(context, appWidgetManager, appWidgetId, state)
     }
 }
+
+internal fun reviewLimitReachedWidgetState(reviewQuestionCount: Int): WidgetNoteState.Message =
+    WidgetNoteState.Message(
+        title = RANDOM_QA_WIDGET_TITLE,
+        message = "You have $reviewQuestionCount review questions. Clear ${reviewQuestionsToClearForPractice(reviewQuestionCount)} before practicing new ones.",
+    )
 
 private fun refreshSingleWidget(
     context: Context,
@@ -583,6 +601,7 @@ private fun ParsedNoteViewData.displayTitle(): String = noteName.displayTopicTit
 private const val MODE_MESSAGE = "message"
 private const val MODE_NOTE = "note"
 private const val REFRESHING_TITLE = "Refreshing..."
+private const val RANDOM_QA_WIDGET_TITLE = "Random Q&A Note"
 private const val REQUEST_REFRESH_NOTE = 5_000
 private const val REQUEST_TOGGLE_QUESTION = 10_000
 private const val REQUEST_TOGGLE_DIFFICULT = 20_000

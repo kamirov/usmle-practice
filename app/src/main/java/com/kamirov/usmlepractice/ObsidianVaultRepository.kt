@@ -93,8 +93,14 @@ internal class ObsidianVaultRepository(
         loadRandomWidgetStateSync()
     }
 
-    fun loadRandomWidgetStateSync(): WidgetNoteState =
-        when (val widgetNotesState = loadWidgetNotesSync()) {
+    fun loadRandomWidgetStateSync(): WidgetNoteState {
+        val troubleQuestionRepository = TroubleQuestionRepository(context)
+        val reviewQuestionCount = troubleQuestionRepository.questionCount()
+        if (isReviewQuestionLimitReached(reviewQuestionCount)) {
+            return reviewLimitReachedWidgetState(reviewQuestionCount)
+        }
+
+        return when (val widgetNotesState = loadWidgetNotesSync()) {
             VaultScreenState.Unlinked -> WidgetNoteState.Message(
                 title = "Vault not linked",
                 message = "Open the app and link your Obsidian vault.",
@@ -150,6 +156,7 @@ internal class ObsidianVaultRepository(
                 }
             }
         }
+    }
 
     fun loadWidgetNotesSync(): VaultScreenState {
         val uri = getSavedTreeUri() ?: return VaultScreenState.Unlinked

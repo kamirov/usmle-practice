@@ -30,6 +30,12 @@ internal sealed interface TroubleQuestionLoadResult {
     ) : TroubleQuestionLoadResult
 }
 
+internal sealed interface TroubleQuestionToggleResult {
+    data object Added : TroubleQuestionToggleResult
+    data object Removed : TroubleQuestionToggleResult
+    data object RejectedAtCapacity : TroubleQuestionToggleResult
+}
+
 internal class TroubleQuestionRepository internal constructor(
     private val storage: TroubleQuestionStorage,
     private val clock: () -> String = { java.time.Instant.now().toString() },
@@ -63,6 +69,14 @@ internal class TroubleQuestionRepository internal constructor(
 
     fun contains(id: String): Boolean = id in loadIds()
 
+    fun questionCount(): Int =
+        when (val result = loadAll()) {
+            is TroubleQuestionLoadResult.Success -> result.items.size
+            is TroubleQuestionLoadResult.Error -> 0
+        }
+
+    fun isAtCapacity(): Boolean = isReviewQuestionLimitReached(questionCount())
+
     fun remove(id: String): Boolean {
         val currentStore = loadStoreForMutation()
         val nextItems = currentStore.items.filterNot { it.id == id }
@@ -77,13 +91,17 @@ internal class TroubleQuestionRepository internal constructor(
         noteTitle: String,
         notePathKey: String,
         item: WidgetQaItem,
-    ): Boolean {
+    ): TroubleQuestionToggleResult {
         val currentStore = loadStoreForMutation()
         val existing = currentStore.items.associateBy { it.id }.toMutableMap()
         val now = clock()
         val current = existing[item.questionId]
 
         if (current == null) {
+            if (isReviewQuestionLimitReached(existing.size)) {
+                return TroubleQuestionToggleResult.RejectedAtCapacity
+            }
+
             existing[item.questionId] = TroubleQuestionItem(
                 id = item.questionId,
                 topic = noteTitle.displayTopicTitle(),
@@ -96,12 +114,12 @@ internal class TroubleQuestionRepository internal constructor(
                 timesMarked = 1,
             )
             saveStore(TroubleQuestionStore(items = existing.values.toList()))
-            return true
+            return TroubleQuestionToggleResult.Added
         }
 
         existing.remove(item.questionId)
         saveStore(TroubleQuestionStore(items = existing.values.toList()))
-        return false
+        return TroubleQuestionToggleResult.Removed
     }
 
     fun mark(
@@ -188,6 +206,11 @@ internal fun selectReviewQuestionIds(
 ): List<String> = shuffleTroubleQuestionItems(items, random)
     .map { it.id }
 
+internal fun isReviewQuestionLimitReached(count: Int): Boolean = count >= MAX_REVIEW_QUESTIONS
+
+internal fun reviewQuestionsToClearForPractice(count: Int): Int =
+    if (isReviewQuestionLimitReached(count)) count - MAX_REVIEW_QUESTIONS + 1 else 0
+
 internal interface TroubleQuestionStorage {
     fun read(): String?
     fun write(value: String)
@@ -258,6 +281,8 @@ internal fun serializeTroubleQuestionStore(store: TroubleQuestionStore): String 
         append('}')
     }
 }
+
+internal const val MAX_REVIEW_QUESTIONS = 10
 
 private fun String.toTroubleQuestionItemOrNull(): TroubleQuestionItem? {
     val fields = parseTopLevelJsonFields(this)

@@ -75,13 +75,13 @@ class TroubleQuestionStoreTest {
             clock = { "2026-03-21T12:00:00Z" },
         )
 
-        val isMarked = repository.toggle(
+        val result = repository.toggle(
             noteTitle = "Cardiology.md",
             notePathKey = "Medicine/Cardiology.md",
             item = testWidgetQaItem(),
         )
 
-        assertTrue(isMarked)
+        assertEquals(TroubleQuestionToggleResult.Added, result)
         assertEquals(
             TroubleQuestionLoadResult.Success(
                 listOf(
@@ -115,17 +115,44 @@ class TroubleQuestionStoreTest {
             notePathKey = "Medicine/Cardiology.md",
             item = testWidgetQaItem(),
         )
-        val isMarked = repository.toggle(
+        val result = repository.toggle(
             noteTitle = "Cardiology.md",
             notePathKey = "Medicine/Cardiology.md",
             item = testWidgetQaItem(),
         )
 
-        assertFalse(isMarked)
+        assertEquals(TroubleQuestionToggleResult.Removed, result)
         assertEquals(
             TroubleQuestionLoadResult.Success(emptyList()),
             repository.loadAll(),
         )
+    }
+
+    @Test
+    fun toggle_rejectsNewItemWhenStoreIsAtCapacity() {
+        val repository = TroubleQuestionRepository(
+            storage = FakeTroubleQuestionStorage(
+                serializeTroubleQuestionStore(
+                    TroubleQuestionStore(
+                        items = (1..MAX_REVIEW_QUESTIONS).map { troubleItem(id = "$it") }
+                    )
+                )
+            ),
+            clock = { "2026-03-21T12:00:00Z" },
+        )
+
+        val result = repository.toggle(
+            noteTitle = "Cardiology.md",
+            notePathKey = "Medicine/Cardiology.md",
+            item = WidgetQaItem(
+                questionId = "question-over-limit",
+                question = "What is over the limit?",
+                answer = "Nothing",
+            ),
+        )
+
+        assertEquals(TroubleQuestionToggleResult.RejectedAtCapacity, result)
+        assertEquals(MAX_REVIEW_QUESTIONS, (repository.loadAll() as TroubleQuestionLoadResult.Success).items.size)
     }
 
     @Test
@@ -187,6 +214,21 @@ class TroubleQuestionStoreTest {
         assertEquals(2, result.items.single().timesMarked)
         assertEquals("2026-03-21T12:00:00Z", result.items.single().createdAt)
         assertEquals("2026-03-21T13:00:00Z", result.items.single().updatedAt)
+    }
+
+    @Test
+    fun isAtCapacity_returnsTrueWhenStoreHasLimitOrMoreItems() {
+        val repository = TroubleQuestionRepository(
+            storage = FakeTroubleQuestionStorage(
+                serializeTroubleQuestionStore(
+                    TroubleQuestionStore(
+                        items = (1..(MAX_REVIEW_QUESTIONS + 1)).map { troubleItem(id = "$it") }
+                    )
+                )
+            ),
+        )
+
+        assertTrue(repository.isAtCapacity())
     }
 
     @Test
