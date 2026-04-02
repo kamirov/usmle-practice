@@ -4,9 +4,11 @@ import android.app.PendingIntent
 import android.appwidget.AppWidgetManager
 import android.appwidget.AppWidgetProvider
 import android.content.BroadcastReceiver.PendingResult
+import android.content.ActivityNotFoundException
 import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
+import android.util.Log
 import android.view.View
 import android.widget.RemoteViews
 
@@ -36,7 +38,7 @@ class AiQuestionAppWidgetReceiver : AppWidgetProvider() {
 
         when (intent.action) {
             ACTION_REFRESH_AI_QUESTION -> {
-                val appWidgetId = requireAppWidgetId(intent) ?: return
+                val appWidgetId = requireAiAppWidgetId(intent) ?: return
                 enqueueAiQuestionRefresh(
                     context = context,
                     appWidgetId = appWidgetId,
@@ -45,7 +47,7 @@ class AiQuestionAppWidgetReceiver : AppWidgetProvider() {
             }
 
             ACTION_SELECT_AI_MODE -> {
-                val appWidgetId = requireAppWidgetId(intent) ?: return
+                val appWidgetId = requireAiAppWidgetId(intent) ?: return
                 val requestedMode = parseAiWidgetMode(intent.getStringExtra(EXTRA_AI_MODE)) ?: return
                 val currentState = AiQuestionWidgetPreferencesStore.loadWidgetState(context, appWidgetId)
                     as? AiQuestionWidgetState.Loaded ?: return
@@ -59,7 +61,7 @@ class AiQuestionAppWidgetReceiver : AppWidgetProvider() {
             }
 
             ACTION_SELECT_AI_ANSWER -> {
-                val appWidgetId = requireAppWidgetId(intent) ?: return
+                val appWidgetId = requireAiAppWidgetId(intent) ?: return
                 val selectedKey = intent.getStringExtra(EXTRA_AI_SELECTED_KEY) ?: return
                 val currentState = AiQuestionWidgetPreferencesStore.loadWidgetState(context, appWidgetId)
                     as? AiQuestionWidgetState.Loaded ?: return
@@ -77,7 +79,7 @@ class AiQuestionAppWidgetReceiver : AppWidgetProvider() {
             }
 
             ACTION_OPEN_AI_TOPIC -> {
-                val appWidgetId = requireAppWidgetId(intent) ?: return
+                val appWidgetId = requireAiAppWidgetId(intent) ?: return
                 val currentState = AiQuestionWidgetPreferencesStore.loadWidgetState(context, appWidgetId)
                     as? AiQuestionWidgetState.Loaded ?: return
                 val modeState = currentState.modeState(currentState.activeMode)
@@ -85,7 +87,7 @@ class AiQuestionAppWidgetReceiver : AppWidgetProvider() {
                     return
                 }
                 val questionContext = modeState.context ?: return
-                launchIntent(
+                launchAiIntent(
                     context = context,
                     intent = WidgetLaunchers.buildObsidianIntent(
                         context = context,
@@ -97,10 +99,10 @@ class AiQuestionAppWidgetReceiver : AppWidgetProvider() {
             }
 
             ACTION_OPEN_AI_CHATGPT -> {
-                val appWidgetId = requireAppWidgetId(intent) ?: return
+                val appWidgetId = requireAiAppWidgetId(intent) ?: return
                 val currentState = AiQuestionWidgetPreferencesStore.loadWidgetState(context, appWidgetId)
                     ?: return
-                launchIntent(
+                launchAiIntent(
                     context = context,
                     intent = WidgetLaunchers.buildChatGptIntent(
                         context = context,
@@ -147,8 +149,20 @@ private fun enqueueAiQuestionRefresh(
     appWidgetId: Int,
     pendingResult: PendingResult?,
 ) {
+    val requestId = generateAiDebugSessionId()
+    val debugLogger = AiDebugSessionLogger(
+        repository = AiDebugLogRepository(context),
+        sessionId = requestId,
+        widgetId = appWidgetId,
+    )
     val previousState = AiQuestionWidgetPreferencesStore.loadWidgetState(context, appWidgetId)
     if (!shouldStartAiQuestionRefresh(previousState)) {
+        debugLogger.logEvent(
+            stage = "widget_refresh_skipped",
+            message = "Skipping refresh because widget is already refreshing",
+            fields = mapOf("widgetId" to appWidgetId.toString()),
+        )
+        debugLogger.complete(status = "skipped")
         pendingResult?.finish()
         return
     }
@@ -170,11 +184,34 @@ private fun enqueueAiQuestionRefresh(
             val nextState = buildAiQuestionWidgetState(
                 context = context,
                 previousState = previousState,
+                appWidgetId = appWidgetId,
+                requestId = requestId,
+                debugLogger = debugLogger,
             )
             rerenderAiQuestionWidget(
                 context = context,
                 appWidgetId = appWidgetId,
                 state = nextState,
+            )
+        } catch (t: Throwable) {
+            debugLogger.logFailure(
+                stage = "widget_refresh_uncaught",
+                throwable = t,
+                fields = mapOf("widgetId" to appWidgetId.toString()),
+            )
+            debugLogger.complete(status = "uncaught_exception")
+            Log.e("AiQuestionWidget", "AI widget refresh failed for request=$requestId", t)
+            rerenderAiQuestionWidget(
+                context = context,
+                appWidgetId = appWidgetId,
+                state = AiQuestionWidgetState.Message(
+                    title = AI_QUESTION_WIDGET_TITLE,
+                    message = appendAiDiagnosticsHint(
+                        summary = "AI widget refresh failed.",
+                        requestId = requestId,
+                    ),
+                    isRefreshing = false,
+                ),
             )
         } finally {
             pendingResult?.finish()
@@ -525,6 +562,24 @@ private val MODE_BUTTON_BINDINGS = linkedMapOf(
     AiWidgetMode.MEDIUM to R.id.widget_mode_medium,
     AiWidgetMode.HARD to R.id.widget_mode_hard,
 )
+
+private fun requireAiAppWidgetId(intent: Intent): Int? =
+    intent.getIntExtra(
+        AppWidgetManager.EXTRA_APPWIDGET_ID,
+        AppWidgetManager.INVALID_APPWIDGET_ID,
+    ).takeIf { it != AppWidgetManager.INVALID_APPWIDGET_ID }
+
+private fun launchAiIntent(
+    context: Context,
+    intent: Intent?,
+) {
+    intent ?: return
+    try {
+        context.startActivity(intent)
+    } catch (_: ActivityNotFoundException) {
+        return
+    }
+}
 
 private const val REQUEST_REFRESH_AI_QUESTION = 40_000
 private const val REQUEST_SELECT_AI_MODE = 41_000

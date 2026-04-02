@@ -1,6 +1,9 @@
 package com.kamirov.usmlepractice
 
+import android.content.Context
 import android.net.Uri
+import java.net.SocketTimeoutException
+import java.net.UnknownHostException
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertNotNull
@@ -11,6 +14,24 @@ import org.mockito.Mockito.mock
 
 class AiQuestionEngineTest {
     private val uriCache = mutableMapOf<String, Uri>()
+
+    @Test
+    fun buildAiQuestionWidgetState_returnsInAppKeyMessageWhenKeyMissing() {
+        val state = buildAiQuestionWidgetState(
+            context = mock(Context::class.java),
+            previousState = null,
+            keyRepositoryFactory = { FakeOpenAiKeyAccess("") },
+            debugLogger = FakeAiDebugLogger("req-missing-key"),
+        )
+
+        assertEquals(
+            AiQuestionWidgetState.Message(
+                title = AI_QUESTION_WIDGET_TITLE,
+                message = "Missing OpenAI key. Open the app and save your key in the OpenAI card.",
+            ),
+            state,
+        )
+    }
 
     @Test
     fun parseAiWidgetMode_returnsExpectedModes() {
@@ -260,6 +281,131 @@ class AiQuestionEngineTest {
         assertTrue(target.recordedWrong.isEmpty())
     }
 
+    @Test
+    fun openAiClient_usesSingleAttemptForTimeoutFailure() {
+        var attempts = 0
+        val client = OpenAiAiQuestionClient(
+            "test-key",
+            FakeAiDebugLogger("req-timeout"),
+            object : OpenAiTransport {
+                override fun execute(
+                    apiKey: String,
+                    requestBody: String,
+                    mode: AiWidgetMode,
+                    generationContext: AiQuestionGenerationContext,
+                ): String {
+                    attempts += 1
+                    throw SocketTimeoutException("timeout")
+                }
+            },
+        )
+
+        val result = client.generateQuestion(
+            mode = AiWidgetMode.EASY,
+            generationContext = testGenerationContext(),
+            random = kotlin.random.Random(0),
+        )
+
+        assertEquals(1, attempts)
+        assertEquals(
+            AiQuestionGenerationResult.Error("OpenAI request error: SocketTimeoutException: timeout"),
+            result,
+        )
+    }
+
+    @Test
+    fun openAiClient_formatsCompactUnknownHostError() {
+        val client = OpenAiAiQuestionClient(
+            "test-key",
+            FakeAiDebugLogger("req-unknown-host"),
+            object : OpenAiTransport {
+                override fun execute(
+                    apiKey: String,
+                    requestBody: String,
+                    mode: AiWidgetMode,
+                    generationContext: AiQuestionGenerationContext,
+                ): String {
+                    throw UnknownHostException("Unable to resolve host api.openai.com")
+                }
+            },
+        )
+
+        val result = client.generateQuestion(
+            mode = AiWidgetMode.EASY,
+            generationContext = testGenerationContext(),
+            random = kotlin.random.Random(0),
+        )
+
+        assertEquals(
+            AiQuestionGenerationResult.Error(
+                "OpenAI request error: UnknownHostException: Unable to resolve host api.openai.com",
+            ),
+            result,
+        )
+    }
+
+    @Test
+    fun describeOpenAiRequestException_includesHttpFailureDetails() {
+        assertEquals(
+            "OpenAI request error: IllegalStateException: HTTP 500: upstream error",
+            describeOpenAiRequestException(IllegalStateException("HTTP 500: upstream error")),
+        )
+    }
+
+    @Test
+    fun openAiClient_parsesSuccessfulTransportResponse() {
+        val client = OpenAiAiQuestionClient(
+            "test-key",
+            FakeAiDebugLogger("req-success"),
+            object : OpenAiTransport {
+                override fun execute(
+                    apiKey: String,
+                    requestBody: String,
+                    mode: AiWidgetMode,
+                    generationContext: AiQuestionGenerationContext,
+                ): String = """
+                    {
+                      "output_text": "{\"stem\":\"A question stem\",\"choices\":[{\"key\":\"A\",\"text\":\"Choice A\",\"explanation\":\"Expl A\"},{\"key\":\"B\",\"text\":\"Choice B\",\"explanation\":\"Expl B\"},{\"key\":\"C\",\"text\":\"Choice C\",\"explanation\":\"Expl C\"},{\"key\":\"D\",\"text\":\"Choice D\",\"explanation\":\"Expl D\"},{\"key\":\"E\",\"text\":\"Choice E\",\"explanation\":\"Expl E\"}],\"correctKey\":\"A\",\"correctExplanation\":\"Correct expl\"}"
+                    }
+                """.trimIndent()
+            },
+        )
+
+        val result = client.generateQuestion(
+            mode = AiWidgetMode.EASY,
+            generationContext = testGenerationContext(),
+            random = kotlin.random.Random(0),
+        )
+
+        assertTrue(result is AiQuestionGenerationResult.Success)
+        assertEquals("A question stem", (result as AiQuestionGenerationResult.Success).question.stem)
+    }
+
+    @Test
+    fun widgetFailureMessage_appendsRequestIdHint() {
+        assertEquals(
+            "OpenAI request error: SocketException: Software caused connection abort Request ai-1234. Open the app for AI diagnostics.",
+            appendAiDiagnosticsHint(
+                "OpenAI request error: SocketException: Software caused connection abort",
+                "ai-1234",
+            ),
+        )
+    }
+
+    private fun testGenerationContext(): AiQuestionGenerationContext = AiQuestionGenerationContext(
+        context = AiQuestionContext(
+            topic = "Cardiology",
+            notePathKey = "Deck/Cardiology.md",
+            noteFile = "Cardiology.md",
+        ),
+        samplePairs = listOf(
+            QaItem(
+                question = "What is the mechanism?",
+                answer = "Mechanism answer.",
+            ),
+        ),
+    )
+
     private fun testQuestion(): AiGeneratedQuestion = AiGeneratedQuestion(
         stem = "A patient has chest pain. Which mediator is most likely involved?",
         choices = listOf(
@@ -293,4 +439,43 @@ private class FakeAiQuestionMistakeMutationTarget : AiQuestionMistakeMutationTar
     override fun decrementTopic(notePathKey: String) {
         decrementedTopics += notePathKey
     }
+}
+
+private class FakeOpenAiKeyAccess(
+    private val key: String,
+) : OpenAiKeyAccess {
+    override fun loadKey(): String = key
+
+    override fun saveKey(value: String) = Unit
+
+    override fun clearKey() = Unit
+
+    override fun hasKey(): Boolean = key.trim().isNotEmpty()
+}
+
+private class FakeAiDebugLogger(
+    override val sessionId: String,
+) : AiDebugLogger {
+    override fun logEvent(
+        stage: String,
+        message: String,
+        mode: AiWidgetMode?,
+        topic: String?,
+        fields: Map<String, String>,
+    ) = Unit
+
+    override fun logFailure(
+        stage: String,
+        throwable: Throwable,
+        mode: AiWidgetMode?,
+        topic: String?,
+        fields: Map<String, String>,
+    ) = Unit
+
+    override fun complete(
+        status: String,
+        mode: AiWidgetMode?,
+        topic: String?,
+        fields: Map<String, String>,
+    ) = Unit
 }

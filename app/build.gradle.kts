@@ -3,11 +3,6 @@ plugins {
     alias(libs.plugins.kotlin.compose)
 }
 
-val openAiApiKey = providers.gradleProperty("OPENAI_API_KEY").orElse("").get()
-val escapedOpenAiApiKey = openAiApiKey
-    .replace("\\", "\\\\")
-    .replace("\"", "\\\"")
-
 android {
     namespace = "com.kamirov.usmlepractice"
     compileSdk {
@@ -22,7 +17,6 @@ android {
         targetSdk = 36
         versionCode = 1
         versionName = "1.0"
-        buildConfigField("String", "OPENAI_API_KEY", "\"$escapedOpenAiApiKey\"")
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -56,6 +50,8 @@ dependencies {
     implementation(libs.androidx.compose.ui.graphics)
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.compose.material3)
+    implementation(libs.androidx.security.crypto)
+    implementation(libs.squareup.okhttp)
     testImplementation(libs.junit)
     testImplementation("org.json:json:20240303")
     testImplementation("org.mockito:mockito-core:5.12.0")
