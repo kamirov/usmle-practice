@@ -6,4 +6,7 @@
     <string name="review_questions_widget_name">Review Questions</string>
     <string name="review_questions_widget_description">Shows trouble questions saved from your study widgets.</string>
     <string name="review_questions_widget_loading">Loading review questions from your trouble-question store.</string>
+    <string name="ai_question_widget_name">AI USMLE Question</string>
+    <string name="ai_question_widget_description">Generates USMLE-style questions from balanced Obsidian Q&amp;A notes.</string>
+    <string name="ai_question_widget_loading">Generating AI study questions from your linked Obsidian vault.</string>
 </resources>

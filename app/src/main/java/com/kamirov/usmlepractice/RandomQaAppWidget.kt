@@ -290,7 +290,12 @@ internal fun isPerWidgetAction(action: String?): Boolean =
         action == ReviewQuestionsAppWidgetReceiver.ACTION_REFRESH_REVIEW_QUESTIONS ||
         action == ReviewQuestionsAppWidgetReceiver.ACTION_TOGGLE_REVIEW_ANSWER ||
         action == ReviewQuestionsAppWidgetReceiver.ACTION_REMOVE_REVIEW_QUESTION ||
-        action == ReviewQuestionsAppWidgetReceiver.ACTION_OPEN_REVIEW_BROWSER
+        action == ReviewQuestionsAppWidgetReceiver.ACTION_OPEN_REVIEW_BROWSER ||
+        action == AiQuestionAppWidgetReceiver.ACTION_REFRESH_AI_QUESTION ||
+        action == AiQuestionAppWidgetReceiver.ACTION_SELECT_AI_MODE ||
+        action == AiQuestionAppWidgetReceiver.ACTION_SELECT_AI_ANSWER ||
+        action == AiQuestionAppWidgetReceiver.ACTION_OPEN_AI_TOPIC ||
+        action == AiQuestionAppWidgetReceiver.ACTION_OPEN_AI_CHATGPT
 
 internal fun shouldStartRefresh(state: WidgetNoteState?): Boolean =
     state is WidgetNoteState.Note && !state.isRefreshing

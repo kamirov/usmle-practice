@@ -23,6 +23,11 @@ class WidgetRefreshActionTest {
         assertTrue(isPerWidgetAction(ReviewQuestionsAppWidgetReceiver.ACTION_TOGGLE_REVIEW_ANSWER))
         assertTrue(isPerWidgetAction(ReviewQuestionsAppWidgetReceiver.ACTION_REMOVE_REVIEW_QUESTION))
         assertTrue(isPerWidgetAction(ReviewQuestionsAppWidgetReceiver.ACTION_OPEN_REVIEW_BROWSER))
+        assertTrue(isPerWidgetAction(AiQuestionAppWidgetReceiver.ACTION_REFRESH_AI_QUESTION))
+        assertTrue(isPerWidgetAction(AiQuestionAppWidgetReceiver.ACTION_SELECT_AI_MODE))
+        assertTrue(isPerWidgetAction(AiQuestionAppWidgetReceiver.ACTION_SELECT_AI_ANSWER))
+        assertTrue(isPerWidgetAction(AiQuestionAppWidgetReceiver.ACTION_OPEN_AI_TOPIC))
+        assertTrue(isPerWidgetAction(AiQuestionAppWidgetReceiver.ACTION_OPEN_AI_CHATGPT))
     }
 
     @Test

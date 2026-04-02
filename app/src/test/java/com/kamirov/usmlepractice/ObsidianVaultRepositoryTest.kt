@@ -4,9 +4,12 @@ import android.net.Uri
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNotEquals
 import org.junit.Test
+import org.mockito.Mockito.mock
 import kotlin.random.Random
 
 class ObsidianVaultRepositoryTest {
+    private val uriCache = mutableMapOf<String, Uri>()
+
     @Test
     fun rootMarkdownNotes_includesOnlyNonEmptyRootMarkdownFiles() {
         val entries = listOf(
@@ -103,5 +106,5 @@ class ObsidianVaultRepositoryTest {
         assertNotEquals(first, differentPath)
     }
 
-    private fun testUri(value: String): Uri = Uri.parse("content://test/$value")
+    private fun testUri(value: String): Uri = uriCache.getOrPut(value) { mock(Uri::class.java) }
 }
