@@ -30,7 +30,6 @@ class RandomQaAppWidgetReceiver : AppWidgetProvider() {
 
     override fun onDeleted(context: Context, appWidgetIds: IntArray) {
         super.onDeleted(context, appWidgetIds)
-        appWidgetIds.forEach { WidgetPreferencesStore.clearWidgetState(context, it) }
     }
 
     override fun onReceive(context: Context, intent: Intent) {
@@ -53,7 +52,7 @@ class RandomQaAppWidgetReceiver : AppWidgetProvider() {
                     return
                 }
 
-                val currentState = WidgetPreferencesStore.loadWidgetState(context, appWidgetId) ?: return
+                val currentState = RandomQaSnapshotRepository(context).load() ?: return
                 val nextState = when (currentState) {
                     is WidgetNoteState.Note -> currentState.copy(
                         expandedIndex = toggleExpandedIndex(currentState.expandedIndex, tappedIndex)
@@ -62,6 +61,12 @@ class RandomQaAppWidgetReceiver : AppWidgetProvider() {
                     is WidgetNoteState.Message -> currentState
                 }
 
+                RandomQaSnapshotRepository(context).let { repo ->
+                    when (nextState) {
+                        is WidgetNoteState.Note,
+                        is WidgetNoteState.Message -> RandomQaSharedSnapshotStore.save(context, nextState)
+                    }
+                }
                 rerenderWidget(context, appWidgetId, nextState)
             }
 
@@ -72,34 +77,16 @@ class RandomQaAppWidgetReceiver : AppWidgetProvider() {
                     return
                 }
 
-                val currentState = WidgetPreferencesStore.loadWidgetState(context, appWidgetId) as? WidgetNoteState.Note
+                val currentState = RandomQaSnapshotRepository(context).load() as? WidgetNoteState.Note
                     ?: return
-                val item = currentState.widgetQaItems.getOrNull(tappedIndex) ?: return
-
-                when (
-                    TroubleQuestionRepository(context).toggle(
-                        noteTitle = currentState.note.noteName,
-                        notePathKey = currentState.note.notePathKey,
-                        item = item,
-                    )
-                ) {
-                    TroubleQuestionToggleResult.Added,
-                    TroubleQuestionToggleResult.Removed -> {
-                        ReviewQuestionsAppWidgetReceiver.requestWidgetRefresh(context)
-                        rerenderWidget(context, appWidgetId, currentState)
-                    }
-
-                    TroubleQuestionToggleResult.RejectedAtCapacity -> rerenderWidget(
-                        context,
-                        appWidgetId,
-                        currentState,
-                    )
-                }
+                RandomQaSnapshotRepository(context).toggleDifficult(tappedIndex)
+                ReviewQuestionsAppWidgetReceiver.requestWidgetRefresh(context)
+                rerenderWidget(context, appWidgetId, currentState)
             }
 
             ACTION_OPEN_NOTE -> {
                 val appWidgetId = requireAppWidgetId(intent) ?: return
-                val currentState = WidgetPreferencesStore.loadWidgetState(context, appWidgetId) as? WidgetNoteState.Note
+                val currentState = RandomQaSnapshotRepository(context).load() as? WidgetNoteState.Note
                     ?: return
                 launchIntent(
                     context = context,
@@ -114,7 +101,7 @@ class RandomQaAppWidgetReceiver : AppWidgetProvider() {
 
             ACTION_OPEN_TOPIC_CHATGPT -> {
                 val appWidgetId = requireAppWidgetId(intent) ?: return
-                val currentState = WidgetPreferencesStore.loadWidgetState(context, appWidgetId) as? WidgetNoteState.Note
+                val currentState = RandomQaSnapshotRepository(context).load() as? WidgetNoteState.Note
                     ?: return
                 launchIntent(
                     context = context,
@@ -132,7 +119,7 @@ class RandomQaAppWidgetReceiver : AppWidgetProvider() {
                     return
                 }
 
-                val currentState = WidgetPreferencesStore.loadWidgetState(context, appWidgetId) as? WidgetNoteState.Note
+                val currentState = RandomQaSnapshotRepository(context).load() as? WidgetNoteState.Note
                     ?: return
                 val item = currentState.widgetQaItems.getOrNull(tappedIndex) ?: return
 
@@ -152,7 +139,7 @@ class RandomQaAppWidgetReceiver : AppWidgetProvider() {
                     return
                 }
 
-                val currentState = WidgetPreferencesStore.loadWidgetState(context, appWidgetId) as? WidgetNoteState.Note
+                val currentState = RandomQaSnapshotRepository(context).load() as? WidgetNoteState.Note
                     ?: return
                 val item = currentState.widgetQaItems.getOrNull(tappedIndex) ?: return
 
@@ -184,6 +171,15 @@ class RandomQaAppWidgetReceiver : AppWidgetProvider() {
                 refreshWidgetIds(context, appWidgetManager, appWidgetIds)
             }
         }
+
+        fun rerenderWidgets(context: Context) {
+            val appWidgetManager = AppWidgetManager.getInstance(context)
+            val appWidgetIds = loadWidgetIds(context, appWidgetManager)
+            val state = RandomQaSnapshotRepository(context).load() ?: return
+            appWidgetIds.forEach { appWidgetId ->
+                RandomQaRemoteViewsRenderer.render(context, appWidgetManager, appWidgetId, state)
+            }
+        }
     }
 }
 
@@ -205,11 +201,10 @@ private fun refreshWidgetIds(
     appWidgetManager: AppWidgetManager,
     appWidgetIds: IntArray,
 ) {
-    val repository = ObsidianVaultRepository(context)
+    val repository = RandomQaSnapshotRepository(context)
 
     appWidgetIds.forEach { appWidgetId ->
-        val state = repository.loadRandomWidgetStateSync()
-        WidgetPreferencesStore.saveWidgetState(context, appWidgetId, state)
+        val state = repository.refresh()
         RandomQaRemoteViewsRenderer.render(context, appWidgetManager, appWidgetId, state)
     }
 }
@@ -237,7 +232,7 @@ private fun startRefreshSingleWidget(
     appWidgetId: Int,
     pendingResult: PendingResult,
 ) {
-    val currentState = WidgetPreferencesStore.loadWidgetState(context, appWidgetId)
+    val currentState = RandomQaSnapshotRepository(context).load()
     if (!shouldStartRefresh(currentState)) {
         pendingResult.finish()
         return
@@ -262,7 +257,7 @@ private fun rerenderWidget(
     appWidgetId: Int,
     state: WidgetNoteState,
 ) {
-    WidgetPreferencesStore.saveWidgetState(context, appWidgetId, state)
+    RandomQaSharedSnapshotStore.save(context, state)
     val appWidgetManager = AppWidgetManager.getInstance(context)
     RandomQaRemoteViewsRenderer.render(context, appWidgetManager, appWidgetId, state)
 }
@@ -606,7 +601,7 @@ private fun ParsedNoteViewData.displayTitle(): String = noteName.displayTopicTit
 private const val MODE_MESSAGE = "message"
 private const val MODE_NOTE = "note"
 private const val REFRESHING_TITLE = "Refreshing..."
-private const val RANDOM_QA_WIDGET_TITLE = "Random Q&A Note"
+internal const val RANDOM_QA_WIDGET_TITLE = "Random Q&A Note"
 private const val REQUEST_REFRESH_NOTE = 5_000
 private const val REQUEST_TOGGLE_QUESTION = 10_000
 private const val REQUEST_TOGGLE_DIFFICULT = 20_000

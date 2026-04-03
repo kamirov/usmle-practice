@@ -21,7 +21,6 @@ class AiQuestionEngineTest {
             context = mock(Context::class.java),
             previousState = null,
             keyRepositoryFactory = { FakeOpenAiKeyAccess("") },
-            debugLogger = FakeAiDebugLogger("req-missing-key"),
         )
 
         assertEquals(
@@ -286,13 +285,10 @@ class AiQuestionEngineTest {
         var attempts = 0
         val client = OpenAiAiQuestionClient(
             "test-key",
-            FakeAiDebugLogger("req-timeout"),
-            object : OpenAiTransport {
-                override fun execute(
-                    apiKey: String,
-                    requestBody: String,
-                    mode: AiWidgetMode,
-                    generationContext: AiQuestionGenerationContext,
+            object : OpenAiSdkGateway {
+                override fun generateQuestionJson(
+                    systemMessage: String,
+                    userMessage: String,
                 ): String {
                     attempts += 1
                     throw SocketTimeoutException("timeout")
@@ -317,13 +313,10 @@ class AiQuestionEngineTest {
     fun openAiClient_formatsCompactUnknownHostError() {
         val client = OpenAiAiQuestionClient(
             "test-key",
-            FakeAiDebugLogger("req-unknown-host"),
-            object : OpenAiTransport {
-                override fun execute(
-                    apiKey: String,
-                    requestBody: String,
-                    mode: AiWidgetMode,
-                    generationContext: AiQuestionGenerationContext,
+            object : OpenAiSdkGateway {
+                override fun generateQuestionJson(
+                    systemMessage: String,
+                    userMessage: String,
                 ): String {
                     throw UnknownHostException("Unable to resolve host api.openai.com")
                 }
@@ -356,16 +349,22 @@ class AiQuestionEngineTest {
     fun openAiClient_parsesSuccessfulTransportResponse() {
         val client = OpenAiAiQuestionClient(
             "test-key",
-            FakeAiDebugLogger("req-success"),
-            object : OpenAiTransport {
-                override fun execute(
-                    apiKey: String,
-                    requestBody: String,
-                    mode: AiWidgetMode,
-                    generationContext: AiQuestionGenerationContext,
+            object : OpenAiSdkGateway {
+                override fun generateQuestionJson(
+                    systemMessage: String,
+                    userMessage: String,
                 ): String = """
                     {
-                      "output_text": "{\"stem\":\"A question stem\",\"choices\":[{\"key\":\"A\",\"text\":\"Choice A\",\"explanation\":\"Expl A\"},{\"key\":\"B\",\"text\":\"Choice B\",\"explanation\":\"Expl B\"},{\"key\":\"C\",\"text\":\"Choice C\",\"explanation\":\"Expl C\"},{\"key\":\"D\",\"text\":\"Choice D\",\"explanation\":\"Expl D\"},{\"key\":\"E\",\"text\":\"Choice E\",\"explanation\":\"Expl E\"}],\"correctKey\":\"A\",\"correctExplanation\":\"Correct expl\"}"
+                      "stem":"A question stem",
+                      "choices":[
+                        {"key":"A","text":"Choice A","explanation":"Expl A"},
+                        {"key":"B","text":"Choice B","explanation":"Expl B"},
+                        {"key":"C","text":"Choice C","explanation":"Expl C"},
+                        {"key":"D","text":"Choice D","explanation":"Expl D"},
+                        {"key":"E","text":"Choice E","explanation":"Expl E"}
+                      ],
+                      "correctKey":"A",
+                      "correctExplanation":"Correct expl"
                     }
                 """.trimIndent()
             },
@@ -379,17 +378,6 @@ class AiQuestionEngineTest {
 
         assertTrue(result is AiQuestionGenerationResult.Success)
         assertEquals("A question stem", (result as AiQuestionGenerationResult.Success).question.stem)
-    }
-
-    @Test
-    fun widgetFailureMessage_appendsRequestIdHint() {
-        assertEquals(
-            "OpenAI request error: SocketException: Software caused connection abort Request ai-1234. Open the app for AI diagnostics.",
-            appendAiDiagnosticsHint(
-                "OpenAI request error: SocketException: Software caused connection abort",
-                "ai-1234",
-            ),
-        )
     }
 
     private fun testGenerationContext(): AiQuestionGenerationContext = AiQuestionGenerationContext(
@@ -451,31 +439,4 @@ private class FakeOpenAiKeyAccess(
     override fun clearKey() = Unit
 
     override fun hasKey(): Boolean = key.trim().isNotEmpty()
-}
-
-private class FakeAiDebugLogger(
-    override val sessionId: String,
-) : AiDebugLogger {
-    override fun logEvent(
-        stage: String,
-        message: String,
-        mode: AiWidgetMode?,
-        topic: String?,
-        fields: Map<String, String>,
-    ) = Unit
-
-    override fun logFailure(
-        stage: String,
-        throwable: Throwable,
-        mode: AiWidgetMode?,
-        topic: String?,
-        fields: Map<String, String>,
-    ) = Unit
-
-    override fun complete(
-        status: String,
-        mode: AiWidgetMode?,
-        topic: String?,
-        fields: Map<String, String>,
-    ) = Unit
 }

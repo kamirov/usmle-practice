@@ -8,7 +8,6 @@ import android.content.ActivityNotFoundException
 import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
-import android.util.Log
 import android.view.View
 import android.widget.RemoteViews
 
@@ -30,7 +29,6 @@ class AiQuestionAppWidgetReceiver : AppWidgetProvider() {
 
     override fun onDeleted(context: Context, appWidgetIds: IntArray) {
         super.onDeleted(context, appWidgetIds)
-        appWidgetIds.forEach { AiQuestionWidgetPreferencesStore.clearWidgetState(context, it) }
     }
 
     override fun onReceive(context: Context, intent: Intent) {
@@ -49,7 +47,7 @@ class AiQuestionAppWidgetReceiver : AppWidgetProvider() {
             ACTION_SELECT_AI_MODE -> {
                 val appWidgetId = requireAiAppWidgetId(intent) ?: return
                 val requestedMode = parseAiWidgetMode(intent.getStringExtra(EXTRA_AI_MODE)) ?: return
-                val currentState = AiQuestionWidgetPreferencesStore.loadWidgetState(context, appWidgetId)
+                val currentState = AiQuestionSnapshotRepository(context).load()
                     as? AiQuestionWidgetState.Loaded ?: return
                 rerenderAiQuestionWidget(
                     context = context,
@@ -63,14 +61,9 @@ class AiQuestionAppWidgetReceiver : AppWidgetProvider() {
             ACTION_SELECT_AI_ANSWER -> {
                 val appWidgetId = requireAiAppWidgetId(intent) ?: return
                 val selectedKey = intent.getStringExtra(EXTRA_AI_SELECTED_KEY) ?: return
-                val currentState = AiQuestionWidgetPreferencesStore.loadWidgetState(context, appWidgetId)
+                val currentState = AiQuestionSnapshotRepository(context).load()
                     as? AiQuestionWidgetState.Loaded ?: return
-                val nextState = answerAiQuestion(
-                    state = currentState,
-                    mode = currentState.activeMode,
-                    selectedKey = selectedKey,
-                    mistakeRepository = AiQuestionMistakeRepository(context),
-                )
+                val nextState = AiQuestionSnapshotRepository(context).answer(selectedKey) ?: return
                 rerenderAiQuestionWidget(
                     context = context,
                     appWidgetId = appWidgetId,
@@ -80,7 +73,7 @@ class AiQuestionAppWidgetReceiver : AppWidgetProvider() {
 
             ACTION_OPEN_AI_TOPIC -> {
                 val appWidgetId = requireAiAppWidgetId(intent) ?: return
-                val currentState = AiQuestionWidgetPreferencesStore.loadWidgetState(context, appWidgetId)
+                val currentState = AiQuestionSnapshotRepository(context).load()
                     as? AiQuestionWidgetState.Loaded ?: return
                 val modeState = currentState.modeState(currentState.activeMode)
                 if (!modeState.isRevealed) {
@@ -100,7 +93,7 @@ class AiQuestionAppWidgetReceiver : AppWidgetProvider() {
 
             ACTION_OPEN_AI_CHATGPT -> {
                 val appWidgetId = requireAiAppWidgetId(intent) ?: return
-                val currentState = AiQuestionWidgetPreferencesStore.loadWidgetState(context, appWidgetId)
+                val currentState = AiQuestionSnapshotRepository(context).load()
                     ?: return
                 launchAiIntent(
                     context = context,
@@ -141,6 +134,17 @@ class AiQuestionAppWidgetReceiver : AppWidgetProvider() {
                 )
             }
         }
+
+        fun rerenderWidgets(context: Context) {
+            val appWidgetManager = AppWidgetManager.getInstance(context)
+            val appWidgetIds = appWidgetManager.getAppWidgetIds(
+                ComponentName(context, AiQuestionAppWidgetReceiver::class.java),
+            )
+            val state = AiQuestionSnapshotRepository(context).load() ?: return
+            appWidgetIds.forEach { appWidgetId ->
+                AiQuestionRemoteViewsRenderer.render(context, appWidgetManager, appWidgetId, state)
+            }
+        }
     }
 }
 
@@ -149,20 +153,8 @@ private fun enqueueAiQuestionRefresh(
     appWidgetId: Int,
     pendingResult: PendingResult?,
 ) {
-    val requestId = generateAiDebugSessionId()
-    val debugLogger = AiDebugSessionLogger(
-        repository = AiDebugLogRepository(context),
-        sessionId = requestId,
-        widgetId = appWidgetId,
-    )
-    val previousState = AiQuestionWidgetPreferencesStore.loadWidgetState(context, appWidgetId)
+    val previousState = AiQuestionSnapshotRepository(context).load()
     if (!shouldStartAiQuestionRefresh(previousState)) {
-        debugLogger.logEvent(
-            stage = "widget_refresh_skipped",
-            message = "Skipping refresh because widget is already refreshing",
-            fields = mapOf("widgetId" to appWidgetId.toString()),
-        )
-        debugLogger.complete(status = "skipped")
         pendingResult?.finish()
         return
     }
@@ -181,35 +173,19 @@ private fun enqueueAiQuestionRefresh(
 
     Thread {
         try {
-            val nextState = buildAiQuestionWidgetState(
-                context = context,
-                previousState = previousState,
-                appWidgetId = appWidgetId,
-                requestId = requestId,
-                debugLogger = debugLogger,
-            )
+            val nextState = AiQuestionSnapshotRepository(context).refresh()
             rerenderAiQuestionWidget(
                 context = context,
                 appWidgetId = appWidgetId,
                 state = nextState,
             )
         } catch (t: Throwable) {
-            debugLogger.logFailure(
-                stage = "widget_refresh_uncaught",
-                throwable = t,
-                fields = mapOf("widgetId" to appWidgetId.toString()),
-            )
-            debugLogger.complete(status = "uncaught_exception")
-            Log.e("AiQuestionWidget", "AI widget refresh failed for request=$requestId", t)
             rerenderAiQuestionWidget(
                 context = context,
                 appWidgetId = appWidgetId,
                 state = AiQuestionWidgetState.Message(
                     title = AI_QUESTION_WIDGET_TITLE,
-                    message = appendAiDiagnosticsHint(
-                        summary = "AI widget refresh failed.",
-                        requestId = requestId,
-                    ),
+                    message = "AI widget refresh failed.",
                     isRefreshing = false,
                 ),
             )
@@ -224,7 +200,7 @@ private fun rerenderAiQuestionWidget(
     appWidgetId: Int,
     state: AiQuestionWidgetState,
 ) {
-    AiQuestionWidgetPreferencesStore.saveWidgetState(context, appWidgetId, state)
+    AiQuestionSharedSnapshotStore.save(context, state)
     AiQuestionRemoteViewsRenderer.render(
         context = context,
         appWidgetManager = AppWidgetManager.getInstance(context),
@@ -265,9 +241,6 @@ private object AiQuestionRemoteViewsRenderer {
         val views = RemoteViews(context.packageName, R.layout.ai_question_widget_note)
         val activeMode = state.activeMode
         val activeModeState = state.modeState(activeMode)
-        val activeQuestion = activeModeState.question
-        val hasQuestion = activeQuestion != null
-        val showModeMessage = !hasQuestion && !activeModeState.message.isNullOrBlank()
         val topicVisible = activeModeState.isRevealed && activeModeState.context != null
         val currentTopic = activeModeState.context?.topic.orEmpty()
 
@@ -298,45 +271,19 @@ private object AiQuestionRemoteViewsRenderer {
             R.id.widget_topic_button,
             if (topicVisible) "[$currentTopic]" else "",
         )
-
-        views.setViewVisibility(
-            R.id.widget_mode_message,
-            if (showModeMessage) View.VISIBLE else View.GONE,
-        )
-        views.setTextViewText(R.id.widget_mode_message, activeModeState.message.orEmpty())
-
-        views.setViewVisibility(
-            R.id.widget_question_container,
-            if (hasQuestion) View.VISIBLE else View.GONE,
-        )
-
-        if (hasQuestion) {
-            views.setTextViewText(R.id.widget_stem_text, activeQuestion.stem)
-            bindChoiceViews(
-                views = views,
+        views.setRemoteAdapter(
+            R.id.widget_question_list,
+            buildAiQuestionCollectionItems(
                 context = context,
                 appWidgetId = appWidgetId,
                 state = state,
                 modeState = activeModeState,
-                question = activeQuestion,
-            )
-
-            views.setViewVisibility(
-                R.id.widget_correct_explanation,
-                if (activeModeState.isRevealed) View.VISIBLE else View.GONE,
-            )
-            val correctExplain = "Correct answer: ${activeQuestion.correctKey}. ${activeQuestion.correctExplanation}"
-            views.setTextViewText(R.id.widget_correct_explanation, correctExplain)
-        } else {
-            views.setTextViewText(R.id.widget_stem_text, "")
-            views.setViewVisibility(R.id.widget_correct_explanation, View.GONE)
-            CHOICE_VIEW_BINDINGS.forEach { binding ->
-                views.setTextViewText(binding.buttonId, "")
-                views.setTextViewText(binding.explanationId, "")
-                views.setViewVisibility(binding.explanationId, View.GONE)
-                views.setInt(binding.buttonId, "setBackgroundResource", R.drawable.widget_choice_button_bg)
-            }
-        }
+            ),
+        )
+        views.setPendingIntentTemplate(
+            R.id.widget_question_list,
+            widgetCollectionPendingIntentTemplate(context, AiQuestionAppWidgetReceiver::class.java),
+        )
 
         return views
     }
@@ -422,58 +369,9 @@ private object AiQuestionRemoteViewsRenderer {
             }
         }
     }
-
-    private fun bindChoiceViews(
-        views: RemoteViews,
-        context: Context,
-        appWidgetId: Int,
-        state: AiQuestionWidgetState.Loaded,
-        modeState: AiQuestionModeState,
-        question: AiGeneratedQuestion,
-    ) {
-        CHOICE_VIEW_BINDINGS.forEach { binding ->
-            val choice = question.choices.firstOrNull { it.key == binding.key }
-            if (choice == null) {
-                views.setTextViewText(binding.buttonId, "")
-                views.setTextViewText(binding.explanationId, "")
-                views.setViewVisibility(binding.explanationId, View.GONE)
-                views.setInt(binding.buttonId, "setBackgroundResource", R.drawable.widget_choice_button_bg)
-                return@forEach
-            }
-
-            views.setTextViewText(binding.buttonId, "${choice.key}. ${choice.text}")
-            views.setTextViewText(binding.explanationId, choice.explanation)
-            views.setViewVisibility(
-                binding.explanationId,
-                if (modeState.isRevealed) View.VISIBLE else View.GONE,
-            )
-            views.setInt(
-                binding.buttonId,
-                "setBackgroundResource",
-                choiceBackgroundRes(
-                    modeState = modeState,
-                    choice = choice,
-                    question = question,
-                ),
-            )
-
-            if (!state.isRefreshing && !modeState.isRevealed) {
-                views.setOnClickPendingIntent(
-                    binding.buttonId,
-                    aiQuestionActionPendingIntent(
-                        context = context,
-                        appWidgetId = appWidgetId,
-                        action = AiQuestionAppWidgetReceiver.ACTION_SELECT_AI_ANSWER,
-                        requestCode = REQUEST_SELECT_AI_ANSWER + binding.buttonId,
-                        extraSelectedKey = choice.key,
-                    ),
-                )
-            }
-        }
-    }
 }
 
-private fun choiceBackgroundRes(
+internal fun choiceBackgroundRes(
     modeState: AiQuestionModeState,
     choice: AiGeneratedChoice,
     question: AiGeneratedQuestion,
@@ -541,20 +439,6 @@ private fun buildAiQuestionChatGptPrompt(
             }
         }
     }
-
-private data class ChoiceViewBinding(
-    val key: String,
-    val buttonId: Int,
-    val explanationId: Int,
-)
-
-private val CHOICE_VIEW_BINDINGS = listOf(
-    ChoiceViewBinding("A", R.id.widget_choice_a_button, R.id.widget_choice_a_explanation),
-    ChoiceViewBinding("B", R.id.widget_choice_b_button, R.id.widget_choice_b_explanation),
-    ChoiceViewBinding("C", R.id.widget_choice_c_button, R.id.widget_choice_c_explanation),
-    ChoiceViewBinding("D", R.id.widget_choice_d_button, R.id.widget_choice_d_explanation),
-    ChoiceViewBinding("E", R.id.widget_choice_e_button, R.id.widget_choice_e_explanation),
-)
 
 private val MODE_BUTTON_BINDINGS = linkedMapOf(
     AiWidgetMode.TARGETED to R.id.widget_mode_targeted,

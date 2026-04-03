@@ -27,7 +27,6 @@ class ReviewQuestionsAppWidgetReceiver : AppWidgetProvider() {
 
     override fun onDeleted(context: Context, appWidgetIds: IntArray) {
         super.onDeleted(context, appWidgetIds)
-        appWidgetIds.forEach { ReviewQuestionsWidgetPreferencesStore.clearWidgetState(context, it) }
     }
 
     override fun onReceive(context: Context, intent: Intent) {
@@ -48,12 +47,13 @@ class ReviewQuestionsAppWidgetReceiver : AppWidgetProvider() {
                 val tappedIndex = intent.getIntExtra(RandomQaAppWidgetReceiver.EXTRA_TAPPED_INDEX, -1)
                 if (tappedIndex < 0) return
 
-                val currentState = ReviewQuestionsWidgetPreferencesStore.loadWidgetState(context, appWidgetId)
+                val currentState = ReviewQuestionsSnapshotRepository(context).load()
                     as? ReviewQuestionsWidgetState.Loaded ?: return
                 val visibleId = currentState.visibleIds.getOrNull(tappedIndex) ?: return
                 val nextState = currentState.copy(
                     expandedItemId = toggleExpandedReviewItemId(currentState.expandedItemId, visibleId)
                 )
+                ReviewQuestionsSharedSnapshotStore.save(context, nextState)
                 rerenderReviewWidget(
                     context = context,
                     appWidgetId = appWidgetId,
@@ -66,7 +66,7 @@ class ReviewQuestionsAppWidgetReceiver : AppWidgetProvider() {
                 val tappedIndex = intent.getIntExtra(RandomQaAppWidgetReceiver.EXTRA_TAPPED_INDEX, -1)
                 if (tappedIndex < 0) return
 
-                val currentState = ReviewQuestionsWidgetPreferencesStore.loadWidgetState(context, appWidgetId)
+                val currentState = ReviewQuestionsSnapshotRepository(context).load()
                     as? ReviewQuestionsWidgetState.Loaded ?: return
                 val visibleId = currentState.visibleIds.getOrNull(tappedIndex) ?: return
                 TroubleQuestionRepository(context).remove(visibleId)
@@ -78,6 +78,7 @@ class ReviewQuestionsAppWidgetReceiver : AppWidgetProvider() {
                     expandedItemId = nextExpandedItemId,
                 )
 
+                ReviewQuestionsSharedSnapshotStore.save(context, nextState)
                 rerenderReviewWidget(
                     context = context,
                     appWidgetId = appWidgetId,
@@ -90,7 +91,7 @@ class ReviewQuestionsAppWidgetReceiver : AppWidgetProvider() {
                 val tappedIndex = intent.getIntExtra(RandomQaAppWidgetReceiver.EXTRA_TAPPED_INDEX, -1)
                 if (tappedIndex < 0) return
 
-                val currentState = ReviewQuestionsWidgetPreferencesStore.loadWidgetState(context, appWidgetId)
+                val currentState = ReviewQuestionsSnapshotRepository(context).load()
                     as? ReviewQuestionsWidgetState.Loaded ?: return
                 val visibleId = currentState.visibleIds.getOrNull(tappedIndex) ?: return
                 val items = when (val result = TroubleQuestionRepository(context).loadAll()) {
@@ -129,6 +130,17 @@ class ReviewQuestionsAppWidgetReceiver : AppWidgetProvider() {
                 refreshReviewWidgetIds(context, appWidgetManager, appWidgetIds)
             }
         }
+
+        fun rerenderWidgets(context: Context) {
+            val appWidgetManager = AppWidgetManager.getInstance(context)
+            val appWidgetIds = appWidgetManager.getAppWidgetIds(
+                ComponentName(context, ReviewQuestionsAppWidgetReceiver::class.java)
+            )
+            val state = ReviewQuestionsSnapshotRepository(context).load() ?: return
+            appWidgetIds.forEach { appWidgetId ->
+                ReviewQuestionsRemoteViewsRenderer.render(context, appWidgetManager, appWidgetId, state)
+            }
+        }
     }
 }
 
@@ -138,8 +150,7 @@ private fun refreshReviewWidgetIds(
     appWidgetIds: IntArray,
 ) {
     appWidgetIds.forEach { appWidgetId ->
-        val state = buildReviewWidgetState(context, random = Random.Default)
-        ReviewQuestionsWidgetPreferencesStore.saveWidgetState(context, appWidgetId, state)
+        val state = ReviewQuestionsSnapshotRepository(context).refresh(random = Random.Default)
         ReviewQuestionsRemoteViewsRenderer.render(context, appWidgetManager, appWidgetId, state)
     }
 }
@@ -160,7 +171,7 @@ private fun startRefreshReviewWidget(
     appWidgetId: Int,
     pendingResult: PendingResult,
 ) {
-    val currentState = ReviewQuestionsWidgetPreferencesStore.loadWidgetState(context, appWidgetId)
+    val currentState = ReviewQuestionsSnapshotRepository(context).load()
     if (!shouldStartReviewRefresh(currentState)) {
         pendingResult.finish()
         return
@@ -186,7 +197,7 @@ private fun rerenderReviewWidget(
     appWidgetId: Int,
     state: ReviewQuestionsWidgetState,
 ) {
-    ReviewQuestionsWidgetPreferencesStore.saveWidgetState(context, appWidgetId, state)
+    ReviewQuestionsSharedSnapshotStore.save(context, state)
     ReviewQuestionsRemoteViewsRenderer.render(
         context = context,
         appWidgetManager = AppWidgetManager.getInstance(context),
@@ -195,7 +206,7 @@ private fun rerenderReviewWidget(
     )
 }
 
-private fun buildReviewWidgetState(
+internal fun buildReviewWidgetState(
     context: Context,
     random: Random,
 ): ReviewQuestionsWidgetState {
@@ -443,7 +454,7 @@ internal object ReviewQuestionsWidgetPreferencesStore {
     }
 }
 
-private const val REVIEW_QUESTIONS_TITLE = "Review Questions"
+internal const val REVIEW_QUESTIONS_TITLE = "Review Questions"
 private const val MODE_REVIEW_LOADED = "loaded"
 private const val MODE_REVIEW_MESSAGE = "message"
 private const val REQUEST_REFRESH_REVIEW = 30_000

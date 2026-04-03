@@ -1,14 +1,23 @@
 package com.kamirov.usmlepractice
 
 import android.content.Context
-import java.nio.charset.StandardCharsets
+import com.aallam.openai.api.chat.ChatCompletionRequest
+import com.aallam.openai.api.chat.ChatMessage
+import com.aallam.openai.api.chat.ChatResponseFormat
+import com.aallam.openai.api.chat.JsonSchema
+import com.aallam.openai.api.chat.systemMessage
+import com.aallam.openai.api.chat.userMessage
+import com.aallam.openai.api.http.Timeout
+import com.aallam.openai.api.model.ModelId
+import com.aallam.openai.client.OpenAI
+import com.aallam.openai.client.OpenAIConfig
+import io.ktor.client.engine.okhttp.OkHttp
 import kotlin.math.max
 import kotlin.random.Random
-import okhttp3.MediaType.Companion.toMediaType
-import okhttp3.OkHttpClient
-import okhttp3.Request
-import okhttp3.RequestBody.Companion.toRequestBody
-import okhttp3.Response
+import kotlin.time.Duration.Companion.seconds
+import kotlinx.coroutines.runBlocking
+import kotlinx.serialization.json.Json
+import kotlinx.serialization.json.jsonObject
 import org.json.JSONArray
 import org.json.JSONObject
 
@@ -167,35 +176,13 @@ internal fun buildAiQuestionWidgetState(
     context: Context,
     previousState: AiQuestionWidgetState?,
     appWidgetId: Int? = null,
-    requestId: String = generateAiDebugSessionId(),
     random: Random = Random.Default,
     now: () -> String = { java.time.Instant.now().toString() },
-    clientFactory: (String, AiDebugLogger) -> AiQuestionClient = { apiKey, debugLogger ->
-        OpenAiAiQuestionClient(apiKey, debugLogger)
-    },
+    clientFactory: (String) -> AiQuestionClient = { apiKey -> OpenAiAiQuestionClient(apiKey) },
     keyRepositoryFactory: (Context) -> OpenAiKeyAccess = { appContext -> OpenAiKeyRepository(appContext) },
-    debugLogger: AiDebugLogger = AiDebugSessionLogger(
-        repository = AiDebugLogRepository(context),
-        sessionId = requestId,
-        widgetId = appWidgetId,
-    ),
 ): AiQuestionWidgetState {
-    debugLogger.logEvent(
-        stage = "widget_refresh_start",
-        message = "Starting AI widget refresh",
-        fields = mapOf(
-            "widgetId" to (appWidgetId ?: -1).toString(),
-            "hasPreviousState" to (previousState != null).toString(),
-        ),
-    )
     val apiKey = keyRepositoryFactory(context).loadKey().trim()
-    debugLogger.logEvent(
-        stage = "key_lookup_complete",
-        message = "Loaded OpenAI key status",
-        fields = mapOf("hasApiKey" to apiKey.isNotBlank().toString()),
-    )
     if (apiKey.isBlank()) {
-        debugLogger.complete(status = "missing_key")
         return AiQuestionWidgetState.Message(
             title = AI_QUESTION_WIDGET_TITLE,
             message = "Missing OpenAI key. Open the app and save your key in the OpenAI card.",
@@ -206,7 +193,6 @@ internal fun buildAiQuestionWidgetState(
     val notesState = repository.loadAiQuestionCandidateNotesSync()
     val notes = when (notesState) {
         VaultScreenState.Unlinked -> {
-            debugLogger.complete(status = "vault_unlinked")
             return AiQuestionWidgetState.Message(
                 title = "Vault not linked",
                 message = "Open the app and link your Obsidian vault.",
@@ -214,7 +200,6 @@ internal fun buildAiQuestionWidgetState(
         }
 
         VaultScreenState.Loading -> {
-            debugLogger.complete(status = "vault_loading")
             return AiQuestionWidgetState.Message(
                 title = AI_QUESTION_WIDGET_TITLE,
                 message = "Loading notes.",
@@ -222,7 +207,6 @@ internal fun buildAiQuestionWidgetState(
         }
 
         is VaultScreenState.Error -> {
-            debugLogger.complete(status = "vault_error")
             return AiQuestionWidgetState.Message(
                 title = "Could not read vault",
                 message = notesState.message,
@@ -233,7 +217,6 @@ internal fun buildAiQuestionWidgetState(
     }
 
     if (notes.isEmpty()) {
-        debugLogger.complete(status = "no_notes")
         return AiQuestionWidgetState.Message(
             title = "No notes",
             message = "No Markdown notes with balanced ## Questions and ## Answers were found.",
@@ -245,14 +228,6 @@ internal fun buildAiQuestionWidgetState(
         ?.mapValues { (_, modeState) -> modeState.context?.notePathKey }
         .orEmpty()
     val notesByPath = notes.associateBy { it.notePathKey }
-    debugLogger.logEvent(
-        stage = "note_pool_ready",
-        message = "Loaded AI candidate notes",
-        fields = mapOf(
-            "noteCount" to notes.size.toString(),
-            "previousPaths" to previousPaths.entries.joinToString(";") { (mode, path) -> "${mode.wireValue}:${path ?: "none"}" },
-        ),
-    )
     val selectedPracticeNotes = pickDistinctPracticeNotes(
         notes = notes,
         previousPaths = previousPaths,
@@ -265,16 +240,6 @@ internal fun buildAiQuestionWidgetState(
         previousPathKey = previousPaths[AiWidgetMode.TARGETED],
         random = random,
     )
-    debugLogger.logEvent(
-        stage = "note_selection_complete",
-        message = "Selected note contexts for AI generation",
-        fields = buildMap {
-            put("targetedPath", targetedStat?.notePathKey ?: "none")
-            selectedPracticeNotes.forEach { (mode, note) ->
-                put("${mode.wireValue}Path", note?.notePathKey ?: "none")
-            }
-        },
-    )
 
     val generationContexts = linkedMapOf<AiWidgetMode, AiQuestionGenerationContext?>()
     generationContexts[AiWidgetMode.TARGETED] = targetedStat
@@ -284,40 +249,20 @@ internal fun buildAiQuestionWidgetState(
         generationContexts[mode] = note?.let { repository.loadAiQuestionGenerationContextSync(it) }
     }
 
-    val client = clientFactory(apiKey, debugLogger)
+    val client = clientFactory(apiKey)
     val modeStates = emptyAiQuestionModeStates().toMutableMap()
     for (mode in AiWidgetMode.refreshableModes) {
         val generationContext = generationContexts[mode]
         modeStates[mode] = when {
             mode == AiWidgetMode.TARGETED && targetedStat == null -> {
-                debugLogger.logEvent(
-                    stage = "mode_skipped",
-                    message = "Targeted mode skipped because no weighted topic exists",
-                    mode = mode,
-                )
                 AiQuestionModeState(message = "No targeted topics yet. Miss a question first.")
             }
 
             generationContext == null -> {
-                debugLogger.logEvent(
-                    stage = "mode_context_missing",
-                    message = "Could not load note context",
-                    mode = mode,
-                )
                 AiQuestionModeState(message = "Could not load note context for ${mode.title.lowercase()} mode.")
             }
 
             else -> {
-                debugLogger.logEvent(
-                    stage = "mode_generation_start",
-                    message = "Generating AI question for mode",
-                    mode = mode,
-                    topic = generationContext.context.topic,
-                    fields = mapOf(
-                        "notePathKey" to generationContext.context.notePathKey,
-                        "samplePairCount" to generationContext.samplePairs.size.toString(),
-                    ),
-                )
                 when (
                     val result = client.generateQuestion(
                         mode = mode,
@@ -328,38 +273,16 @@ internal fun buildAiQuestionWidgetState(
                     is AiQuestionGenerationResult.Success -> AiQuestionModeState(
                         context = generationContext.context,
                         question = result.question,
-                    ).also {
-                        debugLogger.logEvent(
-                            stage = "mode_generation_success",
-                            message = "Generated AI question successfully",
-                            mode = mode,
-                            topic = generationContext.context.topic,
-                            fields = mapOf("choiceCount" to result.question.choices.size.toString()),
-                        )
-                    }
+                    )
 
                     is AiQuestionGenerationResult.Error -> AiQuestionModeState(
                         context = generationContext.context,
-                        message = appendAiDiagnosticsHint(result.message, requestId),
-                    ).also {
-                        debugLogger.logEvent(
-                            stage = "mode_generation_error",
-                            message = result.message,
-                            mode = mode,
-                            topic = generationContext.context.topic,
-                        )
-                    }
+                        message = result.message,
+                    )
                 }
             }
         }
     }
-
-    debugLogger.complete(
-        status = if (modeStates.values.any { it.question != null }) "success" else "message_only",
-        fields = mapOf(
-            "successfulModes" to modeStates.filterValues { it.question != null }.keys.joinToString(",") { it.wireValue },
-        ),
-    )
     return AiQuestionWidgetState.Loaded(
         activeMode = AiWidgetMode.EASY,
         modeStates = modeStates,
@@ -506,8 +429,7 @@ internal interface AiQuestionClient {
 
 internal class OpenAiAiQuestionClient(
     private val apiKey: String,
-    private val debugLogger: AiDebugLogger,
-    private val transport: OpenAiTransport = OkHttpOpenAiTransport(debugLogger),
+    private val gateway: OpenAiSdkGateway = OpenAiKotlinSdkGateway(apiKey),
 ) : AiQuestionClient {
     override fun generateQuestion(
         mode: AiWidgetMode,
@@ -515,50 +437,18 @@ internal class OpenAiAiQuestionClient(
         random: Random,
     ): AiQuestionGenerationResult {
         return try {
-            val requestBody = buildOpenAiQuestionRequestBody(mode, generationContext)
-            debugLogger.logEvent(
-                stage = "request_body_built",
-                message = "Built OpenAI request body",
-                mode = mode,
-                topic = generationContext.context.topic,
-                fields = mapOf(
-                    "endpoint" to OPENAI_RESPONSES_ENDPOINT,
-                    "model" to OPENAI_MODEL,
-                    "requestBytes" to requestBody.toByteArray(StandardCharsets.UTF_8).size.toString(),
+            val messages = buildPromptMessages(mode, generationContext)
+            val parsedQuestion = parseAiGeneratedQuestion(
+                gateway.generateQuestionJson(
+                    systemMessage = messages.first,
+                    userMessage = messages.second,
                 ),
-            )
-            val responseBody = transport.execute(
-                apiKey = apiKey,
-                requestBody = requestBody,
-                mode = mode,
-                generationContext = generationContext,
-            )
-            debugLogger.logEvent(
-                stage = "response_parse_start",
-                message = "Parsing OpenAI JSON response",
-                mode = mode,
-                topic = generationContext.context.topic,
-            )
-            val parsedQuestion = parseGeneratedQuestionFromOpenAiResponse(responseBody).also {
-                debugLogger.logEvent(
-                    stage = "response_parse_complete",
-                    message = "Parsed OpenAI JSON response",
-                    mode = mode,
-                    topic = generationContext.context.topic,
-                    fields = mapOf("parsedQuestion" to (it != null).toString()),
-                )
-            } ?: return AiQuestionGenerationResult.Error("OpenAI returned an invalid question payload.")
+            ) ?: return AiQuestionGenerationResult.Error("OpenAI returned an invalid question payload.")
 
             AiQuestionGenerationResult.Success(
                 randomizeQuestionChoices(parsedQuestion, random),
             )
         } catch (e: Exception) {
-            debugLogger.logFailure(
-                stage = "request_exception",
-                throwable = e,
-                mode = mode,
-                topic = generationContext.context.topic,
-            )
             AiQuestionGenerationResult.Error(
                 describeOpenAiRequestException(e),
             )
@@ -566,176 +456,59 @@ internal class OpenAiAiQuestionClient(
     }
 }
 
-internal interface OpenAiTransport {
-    fun execute(
-        apiKey: String,
-        requestBody: String,
-        mode: AiWidgetMode,
-        generationContext: AiQuestionGenerationContext,
+internal interface OpenAiSdkGateway {
+    fun generateQuestionJson(
+        systemMessage: String,
+        userMessage: String,
     ): String
 }
 
-internal class OkHttpOpenAiTransport(
-    private val debugLogger: AiDebugLogger,
-    private val client: OkHttpClient = OkHttpClient.Builder()
-        .connectTimeout(OPENAI_CONNECT_TIMEOUT_MS.toLong(), java.util.concurrent.TimeUnit.MILLISECONDS)
-        .readTimeout(OPENAI_READ_TIMEOUT_MS.toLong(), java.util.concurrent.TimeUnit.MILLISECONDS)
-        .build(),
-) : OpenAiTransport {
-    override fun execute(
-        apiKey: String,
-        requestBody: String,
-        mode: AiWidgetMode,
-        generationContext: AiQuestionGenerationContext,
-    ): String {
-        val requestBytes = requestBody.toByteArray(StandardCharsets.UTF_8)
-        debugLogger.logEvent(
-            stage = "transport_prepare_start",
-            message = "Preparing OkHttp request",
-            mode = mode,
-            topic = generationContext.context.topic,
-            fields = mapOf(
-                "host" to "api.openai.com",
-                "endpoint" to OPENAI_RESPONSES_ENDPOINT,
-                "requestBytes" to requestBytes.size.toString(),
+internal class OpenAiKotlinSdkGateway(
+    apiKey: String,
+) : OpenAiSdkGateway {
+    private val client = OpenAI(
+        config = OpenAIConfig(
+            token = apiKey,
+            engine = OkHttp.create(),
+            timeout = Timeout(
+                request = OPENAI_READ_TIMEOUT_SECONDS.seconds,
+                connect = OPENAI_CONNECT_TIMEOUT_SECONDS.seconds,
+                socket = OPENAI_READ_TIMEOUT_SECONDS.seconds,
             ),
-        )
-        val request = Request.Builder()
-            .url(OPENAI_RESPONSES_ENDPOINT)
-            .header("Authorization", "Bearer $apiKey")
-            .header("Content-Type", "application/json; charset=utf-8")
-            .header("Accept", "application/json")
-            .header("User-Agent", OPENAI_USER_AGENT)
-            .post(requestBody.toRequestBody(JSON_MEDIA_TYPE))
-            .build()
-        debugLogger.logEvent(
-            stage = "transport_prepare_complete",
-            message = "Prepared OkHttp request",
-            mode = mode,
-            topic = generationContext.context.topic,
-            fields = mapOf(
-                "method" to request.method,
-                "connectTimeoutMs" to OPENAI_CONNECT_TIMEOUT_MS.toString(),
-                "readTimeoutMs" to OPENAI_READ_TIMEOUT_MS.toString(),
-                "headers" to listOf(
-                    "Authorization=Bearer <redacted>",
-                    "Content-Type=application/json; charset=utf-8",
-                    "Accept=application/json",
-                    "User-Agent=$OPENAI_USER_AGENT",
-                ).joinToString(";"),
-            ),
-        )
-        debugLogger.logEvent(
-            stage = "transport_execute_start",
-            message = "Executing OkHttp call",
-            mode = mode,
-            topic = generationContext.context.topic,
-        )
-        client.newCall(request).execute().use { response ->
-            return handleOkHttpResponse(response, debugLogger, mode, generationContext)
-        }
-    }
-}
-
-private fun handleOkHttpResponse(
-    response: Response,
-    debugLogger: AiDebugLogger,
-    mode: AiWidgetMode,
-    generationContext: AiQuestionGenerationContext,
-): String {
-    debugLogger.logEvent(
-        stage = "response_code_complete",
-        message = "Received HTTP response code",
-        mode = mode,
-        topic = generationContext.context.topic,
-        fields = mapOf("responseCode" to response.code.toString()),
-    )
-    debugLogger.logEvent(
-        stage = "response_body_read_start",
-        message = "Reading response body",
-        mode = mode,
-        topic = generationContext.context.topic,
-        fields = mapOf("streamType" to if (!response.isSuccessful) "error" else "input"),
-    )
-    val responseBody = response.body?.string().orEmpty()
-    debugLogger.logEvent(
-        stage = "response_body_read_complete",
-        message = "Read response body",
-        mode = mode,
-        topic = generationContext.context.topic,
-        fields = mapOf(
-            "responseBytes" to responseBody.toByteArray(StandardCharsets.UTF_8).size.toString(),
-            "contentLength" to response.body?.contentLength().toString(),
-            "transferEncoding" to (response.header("Transfer-Encoding") ?: "none"),
         ),
     )
-    debugLogger.logEvent(
-        stage = "transport_execute_complete",
-        message = "Completed OkHttp call",
-        mode = mode,
-        topic = generationContext.context.topic,
-        fields = mapOf("successful" to response.isSuccessful.toString()),
-    )
-    if (!response.isSuccessful) {
-        throw IllegalStateException("HTTP ${response.code}: ${responseBody.take(240)}")
+
+    override fun generateQuestionJson(
+        systemMessage: String,
+        userMessage: String,
+    ): String = runBlocking {
+        val completion = client.chatCompletion(
+            request = ChatCompletionRequest(
+                model = ModelId(OPENAI_MODEL),
+                messages = listOf(
+                    systemMessage { content = systemMessage },
+                    userMessage { content = userMessage },
+                ),
+                responseFormat = ChatResponseFormat(
+                    type = "json_schema",
+                    jsonSchema = JsonSchema(
+                        name = "step1_question",
+                        schema = buildQuestionSchemaObject(),
+                        strict = true,
+                    ),
+                ),
+            ),
+        )
+        completion.choices.firstOrNull()?.message?.content?.trim()
+            ?.takeIf { it.isNotEmpty() }
+            ?: throw IllegalStateException("OpenAI returned an empty completion.")
     }
-    return responseBody
 }
 
 internal fun describeOpenAiRequestException(t: Throwable): String {
     val prefix = t.javaClass.simpleName.takeIf { it.isNotBlank() } ?: "Exception"
     val message = t.message?.trim().takeIf { !it.isNullOrEmpty() } ?: "Unexpected error."
     return "OpenAI request error: $prefix: $message"
-}
-
-private fun buildOpenAiQuestionRequestBody(
-    mode: AiWidgetMode,
-    generationContext: AiQuestionGenerationContext,
-): String {
-    val messages = buildPromptMessages(mode, generationContext)
-    val schema = buildQuestionSchemaJson()
-    return JSONObject()
-        .put("model", OPENAI_MODEL)
-        .put(
-            "input",
-            JSONArray()
-                .put(
-                    JSONObject()
-                        .put("role", "system")
-                        .put(
-                            "content",
-                            JSONArray().put(
-                                JSONObject()
-                                    .put("type", "input_text")
-                                    .put("text", messages.first),
-                            ),
-                        ),
-                )
-                .put(
-                    JSONObject()
-                        .put("role", "user")
-                        .put(
-                            "content",
-                            JSONArray().put(
-                                JSONObject()
-                                    .put("type", "input_text")
-                                    .put("text", messages.second),
-                            ),
-                        ),
-                ),
-        )
-        .put(
-            "text",
-            JSONObject().put(
-                "format",
-                JSONObject()
-                    .put("type", "json_schema")
-                    .put("name", "step1_question")
-                    .put("schema", schema)
-                    .put("strict", true),
-            ),
-        )
-        .toString()
 }
 
 private fun buildQuestionSchemaJson(): JSONObject = JSONObject()
@@ -771,28 +544,7 @@ private fun buildQuestionSchemaJson(): JSONObject = JSONObject()
     )
     .put("required", JSONArray(listOf("stem", "choices", "correctKey", "correctExplanation")))
 
-private fun parseGeneratedQuestionFromOpenAiResponse(raw: String): AiGeneratedQuestion? {
-    val root = JSONObject(raw)
-    val outputText = root.optString("output_text").trim()
-    if (outputText.isNotBlank()) {
-        return parseAiGeneratedQuestion(outputText)
-    }
-
-    val output = root.optJSONArray("output") ?: return null
-    for (index in 0 until output.length()) {
-        val item = output.optJSONObject(index) ?: continue
-        val content = item.optJSONArray("content") ?: continue
-        for (contentIndex in 0 until content.length()) {
-            val contentItem = content.optJSONObject(contentIndex) ?: continue
-            val text = contentItem.optString("text").trim()
-            if (text.isNotBlank()) {
-                return parseAiGeneratedQuestion(text)
-            }
-        }
-    }
-
-    return null
-}
+private fun buildQuestionSchemaObject() = Json.parseToJsonElement(buildQuestionSchemaJson().toString()).jsonObject
 
 internal fun parseAiGeneratedQuestion(raw: String): AiGeneratedQuestion? {
     val json = try {
@@ -1294,12 +1046,9 @@ private fun parseAiQuestionModeState(raw: JSONObject?): AiQuestionModeState {
     )
 }
 
-private const val OPENAI_RESPONSES_ENDPOINT = "https://api.openai.com/v1/responses"
 private const val OPENAI_MODEL = "gpt-5-mini"
-private const val OPENAI_CONNECT_TIMEOUT_MS = 30_000
-private const val OPENAI_READ_TIMEOUT_MS = 60_000
-private const val OPENAI_USER_AGENT = "USMLEPracticeAndroidWidget/1.0"
-private val JSON_MEDIA_TYPE = "application/json; charset=utf-8".toMediaType()
+private const val OPENAI_CONNECT_TIMEOUT_SECONDS = 30
+private const val OPENAI_READ_TIMEOUT_SECONDS = 60
 private const val CURRENT_AI_MISTAKE_STORE_VERSION = 1
 private const val AI_MISTAKE_PREFS_NAME = "ai_question_mistake_store"
 private const val AI_MISTAKE_PREFS_KEY = "store_json"

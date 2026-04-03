@@ -12,6 +12,7 @@ private const val ACTION_KIND_ROW_TOGGLE = "row_toggle"
 private const val ACTION_KIND_TOGGLE_DIFFICULT = "toggle_difficult"
 private const val ACTION_KIND_REMOVE_REVIEW = "remove_review"
 private const val ACTION_KIND_OPEN_BROWSER = "open_browser"
+private const val ACTION_KIND_AI_SELECT_ANSWER = "ai_select_answer"
 
 internal fun buildRandomQaCollectionItems(
     context: Context,
@@ -148,6 +149,99 @@ internal fun buildReviewQuestionsCollectionItems(
     return builder.build()
 }
 
+internal fun buildAiQuestionCollectionItems(
+    context: Context,
+    appWidgetId: Int,
+    state: AiQuestionWidgetState.Loaded,
+    modeState: AiQuestionModeState,
+): RemoteViews.RemoteCollectionItems {
+    val builder = RemoteViews.RemoteCollectionItems.Builder()
+        .setHasStableIds(true)
+        .setViewTypeCount(1)
+
+    val question = modeState.question
+    if (question == null) {
+        val message = modeState.message?.ifBlank { "Question not generated yet." } ?: "Question not generated yet."
+        builder.addItem(
+            aiQuestionRowId("message", message, 0),
+            aiQuestionRowView(
+                context = context,
+                text = message,
+                backgroundRes = R.drawable.widget_question_row_bg,
+                isClickable = false,
+                fillInIntent = null,
+            ),
+        )
+        return builder.build()
+    }
+
+    builder.addItem(
+        aiQuestionRowId("stem", question.stem, 0),
+        aiQuestionRowView(
+            context = context,
+            text = question.stem,
+            backgroundRes = R.drawable.widget_question_row_bg,
+            isClickable = false,
+            fillInIntent = null,
+        ),
+    )
+
+    question.choices.forEachIndexed { index, choice ->
+        val choiceIntent = if (!state.isRefreshing && !modeState.isRevealed) {
+            aiQuestionCollectionFillInIntent(
+                appWidgetId = appWidgetId,
+                action = AiQuestionAppWidgetReceiver.ACTION_SELECT_AI_ANSWER,
+                selectedKey = choice.key,
+                rowIndex = index,
+            )
+        } else {
+            null
+        }
+        builder.addItem(
+            aiQuestionRowId("choice", choice.key, index),
+            aiQuestionRowView(
+                context = context,
+                text = "${choice.key}. ${choice.text}",
+                backgroundRes = choiceBackgroundRes(
+                    modeState = modeState,
+                    choice = choice,
+                    question = question,
+                ),
+                isClickable = choiceIntent != null,
+                fillInIntent = choiceIntent,
+            ),
+        )
+
+        if (modeState.isRevealed) {
+            builder.addItem(
+                aiQuestionRowId("explanation", choice.key, index),
+                aiQuestionRowView(
+                    context = context,
+                    text = choice.explanation,
+                    backgroundRes = R.drawable.widget_answer_bg,
+                    isClickable = false,
+                    fillInIntent = null,
+                ),
+            )
+        }
+    }
+
+    if (modeState.isRevealed) {
+        builder.addItem(
+            aiQuestionRowId("correct", question.correctKey, question.choices.size + 1),
+            aiQuestionRowView(
+                context = context,
+                text = "Correct answer: ${question.correctKey}. ${question.correctExplanation}",
+                backgroundRes = R.drawable.widget_correct_explain_bg,
+                isClickable = false,
+                fillInIntent = null,
+            ),
+        )
+    }
+
+    return builder.build()
+}
+
 internal fun widgetCollectionPendingIntentTemplate(
     context: Context,
     receiverClass: Class<*>,
@@ -170,6 +264,19 @@ internal fun collectionFillInIntent(
     rowIndex?.let { putExtra(RandomQaAppWidgetReceiver.EXTRA_TAPPED_INDEX, it) }
 }
 
+internal fun aiQuestionCollectionFillInIntent(
+    appWidgetId: Int,
+    action: String,
+    selectedKey: String? = null,
+    rowIndex: Int? = null,
+): Intent = Intent().apply {
+    this.action = action
+    putExtra(android.appwidget.AppWidgetManager.EXTRA_APPWIDGET_ID, appWidgetId)
+    putExtra(EXTRA_WIDGET_ACTION_KIND, ACTION_KIND_AI_SELECT_ANSWER)
+    selectedKey?.let { putExtra(AiQuestionAppWidgetReceiver.EXTRA_AI_SELECTED_KEY, it) }
+    rowIndex?.let { putExtra(RandomQaAppWidgetReceiver.EXTRA_TAPPED_INDEX, it) }
+}
+
 internal fun randomQaItemId(item: WidgetQaItem): Long = item.questionId.hashCode().toLong()
 
 internal fun reviewQuestionItemId(item: TroubleQuestionItem): Long = item.id.hashCode().toLong()
@@ -178,7 +285,8 @@ internal fun isWidgetCollectionAction(actionKind: String?): Boolean =
     actionKind == ACTION_KIND_ROW_TOGGLE ||
         actionKind == ACTION_KIND_TOGGLE_DIFFICULT ||
         actionKind == ACTION_KIND_REMOVE_REVIEW ||
-        actionKind == ACTION_KIND_OPEN_BROWSER
+        actionKind == ACTION_KIND_OPEN_BROWSER ||
+        actionKind == ACTION_KIND_AI_SELECT_ANSWER
 
 internal fun widgetListEmptyMessage(items: List<WidgetQaItem>, fallbackMessage: String?): String =
     fallbackMessage ?: if (items.isEmpty()) "No questions found in this note." else ""
@@ -189,3 +297,24 @@ internal fun reviewListEmptyMessage(allItems: List<TroubleQuestionItem>, visible
     } else {
         ""
     }
+
+private fun aiQuestionRowView(
+    context: Context,
+    text: CharSequence,
+    backgroundRes: Int,
+    isClickable: Boolean,
+    fillInIntent: Intent?,
+): RemoteViews = RemoteViews(context.packageName, R.layout.ai_question_widget_row).apply {
+    setTextViewText(R.id.widget_ai_row_text, formatWidgetMarkdown(text.toString()))
+    setInt(R.id.widget_ai_row_root, "setBackgroundResource", backgroundRes)
+    if (isClickable && fillInIntent != null) {
+        setOnClickFillInIntent(R.id.widget_ai_row_root, fillInIntent)
+        setOnClickFillInIntent(R.id.widget_ai_row_text, fillInIntent)
+    }
+}
+
+private fun aiQuestionRowId(
+    kind: String,
+    value: String,
+    index: Int,
+): Long = "$kind::$index::$value".hashCode().toLong()

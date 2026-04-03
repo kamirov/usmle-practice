@@ -1,9 +1,5 @@
 package com.kamirov.usmlepractice
 
-import android.content.Context
-import android.content.Context.CONNECTIVITY_SERVICE
-import android.net.ConnectivityManager
-import android.net.NetworkCapabilities
 import android.net.Uri
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -20,6 +16,8 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.itemsIndexed
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CircularProgressIndicator
@@ -27,6 +25,8 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Tab
+import androidx.compose.material3.TabRow
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -43,7 +43,6 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.compose.foundation.text.KeyboardOptions
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -61,6 +60,13 @@ class MainActivity : ComponentActivity() {
     }
 }
 
+private enum class AppTab(val title: String) {
+    RANDOM("Random Q&A"),
+    REVIEW("Review Questions"),
+    AI("AI Question"),
+    SETTINGS("Settings"),
+}
+
 internal data class OpenAiSettingsUiState(
     val draftKey: String = "",
     val hasSavedKey: Boolean = false,
@@ -68,54 +74,94 @@ internal data class OpenAiSettingsUiState(
     val isSaving: Boolean = false,
 )
 
-internal data class AiDiagnosticsUiState(
-    val sessions: List<AiDebugSession> = emptyList(),
-)
-
-internal data class NetworkDiagnosticSnapshot(
-    val hasActiveNetwork: Boolean,
-    val hasInternetCapability: Boolean,
-    val isValidated: Boolean,
-    val transports: List<String>,
-) {
-    val wouldAttemptRequests: Boolean
-        get() = hasActiveNetwork
-}
-
 @Composable
 private fun MainApp() {
     val appContext = LocalContext.current.applicationContext
     val vaultRepository = remember(appContext) { ObsidianVaultRepository(appContext) }
-    val troubleRepository = remember(appContext) { TroubleQuestionRepository(appContext) }
     val openAiKeyRepository = remember(appContext) { OpenAiKeyRepository(appContext) }
-    val aiDebugLogRepository = remember(appContext) { AiDebugLogRepository(appContext) }
+    val randomRepository = remember(appContext) { RandomQaSnapshotRepository(appContext) }
+    val reviewRepository = remember(appContext) { ReviewQuestionsSnapshotRepository(appContext) }
+    val aiRepository = remember(appContext) { AiQuestionSnapshotRepository(appContext) }
     val scope = rememberCoroutineScope()
 
+    var selectedTab by remember { mutableStateOf(AppTab.RANDOM) }
     var vaultState by remember { mutableStateOf<VaultScreenState>(VaultScreenState.Loading) }
-    var troubleState by remember { mutableStateOf<TroubleQuestionScreenState>(TroubleQuestionScreenState.Loading) }
-    var networkSnapshot: NetworkDiagnosticSnapshot by remember {
-        mutableStateOf(readNetworkDiagnosticSnapshot(appContext))
-    }
+    var randomState by remember { mutableStateOf<WidgetNoteState?>(null) }
+    var reviewState by remember { mutableStateOf<ReviewQuestionsWidgetState?>(null) }
+    var aiState by remember { mutableStateOf<AiQuestionWidgetState?>(null) }
     var isLinkingVault by remember { mutableStateOf(false) }
     var openAiSettings by remember { mutableStateOf(loadOpenAiSettingsUiState(openAiKeyRepository)) }
-    var aiDiagnostics by remember { mutableStateOf(loadAiDiagnosticsUiState(aiDebugLogRepository)) }
-    var isRunningAiProbes by remember { mutableStateOf(false) }
 
     fun reloadVault() {
         scope.launch {
             vaultState = VaultScreenState.Loading
-            vaultState = withContext(Dispatchers.IO) {
-                vaultRepository.loadRootNotes()
-            }
+            vaultState = withContext(Dispatchers.IO) { vaultRepository.loadRootNotes() }
         }
     }
 
-    fun reloadTroubleQuestions() {
+    fun loadRandomSnapshot(refresh: Boolean) {
         scope.launch {
-            troubleState = TroubleQuestionScreenState.Loading
-            troubleState = withContext(Dispatchers.IO) {
-                troubleRepository.shuffledItems(Random.Default).toScreenState()
+            if (refresh) {
+                val current = randomState
+                randomState = when (current) {
+                    is WidgetNoteState.Note -> current.copy(isRefreshing = true)
+                    is WidgetNoteState.Message -> current.copy(isRefreshing = true)
+                    null -> WidgetNoteState.Message(
+                        title = RANDOM_QA_WIDGET_TITLE,
+                        message = "Refreshing...",
+                        isRefreshing = true,
+                    )
+                }
             }
+            val next = withContext(Dispatchers.IO) {
+                if (refresh) randomRepository.refresh() else randomRepository.loadOrRefresh()
+            }
+            randomState = next
+            RandomQaAppWidgetReceiver.rerenderWidgets(appContext)
+        }
+    }
+
+    fun loadReviewSnapshot(refresh: Boolean) {
+        scope.launch {
+            if (refresh) {
+                val current = reviewState
+                reviewState = when (current) {
+                    is ReviewQuestionsWidgetState.Loaded -> current.copy(isRefreshing = true)
+                    is ReviewQuestionsWidgetState.Message -> current.copy(isRefreshing = true)
+                    null -> ReviewQuestionsWidgetState.Message(
+                        title = REVIEW_QUESTIONS_TITLE,
+                        message = "Refreshing...",
+                        isRefreshing = true,
+                    )
+                }
+            }
+            val next = withContext(Dispatchers.IO) {
+                if (refresh) reviewRepository.refresh(Random.Default) else reviewRepository.loadOrRefresh(Random.Default)
+            }
+            reviewState = next
+            ReviewQuestionsAppWidgetReceiver.rerenderWidgets(appContext)
+        }
+    }
+
+    fun loadAiSnapshot(refresh: Boolean) {
+        scope.launch {
+            if (refresh) {
+                val current = aiState
+                aiState = when (current) {
+                    is AiQuestionWidgetState.Loaded -> current.copy(isRefreshing = true)
+                    is AiQuestionWidgetState.Message -> current.copy(isRefreshing = true)
+                    null -> AiQuestionWidgetState.Message(
+                        title = AI_QUESTION_WIDGET_TITLE,
+                        message = "Generating questions...",
+                        isRefreshing = true,
+                    )
+                }
+            }
+            val next = withContext(Dispatchers.IO) {
+                if (refresh) aiRepository.refresh(Random.Default) else aiRepository.loadOrRefresh(Random.Default)
+            }
+            aiState = next
+            AiQuestionAppWidgetReceiver.rerenderWidgets(appContext)
         }
     }
 
@@ -123,18 +169,6 @@ private fun MainApp() {
         openAiSettings = loadOpenAiSettingsUiState(openAiKeyRepository).let { base ->
             if (clearStatusMessage) base else base.copy(statusMessage = openAiSettings.statusMessage)
         }
-    }
-
-    fun reloadAiDiagnostics() {
-        aiDiagnostics = loadAiDiagnosticsUiState(aiDebugLogRepository)
-    }
-
-    fun refreshEverything() {
-        networkSnapshot = readNetworkDiagnosticSnapshot(appContext)
-        reloadVault()
-        reloadTroubleQuestions()
-        reloadOpenAiSettings(clearStatusMessage = true)
-        reloadAiDiagnostics()
     }
 
     val folderPicker = rememberLauncherForActivityResult(OpenDocumentTree()) { uri: Uri? ->
@@ -146,140 +180,421 @@ private fun MainApp() {
         scope.launch {
             isLinkingVault = true
             vaultState = VaultScreenState.Loading
-            vaultState = withContext(Dispatchers.IO) {
-                vaultRepository.linkVault(uri)
-            }
+            vaultState = withContext(Dispatchers.IO) { vaultRepository.linkVault(uri) }
             isLinkingVault = false
-            RandomQaAppWidgetReceiver.requestWidgetRefresh(appContext)
-            ReviewQuestionsAppWidgetReceiver.requestWidgetRefresh(appContext)
-            AiQuestionAppWidgetReceiver.requestWidgetRefresh(appContext)
+            loadRandomSnapshot(refresh = true)
+            loadReviewSnapshot(refresh = true)
+            loadAiSnapshot(refresh = true)
         }
     }
 
     LaunchedEffect(Unit) {
-        refreshEverything()
+        reloadVault()
+        reloadOpenAiSettings(clearStatusMessage = true)
+        loadRandomSnapshot(refresh = false)
+        loadReviewSnapshot(refresh = false)
+        loadAiSnapshot(refresh = false)
     }
 
     Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-        MainScreen(
-            vaultState = vaultState,
-            troubleState = troubleState,
-            networkSnapshot = networkSnapshot,
-            openAiSettings = openAiSettings,
-            aiDiagnostics = aiDiagnostics,
-            contentPadding = innerPadding,
-            isLinkingVault = isLinkingVault,
-            isRunningAiProbes = isRunningAiProbes,
-            onPickVault = {
-                isLinkingVault = true
-                folderPicker.launch(null)
-            },
-            onReloadVault = ::reloadVault,
-            onReloadTroubleQuestions = ::reloadTroubleQuestions,
-            onRefreshNetworkDiagnostics = { networkSnapshot = readNetworkDiagnosticSnapshot(appContext) },
-            onRefreshAiDiagnostics = ::reloadAiDiagnostics,
-            onRunAiNetworkProbes = {
-                scope.launch {
-                    isRunningAiProbes = true
-                    withContext(Dispatchers.IO) {
-                        val latestWidgetFailureStatus = aiDebugLogRepository.loadSnapshot().sessions
-                            .firstOrNull { session ->
-                                !session.sessionId.startsWith("probe-") &&
-                                    session.status != "success" &&
-                                    session.status != "message_only"
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(innerPadding),
+        ) {
+            TabRow(selectedTabIndex = selectedTab.ordinal) {
+                AppTab.entries.forEach { tab ->
+                    Tab(
+                        selected = selectedTab == tab,
+                        onClick = { selectedTab = tab },
+                        text = { Text(tab.title) },
+                    )
+                }
+            }
+
+            when (selectedTab) {
+                AppTab.RANDOM -> RandomQaTab(
+                    state = randomState,
+                    onRefresh = { loadRandomSnapshot(refresh = true) },
+                    onToggleExpanded = { index ->
+                        scope.launch {
+                            randomState = withContext(Dispatchers.IO) {
+                                randomRepository.toggleExpanded(index)
+                            } ?: randomState
+                            RandomQaAppWidgetReceiver.rerenderWidgets(appContext)
+                        }
+                    },
+                    onToggleDifficult = { index ->
+                        scope.launch {
+                            randomState = withContext(Dispatchers.IO) {
+                                randomRepository.toggleDifficult(index)
+                            } ?: randomState
+                            reviewState = withContext(Dispatchers.IO) {
+                                reviewRepository.refresh(Random.Default)
                             }
-                            ?.status
-                        val logger = AiDebugSessionLogger(
-                            repository = aiDebugLogRepository,
-                            sessionId = generateAiProbeSessionId(),
-                            widgetId = null,
+                            RandomQaAppWidgetReceiver.rerenderWidgets(appContext)
+                            ReviewQuestionsAppWidgetReceiver.rerenderWidgets(appContext)
+                        }
+                    },
+                    onOpenNote = {
+                        val note = (randomState as? WidgetNoteState.Note)?.note ?: return@RandomQaTab
+                        launchIntent(
+                            appContext,
+                            WidgetLaunchers.buildObsidianIntent(
+                                context = appContext,
+                                vaultName = note.vaultName,
+                                notePathKey = note.notePathKey,
+                                noteUriString = note.noteUriString,
+                            ),
                         )
-                        DefaultAiNetworkProber().runProbeSuite(
-                            debugLogger = logger,
-                            recentWidgetFailureStatus = latestWidgetFailureStatus,
+                    },
+                    onOpenTopicChatGpt = {
+                        val note = (randomState as? WidgetNoteState.Note)?.note ?: return@RandomQaTab
+                        launchIntent(
+                            appContext,
+                            WidgetLaunchers.buildChatGptIntent(
+                                context = appContext,
+                                prompt = "Tell me about ${note.noteName.displayTopicTitle()}. I'm studying for USMLE Step 1, so keep things relevant.",
+                            ),
                         )
-                    }
-                    reloadAiDiagnostics()
-                    isRunningAiProbes = false
-                }
-            },
-            onOpenAiKeyChange = { value ->
-                openAiSettings = openAiSettings.copy(
-                    draftKey = value,
-                    statusMessage = null,
+                    },
+                    onOpenRowChatGpt = { index ->
+                        val noteState = randomState as? WidgetNoteState.Note ?: return@RandomQaTab
+                        val item = noteState.widgetQaItems.getOrNull(index) ?: return@RandomQaTab
+                        launchIntent(
+                            appContext,
+                            WidgetLaunchers.buildChatGptIntent(
+                                context = appContext,
+                                prompt = "(${noteState.note.noteName.displayTopicTitle()}) ${item.question}. Please include detail appropriate for studying USMLE Step 1.",
+                            ),
+                        )
+                    },
+                    onOpenRowBrowser = { index ->
+                        val noteState = randomState as? WidgetNoteState.Note ?: return@RandomQaTab
+                        val item = noteState.widgetQaItems.getOrNull(index) ?: return@RandomQaTab
+                        launchIntent(
+                            appContext,
+                            WidgetLaunchers.buildGoogleSearchIntent(
+                                context = appContext,
+                                query = item.question,
+                            ),
+                        )
+                    },
                 )
-            },
-            onSaveOpenAiKey = {
-                val keyToSave = openAiSettings.draftKey
-                scope.launch {
-                    openAiSettings = openAiSettings.copy(isSaving = true, statusMessage = null)
-                    withContext(Dispatchers.IO) {
-                        openAiKeyRepository.saveKey(keyToSave)
-                    }
-                    openAiSettings = loadOpenAiSettingsUiState(openAiKeyRepository).copy(
-                        statusMessage = "Key saved.",
-                        isSaving = false,
-                    )
-                    AiQuestionAppWidgetReceiver.requestWidgetRefresh(appContext)
-                    reloadAiDiagnostics()
-                }
-            },
-            onClearOpenAiKey = {
-                scope.launch {
-                    openAiSettings = openAiSettings.copy(isSaving = true, statusMessage = null)
-                    withContext(Dispatchers.IO) {
-                        openAiKeyRepository.clearKey()
-                    }
-                    openAiSettings = loadOpenAiSettingsUiState(openAiKeyRepository).copy(
-                        statusMessage = "Key cleared.",
-                        isSaving = false,
-                    )
-                    AiQuestionAppWidgetReceiver.requestWidgetRefresh(appContext)
-                    reloadAiDiagnostics()
-                }
-            },
-            onRefreshAiWidget = {
-                AiQuestionAppWidgetReceiver.requestWidgetRefresh(appContext)
-            },
-            onClearAiDiagnostics = {
-                scope.launch {
-                    withContext(Dispatchers.IO) {
-                        aiDebugLogRepository.clear()
-                    }
-                    reloadAiDiagnostics()
-                }
-            },
-        )
+
+                AppTab.REVIEW -> ReviewQuestionsTab(
+                    state = reviewState,
+                    items = orderedReviewItemsForCurrentSnapshot(appContext, reviewState ?: ReviewQuestionsWidgetState.Message("", "")),
+                    onRefresh = { loadReviewSnapshot(refresh = true) },
+                    onToggleExpanded = { index ->
+                        scope.launch {
+                            reviewState = withContext(Dispatchers.IO) {
+                                reviewRepository.toggleExpanded(index)
+                            } ?: reviewState
+                            ReviewQuestionsAppWidgetReceiver.rerenderWidgets(appContext)
+                        }
+                    },
+                    onRemove = { index ->
+                        scope.launch {
+                            reviewState = withContext(Dispatchers.IO) {
+                                reviewRepository.remove(index)
+                            } ?: reviewState
+                            ReviewQuestionsAppWidgetReceiver.rerenderWidgets(appContext)
+                        }
+                    },
+                    onOpenBrowser = { index ->
+                        val items = orderedReviewItemsForCurrentSnapshot(appContext, reviewState ?: return@ReviewQuestionsTab)
+                        val item = items.getOrNull(index) ?: return@ReviewQuestionsTab
+                        launchIntent(
+                            appContext,
+                            WidgetLaunchers.buildGoogleSearchIntent(
+                                context = appContext,
+                                query = item.question,
+                            ),
+                        )
+                    },
+                )
+
+                AppTab.AI -> AiQuestionTab(
+                    state = aiState,
+                    onRefresh = { loadAiSnapshot(refresh = true) },
+                    onSelectMode = { mode ->
+                        scope.launch {
+                            aiState = withContext(Dispatchers.IO) {
+                                aiRepository.selectMode(mode)
+                            } ?: aiState
+                            AiQuestionAppWidgetReceiver.rerenderWidgets(appContext)
+                        }
+                    },
+                    onSelectAnswer = { key ->
+                        scope.launch {
+                            aiState = withContext(Dispatchers.IO) {
+                                aiRepository.answer(key)
+                            } ?: aiState
+                            AiQuestionAppWidgetReceiver.rerenderWidgets(appContext)
+                        }
+                    },
+                    onOpenTopic = {
+                        val loaded = aiState as? AiQuestionWidgetState.Loaded ?: return@AiQuestionTab
+                        val modeState = loaded.modeState(loaded.activeMode)
+                        val context = modeState.context ?: return@AiQuestionTab
+                        if (!modeState.isRevealed) return@AiQuestionTab
+                        launchIntent(
+                            appContext,
+                            WidgetLaunchers.buildObsidianIntent(
+                                context = appContext,
+                                vaultName = context.vaultName,
+                                notePathKey = context.notePathKey,
+                                noteUriString = context.noteUriString,
+                            ),
+                        )
+                    },
+                    onOpenChatGpt = {
+                        launchIntent(
+                            appContext,
+                            WidgetLaunchers.buildChatGptIntent(
+                                context = appContext,
+                                prompt = buildAiQuestionAppChatGptPrompt(aiState),
+                            ),
+                        )
+                    },
+                )
+
+                AppTab.SETTINGS -> SettingsTab(
+                    vaultState = vaultState,
+                    openAiSettings = openAiSettings,
+                    isLinkingVault = isLinkingVault,
+                    onPickVault = {
+                        isLinkingVault = true
+                        folderPicker.launch(null)
+                    },
+                    onReloadVault = ::reloadVault,
+                    onOpenAiKeyChange = { value ->
+                        openAiSettings = openAiSettings.copy(
+                            draftKey = value,
+                            statusMessage = null,
+                        )
+                    },
+                    onSaveOpenAiKey = {
+                        val keyToSave = openAiSettings.draftKey
+                        scope.launch {
+                            openAiSettings = openAiSettings.copy(isSaving = true, statusMessage = null)
+                            withContext(Dispatchers.IO) {
+                                openAiKeyRepository.saveKey(keyToSave)
+                            }
+                            openAiSettings = loadOpenAiSettingsUiState(openAiKeyRepository).copy(
+                                statusMessage = "Key saved.",
+                                isSaving = false,
+                            )
+                            loadAiSnapshot(refresh = true)
+                        }
+                    },
+                    onClearOpenAiKey = {
+                        scope.launch {
+                            openAiSettings = openAiSettings.copy(isSaving = true, statusMessage = null)
+                            withContext(Dispatchers.IO) {
+                                openAiKeyRepository.clearKey()
+                            }
+                            openAiSettings = loadOpenAiSettingsUiState(openAiKeyRepository).copy(
+                                statusMessage = "Key cleared.",
+                                isSaving = false,
+                            )
+                            loadAiSnapshot(refresh = true)
+                        }
+                    },
+                )
+            }
+        }
     }
 }
 
 @Composable
-private fun MainScreen(
+private fun RandomQaTab(
+    state: WidgetNoteState?,
+    onRefresh: () -> Unit,
+    onToggleExpanded: (Int) -> Unit,
+    onToggleDifficult: (Int) -> Unit,
+    onOpenNote: () -> Unit,
+    onOpenTopicChatGpt: () -> Unit,
+    onOpenRowChatGpt: (Int) -> Unit,
+    onOpenRowBrowser: (Int) -> Unit,
+) {
+    when (state) {
+        null -> LoadingScreen()
+        is WidgetNoteState.Message -> MessageScreen(
+            title = state.title,
+            message = state.message,
+            isRefreshing = state.isRefreshing,
+            onRefresh = onRefresh,
+        )
+        is WidgetNoteState.Note -> LazyColumn(
+            modifier = Modifier.fillMaxSize().padding(horizontal = 20.dp, vertical = 16.dp),
+            verticalArrangement = Arrangement.spacedBy(12.dp),
+        ) {
+            item {
+                HeaderCard(
+                    title = state.note.noteName.displayTopicTitle(),
+                    subtitle = if (state.isRefreshing) "Refreshing..." else "Random Q&A snapshot",
+                    onPrimary = onRefresh,
+                    primaryLabel = "Refresh",
+                    onSecondary = onOpenNote,
+                    secondaryLabel = "Open note",
+                    onTertiary = onOpenTopicChatGpt,
+                    tertiaryLabel = "Ask GPT",
+                )
+            }
+            itemsIndexed(state.note.accordionRows(state.expandedIndex)) { index, row ->
+                AccordionRowCard(
+                    index = index,
+                    question = row.item.question,
+                    answer = row.item.answer,
+                    isExpanded = row.isExpanded,
+                    onToggle = { onToggleExpanded(index) },
+                    onMark = { onToggleDifficult(index) },
+                    onAsk = { onOpenRowChatGpt(index) },
+                    onSearch = { onOpenRowBrowser(index) },
+                )
+            }
+        }
+    }
+}
+
+@Composable
+private fun ReviewQuestionsTab(
+    state: ReviewQuestionsWidgetState?,
+    items: List<TroubleQuestionItem>,
+    onRefresh: () -> Unit,
+    onToggleExpanded: (Int) -> Unit,
+    onRemove: (Int) -> Unit,
+    onOpenBrowser: (Int) -> Unit,
+) {
+    when (state) {
+        null -> LoadingScreen()
+        is ReviewQuestionsWidgetState.Message -> MessageScreen(
+            title = state.title,
+            message = state.message,
+            isRefreshing = state.isRefreshing,
+            onRefresh = onRefresh,
+        )
+        is ReviewQuestionsWidgetState.Loaded -> LazyColumn(
+            modifier = Modifier.fillMaxSize().padding(horizontal = 20.dp, vertical = 16.dp),
+            verticalArrangement = Arrangement.spacedBy(12.dp),
+        ) {
+            item {
+                HeaderCard(
+                    title = REVIEW_QUESTIONS_TITLE,
+                    subtitle = if (state.isRefreshing) "Refreshing..." else "${items.size} item(s)",
+                    onPrimary = onRefresh,
+                    primaryLabel = "Refresh",
+                )
+            }
+            itemsIndexed(items) { index, item ->
+                ReviewQuestionCard(
+                    item = item,
+                    isExpanded = state.expandedItemId == item.id,
+                    onToggle = { onToggleExpanded(index) },
+                    onRemove = { onRemove(index) },
+                    onSearch = { onOpenBrowser(index) },
+                )
+            }
+        }
+    }
+}
+
+@Composable
+private fun AiQuestionTab(
+    state: AiQuestionWidgetState?,
+    onRefresh: () -> Unit,
+    onSelectMode: (AiWidgetMode) -> Unit,
+    onSelectAnswer: (String) -> Unit,
+    onOpenTopic: () -> Unit,
+    onOpenChatGpt: () -> Unit,
+) {
+    when (state) {
+        null -> LoadingScreen()
+        is AiQuestionWidgetState.Message -> MessageScreen(
+            title = state.title,
+            message = state.message,
+            isRefreshing = state.isRefreshing,
+            onRefresh = onRefresh,
+        )
+        is AiQuestionWidgetState.Loaded -> {
+            val modeState = state.modeState(state.activeMode)
+            LazyColumn(
+                modifier = Modifier.fillMaxSize().padding(horizontal = 20.dp, vertical = 16.dp),
+                verticalArrangement = Arrangement.spacedBy(12.dp),
+            ) {
+                item {
+                    HeaderCard(
+                        title = AI_QUESTION_WIDGET_TITLE,
+                        subtitle = modeState.context?.topic ?: state.activeMode.title,
+                        onPrimary = onRefresh,
+                        primaryLabel = "Refresh",
+                        onSecondary = onOpenChatGpt,
+                        secondaryLabel = "Ask GPT",
+                        onTertiary = if (modeState.isRevealed && modeState.context != null) onOpenTopic else null,
+                        tertiaryLabel = if (modeState.isRevealed && modeState.context != null) "Open topic" else null,
+                    )
+                }
+                item {
+                    Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                        AiWidgetMode.refreshableModes.forEach { mode ->
+                            OutlinedButton(onClick = { onSelectMode(mode) }) {
+                                Text(if (state.activeMode == mode) "[${mode.title}]" else mode.title)
+                            }
+                        }
+                    }
+                }
+                if (modeState.question == null) {
+                    item {
+                        Card(modifier = Modifier.fillMaxWidth()) {
+                            Text(
+                                text = modeState.message ?: "Question not generated yet.",
+                                modifier = Modifier.padding(16.dp),
+                            )
+                        }
+                    }
+                } else {
+                    item {
+                        Card(modifier = Modifier.fillMaxWidth()) {
+                            Column(modifier = Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
+                                Text(modeState.question.stem)
+                                modeState.question.choices.forEach { choice ->
+                                    val choiceLabel = "${choice.key}. ${choice.text}"
+                                    val suffix = if (modeState.isRevealed) "\n${choice.explanation}" else ""
+                                    OutlinedButton(
+                                        onClick = { onSelectAnswer(choice.key) },
+                                        enabled = !modeState.isRevealed,
+                                        modifier = Modifier.fillMaxWidth(),
+                                    ) {
+                                        Text(choiceLabel + suffix)
+                                    }
+                                }
+                                if (modeState.isRevealed) {
+                                    Text("Correct answer: ${modeState.question.correctKey}. ${modeState.question.correctExplanation}")
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@Composable
+private fun SettingsTab(
     vaultState: VaultScreenState,
-    troubleState: TroubleQuestionScreenState,
-    networkSnapshot: NetworkDiagnosticSnapshot,
     openAiSettings: OpenAiSettingsUiState,
-    aiDiagnostics: AiDiagnosticsUiState,
-    contentPadding: PaddingValues,
     isLinkingVault: Boolean,
-    isRunningAiProbes: Boolean,
     onPickVault: () -> Unit,
     onReloadVault: () -> Unit,
-    onReloadTroubleQuestions: () -> Unit,
-    onRefreshNetworkDiagnostics: () -> Unit,
-    onRefreshAiDiagnostics: () -> Unit,
-    onRunAiNetworkProbes: () -> Unit,
     onOpenAiKeyChange: (String) -> Unit,
     onSaveOpenAiKey: () -> Unit,
     onClearOpenAiKey: () -> Unit,
-    onRefreshAiWidget: () -> Unit,
-    onClearAiDiagnostics: () -> Unit,
 ) {
     LazyColumn(
-        modifier = Modifier
-            .fillMaxSize()
-            .padding(contentPadding)
-            .padding(horizontal = 20.dp, vertical = 16.dp),
+        modifier = Modifier.fillMaxSize().padding(horizontal = 20.dp, vertical = 16.dp),
         verticalArrangement = Arrangement.spacedBy(16.dp),
     ) {
         item {
@@ -290,7 +605,6 @@ private fun MainScreen(
                 onReloadVault = onReloadVault,
             )
         }
-
         item {
             OpenAiCard(
                 state = openAiSettings,
@@ -299,203 +613,122 @@ private fun MainScreen(
                 onClear = onClearOpenAiKey,
             )
         }
+    }
+}
 
-        item {
-            AiDiagnosticsCard(
-                state = aiDiagnostics,
-                isRunningProbes = isRunningAiProbes,
-                onRefresh = onRefreshAiDiagnostics,
-                onRunNetworkProbes = onRunAiNetworkProbes,
-                onRefreshWidget = onRefreshAiWidget,
-                onClearLogs = onClearAiDiagnostics,
-            )
-        }
-
-        item {
-            TroubleQuestionsCard(
-                state = troubleState,
-                onRefresh = onReloadTroubleQuestions,
-            )
-        }
-
-        item {
-            NetworkDiagnosticsCard(
-                snapshot = networkSnapshot,
-                onRefresh = onRefreshNetworkDiagnostics,
-            )
+@Composable
+private fun HeaderCard(
+    title: String,
+    subtitle: String? = null,
+    onPrimary: (() -> Unit)? = null,
+    primaryLabel: String? = null,
+    onSecondary: (() -> Unit)? = null,
+    secondaryLabel: String? = null,
+    onTertiary: (() -> Unit)? = null,
+    tertiaryLabel: String? = null,
+) {
+    Card(modifier = Modifier.fillMaxWidth()) {
+        Column(modifier = Modifier.fillMaxWidth().padding(16.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
+            Text(title, style = MaterialTheme.typography.headlineSmall, fontWeight = FontWeight.SemiBold)
+            if (!subtitle.isNullOrBlank()) {
+                Text(subtitle, style = MaterialTheme.typography.bodyMedium)
+            }
+            Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                if (onPrimary != null && !primaryLabel.isNullOrBlank()) {
+                    Button(onClick = onPrimary) { Text(primaryLabel) }
+                }
+                if (onSecondary != null && !secondaryLabel.isNullOrBlank()) {
+                    OutlinedButton(onClick = onSecondary) { Text(secondaryLabel) }
+                }
+                if (onTertiary != null && !tertiaryLabel.isNullOrBlank()) {
+                    OutlinedButton(onClick = onTertiary) { Text(tertiaryLabel) }
+                }
+            }
         }
     }
 }
 
 @Composable
-private fun AiDiagnosticsCard(
-    state: AiDiagnosticsUiState,
-    isRunningProbes: Boolean,
-    onRefresh: () -> Unit,
-    onRunNetworkProbes: () -> Unit,
-    onRefreshWidget: () -> Unit,
-    onClearLogs: () -> Unit,
+private fun AccordionRowCard(
+    index: Int,
+    question: String,
+    answer: String,
+    isExpanded: Boolean,
+    onToggle: () -> Unit,
+    onMark: () -> Unit,
+    onAsk: () -> Unit,
+    onSearch: () -> Unit,
 ) {
-    val latestProbeSummary = state.sessions.firstNotNullOfOrNull(::summarizeAiNetworkProbeSession)
-
     Card(modifier = Modifier.fillMaxWidth()) {
-        Column(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(16.dp),
-        ) {
-            Text(
-                text = "AI diagnostics",
-                style = MaterialTheme.typography.headlineSmall,
-                fontWeight = FontWeight.SemiBold,
-            )
-            Text(
-                text = "Redacted request traces for the AI widget. Match widget failures using the request id shown in the widget message.",
-                style = MaterialTheme.typography.bodyMedium,
-                modifier = Modifier.padding(top = 8.dp),
-            )
-            Row(
-                modifier = Modifier.padding(top = 16.dp),
-                horizontalArrangement = Arrangement.spacedBy(10.dp),
+        Column(modifier = Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+            Text("${index + 1}. $question")
+            Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                Button(onClick = onToggle) { Text(if (isExpanded) "Hide answer" else "Show answer") }
+                OutlinedButton(onClick = onMark) { Text("Toggle review") }
+                OutlinedButton(onClick = onAsk) { Text("Ask GPT") }
+                OutlinedButton(onClick = onSearch) { Text("Search") }
+            }
+            if (isExpanded) {
+                Text(answer.ifBlank { "No answer provided." })
+            }
+        }
+    }
+}
+
+@Composable
+private fun ReviewQuestionCard(
+    item: TroubleQuestionItem,
+    isExpanded: Boolean,
+    onToggle: () -> Unit,
+    onRemove: () -> Unit,
+    onSearch: () -> Unit,
+) {
+    Card(modifier = Modifier.fillMaxWidth()) {
+        Column(modifier = Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+            Text(item.topic, fontWeight = FontWeight.SemiBold)
+            Text(item.question)
+            Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                Button(onClick = onToggle) { Text(if (isExpanded) "Hide answer" else "Show answer") }
+                OutlinedButton(onClick = onRemove) { Text("Remove") }
+                OutlinedButton(onClick = onSearch) { Text("Search") }
+            }
+            if (isExpanded) {
+                Text(item.answer.ifBlank { "No answer provided." })
+            }
+        }
+    }
+}
+
+@Composable
+private fun MessageScreen(
+    title: String,
+    message: String,
+    isRefreshing: Boolean,
+    onRefresh: () -> Unit,
+) {
+    Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+        Card(modifier = Modifier.padding(20.dp)) {
+            Column(
+                modifier = Modifier.padding(20.dp),
+                verticalArrangement = Arrangement.spacedBy(12.dp),
+                horizontalAlignment = Alignment.CenterHorizontally,
             ) {
-                OutlinedButton(onClick = onRefresh) {
-                    Text("Refresh logs")
-                }
-                OutlinedButton(
-                    onClick = onRunNetworkProbes,
-                    enabled = !isRunningProbes,
-                ) {
-                    Text(if (isRunningProbes) "Running probes..." else "Run network probes")
-                }
-                OutlinedButton(onClick = onRefreshWidget) {
-                    Text("Refresh widget")
-                }
-                OutlinedButton(
-                    onClick = onClearLogs,
-                    enabled = state.sessions.isNotEmpty(),
-                ) {
-                    Text("Clear logs")
-                }
-            }
-
-            latestProbeSummary?.let { summary ->
-                Card(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(top = 16.dp),
-                ) {
-                    Column(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(14.dp),
-                    ) {
-                        Text(
-                            text = "Latest probe suite ${summary.sessionId}",
-                            style = MaterialTheme.typography.labelLarge,
-                            fontWeight = FontWeight.SemiBold,
-                        )
-                        Text(
-                            text = "Classification: ${summary.classification}",
-                            style = MaterialTheme.typography.bodyMedium,
-                            modifier = Modifier.padding(top = 6.dp),
-                        )
-                        Text(
-                            text = summary.interpretation,
-                            style = MaterialTheme.typography.bodyMedium,
-                            modifier = Modifier.padding(top = 6.dp),
-                        )
-                        summary.recentWidgetFailureStatus?.let { status ->
-                            Text(
-                                text = "Latest widget failure status when probes ran: $status",
-                                style = MaterialTheme.typography.bodyMedium,
-                                modifier = Modifier.padding(top = 6.dp),
-                            )
-                        }
-                        summary.lines.forEach { line ->
-                            Text(
-                                text = line,
-                                style = MaterialTheme.typography.bodySmall,
-                                modifier = Modifier.padding(top = 8.dp),
-                            )
-                        }
-                    }
-                }
-            }
-
-            if (state.sessions.isEmpty()) {
-                Text(
-                    text = "No AI widget request logs yet.",
-                    style = MaterialTheme.typography.bodyMedium,
-                    modifier = Modifier.padding(top = 16.dp),
-                )
-            } else {
-                state.sessions.take(3).forEach { session ->
-                    Card(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(top = 14.dp),
-                    ) {
-                        Column(
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .padding(14.dp),
-                        ) {
-                            Text(
-                                text = "Request ${session.sessionId}",
-                                style = MaterialTheme.typography.labelLarge,
-                                fontWeight = FontWeight.SemiBold,
-                            )
-                            Text(
-                                text = "Status: ${session.status}",
-                                style = MaterialTheme.typography.bodyMedium,
-                                modifier = Modifier.padding(top = 6.dp),
-                            )
-                            Text(
-                                text = "Widget: ${session.widgetId ?: "none"}  Mode: ${session.latestMode ?: "none"}  Topic: ${session.latestTopic ?: "none"}",
-                                style = MaterialTheme.typography.bodyMedium,
-                                modifier = Modifier.padding(top = 4.dp),
-                            )
-                            Text(
-                                text = "Started: ${session.startedAt}",
-                                style = MaterialTheme.typography.bodyMedium,
-                                modifier = Modifier.padding(top = 4.dp),
-                            )
-                            session.endedAt?.let { endedAt ->
-                                Text(
-                                    text = "Ended: $endedAt",
-                                    style = MaterialTheme.typography.bodyMedium,
-                                    modifier = Modifier.padding(top = 2.dp),
-                                )
-                            }
-                            session.entries.takeLast(20).forEach { entry ->
-                                Text(
-                                    text = buildString {
-                                        append("[${entry.elapsedMs}ms] ")
-                                        append(entry.stage)
-                                        append(" - ")
-                                        append(entry.message)
-                                        if (entry.fields.isNotEmpty()) {
-                                            append(" {")
-                                            append(entry.fields.entries.joinToString(", ") { (key, value) -> "$key=$value" })
-                                            append("}")
-                                        }
-                                    },
-                                    style = MaterialTheme.typography.bodySmall,
-                                    modifier = Modifier.padding(top = 8.dp),
-                                )
-                                entry.stackTrace?.let { stack ->
-                                    Text(
-                                        text = stack,
-                                        style = MaterialTheme.typography.bodySmall,
-                                        modifier = Modifier.padding(top = 4.dp),
-                                    )
-                                }
-                            }
-                        }
-                    }
+                Text(title, style = MaterialTheme.typography.headlineSmall, fontWeight = FontWeight.SemiBold)
+                Text(message)
+                if (isRefreshing) {
+                    CircularProgressIndicator()
+                } else {
+                    Button(onClick = onRefresh) { Text("Refresh") }
                 }
             }
         }
+    }
+}
+
+@Composable
+private fun LoadingScreen() {
+    Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+        CircularProgressIndicator()
     }
 }
 
@@ -543,13 +776,13 @@ private fun VaultCard(
             }
 
             if (isLinkingVault || state is VaultScreenState.Loading) {
-                Box(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(top = 18.dp),
-                    contentAlignment = Alignment.CenterStart,
+                Row(
+                    modifier = Modifier.padding(top = 16.dp),
+                    horizontalArrangement = Arrangement.spacedBy(10.dp),
+                    verticalAlignment = Alignment.CenterVertically,
                 ) {
                     CircularProgressIndicator()
+                    Text("Checking vault access…")
                 }
             }
 
@@ -560,29 +793,21 @@ private fun VaultCard(
                 is VaultScreenState.Error -> {
                     Text(
                         text = state.message,
-                        style = MaterialTheme.typography.bodyMedium,
                         modifier = Modifier.padding(top = 16.dp),
+                        color = MaterialTheme.colorScheme.error,
                     )
                 }
 
                 is VaultScreenState.Loaded -> {
-                    Text(
-                        text = "Root-level markdown notes: ${state.notes.size}",
-                        style = MaterialTheme.typography.labelLarge,
-                        fontWeight = FontWeight.SemiBold,
-                        modifier = Modifier.padding(top = 18.dp),
-                    )
-                    if (state.notes.isEmpty()) {
+                    if (state.notes.isNotEmpty()) {
                         Text(
-                            text = state.emptyMessage ?: "No root-level markdown notes found.",
-                            style = MaterialTheme.typography.bodyMedium,
-                            modifier = Modifier.padding(top = 8.dp),
+                            text = "Root notes preview",
+                            modifier = Modifier.padding(top = 18.dp),
+                            fontWeight = FontWeight.SemiBold,
                         )
-                    } else {
                         state.notes.take(8).forEach { note ->
                             Text(
                                 text = "\u2022 ${note.name}",
-                                style = MaterialTheme.typography.bodyMedium,
                                 modifier = Modifier.padding(top = 6.dp),
                             )
                         }
@@ -612,36 +837,36 @@ private fun OpenAiCard(
                 fontWeight = FontWeight.SemiBold,
             )
             Text(
-                text = "Key status: ${if (state.hasSavedKey) "Saved" else "Not set"}",
-                style = MaterialTheme.typography.bodyMedium,
+                text = if (state.hasSavedKey) "Saved locally on this device." else "Not set.",
                 modifier = Modifier.padding(top = 8.dp),
             )
             Text(
-                text = "The key is stored locally on this device and used by the AI USMLE widget.",
-                style = MaterialTheme.typography.bodyMedium,
+                text = "This key is used by the AI widget and the in-app AI question tab.",
                 modifier = Modifier.padding(top = 6.dp),
+                style = MaterialTheme.typography.bodyMedium,
             )
+
             OutlinedTextField(
                 value = state.draftKey,
                 onValueChange = onKeyChange,
-                label = { Text("API key") },
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(top = 16.dp),
+                label = { Text("API key") },
                 singleLine = true,
                 visualTransformation = PasswordVisualTransformation(),
                 keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
-                enabled = !state.isSaving,
             )
+
             Row(
                 modifier = Modifier.padding(top = 16.dp),
                 horizontalArrangement = Arrangement.spacedBy(10.dp),
             ) {
                 Button(
                     onClick = onSave,
-                    enabled = !state.isSaving && state.draftKey.trim().isNotEmpty(),
+                    enabled = !state.isSaving && state.draftKey.isNotBlank(),
                 ) {
-                    Text(if (state.isSaving) "Saving..." else "Save")
+                    Text("Save")
                 }
                 OutlinedButton(
                     onClick = onClear,
@@ -651,386 +876,79 @@ private fun OpenAiCard(
                 }
             }
 
-            state.statusMessage?.let { message ->
+            if (state.isSaving) {
+                CircularProgressIndicator(modifier = Modifier.padding(top = 16.dp))
+            }
+
+            state.statusMessage?.let { status ->
                 Text(
-                    text = message,
-                    style = MaterialTheme.typography.bodyMedium,
-                    modifier = Modifier.padding(top = 12.dp),
+                    text = status,
+                    modifier = Modifier.padding(top = 16.dp),
+                    color = MaterialTheme.colorScheme.primary,
                 )
             }
         }
     }
 }
 
-@Composable
-private fun TroubleQuestionsCard(
-    state: TroubleQuestionScreenState,
-    onRefresh: () -> Unit,
-) {
-    Card(modifier = Modifier.fillMaxWidth()) {
-        Column(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(16.dp),
-        ) {
-            Text(
-                text = "Trouble questions",
-                style = MaterialTheme.typography.headlineSmall,
-                fontWeight = FontWeight.SemiBold,
-            )
-            Text(
-                text = "Questions you checked in the widget across your Obsidian notes.",
-                style = MaterialTheme.typography.bodyMedium,
-                modifier = Modifier.padding(top = 8.dp),
-            )
-            OutlinedButton(
-                onClick = onRefresh,
-                modifier = Modifier.padding(top = 16.dp),
-            ) {
-                Text("Refresh")
-            }
-
-            when (state) {
-                TroubleQuestionScreenState.Loading -> {
-                    Box(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(top = 18.dp),
-                        contentAlignment = Alignment.CenterStart,
-                    ) {
-                        CircularProgressIndicator()
-                    }
-                }
-
-                is TroubleQuestionScreenState.Empty -> {
-                    Text(
-                        text = state.message,
-                        style = MaterialTheme.typography.bodyMedium,
-                        modifier = Modifier.padding(top = 16.dp),
-                    )
-                }
-
-                is TroubleQuestionScreenState.Error -> {
-                    Text(
-                        text = state.message,
-                        style = MaterialTheme.typography.bodyMedium,
-                        modifier = Modifier.padding(top = 16.dp),
-                    )
-                }
-
-                is TroubleQuestionScreenState.Loaded -> {
-                    if (state.items.isEmpty()) {
-                        Text(
-                            text = "No trouble questions yet.",
-                            style = MaterialTheme.typography.bodyMedium,
-                            modifier = Modifier.padding(top = 16.dp),
-                        )
-                    } else {
-                        state.items.forEach { item ->
-                            Card(
-                                modifier = Modifier
-                                    .fillMaxWidth()
-                                    .padding(top = 12.dp),
-                            ) {
-                                Column(
-                                    modifier = Modifier
-                                        .fillMaxWidth()
-                                        .padding(16.dp),
-                                ) {
-                                    if (item.topic.isNotBlank()) {
-                                        Text(
-                                            text = item.topic,
-                                            style = MaterialTheme.typography.labelLarge,
-                                            fontWeight = FontWeight.SemiBold,
-                                        )
-                                    }
-                                    Text(
-                                        text = item.question,
-                                        style = MaterialTheme.typography.bodyLarge,
-                                        fontWeight = FontWeight.SemiBold,
-                                        modifier = Modifier.padding(top = 8.dp),
-                                    )
-                                    Text(
-                                        text = item.answer.ifBlank { "No answer provided." },
-                                        style = MaterialTheme.typography.bodyLarge,
-                                        modifier = Modifier.padding(top = 10.dp),
-                                    )
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
-@Composable
-private fun NetworkDiagnosticsCard(
-    snapshot: NetworkDiagnosticSnapshot,
-    onRefresh: () -> Unit,
-) {
-    Card(modifier = Modifier.fillMaxWidth()) {
-        Column(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(16.dp),
-        ) {
-            Text(
-                text = "Network diagnostics",
-                style = MaterialTheme.typography.headlineSmall,
-                fontWeight = FontWeight.SemiBold,
-            )
-            Text(
-                text = "This is informational only. The AI widget still attempts requests when an active network is present.",
-                style = MaterialTheme.typography.bodyMedium,
-                modifier = Modifier.padding(top = 8.dp),
-            )
-            Text(
-                text = formatNetworkDiagnosticSummary(snapshot),
-                style = MaterialTheme.typography.bodyMedium,
-                modifier = Modifier.padding(top = 12.dp),
-            )
-            Text(
-                text = describeNetworkGuidance(snapshot),
-                style = MaterialTheme.typography.bodyMedium,
-                modifier = Modifier.padding(top = 12.dp),
-            )
-            OutlinedButton(
-                onClick = onRefresh,
-                modifier = Modifier.padding(top = 16.dp),
-            ) {
-                Text("Refresh")
-            }
-        }
-    }
-}
-
-private fun loadOpenAiSettingsUiState(repository: OpenAiKeyAccess): OpenAiSettingsUiState =
-    OpenAiSettingsUiState(
-        draftKey = "",
-        hasSavedKey = repository.hasKey(),
-        statusMessage = null,
-        isSaving = false,
-    )
-
-private fun loadAiDiagnosticsUiState(repository: AiDebugLogRepository): AiDiagnosticsUiState =
-    AiDiagnosticsUiState(
-        sessions = repository.loadSnapshot().sessions,
-    )
-
-private fun readNetworkDiagnosticSnapshot(context: Context): NetworkDiagnosticSnapshot {
-    val connectivityManager = context.getSystemService(CONNECTIVITY_SERVICE) as? ConnectivityManager
-        ?: return NetworkDiagnosticSnapshot(
-            hasActiveNetwork = false,
-            hasInternetCapability = false,
-            isValidated = false,
-            transports = emptyList(),
-        )
-    val activeNetwork = connectivityManager.activeNetwork
-        ?: return NetworkDiagnosticSnapshot(
-            hasActiveNetwork = false,
-            hasInternetCapability = false,
-            isValidated = false,
-            transports = emptyList(),
-        )
-    val capabilities = connectivityManager.getNetworkCapabilities(activeNetwork)
-        ?: return NetworkDiagnosticSnapshot(
-            hasActiveNetwork = true,
-            hasInternetCapability = false,
-            isValidated = false,
-            transports = emptyList(),
-        )
-
-    val transports = buildList {
-        if (capabilities.hasTransport(NetworkCapabilities.TRANSPORT_WIFI)) add("WIFI")
-        if (capabilities.hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR)) add("CELLULAR")
-        if (capabilities.hasTransport(NetworkCapabilities.TRANSPORT_ETHERNET)) add("ETHERNET")
-        if (capabilities.hasTransport(NetworkCapabilities.TRANSPORT_VPN)) add("VPN")
-        if (capabilities.hasTransport(NetworkCapabilities.TRANSPORT_BLUETOOTH)) add("BLUETOOTH")
-        if (isEmpty()) add("OTHER")
-    }
-
-    return NetworkDiagnosticSnapshot(
-        hasActiveNetwork = true,
-        hasInternetCapability = capabilities.hasCapability(NetworkCapabilities.NET_CAPABILITY_INTERNET),
-        isValidated = capabilities.hasCapability(NetworkCapabilities.NET_CAPABILITY_VALIDATED),
-        transports = transports,
-    )
-}
-
-private fun formatNetworkDiagnosticSummary(snapshot: NetworkDiagnosticSnapshot): String = buildString {
-    append("Active network: ").append(if (snapshot.hasActiveNetwork) "yes" else "no")
-    append("\nTransports: ").append(snapshot.transports.ifEmpty { listOf("none") }.joinToString(", "))
-    append("\nInternet capability: ").append(if (snapshot.hasInternetCapability) "yes" else "no")
-    append("\nValidated: ").append(if (snapshot.isValidated) "yes" else "no")
-    append("\nAI widget would attempt request: ").append(if (snapshot.wouldAttemptRequests) "yes" else "no")
-}
-
-private fun describeNetworkGuidance(snapshot: NetworkDiagnosticSnapshot): String =
-    when {
-        !snapshot.hasActiveNetwork -> "No active network detected."
-        snapshot.hasActiveNetwork && !snapshot.hasInternetCapability -> {
-            "Active network present, but Android does not report internet capability."
-        }
-
-        snapshot.hasActiveNetwork && snapshot.hasInternetCapability && !snapshot.isValidated -> {
-            "Android marks this network as unvalidated, but the AI widget still attempts requests."
-        }
-
-        else -> "Android reports an active, internet-capable, validated network."
-    }
+private fun loadOpenAiSettingsUiState(
+    repository: OpenAiKeyAccess,
+): OpenAiSettingsUiState = OpenAiSettingsUiState(
+    hasSavedKey = repository.hasKey(),
+)
 
 private fun vaultSummaryText(state: VaultScreenState): String =
     when (state) {
         VaultScreenState.Loading -> "Loading vault status."
         VaultScreenState.Unlinked -> "No Obsidian vault linked yet."
         is VaultScreenState.Error -> state.message
-        is VaultScreenState.Loaded -> state.emptyMessage
-            ?: "Vault linked and ready."
+        is VaultScreenState.Loaded -> state.emptyMessage ?: "Vault linked and ready."
     }
 
-internal sealed interface TroubleQuestionScreenState {
-    data object Loading : TroubleQuestionScreenState
-    data class Loaded(
-        val items: List<TroubleQuestionItem>,
-    ) : TroubleQuestionScreenState
-
-    data class Empty(
-        val title: String,
-        val message: String,
-    ) : TroubleQuestionScreenState
-
-    data class Error(
-        val message: String,
-    ) : TroubleQuestionScreenState
-}
-
-internal fun TroubleQuestionLoadResult.toScreenState(): TroubleQuestionScreenState =
-    when (this) {
-        is TroubleQuestionLoadResult.Error -> TroubleQuestionScreenState.Error(message)
-        is TroubleQuestionLoadResult.Success -> {
-            if (items.isEmpty()) {
-                TroubleQuestionScreenState.Empty(
-                    title = "No trouble questions yet",
-                    message = "Check a question in the widget and it will appear here.",
-                )
-            } else {
-                TroubleQuestionScreenState.Loaded(items)
+private fun buildAiQuestionAppChatGptPrompt(
+    state: AiQuestionWidgetState?,
+): String = when (state) {
+    null -> "Tell me about USMLE Step 1 high-yield topics from first principles."
+    is AiQuestionWidgetState.Message -> state.message
+    is AiQuestionWidgetState.Loaded -> {
+        val modeState = state.modeState(state.activeMode)
+        val topic = modeState.context?.topic ?: "USMLE Step 1 topic"
+        val question = modeState.question
+        if (question == null) {
+            "Tell me about $topic. Assume I know nothing and explain it at a USMLE Step 1 level."
+        } else {
+            buildString {
+                append("Topic: ").append(topic).append("\n\n")
+                append("Question: ").append(question.stem).append("\n\n")
+                question.choices.forEach { choice ->
+                    append(choice.key).append(". ").append(choice.text).append('\n')
+                }
+                append("\nCorrect answer: ").append(question.correctKey).append('\n')
+                append("Official explanation: ").append(question.correctExplanation).append("\n\n")
+                append("Request: Explain this from first principles, define the key terms, explain why the right answer is correct, and why the wrong answers are tempting but wrong.")
             }
         }
     }
+}
 
 @Preview(showBackground = true)
 @Composable
 private fun MainScreenPreview() {
     MaterialTheme {
-        MainScreen(
+        SettingsTab(
             vaultState = VaultScreenState.Loaded(
                 notes = listOf(
                     VaultNote(name = "Cardiology.md", uri = Uri.EMPTY),
                     VaultNote(name = "Renal.md", uri = Uri.EMPTY),
                 ),
             ),
-            troubleState = TroubleQuestionScreenState.Loaded(
-                items = listOf(
-                    TroubleQuestionItem(
-                        id = "1",
-                        topic = "Cardiology",
-                        question = "Why does troponin stay elevated longer than CK-MB?",
-                        answer = "Troponin remains elevated for days after myocardial injury.",
-                        notePath = "Medicine/Cardiology.md",
-                        noteFile = "Cardiology.md",
-                        createdAt = "2026-03-21T10:00:00Z",
-                        updatedAt = "2026-03-21T10:00:00Z",
-                        timesMarked = 1,
-                    ),
-                ),
-            ),
-            networkSnapshot = NetworkDiagnosticSnapshot(
-                hasActiveNetwork = true,
-                hasInternetCapability = true,
-                isValidated = true,
-                transports = listOf("WIFI"),
-            ),
             openAiSettings = OpenAiSettingsUiState(hasSavedKey = true),
-            aiDiagnostics = AiDiagnosticsUiState(
-                sessions = listOf(
-                    AiDebugSession(
-                        sessionId = "probe-1234",
-                        startedAt = "2026-04-02T12:01:00Z",
-                        endedAt = "2026-04-02T12:01:03Z",
-                        status = "host_specific_dns_failure",
-                        entries = listOf(
-                            AiDebugLogEntry(
-                                timestamp = "2026-04-02T12:01:01Z",
-                                stage = "probe_dns_result",
-                                message = "DNS probe completed",
-                                elapsedMs = 30L,
-                                fields = mapOf(
-                                    "host" to "api.openai.com",
-                                    "status" to "FAIL",
-                                    "details" to "Unable to resolve host",
-                                ),
-                            ),
-                            AiDebugLogEntry(
-                                timestamp = "2026-04-02T12:01:02Z",
-                                stage = "probe_dns_result",
-                                message = "DNS probe completed",
-                                elapsedMs = 45L,
-                                fields = mapOf(
-                                    "host" to "openai.com",
-                                    "status" to "PASS",
-                                    "addresses" to "104.18.33.45",
-                                ),
-                            ),
-                            AiDebugLogEntry(
-                                timestamp = "2026-04-02T12:01:03Z",
-                                stage = "probe_suite_complete",
-                                message = "Completed manual probe suite",
-                                elapsedMs = 3000L,
-                                fields = mapOf(
-                                    "classification" to "host_specific_dns_failure",
-                                    "interpretation" to "DNS failing only for api.openai.com.",
-                                    "recentWidgetFailureStatus" to "unknown_host",
-                                ),
-                            ),
-                        ),
-                    ),
-                    AiDebugSession(
-                        sessionId = "ai-1234",
-                        widgetId = 42,
-                        startedAt = "2026-04-02T12:00:00Z",
-                        endedAt = "2026-04-02T12:00:02Z",
-                        status = "socket_exception",
-                        latestMode = "easy",
-                        latestTopic = "Cardiology",
-                        entries = listOf(
-                            AiDebugLogEntry(
-                                timestamp = "2026-04-02T12:00:00Z",
-                                stage = "connection_open_start",
-                                message = "Opening HttpURLConnection",
-                                elapsedMs = 15L,
-                                fields = mapOf("host" to "api.openai.com"),
-                            ),
-                        ),
-                    ),
-                ),
-            ),
-            contentPadding = PaddingValues(),
             isLinkingVault = false,
-            isRunningAiProbes = false,
             onPickVault = {},
             onReloadVault = {},
-            onReloadTroubleQuestions = {},
-            onRefreshNetworkDiagnostics = {},
-            onRefreshAiDiagnostics = {},
-            onRunAiNetworkProbes = {},
             onOpenAiKeyChange = {},
             onSaveOpenAiKey = {},
             onClearOpenAiKey = {},
-            onRefreshAiWidget = {},
-            onClearAiDiagnostics = {},
         )
     }
 }
