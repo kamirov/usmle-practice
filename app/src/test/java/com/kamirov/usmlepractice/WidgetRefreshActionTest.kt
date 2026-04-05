@@ -26,7 +26,6 @@ class WidgetRefreshActionTest {
         assertTrue(isPerWidgetAction(AiQuestionAppWidgetReceiver.ACTION_REFRESH_AI_QUESTION))
         assertTrue(isPerWidgetAction(AiQuestionAppWidgetReceiver.ACTION_SELECT_AI_MODE))
         assertTrue(isPerWidgetAction(AiQuestionAppWidgetReceiver.ACTION_SELECT_AI_ANSWER))
-        assertTrue(isPerWidgetAction(AiQuestionAppWidgetReceiver.ACTION_OPEN_AI_TOPIC))
         assertTrue(isPerWidgetAction(AiQuestionAppWidgetReceiver.ACTION_OPEN_AI_CHATGPT))
     }
 

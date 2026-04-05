@@ -1,9 +1,6 @@
 package com.kamirov.usmlepractice
 
 import android.content.Context
-import android.net.Uri
-import java.net.SocketTimeoutException
-import java.net.UnknownHostException
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertNotNull
@@ -13,25 +10,6 @@ import org.junit.Test
 import org.mockito.Mockito.mock
 
 class AiQuestionEngineTest {
-    private val uriCache = mutableMapOf<String, Uri>()
-
-    @Test
-    fun buildAiQuestionWidgetState_returnsInAppKeyMessageWhenKeyMissing() {
-        val state = buildAiQuestionWidgetState(
-            context = mock(Context::class.java),
-            previousState = null,
-            keyRepositoryFactory = { FakeOpenAiKeyAccess("") },
-        )
-
-        assertEquals(
-            AiQuestionWidgetState.Message(
-                title = AI_QUESTION_WIDGET_TITLE,
-                message = "Missing OpenAI key. Open the app and save your key in the OpenAI card.",
-            ),
-            state,
-        )
-    }
-
     @Test
     fun parseAiWidgetMode_returnsExpectedModes() {
         assertEquals(AiWidgetMode.TARGETED, parseAiWidgetMode("targeted"))
@@ -42,95 +20,51 @@ class AiQuestionEngineTest {
     }
 
     @Test
-    fun pickDistinctPracticeNotes_avoidsPreviousPathsAndDuplicatesWhenPossible() {
-        val notes = listOf(
-            VaultNote(name = "Alpha.md", uri = testUri("alpha"), notePathKey = "Deck/Alpha.md"),
-            VaultNote(name = "Beta.md", uri = testUri("beta"), notePathKey = "Deck/Beta.md"),
-            VaultNote(name = "Gamma.md", uri = testUri("gamma"), notePathKey = "Deck/Gamma.md"),
-        )
-
-        val selected = pickDistinctPracticeNotes(
-            notes = notes,
-            previousPaths = mapOf(
-                AiWidgetMode.EASY to "Deck/Alpha.md",
-                AiWidgetMode.MEDIUM to "Deck/Beta.md",
-                AiWidgetMode.HARD to "Deck/Gamma.md",
-            ),
-            random = kotlin.random.Random(0),
-        )
-
-        assertEquals(3, selected.values.filterNotNull().map { it.notePathKey }.distinct().size)
-        assertTrue(selected[AiWidgetMode.EASY]?.notePathKey != "Deck/Alpha.md")
-        assertTrue(selected[AiWidgetMode.MEDIUM]?.notePathKey != "Deck/Beta.md")
-        assertTrue(selected[AiWidgetMode.HARD]?.notePathKey != "Deck/Gamma.md")
-    }
-
-    @Test
-    fun pickDistinctPracticeNotes_reusesSingleCandidateAcrossModes() {
-        val note = VaultNote(name = "Only.md", uri = testUri("only"), notePathKey = "Deck/Only.md")
-
-        val selected = pickDistinctPracticeNotes(
-            notes = listOf(note),
-            previousPaths = emptyMap(),
-            random = kotlin.random.Random(0),
-        )
-
-        assertEquals("Deck/Only.md", selected[AiWidgetMode.EASY]?.notePathKey)
-        assertEquals("Deck/Only.md", selected[AiWidgetMode.MEDIUM]?.notePathKey)
-        assertEquals("Deck/Only.md", selected[AiWidgetMode.HARD]?.notePathKey)
-    }
-
-    @Test
-    fun pickWeightedTargetedTopic_prefersAlternativeWhenPreviousCanBeAvoided() {
-        val selected = pickWeightedTargetedTopic(
-            stats = listOf(
-                AiTargetedTopicStat("Cardiology", "Deck/Cardiology.md", "Cardiology.md", 5),
-                AiTargetedTopicStat("Renal", "Deck/Renal.md", "Renal.md", 1),
-            ),
-            previousPathKey = "Deck/Cardiology.md",
-            random = kotlin.random.Random(0),
-        )
-
-        assertEquals("Deck/Renal.md", selected?.notePathKey)
-    }
-
-    @Test
-    fun parseAiGeneratedQuestion_returnsStructuredQuestionWhenValid() {
-        val question = parseAiGeneratedQuestion(
+    fun parseLatestAiQuestionResponse_returnsStructuredQuestionWhenValid() {
+        val parsed = parseLatestAiQuestionResponse(
             """
                 {
-                  "stem": "A 25-year-old man has chest pain. What is the mechanism?",
-                  "choices": [
-                    { "key": "A", "text": "Alpha", "explanation": "Wrong A" },
-                    { "key": "B", "text": "Beta", "explanation": "Wrong B" },
-                    { "key": "C", "text": "Gamma", "explanation": "Wrong C" },
-                    { "key": "D", "text": "Delta", "explanation": "Wrong D" },
-                    { "key": "E", "text": "Epsilon", "explanation": "Wrong E" }
-                  ],
-                  "correctKey": "B",
-                  "correctExplanation": "Because beta."
+                  "data": {
+                    "id": "question-1",
+                    "topic": "Cardiology",
+                    "difficulty": "medium",
+                    "content": "A patient presents with chest pain.",
+                    "option1": { "content": "Choice 1", "explanation": "Expl 1" },
+                    "option2": { "content": "Choice 2", "explanation": "Expl 2" },
+                    "option3": { "content": "Choice 3", "explanation": "Expl 3" },
+                    "option4": { "content": "Choice 4", "explanation": "Expl 4" },
+                    "correctOptionIndex": 2,
+                    "answerStatus": "correct"
+                  }
                 }
             """.trimIndent(),
         )
 
-        assertNotNull(question)
-        assertEquals("B", question?.correctKey)
-        assertEquals(5, question?.choices?.size)
+        assertNotNull(parsed)
+        assertEquals("question-1", parsed?.id)
+        assertEquals("Cardiology", parsed?.topic)
+        assertEquals("medium", parsed?.difficulty)
+        assertEquals("B", parsed?.correctKey)
+        assertEquals("Expl 2", parsed?.correctExplanation)
+        assertEquals(4, parsed?.choices?.size)
     }
 
     @Test
-    fun parseAiGeneratedQuestion_rejectsInvalidChoiceSets() {
+    fun parseLatestAiQuestionResponse_rejectsMissingOptionPayload() {
         assertNull(
-            parseAiGeneratedQuestion(
+            parseLatestAiQuestionResponse(
                 """
                     {
-                      "stem": "Stem",
-                      "choices": [
-                        { "key": "A", "text": "Alpha", "explanation": "Wrong" },
-                        { "key": "A", "text": "Beta", "explanation": "Wrong" }
-                      ],
-                      "correctKey": "A",
-                      "correctExplanation": "Because."
+                      "data": {
+                        "id": "question-1",
+                        "topic": "Cardiology",
+                        "difficulty": "medium",
+                        "content": "Stem",
+                        "option1": { "content": "Choice 1", "explanation": "Expl 1" },
+                        "option2": { "content": "Choice 2", "explanation": "Expl 2" },
+                        "option3": { "content": "Choice 3", "explanation": "Expl 3" },
+                        "correctOptionIndex": 2
+                      }
                     }
                 """.trimIndent(),
             ),
@@ -138,33 +72,135 @@ class AiQuestionEngineTest {
     }
 
     @Test
-    fun serializeAndParseAiQuestionMistakeStore_roundTripsAndSanitizes() {
-        val serialized = serializeAiQuestionMistakeStore(
-            AiQuestionMistakeStore(
-                recentMistakes = listOf(
-                    AiQuestionMistakeRecord(
-                        topic = "Cardiology",
-                        notePathKey = "Deck/Cardiology.md",
-                        noteFile = "Cardiology.md",
-                        stem = "Stem",
-                        correctKey = "A",
-                        selectedKey = "B",
-                        difficulty = "medium",
-                        createdAt = "2026-04-01T00:00:00Z",
-                    ),
-                ),
-                topicStats = listOf(
-                    AiTargetedTopicStat("Cardiology", "Deck/Cardiology.md", "Cardiology.md", 2),
-                    AiTargetedTopicStat("Cardiology", "Deck/Cardiology.md", "Cardiology.md", 1),
-                ),
+    fun parseLatestAiQuestionResponse_rejectsInvalidCorrectOptionIndex() {
+        assertNull(
+            parseLatestAiQuestionResponse(
+                """
+                    {
+                      "data": {
+                        "id": "question-1",
+                        "topic": "Cardiology",
+                        "difficulty": "medium",
+                        "content": "Stem",
+                        "option1": { "content": "Choice 1", "explanation": "Expl 1" },
+                        "option2": { "content": "Choice 2", "explanation": "Expl 2" },
+                        "option3": { "content": "Choice 3", "explanation": "Expl 3" },
+                        "option4": { "content": "Choice 4", "explanation": "Expl 4" },
+                        "correctOptionIndex": 5
+                      }
+                    }
+                """.trimIndent(),
+            ),
+        )
+    }
+
+    @Test
+    fun buildAiQuestionWidgetState_fetchesOnlyServerBackedModes() {
+        val client = FakeAiQuestionApiClient(
+            responses = mapOf(
+                "easy" to Result.success(testQuestion(id = "easy-question", difficulty = "easy")),
+                "medium" to Result.success(testQuestion(id = "medium-question", difficulty = "medium")),
+                "hard" to Result.success(testQuestion(id = "hard-question", difficulty = "hard")),
             ),
         )
 
-        val parsed = parseAiQuestionMistakeStore(serialized)
+        val state = buildAiQuestionWidgetState(
+            context = mock(Context::class.java),
+            previousState = null,
+            apiClient = client,
+        ) as AiQuestionWidgetState.Loaded
 
-        assertEquals(1, parsed.recentMistakes.size)
-        assertEquals(1, parsed.topicStats.size)
-        assertEquals(3, parsed.topicStats.single().count)
+        assertEquals(listOf("easy", "medium", "hard"), client.requestedDifficulties)
+        assertEquals(TARGETED_MODE_PLACEHOLDER_MESSAGE_FOR_TEST, state.modeState(AiWidgetMode.TARGETED).message)
+        assertEquals("easy-question", state.modeState(AiWidgetMode.EASY).question?.id)
+        assertEquals("medium-question", state.modeState(AiWidgetMode.MEDIUM).question?.id)
+        assertEquals("hard-question", state.modeState(AiWidgetMode.HARD).question?.id)
+    }
+
+    @Test
+    fun buildAiQuestionWidgetState_keepsRequestedActiveModeFromPreviousState() {
+        val previousState = AiQuestionWidgetState.Loaded(activeMode = AiWidgetMode.HARD)
+        val client = FakeAiQuestionApiClient(
+            responses = mapOf(
+                "easy" to Result.success(testQuestion(id = "easy-question", difficulty = "easy")),
+                "medium" to Result.success(testQuestion(id = "medium-question", difficulty = "medium")),
+                "hard" to Result.success(testQuestion(id = "hard-question", difficulty = "hard")),
+            ),
+        )
+
+        val state = buildAiQuestionWidgetState(
+            context = mock(Context::class.java),
+            previousState = previousState,
+            apiClient = client,
+        ) as AiQuestionWidgetState.Loaded
+
+        assertEquals(AiWidgetMode.HARD, state.activeMode)
+    }
+
+    @Test
+    fun answerAiQuestion_revealsImmediatelyFromFetchedPayload() {
+        val state = AiQuestionWidgetState.Loaded(
+            activeMode = AiWidgetMode.MEDIUM,
+            modeStates = emptyAiQuestionModeStates().toMutableMap().apply {
+                this[AiWidgetMode.MEDIUM] = AiQuestionModeState(question = testQuestion())
+            },
+        )
+
+        val next = answerAiQuestion(
+            state = state,
+            mode = AiWidgetMode.MEDIUM,
+            selectedKey = "b",
+        )
+
+        assertTrue(next.modeState(AiWidgetMode.MEDIUM).isRevealed)
+        assertEquals("B", next.modeState(AiWidgetMode.MEDIUM).selectedKey)
+        assertEquals(testQuestion(), next.modeState(AiWidgetMode.MEDIUM).question)
+    }
+
+    @Test
+    fun answerAiQuestion_doesNothingWhenModeHasNoQuestion() {
+        val state = AiQuestionWidgetState.Loaded(activeMode = AiWidgetMode.TARGETED)
+
+        val next = answerAiQuestion(
+            state = state,
+            mode = AiWidgetMode.TARGETED,
+            selectedKey = "A",
+        )
+
+        assertEquals(state, next)
+    }
+
+    @Test
+    fun withAiModeMessage_setsMessageWithoutClearingRevealedQuestion() {
+        val revealed = AiQuestionWidgetState.Loaded(
+            activeMode = AiWidgetMode.EASY,
+            modeStates = emptyAiQuestionModeStates().toMutableMap().apply {
+                this[AiWidgetMode.EASY] = AiQuestionModeState(
+                    question = testQuestion(),
+                    selectedKey = "A",
+                    isRevealed = true,
+                )
+            },
+        )
+
+        val next = withAiModeMessage(
+            state = revealed,
+            mode = AiWidgetMode.EASY,
+            message = AI_QUESTION_SUBMIT_FAILURE_MESSAGE,
+        )
+
+        assertTrue(next.modeState(AiWidgetMode.EASY).isRevealed)
+        assertEquals("A", next.modeState(AiWidgetMode.EASY).selectedKey)
+        assertEquals(AI_QUESTION_SUBMIT_FAILURE_MESSAGE, next.modeState(AiWidgetMode.EASY).message)
+    }
+
+    @Test
+    fun selectedOptionIndexForKey_returnsServerIndices() {
+        assertEquals(1, selectedOptionIndexForKey("a"))
+        assertEquals(2, selectedOptionIndexForKey("B"))
+        assertEquals(3, selectedOptionIndexForKey(" c "))
+        assertEquals(4, selectedOptionIndexForKey("D"))
+        assertNull(selectedOptionIndexForKey("E"))
     }
 
     @Test
@@ -173,20 +209,12 @@ class AiQuestionEngineTest {
             activeMode = AiWidgetMode.MEDIUM,
             modeStates = emptyAiQuestionModeStates().toMutableMap().apply {
                 this[AiWidgetMode.MEDIUM] = AiQuestionModeState(
-                    context = AiQuestionContext(
-                        topic = "Cardiology",
-                        notePathKey = "Deck/Cardiology.md",
-                        noteFile = "Cardiology.md",
-                        noteUriString = "content://cardiology",
-                        vaultName = "Vault",
-                    ),
                     question = testQuestion(),
-                    message = null,
+                    message = "Answer sync failed.",
                     selectedKey = "A",
                     isRevealed = true,
                 )
             },
-            isRefreshing = false,
         )
 
         val parsed = parseAiQuestionWidgetState(serializeAiQuestionWidgetState(state))
@@ -220,223 +248,41 @@ class AiQuestionEngineTest {
         )
     }
 
-    @Test
-    fun answerAiQuestion_recordsWrongAnswer() {
-        val target = FakeAiQuestionMistakeMutationTarget()
-        val state = AiQuestionWidgetState.Loaded(
-            activeMode = AiWidgetMode.EASY,
-            modeStates = emptyAiQuestionModeStates().toMutableMap().apply {
-                this[AiWidgetMode.EASY] = AiQuestionModeState(
-                    context = AiQuestionContext(
-                        topic = "Cardiology",
-                        notePathKey = "Deck/Cardiology.md",
-                        noteFile = "Cardiology.md",
-                    ),
-                    question = testQuestion(),
-                )
-            },
-        )
-
-        val next = answerAiQuestion(
-            state = state,
-            mode = AiWidgetMode.EASY,
-            selectedKey = "B",
-            mistakeRepository = target,
-            now = { "2026-04-01T00:00:00Z" },
-        )
-
-        assertTrue(next.modeState(AiWidgetMode.EASY).isRevealed)
-        assertEquals("B", next.modeState(AiWidgetMode.EASY).selectedKey)
-        assertEquals(1, target.recordedWrong.size)
-        assertTrue(target.decrementedTopics.isEmpty())
-    }
-
-    @Test
-    fun answerAiQuestion_decrementsTargetedTopicOnCorrectAnswer() {
-        val target = FakeAiQuestionMistakeMutationTarget()
-        val state = AiQuestionWidgetState.Loaded(
-            activeMode = AiWidgetMode.TARGETED,
-            modeStates = emptyAiQuestionModeStates().toMutableMap().apply {
-                this[AiWidgetMode.TARGETED] = AiQuestionModeState(
-                    context = AiQuestionContext(
-                        topic = "Cardiology",
-                        notePathKey = "Deck/Cardiology.md",
-                        noteFile = "Cardiology.md",
-                    ),
-                    question = testQuestion(),
-                )
-            },
-        )
-
-        answerAiQuestion(
-            state = state,
-            mode = AiWidgetMode.TARGETED,
-            selectedKey = "A",
-            mistakeRepository = target,
-            now = { "2026-04-01T00:00:00Z" },
-        )
-
-        assertEquals(listOf("Deck/Cardiology.md"), target.decrementedTopics)
-        assertTrue(target.recordedWrong.isEmpty())
-    }
-
-    @Test
-    fun openAiClient_usesSingleAttemptForTimeoutFailure() {
-        var attempts = 0
-        val client = OpenAiAiQuestionClient(
-            "test-key",
-            object : OpenAiSdkGateway {
-                override fun generateQuestionJson(
-                    systemMessage: String,
-                    userMessage: String,
-                ): String {
-                    attempts += 1
-                    throw SocketTimeoutException("timeout")
-                }
-            },
-        )
-
-        val result = client.generateQuestion(
-            mode = AiWidgetMode.EASY,
-            generationContext = testGenerationContext(),
-            random = kotlin.random.Random(0),
-        )
-
-        assertEquals(1, attempts)
-        assertEquals(
-            AiQuestionGenerationResult.Error("OpenAI request error: SocketTimeoutException: timeout"),
-            result,
-        )
-    }
-
-    @Test
-    fun openAiClient_formatsCompactUnknownHostError() {
-        val client = OpenAiAiQuestionClient(
-            "test-key",
-            object : OpenAiSdkGateway {
-                override fun generateQuestionJson(
-                    systemMessage: String,
-                    userMessage: String,
-                ): String {
-                    throw UnknownHostException("Unable to resolve host api.openai.com")
-                }
-            },
-        )
-
-        val result = client.generateQuestion(
-            mode = AiWidgetMode.EASY,
-            generationContext = testGenerationContext(),
-            random = kotlin.random.Random(0),
-        )
-
-        assertEquals(
-            AiQuestionGenerationResult.Error(
-                "OpenAI request error: UnknownHostException: Unable to resolve host api.openai.com",
-            ),
-            result,
-        )
-    }
-
-    @Test
-    fun describeOpenAiRequestException_includesHttpFailureDetails() {
-        assertEquals(
-            "OpenAI request error: IllegalStateException: HTTP 500: upstream error",
-            describeOpenAiRequestException(IllegalStateException("HTTP 500: upstream error")),
-        )
-    }
-
-    @Test
-    fun openAiClient_parsesSuccessfulTransportResponse() {
-        val client = OpenAiAiQuestionClient(
-            "test-key",
-            object : OpenAiSdkGateway {
-                override fun generateQuestionJson(
-                    systemMessage: String,
-                    userMessage: String,
-                ): String = """
-                    {
-                      "stem":"A question stem",
-                      "choices":[
-                        {"key":"A","text":"Choice A","explanation":"Expl A"},
-                        {"key":"B","text":"Choice B","explanation":"Expl B"},
-                        {"key":"C","text":"Choice C","explanation":"Expl C"},
-                        {"key":"D","text":"Choice D","explanation":"Expl D"},
-                        {"key":"E","text":"Choice E","explanation":"Expl E"}
-                      ],
-                      "correctKey":"A",
-                      "correctExplanation":"Correct expl"
-                    }
-                """.trimIndent()
-            },
-        )
-
-        val result = client.generateQuestion(
-            mode = AiWidgetMode.EASY,
-            generationContext = testGenerationContext(),
-            random = kotlin.random.Random(0),
-        )
-
-        assertTrue(result is AiQuestionGenerationResult.Success)
-        assertEquals("A question stem", (result as AiQuestionGenerationResult.Success).question.stem)
-    }
-
-    private fun testGenerationContext(): AiQuestionGenerationContext = AiQuestionGenerationContext(
-        context = AiQuestionContext(
-            topic = "Cardiology",
-            notePathKey = "Deck/Cardiology.md",
-            noteFile = "Cardiology.md",
-        ),
-        samplePairs = listOf(
-            QaItem(
-                question = "What is the mechanism?",
-                answer = "Mechanism answer.",
-            ),
-        ),
-    )
-
-    private fun testQuestion(): AiGeneratedQuestion = AiGeneratedQuestion(
-        stem = "A patient has chest pain. Which mediator is most likely involved?",
+    private fun testQuestion(
+        id: String = "question-1",
+        difficulty: String = "medium",
+    ): AiGeneratedQuestion = AiGeneratedQuestion(
+        id = id,
+        topic = "Cardiology",
+        difficulty = difficulty,
+        stem = "A patient has chest pain. What is the best next step?",
         choices = listOf(
-            AiGeneratedChoice("A", "Mediator A", "Correct."),
-            AiGeneratedChoice("B", "Mediator B", "Wrong B."),
-            AiGeneratedChoice("C", "Mediator C", "Wrong C."),
-            AiGeneratedChoice("D", "Mediator D", "Wrong D."),
-            AiGeneratedChoice("E", "Mediator E", "Wrong E."),
+            AiGeneratedChoice("A", "Choice A", "Expl A"),
+            AiGeneratedChoice("B", "Choice B", "Expl B"),
+            AiGeneratedChoice("C", "Choice C", "Expl C"),
+            AiGeneratedChoice("D", "Choice D", "Expl D"),
         ),
         correctKey = "A",
-        correctExplanation = "Mediator A best matches the vignette.",
+        correctExplanation = "Expl A",
+        answerStatus = "correct",
     )
-
-    private fun testUri(value: String): Uri = uriCache.getOrPut(value) { mock(Uri::class.java) }
 }
 
-private class FakeAiQuestionMistakeMutationTarget : AiQuestionMistakeMutationTarget {
-    val recordedWrong = mutableListOf<String>()
-    val decrementedTopics = mutableListOf<String>()
+private class FakeAiQuestionApiClient(
+    private val responses: Map<String, Result<AiGeneratedQuestion>>,
+) : AiQuestionApiClient {
+    val requestedDifficulties = mutableListOf<String>()
+    val submittedAnswers = mutableListOf<Pair<String, Int>>()
 
-    override fun recordWrong(
-        context: AiQuestionContext,
-        question: AiGeneratedQuestion,
-        selectedKey: String,
-        difficulty: String,
-        createdAt: String,
-    ) {
-        recordedWrong += "${context.notePathKey}:$selectedKey:$difficulty:$createdAt:${question.correctKey}"
+    override fun getLatestQuestion(difficulty: String): Result<AiGeneratedQuestion> {
+        requestedDifficulties += difficulty
+        return responses[difficulty] ?: Result.failure(IllegalStateException("missing difficulty"))
     }
 
-    override fun decrementTopic(notePathKey: String) {
-        decrementedTopics += notePathKey
+    override fun postAnswer(questionId: String, selectedOptionIndex: Int): Result<Unit> {
+        submittedAnswers += questionId to selectedOptionIndex
+        return Result.success(Unit)
     }
 }
 
-private class FakeOpenAiKeyAccess(
-    private val key: String,
-) : OpenAiKeyAccess {
-    override fun loadKey(): String = key
-
-    override fun saveKey(value: String) = Unit
-
-    override fun clearKey() = Unit
-
-    override fun hasKey(): Boolean = key.trim().isNotEmpty()
-}
+private const val TARGETED_MODE_PLACEHOLDER_MESSAGE_FOR_TEST = "Targeted mode is not available yet."

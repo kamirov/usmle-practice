@@ -289,7 +289,6 @@ internal fun isPerWidgetAction(action: String?): Boolean =
         action == AiQuestionAppWidgetReceiver.ACTION_REFRESH_AI_QUESTION ||
         action == AiQuestionAppWidgetReceiver.ACTION_SELECT_AI_MODE ||
         action == AiQuestionAppWidgetReceiver.ACTION_SELECT_AI_ANSWER ||
-        action == AiQuestionAppWidgetReceiver.ACTION_OPEN_AI_TOPIC ||
         action == AiQuestionAppWidgetReceiver.ACTION_OPEN_AI_CHATGPT
 
 internal fun shouldStartRefresh(state: WidgetNoteState?): Boolean =

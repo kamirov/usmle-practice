@@ -2,7 +2,6 @@ package com.kamirov.usmlepractice
 
 import android.content.Context
 import org.json.JSONObject
-import kotlin.random.Random
 
 internal class RandomQaSnapshotRepository(
     private val context: Context,
@@ -55,9 +54,9 @@ internal class ReviewQuestionsSnapshotRepository(
 
     fun load(): ReviewQuestionsWidgetState? = ReviewQuestionsSharedSnapshotStore.load(appContext)
 
-    fun loadOrRefresh(random: Random = Random.Default): ReviewQuestionsWidgetState = load() ?: refresh(random)
+    fun loadOrRefresh(random: kotlin.random.Random = kotlin.random.Random.Default): ReviewQuestionsWidgetState = load() ?: refresh(random)
 
-    fun refresh(random: Random = Random.Default): ReviewQuestionsWidgetState {
+    fun refresh(random: kotlin.random.Random = kotlin.random.Random.Default): ReviewQuestionsWidgetState {
         val state = buildReviewWidgetState(appContext, random)
         ReviewQuestionsSharedSnapshotStore.save(appContext, state)
         return state
@@ -91,19 +90,20 @@ internal class ReviewQuestionsSnapshotRepository(
 
 internal class AiQuestionSnapshotRepository(
     private val context: Context,
+    private val apiClient: AiQuestionApiClient = HttpAiQuestionApiClient(context),
 ) {
     private val appContext = context.applicationContext
 
     fun load(): AiQuestionWidgetState? = AiQuestionSharedSnapshotStore.load(appContext)
 
-    fun loadOrRefresh(random: Random = Random.Default): AiQuestionWidgetState = load() ?: refresh(random)
+    fun loadOrRefresh(): AiQuestionWidgetState = load() ?: refresh()
 
-    fun refresh(random: Random = Random.Default): AiQuestionWidgetState {
+    fun refresh(): AiQuestionWidgetState {
         val previousState = load()
         val state = buildAiQuestionWidgetState(
             context = appContext,
             previousState = previousState,
-            random = random,
+            apiClient = apiClient,
         )
         AiQuestionSharedSnapshotStore.save(appContext, state)
         return state
@@ -124,11 +124,13 @@ internal class AiQuestionSnapshotRepository(
             state = current,
             mode = current.activeMode,
             selectedKey = selectedKey,
-            mistakeRepository = AiQuestionMistakeRepository(appContext),
         )
         AiQuestionSharedSnapshotStore.save(appContext, next)
         return next
     }
+
+    fun submitAnswer(questionId: String, selectedOptionIndex: Int): Result<Unit> =
+        apiClient.postAnswer(questionId, selectedOptionIndex)
 }
 
 internal fun orderedReviewItemsForCurrentSnapshot(

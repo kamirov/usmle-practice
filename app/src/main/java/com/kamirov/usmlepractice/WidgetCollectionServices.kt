@@ -175,6 +175,21 @@ internal fun buildAiQuestionCollectionItems(
         return builder.build()
     }
 
+    modeState.message
+        ?.takeIf { it.isNotBlank() }
+        ?.let { message ->
+            builder.addItem(
+                aiQuestionRowId("message", message, 0),
+                aiQuestionRowView(
+                    context = context,
+                    text = message,
+                    backgroundRes = R.drawable.widget_question_row_bg,
+                    isClickable = false,
+                    fillInIntent = null,
+                ),
+            )
+        }
+
     builder.addItem(
         aiQuestionRowId("stem", question.stem, 0),
         aiQuestionRowView(

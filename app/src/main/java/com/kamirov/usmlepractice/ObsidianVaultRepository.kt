@@ -163,28 +163,6 @@ internal class ObsidianVaultRepository(
         return readWidgetNotes(uri)
     }
 
-    fun loadAiQuestionCandidateNotesSync(): VaultScreenState = loadWidgetNotesSync()
-
-    fun loadAiQuestionGenerationContextSync(
-        note: VaultNote,
-    ): AiQuestionGenerationContext? =
-        when (val result = loadParsedNoteViewDataSync(note)) {
-            is ParsedNoteLoadResult.Error -> null
-            is ParsedNoteLoadResult.Success -> {
-                val parsedNote = result.note
-                AiQuestionGenerationContext(
-                    context = AiQuestionContext(
-                        topic = parsedNote.noteName.displayTopicTitle(),
-                        notePathKey = parsedNote.notePathKey,
-                        noteFile = parsedNote.noteName,
-                        noteUriString = parsedNote.noteUriString,
-                        vaultName = parsedNote.vaultName,
-                    ),
-                    samplePairs = parsedNote.previewItems(3),
-                )
-            }
-        }
-
     private fun readNoteContentSync(note: VaultNote): NoteContentResult {
         Log.d(TAG, "Reading note content for ${note.name}")
 

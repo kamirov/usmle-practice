@@ -17,13 +17,12 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.itemsIndexed
-import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Tab
 import androidx.compose.material3.TabRow
@@ -39,7 +38,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -63,34 +61,24 @@ class MainActivity : ComponentActivity() {
 private enum class AppTab(val title: String) {
     RANDOM("Random Q&A"),
     REVIEW("Review Questions"),
-    AI("AI Question"),
     SETTINGS("Settings"),
 }
-
-internal data class OpenAiSettingsUiState(
-    val draftKey: String = "",
-    val hasSavedKey: Boolean = false,
-    val statusMessage: String? = null,
-    val isSaving: Boolean = false,
-)
 
 @Composable
 private fun MainApp() {
     val appContext = LocalContext.current.applicationContext
     val vaultRepository = remember(appContext) { ObsidianVaultRepository(appContext) }
-    val openAiKeyRepository = remember(appContext) { OpenAiKeyRepository(appContext) }
+    val secretRepository = remember(appContext) { PracticeServerSecretRepository(appContext) }
     val randomRepository = remember(appContext) { RandomQaSnapshotRepository(appContext) }
     val reviewRepository = remember(appContext) { ReviewQuestionsSnapshotRepository(appContext) }
-    val aiRepository = remember(appContext) { AiQuestionSnapshotRepository(appContext) }
     val scope = rememberCoroutineScope()
 
     var selectedTab by remember { mutableStateOf(AppTab.RANDOM) }
     var vaultState by remember { mutableStateOf<VaultScreenState>(VaultScreenState.Loading) }
     var randomState by remember { mutableStateOf<WidgetNoteState?>(null) }
     var reviewState by remember { mutableStateOf<ReviewQuestionsWidgetState?>(null) }
-    var aiState by remember { mutableStateOf<AiQuestionWidgetState?>(null) }
     var isLinkingVault by remember { mutableStateOf(false) }
-    var openAiSettings by remember { mutableStateOf(loadOpenAiSettingsUiState(openAiKeyRepository)) }
+    var serverSecretInput by remember { mutableStateOf(secretRepository.loadSecret()) }
 
     fun reloadVault() {
         scope.launch {
@@ -143,34 +131,6 @@ private fun MainApp() {
         }
     }
 
-    fun loadAiSnapshot(refresh: Boolean) {
-        scope.launch {
-            if (refresh) {
-                val current = aiState
-                aiState = when (current) {
-                    is AiQuestionWidgetState.Loaded -> current.copy(isRefreshing = true)
-                    is AiQuestionWidgetState.Message -> current.copy(isRefreshing = true)
-                    null -> AiQuestionWidgetState.Message(
-                        title = AI_QUESTION_WIDGET_TITLE,
-                        message = "Generating questions...",
-                        isRefreshing = true,
-                    )
-                }
-            }
-            val next = withContext(Dispatchers.IO) {
-                if (refresh) aiRepository.refresh(Random.Default) else aiRepository.loadOrRefresh(Random.Default)
-            }
-            aiState = next
-            AiQuestionAppWidgetReceiver.rerenderWidgets(appContext)
-        }
-    }
-
-    fun reloadOpenAiSettings(clearStatusMessage: Boolean) {
-        openAiSettings = loadOpenAiSettingsUiState(openAiKeyRepository).let { base ->
-            if (clearStatusMessage) base else base.copy(statusMessage = openAiSettings.statusMessage)
-        }
-    }
-
     val folderPicker = rememberLauncherForActivityResult(OpenDocumentTree()) { uri: Uri? ->
         if (uri == null) {
             isLinkingVault = false
@@ -184,16 +144,13 @@ private fun MainApp() {
             isLinkingVault = false
             loadRandomSnapshot(refresh = true)
             loadReviewSnapshot(refresh = true)
-            loadAiSnapshot(refresh = true)
         }
     }
 
     LaunchedEffect(Unit) {
         reloadVault()
-        reloadOpenAiSettings(clearStatusMessage = true)
         loadRandomSnapshot(refresh = false)
         loadReviewSnapshot(refresh = false)
-        loadAiSnapshot(refresh = false)
     }
 
     Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
@@ -254,7 +211,7 @@ private fun MainApp() {
                             appContext,
                             WidgetLaunchers.buildChatGptIntent(
                                 context = appContext,
-                                prompt = "Tell me about ${note.noteName.displayTopicTitle()}. I'm studying for USMLE Step 1, so keep things relevant.",
+                                prompt = "(${note.noteName.displayTopicTitle()}) Tell me about this topic. Please include detail appropriate for studying USMLE Step 1.",
                             ),
                         )
                     },
@@ -315,92 +272,26 @@ private fun MainApp() {
                     },
                 )
 
-                AppTab.AI -> AiQuestionTab(
-                    state = aiState,
-                    onRefresh = { loadAiSnapshot(refresh = true) },
-                    onSelectMode = { mode ->
-                        scope.launch {
-                            aiState = withContext(Dispatchers.IO) {
-                                aiRepository.selectMode(mode)
-                            } ?: aiState
-                            AiQuestionAppWidgetReceiver.rerenderWidgets(appContext)
-                        }
-                    },
-                    onSelectAnswer = { key ->
-                        scope.launch {
-                            aiState = withContext(Dispatchers.IO) {
-                                aiRepository.answer(key)
-                            } ?: aiState
-                            AiQuestionAppWidgetReceiver.rerenderWidgets(appContext)
-                        }
-                    },
-                    onOpenTopic = {
-                        val loaded = aiState as? AiQuestionWidgetState.Loaded ?: return@AiQuestionTab
-                        val modeState = loaded.modeState(loaded.activeMode)
-                        val context = modeState.context ?: return@AiQuestionTab
-                        if (!modeState.isRevealed) return@AiQuestionTab
-                        launchIntent(
-                            appContext,
-                            WidgetLaunchers.buildObsidianIntent(
-                                context = appContext,
-                                vaultName = context.vaultName,
-                                notePathKey = context.notePathKey,
-                                noteUriString = context.noteUriString,
-                            ),
-                        )
-                    },
-                    onOpenChatGpt = {
-                        launchIntent(
-                            appContext,
-                            WidgetLaunchers.buildChatGptIntent(
-                                context = appContext,
-                                prompt = buildAiQuestionAppChatGptPrompt(aiState),
-                            ),
-                        )
-                    },
-                )
-
                 AppTab.SETTINGS -> SettingsTab(
                     vaultState = vaultState,
-                    openAiSettings = openAiSettings,
                     isLinkingVault = isLinkingVault,
+                    serverSecret = serverSecretInput,
+                    hasSavedServerSecret = secretRepository.hasSecret(),
                     onPickVault = {
                         isLinkingVault = true
                         folderPicker.launch(null)
                     },
                     onReloadVault = ::reloadVault,
-                    onOpenAiKeyChange = { value ->
-                        openAiSettings = openAiSettings.copy(
-                            draftKey = value,
-                            statusMessage = null,
-                        )
+                    onServerSecretChange = { serverSecretInput = it },
+                    onSaveServerSecret = {
+                        secretRepository.saveSecret(serverSecretInput)
+                        serverSecretInput = secretRepository.loadSecret()
+                        AiQuestionAppWidgetReceiver.requestWidgetRefresh(appContext)
                     },
-                    onSaveOpenAiKey = {
-                        val keyToSave = openAiSettings.draftKey
-                        scope.launch {
-                            openAiSettings = openAiSettings.copy(isSaving = true, statusMessage = null)
-                            withContext(Dispatchers.IO) {
-                                openAiKeyRepository.saveKey(keyToSave)
-                            }
-                            openAiSettings = loadOpenAiSettingsUiState(openAiKeyRepository).copy(
-                                statusMessage = "Key saved.",
-                                isSaving = false,
-                            )
-                            loadAiSnapshot(refresh = true)
-                        }
-                    },
-                    onClearOpenAiKey = {
-                        scope.launch {
-                            openAiSettings = openAiSettings.copy(isSaving = true, statusMessage = null)
-                            withContext(Dispatchers.IO) {
-                                openAiKeyRepository.clearKey()
-                            }
-                            openAiSettings = loadOpenAiSettingsUiState(openAiKeyRepository).copy(
-                                statusMessage = "Key cleared.",
-                                isSaving = false,
-                            )
-                            loadAiSnapshot(refresh = true)
-                        }
+                    onClearServerSecret = {
+                        secretRepository.clearSecret()
+                        serverSecretInput = ""
+                        AiQuestionAppWidgetReceiver.requestWidgetRefresh(appContext)
                     },
                 )
             }
@@ -502,96 +393,16 @@ private fun ReviewQuestionsTab(
 }
 
 @Composable
-private fun AiQuestionTab(
-    state: AiQuestionWidgetState?,
-    onRefresh: () -> Unit,
-    onSelectMode: (AiWidgetMode) -> Unit,
-    onSelectAnswer: (String) -> Unit,
-    onOpenTopic: () -> Unit,
-    onOpenChatGpt: () -> Unit,
-) {
-    when (state) {
-        null -> LoadingScreen()
-        is AiQuestionWidgetState.Message -> MessageScreen(
-            title = state.title,
-            message = state.message,
-            isRefreshing = state.isRefreshing,
-            onRefresh = onRefresh,
-        )
-        is AiQuestionWidgetState.Loaded -> {
-            val modeState = state.modeState(state.activeMode)
-            LazyColumn(
-                modifier = Modifier.fillMaxSize().padding(horizontal = 20.dp, vertical = 16.dp),
-                verticalArrangement = Arrangement.spacedBy(12.dp),
-            ) {
-                item {
-                    HeaderCard(
-                        title = AI_QUESTION_WIDGET_TITLE,
-                        subtitle = modeState.context?.topic ?: state.activeMode.title,
-                        onPrimary = onRefresh,
-                        primaryLabel = "Refresh",
-                        onSecondary = onOpenChatGpt,
-                        secondaryLabel = "Ask GPT",
-                        onTertiary = if (modeState.isRevealed && modeState.context != null) onOpenTopic else null,
-                        tertiaryLabel = if (modeState.isRevealed && modeState.context != null) "Open topic" else null,
-                    )
-                }
-                item {
-                    Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                        AiWidgetMode.refreshableModes.forEach { mode ->
-                            OutlinedButton(onClick = { onSelectMode(mode) }) {
-                                Text(if (state.activeMode == mode) "[${mode.title}]" else mode.title)
-                            }
-                        }
-                    }
-                }
-                if (modeState.question == null) {
-                    item {
-                        Card(modifier = Modifier.fillMaxWidth()) {
-                            Text(
-                                text = modeState.message ?: "Question not generated yet.",
-                                modifier = Modifier.padding(16.dp),
-                            )
-                        }
-                    }
-                } else {
-                    item {
-                        Card(modifier = Modifier.fillMaxWidth()) {
-                            Column(modifier = Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
-                                Text(modeState.question.stem)
-                                modeState.question.choices.forEach { choice ->
-                                    val choiceLabel = "${choice.key}. ${choice.text}"
-                                    val suffix = if (modeState.isRevealed) "\n${choice.explanation}" else ""
-                                    OutlinedButton(
-                                        onClick = { onSelectAnswer(choice.key) },
-                                        enabled = !modeState.isRevealed,
-                                        modifier = Modifier.fillMaxWidth(),
-                                    ) {
-                                        Text(choiceLabel + suffix)
-                                    }
-                                }
-                                if (modeState.isRevealed) {
-                                    Text("Correct answer: ${modeState.question.correctKey}. ${modeState.question.correctExplanation}")
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
-@Composable
 private fun SettingsTab(
     vaultState: VaultScreenState,
-    openAiSettings: OpenAiSettingsUiState,
     isLinkingVault: Boolean,
+    serverSecret: String,
+    hasSavedServerSecret: Boolean,
     onPickVault: () -> Unit,
     onReloadVault: () -> Unit,
-    onOpenAiKeyChange: (String) -> Unit,
-    onSaveOpenAiKey: () -> Unit,
-    onClearOpenAiKey: () -> Unit,
+    onServerSecretChange: (String) -> Unit,
+    onSaveServerSecret: () -> Unit,
+    onClearServerSecret: () -> Unit,
 ) {
     LazyColumn(
         modifier = Modifier.fillMaxSize().padding(horizontal = 20.dp, vertical = 16.dp),
@@ -606,11 +417,12 @@ private fun SettingsTab(
             )
         }
         item {
-            OpenAiCard(
-                state = openAiSettings,
-                onKeyChange = onOpenAiKeyChange,
-                onSave = onSaveOpenAiKey,
-                onClear = onClearOpenAiKey,
+            PracticeServerSecretCard(
+                secret = serverSecret,
+                hasSavedSecret = hasSavedServerSecret,
+                onSecretChange = onServerSecretChange,
+                onSave = onSaveServerSecret,
+                onClear = onClearServerSecret,
             )
         }
     }
@@ -819,9 +631,10 @@ private fun VaultCard(
 }
 
 @Composable
-private fun OpenAiCard(
-    state: OpenAiSettingsUiState,
-    onKeyChange: (String) -> Unit,
+private fun PracticeServerSecretCard(
+    secret: String,
+    hasSavedSecret: Boolean,
+    onSecretChange: (String) -> Unit,
     onSave: () -> Unit,
     onClear: () -> Unit,
 ) {
@@ -830,72 +643,46 @@ private fun OpenAiCard(
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(16.dp),
+            verticalArrangement = Arrangement.spacedBy(12.dp),
         ) {
             Text(
-                text = "OpenAI",
+                text = "Practice server secret",
                 style = MaterialTheme.typography.headlineSmall,
                 fontWeight = FontWeight.SemiBold,
             )
             Text(
-                text = if (state.hasSavedKey) "Saved locally on this device." else "Not set.",
-                modifier = Modifier.padding(top = 8.dp),
-            )
-            Text(
-                text = "This key is used by the AI widget and the in-app AI question tab.",
-                modifier = Modifier.padding(top = 6.dp),
+                text = if (hasSavedSecret) {
+                    "Saved. This is sent as the x-api-secret header on AI widget requests."
+                } else {
+                    "Not set. Save a value here so the AI widget can call the practice server."
+                },
                 style = MaterialTheme.typography.bodyMedium,
             )
-
             OutlinedTextField(
-                value = state.draftKey,
-                onValueChange = onKeyChange,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(top = 16.dp),
-                label = { Text("API key") },
+                value = secret,
+                onValueChange = onSecretChange,
+                modifier = Modifier.fillMaxWidth(),
+                label = { Text("x-api-secret") },
                 singleLine = true,
                 visualTransformation = PasswordVisualTransformation(),
-                keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
             )
-
-            Row(
-                modifier = Modifier.padding(top = 16.dp),
-                horizontalArrangement = Arrangement.spacedBy(10.dp),
-            ) {
+            Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
                 Button(
                     onClick = onSave,
-                    enabled = !state.isSaving && state.draftKey.isNotBlank(),
+                    enabled = secret.isNotBlank(),
                 ) {
                     Text("Save")
                 }
                 OutlinedButton(
                     onClick = onClear,
-                    enabled = !state.isSaving && state.hasSavedKey,
+                    enabled = hasSavedSecret || secret.isNotBlank(),
                 ) {
                     Text("Clear")
                 }
             }
-
-            if (state.isSaving) {
-                CircularProgressIndicator(modifier = Modifier.padding(top = 16.dp))
-            }
-
-            state.statusMessage?.let { status ->
-                Text(
-                    text = status,
-                    modifier = Modifier.padding(top = 16.dp),
-                    color = MaterialTheme.colorScheme.primary,
-                )
-            }
         }
     }
 }
-
-private fun loadOpenAiSettingsUiState(
-    repository: OpenAiKeyAccess,
-): OpenAiSettingsUiState = OpenAiSettingsUiState(
-    hasSavedKey = repository.hasKey(),
-)
 
 private fun vaultSummaryText(state: VaultScreenState): String =
     when (state) {
@@ -904,32 +691,6 @@ private fun vaultSummaryText(state: VaultScreenState): String =
         is VaultScreenState.Error -> state.message
         is VaultScreenState.Loaded -> state.emptyMessage ?: "Vault linked and ready."
     }
-
-private fun buildAiQuestionAppChatGptPrompt(
-    state: AiQuestionWidgetState?,
-): String = when (state) {
-    null -> "Tell me about USMLE Step 1 high-yield topics from first principles."
-    is AiQuestionWidgetState.Message -> state.message
-    is AiQuestionWidgetState.Loaded -> {
-        val modeState = state.modeState(state.activeMode)
-        val topic = modeState.context?.topic ?: "USMLE Step 1 topic"
-        val question = modeState.question
-        if (question == null) {
-            "Tell me about $topic. Assume I know nothing and explain it at a USMLE Step 1 level."
-        } else {
-            buildString {
-                append("Topic: ").append(topic).append("\n\n")
-                append("Question: ").append(question.stem).append("\n\n")
-                question.choices.forEach { choice ->
-                    append(choice.key).append(". ").append(choice.text).append('\n')
-                }
-                append("\nCorrect answer: ").append(question.correctKey).append('\n')
-                append("Official explanation: ").append(question.correctExplanation).append("\n\n")
-                append("Request: Explain this from first principles, define the key terms, explain why the right answer is correct, and why the wrong answers are tempting but wrong.")
-            }
-        }
-    }
-}
 
 @Preview(showBackground = true)
 @Composable
@@ -942,13 +703,14 @@ private fun MainScreenPreview() {
                     VaultNote(name = "Renal.md", uri = Uri.EMPTY),
                 ),
             ),
-            openAiSettings = OpenAiSettingsUiState(hasSavedKey = true),
             isLinkingVault = false,
+            serverSecret = "",
+            hasSavedServerSecret = false,
             onPickVault = {},
             onReloadVault = {},
-            onOpenAiKeyChange = {},
-            onSaveOpenAiKey = {},
-            onClearOpenAiKey = {},
+            onServerSecretChange = {},
+            onSaveServerSecret = {},
+            onClearServerSecret = {},
         )
     }
 }

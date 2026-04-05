@@ -63,32 +63,40 @@ class AiQuestionAppWidgetReceiver : AppWidgetProvider() {
                 val selectedKey = intent.getStringExtra(EXTRA_AI_SELECTED_KEY) ?: return
                 val currentState = AiQuestionSnapshotRepository(context).load()
                     as? AiQuestionWidgetState.Loaded ?: return
+                val answeredMode = currentState.activeMode
+                val question = currentState.modeState(answeredMode).question
                 val nextState = AiQuestionSnapshotRepository(context).answer(selectedKey) ?: return
                 rerenderAiQuestionWidget(
                     context = context,
                     appWidgetId = appWidgetId,
                     state = nextState,
                 )
-            }
-
-            ACTION_OPEN_AI_TOPIC -> {
-                val appWidgetId = requireAiAppWidgetId(intent) ?: return
-                val currentState = AiQuestionSnapshotRepository(context).load()
-                    as? AiQuestionWidgetState.Loaded ?: return
-                val modeState = currentState.modeState(currentState.activeMode)
-                if (!modeState.isRevealed) {
-                    return
+                val selectedOptionIndex = selectedOptionIndexForKey(selectedKey)
+                if (question != null && selectedOptionIndex != null) {
+                    val pendingResult = goAsync()
+                    Thread {
+                        try {
+                            val submitResult = AiQuestionSnapshotRepository(context)
+                                .submitAnswer(question.id, selectedOptionIndex)
+                            submitResult.exceptionOrNull()?.let {
+                                val latest = AiQuestionSnapshotRepository(context).load() as? AiQuestionWidgetState.Loaded
+                                    ?: return@let
+                                val withError = withAiModeMessage(
+                                    state = latest,
+                                    mode = answeredMode,
+                                    message = AI_QUESTION_SUBMIT_FAILURE_MESSAGE,
+                                )
+                                rerenderAiQuestionWidget(
+                                    context = context,
+                                    appWidgetId = appWidgetId,
+                                    state = withError,
+                                )
+                            }
+                        } finally {
+                            pendingResult.finish()
+                        }
+                    }.start()
                 }
-                val questionContext = modeState.context ?: return
-                launchAiIntent(
-                    context = context,
-                    intent = WidgetLaunchers.buildObsidianIntent(
-                        context = context,
-                        vaultName = questionContext.vaultName,
-                        notePathKey = questionContext.notePathKey,
-                        noteUriString = questionContext.noteUriString,
-                    ),
-                )
             }
 
             ACTION_OPEN_AI_CHATGPT -> {
@@ -113,8 +121,6 @@ class AiQuestionAppWidgetReceiver : AppWidgetProvider() {
             "com.kamirov.usmlepractice.action.SELECT_AI_MODE"
         const val ACTION_SELECT_AI_ANSWER =
             "com.kamirov.usmlepractice.action.SELECT_AI_ANSWER"
-        const val ACTION_OPEN_AI_TOPIC =
-            "com.kamirov.usmlepractice.action.OPEN_AI_TOPIC"
         const val ACTION_OPEN_AI_CHATGPT =
             "com.kamirov.usmlepractice.action.OPEN_AI_CHATGPT"
 
@@ -162,7 +168,7 @@ private fun enqueueAiQuestionRefresh(
     val placeholderState = previousState?.toRefreshingState()
         ?: AiQuestionWidgetState.Message(
             title = AI_QUESTION_WIDGET_TITLE,
-            message = "Generating questions...",
+            message = "Loading questions...",
             isRefreshing = true,
         )
     rerenderAiQuestionWidget(
@@ -185,7 +191,7 @@ private fun enqueueAiQuestionRefresh(
                 appWidgetId = appWidgetId,
                 state = AiQuestionWidgetState.Message(
                     title = AI_QUESTION_WIDGET_TITLE,
-                    message = "AI widget refresh failed.",
+                    message = "Could not load questions.",
                     isRefreshing = false,
                 ),
             )
@@ -241,8 +247,6 @@ private object AiQuestionRemoteViewsRenderer {
         val views = RemoteViews(context.packageName, R.layout.ai_question_widget_note)
         val activeMode = state.activeMode
         val activeModeState = state.modeState(activeMode)
-        val topicVisible = activeModeState.isRevealed && activeModeState.context != null
-        val currentTopic = activeModeState.context?.topic.orEmpty()
 
         views.setTextViewText(R.id.widget_note_title, AI_QUESTION_WIDGET_TITLE)
         views.setViewVisibility(
@@ -263,14 +267,8 @@ private object AiQuestionRemoteViewsRenderer {
             state = state,
         )
 
-        views.setViewVisibility(
-            R.id.widget_topic_button,
-            if (topicVisible) View.VISIBLE else View.GONE,
-        )
-        views.setTextViewText(
-            R.id.widget_topic_button,
-            if (topicVisible) "[$currentTopic]" else "",
-        )
+        views.setViewVisibility(R.id.widget_topic_button, View.GONE)
+        views.setTextViewText(R.id.widget_topic_button, "")
         views.setRemoteAdapter(
             R.id.widget_question_list,
             buildAiQuestionCollectionItems(
@@ -327,15 +325,6 @@ private object AiQuestionRemoteViewsRenderer {
                     appWidgetId = appWidgetId,
                     action = AiQuestionAppWidgetReceiver.ACTION_OPEN_AI_CHATGPT,
                     requestCode = REQUEST_OPEN_AI_CHATGPT,
-                ),
-            )
-            views.setOnClickPendingIntent(
-                R.id.widget_topic_button,
-                aiQuestionActionPendingIntent(
-                    context = context,
-                    appWidgetId = appWidgetId,
-                    action = AiQuestionAppWidgetReceiver.ACTION_OPEN_AI_TOPIC,
-                    requestCode = REQUEST_OPEN_AI_TOPIC,
                 ),
             )
         }
@@ -421,7 +410,7 @@ private fun buildAiQuestionChatGptPrompt(
         is AiQuestionWidgetState.Message -> state.message
         is AiQuestionWidgetState.Loaded -> {
             val modeState = state.modeState(state.activeMode)
-            val topic = modeState.context?.topic ?: "USMLE Step 1 topic"
+            val topic = modeState.question?.topic ?: "USMLE Step 1 topic"
             val question = modeState.question
             if (question == null) {
                 "Tell me about $topic. Assume I know nothing and explain it at a USMLE Step 1 level."
@@ -468,5 +457,4 @@ private fun launchAiIntent(
 private const val REQUEST_REFRESH_AI_QUESTION = 40_000
 private const val REQUEST_SELECT_AI_MODE = 41_000
 private const val REQUEST_SELECT_AI_ANSWER = 42_000
-private const val REQUEST_OPEN_AI_TOPIC = 43_000
 private const val REQUEST_OPEN_AI_CHATGPT = 44_000
