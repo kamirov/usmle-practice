@@ -1,0 +1,29 @@
+Antiarrhythmic action potential images — sources and licenses
+
+Class Ia — Wikipedia SVG (black = normal, red dashed = drug effect)
+https://en.wikipedia.org/wiki/File:Action_potential_class_Ia.svg
+https://en.wikipedia.org/wiki/Special:FilePath/Action_potential_class_Ia.svg
+
+Class Ib — Wikipedia SVG
+https://en.wikipedia.org/wiki/File:Action_potential_Class_Ib.svg
+https://en.wikipedia.org/wiki/Special:FilePath/Action_potential_Class_Ib.svg
+
+Class Ic — Wikipedia SVG
+https://en.wikipedia.org/wiki/File:Action_potential_class_Ic.svg
+https://en.wikipedia.org/wiki/Special:FilePath/Action_potential_class_Ic.svg
+
+Class II — Cropped from Wikimedia Commons (nodal AP slope; β-blockers slow phase 4 similarly)
+https://commons.wikimedia.org/wiki/File:Effect_of_antiarrythmics_on_nodal_action_potential.png
+https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Effect_of_antiarrythmics_on_nodal_action_potential.png/960px-Effect_of_antiarrythmics_on_nodal_action_potential.png
+
+Class III — Wikipedia SVG
+https://en.wikipedia.org/wiki/File:Action_potential_Class_III.svg
+https://en.wikipedia.org/wiki/Special:FilePath/Action_potential_Class_III.svg
+
+Class IV — Wikimedia Commons JPG (verapamil on SA nodal action potential)
+https://commons.wikimedia.org/wiki/File:IV_class_action.jpg
+https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/IV_class_action.jpg/960px-IV_class_action.jpg
+
+Related composite reference (all classes on one diagram):
+https://commons.wikimedia.org/wiki/File:Cardiac_action_potential.svg
+https://upload.wikimedia.org/wikipedia/commons/6/6d/Cardiac_action_potential.svg

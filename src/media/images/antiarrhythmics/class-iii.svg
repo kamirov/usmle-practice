@@ -1,13 +1,62 @@
-<!-- Derived from Wikimedia Commons Cardiac_action_potential.svg (CC BY-SA 4.0, Sertion) -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 120" width="180" height="120">
-  <rect width="180" height="120" fill="#fafafa" rx="4"/>
-  <text x="90" y="14" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" font-weight="600" fill="#334155">Class III</text>
-  <text x="90" y="24" text-anchor="middle" font-family="system-ui,sans-serif" font-size="7" fill="#64748b">‘ APD · Kz channel block</text>
-  <line x1="20" y1="95" x2="165" y2="95" stroke="#cbd5e1" stroke-width="1"/>
-  <line x1="20" y1="30" x2="20" y2="95" stroke="#cbd5e1" stroke-width="1"/>
-  <text x="8" y="33" font-family="system-ui,sans-serif" font-size="6" fill="#94a3b8">mV</text>
-  <path d="M 25 85 L 35 85 L 45 35 L 52 50 L 58 50 L 95 50 L 115 85 L 125 85" fill="none" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4 3"/>
-  <path d="M 25 85 L 35 85 L 45 35 L 52 50 L 58 50 L 95 50 L 135 85 L 145 85" fill="none" stroke="#7c3aed" stroke-width="2"/>
-  <text x="147" y="88" font-family="system-ui,sans-serif" font-size="6" fill="#7c3aed">III</text>
-  <text x="90" y="112" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" fill="#94a3b8">Normal   </text>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.47pre4 r22446"
+   width="549.73303"
+   height="273.31143"
+   sodipodi:docname="Action_potential_Class_III.png">
+  <metadata
+     id="metadata8">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs6" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1280"
+     inkscape:window-height="970"
+     id="namedview4"
+     showgrid="false"
+     inkscape:zoom="1.046252"
+     inkscape:cx="192.79466"
+     inkscape:cy="45.943262"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+     d="m 2.5,269.96663 107.62871,0 L 120.68882,2.5 c 0.83589,22.288672 14.88694,25.942611 21.62712,26.104608 l 179.18406,0 c 8.97682,1.111502 20.78051,17.447977 23.40122,25.428761 22.69722,64.487111 41.49625,130.273611 61.75556,195.573361 3.26102,11.32456 7.96606,18.62829 18.07892,21.20471 l 122.49735,0"
+     id="path2828"
+     sodipodi:nodetypes="ccccccccc" />
+  <path
+     sodipodi:nodetypes="ccccccccc"
+     id="path3602"
+     d="m 2.5,269.96663 107.62871,0 L 128.46107,2.5 c 0.83589,22.288672 10.57273,17.114992 13.85487,17.994438 L 321.5,20.832362 c 26.54885,0.09773 35.31123,25.220223 37.93194,33.201007 22.69722,64.487111 53.6615,131.963231 75.61043,195.573361 3.26102,11.32456 28.24149,18.62829 38.35435,21.20471 l 73.83633,0"
+     style="fill:none;stroke:#ff0000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:5, 5;stroke-dashoffset:0" />
 </svg>

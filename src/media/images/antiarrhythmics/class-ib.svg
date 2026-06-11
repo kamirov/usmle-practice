@@ -1,13 +1,90 @@
-<!-- Derived from Wikimedia Commons Cardiac_action_potential.svg (CC BY-SA 4.0, Sertion) -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 120" width="180" height="120">
-  <rect width="180" height="120" fill="#fafafa" rx="4"/>
-  <text x="90" y="14" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" font-weight="600" fill="#334155">Class Ib</text>
-  <text x="90" y="24" text-anchor="middle" font-family="system-ui,sans-serif" font-size="7" fill="#64748b">“ APD · weak Naz block</text>
-  <line x1="20" y1="95" x2="165" y2="95" stroke="#cbd5e1" stroke-width="1"/>
-  <line x1="20" y1="30" x2="20" y2="95" stroke="#cbd5e1" stroke-width="1"/>
-  <text x="8" y="33" font-family="system-ui,sans-serif" font-size="6" fill="#94a3b8">mV</text>
-  <path d="M 25 85 L 35 85 L 45 35 L 52 50 L 58 50 L 95 50 L 115 85 L 125 85" fill="none" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4 3"/>
-  <path d="M 25 85 L 35 85 L 45 35 L 52 48 L 58 48 L 82 48 L 98 85 L 108 85" fill="none" stroke="#059669" stroke-width="2"/>
-  <text x="110" y="88" font-family="system-ui,sans-serif" font-size="6" fill="#059669">Ib</text>
-  <text x="90" y="112" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" fill="#94a3b8">Normal   </text>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="483.60001"
+   height="271.85522"
+   id="svg5134"
+   sodipodi:version="0.32"
+   inkscape:version="0.46"
+   sodipodi:docname="Action potential Class Ib.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"
+   version="1.0">
+  <defs
+     id="defs5136">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       id="perspective5142" />
+    <inkscape:perspective
+       id="perspective5151"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective8411"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       sodipodi:type="inkscape:persp3d" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     gridtolerance="10000"
+     guidetolerance="10"
+     objecttolerance="10"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.49497475"
+     inkscape:cx="261.43202"
+     inkscape:cy="365.17899"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1020"
+     inkscape:window-height="718"
+     inkscape:window-x="0"
+     inkscape:window-y="14" />
+  <metadata
+     id="metadata5139">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-85.142857,-320.36218)">
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 87.142857,589.08662 L 187.14286,589.08662 L 198.57143,322.36218 C 198.57143,352.71933 227.85714,348.07647 227.85714,348.07647 L 395.4902,348.07647 C 412.89082,348.07647 424.28571,378.07647 424.28571,378.07647 L 485.37456,572.3567 C 485.37456,572.3567 489.68849,589.68168 505.58135,590.21739 L 562.14989,590.21739"
+       id="path5157"
+       sodipodi:nodetypes="ccccccccc" />
+    <path
+       sodipodi:nodetypes="ccccccccc"
+       id="path5668"
+       d="M 87.142857,589.08662 L 187.14286,589.08662 L 198.27556,322.36218 C 198.27556,352.71933 223.27556,348.07647 223.27556,348.07647 L 360.79838,348.07647 C 378.199,348.07647 389.59389,378.07647 389.59389,378.07647 L 447.8256,572.3567 C 447.8256,572.3567 452.13953,589.68168 468.03239,590.21739 L 554.61835,590.21739"
+       style="fill:none;fill-rule:evenodd;stroke:#ff0000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:8, 4;stroke-dashoffset:0;stroke-opacity:1" />
+  </g>
 </svg>
