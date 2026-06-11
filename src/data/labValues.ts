@@ -150,6 +150,47 @@ export const LAB_VALUES: LabValueEntry[] = [
     ],
   },
   {
+    id: "eosinophilia",
+    name: "Eosinophilia",
+    aliases: [
+      "eosinophilia",
+      "elevated eosinophils",
+      "increased eosinophils",
+      "high eosinophil count",
+      "peripheral eosinophilia",
+    ],
+    measures:
+      "Elevated eosinophil count in peripheral blood; absolute eosinophilia is typically >500 /µL or >5% of WBC.",
+    normalRange: "~0–500 /µL (0–5% of WBC)",
+    increasedCauses: [
+      "Parasitic infection (helminths — strongest association)",
+      "Atopy: asthma, allergic rhinitis, eczema",
+      "Drug hypersensitivity (DRESS, sulfonamides, NSAIDs)",
+      "EGPA (Churg-Strauss) and hypereosinophilic syndrome",
+      "Addison disease (loss of cortisol-mediated eosinophil suppression)",
+      "Malignancy (Hodgkin lymphoma, eosinophilic leukemia)",
+      "Connective tissue disease and vasculitis",
+    ],
+    decreasedCauses: [
+      "Corticosteroids (physiologic and therapeutic)",
+      "Cushing syndrome / hypercortisolism",
+      "Acute stress and acute bacterial infection (eosinopenia)",
+    ],
+    boardsPearls: [
+      "NEVER PASS mnemonic for eosinophilia causes: Neoplasia, Environmental (drugs), Vasculitis, Infections (parasites), Skin, Others (Addison, adrenal insufficiency)",
+      "Marked eosinophilia + travel or raw fish → parasitic infection (strongyloidiasis, toxocariasis)",
+      "Addison disease: eosinophilia + hyponatremia + hyperkalemia + hyperpigmentation",
+      "EGPA triad: asthma + eosinophilia + vasculitis; p-ANCA (MPO) in many cases",
+      "Steroids rapidly ↓ eosinophils — eosinopenia expected on chronic steroid therapy",
+    ],
+    pairWith: [
+      "Asthma + neuropathy + sinus disease → EGPA",
+      "Eosinophilia + adrenal crisis → primary adrenal insufficiency",
+      "Eosinophilia + hepatomegaly + travel history → parasitic infection",
+      "Peds: atopy and parasitic infection are top causes; exclude helminths before diagnosing primary hypereosinophilic disorder",
+    ],
+  },
+  {
     id: "sodium",
     name: "Sodium",
     aliases: ["sodium", "serum sodium", "na+"],
