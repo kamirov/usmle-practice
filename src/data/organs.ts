@@ -333,9 +333,9 @@ export const ORGANS: OrganEntry[] = [
     id: "adrenal-medulla",
     name: "Adrenal Medulla",
     aliases: ["adrenal medulla"],
-    germLayer: "Neural crest",
+    germLayer: "Ectoderm / Neural crest",
     origin:
-      "Neural crest cells migrate into adrenal cortex primordium and differentiate into chromaffin cells.",
+      "Neural crest cells (ectoderm) migrate into adrenal cortex primordium and differentiate into chromaffin cells.",
   },
   {
     id: "pituitary",
