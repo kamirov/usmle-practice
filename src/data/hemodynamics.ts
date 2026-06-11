@@ -40,6 +40,20 @@ export const HEMODYNAMICS: HemodynamicEntry[] = [
       "↑ EF: positive inotropes (dobutamine, digoxin), decreased afterload, hyperdynamic states (anemia, hyperthyroidism)",
     ],
   },
+  {
+    id: "hypovolemia",
+    name: "Hypovolemia",
+    aliases: ["hypovolemia", "hypovolaemia"],
+    definition:
+      "Decreased effective circulating intravascular volume, leading to reduced preload, tissue hypoperfusion, and compensatory sympathetic activation.",
+    factors: [
+      "Causes: hemorrhage, vomiting/diarrhea, burns, diuretics, third-spacing (pancreatitis, sepsis), inadequate intake",
+      "Signs: tachycardia, hypotension, dry mucous membranes, decreased skin turgor, ↓ urine output",
+      "Labs: ↑ BUN:Cr (prerenal), hemoconcentration (↑ Hct/Hgb), metabolic acidosis with poor perfusion",
+      "Treatment: isotonic crystalloid (NS or LR); blood products for hemorrhagic shock",
+      "Peds: infants decompensate quickly — tachycardia and lethargy may precede hypotension",
+    ],
+  },
 ];
 
 const hemodynamicById = new Map(HEMODYNAMICS.map((h) => [h.id, h]));
