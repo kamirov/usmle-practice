@@ -136,6 +136,44 @@ export const HEMODYNAMICS: HemodynamicEntry[] = [
       "Peds: RVH on ECG in cyanotic CHD — think ToF or severe pulmonic stenosis",
     ],
   },
+  {
+    id: "beck-triad",
+    name: "Beck Triad",
+    aliases: [
+      "beck triad",
+      "beck's triad",
+      "becks triad",
+    ],
+    definition:
+      "Classic clinical triad of cardiac tamponade: hypotension, jugular venous distention (elevated JVP), and muffled heart sounds.",
+    factors: [
+      "Hypotension — ↓ cardiac output from impaired diastolic filling",
+      "Elevated JVP / distended neck veins — impaired venous return to compressed RA",
+      "Muffled heart sounds — fluid between heart and chest wall dampens acoustics",
+      "Often accompanied by pulsus paradoxus >10 mmHg and tachycardia",
+      "Causes: pericardial effusion, hemopericardium (trauma, post-MI rupture, anticoagulation)",
+      "Distinguish from tension pneumothorax (hyperresonance, absent breath sounds) and massive PE (clear lungs, no muffled sounds)",
+    ],
+  },
+  {
+    id: "pulsus-paradoxus",
+    name: "Pulsus Paradoxus",
+    aliases: [
+      "pulsus paradoxus",
+      "paradoxical pulse",
+      "paradoxical pulsus",
+    ],
+    definition:
+      "Exaggerated drop in systolic blood pressure (>10 mmHg) during inspiration — paradoxical because pulse/Korotkoff sounds may disappear with inspiration despite continued heartbeat.",
+    factors: [
+      "Mechanism: ↑ intrathoracic pressure or pericardial constraint → ↓ LV filling during inspiration while RV filling increases (ventricular interdependence)",
+      "Classic: cardiac tamponade (>10 mmHg drop diagnostic)",
+      "Also seen: severe asthma/COPD exacerbation, constrictive pericarditis, massive PE, obesity",
+      "Measure: BP cuff — note systolic pressure when Korotkoff sounds first appear in expiration vs when continuous",
+      "Tamponade vignette: JVD + muffled heart sounds + pulsus paradoxus → pericardiocentesis",
+      "Not specific to tamponade alone — always interpret with full clinical context",
+    ],
+  },
 ];
 
 const hemodynamicById = new Map(HEMODYNAMICS.map((h) => [h.id, h]));

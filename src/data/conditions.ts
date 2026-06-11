@@ -368,6 +368,196 @@ export const CONDITIONS: ConditionEntry[] = [
       "Most pediatric pericarditis is viral and self-limited; purulent pericarditis is serious in infants. Post-MI Dressler is rare in children but myopericarditis occurs with viral myocarditis.",
   },
   {
+    id: "cardiac-tamponade",
+    name: "Cardiac Tamponade",
+    aliases: [
+      "cardiac tamponade",
+      "pericardial tamponade",
+      "tamponade",
+      "hemopericardium with tamponade",
+    ],
+    definition:
+      "Life-threatening compression of the heart by accumulated pericardial fluid (or blood) that impairs diastolic filling and cardiac output.",
+    pathophysiology:
+      "Rapid or large pericardial effusion → ↑ intrapericardial pressure → equalization of diastolic pressures and ↓ ventricular filling → ↓ stroke volume and CO → hypotension and shock; inspiratory ↓ in systolic BP (pulsus paradoxus) from exaggerated ventricular interdependence.",
+    classicPresentation: [
+      "Hypotension, tachycardia, dyspnea, and distended neck veins",
+      "Muffled heart sounds",
+      "Beck triad: hypotension, JVD, muffled heart sounds",
+      "Pulsus paradoxus >10 mmHg",
+      "Acute: trauma, aortic rupture into pericardium, post-MI free wall rupture, iatrogenic (catheter)",
+    ],
+    keyFindings: [
+      "Elevated JVP with Kussmaul sign absent (JVP rises with inspiration in constriction, not classic tamponade)",
+      "Pulsus paradoxus >10 mmHg",
+      "Electrical alternans on ECG (beat-to-beat QRS amplitude variation with swinging heart)",
+      "Echo: pericardial effusion with RA/RV diastolic collapse",
+    ],
+    keyLabs: [
+      "Echocardiography — diagnostic; guides pericardiocentesis",
+      "ECG — low voltage, electrical alternans; may mimic STEMI if post-MI hemopericardium",
+      "Chest X-ray — enlarged cardiac silhouette if effusion large and subacute",
+    ],
+    associations: [
+      "Pericarditis with effusion (malignancy, uremia, viral, TB)",
+      "Trauma and aortic dissection rupture into pericardium",
+      "Post-MI free wall rupture",
+      "Anticoagulation in pericarditis (hemopericardium)",
+    ],
+    complications: [
+      "Obstructive shock and cardiac arrest",
+      "Death without urgent decompression",
+    ],
+    distinguishFrom: [
+      "Constrictive pericarditis — chronic, pericardial knock, Kussmaul sign, equalized pressures without effusion",
+      "Massive pulmonary embolism — JVD and hypotension but no muffled heart sounds; echo shows RV strain",
+      "Tension pneumothorax — unilateral absent breath sounds, tracheal deviation, hyperresonance",
+      "Large pleural effusion alone — no muffled heart sounds or pulsus paradoxus",
+    ],
+    treatment: [
+      "Urgent pericardiocentesis (or surgical window) for decompression",
+      "IV fluids as temporizing measure (↑ preload)",
+      "Treat underlying cause; avoid diuretics and aggressive vasodilation",
+      "Pericardial drain for recurrent or purulent effusion",
+    ],
+    boardsPearls: [
+      "Beck triad: hypotension + JVD + muffled heart sounds",
+      "Pulsus paradoxus >10 mmHg — inspiratory drop in systolic BP from ↓ stroke volume",
+      "Electrical alternans = swinging heart in large effusion",
+      "Obstructive shock with JVD — tamponade, tension PTX, massive PE",
+      "RA diastolic collapse on echo is sensitive for tamponade",
+    ],
+    pediatrics:
+      "Tamponade in children from bacterial pericarditis, trauma, or post-cardiac surgery; infants may present with irritability, tachypnea, and hepatomegaly. Urgent echo and pericardiocentesis.",
+  },
+  {
+    id: "tension-pneumothorax",
+    name: "Tension Pneumothorax",
+    aliases: [
+      "tension pneumothorax",
+      "tension ptx",
+      "tension pneumo",
+    ],
+    definition:
+      "Life-threatening pneumothorax in which air enters the pleural space but cannot exit, causing progressive intrathoracic pressure, mediastinal shift, and cardiovascular collapse.",
+    pathophysiology:
+      "One-way valve effect traps air in pleural space → ↑ intrapleural pressure → lung collapse → mediastinal shift → ↓ venous return to heart → ↓ preload and CO → obstructive shock; contralateral lung compression worsens hypoxemia.",
+    classicPresentation: [
+      "Sudden severe dyspnea, chest pain, and hypotension after trauma, ventilation, or procedure",
+      "Unilateral absent or markedly decreased breath sounds",
+      "Hyperresonance to percussion on affected side",
+      "Tracheal deviation away from affected side (late sign)",
+      "Distended neck veins (obstructive physiology)",
+    ],
+    keyFindings: [
+      "Absent breath sounds on affected hemithorax",
+      "Hyperresonance on percussion",
+      "Tracheal and mediastinal shift away from pneumothorax",
+      "Tachycardia, hypotension, hypoxemia",
+    ],
+    keyLabs: [
+      "Clinical diagnosis — do not delay treatment for imaging",
+      "Chest X-ray or ultrasound if stable: visceral pleural line without lung markings, mediastinal shift",
+      "ABG may show hypoxemia and respiratory alkalosis early",
+    ],
+    associations: [
+      "Trauma (rib fracture, penetrating injury)",
+      "Mechanical ventilation (barotrauma)",
+      "Central line placement, thoracentesis, lung biopsy",
+      "Underlying COPD with spontaneous pneumothorax",
+      "Resuscitation with bag-mask ventilation if unrecognized rib injury",
+    ],
+    complications: [
+      "Obstructive shock and cardiac arrest",
+      "Reexpansion pulmonary edema after rapid decompression (rare)",
+      "Death without immediate decompression",
+    ],
+    distinguishFrom: [
+      "Simple pneumothorax — no hemodynamic compromise or mediastinal shift",
+      "Cardiac tamponade — muffled heart sounds, pulsus paradoxus, no unilateral hyperresonance",
+      "Massive hemothorax — dullness to percussion, not hyperresonance",
+      "Mainstem intubation — unilateral breath sounds but no hyperresonance or tracheal deviation pattern",
+    ],
+    treatment: [
+      "Immediate needle decompression (2nd intercostal space, midclavicular line) or finger thoracostomy",
+      "Definitive chest tube (tube thoracostomy)",
+      "Supplemental O₂; treat shock with fluids and vasopressors as needed",
+      "Do not wait for chest X-ray if clinical suspicion is high",
+    ],
+    boardsPearls: [
+      "Tension PTX = obstructive shock + unilateral absent breath sounds + hyperresonance",
+      "Needle decompression then chest tube — clinical diagnosis, treat before imaging",
+      "Tracheal deviation away from affected side is late — do not wait for it",
+      "Obstructive shock triad differential: tamponade, tension PTX, massive PE",
+      "Ventilated patient with sudden ↓ BP and ↑ airway pressures → tension PTX until proven otherwise",
+    ],
+    pediatrics:
+      "Same emergency management in children; needle decompression site adjusted for body size. Spontaneous pneumothorax in adolescents (tall thin males) can progress to tension — urgent decompression.",
+  },
+  {
+    id: "hemothorax",
+    name: "Hemothorax",
+    aliases: [
+      "hemothorax",
+      "hemothoraces",
+      "bloody pleural effusion",
+      "traumatic hemothorax",
+    ],
+    definition:
+      "Accumulation of blood in the pleural space, most often from trauma to the chest wall, lung parenchyma, or great vessels.",
+    pathophysiology:
+      "Disruption of intercostal vessels, lung, or mediastinal structures → blood collects in pleural space → ↓ lung expansion and ventilation; massive hemothorax (>1500 mL or >200 mL/h) → ↓ venous return and hypovolemic/obstructive shock.",
+    classicPresentation: [
+      "Chest trauma with dyspnea, pleuritic pain, and hypotension",
+      "Dullness to percussion and decreased breath sounds on affected side",
+      "Decreased tactile fremitus",
+      "Signs of hypovolemia with large blood loss",
+    ],
+    keyFindings: [
+      "Dullness to percussion over hemithorax (vs hyperresonance in pneumothorax)",
+      "Decreased or absent breath sounds at base",
+      "Flat hemidiaphragm or opacified hemithorax on CXR",
+      "Tracheal deviation toward affected side if massive (volume effect, not tension)",
+    ],
+    keyLabs: [
+      "Chest X-ray — homogenous opacity layering in pleural space; blunted costophrenic angle",
+      "Chest tube output quantifies ongoing bleeding",
+      "↓ Hemoglobin/hematocrit; type and crossmatch",
+    ],
+    associations: [
+      "Blunt or penetrating thoracic trauma",
+      "Rib fractures lacerating intercostal artery",
+      "Iatrogenic (central line, thoracentesis, surgery)",
+      "Coagulopathy or anticoagulation",
+      "Aortic or great vessel injury (massive hemothorax)",
+    ],
+    complications: [
+      "Hypovolemic shock from massive hemorrhage",
+      "Retained hemothorax → empyema or fibrothorax",
+      "Coagulopathic thoracic hemorrhage",
+    ],
+    distinguishFrom: [
+      "Tension pneumothorax — hyperresonance, no dullness, obstructive shock with JVD",
+      "Pleural effusion (transudate/exudate) — nontraumatic, usually not acute shock",
+      "Hemopneumothorax — both air and blood; may have mixed findings",
+      "Pulmonary contusion — infiltrate on CXR without pleural fluid layering",
+    ],
+    treatment: [
+      "Large-bore chest tube (tube thoracostomy) for drainage and quantification of blood loss",
+      "IV fluids and blood transfusion for hemorrhagic shock",
+      "Surgical exploration (thoracotomy) if >1500 mL initial output or >200 mL/h ongoing",
+      "Treat coagulopathy; analgesia and supportive care",
+    ],
+    boardsPearls: [
+      "Trauma + dullness + ↓ breath sounds → hemothorax (vs hyperresonance in pneumothorax)",
+      "Massive hemothorax thresholds: ~1500 mL initial or >200 mL/h → thoracotomy",
+      "Retained clot risks empyema — early adequate drainage",
+      "Do not confuse with tension pneumothorax — percussion and urgency differ",
+    ],
+    pediatrics:
+      "Child abuse and rib fractures can cause hemothorax; smaller blood volume means shock develops faster. Same drainage principles with age-appropriate tube size.",
+  },
+  {
     id: "thromboangiitis-obliterans",
     name: "Thromboangiitis Obliterans (Buerger Disease)",
     aliases: [
