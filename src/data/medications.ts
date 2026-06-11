@@ -181,6 +181,129 @@ export const MEDICATIONS: MedicationEntry[] = [
     ],
   },
   {
+    id: "diltiazem",
+    name: "Diltiazem",
+    aliases: ["diltiazem", "cardizem"],
+    drugClass: "Class IV antiarrhythmic / nondihydropyridine calcium channel blocker",
+    mechanism:
+      "Blocks L-type Ca²⁺ channels in cardiac SA/AV node and vascular smooth muscle → ↓ AV nodal conduction and contractility; peripheral vasodilation.",
+    indications: [
+      "Rate control in atrial fibrillation/flutter",
+      "Supraventricular tachycardia",
+      "Hypertension and angina",
+    ],
+    adverseEffects: [
+      "Bradycardia, AV block, heart failure exacerbation",
+      "Peripheral edema, constipation",
+      "Hypotension",
+      "Gingival hyperplasia (less common than verapamil)",
+    ],
+    boardsPearls: [
+      "Nondihydropyridine CCB — cardiac effects dominate (vs amlodipine/nifedipine)",
+      "Avoid with β-blockers or digoxin → additive AV nodal depression",
+      "Contraindicated in WPW with AF (shortens refractory period in accessory pathway → ↑ ventricular rate)",
+      "Pediatrics: same AV nodal effects; used cautiously for SVT rate control",
+    ],
+  },
+  {
+    id: "disopyramide",
+    name: "Disopyramide",
+    aliases: ["disopyramide", "norpace"],
+    drugClass: "Class Ia antiarrhythmic",
+    mechanism:
+      "Blocks fast Na⁺ channels and has antimuscarinic activity → ↑ action potential duration and effective refractory period; negative inotropy.",
+    indications: [
+      "Ventricular arrhythmias",
+      "Supraventricular arrhythmias (selected cases)",
+    ],
+    adverseEffects: [
+      "Anticholinergic effects (dry mouth, urinary retention, constipation)",
+      "Negative inotropy → heart failure exacerbation",
+      "QT prolongation / torsades de pointes",
+      "Hypoglycemia (especially in diabetics)",
+    ],
+    boardsPearls: [
+      "Class Ia: moderate Na⁺ channel block + ↑ APD (quinidine-like)",
+      "Strong anticholinergic and negative inotropic effects — avoid in HFrEF",
+      "Use with caution in structural heart disease",
+      "Pediatrics: rarely first-line; anticholinergic and inotropic effects limit use",
+    ],
+  },
+  {
+    id: "flecainide",
+    name: "Flecainide",
+    aliases: ["flecainide", "tambocor"],
+    drugClass: "Class Ic antiarrhythmic",
+    mechanism:
+      "Strong block of fast Na⁺ channels → markedly slows conduction (↓ Vmax) with minimal effect on action potential duration.",
+    indications: [
+      "Supraventricular arrhythmias (including atrial fibrillation/flutter in structurally normal hearts)",
+      "Life-threatening ventricular arrhythmias (selected patients without structural heart disease)",
+    ],
+    adverseEffects: [
+      "Proarrhythmia (new or worsened ventricular arrhythmias)",
+      "Bradycardia, heart block",
+      "Dizziness, visual disturbances",
+      "Negative inotropy",
+    ],
+    boardsPearls: [
+      "Class Ic: strong Na⁺ block, minimal APD change — \"can organize\" AF into slow atrial flutter with 1:1 conduction",
+      "Contraindicated in structural heart disease (post-MI, CAD, HFrEF) — CAST trial ↑ mortality",
+      "Useful for rhythm control in lone AF with normal heart",
+      "Pediatrics: reserved for refractory SVT in structurally normal hearts under specialist care",
+    ],
+  },
+  {
+    id: "lidocaine",
+    name: "Lidocaine",
+    aliases: ["lidocaine", "xylocaine"],
+    drugClass: "Class Ib antiarrhythmic / local anesthetic",
+    mechanism:
+      "Blocks fast Na⁺ channels preferentially in depolarized or ischemic tissue → shortens action potential duration; minimal effect on normal tissue.",
+    indications: [
+      "Ventricular arrhythmias (especially post-MI)",
+      "Local/regional anesthesia",
+    ],
+    adverseEffects: [
+      "CNS toxicity (perioral numbness, seizures, confusion)",
+      "Cardiovascular depression at high doses",
+      "Drowsiness, tinnitus",
+    ],
+    boardsPearls: [
+      "Class Ib: preferentially binds inactivated Na⁺ channels in ischemic myocardium",
+      "IV antiarrhythmic use largely replaced by amiodarone, but classic post-MI VT/VF drug",
+      "CNS toxicity before cardiovascular collapse — perioral numbness is early warning",
+      "Pediatrics: same ischemia-selective binding; toxicity risk ↑ with liver dysfunction",
+    ],
+  },
+  {
+    id: "propranolol",
+    name: "Propranolol",
+    aliases: ["propranolol", "inderal"],
+    drugClass: "Nonselective β-blocker (Class II antiarrhythmic)",
+    mechanism:
+      "Antagonizes β1 and β2 receptors → ↓ heart rate, contractility, and AV nodal conduction; ↓ renin release.",
+    indications: [
+      "Hypertension, angina, migraine prophylaxis",
+      "Rate control in atrial fibrillation",
+      "Thyrotoxicosis / thyroid storm",
+      "Infantile hemangioma",
+      "Essential tremor, performance anxiety",
+    ],
+    adverseEffects: [
+      "Bronchospasm (β2 blockade)",
+      "Bradycardia, AV block, heart failure exacerbation",
+      "Masks hypoglycemia symptoms",
+      "Fatigue, vivid dreams, impotence",
+    ],
+    boardsPearls: [
+      "Nonselective β-blocker — avoid in asthma/COPD (unlike metoprolol/atenolol)",
+      "Class II antiarrhythmic: ↓ cAMP → ↓ Ca²⁺ influx in nodal tissue",
+      "Treats thyrotoxic symptoms (↓ peripheral T4→T3 conversion)",
+      "Pediatrics: first-line for infantile hemangioma; bronchospasm risk limits use in reactive airway disease",
+    ],
+  },
+  {
     id: "alteplase",
     name: "Alteplase",
     aliases: ["alteplase", "tpa", "t-pa", "activase"],
