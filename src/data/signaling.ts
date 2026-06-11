@@ -5,7 +5,8 @@ export type SignalingType =
   | "Neurotransmitter"
   | "Second messenger"
   | "Gasotransmitter"
-  | "Hormone";
+  | "Hormone"
+  | "Vitamin";
 
 export interface SignalingEntry {
   id: string;
@@ -55,6 +56,74 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
     ],
     pediatrics:
       "Congenital heart disease with volume overload can elevate BNP; interpret against age-specific norms when available.",
+  },
+  {
+    id: "anp",
+    name: "Atrial natriuretic peptide (ANP)",
+    aliases: [
+      "atrial natriuretic peptide",
+      "anp",
+      "atrial natriuretic factor",
+      "anf",
+    ],
+    type: "Peptide hormone",
+    source: "Atrial cardiomyocytes (released with atrial stretch/volume overload)",
+    receptor: "Natriuretic peptide receptor A (NPR-A; guanylyl cyclase–linked)",
+    function:
+      "Counter-regulatory to RAAS and ADH: promotes natriuresis, diuresis, and vasodilation; lowers preload and inhibits renin and aldosterone secretion.",
+    clinicalRelevance: [
+      "↑ with hypervolemia, heart failure, and atrial stretch",
+      "Guanylyl cyclase activation → ↑ cGMP → natriuresis",
+      "Part of the natriuretic peptide system alongside BNP",
+    ],
+    boardsPearls: [
+      "ANP from atria (stretch) vs BNP from ventricles (stretch)",
+      "ANP → ↑ cGMP → natriuresis; opposes RAAS (↓ renin, ↓ aldosterone)",
+      "Increased atrial pressure (e.g. mitral regurgitation, HF) → ↑ ANP",
+    ],
+    distinguishFrom: [
+      "BNP — ventricular stretch; more commonly measured in HF workup",
+      "Aldosterone — retains Na⁺/water; ANP promotes natriuresis",
+      "ADH — water retention; ANP promotes diuresis",
+    ],
+    pediatrics:
+      "Congenital heart disease with atrial volume overload can elevate ANP; neonatal fluid shifts may transiently affect natriuretic peptide levels.",
+  },
+  {
+    id: "vitamin-d",
+    name: "Vitamin D (25-hydroxycholecalciferol)",
+    aliases: [
+      "vitamin d",
+      "vitamin d3",
+      "cholecalciferol",
+      "25-hydroxyvitamin d",
+      "25-hydroxycholecalciferol",
+      "25 oh vitamin d",
+      "25 oh cholecalciferol",
+      "calcidiol",
+    ],
+    type: "Vitamin",
+    source:
+      "Skin (UV → cholecalciferol/D3) and diet; hepatic 25-hydroxylation yields 25-OH vitamin D (storage form)",
+    receptor: "Converted to active 1,25-(OH)₂D → binds intracellular vitamin D receptor (VDR)",
+    function:
+      "Prohormone for calcitriol: maintains Ca²⁺/phosphate homeostasis via intestinal absorption and bone mineralization after renal 1α-hydroxylation.",
+    clinicalRelevance: [
+      "Deficiency → rickets (children) / osteomalacia (adults), hypocalcemia, secondary hyperparathyroidism",
+      "25-OH vitamin D is the standard lab measurement of vitamin D status",
+      "Malabsorption, low sun exposure, CKD, and anticonvulsants increase deficiency risk",
+    ],
+    boardsPearls: [
+      "Vitamin D pathway: D3 (skin/diet) → 25-OH (liver, storage) → 1,25-(OH)₂D (kidney, active)",
+      "Measure 25-OH vitamin D for deficiency — not 1,25-(OH)₂D (unless CKD/granulomatous disease)",
+      "Deficiency vignette: bone pain, leg bowing, ↑ ALP, low Ca²⁺/phosphate, ↑ PTH",
+    ],
+    distinguishFrom: [
+      "1,25-dihydroxyvitamin D (calcitriol) — active hormone; measured in CKD and granulomatous disease",
+      "PTH — raises serum Ca²⁺; vitamin D is upstream nutritional/hormonal partner",
+    ],
+    pediatrics:
+      "Breastfed infants without supplementation at high risk for rickets; vitamin D 400 IU/day recommended; leg bowing and widened growth plates on X-ray.",
   },
   {
     id: "active-vitamin-d",
