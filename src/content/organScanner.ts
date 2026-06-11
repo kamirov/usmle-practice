@@ -2,6 +2,7 @@ import { buildHeartSoundAliasIndex } from "../data/heartSounds";
 import { buildHemodynamicAliasIndex } from "../data/hemodynamics";
 import { buildLabValueAliasIndex } from "../data/labValues";
 import { buildMedicationAliasIndex } from "../data/medications";
+import { buildNephronAliasIndex } from "../data/nephron";
 import { buildAliasIndex } from "../data/organs";
 import { buildSymptomAliasIndex } from "../data/symptoms";
 
@@ -11,7 +12,8 @@ const HEMODYNAMIC_CHIP_CLASS = "usmle-hemodynamic-chip";
 const SYMPTOM_CHIP_CLASS = "usmle-symptom-chip";
 const MEDICATION_CHIP_CLASS = "usmle-medication-chip";
 const LAB_CHIP_CLASS = "usmle-lab-chip";
-const CHIP_SELECTOR = `.${ORGAN_CHIP_CLASS}, .${HEART_SOUND_CHIP_CLASS}, .${HEMODYNAMIC_CHIP_CLASS}, .${SYMPTOM_CHIP_CLASS}, .${MEDICATION_CHIP_CLASS}, .${LAB_CHIP_CLASS}`;
+const NEPHRON_CHIP_CLASS = "usmle-nephron-chip";
+const CHIP_SELECTOR = `.${ORGAN_CHIP_CLASS}, .${HEART_SOUND_CHIP_CLASS}, .${HEMODYNAMIC_CHIP_CLASS}, .${SYMPTOM_CHIP_CLASS}, .${MEDICATION_CHIP_CLASS}, .${LAB_CHIP_CLASS}, .${NEPHRON_CHIP_CLASS}`;
 const OUR_CHIP_CLASSES = [
   ORGAN_CHIP_CLASS,
   HEART_SOUND_CHIP_CLASS,
@@ -19,6 +21,7 @@ const OUR_CHIP_CLASSES = [
   SYMPTOM_CHIP_CLASS,
   MEDICATION_CHIP_CLASS,
   LAB_CHIP_CLASS,
+  NEPHRON_CHIP_CLASS,
 ] as const;
 const POPOVER_CLASS = "usmle-organ-popover";
 const SKIP_TAGS = new Set([
@@ -37,7 +40,8 @@ type TermKind =
   | "hemodynamic"
   | "symptom"
   | "medication"
-  | "lab";
+  | "lab"
+  | "nephron";
 
 interface TermMatch {
   alias: string;
@@ -48,11 +52,19 @@ interface TermMatch {
 let termIndex: TermMatch[] | null = null;
 const highlightedOnQuestion = new Set<string>();
 const highlightedWordsOnQuestion = new Set<string>();
+const highlightedTermZone = new Map<string, number>();
 let questionFingerprint = "";
 let isApplyingHighlights = false;
 
 const QUESTION_HEADER_RE =
   /(?:Question|Q\.?|Item)\s*\d+(?:\s*(?:of|\/)\s*\d+)?/i;
+
+/** Lower number = scanned and claimed first (UWorld question stem + options). */
+const SCAN_ZONE = {
+  QUESTION: 0,
+  EXPLANATION: 2,
+  OTHER: 3,
+} as const;
 
 function termKey(term: TermMatch): string {
   return `${term.kind}:${term.id.toLowerCase()}`;
@@ -62,16 +74,99 @@ function normalizedWordKey(matchText: string): string {
   return matchText.toLowerCase();
 }
 
-function isAlreadyHighlighted(term: TermMatch, matchText: string): boolean {
+function getScanZone(node: Node): number {
+  const el = node.parentElement;
+  if (!el) return SCAN_ZONE.OTHER;
+  if (el.closest("#explanation")) return SCAN_ZONE.EXPLANATION;
+  if (el.closest("#questionInformation")) return SCAN_ZONE.QUESTION;
+  return SCAN_ZONE.OTHER;
+}
+
+function isVisibleElement(el: HTMLElement): boolean {
+  if (typeof el.checkVisibility === "function") {
+    return el.checkVisibility({ checkOpacity: true, checkVisibilityCSS: true });
+  }
+  const style = getComputedStyle(el);
   return (
-    highlightedOnQuestion.has(termKey(term)) ||
-    highlightedWordsOnQuestion.has(normalizedWordKey(matchText))
+    style.display !== "none" &&
+    style.visibility !== "hidden" &&
+    style.opacity !== "0"
   );
 }
 
-function recordHighlight(term: TermMatch, matchText: string): void {
+function isVisibleNode(node: Node): boolean {
+  let el = node.parentElement;
+  while (el) {
+    if (!isVisibleElement(el)) return false;
+    el = el.parentElement;
+  }
+  return true;
+}
+
+function chipSelectorForTerm(term: TermMatch): string {
+  switch (term.kind) {
+    case "heart-sound":
+      return `[data-heart-sound-id="${CSS.escape(term.id)}"]`;
+    case "hemodynamic":
+      return `[data-hemodynamic-id="${CSS.escape(term.id)}"]`;
+    case "symptom":
+      return `[data-symptom-id="${CSS.escape(term.id)}"]`;
+    case "medication":
+      return `[data-medication-id="${CSS.escape(term.id)}"]`;
+    case "lab":
+      return `[data-lab-value-id="${CSS.escape(term.id)}"]`;
+    case "nephron":
+      return `[data-nephron-segment-id="${CSS.escape(term.id)}"]`;
+    default:
+      return `[data-organ-id="${CSS.escape(term.id)}"]`;
+  }
+}
+
+function unwrapChip(chip: Element): void {
+  const text = chip.textContent ?? "";
+  const parent = chip.parentNode;
+  if (!parent) return;
+  parent.replaceChild(chip.ownerDocument.createTextNode(text), chip);
+  parent.normalize();
+}
+
+function evictTermHighlight(term: TermMatch): void {
+  const key = termKey(term);
+  highlightedOnQuestion.delete(key);
+  highlightedTermZone.delete(key);
+
+  for (const chip of document.querySelectorAll(chipSelectorForTerm(term))) {
+    highlightedWordsOnQuestion.delete(
+      normalizedWordKey(chip.textContent ?? ""),
+    );
+    unwrapChip(chip);
+  }
+}
+
+function isAlreadyHighlighted(
+  term: TermMatch,
+  matchText: string,
+  zone: number,
+): boolean {
+  const key = termKey(term);
+  const existingZone = highlightedTermZone.get(key);
+  if (existingZone !== undefined && zone < existingZone) {
+    evictTermHighlight(term);
+  } else if (highlightedOnQuestion.has(key)) {
+    return true;
+  }
+
+  return highlightedWordsOnQuestion.has(normalizedWordKey(matchText));
+}
+
+function recordHighlight(
+  term: TermMatch,
+  matchText: string,
+  zone: number,
+): void {
   highlightedOnQuestion.add(termKey(term));
   highlightedWordsOnQuestion.add(normalizedWordKey(matchText));
+  highlightedTermZone.set(termKey(term), zone);
 }
 
 function getQuestionTextSnapshot(): string {
@@ -93,6 +188,7 @@ function getQuestionFingerprint(): string {
 function resetQuestionHighlights(): void {
   highlightedOnQuestion.clear();
   highlightedWordsOnQuestion.clear();
+  highlightedTermZone.clear();
   questionFingerprint = "";
 }
 
@@ -101,6 +197,7 @@ function syncQuestionContext(): void {
   if (questionFingerprint && next !== questionFingerprint) {
     highlightedOnQuestion.clear();
     highlightedWordsOnQuestion.clear();
+    highlightedTermZone.clear();
   }
   questionFingerprint = next;
 }
@@ -170,6 +267,13 @@ function buildTermIndex(): TermMatch[] {
       id: labValueId,
     }),
   );
+  const nephronMatches: TermMatch[] = buildNephronAliasIndex().map(
+    ({ alias, nephronSegmentId }) => ({
+      alias,
+      kind: "nephron" as const,
+      id: nephronSegmentId,
+    }),
+  );
   return [
     ...organMatches,
     ...heartSoundMatches,
@@ -177,6 +281,7 @@ function buildTermIndex(): TermMatch[] {
     ...symptomMatches,
     ...medicationMatches,
     ...labMatches,
+    ...nephronMatches,
   ].sort(
     (a, b) => b.alias.length - a.alias.length || a.alias.localeCompare(b.alias),
   );
@@ -220,6 +325,7 @@ function matchedLengthAt(
 
 function findNextMatch(
   text: string,
+  zone: number,
 ): { index: number; matchText: string; term: TermMatch } | null {
   const index = getTermIndex();
   let leftmost = text.length;
@@ -229,7 +335,7 @@ function findNextMatch(
       const len = matchedLengthAt(text, i, entry);
       if (len === null) continue;
       const matchText = text.slice(i, i + len);
-      if (isAlreadyHighlighted(entry, matchText)) continue;
+      if (isAlreadyHighlighted(entry, matchText, zone)) continue;
       leftmost = i;
       break;
     }
@@ -244,7 +350,7 @@ function findNextMatch(
     const len = matchedLengthAt(text, leftmost, entry);
     if (len === null) continue;
     const matchText = text.slice(leftmost, leftmost + len);
-    if (isAlreadyHighlighted(entry, matchText)) continue;
+    if (isAlreadyHighlighted(entry, matchText, zone)) continue;
     if (!best || len > best.length) {
       best = {
         matchText,
@@ -294,6 +400,9 @@ function createChip(
   } else if (term.kind === "lab") {
     button.className = LAB_CHIP_CLASS;
     button.dataset.labValueId = term.id;
+  } else if (term.kind === "nephron") {
+    button.className = NEPHRON_CHIP_CLASS;
+    button.dataset.nephronSegmentId = term.id;
   } else {
     button.className = ORGAN_CHIP_CLASS;
     button.dataset.organId = term.id;
@@ -302,10 +411,10 @@ function createChip(
   return button;
 }
 
-function highlightTextNode(textNode: Text): boolean {
+function highlightTextNode(textNode: Text, zone: number): boolean {
   const text = textNode.textContent ?? "";
   if (!text.trim()) return false;
-  if (!findNextMatch(text)) return false;
+  if (!findNextMatch(text, zone)) return false;
 
   const parent = textNode.parentNode;
   if (!parent) return false;
@@ -316,7 +425,7 @@ function highlightTextNode(textNode: Text): boolean {
   let changed = false;
 
   while (remaining.length > 0) {
-    const next = findNextMatch(remaining);
+    const next = findNextMatch(remaining, zone);
     if (!next) {
       fragment.appendChild(doc.createTextNode(remaining));
       break;
@@ -327,7 +436,7 @@ function highlightTextNode(textNode: Text): boolean {
     }
 
     fragment.appendChild(createChip(doc, next.matchText, next.term));
-    recordHighlight(next.term, next.matchText);
+    recordHighlight(next.term, next.matchText, zone);
     changed = true;
     remaining = remaining.slice(next.index + next.matchText.length);
   }
@@ -338,23 +447,21 @@ function highlightTextNode(textNode: Text): boolean {
   return changed;
 }
 
-function isInsidePopover(node: Node): boolean {
-  return (
-    node instanceof Element &&
-    (node.classList.contains(POPOVER_CLASS) ||
-      node.closest(`.${POPOVER_CLASS}`) !== null)
-  );
+function compareNodeDocumentOrder(a: Node, b: Node): number {
+  const pos = a.compareDocumentPosition(b);
+  if (pos & Node.DOCUMENT_POSITION_FOLLOWING) return -1;
+  if (pos & Node.DOCUMENT_POSITION_PRECEDING) return 1;
+  return 0;
 }
 
-export function scanRoot(root: Node): void {
-  if (isInsidePopover(root)) return;
-  syncQuestionContext();
-
+function collectHighlightableTextNodes(root: Node): Text[] {
   const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
     acceptNode(node) {
+      if (isInsidePopover(node)) return NodeFilter.FILTER_REJECT;
       if (shouldSkipNode(node)) return NodeFilter.FILTER_REJECT;
+      if (!isVisibleNode(node)) return NodeFilter.FILTER_REJECT;
       const text = node.textContent ?? "";
-      if (!text.trim() || !findNextMatch(text)) return NodeFilter.FILTER_REJECT;
+      if (!text.trim()) return NodeFilter.FILTER_REJECT;
       return NodeFilter.FILTER_ACCEPT;
     },
   });
@@ -366,11 +473,53 @@ export function scanRoot(root: Node): void {
     current = walker.nextNode();
   }
 
+  return textNodes.sort((a, b) => {
+    const zoneDiff = getScanZone(a) - getScanZone(b);
+    if (zoneDiff !== 0) return zoneDiff;
+    return compareNodeDocumentOrder(a, b);
+  });
+}
+
+function isInsidePopover(node: Node): boolean {
+  return (
+    node instanceof Element &&
+    (node.classList.contains(POPOVER_CLASS) ||
+      node.closest(`.${POPOVER_CLASS}`) !== null)
+  );
+}
+
+function scanPage(): void {
+  if (!document.body || isInsidePopover(document.body)) return;
+  syncQuestionContext();
+
+  const textNodes = collectHighlightableTextNodes(document.body);
   isApplyingHighlights = true;
   try {
     for (const textNode of textNodes) {
       if (!textNode.parentNode || shouldSkipNode(textNode)) continue;
-      highlightTextNode(textNode);
+      if (!isVisibleNode(textNode)) continue;
+      highlightTextNode(textNode, getScanZone(textNode));
+    }
+  } finally {
+    isApplyingHighlights = false;
+  }
+}
+
+export function scanRoot(root: Node): void {
+  if (isInsidePopover(root)) return;
+  if (root === document.body) {
+    scanPage();
+    return;
+  }
+
+  syncQuestionContext();
+  const textNodes = collectHighlightableTextNodes(root);
+  isApplyingHighlights = true;
+  try {
+    for (const textNode of textNodes) {
+      if (!textNode.parentNode || shouldSkipNode(textNode)) continue;
+      if (!isVisibleNode(textNode)) continue;
+      highlightTextNode(textNode, getScanZone(textNode));
     }
   } finally {
     isApplyingHighlights = false;
@@ -381,10 +530,10 @@ export function startOrganScanner(): void {
   if (!document.body) return;
 
   resetQuestionHighlights();
-  scanRoot(document.body);
+  scanPage();
 
   let debounceTimer: ReturnType<typeof setTimeout> | null = null;
-  const pendingRoots = new Set<Node>();
+  let scanScheduled = false;
 
   const observer = new MutationObserver((mutations) => {
     if (!isApplyingHighlights && mutationsRemovedOurChips(mutations)) {
@@ -394,7 +543,7 @@ export function startOrganScanner(): void {
     for (const mutation of mutations) {
       if (mutation.type === "characterData") {
         const parent = mutation.target.parentNode;
-        if (parent && !isInsidePopover(parent)) pendingRoots.add(parent);
+        if (parent && !isInsidePopover(parent)) scanScheduled = true;
         continue;
       }
       for (const node of mutation.addedNodes) {
@@ -410,24 +559,21 @@ export function startOrganScanner(): void {
         }
         if (node.nodeType === Node.TEXT_NODE) {
           const parent = node.parentNode;
-          if (parent && !isInsidePopover(parent)) pendingRoots.add(parent);
+          if (parent && !isInsidePopover(parent)) scanScheduled = true;
         } else if (
           node.nodeType === Node.ELEMENT_NODE &&
           !isInsidePopover(node)
         ) {
-          pendingRoots.add(node);
+          scanScheduled = true;
         }
       }
     }
 
-    if (pendingRoots.size === 0) return;
+    if (!scanScheduled) return;
     if (debounceTimer) clearTimeout(debounceTimer);
     debounceTimer = setTimeout(() => {
-      syncQuestionContext();
-      for (const root of pendingRoots) {
-        if (root.isConnected) scanRoot(root);
-      }
-      pendingRoots.clear();
+      scanPage();
+      scanScheduled = false;
       debounceTimer = null;
     }, 300);
   });

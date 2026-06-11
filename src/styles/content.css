@@ -163,6 +163,28 @@
   outline-offset: 1px;
 }
 
+.usmle-nephron-chip {
+  display: inline;
+  margin: 0;
+  padding: 0 2px;
+  border: none;
+  border-radius: 3px;
+  background: rgba(192, 38, 211, 0.12);
+  color: inherit;
+  font: inherit;
+  line-height: inherit;
+  text-decoration: underline dotted rgba(192, 38, 211, 0.6);
+  text-underline-offset: 2px;
+  cursor: help;
+}
+
+.usmle-nephron-chip:hover,
+.usmle-nephron-chip:focus-visible {
+  background: rgba(192, 38, 211, 0.22);
+  outline: 1px solid rgba(192, 38, 211, 0.5);
+  outline-offset: 1px;
+}
+
 .usmle-organ-popover--rich {
   max-width: 360px;
   max-height: min(70vh, 480px);
@@ -187,6 +209,10 @@
 
 .usmle-organ-popover__title--lab {
   color: #0e7490;
+}
+
+.usmle-organ-popover__title--nephron {
+  color: #a21caf;
 }
 
 .usmle-organ-popover__meaning {

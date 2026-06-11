@@ -2,11 +2,12 @@ import { getHeartSoundById } from "../data/heartSounds";
 import { getHemodynamicById } from "../data/hemodynamics";
 import { getLabValueById } from "../data/labValues";
 import { getMedicationById } from "../data/medications";
+import { getNephronSegmentById } from "../data/nephron";
 import { getOrganById } from "../data/organs";
 import { getSymptomById } from "../data/symptoms";
 
 const CHIP_SELECTOR =
-  ".usmle-organ-chip, .usmle-heart-sound-chip, .usmle-hemodynamic-chip, .usmle-symptom-chip, .usmle-medication-chip, .usmle-lab-chip";
+  ".usmle-organ-chip, .usmle-heart-sound-chip, .usmle-hemodynamic-chip, .usmle-symptom-chip, .usmle-medication-chip, .usmle-lab-chip, .usmle-nephron-chip";
 const POPOVER_CLASS = "usmle-organ-popover";
 const HIDE_DELAY_MS = 120;
 
@@ -202,6 +203,22 @@ function renderLabValuePopover(labValueId: string): boolean {
   return true;
 }
 
+function renderNephronPopover(nephronSegmentId: string): boolean {
+  const segment = getNephronSegmentById(nephronSegmentId);
+  if (!segment || !popoverEl) return false;
+
+  popoverEl.classList.add("usmle-organ-popover--rich");
+  popoverEl.innerHTML = `
+    <div class="usmle-organ-popover__title usmle-organ-popover__title--nephron">${segment.name}</div>
+    <div class="usmle-organ-popover__section-label">Function</div>
+    <div class="usmle-organ-popover__mechanism">${segment.function}</div>
+    ${renderListSection("Reabsorbs", segment.reabsorbs)}
+    ${renderListSection("Secretes", segment.secretes)}
+    ${renderListSection("Boards pearls", segment.boardsPearls)}
+  `;
+  return true;
+}
+
 function showPopover(chip: HTMLElement): void {
   const organId = chip.dataset.organId;
   const heartSoundId = chip.dataset.heartSoundId;
@@ -209,13 +226,15 @@ function showPopover(chip: HTMLElement): void {
   const symptomId = chip.dataset.symptomId;
   const medicationId = chip.dataset.medicationId;
   const labValueId = chip.dataset.labValueId;
+  const nephronSegmentId = chip.dataset.nephronSegmentId;
   if (
     !organId &&
     !heartSoundId &&
     !hemodynamicId &&
     !symptomId &&
     !medicationId &&
-    !labValueId
+    !labValueId &&
+    !nephronSegmentId
   )
     return;
 
@@ -236,7 +255,9 @@ function showPopover(chip: HTMLElement): void {
           ? renderSymptomPopover(symptomId)
           : medicationId
             ? renderMedicationPopover(medicationId)
-            : renderLabValuePopover(labValueId!);
+            : labValueId
+              ? renderLabValuePopover(labValueId)
+              : renderNephronPopover(nephronSegmentId!);
   if (!rendered) return;
 
   activeChip = chip;
