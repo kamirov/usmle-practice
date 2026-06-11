@@ -158,6 +158,127 @@ export const MEDICATIONS: MedicationEntry[] = [
     ],
   },
   {
+    id: "adenosine",
+    name: "Adenosine",
+    aliases: ["adenosine", "adenocard"],
+    drugClass: "Purine nucleoside / antiarrhythmic",
+    mechanism:
+      "Activates A1 receptors → ↑ K⁺ efflux → hyperpolarization and transient AV nodal block; very short half-life (seconds).",
+    indications: [
+      "Stable narrow-complex paroxysmal SVT (first-line)",
+      "Diagnostic maneuver in wide-complex tachycardia (transient AV block)",
+    ],
+    adverseEffects: [
+      "Transient flushing, chest discomfort, dyspnea",
+      "Brief asystole or bradycardia (expected)",
+      "Bronchospasm (use caution in asthma/COPD)",
+    ],
+    boardsPearls: [
+      "Rapid IV push followed by saline flush; half-life ~10 seconds",
+      "Ineffective if given as slow infusion or orally",
+      "Methylxanthines (caffeine, theophylline) antagonize effect",
+      "Pediatrics: same role in SVT; weight-based dosing",
+    ],
+  },
+  {
+    id: "alteplase",
+    name: "Alteplase",
+    aliases: ["alteplase", "tpa", "t-pa", "activase"],
+    drugClass: "Thrombolytic (tissue plasminogen activator)",
+    mechanism:
+      "Converts plasminogen to plasmin → fibrinolysis and clot dissolution.",
+    indications: [
+      "Acute ischemic stroke (within window, no contraindications)",
+      "STEMI (when PCI unavailable or as adjunct)",
+      "Massive pulmonary embolism with hemodynamic instability",
+      "Occluded central venous catheter (low-dose dwell)",
+    ],
+    adverseEffects: [
+      "Intracranial hemorrhage",
+      "Systemic bleeding",
+      "Reperfusion arrhythmias",
+    ],
+    boardsPearls: [
+      "Contraindications: recent stroke/surgery, active bleeding, uncontrolled HTN",
+      "Stroke window typically ≤4.5 h from last known well",
+      "Avoid anticoagulation/antiplatelets until bleeding risk assessed",
+      "Tenecteplase is an alternative fibrin-specific TPA for STEMI",
+    ],
+  },
+  {
+    id: "atropine",
+    name: "Atropine",
+    aliases: ["atropine"],
+    drugClass: "Antimuscarinic (anticholinergic)",
+    mechanism:
+      "Competitive muscarinic (M) receptor antagonist → blocks vagal effects on SA/AV node and smooth muscle.",
+    indications: [
+      "Symptomatic bradycardia (ACLS)",
+      "Organophosphate/carbamate poisoning (with pralidoxime)",
+      "Premedication to reduce secretions (e.g., before intubation)",
+      "Cycloplegia / mydriasis (ophthalmic)",
+    ],
+    adverseEffects: [
+      "Tachycardia, dry mouth, urinary retention",
+      "Confusion, hyperthermia (especially elderly)",
+      "Mydriasis, acute angle-closure glaucoma risk",
+      "Paradoxical bradycardia at low doses",
+    ],
+    boardsPearls: [
+      "ACLS: 1 mg IV q3–5 min up to 3 mg for symptomatic bradycardia",
+      "Not for high-degree (type II second-degree or third-degree) AV block",
+      "Antidote for cholinergic excess; organophosphate poisoning → atropine + pralidoxime",
+      "Pediatrics: bradycardia often hypoxic — prioritize ventilation before atropine",
+    ],
+  },
+  {
+    id: "naloxone",
+    name: "Naloxone",
+    aliases: ["naloxone", "narcan"],
+    drugClass: "Opioid antagonist",
+    mechanism:
+      "Competitive antagonist at μ, κ, and δ opioid receptors → reverses opioid-induced CNS and respiratory depression.",
+    indications: [
+      "Opioid overdose (respiratory depression, altered mental status)",
+      "Opioid-induced pruritus (low-dose)",
+      "Neonatal opioid withdrawal assessment (selected settings)",
+    ],
+    adverseEffects: [
+      "Acute opioid withdrawal (agitation, vomiting, diarrhea, tachycardia)",
+      "Pulmonary edema (rare)",
+      "Recurrent depression as naloxone wears off (shorter half-life than many opioids)",
+    ],
+    boardsPearls: [
+      "Pinpoint pupils + ↓ respirations → give naloxone; may need repeat doses",
+      "Start 0.4–2 mg IV/IM/IN; titrate to adequate respirations, not full wakefulness",
+      "Observe for renarcotization — fentanyl and long-acting opioids may need infusion",
+      "Pediatrics: same indication; accidental ingestion or iatrogenic overdose",
+    ],
+  },
+  {
+    id: "physostigmine",
+    name: "Physostigmine",
+    aliases: ["physostigmine", "antilirium"],
+    drugClass: "Reversible acetylcholinesterase inhibitor",
+    mechanism:
+      "Crosses blood-brain barrier; inhibits acetylcholinesterase → ↑ synaptic ACh at muscarinic and nicotinic sites.",
+    indications: [
+      "Anticholinergic (antimuscarinic) toxicity with CNS effects",
+      "Selected cases of benzodiazepine overdose with severe delirium (controversial)",
+    ],
+    adverseEffects: [
+      "Bradycardia, salivation, bronchorrhea, seizures",
+      "Cholinergic crisis if overdosed",
+      "Contraindicated in TCA overdose (may worsen cardiac conduction)",
+    ],
+    boardsPearls: [
+      "Antidote for pure anticholinergic toxidrome: hot as a hare, dry as a bone, mad as a hatter, blind as a bat",
+      "Contraindicated in QRS widening / TCA ingestion — use sodium bicarbonate instead",
+      "Atropine treats peripheral cholinergic excess; physostigmine treats central anticholinergic delirium",
+      "Pediatrics: accidental diphenhydramine or scopolamine ingestion — same contraindications apply",
+    ],
+  },
+  {
     id: "heparin",
     name: "Heparin",
     aliases: ["heparin"],
