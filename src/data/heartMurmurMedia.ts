@@ -12,6 +12,9 @@ import aorticRegurgitationMurmur from "../media/audio/heart-murmurs/aortic-regur
 
 export type HeartMurmurAudioId = HeartMurmurEntry["id"];
 
+const TEACHING_HEART_AUSCULTATION_MP3_PAGE =
+  "https://teachingheartauscultation.com/heart-sounds-mp3-downloads";
+
 function extensionAssetUrl(path: string): string {
   return chrome.runtime.getURL(path);
 }
@@ -33,31 +36,31 @@ export const HEART_MURMUR_AUDIO_ATTRIBUTIONS: Record<
 > = {
   "crescendo-decrescendo": {
     label: "Teaching Heart Auscultation (Adult Case 4)",
-    url: "https://teachingheartauscultation.com/download/1734/",
+    url: TEACHING_HEART_AUSCULTATION_MP3_PAGE,
   },
   "diastolic-rumble": {
     label: "Teaching Heart Auscultation (Adult Case 3)",
-    url: "https://teachingheartauscultation.com/download/1721/",
+    url: TEACHING_HEART_AUSCULTATION_MP3_PAGE,
   },
   "ejection-click": {
     label: "Teaching Heart Auscultation (Case 6)",
-    url: "https://teachingheartauscultation.com/download/1114/",
+    url: TEACHING_HEART_AUSCULTATION_MP3_PAGE,
   },
   "harsh-systolic-ejection-murmur": {
     label: "Teaching Heart Auscultation (Congenital Case 2)",
-    url: "https://teachingheartauscultation.com/download/1110/",
+    url: TEACHING_HEART_AUSCULTATION_MP3_PAGE,
   },
   "atrial-septal-defect-murmur": {
     label: "Teaching Heart Auscultation (Congenital Case 1)",
-    url: "https://teachingheartauscultation.com/download/1109/",
+    url: TEACHING_HEART_AUSCULTATION_MP3_PAGE,
   },
   "patent-ductus-arteriosus-murmur": {
     label: "Teaching Heart Auscultation (Congenital Case 3)",
-    url: "https://teachingheartauscultation.com/download/1111/",
+    url: TEACHING_HEART_AUSCULTATION_MP3_PAGE,
   },
   "aortic-regurgitation-murmur": {
     label: "Teaching Heart Auscultation (Congenital Case 4)",
-    url: "https://teachingheartauscultation.com/download/1112/",
+    url: TEACHING_HEART_AUSCULTATION_MP3_PAGE,
   },
 };
 
