@@ -34,7 +34,44 @@ interface TermMatch {
 }
 
 let termIndex: TermMatch[] | null = null;
-let matchPattern: RegExp | null = null;
+const highlightedOnPage = new Set<string>();
+let trackedPageUrl = location.href;
+
+function termKey(term: TermMatch): string {
+  return `${term.kind}:${term.id}`;
+}
+
+function resetPageHighlights(): void {
+  highlightedOnPage.clear();
+  trackedPageUrl = location.href;
+}
+
+function resetPageHighlightsIfNavigated(): void {
+  if (location.href !== trackedPageUrl) {
+    resetPageHighlights();
+  }
+}
+
+function watchHistoryNavigation(): void {
+  const onNavigate = () => resetPageHighlights();
+  window.addEventListener("popstate", onNavigate);
+  window.addEventListener("hashchange", onNavigate);
+
+  for (const method of ["pushState", "replaceState"] as const) {
+    const original = history[method].bind(history);
+    history[method] = (...args: Parameters<History["pushState"]>) => {
+      const previousUrl = location.href;
+      const result = original(...args);
+      if (location.href !== previousUrl) onNavigate();
+      return result;
+    };
+  }
+}
+
+function getTermIndex(): TermMatch[] {
+  if (!termIndex) termIndex = buildTermIndex();
+  return termIndex;
+}
 
 function buildTermIndex(): TermMatch[] {
   const organMatches: TermMatch[] = buildAliasIndex().map(
@@ -71,30 +108,83 @@ function buildTermIndex(): TermMatch[] {
     ...hemodynamicMatches,
     ...symptomMatches,
   ].sort(
-    (a, b) => b.alias.length - a.alias.length,
+    (a, b) => b.alias.length - a.alias.length || a.alias.localeCompare(b.alias),
   );
 }
 
-function escapeRegex(value: string): string {
-  return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+function hasWordBoundaryBefore(text: string, index: number): boolean {
+  return index === 0 || !/\w/.test(text[index - 1]);
 }
 
-function buildCombinedMatchPattern(index: TermMatch[]): RegExp {
-  const parts = index.map(({ alias, kind }) => {
-    const escaped = escapeRegex(alias);
-    const plural =
-      kind === "organ" && !alias.endsWith("s")
-        ? `${escaped}(?:es|s)?`
-        : escaped;
-    return `\\b${plural}\\b`;
-  });
-  return new RegExp(`(${parts.join("|")})`, "gi");
+function hasWordBoundaryAfter(text: string, index: number): boolean {
+  return index >= text.length || !/\w/.test(text[index]);
 }
 
-function getMatchPattern(): RegExp {
-  if (!termIndex) termIndex = buildTermIndex();
-  if (!matchPattern) matchPattern = buildCombinedMatchPattern(termIndex);
-  return matchPattern;
+function matchedLengthAt(
+  text: string,
+  index: number,
+  entry: TermMatch,
+): number | null {
+  const lower = text.toLowerCase();
+  const alias = entry.alias;
+
+  if (!hasWordBoundaryBefore(text, index)) return null;
+
+  if (lower.slice(index, index + alias.length) === alias) {
+    const end = index + alias.length;
+    if (hasWordBoundaryAfter(text, end)) return alias.length;
+  }
+
+  if (entry.kind === "organ" && !alias.endsWith("s")) {
+    for (const suffix of ["s", "es"] as const) {
+      const plural = alias + suffix;
+      if (lower.slice(index, index + plural.length) === plural) {
+        const end = index + plural.length;
+        if (hasWordBoundaryAfter(text, end)) return plural.length;
+      }
+    }
+  }
+
+  return null;
+}
+
+function findNextMatch(
+  text: string,
+  skipTerms: ReadonlySet<string> = highlightedOnPage,
+): { index: number; matchText: string; term: TermMatch } | null {
+  const index = getTermIndex();
+  let leftmost = text.length;
+
+  for (let i = 0; i < text.length; i++) {
+    for (const entry of index) {
+      if (skipTerms.has(termKey(entry))) continue;
+      if (matchedLengthAt(text, i, entry) !== null) {
+        leftmost = i;
+        break;
+      }
+    }
+    if (leftmost < text.length) break;
+  }
+
+  if (leftmost >= text.length) return null;
+
+  let best: { matchText: string; term: TermMatch; length: number } | null =
+    null;
+  for (const entry of index) {
+    if (skipTerms.has(termKey(entry))) continue;
+    const len = matchedLengthAt(text, leftmost, entry);
+    if (len === null) continue;
+    if (!best || len > best.length) {
+      best = {
+        matchText: text.slice(leftmost, leftmost + len),
+        term: entry,
+        length: len,
+      };
+    }
+  }
+
+  if (!best) return null;
+  return { index: leftmost, matchText: best.matchText, term: best.term };
 }
 
 function shouldSkipNode(node: Node): boolean {
@@ -109,21 +199,6 @@ function shouldSkipNode(node: Node): boolean {
     parent = parent.parentElement;
   }
   return false;
-}
-
-function resolveTerm(matchedText: string): TermMatch | null {
-  if (!termIndex) termIndex = buildTermIndex();
-  const lower = matchedText.toLowerCase();
-  for (const entry of termIndex) {
-    if (lower === entry.alias) return entry;
-    if (
-      entry.kind === "organ" &&
-      (lower === `${entry.alias}es` || lower === `${entry.alias}s`)
-    ) {
-      return entry;
-    }
-  }
-  return null;
 }
 
 function createChip(
@@ -153,10 +228,7 @@ function createChip(
 function highlightTextNode(textNode: Text): boolean {
   const text = textNode.textContent ?? "";
   if (!text.trim()) return false;
-
-  const pattern = getMatchPattern();
-  pattern.lastIndex = 0;
-  if (!pattern.test(text)) return false;
+  if (!findNextMatch(text)) return false;
 
   const parent = textNode.parentNode;
   if (!parent) return false;
@@ -167,31 +239,20 @@ function highlightTextNode(textNode: Text): boolean {
   let changed = false;
 
   while (remaining.length > 0) {
-    pattern.lastIndex = 0;
-    const match = pattern.exec(remaining);
-    if (!match) {
+    const next = findNextMatch(remaining);
+    if (!next) {
       fragment.appendChild(doc.createTextNode(remaining));
       break;
     }
 
-    const matchText = match[0];
-    const idx = match.index ?? 0;
-    const term = resolveTerm(matchText);
-
-    if (!term) {
-      const skipEnd = idx + matchText.length;
-      fragment.appendChild(doc.createTextNode(remaining.slice(0, skipEnd)));
-      remaining = remaining.slice(skipEnd);
-      continue;
+    if (next.index > 0) {
+      fragment.appendChild(doc.createTextNode(remaining.slice(0, next.index)));
     }
 
-    if (idx > 0) {
-      fragment.appendChild(doc.createTextNode(remaining.slice(0, idx)));
-    }
-
-    fragment.appendChild(createChip(doc, matchText, term));
+    fragment.appendChild(createChip(doc, next.matchText, next.term));
+    highlightedOnPage.add(termKey(next.term));
     changed = true;
-    remaining = remaining.slice(idx + matchText.length);
+    remaining = remaining.slice(next.index + next.matchText.length);
   }
 
   if (changed) {
@@ -210,12 +271,13 @@ function isInsidePopover(node: Node): boolean {
 
 export function scanRoot(root: Node): void {
   if (isInsidePopover(root)) return;
+  resetPageHighlightsIfNavigated();
 
   const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
     acceptNode(node) {
       if (shouldSkipNode(node)) return NodeFilter.FILTER_REJECT;
       const text = node.textContent ?? "";
-      if (!text.trim()) return NodeFilter.FILTER_REJECT;
+      if (!text.trim() || !findNextMatch(text)) return NodeFilter.FILTER_REJECT;
       return NodeFilter.FILTER_ACCEPT;
     },
   });
@@ -236,6 +298,8 @@ export function scanRoot(root: Node): void {
 export function startOrganScanner(): void {
   if (!document.body) return;
 
+  resetPageHighlights();
+  watchHistoryNavigation();
   scanRoot(document.body);
 
   let debounceTimer: ReturnType<typeof setTimeout> | null = null;
