@@ -558,6 +558,134 @@ export const CONDITIONS: ConditionEntry[] = [
       "Child abuse and rib fractures can cause hemothorax; smaller blood volume means shock develops faster. Same drainage principles with age-appropriate tube size.",
   },
   {
+    id: "parapneumonic-effusion",
+    name: "Parapneumonic Effusion",
+    aliases: [
+      "parapneumonic effusion",
+      "parapneumonic effusions",
+      "complicated parapneumonic effusion",
+      "uncomplicated parapneumonic effusion",
+    ],
+    definition:
+      "Pleural effusion that develops adjacent to pneumonia, ranging from a sterile reactive exudate to infected fluid that may progress to empyema.",
+    pathophysiology:
+      "Pneumonia → ↑ pleural capillary permeability and impaired lymphatic drainage → exudative pleural fluid; bacterial invasion of pleural space → ↓ glucose, ↓ pH, ↑ LDH, loculations; untreated complicated effusion → frank pus (empyema).",
+    classicPresentation: [
+      "Community-acquired pneumonia with persistent fever despite antibiotics",
+      "Pleuritic chest pain and dyspnea out of proportion to infiltrate alone",
+      "Dullness to percussion and ↓ breath sounds at base",
+      "Failure to improve clinically after 48–72 h of appropriate antibiotics",
+    ],
+    keyFindings: [
+      "Exudative pleural fluid by Light's criteria",
+      "Blunted costophrenic angle or layering opacity on CXR; loculations on CT or ultrasound",
+      "Complicated: pleural pH <7.2, glucose <60 mg/dL, LDH >1000 U/L, positive Gram stain/culture",
+      "Septations or loculations on ultrasound — cannot drain fully with simple thoracentesis",
+    ],
+    keyLabs: [
+      "Thoracentesis — protein, LDH, glucose, pH, cell count, Gram stain, culture",
+      "Light's criteria confirm exudate",
+      "Blood cultures and sputum culture for underlying pneumonia organism",
+    ],
+    associations: [
+      "Community-acquired pneumonia (S. pneumoniae, S. aureus, Streptococcus pyogenes, anaerobes)",
+      "Hospital-acquired or aspiration pneumonia",
+      "Immunocompromise",
+      "Rheumatologic effusions can mimic but lack infectious pleural fluid",
+    ],
+    complications: [
+      "Progression to empyema",
+      "Loculated or trapped lung",
+      "Prolonged hospitalization and need for surgical decortication",
+      "Sepsis from untreated pleural infection",
+    ],
+    distinguishFrom: [
+      "Empyema — frank pus in pleural space; often requires chest tube ± fibrinolytics or VATS",
+      "Transudative effusion (CHF, cirrhosis) — Light's criteria show transudate, no fever/infection",
+      "Malignant effusion — cytology positive, not tied to acute pneumonia",
+      "Pulmonary embolism with exudate — pleuritic pain but no pneumonia infiltrate",
+    ],
+    treatment: [
+      "Treat underlying pneumonia with appropriate antibiotics",
+      "Uncomplicated small effusion — antibiotics alone may suffice; monitor",
+      "Complicated parapneumonic effusion (low pH/glucose, large, loculated, positive culture) — chest tube drainage",
+      "Fibrinolytics (tPA/DNase) or VATS/decortication if loculated or refractory",
+    ],
+    boardsPearls: [
+      "Pneumonia + effusion → thoracentesis; exudate with pH <7.2, glucose <60, or LDH >1000 = complicated → chest tube",
+      "Do not wait for frank pus — complicated parapneumonic effusion is treated like empyema",
+      "Light's criteria: any one met → exudate (protein ratio >0.5, LDH ratio >0.6, pleural LDH >⅔ ULN serum LDH)",
+      "Loculations on ultrasound → chest tube often insufficient alone → consider intrapleural fibrinolytics or VATS",
+    ],
+    pediatrics:
+      "Common with bacterial pneumonia in children; same pleural fluid thresholds apply. Smaller reserve — earlier chest tube if complicated effusion or empyema suspected; S. pneumoniae and S. aureus (including MRSA) are frequent organisms.",
+  },
+  {
+    id: "empyema",
+    name: "Empyema",
+    aliases: [
+      "empyema",
+      "empyemas",
+      "pleural empyema",
+      "pyothorax",
+      "purulent pleural effusion",
+    ],
+    definition:
+      "Collection of pus in the pleural space, most often as a complication of pneumonia (parapneumonic) but also from trauma, surgery, or extension of subdiaphragmatic infection.",
+    pathophysiology:
+      "Bacterial invasion of pleural space → fibrinous pleuritis and loculations → impaired drainage and trapped lung; progressive infection → sepsis; fibrinopurulent stage may require decortication to re-expand lung.",
+    classicPresentation: [
+      "Pneumonia with high fever, toxicity, and pleuritic pain persisting despite antibiotics",
+      "Marked leukocytosis and continued respiratory symptoms",
+      "Dullness, ↓ breath sounds, and possible friction rub over effusion",
+      "Frank pus on thoracentesis or chest tube output",
+    ],
+    keyFindings: [
+      "Pleural fluid: pH <7.2, glucose <40–60 mg/dL, LDH >1000 U/L, WBC >50,000/µL with neutrophil predominance",
+      "Gram stain or culture positive (may be anaerobic); thick purulent fluid",
+      "Loculated collection on ultrasound or CT",
+      "Split pleural sign on contrast CT — thickened enhancing pleural rind",
+    ],
+    keyLabs: [
+      "Thoracentesis or chest tube fluid — Gram stain, aerobic/anaerobic culture, cell count, pH, glucose, LDH",
+      "Blood cultures",
+      "CXR/CT — effusion with possible air-fluid level if bronchopleural fistula",
+    ],
+    associations: [
+      "Parapneumonic effusion (most common)",
+      "Penetrating or blunt chest trauma with contaminated hemothorax",
+      "Esophageal rupture, subphrenic abscess extension",
+      "Post-thoracic surgery or thoracentesis",
+      "Immunocompromise",
+    ],
+    complications: [
+      "Sepsis and septic shock",
+      "Bronchopleural fistula",
+      "Trapped lung requiring decortication",
+      "Chronic fibrothorax",
+    ],
+    distinguishFrom: [
+      "Complicated parapneumonic effusion without frank pus — same management thresholds; empyema is the end stage",
+      "Hemothorax — bloody fluid, trauma history; can become secondary empyema if infected",
+      "Malignant effusion — cytology positive, no purulence or infection",
+      "Tuberculous pleuritis — lymphocyte-predominant exudate, ADA elevated, no acute purulence",
+    ],
+    treatment: [
+      "Broad-spectrum antibiotics covering typical and anaerobic organisms (e.g., beta-lactam/β-lactamase inhibitor); tailor to culture",
+      "Chest tube drainage (large-bore) — mandatory; image-guided if loculated",
+      "Intrapleural fibrinolytics (tPA + DNase) for loculated collections",
+      "VATS or open decortication if failed drainage, organized rind, or trapped lung",
+    ],
+    boardsPearls: [
+      "Empyema = pus in pleural space; treat with antibiotics + chest tube — not thoracentesis alone",
+      "Complicated parapneumonic criteria (pH <7.2, glucose <60, LDH >1000, loculations, positive Gram stain) → drain as empyema",
+      "Anaerobes common with aspiration; cover with clindamycin or beta-lactam/β-lactamase inhibitor",
+      "Retained hemothorax or inadequate drainage after trauma → secondary empyema risk",
+    ],
+    pediatrics:
+      "Parapneumonic empyema is a leading cause of pleural infection in children; earlier aggressive drainage than adults often needed. Same fluid criteria; VATS decortication considered if chest tube and antibiotics fail.",
+  },
+  {
     id: "thromboangiitis-obliterans",
     name: "Thromboangiitis Obliterans (Buerger Disease)",
     aliases: [
