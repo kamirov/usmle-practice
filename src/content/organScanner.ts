@@ -1,9 +1,16 @@
 import { buildHeartSoundAliasIndex } from "../data/heartSounds";
+import { buildHemodynamicAliasIndex } from "../data/hemodynamics";
 import { buildAliasIndex } from "../data/organs";
 
 const ORGAN_CHIP_CLASS = "usmle-organ-chip";
 const HEART_SOUND_CHIP_CLASS = "usmle-heart-sound-chip";
-const CHIP_SELECTOR = `.${ORGAN_CHIP_CLASS}, .${HEART_SOUND_CHIP_CLASS}`;
+const HEMODYNAMIC_CHIP_CLASS = "usmle-hemodynamic-chip";
+const CHIP_SELECTOR = `.${ORGAN_CHIP_CLASS}, .${HEART_SOUND_CHIP_CLASS}, .${HEMODYNAMIC_CHIP_CLASS}`;
+const OUR_CHIP_CLASSES = [
+  ORGAN_CHIP_CLASS,
+  HEART_SOUND_CHIP_CLASS,
+  HEMODYNAMIC_CHIP_CLASS,
+] as const;
 const POPOVER_CLASS = "usmle-organ-popover";
 const SKIP_TAGS = new Set([
   "SCRIPT",
@@ -15,7 +22,7 @@ const SKIP_TAGS = new Set([
   "NOSCRIPT",
 ]);
 
-type TermKind = "organ" | "heart-sound";
+type TermKind = "organ" | "heart-sound" | "hemodynamic";
 
 interface TermMatch {
   alias: string;
@@ -41,7 +48,14 @@ function buildTermIndex(): TermMatch[] {
       id: heartSoundId,
     }),
   );
-  return [...organMatches, ...heartSoundMatches].sort(
+  const hemodynamicMatches: TermMatch[] = buildHemodynamicAliasIndex().map(
+    ({ alias, hemodynamicId }) => ({
+      alias,
+      kind: "hemodynamic" as const,
+      id: hemodynamicId,
+    }),
+  );
+  return [...organMatches, ...heartSoundMatches, ...hemodynamicMatches].sort(
     (a, b) => b.alias.length - a.alias.length,
   );
 }
@@ -72,8 +86,9 @@ function shouldSkipNode(node: Node): boolean {
   let parent = node.parentElement;
   while (parent) {
     if (SKIP_TAGS.has(parent.tagName)) return true;
-    if (parent.classList.contains(ORGAN_CHIP_CLASS)) return true;
-    if (parent.classList.contains(HEART_SOUND_CHIP_CLASS)) return true;
+    for (const cls of OUR_CHIP_CLASSES) {
+      if (parent.classList.contains(cls)) return true;
+    }
     if (parent.classList.contains(POPOVER_CLASS)) return true;
     if (parent.closest(`${CHIP_SELECTOR}, .${POPOVER_CLASS}`)) return true;
     parent = parent.parentElement;
@@ -96,33 +111,25 @@ function resolveTerm(matchedText: string): TermMatch | null {
   return null;
 }
 
-function wrapMatch(
+function createChip(
   doc: Document,
-  text: string,
   matchText: string,
   term: TermMatch,
-): Node[] {
-  const idx = text.toLowerCase().indexOf(matchText.toLowerCase());
-  if (idx === -1) return [doc.createTextNode(text)];
-
-  const nodes: Node[] = [];
-  if (idx > 0) nodes.push(doc.createTextNode(text.slice(0, idx)));
-
+): HTMLButtonElement {
   const button = doc.createElement("button");
   button.type = "button";
-  button.className =
-    term.kind === "heart-sound" ? HEART_SOUND_CHIP_CLASS : ORGAN_CHIP_CLASS;
   if (term.kind === "heart-sound") {
+    button.className = HEART_SOUND_CHIP_CLASS;
     button.dataset.heartSoundId = term.id;
+  } else if (term.kind === "hemodynamic") {
+    button.className = HEMODYNAMIC_CHIP_CLASS;
+    button.dataset.hemodynamicId = term.id;
   } else {
+    button.className = ORGAN_CHIP_CLASS;
     button.dataset.organId = term.id;
   }
-  button.textContent = text.slice(idx, idx + matchText.length);
-  nodes.push(button);
-
-  const rest = text.slice(idx + matchText.length);
-  if (rest) nodes.push(doc.createTextNode(rest));
-  return nodes;
+  button.textContent = matchText;
+  return button;
 }
 
 function highlightTextNode(textNode: Text): boolean {
@@ -133,7 +140,6 @@ function highlightTextNode(textNode: Text): boolean {
   pattern.lastIndex = 0;
   if (!pattern.test(text)) return false;
 
-  pattern.lastIndex = 0;
   const parent = textNode.parentNode;
   if (!parent) return false;
 
@@ -151,18 +157,23 @@ function highlightTextNode(textNode: Text): boolean {
     }
 
     const matchText = match[0];
+    const idx = match.index ?? 0;
     const term = resolveTerm(matchText);
+
     if (!term) {
-      fragment.appendChild(doc.createTextNode(remaining));
-      break;
+      const skipEnd = idx + matchText.length;
+      fragment.appendChild(doc.createTextNode(remaining.slice(0, skipEnd)));
+      remaining = remaining.slice(skipEnd);
+      continue;
     }
 
-    const wrapped = wrapMatch(doc, remaining, matchText, term);
-    for (const node of wrapped) fragment.appendChild(node);
-    changed = true;
+    if (idx > 0) {
+      fragment.appendChild(doc.createTextNode(remaining.slice(0, idx)));
+    }
 
-    const consumed = remaining.indexOf(matchText) + matchText.length;
-    remaining = remaining.slice(consumed);
+    fragment.appendChild(createChip(doc, matchText, term));
+    changed = true;
+    remaining = remaining.slice(idx + matchText.length);
   }
 
   if (changed) {
@@ -220,6 +231,12 @@ export function startOrganScanner(): void {
         continue;
       }
       for (const node of mutation.addedNodes) {
+        if (
+          node instanceof Element &&
+          OUR_CHIP_CLASSES.some((cls) => node.classList.contains(cls))
+        ) {
+          continue;
+        }
         if (node.nodeType === Node.TEXT_NODE) {
           const parent = node.parentNode;
           if (parent && !isInsidePopover(parent)) pendingRoots.add(parent);

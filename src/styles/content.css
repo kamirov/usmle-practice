@@ -75,8 +75,34 @@
   outline-offset: 1px;
 }
 
+.usmle-hemodynamic-chip {
+  display: inline;
+  margin: 0;
+  padding: 0 2px;
+  border: none;
+  border-radius: 3px;
+  background: rgba(5, 150, 105, 0.12);
+  color: inherit;
+  font: inherit;
+  line-height: inherit;
+  text-decoration: underline dotted rgba(5, 150, 105, 0.6);
+  text-underline-offset: 2px;
+  cursor: help;
+}
+
+.usmle-hemodynamic-chip:hover,
+.usmle-hemodynamic-chip:focus-visible {
+  background: rgba(5, 150, 105, 0.22);
+  outline: 1px solid rgba(5, 150, 105, 0.5);
+  outline-offset: 1px;
+}
+
 .usmle-organ-popover__title--heart {
   color: #be123c;
+}
+
+.usmle-organ-popover__title--hemodynamic {
+  color: #047857;
 }
 
 .usmle-organ-popover__meaning {

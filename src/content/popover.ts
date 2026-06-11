@@ -1,7 +1,9 @@
 import { getHeartSoundById } from "../data/heartSounds";
+import { getHemodynamicById } from "../data/hemodynamics";
 import { getOrganById } from "../data/organs";
 
-const CHIP_SELECTOR = ".usmle-organ-chip, .usmle-heart-sound-chip";
+const CHIP_SELECTOR =
+  ".usmle-organ-chip, .usmle-heart-sound-chip, .usmle-hemodynamic-chip";
 const POPOVER_CLASS = "usmle-organ-popover";
 const HIDE_DELAY_MS = 120;
 
@@ -88,27 +90,59 @@ function renderOrganPopover(organId: string): boolean {
   return true;
 }
 
-function renderHeartSoundPopover(heartSoundId: string): boolean {
-  const sound = getHeartSoundById(heartSoundId);
-  if (!sound || !popoverEl) return false;
+function renderDefinitionPopover(
+  title: string,
+  titleClass: string,
+  definition: string,
+  sectionLabel: string,
+  items: string[],
+): boolean {
+  if (!popoverEl) return false;
 
-  const conditions = `<ul class="usmle-organ-popover__list">${sound.conditions
-    .map((c) => `<li>${c}</li>`)
+  const list = `<ul class="usmle-organ-popover__list">${items
+    .map((item) => `<li>${item}</li>`)
     .join("")}</ul>`;
 
   popoverEl.innerHTML = `
-    <div class="usmle-organ-popover__title usmle-organ-popover__title--heart">${sound.name}</div>
-    <div class="usmle-organ-popover__meaning">${sound.meaning}</div>
-    <div class="usmle-organ-popover__section-label">Common conditions</div>
-    ${conditions}
+    <div class="usmle-organ-popover__title ${titleClass}">${title}</div>
+    <div class="usmle-organ-popover__meaning">${definition}</div>
+    <div class="usmle-organ-popover__section-label">${sectionLabel}</div>
+    ${list}
   `;
   return true;
+}
+
+function renderHeartSoundPopover(heartSoundId: string): boolean {
+  const sound = getHeartSoundById(heartSoundId);
+  if (!sound) return false;
+
+  return renderDefinitionPopover(
+    sound.name,
+    "usmle-organ-popover__title--heart",
+    sound.meaning,
+    "Common conditions",
+    sound.conditions,
+  );
+}
+
+function renderHemodynamicPopover(hemodynamicId: string): boolean {
+  const term = getHemodynamicById(hemodynamicId);
+  if (!term) return false;
+
+  return renderDefinitionPopover(
+    term.name,
+    "usmle-organ-popover__title--hemodynamic",
+    term.definition,
+    "Factors that affect it",
+    term.factors,
+  );
 }
 
 function showPopover(chip: HTMLElement): void {
   const organId = chip.dataset.organId;
   const heartSoundId = chip.dataset.heartSoundId;
-  if (!organId && !heartSoundId) return;
+  const hemodynamicId = chip.dataset.hemodynamicId;
+  if (!organId && !heartSoundId && !hemodynamicId) return;
 
   if (hideTimer) {
     clearTimeout(hideTimer);
@@ -118,7 +152,9 @@ function showPopover(chip: HTMLElement): void {
   const popover = ensurePopover();
   const rendered = organId
     ? renderOrganPopover(organId)
-    : renderHeartSoundPopover(heartSoundId!);
+    : heartSoundId
+      ? renderHeartSoundPopover(heartSoundId)
+      : renderHemodynamicPopover(hemodynamicId!);
   if (!rendered) return;
 
   activeChip = chip;
