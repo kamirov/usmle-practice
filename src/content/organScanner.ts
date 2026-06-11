@@ -5,6 +5,7 @@ import {
 } from "../data/organs";
 
 const CHIP_CLASS = "usmle-organ-chip";
+const POPOVER_CLASS = "usmle-organ-popover";
 const SKIP_TAGS = new Set([
   "SCRIPT",
   "STYLE",
@@ -29,7 +30,8 @@ function shouldSkipNode(node: Node): boolean {
   while (parent) {
     if (SKIP_TAGS.has(parent.tagName)) return true;
     if (parent.classList.contains(CHIP_CLASS)) return true;
-    if (parent.closest(`.${CHIP_CLASS}`)) return true;
+    if (parent.classList.contains(POPOVER_CLASS)) return true;
+    if (parent.closest(`.${CHIP_CLASS}, .${POPOVER_CLASS}`)) return true;
     parent = parent.parentElement;
   }
   return false;
@@ -115,7 +117,17 @@ function highlightTextNode(textNode: Text): boolean {
   return changed;
 }
 
+function isInsidePopover(node: Node): boolean {
+  return (
+    node instanceof Element &&
+    (node.classList.contains(POPOVER_CLASS) ||
+      node.closest(`.${POPOVER_CLASS}`) !== null)
+  );
+}
+
 export function scanRoot(root: Node): void {
+  if (isInsidePopover(root)) return;
+
   const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
     acceptNode(node) {
       if (shouldSkipNode(node)) return NodeFilter.FILTER_REJECT;
@@ -150,14 +162,17 @@ export function startOrganScanner(): void {
     for (const mutation of mutations) {
       if (mutation.type === "characterData") {
         const parent = mutation.target.parentNode;
-        if (parent) pendingRoots.add(parent);
+        if (parent && !isInsidePopover(parent)) pendingRoots.add(parent);
         continue;
       }
       for (const node of mutation.addedNodes) {
         if (node.nodeType === Node.TEXT_NODE) {
           const parent = node.parentNode;
-          if (parent) pendingRoots.add(parent);
-        } else if (node.nodeType === Node.ELEMENT_NODE) {
+          if (parent && !isInsidePopover(parent)) pendingRoots.add(parent);
+        } else if (
+          node.nodeType === Node.ELEMENT_NODE &&
+          !isInsidePopover(node)
+        ) {
           pendingRoots.add(node);
         }
       }
