@@ -202,11 +202,17 @@ export const CONDITIONS: ConditionEntry[] = [
       "Normal arteries on angiography above ankle/wrist with corkscrew collaterals distally",
     ],
     keyLabs: [
-      "Angiography — segmental occlusions, corkscrew collaterals (\"tree root\" appearance)",
+      'Angiography — segmental occlusions, corkscrew collaterals ("tree root" appearance)',
       "Hypercoagulable and autoimmune workup negative",
     ],
-    associations: ["Heavy tobacco use (cigarettes, chewing tobacco)", "Young men of Asian/Middle Eastern/Eastern European descent"],
-    complications: ["Digital gangrene and amputation", "Progression with continued smoking"],
+    associations: [
+      "Heavy tobacco use (cigarettes, chewing tobacco)",
+      "Young men of Asian/Middle Eastern/Eastern European descent",
+    ],
+    complications: [
+      "Digital gangrene and amputation",
+      "Progression with continued smoking",
+    ],
     distinguishFrom: [
       "Atherosclerotic peripheral artery disease — older patients, proximal large-vessel disease",
       "Systemic vasculitis (GPA, polyarteritis nodosa) — systemic features, different angiographic pattern",
@@ -368,7 +374,10 @@ export const CONDITIONS: ConditionEntry[] = [
       "Sustained PMI, bifid carotid pulse",
       "Echo: septal hypertrophy ≥15 mm, SAM of mitral valve",
     ],
-    associations: ["Autosomal dominant inheritance", "Sudden cardiac death in young athletes"],
+    associations: [
+      "Autosomal dominant inheritance",
+      "Sudden cardiac death in young athletes",
+    ],
     complications: [
       "Sudden cardiac death",
       "Atrial fibrillation",
@@ -500,10 +509,7 @@ export const CONDITIONS: ConditionEntry[] = [
       "Diminished peripheral pulses",
       "Xanthomas (familial hypercholesterolemia)",
     ],
-    keyLabs: [
-      "↑ LDL cholesterol",
-      "↑ hs-CRP (inflammation marker)",
-    ],
+    keyLabs: ["↑ LDL cholesterol", "↑ hs-CRP (inflammation marker)"],
     associations: [
       "Hypertension",
       "Diabetes mellitus",
@@ -663,7 +669,11 @@ export const CONDITIONS: ConditionEntry[] = [
       "Diabetes mellitus",
       "Carotid stenosis",
     ],
-    complications: ["Hemorrhagic conversion", "Cerebral edema", "Aspiration pneumonia"],
+    complications: [
+      "Hemorrhagic conversion",
+      "Cerebral edema",
+      "Aspiration pneumonia",
+    ],
     distinguishFrom: [
       "Hemorrhagic stroke — headache, ↓ consciousness, blood on CT",
       "TIA — symptoms resolve within 24 h",
@@ -682,7 +692,12 @@ export const CONDITIONS: ConditionEntry[] = [
   {
     id: "primary-brain-tumor",
     name: "Primary Brain Tumor",
-    aliases: ["primary brain tumor", "brain tumor", "brain neoplasm", "glioblastoma"],
+    aliases: [
+      "primary brain tumor",
+      "brain tumor",
+      "brain neoplasm",
+      "glioblastoma",
+    ],
     definition:
       "Neoplasm arising from intracranial structures (glial cells, meninges, or embryonal tissue), distinct from metastatic disease.",
     pathophysiology:
@@ -741,8 +756,16 @@ export const CONDITIONS: ConditionEntry[] = [
       "↑ IgG index and oligoclonal bands in CSF",
       "MRI: periventricular plaques",
     ],
-    associations: ["Higher prevalence in women", "Northern latitude", "HLA-DR2"],
-    complications: ["Progressive disability", "Bladder dysfunction", "Depression"],
+    associations: [
+      "Higher prevalence in women",
+      "Northern latitude",
+      "HLA-DR2",
+    ],
+    complications: [
+      "Progressive disability",
+      "Bladder dysfunction",
+      "Depression",
+    ],
     distinguishFrom: [
       "Neuromyelitis optica — anti-AQP4, longitudinally extensive transverse myelitis",
       "ADEM — monophasic, post-infectious",
@@ -841,7 +864,12 @@ export const CONDITIONS: ConditionEntry[] = [
   {
     id: "type-1-diabetes-mellitus",
     name: "Type 1 Diabetes Mellitus",
-    aliases: ["type 1 diabetes mellitus", "type 1 diabetes", "t1dm", "juvenile diabetes"],
+    aliases: [
+      "type 1 diabetes mellitus",
+      "type 1 diabetes",
+      "t1dm",
+      "juvenile diabetes",
+    ],
     definition:
       "Autoimmune destruction of pancreatic β-cells causing absolute insulin deficiency and hyperglycemia.",
     pathophysiology:
@@ -856,8 +884,15 @@ export const CONDITIONS: ConditionEntry[] = [
       "Anti-GAD, anti-islet cell antibodies",
       "↑ HbA1c",
     ],
-    associations: ["HLA-DR3/DR4", "Other autoimmune diseases (Hashimoto, celiac)"],
-    complications: ["DKA", "Hypoglycemia with insulin therapy", "Microvascular complications"],
+    associations: [
+      "HLA-DR3/DR4",
+      "Other autoimmune diseases (Hashimoto, celiac)",
+    ],
+    complications: [
+      "DKA",
+      "Hypoglycemia with insulin therapy",
+      "Microvascular complications",
+    ],
     distinguishFrom: [
       "Type 2 DM — obese, insulin resistant, ↑ C-peptide",
       "MODY — autosomal dominant, milder, no autoantibodies",
@@ -978,7 +1013,11 @@ export const CONDITIONS: ConditionEntry[] = [
       "Hyponatremia, hyperkalemia in crisis",
     ],
     associations: ["Autosomal recessive", "HLA-linked"],
-    complications: ["Adrenal crisis", "Short stature if undertreated", "Infertility"],
+    complications: [
+      "Adrenal crisis",
+      "Short stature if undertreated",
+      "Infertility",
+    ],
     distinguishFrom: [
       "11β-hydroxylase deficiency — HTN, ↑ 11-deoxycortisol",
       "Androgen-secreting tumor",
@@ -1010,7 +1049,11 @@ export const CONDITIONS: ConditionEntry[] = [
     ],
     keyLabs: ["↑ serum prolactin (often >200 ng/mL in macroprolactinoma)"],
     keyFindings: ["Bitemporal hemianopia (chiasm compression)", "Galactorrhea"],
-    complications: ["Infertility", "Osteoporosis from hypogonadism", "Visual field loss"],
+    complications: [
+      "Infertility",
+      "Osteoporosis from hypogonadism",
+      "Visual field loss",
+    ],
     distinguishFrom: [
       "Pregnancy — physiologic hyperprolactinemia",
       "Dopamine antagonists (antipsychotics) — drug-induced hyperprolactinemia",
@@ -1067,7 +1110,11 @@ export const CONDITIONS: ConditionEntry[] = [
   {
     id: "addison-disease",
     name: "Addison Disease",
-    aliases: ["addison disease", "addison's disease", "primary adrenal insufficiency"],
+    aliases: [
+      "addison disease",
+      "addison's disease",
+      "primary adrenal insufficiency",
+    ],
     definition:
       "Primary adrenal insufficiency from destruction of the adrenal cortex, causing deficiency of cortisol and aldosterone.",
     pathophysiology:
@@ -1082,7 +1129,11 @@ export const CONDITIONS: ConditionEntry[] = [
       "Hyponatremia, hyperkalemia",
       "↑ eosinophils",
     ],
-    associations: ["Autoimmune polyglandular syndromes", "TB (worldwide)", "Adrenal hemorrhage (Waterhouse-Friderichsen)"],
+    associations: [
+      "Autoimmune polyglandular syndromes",
+      "TB (worldwide)",
+      "Adrenal hemorrhage (Waterhouse-Friderichsen)",
+    ],
     complications: ["Adrenal crisis — shock, hypoglycemia, death"],
     distinguishFrom: [
       "Secondary adrenal insufficiency — ↓ ACTH, no hyperpigmentation, no hyperkalemia",
@@ -1101,11 +1152,7 @@ export const CONDITIONS: ConditionEntry[] = [
   {
     id: "zollinger-ellison-syndrome",
     name: "Zollinger-Ellison Syndrome",
-    aliases: [
-      "zollinger-ellison syndrome",
-      "zes",
-      "gastrinoma",
-    ],
+    aliases: ["zollinger-ellison syndrome", "zes", "gastrinoma"],
     definition:
       "Gastrin-secreting neuroendocrine tumor (gastrinoma) causing refractory peptic ulcer disease and diarrhea.",
     pathophysiology:
@@ -1121,7 +1168,10 @@ export const CONDITIONS: ConditionEntry[] = [
       "↑ gastric acid secretion",
       "Secretin stimulation test: paradoxical ↑ gastrin",
     ],
-    associations: ["MEN 1 (gastrinoma + parathyroid + pituitary)", "Duodenal/jejunal ulcers"],
+    associations: [
+      "MEN 1 (gastrinoma + parathyroid + pituitary)",
+      "Duodenal/jejunal ulcers",
+    ],
     distinguishFrom: [
       "Routine PUD — H. pylori, NSAIDs; responds to PPI",
       "Retained antrum syndrome",
@@ -1154,7 +1204,12 @@ export const CONDITIONS: ConditionEntry[] = [
       "↓ IgA — check total IgA (false negative if IgA deficient)",
       "Duodenal biopsy: villous atrophy",
     ],
-    associations: ["HLA-DQ2/DQ8", "Type 1 diabetes", "Down syndrome", "Dermatitis herpetiformis"],
+    associations: [
+      "HLA-DQ2/DQ8",
+      "Type 1 diabetes",
+      "Down syndrome",
+      "Dermatitis herpetiformis",
+    ],
     complications: ["Malnutrition", "Osteoporosis", "T-cell lymphoma (rare)"],
     distinguishFrom: [
       "Tropical sprue — travel history, responds to antibiotics",
@@ -1185,9 +1240,16 @@ export const CONDITIONS: ConditionEntry[] = [
       "Rule of 2s: 2% population, 2 feet from ileocecal valve, 2 inches long, 2 types ectopic tissue, 2 years old",
       "Intussusception or obstruction",
     ],
-    keyFindings: ["Technetium-99m pertechnetate scan (Meckel scan) — detects ectopic gastric mucosa"],
+    keyFindings: [
+      "Technetium-99m pertechnetate scan (Meckel scan) — detects ectopic gastric mucosa",
+    ],
     associations: ["Ectopic gastric or pancreatic mucosa"],
-    complications: ["GI bleeding", "Intussusception", "Volvulus", "Diverticulitis"],
+    complications: [
+      "GI bleeding",
+      "Intussusception",
+      "Volvulus",
+      "Diverticulitis",
+    ],
     distinguishFrom: [
       "Intussusception — currant jelly stools, sausage-shaped mass",
       "Juvenile polyps — colonoscopy finding",
@@ -1207,7 +1269,11 @@ export const CONDITIONS: ConditionEntry[] = [
   {
     id: "wilson-disease",
     name: "Wilson Disease",
-    aliases: ["wilson disease", "wilson's disease", "hepatolenticular degeneration"],
+    aliases: [
+      "wilson disease",
+      "wilson's disease",
+      "hepatolenticular degeneration",
+    ],
     definition:
       "Autosomal recessive disorder of copper metabolism causing toxic copper accumulation in liver, brain, and cornea.",
     pathophysiology:
@@ -1217,14 +1283,20 @@ export const CONDITIONS: ConditionEntry[] = [
       "Tremor, personality change, dysarthria",
       "Hemolytic anemia",
     ],
-    keyFindings: ["Kayser-Fleischer rings (copper deposition in Descemet membrane)"],
+    keyFindings: [
+      "Kayser-Fleischer rings (copper deposition in Descemet membrane)",
+    ],
     keyLabs: [
       "↓ ceruloplasmin",
       "↑ urinary copper excretion",
       "↑ hepatic copper on biopsy",
     ],
     associations: ["Autosomal recessive", "ATP7B gene on chromosome 13"],
-    complications: ["Cirrhosis", "Hepatocellular carcinoma", "Neurologic disability"],
+    complications: [
+      "Cirrhosis",
+      "Hepatocellular carcinoma",
+      "Neurologic disability",
+    ],
     distinguishFrom: [
       "Hemochromatosis — bronze diabetes, ↑ ferritin, HFE mutation",
       "Autoimmune hepatitis — autoantibodies, normal copper studies",
@@ -1260,8 +1332,17 @@ export const CONDITIONS: ConditionEntry[] = [
       "Cobblestone mucosa, skip lesions on endoscopy",
       "String sign on small bowel follow-through",
     ],
-    associations: ["Smoking worsens disease", "HLA associations", "Extraintestinal manifestations"],
-    complications: ["Fistulae", "Strictures", "Abscesses", "Colorectal cancer (long-standing)"],
+    associations: [
+      "Smoking worsens disease",
+      "HLA associations",
+      "Extraintestinal manifestations",
+    ],
+    complications: [
+      "Fistulae",
+      "Strictures",
+      "Abscesses",
+      "Colorectal cancer (long-standing)",
+    ],
     distinguishFrom: [
       "Ulcerative colitis — continuous colonic disease, bloody diarrhea, no fistulae",
       "Celiac disease — villous atrophy, tTG positive",
@@ -1319,7 +1400,13 @@ export const CONDITIONS: ConditionEntry[] = [
   {
     id: "peptic-ulcer-disease",
     name: "Peptic Ulcer Disease",
-    aliases: ["peptic ulcer disease", "pud", "peptic ulcer", "gastric ulcer", "duodenal ulcer"],
+    aliases: [
+      "peptic ulcer disease",
+      "pud",
+      "peptic ulcer",
+      "gastric ulcer",
+      "duodenal ulcer",
+    ],
     definition:
       "Mucosal break in stomach or duodenum from acid-pepsin injury exceeding mucosal defenses.",
     pathophysiology:
@@ -1370,7 +1457,10 @@ export const CONDITIONS: ConditionEntry[] = [
       "↑ reticulocyte count",
       "Indirect hyperbilirubinemia",
     ],
-    associations: ["Autosomal recessive", "Malaria endemic areas (heterozygote advantage)"],
+    associations: [
+      "Autosomal recessive",
+      "Malaria endemic areas (heterozygote advantage)",
+    ],
     complications: [
       "Acute chest syndrome",
       "Stroke",
@@ -1496,7 +1586,11 @@ export const CONDITIONS: ConditionEntry[] = [
       "Hyperinflation on CXR",
     ],
     associations: ["Atopy", "Family history", "Occupational exposures"],
-    complications: ["Status asthmaticus", "Respiratory failure", "Airway remodeling"],
+    complications: [
+      "Status asthmaticus",
+      "Respiratory failure",
+      "Airway remodeling",
+    ],
     distinguishFrom: [
       "COPD — older, smokers, incomplete reversibility",
       "Cardiac asthma — heart failure with wheeze",
@@ -1534,7 +1628,11 @@ export const CONDITIONS: ConditionEntry[] = [
     ],
     keyLabs: ["↑ ACE (nonspecific)", "Hypercalcemia/hypercalciuria"],
     associations: ["African American ethnicity", "Female sex"],
-    complications: ["Pulmonary fibrosis", "Cardiac sarcoid (arrhythmias)", "Neurosarcoidosis"],
+    complications: [
+      "Pulmonary fibrosis",
+      "Cardiac sarcoid (arrhythmias)",
+      "Neurosarcoidosis",
+    ],
     distinguishFrom: [
       "Tuberculosis — caseating granulomas, positive AFB",
       "Lymphoma — B symptoms, mediastinal mass without granulomas",
@@ -1573,8 +1671,17 @@ export const CONDITIONS: ConditionEntry[] = [
       "Grunting (maintains PEEP)",
       "Hypoxemia, respiratory acidosis",
     ],
-    associations: ["Prematurity", "Maternal diabetes", "Male sex", "Cesarean delivery"],
-    complications: ["Pneumothorax", "Persistent pulmonary hypertension", "Bronchopulmonary dysplasia"],
+    associations: [
+      "Prematurity",
+      "Maternal diabetes",
+      "Male sex",
+      "Cesarean delivery",
+    ],
+    complications: [
+      "Pneumothorax",
+      "Persistent pulmonary hypertension",
+      "Bronchopulmonary dysplasia",
+    ],
     distinguishFrom: [
       "Transient tachypnea of newborn — term/near-term, fluid in lungs, resolves in 24–72 h",
       "Meconium aspiration — post-term, meconium-stained fluid",
@@ -1610,7 +1717,11 @@ export const CONDITIONS: ConditionEntry[] = [
       "↓ DLCO",
     ],
     associations: ["Smoking", "α1-antitrypsin deficiency (panacinar)"],
-    complications: ["Cor pulmonale", "Pneumothorax (especially bullae)", "Respiratory failure"],
+    complications: [
+      "Cor pulmonale",
+      "Pneumothorax (especially bullae)",
+      "Respiratory failure",
+    ],
     distinguishFrom: [
       "Chronic bronchitis — productive cough prominent, less hyperinflation",
       "Asthma — reversible obstruction, younger onset",
@@ -1628,7 +1739,13 @@ export const CONDITIONS: ConditionEntry[] = [
   {
     id: "pneumoconiosis",
     name: "Pneumoconiosis",
-    aliases: ["pneumoconiosis", "pneumoconioses", "silicosis", "asbestosis", "coal workers pneumoconiosis"],
+    aliases: [
+      "pneumoconiosis",
+      "pneumoconioses",
+      "silicosis",
+      "asbestosis",
+      "coal workers pneumoconiosis",
+    ],
     definition:
       "Interstitial lung disease from inhalation of mineral dusts (silica, asbestos, coal) causing fibrosis and restrictive physiology.",
     pathophysiology:
@@ -1647,7 +1764,11 @@ export const CONDITIONS: ConditionEntry[] = [
       "Silica exposure → ↑ tuberculosis risk",
       "Asbestos + smoking → synergistic lung cancer risk",
     ],
-    complications: ["Progressive massive fibrosis", "Mesothelioma (asbestos)", "Lung cancer"],
+    complications: [
+      "Progressive massive fibrosis",
+      "Mesothelioma (asbestos)",
+      "Lung cancer",
+    ],
     distinguishFrom: [
       "Sarcoidosis — noncaseating granulomas, BHL, no occupational history",
       "Idiopathic pulmonary fibrosis — no dust exposure",
@@ -1665,7 +1786,11 @@ export const CONDITIONS: ConditionEntry[] = [
   {
     id: "pulmonary-hypertension",
     name: "Pulmonary Hypertension",
-    aliases: ["pulmonary hypertension", "pah", "pulmonary arterial hypertension"],
+    aliases: [
+      "pulmonary hypertension",
+      "pah",
+      "pulmonary arterial hypertension",
+    ],
     definition:
       "Elevated mean pulmonary arterial pressure (≥20 mmHg at rest) from varied etiologies, leading to right heart strain and failure.",
     pathophysiology:
@@ -1680,7 +1805,10 @@ export const CONDITIONS: ConditionEntry[] = [
       "Parasternal heave (RV hypertrophy)",
       "Elevated JVP, peripheral edema (late)",
     ],
-    keyLabs: ["Echo: elevated RVSP, RV dilation", "Right heart catheterization — definitive"],
+    keyLabs: [
+      "Echo: elevated RVSP, RV dilation",
+      "Right heart catheterization — definitive",
+    ],
     associations: [
       "Idiopathic PAH",
       "Scleroderma",
@@ -1688,7 +1816,11 @@ export const CONDITIONS: ConditionEntry[] = [
       "Chronic thromboembolic disease",
       "COPD/hypoxemia (Eisenmenger)",
     ],
-    complications: ["Right heart failure", "Sudden death", "Syncope (poor prognostic sign)"],
+    complications: [
+      "Right heart failure",
+      "Sudden death",
+      "Syncope (poor prognostic sign)",
+    ],
     distinguishFrom: [
       "Left heart failure — pulmonary edema, ↓ EF",
       "Asthma/COPD — obstructive pattern on PFTs",
@@ -1722,7 +1854,11 @@ export const CONDITIONS: ConditionEntry[] = [
       "Hypercapnia, polycythemia",
     ],
     associations: ["Smoking", "Air pollution", "Occupational dusts"],
-    complications: ["Cor pulmonale", "Respiratory failure", "Secondary polycythemia"],
+    complications: [
+      "Cor pulmonale",
+      "Respiratory failure",
+      "Secondary polycythemia",
+    ],
     distinguishFrom: [
       "Emphysema — dyspnea predominant, hyperinflation, pink puffer",
       "Bronchiectasis — copious purulent sputum, dilated bronchi on CT",
@@ -1761,7 +1897,11 @@ export const CONDITIONS: ConditionEntry[] = [
       "IgA nephropathy (Berger disease)",
       "Rapidly progressive GN (Goodpasture, ANCA vasculitis)",
     ],
-    complications: ["Acute kidney injury", "Chronic kidney disease", "Hypertensive emergency"],
+    complications: [
+      "Acute kidney injury",
+      "Chronic kidney disease",
+      "Hypertensive emergency",
+    ],
     distinguishFrom: [
       "Nephrotic syndrome — heavy proteinuria (>3.5 g/day), fatty casts, minimal hematuria",
       "UTI — WBC casts, dysuria, positive culture",
@@ -1828,7 +1968,12 @@ export const CONDITIONS: ConditionEntry[] = [
   {
     id: "nephrolithiasis",
     name: "Nephrolithiasis",
-    aliases: ["nephrolithiasis", "kidney stones", "renal calculi", "urolithiasis"],
+    aliases: [
+      "nephrolithiasis",
+      "kidney stones",
+      "renal calculi",
+      "urolithiasis",
+    ],
     definition:
       "Formation of crystalline concretions in the urinary tract causing colicky flank pain and hematuria.",
     pathophysiology:
@@ -1882,8 +2027,18 @@ export const CONDITIONS: ConditionEntry[] = [
       "Pyuria, bacteriuria on urinalysis",
       "WBC casts suggest pyelonephritis",
     ],
-    associations: ["Female sex", "Sexual activity", "Catheterization", "Diabetes", "Pregnancy"],
-    complications: ["Pyelonephritis", "Urosepsis", "Emphysematous pyelonephritis (diabetics)"],
+    associations: [
+      "Female sex",
+      "Sexual activity",
+      "Catheterization",
+      "Diabetes",
+      "Pregnancy",
+    ],
+    complications: [
+      "Pyelonephritis",
+      "Urosepsis",
+      "Emphysematous pyelonephritis (diabetics)",
+    ],
     distinguishFrom: [
       "Vaginitis — external dysuria, discharge, normal urine culture",
       "Acute urethritis (GC/Chlamydia) — discharge, urethral inflammation",
@@ -1919,7 +2074,12 @@ export const CONDITIONS: ConditionEntry[] = [
       "Subcutaneous rheumatoid nodules",
     ],
     keyLabs: ["↑ RF", "↑ anti-CCP (more specific)", "↑ ESR/CRP"],
-    associations: ["HLA-DR4", "Smoking", "Pulmonary fibrosis", "Felty syndrome"],
+    associations: [
+      "HLA-DR4",
+      "Smoking",
+      "Pulmonary fibrosis",
+      "Felty syndrome",
+    ],
     complications: [
       "Joint destruction and deformity",
       "Atlantoaxial subluxation",
@@ -1959,8 +2119,17 @@ export const CONDITIONS: ConditionEntry[] = [
       "Short fourth metacarpal",
     ],
     keyLabs: ["Karyotype: 45,X or mosaic (45,X/46,XX)"],
-    associations: ["Coarctation of aorta", "Bicuspid aortic valve", "Horseshoe kidney"],
-    complications: ["Infertility", "Aortic dissection", "Osteoporosis", "Hypothyroidism (autoimmune)"],
+    associations: [
+      "Coarctation of aorta",
+      "Bicuspid aortic valve",
+      "Horseshoe kidney",
+    ],
+    complications: [
+      "Infertility",
+      "Aortic dissection",
+      "Osteoporosis",
+      "Hypothyroidism (autoimmune)",
+    ],
     distinguishFrom: [
       "Noonan syndrome — 46,XY or XX, pulmonary stenosis, normal ovaries",
       "Constitutional growth delay — normal karyotype",
@@ -2001,8 +2170,15 @@ export const CONDITIONS: ConditionEntry[] = [
       "Anti-Smith (specific)",
       "↓ C3/C4 (active disease)",
     ],
-    associations: ["HLA-DR2/DR3", "Drug-induced lupus (hydralazine, procainamide, isoniazid)"],
-    complications: ["Lupus nephritis", "Libman-Sacks endocarditis", "Antiphospholipid syndrome"],
+    associations: [
+      "HLA-DR2/DR3",
+      "Drug-induced lupus (hydralazine, procainamide, isoniazid)",
+    ],
+    complications: [
+      "Lupus nephritis",
+      "Libman-Sacks endocarditis",
+      "Antiphospholipid syndrome",
+    ],
     distinguishFrom: [
       "Rheumatoid arthritis — erosive, anti-CCP, spares malar rash",
       "Rosacea — centrofacial erythema, no systemic features",
@@ -2050,8 +2226,15 @@ export const CONDITIONS: ConditionEntry[] = [
       "↑ ESR/CRP",
       "Urinalysis: hematuria, RBC casts, ↑ creatinine",
     ],
-    associations: ["PR3-ANCA positivity", "Upper and lower respiratory tract involvement"],
-    complications: ["Renal failure", "Diffuse alveolar hemorrhage", "Chronic sinus/ear damage"],
+    associations: [
+      "PR3-ANCA positivity",
+      "Upper and lower respiratory tract involvement",
+    ],
+    complications: [
+      "Renal failure",
+      "Diffuse alveolar hemorrhage",
+      "Chronic sinus/ear damage",
+    ],
     distinguishFrom: [
       "Microscopic polyangiitis — pauci-immune GN and lung hemorrhage, usually without upper airway granulomas; MPO-ANCA",
       "Churg-Strauss (EGPA) — asthma, eosinophilia, neuropathy",
@@ -2100,8 +2283,16 @@ export const CONDITIONS: ConditionEntry[] = [
       "p-ANCA (anti-MPO) in ~40–60%",
       "↑ IgE, ↑ ESR/CRP",
     ],
-    associations: ["Pre-existing asthma", "Allergic rhinitis", "MPO-ANCA positivity"],
-    complications: ["Peripheral neuropathy", "Cardiac involvement (eosinophilic myocarditis)", "GI vasculitis"],
+    associations: [
+      "Pre-existing asthma",
+      "Allergic rhinitis",
+      "MPO-ANCA positivity",
+    ],
+    complications: [
+      "Peripheral neuropathy",
+      "Cardiac involvement (eosinophilic myocarditis)",
+      "GI vasculitis",
+    ],
     distinguishFrom: [
       "Asthma alone — no eosinophilic vasculitis or neuropathy",
       "GPA — c-ANCA/PR3, upper airway destruction, cavitary lung lesions",
@@ -2138,7 +2329,11 @@ export const CONDITIONS: ConditionEntry[] = [
       "Bizarre delusions",
       "Disorganized speech or behavior",
     ],
-    associations: ["Family history", "Cannabis use (adolescence)", "Urban upbringing"],
+    associations: [
+      "Family history",
+      "Cannabis use (adolescence)",
+      "Urban upbringing",
+    ],
     complications: ["Suicide", "Substance abuse", "Treatment nonadherence"],
     distinguishFrom: [
       "Schizophreniform — symptoms 1–6 months",
@@ -2177,8 +2372,16 @@ export const CONDITIONS: ConditionEntry[] = [
       "SIGECAPS: Sleep, Interest, Guilt, Energy, Concentration, Appetite, Psychomotor, Suicidality",
       "Psychomotor retardation or agitation",
     ],
-    associations: ["Family history", "Chronic medical illness", "Substance use"],
-    complications: ["Suicide", "Treatment-resistant depression", "Medical comorbidity"],
+    associations: [
+      "Family history",
+      "Chronic medical illness",
+      "Substance use",
+    ],
+    complications: [
+      "Suicide",
+      "Treatment-resistant depression",
+      "Medical comorbidity",
+    ],
     distinguishFrom: [
       "Persistent depressive disorder (dysthymia) — chronic low mood ≥2 years",
       "Bipolar depression — history of manic/hypomanic episodes",
@@ -2262,8 +2465,18 @@ export const CONDITIONS: ConditionEntry[] = [
       "Acid-fast bacilli on sputum smear",
       "Mycobacterial culture (gold standard)",
     ],
-    associations: ["HIV coinfection", "Silicosis", "Diabetes", "Homelessness, incarceration"],
-    complications: ["Miliary TB", "TB meningitis", "Pott disease (vertebral)", "Drug resistance (MDR-TB)"],
+    associations: [
+      "HIV coinfection",
+      "Silicosis",
+      "Diabetes",
+      "Homelessness, incarceration",
+    ],
+    complications: [
+      "Miliary TB",
+      "TB meningitis",
+      "Pott disease (vertebral)",
+      "Drug resistance (MDR-TB)",
+    ],
     distinguishFrom: [
       "Sarcoidosis — noncaseating granulomas, bilateral hilar lymphadenopathy",
       "Lung cancer — mass without infectious symptoms",
