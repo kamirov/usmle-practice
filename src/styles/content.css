@@ -53,6 +53,44 @@
   margin-bottom: 4px;
 }
 
+.usmle-heart-sound-chip {
+  display: inline;
+  margin: 0;
+  padding: 0 2px;
+  border: none;
+  border-radius: 3px;
+  background: rgba(190, 18, 60, 0.12);
+  color: inherit;
+  font: inherit;
+  line-height: inherit;
+  text-decoration: underline dotted rgba(190, 18, 60, 0.6);
+  text-underline-offset: 2px;
+  cursor: help;
+}
+
+.usmle-heart-sound-chip:hover,
+.usmle-heart-sound-chip:focus-visible {
+  background: rgba(190, 18, 60, 0.22);
+  outline: 1px solid rgba(190, 18, 60, 0.5);
+  outline-offset: 1px;
+}
+
+.usmle-organ-popover__title--heart {
+  color: #be123c;
+}
+
+.usmle-organ-popover__meaning {
+  margin-bottom: 8px;
+}
+
+.usmle-organ-popover__section-label {
+  margin-bottom: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #475569;
+}
+
+.usmle-organ-popover__list,
 .usmle-organ-popover__derivatives {
   margin: 6px 0 0;
   padding-left: 18px;
@@ -60,6 +98,7 @@
   color: #334155;
 }
 
+.usmle-organ-popover__list li,
 .usmle-organ-popover__derivatives li {
   margin-bottom: 2px;
 }

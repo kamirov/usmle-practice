@@ -1,6 +1,7 @@
+import { getHeartSoundById } from "../data/heartSounds";
 import { getOrganById } from "../data/organs";
 
-const CHIP_CLASS = "usmle-organ-chip";
+const CHIP_SELECTOR = ".usmle-organ-chip, .usmle-heart-sound-chip";
 const POPOVER_CLASS = "usmle-organ-popover";
 const HIDE_DELAY_MS = 120;
 
@@ -67,13 +68,13 @@ function positionPopover(chip: HTMLElement, popover: HTMLDivElement): void {
   popover.style.visibility = "visible";
 }
 
-function renderPopoverContent(organId: string): boolean {
+function renderOrganPopover(organId: string): boolean {
   const organ = getOrganById(organId);
   if (!organ || !popoverEl) return false;
 
   const derivatives =
     organ.derivatives && organ.derivatives.length > 0
-      ? `<ul class="usmle-organ-popover__derivatives">${organ.derivatives
+      ? `<ul class="usmle-organ-popover__list">${organ.derivatives
           .map((d) => `<li>${d}</li>`)
           .join("")}</ul>`
       : "";
@@ -87,9 +88,27 @@ function renderPopoverContent(organId: string): boolean {
   return true;
 }
 
+function renderHeartSoundPopover(heartSoundId: string): boolean {
+  const sound = getHeartSoundById(heartSoundId);
+  if (!sound || !popoverEl) return false;
+
+  const conditions = `<ul class="usmle-organ-popover__list">${sound.conditions
+    .map((c) => `<li>${c}</li>`)
+    .join("")}</ul>`;
+
+  popoverEl.innerHTML = `
+    <div class="usmle-organ-popover__title usmle-organ-popover__title--heart">${sound.name}</div>
+    <div class="usmle-organ-popover__meaning">${sound.meaning}</div>
+    <div class="usmle-organ-popover__section-label">Common conditions</div>
+    ${conditions}
+  `;
+  return true;
+}
+
 function showPopover(chip: HTMLElement): void {
   const organId = chip.dataset.organId;
-  if (!organId) return;
+  const heartSoundId = chip.dataset.heartSoundId;
+  if (!organId && !heartSoundId) return;
 
   if (hideTimer) {
     clearTimeout(hideTimer);
@@ -97,7 +116,10 @@ function showPopover(chip: HTMLElement): void {
   }
 
   const popover = ensurePopover();
-  if (!renderPopoverContent(organId)) return;
+  const rendered = organId
+    ? renderOrganPopover(organId)
+    : renderHeartSoundPopover(heartSoundId!);
+  if (!rendered) return;
 
   activeChip = chip;
   positionPopover(chip, popover);
@@ -108,7 +130,7 @@ export function startPopoverController(): void {
     "mouseover",
     (event) => {
       const target = (event.target as Element | null)?.closest(
-        `.${CHIP_CLASS}`,
+        CHIP_SELECTOR,
       ) as HTMLElement | null;
       if (!target) return;
       showPopover(target);
@@ -121,7 +143,7 @@ export function startPopoverController(): void {
     (event) => {
       const related = event.relatedTarget as Node | null;
       const from = (event.target as Element | null)?.closest(
-        `.${CHIP_CLASS}`,
+        CHIP_SELECTOR,
       ) as HTMLElement | null;
       if (!from || from !== activeChip) return;
       if (related && (from.contains(related) || popoverEl?.contains(related)))

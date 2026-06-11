@@ -1,10 +1,9 @@
-import {
-  buildAliasIndex,
-  buildMatchPattern,
-  type AliasMatch,
-} from "../data/organs";
+import { buildHeartSoundAliasIndex } from "../data/heartSounds";
+import { buildAliasIndex } from "../data/organs";
 
-const CHIP_CLASS = "usmle-organ-chip";
+const ORGAN_CHIP_CLASS = "usmle-organ-chip";
+const HEART_SOUND_CHIP_CLASS = "usmle-heart-sound-chip";
+const CHIP_SELECTOR = `.${ORGAN_CHIP_CLASS}, .${HEART_SOUND_CHIP_CLASS}`;
 const POPOVER_CLASS = "usmle-organ-popover";
 const SKIP_TAGS = new Set([
   "SCRIPT",
@@ -16,12 +15,56 @@ const SKIP_TAGS = new Set([
   "NOSCRIPT",
 ]);
 
-let aliasIndex: AliasMatch[] | null = null;
+type TermKind = "organ" | "heart-sound";
+
+interface TermMatch {
+  alias: string;
+  kind: TermKind;
+  id: string;
+}
+
+let termIndex: TermMatch[] | null = null;
 let matchPattern: RegExp | null = null;
 
+function buildTermIndex(): TermMatch[] {
+  const organMatches: TermMatch[] = buildAliasIndex().map(
+    ({ alias, organId }) => ({
+      alias,
+      kind: "organ" as const,
+      id: organId,
+    }),
+  );
+  const heartSoundMatches: TermMatch[] = buildHeartSoundAliasIndex().map(
+    ({ alias, heartSoundId }) => ({
+      alias,
+      kind: "heart-sound" as const,
+      id: heartSoundId,
+    }),
+  );
+  return [...organMatches, ...heartSoundMatches].sort(
+    (a, b) => b.alias.length - a.alias.length,
+  );
+}
+
+function escapeRegex(value: string): string {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+function buildCombinedMatchPattern(index: TermMatch[]): RegExp {
+  const parts = index.map(({ alias, kind }) => {
+    const escaped = escapeRegex(alias);
+    const plural =
+      kind === "organ" && !alias.endsWith("s")
+        ? `${escaped}(?:es|s)?`
+        : escaped;
+    return `\\b${plural}\\b`;
+  });
+  return new RegExp(`(${parts.join("|")})`, "gi");
+}
+
 function getMatchPattern(): RegExp {
-  if (!aliasIndex) aliasIndex = buildAliasIndex();
-  if (!matchPattern) matchPattern = buildMatchPattern(aliasIndex);
+  if (!termIndex) termIndex = buildTermIndex();
+  if (!matchPattern) matchPattern = buildCombinedMatchPattern(termIndex);
   return matchPattern;
 }
 
@@ -29,20 +72,26 @@ function shouldSkipNode(node: Node): boolean {
   let parent = node.parentElement;
   while (parent) {
     if (SKIP_TAGS.has(parent.tagName)) return true;
-    if (parent.classList.contains(CHIP_CLASS)) return true;
+    if (parent.classList.contains(ORGAN_CHIP_CLASS)) return true;
+    if (parent.classList.contains(HEART_SOUND_CHIP_CLASS)) return true;
     if (parent.classList.contains(POPOVER_CLASS)) return true;
-    if (parent.closest(`.${CHIP_CLASS}, .${POPOVER_CLASS}`)) return true;
+    if (parent.closest(`${CHIP_SELECTOR}, .${POPOVER_CLASS}`)) return true;
     parent = parent.parentElement;
   }
   return false;
 }
 
-function resolveOrganId(matchedText: string): string | null {
-  if (!aliasIndex) aliasIndex = buildAliasIndex();
+function resolveTerm(matchedText: string): TermMatch | null {
+  if (!termIndex) termIndex = buildTermIndex();
   const lower = matchedText.toLowerCase();
-  for (const { alias, organId } of aliasIndex) {
-    if (lower === alias) return organId;
-    if (lower === `${alias}es` || lower === `${alias}s`) return organId;
+  for (const entry of termIndex) {
+    if (lower === entry.alias) return entry;
+    if (
+      entry.kind === "organ" &&
+      (lower === `${entry.alias}es` || lower === `${entry.alias}s`)
+    ) {
+      return entry;
+    }
   }
   return null;
 }
@@ -51,7 +100,7 @@ function wrapMatch(
   doc: Document,
   text: string,
   matchText: string,
-  organId: string,
+  term: TermMatch,
 ): Node[] {
   const idx = text.toLowerCase().indexOf(matchText.toLowerCase());
   if (idx === -1) return [doc.createTextNode(text)];
@@ -61,8 +110,13 @@ function wrapMatch(
 
   const button = doc.createElement("button");
   button.type = "button";
-  button.className = CHIP_CLASS;
-  button.dataset.organId = organId;
+  button.className =
+    term.kind === "heart-sound" ? HEART_SOUND_CHIP_CLASS : ORGAN_CHIP_CLASS;
+  if (term.kind === "heart-sound") {
+    button.dataset.heartSoundId = term.id;
+  } else {
+    button.dataset.organId = term.id;
+  }
   button.textContent = text.slice(idx, idx + matchText.length);
   nodes.push(button);
 
@@ -97,13 +151,13 @@ function highlightTextNode(textNode: Text): boolean {
     }
 
     const matchText = match[0];
-    const organId = resolveOrganId(matchText);
-    if (!organId) {
+    const term = resolveTerm(matchText);
+    if (!term) {
       fragment.appendChild(doc.createTextNode(remaining));
       break;
     }
 
-    const wrapped = wrapMatch(doc, remaining, matchText, organId);
+    const wrapped = wrapMatch(doc, remaining, matchText, term);
     for (const node of wrapped) fragment.appendChild(node);
     changed = true;
 
