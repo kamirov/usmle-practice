@@ -561,28 +561,39 @@ export const SYMPTOMS: SymptomEntry[] = [
   {
     id: "cyanosis",
     name: "Cyanosis",
-    aliases: ["cyanosis"],
+    aliases: [
+      "cyanosis",
+      "cyanotic",
+      "central cyanosis",
+      "peripheral cyanosis",
+      "cyanotic heart disease",
+      "cyanotic spell",
+    ],
     definition:
-      "Bluish discoloration of skin or mucous membranes from increased deoxygenated hemoglobin in capillaries.",
+      "Bluish discoloration of skin or mucous membranes from increased deoxygenated hemoglobin in capillaries; a cyanotic patient has clinically apparent cyanosis.",
     mechanism:
-      "Visible when reduced (deoxygenated) Hb ≥ ~5 g/dL in capillaries; reflects hypoxemia, poor perfusion, or abnormal hemoglobin.",
+      "Visible when reduced (deoxygenated) Hb ≥ ~5 g/dL in capillaries; reflects hypoxemia, right-to-left shunting, poor perfusion, or abnormal hemoglobin (methemoglobin, sulfhemoglobin).",
     thinkOf: [
-      "Right-to-left shunt (congenital heart disease, Eisenmenger)",
+      "Cyanotic congenital heart disease (tetralogy of Fallot, TGA, truncus arteriosus, tricuspid atresia)",
+      "Right-to-left shunt with Eisenmenger syndrome",
       "Severe lung disease (COPD, ARDS)",
       "Pulmonary embolism",
       "Methemoglobinemia",
       "Cold exposure / peripheral vasoconstriction",
     ],
     pairWith: [
-      "Clubbing → chronic hypoxemia (CF, congenital heart disease)",
+      "Clubbing → chronic hypoxemia (CF, cyanotic congenital heart disease)",
       "Polycythemia → chronic hypoxic drive",
       "Chocolate-colored blood → methemoglobinemia",
-      "Differential cyanosis → PDA with R→L shunt",
+      "Differential cyanosis → PDA with R→L shunt (lower body cyanotic, upper body pink)",
+      "Hyperoxia test: PaO₂ fails to rise with 100% O₂ → cardiac shunt (vs lung disease)",
+      "Peds: cyanotic spell in tetralogy of Fallot — squatting ↑ SVR, ↓ R→L shunt",
     ],
     distinguishFrom: [
-      "Central cyanosis — lips/tongue (hypoxemia or abnormal Hb)",
-      "Peripheral cyanosis — cool extremities (low flow, not always hypoxemia)",
-      "Acrocyanosis of newborn — benign peripheral cyanosis",
+      "Central cyanosis — lips/tongue (hypoxemia, shunt, or abnormal Hb)",
+      "Peripheral cyanosis — cool extremities (low flow; may occur without severe hypoxemia)",
+      "Acrocyanosis of newborn — benign peripheral cyanosis of hands/feet",
+      "Acyanotic congenital heart disease — left-to-right shunt (VSD, ASD, PDA) without resting cyanosis",
     ],
   },
   {

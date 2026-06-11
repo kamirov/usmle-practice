@@ -4,6 +4,7 @@ import {
   getAntiarrhythmicImageForMedication,
 } from "../data/antiarrhythmicMedia";
 import type { MediaAttribution } from "../data/media";
+import { getClinicalStrategyById } from "../data/clinicalStrategies";
 import { getConditionById } from "../data/conditions";
 import { getEcgFindingById } from "../data/ecgFindings";
 import { getHeartSoundById } from "../data/heartSounds";
@@ -18,7 +19,7 @@ import { getSignalingById } from "../data/signaling";
 import { getSymptomById } from "../data/symptoms";
 
 const CHIP_SELECTOR =
-  ".usmle-organ-chip, .usmle-heart-sound-chip, .usmle-hemodynamic-chip, .usmle-symptom-chip, .usmle-medication-chip, .usmle-lab-chip, .usmle-nephron-chip, .usmle-condition-chip, .usmle-protein-chip, .usmle-signaling-chip, .usmle-ecg-chip, .usmle-procedure-chip";
+  ".usmle-organ-chip, .usmle-heart-sound-chip, .usmle-hemodynamic-chip, .usmle-symptom-chip, .usmle-medication-chip, .usmle-lab-chip, .usmle-nephron-chip, .usmle-condition-chip, .usmle-protein-chip, .usmle-signaling-chip, .usmle-ecg-chip, .usmle-procedure-chip, .usmle-clinical-strategy-chip";
 const POPOVER_CLASS = "usmle-organ-popover";
 const HIDE_DELAY_MS = 120;
 
@@ -345,6 +346,21 @@ function renderEcgFindingPopover(ecgFindingId: string): boolean {
   return true;
 }
 
+function renderClinicalStrategyPopover(clinicalStrategyId: string): boolean {
+  const strategy = getClinicalStrategyById(clinicalStrategyId);
+  if (!strategy || !popoverEl) return false;
+
+  popoverEl.classList.add("usmle-organ-popover--rich");
+  popoverEl.innerHTML = `
+    <div class="usmle-organ-popover__title usmle-organ-popover__title--clinical-strategy">${strategy.name}</div>
+    <div class="usmle-organ-popover__meaning">${strategy.definition}</div>
+    ${renderListSection("Key points", strategy.details)}
+    ${renderListSection("Boards pearls", strategy.boardsPearls)}
+    ${strategy.pediatrics ? renderPediatricsSection(strategy.pediatrics) : ""}
+  `;
+  return true;
+}
+
 function renderProcedurePopover(procedureId: string): boolean {
   const procedure = getProcedureById(procedureId);
   if (!procedure || !popoverEl) return false;
@@ -425,6 +441,7 @@ function showPopover(chip: HTMLElement): void {
   const signalingId = chip.dataset.signalingId;
   const ecgFindingId = chip.dataset.ecgFindingId;
   const procedureId = chip.dataset.procedureId;
+  const clinicalStrategyId = chip.dataset.clinicalStrategyId;
   if (
     !organId &&
     !heartSoundId &&
@@ -437,7 +454,8 @@ function showPopover(chip: HTMLElement): void {
     !proteinId &&
     !signalingId &&
     !ecgFindingId &&
-    !procedureId
+    !procedureId &&
+    !clinicalStrategyId
   )
     return;
 
@@ -473,7 +491,9 @@ function showPopover(chip: HTMLElement): void {
                       ? renderSignalingPopover(signalingId)
                       : ecgFindingId
                         ? renderEcgFindingPopover(ecgFindingId)
-                        : renderProcedurePopover(procedureId!);
+                        : procedureId
+                          ? renderProcedurePopover(procedureId)
+                          : renderClinicalStrategyPopover(clinicalStrategyId!);
   if (!rendered) return;
 
   activeChip = chip;

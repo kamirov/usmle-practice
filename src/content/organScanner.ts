@@ -1,3 +1,4 @@
+import { buildClinicalStrategyAliasIndex } from "../data/clinicalStrategies";
 import { buildConditionAliasIndex } from "../data/conditions";
 import { buildEcgFindingAliasIndex } from "../data/ecgFindings";
 import { buildHeartSoundAliasIndex } from "../data/heartSounds";
@@ -23,7 +24,8 @@ const PROTEIN_CHIP_CLASS = "usmle-protein-chip";
 const SIGNALING_CHIP_CLASS = "usmle-signaling-chip";
 const ECG_CHIP_CLASS = "usmle-ecg-chip";
 const PROCEDURE_CHIP_CLASS = "usmle-procedure-chip";
-const CHIP_SELECTOR = `.${ORGAN_CHIP_CLASS}, .${HEART_SOUND_CHIP_CLASS}, .${HEMODYNAMIC_CHIP_CLASS}, .${SYMPTOM_CHIP_CLASS}, .${MEDICATION_CHIP_CLASS}, .${LAB_CHIP_CLASS}, .${NEPHRON_CHIP_CLASS}, .${CONDITION_CHIP_CLASS}, .${PROTEIN_CHIP_CLASS}, .${SIGNALING_CHIP_CLASS}, .${ECG_CHIP_CLASS}, .${PROCEDURE_CHIP_CLASS}`;
+const CLINICAL_STRATEGY_CHIP_CLASS = "usmle-clinical-strategy-chip";
+const CHIP_SELECTOR = `.${ORGAN_CHIP_CLASS}, .${HEART_SOUND_CHIP_CLASS}, .${HEMODYNAMIC_CHIP_CLASS}, .${SYMPTOM_CHIP_CLASS}, .${MEDICATION_CHIP_CLASS}, .${LAB_CHIP_CLASS}, .${NEPHRON_CHIP_CLASS}, .${CONDITION_CHIP_CLASS}, .${PROTEIN_CHIP_CLASS}, .${SIGNALING_CHIP_CLASS}, .${ECG_CHIP_CLASS}, .${PROCEDURE_CHIP_CLASS}, .${CLINICAL_STRATEGY_CHIP_CLASS}`;
 const OUR_CHIP_CLASSES = [
   ORGAN_CHIP_CLASS,
   HEART_SOUND_CHIP_CLASS,
@@ -37,6 +39,7 @@ const OUR_CHIP_CLASSES = [
   SIGNALING_CHIP_CLASS,
   ECG_CHIP_CLASS,
   PROCEDURE_CHIP_CLASS,
+  CLINICAL_STRATEGY_CHIP_CLASS,
 ] as const;
 const POPOVER_CLASS = "usmle-organ-popover";
 const SKIP_TAGS = new Set([
@@ -98,7 +101,8 @@ type TermKind =
   | "protein"
   | "signaling"
   | "ecg"
-  | "procedure";
+  | "procedure"
+  | "clinical-strategy";
 
 interface TermMatch {
   alias: string;
@@ -264,6 +268,8 @@ function chipSelectorForTerm(term: TermMatch): string {
       return `[data-ecg-finding-id="${CSS.escape(term.id)}"]`;
     case "procedure":
       return `[data-procedure-id="${CSS.escape(term.id)}"]`;
+    case "clinical-strategy":
+      return `[data-clinical-strategy-id="${CSS.escape(term.id)}"]`;
     default:
       return `[data-organ-id="${CSS.escape(term.id)}"]`;
   }
@@ -456,6 +462,12 @@ function buildTermIndex(): TermMatch[] {
       id: procedureId,
     }),
   );
+  const clinicalStrategyMatches: TermMatch[] =
+    buildClinicalStrategyAliasIndex().map(({ alias, clinicalStrategyId }) => ({
+      alias,
+      kind: "clinical-strategy" as const,
+      id: clinicalStrategyId,
+    }));
   return [
     ...organMatches,
     ...heartSoundMatches,
@@ -469,6 +481,7 @@ function buildTermIndex(): TermMatch[] {
     ...signalingMatches,
     ...ecgMatches,
     ...procedureMatches,
+    ...clinicalStrategyMatches,
   ].sort(
     (a, b) => b.alias.length - a.alias.length || a.alias.localeCompare(b.alias),
   );
@@ -636,6 +649,9 @@ function createChip(
   } else if (term.kind === "procedure") {
     button.className = PROCEDURE_CHIP_CLASS;
     button.dataset.procedureId = term.id;
+  } else if (term.kind === "clinical-strategy") {
+    button.className = CLINICAL_STRATEGY_CHIP_CLASS;
+    button.dataset.clinicalStrategyId = term.id;
   } else {
     button.className = ORGAN_CHIP_CLASS;
     button.dataset.organId = term.id;

@@ -403,6 +403,32 @@
   color: #c2410c;
 }
 
+.usmle-clinical-strategy-chip {
+  display: inline;
+  margin: 0;
+  padding: 0 2px;
+  border: none;
+  border-radius: 3px;
+  background: rgba(2, 132, 199, 0.06);
+  color: inherit;
+  font: inherit;
+  line-height: inherit;
+  text-decoration: underline dotted rgba(2, 132, 199, 0.35);
+  text-underline-offset: 2px;
+  cursor: help;
+}
+
+.usmle-clinical-strategy-chip:hover,
+.usmle-clinical-strategy-chip:focus-visible {
+  background: rgba(2, 132, 199, 0.12);
+  outline: 1px solid rgba(2, 132, 199, 0.3);
+  outline-offset: 1px;
+}
+
+.usmle-organ-popover__title--clinical-strategy {
+  color: #0369a1;
+}
+
 .usmle-organ-popover__meaning {
   margin-bottom: 8px;
 }
