@@ -1,0 +1,10 @@
+ECG finding images for USMLE Study Tools popovers.
+
+electrical-alternans.jpg
+  Source: Wikimedia Commons — Electrical Alternans.JPG
+  Author: James Heilman, MD
+  Description: Electrical alternans, tachycardia, and low voltage in a person with a large pericardial effusion
+  License: Creative Commons Attribution-Share Alike 3.0 Unported
+  Page: https://commons.wikimedia.org/wiki/File:Electrical_Alternans.JPG
+  Download: https://commons.wikimedia.org/wiki/Special:FilePath/Electrical_Alternans.JPG?width=1280
+  Resized to 1280 px width for popover display.

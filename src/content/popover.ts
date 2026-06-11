@@ -6,6 +6,11 @@ import {
 import type { MediaAttribution } from "../data/media";
 import { getClinicalStrategyById } from "../data/clinicalStrategies";
 import { getConditionById } from "../data/conditions";
+import {
+  getEcgFindingImageAttributionForId,
+  getEcgFindingImageCaptionForId,
+  getEcgFindingImageForId,
+} from "../data/ecgFindingMedia";
 import { getEcgFindingById } from "../data/ecgFindings";
 import {
   getHeartMurmurAudioAttributionForId,
@@ -416,8 +421,11 @@ function renderEcgFindingPopover(ecgFindingId: string): boolean {
   const finding = getEcgFindingById(ecgFindingId);
   if (!finding || !popoverEl) return false;
 
-  popoverEl.classList.add("usmle-organ-popover--rich");
-  popoverEl.innerHTML = `
+  const imageSrc = getEcgFindingImageForId(ecgFindingId);
+  const imageCaption = getEcgFindingImageCaptionForId(ecgFindingId);
+  const imageAttribution = getEcgFindingImageAttributionForId(ecgFindingId);
+
+  const bodyContent = `
     <div class="usmle-organ-popover__title usmle-organ-popover__title--ecg">${finding.name}</div>
     <div class="usmle-organ-popover__meaning">${finding.interpretation}</div>
     <div class="usmle-organ-popover__layer"><strong>Territory:</strong> ${finding.territory}</div>
@@ -426,6 +434,24 @@ function renderEcgFindingPopover(ecgFindingId: string): boolean {
     ${renderListSection("Boards pearls", finding.boardsPearls)}
     ${finding.pediatrics ? renderPediatricsSection(finding.pediatrics) : ""}
   `;
+
+  popoverEl.classList.add("usmle-organ-popover--rich");
+  if (imageSrc && imageCaption && imageAttribution) {
+    popoverEl.classList.add("usmle-organ-popover--with-media");
+    popoverEl.innerHTML = `
+      <div class="usmle-organ-popover__layout">
+        <div class="usmle-organ-popover__body">${bodyContent}</div>
+        ${renderPopoverMediaBlock({
+          src: imageSrc,
+          alt: `${finding.name} ECG example`,
+          caption: imageCaption,
+          attribution: imageAttribution,
+        })}
+      </div>
+    `;
+  } else {
+    popoverEl.innerHTML = bodyContent;
+  }
   return true;
 }
 
