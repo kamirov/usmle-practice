@@ -30,7 +30,7 @@ export const MEDICATIONS: MedicationEntry[] = [
     boardsPearls: [
       "Hypokalemia, hypomagnesemia, hypercalcemia, and renal failure increase toxicity",
       "Amiodarone, verapamil, and quinidine increase digoxin levels",
-      "Severe toxicity: treat with digoxin-specific Fab fragments",
+      "Toxicity antidote: digoxin-specific Fab fragments (binds free digoxin)",
     ],
   },
   {
@@ -127,7 +127,7 @@ export const MEDICATIONS: MedicationEntry[] = [
       "Masks hypoglycemia symptoms",
     ],
     boardsPearls: [
-      "Do not start in acute decompensated HF; used chronically for mortality benefit",
+      "Contraindicated in acute decompensated HF (↓ contractility worsens pump failure)",
       "Avoid abrupt withdrawal → rebound tachycardia / ischemia",
       "β1-selective but still use caution in asthma",
     ],
@@ -154,7 +154,7 @@ export const MEDICATIONS: MedicationEntry[] = [
     boardsPearls: [
       "Many drug interactions via CYP inhibition; increases digoxin levels",
       "Contains iodine → thyroid dysfunction",
-      "Check PFTs, LFTs, TFTs with chronic use",
+      "Long-term toxicities: pulmonary fibrosis, hepatotoxicity, corneal deposits, thyroid dysfunction",
     ],
   },
   {
@@ -174,10 +174,10 @@ export const MEDICATIONS: MedicationEntry[] = [
       "Bronchospasm (use caution in asthma/COPD)",
     ],
     boardsPearls: [
-      "Rapid IV push followed by saline flush; half-life ~10 seconds",
-      "Ineffective if given as slow infusion or orally",
+      "Half-life ~10 seconds — terminated by RBC/endothelial uptake",
+      "Ineffective orally or as slow infusion (degraded before reaching AV node)",
       "Methylxanthines (caffeine, theophylline) antagonize effect",
-      "Pediatrics: same role in SVT; weight-based dosing",
+      "Pediatrics: same mechanism in SVT; blocked by methylxanthines",
     ],
   },
   {
@@ -201,8 +201,8 @@ export const MEDICATIONS: MedicationEntry[] = [
     boardsPearls: [
       "Contraindications: recent stroke/surgery, active bleeding, uncontrolled HTN",
       "Stroke window typically ≤4.5 h from last known well",
-      "Avoid anticoagulation/antiplatelets until bleeding risk assessed",
-      "Tenecteplase is an alternative fibrin-specific TPA for STEMI",
+      "Converts plasminogen → plasmin; major risk is intracranial hemorrhage",
+      "Tenecteplase: modified tPA with longer half-life (fibrin-specific)",
     ],
   },
   {
@@ -225,10 +225,10 @@ export const MEDICATIONS: MedicationEntry[] = [
       "Paradoxical bradycardia at low doses",
     ],
     boardsPearls: [
-      "ACLS: 1 mg IV q3–5 min up to 3 mg for symptomatic bradycardia",
-      "Not for high-degree (type II second-degree or third-degree) AV block",
-      "Antidote for cholinergic excess; organophosphate poisoning → atropine + pralidoxime",
-      "Pediatrics: bradycardia often hypoxic — prioritize ventilation before atropine",
+      "Muscarinic antagonist → ↑ HR via M2 blockade on SA/AV node",
+      "Not effective for high-degree (type II second-degree or third-degree) AV block",
+      "Organophosphate poisoning → atropine + pralidoxime (reactivates acetylcholinesterase)",
+      "Pediatrics: bradycardia in infants often from hypoxia — address airway first",
     ],
   },
   {
@@ -253,8 +253,8 @@ export const MEDICATIONS: MedicationEntry[] = [
     boardsPearls: [
       "Reversed by naloxone; shorter naloxone half-life → risk of renarcotization",
       "Avoid in severe asthma, COPD, or undiagnosed head injury (↑ CO₂ retention / ↑ ICP)",
-      "Reduce dose in renal/hepatic failure; active metabolite morphine-6-glucuronide accumulates",
-      "Pediatrics: weight-based dosing; respiratory depression is leading toxicity — monitor closely",
+      "Active metabolite morphine-6-glucuronide accumulates in renal failure → prolonged toxicity",
+      "Pediatrics: respiratory depression is leading toxicity; same μ-receptor mechanism",
     ],
   },
   {
@@ -275,10 +275,10 @@ export const MEDICATIONS: MedicationEntry[] = [
       "Recurrent depression as naloxone wears off (shorter half-life than many opioids)",
     ],
     boardsPearls: [
-      "Pinpoint pupils + ↓ respirations → give naloxone; may need repeat doses",
-      "Start 0.4–2 mg IV/IM/IN; titrate to adequate respirations, not full wakefulness",
-      "Observe for renarcotization — fentanyl and long-acting opioids may need infusion",
-      "Pediatrics: same indication; accidental ingestion or iatrogenic overdose",
+      "Pinpoint pupils + ↓ respirations → opioid toxicity; competitive μ-receptor antagonist",
+      "Shorter half-life than most opioids → renarcotization risk as naloxone wears off",
+      "Precipitates acute withdrawal in opioid-dependent patients",
+      "Pediatrics: same toxidrome; accidental ingestion or iatrogenic overdose",
     ],
   },
   {
@@ -324,9 +324,9 @@ export const MEDICATIONS: MedicationEntry[] = [
       "Hyperkalemia (suppressed aldosterone)",
     ],
     boardsPearls: [
-      "Monitor aPTT (unfractionated heparin)",
-      "HIT: thrombocytopenia + thrombosis → stop heparin, use direct thrombin inhibitor",
-      "Protamine sulfate reverses UFH",
+      "Binds antithrombin III → potentiates inhibition of thrombin (IIa) and factor Xa",
+      "HIT: immune-mediated anti-PF4 antibodies → thrombocytopenia + thrombosis",
+      "Protamine sulfate reverses UFH (cationic protein binds acidic heparin)",
     ],
   },
   {
@@ -347,10 +347,10 @@ export const MEDICATIONS: MedicationEntry[] = [
       "Teratogenic — contraindicated in pregnancy",
     ],
     boardsPearls: [
-      "Monitor INR; narrow therapeutic window",
-      "Vitamin K-rich foods and CYP2C9 inhibitors (metronidazole, amiodarone) ↑ effect",
-      "Bridge with heparin/LMWH when starting (initial procoagulant state)",
-      "Reversal: vitamin K, FFP, or prothrombin complex concentrate",
+      "Inhibits vitamin K epoxide reductase → ↓ factors II, VII, IX, X and protein C & S",
+      "Narrow therapeutic window; vitamin K–rich foods and CYP2C9 inhibitors ↑ effect",
+      "Skin necrosis early in therapy if congenital protein C deficiency",
+      "Teratogenic — crosses placenta; fetal hemorrhage risk",
     ],
   },
   {
@@ -369,9 +369,9 @@ export const MEDICATIONS: MedicationEntry[] = [
       "No routine monitoring required",
     ],
     boardsPearls: [
-      "Preferred over warfarin in many nonvalvular AF scenarios",
-      "Andexanet alfa reverses apixaban (and rivaroxaban) in life-threatening bleeding",
-      "Avoid in mechanical valves and severe renal impairment (relative)",
+      "Direct factor Xa inhibitor — no routine coagulation monitoring needed",
+      "Contraindicated with mechanical heart valves (thrombosis risk)",
+      "Renally cleared — accumulation risk with impaired kidney function",
     ],
   },
   {
@@ -395,9 +395,9 @@ export const MEDICATIONS: MedicationEntry[] = [
       "Asthma exacerbation (aspirin-exacerbated respiratory disease)",
     ],
     boardsPearls: [
-      "ACS: chew 162–325 mg, then daily low-dose (81 mg) indefinitely",
+      "Irreversible COX-1 inhibition → antiplatelet effect lasts platelet lifespan (~7–10 days)",
       "Contraindicated in children with febrile viral illness (Reye syndrome)",
-      "Triple therapy post-PCI: aspirin + P2Y12 inhibitor + anticoagulation (bleeding risk)",
+      "Low-dose: antiplatelet; high-dose: analgesic/antipyretic/anti-inflammatory",
       "Pediatrics: avoid for fever in varicella/influenza; used in Kawasaki disease",
     ],
   },
@@ -419,8 +419,8 @@ export const MEDICATIONS: MedicationEntry[] = [
       "Vitamin B12 deficiency (chronic use)",
     ],
     boardsPearls: [
-      "Hold before iodinated contrast and major surgery (renal risk)",
-      "Contraindicated in eGFR <30",
+      "↓ hepatic gluconeogenesis; does not stimulate insulin secretion",
+      "Contraindicated in eGFR <30 (lactic acidosis risk)",
       "Does not cause hypoglycemia as monotherapy",
     ],
   },
@@ -444,9 +444,9 @@ export const MEDICATIONS: MedicationEntry[] = [
       "Hypokalemia (during treatment of DKA)",
     ],
     boardsPearls: [
-      "DKA: IV regular insulin + fluids + K⁺ replacement",
-      "β-blockers mask hypoglycemia symptoms",
-      "Peak times differ by formulation (rapid, NPH, glargine, etc.)",
+      "Drives K⁺ intracellularly — given with glucose for hyperkalemia",
+      "β-blockers mask hypoglycemia symptoms (tachycardia, tremor)",
+      "Formulations differ by onset and duration (rapid, NPH, glargine, etc.)",
     ],
   },
   {
@@ -466,9 +466,9 @@ export const MEDICATIONS: MedicationEntry[] = [
       "Atrial fibrillation in elderly if over-replaced",
     ],
     boardsPearls: [
-      "Take on empty stomach; many drug interactions (Ca²⁺, Fe, PPIs ↓ absorption)",
-      "Adjust dose in pregnancy",
-      "Narrow therapeutic window — check TSH",
+      "T4 prodrug → peripheral conversion to active T3",
+      "Many drug interactions (Ca²⁺, Fe, PPIs ↓ absorption)",
+      "Pregnancy ↑ thyroid hormone requirements; TSH guides adequacy",
     ],
   },
   {
@@ -518,7 +518,7 @@ export const MEDICATIONS: MedicationEntry[] = [
     ],
     boardsPearls: [
       "High-potency typical antipsychotic → more EPS, less sedation/anticholinergic effects",
-      "NMS: rigidity, fever, autonomic instability → stop drug, dantrolene/bromocriptine",
+      "NMS: rigidity, fever, autonomic instability, ↑ CK — dopamine blockade toxicity",
       "Avoid in Lewy body dementia (severe sensitivity)",
     ],
   },
@@ -542,7 +542,7 @@ export const MEDICATIONS: MedicationEntry[] = [
       "Ataxia",
     ],
     boardsPearls: [
-      "CIWA protocol for alcohol withdrawal",
+      "Alcohol withdrawal: GABA facilitation prevents seizures and delirium tremens",
       "Flumazenil reverses overdose but may precipitate seizures",
       "Avoid combining with alcohol/opioids",
     ],
@@ -589,9 +589,9 @@ export const MEDICATIONS: MedicationEntry[] = [
       "Neuromuscular blockade",
     ],
     boardsPearls: [
-      "Requires therapeutic drug monitoring (peak/trough)",
-      "Synergistic with β-lactams for enterococcal endocarditis",
-      "Avoid with other nephrotoxins/ototoxins (loop diuretics, vancomycin)",
+      "Binds 30S ribosomal subunit → misreading of mRNA (concentration-dependent killing)",
+      "Synergistic with β-lactams for enterococcal endocarditis (cell-wall + protein synthesis)",
+      "Nephrotoxic and ototoxic — risk ↑ with loop diuretics and vancomycin",
     ],
   },
   {
@@ -613,9 +613,9 @@ export const MEDICATIONS: MedicationEntry[] = [
       "Thrombophlebitis",
     ],
     boardsPearls: [
-      "Monitor trough levels for IV therapy",
-      "Infuse slowly to prevent red man syndrome",
-      "Oral vancomycin not absorbed — treats C. difficile in gut",
+      "Binds D-Ala-D-Ala → inhibits peptidoglycan polymerization (Gram-positive)",
+      "Red man syndrome from rapid infusion (histamine release, not true allergy)",
+      "Oral vancomycin not absorbed — treats C. difficile in gut lumen only",
     ],
   },
   {

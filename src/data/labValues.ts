@@ -57,7 +57,7 @@ export const LAB_VALUES: LabValueEntry[] = [
       "Bone marrow suppression",
     ],
     boardsPearls: [
-      "Hgb <7 g/dL often triggers transfusion threshold (clinical context matters)",
+      "Anemia workup: classify by MCV → iron studies, B12/folate, or reticulocyte count",
       "Peds: age-specific normals — infants have higher physiologic Hgb",
     ],
     pairWith: [
@@ -111,7 +111,7 @@ export const LAB_VALUES: LabValueEntry[] = [
     ],
     boardsPearls: [
       "TTP pentad: fever, thrombocytopenia, MAHA, neuro symptoms, renal dysfunction",
-      "HIT: platelets fall 5–10 days after heparin — do not give heparin again",
+      "HIT: thrombocytopenia 5–10 days after heparin + thrombosis (anti-PF4 antibodies)",
       "Peds: ITP after viral illness — often self-limited",
     ],
     pairWith: [
@@ -168,7 +168,7 @@ export const LAB_VALUES: LabValueEntry[] = [
       "Psychogenic polydipsia",
     ],
     boardsPearls: [
-      "Correct Na⁺ slowly in chronic hyponatremia to avoid osmotic demyelination",
+      "Rapid correction of chronic hyponatremia → osmotic demyelination syndrome",
       "Hypernatremia = water deficit; think DI or inadequate access to water",
       "Peds: same principles; infants vulnerable with GI losses",
     ],
@@ -200,7 +200,7 @@ export const LAB_VALUES: LabValueEntry[] = [
     ],
     boardsPearls: [
       "Peaked T waves → hyperkalemia; sine wave → imminent arrest",
-      "Replete Mg²⁺ to correct refractory hypokalemia",
+      "Refractory hypokalemia — check Mg²⁺ (hypomagnesemia impairs K⁺ reabsorption)",
       "Pseudohyperkalemia with hemolyzed sample",
     ],
     pairWith: [
@@ -279,7 +279,7 @@ export const LAB_VALUES: LabValueEntry[] = [
     ],
     boardsPearls: [
       "eGFR staging for CKD",
-      "Creatinine may be normal early in AKI — watch urine output and BUN",
+      "Creatinine may be normal early in AKI — lags behind actual GFR decline",
       "Peds: creatinine is low at birth, rises with muscle mass",
     ],
     pairWith: [
@@ -466,7 +466,7 @@ export const LAB_VALUES: LabValueEntry[] = [
     ],
     boardsPearls: [
       "Acute gout attack may have normal uric acid",
-      "TLS: prevent with allopurinol/rasburicase; hydrate aggressively",
+      "TLS labs: ↑ uric acid, ↑ K⁺, ↑ phos, ↓ Ca²⁺ after tumor breakdown (chemo)",
       "Urate nephropathy with chemotherapy",
     ],
     pairWith: [
@@ -489,8 +489,8 @@ export const LAB_VALUES: LabValueEntry[] = [
     ],
     decreasedCauses: ["Rare; not usually clinically emphasized"],
     boardsPearls: [
-      "Target INR ~2–3 for most AF/VTE on warfarin",
-      "Vitamin K reverses warfarin; FFP/PCC for serious bleeding",
+      "Warfarin inhibits vitamin K–dependent factors (II, VII, IX, X, protein C & S)",
+      "Early warfarin therapy: protein C (short t½) falls first → transient hypercoagulable state",
       "Prolonged INR + low platelets → DIC or liver failure",
     ],
     pairWith: [
@@ -539,9 +539,9 @@ export const LAB_VALUES: LabValueEntry[] = [
     ],
     decreasedCauses: [],
     boardsPearls: [
-      "High sensitivity, low specificity — good to rule OUT PE/DVT when low in low-risk patients",
-      "Age-adjusted cutoff: age × 10 ng/mL after age 50",
-      "Never use elevated D-dimer alone to diagnose VTE",
+      "Fibrin degradation product from cross-linked fibrin — marker of fibrinolysis",
+      "Elevated in PE, DVT, DIC, surgery, pregnancy — low specificity",
+      "Very high in DIC; not specific enough to diagnose VTE on its own",
     ],
     pairWith: [
       "Low D-dimer + low pretest probability → PE unlikely",

@@ -114,7 +114,7 @@ export const NEPHRON_SEGMENTS: NephronSegmentEntry[] = [
     ],
     secretes: ["H⁺"],
     boardsPearls: [
-      "Thiazide diuretics block NCC → ↑ Ca²⁺ reabsorption (hypocalciuria) — useful in recurrent calcium stones",
+      "Thiazide diuretics block NCC → ↑ Ca²⁺ reabsorption (hypocalciuria)",
       "Gitelman syndrome mimics thiazide effect (NCC defect)",
       "Still relatively dilute tubular fluid — not final urine concentration site",
     ],
