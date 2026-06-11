@@ -49,6 +49,43 @@ const SKIP_TAGS = new Set([
   "NOSCRIPT",
 ]);
 
+/** Block containers whose descendant text is matched as one string (handles <br>-split headers). */
+const COALESCE_ROOT_TAGS = new Set([
+  "TH",
+  "TD",
+  "CAPTION",
+  "P",
+  "LI",
+  "DT",
+  "DD",
+  "DIV",
+  "H1",
+  "H2",
+  "H3",
+  "H4",
+  "H5",
+  "H6",
+  "LABEL",
+  "FIGCAPTION",
+  "LEGEND",
+  "BLOCKQUOTE",
+  "ARTICLE",
+  "SECTION",
+  "MAIN",
+  "ASIDE",
+]);
+
+interface TextSegment {
+  node: Text;
+  start: number;
+  end: number;
+}
+
+interface CoalescedTextView {
+  text: string;
+  segments: TextSegment[];
+}
+
 type TermKind =
   | "organ"
   | "heart-sound"
@@ -174,15 +211,16 @@ function matchAliasLengthAt(
 }
 
 function getScanZone(node: Node): number {
-  const el = node.parentElement;
+  const el =
+    node instanceof Element ? node : node.parentElement;
   if (!el) return SCAN_ZONE.OTHER;
   if (el.closest("#explanation")) return SCAN_ZONE.EXPLANATION;
   if (el.closest("#questionInformation")) return SCAN_ZONE.QUESTION;
   return SCAN_ZONE.OTHER;
 }
 
-function isVisibleElement(el: HTMLElement): boolean {
-  if (typeof el.checkVisibility === "function") {
+function isVisibleElement(el: Element): boolean {
+  if (el instanceof HTMLElement && typeof el.checkVisibility === "function") {
     return el.checkVisibility({ checkOpacity: true, checkVisibilityCSS: true });
   }
   const style = getComputedStyle(el);
@@ -472,6 +510,37 @@ function matchedLengthAt(
   return null;
 }
 
+function findAllMatches(
+  text: string,
+  zone: number,
+): { start: number; end: number; matchText: string; term: TermMatch }[] {
+  const matches: {
+    start: number;
+    end: number;
+    matchText: string;
+    term: TermMatch;
+  }[] = [];
+  let remaining = text;
+  let offset = 0;
+
+  while (remaining.length > 0) {
+    const next = findNextMatch(remaining, zone);
+    if (!next) break;
+    const start = offset + next.index;
+    matches.push({
+      start,
+      end: start + next.matchText.length,
+      matchText: next.matchText,
+      term: next.term,
+    });
+    const advance = next.index + next.matchText.length;
+    offset += advance;
+    remaining = remaining.slice(advance);
+  }
+
+  return matches;
+}
+
 function findNextMatch(
   text: string,
   zone: number,
@@ -575,40 +644,152 @@ function createChip(
   return button;
 }
 
-function highlightTextNode(textNode: Text, zone: number): boolean {
-  const text = textNode.textContent ?? "";
-  if (!text.trim()) return false;
-  if (!findNextMatch(text, zone)) return false;
+function getCoalesceRoot(textNode: Text): Element | null {
+  let el: Element | null = textNode.parentElement;
+  while (el) {
+    if (COALESCE_ROOT_TAGS.has(el.tagName)) return el;
+    if (el === document.body) return textNode.parentElement;
+    el = el.parentElement;
+  }
+  return textNode.parentElement;
+}
 
-  const parent = textNode.parentNode;
-  if (!parent) return false;
+function shouldSkipElement(el: Element): boolean {
+  if (SKIP_TAGS.has(el.tagName)) return true;
+  for (const cls of OUR_CHIP_CLASSES) {
+    if (el.classList.contains(cls)) return true;
+  }
+  if (el.classList.contains(POPOVER_CLASS)) return true;
+  if (el.closest(`${CHIP_SELECTOR}, .${POPOVER_CLASS}`)) return true;
+  return false;
+}
 
-  const doc = textNode.ownerDocument;
-  const fragment = doc.createDocumentFragment();
-  let remaining = text;
-  let changed = false;
+function appendCoalescedSeparator(text: string): string {
+  if (text.length === 0) return text;
+  const last = text[text.length - 1];
+  if (/\s/.test(last)) return text;
+  return `${text} `;
+}
 
-  while (remaining.length > 0) {
-    const next = findNextMatch(remaining, zone);
-    if (!next) {
-      fragment.appendChild(doc.createTextNode(remaining));
-      break;
+function buildCoalescedText(root: Element): CoalescedTextView | null {
+  const segments: TextSegment[] = [];
+  let text = "";
+
+  function walk(node: Node): void {
+    if (node.nodeType === Node.TEXT_NODE) {
+      const textNode = node as Text;
+      if (shouldSkipNode(textNode)) return;
+      if (!isVisibleNode(textNode)) return;
+      const content = textNode.textContent ?? "";
+      if (!content) return;
+      text = appendCoalescedSeparator(text);
+      const start = text.length;
+      text += content;
+      segments.push({ node: textNode, start, end: text.length });
+      return;
     }
 
-    if (next.index > 0) {
-      fragment.appendChild(doc.createTextNode(remaining.slice(0, next.index)));
+    if (node.nodeType !== Node.ELEMENT_NODE) return;
+    const el = node as Element;
+    if (shouldSkipElement(el)) return;
+    if (!isVisibleElement(el)) return;
+
+    if (el.tagName === "BR") {
+      text = appendCoalescedSeparator(text);
+      return;
     }
 
-    fragment.appendChild(createChip(doc, next.matchText, next.term));
-    recordHighlight(next.term, next.matchText, zone);
-    changed = true;
-    remaining = remaining.slice(next.index + next.matchText.length);
+    for (const child of el.childNodes) {
+      walk(child);
+    }
   }
 
-  if (changed) {
-    parent.replaceChild(fragment, textNode);
+  walk(root);
+  if (!text.trim() || segments.length === 0) return null;
+  return { text, segments };
+}
+
+function locateOffset(
+  segments: TextSegment[],
+  offset: number,
+): { node: Text; nodeOffset: number } | null {
+  for (const segment of segments) {
+    if (offset >= segment.start && offset <= segment.end) {
+      return { node: segment.node, nodeOffset: offset - segment.start };
+    }
+  }
+
+  for (const segment of segments) {
+    if (offset < segment.start) {
+      return { node: segment.node, nodeOffset: 0 };
+    }
+  }
+
+  const last = segments[segments.length - 1];
+  return {
+    node: last.node,
+    nodeOffset: last.node.textContent?.length ?? 0,
+  };
+}
+
+function applyCoalescedMatch(
+  root: Element,
+  view: CoalescedTextView,
+  match: { start: number; end: number; matchText: string; term: TermMatch },
+): boolean {
+  const start = locateOffset(view.segments, match.start);
+  const end = locateOffset(view.segments, match.end);
+  if (!start || !end) return false;
+  if (!start.node.isConnected || !end.node.isConnected) return false;
+
+  const range = root.ownerDocument.createRange();
+  range.setStart(start.node, start.nodeOffset);
+  range.setEnd(end.node, end.nodeOffset);
+
+  const chip = createChip(root.ownerDocument, match.matchText, match.term);
+  range.deleteContents();
+  range.insertNode(chip);
+  recordHighlight(match.term, match.matchText, getScanZone(root));
+  return true;
+}
+
+function highlightCoalescedRoot(root: Element, zone: number): boolean {
+  const view = buildCoalescedText(root);
+  if (!view) return false;
+
+  const matches = findAllMatches(view.text, zone);
+  if (matches.length === 0) return false;
+
+  let changed = false;
+  for (let i = matches.length - 1; i >= 0; i--) {
+    const currentView = buildCoalescedText(root);
+    if (!currentView) break;
+    if (applyCoalescedMatch(root, currentView, matches[i]!)) {
+      changed = true;
+    }
   }
   return changed;
+}
+
+function collectCoalesceRoots(scanRoot: Node): Element[] {
+  const textNodes = collectHighlightableTextNodes(scanRoot);
+  const seen = new Set<Element>();
+  const roots: Element[] = [];
+
+  for (const textNode of textNodes) {
+    const root = getCoalesceRoot(textNode);
+    if (!root || seen.has(root)) continue;
+    if (isInsidePopover(root)) continue;
+    if (!isVisibleElement(root)) continue;
+    seen.add(root);
+    roots.push(root);
+  }
+
+  return roots.sort((a, b) => {
+    const zoneDiff = getScanZone(a) - getScanZone(b);
+    if (zoneDiff !== 0) return zoneDiff;
+    return compareNodeDocumentOrder(a, b);
+  });
 }
 
 function compareNodeDocumentOrder(a: Node, b: Node): number {
@@ -656,13 +837,11 @@ function scanPage(): void {
   if (!document.body || isInsidePopover(document.body)) return;
   syncQuestionContext();
 
-  const textNodes = collectHighlightableTextNodes(document.body);
+  const coalesceRoots = collectCoalesceRoots(document.body);
   isApplyingHighlights = true;
   try {
-    for (const textNode of textNodes) {
-      if (!textNode.parentNode || shouldSkipNode(textNode)) continue;
-      if (!isVisibleNode(textNode)) continue;
-      highlightTextNode(textNode, getScanZone(textNode));
+    for (const root of coalesceRoots) {
+      highlightCoalescedRoot(root, getScanZone(root));
     }
   } finally {
     isApplyingHighlights = false;
@@ -677,13 +856,11 @@ export function scanRoot(root: Node): void {
   }
 
   syncQuestionContext();
-  const textNodes = collectHighlightableTextNodes(root);
+  const coalesceRoots = collectCoalesceRoots(root);
   isApplyingHighlights = true;
   try {
-    for (const textNode of textNodes) {
-      if (!textNode.parentNode || shouldSkipNode(textNode)) continue;
-      if (!isVisibleNode(textNode)) continue;
-      highlightTextNode(textNode, getScanZone(textNode));
+    for (const coalesceRoot of coalesceRoots) {
+      highlightCoalescedRoot(coalesceRoot, getScanZone(coalesceRoot));
     }
   } finally {
     isApplyingHighlights = false;
