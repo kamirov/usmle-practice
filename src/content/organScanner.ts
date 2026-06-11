@@ -70,8 +70,57 @@ function termKey(term: TermMatch): string {
   return `${term.kind}:${term.id.toLowerCase()}`;
 }
 
+/** Strip styling/invisible chars so bold, Unicode styled, and plain text dedupe together. */
+function normalizeForComparison(text: string): string {
+  return text
+    .normalize("NFKC")
+    .toLowerCase()
+    .replace(/[\u00AD\u200B-\u200D\u2060\uFEFF]/g, "");
+}
+
 function normalizedWordKey(matchText: string): string {
-  return matchText.toLowerCase();
+  return normalizeForComparison(matchText).replace(/\s+/g, " ").trim();
+}
+
+function isTermHighlightedInDom(term: TermMatch): boolean {
+  return document.querySelector(chipSelectorForTerm(term)) !== null;
+}
+
+function isWordHighlightedInDom(matchText: string): boolean {
+  const key = normalizedWordKey(matchText);
+  for (const chip of document.querySelectorAll(CHIP_SELECTOR)) {
+    if (normalizedWordKey(chip.textContent ?? "") === key) return true;
+  }
+  return false;
+}
+
+function unwrapAllChips(): void {
+  for (const chip of document.querySelectorAll(CHIP_SELECTOR)) {
+    unwrapChip(chip);
+  }
+}
+
+function matchAliasLengthAt(
+  text: string,
+  index: number,
+  alias: string,
+): number | null {
+  const target = normalizedWordKey(alias);
+  if (!target) return null;
+
+  let i = index;
+  let matched = "";
+
+  while (i < text.length && matched.length < target.length) {
+    const codePoint = text.codePointAt(i);
+    if (codePoint === undefined) break;
+    const char = String.fromCodePoint(codePoint);
+    matched += normalizeForComparison(char);
+    i += char.length;
+  }
+
+  if (normalizedWordKey(matched) !== target) return null;
+  return i - index;
 }
 
 function getScanZone(node: Node): number {
@@ -152,7 +201,11 @@ function isAlreadyHighlighted(
   const existingZone = highlightedTermZone.get(key);
   if (existingZone !== undefined && zone < existingZone) {
     evictTermHighlight(term);
-  } else if (highlightedOnQuestion.has(key)) {
+  } else if (
+    highlightedOnQuestion.has(key) ||
+    isTermHighlightedInDom(term) ||
+    isWordHighlightedInDom(matchText)
+  ) {
     return true;
   }
 
@@ -195,6 +248,7 @@ function resetQuestionHighlights(): void {
 function syncQuestionContext(): void {
   const next = getQuestionFingerprint();
   if (questionFingerprint && next !== questionFingerprint) {
+    unwrapAllChips();
     highlightedOnQuestion.clear();
     highlightedWordsOnQuestion.clear();
     highlightedTermZone.clear();
@@ -300,22 +354,22 @@ function matchedLengthAt(
   index: number,
   entry: TermMatch,
 ): number | null {
-  const lower = text.toLowerCase();
   const alias = entry.alias;
 
   if (!hasWordBoundaryBefore(text, index)) return null;
 
-  if (lower.slice(index, index + alias.length) === alias) {
-    const end = index + alias.length;
-    if (hasWordBoundaryAfter(text, end)) return alias.length;
+  const singularLen = matchAliasLengthAt(text, index, alias);
+  if (singularLen !== null) {
+    const end = index + singularLen;
+    if (hasWordBoundaryAfter(text, end)) return singularLen;
   }
 
   if (entry.kind === "organ" && !alias.endsWith("s")) {
     for (const suffix of ["s", "es"] as const) {
-      const plural = alias + suffix;
-      if (lower.slice(index, index + plural.length) === plural) {
-        const end = index + plural.length;
-        if (hasWordBoundaryAfter(text, end)) return plural.length;
+      const pluralLen = matchAliasLengthAt(text, index, alias + suffix);
+      if (pluralLen !== null) {
+        const end = index + pluralLen;
+        if (hasWordBoundaryAfter(text, end)) return pluralLen;
       }
     }
   }
