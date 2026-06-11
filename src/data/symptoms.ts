@@ -13,7 +13,12 @@ export const SYMPTOMS: SymptomEntry[] = [
   {
     id: "exertional-dyspnea",
     name: "Exertional Dyspnea",
-    aliases: ["exertional dyspnea"],
+    aliases: [
+      "exertional dyspnea",
+      "exertional sob",
+      "exertional shortness of breath",
+      "dyspnea on exertion",
+    ],
     definition:
       "Shortness of breath triggered by physical activity that was previously tolerated.",
     mechanism:
@@ -201,6 +206,38 @@ export const SYMPTOMS: SymptomEntry[] = [
       "Pleuritic pain — worse with breathing, not classic ripping radiation",
       "STEMI — crushing pressure, not tearing to the back",
       "PE — pleuritic, tachycardic, hypoxic without pulse deficit",
+    ],
+  },
+  {
+    id: "palpitations",
+    name: "Palpitations",
+    aliases: ["palpitations", "palpitation"],
+    definition:
+      "Awareness of one's own heartbeat, described as racing, pounding, fluttering, or skipping beats.",
+    mechanism:
+      "Increased rate, contractility, stroke volume, or irregular rhythm makes normally subliminal cardiac sensations perceptible; heightened sympathetic tone or anxiety lowers the perceptual threshold.",
+    thinkOf: [
+      "Atrial fibrillation / flutter",
+      "Paroxysmal SVT",
+      "Premature beats (PVCs, PACs)",
+      "Hyperthyroidism",
+      "Anxiety / panic disorder",
+      "Anemia",
+      "Caffeine, stimulants, or sympathomimetics",
+      "Structural heart disease (mitral valve prolapse, HOCM)",
+      "Pheochromocytoma",
+    ],
+    pairWith: [
+      "Syncope or presyncope → malignant arrhythmia",
+      "Exertional dyspnea → heart failure or ischemia",
+      "Heat intolerance, weight loss, tremor → hyperthyroidism",
+      "Chest pain → ischemia or pericarditis",
+      "Peds: supraventricular tachycardia — narrow-complex tachycardia in infant with irritability or poor feeding; history of abrupt rate change is classic",
+    ],
+    distinguishFrom: [
+      "Chest pain without rhythm awareness → angina, not primary palpitations",
+      "Presyncope without racing heartbeat → orthostatic or vasovagal",
+      "Physiologic sinus tachycardia with fever, pain, or exercise — expected, not pathologic palpitations",
     ],
   },
   {
