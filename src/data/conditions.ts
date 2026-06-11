@@ -19,7 +19,18 @@ export const CONDITIONS: ConditionEntry[] = [
   {
     id: "myocardial-infarction",
     name: "Myocardial Infarction",
-    aliases: ["myocardial infarction", "mi", "heart attack", "acute mi"],
+    aliases: [
+      "myocardial infarction",
+      "mi",
+      "heart attack",
+      "acute mi",
+      "stemi",
+      "nstemi",
+      "acute coronary syndrome",
+      "acs",
+      "transmural infarction",
+      "subendocardial infarction",
+    ],
     definition:
       "Acute myocardial necrosis from prolonged coronary ischemia, usually due to plaque rupture and thrombotic occlusion.",
     pathophysiology:
@@ -57,7 +68,11 @@ export const CONDITIONS: ConditionEntry[] = [
       "STEMI: ST elevation in contiguous leads → culprit artery territory",
       "Anterior MI (LAD): V1–V4; Inferior MI (RCA): II, III, aVF",
       "Reperfusion therapy: PCI or fibrinolysis within time window",
+      "Post-MI complications by timing: VF (24 h), papillary rupture (3–5 d), free wall rupture (5–14 d)",
+      "Cardiogenic shock post-MI → large infarct, ↓ EF, pulmonary edema; may need IABP and urgent revascularization",
     ],
+    pediatrics:
+      "MI rare in children; consider Kawasaki disease (coronary aneurysm/thrombosis), anomalous coronary origin, or hypercoagulability. Chest pain in adolescents still warrants ECG and troponin when ischemia is suspected.",
   },
   {
     id: "valvular-heart-disease",
@@ -100,6 +115,114 @@ export const CONDITIONS: ConditionEntry[] = [
       "MS → LA enlargement → atrial fibrillation → thromboembolism",
       "Acute MR from papillary muscle rupture post-MI",
     ],
+  },
+  {
+    id: "infective-endocarditis",
+    name: "Infective Endocarditis",
+    aliases: [
+      "infective endocarditis",
+      "bacterial endocarditis",
+      "subacute bacterial endocarditis",
+      "acute bacterial endocarditis",
+      "endocarditis",
+      "sbe",
+      "abe",
+    ],
+    definition:
+      "Infection of the endocardium, usually involving heart valves, with microbial vegetations that can embolize and destroy valve tissue.",
+    pathophysiology:
+      "Endothelial injury (valve damage, turbulence) → platelet-fibrin thrombus → bacterial seeding during bacteremia → vegetations on valves → valve destruction, abscess formation, and septic emboli.",
+    classicPresentation: [
+      "Fever, new or changing murmur, fatigue",
+      "Subacute (viridans strep): after dental work on abnormal valve",
+      "Acute (S. aureus): rapid destruction, often normal valves or IVDU",
+    ],
+    keyFindings: [
+      "New regurgitant murmur",
+      "Janeway lesions (painless palm/sole macules)",
+      "Osler nodes (painful finger/toe nodules)",
+      "Splinter hemorrhages, Roth spots (retinal hemorrhage with pale center)",
+    ],
+    keyLabs: [
+      "Positive blood cultures (most important)",
+      "↑ ESR/CRP",
+      "Echocardiography — vegetations, abscess, new regurgitation",
+    ],
+    associations: [
+      "Prior valve disease (rheumatic, prosthetic, congenital)",
+      "IV drug use (tricuspid involvement, S. aureus)",
+      "Dental procedures (viridans streptococci)",
+      "Catheters and indwelling hardware",
+    ],
+    complications: [
+      "Valve destruction requiring surgery",
+      "Septic emboli (stroke, splenic/renal infarcts)",
+      "Ring abscess, heart block",
+      "Glomerulonephritis (immune complex)",
+    ],
+    distinguishFrom: [
+      "Libman-Sacks endocarditis (SLE) — sterile vegetations, verrucous, both sides of valve",
+      "Rheumatic fever — migratory polyarthritis, chorea, pancarditis; no persistent bacteremia",
+      "Nonbacterial thrombotic endocarditis (marantic) — malignancy/hypercoagulable, sterile small vegetations",
+    ],
+    treatment: [
+      "Prolonged IV antibiotics tailored to organism and sensitivities",
+      "Surgery for refractory infection, abscess, heart block, or severe valve dysfunction",
+    ],
+    boardsPearls: [
+      "Most common organisms: S. viridans (dental, damaged valve), S. aureus (acute, IVDU, prosthetic)",
+      "Enterococcal endocarditis: ampicillin + gentamicin synergy",
+      "Duke criteria: blood cultures + echo findings + clinical criteria",
+      "IVDU → tricuspid valve, S. aureus, septic pulmonary emboli",
+    ],
+    pediatrics:
+      "Congenital heart disease and prior valve surgery increase risk; viridans strep after dental procedures. Prophylaxis limited to highest-risk lesions per current guidelines.",
+  },
+  {
+    id: "thromboangiitis-obliterans",
+    name: "Thromboangiitis Obliterans (Buerger Disease)",
+    aliases: [
+      "thromboangiitis obliterans",
+      "buerger disease",
+      "buerger's disease",
+      "buergers disease",
+    ],
+    definition:
+      "Segmental inflammatory thrombosis of small- and medium-sized arteries and veins, strongly associated with tobacco use, causing distal extremity ischemia.",
+    pathophysiology:
+      "Inflammatory occlusive thrombosis of distal vessels without primary atherosclerosis; smoking is essential to pathogenesis — hypersensitivity or toxic injury to vessel wall triggers segmental inflammation and thrombosis.",
+    classicPresentation: [
+      "Young male smoker (<45) with distal upper/lower extremity ischemia",
+      "Claudication of hands/feet, rest pain, digital ischemia",
+      "Raynaud phenomenon, migratory superficial thrombophlebitis",
+    ],
+    keyFindings: [
+      "Absent or diminished distal pulses with proximal pulses preserved",
+      "Digital ulceration or gangrene",
+      "Normal arteries on angiography above ankle/wrist with corkscrew collaterals distally",
+    ],
+    keyLabs: [
+      "Angiography — segmental occlusions, corkscrew collaterals (\"tree root\" appearance)",
+      "Hypercoagulable and autoimmune workup negative",
+    ],
+    associations: ["Heavy tobacco use (cigarettes, chewing tobacco)", "Young men of Asian/Middle Eastern/Eastern European descent"],
+    complications: ["Digital gangrene and amputation", "Progression with continued smoking"],
+    distinguishFrom: [
+      "Atherosclerotic peripheral artery disease — older patients, proximal large-vessel disease",
+      "Systemic vasculitis (GPA, polyarteritis nodosa) — systemic features, different angiographic pattern",
+      "Raynaud disease alone — reversible vasospasm without tissue loss",
+    ],
+    treatment: [
+      "Absolute smoking cessation — only intervention that alters disease course",
+      "Wound care; avoid cold exposure; sympathectomy or prostaglandins in refractory cases",
+    ],
+    boardsPearls: [
+      "Young smoker + distal ischemia + superficial thrombophlebitis → Buerger until proven otherwise",
+      "Smoking cessation is mandatory — continued use leads to amputation",
+      "Segmental inflammatory thrombosis of distal vessels, not atherosclerosis",
+    ],
+    pediatrics:
+      "Extremely rare in children; any adolescent with tobacco exposure and digital ischemia warrants urgent vascular evaluation and smoking cessation counseling.",
   },
   {
     id: "heart-failure",
@@ -151,6 +274,76 @@ export const CONDITIONS: ConditionEntry[] = [
     ],
     pediatrics:
       "Dilated cardiomyopathy is the most common cause of heart failure in children; consider inborn errors of metabolism and myocarditis.",
+  },
+  {
+    id: "shock",
+    name: "Shock",
+    aliases: [
+      "shock",
+      "circulatory shock",
+      "hypovolemic shock",
+      "hemorrhagic shock",
+      "cardiogenic shock",
+      "distributive shock",
+      "obstructive shock",
+      "septic shock",
+      "anaphylactic shock",
+      "neurogenic shock",
+    ],
+    definition:
+      "Life-threatening state of inadequate tissue perfusion and oxygen delivery despite compensatory mechanisms; classified by primary hemodynamic mechanism.",
+    pathophysiology:
+      "↓ effective perfusion → tissue hypoxia → anaerobic metabolism and lactic acidosis. Four broad types: hypovolemic (↓ preload), cardiogenic (pump failure), distributive (↓ SVR with maldistribution), obstructive (mechanical impediment to filling or ejection).",
+    classicPresentation: [
+      "Hypotension, tachycardia, cool clammy extremities (except early distributive shock)",
+      "Altered mental status, oliguria, metabolic acidosis",
+      "Tachypnea, weak pulses, delayed capillary refill",
+    ],
+    keyFindings: [
+      "Hypovolemic: flat neck veins, dry mucous membranes, ↓ PCWP/CVP",
+      "Cardiogenic: pulmonary edema, ↑ JVP, cool extremities, ↓ CO, ↑ PCWP",
+      "Distributive (septic early): warm extremities, bounding pulses, ↓ SVR; late septic shock resembles cardiogenic",
+      "Obstructive: JVD with hypotension (tamponade, PE, tension pneumothorax); muffled heart sounds (tamponade), unilateral absent breath sounds (tension PTX)",
+    ],
+    keyLabs: [
+      "↑ Lactate — tissue hypoperfusion",
+      "Metabolic acidosis",
+      "↑ BUN:Cr in hypovolemic (prerenal) states",
+      "Blood cultures, procalcitonin in suspected septic shock",
+    ],
+    associations: [
+      "Hypovolemic: hemorrhage, burns, vomiting/diarrhea, diuretics",
+      "Cardiogenic: large MI, decompensated HF, severe valvular disease",
+      "Distributive: sepsis, anaphylaxis, spinal cord injury (neurogenic)",
+      "Obstructive: cardiac tamponade, massive PE, tension pneumothorax",
+    ],
+    complications: [
+      "Multiorgan dysfunction syndrome (MODS)",
+      "Acute kidney injury",
+      "Disseminated intravascular coagulation (especially septic shock)",
+      "Death without rapid resuscitation",
+    ],
+    distinguishFrom: [
+      "Syncope — transient hypotension with rapid spontaneous recovery",
+      "Orthostatic hypotension — positional, not global hypoperfusion",
+      "Neurogenic shock — distributive with bradycardia and warm skin (vs spinal shock = flaccid paralysis/areflexia)",
+    ],
+    treatment: [
+      "ABC, IV access, supplemental O₂; treat underlying cause",
+      "Hypovolemic/obstructive: volume resuscitation (crystalloid/blood); relieve obstruction (pericardiocentesis, chest tube, thrombolysis/anticoagulation for PE)",
+      "Cardiogenic: cautious fluids, inotropes, vasopressors, urgent revascularization or mechanical support",
+      "Septic: early broad-spectrum antibiotics, source control, fluids, norepinephrine first-line vasopressor",
+      "Anaphylactic: epinephrine IM, fluids, antihistamines, glucocorticoids",
+    ],
+    boardsPearls: [
+      "Shock types: hypovolemic, cardiogenic, distributive, obstructive — know hemodynamic profiles (CO, SVR, PCWP/CVP)",
+      "Hypovolemic: ↓ CO, ↑ SVR, ↓ PCWP; cardiogenic: ↓ CO, ↑ SVR, ↑ PCWP",
+      "Early septic shock: ↑ or normal CO, ↓ SVR; late septic: ↓ CO",
+      "Obstructive shock with JVD: tamponade, PE, tension pneumothorax — not all shock is hypovolemic",
+      "Neurogenic shock (high spinal cord injury): hypotension + bradycardia from loss of sympathetic tone",
+    ],
+    pediatrics:
+      "Infants compensate with tachycardia until late decompensation — hypotension is a late and ominous sign. Septic shock in neonates/children: fluids first, then epinephrine or norepinephrine per PALS; adrenal crisis and congenital heart disease are important pediatric differentials.",
   },
   {
     id: "hypertrophic-cardiomyopathy",
@@ -283,7 +476,16 @@ export const CONDITIONS: ConditionEntry[] = [
   {
     id: "atherosclerosis",
     name: "Atherosclerosis",
-    aliases: ["atherosclerosis", "coronary artery disease", "cad"],
+    aliases: [
+      "atherosclerosis",
+      "coronary artery disease",
+      "cad",
+      "atheroma",
+      "atherosclerotic plaque",
+      "coronary atherosclerosis",
+      "arterial plaque",
+      "ischemic heart disease",
+    ],
     definition:
       "Chronic inflammatory disease of arterial intima with lipid accumulation, plaque formation, and progressive luminal narrowing.",
     pathophysiology:
@@ -326,7 +528,11 @@ export const CONDITIONS: ConditionEntry[] = [
       "Major risk factors: hyperlipidemia, HTN, DM, smoking",
       "Foam cells = lipid-laden macrophages in intima",
       "Statins stabilize plaques and ↓ cardiovascular events",
+      "Unstable plaque: thin fibrous cap, ↑ macrophages, risk of rupture → thrombosis → MI/stroke",
+      "Path sequence: endothelial injury → LDL oxidation → foam cells → fatty streak → fibrous plaque",
     ],
+    pediatrics:
+      "Homozygous familial hypercholesterolemia presents in childhood with tendon xanthomas and premature CAD; heterozygous FH also warrants early statin therapy.",
   },
   {
     id: "hypertension",
@@ -1809,9 +2015,110 @@ export const CONDITIONS: ConditionEntry[] = [
       "Anti-dsDNA correlates with renal disease activity",
       "↓ complement (C3/C4) during flares",
       "Drug-induced lupus: anti-histone antibodies, resolves when drug stopped",
+      "Libman-Sacks endocarditis: sterile verrucous vegetations on mitral/aortic valves — both sides of valve",
+      "Libman-Sacks vs infective endocarditis: no bacteremia, negative cultures, associated with SLE activity",
     ],
     pediatrics:
       "Childhood SLE often more severe with higher renal involvement; monitor closely for nephritis.",
+  },
+  {
+    id: "granulomatosis-with-polyangiitis",
+    name: "Granulomatosis with Polyangiitis",
+    aliases: [
+      "granulomatosis with polyangiitis",
+      "wegener granulomatosis",
+      "wegener's granulomatosis",
+      "wegners granulomatosis",
+      "gpa",
+    ],
+    definition:
+      "ANCA-associated small-vessel vasculitis with necrotizing granulomatous inflammation of upper airways, lungs, and kidneys.",
+    pathophysiology:
+      "Autoimmune neutrophil activation (PR3-ANCA/c-ANCA) → necrotizing granulomatous vasculitis of small vessels → sinonasal destruction, pulmonary nodules/cavities, and crescentic glomerulonephritis.",
+    classicPresentation: [
+      "Chronic sinusitis, epistaxis, nasal crusting or saddle-nose deformity",
+      "Cough, hemoptysis, pulmonary nodules or cavities on CXR",
+      "Hematuria, RBC casts, rapidly progressive glomerulonephritis",
+    ],
+    keyFindings: [
+      "Saddle-nose deformity, chronic otitis/sinusitis",
+      "Pulmonary nodules with cavitation",
+      "RPGN on renal biopsy (pauci-immune crescentic GN)",
+    ],
+    keyLabs: [
+      "c-ANCA (anti-PR3) — most specific (~90%)",
+      "↑ ESR/CRP",
+      "Urinalysis: hematuria, RBC casts, ↑ creatinine",
+    ],
+    associations: ["PR3-ANCA positivity", "Upper and lower respiratory tract involvement"],
+    complications: ["Renal failure", "Diffuse alveolar hemorrhage", "Chronic sinus/ear damage"],
+    distinguishFrom: [
+      "Microscopic polyangiitis — pauci-immune GN and lung hemorrhage, usually without upper airway granulomas; MPO-ANCA",
+      "Churg-Strauss (EGPA) — asthma, eosinophilia, neuropathy",
+      "Goodpasture syndrome — anti-GBM antibodies, linear IgG on biopsy",
+    ],
+    treatment: [
+      "Cyclophosphamide or rituximab + high-dose corticosteroids for induction",
+      "Azathioprine or methotrexate for maintenance",
+      "Plasmapheresis if severe pulmonary hemorrhage or rapidly progressive GN",
+    ],
+    boardsPearls: [
+      "GPA triad: upper airway + lungs + kidneys",
+      "c-ANCA (anti-PR3) — think GPA (Wegener)",
+      "Pauci-immune crescentic GN on biopsy — few immune deposits",
+      "Former name Wegener granulomatosis; now GPA",
+    ],
+    pediatrics:
+      "Rare in children; juvenile GPA presents similarly with ENT, pulmonary, and renal involvement — treat aggressively to preserve renal function.",
+  },
+  {
+    id: "eosinophilic-granulomatosis-with-polyangiitis",
+    name: "Eosinophilic Granulomatosis with Polyangiitis",
+    aliases: [
+      "eosinophilic granulomatosis with polyangiitis",
+      "churg-strauss syndrome",
+      "churg strauss syndrome",
+      "churg-strauss",
+      "egpa",
+    ],
+    definition:
+      "ANCA-associated vasculitis characterized by asthma, eosinophilia, and necrotizing granulomatous inflammation of small vessels.",
+    pathophysiology:
+      "Eosinophilic inflammation and granulomatous vasculitis affect lungs, skin, nerves, and other organs; often p-ANCA (MPO) positive. May develop after years of asthma.",
+    classicPresentation: [
+      "Adult with long-standing asthma who develops worsening respiratory symptoms",
+      "Marked peripheral eosinophilia",
+      "Mononeuritis multiplex, sinusitis, skin nodules or purpura",
+    ],
+    keyFindings: [
+      "Asthma + eosinophilia + vasculitic organ involvement",
+      "Peripheral neuropathy (mononeuritis multiplex)",
+      "Pulmonary infiltrates (not always cavitary, unlike GPA)",
+    ],
+    keyLabs: [
+      "Marked eosinophilia (>10% or >1500/μL)",
+      "p-ANCA (anti-MPO) in ~40–60%",
+      "↑ IgE, ↑ ESR/CRP",
+    ],
+    associations: ["Pre-existing asthma", "Allergic rhinitis", "MPO-ANCA positivity"],
+    complications: ["Peripheral neuropathy", "Cardiac involvement (eosinophilic myocarditis)", "GI vasculitis"],
+    distinguishFrom: [
+      "Asthma alone — no eosinophilic vasculitis or neuropathy",
+      "GPA — c-ANCA/PR3, upper airway destruction, cavitary lung lesions",
+      "Hypereosinophilic syndrome — eosinophilia without vasculitis",
+    ],
+    treatment: [
+      "High-dose corticosteroids; add cyclophosphamide or rituximab for severe organ involvement",
+      "Treat cardiac and neurologic involvement aggressively",
+    ],
+    boardsPearls: [
+      "Churg-Strauss triad: asthma + eosinophilia + vasculitis",
+      "Mononeuritis multiplex is a classic clue",
+      "p-ANCA (MPO) more common than in GPA (c-ANCA/PR3)",
+      "Former name Churg-Strauss; now EGPA",
+    ],
+    pediatrics:
+      "Very rare; eosinophilic vasculitis in children with asthma requires exclusion of parasitic infection and primary hypereosinophilic disorders.",
   },
   {
     id: "schizophrenia",

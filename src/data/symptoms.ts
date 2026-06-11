@@ -192,6 +192,78 @@ export const SYMPTOMS: SymptomEntry[] = [
     ],
   },
   {
+    id: "pulmonary-edema",
+    name: "Pulmonary Edema",
+    aliases: [
+      "pulmonary edema",
+      "pulmonary oedema",
+      "alveolar edema",
+      "flash pulmonary edema",
+    ],
+    definition:
+      "Accumulation of fluid in the pulmonary interstitium and alveoli, impairing gas exchange and causing dyspnea.",
+    mechanism:
+      "↑ pulmonary capillary hydrostatic pressure (cardiogenic) or ↑ capillary permeability (noncardiogenic/ARDS) drives fluid into alveoli → crackles, hypoxemia, and pink frothy sputum when severe.",
+    thinkOf: [
+      "Acute left ventricular failure / cardiogenic pulmonary edema",
+      "Myocardial infarction with pump failure",
+      "Mitral regurgitation (acute or severe chronic)",
+      "Renal failure with volume overload",
+      "ARDS (noncardiogenic — permeability edema)",
+      "Neurogenic pulmonary edema (catecholamine surge)",
+    ],
+    pairWith: [
+      "Orthopnea, PND, S3 → cardiogenic pulmonary edema",
+      "Crackles, hypoxemia, ↑ BNP → heart failure",
+      "Chest pain + diaphoresis → MI with pulmonary edema",
+      "Bilateral infiltrates without JVD → ARDS vs cardiogenic (check BNP, echo)",
+      "Peds: congenital heart disease, acute rheumatic carditis, or fluid overload in renal disease",
+    ],
+    distinguishFrom: [
+      "Pneumonia — fever, focal consolidation, not necessarily volume overload",
+      "COPD exacerbation — wheeze, hyperinflation, chronic history",
+      "Pulmonary embolism — pleuritic pain, clear lungs early, hypoxemia out of proportion",
+      "Peripheral edema alone — systemic congestion without alveolar flooding",
+    ],
+  },
+  {
+    id: "edema",
+    name: "Edema",
+    aliases: [
+      "edema",
+      "oedema",
+      "pitting edema",
+      "anasarca",
+      "generalized edema",
+      "tissue swelling",
+    ],
+    definition:
+      "Abnormal accumulation of fluid in the interstitial space; may be localized or generalized.",
+    mechanism:
+      "Imbalance of Starling forces: ↑ hydrostatic pressure (heart failure, venous obstruction), ↓ plasma oncotic pressure (nephrotic syndrome, liver failure), lymphatic obstruction, or ↑ capillary permeability (inflammation, sepsis).",
+    thinkOf: [
+      "Heart failure (pulmonary + peripheral)",
+      "Nephrotic syndrome / renal failure",
+      "Cirrhosis / portal hypertension",
+      "DVT, lymphedema, venous insufficiency",
+      "Angioedema, capillary leak (sepsis, burns)",
+      "Medications (CCBs, NSAIDs, prednisone)",
+    ],
+    pairWith: [
+      "Crackles, orthopnea → pulmonary edema / left HF",
+      "Proteinuria, hypoalbuminemia → nephrotic syndrome",
+      "JVD, hepatomegaly → right heart failure / volume overload",
+      "Unilateral leg swelling → DVT",
+      "Peds: periorbital edema + proteinuria → minimal change disease; anasarca in severe nephrotic syndrome",
+    ],
+    distinguishFrom: [
+      "Peripheral edema — dependent extremity swelling; subset of generalized edema",
+      "Angioedema — acute, often allergic or ACE-I mediated, may involve airway",
+      "Myxedema — nonpitting mucopolysaccharide deposition in hypothyroidism",
+      "Lipedema — painful, nonpitting adipose distribution",
+    ],
+  },
+  {
     id: "peripheral-edema",
     name: "Peripheral Edema",
     aliases: [
