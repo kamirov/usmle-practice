@@ -45,6 +45,39 @@ export const ECG_FINDINGS: EcgFindingEntry[] = [
     pediatrics:
       "Same lead-territory mapping; Kawasaki coronary aneurysm can present with MI patterns in children.",
   },
+  {
+    id: "electrical-alternans",
+    name: "Electrical Alternans",
+    aliases: [
+      "electrical alternans",
+      "qrs alternans",
+      "p wave alternans",
+    ],
+    interpretation:
+      "Beat-to-beat alternation in QRS (or P wave) amplitude on ECG, classically from the heart swinging within a large pericardial effusion.",
+    territory:
+      "Not territorial — global ECG pattern; most often seen in pericardial effusion with tamponade physiology.",
+    thinkOf: [
+      "Cardiac tamponade with large pericardial effusion",
+      "Pericardial effusion (malignancy, viral, uremic, post-MI hemopericardium)",
+      "Pair with Beck triad and pulsus paradoxus",
+      "Low-voltage QRS may coexist in effusion",
+    ],
+    distinguishFrom: [
+      "Respiratory variation in QRS amplitude — not true beat-to-beat alternans",
+      "Ventricular bigeminy — alternating normal and ectopic beats, not smooth amplitude cycling",
+      "Pericarditis without effusion — diffuse ST elevation, usually no alternans",
+      "Regional STEMI — territorial ST elevation, not alternating QRS amplitude",
+    ],
+    boardsPearls: [
+      "Electrical alternans = swinging heart in large pericardial effusion",
+      "Classic tamponade ECG clue alongside low voltage and tachycardia",
+      "Tamponade: alternans + JVD + muffled heart sounds + pulsus paradoxus",
+      "Echo confirms effusion with RA/RV diastolic collapse — urgent pericardiocentesis",
+    ],
+    pediatrics:
+      "Same association with large effusions in children; bacterial pericarditis or post-surgical effusion can present with alternans and shock.",
+  },
 ];
 
 const ecgFindingById = new Map(ECG_FINDINGS.map((entry) => [entry.id, entry]));
