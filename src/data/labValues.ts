@@ -68,7 +68,11 @@ export const LAB_VALUES: LabValueEntry[] = [
   {
     id: "mcv",
     name: "MCV",
-    aliases: ["mcv", "mean corpuscular volume"],
+    aliases: [
+      "mcv",
+      "mean corpuscular volume",
+      "mean cell volume",
+    ],
     measures: "Average volume of red blood cells; classifies anemia morphology.",
     normalRange: "~80–100 fL",
     increasedCauses: [
@@ -277,7 +281,7 @@ export const LAB_VALUES: LabValueEntry[] = [
   {
     id: "bun",
     name: "BUN",
-    aliases: ["bun", "blood urea nitrogen"],
+    aliases: ["bun", "blood urea nitrogen", "urea nitrogen", "serum urea nitrogen"],
     measures: "Nitrogen component of urea; marker of nitrogen waste and renal function.",
     normalRange: "~7–20 mg/dL",
     increasedCauses: [
@@ -717,6 +721,1197 @@ export const LAB_VALUES: LabValueEntry[] = [
       "Exudate + low pH + low glucose → complicated parapneumonic effusion",
       "Transudate + JVD + peripheral edema → CHF",
       "Bloody pleural fluid + trauma → hemothorax",
+    ],
+  },
+  {
+    id: "amylase",
+    name: "Amylase",
+    aliases: ["amylase", "serum amylase"],
+    measures:
+      "Pancreatic and salivary enzyme that digests starch; elevated in pancreatitis and salivary gland disease.",
+    normalRange: "~30–110 U/L (lab-dependent)",
+    increasedCauses: [
+      "Acute pancreatitis (lipase more specific)",
+      "Salivary gland disease (mumps, obstruction)",
+      "Bowel perforation, mesenteric ischemia",
+      "Macroamylasemia (amylase bound to immunoglobulin — benign)",
+      "Kidney failure (reduced clearance)",
+    ],
+    decreasedCauses: [
+      "Chronic pancreatitis (burned-out pancreas)",
+      "Pancreatic insufficiency (cystic fibrosis)",
+    ],
+    boardsPearls: [
+      "Lipase preferred over amylase for pancreatitis — more specific",
+      "Amylase normal does not exclude pancreatitis (alcohol, delayed presentation)",
+      "Macroamylasemia: persistently ↑ amylase with normal lipase and no symptoms",
+      "Peds: same markers; consider gallstones and trauma in adolescents",
+    ],
+    pairWith: [
+      "↑ amylase + epigastric pain radiating to back → pancreatitis (confirm with lipase)",
+      "↑ amylase + parotid swelling → mumps or salivary obstruction",
+    ],
+  },
+  {
+    id: "calcium",
+    name: "Serum Calcium",
+    aliases: [
+      "calcium",
+      "serum calcium",
+      "ca2+",
+      "total calcium",
+      "corrected calcium",
+    ],
+    measures:
+      "Total serum calcium (bound to albumin + ionized fraction); essential for neuromuscular function, coagulation, and bone mineralization.",
+    normalRange: "~8.5–10.5 mg/dL (total); ionized ~4.5–5.3 mg/dL",
+    increasedCauses: [
+      "Primary hyperparathyroidism (most common outpatient cause)",
+      "Malignancy (PTHrP, bone metastases)",
+      "Vitamin D intoxication, granulomatous disease (sarcoidosis)",
+      "Thiazide diuretics, immobilization",
+      "Milk-alkali syndrome",
+      "Tumor lysis syndrome (early phase, before Ca drops)",
+    ],
+    decreasedCauses: [
+      "Hypoalbuminemia (↓ total Ca, ionized may be normal)",
+      "Vitamin D deficiency, chronic kidney disease",
+      "Hypoparathyroidism (post-thyroid surgery)",
+      "Acute pancreatitis, rhabdomyolysis, tumor lysis (late)",
+      "Hungry bone syndrome after parathyroidectomy",
+    ],
+    boardsPearls: [
+      "Corrected Ca = measured Ca + 0.8 × (4 − albumin)",
+      "Stones, bones, groans, moans, psychiatric overtones → hyperparathyroidism",
+      "Chvostek and Trousseau signs → hypocalcemia",
+      "QT interval shortens with hypercalcemia, prolongs with hypocalcemia",
+    ],
+    pairWith: [
+      "↑ Ca + ↑ PTH → primary hyperparathyroidism",
+      "↓ Ca + ↑ phosphate + low PTH → hypoparathyroidism",
+      "↓ total Ca + low albumin → check ionized calcium",
+    ],
+  },
+  {
+    id: "triglycerides",
+    name: "Triglycerides",
+    aliases: [
+      "triglycerides",
+      "triglyceride",
+      "serum triglycerides",
+      "fasting triglycerides",
+      "tg",
+    ],
+    measures:
+      "Major circulating lipid stored in adipose tissue and VLDL; energy reserve and pancreatitis risk marker when severely elevated.",
+    normalRange: "Fasting <150 mg/dL (desirable); 150–199 borderline; ≥500 very high",
+    increasedCauses: [
+      "Familial hypertriglyceridemia",
+      "Uncontrolled diabetes, obesity, metabolic syndrome",
+      "Alcohol excess, high-carbohydrate diet",
+      "Estrogens, thiazides, β-blockers",
+      "Nephrotic syndrome, hypothyroidism",
+    ],
+    decreasedCauses: [
+      "Malnutrition",
+      "Hyperthyroidism",
+      "Lipid-lowering therapy",
+    ],
+    boardsPearls: [
+      "Severe hypertriglyceridemia (>1000 mg/dL) → acute pancreatitis risk",
+      "Fibrates and omega-3 fatty acids for severe ↑ TG; restrict alcohol",
+      "Lipemic serum can falsely affect other assays",
+      "Peds: familial forms present with eruptive xanthomas and pancreatitis",
+    ],
+    pairWith: [
+      "TG >1000 + epigastric pain → hypertriglyceridemic pancreatitis",
+      "↑ TG + ↑ glucose + obesity → metabolic syndrome",
+    ],
+  },
+  {
+    id: "cortisol",
+    name: "Cortisol",
+    aliases: [
+      "cortisol",
+      "serum cortisol",
+      "plasma cortisol",
+      "urine free cortisol",
+      "24-hour urine cortisol",
+      "salivary cortisol",
+      "dexamethasone suppression test",
+    ],
+    measures:
+      "Glucocorticoid from adrenal cortex; regulates glucose, stress response, and immune function. Diurnal variation — highest in early morning.",
+    normalRange: "Morning serum ~5–25 µg/dL (assay-dependent); must interpret with timing and ACTH",
+    increasedCauses: [
+      "Cushing syndrome (endogenous or exogenous steroids)",
+      "Stress, illness, pregnancy",
+      "Depression, obesity (mild elevation)",
+      "ACTH-secreting pituitary adenoma or ectopic ACTH",
+    ],
+    decreasedCauses: [
+      "Primary adrenal insufficiency (Addison disease)",
+      "Secondary adrenal insufficiency (pituitary ACTH deficiency)",
+      "Chronic exogenous steroid use (adrenal suppression)",
+    ],
+    boardsPearls: [
+      "Cushing workup: 24-h urine free cortisol, late-night salivary cortisol, low-dose dexamethasone suppression",
+      "High-dose dex suppression distinguishes pituitary (suppresses) from ectopic/adrenal (does not)",
+      "Addison: ↓ cortisol + ↑ ACTH + hyperpigmentation",
+      "Acute adrenal crisis: hydrocortisone before labs if unstable",
+    ],
+    pairWith: [
+      "↑ cortisol + central obesity + striae → Cushing syndrome",
+      "↓ cortisol + hypotension + hyperkalemia → Addison disease",
+    ],
+  },
+  {
+    id: "creatine-kinase",
+    name: "Creatine Kinase",
+    aliases: [
+      "creatine kinase",
+      "ck",
+      "cpk",
+      "creatine phosphokinase",
+      "ck-mb",
+      "ckmb",
+    ],
+    measures:
+      "Enzyme in skeletal muscle, heart, and brain; released with muscle or myocardial injury. CK-MB and troponin refine cardiac specificity.",
+    normalRange: "~30–200 U/L (sex and muscle mass dependent)",
+    increasedCauses: [
+      "Rhabdomyolysis (statin, trauma, exertion, cocaine)",
+      "Myocardial infarction (CK-MB, largely replaced by troponin)",
+      "Muscular dystrophy, myositis, hypothyroid myopathy",
+      "IM injections, heavy exercise",
+      "Neuroleptic malignant syndrome, malignant hyperthermia",
+    ],
+    decreasedCauses: [
+      "Sedentary state / low muscle mass",
+      "Not clinically emphasized",
+    ],
+    boardsPearls: [
+      "Troponin preferred over CK-MB for MI diagnosis",
+      "Massive CK elevation + myoglobinuria + AKI → rhabdomyolysis",
+      "Statin + unexplained myalgia — check CK; risk with fibrates and CYP interactions",
+      "CK-MB mass: relative index helps distinguish cardiac from skeletal muscle injury",
+    ],
+    pairWith: [
+      "↑ CK + dark urine + ↑ Cr → rhabdomyolysis",
+      "↑ CK-MB + troponin → myocardial injury",
+    ],
+  },
+  {
+    id: "chloride",
+    name: "Chloride",
+    aliases: ["chloride", "serum chloride", "cl-"],
+    measures:
+      "Major extracellular anion; tracks sodium and acid-base status. Changes often parallel Na⁺ (volume) or reflect acid-base disorders.",
+    normalRange: "~96–106 mEq/L",
+    increasedCauses: [
+      "Metabolic acidosis (hyperchloremic: diarrhea, RTA type 2, saline infusion)",
+      "Dehydration / hypernatremia",
+      "Renal tubular acidosis (some forms)",
+    ],
+    decreasedCauses: [
+      "Metabolic alkalosis (vomiting, diuretics)",
+      "SIADH, heart failure (dilutional)",
+      "Cystic fibrosis — ↑ sweat chloride (>60 mEq/L diagnostic)",
+    ],
+    boardsPearls: [
+      "Hyperchloremic metabolic acidosis: normal anion gap — diarrhea, ureterosigmoidostomy, RTA",
+      "Vomiting → loss of H⁺ and Cl⁻ → metabolic alkalosis with hypochloremia",
+      "CF diagnostic test: sweat chloride >60 mEq/L (not serum chloride)",
+      "Calculate anion gap: Na − (Cl + HCO₃)",
+    ],
+    pairWith: [
+      "↓ Cl + ↑ HCO₃ + vomiting → metabolic alkalosis",
+      "↑ Cl + ↓ HCO₃ + diarrhea → hyperchloremic acidosis",
+    ],
+  },
+  {
+    id: "magnesium",
+    name: "Magnesium",
+    aliases: ["magnesium", "serum magnesium", "mg2+"],
+    measures:
+      "Intracellular cation essential for ATP-dependent processes, neuromuscular function, and potassium homeostasis.",
+    normalRange: "~1.7–2.2 mg/dL",
+    increasedCauses: [
+      "Renal failure",
+      "Magnesium-containing antacids or laxatives",
+      "Adrenal insufficiency (mild)",
+      "Lithium therapy",
+    ],
+    decreasedCauses: [
+      "Malnutrition, alcoholism, malabsorption",
+      "Diuretics, aminoglycosides, cisplatin",
+      "Diabetic ketoacidosis (during treatment)",
+      "Chronic PPI use",
+    ],
+    boardsPearls: [
+      "Refractory hypokalemia — check and replete magnesium first",
+      "Hypomagnesemia predisposes to torsades de pointes",
+      "Pre-eclampsia/eclampsia treatment: IV magnesium sulfate for seizure prophylaxis",
+      "Peds: same repletion principles; hypomagnesemia with chronic diarrhea",
+    ],
+    pairWith: [
+      "↓ Mg + ↓ K despite repletion → replete Mg before K will correct",
+      "↓ Mg + prolonged QT → torsades risk",
+    ],
+  },
+  {
+    id: "fsh",
+    name: "FSH",
+    aliases: [
+      "fsh",
+      "follicle stimulating hormone",
+      "follicle-stimulating hormone",
+      "serum fsh",
+    ],
+    measures:
+      "Anterior pituitary gonadotropin that stimulates ovarian follicle development and spermatogenesis; central to puberty and fertility evaluation.",
+    normalRange: "Cyclic in women; ~1–12 mIU/mL (follicular, lab-dependent); postmenopausal ↑",
+    increasedCauses: [
+      "Primary gonadal failure (Turner syndrome, premature ovarian insufficiency, Klinefelter)",
+      "Menopause",
+      "Primary hypogonadism (testicular failure)",
+    ],
+    decreasedCauses: [
+      "Pituitary/hypothalamic dysfunction (secondary hypogonadism)",
+      "Hyperprolactinemia (inhibits GnRH)",
+      "Exogenous sex steroids (negative feedback)",
+      "Anorexia, excessive exercise (functional hypothalamic amenorrhea)",
+    ],
+    boardsPearls: [
+      "Primary hypogonadism: ↑ FSH/LH + low sex hormones",
+      "Secondary hypogonadism: ↓ or inappropriately normal FSH/LH + low sex hormones",
+      "Kallmann syndrome: anosmia + delayed puberty + ↓ GnRH",
+      "Turner: short stature, webbed neck, ↑ FSH, streak ovaries",
+    ],
+    pairWith: [
+      "↑ FSH + low estrogen + amenorrhea → primary ovarian failure",
+      "↓ FSH + low testosterone → pituitary hypogonadism",
+    ],
+  },
+  {
+    id: "lh",
+    name: "Luteinizing Hormone",
+    aliases: [
+      "luteinizing hormone",
+      "lh",
+      "serum lh",
+    ],
+    measures:
+      "Anterior pituitary gonadotropin that triggers ovulation (LH surge) and stimulates Leydig cells to produce testosterone.",
+    normalRange: "Cyclic in women; midcycle surge; postmenopausal ↑",
+    increasedCauses: [
+      "Primary gonadal failure (Turner, Klinefelter, menopause)",
+      "PCOS (may have ↑ LH:FSH ratio >2–3)",
+      "Precocious puberty (central)",
+    ],
+    decreasedCauses: [
+      "Secondary hypogonadism (pituitary tumor, hyperprolactinemia)",
+      "Exogenous steroids",
+      "Functional hypothalamic amenorrhea",
+    ],
+    boardsPearls: [
+      "LH surge triggers ovulation ~14 days before menses",
+      "PCOS: ↑ LH:FSH ratio, elevated androgens, polycystic ovaries on ultrasound",
+      "Klinefelter (47,XXY): ↑ FSH/LH, small firm testes, infertility",
+      "hCG mimics LH — pregnancy test detects β-hCG",
+    ],
+    pairWith: [
+      "↑ LH:FSH + hirsutism + oligomenorrhea → PCOS",
+      "↑ LH/FSH + small testes → Klinefelter syndrome",
+    ],
+  },
+  {
+    id: "gh-arginine-stimulation",
+    name: "Growth Hormone Arginine Stimulation Test",
+    aliases: [
+      "growth hormone-arginine stimulation",
+      "growth hormone arginine stimulation",
+      "gh arginine stimulation test",
+      "arginine gh stimulation test",
+      "gh stimulation test",
+    ],
+    measures:
+      "Provocative test measuring peak growth hormone response after IV arginine infusion; used to diagnose growth hormone deficiency when basal GH is insufficient.",
+    normalRange: "Peak GH ≥10 ng/mL (assay-dependent) generally excludes GHD in adults; pediatric cutoffs vary by age",
+    increasedCauses: [
+      "Normal robust response in healthy children",
+      "Acromegaly (elevated baseline and blunted suppression on glucose test instead)",
+    ],
+    decreasedCauses: [
+      "Growth hormone deficiency (pituitary adenoma, craniopharyngioma, radiation)",
+      "Panhypopituitarism",
+      "Childhood short stature from GHD",
+    ],
+    boardsPearls: [
+      "Diagnose GHD when GH fails to rise adequately after provocative stimuli (arginine, insulin tolerance, clonidine)",
+      "Insulin tolerance test is gold standard but risky — arginine/clonidine safer in children",
+      "Glucose suppression test diagnoses acromegaly (GH fails to suppress)",
+      "Peds: GH therapy for confirmed GHD improves final height; Turner syndrome also treated with GH",
+    ],
+    pairWith: [
+      "Blunted GH response + short stature + delayed bone age → GHD workup",
+      "Pituitary mass + ↓ multiple anterior hormones → panhypopituitarism",
+    ],
+  },
+  {
+    id: "iron",
+    name: "Serum Iron",
+    aliases: [
+      "iron",
+      "serum iron",
+      "fe",
+    ],
+    measures:
+      "Circulating iron bound mainly to transferrin; reflects recent iron intake and availability (diurnal variation — draw fasting AM).",
+    normalRange: "~60–170 µg/dL (M), 40–160 (F)",
+    increasedCauses: [
+      "Hemochromatosis, transfusional iron overload",
+      "Hemolytic anemia (released iron)",
+      "Iron poisoning",
+      "Recent iron supplementation",
+    ],
+    decreasedCauses: [
+      "Iron deficiency anemia",
+      "Chronic disease (iron sequestration in macrophages)",
+      "Blood loss",
+    ],
+    boardsPearls: [
+      "Serum iron alone is unreliable — interpret with ferritin, TIBC, transferrin saturation",
+      "Iron deficiency: ↓ iron, ↓ ferritin, ↑ TIBC, ↓ saturation",
+      "Anemia of chronic disease: ↓ iron, normal/↑ ferritin, ↓ TIBC",
+      "Hemochromatosis: ↑ iron, ↑ ferritin, ↑ transferrin saturation",
+    ],
+    pairWith: [
+      "↓ iron + ↓ ferritin + microcytic anemia → iron deficiency",
+      "↑ iron + ↑ ferritin + ↑ saturation → hemochromatosis",
+    ],
+  },
+  {
+    id: "tibc",
+    name: "Total Iron Binding Capacity",
+    aliases: [
+      "total iron binding capacity",
+      "tibc",
+      "iron binding capacity",
+    ],
+    measures:
+      "Indirect measure of transferrin capacity to bind iron; reflects transferrin concentration in blood.",
+    normalRange: "~250–450 µg/dL",
+    increasedCauses: [
+      "Iron deficiency (compensatory ↑ transferrin production)",
+      "Oral contraceptives, pregnancy",
+    ],
+    decreasedCauses: [
+      "Chronic disease / inflammation",
+      "Hemochromatosis, malnutrition",
+      "Liver disease (↓ transferrin synthesis)",
+    ],
+    boardsPearls: [
+      "↑ TIBC is classic for iron deficiency",
+      "↓ TIBC in anemia of chronic disease and hemochromatosis",
+      "Transferrin saturation = (serum iron / TIBC) × 100%",
+      "Ferritin is more specific than TIBC for iron stores",
+    ],
+    pairWith: [
+      "↑ TIBC + ↓ ferritin → iron deficiency",
+      "↓ TIBC + ↑ ferritin → anemia of chronic disease",
+    ],
+  },
+  {
+    id: "transferrin",
+    name: "Transferrin",
+    aliases: [
+      "transferrin",
+      "serum transferrin",
+      "transferrin saturation",
+    ],
+    measures:
+      "Plasma glycoprotein that transports iron from gut and macrophages to bone marrow; TIBC approximates transferrin iron-binding capacity.",
+    normalRange: "~200–360 mg/dL; saturation 20–50%",
+    increasedCauses: [
+      "Iron deficiency (↑ transferrin to capture more iron)",
+      "Estrogen therapy, pregnancy",
+    ],
+    decreasedCauses: [
+      "Inflammation (negative acute-phase response)",
+      "Hemochromatosis (iron overload)",
+      "Liver disease, malnutrition",
+    ],
+    boardsPearls: [
+      "Transferrin saturation >45% screens for hemochromatosis",
+      "HFE C282Y homozygosity + ↑ saturation → hemochromatosis",
+      "Anemia of chronic disease: ↓ transferrin, sequestered iron in macrophages",
+      "vs ferritin — transferrin reflects transport capacity; ferritin reflects storage",
+    ],
+    pairWith: [
+      "↑ transferrin saturation + ↑ ferritin → iron overload",
+      "↑ transferrin + ↓ ferritin → iron deficiency",
+    ],
+  },
+  {
+    id: "osmolality",
+    name: "Osmolality",
+    aliases: [
+      "osmolality",
+      "serum osmolality",
+      "plasma osmolality",
+      "urine osmolality",
+      "calculated osmolality",
+    ],
+    measures:
+      "Concentration of solute particles per kg solvent; serum ~275–295 mOsm/kg reflects sodium, glucose, and BUN. Urine osmolality assesses concentrating ability.",
+    normalRange: "Serum ~275–295 mOsm/kg; urine varies 50–1200 mOsm/kg with hydration/ADH",
+    increasedCauses: [
+      "Hypernatremia (water deficit)",
+      "Hyperglycemia (unmeasured osmoles)",
+      "Uremia, ethanol, methanol, ethylene glycol (toxic alcohols)",
+      "Mannitol infusion",
+    ],
+    decreasedCauses: [
+      "Hyponatremia (excess water)",
+      "SIADH (inappropriately dilute serum)",
+      "Beer potomania, psychogenic polydipsia",
+    ],
+    boardsPearls: [
+      "Calculated osm = 2×Na + glucose/18 + BUN/2.8",
+      "Osm gap = measured − calculated; >10 suggests unmeasured osmoles (toxic alcohols)",
+      "DI: high serum osm + low urine osm; SIADH: low serum osm + inappropriately concentrated urine",
+      "Peds: same physiology; infants vulnerable to hyponatremia with hypotonic fluids",
+    ],
+    pairWith: [
+      "High serum osm + polyuria + dilute urine → diabetes insipidus",
+      "Low serum osm + euvolemia + concentrated urine → SIADH",
+    ],
+  },
+  {
+    id: "phosphorus",
+    name: "Phosphorus",
+    aliases: [
+      "phosphorus",
+      "phosphate",
+      "serum phosphorus",
+      "serum phosphate",
+      "po4",
+    ],
+    measures:
+      "Major intracellular anion; critical for ATP, bone mineralization, and membrane function. Renally excreted and regulated by PTH and vitamin D.",
+    normalRange: "~2.5–4.5 mg/dL",
+    increasedCauses: [
+      "Renal failure (↓ excretion)",
+      "Tumor lysis syndrome",
+      "Rhabdomyolysis",
+      "Vitamin D intoxication, hypoparathyroidism",
+      "Laxative abuse (phosphate enemas)",
+    ],
+    decreasedCauses: [
+      "Refeeding syndrome",
+      "Hyperparathyroidism",
+      "Vitamin D deficiency",
+      "Primary hyperparathyroidism shifts phosphate into urine",
+      "Alcoholism, respiratory alkalosis",
+    ],
+    boardsPearls: [
+      "TLS triad labs: ↑ K, ↑ uric acid, ↑ phosphate, ↓ calcium",
+      "CKD → hyperphosphatemia → secondary hyperparathyroidism",
+      "Refeeding syndrome: ↓ phosphate, ↓ K, ↓ Mg after nutrition restart",
+      "Peds: rickets from vitamin D deficiency — ↓ phosphate with bone changes",
+    ],
+    pairWith: [
+      "↑ phosphate + ↑ K + ↑ uric acid after chemo → tumor lysis syndrome",
+      "↓ phosphate + CKD bone pain → renal osteodystrophy workup",
+    ],
+  },
+  {
+    id: "prolactin",
+    name: "Prolactin",
+    aliases: [
+      "prolactin",
+      "hprl",
+      "hp rl",
+      "serum prolactin",
+      "hyperprolactinemia",
+    ],
+    measures:
+      "Anterior pituitary hormone promoting lactation; inhibits GnRH → hypogonadism when elevated.",
+    normalRange: "~2–25 ng/mL (nonpregnant; lab-dependent); physiologically ↑ in pregnancy and postpartum",
+    increasedCauses: [
+      "Prolactinoma (micro- or macro-)",
+      "Dopamine antagonists (antipsychotics, metoclopramide)",
+      "Primary hypothyroidism (↑ TRH stimulates prolactin)",
+      "Pregnancy, nipple stimulation, chest wall trauma",
+      "Renal failure (↓ clearance)",
+    ],
+    decreasedCauses: [
+      "Pituitary destruction (Sheehan syndrome, apoplexy)",
+      "Dopamine agonist therapy",
+    ],
+    boardsPearls: [
+      "Galactorrhea + amenorrhea + ↓ libido → check prolactin",
+      "Macroprolactinoma: prolactin often >200 ng/mL + visual field defects",
+      "Treat prolactinoma with dopamine agonists (cabergoline, bromocriptine)",
+      "Hypothyroidism can cause mild hyperprolactinemia — check TSH",
+    ],
+    pairWith: [
+      "↑ prolactin + bitemporal hemianopsia → macroprolactinoma",
+      "↑ prolactin + antipsychotic use → drug-induced; consider switch",
+    ],
+  },
+  {
+    id: "globulin",
+    name: "Globulin",
+    aliases: [
+      "globulin",
+      "serum globulin",
+      "total globulin",
+      "gamma globulin",
+      "gamma-globulin",
+      "globulins",
+    ],
+    measures:
+      "Serum proteins other than albumin (α, β, γ fractions); γ-globulins are predominantly immunoglobulins. Total protein = albumin + globulin.",
+    normalRange: "Total globulin ~2.0–3.5 g/dL; A/G ratio ~1.2–2.2",
+    increasedCauses: [
+      "Chronic inflammation / infection",
+      "Liver cirrhosis (polyclonal ↑ γ-globulin)",
+      "Multiple myeloma (monoclonal spike on SPEP)",
+      "Autoimmune disease",
+      "Waldenström macroglobulinemia (IgM spike)",
+    ],
+    decreasedCauses: [
+      "Immunodeficiency (agammaglobulinemia, nephrotic syndrome loss)",
+      "Protein-losing enteropathy",
+      "Severe malnutrition",
+    ],
+    boardsPearls: [
+      "SPEP: M spike → multiple myeloma (usually IgG or IgA)",
+      "Cirrhosis: hypergammaglobulinemia with ↑ IgG",
+      "Nephrotic syndrome: ↓ albumin and ↓ immunoglobulins → infection risk",
+      "A/G ratio inverted (<1) in cirrhosis and myeloma",
+    ],
+    pairWith: [
+      "M spike + bone pain + anemia → multiple myeloma",
+      "↓ globulin + recurrent infections → immunodeficiency",
+    ],
+  },
+  {
+    id: "iodine-uptake",
+    name: "Radioactive Iodine Uptake",
+    aliases: [
+      "iodine",
+      "radioactive iodine uptake",
+      "rai uptake",
+      "iodine uptake",
+      "iodine uptake scan",
+      "24-hour radioactive iodine uptake",
+    ],
+    measures:
+      "Thyroid gland uptake of oral radioactive iodine (I-123 or I-131 tracer); distinguishes causes of hyperthyroidism by whether the gland avidly traps iodine.",
+    normalRange: "~5–15% at 24 hours (varies with iodine intake)",
+    increasedCauses: [
+      "Graves disease (diffusely increased uptake)",
+      "Toxic multinodular goiter (patchy increased uptake)",
+      "Iodine deficiency (compensatory ↑ uptake)",
+    ],
+    decreasedCauses: [
+      "Thyroiditis (destructive — leaked hormone, gland not trapping)",
+      "Exogenous thyroid hormone or iodine load (Wolff-Chaikoff effect)",
+      "Factitious hyperthyroidism (taking levothyroxine)",
+    ],
+    boardsPearls: [
+      "Graves: ↑ T4/T3, ↑ uptake, TSH suppressed, TSI positive",
+      "Subacute thyroiditis: ↑ T4/T3, ↓ uptake (leak vs production)",
+      "I-131 ablation for Graves — contraindicated in pregnancy",
+      "Peds: congenital hypothyroidism screened by TSH, not uptake scan",
+    ],
+    pairWith: [
+      "↑ T4 + ↑ RAI uptake → Graves or toxic nodular goiter",
+      "↑ T4 + ↓ RAI uptake → thyroiditis or exogenous hormone",
+    ],
+  },
+  {
+    id: "thyroxine",
+    name: "Thyroxine (T4)",
+    aliases: [
+      "thyroxine",
+      "t4",
+      "free t4",
+      "ft4",
+      "total t4",
+      "levothyroxine level",
+    ],
+    measures:
+      "Primary thyroid hormone (T4); less active than T3 but more abundant. Free T4 is unbound and biologically active fraction.",
+    normalRange: "Free T4 ~0.8–1.8 ng/dL; total T4 ~5–12 µg/dL",
+    increasedCauses: [
+      "Hyperthyroidism (Graves, toxic nodule, thyroiditis early)",
+      "Exogenous levothyroxine",
+      "Acute illness (euthyroid sick syndrome — variable)",
+    ],
+    decreasedCauses: [
+      "Primary hypothyroidism",
+      "Central hypothyroidism (low TSH + low T4)",
+      "Severe illness (euthyroid sick — ↓ T4)",
+      "Iodine deficiency (if severe)",
+    ],
+    boardsPearls: [
+      "Primary hypothyroidism: ↑ TSH, ↓ free T4",
+      "Hyperthyroidism: ↓ TSH, ↑ free T4 (and/or T3)",
+      "Euthyroid sick: ↓ T3, normal or ↓ T4, normal/low TSH",
+      "Neonatal TSH screen — not T4 alone — for congenital hypothyroidism",
+    ],
+    pairWith: [
+      "↓ T4 + ↑ TSH → primary hypothyroidism",
+      "↑ T4 + ↓ TSH → hyperthyroidism",
+    ],
+  },
+  {
+    id: "triiodothyronine",
+    name: "Triiodothyronine (T3)",
+    aliases: [
+      "triiodothyronine",
+      "t3",
+      "free t3",
+      "ft3",
+      "total t3",
+      "reverse t3",
+    ],
+    measures:
+      "More potent thyroid hormone; mostly from peripheral T4 deiodination. T3 toxicosis shows isolated ↑ T3 with normal T4.",
+    normalRange: "Free T3 ~2.3–4.2 pg/mL (lab-dependent)",
+    increasedCauses: [
+      "Hyperthyroidism (especially T3 toxicosis)",
+      "Graves disease",
+      "Toxic nodular goiter",
+    ],
+    decreasedCauses: [
+      "Hypothyroidism",
+      "Euthyroid sick syndrome (↓ T3, ↑ reverse T3)",
+      "Propranolol and glucocorticoids (block peripheral T4→T3)",
+      "Amiodarone (blocks conversion)",
+    ],
+    boardsPearls: [
+      "T3 toxicosis: ↑ T3, normal T4, suppressed TSH — early Graves or nodular disease",
+      "Euthyroid sick: ↓ T3, ↑ reverse T3 — peripheral deiodinase shuts down",
+      "β-blockers relieve hyperthyroid symptoms without lowering hormone levels",
+      "Peds: congenital hypothyroidism — low T4/T3, ↑ TSH on newborn screen",
+    ],
+    pairWith: [
+      "↑ T3 + normal T4 + ↓ TSH → T3 toxicosis",
+      "↓ T3 + normal TSH in ICU patient → euthyroid sick syndrome",
+    ],
+  },
+  {
+    id: "immunoglobulins",
+    name: "Immunoglobulins",
+    aliases: [
+      "immunoglobulins",
+      "immunoglobulin",
+      "igs",
+      "total immunoglobulins",
+      "quantitative immunoglobulins",
+      "spep",
+      "serum protein electrophoresis",
+    ],
+    measures:
+      "Antibody classes (IgG, IgM, IgA, IgE, IgD) produced by B cells; measured quantitatively or as fractions on serum protein electrophoresis.",
+    normalRange: "IgG ~700–1600, IgA ~70–400, IgM ~40–230 mg/dL (lab-dependent)",
+    increasedCauses: [
+      "Infection (especially IgM acute, IgG convalescent)",
+      "Autoimmune disease, chronic inflammation",
+      "Multiple myeloma (monoclonal IgG or IgA)",
+      "Waldenström (IgM), MGUS",
+    ],
+    decreasedCauses: [
+      "X-linked agammaglobulinemia (Bruton)",
+      "Common variable immunodeficiency (CVID)",
+      "Nephrotic syndrome (urinary loss)",
+      "Protein-losing enteropathy",
+    ],
+    boardsPearls: [
+      "Bruton agammaglobulinemia: ↓ all Igs, recurrent bacterial infections after 6 months",
+      "CVID: ↓ IgG and IgA (± IgM), recurrent sinopulmonary infections",
+      "SPEP M spike → myeloma workup (bone marrow, free light chains)",
+      "IgM pentamer — best complement fixer; IgG most abundant in serum",
+    ],
+    pairWith: [
+      "↓ all immunoglobulins + recurrent pyogenic infections in boy → Bruton",
+      "M spike + back pain → multiple myeloma",
+    ],
+  },
+  {
+    id: "iga",
+    name: "IgA",
+    aliases: [
+      "iga",
+      "immunoglobulin a",
+      "immunoglobulin a (iga)",
+      "serum iga",
+    ],
+    measures:
+      "Predominant immunoglobulin in mucosal secretions (tears, saliva, breast milk, GI/genitourinary mucosa); dimer with secretory component in secretions.",
+    normalRange: "Serum IgA ~70–400 mg/dL",
+    increasedCauses: [
+      "Chronic mucosal infection or inflammation",
+      "Cirrhosis (polyclonal ↑)",
+      "IgA multiple myeloma (monoclonal spike)",
+      "IgA nephropathy (mesangial IgA deposition — diagnosis by biopsy, not serum level)",
+    ],
+    decreasedCauses: [
+      "Selective IgA deficiency (most common primary immunodeficiency)",
+      "CVID, nephrotic syndrome",
+      "Protein-losing enteropathy",
+    ],
+    boardsPearls: [
+      "Selective IgA deficiency: ↑ anaphylaxis risk with blood products containing IgA",
+      "Celiac screening: anti-tTG IgA — check total IgA (false negative if IgA deficient)",
+      "IgA nephropathy (Berger): synpharyngitic hematuria; mesangial IgA on biopsy",
+      "Henoch-Schönlein purpura: IgA immune complex vasculitis in children",
+    ],
+    pairWith: [
+      "Recurrent sinopulmonary infections + ↓ IgA → selective IgA deficiency",
+      "Gross hematuria after URI + normal complement → IgA nephropathy",
+    ],
+  },
+  {
+    id: "ige",
+    name: "IgE",
+    aliases: [
+      "ige",
+      "immunoglobulin e",
+      "immunoglobulin e (ige)",
+      "serum ige",
+      "total ige",
+    ],
+    measures:
+      "Immunoglobulin involved in type I hypersensitivity and defense against helminths; bound to mast cells and basophils via FcεRI.",
+    normalRange: "Serum IgE ~0–100 IU/mL (lab-dependent); markedly higher in atopy",
+    increasedCauses: [
+      "Atopic disease: asthma, allergic rhinitis, eczema",
+      "Parasitic (helminth) infection",
+      "Allergic bronchopulmonary aspergillosis (ABPA)",
+      "Hyper-IgE syndrome (Job syndrome — STAT3 mutation)",
+      "Pemphigus vulgaris, some drug reactions",
+    ],
+    decreasedCauses: [
+      "Not commonly clinically emphasized",
+      "Rare immunodeficiency syndromes",
+    ],
+    boardsPearls: [
+      "Type I hypersensitivity: allergen cross-links IgE on mast cells → degranulation (histamine, tryptase)",
+      "Hyper-IgE syndrome: ↑ IgE, eczema, recurrent staph abscesses, retained primary teeth, coarse facies",
+      "ABPA: asthma + eosinophilia + ↑ IgE + central bronchiectasis in CF/asthma patients",
+      "Anti-IgE (omalizumab) for severe allergic asthma",
+      "Peds: atopy and parasites are top causes of elevated IgE",
+    ],
+    pairWith: [
+      "↑ IgE + asthma + eosinophilia → atopy or ABPA",
+      "↑ IgE + recurrent staph abscesses + eczema → Job syndrome",
+    ],
+  },
+  {
+    id: "igg",
+    name: "IgG",
+    aliases: [
+      "igg",
+      "immunoglobulin g",
+      "immunoglobulin g (igg)",
+      "serum igg",
+    ],
+    measures:
+      "Most abundant serum immunoglobulin; major opsonin and the only class that crosses the placenta (maternal-fetal immunity).",
+    normalRange: "Serum IgG ~700–1600 mg/dL",
+    increasedCauses: [
+      "Chronic infection or inflammation",
+      "Autoimmune disease",
+      "IgG multiple myeloma (monoclonal spike — most common myeloma isotype)",
+      "Cirrhosis (polyclonal hypergammaglobulinemia)",
+      "Chronic granulomatous disease (sometimes)",
+    ],
+    decreasedCauses: [
+      "Bruton agammaglobulinemia (↓ all Igs)",
+      "CVID (↓ IgG ± IgA/IgM)",
+      "Nephrotic syndrome (urinary loss)",
+      "Protein-losing enteropathy",
+    ],
+    boardsPearls: [
+      "IgG crosses placenta — neonatal protection for ~6 months",
+      "Secondary immune response: IgM first, then IgG dominates (class switching)",
+      "Rh hemolytic disease: maternal anti-D IgG crosses placenta → fetal hemolysis",
+      "IVIG replaces IgG in CVID and ITP (immune modulation)",
+      "Peds: maternal IgG wanes by ~6 months — infections rise if humoral immunity deficient",
+    ],
+    pairWith: [
+      "↓ IgG + recurrent bacterial infections after 6 months in boy → Bruton",
+      "M spike predominantly IgG + bone pain → multiple myeloma",
+    ],
+  },
+  {
+    id: "igm",
+    name: "IgM",
+    aliases: [
+      "igm",
+      "immunoglobulin m",
+      "immunoglobulin m (igm)",
+      "serum igm",
+    ],
+    measures:
+      "Pentameric immunoglobulin; first antibody produced in primary immune response. Best at complement activation (classic pathway). Too large to cross placenta.",
+    normalRange: "Serum IgM ~40–230 mg/dL",
+    increasedCauses: [
+      "Acute infection (early humoral response — IgM before IgG)",
+      "Waldenström macroglobulinemia (IgM monoclonal spike)",
+      "Primary biliary cholangitis (often ↑ IgM)",
+      "Rheumatoid factor (IgM anti-IgG — can be elevated in RA, Sjögren)",
+      "Hyper-IgM syndrome (defective class switching)",
+    ],
+    decreasedCauses: [
+      "Bruton agammaglobulinemia",
+      "CVID (sometimes)",
+      "Nephrotic syndrome",
+    ],
+    boardsPearls: [
+      "IgM = first antibody in acute infection; IgG follows with class switching",
+      "Waldenström: IgM spike + hyperviscosity (blurred vision, bleeding, neurologic symptoms)",
+      "Hyper-IgM syndrome: ↑ IgM, ↓ IgG/IgA/IgE — CD40L (X-linked) or AID defects",
+      "Cold agglutinins are usually IgM — Mycoplasma pneumoniae, EBV",
+      "Peds: X-linked hyper-IgM — recurrent pyogenic and opportunistic infections",
+    ],
+    pairWith: [
+      "↑ IgM + blurred vision + IgM spike → Waldenström macroglobulinemia",
+      "↑ IgM only with ↓ IgG/IgA → hyper-IgM syndrome",
+    ],
+  },
+  {
+    id: "hba1c",
+    name: "Hemoglobin A1c",
+    aliases: [
+      "hemoglobin a1c",
+      "hemoglobin a₁c",
+      "hba1c",
+      "hb a1c",
+      "a1c",
+      "glycated hemoglobin",
+      "glycosylated hemoglobin",
+      "glycohemoglobin",
+    ],
+    measures:
+      "Fraction of hemoglobin nonenzymatically glycated; reflects average blood glucose over ~120 days (weighted toward recent weeks).",
+    normalRange: "<5.7% normal; 5.7–6.4% prediabetes; ≥6.5% diagnostic for diabetes (ADA criteria)",
+    increasedCauses: [
+      "Diabetes mellitus (poor glycemic control)",
+      "Iron deficiency (falsely ↑ A1c — fewer young RBCs)",
+      "Splenectomy / hemolytic anemia recovery (older RBCs persist)",
+    ],
+    decreasedCauses: [
+      "Hemolytic anemia (RBC turnover shortens exposure)",
+      "Recent transfusion",
+      "Chronic kidney disease on erythropoietin (variable)",
+      "Pregnancy (physiologic dilution of glycation)",
+    ],
+    boardsPearls: [
+      "Hemoglobin A₁c (subscript 1c) = HbA1c — same glycated hemoglobin test",
+      "Diagnose diabetes: A1c ≥6.5%, fasting glucose ≥126, or OGTT ≥200",
+      "Unreliable in hemolysis, recent transfusion, some hemoglobinopathies — use fructosamine or glucose",
+      "Peds: same diagnostic thresholds; A1c less validated in young children",
+    ],
+    pairWith: [
+      "A1c ≥6.5% + polyuria/polydipsia → diabetes mellitus",
+      "High A1c + hemolytic anemia → interpret cautiously or use alternative marker",
+    ],
+  },
+  {
+    id: "reticulocyte",
+    name: "Reticulocyte Count",
+    aliases: [
+      "reticulocyte",
+      "reticulocytes",
+      "reticulocyte count",
+      "retic count",
+      "reticulocyte index",
+    ],
+    measures:
+      "Immature anucleate red blood cells recently released from bone marrow; marker of erythropoietic activity.",
+    normalRange: "~0.5–2.5% of RBCs (or absolute count ~25,000–100,000 /µL)",
+    increasedCauses: [
+      "Hemolytic anemia (marrow compensates)",
+      "Acute blood loss with adequate iron stores",
+      "Recovery from marrow suppression",
+      "Erythropoietin therapy",
+    ],
+    decreasedCauses: [
+      "Aplastic anemia",
+      "Iron/B12/folate deficiency (ineffective erythropoiesis)",
+      "Chronic kidney disease (↓ erythropoietin)",
+      "Bone marrow infiltration (leukemia, metastases)",
+    ],
+    boardsPearls: [
+      "Reticulocyte index corrects for anemia severity",
+      "↑ reticulocytes + anemia → hemolysis or bleeding with marrow response",
+      "↓ reticulocytes + anemia → production problem (hypoproliferative)",
+      "Peds: hemolytic disease of newborn — ↑ reticulocytes with jaundice",
+    ],
+    pairWith: [
+      "Anemia + ↑ reticulocytes + ↑ LDH → hemolysis",
+      "Anemia + ↓ reticulocytes + low MCV → iron deficiency",
+    ],
+  },
+  {
+    id: "pt",
+    name: "Prothrombin Time",
+    aliases: [
+      "pt",
+      "prothrombin time",
+      "protime",
+    ],
+    measures:
+      "Coagulation test of the extrinsic and common pathways (factors VII, X, V, II, fibrinogen); reported as seconds or INR.",
+    normalRange: "~11–13.5 seconds; INR 0.8–1.2 (not anticoagulated)",
+    increasedCauses: [
+      "Warfarin (↓ vitamin K–dependent factors)",
+      "Vitamin K deficiency (malabsorption, antibiotics, newborn)",
+      "Liver disease (↓ factor synthesis)",
+      "DIC (consumption)",
+      "Factor VII deficiency",
+    ],
+    decreasedCauses: [
+      "Rare; not clinically emphasized",
+    ],
+    boardsPearls: [
+      "PT/INR monitors warfarin — target usually 2–3 for most indications",
+      "Vitamin K–dependent factors: II, VII, IX, X, protein C & S",
+      "Prolonged PT + prolonged PTT → common pathway or severe liver disease/DIC",
+      "Neonatal hemorrhagic disease — ↓ vitamin K → ↑ PT",
+    ],
+    pairWith: [
+      "↑ PT + normal PTT → extrinsic pathway (factor VII, warfarin)",
+      "↑ PT + ↑ PTT + ↓ fibrinogen → DIC",
+    ],
+  },
+  {
+    id: "ptt",
+    name: "Partial Thromboplastin Time",
+    aliases: [
+      "ptt",
+      "partial thromboplastin time",
+      "aptt",
+      "activated partial thromboplastin time",
+      "activated ptt",
+    ],
+    measures:
+      "Coagulation test of the intrinsic and common pathways (factors XII, XI, IX, VIII, X, V, II, fibrinogen); monitors heparin.",
+    normalRange: "~25–35 seconds",
+    increasedCauses: [
+      "Heparin / LMWH therapy",
+      "Hemophilia A (factor VIII) or B (factor IX)",
+      "von Willebrand disease (↓ factor VIII stabilization)",
+      "Lupus anticoagulant (prolongs PTT in vitro — paradoxically thrombotic)",
+      "Liver disease, DIC, vitamin K deficiency (less than PT)",
+    ],
+    decreasedCauses: [
+      "Acute phase / factor VIII elevation (rare)",
+    ],
+    boardsPearls: [
+      "Mixing study: PTT corrects if deficiency, does not correct if inhibitor (lupus anticoagulant, factor inhibitor)",
+      "Hemophilia: prolonged PTT, normal PT, normal platelets",
+      "Heparin monitoring — therapeutic PTT ~1.5–2.5× control",
+      "Peds: hemophilia presents with deep tissue/joint bleeding after minor trauma",
+    ],
+    pairWith: [
+      "↑ PTT + normal PT + joint bleeding → hemophilia",
+      "↑ PTT + thrombosis history → lupus anticoagulant",
+    ],
+  },
+  {
+    id: "mch",
+    name: "MCH",
+    aliases: ["mch", "mean corpuscular hemoglobin"],
+    measures:
+      "Average mass of hemoglobin per red blood cell; parallels MCHC and helps classify anemia.",
+    normalRange: "~27–33 pg",
+    increasedCauses: [
+      "Macrocytic anemia (often with ↑ MCV)",
+      "Hyperthyroidism",
+    ],
+    decreasedCauses: [
+      "Iron deficiency anemia",
+      "Thalassemia",
+      "Anemia of chronic disease",
+    ],
+    boardsPearls: [
+      "Low MCH + low MCV → microcytic hypochromic anemia (iron deficiency, thalassemia)",
+      "Interpret with MCV, MCHC, and RDW",
+      "Less commonly cited alone than MCV on boards",
+    ],
+    pairWith: [
+      "↓ MCH + ↓ MCV + ↑ RDW → iron deficiency",
+      "↓ MCH + ↓ MCV + normal RDW → thalassemia trait",
+    ],
+  },
+  {
+    id: "mchc",
+    name: "MCHC",
+    aliases: [
+      "mchc",
+      "mean corpuscular hemoglobin concentration",
+    ],
+    measures:
+      "Average concentration of hemoglobin per unit volume of red cells; reflects RBC hypochromia.",
+    normalRange: "~32–36 g/dL",
+    increasedCauses: [
+      "Hereditary spherocytosis (relative hemoglobin concentration in spherocytes)",
+      "Lab artifact (cold agglutinins, hyperlipidemia)",
+    ],
+    decreasedCauses: [
+      "Iron deficiency anemia (hypochromic microcytic)",
+      "Thalassemia",
+      "Sideroblastic anemia",
+    ],
+    boardsPearls: [
+      "Low MCHC → hypochromic RBCs on smear",
+      "Spherocytes with ↑ MCHC → hereditary spherocytosis",
+      "Use with MCV and RDW to narrow anemia differential",
+    ],
+    pairWith: [
+      "↓ MCHC + microcytosis → iron deficiency or thalassemia",
+      "↑ MCHC + spherocytes → hereditary spherocytosis",
+    ],
+  },
+  {
+    id: "oxalate",
+    name: "Oxalate",
+    aliases: [
+      "oxalate",
+      "urine oxalate",
+      "serum oxalate",
+      "oxalic acid",
+      "hyperoxaluria",
+    ],
+    measures:
+      "End product of glyoxylate metabolism; combines with calcium to form insoluble calcium oxalate — the most common kidney stone component.",
+    normalRange: "Urine oxalate ~20–40 mg/24 h (lab-dependent)",
+    increasedCauses: [
+      "Primary hyperoxaluria (AGXT, GRHPR, HOGA1 mutations)",
+      "Enteric hyperoxaluria (malabsorption, Crohn, gastric bypass)",
+      "Ethylene glycol poisoning (oxalate crystals in urine)",
+      "Vitamin C excess (metabolized to oxalate)",
+      "High oxalate diet (spinach, rhubarb, nuts)",
+    ],
+    decreasedCauses: [
+      "Not clinically emphasized",
+    ],
+    boardsPearls: [
+      "Calcium oxalate stones — envelope-shaped crystals on urinalysis",
+      "Ethylene glycol toxicity: anion gap acidosis + calcium oxalate crystals + ↑ osm gap",
+      "Primary hyperoxaluria → nephrocalcinosis and renal failure in children",
+      "Restrict oxalate and ensure adequate calcium intake with meals to limit intestinal absorption",
+    ],
+    pairWith: [
+      "Anion gap acidosis + oxalate crystals → ethylene glycol poisoning",
+      "Recurrent calcium oxalate stones + GI disease → enteric hyperoxaluria",
+    ],
+  },
+  {
+    id: "17-hydroxycorticosteroids",
+    name: "17-Hydroxycorticosteroids",
+    aliases: [
+      "17-hydroxycorticosteroids",
+      "17 hydroxycorticosteroids",
+      "17-oh corticosteroids",
+      "urinary 17-hydroxycorticosteroids",
+    ],
+    measures:
+      "Urinary metabolites of cortisol and cortisone (17-hydroxy group); historical marker of glucocorticoid production and adrenal cortex activity.",
+    normalRange: "~2–8 mg/24 h (lab-dependent; largely superseded by direct cortisol assays)",
+    increasedCauses: [
+      "Cushing syndrome (endogenous or exogenous steroids)",
+      "Stress, pregnancy",
+      "Adrenal adenoma/carcinoma",
+    ],
+    decreasedCauses: [
+      "Adrenal insufficiency",
+      "Hypopituitarism",
+      "Congenital adrenal hyperplasia (depending on enzyme block)",
+    ],
+    boardsPearls: [
+      "Largely replaced by 24-h urine free cortisol and salivary cortisol for Cushing workup",
+      "Elevated in glucocorticoid excess states",
+      "CAH enzyme defects alter steroid precursor routing — 17-OHP more classic for 21-hydroxylase deficiency",
+      "Boards may reference in older Cushing/adrenal vignettes",
+    ],
+    pairWith: [
+      "↑ 17-hydroxycorticosteroids + Cushingoid features → hypercortisolism",
+      "CAH workup: 17-OHP elevation more specific for 21-hydroxylase deficiency",
+    ],
+  },
+  {
+    id: "17-ketosteroids",
+    name: "17-Ketosteroids",
+    aliases: [
+      "17-ketosteroids",
+      "17 ketosteroids",
+      "urinary 17-ketosteroids",
+      "17-ks",
+    ],
+    measures:
+      "Urinary metabolites of adrenal and gonadal androgens (DHEA, androstenedione, testosterone metabolites); reflects androgen production.",
+    normalRange: "Adult male ~7–20 mg/24 h; female ~4–14 mg/24 h",
+    increasedCauses: [
+      "Congenital adrenal hyperplasia (androgen excess)",
+      "Adrenal carcinoma",
+      "Virilizing ovarian or testicular tumors",
+      "Exogenous androgens",
+    ],
+    decreasedCauses: [
+      "Adrenal insufficiency",
+      "Hypogonadism",
+      "Panhypopituitarism",
+    ],
+    boardsPearls: [
+      "↑ in androgen excess — CAH, virilizing tumors",
+      "21-hydroxylase CAH: virilization, ↑ 17-OHP (more specific than 17-ketosteroids today)",
+      "Historical test; modern workup uses direct androgen and 17-OHP levels",
+      "Peds: ambiguous genitalia + salt wasting → screen 17-OHP for CAH",
+    ],
+    pairWith: [
+      "↑ 17-ketosteroids + virilization in female → androgen excess workup",
+      "Newborn salt wasting + ambiguous genitalia → 17-OHP for CAH",
+    ],
+  },
+  {
+    id: "bmi",
+    name: "Body Mass Index",
+    aliases: [
+      "bmi",
+      "body mass index",
+    ],
+    measures:
+      "Weight (kg) / height (m)²; screening measure for underweight, overweight, and obesity.",
+    normalRange: "18.5–24.9 normal; 25–29.9 overweight; ≥30 obese; <18.5 underweight",
+    increasedCauses: [
+      "Obesity (caloric excess, sedentary lifestyle)",
+      "Endocrine: hypothyroidism, Cushing syndrome",
+      "Medications (steroids, atypical antipsychotics)",
+      "Genetic syndromes (Prader-Willi)",
+    ],
+    decreasedCauses: [
+      "Malnutrition, eating disorders",
+      "Malabsorption, hyperthyroidism",
+      "Chronic illness, malignancy",
+    ],
+    boardsPearls: [
+      "BMI ≥30 → obesity; associated with T2DM, OSA, NAFLD, HTN, ASCVD risk",
+      "BMI does not distinguish muscle from fat — athletes may have high BMI with low body fat",
+      "Pediatrics: use BMI percentile for age/sex — ≥95th percentile obese",
+      "Obesity hypoventilation syndrome (Pickwickian): obesity + daytime hypercapnia",
+    ],
+    pairWith: [
+      "BMI ≥30 + daytime somnolence + hypercapnia → obesity hypoventilation",
+      "High BMI + Acanthosis nigricans → insulin resistance",
     ],
   },
 ];
