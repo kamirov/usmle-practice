@@ -29,6 +29,7 @@ export const NEPHRON_SEGMENTS: NephronSegmentEntry[] = [
     aliases: [
       "proximal convoluted tubule",
       "proximal tubule",
+      "proximal renal tubule",
       "pct",
     ],
     function:
@@ -102,6 +103,7 @@ export const NEPHRON_SEGMENTS: NephronSegmentEntry[] = [
     aliases: [
       "distal convoluted tubule",
       "distal tubule",
+      "distal renal tubule",
       "dct",
     ],
     function:
