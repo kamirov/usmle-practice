@@ -232,6 +232,32 @@ export const MEDICATIONS: MedicationEntry[] = [
     ],
   },
   {
+    id: "morphine",
+    name: "Morphine",
+    aliases: ["morphine", "ms contin"],
+    drugClass: "Opioid agonist (μ-receptor)",
+    mechanism:
+      "Agonist at μ-opioid receptors (and κ, δ) → ↑ analgesia, sedation, and respiratory depression; ↓ sympathetic outflow.",
+    indications: [
+      "Moderate to severe pain (acute and chronic)",
+      "Acute pulmonary edema (reduces preload and sympathetic surge)",
+      "MI-related chest pain (with ACS protocol)",
+    ],
+    adverseEffects: [
+      "Respiratory depression",
+      "Nausea, vomiting, constipation",
+      "Miosis, sedation, urinary retention",
+      "Hypotension and bradycardia",
+      "Physical dependence and withdrawal",
+    ],
+    boardsPearls: [
+      "Reversed by naloxone; shorter naloxone half-life → risk of renarcotization",
+      "Avoid in severe asthma, COPD, or undiagnosed head injury (↑ CO₂ retention / ↑ ICP)",
+      "Reduce dose in renal/hepatic failure; active metabolite morphine-6-glucuronide accumulates",
+      "Pediatrics: weight-based dosing; respiratory depression is leading toxicity — monitor closely",
+    ],
+  },
+  {
     id: "naloxone",
     name: "Naloxone",
     aliases: ["naloxone", "narcan"],
@@ -346,6 +372,33 @@ export const MEDICATIONS: MedicationEntry[] = [
       "Preferred over warfarin in many nonvalvular AF scenarios",
       "Andexanet alfa reverses apixaban (and rivaroxaban) in life-threatening bleeding",
       "Avoid in mechanical valves and severe renal impairment (relative)",
+    ],
+  },
+  {
+    id: "aspirin",
+    name: "Aspirin",
+    aliases: ["aspirin", "asa", "acetylsalicylic acid"],
+    drugClass: "NSAID / antiplatelet agent",
+    mechanism:
+      "Irreversibly inhibits cyclooxygenase (COX-1 >> COX-2) → ↓ thromboxane A₂ synthesis → inhibits platelet aggregation; at higher doses also ↓ prostaglandins → analgesic, antipyretic, anti-inflammatory effects.",
+    indications: [
+      "Acute coronary syndrome (antiplatelet)",
+      "Secondary prevention of MI, stroke, and cardiovascular events",
+      "Kawasaki disease (with IVIG)",
+      "Analgesia, fever, inflammation (higher doses)",
+    ],
+    adverseEffects: [
+      "GI bleeding and peptic ulcer disease",
+      "Bleeding (prolonged platelet dysfunction ~7–10 days)",
+      "Tinnitus and salicylate toxicity (high doses)",
+      "Reye syndrome in children with viral illness",
+      "Asthma exacerbation (aspirin-exacerbated respiratory disease)",
+    ],
+    boardsPearls: [
+      "ACS: chew 162–325 mg, then daily low-dose (81 mg) indefinitely",
+      "Contraindicated in children with febrile viral illness (Reye syndrome)",
+      "Triple therapy post-PCI: aspirin + P2Y12 inhibitor + anticoagulation (bleeding risk)",
+      "Pediatrics: avoid for fever in varicella/influenza; used in Kawasaki disease",
     ],
   },
   {
