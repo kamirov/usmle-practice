@@ -1339,6 +1339,553 @@ export const MICROBIOLOGY: MicrobiologyEntry[] = [
     pediatrics:
       "Amebic dysentery in endemic areas; treat children with same agents (weight-based dosing); liver abscess less common but occurs.",
   },
+  {
+    id: "salmonella-enterica",
+    name: "Salmonella enterica",
+    aliases: [
+      "salmonella enterica",
+      "salmonella",
+      "s. typhi",
+      "salmonella typhi",
+      "salmonella typhimurium",
+      "s. typhimurium",
+      "non-typhoidal salmonella",
+    ],
+    type: "gram-negative-rod",
+    definition:
+      "Gram-negative rod; non-lactose fermenter (usually). Causes gastroenteritis (non-typhoidal serovars) and typhoid fever (S. Typhi). Facultative intracellular pathogen.",
+    morphology: [
+      "Gram− bacilli",
+      "Non-lactose fermenter (colorless colonies on MacConkey — except S. Typhi is slow lactose+)",
+      "Motile (peritrichous flagella) except S. Gallinarum/Pullorum",
+      "H2S production on TSI (black butt) — classic for many Salmonella",
+    ],
+    virulenceFactors: [
+      "Type III secretion system — invasion of M cells and enterocytes",
+      "Vi capsule (S. Typhi) — antiphagocytic",
+      "Endotoxin (LPS)",
+      "Intracellular survival in macrophages (typhoid)",
+    ],
+    transmission: [
+      "Fecal-oral (poultry, eggs, reptiles, contaminated water)",
+      "Typhoid: human reservoir; chronic carriers (gallbladder)",
+    ],
+    diseases: [
+      "Salmonella gastroenteritis (self-limited diarrhea)",
+      "Typhoid fever (S. Typhi — stepwise fever, rose spots, relative bradycardia)",
+      "Bacteremia and endovascular infection in sickle cell (osteomyelitis)",
+      "Chronic carrier state (gallbladder)",
+    ],
+    classicPresentation: [
+      "Raw eggs/poultry → diarrhea, fever, cramps 12–72 h later",
+      "Typhoid: prolonged fever, abdominal pain, rose spots, constipation > diarrhea",
+      "Sickle cell child with osteomyelitis — Salmonella more common than Staph",
+    ],
+    diagnosis: [
+      "Stool culture (non-typhoidal); blood culture early in typhoid",
+      "Typhoid: blood culture best in first week; stool/ urine later",
+      "Non-typhoidal: often no antibiotics in uncomplicated case",
+    ],
+    treatment: [
+      "Uncomplicated gastroenteritis: supportive (avoid antibiotics — prolongs carrier state)",
+      "Typhoid/severe/bacteremia: fluoroquinolone or ceftriaxone (resistance common)",
+      "Sickle cell osteomyelitis: ceftriaxone + coverage per guidelines",
+    ],
+    distinguishFrom: [
+      "Shigella — similar foodborne dysentery; more bloody/mucoid, lower inoculum",
+      "Campylobacter — curved Gram− rod; associated with Guillain-Barré",
+      "E. coli (ETEC/EHEC) — lactose fermenter (most strains)",
+    ],
+    boardsPearls: [
+      "Reptiles/turtles and undercooked eggs — classic sources",
+      "Typhoid = S. Typhi; treat; chronic gallbladder carrier",
+      "Sickle cell + osteomyelitis → think Salmonella (functional asplenia)",
+      "Antibiotics for uncomplicated nontyphoidal diarrhea often not indicated",
+    ],
+    pediatrics:
+      "Salmonella gastroenteritis common in children; infants <3 months and immunocompromised need antibiotics; sickle cell osteomyelitis classic association.",
+  },
+  {
+    id: "shigella-flexneri",
+    name: "Shigella flexneri",
+    aliases: [
+      "shigella flexneri",
+      "shigella",
+      "s. flexneri",
+      "s. dysenteriae",
+      "shigella dysenteriae",
+    ],
+    type: "gram-negative-rod",
+    definition:
+      "Gram-negative rod; non-motile Enterobacteriaceae. Very low infectious dose; causes bacillary dysentery with invasive colonic inflammation.",
+    morphology: [
+      "Gram− bacilli",
+      "Non-lactose fermenter",
+      "Non-motile (unlike Salmonella/E. coli)",
+      "Does not produce H2S on TSI",
+    ],
+    virulenceFactors: [
+      "Type III secretion — invasion of colonic epithelium",
+      "Shiga toxin (S. dysenteriae type 1) — HUS risk",
+      "Intracellular spread cell-to-cell",
+      "Low inoculum (10–100 organisms) — person-to-person spread",
+    ],
+    transmission: ["Fecal-oral; person-to-person (daycare), contaminated food/water"],
+    diseases: [
+      "Shigellosis (bacillary dysentery — bloody/mucoid diarrhea, tenesmus, fever)",
+      "HUS (S. dysenteriae type 1 — Shiga toxin)",
+    ],
+    classicPresentation: [
+      "Bloody diarrhea with mucus and severe abdominal cramps",
+      "Daycare or institutional outbreak",
+      "Tenesmus and high fever",
+    ],
+    diagnosis: [
+      "Stool culture on selective media",
+      "Leukocytes and blood in stool",
+      "Rule out EHEC if considering antibiotics (HUS risk overlap)",
+    ],
+    treatment: [
+      "Supportive hydration first",
+      "Fluoroquinolone or azithromycin for moderate/severe (resistance varies)",
+      "Avoid antibiotics in EHEC-like presentation until organism identified",
+    ],
+    distinguishFrom: [
+      "Salmonella — usually less bloody; higher inoculum; motile",
+      "Campylobacter — curved rod; poultry association",
+      "EHEC O157:H7 — avoid antibiotics; Shiga toxin overlap with S. dysenteriae",
+      "Entamoeba — trophozoites with RBCs; chronic bloody diarrhea + liver abscess",
+    ],
+    boardsPearls: [
+      "Very low inoculum — highly contagious in daycare",
+      "S. dysenteriae type 1 Shiga toxin → HUS (like EHEC)",
+      "Non-motile Gram− rod causing bloody diarrhea",
+    ],
+    pediatrics:
+      "Common cause of bloody diarrhea in toddlers; dehydration risk high; daycare exclusion until culture negative.",
+  },
+  {
+    id: "listeria-monocytogenes",
+    name: "Listeria monocytogenes",
+    aliases: [
+      "listeria monocytogenes",
+      "listeria",
+      "l. monocytogenes",
+    ],
+    type: "gram-positive-rod",
+    definition:
+      "Gram-positive rod; facultative intracellular pathogen. Grows at refrigeration temperatures; causes meningitis in neonates, elderly, pregnant, and immunocompromised.",
+    morphology: [
+      "Gram+ rod (may appear coccobacillary)",
+      "Motile at room temperature (tumbling motility); non-motile at 37°C",
+      "β-hemolysis on blood agar (narrow zone)",
+      "Cold growth (4°C) — contaminated deli meats, soft cheeses",
+    ],
+    virulenceFactors: [
+      "Listeriolysin O (LLO) — escapes phagosome",
+      "ActA — actin rocket motility (cell-to-cell spread without leaving cell)",
+      "Intracellular survival in macrophages and epithelial cells",
+    ],
+    transmission: [
+      "Ingestion of contaminated food (soft cheeses, deli meats, unpasteurized milk)",
+      "Vertical transmission (neonatal disease)",
+    ],
+    diseases: [
+      "Neonatal sepsis and meningitis (early and late onset)",
+      "Meningitis/bacteremia in elderly and immunocompromised",
+      "Gastroenteritis in healthy adults (mild)",
+      "Granulomatosis infantiseptica (disseminated neonatal)",
+      "Maternal flu-like illness; fetal loss/preterm labor",
+    ],
+    classicPresentation: [
+      "Pregnant woman with flu-like illness → fetal distress/preterm delivery",
+      "Neonate with meningitis (Gram+ rod in CSF)",
+      "Elderly/immunocompromised with meningitis after deli meats/soft cheese exposure",
+    ],
+    diagnosis: [
+      "Blood/CSF culture — tell lab if Listeria suspected (prolong incubation, cold enrichment)",
+      "Gram stain CSF — Gram+ rods",
+      "Culture from meconium/placenta in neonatal disease",
+    ],
+    treatment: [
+      "Ampicillin + gentamicin (synergy for serious infection)",
+      "Trimethoprim-sulfamethoxazole in penicillin allergy",
+      "Duration 3 weeks for meningitis",
+    ],
+    distinguishFrom: [
+      "Group B strep — neonatal meningitis; Gram+ cocci in chains",
+      "E. coli — Gram− rod; early-onset neonatal sepsis",
+      "Corynebacterium — contaminant; diphtheroid appearance",
+    ],
+    boardsPearls: [
+      "Refrigeration does NOT prevent growth — deli meats, brie, hot dogs",
+      "Ampicillin + gentamicin for meningitis (not ceftriaxone alone — Listeria resistant to 3rd-gen cephalosporins)",
+      "Pregnant women: avoid unpasteurized cheese and undercooked deli meats",
+    ],
+    pediatrics:
+      "Neonatal Listeria meningitis — ampicillin + gentamicin; maternal infection often mild but fetal consequences severe.",
+  },
+  {
+    id: "herpes-simplex-virus",
+    name: "Herpes Simplex Virus",
+    aliases: [
+      "herpes simplex virus",
+      "herpes simplex",
+      "hsv",
+      "hsv-1",
+      "hsv-2",
+      "hsv 1",
+      "hsv 2",
+    ],
+    type: "virus",
+    definition:
+      "Enveloped dsDNA herpesvirus. HSV-1 classically oral (cold sores); HSV-2 genital — overlap increasing. Establishes latency in sensory ganglia.",
+    morphology: [
+      "Enveloped icosahedral virion with dsDNA core",
+      "Intranuclear Cowdry type A inclusions on histology",
+      "Syncytia and multinucleated giant cells in epithelial infections",
+    ],
+    virulenceFactors: [
+      "Latency in trigeminal/sacral ganglia",
+      "Neurotropism — encephalitis (temporal lobe predilection HSV-1)",
+      "Vertical transmission — neonatal herpes (skin, eye, CNS, disseminated)",
+    ],
+    transmission: [
+      "Direct contact with active lesions or asymptomatic shedding",
+      "Vertical (birth canal; higher risk with primary maternal infection)",
+    ],
+    diseases: [
+      "Herpes labialis (HSV-1)",
+      "Genital herpes (HSV-2 > HSV-1)",
+      "Herpetic whitlow",
+      "Herpes keratitis (dendritic ulcer)",
+      "HSV encephalitis",
+      "Neonatal herpes",
+      "Eczema herpeticum",
+    ],
+    classicPresentation: [
+      "Grouped vesicles on erythematous base — painful",
+      "Recurrent lesions at same site (latency/reactivation)",
+      "Encephalitis: fever, altered mental status, temporal lobe findings",
+    ],
+    diagnosis: [
+      "PCR of CSF (encephalitis) — test of choice",
+      "Tzanck smear (multinucleated giant cells) — less used",
+      "Viral culture/PCR from lesion swab",
+    ],
+    treatment: [
+      "Acyclovir, valacyclovir, famciclovir",
+      "IV acyclovir for encephalitis and disseminated/neonatal disease",
+      "Suppressive therapy for frequent recurrences",
+    ],
+    distinguishFrom: [
+      "VZV — dermatomal distribution; different PCR",
+      "Aphthous ulcers — no vesicles, not grouped",
+      "Syphilis chancre — painless ulcer, not vesicular",
+    ],
+    boardsPearls: [
+      "Grouped painful vesicles = HSV until proven otherwise",
+      "Temporal lobe encephalitis → HSV PCR and empiric IV acyclovir",
+      "Eczema herpeticum — dermatology emergency in atopic children",
+    ],
+    pediatrics:
+      "Neonatal herpes from birth canal exposure during primary outbreak; treat with IV acyclovir; eczema herpeticum in atopic children.",
+  },
+  {
+    id: "varicella-zoster-virus",
+    name: "Varicella-Zoster Virus",
+    aliases: [
+      "varicella-zoster virus",
+      "varicella zoster virus",
+      "vzv",
+      "human herpesvirus 3",
+      "hhv-3",
+    ],
+    type: "virus",
+    definition:
+      "Herpesvirus causing primary varicella (chickenpox) and reactivation as herpes zoster (shingles). Latency in dorsal root/trigeminal ganglia.",
+    morphology: [
+      "Enveloped dsDNA herpesvirus",
+      "Multinucleated giant cells with intranuclear inclusions",
+      "Same family structure as HSV",
+    ],
+    virulenceFactors: [
+      "Latency in sensory ganglia lifelong",
+      "Cell-associated viremia in primary infection",
+      "Spread along dermatomal nerves on reactivation",
+    ],
+    transmission: [
+      "Respiratory droplets and direct contact (varicella)",
+      "Zoster: contact with vesicle fluid (less contagious than varicella)",
+    ],
+    diseases: [
+      "Varicella (chickenpox)",
+      "Herpes zoster (shingles)",
+      "Disseminated zoster (immunocompromised)",
+      "Postherpetic neuralgia",
+      "Ramsay Hunt syndrome (zoster oticus)",
+      "Congenital varicella syndrome (maternal infection 8–20 weeks)",
+    ],
+    classicPresentation: [
+      "Varicella: crops of lesions in different stages (macule → vesicle → crust)",
+      "Zoster: painful unilateral dermatomal vesicular rash",
+      "Ramsay Hunt: ear pain, facial paralysis, vesicles in ear canal",
+    ],
+    diagnosis: [
+      "Clinical diagnosis usually sufficient",
+      "PCR or DFA from lesion scraping if uncertain",
+      "Serology for immunity status",
+    ],
+    treatment: [
+      "Varicella (healthy child): supportive; acyclovir if high-risk/complicated",
+      "Zoster: valacyclovir/famciclovir within 72 h; add analgesia",
+      "IV acyclovir for disseminated/immunocompromised",
+    ],
+    distinguishFrom: [
+      "HSV — grouped vesicles without strict dermatomal limit (though overlap)",
+      "Impetigo — honey-crusted, not dermatomal",
+      "Contact dermatitis — pruritic, not vesicular dermatomal pattern",
+    ],
+    boardsPearls: [
+      "Lesions in different stages = varicella hallmark",
+      "Zoster in young patient → think HIV or immunosuppression",
+      "Live vaccine contraindicated in pregnancy and severe immunocompromise",
+      "Do not give aspirin in varicella (Reye syndrome)",
+    ],
+    pediatrics:
+      "Varicella vaccine routine; congenital varicella syndrome if maternal primary infection in first/second trimester; Reye syndrome risk with salicylates.",
+  },
+  {
+    id: "toxoplasma-gondii",
+    name: "Toxoplasma gondii",
+    aliases: [
+      "toxoplasma gondii",
+      "toxoplasma",
+      "t. gondii",
+    ],
+    type: "parasite",
+    definition:
+      "Apicomplexan protozoan; cat is definitive host. Causes congenital toxoplasmosis and reactivation chorioretinitis/encephalitis in AIDS (CD4 <100).",
+    morphology: [
+      "Tachyzoites — crescent-shaped, rapid dividing (acute)",
+      "Bradyzoites in tissue cysts (latent)",
+      "Oocysts in cat feces (sporulated in environment)",
+    ],
+    virulenceFactors: [
+      "Intracellular survival in macrophages and neurons",
+      "Tissue cysts persist lifelong (CNS, muscle)",
+      "Congenital transmission — transplacental in primary maternal infection",
+    ],
+    transmission: [
+      "Ingestion of oocysts (cat litter, soil)",
+      "Undercooked meat (tissue cysts)",
+      "Vertical (congenital)",
+      "Rarely transfusion/organ transplant",
+    ],
+    diseases: [
+      "Congenital toxoplasmosis (chorioretinitis, hydrocephalus, intracranial calcifications)",
+      "Toxoplasma encephalitis (AIDS — ring-enhancing lesions)",
+      "Mononucleosis-like illness (immunocompetent)",
+      "Chorioretinitis (reactivation)",
+    ],
+    classicPresentation: [
+      "AIDS + ring-enhancing brain lesions + seizures (TE vs lymphoma)",
+      "Congenital: chorioretinitis, hydrocephalus, diffuse calcifications",
+      "Cat exposure + maternal primary infection in pregnancy",
+    ],
+    diagnosis: [
+      "Serology (IgM/IgG; avidity testing in pregnancy)",
+      "CSF PCR or brain biopsy PCR in AIDS encephalitis",
+      "Sulfadiazine-pyrimethamine response supports TE empirically",
+    ],
+    treatment: [
+      "Pyrimethamine + sulfadiazine + leucovorin (TE and congenital)",
+      "Pyrimethamine + clindamycin alternative",
+      "Spiramycin in early pregnancy primary infection (reduce transplacental spread)",
+    ],
+    distinguishFrom: [
+      "CMV congenital — periventricular calcifications, hearing loss",
+      "Primary CNS lymphoma — EBV-driven; single lesion, thallium scan",
+      "Cryptococcus — yeast in CSF; not ring-enhancing parenchymal lesions typically",
+    ],
+    boardsPearls: [
+      "Cat litter + undercooked meat; wash hands and cook meat thoroughly",
+      "AIDS ring-enhancing lesions → Toxoplasma until proven otherwise (start empiric therapy)",
+      "Congenital triad: chorioretinitis, hydrocephalus, intracranial calcifications",
+    ],
+    pediatrics:
+      "Congenital toxoplasmosis — treat mother in pregnancy when acquired; neonatal pyrimethamine-sulfadiazine; chorioretinitis may present later in childhood.",
+  },
+  {
+    id: "borrelia-burgdorferi",
+    name: "Borrelia burgdorferi",
+    aliases: [
+      "borrelia burgdorferi",
+      "b. burgdorferi",
+      "borrelia",
+    ],
+    type: "spirochete",
+    definition:
+      "Spirochete transmitted by Ixodes tick bite (Northeast/Midwest US). Causes Lyme disease — erythema migrans, early disseminated and late manifestations.",
+    morphology: [
+      "Spirochete — too thin for Gram stain",
+      "Dark-field or silver stain",
+      "Does not culture easily on routine media",
+    ],
+    virulenceFactors: [
+      "Flagella (endoflagella between outer membrane and protoplasm)",
+      "Evasion of complement and antibody",
+      "Tropism for skin, joints, heart, CNS",
+    ],
+    transmission: ["Ixodes scapularis (deer tick) bite — nymph stage most common"],
+    diseases: [
+      "Early localized: erythema migrans",
+      "Early disseminated: multiple EM, facial nerve palsy, AV block, meningitis",
+      "Late: Lyme arthritis (large joints), acrodermatitis chronica atrophicans",
+    ],
+    classicPresentation: [
+      "Summer hiking in endemic area → expanding bull's-eye rash (erythema migrans)",
+      "Bell palsy + recent tick exposure",
+      "Migratory large-joint oligoarthritis (knee)",
+    ],
+    diagnosis: [
+      "Clinical diagnosis of erythema migrans — treat without serology",
+      "Two-tier serology (ELISA then Western blot) for later stages",
+      "Do not test immediately after bite (false negative)",
+    ],
+    treatment: [
+      "Early: doxycycline (also covers Anaplasma); amoxicillin or cefuroxime alternatives",
+      "Neuro/cardiac: ceftriaxone IV",
+      "Lyme arthritis: oral doxycycline or amoxicillin; IV ceftriaxone if refractory",
+    ],
+    distinguishFrom: [
+      "Syphilis (T. pallidum) — different spirochete; VDRL/RPR, penicillin treatment",
+      "Rocky Mountain spotted fever — different tick; rash starts wrists/ankles",
+      "Cellulitis — not expanding bull's-eye, no central clearing typically",
+    ],
+    boardsPearls: [
+      "Erythema migrans = treat empirically — serology often negative early",
+      "Bell palsy + tick exposure in Northeast = Lyme until proven otherwise",
+      "Doxycycline covers Lyme and co-transmitted Anaplasma/Ehrlichia",
+    ],
+    pediatrics:
+      "Children in endemic areas — check for tick bites; doxycycline used in children for Lyme per current guidelines (age limits evolving); arthritis common late manifestation.",
+  },
+  {
+    id: "aspergillus-fumigatus",
+    name: "Aspergillus fumigatus",
+    aliases: [
+      "aspergillus fumigatus",
+      "aspergillus",
+      "a. fumigatus",
+    ],
+    type: "fungus",
+    definition:
+      "Septate mold with acute-angle (45°) branching hyphae. Causes allergic bronchopulmonary aspergillosis (ABPA), aspergilloma, and invasive aspergillosis in neutropenic/transplant patients.",
+    morphology: [
+      "Septate hyphae with uniform width",
+      "Branch at 45° angles (vs Mucor 90° wide irregular)",
+      "Conidia on conidiophores (septate foot cell)",
+      "Angioinvasive in immunocompromised",
+    ],
+    virulenceFactors: [
+      "Conidia inhaled — small enough to reach alveoli",
+      "Galactomannan antigen (serum/BAL) — diagnostic marker",
+      "Biofilm in aspergilloma (preexisting cavity)",
+    ],
+    transmission: ["Inhalation of airborne conidia (ubiquitous in environment)"],
+    diseases: [
+      "Allergic bronchopulmonary aspergillosis (ABPA) in asthma/CF",
+      "Aspergilloma (fungus ball in preexisting cavity)",
+      "Invasive pulmonary aspergillosis (neutropenia, transplant)",
+      "Cutaneous and disseminated aspergillosis (rare)",
+    ],
+    classicPresentation: [
+      "Neutropenic fever unresponsive to antibiotics + pulmonary nodules/halo sign",
+      "Asthmatic with bronchiectasis, eosinophilia, elevated IgE (ABPA)",
+      "Hemoptysis in patient with prior TB cavity (aspergilloma)",
+    ],
+    diagnosis: [
+      "Galactomannan antigen (serum, BAL)",
+      "β-D-glucan may be positive",
+      "Biopsy/culture — septate 45° branching hyphae",
+      "Serum IgE and Aspergillus-specific IgE/IgG in ABPA",
+    ],
+    treatment: [
+      "ABPA: itraconazole + corticosteroids",
+      "Invasive: voriconazole first line; echinocandin or amphotericin alternatives",
+      "Aspergilloma: surgery or antifungals if symptomatic",
+    ],
+    distinguishFrom: [
+      "Mucor/Rhizopus — non-septate, wide hyphae, 90° branching; diabetic ketoacidosis",
+      "Candida — yeast/pseudohyphae, not mold in tissue",
+      "Histoplasma — yeast in macrophages, not hyphae in tissue",
+    ],
+    boardsPearls: [
+      "45° septate hyphae = Aspergillus; 90° non-septate wide = Mucor",
+      "Voriconazole first line for invasive aspergillosis",
+      "Galactomannan in neutropenic fever workup",
+    ],
+    pediatrics:
+      "ABPA in CF and asthma; invasive aspergillosis in pediatric oncology/neutropenia — voriconazole dosing weight-based.",
+  },
+  {
+    id: "histoplasma-capsulatum",
+    name: "Histoplasma capsulatum",
+    aliases: [
+      "histoplasma capsulatum",
+      "histoplasma",
+      "h. capsulatum",
+    ],
+    type: "fungus",
+    definition:
+      "Dimorphic fungus endemic to Ohio/Mississippi River valleys. Mold in soil (bird/bat droppings); yeast in tissue at 37°C. Causes pulmonary and disseminated disease.",
+    morphology: [
+      "Tissue/37°C: small intracellular yeast (2–4 µm) within macrophages",
+      "Environment: septate mold with tuberculate macroconidia",
+      "Silver stain (GMS) highlights yeast in tissue",
+    ],
+    virulenceFactors: [
+      "Survival and replication within macrophages",
+      "Microconidia inhaled from disturbed soil (construction, caves, chicken coops)",
+    ],
+    transmission: ["Inhalation of microconidia from soil contaminated with bird/bat droppings"],
+    diseases: [
+      "Acute pulmonary histoplasmosis (often asymptomatic/mild)",
+      "Chronic cavitary pulmonary histoplasmosis (COPD-like)",
+      "Disseminated histoplasmosis (AIDS, immunosuppression)",
+      "Mediastinal granuloma/fibrosis",
+      "Endocarditis (rare, on prosthetic valves)",
+    ],
+    classicPresentation: [
+      "Mississippi/Ohio valley exposure + flu-like illness after spelunking/chicken coop cleanup",
+      "AIDS with fever, hepatosplenomegaly, pancytopenia (disseminated)",
+      "Small yeast inside macrophages on tissue biopsy",
+    ],
+    diagnosis: [
+      "Urine/serum Histoplasma antigen (disseminated/acute pulmonary)",
+      "Fungal culture (slow growing)",
+      "GMS or silver stain of tissue — yeast within macrophages",
+      "Serology (complement fixation)",
+    ],
+    treatment: [
+      "Mild acute pulmonary: often self-limited; itraconazole if prolonged",
+      "Moderate/severe/disseminated: liposomal amphotericin B, then itraconazole",
+      "Chronic pulmonary: itraconazole prolonged course",
+    ],
+    distinguishFrom: [
+      "Blastomyces — larger yeast with broad-based budding; different endemic overlap",
+      "Coccidioides — spherules in tissue; Southwest endemic",
+      "TB — acid-fast bacilli, not yeast in macrophages",
+    ],
+    boardsPearls: [
+      "Bird/bat droppings + Ohio/Mississippi valleys = Histoplasma",
+      "Small yeast inside macrophages on silver stain",
+      "Urine antigen for disseminated disease in AIDS",
+    ],
+    pediatrics:
+      "Disseminated histoplasmosis in infant immunocompromise; endemic exposure in children often mild; amphotericin B for severe disease.",
+  },
 ];
 
 const microbiologyById = new Map(

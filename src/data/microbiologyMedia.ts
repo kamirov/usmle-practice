@@ -1,7 +1,9 @@
 import type { MediaAttribution } from "./media";
 import type { MicrobiologyEntry } from "./microbiology";
 
+import aspergillusFumigatus from "../media/images/microbiology/aspergillus-fumigatus.jpg?url";
 import bordetellaPertussis from "../media/images/microbiology/bordetella-pertussis.jpg?url";
+import borreliaBurgdorferi from "../media/images/microbiology/borrelia-burgdorferi.jpg?url";
 import candidaAlbicans from "../media/images/microbiology/candida-albicans.jpg?url";
 import clostridiumPerfringens from "../media/images/microbiology/clostridium-perfringens.jpg?url";
 import cryptosporidiumParvum from "../media/images/microbiology/cryptosporidium-parvum.jpg?url";
@@ -12,17 +14,24 @@ import epsteinBarrVirus from "../media/images/microbiology/epstein-barr-virus.jp
 import escherichiaColi from "../media/images/microbiology/escherichia-coli.jpg?url";
 import giardiaLamblia from "../media/images/microbiology/giardia-lamblia.jpg?url";
 import haemophilusInfluenzae from "../media/images/microbiology/haemophilus-influenzae.jpg?url";
+import herpesSimplexVirus from "../media/images/microbiology/herpes-simplex-virus.jpg?url";
+import histoplasmaCapsulatum from "../media/images/microbiology/histoplasma-capsulatum.jpg?url";
 import hiv from "../media/images/microbiology/hiv.jpg?url";
 import klebsiellaPneumoniae from "../media/images/microbiology/klebsiella-pneumoniae.jpg?url";
 import legionellaPneumophila from "../media/images/microbiology/legionella-pneumophila.jpg?url";
+import listeriaMonocytogenes from "../media/images/microbiology/listeria-monocytogenes.jpg?url";
 import mycobacteriumTuberculosis from "../media/images/microbiology/mycobacterium-tuberculosis.jpg?url";
 import neisseriaMeningitidis from "../media/images/microbiology/neisseria-meningitidis.jpg?url";
 import plasmodiumFalciparum from "../media/images/microbiology/plasmodium-falciparum.jpg?url";
 import pseudomonasAeruginosa from "../media/images/microbiology/pseudomonas-aeruginosa.jpg?url";
+import salmonellaEnterica from "../media/images/microbiology/salmonella-enterica.jpg?url";
+import shigellaFlexneri from "../media/images/microbiology/shigella-flexneri.jpg?url";
 import staphylococcusAureus from "../media/images/microbiology/staphylococcus-aureus.jpg?url";
 import streptococcusPneumoniae from "../media/images/microbiology/streptococcus-pneumoniae.jpg?url";
 import streptococcusPyogenes from "../media/images/microbiology/streptococcus-pyogenes.jpg?url";
 import treponemaPallidum from "../media/images/microbiology/treponema-pallidum.jpg?url";
+import toxoplasmaGondii from "../media/images/microbiology/toxoplasma-gondii.jpg?url";
+import varicellaZosterVirus from "../media/images/microbiology/varicella-zoster-virus.jpg?url";
 
 export type MicrobiologyImageId = MicrobiologyEntry["id"];
 
@@ -55,6 +64,15 @@ export const MICROBIOLOGY_IMAGES: Partial<Record<MicrobiologyImageId, string>> =
     cytomegalovirus: extensionAssetUrl(cytomegalovirus),
     "cryptosporidium-parvum": extensionAssetUrl(cryptosporidiumParvum),
     "entamoeba-histolytica": extensionAssetUrl(entamoebaHistolytica),
+    "salmonella-enterica": extensionAssetUrl(salmonellaEnterica),
+    "shigella-flexneri": extensionAssetUrl(shigellaFlexneri),
+    "listeria-monocytogenes": extensionAssetUrl(listeriaMonocytogenes),
+    "herpes-simplex-virus": extensionAssetUrl(herpesSimplexVirus),
+    "varicella-zoster-virus": extensionAssetUrl(varicellaZosterVirus),
+    "toxoplasma-gondii": extensionAssetUrl(toxoplasmaGondii),
+    "borrelia-burgdorferi": extensionAssetUrl(borreliaBurgdorferi),
+    "aspergillus-fumigatus": extensionAssetUrl(aspergillusFumigatus),
+    "histoplasma-capsulatum": extensionAssetUrl(histoplasmaCapsulatum),
   };
 
 export const MICROBIOLOGY_IMAGE_ATTRIBUTIONS: Partial<
@@ -148,6 +166,42 @@ export const MICROBIOLOGY_IMAGE_ATTRIBUTIONS: Partial<
     label: "CDC PHIL #14544",
     url: "https://phil.cdc.gov/Details.aspx?pid=14544",
   },
+  "salmonella-enterica": {
+    label: "NIAID/NIH (Rocky Mountain Laboratories)",
+    url: "https://commons.wikimedia.org/wiki/File:SalmonellaNIAID.jpg",
+  },
+  "shigella-flexneri": {
+    label: "Wikimedia Commons (B. Domangue, CC BY-SA 4.0)",
+    url: "https://commons.wikimedia.org/wiki/File:Shigella_flexneri_Gram_Stain_on_Microscope_Slide.jpg",
+  },
+  "listeria-monocytogenes": {
+    label: "CDC PHIL #2287",
+    url: "https://phil.cdc.gov/Details.aspx?pid=2287",
+  },
+  "herpes-simplex-virus": {
+    label: "CDC PHIL #10235",
+    url: "https://phil.cdc.gov/Details.aspx?pid=10235",
+  },
+  "varicella-zoster-virus": {
+    label: "CDC PHIL #1878",
+    url: "https://phil.cdc.gov/Details.aspx?pid=1878",
+  },
+  "toxoplasma-gondii": {
+    label: "CDC DPDx Parasite Image Library",
+    url: "https://commons.wikimedia.org/wiki/File:Toxoplasma_gondii_tachy.jpg",
+  },
+  "borrelia-burgdorferi": {
+    label: "CDC PHIL #6631",
+    url: "https://phil.cdc.gov/Details.aspx?pid=6631",
+  },
+  "aspergillus-fumigatus": {
+    label: "Wikimedia Commons (Nephron, CC BY-SA 3.0)",
+    url: "https://commons.wikimedia.org/wiki/File:Pulmonary_aspergillosis.jpg",
+  },
+  "histoplasma-capsulatum": {
+    label: "CDC PHIL #4223",
+    url: "https://phil.cdc.gov/Details.aspx?pid=4223",
+  },
 };
 
 export const MICROBIOLOGY_IMAGE_CAPTIONS: Partial<
@@ -184,6 +238,20 @@ export const MICROBIOLOGY_IMAGE_CAPTIONS: Partial<
   "cryptosporidium-parvum": "Stool smear with Cryptosporidium parvum oocysts",
   "entamoeba-histolytica":
     "Trichrome stain: trophozoite with ingested erythrocytes",
+  "salmonella-enterica":
+    "SEM: Salmonella Typhimurium (red) invading human cells",
+  "shigella-flexneri": "Gram stain: Gram-negative rods (pink safranin)",
+  "listeria-monocytogenes":
+    "Electron micrograph of flagellated L. monocytogenes (41,250×)",
+  "herpes-simplex-virus": "TEM: herpes simplex virions (negatively stained)",
+  "varicella-zoster-virus": "Electron micrograph of varicella-zoster virion",
+  "toxoplasma-gondii": "Giemsa stain: crescent-shaped tachyzoites",
+  "borrelia-burgdorferi":
+    "Dark-field microscopy: corkscrew spirochetes (400×)",
+  "aspergillus-fumigatus":
+    "H&E: septate hyphae branching at 45° in pulmonary aspergillosis",
+  "histoplasma-capsulatum":
+    "GMS stain: budding yeast cells in histoplasmosis tissue",
 };
 
 export function getMicrobiologyImageForId(

@@ -161,3 +161,71 @@ entamoeba-histolytica.jpg
   License: Public domain (U.S. federal government)
   Page: https://phil.cdc.gov/Details.aspx?pid=14544
   Commons: https://commons.wikimedia.org/wiki/File:Micrograph_of_Entamoeba_histolytica.jpg
+
+salmonella-enterica.jpg
+  Source: Wikimedia Commons — SalmonellaNIAID.jpg
+  Author: Rocky Mountain Laboratories, NIAID, NIH
+  Description: Color-enhanced SEM of Salmonella Typhimurium invading cultured human cells
+  License: Public domain (U.S. federal government)
+  Page: https://commons.wikimedia.org/wiki/File:SalmonellaNIAID.jpg
+  Download: https://commons.wikimedia.org/wiki/Special:FilePath/SalmonellaNIAID.jpg?width=1280
+
+shigella-flexneri.jpg
+  Source: Wikimedia Commons — Shigella flexneri Gram Stain on Microscope Slide.jpg
+  Author: B. Domangue
+  Description: Gram stain of Gram-negative Shigella flexneri rods
+  License: Creative Commons Attribution-Share Alike 4.0 International
+  Page: https://commons.wikimedia.org/wiki/File:Shigella_flexneri_Gram_Stain_on_Microscope_Slide.jpg
+
+listeria-monocytogenes.jpg
+  Source: CDC PHIL #2287
+  Author: Elizabeth White
+  Description: Electron micrograph of flagellated Listeria monocytogenes (41,250×)
+  License: Public domain (U.S. federal government)
+  Page: https://phil.cdc.gov/Details.aspx?pid=2287
+  Commons: https://commons.wikimedia.org/wiki/File:Listeria_monocytogenes_PHIL_2287_lores.jpg
+
+herpes-simplex-virus.jpg
+  Source: CDC PHIL #10235
+  Author: CDC/Dr. Fred Murphy
+  Description: TEM of negatively stained herpes simplex virions
+  License: Public domain (U.S. federal government)
+  Page: https://phil.cdc.gov/Details.aspx?pid=10235
+  Commons: https://commons.wikimedia.org/wiki/File:Herpes_simplex_virions,_TEM.jpg
+
+varicella-zoster-virus.jpg
+  Source: CDC PHIL #1878
+  Description: Electron micrograph of varicella (chickenpox) virus
+  License: Public domain (U.S. federal government)
+  Page: https://phil.cdc.gov/Details.aspx?pid=1878
+  Commons: https://commons.wikimedia.org/wiki/File:Varicella_(Chickenpox)_Virus_PHIL_1878_lores.jpg
+
+toxoplasma-gondii.jpg
+  Source: CDC DPDx Parasite Image Library
+  Description: Giemsa-stained T. gondii tachyzoites from peritoneal fluid smear
+  License: Public domain (U.S. federal government)
+  Page: https://commons.wikimedia.org/wiki/File:Toxoplasma_gondii_tachy.jpg
+  DPDx: https://www.dpd.cdc.gov/dpdx/html/Toxoplasmosis.htm
+
+borrelia-burgdorferi.jpg
+  Source: CDC PHIL #6631
+  Author: CDC/Dr. David Cox
+  Description: Dark-field micrograph of Borrelia burgdorferi spirochetes (400×)
+  License: Public domain (U.S. federal government)
+  Page: https://phil.cdc.gov/Details.aspx?pid=6631
+  Commons: https://commons.wikimedia.org/wiki/File:Borrelia_burgdorferi-cropped.jpg
+
+aspergillus-fumigatus.jpg
+  Source: Wikimedia Commons — Pulmonary aspergillosis.jpg
+  Author: Nephron
+  Description: H&E micrograph of aspergillosis with 45° branching septate hyphae
+  License: Creative Commons Attribution-Share Alike 3.0 Unported
+  Page: https://commons.wikimedia.org/wiki/File:Pulmonary_aspergillosis.jpg
+  Download: https://commons.wikimedia.org/wiki/Special:FilePath/Pulmonary_aspergillosis.jpg?width=1280
+
+histoplasma-capsulatum.jpg
+  Source: CDC PHIL #4223
+  Description: Methenamine silver stain of Histoplasma capsulatum yeast in tissue
+  License: Public domain (U.S. federal government)
+  Page: https://phil.cdc.gov/Details.aspx?pid=4223
+  Commons: https://commons.wikimedia.org/wiki/File:Histoplasmosis_capsulatum.jpg
