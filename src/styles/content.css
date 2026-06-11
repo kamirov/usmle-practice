@@ -119,7 +119,29 @@
   outline-offset: 1px;
 }
 
-.usmle-organ-popover--symptom {
+.usmle-medication-chip {
+  display: inline;
+  margin: 0;
+  padding: 0 2px;
+  border: none;
+  border-radius: 3px;
+  background: rgba(124, 58, 237, 0.12);
+  color: inherit;
+  font: inherit;
+  line-height: inherit;
+  text-decoration: underline dotted rgba(124, 58, 237, 0.6);
+  text-underline-offset: 2px;
+  cursor: help;
+}
+
+.usmle-medication-chip:hover,
+.usmle-medication-chip:focus-visible {
+  background: rgba(124, 58, 237, 0.22);
+  outline: 1px solid rgba(124, 58, 237, 0.5);
+  outline-offset: 1px;
+}
+
+.usmle-organ-popover--rich {
   max-width: 360px;
   max-height: min(70vh, 480px);
   overflow-y: auto;
@@ -135,6 +157,10 @@
 
 .usmle-organ-popover__title--symptom {
   color: #b45309;
+}
+
+.usmle-organ-popover__title--medication {
+  color: #6d28d9;
 }
 
 .usmle-organ-popover__meaning {

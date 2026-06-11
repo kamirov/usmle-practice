@@ -1,5 +1,6 @@
 import { buildHeartSoundAliasIndex } from "../data/heartSounds";
 import { buildHemodynamicAliasIndex } from "../data/hemodynamics";
+import { buildMedicationAliasIndex } from "../data/medications";
 import { buildAliasIndex } from "../data/organs";
 import { buildSymptomAliasIndex } from "../data/symptoms";
 
@@ -7,12 +8,14 @@ const ORGAN_CHIP_CLASS = "usmle-organ-chip";
 const HEART_SOUND_CHIP_CLASS = "usmle-heart-sound-chip";
 const HEMODYNAMIC_CHIP_CLASS = "usmle-hemodynamic-chip";
 const SYMPTOM_CHIP_CLASS = "usmle-symptom-chip";
-const CHIP_SELECTOR = `.${ORGAN_CHIP_CLASS}, .${HEART_SOUND_CHIP_CLASS}, .${HEMODYNAMIC_CHIP_CLASS}, .${SYMPTOM_CHIP_CLASS}`;
+const MEDICATION_CHIP_CLASS = "usmle-medication-chip";
+const CHIP_SELECTOR = `.${ORGAN_CHIP_CLASS}, .${HEART_SOUND_CHIP_CLASS}, .${HEMODYNAMIC_CHIP_CLASS}, .${SYMPTOM_CHIP_CLASS}, .${MEDICATION_CHIP_CLASS}`;
 const OUR_CHIP_CLASSES = [
   ORGAN_CHIP_CLASS,
   HEART_SOUND_CHIP_CLASS,
   HEMODYNAMIC_CHIP_CLASS,
   SYMPTOM_CHIP_CLASS,
+  MEDICATION_CHIP_CLASS,
 ] as const;
 const POPOVER_CLASS = "usmle-organ-popover";
 const SKIP_TAGS = new Set([
@@ -25,7 +28,7 @@ const SKIP_TAGS = new Set([
   "NOSCRIPT",
 ]);
 
-type TermKind = "organ" | "heart-sound" | "hemodynamic" | "symptom";
+type TermKind = "organ" | "heart-sound" | "hemodynamic" | "symptom" | "medication";
 
 interface TermMatch {
   alias: string;
@@ -144,11 +147,19 @@ function buildTermIndex(): TermMatch[] {
       id: symptomId,
     }),
   );
+  const medicationMatches: TermMatch[] = buildMedicationAliasIndex().map(
+    ({ alias, medicationId }) => ({
+      alias,
+      kind: "medication" as const,
+      id: medicationId,
+    }),
+  );
   return [
     ...organMatches,
     ...heartSoundMatches,
     ...hemodynamicMatches,
     ...symptomMatches,
+    ...medicationMatches,
   ].sort(
     (a, b) => b.alias.length - a.alias.length || a.alias.localeCompare(b.alias),
   );
@@ -260,6 +271,9 @@ function createChip(
   } else if (term.kind === "symptom") {
     button.className = SYMPTOM_CHIP_CLASS;
     button.dataset.symptomId = term.id;
+  } else if (term.kind === "medication") {
+    button.className = MEDICATION_CHIP_CLASS;
+    button.dataset.medicationId = term.id;
   } else {
     button.className = ORGAN_CHIP_CLASS;
     button.dataset.organId = term.id;

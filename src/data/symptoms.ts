@@ -448,6 +448,146 @@ export const SYMPTOMS: SymptomEntry[] = [
       "Hematuria — blood from urinary tract",
     ],
   },
+  {
+    id: "watery-diarrhea",
+    name: "Watery Diarrhea",
+    aliases: ["watery diarrhea"],
+    definition:
+      "Frequent loose stools with high water content, reflecting secretory or osmotic fluid loss into the bowel lumen.",
+    mechanism:
+      "Toxins, pathogens, or malabsorption disrupt normal intestinal absorption or stimulate secretion (e.g., ↑ cAMP in enterocytes) → large-volume stool losses.",
+    thinkOf: [
+      "Viral gastroenteritis (norovirus, rotavirus)",
+      "Cholera (rice-water stools)",
+      "Enterotoxigenic E. coli (traveler's diarrhea)",
+      "C. difficile colitis",
+      "Carcinoid syndrome, VIPoma (secretory)",
+      "Lactose intolerance / osmotic diarrhea",
+    ],
+    pairWith: [
+      "Vomiting, dehydration signs → acute gastroenteritis",
+      "Recent antibiotics → C. difficile",
+      "Travel history → enterotoxigenic E. coli, cholera",
+      "Hypotension, tachycardia → severe volume depletion",
+      "Peds: rotavirus, quick dehydration in infants — watch urine output and mental status",
+    ],
+    distinguishFrom: [
+      "Bloody diarrhea — invasive or inflammatory colitis (Shigella, Campylobacter, IBD)",
+      "Fatty/greasy stools — steatorrhea from malabsorption",
+      "Constipation — obstipation with overflow incontinence",
+    ],
+  },
+  {
+    id: "vomiting",
+    name: "Vomiting",
+    aliases: ["vomiting"],
+    definition:
+      "Forceful expulsion of gastric contents through the mouth due to coordinated contraction of the diaphragm and abdominal wall.",
+    mechanism:
+      "Triggered when the vomiting center (medulla) is activated by GI irritation, vestibular input, chemoreceptor trigger zone (bloodborne toxins, uremia), or increased intracranial pressure.",
+    thinkOf: [
+      "Gastroenteritis",
+      "Bowel obstruction",
+      "Pregnancy (hyperemesis gravidarum)",
+      "Increased intracranial pressure",
+      "DKA / uremia / drug toxicity (CTZ activation)",
+      "Migraine, vestibular disorders",
+    ],
+    pairWith: [
+      "Watery diarrhea → gastroenteritis",
+      "Bilious emesis in neonate → malrotation/volvulus until proven otherwise (peds surgical emergency)",
+      "Headache, papilledema → ↑ ICP",
+      "Kussmaul respirations, hyperglycemia → DKA",
+      "Projectile vomiting in infant → pyloric stenosis (peds)",
+    ],
+    distinguishFrom: [
+      "Regurgitation — passive, effortless reflux",
+      "Retching — unproductive vomiting effort",
+      "Hematemesis — blood in vomitus (upper GI bleed)",
+    ],
+  },
+  {
+    id: "dry-mucous-membranes",
+    name: "Dry Mucous Membranes",
+    aliases: ["dry mucous membranes", "dry mucosa"],
+    definition:
+      "Reduced moisture of oral and other mucosal surfaces, a clinical sign of hypovolemia or dehydration.",
+    mechanism:
+      "Total body water deficit reduces salivary flow and mucosal hydration; sympathetic activation during hypovolemia also diverts fluid from nonessential secretions.",
+    thinkOf: [
+      "Dehydration from diarrhea or vomiting",
+      "Poor oral intake",
+      "Diabetes mellitus (hyperglycemic osmotic diuresis)",
+      "Fever / heat exposure",
+      "Diuretic use",
+    ],
+    pairWith: [
+      "Decreased skin turgor, tachycardia, hypotension → hypovolemia",
+      "Polyuria, polydipsia → hyperglycemia",
+      "Peds: same sign as adults but assess capillary refill, sunken fontanelle (infants), and lethargy — mucosa alone is insufficient",
+    ],
+    distinguishFrom: [
+      "Xerostomia from anticholinergics or Sjögren syndrome — may occur without volume depletion",
+      "Kussmaul breathing with dry mouth — DKA (dehydration plus acidosis)",
+    ],
+  },
+  {
+    id: "decreased-skin-turgor",
+    name: "Decreased Skin Turgor",
+    aliases: [
+      "decreased skin turgor",
+      "poor skin turgor",
+      "reduced skin turgor",
+    ],
+    definition:
+      "Skin that tents or returns slowly to normal after being pinched, indicating reduced tissue turgor from interstitial/total body water loss.",
+    mechanism:
+      "Dehydration lowers interstitial and intracellular water, decreasing skin elasticity and prolonging recoil time after deformation.",
+    thinkOf: [
+      "Dehydration (GI losses, poor intake)",
+      "Hypernatremia",
+      "Diabetic ketoacidosis / HHS",
+      "Burns (capillary leak and evaporative loss)",
+    ],
+    pairWith: [
+      "Dry mucous membranes, tachycardia, orthostasis → hypovolemia",
+      "Watery diarrhea and vomiting → GI fluid losses",
+      "Peds: highly sensitive sign in infants/young children (skin tents for seconds); less reliable in elderly due to age-related loss of elasticity",
+      "Peds: combine with sunken eyes/fontanelle, dry diapers, and irritability/lethargy",
+    ],
+    distinguishFrom: [
+      "Edema — fluid overload, not dehydration",
+      "Normal skin in obese or elderly patients — turgor testing less reliable",
+      "Cutis laxa / Ehlers-Danlos — chronic poor elasticity unrelated to acute volume status",
+    ],
+  },
+  {
+    id: "hyperactive-bowel-sounds",
+    name: "Hyperactive Bowel Sounds",
+    aliases: ["hyperactive bowel sounds", "increased bowel sounds"],
+    definition:
+      "Loud, frequent bowel sounds on auscultation, reflecting increased peristaltic activity.",
+    mechanism:
+      "Irritation or distention of the bowel wall stimulates motility; early obstruction and gastroenteritis increase propagated contractions audible as hyperactive sounds.",
+    thinkOf: [
+      "Gastroenteritis / diarrhea",
+      "Early small bowel obstruction",
+      "Laxative use",
+      "Malabsorption",
+      "Subacute mesenteric ischemia (early hyperactive phase)",
+    ],
+    pairWith: [
+      "Watery diarrhea, vomiting → infectious gastroenteritis",
+      "Crampy abdominal pain, then obstipation → early obstruction",
+      "Peds: intussusception may have early hyperactive sounds, then hypoactive/absent as ischemia progresses — don't be reassured by initial hyperactivity",
+      "Absent bowel sounds later → ileus or late obstruction",
+    ],
+    distinguishFrom: [
+      "Hypoactive or absent bowel sounds — ileus, peritonitis, late obstruction",
+      "Normal bowel sounds — not hyperactive",
+      "Borborygmi — very loud \"stomach growling\" without pathology",
+    ],
+  },
 ];
 
 const symptomById = new Map(SYMPTOMS.map((s) => [s.id, s]));

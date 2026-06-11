@@ -1,10 +1,11 @@
 import { getHeartSoundById } from "../data/heartSounds";
 import { getHemodynamicById } from "../data/hemodynamics";
+import { getMedicationById } from "../data/medications";
 import { getOrganById } from "../data/organs";
 import { getSymptomById } from "../data/symptoms";
 
 const CHIP_SELECTOR =
-  ".usmle-organ-chip, .usmle-heart-sound-chip, .usmle-hemodynamic-chip, .usmle-symptom-chip";
+  ".usmle-organ-chip, .usmle-heart-sound-chip, .usmle-hemodynamic-chip, .usmle-symptom-chip, .usmle-medication-chip";
 const POPOVER_CLASS = "usmle-organ-popover";
 const HIDE_DELAY_MS = 120;
 
@@ -153,7 +154,7 @@ function renderSymptomPopover(symptomId: string): boolean {
   const symptom = getSymptomById(symptomId);
   if (!symptom || !popoverEl) return false;
 
-  popoverEl.classList.add("usmle-organ-popover--symptom");
+  popoverEl.classList.add("usmle-organ-popover--rich");
   popoverEl.innerHTML = `
     <div class="usmle-organ-popover__title usmle-organ-popover__title--symptom">${symptom.name}</div>
     <div class="usmle-organ-popover__meaning">${symptom.definition}</div>
@@ -166,12 +167,31 @@ function renderSymptomPopover(symptomId: string): boolean {
   return true;
 }
 
+function renderMedicationPopover(medicationId: string): boolean {
+  const medication = getMedicationById(medicationId);
+  if (!medication || !popoverEl) return false;
+
+  popoverEl.classList.add("usmle-organ-popover--rich");
+  popoverEl.innerHTML = `
+    <div class="usmle-organ-popover__title usmle-organ-popover__title--medication">${medication.name}</div>
+    <div class="usmle-organ-popover__layer"><strong>Class:</strong> ${medication.drugClass}</div>
+    <div class="usmle-organ-popover__section-label">Mechanism</div>
+    <div class="usmle-organ-popover__mechanism">${medication.mechanism}</div>
+    ${renderListSection("Indications", medication.indications)}
+    ${renderListSection("Adverse effects", medication.adverseEffects)}
+    ${renderListSection("Boards pearls", medication.boardsPearls)}
+  `;
+  return true;
+}
+
 function showPopover(chip: HTMLElement): void {
   const organId = chip.dataset.organId;
   const heartSoundId = chip.dataset.heartSoundId;
   const hemodynamicId = chip.dataset.hemodynamicId;
   const symptomId = chip.dataset.symptomId;
-  if (!organId && !heartSoundId && !hemodynamicId && !symptomId) return;
+  const medicationId = chip.dataset.medicationId;
+  if (!organId && !heartSoundId && !hemodynamicId && !symptomId && !medicationId)
+    return;
 
   if (hideTimer) {
     clearTimeout(hideTimer);
@@ -179,14 +199,16 @@ function showPopover(chip: HTMLElement): void {
   }
 
   const popover = ensurePopover();
-  popover.classList.remove("usmle-organ-popover--symptom");
+  popover.classList.remove("usmle-organ-popover--rich");
   const rendered = organId
     ? renderOrganPopover(organId)
     : heartSoundId
       ? renderHeartSoundPopover(heartSoundId)
       : hemodynamicId
         ? renderHemodynamicPopover(hemodynamicId)
-        : renderSymptomPopover(symptomId!);
+        : symptomId
+          ? renderSymptomPopover(symptomId)
+          : renderMedicationPopover(medicationId!);
   if (!rendered) return;
 
   activeChip = chip;
