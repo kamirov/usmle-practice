@@ -57,7 +57,7 @@ export const LAB_VALUES: LabValueEntry[] = [
       "Bone marrow suppression",
     ],
     boardsPearls: [
-      "Anemia workup: classify by MCV → iron studies, B12/folate, or reticulocyte count",
+      "Classify anemia by MCV → microcytic (iron deficiency, thalassemia), macrocytic (B12/folate), or use reticulocyte count for hemolysis vs production defect",
       "Peds: age-specific normals — infants have higher physiologic Hgb",
     ],
     pairWith: [
@@ -146,7 +146,7 @@ export const LAB_VALUES: LabValueEntry[] = [
     ],
     pairWith: [
       "↑ WBC + left shift → bacterial infection",
-      "↓ WBC + fever on chemotherapy → neutropenic fever emergency",
+      "↓ WBC + fever on chemotherapy → febrile neutropenia (high-risk for bacterial sepsis)",
     ],
   },
   {
@@ -204,7 +204,7 @@ export const LAB_VALUES: LabValueEntry[] = [
       "Pseudohyperkalemia with hemolyzed sample",
     ],
     pairWith: [
-      "↑ K⁺ + ECG changes → calcium stabilization, insulin/glucose, kayexalate/dialysis",
+      "↑ K⁺ + peaked T waves → membrane hyperpolarization failure; insulin/glucose shifts K⁺ intracellularly",
       "↓ K⁺ + hypertension → hyperaldosteronism",
     ],
   },
@@ -278,7 +278,7 @@ export const LAB_VALUES: LabValueEntry[] = [
       "Pregnancy (hemodilution)",
     ],
     boardsPearls: [
-      "eGFR staging for CKD",
+      "Creatinine inversely reflects GFR; rises late relative to actual kidney injury",
       "Creatinine may be normal early in AKI — lags behind actual GFR decline",
       "Peds: creatinine is low at birth, rises with muscle mass",
     ],
@@ -494,7 +494,7 @@ export const LAB_VALUES: LabValueEntry[] = [
       "Prolonged INR + low platelets → DIC or liver failure",
     ],
     pairWith: [
-      "↑ INR on warfarin + bleeding → vitamin K ± FFP/PCC",
+      "↑ INR on warfarin → impaired synthesis of vitamin K–dependent clotting factors",
       "↑ INR + jaundice → advanced liver disease",
     ],
   },
@@ -544,8 +544,8 @@ export const LAB_VALUES: LabValueEntry[] = [
       "Very high in DIC; not specific enough to diagnose VTE on its own",
     ],
     pairWith: [
-      "Low D-dimer + low pretest probability → PE unlikely",
-      "High D-dimer + leg swelling → ultrasound even if nonspecific",
+      "Low D-dimer argues against active thrombosis but has low specificity",
+      "↑ D-dimer + leg swelling → consider DVT/PE (also elevated in pregnancy, surgery, malignancy)",
     ],
   },
   {

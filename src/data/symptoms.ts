@@ -250,7 +250,7 @@ export const SYMPTOMS: SymptomEntry[] = [
     pairWith: [
       "Medications (antihypertensives, diuretics)",
       "Dehydration, bleeding",
-      "Palpitations → arrhythmia workup",
+      "Palpitations → arrhythmia (structural heart disease, electrolyte abnormality, or toxic/metabolic cause)",
       "Positional symptoms → orthostatic vitals",
     ],
     distinguishFrom: [

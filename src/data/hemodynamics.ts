@@ -50,7 +50,7 @@ export const HEMODYNAMICS: HemodynamicEntry[] = [
       "Causes: hemorrhage, vomiting/diarrhea, burns, diuretics, third-spacing (pancreatitis, sepsis), inadequate intake",
       "Signs: tachycardia, hypotension, dry mucous membranes, decreased skin turgor, ↓ urine output",
       "Labs: ↑ BUN:Cr (prerenal), hemoconcentration (↑ Hct/Hgb), metabolic acidosis with poor perfusion",
-      "Treatment: isotonic crystalloid (NS or LR); blood products for hemorrhagic shock",
+      "Compensatory response: ↑ sympathetic tone, ↑ RAAS, ↑ ADH → tachycardia, vasoconstriction, oliguria",
       "Peds: infants decompensate quickly — tachycardia and lethargy may precede hypotension",
     ],
   },

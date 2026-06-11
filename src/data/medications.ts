@@ -81,7 +81,7 @@ export const MEDICATIONS: MedicationEntry[] = [
     boardsPearls: [
       "Contraindicated in pregnancy",
       "Avoid with bilateral renal artery stenosis",
-      "Cough → switch to ARB",
+      "Dry cough from bradykinin accumulation — ARBs do not inhibit kininase II",
     ],
   },
   {
@@ -165,7 +165,7 @@ export const MEDICATIONS: MedicationEntry[] = [
     mechanism:
       "Activates A1 receptors → ↑ K⁺ efflux → hyperpolarization and transient AV nodal block; very short half-life (seconds).",
     indications: [
-      "Stable narrow-complex paroxysmal SVT (first-line)",
+      "Paroxysmal supraventricular tachycardia (AV nodal block)",
       "Diagnostic maneuver in wide-complex tachycardia (transient AV block)",
     ],
     adverseEffects: [
@@ -188,10 +188,9 @@ export const MEDICATIONS: MedicationEntry[] = [
     mechanism:
       "Converts plasminogen to plasmin → fibrinolysis and clot dissolution.",
     indications: [
-      "Acute ischemic stroke (within window, no contraindications)",
-      "STEMI (when PCI unavailable or as adjunct)",
+      "Acute ischemic stroke",
+      "STEMI (fibrinolysis)",
       "Massive pulmonary embolism with hemodynamic instability",
-      "Occluded central venous catheter (low-dose dwell)",
     ],
     adverseEffects: [
       "Intracranial hemorrhage",
@@ -200,7 +199,6 @@ export const MEDICATIONS: MedicationEntry[] = [
     ],
     boardsPearls: [
       "Contraindications: recent stroke/surgery, active bleeding, uncontrolled HTN",
-      "Stroke window typically ≤4.5 h from last known well",
       "Converts plasminogen → plasmin; major risk is intracranial hemorrhage",
       "Tenecteplase: modified tPA with longer half-life (fibrin-specific)",
     ],
@@ -213,9 +211,8 @@ export const MEDICATIONS: MedicationEntry[] = [
     mechanism:
       "Competitive muscarinic (M) receptor antagonist → blocks vagal effects on SA/AV node and smooth muscle.",
     indications: [
-      "Symptomatic bradycardia (ACLS)",
+      "Symptomatic bradycardia",
       "Organophosphate/carbamate poisoning (with pralidoxime)",
-      "Premedication to reduce secretions (e.g., before intubation)",
       "Cycloplegia / mydriasis (ophthalmic)",
     ],
     adverseEffects: [
@@ -241,7 +238,7 @@ export const MEDICATIONS: MedicationEntry[] = [
     indications: [
       "Moderate to severe pain (acute and chronic)",
       "Acute pulmonary edema (reduces preload and sympathetic surge)",
-      "MI-related chest pain (with ACS protocol)",
+      "Acute coronary syndrome / MI-related chest pain",
     ],
     adverseEffects: [
       "Respiratory depression",
@@ -266,8 +263,6 @@ export const MEDICATIONS: MedicationEntry[] = [
       "Competitive antagonist at μ, κ, and δ opioid receptors → reverses opioid-induced CNS and respiratory depression.",
     indications: [
       "Opioid overdose (respiratory depression, altered mental status)",
-      "Opioid-induced pruritus (low-dose)",
-      "Neonatal opioid withdrawal assessment (selected settings)",
     ],
     adverseEffects: [
       "Acute opioid withdrawal (agitation, vomiting, diarrhea, tachycardia)",
@@ -290,7 +285,6 @@ export const MEDICATIONS: MedicationEntry[] = [
       "Crosses blood-brain barrier; inhibits acetylcholinesterase → ↑ synaptic ACh at muscarinic and nicotinic sites.",
     indications: [
       "Anticholinergic (antimuscarinic) toxicity with CNS effects",
-      "Selected cases of benzodiazepine overdose with severe delirium (controversial)",
     ],
     adverseEffects: [
       "Bradycardia, salivation, bronchorrhea, seizures",
@@ -314,7 +308,7 @@ export const MEDICATIONS: MedicationEntry[] = [
     indications: [
       "Acute venous thromboembolism",
       "Acute coronary syndromes",
-      "Atrial fibrillation (bridging)",
+      "Atrial fibrillation",
       "DIC (selected cases)",
     ],
     adverseEffects: [
@@ -366,10 +360,9 @@ export const MEDICATIONS: MedicationEntry[] = [
     ],
     adverseEffects: [
       "Bleeding",
-      "No routine monitoring required",
     ],
     boardsPearls: [
-      "Direct factor Xa inhibitor — no routine coagulation monitoring needed",
+      "Direct factor Xa inhibitor — inhibits thrombin generation without antithrombin",
       "Contraindicated with mechanical heart valves (thrombosis risk)",
       "Renally cleared — accumulation risk with impaired kidney function",
     ],
@@ -409,9 +402,9 @@ export const MEDICATIONS: MedicationEntry[] = [
     mechanism:
       "↓ hepatic gluconeogenesis and improves peripheral insulin sensitivity; does not stimulate insulin secretion.",
     indications: [
-      "Type 2 diabetes mellitus (first-line)",
+      "Type 2 diabetes mellitus",
       "PCOS",
-      "Prediabetes (selected patients)",
+      "Prediabetes",
     ],
     adverseEffects: [
       "GI upset (nausea, diarrhea)",
@@ -435,13 +428,13 @@ export const MEDICATIONS: MedicationEntry[] = [
       "Type 1 diabetes mellitus",
       "Type 2 diabetes (when oral agents insufficient)",
       "Hyperkalemia (with glucose)",
-      "DKA / HHS management",
+      "Diabetic ketoacidosis / hyperosmolar hyperglycemic state",
     ],
     adverseEffects: [
       "Hypoglycemia (most serious)",
       "Weight gain",
       "Lipohypertrophy at injection sites",
-      "Hypokalemia (during treatment of DKA)",
+      "Hypokalemia (insulin drives K⁺ intracellularly during DKA correction)",
     ],
     boardsPearls: [
       "Drives K⁺ intracellularly — given with glucose for hyperkalemia",
