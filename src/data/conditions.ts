@@ -117,6 +117,69 @@ export const CONDITIONS: ConditionEntry[] = [
     ],
   },
   {
+    id: "endocarditis",
+    name: "Endocarditis",
+    aliases: [
+      "endocarditis",
+      "libman-sacks endocarditis",
+      "libman sacks endocarditis",
+      "nonbacterial thrombotic endocarditis",
+      "marantic endocarditis",
+      "nbte",
+    ],
+    definition:
+      "Inflammation of the endocardium, most often affecting heart valves; may be infectious, autoimmune, or sterile/thrombotic depending on etiology.",
+    pathophysiology:
+      "Endothelial injury on valves → platelet-fibrin deposition ± microbial seeding or immune complex deposition → vegetations that can destroy valves or embolize. Infective: bacteremia on damaged endothelium. Libman-Sacks: SLE immune complexes. Marantic: hypercoagulable/malignancy-associated sterile thrombi.",
+    classicPresentation: [
+      "Fever, new murmur, fatigue (infective)",
+      "Embolic phenomena: stroke, splinter hemorrhages, Janeway/Osler lesions (infective)",
+      "Sterile verrucous vegetations in SLE (Libman-Sacks)",
+      "Occult malignancy or hypercoagulable state (marantic)",
+    ],
+    keyFindings: [
+      "Valvular vegetations on echocardiography",
+      "New or worsening regurgitant murmur",
+      "Peripheral stigmata: splinter hemorrhages, Roth spots, Janeway/Osler nodes (infective)",
+      "Verrucous vegetations on both sides of valve (Libman-Sacks)",
+    ],
+    keyLabs: [
+      "Blood cultures (infective — positive; Libman-Sacks/marantic — negative)",
+      "↑ ESR/CRP",
+      "ANA/anti-dsDNA (Libman-Sacks with SLE)",
+    ],
+    associations: [
+      "Infective endocarditis — damaged/native/prosthetic valves, IVDU, dental procedures",
+      "Libman-Sacks — systemic lupus erythematosus",
+      "Marantic (NBTE) — advanced malignancy, Trousseau syndrome",
+      "Rheumatic fever — pancarditis with endocardial involvement",
+    ],
+    complications: [
+      "Valve destruction and heart failure",
+      "Septic or sterile emboli (stroke, renal/splenic infarcts)",
+      "Ring abscess and conduction block (infective)",
+    ],
+    distinguishFrom: [
+      "Infective endocarditis — positive blood cultures, fever, acute/subacute bacterial course",
+      "Rheumatic fever — migratory polyarthritis, chorea, ASO elevation, responds to antibiotics for strep",
+      "Myocarditis — myocardial inflammation; murmur not from vegetations",
+      "Pericarditis — pleuritic pain, friction rub, diffuse ST elevation with PR depression",
+    ],
+    treatment: [
+      "Infective: prolonged IV antibiotics ± valve surgery",
+      "Libman-Sacks: treat underlying SLE; anticoagulation controversial",
+      "Marantic: treat underlying malignancy/hypercoagulable state; anticoagulation often considered",
+    ],
+    boardsPearls: [
+      "Three main boards types: infective (bacterial), Libman-Sacks (SLE, sterile), marantic/NBTE (malignancy)",
+      "Libman-Sacks: verrucous vegetations on mitral/aortic valves, both sides of valve, negative cultures",
+      "Marantic endocarditis: sterile small vegetations on normal valves in advanced cancer",
+      "Infective endocarditis is the most common clinically significant form — see dedicated entry",
+    ],
+    pediatrics:
+      "Congenital heart disease increases infective endocarditis risk; rheumatic fever still causes endocarditis in endemic areas. Libman-Sacks can occur in childhood SLE.",
+  },
+  {
     id: "infective-endocarditis",
     name: "Infective Endocarditis",
     aliases: [
@@ -124,7 +187,6 @@ export const CONDITIONS: ConditionEntry[] = [
       "bacterial endocarditis",
       "subacute bacterial endocarditis",
       "acute bacterial endocarditis",
-      "endocarditis",
       "sbe",
       "abe",
     ],
@@ -177,6 +239,73 @@ export const CONDITIONS: ConditionEntry[] = [
     ],
     pediatrics:
       "Congenital heart disease and prior valve surgery increase risk; viridans strep after dental procedures. Prophylaxis limited to highest-risk lesions per current guidelines.",
+  },
+  {
+    id: "pericarditis",
+    name: "Pericarditis",
+    aliases: [
+      "pericarditis",
+      "acute pericarditis",
+      "viral pericarditis",
+      "uremic pericarditis",
+      "dressler syndrome",
+      "post-mi pericarditis",
+      "constrictive pericarditis",
+    ],
+    definition:
+      "Inflammation of the pericardium causing chest pain, friction rub, and characteristic ECG changes; may progress to effusion, tamponade, or constrictive pericarditis.",
+    pathophysiology:
+      "Pericardial inflammation → chest pain from parietal pericardium irritation; pericardial effusion from ↑ capillary permeability or uremic toxins; chronic inflammation → fibrosis and calcification (constrictive pericarditis) with impaired diastolic filling.",
+    classicPresentation: [
+      "Sharp pleuritic chest pain relieved by sitting up and leaning forward",
+      "Pericardial friction rub (pathognomonic when present)",
+      "Fever and recent viral URI (viral pericarditis)",
+      "1–3 days to weeks post-MI (Dressler syndrome — autoimmune)",
+    ],
+    keyFindings: [
+      "Pericardial friction rub (triphasic: atrial systole, ventricular systole, early diastole)",
+      "Diffuse ST-segment elevation with PR-segment depression on ECG",
+      "Pericardial effusion on echo (may be small)",
+      "Electrical alternans with large effusion/tamponade",
+    ],
+    keyLabs: [
+      "↑ troponin possible (myopericarditis overlap)",
+      "↑ ESR/CRP",
+      "↑ BUN/Cr in uremic pericarditis",
+    ],
+    associations: [
+      "Viral infection (Coxsackie B most common)",
+      "Post-myocardial infarction (Dressler syndrome)",
+      "Uremia (dialysis indication if uremic pericarditis)",
+      "Autoimmune disease (SLE, rheumatoid arthritis)",
+      "Bacterial pericarditis (purulent — post-thoracic surgery, extension from pneumonia)",
+    ],
+    complications: [
+      "Pericardial effusion",
+      "Cardiac tamponade (Beck triad: hypotension, JVD, muffled heart sounds)",
+      "Constrictive pericarditis (chronic — Kussmaul sign, pericardial knock)",
+    ],
+    distinguishFrom: [
+      "Myocardial infarction — regional ST elevation, reciprocal changes, ↑ troponin with wall motion abnormality",
+      "Pulmonary embolism — pleuritic pain but no friction rub; no diffuse ST elevation",
+      "Aortic dissection — tearing pain to back, unequal BP, widened mediastinum",
+      "Restrictive cardiomyopathy — similar hemodynamics to constriction but pericardium normal on CT/MRI",
+    ],
+    treatment: [
+      "NSAIDs + colchicine for idiopathic/viral acute pericarditis",
+      "Treat underlying cause (dialysis for uremic pericarditis)",
+      "Avoid anticoagulation when possible — risk of hemopericardium",
+      "Pericardiocentesis for tamponade; pericardiectomy for symptomatic constriction",
+    ],
+    boardsPearls: [
+      "Diffuse ST elevation + PR depression = acute pericarditis (vs regional ST elevation in MI)",
+      "Pain improved sitting forward — classic positional symptom",
+      "Dressler syndrome: autoimmune pericarditis weeks post-MI",
+      "Tamponade: JVD + hypotension + muffled heart sounds; pulsus paradoxus >10 mmHg",
+      "Constrictive vs restrictive: constriction has pericardial calcification/knock; equalization of diastolic pressures on cath",
+    ],
+    pediatrics:
+      "Most pediatric pericarditis is viral and self-limited; purulent pericarditis is serious in infants. Post-MI Dressler is rare in children but myopericarditis occurs with viral myocarditis.",
   },
   {
     id: "thromboangiitis-obliterans",
@@ -604,6 +733,70 @@ export const CONDITIONS: ConditionEntry[] = [
       "Homozygous familial hypercholesterolemia presents in childhood with tendon xanthomas and premature CAD; heterozygous FH also warrants early statin therapy.",
   },
   {
+    id: "hyperlipidemia",
+    name: "Hyperlipidemia",
+    aliases: [
+      "hyperlipidemia",
+      "dyslipidemia",
+      "hypercholesterolemia",
+      "hypertriglyceridemia",
+      "elevated cholesterol",
+      "high cholesterol",
+      "familial hypercholesterolemia",
+      "mixed hyperlipidemia",
+    ],
+    definition:
+      "Abnormal elevation of circulating lipids (LDL cholesterol, triglycerides, and/or lipoprotein(a)), or low HDL — a major modifiable risk factor for atherosclerotic cardiovascular disease.",
+    pathophysiology:
+      "↑ LDL penetrates and oxidizes in arterial intima → foam cell formation and atherosclerosis; ↑ triglyceride-rich lipoproteins contribute to pancreatitis risk and residual ASCVD risk. Familial forms from defective LDL receptor clearance (LDLR, ApoB-100) or gain-of-function PCSK9.",
+    classicPresentation: [
+      "Usually asymptomatic — detected on fasting lipid panel",
+      "Tendon xanthomas (Achilles, extensor tendons) in familial hypercholesterolemia",
+      "Arcus senilis (corneal arcus) and xanthelasma",
+      "Premature MI or stroke in young patient or family history",
+    ],
+    keyFindings: [
+      "Xanthomas, xanthelasma, arcus senilis",
+      "Premature atherosclerotic disease on imaging or clinical events",
+    ],
+    keyLabs: [
+      "Fasting lipid panel: ↑ LDL-C, ↑ triglycerides, ↓ HDL",
+      "↑ lipoprotein(a) — independent ASCVD risk factor",
+      "Secondary workup if indicated: TSH (hypothyroidism), glucose/HbA1c, urine protein",
+    ],
+    associations: [
+      "Familial hypercholesterolemia (autosomal dominant LDLR/ApoB/PCSK9 defects)",
+      "Diabetes mellitus, metabolic syndrome, obesity",
+      "Hypothyroidism, nephrotic syndrome, cholestasis",
+      "Medications: thiazides, β-blockers, glucocorticoids, protease inhibitors",
+    ],
+    complications: [
+      "Coronary artery disease and myocardial infarction",
+      "Ischemic stroke and peripheral artery disease",
+      "Acute pancreatitis (severe hypertriglyceridemia, typically >1000 mg/dL)",
+    ],
+    distinguishFrom: [
+      "Atherosclerosis — end-organ disease; hyperlipidemia is a major upstream risk factor",
+      "Nephrotic syndrome hyperlipidemia — heavy proteinuria, edema, hypoalbuminemia",
+      "Secondary causes — correct hypothyroidism or nephrotic syndrome before labeling primary dyslipidemia",
+    ],
+    treatment: [
+      "Lifestyle: diet, exercise, weight loss, smoking cessation",
+      "Statins (HMG-CoA reductase inhibitors) first line for ↑ LDL and ASCVD risk reduction",
+      "Ezetimibe, PCSK9 inhibitors, bile acid sequestrants for refractory LDL",
+      "Fibrates and omega-3 for severe hypertriglyceridemia; treat secondary causes",
+    ],
+    boardsPearls: [
+      "LDL is primary target for atherosclerosis prevention; statins ↓ LDL and stabilize plaques",
+      "Familial hypercholesterolemia: ↑↑ LDL from birth, tendon xanthomas, premature CAD — treat early with statins",
+      "Homozygous FH: LDL often >500 mg/dL; may need LDL apheresis",
+      "Severe hypertriglyceridemia (>1000) → pancreatitis risk; fibrates and alcohol restriction",
+      "Statins inhibit HMG-CoA reductase — rate-limiting step in cholesterol synthesis",
+    ],
+    pediatrics:
+      "Screen children with FH, diabetes, or obesity per guidelines; heterozygous FH may need statins in childhood. Homozygous FH presents with dramatic LDL elevation and xanthomas in infancy/childhood.",
+  },
+  {
     id: "hypertension",
     name: "Hypertension",
     aliases: [
@@ -659,6 +852,74 @@ export const CONDITIONS: ConditionEntry[] = [
     ],
     pediatrics:
       "Secondary causes (renal parenchymal disease, coarctation) are more common than essential HTN; evaluate if BP elevated on repeated measurements.",
+  },
+  {
+    id: "atrial-fibrillation",
+    name: "Atrial Fibrillation",
+    aliases: [
+      "atrial fibrillation",
+      "afib",
+      "a-fib",
+      "a fib",
+      "af",
+      "chronic atrial fibrillation",
+      "paroxysmal atrial fibrillation",
+    ],
+    definition:
+      "Supraventricular tachyarrhythmia with chaotic atrial electrical activity and ineffective atrial contraction, producing an irregularly irregular ventricular response.",
+    pathophysiology:
+      "Multiple reentrant microcircuits in atrial myocardium → loss of coordinated atrial contraction; blood stasis in the left atrial appendage → thrombus formation and embolic stroke risk. Loss of atrial kick worsens cardiac output, especially with diastolic dysfunction or mitral stenosis.",
+    classicPresentation: [
+      "Palpitations, fatigue, dyspnea, or asymptomatic irregular pulse",
+      "Irregularly irregular rhythm on exam",
+      "History of hypertension, heart failure, valvular disease, or hyperthyroidism",
+      "Alcohol binge (\"holiday heart\") or postoperative state",
+    ],
+    keyFindings: [
+      "Irregularly irregular pulse",
+      "Absent P waves with fibrillatory waves on ECG",
+      "Variable R-R intervals",
+      "Absent S4/atrial kick; irregular pulse > heart rate if frequent premature beats",
+    ],
+    keyLabs: [
+      "ECG — diagnostic",
+      "TSH (hyperthyroidism)",
+      "Echocardiography — LA size, valvular disease, LV function",
+    ],
+    associations: [
+      "Hypertension and heart failure",
+      "Mitral stenosis or regurgitation",
+      "Hyperthyroidism (Graves disease)",
+      "Ischemic heart disease and post-MI",
+      "Obstructive sleep apnea, pulmonary embolism, alcohol",
+    ],
+    complications: [
+      "Ischemic stroke and systemic embolism",
+      "Tachycardia-mediated cardiomyopathy",
+      "Heart failure exacerbation",
+    ],
+    distinguishFrom: [
+      "Atrial flutter — sawtooth flutter waves, often regular ventricular response with block",
+      "Multifocal atrial tachycardia — distinct P waves with ≥3 morphologies",
+      "Frequent PVCs — regular underlying rhythm between ectopy",
+      "Sinus arrhythmia — phasic variation with respiration, normal P waves",
+    ],
+    treatment: [
+      "Rate control: β-blockers, nondihydropyridine CCBs (diltiazem/verapamil), or digoxin",
+      "Rhythm control: cardioversion, antiarrhythmics (amiodarone, flecainide) when appropriate",
+      "Anticoagulation per stroke risk (CHA₂DS₂-VASc): DOACs or warfarin",
+      "Treat underlying cause (thyroid disease, valve disease, heart failure)",
+    ],
+    boardsPearls: [
+      "Irregularly irregular + no P waves = atrial fibrillation",
+      "CHA₂DS₂-VASc guides anticoagulation; HAS-BLED assesses bleeding risk",
+      "Cardioversion if >48 h or unknown duration → anticoagulate ≥3 weeks before or TEE to rule out LA thrombus",
+      "WPW + AF: avoid AV nodal blockers (β-blocker, CCB, digoxin) → use procainamide or cardioversion",
+      "Mitral stenosis or mechanical valve → warfarin (not DOAC) for stroke prevention",
+      "Rate control often first-line in elderly; rhythm control does not consistently beat rate control for mortality",
+    ],
+    pediatrics:
+      "Uncommon; consider congenital heart disease, WPW, or post-cardiac surgery. Same anticoagulation principles apply when stroke risk warrants.",
   },
   {
     id: "atrioventricular-block",

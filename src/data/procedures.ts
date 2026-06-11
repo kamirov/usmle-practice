@@ -50,6 +50,47 @@ export const PROCEDURES: ProcedureEntry[] = [
     pediatrics:
       "Same principles; catheter sizes and contrast volumes adjusted for weight. Kawasaki with coronary aneurysms may need cath for stenosis assessment.",
   },
+  {
+    id: "coronary-ct-angiography",
+    name: "Coronary CT Angiography",
+    aliases: [
+      "coronary ct angiography",
+      "coronary cta",
+      "coronary computed tomography angiography",
+      "ccta",
+      "cardiac ct angiography",
+      "ct coronary angiogram",
+    ],
+    definition:
+      "Noninvasive contrast-enhanced CT imaging of coronary arteries to detect stenosis, plaque burden, and anatomic variants.",
+    indications: [
+      "Evaluation of stable chest pain in low-to-intermediate pretest probability CAD",
+      "Rule out anomalous coronary origins (especially in young athletes)",
+      "Assess coronary artery bypass graft patency",
+      "Coronary calcium scoring (noncontrast CT) for ASCVD risk stratification",
+    ],
+    keyMeasurements: [
+      "Coronary stenosis severity by luminal narrowing",
+      "Agatston coronary artery calcium (CAC) score — 0 suggests very low short-term ASCVD risk",
+      "Plaque characterization (calcified vs noncalcified)",
+    ],
+    complications: [
+      "Contrast-induced nephropathy",
+      "Allergic reaction to iodinated contrast",
+      "Ionizing radiation exposure",
+      "False positives from motion artifact or heavy calcification limiting interpretation",
+    ],
+    boardsPearls: [
+      "Noninvasive alternative to invasive coronary angiography for appropriate-risk patients",
+      "High CAC score → atherosclerosis present; very high scores can obscure CTA lumen detail",
+      "Invasive cath remains gold standard when revascularization likely or high-risk ACS",
+      "Exercise stress testing vs CTA vs invasive angiography chosen by pretest probability and symptoms",
+      "vs invasive angiography — CTA rules out CAD noninvasively; cath needed for PCI",
+      "vs stress testing — CTA shows anatomy; stress tests detect functional ischemia",
+    ],
+    pediatrics:
+      "Rarely used in children except evaluation of anomalous coronary arteries or post-Kawasaki coronary aneurysms; radiation and contrast risks favor echo/MRI when possible.",
+  },
 ];
 
 const procedureById = new Map(PROCEDURES.map((entry) => [entry.id, entry]));

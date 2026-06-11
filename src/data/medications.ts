@@ -136,6 +136,32 @@ export const MEDICATIONS: MedicationEntry[] = [
     ],
   },
   {
+    id: "atenolol",
+    name: "Atenolol",
+    aliases: ["atenolol", "tenormin"],
+    drugClass: "Beta-1 selective blocker",
+    mechanism:
+      "Antagonizes β1 receptors → ↓ heart rate, contractility, and renin release; hydrophilic β-blocker with minimal CNS penetration.",
+    indications: [
+      "Hypertension",
+      "Angina",
+      "Post-MI",
+      "Rate control in atrial fibrillation",
+    ],
+    adverseEffects: [
+      "Bradycardia, AV block, heart failure exacerbation (acute decompensated HF)",
+      "Bronchospasm (less than nonselective β-blockers)",
+      "Fatigue, cold extremities",
+      "Masks hypoglycemia symptoms",
+    ],
+    boardsPearls: [
+      "Hydrophilic β1-blocker — renally excreted; reduce dose in renal failure",
+      "Less CNS side effects than lipophilic agents (propranolol, metoprolol)",
+      "β1-selective but still use caution in asthma/COPD",
+      "Avoid abrupt withdrawal → rebound tachycardia / ischemia",
+    ],
+  },
+  {
     id: "amiodarone",
     name: "Amiodarone",
     aliases: ["amiodarone", "pacerone"],
@@ -208,6 +234,32 @@ export const MEDICATIONS: MedicationEntry[] = [
       "Avoid with β-blockers or digoxin → additive AV nodal depression",
       "Contraindicated in WPW with AF (shortens refractory period in accessory pathway → ↑ ventricular rate)",
       "Pediatrics: same AV nodal effects; used cautiously for SVT rate control",
+    ],
+  },
+  {
+    id: "amlodipine",
+    name: "Amlodipine",
+    aliases: ["amlodipine", "norvasc"],
+    drugClass: "Dihydropyridine calcium channel blocker",
+    mechanism:
+      "Blocks L-type Ca²⁺ channels in vascular smooth muscle → arteriolar vasodilation with minimal direct cardiac conduction effects (peripheral > cardiac selectivity).",
+    indications: [
+      "Hypertension",
+      "Chronic stable angina",
+      "Vasospastic (Prinzmetal) angina",
+      "Coronary artery disease",
+    ],
+    adverseEffects: [
+      "Peripheral edema (arteriolar dilation → capillary hydrostatic pressure)",
+      "Flushing, headache, dizziness",
+      "Reflex tachycardia (less than immediate-release nifedipine)",
+      "Gingival hyperplasia (less common than nifedipine)",
+    ],
+    boardsPearls: [
+      "Dihydropyridine CCB — vascular effects dominate (vs diltiazem/verapamil)",
+      "Peripheral edema is common — not relieved by diuretics alone (arteriolar dilation mechanism)",
+      "Does not significantly depress AV nodal conduction — safer with β-blockers than nondihydropyridines",
+      "Long half-life → once-daily dosing",
     ],
   },
   {
