@@ -231,6 +231,69 @@ export const CONDITIONS: ConditionEntry[] = [
       "Extremely rare in children; any adolescent with tobacco exposure and digital ischemia warrants urgent vascular evaluation and smoking cessation counseling.",
   },
   {
+    id: "gangrene",
+    name: "Gangrene",
+    aliases: [
+      "gangrene",
+      "dry gangrene",
+      "wet gangrene",
+      "gas gangrene",
+      "clostridial myonecrosis",
+      "clostridial gangrene",
+    ],
+    definition:
+      "Localized tissue death (necrosis) from severe ischemia, infection, or both; classified as dry, wet, or gas gangrene by mechanism and clinical features.",
+    pathophysiology:
+      "Dry gangrene: chronic arterial insufficiency → coagulative necrosis without early infection. Wet gangrene: ischemic or traumatic necrosis with bacterial superinfection and liquefactive necrosis. Gas gangrene: Clostridium perfringens (and related species) produce α-toxin (lecithinase) → myonecrosis, gas production, and rapid systemic toxicity.",
+    classicPresentation: [
+      "Dry gangrene: cold, dry, black/discolored distal tissue; line of demarcation",
+      "Wet gangrene: swollen, foul-smelling, hemorrhagic necrosis with infection",
+      "Gas gangrene: severe pain, crepitus, bronze skin discoloration, systemic toxicity after trauma or surgery",
+    ],
+    keyFindings: [
+      "Black or dusky necrotic tissue",
+      "Crepitus on palpation (gas gangrene)",
+      "Foul odor and rapid spread (wet/gas gangrene)",
+      "Systemic signs: fever, tachycardia, hypotension",
+    ],
+    keyLabs: [
+      "Gram stain/culture of wound — gram-positive rods (Clostridium)",
+      "X-ray or CT may show gas in soft tissues",
+      "↑ CK, metabolic acidosis, hemolysis in severe clostridial infection",
+    ],
+    associations: [
+      "Peripheral artery disease, diabetes, thromboangiitis obliterans (dry gangrene)",
+      "Trauma, crush injury, contaminated wounds (gas gangrene)",
+      "Immunocompromise and necrotizing soft tissue infections (wet gangrene)",
+    ],
+    complications: [
+      "Sepsis and septic shock",
+      "Amputation",
+      "Death in fulminant gas gangrene or necrotizing fasciitis",
+      "Multiorgan failure",
+    ],
+    distinguishFrom: [
+      "Necrotizing fasciitis — pain out of proportion, spread along fascial planes; may coexist",
+      "Cellulitis — erythema without frank necrosis early on",
+      "Ischemic limb without infection — dry appearance, no systemic toxicity",
+      "Fournier gangrene — necrotizing infection of perineum/scrotum (subtype of wet gangrene)",
+    ],
+    treatment: [
+      "Dry gangrene: treat underlying ischemia; amputation at line of demarcation if needed",
+      "Wet/gas gangrene: urgent surgical debridement/amputation",
+      "Penicillin G + clindamycin for clostridial myonecrosis; add hyperbaric oxygen when available",
+      "Broad-spectrum antibiotics and source control for necrotizing soft tissue infection",
+    ],
+    boardsPearls: [
+      "Gas gangrene: C. perfringens α-toxin (lecithinase) → myonecrosis + gas + crepitus",
+      "Trauma + severe pain + crepitus → gas gangrene until proven otherwise",
+      "Treatment = debridement + penicillin; clindamycin inhibits toxin production",
+      "Dry vs wet: dry = ischemic coagulative necrosis; wet = superinfected liquefactive necrosis",
+    ],
+    pediatrics:
+      "Gas gangrene and necrotizing fasciitis are rare but catastrophic in children — varicella, immunosuppression, and trauma are risk factors; urgent surgery and antibiotics.",
+  },
+  {
     id: "heart-failure",
     name: "Congestive Heart Failure",
     aliases: [
@@ -1609,6 +1672,131 @@ export const CONDITIONS: ConditionEntry[] = [
       "Most common chronic disease of childhood; viral URIs are common triggers; watch for atypical presentations (cough-only asthma).",
   },
   {
+    id: "sinusitis",
+    name: "Sinusitis",
+    aliases: [
+      "sinusitis",
+      "acute sinusitis",
+      "acute bacterial sinusitis",
+      "rhinosinusitis",
+      "maxillary sinusitis",
+      "ethmoid sinusitis",
+      "frontal sinusitis",
+      "sphenoid sinusitis",
+    ],
+    definition:
+      "Inflammation of the paranasal sinuses, usually following viral upper respiratory infection; bacterial superinfection is suspected when symptoms persist or worsen.",
+    pathophysiology:
+      "Viral URI → mucosal edema and impaired sinus drainage → stagnant secretions → bacterial overgrowth (S. pneumoniae, H. influenzae, M. catarrhalis, anaerobes). Obstruction of osteomeatal complex is central to pathogenesis.",
+    classicPresentation: [
+      "Facial pain or pressure worse on bending forward",
+      "Purulent nasal discharge, nasal congestion",
+      "Symptoms >10 days, or severe onset with high fever and purulent discharge ≥3–4 days",
+      "Tooth pain (maxillary sinus)",
+    ],
+    keyFindings: [
+      "Tenderness over affected sinuses",
+      "Purulent rhinorrhea",
+      "Transillumination may be decreased (limited utility)",
+    ],
+    keyLabs: [
+      "Usually clinical diagnosis; imaging not routine for uncomplicated acute sinusitis",
+      "CT sinuses if complications suspected or refractory disease",
+    ],
+    associations: [
+      "Viral URI",
+      "Allergic rhinitis",
+      "Dental infection (maxillary)",
+      "Immunocompromise",
+      "Granulomatosis with polyangiitis (chronic destructive sinusitis)",
+    ],
+    complications: [
+      "Orbital cellulitis (ethmoid sinusitis → periorbital swelling, ophthalmoplegia)",
+      "Cavernous sinus thrombosis (headache, cranial nerve palsies, proptosis)",
+      "Meningitis or brain abscess",
+      "Chronic sinusitis and mucocele",
+    ],
+    distinguishFrom: [
+      "Viral URI — symptoms improve by day 10",
+      "Allergic rhinitis — clear rhinorrhea, sneezing, seasonal pattern, no fever",
+      "Migraine/facial pain — no purulent discharge",
+      "GPA — chronic sinusitis with epistaxis, saddle-nose deformity",
+    ],
+    treatment: [
+      "Supportive care for viral rhinosinusitis",
+      "Amoxicillin-clavulanate for acute bacterial sinusitis when criteria met",
+      "Saline irrigation, intranasal corticosteroids may help drainage",
+      "Urgent ENT/ophthalmology for orbital or intracranial complications",
+    ],
+    boardsPearls: [
+      "Bacterial sinusitis: symptoms >10 days, or severe (fever ≥39°C + purulent discharge ≥3–4 days), or biphasic worsening after initial improvement",
+      "Ethmoid sinusitis → orbital cellulitis — ophthalmoplegia and proptosis are emergencies",
+      "Cavernous sinus thrombosis: fever, headache, proptosis, CN III/IV/VI palsies",
+    ],
+    pediatrics:
+      "Orbital cellulitis is a pediatric emergency — distinguish preseptal (periorbital) from postseptal (orbital) cellulitis; ethmoiditis is the usual source.",
+  },
+  {
+    id: "otitis-media",
+    name: "Otitis Media",
+    aliases: [
+      "otitis media",
+      "acute otitis media",
+      "aom",
+      "middle ear infection",
+      "otitis media with effusion",
+      "serous otitis media",
+    ],
+    definition:
+      "Inflammation and infection of the middle ear, most often acute and bacterial in children; otitis media with effusion is noninfectious fluid without acute signs.",
+    pathophysiology:
+      "Eustachian tube dysfunction (short/horizontal in children) → negative middle ear pressure and fluid → bacterial ascent after viral URI. Common organisms: S. pneumoniae, nontypeable H. influenzae, M. catarrhalis.",
+    classicPresentation: [
+      "Ear pain (otalgia), fever, irritability in infants",
+      "Bulging, erythematous, immobile tympanic membrane",
+      "Recent URI, daycare attendance",
+      "Hearing difficulty with persistent effusion",
+    ],
+    keyFindings: [
+      "Bulging TM with impaired mobility on pneumatic otoscopy",
+      "Middle ear effusion",
+      "Otorrhea if TM perforated",
+    ],
+    keyLabs: [
+      "Clinical diagnosis by otoscopy — culture rarely needed",
+      "Tympanometry shows flat curve with effusion",
+    ],
+    associations: [
+      "Viral URI",
+      "Daycare, bottle propping, smoke exposure",
+      "Cleft palate, Down syndrome (Eustachian tube dysfunction)",
+    ],
+    complications: [
+      "TM perforation and otorrhea",
+      "Mastoiditis (postauricular swelling, protruding ear)",
+      "Cholesteatoma (chronic)",
+      "Conductive hearing loss with chronic effusion",
+    ],
+    distinguishFrom: [
+      "Otitis externa — tragal tenderness, ear canal inflammation, TM often normal",
+      "Otitis media with effusion — fluid without bulging TM or acute inflammation",
+      "Referred otalgia — dental, pharyngeal, or TMJ source",
+    ],
+    treatment: [
+      "Amoxicillin first line for acute otitis media when antibiotics indicated",
+      "Amoxicillin-clavulanate if recent antibiotics or treatment failure",
+      "Analgesia; tympanostomy tubes for recurrent AOM or chronic effusion with hearing loss",
+    ],
+    boardsPearls: [
+      "Bulging, immobile TM = acute otitis media",
+      "Amoxicillin first line; add clavulanate for β-lactamase coverage if needed",
+      "Mastoiditis: postauricular erythema/swelling after AOM — needs IV antibiotics ± drainage",
+      "OME (serous otitis) — fluid without acute infection; observe or tubes if persistent",
+    ],
+    pediatrics:
+      "Peak incidence 6–15 months; watchful waiting may be appropriate in older children with mild symptoms. Hib vaccine ↓ H. influenzae type b but nontypeable H. flu remains common.",
+  },
+  {
     id: "sarcoidosis",
     name: "Sarcoidosis",
     aliases: ["sarcoidosis", "sarcoid"],
@@ -1872,6 +2060,81 @@ export const CONDITIONS: ConditionEntry[] = [
       "Reid index >0.5 (gland layer thickness / bronchial wall thickness)",
       "Blue bloater: chronic bronchitis with hypercapnia and cyanosis",
     ],
+  },
+  {
+    id: "glomerulonephritis",
+    name: "Glomerulonephritis",
+    aliases: [
+      "glomerulonephritis",
+      "glomerular nephritis",
+      "poststreptococcal glomerulonephritis",
+      "post-streptococcal glomerulonephritis",
+      "post streptococcal glomerulonephritis",
+      "psgn",
+      "rapidly progressive glomerulonephritis",
+      "rpgn",
+      "crescentic glomerulonephritis",
+      "iga nephropathy",
+      "berger disease",
+    ],
+    definition:
+      "Inflammation of the renal glomeruli causing hematuria, proteinuria, and impaired filtration; may present as nephritic syndrome, nephrotic syndrome, or rapidly progressive renal failure.",
+    pathophysiology:
+      "Immune-mediated glomerular injury (immune complex deposition, anti-GBM antibodies, or ANCA-associated pauci-immune disease) → complement activation, inflammatory cell infiltration, and GBM damage → hematuria with RBC casts; severe disease forms crescents (RPGN) from proliferative epithelial cells in Bowman space.",
+    classicPresentation: [
+      "Cola- or tea-colored urine (glomerular hematuria)",
+      "Hypertension, oliguria, periorbital edema (nephritic presentation)",
+      "1–3 weeks after streptococcal pharyngitis or impetigo (post-streptococcal GN)",
+      "Episodic gross hematuria during or after URI (IgA nephropathy)",
+    ],
+    keyFindings: [
+      "RBC casts on urinalysis (pathognomonic for glomerular bleeding)",
+      "Dysmorphic RBCs",
+      "Hypertension and edema",
+      ">50% crescents on biopsy → rapidly progressive GN",
+    ],
+    keyLabs: [
+      "Urinalysis: hematuria, RBC casts, variable proteinuria",
+      "↑ creatinine, ↓ GFR",
+      "↓ C3 in post-streptococcal GN and MPGN type I",
+      "↑ anti-streptolysin O / anti-DNase B (recent strep)",
+      "Anti-GBM antibodies (Goodpasture); ANCA (vasculitis); anti-dsDNA (lupus nephritis)",
+    ],
+    associations: [
+      "Post-streptococcal GN (children, 1–3 weeks post-infection)",
+      "IgA nephropathy (Berger disease) — most common GN worldwide",
+      "Goodpasture syndrome (anti-GBM)",
+      "ANCA-associated vasculitis (GPA, MPA)",
+      "Lupus nephritis",
+      "Membranoproliferative glomerulonephritis (MPGN)",
+    ],
+    complications: [
+      "Acute kidney injury",
+      "Rapidly progressive renal failure (crescentic GN)",
+      "Chronic kidney disease and ESRD",
+      "Hypertensive emergency",
+    ],
+    distinguishFrom: [
+      "Nephrotic syndrome — heavy proteinuria (>3.5 g/day), fatty casts, minimal hematuria",
+      "UTI/pyelonephritis — WBC casts, dysuria, positive urine culture",
+      "Nephritic syndrome — clinical presentation subset of glomerulonephritis",
+      "Hematuria from stones or malignancy — no RBC casts, no dysmorphic RBCs",
+    ],
+    treatment: [
+      "Post-streptococcal GN: supportive care (usually self-limited in children)",
+      "RPGN: urgent immunosuppression (steroids ± cyclophosphamide) ± plasmapheresis (anti-GBM, severe vasculitis)",
+      "IgA nephropathy: ACE inhibitors; steroids/immunosuppression if progressive",
+      "Lupus nephritis: mycophenolate or cyclophosphamide per class",
+    ],
+    boardsPearls: [
+      "RBC casts = glomerulonephritis until proven otherwise",
+      "Post-strep GN: ↓ C3, normal C4, subepithelial \"humps\" on EM, resolves in 6–8 weeks",
+      "IgA nephropathy: mesangial IgA deposition; synpharyngitic hematuria",
+      "RPGN: crescents on biopsy — treat urgently (Goodpasture, ANCA vasculitis, severe lupus)",
+      "Goodpasture: anti-GBM → pulmonary hemorrhage + RPGN; linear IgG on biopsy",
+    ],
+    pediatrics:
+      "Post-streptococcal GN is classic in children after pharyngitis or skin infection; usually self-limited. Minimal change disease causes nephrotic (not primarily nephritic) presentation — distinguish by RBC casts vs heavy proteinuria.",
   },
   {
     id: "nephritic-syndrome",
