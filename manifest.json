@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "USMLE Study Tools",
+  "version": "0.1.0",
+  "description": "Study aids for UWorld",
+  "content_scripts": [
+    {
+      "matches": ["https://apps.uworld.com/*"],
+      "js": ["src/content/index.ts"],
+      "css": ["src/styles/content.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}
