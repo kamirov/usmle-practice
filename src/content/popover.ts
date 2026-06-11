@@ -1,3 +1,7 @@
+import {
+  getAntiarrhythmicClassForMedication,
+  getAntiarrhythmicImageForMedication,
+} from "../data/antiarrhythmicMedia";
 import { getConditionById } from "../data/conditions";
 import { getHeartSoundById } from "../data/heartSounds";
 import { getHemodynamicById } from "../data/hemodynamics";
@@ -175,8 +179,10 @@ function renderMedicationPopover(medicationId: string): boolean {
   const medication = getMedicationById(medicationId);
   if (!medication || !popoverEl) return false;
 
-  popoverEl.classList.add("usmle-organ-popover--rich");
-  popoverEl.innerHTML = `
+  const antiarrhythmicClass = getAntiarrhythmicClassForMedication(medicationId);
+  const actionPotentialImage = getAntiarrhythmicImageForMedication(medicationId);
+
+  const bodyContent = `
     <div class="usmle-organ-popover__title usmle-organ-popover__title--medication">${medication.name}</div>
     <div class="usmle-organ-popover__layer"><strong>Class:</strong> ${medication.drugClass}</div>
     <div class="usmle-organ-popover__section-label">Mechanism</div>
@@ -185,6 +191,22 @@ function renderMedicationPopover(medicationId: string): boolean {
     ${renderListSection("Adverse effects", medication.adverseEffects)}
     ${renderListSection("Boards pearls", medication.boardsPearls)}
   `;
+
+  popoverEl.classList.add("usmle-organ-popover--rich");
+  if (actionPotentialImage && antiarrhythmicClass) {
+    popoverEl.classList.add("usmle-organ-popover--with-media");
+    popoverEl.innerHTML = `
+      <div class="usmle-organ-popover__layout">
+        <div class="usmle-organ-popover__body">${bodyContent}</div>
+        <div class="usmle-organ-popover__media">
+          <img src="${actionPotentialImage}" alt="Class ${antiarrhythmicClass} action potential effect" />
+          <div class="usmle-organ-popover__media-caption">Class ${antiarrhythmicClass}</div>
+        </div>
+      </div>
+    `;
+  } else {
+    popoverEl.innerHTML = bodyContent;
+  }
   return true;
 }
 
@@ -303,7 +325,10 @@ function showPopover(chip: HTMLElement): void {
   }
 
   const popover = ensurePopover();
-  popover.classList.remove("usmle-organ-popover--rich");
+  popover.classList.remove(
+    "usmle-organ-popover--rich",
+    "usmle-organ-popover--with-media",
+  );
   const rendered = organId
     ? renderOrganPopover(organId)
     : heartSoundId

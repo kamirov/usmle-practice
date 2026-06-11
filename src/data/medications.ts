@@ -1,3 +1,5 @@
+export type AntiarrhythmicClass = "Ia" | "Ib" | "Ic" | "II" | "III" | "IV";
+
 export interface MedicationEntry {
   id: string;
   name: string;
@@ -7,6 +9,7 @@ export interface MedicationEntry {
   indications: string[];
   adverseEffects: string[];
   boardsPearls: string[];
+  antiarrhythmicClass?: AntiarrhythmicClass;
 }
 
 export const MEDICATIONS: MedicationEntry[] = [
@@ -137,6 +140,7 @@ export const MEDICATIONS: MedicationEntry[] = [
     name: "Amiodarone",
     aliases: ["amiodarone", "pacerone"],
     drugClass: "Class III antiarrhythmic (multichannel blocker)",
+    antiarrhythmicClass: "III",
     mechanism:
       "Blocks K⁺, Na⁺, and Ca²⁺ channels and has noncompetitive β-blockade → prolongs action potential and refractory period.",
     indications: [
@@ -185,6 +189,7 @@ export const MEDICATIONS: MedicationEntry[] = [
     name: "Diltiazem",
     aliases: ["diltiazem", "cardizem"],
     drugClass: "Class IV antiarrhythmic / nondihydropyridine calcium channel blocker",
+    antiarrhythmicClass: "IV",
     mechanism:
       "Blocks L-type Ca²⁺ channels in cardiac SA/AV node and vascular smooth muscle → ↓ AV nodal conduction and contractility; peripheral vasodilation.",
     indications: [
@@ -210,6 +215,7 @@ export const MEDICATIONS: MedicationEntry[] = [
     name: "Disopyramide",
     aliases: ["disopyramide", "norpace"],
     drugClass: "Class Ia antiarrhythmic",
+    antiarrhythmicClass: "Ia",
     mechanism:
       "Blocks fast Na⁺ channels and has antimuscarinic activity → ↑ action potential duration and effective refractory period; negative inotropy.",
     indications: [
@@ -234,6 +240,7 @@ export const MEDICATIONS: MedicationEntry[] = [
     name: "Flecainide",
     aliases: ["flecainide", "tambocor"],
     drugClass: "Class Ic antiarrhythmic",
+    antiarrhythmicClass: "Ic",
     mechanism:
       "Strong block of fast Na⁺ channels → markedly slows conduction (↓ Vmax) with minimal effect on action potential duration.",
     indications: [
@@ -258,6 +265,7 @@ export const MEDICATIONS: MedicationEntry[] = [
     name: "Lidocaine",
     aliases: ["lidocaine", "xylocaine"],
     drugClass: "Class Ib antiarrhythmic / local anesthetic",
+    antiarrhythmicClass: "Ib",
     mechanism:
       "Blocks fast Na⁺ channels preferentially in depolarized or ischemic tissue → shortens action potential duration; minimal effect on normal tissue.",
     indications: [
@@ -281,6 +289,7 @@ export const MEDICATIONS: MedicationEntry[] = [
     name: "Propranolol",
     aliases: ["propranolol", "inderal"],
     drugClass: "Nonselective β-blocker (Class II antiarrhythmic)",
+    antiarrhythmicClass: "II",
     mechanism:
       "Antagonizes β1 and β2 receptors → ↓ heart rate, contractility, and AV nodal conduction; ↓ renin release.",
     indications: [

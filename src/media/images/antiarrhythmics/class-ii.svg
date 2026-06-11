@@ -1,0 +1,14 @@
+<!-- Derived from Wikimedia Commons Cardiac_action_potential.svg (CC BY-SA 4.0, Sertion) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 120" width="180" height="120">
+  <rect width="180" height="120" fill="#fafafa" rx="4"/>
+  <text x="90" y="14" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" font-weight="600" fill="#334155">Class II</text>
+  <text x="90" y="24" text-anchor="middle" font-family="system-ui,sans-serif" font-size="7" fill="#64748b">“ SA/AV slope · ²-blockade</text>
+  <line x1="20" y1="95" x2="165" y2="95" stroke="#cbd5e1" stroke-width="1"/>
+  <line x1="20" y1="30" x2="20" y2="95" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="8" y="33" font-family="system-ui,sans-serif" font-size="6" fill="#94a3b8">mV</text>
+  <path d="M 25 85 L 50 70 L 75 55 L 100 40 L 125 35 L 150 35" fill="none" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <path d="M 25 85 L 55 78 L 85 72 L 115 68 L 145 65 L 155 65" fill="none" stroke="#0284c7" stroke-width="2"/>
+  <text x="157" y="68" font-family="system-ui,sans-serif" font-size="6" fill="#0284c7">II</text>
+  <text x="90" y="108" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" fill="#64748b">Pacemaker phase 4 (nodal tissue)</text>
+  <text x="90" y="116" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" fill="#94a3b8">Normal   </text>
+</svg>
