@@ -788,7 +788,11 @@ export const MEDICATIONS: MedicationEntry[] = [
   {
     id: "heparin",
     name: "Heparin",
-    aliases: ["heparin"],
+    aliases: [
+      "heparin",
+      "unfractionated heparin",
+      "ufh",
+    ],
     drugClass: "Anticoagulant (indirect thrombin inhibitor)",
     mechanism:
       "Binds antithrombin III → markedly ↑ inhibition of factor Xa and thrombin (IIa).",
@@ -852,6 +856,287 @@ export const MEDICATIONS: MedicationEntry[] = [
       "Direct factor Xa inhibitor — inhibits thrombin generation without antithrombin",
       "Contraindicated with mechanical heart valves (thrombosis risk)",
       "Renally cleared — accumulation risk with impaired kidney function",
+    ],
+  },
+  {
+    id: "rivaroxaban",
+    name: "Rivaroxaban",
+    aliases: ["rivaroxaban", "xarelto"],
+    drugClass: "Direct factor Xa inhibitor (DOAC)",
+    mechanism:
+      "Directly inhibits factor Xa → ↓ thrombin generation without requiring antithrombin.",
+    indications: [
+      "Nonvalvular atrial fibrillation (stroke prevention)",
+      "VTE treatment and prophylaxis (including post-orthopedic surgery)",
+    ],
+    adverseEffects: [
+      "Bleeding",
+      "GI upset",
+    ],
+    boardsPearls: [
+      "Direct factor Xa inhibitor — once-daily dosing (food ↑ absorption)",
+      "Contraindicated with mechanical heart valves",
+      "Renally cleared — dose adjustment with impaired kidney function",
+    ],
+  },
+  {
+    id: "dabigatran",
+    name: "Dabigatran",
+    aliases: ["dabigatran", "pradaxa"],
+    drugClass: "Direct thrombin inhibitor (DOAC)",
+    mechanism:
+      "Directly inhibits thrombin (factor IIa) → prevents fibrin formation.",
+    indications: [
+      "Nonvalvular atrial fibrillation (stroke prevention)",
+      "VTE treatment",
+    ],
+    adverseEffects: [
+      "Bleeding",
+      "Dyspepsia",
+    ],
+    boardsPearls: [
+      "Only oral direct thrombin inhibitor among DOACs",
+      "Reversal agent: idarucizumab (Fab fragment)",
+      "Contraindicated with mechanical heart valves",
+    ],
+  },
+  {
+    id: "lmwh",
+    name: "Low-Molecular-Weight Heparin (LMWH)",
+    aliases: [
+      "lmwh",
+      "low molecular weight heparin",
+      "low-molecular-weight heparin",
+      "low molecular weight heparins",
+    ],
+    drugClass: "Anticoagulant (indirect factor Xa inhibitor)",
+    mechanism:
+      "Short heparin chains bind antithrombin III → preferential inhibition of factor Xa over thrombin (higher anti-Xa:anti-IIa ratio than unfractionated heparin).",
+    indications: [
+      "VTE treatment and prophylaxis",
+      "Acute coronary syndromes",
+      "Bridging anticoagulation",
+    ],
+    adverseEffects: [
+      "Bleeding",
+      "Heparin-induced thrombocytopenia (less common than with UFH)",
+      "Injection-site hematoma",
+    ],
+    boardsPearls: [
+      "LMWH (e.g., enoxaparin, dalteparin) — mainly anti-Xa activity; subcutaneous, predictable PK",
+      "Renally cleared — avoid or reduce dose if CrCl <30",
+      "Protamine only partially reverses anti-Xa effect",
+      "UFH inhibits Xa and IIa more equally; LMWH has less anti-IIa activity",
+    ],
+  },
+  {
+    id: "enoxaparin",
+    name: "Enoxaparin",
+    aliases: ["enoxaparin", "lovenox"],
+    drugClass: "Low-molecular-weight heparin (LMWH)",
+    mechanism:
+      "Binds antithrombin III → preferentially inhibits factor Xa over thrombin (higher anti-Xa:anti-IIa ratio than UFH).",
+    indications: [
+      "VTE treatment and prophylaxis",
+      "Acute coronary syndromes",
+      "Bridging anticoagulation",
+    ],
+    adverseEffects: [
+      "Bleeding",
+      "Heparin-induced thrombocytopenia (HIT, less common than UFH)",
+      "Injection-site hematoma",
+    ],
+    boardsPearls: [
+      "LMWH — mainly anti-Xa activity; subcutaneous dosing, predictable PK (no routine monitoring)",
+      "Renally cleared — avoid or reduce dose if CrCl <30",
+      "Protamine partially reverses anti-Xa effect (less complete than for UFH)",
+      "HIT still possible — switch to argatroban or fondaparinux if suspected",
+    ],
+  },
+  {
+    id: "fondaparinux",
+    name: "Fondaparinux",
+    aliases: ["fondaparinux", "arixtra"],
+    drugClass: "Synthetic factor Xa inhibitor",
+    mechanism:
+      "Synthetic pentasaccharide that binds antithrombin III → selective factor Xa inhibition (no direct thrombin inhibition).",
+    indications: [
+      "VTE prophylaxis and treatment",
+      "HIT (alternative anticoagulant when heparin contraindicated)",
+    ],
+    adverseEffects: [
+      "Bleeding",
+      "Injection-site reactions",
+    ],
+    boardsPearls: [
+      "Synthetic pentasaccharide — selective anti-Xa without anti-IIa activity",
+      "Safe in HIT (no PF4-heparin complex formation)",
+      "Renally cleared — contraindicated if CrCl <30",
+      "No protamine reversal — long half-life",
+    ],
+  },
+  {
+    id: "clopidogrel",
+    name: "Clopidogrel",
+    aliases: ["clopidogrel", "plavix"],
+    drugClass: "P2Y12 ADP receptor antagonist (thienopyridine)",
+    mechanism:
+      "Irreversible P2Y12 ADP receptor blockade on platelets → ↓ GPIIb/IIIa activation and platelet aggregation.",
+    indications: [
+      "Acute coronary syndrome",
+      "Post-PCI stent thrombosis prevention",
+      "Secondary stroke prevention",
+      "Peripheral arterial disease",
+    ],
+    adverseEffects: [
+      "Bleeding",
+      "Thrombotic thrombocytopenic purpura (rare)",
+      "Rash, diarrhea",
+    ],
+    boardsPearls: [
+      "Prodrug — requires CYP2C19 activation; poor metabolizers have ↓ efficacy",
+      "Irreversible P2Y12 blockade — effect lasts platelet lifespan (~7–10 days)",
+      "Combined with aspirin in ACS/PCI (dual antiplatelet therapy)",
+      "Omeprazole may ↓ activation via CYP2C19 inhibition (clinical significance debated)",
+    ],
+  },
+  {
+    id: "ticagrelor",
+    name: "Ticagrelor",
+    aliases: ["ticagrelor", "brilinta"],
+    drugClass: "P2Y12 ADP receptor antagonist (cyclopentyltriazolopyrimidine)",
+    mechanism:
+      "Reversible, noncompetitive P2Y12 ADP receptor blockade → ↓ platelet aggregation.",
+    indications: [
+      "Acute coronary syndrome",
+      "Post-PCI (dual antiplatelet therapy with aspirin)",
+    ],
+    adverseEffects: [
+      "Bleeding",
+      "Dyspnea (common, usually benign)",
+      "Bradycardia (transient)",
+    ],
+    boardsPearls: [
+      "Reversible P2Y12 inhibitor — faster onset/offset than clopidogrel",
+      "Active drug (not a prodrug) — no CYP2C19 dependence",
+      "Twice-daily dosing; avoid >100 mg/day aspirin (↓ efficacy)",
+    ],
+  },
+  {
+    id: "prasugrel",
+    name: "Prasugrel",
+    aliases: ["prasugrel", "effient"],
+    drugClass: "P2Y12 ADP receptor antagonist (thienopyridine)",
+    mechanism:
+      "Irreversible P2Y12 ADP receptor blockade → more potent and faster-acting than clopidogrel.",
+    indications: [
+      "Acute coronary syndrome undergoing PCI",
+    ],
+    adverseEffects: [
+      "Bleeding (higher than clopidogrel)",
+      "Thrombotic thrombocytopenic purpura (rare)",
+    ],
+    boardsPearls: [
+      "More potent thienopyridine than clopidogrel — faster onset",
+      "Contraindicated with prior stroke/TIA (↑ ICH risk)",
+      "Contraindicated if age ≥75 or weight <60 kg (bleeding risk)",
+    ],
+  },
+  {
+    id: "eptifibatide",
+    name: "Eptifibatide",
+    aliases: ["eptifibatide", "integrilin"],
+    drugClass: "Glycoprotein IIb/IIIa inhibitor",
+    mechanism:
+      "Blocks fibrinogen binding to GPIIb/IIIa receptor on activated platelets → inhibits final common pathway of platelet aggregation.",
+    indications: [
+      "High-risk ACS undergoing PCI",
+      "PCI with glycoprotein IIb/IIIa inhibitor bailout",
+    ],
+    adverseEffects: [
+      "Bleeding (major risk)",
+      "Thrombocytopenia",
+    ],
+    boardsPearls: [
+      "Blocks final common pathway of platelet aggregation (GPIIb/IIIa)",
+      "IV use only — short half-life; used in cath lab setting",
+      "Contraindicated with severe thrombocytopenia or active bleeding",
+      "Abciximab and tirofiban are other GPIIb/IIIa inhibitors",
+    ],
+  },
+  {
+    id: "cilostazol",
+    name: "Cilostazol",
+    aliases: ["cilostazol", "pletal"],
+    drugClass: "Phosphodiesterase-3 inhibitor / antiplatelet agent",
+    mechanism:
+      "Inhibits PDE-3 → ↑ cAMP in platelets and vascular smooth muscle → antiplatelet effect and vasodilation.",
+    indications: [
+      "Intermittent claudication (peripheral arterial disease)",
+      "Secondary stroke prevention (selected patients)",
+    ],
+    adverseEffects: [
+      "Headache, diarrhea, palpitations",
+      "Contraindicated in heart failure (PDE-3 inhibitors ↑ mortality in HF)",
+    ],
+    boardsPearls: [
+      "PDE-3 inhibitor — antiplatelet + vasodilator for claudication",
+      "Contraindicated in heart failure (same class as milrinone — ↑ mortality)",
+      "Improves walking distance in PAD; not first-line for ACS",
+    ],
+  },
+  {
+    id: "nsaid",
+    name: "NSAID",
+    aliases: [
+      "nsaid",
+      "nsaids",
+      "nonsteroidal anti-inflammatory drug",
+      "nonsteroidal anti-inflammatory drugs",
+      "non-steroidal anti-inflammatory drug",
+    ],
+    drugClass: "Nonsteroidal anti-inflammatory drug (NSAID)",
+    mechanism:
+      "Inhibits cyclooxygenase (COX) → ↓ prostaglandin and thromboxane A₂ synthesis → analgesic, antipyretic, anti-inflammatory effects; COX-1 inhibition also ↓ platelet aggregation and protects gastric mucosa.",
+    indications: [
+      "Pain, fever, inflammation (arthritis, dysmenorrhea, headache)",
+      "Aspirin at low dose used for antiplatelet effect (irreversible COX-1 inhibition)",
+    ],
+    adverseEffects: [
+      "GI bleeding and peptic ulcer disease (↓ protective PGE₂)",
+      "Renal insufficiency (afferent arteriole vasoconstriction when prostaglandins blunted)",
+      "Hypertension, fluid retention",
+      "Cardiovascular thrombotic risk with chronic use (except low-dose aspirin)",
+    ],
+    boardsPearls: [
+      "COX-1: platelets, gastric mucosa; COX-2: inflamed tissue — selective COX-2 inhibitors ↓ GI ulcer risk but ↑ CV risk",
+      "Aspirin irreversibly acetylates COX-1; other NSAIDs reversibly inhibit COX",
+      "NSAIDs ↓ renal blood flow — avoid in CKD, heart failure, dehydration",
+      "Combine with PPI if GI risk; avoid NSAIDs in active PUD",
+    ],
+  },
+  {
+    id: "naproxen",
+    name: "Naproxen",
+    aliases: ["naproxen", "aleve", "naprosyn"],
+    drugClass: "NSAID",
+    mechanism:
+      "Reversibly inhibits COX-1 and COX-2 → ↓ prostaglandin synthesis → analgesic, antipyretic, anti-inflammatory effects; COX-1 inhibition also ↓ thromboxane A₂.",
+    indications: [
+      "Pain, fever, inflammation (arthritis, dysmenorrhea)",
+      "Not used as primary antiplatelet agent",
+    ],
+    adverseEffects: [
+      "GI bleeding and peptic ulcer disease",
+      "Renal insufficiency (afferent arteriole vasoconstriction)",
+      "Hypertension, fluid retention",
+      "Cardiovascular risk with chronic use",
+    ],
+    boardsPearls: [
+      "NSAID — reversible COX inhibition (unlike aspirin’s irreversible COX-1 blockade)",
+      "↑ cardiovascular thrombotic risk with chronic NSAID use",
+      "Avoid in CKD, heart failure, active GI bleeding",
+      "Pediatrics: avoid in dehydration (renal toxicity); not for fever in viral illness if aspirin alternatives preferred",
     ],
   },
   {

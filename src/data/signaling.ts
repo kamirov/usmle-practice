@@ -126,6 +126,44 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
       "Breastfed infants without supplementation at high risk for rickets; vitamin D 400 IU/day recommended; leg bowing and widened growth plates on X-ray.",
   },
   {
+    id: "vitamin-k",
+    name: "Vitamin K",
+    aliases: [
+      "vitamin k",
+      "vitamin k1",
+      "vitamin k2",
+      "phylloquinone",
+      "phytonadione",
+      "menaquinone",
+    ],
+    type: "Vitamin",
+    source:
+      "K1 (phylloquinone) from leafy greens; K2 (menaquinone) from gut bacteria; stored poorly — requires regular intake",
+    receptor:
+      "Cofactor for γ-glutamyl carboxylase in hepatocyte ER — enables γ-carboxylation of glutamate residues on clotting factors",
+    function:
+      "Essential cofactor for hepatic synthesis of active vitamin K–dependent clotting factors (II, VII, IX, X) and anticoagulant proteins C and S.",
+    clinicalRelevance: [
+      "Deficiency → impaired γ-carboxylation → bleeding with ↑ PT (extrinsic pathway affected first)",
+      "Neonatal hemorrhagic disease prevented by vitamin K injection at birth",
+      "Warfarin inhibits vitamin K epoxide reductase → functional deficiency of factors II, VII, IX, X",
+      "Broad-spectrum antibiotics can cause deficiency by killing gut K2-producing bacteria",
+    ],
+    boardsPearls: [
+      "Vitamin K–dependent factors: 2, 7, 9, 10 and proteins C & S — warfarin mnemonic",
+      "Warfarin inhibits vitamin K epoxide reductase — not direct factor destruction",
+      "Neonates lack gut flora and breast milk is low in K — prophylactic IM vitamin K at birth",
+      "Give vitamin K (phytonadione) to reverse warfarin in serious bleeding",
+    ],
+    distinguishFrom: [
+      "Vitamin C — collagen synthesis, scurvy; not coagulation",
+      "Calcium — cofactor in coagulation cascade on phospholipid surfaces, not γ-carboxylation",
+      "Heparin — accelerates antithrombin; does not affect vitamin K synthesis",
+    ],
+    pediatrics:
+      "Vitamin K deficiency bleeding (VKDB) in newborns — give IM vitamin K at birth; classic VKDB days 2–7, late VKDB weeks 2–12 in exclusively breastfed infants without prophylaxis.",
+  },
+  {
     id: "active-vitamin-d",
     name: "1,25-Dihydroxycholecalciferol (calcitriol)",
     aliases: [
@@ -343,6 +381,82 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
     ],
     pediatrics:
       "Same NO–cGMP pathway in PPHN; sildenafil approved for pediatric PAH (weight-based dosing).",
+  },
+  {
+    id: "prostaglandin",
+    name: "Prostaglandins",
+    aliases: [
+      "prostaglandin",
+      "prostaglandins",
+      "pge2",
+      "prostaglandin e2",
+      "prostaglandin e1",
+      "pge1",
+      "prostaglandin i2",
+      "pgi2",
+      "prostacyclin",
+    ],
+    type: "Hormone",
+    source:
+      "Synthesized from arachidonic acid via COX pathway in most tissues; PGE₂ widespread, PGI₂ (prostacyclin) from endothelium, PGF₂α from uterus",
+    receptor: "GPCRs (EP, IP, FP subtypes) — tissue-specific effects",
+    function:
+      "Local autacoids mediating inflammation, fever, pain sensitization, gastric mucosal protection, renal afferent vasodilation, uterine contraction, and ductus arteriosus patency (PGE).",
+    clinicalRelevance: [
+      "NSAIDs ↓ prostaglandins → analgesia/antipyresis but also GI ulcers and ↓ renal perfusion",
+      "PGE₁ (alprostadil) keeps ductus arteriosus open in ductal-dependent congenital heart disease",
+      "PGE₂ mediates fever via hypothalamic thermoregulation",
+      "PGI₂ (prostacyclin) opposes thromboxane — vasodilation and inhibits platelet aggregation",
+    ],
+    boardsPearls: [
+      "COX converts arachidonic acid → PGH₂ → tissue-specific prostaglandins",
+      "PGE₂: gastric mucosal protection, renal afferent dilation — lost with NSAIDs",
+      "Prostaglandin E1 opens ductus in cyanotic CHD; indomethacin closes PDA in premies",
+      "PGI₂ vs thromboxane A₂ — opposing effects on platelets and vessels",
+    ],
+    distinguishFrom: [
+      "Leukotrienes — lipoxygenase pathway, bronchoconstriction in asthma",
+      "Thromboxane A₂ — platelet aggregation and vasoconstriction, not general mucosal protection",
+      "Histamine — separate mediator in allergy, not arachidonic acid derived",
+    ],
+    pediatrics:
+      "Prostaglandin E1 infusion critical for ductal-dependent lesions (e.g., hypoplastic left heart, interrupted aortic arch) until surgery; monitor for apnea and fever.",
+  },
+  {
+    id: "thromboxane-a2",
+    name: "Thromboxane A₂",
+    aliases: [
+      "thromboxane a2",
+      "thromboxane a₂",
+      "thromboxane",
+      "thromboxane 2",
+      "txa2",
+      "txa₂",
+    ],
+    type: "Hormone",
+    source:
+      "Synthesized in platelets from PGH₂ by thromboxane synthase; short half-life (seconds)",
+    receptor: "TP receptor (GPCR) on platelets and vascular smooth muscle",
+    function:
+      "Potent platelet activator and vasoconstrictor; promotes aggregation, granule release, and local thrombus formation.",
+    clinicalRelevance: [
+      "Aspirin irreversibly inhibits platelet COX-1 → ↓ thromboxane A₂ → antiplatelet effect",
+      "Balance with prostacyclin (PGI₂) from endothelium — aspirin affects platelet TXA₂ more than endothelial PGI₂ at low doses",
+      "↑ thromboxane activity contributes to arterial thrombosis in ACS",
+    ],
+    boardsPearls: [
+      "Thromboxane A₂: platelet aggregation + vasoconstriction — key target of aspirin",
+      "Aspirin ↓ TXA₂ synthesis in platelets (no nucleus → effect lasts platelet lifespan)",
+      "NSAIDs reversibly inhibit COX — platelet function recovers as drug clears",
+      "PGI₂ (prostacyclin) from endothelium opposes TXA₂ — vasodilation, anti-aggregation",
+    ],
+    distinguishFrom: [
+      "Prostacyclin (PGI₂) — endothelial, vasodilates and inhibits platelets",
+      "ADP — separate platelet activation pathway (P2Y12 inhibitors: clopidogrel)",
+      "Thrombin — coagulation cascade protease, not eicosanoid",
+    ],
+    pediatrics:
+      "Same aspirin/COX-1 mechanism in children; Reye syndrome risk with aspirin in viral illness — use alternatives for fever in pediatrics.",
   },
 ];
 

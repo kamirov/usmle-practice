@@ -516,6 +516,35 @@ export const PROTEINS: ProteinEntry[] = [
     ],
   },
   {
+    id: "factor-x",
+    name: "Factor X",
+    aliases: [
+      "factor x",
+      "factor 10",
+      "stuart factor",
+      "stuart-prower factor",
+    ],
+    gene: "F10",
+    location: "Plasma (liver-synthesized, vitamin K-dependent zymogen)",
+    function:
+      "Vitamin K-dependent serine protease; activated factor Xa (with factor Va, Ca²⁺, phospholipid) converts prothrombin to thrombin in the common coagulation pathway.",
+    mutationCauses: [
+      "Factor X deficiency — rare autosomal recessive bleeding disorder",
+      "Prolonged PT and aPTT with normal fibrinogen",
+    ],
+    boardsPearls: [
+      "Factor Xa is convergence point of intrinsic and extrinsic pathways → common pathway",
+      "Direct factor Xa inhibitors: apixaban, rivaroxaban, edoxaban (DOACs)",
+      "Vitamin K-dependent factor — warfarin ↓ factor X synthesis",
+      "Factor Xa + Va + prothrombin → thrombin (factor IIa)",
+    ],
+    distinguishFrom: [
+      "Factor V — cofactor for prothrombinase, not protease",
+      "Thrombin (factor IIa) — downstream of factor Xa",
+      "Factor VII — extrinsic pathway only, not common pathway convergence",
+    ],
+  },
+  {
     id: "protein-c",
     name: "Protein C",
     aliases: ["protein c"],
@@ -558,6 +587,70 @@ export const PROTEINS: ProteinEntry[] = [
     distinguishFrom: [
       "Protein C — similar phenotype; assay distinguishes",
       "Antithrombin III — heparin resistance, not warfarin skin necrosis",
+    ],
+  },
+  {
+    id: "antithrombin",
+    name: "Antithrombin III",
+    aliases: [
+      "antithrombin",
+      "antithrombin iii",
+      "antithrombin 3",
+      "atiii",
+    ],
+    gene: "SERPINC1",
+    location: "Plasma (liver-synthesized serine protease inhibitor)",
+    function:
+      "Endogenous anticoagulant that inactivates thrombin (IIa), factor Xa, and other serine proteases; heparin binds antithrombin and dramatically accelerates its inhibitory activity.",
+    mutationCauses: [
+      "Antithrombin III deficiency — autosomal dominant VTE risk",
+      "Heparin resistance when levels very low",
+      "Lost in urine in nephrotic syndrome → hypercoagulable state",
+    ],
+    boardsPearls: [
+      "Heparin/LMWH mechanism: bind antithrombin → ↑ inhibition of Xa and thrombin",
+      "Antithrombin deficiency: recurrent VTE, often young, family history",
+      "Nephrotic syndrome loses antithrombin → thrombosis risk",
+      "DOACs inhibit factor Xa directly — do not require antithrombin",
+    ],
+    distinguishFrom: [
+      "Protein C and protein S — vitamin K-dependent anticoagulant pathway",
+      "Heparin cofactor II — separate thrombin inhibitor, not heparin’s main target",
+      "Tissue factor pathway inhibitor (TFPI) — inhibits factor VIIa/Xa complex",
+    ],
+  },
+  {
+    id: "cyclooxygenase",
+    name: "Cyclooxygenase (COX)",
+    aliases: [
+      "cox",
+      "cyclooxygenase",
+      "cyclo-oxygenase",
+      "cox-1",
+      "cox-2",
+      "cox 1",
+      "cox 2",
+      "prostaglandin-endoperoxide synthase",
+      "ptgs",
+    ],
+    gene: "PTGS1 (COX-1), PTGS2 (COX-2)",
+    location: "Membrane-bound enzyme in platelets (COX-1), macrophages/endothelium (COX-2), gastric mucosa",
+    function:
+      "Rate-limiting enzyme converting arachidonic acid to prostaglandin H₂ (PGH₂), precursor of prostaglandins, thromboxane A₂, and prostacyclin (PGI₂).",
+    mutationCauses: [
+      "Pharmacologic inhibition by NSAIDs — ↓ prostaglandin-mediated gastric protection, renal blood flow, and platelet aggregation",
+      "Aspirin irreversibly acetylates COX-1; other NSAIDs reversibly inhibit COX",
+    ],
+    boardsPearls: [
+      "COX-1: constitutive — platelets, gastric mucosa; COX-2: inducible at inflammation sites",
+      "Aspirin: irreversible COX-1 inhibition → antiplatelet effect lasts platelet lifespan",
+      "Selective COX-2 inhibitors (celecoxib) ↓ GI ulcers but ↑ cardiovascular risk",
+      "NSAIDs block COX → ↓ PGE₂ (gastric protection, renal afferent dilation)",
+    ],
+    distinguishFrom: [
+      "Phospholipase A₂ — releases arachidonic acid upstream of COX",
+      "Lipoxygenase pathway — produces leukotrienes, not prostaglandins",
+      "5-lipoxygenase inhibitors (zileuton) — asthma, not NSAID mechanism",
     ],
   },
   {

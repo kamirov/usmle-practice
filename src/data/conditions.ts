@@ -75,6 +75,66 @@ export const CONDITIONS: ConditionEntry[] = [
       "MI rare in children; consider Kawasaki disease (coronary aneurysm/thrombosis), anomalous coronary origin, or hypercoagulability. Chest pain in adolescents still warrants ECG and troponin when ischemia is suspected.",
   },
   {
+    id: "stable-angina",
+    name: "Stable Angina",
+    aliases: [
+      "stable angina",
+      "chronic stable angina",
+      "exertional angina",
+      "angina pectoris",
+      "stable angina pectoris",
+    ],
+    definition:
+      "Predictable chest discomfort from myocardial ischemia during increased oxygen demand, caused by fixed coronary atherosclerotic stenosis without acute plaque rupture.",
+    pathophysiology:
+      "Chronic coronary plaque limits flow reserve → exertion ↑ myocardial O₂ demand beyond supply → subendocardial ischemia → anginal pain; rest restores supply-demand balance and relieves symptoms.",
+    classicPresentation: [
+      "Substernal pressure or tightness with exertion, emotional stress, or cold",
+      "Relieved within minutes by rest or nitroglycerin",
+      "Predictable pattern over weeks to months (same threshold)",
+      "Risk factors: HTN, hyperlipidemia, diabetes, smoking",
+    ],
+    keyFindings: [
+      "Normal troponin (no myocyte necrosis)",
+      "ST depression during stress test (or normal ECG at rest)",
+      "S4 gallop possible with LV hypertrophy or ischemic cardiomyopathy",
+    ],
+    keyLabs: [
+      "Troponin negative during pain-free interval",
+      "Stress ECG, stress echo, or nuclear perfusion imaging → inducible ischemia",
+      "Coronary CT angiography or catheter angiography for anatomic disease",
+    ],
+    associations: [
+      "Atherosclerosis and coronary artery disease",
+      "Hypertension, hyperlipidemia, diabetes mellitus",
+      "Aortic stenosis (can cause exertional angina without CAD)",
+    ],
+    complications: [
+      "Progression to unstable angina or acute coronary syndrome",
+      "Myocardial infarction",
+      "Ischemic cardiomyopathy with reduced EF",
+    ],
+    distinguishFrom: [
+      "Unstable angina — new-onset, accelerating, or rest angina; higher ACS risk",
+      "NSTEMI/STEMI — troponin elevation, acute plaque rupture",
+      "Vasospastic (Prinzmetal) angina — rest pain, transient ST elevation, normal coronaries",
+      "GERD or musculoskeletal chest pain — nonexertional, not relieved predictably by nitroglycerin",
+    ],
+    treatment: [
+      "Anti-anginal therapy: β-blocker (first line), nitroglycerin PRN, long-acting nitrates, CCB if β-blocker intolerant",
+      "Risk reduction: aspirin, statin, ACE inhibitor, smoking cessation",
+      "Revascularization (PCI/CABG) for refractory symptoms or high-risk anatomy",
+    ],
+    boardsPearls: [
+      "Stable = predictable exertional pain relieved by rest/nitrates; troponin negative",
+      "Unstable angina = ACS without troponin rise; NSTEMI/STEMI = troponin positive",
+      "β-blockers ↓ myocardial O₂ demand (↓ HR, contractility); nitrates ↓ preload",
+      "Aortic stenosis triad: angina, syncope, heart failure — angina without CAD possible",
+    ],
+    pediatrics:
+      "Atherosclerotic stable angina is rare in children; exertional chest pain in adolescents more often musculoskeletal, asthma, or anxiety — still evaluate if cardiac risk factors or concerning exam.",
+  },
+  {
     id: "valvular-heart-disease",
     name: "Valvular Heart Disease",
     aliases: [
@@ -731,6 +791,74 @@ export const CONDITIONS: ConditionEntry[] = [
     ],
     pediatrics:
       "Homozygous familial hypercholesterolemia presents in childhood with tendon xanthomas and premature CAD; heterozygous FH also warrants early statin therapy.",
+  },
+  {
+    id: "peripheral-artery-disease",
+    name: "Peripheral Artery Disease",
+    aliases: [
+      "peripheral artery disease",
+      "peripheral arterial disease",
+      "pad",
+      "peripheral vascular disease",
+      "pvd",
+      "intermittent claudication",
+      "lower extremity arterial disease",
+      "limb ischemia",
+    ],
+    definition:
+      "Atherosclerotic narrowing or occlusion of noncoronary, noncerebral arteries — most commonly lower extremity arteries — causing chronic limb ischemia.",
+    pathophysiology:
+      "Atherosclerotic plaque in iliac, femoral, or popliteal arteries → progressive luminal stenosis → exercise-induced mismatch between oxygen demand and supply in calf muscles → ischemic pain (claudication); advanced disease causes rest pain and tissue loss.",
+    classicPresentation: [
+      "Intermittent claudication — cramping calf pain with walking, relieved by rest (<10 min)",
+      "Older patient with smoking, diabetes, HTN, or hyperlipidemia",
+      "Rest pain, nonhealing ulcers, or gangrene in critical limb ischemia",
+      "Diminished femoral or pedal pulses with bruits",
+    ],
+    keyFindings: [
+      "↓ or absent dorsalis pedis / posterior tibial pulses",
+      "Femoral bruit",
+      "Cool, pale extremity; delayed capillary refill",
+      "Hair loss and shiny skin on affected limb",
+      "ABI <0.9 diagnostic; ABI >1.3 suggests noncompressible calcified vessels (common in diabetes)",
+    ],
+    keyLabs: [
+      "Ankle-brachial index (ABI) <0.9",
+      "Duplex ultrasound — stenosis with ↑ peak systolic velocity",
+      "CT/MR angiography or catheter angiography for revascularization planning",
+    ],
+    associations: [
+      "Atherosclerosis — shares risk factors with CAD and cerebrovascular disease",
+      "Diabetes mellitus (often medial calcification, distal disease)",
+      "Smoking",
+      "Hypertension and hyperlipidemia",
+    ],
+    complications: [
+      "Critical limb ischemia — rest pain, ulcers, gangrene",
+      "Amputation",
+      "Cardiovascular events (MI, stroke) — PAD is a marker of systemic atherosclerosis",
+    ],
+    distinguishFrom: [
+      "Thromboangiitis obliterans (Buerger) — young smoker, distal hand/foot ischemia, segmental inflammatory thrombosis",
+      "Spinal stenosis (neurogenic claudication) — leg pain with walking but pulses normal; relief with sitting/leaning forward, not just standing",
+      "Venous claudication — post-thrombotic syndrome, edema, normal pulses",
+      "Acute limb ischemia — sudden onset, 6 Ps (pain, pallor, pulselessness, paresthesias, paralysis, poikilothermia)",
+    ],
+    treatment: [
+      "Risk factor modification: smoking cessation, statin, antiplatelet therapy (aspirin or clopidogrel)",
+      "Supervised exercise therapy for claudication",
+      "Cilostazol (PDE-3 inhibitor) for symptomatic claudication — contraindicated in HF",
+      "Revascularization (endovascular or bypass) for lifestyle-limiting claudication or critical limb ischemia",
+    ],
+    boardsPearls: [
+      "ABI <0.9 = PAD; ABI 0.4–0.5 severe; ABI >1.3 noncompressible arteries (diabetes)",
+      "Claudication = reproducible exertional pain relieved by rest; neurogenic claudication pulses stay normal",
+      "PAD implies systemic atherosclerosis — aggressive CV risk reduction (statin + antiplatelet)",
+      "Cilostazol improves walking distance but contraindicated in heart failure (PDE-3 inhibitor)",
+      "Acute limb ischemia is a vascular emergency — heparin and urgent revascularization",
+    ],
+    pediatrics:
+      "Atherosclerotic PAD is rare in children; limb ischemia in pediatrics suggests embolism, vasculitis, coarctation, or thromboangiitis obliterans in adolescents who smoke.",
   },
   {
     id: "hyperlipidemia",
@@ -1996,6 +2124,69 @@ export const CONDITIONS: ConditionEntry[] = [
     ],
     pediatrics:
       "Orbital cellulitis is a pediatric emergency — distinguish preseptal (periorbital) from postseptal (orbital) cellulitis; ethmoiditis is the usual source.",
+  },
+  {
+    id: "rhinitis",
+    name: "Rhinitis",
+    aliases: [
+      "rhinitis",
+      "allergic rhinitis",
+      "hay fever",
+      "vasomotor rhinitis",
+      "nonallergic rhinitis",
+      "perennial rhinitis",
+      "seasonal rhinitis",
+    ],
+    definition:
+      "Inflammation of the nasal mucosa causing congestion, rhinorrhea, sneezing, and pruritus; classified as allergic (IgE-mediated), infectious, or nonallergic (vasomotor, drug-induced, hormonal).",
+    pathophysiology:
+      "Allergic rhinitis: allergen exposure → IgE cross-linking on mast cells → histamine and leukotriene release → vasodilation, mucus secretion, sneezing. Vasomotor rhinitis: autonomic dysregulation and irritant triggers without IgE sensitization.",
+    classicPresentation: [
+      "Nasal congestion, rhinorrhea, sneezing, nasal/ocular pruritus",
+      "Allergic: seasonal or perennial triggers (pollen, dust mites, pets)",
+      "Clear rhinorrhea, pale boggy turbinates, allergic shiners, Dennie-Morgan lines",
+      "Vasomotor: symptoms with temperature changes, strong odors, or stress",
+    ],
+    keyFindings: [
+      "Pale, swollen nasal turbinates (allergic)",
+      "Allergic salute (horizontal nasal crease in children)",
+      "Conjunctival injection with allergic rhinitis",
+    ],
+    keyLabs: [
+      "Skin prick testing or serum specific IgE for allergic rhinitis",
+      "Usually clinical diagnosis; eosinophilia on nasal smear supports allergy",
+    ],
+    associations: [
+      "Atopic triad: allergic rhinitis, asthma, eczema",
+      "Chronic sinusitis and otitis media (eustachian tube dysfunction)",
+      "Drug-induced rhinitis (ACE inhibitors, α-blockers, NSAIDs)",
+    ],
+    complications: [
+      "Chronic sinusitis",
+      "Otitis media (especially in children)",
+      "Sleep disturbance and impaired quality of life",
+      "Exacerbation of asthma",
+    ],
+    distinguishFrom: [
+      "Viral URI — fever, malaise, symptoms <10 days, purulent discharge later",
+      "Sinusitis — facial pain/pressure, purulent discharge >10 days",
+      "Nasal polyps — anosmia, chronic obstruction, may coexist with allergy",
+      "Cerebrospinal fluid rhinorrhea — unilateral clear discharge after trauma/surgery",
+    ],
+    treatment: [
+      "Allergic: intranasal corticosteroids first line; oral/intranasal antihistamines, leukotriene modifiers",
+      "Allergen avoidance and immunotherapy for refractory disease",
+      "Vasomotor: intranasal anticholinergics (ipratropium), saline irrigation",
+      "Treat comorbid asthma if present",
+    ],
+    boardsPearls: [
+      "Intranasal corticosteroids are most effective for allergic rhinitis",
+      "Atopy link: rhinitis + asthma + eczema on boards",
+      "First-generation antihistamines sedating; second-generation (loratadine, cetirizine) preferred",
+      "ACE inhibitor cough is separate; α-blockers cause rhinitis via vasodilation",
+    ],
+    pediatrics:
+      "Allergic rhinitis common in school-age children; intranasal steroids safe at appropriate doses. Rule out adenoidal hypertrophy and foreign body in unilateral foul rhinorrhea.",
   },
   {
     id: "otitis-media",
