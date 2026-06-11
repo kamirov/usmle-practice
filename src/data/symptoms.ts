@@ -77,6 +77,66 @@ export const SYMPTOMS: SymptomEntry[] = [
     ],
   },
   {
+    id: "wheezing",
+    name: "Wheezing",
+    aliases: ["wheezing", "wheeze", "wheezes"],
+    definition:
+      "High-pitched whistling sound during expiration (sometimes inspiration) from narrowed airways.",
+    mechanism:
+      "Turbulent airflow through constricted bronchioles (smooth muscle spasm, edema, or mucus plugging) produces audible wheezing.",
+    thinkOf: [
+      "Asthma",
+      "COPD exacerbation",
+      "Heart failure (cardiac asthma)",
+      "Anaphylaxis",
+      "Foreign body aspiration",
+      "Bronchiolitis (peds)",
+    ],
+    pairWith: [
+      "Exertional or nocturnal symptoms → asthma",
+      "Orthopnea, crackles, edema → cardiac asthma / pulmonary edema",
+      "Urticaria, hypotension after exposure → anaphylaxis",
+      "Peds: viral bronchiolitis (RSV) — wheeze in infant with URI symptoms",
+      "Unilateral wheeze → foreign body until proven otherwise",
+    ],
+    distinguishFrom: [
+      "Stridor — inspiratory, upper airway (croup, epiglottitis)",
+      "Rhonchi — low-pitched, often clears with cough",
+      "Crackles — discontinuous, alveolar fluid (not wheeze)",
+    ],
+  },
+  {
+    id: "cough",
+    name: "Cough",
+    aliases: ["cough", "chronic cough", "productive cough", "dry cough"],
+    definition:
+      "Reflex expulsion of air from the lungs to clear airways; may be acute or chronic, dry or productive.",
+    mechanism:
+      "Stimulation of cough receptors (airway inflammation, mucus, foreign material, or pulmonary congestion) triggers the cough reflex arc via the vagus and medullary cough center.",
+    thinkOf: [
+      "Upper respiratory infection",
+      "Asthma",
+      "COPD",
+      "GERD / postnasal drip",
+      "ACE inhibitor side effect",
+      "Heart failure",
+      "Tuberculosis / lung cancer",
+      "Pertussis (peds)",
+    ],
+    pairWith: [
+      "Hemoptysis → malignancy, TB, bronchiectasis",
+      "Wheezing → asthma or COPD",
+      "Orthopnea, edema → pulmonary congestion",
+      "Fever, weight loss, night sweats → TB or malignancy",
+      "Peds: paroxysmal whoop → pertussis; barking cough → croup",
+    ],
+    distinguishFrom: [
+      "Hemoptysis — blood in sputum, not cough alone",
+      "Dyspnea without cough — PE, anemia, metabolic acidosis",
+      "Chronic cough >8 weeks — think GERD, postnasal drip, asthma, ACE-I",
+    ],
+  },
+  {
     id: "easy-fatigability",
     name: "Easy Fatigability",
     aliases: ["easy fatigability"],
@@ -129,6 +189,41 @@ export const SYMPTOMS: SymptomEntry[] = [
     distinguishFrom: [
       "PND — occurs after sleep onset, not immediately on lying down",
       "Exertional dyspnea — triggered by activity, not position",
+    ],
+  },
+  {
+    id: "peripheral-edema",
+    name: "Peripheral Edema",
+    aliases: [
+      "peripheral edema",
+      "pedal edema",
+      "lower extremity edema",
+      "leg swelling",
+      "bilateral leg swelling",
+    ],
+    definition:
+      "Accumulation of interstitial fluid in the dependent extremities, typically bilateral and pitting.",
+    mechanism:
+      "↑ capillary hydrostatic pressure (heart failure, venous obstruction), ↓ oncotic pressure (nephrotic syndrome, cirrhosis), or ↑ capillary permeability (inflammation) drive fluid into interstitium.",
+    thinkOf: [
+      "Heart failure (right or biventricular)",
+      "Nephrotic syndrome",
+      "Cirrhosis / portal hypertension",
+      "Chronic venous insufficiency",
+      "DVT / lymphedema (often unilateral)",
+      "Medications (CCBs, NSAIDs)",
+    ],
+    pairWith: [
+      "Orthopnea, PND, JVP elevation → heart failure",
+      "Proteinuria, hypoalbuminemia → nephrotic syndrome",
+      "Ascites, jaundice → cirrhosis",
+      "Unilateral calf pain, warmth → DVT",
+      "Peds: periorbital edema with proteinuria → nephrotic syndrome (minimal change disease)",
+    ],
+    distinguishFrom: [
+      "Lipedema — nonpitting, painful fat distribution",
+      "Angioedema — acute, often face/airway, allergic or ACE-I mediated",
+      "Ascites — intraperitoneal fluid, not peripheral edema alone",
     ],
   },
   {
@@ -206,6 +301,42 @@ export const SYMPTOMS: SymptomEntry[] = [
       "Pleuritic pain — worse with breathing, not classic ripping radiation",
       "STEMI — crushing pressure, not tearing to the back",
       "PE — pleuritic, tachycardic, hypoxic without pulse deficit",
+    ],
+  },
+  {
+    id: "chest-pain",
+    name: "Chest Pain",
+    aliases: [
+      "chest pain",
+      "substernal chest pain",
+      "crushing chest pain",
+      "pressure-like chest pain",
+      "angina",
+      "chest pressure",
+    ],
+    definition:
+      "Discomfort or pain in the chest, often described as pressure, tightness, or squeezing.",
+    mechanism:
+      "Myocardial ischemia (supply-demand mismatch) causes substernal pain via ischemic metabolites; noncardiac causes include esophageal spasm, musculoskeletal strain, and anxiety.",
+    thinkOf: [
+      "Stable or unstable angina",
+      "Acute coronary syndrome (NSTEMI / STEMI)",
+      "Aortic stenosis",
+      "Hypertrophic cardiomyopathy",
+      "GERD / esophageal spasm",
+      "Costochondritis",
+    ],
+    pairWith: [
+      "Exertional, relieved by rest or nitroglycerin → stable angina",
+      "Diaphoresis, nausea, radiation to jaw/arm → ACS",
+      "Syncope with exertion → aortic stenosis or HOCM",
+      "Reproducible with palpation → musculoskeletal",
+      "Peds: chest pain with exertion in adolescent → HOCM or anomalous coronary artery",
+    ],
+    distinguishFrom: [
+      "Pleuritic chest pain — sharp, worse with inspiration",
+      "Tearing chest pain — ripping radiation to back → dissection",
+      "Point tenderness — costochondritis, not ischemia",
     ],
   },
   {
@@ -294,6 +425,65 @@ export const SYMPTOMS: SymptomEntry[] = [
       "Syncope — complete LOC",
       "Vertigo — spinning sensation, usually inner ear",
       "Anxiety / hyperventilation — paresthesias, situational",
+    ],
+  },
+  {
+    id: "fever",
+    name: "Fever",
+    aliases: ["fever", "febrile", "pyrexia"],
+    definition:
+      "Elevation of body temperature above normal, usually ≥38°C (100.4°F), reflecting a shift in the hypothalamic set point.",
+    mechanism:
+      "Pyrogens (endogenous IL-1, IL-6, TNF from macrophages or exogenous LPS) raise the hypothalamic thermostat → prostaglandin E₂-mediated heat conservation and shivering.",
+    thinkOf: [
+      "Bacterial infection",
+      "Viral infection",
+      "Abscess / occult infection",
+      "Malignancy (lymphoma)",
+      "Autoimmune / inflammatory disease",
+      "Drug fever",
+    ],
+    pairWith: [
+      "Rigors, focal symptoms → bacteremia or localized infection",
+      "Night sweats, weight loss → TB or lymphoma",
+      "Rash, arthritis → viral or autoimmune",
+      "Recent travel or exposure → endemic infection",
+      "Peds: fever in neonate (<28 days) — full sepsis workup; low threshold for serious bacterial infection in infants",
+    ],
+    distinguishFrom: [
+      "Hyperthermia — exogenous heat stroke, set point normal",
+      "Factitious fever — rare, inconsistent readings",
+      "Fever of unknown origin — >3 weeks, diagnosis elusive after workup",
+    ],
+  },
+  {
+    id: "headache",
+    name: "Headache",
+    aliases: ["headache", "head pain", "severe headache", "worst headache of life"],
+    definition:
+      "Pain in the head or neck region; may be primary (migraine, tension) or secondary to underlying pathology.",
+    mechanism:
+      "Activation of pain-sensitive structures (meninges, vessels, cranial nerves) via inflammation, traction, vasodilation, or muscle tension generates headache.",
+    thinkOf: [
+      "Migraine",
+      "Tension-type headache",
+      "Subarachnoid hemorrhage",
+      "Meningitis / encephalitis",
+      "Giant cell arteritis",
+      "Idiopathic intracranial hypertension",
+      "Brain tumor",
+    ],
+    pairWith: [
+      "Thunderclap onset → subarachnoid hemorrhage until proven otherwise",
+      "Fever, neck stiffness, photophobia → meningitis",
+      "Age >50, jaw claudication, vision changes → giant cell arteritis",
+      "Papilledema, obese woman → IIH",
+      "Peds: morning headache with vomiting → ↑ ICP (tumor, hydrocephalus)",
+    ],
+    distinguishFrom: [
+      "Sinus headache — facial pressure, purulent discharge",
+      "Cluster headache — unilateral, periorbital, autonomic symptoms",
+      "Cervicogenic — neck pain with occipital radiation",
     ],
   },
   {
@@ -486,6 +676,97 @@ export const SYMPTOMS: SymptomEntry[] = [
     ],
   },
   {
+    id: "hematuria",
+    name: "Hematuria",
+    aliases: ["hematuria", "blood in urine", "gross hematuria"],
+    definition:
+      "Presence of red blood cells in the urine, visible (gross) or detected on dipstick/microscopy.",
+    mechanism:
+      "Bleeding from anywhere in the urinary tract — glomerulus (inflammation, immune deposition), tubules, or urothelium (stones, infection, malignancy).",
+    thinkOf: [
+      "Nephrolithiasis",
+      "UTI / pyelonephritis",
+      "Glomerulonephritis (IgA, post-strep)",
+      "Bladder or renal cell carcinoma",
+      "Trauma / catheterization",
+      "Anticoagulation",
+    ],
+    pairWith: [
+      "Dysuria, frequency → UTI",
+      "Colicky flank pain → stone",
+      "RBC casts, proteinuria → glomerulonephritis",
+      "Hemoptysis → pulmonary-renal syndrome (Goodpasture, GPA)",
+      "Peds: gross hematuria after URI → IgA nephropathy; tea-colored urine with periorbital edema → post-strep GN",
+    ],
+    distinguishFrom: [
+      "Hemoglobinuria — dipstick positive, no RBCs on microscopy (hemolysis)",
+      "Myoglobinuria — brown urine after rhabdomyolysis",
+      "Menstrual contamination — consider in women",
+    ],
+  },
+  {
+    id: "dysuria",
+    name: "Dysuria",
+    aliases: ["dysuria", "painful urination", "burning with urination"],
+    definition:
+      "Painful or burning sensation during urination.",
+    mechanism:
+      "Inflammation of the urethra or bladder mucosa (infection, chemical irritation, or stones) lowers the threshold for pain with urine flow.",
+    thinkOf: [
+      "Cystitis (UTI)",
+      "Urethritis (E. coli, Chlamydia, gonorrhea)",
+      "Vaginitis (irritative symptoms)",
+      "Urinary tract stones",
+      "Interstitial cystitis",
+    ],
+    pairWith: [
+      "Frequency, urgency, suprapubic pain → cystitis",
+      "Discharge, sexual exposure → urethritis / STI",
+      "Flank pain, fever → pyelonephritis",
+      "Hematuria → stone or UTI",
+      "Peds: fever without source in young child — consider UTI; circumcision status and voiding dysfunction matter in boys",
+    ],
+    distinguishFrom: [
+      "Urinary frequency without pain → polyuria (DM, DI)",
+      "Pelvic pain without dysuria → gynecologic cause",
+      "Asymptomatic bacteriuria — positive culture without symptoms",
+    ],
+  },
+  {
+    id: "polyuria-polydipsia",
+    name: "Polyuria and Polydipsia",
+    aliases: [
+      "polyuria",
+      "polydipsia",
+      "polyuria and polydipsia",
+      "increased urination",
+      "excessive thirst",
+    ],
+    definition:
+      "Excessive urine output (>3 L/day) often accompanied by increased thirst and fluid intake.",
+    mechanism:
+      "Osmotic diuresis (hyperglycemia), impaired ADH action or secretion (DI), or primary polydipsia drives increased urine volume and compensatory thirst.",
+    thinkOf: [
+      "Diabetes mellitus (osmotic diuresis)",
+      "Diabetes insipidus (central or nephrogenic)",
+      "Primary polydipsia (psychogenic)",
+      "Hypercalcemia",
+      "Recovery phase of ATN",
+    ],
+    pairWith: [
+      "Hyperglycemia, weight loss, ketones → DKA / new-onset DM",
+      "Dilute urine with high serum osmolality → central DI",
+      "Dilute urine with hypernatremia, lithium use → nephrogenic DI",
+      "Confusion, long-term psych meds → primary polydipsia",
+      "Peds: enuresis, nocturia, growth concerns — test glucose; infant with irritability and dehydration → consider DI",
+    ],
+    distinguishFrom: [
+      "Urinary frequency with normal volume → cystitis, BPH",
+      "Nocturia alone → BPH, heart failure, not necessarily polyuria",
+      "Diuretic use — iatrogenic increased urine output",
+    ],
+  },
+  {
     id: "watery-diarrhea",
     name: "Watery Diarrhea",
     aliases: ["watery diarrhea"],
@@ -512,6 +793,36 @@ export const SYMPTOMS: SymptomEntry[] = [
       "Bloody diarrhea — invasive or inflammatory colitis (Shigella, Campylobacter, IBD)",
       "Fatty/greasy stools — steatorrhea from malabsorption",
       "Constipation — obstipation with overflow incontinence",
+    ],
+  },
+  {
+    id: "nausea",
+    name: "Nausea",
+    aliases: ["nausea", "nauseated"],
+    definition:
+      "Unpleasant sensation of needing to vomit, with or without actual emesis.",
+    mechanism:
+      "Activation of the vomiting center and chemoreceptor trigger zone by GI distention, toxins, vestibular input, or ↑ ICP produces the subjective urge to vomit.",
+    thinkOf: [
+      "Gastroenteritis",
+      "Pregnancy (morning sickness)",
+      "Medications (chemotherapy, opioids)",
+      "Migraine",
+      "Pancreatitis, cholecystitis",
+      "DKA / uremia",
+      "Increased intracranial pressure",
+    ],
+    pairWith: [
+      "Vomiting → gastroenteritis, obstruction, ↑ ICP",
+      "RUQ pain, fever → cholecystitis or hepatitis",
+      "Epigastric pain radiating to back → pancreatitis",
+      "Hyperglycemia, Kussmaul breathing → DKA",
+      "Peds: bilious vomiting in neonate — surgical emergency (malrotation); cyclic vomiting may suggest metabolic disorder",
+    ],
+    distinguishFrom: [
+      "Vomiting — active emesis has occurred",
+      "Anorexia without nausea — systemic illness, depression",
+      "Early satiety — gastric outlet obstruction or gastroparesis",
     ],
   },
   {
