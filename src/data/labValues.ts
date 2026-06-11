@@ -687,6 +687,38 @@ export const LAB_VALUES: LabValueEntry[] = [
       "↑ lipase + RUQ pain + fever → biliary pancreatitis",
     ],
   },
+  {
+    id: "pleural-fluid",
+    name: "Pleural Fluid Analysis",
+    aliases: [
+      "pleural fluid",
+      "pleural fluid analysis",
+      "pleural effusion fluid",
+      "pleural aspirate",
+    ],
+    measures:
+      "Fluid collected by thoracentesis from the pleural space; analyzed to classify effusion as transudate or exudate and identify infection, malignancy, or other cause.",
+    normalRange: "Normally only a small volume (~0.1–0.2 mL/kg) lubricates pleura; any clinically significant collection is pathologic",
+    increasedCauses: [
+      "Transudate: CHF, cirrhosis, nephrotic syndrome, hypoalbuminemia, peritoneal dialysis",
+      "Exudate: parapneumonic effusion/empyema, malignancy, pulmonary embolism, TB, pancreatitis, rheumatologic disease",
+      "Hemorrhagic: trauma, malignancy, PE, hemothorax",
+      "Chylous (milky): thoracic duct injury or obstruction (trauma, malignancy)",
+    ],
+    decreasedCauses: [],
+    boardsPearls: [
+      "Light's criteria — any one criterion met → exudate: pleural/serum protein >0.5, pleural/serum LDH >0.6, pleural LDH >⅔ ULN serum LDH",
+      "Transudate = ↑ hydrostatic or ↓ oncotic pressure; exudate = ↑ capillary permeability or impaired lymphatic drainage",
+      "Parapneumonic: pH <7.2, glucose <60, LDH >1000 → empyema until proven otherwise → chest tube",
+      "Bloody effusion: malignancy, PE, trauma; RBC count >100,000 suggests hemothorax",
+      "Lymphocyte-predominant exudate → TB or malignancy",
+    ],
+    pairWith: [
+      "Exudate + low pH + low glucose → complicated parapneumonic effusion",
+      "Transudate + JVD + peripheral edema → CHF",
+      "Bloody pleural fluid + trauma → hemothorax",
+    ],
+  },
 ];
 
 const labValueById = new Map(LAB_VALUES.map((l) => [l.id, l]));

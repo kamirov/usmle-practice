@@ -1,9 +1,11 @@
+import { buildCellAliasIndex } from "../data/cells";
 import { buildClinicalStrategyAliasIndex } from "../data/clinicalStrategies";
 import { buildConditionAliasIndex } from "../data/conditions";
 import { buildEcgFindingAliasIndex } from "../data/ecgFindings";
 import { buildHeartMurmurAliasIndex } from "../data/heartMurmurs";
 import { buildHeartSoundAliasIndex } from "../data/heartSounds";
 import { buildHemodynamicAliasIndex } from "../data/hemodynamics";
+import { buildPathogenesisAliasIndex } from "../data/pathogenesis";
 import { buildProcedureAliasIndex } from "../data/procedures";
 import { buildLabValueAliasIndex } from "../data/labValues";
 import { buildMedicationAliasIndex } from "../data/medications";
@@ -27,7 +29,9 @@ const SIGNALING_CHIP_CLASS = "usmle-signaling-chip";
 const ECG_CHIP_CLASS = "usmle-ecg-chip";
 const PROCEDURE_CHIP_CLASS = "usmle-procedure-chip";
 const CLINICAL_STRATEGY_CHIP_CLASS = "usmle-clinical-strategy-chip";
-const CHIP_SELECTOR = `.${ORGAN_CHIP_CLASS}, .${HEART_SOUND_CHIP_CLASS}, .${HEART_MURMUR_CHIP_CLASS}, .${HEMODYNAMIC_CHIP_CLASS}, .${SYMPTOM_CHIP_CLASS}, .${MEDICATION_CHIP_CLASS}, .${LAB_CHIP_CLASS}, .${NEPHRON_CHIP_CLASS}, .${CONDITION_CHIP_CLASS}, .${PROTEIN_CHIP_CLASS}, .${SIGNALING_CHIP_CLASS}, .${ECG_CHIP_CLASS}, .${PROCEDURE_CHIP_CLASS}, .${CLINICAL_STRATEGY_CHIP_CLASS}`;
+const CELL_CHIP_CLASS = "usmle-cell-chip";
+const PATHOGENESIS_CHIP_CLASS = "usmle-pathogenesis-chip";
+const CHIP_SELECTOR = `.${ORGAN_CHIP_CLASS}, .${HEART_SOUND_CHIP_CLASS}, .${HEART_MURMUR_CHIP_CLASS}, .${HEMODYNAMIC_CHIP_CLASS}, .${SYMPTOM_CHIP_CLASS}, .${MEDICATION_CHIP_CLASS}, .${LAB_CHIP_CLASS}, .${NEPHRON_CHIP_CLASS}, .${CONDITION_CHIP_CLASS}, .${PROTEIN_CHIP_CLASS}, .${SIGNALING_CHIP_CLASS}, .${ECG_CHIP_CLASS}, .${PROCEDURE_CHIP_CLASS}, .${CLINICAL_STRATEGY_CHIP_CLASS}, .${CELL_CHIP_CLASS}, .${PATHOGENESIS_CHIP_CLASS}`;
 const OUR_CHIP_CLASSES = [
   ORGAN_CHIP_CLASS,
   HEART_SOUND_CHIP_CLASS,
@@ -43,6 +47,8 @@ const OUR_CHIP_CLASSES = [
   ECG_CHIP_CLASS,
   PROCEDURE_CHIP_CLASS,
   CLINICAL_STRATEGY_CHIP_CLASS,
+  CELL_CHIP_CLASS,
+  PATHOGENESIS_CHIP_CLASS,
 ] as const;
 const POPOVER_CLASS = "usmle-organ-popover";
 const SKIP_TAGS = new Set([
@@ -106,7 +112,9 @@ type TermKind =
   | "signaling"
   | "ecg"
   | "procedure"
-  | "clinical-strategy";
+  | "clinical-strategy"
+  | "cell"
+  | "pathogenesis";
 
 interface TermMatch {
   alias: string;
@@ -276,6 +284,10 @@ function chipSelectorForTerm(term: TermMatch): string {
       return `[data-procedure-id="${CSS.escape(term.id)}"]`;
     case "clinical-strategy":
       return `[data-clinical-strategy-id="${CSS.escape(term.id)}"]`;
+    case "cell":
+      return `[data-cell-id="${CSS.escape(term.id)}"]`;
+    case "pathogenesis":
+      return `[data-pathogenesis-id="${CSS.escape(term.id)}"]`;
     default:
       return `[data-organ-id="${CSS.escape(term.id)}"]`;
   }
@@ -481,6 +493,20 @@ function buildTermIndex(): TermMatch[] {
       kind: "clinical-strategy" as const,
       id: clinicalStrategyId,
     }));
+  const cellMatches: TermMatch[] = buildCellAliasIndex().map(
+    ({ alias, cellId }) => ({
+      alias,
+      kind: "cell" as const,
+      id: cellId,
+    }),
+  );
+  const pathogenesisMatches: TermMatch[] = buildPathogenesisAliasIndex().map(
+    ({ alias, pathogenesisId }) => ({
+      alias,
+      kind: "pathogenesis" as const,
+      id: pathogenesisId,
+    }),
+  );
   return [
     ...organMatches,
     ...heartSoundMatches,
@@ -496,6 +522,8 @@ function buildTermIndex(): TermMatch[] {
     ...ecgMatches,
     ...procedureMatches,
     ...clinicalStrategyMatches,
+    ...cellMatches,
+    ...pathogenesisMatches,
   ].sort(
     (a, b) => b.alias.length - a.alias.length || a.alias.localeCompare(b.alias),
   );
@@ -672,6 +700,12 @@ function createChip(
   } else if (term.kind === "clinical-strategy") {
     button.className = CLINICAL_STRATEGY_CHIP_CLASS;
     button.dataset.clinicalStrategyId = term.id;
+  } else if (term.kind === "cell") {
+    button.className = CELL_CHIP_CLASS;
+    button.dataset.cellId = term.id;
+  } else if (term.kind === "pathogenesis") {
+    button.className = PATHOGENESIS_CHIP_CLASS;
+    button.dataset.pathogenesisId = term.id;
   } else {
     button.className = ORGAN_CHIP_CLASS;
     button.dataset.organId = term.id;

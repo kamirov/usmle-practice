@@ -457,6 +457,58 @@
   color: #0369a1;
 }
 
+.usmle-cell-chip {
+  display: inline;
+  margin: 0;
+  padding: 0 2px;
+  border: none;
+  border-radius: 3px;
+  background: rgba(124, 58, 237, 0.06);
+  color: inherit;
+  font: inherit;
+  line-height: inherit;
+  text-decoration: underline dotted rgba(124, 58, 237, 0.35);
+  text-underline-offset: 2px;
+  cursor: help;
+}
+
+.usmle-cell-chip:hover,
+.usmle-cell-chip:focus-visible {
+  background: rgba(124, 58, 237, 0.12);
+  outline: 1px solid rgba(124, 58, 237, 0.3);
+  outline-offset: 1px;
+}
+
+.usmle-organ-popover__title--cell {
+  color: #6d28d9;
+}
+
+.usmle-pathogenesis-chip {
+  display: inline;
+  margin: 0;
+  padding: 0 2px;
+  border: none;
+  border-radius: 3px;
+  background: rgba(217, 119, 6, 0.06);
+  color: inherit;
+  font: inherit;
+  line-height: inherit;
+  text-decoration: underline dotted rgba(217, 119, 6, 0.35);
+  text-underline-offset: 2px;
+  cursor: help;
+}
+
+.usmle-pathogenesis-chip:hover,
+.usmle-pathogenesis-chip:focus-visible {
+  background: rgba(217, 119, 6, 0.12);
+  outline: 1px solid rgba(217, 119, 6, 0.3);
+  outline-offset: 1px;
+}
+
+.usmle-organ-popover__title--pathogenesis {
+  color: #b45309;
+}
+
 .usmle-organ-popover__meaning {
   margin-bottom: 8px;
 }

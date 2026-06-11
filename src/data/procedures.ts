@@ -91,6 +91,47 @@ export const PROCEDURES: ProcedureEntry[] = [
     pediatrics:
       "Rarely used in children except evaluation of anomalous coronary arteries or post-Kawasaki coronary aneurysms; radiation and contrast risks favor echo/MRI when possible.",
   },
+  {
+    id: "thoracentesis",
+    name: "Thoracentesis",
+    aliases: [
+      "thoracentesis",
+      "pleural tap",
+      "pleural aspiration",
+      "diagnostic thoracentesis",
+      "therapeutic thoracentesis",
+      "pleural fluid drainage",
+    ],
+    definition:
+      "Percutaneous needle insertion into the pleural space to aspirate pleural fluid for diagnostic analysis (chemistry, cell count, culture, cytology) or therapeutic drainage of a symptomatic effusion.",
+    indications: [
+      "New pleural effusion of unclear etiology — diagnostic tap",
+      "Symptomatic large effusion — therapeutic drainage",
+      "Suspected empyema, hemothorax, or malignant effusion",
+      "Differentiate transudate vs exudate (Light's criteria on pleural fluid)",
+    ],
+    keyMeasurements: [
+      "Pleural fluid protein, LDH, glucose, pH, cell count and differential",
+      "Gram stain and culture; cytology if malignancy suspected",
+      "Light's criteria: exudate if pleural/serum protein ratio >0.5, pleural/serum LDH ratio >0.6, or pleural LDH >⅔ upper limit of normal serum LDH",
+    ],
+    complications: [
+      "Pneumothorax (most common significant complication)",
+      "Bleeding, hemothorax",
+      "Re-expansion pulmonary edema (rapid large-volume drainage)",
+      "Infection, organ injury (liver/spleen if low insertion)",
+      "Vasovagal reaction",
+    ],
+    boardsPearls: [
+      "Ultrasound guidance reduces pneumothorax risk — preferred when available",
+      "Iatrogenic pneumothorax after thoracentesis — chest pain, ↓ breath sounds, CXR confirms",
+      "Exudative effusion + low glucose + low pH → complicated parapneumonic effusion or empyema → chest tube",
+      "Transudate: CHF, cirrhosis, nephrotic syndrome; Exudate: infection, malignancy, PE, inflammation",
+      "Do not drain >1–1.5 L at once — re-expansion pulmonary edema risk",
+    ],
+    pediatrics:
+      "Same principles with smaller volumes and ultrasound guidance; parapneumonic effusion in children may need chest tube if empyema or loculations present.",
+  },
 ];
 
 const procedureById = new Map(PROCEDURES.map((entry) => [entry.id, entry]));
