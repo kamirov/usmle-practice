@@ -50,6 +50,7 @@ interface TermMatch {
 }
 
 let termIndex: TermMatch[] | null = null;
+let aliasesByTermKey: Map<string, Set<string>> | null = null;
 const highlightedOnQuestion = new Set<string>();
 const highlightedWordsOnQuestion = new Set<string>();
 const highlightedTermZone = new Map<string, number>();
@@ -86,11 +87,40 @@ function isTermHighlightedInDom(term: TermMatch): boolean {
   return document.querySelector(chipSelectorForTerm(term)) !== null;
 }
 
-function isWordHighlightedInDom(matchText: string): boolean {
-  const key = normalizedWordKey(matchText);
-  for (const chip of document.querySelectorAll(CHIP_SELECTOR)) {
-    if (normalizedWordKey(chip.textContent ?? "") === key) return true;
+function getAliasesForTerm(term: TermMatch): Set<string> {
+  if (!aliasesByTermKey) {
+    aliasesByTermKey = new Map();
+    for (const entry of getTermIndex()) {
+      const key = termKey(entry);
+      if (!aliasesByTermKey.has(key)) aliasesByTermKey.set(key, new Set());
+      const aliases = aliasesByTermKey.get(key)!;
+      aliases.add(normalizedWordKey(entry.alias));
+      if (entry.kind === "organ" && !entry.alias.endsWith("s")) {
+        aliases.add(normalizedWordKey(`${entry.alias}s`));
+        aliases.add(normalizedWordKey(`${entry.alias}es`));
+      }
+    }
   }
+  return (
+    aliasesByTermKey.get(termKey(term)) ??
+    new Set([normalizedWordKey(term.alias)])
+  );
+}
+
+function isSynonymAlreadyHighlighted(term: TermMatch): boolean {
+  const key = termKey(term);
+  if (highlightedOnQuestion.has(key)) return true;
+  if (isTermHighlightedInDom(term)) return true;
+
+  const aliases = getAliasesForTerm(term);
+  for (const alias of aliases) {
+    if (highlightedWordsOnQuestion.has(alias)) return true;
+  }
+
+  for (const chip of document.querySelectorAll(CHIP_SELECTOR)) {
+    if (aliases.has(normalizedWordKey(chip.textContent ?? ""))) return true;
+  }
+
   return false;
 }
 
@@ -184,42 +214,37 @@ function evictTermHighlight(term: TermMatch): void {
   highlightedOnQuestion.delete(key);
   highlightedTermZone.delete(key);
 
+  for (const alias of getAliasesForTerm(term)) {
+    highlightedWordsOnQuestion.delete(alias);
+  }
+
   for (const chip of document.querySelectorAll(chipSelectorForTerm(term))) {
-    highlightedWordsOnQuestion.delete(
-      normalizedWordKey(chip.textContent ?? ""),
-    );
     unwrapChip(chip);
   }
 }
 
 function isAlreadyHighlighted(
   term: TermMatch,
-  matchText: string,
+  _matchText: string,
   zone: number,
 ): boolean {
   const key = termKey(term);
   const existingZone = highlightedTermZone.get(key);
   if (existingZone !== undefined && zone < existingZone) {
     evictTermHighlight(term);
-  } else if (
-    highlightedOnQuestion.has(key) ||
-    isTermHighlightedInDom(term) ||
-    isWordHighlightedInDom(matchText)
-  ) {
-    return true;
+    return false;
   }
 
-  return highlightedWordsOnQuestion.has(normalizedWordKey(matchText));
+  return isSynonymAlreadyHighlighted(term);
 }
 
-function recordHighlight(
-  term: TermMatch,
-  matchText: string,
-  zone: number,
-): void {
-  highlightedOnQuestion.add(termKey(term));
-  highlightedWordsOnQuestion.add(normalizedWordKey(matchText));
-  highlightedTermZone.set(termKey(term), zone);
+function recordHighlight(term: TermMatch, _matchText: string, zone: number): void {
+  const key = termKey(term);
+  highlightedOnQuestion.add(key);
+  highlightedTermZone.set(key, zone);
+  for (const alias of getAliasesForTerm(term)) {
+    highlightedWordsOnQuestion.add(alias);
+  }
 }
 
 function getQuestionTextSnapshot(): string {
