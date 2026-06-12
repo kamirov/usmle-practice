@@ -41,6 +41,7 @@ import strongyloidesStercoralis from "../media/images/microbiology/strongyloides
 import treponemaPallidum from "../media/images/microbiology/treponema-pallidum.jpg?url";
 import toxoplasmaGondii from "../media/images/microbiology/toxoplasma-gondii.jpg?url";
 import varicellaZosterVirus from "../media/images/microbiology/varicella-zoster-virus.jpg?url";
+import measlesVirus from "../media/images/microbiology/measles-virus.jpg?url";
 
 export type MicrobiologyImageId = MicrobiologyEntry["id"];
 
@@ -78,6 +79,7 @@ export const MICROBIOLOGY_IMAGES: Partial<Record<MicrobiologyImageId, string>> =
     "listeria-monocytogenes": extensionAssetUrl(listeriaMonocytogenes),
     "herpes-simplex-virus": extensionAssetUrl(herpesSimplexVirus),
     "varicella-zoster-virus": extensionAssetUrl(varicellaZosterVirus),
+    "measles-virus": extensionAssetUrl(measlesVirus),
     "toxoplasma-gondii": extensionAssetUrl(toxoplasmaGondii),
     "borrelia-burgdorferi": extensionAssetUrl(borreliaBurgdorferi),
     "aspergillus-fumigatus": extensionAssetUrl(aspergillusFumigatus),
@@ -204,6 +206,10 @@ export const MICROBIOLOGY_IMAGE_ATTRIBUTIONS: Partial<
     label: "CDC PHIL #1878",
     url: "https://phil.cdc.gov/Details.aspx?pid=1878",
   },
+  "measles-virus": {
+    label: "CDC PHIL #8429",
+    url: "https://phil.cdc.gov/Details.aspx?pid=8429",
+  },
   "toxoplasma-gondii": {
     label: "CDC DPDx Parasite Image Library",
     url: "https://commons.wikimedia.org/wiki/File:Toxoplasma_gondii_tachy.jpg",
@@ -299,6 +305,8 @@ export const MICROBIOLOGY_IMAGE_CAPTIONS: Partial<
     "Electron micrograph of flagellated L. monocytogenes (41,250×)",
   "herpes-simplex-virus": "TEM: herpes simplex virions (negatively stained)",
   "varicella-zoster-virus": "Electron micrograph of varicella-zoster virion",
+  "measles-virus":
+    "TEM thin section of a single measles morbillivirus virion (paramyxovirus)",
   "toxoplasma-gondii": "Giemsa stain: crescent-shaped tachyzoites",
   "borrelia-burgdorferi":
     "Dark-field microscopy: corkscrew spirochetes (400×)",

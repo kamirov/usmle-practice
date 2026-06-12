@@ -24,6 +24,7 @@
   position: fixed;
   z-index: 2147483646;
   max-width: 320px;
+  max-height: calc(100vh - 16px);
   padding: 10px 12px;
   border: 1px solid #cbd5e1;
   border-radius: 8px;
@@ -34,6 +35,8 @@
   font-size: 13px;
   line-height: 1.45;
   pointer-events: auto;
+  overflow-y: auto;
+  overscroll-behavior: contain;
 }
 
 .usmle-organ-popover__title {
@@ -331,6 +334,11 @@
 .usmle-organ-popover--rich {
   width: min(92vw, 680px);
   max-width: min(92vw, 680px);
+}
+
+.usmle-organ-popover--wide {
+  width: min(94vw, 860px);
+  max-width: min(94vw, 860px);
 }
 
 .usmle-organ-popover--with-media {

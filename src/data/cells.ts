@@ -2239,6 +2239,104 @@ export const CELLS: CellEntry[] = [
     pediatrics:
       "Kallmann syndrome presents in adolescence with delayed puberty and anosmia; central precocious puberty from premature hypothalamic GnRH activation.",
   },
+  {
+    id: "mtdna",
+    name: "mtDNA",
+    aliases: [
+      "mtdna",
+      "mt dna",
+      "mitochondrial dna",
+      "mitochondrial genome",
+      "mitochondrial genetic material",
+      "circular mitochondrial dna",
+    ],
+    definition:
+      "Circular double-stranded DNA in the mitochondrial matrix encoding essential components of oxidative phosphorylation — distinct from nuclear DNA in inheritance, copy number, and repair; human mtDNA is ~16.6 kb with 37 genes (13 mRNAs for ETC proteins, 22 tRNAs, 2 rRNAs).",
+    characteristics: [
+      "Circular, histone-free genome — multiple copies per mitochondrion and hundreds to thousands of copies per cell",
+      "Encodes 13 polypeptides of complexes I, III, IV, and V; remaining mitochondrial proteins (~1500) encoded by nuclear DNA and imported",
+      "Transcribed as polycistronic heavy- and light-strand transcripts, then processed into individual RNAs",
+      "Own genetic code variants (e.g., UGA codes tryptophan in mitochondria)",
+      "High mutation rate — limited repair, exposure to reactive oxygen species from ETC",
+      "Heteroplasmy — mixed wild-type and mutant mtDNA within one person; phenotype when mutant load crosses tissue threshold",
+    ],
+    clinicalRelevance: [
+      "Maternal inheritance only — offspring inherit mother's mtDNA; affected fathers do not transmit mtDNA disease",
+      "Point mutations cause MELAS (m.3243A>G), MERRF (m.8344A>G), MIDD, and other encephalomyopathies",
+      "Large-scale mtDNA deletions — Kearns-Sayre syndrome, progressive external ophthalmoplegia",
+      "Nuclear-encoded mitochondrial gene mutations also cause mitochondrial disease (Mendelian inheritance)",
+      "mtDNA used in forensic and ancestry testing — high copy number in degraded samples; no recombination",
+      "Heteroplasmic load in oocyte determines variable severity among siblings from same mother",
+    ],
+    boardsPearls: [
+      "Maternal inheritance — all children of affected mother at risk; affected father does NOT pass mtDNA mutations",
+      "vs nuclear DNA — Mendelian inheritance; mtDNA is cytoplasmic/extranuclear",
+      "Heteroplasmy explains variable expressivity in mitochondrial disease",
+      "13 mtDNA-encoded proteins — all part of electron transport chain / ATP synthase",
+      "Most mitochondrial proteins are nuclear-encoded — boards may test inheritance pattern, not every gene location",
+      "Leber hereditary optic neuropathy (LHON) — mtDNA point mutations; predominantly affects males despite maternal transmission",
+      "Threshold effect — higher-energy tissues (brain, muscle, retina) symptomatic first",
+    ],
+    distinguishFrom: [
+      "Nuclear DNA (nDNA) — Mendelian inheritance, linear chromosomes, vastly larger genome",
+      "Mitochondrial encephalomyopathy (clinical syndrome) — disease phenotype, not the genome itself",
+      "Heteroplasmy (pathogenesis concept) — mixed genomes within one individual, not the DNA molecule",
+      "Chloroplast DNA — plant organelle genome; not relevant to human boards except as analogy",
+      "Epigenetics — mtDNA has no histone-based chromatin; nuclear epigenetic marks differ",
+    ],
+    pediatrics:
+      "Infantile Leigh syndrome and neonatal mitochondrial myopathies often reflect high mutant mtDNA load from birth; maternal relatives may have milder or no symptoms due to heteroplasmy.",
+  },
+  {
+    id: "oxidative-phosphorylation",
+    name: "Oxidative Phosphorylation",
+    aliases: [
+      "oxidative phosphorylation",
+      "oxidative phosphorylation pathway",
+      "mitochondrial oxidative phosphorylation",
+      "oxphos",
+      "ox phos",
+      "aerobic phosphorylation",
+      "chemiosmotic phosphorylation",
+    ],
+    definition:
+      "Mitochondrial ATP synthesis driven by the electron transport chain (ETC): NADH and FADH₂ donate electrons through membrane complexes, pumping protons into the intermembrane space; the proton-motive force powers ATP synthase (Complex V) to phosphorylate ADP — requires O₂ as the terminal electron acceptor.",
+    characteristics: [
+      "Occurs at the inner mitochondrial membrane — ETC complexes I–IV plus ATP synthase (Complex V)",
+      "NADH → Complex I → ubiquinone (CoQ) → Complex III → cytochrome c → Complex IV → O₂ → H₂O; FADH₂ enters at Complex II (skips Complex I)",
+      "Chemiosmosis — proton gradient (ΔpH + membrane potential) stores energy for ATP synthase rotary catalysis",
+      "Yields most ATP from aerobic glucose oxidation (~26–28 net ATP vs 2 from glycolysis + 2 substrate-level from Krebs)",
+      "~2.5 ATP per NADH and ~1.5 ATP per FADH₂ (modern P/O ratios; boards may round to 3 and 2)",
+      "13 mtDNA-encoded ETC subunits; remainder nuclear-encoded and imported",
+    ],
+    clinicalRelevance: [
+      "Mitochondrial encephalomyopathies — defective OXPHOS → lactic acidosis, ragged red fibers",
+      "Cyanide and carbon monoxide — inhibit Complex IV (cytochrome c oxidase) → histotoxic hypoxia",
+      "Rotenone — Complex I inhibitor (pesticide, research tool)",
+      "Oligomycin — blocks ATP synthase; ETC may still run until gradient equilibrates",
+      "Uncouplers (2,4-DNP, thermogenin in brown fat) — dissipate proton gradient as heat, ↑ O₂ consumption without ↑ ATP",
+      "Metformin — mild Complex I inhibition contributes to lactic acidosis risk",
+    ],
+    boardsPearls: [
+      "OXPHOS = ETC + chemiosmosis; O₂ required as final electron acceptor",
+      "Substrate-level phosphorylation (glycolysis, Krebs) vs oxidative phosphorylation — boards favorite contrast",
+      "Krebs cycle produces NADH/FADH₂; bulk ATP comes from OXPHOS, not Krebs directly",
+      "Cyanide/CO — Complex IV block → cannot use O₂ despite normal PaO₂",
+      "Oligomycin — no ATP from synthase; antimycin A (III), rotenone (I) block upstream ETC sites",
+      "Uncoupling — mitochondria consume O₂ and burn fuel but make heat instead of ATP (fever in brown adipose infants)",
+      "Anaerobic glycolysis only when OXPHOS impaired or O₂ insufficient — net 2 ATP + lactate",
+    ],
+    distinguishFrom: [
+      "Substrate-level phosphorylation — direct phosphate transfer to ADP (glycolysis, succinyl-CoA step in Krebs)",
+      "Glycolysis — cytoplasmic glucose breakdown; does not require mitochondria or O₂",
+      "Krebs (TCA) cycle — generates reducing equivalents (NADH, FADH₂), not bulk ATP via ETC",
+      "Fermentation — regenerates NAD⁺ anaerobically; no ETC or O₂ use",
+      "Electron transport chain alone — proton pumping; ATP synthesis is the separate chemiosmotic coupling step",
+      "Beta-oxidation — produces acetyl-CoA and FADH₂/NADH that feed OXPHOS, not synonymous with it",
+    ],
+    pediatrics:
+      "Neonatal mitochondrial disease and Leigh syndrome reflect impaired OXPHOS from birth; brown adipose uncoupling (thermogenin) is physiologic heat production in infants.",
+  },
 ];
 
 const cellById = new Map(CELLS.map((entry) => [entry.id, entry]));

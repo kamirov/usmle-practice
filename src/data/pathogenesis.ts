@@ -1308,6 +1308,91 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
     pediatrics:
       "PWS and Angelman present in infancy — hypotonia, feeding difficulties (PWS), seizures and ataxia (Angelman). UPD accounts for a subset when FISH/microarray show no deletion — methylation study distinguishes PWS vs Angelman.",
   },
+  {
+    id: "locus-heterogeneity",
+    name: "Locus Heterogeneity",
+    aliases: [
+      "locus heterogeneity",
+      "locus heterogeneities",
+      "locus heterogenaity",
+      "locus heterogenaities",
+      "genetic locus heterogeneity",
+      "heterogeneity of loci",
+    ],
+    definition:
+      "One clinical phenotype can result from pathogenic variants at different genetic loci (different genes) — the same disease name or syndrome may be caused by mutations in unrelated genes that converge on a shared pathway or final common phenotype.",
+    examples: [
+      "Albinism — tyrosinase (OCA1), OCA2 (P gene), TYRP1, and other loci → hypopigmentation",
+      "Retinitis pigmentosa — rhodopsin, peripherin, and dozens of other genes → night blindness and peripheral vision loss",
+      "Congenital nonsyndromic hearing loss — GJB2 (connexin 26), GJB6, STRC, and many other loci",
+      "Long QT syndrome — KCNQ1 (LQT1), KCNH2 (LQT2), SCN5A (LQT3), and others → prolonged QT",
+      "Ehlers-Danlos syndrome — COL5A1/COL5A2 (classical), TNXB, and other collagen-related genes by subtype",
+      "Osteogenesis imperfecta — COL1A1 vs COL1A2 mutations → brittle bones with variable severity",
+    ],
+    boardsPearls: [
+      "Locus heterogeneity = different genes → same (or similar) phenotype",
+      "vs allelic heterogeneity — different mutations in the same gene (e.g., many CFTR alleles all causing cystic fibrosis)",
+      "Explains why gene panels test multiple loci for one clinical indication (deafness panel, RP panel, cardiomyopathy panel)",
+      "vs phenotypic heterogeneity — variable clinical features from one genotype, not multiple genes",
+      "vs variable expressivity — severity differences with same mutation, not different loci",
+      "Disease naming can mask locus heterogeneity — 'albinism' or 'LQTS' are phenotypic labels spanning many genes",
+    ],
+    distinguishFrom: [
+      "Allelic heterogeneity — multiple distinct mutations within one gene cause the disease",
+      "Phenotypic heterogeneity — one genotype produces varied clinical presentations",
+      "Variable expressivity — same mutation, different severity among individuals",
+      "Incomplete penetrance — genotype present but phenotype absent in some carriers",
+      "Pleiotropy — one gene mutation causes multiple seemingly unrelated phenotypes",
+      "Genetic heterogeneity (umbrella) — includes both locus and allelic heterogeneity; locus = across genes",
+    ],
+    pediatrics:
+      "Newborn hearing loss and metabolic newborn screens illustrate locus heterogeneity — negative GJB2 does not exclude genetic deafness; expanded panels test multiple loci. OI type depends on which collagen gene is mutated.",
+  },
+  {
+    id: "class-switching",
+    name: "Class Switching",
+    aliases: [
+      "class switching",
+      "class switch",
+      "class switch recombination",
+      "class-switch recombination",
+      "isotype switching",
+      "isotype switch",
+      "immunoglobulin class switching",
+      "ig class switching",
+      "csr",
+      "heavy chain class switching",
+    ],
+    definition:
+      "B-cell process in germinal centers that changes the immunoglobulin heavy-chain constant (C) region — switching isotype (IgM/IgD → IgG, IgA, or IgE) while preserving the variable (V) region and therefore antigen specificity.",
+    examples: [
+      "Primary infection — IgM first; secondary response — class-switched IgG dominates (memory B cells)",
+      "IL-4 from Th2 cells → class switch to IgE (allergy) and IgG4",
+      "IFN-γ from Th1 cells → class switch to IgG3 and IgG1 (opsonization, complement)",
+      "TGF-β → class switch to IgA (mucosal immunity)",
+      "Hyper-IgM syndrome — failure of class switching → ↑ IgM, ↓ IgG/IgA/IgE",
+      "Conjugate vaccines — protein carrier provides T-cell help → class switching to IgG against polysaccharide",
+    ],
+    boardsPearls: [
+      "Requires T-cell help: CD40L on Th cells binds CD40 on B cells + cytokine signals",
+      "AID (activation-induced cytidine deaminase) — enzyme initiating switch recombination; AID defect → hyper-IgM (autosomal recessive)",
+      "X-linked hyper-IgM — CD40L deficiency (on T cells) → cannot signal B cells to class switch",
+      "T-independent antigens (polysaccharides) → mainly IgM, poor class switching and memory",
+      "vs somatic hypermutation — both in germinal centers and need AID; hypermutation improves affinity, class switching changes isotype",
+      "vs V(D)J recombination — generates initial BCR diversity in bone marrow, not isotype change after antigen exposure",
+      "Same variable region, new constant region — antibody specificity unchanged",
+    ],
+    distinguishFrom: [
+      "Somatic hypermutation — introduces point mutations in variable regions for affinity maturation, not isotype change",
+      "VDJ recombination — assembles variable region in developing B cells; occurs before antigen encounter",
+      "Affinity maturation — selection of higher-affinity B cells in germinal center; overlaps with somatic hypermutation",
+      "Isotype (class) vs idiotype — isotype is constant region; idiotype is variable region antigen specificity",
+      "T-independent B-cell activation — polysaccharide antigens bypass full T help → limited class switching",
+      "Plasma cell differentiation — terminal differentiation to antibody secretion; distinct step from class switch",
+    ],
+    pediatrics:
+      "X-linked hyper-IgM (CD40L deficiency) presents with recurrent pyogenic and opportunistic infections, ↑ IgM, ↓ IgG/IgA; live vaccines contraindicated. Conjugate vaccines (Hib, pneumococcal) exist because infants mount poor T-independent IgM responses to naked polysaccharides.",
+  },
 ];
 
 const pathogenesisById = new Map(

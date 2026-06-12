@@ -294,3 +294,10 @@ schistosoma-mansoni.jpg
   License: Public domain (U.S. federal government)
   Page: https://phil.cdc.gov/Details.aspx?pid=5252
   Commons: https://commons.wikimedia.org/wiki/File:Schistosoma_mansoni_trematodes.jpg
+
+measles-virus.jpg
+  Source: CDC PHIL #8429
+  Description: Thin-section TEM of a single measles morbillivirus virion
+  License: Public domain (U.S. federal government)
+  Page: https://phil.cdc.gov/Details.aspx?pid=8429
+  Commons: https://commons.wikimedia.org/wiki/File:Measles_virus.JPG

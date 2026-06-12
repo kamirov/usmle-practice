@@ -5,6 +5,11 @@ import {
 } from "../data/antiarrhythmicMedia";
 import type { MediaAttribution } from "../data/media";
 import { getCellById } from "../data/cells";
+import {
+  getCellImageAttributionForId,
+  getCellImageCaptionForId,
+  getCellImageForId,
+} from "../data/cellsMedia";
 import { getClinicalStrategyById } from "../data/clinicalStrategies";
 import { getConditionById } from "../data/conditions";
 import {
@@ -119,6 +124,27 @@ function hidePopover(): void {
 
 function clamp(value: number, min: number, max: number): number {
   return Math.min(Math.max(value, min), max);
+}
+
+const WIDE_POPOVER_MIN_SECTIONS = 5;
+
+function preparePopoverForDisplay(popover: HTMLDivElement): void {
+  popover.scrollTop = 0;
+  popover.classList.remove("usmle-organ-popover--wide");
+
+  if (
+    !popover.classList.contains("usmle-organ-popover--rich") ||
+    popover.classList.contains("usmle-organ-popover--with-media")
+  ) {
+    return;
+  }
+
+  const sectionCount = popover.querySelectorAll(
+    ".usmle-organ-popover__section",
+  ).length;
+  if (sectionCount >= WIDE_POPOVER_MIN_SECTIONS) {
+    popover.classList.add("usmle-organ-popover--wide");
+  }
 }
 
 function positionPopover(chip: HTMLElement, popover: HTMLDivElement): void {
@@ -578,8 +604,11 @@ function renderCellPopover(cellId: string): boolean {
   const cell = getCellById(cellId);
   if (!cell || !popoverEl) return false;
 
-  popoverEl.classList.add("usmle-organ-popover--rich");
-  popoverEl.innerHTML = renderRichPopoverContent(
+  const imageSrc = getCellImageForId(cellId);
+  const imageCaption = getCellImageCaptionForId(cellId);
+  const imageAttribution = getCellImageAttributionForId(cellId);
+
+  const bodyContent = renderRichPopoverContent(
     `
     ${renderPopoverTitle(cell.name, "cell")}
     <div class="usmle-organ-popover__meaning">${cell.definition}</div>
@@ -592,6 +621,24 @@ function renderCellPopover(cellId: string): boolean {
     ${cell.pediatrics ? renderPediatricsSection(cell.pediatrics) : ""}
   `,
   );
+
+  popoverEl.classList.add("usmle-organ-popover--rich");
+  if (imageSrc && imageCaption && imageAttribution) {
+    popoverEl.classList.add("usmle-organ-popover--with-media");
+    popoverEl.innerHTML = `
+      <div class="usmle-organ-popover__layout">
+        <div class="usmle-organ-popover__body">${bodyContent}</div>
+        ${renderPopoverMediaBlock({
+          src: imageSrc,
+          alt: `${cell.name} diagram`,
+          caption: imageCaption,
+          attribution: imageAttribution,
+        })}
+      </div>
+    `;
+  } else {
+    popoverEl.innerHTML = bodyContent;
+  }
   return true;
 }
 
@@ -843,6 +890,7 @@ function showPopover(chip: HTMLElement): void {
   const popover = ensurePopover();
   popover.classList.remove(
     "usmle-organ-popover--rich",
+    "usmle-organ-popover--wide",
     "usmle-organ-popover--with-media",
   );
   const rendered = organId
@@ -884,6 +932,7 @@ function showPopover(chip: HTMLElement): void {
                                     );
   if (!rendered) return;
 
+  preparePopoverForDisplay(popover);
   activeChip = chip;
   positionPopover(chip, popover);
   playPopoverAudio();
