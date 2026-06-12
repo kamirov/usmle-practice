@@ -3756,12 +3756,48 @@ export interface MicrobiologyAliasMatch {
   microbiologyId: string;
 }
 
+/** Latin binomial names like "Staphylococcus aureus" (not "Influenza A"). */
+const BINOMIAL_NAME_RE = /^([a-z]+) ([a-z][\w-]{3,})$/;
+
+/** Genus abbreviations like "s. aureus". */
+const GENUS_ABBREV_RE = /^([a-z])\. (.+)$/;
+
+function collectMicrobiologyAliases(entry: MicrobiologyEntry): string[] {
+  const seen = new Set<string>();
+  const aliases: string[] = [];
+
+  const add = (raw: string): void => {
+    const alias = raw.toLowerCase().trim();
+    if (!alias || seen.has(alias)) return;
+    seen.add(alias);
+    aliases.push(alias);
+  };
+
+  add(entry.name);
+  for (const alias of entry.aliases) add(alias);
+
+  for (const alias of [...aliases]) {
+    const abbrev = alias.match(GENUS_ABBREV_RE);
+    if (abbrev) add(`${abbrev[1]} ${abbrev[2]}`);
+  }
+
+  const binomial = entry.name.toLowerCase().match(BINOMIAL_NAME_RE);
+  if (binomial && entry.type !== "virus") {
+    const initial = binomial[1][0];
+    const species = binomial[2];
+    add(`${initial}. ${species}`);
+    add(`${initial} ${species}`);
+  }
+
+  return aliases;
+}
+
 export function buildMicrobiologyAliasIndex(): MicrobiologyAliasMatch[] {
   const matches: MicrobiologyAliasMatch[] = [];
   for (const entry of MICROBIOLOGY) {
-    for (const alias of entry.aliases) {
+    for (const alias of collectMicrobiologyAliases(entry)) {
       matches.push({
-        alias: alias.toLowerCase(),
+        alias,
         microbiologyId: entry.id,
       });
     }
