@@ -107,6 +107,7 @@ export const MICROBIOLOGY_IMAGES: Partial<Record<MicrobiologyImageId, string>> =
     "strongyloides-stercoralis": extensionAssetUrl(strongyloidesStercoralis),
     "schistosoma-mansoni": extensionAssetUrl(schistosomaMansoni),
     "dengue-virus": extensionAssetUrl(aedesAegypti),
+    "chikungunya-virus": extensionAssetUrl(aedesAegypti),
   };
 
 export const MICROBIOLOGY_IMAGE_ATTRIBUTIONS: Partial<
@@ -304,6 +305,10 @@ export const MICROBIOLOGY_IMAGE_ATTRIBUTIONS: Partial<
     label: "CDC PHIL #9186 (public domain)",
     url: "https://phil.cdc.gov/Details.aspx?pid=9186",
   },
+  "chikungunya-virus": {
+    label: "CDC PHIL #9186 (public domain)",
+    url: "https://phil.cdc.gov/Details.aspx?pid=9186",
+  },
 };
 
 export const MICROBIOLOGY_IMAGE_CAPTIONS: Partial<
@@ -355,6 +360,10 @@ export const MICROBIOLOGY_IMAGE_CAPTIONS: Partial<
     "Negative-stain TEM of rubella virions budding from host cell surface",
   "zika-virus":
     "Colorized TEM of Zika virus particles (Flaviviridae; ~40 nm)",
+  "dengue-virus":
+    "Female Aedes aegypti mosquito — primary vector of dengue virus (daytime feeder)",
+  "chikungunya-virus":
+    "Female Aedes aegypti mosquito — primary vector of chikungunya virus (daytime feeder)",
   "yellow-fever-virus":
     "TEM of yellow fever virions at high magnification (Flaviviridae)",
   "sporothrix-schenckii":

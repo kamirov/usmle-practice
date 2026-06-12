@@ -343,3 +343,10 @@ bartonella-henselae.jpg
   Description: Cat-scratch inoculation lesion on hand (Bartonella henselae)
   License: Public domain (U.S. federal government)
   Page: https://phil.cdc.gov/Details.aspx?pid=22328
+
+aedes-aegypti.jpg
+  Source: CDC PHIL #9186
+  Description: Female Aedes aegypti mosquito — dengue virus vector
+  License: Public domain (U.S. federal government)
+  Page: https://phil.cdc.gov/Details.aspx?pid=9186
+  Photographer: James Gathany

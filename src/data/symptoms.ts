@@ -1684,6 +1684,212 @@ export const SYMPTOMS: SymptomEntry[] = [
       "Livedo reticularis — netlike vascular pattern, usually blanching",
     ],
   },
+  {
+    id: "nuchal-rigidity",
+    name: "Nuchal Rigidity",
+    aliases: [
+      "nuchal rigidity",
+      "neck stiffness",
+      "stiff neck",
+      "meningeal neck stiffness",
+      "cervical rigidity",
+    ],
+    definition:
+      "Resistance to passive flexion of the neck due to irritation or inflammation of the meninges — a classic sign of meningeal irritation, though not specific to meningitis alone.",
+    mechanism:
+      "Inflammation of pain-sensitive meninges and stretching of spinal nerve roots during neck flexion → reflex spasm of neck extensor muscles and pain limiting flexion.",
+    thinkOf: [
+      "Bacterial meningitis",
+      "Viral (aseptic) meningitis",
+      "Subarachnoid hemorrhage",
+      "Encephalitis with meningeal involvement",
+      "Cervical spine pathology (less acute infectious picture)",
+    ],
+    pairWith: [
+      "Fever + headache + nuchal rigidity → meningitis until proven otherwise",
+      "Thunderclap headache + neck stiffness → subarachnoid hemorrhage",
+      "Photophobia + Kernig/Brudzinski signs → meningeal irritation",
+      "Altered mental status + fever → consider encephalitis or meningitis",
+    ],
+    distinguishFrom: [
+      "Cervical muscle spasm — trauma or strain; no fever/photophobia cluster",
+      "Torticollis — head tilt from SCM spasm; different exam maneuver",
+      "Meningism without meningitis — neck pain with normal CSF",
+    ],
+  },
+  {
+    id: "kernig-sign",
+    name: "Kernig Sign",
+    aliases: [
+      "kernig sign",
+      "kernig's sign",
+      "kernigs sign",
+      "positive kernig sign",
+    ],
+    definition:
+      "Physical exam maneuver for meningeal irritation — pain or resistance when the thigh is flexed at the hip and the knee is passively extended with the patient supine.",
+    mechanism:
+      "Stretching of inflamed meninges and lumbar nerve roots during knee extension with hip flexion reproduces pain and hamstring spasm.",
+    thinkOf: [
+      "Meningitis (bacterial or viral)",
+      "Subarachnoid hemorrhage",
+      "Meningeal carcinomatosis",
+    ],
+    pairWith: [
+      "Fever + headache + Kernig sign → meningitis workup including LP",
+      "Brudzinski sign positive together → supports meningeal irritation",
+      "Normal CSF despite positive Kernig → meningism from noninfectious cause",
+    ],
+    distinguishFrom: [
+      "Brudzinski sign — passive neck flexion causes hip/knee flexion",
+      "Straight leg raise (Lasègue) — sciatica from lumbosacral radiculopathy, not meningitis",
+      "Hamstring tightness alone — no systemic infectious signs",
+    ],
+  },
+  {
+    id: "brudzinski-sign",
+    name: "Brudzinski Sign",
+    aliases: [
+      "brudzinski sign",
+      "brudzinski's sign",
+      "brudzinskis sign",
+      "positive brudzinski sign",
+    ],
+    definition:
+      "Physical exam sign of meningeal irritation — passive flexion of the neck causes involuntary flexion of the hips and knees.",
+    mechanism:
+      "Meningeal inflammation lowers the threshold for reflex hip and knee flexion when cervical nerve roots are stretched by neck flexion.",
+    thinkOf: [
+      "Meningitis",
+      "Subarachnoid hemorrhage",
+      "Meningeal inflammation from any cause",
+    ],
+    pairWith: [
+      "Fever + headache + Brudzinski sign → emergent meningitis evaluation",
+      "Kernig sign positive → strengthens meningeal irritation",
+      "Petechial rash + meningeal signs → meningococcemia",
+    ],
+    distinguishFrom: [
+      "Kernig sign — knee extension pain with hip flexed",
+      "Voluntary hip flexion from discomfort — not involuntary reflex",
+      "Neck pain from cervical pathology without meningeal inflammation",
+    ],
+  },
+  {
+    id: "petechiae",
+    name: "Petechiae",
+    aliases: [
+      "petechiae",
+      "petechia",
+      "petechial rash",
+      "petechial rashes",
+      "petecchae",
+    ],
+    definition:
+      "Non-blanching pinpoint (typically <3 mm) hemorrhages into the skin or mucosa from extravasation of red blood cells through vessel walls.",
+    mechanism:
+      "Platelet deficiency or dysfunction, coagulopathy, or increased capillary fragility/permeability allows red cells to leak into the dermis — does not blanch with pressure unlike erythema.",
+    thinkOf: [
+      "Thrombocytopenia — dengue, chikungunya, ITP, TTP, HIT, DIC",
+      "Meningococcemia — rapid toxic illness with petechiae/purpura",
+      "Rocky Mountain spotted fever — petechiae in severe/late disease",
+      "Immune thrombocytopenic purpura (ITP) — isolated low platelets",
+      "Scurvy (vitamin C deficiency) — perifollicular petechiae, bleeding gums",
+      "Child abuse — patterned or inconsistent-location bruising/petechiae",
+    ],
+    pairWith: [
+      "Fever + hypotension + rapid progression → meningococcemia",
+      "Tick exposure + centripetal rash → RMSF (petechiae = severe)",
+      "Travel to tropics + fever + thrombocytopenia → dengue > chikungunya",
+      "Isolated thrombocytopenia + mucosal bleeding → ITP",
+      "Positive tourniquet test → dengue",
+    ],
+    distinguishFrom: [
+      "Purpura — larger (3–10 mm) non-blanching lesions",
+      "Ecchymosis — bruise >1 cm, often traumatic",
+      "Erythema — blanches with pressure; vasodilation not hemorrhage",
+      "Telangiectasia — dilated vessels, not hemorrhage",
+    ],
+  },
+  {
+    id: "maculopapular-rash",
+    name: "Maculopapular Rash",
+    aliases: [
+      "maculopapular rash",
+      "maculopapular rashes",
+      "maculopapular eruption",
+      "maculopapular exanthem",
+      "morbilliform rash",
+      "morbilliform eruption",
+    ],
+    definition:
+      "Blanching erythematous eruption composed of both flat macules and raised papules — a common pattern in viral exanthems, drug reactions, and some bacterial illnesses.",
+    mechanism:
+      "Immune-mediated or direct viral injury to dermal capillaries and keratinocytes produces perivascular inflammation and erythema with variable papular component; distribution and timing narrow the differential.",
+    thinkOf: [
+      "Chikungunya fever — rash ~2–5 days after fever; often trunk/extremities",
+      "Dengue fever — maculopapular rash days 4–7; recovery 'white islands in red sea'",
+      "Measles (rubeola) — cephalocaudal spread after Koplik spots",
+      "Rubella — face to body; postauricular lymphadenopathy",
+      "Drug eruption — temporal relation to new medication",
+      "Secondary syphilis — diffuse rash including palms/soles",
+      "Rocky Mountain spotted fever — wrists/ankles → trunk",
+      "Zika virus — pruritic rash with conjunctivitis",
+    ],
+    pairWith: [
+      "Koplik spots + 3 C's prodrome → measles",
+      "Incapacitating symmetric arthralgia + travel → chikungunya",
+      "Thrombocytopenia + tourniquet test + tropics → dengue",
+      "Tick bite + fever + centripetal spread → RMSF",
+      "New drug within 1–2 weeks → drug eruption",
+      "Conjunctivitis + mild fever + pregnancy exposure → Zika",
+    ],
+    distinguishFrom: [
+      "Urticaria — transient wheals, intensely pruritic, individual lesions <24 h",
+      "Vesicular rash — varicella, HSV, hand-foot-mouth",
+      "Petechial/purpuric rash — non-blanching hemorrhage, not simple maculopapular erythema",
+      "Erythema migrans — expanding annular lesion at tick bite (Lyme)",
+    ],
+  },
+  {
+    id: "thrombocytopenia",
+    name: "Thrombocytopenia",
+    aliases: [
+      "thrombocytopenia",
+      "thrombocytopenias",
+      "low platelets",
+      "low platelet count",
+      "decreased platelets",
+      "plt low",
+    ],
+    definition:
+      "Platelet count below the normal reference range (~150,000–400,000/µL), increasing bleeding risk from mucocutaneous hemorrhage to life-threatening intracranial or GI bleeding depending on severity and cause.",
+    mechanism:
+      "Decreased production (marrow failure/infiltration), increased destruction (immune or consumptive), or sequestration (hypersplenism) reduce circulating platelets; severity and associated findings define the etiology.",
+    thinkOf: [
+      "Dengue fever — marked thrombocytopenia with hemorrhagic risk",
+      "Chikungunya fever — mild thrombocytopenia (usually less severe than dengue)",
+      "ITP — isolated immune-mediated platelet destruction",
+      "TTP/HUS — microangiopathic hemolysis + thrombocytopenia",
+      "HIT — 5–10 days after heparin + thrombosis",
+      "DIC — widespread consumption with coagulopathy",
+      "Bone marrow failure — leukemia, aplastic anemia, chemotherapy",
+      "Hypersplenism — cirrhosis, portal hypertension",
+    ],
+    pairWith: [
+      "Schistocytes + ↑ LDH + fever → TTP",
+      "Travel + fever + petechiae + tourniquet test → dengue",
+      "Symmetric arthralgia + mild plt drop + tropics → chikungunya",
+      "Isolated plt low + mucosal bleeding → ITP",
+      "Heparin exposure + plt fall + clot → HIT",
+      "Pancytopenia + blasts → leukemia",
+    ],
+    distinguishFrom: [
+      "Thrombocytosis — elevated platelets; reactive or myeloproliferative",
+      "Platelet dysfunction (e.g., uremia, aspirin) — bleeding with normal count",
+      "Coagulopathy (↓ fibrinogen, ↑ PT/aPTT) — DIC or liver disease pattern",
+    ],
+  },
 ];
 
 const symptomById = new Map(SYMPTOMS.map((s) => [s.id, s]));

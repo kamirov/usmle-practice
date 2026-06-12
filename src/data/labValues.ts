@@ -112,6 +112,8 @@ export const LAB_VALUES: LabValueEntry[] = [
       "Bone marrow failure / infiltration",
       "Heparin-induced thrombocytopenia",
       "Hypersplenism",
+      "Dengue fever",
+      "Chikungunya fever (usually mild)",
     ],
     boardsPearls: [
       "TTP pentad: fever, thrombocytopenia, MAHA, neuro symptoms, renal dysfunction",

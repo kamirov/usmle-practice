@@ -7,7 +7,9 @@ import molarPregnancyUltrasound from "../media/images/conditions/molar-pregnancy
 import ovarianDermoidCystHistology from "../media/images/conditions/ovarian-dermoid-cyst-histology.jpg?url";
 import rockyMountainSpottedFeverRash from "../media/images/conditions/rocky-mountain-spotted-fever-rash.jpg?url";
 import dengueRecoveryRash from "../media/images/conditions/dengue-recovery-rash.jpg?url";
+import chikungunyaRash from "../media/images/conditions/chikungunya-rash.jpg?url";
 import typhoidFeverRoseSpots from "../media/images/conditions/typhoid-fever-rose-spots.jpg?url";
+import meningesDiagram from "../media/images/conditions/meninges-diagram.svg?url";
 
 export type ConditionImageId = Extract<
   ConditionEntry["id"],
@@ -18,6 +20,8 @@ export type ConditionImageId = Extract<
   | "rocky-mountain-spotted-fever"
   | "typhoid-fever"
   | "dengue-fever"
+  | "chikungunya-fever"
+  | "meningitis"
 >;
 
 function extensionAssetUrl(path: string): string {
@@ -35,6 +39,8 @@ export const CONDITION_IMAGES: Partial<Record<ConditionImageId, string>> = {
   ),
   "typhoid-fever": extensionAssetUrl(typhoidFeverRoseSpots),
   "dengue-fever": extensionAssetUrl(dengueRecoveryRash),
+  "chikungunya-fever": extensionAssetUrl(chikungunyaRash),
+  meningitis: extensionAssetUrl(meningesDiagram),
 };
 
 export const CONDITION_IMAGE_ATTRIBUTIONS: Partial<
@@ -68,6 +74,14 @@ export const CONDITION_IMAGE_ATTRIBUTIONS: Partial<
     label: "Wikimedia Commons (Ranjan Premaratna, CC BY-SA 4.0)",
     url: "https://commons.wikimedia.org/wiki/File:Dengue_recovery_rash_(White_islands_in_red_sea).jpg",
   },
+  "chikungunya-fever": {
+    label: "Wikimedia Commons (Uwe Gille, CC BY-SA 3.0)",
+    url: "https://commons.wikimedia.org/wiki/File:2012-01-09_Chikungunya_on_the_belly_at_The_Philippines.jpeg",
+  },
+  meningitis: {
+    label: "Wikimedia Commons (Mysid/Jmarchn, CC BY-SA 3.0)",
+    url: "https://commons.wikimedia.org/wiki/File:Meninges-en.svg",
+  },
 };
 
 export const CONDITION_IMAGE_CAPTIONS: Partial<
@@ -87,6 +101,10 @@ export const CONDITION_IMAGE_CAPTIONS: Partial<
     "Rose spots on the chest in typhoid fever due to Salmonella Typhi",
   "dengue-fever":
     "Dengue recovery rash — classic 'white islands in a sea of red' pattern",
+  "chikungunya-fever":
+    "Maculopapular chikungunya rash on the abdomen during acute illness",
+  meningitis:
+    "Cross-section of cranial meninges — dura mater, arachnoid mater, pia mater, and subarachnoid space",
 };
 
 export function getConditionImageForId(id: string): string | undefined {

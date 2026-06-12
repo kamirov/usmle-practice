@@ -233,6 +233,52 @@ export const PROCEDURES: ProcedureEntry[] = [
     pediatrics:
       "Nemaline rod myopathy and mitochondrial myopathies present in infancy — hypotonia, weakness; muscle biopsy with Gomori trichrome shows diagnostic rods or ragged red fibers. Distinguish from benign congenital hypotonia.",
   },
+  {
+    id: "lumbar-puncture",
+    name: "Lumbar Puncture",
+    aliases: [
+      "lumbar puncture",
+      "lumbar punctures",
+      "spinal tap",
+      "spinal taps",
+      "lp",
+      "csf tap",
+      "cerebrospinal fluid tap",
+    ],
+    definition:
+      "Procedure inserting a needle into the subarachnoid space (usually L3–L4 or L4–L5 interspace) to obtain cerebrospinal fluid for diagnosis of meningitis, subarachnoid hemorrhage, and other CNS disorders, or to measure opening pressure.",
+    indications: [
+      "Suspected meningitis — cell count, glucose, protein, Gram stain, culture, PCR",
+      "Suspected subarachnoid hemorrhage when CT negative or unavailable",
+      "Suspected idiopathic intracranial hypertension — opening pressure measurement",
+      "Suspected CNS vasculitis, carcinomatous meningitis, or neurosyphilis",
+      "Administration of intrathecal medications (e.g., chemotherapy, antibiotics)",
+    ],
+    keyMeasurements: [
+      "Opening pressure (normal ~10–20 cm H₂O; ↑ in bacterial meningitis, IIH)",
+      "CSF WBC count and differential — neutrophils (bacterial) vs lymphocytes (viral/TB/fungal)",
+      "CSF glucose — low in bacterial, TB, fungal; normal in viral",
+      "CSF protein — elevated in most CNS infections and inflammatory states",
+      "Gram stain and culture; PCR panels; India ink or cryptococcal antigen when indicated",
+      "Xanthochromia and RBCs not cleared by centrifugation — subarachnoid hemorrhage",
+    ],
+    complications: [
+      "Post-LP headache (CSF leak)",
+      "Bleeding, epidural hematoma (rare)",
+      "Brainstem herniation if ↑ ICP with mass effect — obtain CT first when indicated",
+      "Infection (rare with sterile technique)",
+    ],
+    boardsPearls: [
+      "Diagnostic cornerstone of meningitis — but don't delay empiric antibiotics for LP in suspected bacterial meningitis",
+      "CT before LP if focal neuro deficits, papilledema, seizures, or immunocompromise (↓ herniation risk)",
+      "Bacterial CSF: ↑ neutrophils, ↑ protein, ↓ glucose; Viral: ↑ lymphocytes, normal glucose",
+      "SAH — xanthochromia; RBCs persist after centrifugation (vs traumatic tap clears)",
+      "Opening pressure >25 cm H₂O suggests ↑ ICP (meningitis, IIH)",
+      "L3–L4 or L4–L5 — below conus medullaris (typically ends ~L1–L2)",
+    ],
+    pediatrics:
+      "Same CSF interpretation principles; neonatal meningitis requires low threshold for LP in febrile or ill infant. CT indications similar; do not withhold antibiotics while arranging LP in suspected bacterial meningitis.",
+  },
 ];
 
 const procedureById = new Map(PROCEDURES.map((entry) => [entry.id, entry]));
