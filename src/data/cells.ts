@@ -96,6 +96,44 @@ export const CELLS: CellEntry[] = [
       "Febrile neutropenia in children on chemotherapy requires urgent evaluation and empiric antibiotics; same left-shift pattern signals bacterial infection.",
   },
   {
+    id: "eosinophil",
+    name: "Eosinophil",
+    aliases: [
+      "eosinophil",
+      "eosinophils",
+      "eos",
+    ],
+    definition:
+      "Granulocyte with bilobed nucleus and large eosinophilic cytoplasmic granules; defends against helminths and participates in allergic and atopic inflammation via granule proteins and cytokine release.",
+    characteristics: [
+      "Bilobed nucleus; coarse orange-pink granules on H&E (eosinophilic = \"eosin-loving\" stain)",
+      "Granule contents: major basic protein (MBP), eosinophil peroxidase, cationic protein, IL-5 receptor",
+      "Activated by IL-5 (Th2) and eotaxins (chemokines); recruited to tissues in allergy and parasitic infection",
+      "Kills helminths too large to phagocytose — degranulation onto parasite surface",
+      "Normal peripheral count ~1–4% of WBCs (absolute eosinophil count ~50–500 /µL)",
+    ],
+    clinicalRelevance: [
+      "Eosinophilia: helminth/parasite infection, atopy (asthma, eczema), drug reactions, Hodgkin lymphoma",
+      "Hypereosinophilic syndrome — end-organ damage from persistent eosinophilia (heart, lungs, nerves)",
+      "Eosinophilic esophagitis — food allergy–associated dysphagia with tissue eosinophils",
+      "EGPA (Churg-Strauss) — asthma, eosinophilia, granulomatous vasculitis, MPO-ANCA",
+      "Eosinopenia with corticosteroids — sequestration in lymphoid tissue (demargination pattern)",
+    ],
+    boardsPearls: [
+      "Eosinophils + parasites/allergy; neutrophils + bacteria — classic differential pairing",
+      "IL-5 from Th2 drives eosinophil production — links to Th2/IgE axis",
+      "Corticosteroids ↓ eosinophil count; also ↓ basophils",
+      "Major basic protein damages helminths and can injure host tissue (airway remodeling in asthma)",
+    ],
+    distinguishFrom: [
+      "Basophil — darkest purple granules obscure nucleus; histamine/heparin; rarest granulocyte",
+      "Neutrophil — multilobed nucleus, neutral granules; acute bacterial infection",
+      "Mast cell — tissue-resident; similar allergy role but fixed in tissues, not circulating WBC",
+    ],
+    pediatrics:
+      "Parasitic infections (pinworm, Ascaris) and atopic disease common causes of eosinophilia in children; eosinophilic esophagitis presents with feeding difficulty or dysphagia in adolescents.",
+  },
+  {
     id: "basophil",
     name: "Basophil",
     aliases: [

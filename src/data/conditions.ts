@@ -4085,6 +4085,244 @@ export const CONDITIONS: ConditionEntry[] = [
     pediatrics:
       "Primary TB in children may present with hilar lymphadenopathy without cavitation; miliary TB in infants.",
   },
+  {
+    id: "cll",
+    name: "Chronic Lymphocytic Leukemia (CLL)",
+    aliases: [
+      "chronic lymphocytic leukemia",
+      "chronic lymphocytic leukaemia",
+      "cll",
+      "cll/sll",
+      "small lymphocytic lymphoma",
+    ],
+    definition:
+      "Indolent neoplasm of mature B lymphocytes (CD5⁺, CD19⁺, CD20⁺, CD23⁺) accumulating in blood, marrow, lymph nodes, and spleen; the most common leukemia in adults in Western countries.",
+    pathophysiology:
+      "Clonal proliferation of incompetent mature-appearing B cells → lymphocytosis and marrow infiltration → cytopenias from marrow crowding or autoimmune destruction; hypogammaglobulinemia → recurrent infections.",
+    classicPresentation: [
+      "Asymptomatic lymphocytosis on routine labs (often elderly)",
+      "Lymphadenopathy, hepatosplenomegaly",
+      "Fatigue, anemia, thrombocytopenia",
+      "Recurrent bacterial infections from hypogammaglobulinemia",
+    ],
+    keyFindings: [
+      "Absolute lymphocytosis with mature-appearing small lymphocytes",
+      "Smudge cells on peripheral smear (fragile lymphocytes)",
+      "Flow cytometry: clonal B cells with CD5 and CD23 co-expression",
+    ],
+    keyLabs: [
+      "↑ Lymphocyte count (often >5000 /µL sustained)",
+      "↓ Immunoglobulins (IgG, IgA, IgM)",
+      "Direct Coombs positive in autoimmune hemolytic anemia subset",
+    ],
+    associations: [
+      "Autoimmune hemolytic anemia and ITP",
+      "Richter transformation to diffuse large B-cell lymphoma (aggressive)",
+    ],
+    complications: [
+      "Autoimmune cytopenias",
+      "Recurrent sinopulmonary infections",
+      "Richter transformation",
+      "Second malignancies",
+    ],
+    distinguishFrom: [
+      "Reactive lymphocytosis — polyclonal, resolves; no smudge cells or clonal markers",
+      "Acute lymphoblastic leukemia — blasts, not mature lymphocytes; children/young adults",
+      "Hairy cell leukemia — pancytopenia, splenomegaly, hairy projections; TRAP positive",
+    ],
+    treatment: [
+      "Asymptomatic early stage — observation (\"watch and wait\")",
+      "Symptomatic or progressive: BTK inhibitors (ibrutinib), venetoclax ± obinutuzumab",
+      "Rituximab-based regimens; fludarabine in fit patients (older regimens)",
+      "Treat autoimmune cytopenias (steroids, IVIG) as indicated",
+    ],
+    boardsPearls: [
+      "CLL = elderly + lymphocytosis + smudge cells + CD5⁺ B cells",
+      "Most common adult leukemia in the West — often incidental diagnosis",
+      "Hypogammaglobulinemia → infections despite high lymphocyte count",
+      "Richter transformation — sudden clinical worsening with aggressive lymphoma",
+    ],
+    pediatrics:
+      "CLL essentially an adult disease; pediatric small lymphocytic proliferations are rare and require specialist evaluation.",
+  },
+  {
+    id: "cml",
+    name: "Chronic Myelogenous Leukemia (CML)",
+    aliases: [
+      "chronic myelogenous leukemia",
+      "chronic myeloid leukemia",
+      "chronic myelogenous leukaemia",
+      "cml",
+    ],
+    definition:
+      "Myeloproliferative neoplasm driven by the BCR-ABL fusion tyrosine kinase (Philadelphia chromosome), characterized by marked leukocytosis with left shift and hypercellular marrow.",
+    pathophysiology:
+      "t(9;22) translocation → constitutively active BCR-ABL tyrosine kinase → uncontrolled myeloid proliferation; natural history progresses from chronic phase to accelerated phase and blast crisis if untreated.",
+    classicPresentation: [
+      "Fatigue, weight loss, early satiety from splenomegaly",
+      "Marked leukocytosis with granulocytic left shift (myelocytes, metamyelocytes, bands, segs)",
+      "Basophilia — classic clue",
+      "Hyperuricemia and gout from high cell turnover",
+    ],
+    keyFindings: [
+      "Massive splenomegaly",
+      "Leukocytosis with full myeloid maturation (left shift)",
+      "Basophilia and eosinophilia often present",
+      "Low leukocyte alkaline phosphatase (LAP) score (vs leukemoid reaction)",
+    ],
+    keyLabs: [
+      "BCR-ABL fusion by PCR or FISH; Philadelphia chromosome on cytogenetics",
+      "Peripheral smear: left shift, basophilia, pseudo–Pelger-Huët anomaly",
+      "↓ LAP score",
+    ],
+    associations: [
+      "Philadelphia chromosome t(9;22) — pathognomonic",
+      "Blast crisis may resemble AML or ALL",
+    ],
+    complications: [
+      "Blast crisis — treatment-resistant, poor prognosis",
+      "Hyperuricemia and tumor lysis with therapy",
+      "Transformation to acute leukemia (myeloid or lymphoid blast crisis)",
+    ],
+    distinguishFrom: [
+      "Leukemoid reaction — ↑ LAP, no BCR-ABL, reactive (infection, inflammation)",
+      "Polycythemia vera / essential thrombocythemia — different JAK2-driven MPNs",
+      "AML — ≥20% blasts at presentation; not chronic phase maturation",
+    ],
+    treatment: [
+      "Tyrosine kinase inhibitors — imatinib first line; dasatinib, nilotinib, bosutinib alternatives",
+      "Allogeneic stem cell transplant for TKI failure or blast crisis",
+      "Hydroxyurea for short-term cytoreduction",
+    ],
+    boardsPearls: [
+      "CML = Philadelphia chromosome (t[9;22]) + BCR-ABL → imatinib",
+      "Basophilia + left shift + splenomegaly → CML until proven otherwise",
+      "↓ LAP score distinguishes from leukemoid reaction (↑ LAP)",
+      "Blast crisis = progression; treat like acute leukemia",
+    ],
+    pediatrics:
+      "CML rare in children; juvenile myelomonocytic leukemia (JMML) is a distinct pediatric myeloproliferative disorder without BCR-ABL.",
+  },
+  {
+    id: "aml",
+    name: "Acute Myeloid Leukemia (AML)",
+    aliases: [
+      "acute myeloid leukemia",
+      "acute myelogenous leukemia",
+      "acute myelogenous leukaemia",
+      "aml",
+    ],
+    definition:
+      "Acute clonal proliferation of myeloid blasts (≥20% blasts in marrow or blood) causing marrow failure and rapid clinical deterioration if untreated.",
+    pathophysiology:
+      "Accumulation of poorly differentiated myeloid blasts replaces normal hematopoiesis → anemia, neutropenia, thrombocytopenia; Auer rods (crystalline inclusions) pathognomonic of myeloid lineage.",
+    classicPresentation: [
+      "Fatigue, pallor (anemia)",
+      "Fever, infections (neutropenia)",
+      "Bleeding, gum hypertrophy, petechiae (thrombocytopenia)",
+      "Bone pain; DIC in APL subtype",
+      "Adults >65 years most common; can follow myelodysplastic syndrome or prior chemotherapy",
+    ],
+    keyFindings: [
+      "Circulating blasts on peripheral smear",
+      "Auer rods in cytoplasm of myeloblasts",
+      "Gingival infiltration (especially monocytic subtypes M4/M5)",
+    ],
+    keyLabs: [
+      "≥20% myeloblasts in bone marrow or blood",
+      "Cytopenias (anemia, neutropenia, thrombocytopenia)",
+      "Flow cytometry and cytogenetics for classification and prognosis",
+    ],
+    associations: [
+      "Prior alkylating agent or topoisomerase II inhibitor therapy",
+      "Myelodysplastic syndrome progression",
+      "Down syndrome — ↑ AML risk (especially megakaryoblastic)",
+    ],
+    complications: [
+      "DIC (especially APL)",
+      "Tumor lysis syndrome with treatment",
+      "Life-threatening infection and bleeding",
+    ],
+    distinguishFrom: [
+      "ALL — lymphoblasts, TdT+, no Auer rods; more common in children",
+      "CML in chronic phase — mature left shift, not blast predominance",
+      "APL — AML M3 subtype; t(15;17); DIC; requires ATRA urgently",
+    ],
+    treatment: [
+      "Induction chemotherapy (\"7+3\": cytarabine + anthracycline)",
+      "Consolidation and allogeneic transplant based on risk stratification",
+      "APL treated differently — ATRA + arsenic trioxide (see APL entry)",
+      "Supportive: transfusions, infection prophylaxis, tumor lysis prevention",
+    ],
+    boardsPearls: [
+      "AML = blasts + Auer rods + pancytopenia in adult",
+      "Auer rods = myeloid lineage (not in lymphoblasts)",
+      "APL (M3) is an AML subtype — do NOT give standard chemo alone; give ATRA immediately",
+      "Leukemoid reaction has <20% blasts and ↑ LAP — not AML",
+    ],
+    pediatrics:
+      "Pediatric AML distinct from adult; Down syndrome–associated megakaryoblastic leukemia has better prognosis; APL also occurs in children — ATRA essential.",
+  },
+  {
+    id: "apl",
+    name: "Acute Promyelocytic Leukemia (APL)",
+    aliases: [
+      "acute promyelocytic leukemia",
+      "apl",
+      "aml m3",
+      "aml-m3",
+      "m3 aml",
+      "m3 leukemia",
+    ],
+    definition:
+      "Distinct AML subtype (FAB M3 / WHO APL with PML-RARA) characterized by abnormal promyelocytes, Auer rods, and life-threatening DIC at presentation.",
+    pathophysiology:
+      "t(15;17) translocation fuses PML and RARA genes → abnormal retinoic acid receptor blocks promyelocyte differentiation → accumulation of malignant promyelocytes that release procoagulant granules → DIC.",
+    classicPresentation: [
+      "Bleeding diathesis out of proportion to platelet count — DIC",
+      "Fatigue, pallor, fever (marrow failure)",
+      "Younger adult median age than other AML subtypes",
+      "Hypergranular promyelocytes with bundles of Auer rods (faggot cells)",
+    ],
+    keyFindings: [
+      "Abnormal promyelocytes with heavy azurophilic granules",
+      "Auer rods — often multiple per cell (faggot cells)",
+      "Active DIC: ↓ fibrinogen, ↑ D-dimer, ↑ PT/aPTT, thrombocytopenia",
+    ],
+    keyLabs: [
+      "t(15;17) PML-RARA fusion — diagnostic; FISH or PCR",
+      "DIC panel abnormalities at presentation",
+      "Bone marrow hypercellular with promyelocyte predominance",
+    ],
+    associations: [
+      "t(15;17) PML-RARA — targetable with all-trans retinoic acid (ATRA)",
+      "Differentiation syndrome with ATRA therapy (fever, pulmonary infiltrates, edema)",
+    ],
+    complications: [
+      "DIC — intracranial hemorrhage is leading cause of early death",
+      "Differentiation syndrome (ATRA syndrome) during treatment",
+      "Tumor lysis syndrome",
+    ],
+    distinguishFrom: [
+      "Other AML subtypes — no PML-RARA; ATRA not indicated",
+      "DIC from sepsis or obstetric causes — no promyelocytes or t(15;17)",
+      "CML blast crisis — BCR-ABL positive, not PML-RARA",
+    ],
+    treatment: [
+      "All-trans retinoic acid (ATRA) + arsenic trioxide — highly curative; start ATRA immediately on suspicion",
+      "Avoid early death from DIC — platelets, cryoprecipitate (fibrinogen), treat coagulopathy",
+      "Low-dose chemotherapy historically; modern ATRA + arsenic trioxide often curative without anthracyclines",
+      "Dexamethasone prophylaxis/treatment for differentiation syndrome",
+    ],
+    boardsPearls: [
+      "APL = young adult + DIC + promyelocytes + t(15;17) → start ATRA immediately",
+      "Most curable adult AML subtype with ATRA + arsenic trioxide",
+      "Do not delay ATRA for confirmatory genetics if APL suspected clinically",
+      "Differentiation syndrome — capillary leak, pulmonary edema during ATRA; treat with steroids",
+    ],
+    pediatrics:
+      "APL occurs in children and adolescents — same urgency for ATRA and DIC management; excellent cure rates with modern therapy.",
+  },
 ];
 
 const conditionById = new Map(CONDITIONS.map((c) => [c.id, c]));
