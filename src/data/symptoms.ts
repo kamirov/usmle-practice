@@ -1059,6 +1059,38 @@ export const SYMPTOMS: SymptomEntry[] = [
       "Borborygmi — very loud \"stomach growling\" without pathology",
     ],
   },
+  {
+    id: "erythema",
+    name: "Erythema",
+    aliases: ["erythema", "erythematous", "skin erythema"],
+    definition:
+      "Visible redness of the skin or mucosa caused by increased blood flow to dermal capillaries (active hyperemia); typically blanches with pressure unless severe or purpuric components are present.",
+    mechanism:
+      "Vasodilation from inflammation (histamine, prostaglandins, cytokines), infection, heat, UV injury, or neurogenic flushing; intensity reflects local perfusion and inflammatory activity.",
+    thinkOf: [
+      "Cellulitis / erysipelas (infection with warmth and tenderness)",
+      "Contact dermatitis, drug eruption, urticaria",
+      "Viral exanthem (measles, scarlet fever, slapped-cheek/fifth disease)",
+      "Systemic lupus erythematosus — malar (butterfly) rash",
+      "Lyme disease — erythema migrans (expanding annular lesion)",
+      "Sunburn, thermal or chemical burn",
+      "Anaphylaxis — diffuse flushing with urticaria",
+    ],
+    pairWith: [
+      "Warmth, tenderness, fever → cellulitis or erysipelas",
+      "Expanding bull's-eye after tick bite → erythema migrans (Lyme)",
+      "Target (iris) lesions → erythema multiforme",
+      "Tender subcutaneous nodules on shins → erythema nodosum (sarcoid, strep, IBD, OCPs)",
+      "Non-blanching purple lesions → purpura/petechiae, not simple erythema",
+      "Centrofacial flushing with telangiectasias → rosacea",
+    ],
+    distinguishFrom: [
+      "Purpura / petechiae — non-blanching hemorrhage into skin, not vasodilation alone",
+      "Pallor — reduced perfusion; opposite of erythema",
+      "Cyanosis — deoxygenated hemoglobin; bluish, not red",
+      "Jaundice — yellow bilirubin pigmentation, sclera involved",
+    ],
+  },
 ];
 
 const symptomById = new Map(SYMPTOMS.map((s) => [s.id, s]));

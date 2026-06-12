@@ -227,6 +227,39 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
       "Neonatal seizures may involve GABAergic immaturity; phenobarbital enhances GABA-A in neonatal epilepsy.",
   },
   {
+    id: "cytokine",
+    name: "Cytokine",
+    aliases: ["cytokine", "cytokines"],
+    type: "Cytokine",
+    source:
+      "Secreted by immune and stromal cells — macrophages, dendritic cells, T and B lymphocytes, endothelial cells, fibroblasts, mast cells",
+    receptor:
+      "Cytokine receptors (often JAK-STAT pathway); TNF-family receptors activate NF-κB; chemokine receptors (GPCRs) guide leukocyte migration",
+    function:
+      "Short-range or paracrine signaling proteins coordinating innate and adaptive immunity, inflammation, hematopoiesis, and tissue repair. Major families: interleukins (IL-), interferons (IFN-), tumor necrosis factor (TNF), and chemokines.",
+    clinicalRelevance: [
+      "Pro-inflammatory cytokines (IL-1, IL-6, TNF-α) drive fever, sepsis, and acute-phase response",
+      "Cytokine storm / cytokine release syndrome — excessive systemic cytokines (sepsis, CAR-T therapy, COVID-19, HLH)",
+      "Anti-TNF biologics (infliximab, adalimumab, etanercept) — RA, IBD, psoriasis",
+      "IL-1 blockade (anakinra) — autoinflammatory syndromes; IL-6 inhibitors (tocilizumab) — cytokine storm, RA",
+      "Corticosteroids broadly suppress cytokine gene transcription",
+    ],
+    boardsPearls: [
+      "Interleukins — between leukocytes; interferons — antiviral/immunomodulatory; TNF — inflammation and cachexia; chemokines — chemotaxis",
+      "Endogenous pyrogens: IL-1, IL-6, TNF-α → PGE₂ in hypothalamus → fever",
+      "Th1 cytokines: IFN-γ, IL-12 (intracellular pathogens); Th2: IL-4, IL-5, IL-13 (allergy, helminths)",
+      "JAK-STAT is the dominant cytokine signaling pathway — many biologics target cytokines or their receptors",
+      "vs chemokine — cytokine is broader; chemokines specifically direct leukocyte trafficking (e.g., IL-8/CXCL8)",
+    ],
+    distinguishFrom: [
+      "Hormone — typically endocrine, distant targets, classic glands (insulin, cortisol); overlap exists (e.g., IL-6 as hepatic acute-phase signal)",
+      "Growth factor — PDGF, EGF, VEGF; emphasize mitogenesis/repair; categories overlap (TGF-β is both)",
+      "Complement proteins — cascade opsonization/lysis, not cytokine signaling mediators",
+    ],
+    pediatrics:
+      "Hemophagocytic lymphohistiocytosis (HLH) — uncontrolled macrophage activation and cytokine storm in children; MIS-C post-COVID also cytokine-driven.",
+  },
+  {
     id: "il-2",
     name: "Interleukin-2 (IL-2)",
     aliases: [
@@ -257,6 +290,40 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
     ],
     pediatrics:
       "SCID from IL-2 receptor γ-chain defects (X-linked SCID); basiliximab used cautiously in pediatric transplant.",
+  },
+  {
+    id: "il-4",
+    name: "Interleukin-4 (IL-4)",
+    aliases: [
+      "interleukin-4",
+      "interleukin 4",
+      "il-4",
+      "il 4",
+    ],
+    type: "Cytokine",
+    source: "Th2 CD4⁺ T helper cells, mast cells, basophils, NKT cells",
+    receptor: "IL-4 receptor (type I and type II; signals via JAK-STAT6)",
+    function:
+      "Key Th2 cytokine driving B-cell class switching to IgE and IgG4, promoting B-cell proliferation, and suppressing Th1 (macrophage-activating) responses.",
+    clinicalRelevance: [
+      "Central to allergic/atopic disease — ↑ IL-4 → ↑ IgE → mast cell sensitization",
+      "Helminth defense — coordinates eosinophil and IgE-mediated parasite clearance",
+      "Dupilumab blocks IL-4 receptor α (shared with IL-13) — atopic dermatitis, asthma",
+      "Excess Th2/IL-4 skew in atopy; Th1/IFN-γ skew needed for intracellular pathogen control",
+    ],
+    boardsPearls: [
+      "IL-4 → class switch to IgE (allergy) and IgG4; IL-5 → eosinophils; IL-13 similar to IL-4",
+      "Th1 (IFN-γ) vs Th2 (IL-4, IL-5, IL-13) — classic boards paradigm",
+      "IL-4 inhibits macrophage activation — opposes IFN-γ from Th1 cells",
+      "Mast cells and basophils both produce IL-4, amplifying Th2 responses",
+    ],
+    distinguishFrom: [
+      "IL-2 — T-cell proliferation, not IgE class switching",
+      "IFN-γ — Th1 cytokine; activates macrophages for intracellular killing",
+      "IL-5 — eosinophil growth and activation, not primary IgE switch factor",
+    ],
+    pediatrics:
+      "Atopic march in children — eczema, food allergy, asthma linked to Th2/IL-4 skew; early allergen sensitization drives IgE production.",
   },
   {
     id: "pdgf",
@@ -318,6 +385,37 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
     ],
     pediatrics:
       "Neonatal myasthenia gravis from transplacental anti-AChR antibodies — hypotonia, poor feeding, respiratory weakness.",
+  },
+  {
+    id: "histamine",
+    name: "Histamine",
+    aliases: ["histamine"],
+    type: "Neurotransmitter",
+    source:
+      "Mast cells, basophils (immune degranulation); histaminergic neurons in hypothalamus; enterochromaffin-like cells in gastric mucosa",
+    receptor: "H1 (Gq — vasodilation, bronchoconstriction, pruritus); H2 (Gs — ↑ gastric acid); H3 (CNS presynaptic inhibition)",
+    function:
+      "Biogenic amine mediator of type I hypersensitivity, gastric acid secretion, vascular permeability, and CNS arousal; stored in mast cell/basophil granules and released upon IgE cross-linking.",
+    clinicalRelevance: [
+      "Anaphylaxis and allergic rhinitis — histamine causes vasodilation, edema, bronchospasm, urticaria",
+      "H1 antihistamines (diphenhydramine, cetirizine) — allergy, pruritus, motion sickness",
+      "H2 blockers (famotidine, ranitidine) — peptic ulcer disease, GERD",
+      "Carcinoid syndrome — flushing from histamine/serotonin release (H1/H2 blockers help flushing)",
+      "Vancomycin red man syndrome — histamine release from rapid infusion (not true IgE allergy)",
+    ],
+    boardsPearls: [
+      "Histamine from mast cell degranulation — type I hypersensitivity effector molecule",
+      "H1 → itch, bronchoconstriction, vasodilation; H2 → gastric parietal cell acid secretion",
+      "First-generation H1 blockers cross BBB → sedation; second-generation less sedating",
+      "Epinephrine treats anaphylaxis; antihistamines are adjunct only",
+    ],
+    distinguishFrom: [
+      "Leukotrienes — also from mast cells; slower, prolonged bronchoconstriction in asthma (late phase)",
+      "Serotonin — separate biogenic amine; carcinoid, mood, platelet aggregation",
+      "Prostaglandins — arachidonic acid derived; not stored in preformed granules like histamine",
+    ],
+    pediatrics:
+      "Food-induced anaphylaxis — histamine and other mediators from mast cell degranulation; epinephrine IM is first-line in children.",
   },
   {
     id: "nitric-oxide",

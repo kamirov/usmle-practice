@@ -790,6 +790,37 @@ export const PROTEINS: ProteinEntry[] = [
       "Cadherin — adherens junction/desmosome adhesion, not cytoplasmic channels",
     ],
   },
+  {
+    id: "calcineurin",
+    name: "Calcineurin",
+    aliases: [
+      "calcineurin",
+      "protein phosphatase 2b",
+      "pp2b",
+      "protein phosphatase 3",
+    ],
+    gene: "PPP3CA / PPP3CB (catalytic subunit); PPP3R1 (regulatory subunit)",
+    location:
+      "Cytosol of T lymphocytes, neurons, cardiac myocytes, and other Ca²⁺-responsive cells",
+    function:
+      "Ca²⁺/calmodulin-dependent serine/threonine phosphatase; when intracellular Ca²⁺ rises after T-cell receptor activation, calcineurin dephosphorylates NFAT → NFAT enters nucleus → transcription of IL-2 and other activation genes → T-cell proliferation.",
+    mutationCauses: [
+      "Pharmacologic inhibition (tacrolimus, cyclosporine) → ↓ IL-2 → immunosuppression (transplant rejection prophylaxis)",
+      "Chronic calcineurin-NFAT signaling implicated in pathologic cardiac hypertrophy",
+      "Topical calcineurin inhibitor use (tacrolimus, pimecrolimus) — local immunomodulation in atopic dermatitis",
+    ],
+    boardsPearls: [
+      "TCR signal → PLCγ → IP3 → ↑ cytosolic Ca²⁺ → calmodulin → calcineurin → dephosphorylate NFAT → IL-2 gene transcription",
+      "Tacrolimus + FKBP-12 and cyclosporine + cyclophilin both inhibit calcineurin — different binding proteins, same target enzyme",
+      "Calcineurin inhibitors block T-cell activation early (signal 1 downstream), not antibody production directly",
+      "vs sirolimus (rapamycin) — inhibits mTOR, not calcineurin",
+    ],
+    distinguishFrom: [
+      "Tacrolimus / cyclosporine — drugs that inhibit calcineurin, not the enzyme itself",
+      "NFAT — transcription factor substrate of calcineurin; calcineurin is the phosphatase",
+      "mTOR — target of sirolimus; downstream of IL-2 receptor, not Ca²⁺/calmodulin pathway",
+    ],
+  },
 ];
 
 const proteinById = new Map(PROTEINS.map((p) => [p.id, p]));

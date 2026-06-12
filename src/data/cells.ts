@@ -128,6 +128,41 @@ export const CELLS: CellEntry[] = [
       "CML rare in children but juvenile myelomonocytic leukemia and other myeloproliferative disorders can show leukocytosis with immature forms.",
   },
   {
+    id: "mast-cell",
+    name: "Mast Cell",
+    aliases: [
+      "mast cell",
+      "mast cells",
+    ],
+    definition:
+      "Tissue-resident granulated immune cell of myeloid lineage found in skin, mucosa, and perivascular spaces; central effector of type I hypersensitivity and innate defense against helminths via IgE-mediated degranulation.",
+    characteristics: [
+      "High-affinity IgE receptor (FcεRI) on surface — cross-linking by allergen triggers degranulation",
+      "Granules contain histamine, heparin, tryptase, chymase, and generate leukotrienes (LTC4, LTD4)",
+      "Circulating counterpart is the basophil; mast cells are fixed in tissues",
+      "Also activated by complement (C3a, C5a), neuropeptides, and direct tissue injury",
+    ],
+    clinicalRelevance: [
+      "Type I hypersensitivity — anaphylaxis, urticaria, allergic rhinitis, asthma (early phase)",
+      "Systemic mastocytosis — KIT (c-KIT) mutations → ↑ mast cells, flushing, anaphylaxis, ↑ tryptase",
+      "Mast cell stabilizers (cromolyn) prevent degranulation in asthma/allergy",
+      "Antihistamines (H1 blockers) counter histamine effects after degranulation",
+    ],
+    boardsPearls: [
+      "Mast cell degranulation: allergen cross-links IgE on FcεRI → histamine + leukotrienes",
+      "Mast cell (tissue) vs basophil (blood) — both IgE-mediated type I hypersensitivity",
+      "↑ serum tryptase suggests mast cell activation (anaphylaxis, mastocytosis)",
+      "Epinephrine first-line in anaphylaxis — not antihistamines alone",
+    ],
+    distinguishFrom: [
+      "Basophil — circulating granulocyte with similar granules; CML basophilia",
+      "Eosinophil — parasites and allergy; major basic protein, not histamine-rich degranulation",
+      "Macrophage — phagocyte; no IgE-mediated histamine release",
+    ],
+    pediatrics:
+      "Food allergy anaphylaxis common in children — mast cell/IgE mediated; epinephrine auto-injector and action plan essential.",
+  },
+  {
     id: "lymphocyte",
     name: "Lymphocyte",
     aliases: [
@@ -237,6 +272,133 @@ export const CELLS: CellEntry[] = [
     ],
     pediatrics:
       "HIV-infected children: CD4 percentage often used alongside absolute count because total lymphocyte numbers differ by age.",
+  },
+  {
+    id: "t-lymphocyte",
+    name: "T Lymphocyte",
+    aliases: [
+      "t-lymphocyte",
+      "t lymphocyte",
+      "t lymphocytes",
+      "t cell",
+      "t cells",
+      "t-lymphocytes",
+    ],
+    definition:
+      "Adaptive immune lymphocyte that mediates cell-mediated immunity via T-cell receptor (TCR) recognition of peptide–MHC complexes; includes CD4⁺ helper and CD8⁺ cytotoxic subsets.",
+    characteristics: [
+      "Surface markers: CD3 (pan-T), TCR (αβ or γδ), plus CD4 or CD8 co-receptor",
+      "CD4⁺ — MHC class II (APC-presented antigen); helper subsets Th1, Th2, Th17, Tfh, Treg",
+      "CD8⁺ — MHC class I (all nucleated cells); kills virus-infected and tumor cells via perforin/granzyme",
+      "Develop in thymus — positive selection (MHC restriction) and negative selection (eliminate self-reactive clones)",
+    ],
+    clinicalRelevance: [
+      "HIV destroys CD4⁺ T cells → immunodeficiency (AIDS)",
+      "DiGeorge syndrome — thymic aplasia → ↓ T cells, normal B cells (T-cell immunodeficiency)",
+      "SCID — severe combined immunodeficiency when T and B cell development impaired",
+      "GVHD and transplant rejection — donor T cells attack host MHC",
+      "Type IV hypersensitivity — delayed T-cell–mediated inflammation (TB skin test, contact dermatitis)",
+    ],
+    boardsPearls: [
+      "T cells = cell-mediated immunity; B cells = humoral (antibody)",
+      "CD4 + MHC II; CD8 + MHC I — co-receptor restriction is boards essential",
+      "Cannot recognize native antigen without MHC presentation (unlike B-cell receptor)",
+      "Atypical lymphocytes in EBV = reactive CD8⁺ T cells attacking infected B cells",
+    ],
+    distinguishFrom: [
+      "B lymphocyte — surface immunoglobulin, antibody production, CD19/CD20",
+      "NK cell — innate; kills without prior sensitization; CD16/CD56, no TCR/CD3",
+      "CD4+ T lymphocyte — subset of T cells; helper/coordinator role specifically",
+    ],
+    pediatrics:
+      "DiGeorge: conotruncal heart defects, hypocalcemia, absent thymic shadow, recurrent viral/fungal infections from T-cell deficiency.",
+  },
+  {
+    id: "t-cell-signaling",
+    name: "T-Cell Signaling",
+    aliases: [
+      "t-cell signaling",
+      "t cell signaling",
+      "t-cell activation",
+      "t cell activation",
+      "tcr signaling",
+      "t-cell activation signaling",
+    ],
+    definition:
+      "Two-signal process required for full T-lymphocyte activation: Signal 1 (TCR recognition of peptide–MHC) plus Signal 2 (CD28 co-stimulation by B7 on APC), leading to IL-2 production, clonal expansion, and effector differentiation.",
+    characteristics: [
+      "Signal 1: TCR–CD3 complex binds peptide–MHC (CD4⁺ + MHC II on APC; CD8⁺ + MHC I on any nucleated cell)",
+      "Signal 2: CD28 on T cell binds B7 (CD80/CD86) on APC — required to avoid anergy; CTLA-4 later binds B7 with higher affinity → inhibition",
+      "TCR ligation → PLCγ → IP3 (Ca²⁺ release) + DAG → calcineurin activates NFAT → IL-2 gene transcription",
+      "IL-2 autocrine loop via high-affinity IL-2 receptor → clonal T-cell proliferation",
+      "Cytokine milieu drives differentiation: IL-12/IFN-γ → Th1; IL-4 → Th2; TGF-β + IL-6 → Th17; TGF-β → Treg",
+    ],
+    clinicalRelevance: [
+      "Calcineurin inhibitors (tacrolimus, cyclosporine) block Signal 1 downstream → ↓ IL-2 → immunosuppression in transplant",
+      "Sirolimus inhibits mTOR downstream of IL-2 receptor — synergistic with calcineurin inhibitors",
+      "Immune checkpoint inhibitors — ipilimumab (anti–CTLA-4), pembrolizumab/nivolumab (anti–PD-1) release T-cell brakes in cancer",
+      "Superantigens (S. aureus TSST-1, enterotoxins) cross-link TCR and MHC II outside peptide groove → massive cytokine release (toxic shock)",
+      "Anergy when Signal 1 without Signal 2 — peripheral tolerance mechanism",
+    ],
+    boardsPearls: [
+      "Two-signal model: TCR (Signal 1) + CD28/B7 (Signal 2) = full activation; missing Signal 2 → anergy",
+      "Calcineurin → NFAT → IL-2 is the key pharmacology pathway for transplant drugs",
+      "CD4 + MHC II; CD8 + MHC I — co-receptor strengthens TCR binding to correct MHC class",
+      "CTLA-4 and PD-1 are inhibitory checkpoints — blockade unleashes anti-tumor T-cell responses",
+      "Superantigen = polyclonal T-cell activation without specific peptide in MHC groove",
+    ],
+    distinguishFrom: [
+      "B-cell activation — BCR binds native antigen; requires CD40–CD40L (T-cell help) for class switching, not TCR/MHC",
+      "NK cell killing — no TCR, no MHC restriction; KIR recognition",
+      "Type I hypersensitivity — IgE/mast cell, immediate; not T-cell receptor signaling",
+      "Calcineurin — single enzyme in the pathway; T-cell signaling is the full activation cascade",
+    ],
+    pediatrics:
+      "X-linked SCID (IL-2 receptor γ-chain defect) abolishes IL-2/IL-4/IL-7/IL-15 signaling → no T-cell development; bubble boy phenotype.",
+  },
+  {
+    id: "th2",
+    name: "Th2",
+    aliases: [
+      "th2",
+      "th 2",
+      "th2 cell",
+      "th2 cells",
+      "t helper 2",
+      "t-helper 2",
+      "t helper 2 cell",
+      "t helper 2 cells",
+      "type 2 helper t cell",
+    ],
+    definition:
+      "CD4⁺ T-helper subset differentiated under IL-4 signaling (STAT6, GATA3) that coordinates humoral and allergic immunity by secreting IL-4, IL-5, and IL-13.",
+    characteristics: [
+      "Differentiation driven by IL-4 from naïve CD4⁺ cells or innate sources (mast cells, basophils); inhibited by IFN-γ/Th1 skew",
+      "IL-4 — B-cell class switching to IgE and IgG4; promotes B-cell proliferation",
+      "IL-5 — eosinophil growth, recruitment, and activation (helminths, allergy)",
+      "IL-13 — ↑ mucus production, airway hyperreactivity, subepithelial fibrosis (similar overlap with IL-4)",
+      "Transcription factor GATA3 is the master regulator of Th2 lineage commitment",
+    ],
+    clinicalRelevance: [
+      "Atopic diseases — asthma, allergic rhinitis, atopic dermatitis (Th2/IgE/eosinophil axis)",
+      "Helminth and parasite defense — IgE and eosinophil-mediated killing",
+      "Dupilumab (anti–IL-4Rα) and other biologics target downstream Th2 cytokine signaling",
+      "Excessive Th2 skew in atopy; balanced Th1 responses needed for intracellular pathogens (M. tuberculosis, viruses)",
+    ],
+    boardsPearls: [
+      "Th2 cytokines: IL-4, IL-5, IL-13 — memorize as a triad",
+      "Th1 (IFN-γ, IL-12) vs Th2 (IL-4, IL-5, IL-13) — classic USMLE paradigm",
+      "IL-4 from Th2 → IgE → mast cell sensitization → type I hypersensitivity",
+      "GATA3 drives Th2; T-bet drives Th1 — transcription factor boards favorite",
+    ],
+    distinguishFrom: [
+      "Th1 — IFN-γ production; activates macrophages for intracellular bacteria and viruses",
+      "Th17 — IL-17; neutrophil recruitment; fungal defense and autoimmunity",
+      "Treg — FoxP3⁺; suppresses immune responses; maintains tolerance",
+      "CD4+ T lymphocyte — parent category; Th2 is one effector subset",
+    ],
+    pediatrics:
+      "Atopic march — infant eczema (Th2-skewed) often precedes food allergy and childhood asthma; early Th2 sensitization is a key pediatric immunology concept.",
   },
   {
     id: "b-lymphocyte",
@@ -726,6 +888,204 @@ export const CELLS: CellEntry[] = [
     ],
     pediatrics:
       "Preterm labor — immature myometrium can be suppressed with tocolytics while giving steroids for fetal lung maturity; same oxytocin/prostaglandin axis as term labor.",
+  },
+  {
+    id: "actin",
+    name: "Actin",
+    aliases: [
+      "actin",
+      "actin filament",
+      "actin filaments",
+      "microfilament",
+      "microfilaments",
+      "f-actin",
+      "g-actin",
+    ],
+    definition:
+      "Globular (G-actin) monomers polymerize into filamentous (F-actin) microfilaments — the thinnest cytoskeletal element (~7 nm), providing structural support, cell motility, and contractile force when coupled with myosin.",
+    characteristics: [
+      "Polar filaments with barbed (+) and pointed (−) ends; Arp2/3 nucleates branching (lamellipodia)",
+      "Anchored at adherens junctions (E-cadherin → catenins → actin belt) and focal adhesions (integrin → actin)",
+      "Thin filaments in muscle sarcomeres — interact with myosin for contraction",
+      "Cortical actin underlies plasma membrane; drives phagocytosis, cytokinesis, and cell crawling",
+    ],
+    clinicalRelevance: [
+      "Listeria monocytogenes ActA protein hijacks host actin → rocket motility and cell-to-cell spread",
+      "Cytochalasin D — disrupts actin polymerization (lab tool; impairs phagocytosis)",
+      "Latrunculin — sequesters G-actin → filament disassembly",
+      "Inherited actin or sarcomeric mutations — cardiomyopathy and myopathy (less common boards focus)",
+    ],
+    boardsPearls: [
+      "Actin = microfilaments; anchors adherens junctions and focal adhesions (not desmosomes)",
+      "Desmosomes → intermediate filaments; adherens junctions → actin — classic pairing",
+      "Listeria ActA → actin comet tails for intracellular motility",
+      "Muscle: actin thin filaments + myosin thick filaments in sarcomere",
+    ],
+    distinguishFrom: [
+      "Intermediate filaments — keratin at desmosomes; 10 nm, no polarity, no motor coupling",
+      "Microtubules — tubulin, 25 nm; mitotic spindle, cilia, axonal transport",
+      "Myosin — motor protein that moves along actin, not a filament itself",
+    ],
+    pediatrics:
+      "Primary ciliary dyskinesia affects microtubules (dynein), not actin — Kartagener triad is a common boards distractor from actin pathology.",
+  },
+  {
+    id: "intermediate-filament",
+    name: "Intermediate Filament",
+    aliases: [
+      "intermediate filament",
+      "intermediate filaments",
+      "keratin filament",
+      "keratin filaments",
+      "desmin",
+      "vimentin",
+    ],
+    definition:
+      "Rope-like cytoskeletal filaments (~10 nm diameter) providing tensile strength; tissue-specific proteins polymerize into non-polar, stable networks anchored at desmosomes and hemidesmosomes.",
+    characteristics: [
+      "Keratin — epithelial cells (stratum spinosum desmosomes)",
+      "Desmin — skeletal and cardiac muscle (Z-disc linkage)",
+      "Vimentin — mesenchymal cells (fibroblasts, endothelium)",
+      "Neurofilaments — neurons; lamins — nuclear lamina (nuclear envelope support)",
+      "No polarity, no associated motor proteins — mechanical stress absorption",
+    ],
+    clinicalRelevance: [
+      "Pemphigus vulgaris — anti-desmoglein antibodies → loss of keratin-anchored desmosomes → acantholysis",
+      "Mallory bodies — keratin intermediate filament aggregates in alcoholic hepatitis",
+      "Laminopathies — LMNA mutations → Hutchinson-Gilford progeria, muscular dystrophy",
+      "Desmin-related myopathy — desmin IF accumulation → skeletal/cardiac muscle weakness",
+    ],
+    boardsPearls: [
+      "Intermediate filaments at desmosomes (cell–cell) and hemidesmosomes (cell–BM)",
+      "Keratin = epithelial IF; vimentin = mesenchymal; desmin = muscle — tissue-specific boards pattern",
+      "vs actin (adherens junction) vs microtubules (cilia/spindle) — three cytoskeletal systems",
+      "Mallory bodies = keratin aggregates in liver (alcoholic liver disease)",
+    ],
+    distinguishFrom: [
+      "Actin microfilaments — adherens junctions, muscle thin filaments, motility",
+      "Microtubules — tubulin; cilia, flagella, mitotic spindle",
+      "Collagen — extracellular matrix protein, not intracellular cytoskeleton",
+    ],
+    pediatrics:
+      "Epidermolysis bullosa simplex — keratin mutations → intraepidermal blistering with minimal trauma in infants.",
+  },
+  {
+    id: "microtubule",
+    name: "Microtubule",
+    aliases: [
+      "microtubule",
+      "microtubules",
+      "tubulin",
+      "tubulin filament",
+    ],
+    definition:
+      "Hollow cylindrical polymers of α/β-tubulin dimers (~25 nm) — the largest cytoskeletal filaments; dynamic instability drives mitosis, intracellular transport, and ciliary/flagellar motility.",
+    characteristics: [
+      "Polar structure: fast-growing (+) end, slow-growing (−) end; γ-tubulin nucleates at MTOC/centrosome",
+      "Mitotic spindle — chromosomes align and segregate at metaphase/anaphase",
+      "Axonal transport — kinesin (anterograde toward + end) and dynein (retrograde toward − end)",
+      "Cilia/flagella — 9+2 microtubule arrangement; dynein arms drive bending (ATP-dependent)",
+    ],
+    clinicalRelevance: [
+      "Taxol (paclitaxel) — stabilizes microtubules → arrests mitosis (chemotherapy)",
+      "Vincristine/vinblastine, colchicine — destabilize/depolymerize microtubules → M-phase arrest or gout (colchicine)",
+      "Primary ciliary dyskinesia — dynein arm defect → immotile cilia, Kartagener syndrome (situs inversus, bronchiectasis, infertility)",
+      "Alzheimer — tau stabilizes microtubules; hyperphosphorylated tau detaches → neurofibrillary tangles",
+    ],
+    boardsPearls: [
+      "Microtubules = tubulin; actin = microfilaments; keratin/desmin = intermediate filaments",
+      "Cilia 9+2 axoneme — microtubules + dynein, NOT actin",
+      "Paclitaxel stabilizes; vincristine/colchicine destabilize — opposite mechanisms",
+      "Kartagener: primary ciliary dyskinesia → situs inversus + chronic sinusitis + bronchiectasis",
+    ],
+    distinguishFrom: [
+      "Actin — microfilaments for junctions and muscle thin filaments, not cilia/spindle",
+      "Intermediate filaments — structural anchoring at desmosomes, no dynamic instability",
+      "Myosin — motor on actin filaments; dynein/kinesin are microtubule motors",
+    ],
+    pediatrics:
+      "Kartagener syndrome often diagnosed in childhood with recurrent sinusitis and laterality defects; immotile sperm in males.",
+  },
+  {
+    id: "a-delta-fiber",
+    name: "A-delta fiber",
+    aliases: [
+      "a-delta fiber",
+      "a-delta fibers",
+      "a delta fiber",
+      "a delta fibers",
+      "adelta fiber",
+      "adelta fibers",
+      "aδ fiber",
+      "aδ fibers",
+      "a-delta nociceptor",
+      "a-delta nociceptors",
+    ],
+    definition:
+      "Thinly myelinated peripheral nerve fibers (Aδ group) that conduct nociceptive and thermoreceptive signals rapidly; mediate sharp, well-localized \"first pain\" (pricking, stinging).",
+    characteristics: [
+      "Conduction velocity ~5–30 m/s — faster than unmyelinated C fibers, slower than Aβ fibers",
+      "Aβ (large, myelinated) — touch, pressure, proprioception; Aδ — fast pain, cold; C — slow pain, warmth, itch",
+      "Free nerve endings in skin, viscera, and other tissues; activated by mechanical, thermal, and chemical nociceptors",
+      "Synapse in dorsal horn (laminae I and V) → spinothalamic tract to thalamus and cortex",
+    ],
+    clinicalRelevance: [
+      "Acute injury — Aδ-mediated sharp pain arrives before C-fiber dull burning pain (double pain response)",
+      "Local anesthetics block voltage-gated Na⁺ channels — smaller fibers (Aδ, C) blocked at lower concentrations than Aβ in some contexts",
+      "Herpes zoster — reactivation in dorsal root ganglion → dermatomal sharp pain before rash",
+      "Diabetic neuropathy — can affect both Aδ and C fibers → ↓ pain sensation, foot ulcers",
+    ],
+    boardsPearls: [
+      "Aδ = fast/sharp pain (myelinated); C = slow/dull/burning pain (unmyelinated)",
+      "Aβ = touch/proprioception; Aδ = fast pain; C = slow pain — classic fiber triad",
+      "Spinothalamic tract carries pain and temperature (Aδ and C) — not proprioception (dorsal columns)",
+      "Double pain: sharp first (Aδ), then dull (C) after seconds",
+    ],
+    distinguishFrom: [
+      "C fibers — unmyelinated, slow conduction (~0.5–2 m/s), dull aching/burning second pain",
+      "Aβ fibers — large myelinated; touch, vibration, proprioception; dorsal column pathway",
+      "B fibers — preganglionic autonomic; myelinated, ~3–15 m/s",
+    ],
+    pediatrics:
+      "Neonates and infants have functional nociceptive pathways (Aδ/C) — procedural pain requires analgesia; myth that infants do not feel pain is false.",
+  },
+  {
+    id: "golgi-tendon-organ",
+    name: "Golgi tendon organ",
+    aliases: [
+      "golgi tendon organ",
+      "golgi tendon organs",
+      "gto",
+      "golgi tendon organ (gto)",
+      "tendon organ of golgi",
+    ],
+    definition:
+      "Proprioceptive mechanoreceptor in series with muscle fibers at the muscle–tendon junction; detects increased muscle tension (force) and mediates the inverse stretch reflex to prevent excessive contraction.",
+    characteristics: [
+      "Encapsulated endings innervated by type Ib afferent fibers (Aα)",
+      "In series with extrafusal muscle fibers — activated when tendon/muscle generates tension, not when muscle is passively lengthened alone",
+      "Activated during active contraction and stretch under load",
+      "Synapse on inhibitory interneurons in spinal cord → ↓ α-motor neuron output to same muscle (autogenic inhibition)",
+    ],
+    clinicalRelevance: [
+      "Protects muscle and tendon from rupture during forceful contraction — dampens motor output when tension is excessive",
+      "Works with muscle spindles for coordinated movement and posture",
+      "Clonus and hyperreflexia (UMN lesion) — exaggerated stretch reflex circuitry; GTO inhibition normally modulates reflex gain",
+      "Relevant to resistance training physiology and tendon injury mechanics (boards context)",
+    ],
+    boardsPearls: [
+      "GTO detects TENSION; muscle spindle detects LENGTH/change in length",
+      "GTO → type Ib afferent → inhibitory interneuron → ↓ same muscle (inverse stretch reflex)",
+      "Muscle spindle → type Ia/II → excitatory stretch reflex (DTR)",
+      "GTO in series; muscle spindle parallel to extrafusal fibers",
+    ],
+    distinguishFrom: [
+      "Muscle spindle — detects stretch/length change; Ia afferent; excites same muscle (stretch reflex)",
+      "Pacinian corpuscle — rapid vibration/pressure in skin, not tendon tension",
+      "Meissner corpuscle — light touch, low-frequency vibration in glabrous skin",
+    ],
+    pediatrics:
+      "Infant reflexes (Moro, grasp) involve CNS reflex arcs; GTO-mediated autogenic inhibition develops with mature motor control during childhood.",
   },
 ];
 

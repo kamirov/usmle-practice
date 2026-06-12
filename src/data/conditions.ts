@@ -2507,6 +2507,137 @@ export const CONDITIONS: ConditionEntry[] = [
       "Allergic rhinitis common in school-age children; intranasal steroids safe at appropriate doses. Rule out adenoidal hypertrophy and foreign body in unilateral foul rhinorrhea.",
   },
   {
+    id: "atopic-dermatitis",
+    name: "Atopic Dermatitis",
+    aliases: [
+      "atopic dermatitis",
+      "eczema",
+      "atopic eczema",
+      "infantile eczema",
+      "childhood eczema",
+      "endogenous eczema",
+    ],
+    definition:
+      "Chronic, relapsing inflammatory skin disease characterized by pruritus and eczematous lesions; the most common form of eczema and a core component of the atopic triad (with asthma and allergic rhinitis).",
+    pathophysiology:
+      "Skin barrier defect (filaggrin mutations common) → ↑ transepidermal water loss and allergen penetration; Th2-skewed immune response (IL-4, IL-13) → IgE sensitization, inflammation, and pruritus. S. aureus colonization often exacerbates disease.",
+    classicPresentation: [
+      "Intense pruritus — \"eczema is the itch that rashes\"",
+      "Infants: erythematous papules/plaques on cheeks and extensor surfaces",
+      "Children/adults: flexural distribution (antecubital and popliteal fossae, neck)",
+      "Xerosis (dry skin), lichenification from chronic scratching",
+      "Personal or family history of atopy (asthma, allergic rhinitis, food allergy)",
+    ],
+    keyFindings: [
+      "Erythematous, scaly, excoriated plaques",
+      "Dennie-Morgan infraorbital folds, periorbital darkening",
+      "Keratosis pilaris, palmar hyperlinearity",
+      "Secondary crusting/honey-colored lesions → impetiginization (S. aureus)",
+    ],
+    associations: [
+      "Atopic triad: eczema, asthma, allergic rhinitis (\"atopic march\")",
+      "Food allergy (egg, milk, peanut) especially in young children",
+      "Filaggrin gene (FLG) mutations — barrier defect",
+    ],
+    complications: [
+      "Secondary bacterial infection (impetigo, cellulitis — S. aureus)",
+      "Eczema herpeticum — HSV superinfection with monomorphic punched-out erosions, fever; dermatologic emergency",
+      "Sleep disturbance, psychosocial impact",
+    ],
+    distinguishFrom: [
+      "Contact dermatitis — localized to allergen/irritant exposure site; patch testing",
+      "Seborrheic dermatitis — greasy yellow scales on scalp, nasolabial folds, diaper area in infants",
+      "Scabies — burrows, nocturnal itch, web spaces and wrists",
+      "Psoriasis — well-demarcated silvery plaques, extensor surfaces, nail pitting",
+      "Tinea — annular, central clearing; KOH positive",
+      "Nummular eczema — coin-shaped lesions; may overlap with atopic dermatitis",
+    ],
+    treatment: [
+      "Emollients/moisturizers — cornerstone of maintenance; restore skin barrier",
+      "Topical corticosteroids — flares; use appropriate potency for site and age",
+      "Topical calcineurin inhibitors (tacrolimus, pimecrolimus) — face/folds, steroid-sparing",
+      "Dupilumab (anti–IL-4Rα) — moderate-to-severe disease refractory to topicals",
+      "Trigger avoidance; treat secondary infection; oral antihistamines for sleep-disturbing pruritus",
+    ],
+    boardsPearls: [
+      "Atopic dermatitis = most common eczema; terms often used interchangeably on boards",
+      "Atopic march: eczema in infancy → food allergy → asthma/rhinitis later",
+      "Filaggrin mutation → impaired skin barrier — high-yield genetics link",
+      "Eczema herpeticum — punched-out vesicles/erosions in atopic patient with fever → IV acyclovir",
+      "S. aureus colonization common; crusted weeping lesions may need antibiotics",
+    ],
+    pediatrics:
+      "Most common in infancy and childhood; 60% present in first year. Many outgrow by adolescence. Food allergy testing only if consistent history — elimination diet under guidance. Topical steroid potency must be age- and site-appropriate (lower potency on face/diaper area).",
+  },
+  {
+    id: "mastocytosis",
+    name: "Mastocytosis",
+    aliases: [
+      "mastocytosis",
+      "systemic mastocytosis",
+      "cutaneous mastocytosis",
+      "mast cell disease",
+      "urticaria pigmentosa",
+    ],
+    definition:
+      "Clonal neoplastic proliferation and accumulation of mast cells in skin, bone marrow, and other organs; ranges from indolent cutaneous disease to aggressive systemic mastocytosis with organ dysfunction.",
+    pathophysiology:
+      "Activating KIT (c-KIT/CD117) mutations — classically D816V — drive autonomous mast cell growth and spontaneous mediator release (histamine, tryptase, prostaglandins, leukotrienes) without allergen cross-linking.",
+    classicPresentation: [
+      "Episodic flushing, pruritus, hypotension, syncope",
+      "Urticaria pigmentosa — tan-brown macules/plaques that urticate when rubbed (Darier sign)",
+      "Abdominal cramping, diarrhea, nausea (GI mast cell infiltration and mediators)",
+      "Anaphylactoid reactions to triggers: Hymenoptera stings, NSAIDs, alcohol, opiates, stress",
+      "Bone pain, fractures from mast cell mediator–induced osteoporosis",
+    ],
+    keyFindings: [
+      "Darier sign — localized urtication and wheal after stroking a lesion",
+      "Urticaria pigmentosa on skin examination",
+      "Hepatosplenomegaly in advanced systemic disease",
+    ],
+    keyLabs: [
+      "↑ Serum tryptase (baseline >20 ng/mL supports systemic mastocytosis)",
+      "Bone marrow biopsy — multifocal mast cell aggregates, spindle-shaped mast cells",
+      "Flow cytometry: mast cells CD117⁺ with aberrant CD25 (IL-2Rα) expression",
+      "KIT D816V mutation testing (peripheral blood or marrow)",
+    ],
+    associations: [
+      "KIT (c-KIT) tyrosine kinase receptor mutations — D816V most common in adults",
+      "Atopy may coexist but mastocytosis is a clonal disorder, not simple allergy",
+    ],
+    complications: [
+      "Anaphylaxis / anaphylactoid episodes",
+      "Mast cell leukemia (aggressive variant — rare)",
+      "Peptic ulcer disease and GI bleeding (histamine-driven acid secretion)",
+      "Osteoporosis and pathologic fractures",
+      "Portal hypertension and ascites (advanced hepatic mast cell infiltration)",
+    ],
+    distinguishFrom: [
+      "Allergic urticaria/anaphylaxis — episodic, normal baseline tryptase, no urticaria pigmentosa",
+      "Carcinoid syndrome — flushing + diarrhea; ↑ 5-HIAA, not tryptase",
+      "Pheochromocytoma — paroxysmal HTN, ↑ catecholamines/metanephrines",
+      "Hyper-IgE syndrome (Job) — eczema, recurrent staph abscesses, ↑ IgE, retained primary teeth",
+      "Basophilia in CML — myeloproliferative disease, not mast cell neoplasm",
+    ],
+    treatment: [
+      "H1 and H2 antihistamines for pruritus, flushing, and gastric acid",
+      "Epinephrine auto-injector for anaphylactoid episodes; avoid known triggers",
+      "Cromolyn sodium for GI symptoms",
+      "Topical corticosteroids for limited cutaneous lesions",
+      "Midostaurin or avapritinib for advanced systemic mastocytosis; imatinib ineffective for D816V mutation",
+      "Bisphosphonates for osteoporosis",
+    ],
+    boardsPearls: [
+      "Darier sign + urticaria pigmentosa → think mastocytosis",
+      "↑ baseline tryptase distinguishes mastocytosis from isolated allergic anaphylaxis",
+      "KIT D816V — imatinib does NOT work; newer KIT inhibitors (midostaurin, avapritinib) for advanced disease",
+      "Mast cell mediators explain GI symptoms, flushing, and osteoporosis without allergen exposure",
+      "Hymenoptera venom anaphylaxis in adult with no prior atopy → screen for mastocytosis",
+    ],
+    pediatrics:
+      "Cutaneous mastocytosis (urticaria pigmentosa) often presents in infancy — may be limited to skin and spontaneously improve by adolescence. Systemic involvement less common in children but evaluate if persistent symptoms or ↑ tryptase.",
+  },
+  {
     id: "otitis-media",
     name: "Otitis Media",
     aliases: [
