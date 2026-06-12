@@ -1,3 +1,11 @@
 ragged-red-fibers-gomori.jpg
 https://commons.wikimedia.org/wiki/File:Ragged_red_fibres_-_gtc_-_very_high_mag.jpg
 Nephron, CC BY-SA 3.0
+
+uterine-fibroids.png
+https://commons.wikimedia.org/wiki/File:Uterine_fibroids.png
+Mysid (vectorized from CDC public domain image)
+
+molar-pregnancy-ultrasound.jpg
+https://commons.wikimedia.org/wiki/File:Molar_pregnancy.jpg
+Mikael Häggström, CC0 (public domain)

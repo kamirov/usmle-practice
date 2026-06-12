@@ -2306,6 +2306,81 @@ export const MICROBIOLOGY: MicrobiologyEntry[] = [
       "Routine DTaP vaccination; unvaccinated immigrant children at risk; antitoxin and antibiotics in suspected cases; cutaneous diphtheria in tropics.",
   },
   {
+    id: "bartonella-henselae",
+    name: "Bartonella henselae",
+    aliases: [
+      "bartonella henselae",
+      "b. henselae",
+      "bartonella",
+      "rochalimaea henselae",
+    ],
+    type: "gram-negative-rod",
+    definition:
+      "Fastidious facultative intracellular Gram-negative bacillus transmitted by cat scratches or bites (especially kittens) — causes cat-scratch disease; in immunocompromised hosts also causes bacillary angiomatosis and bacillary peliosis.",
+    morphology: [
+      "Small pleomorphic Gram-negative rod — often not seen on routine Gram stain",
+      "Warthin-Starry silver stain highlights organisms in tissue",
+      "Slow-growing, fastidious; culture requires prolonged incubation (≥21 days)",
+      "Facultative intracellular growth in endothelial cells and macrophages",
+    ],
+    virulenceFactors: [
+      "Transmission via cat scratch contaminated with flea feces (Ctenocephalides felis)",
+      "Endothelial cell infection → granulomatous lymphadenitis in immunocompetent hosts",
+      "Angioproliferation in AIDS → bacillary angiomatosis (vascular papules/nodules)",
+      "Hepatic/splenic vascular cystic lesions — bacillary peliosis in immunocompromise",
+      "Can cause culture-negative endocarditis (especially prosthetic valves)",
+    ],
+    transmission: [
+      "Scratch or bite from domestic/feral cat, particularly kitten",
+      "Flea feces on claws/inoculation site — not direct flea bite to human",
+      "No person-to-person transmission",
+    ],
+    diseases: [
+      "Cat-scratch disease — regional lymphadenitis",
+      "Bacillary angiomatosis (HIV/AIDS)",
+      "Bacillary peliosis hepatis/splenis",
+      "Bartonella endocarditis",
+      "Parinaud oculoglandular syndrome (conjunctival inoculation)",
+    ],
+    classicPresentation: [
+      "Child/adolescent with kitten exposure → small papule at scratch site",
+      "1–3 weeks later: painful regional lymphadenopathy (axillary, cervical, preauricular)",
+      "Low-grade fever, malaise; usually self-limited in healthy hosts",
+      "AIDS: vascular red/purple skin lesions (bacillary angiomatosis) mimicking Kaposi sarcoma",
+    ],
+    diagnosis: [
+      "Cat-scratch disease — often clinical (cat exposure + regional nodes)",
+      "Serology (IFA) for B. henselae antibodies",
+      "PCR or biopsy of lymph node — Warthin-Starry stain shows bacilli",
+      "Culture slow and low yield unless lab alerted",
+      "Bacillary angiomatosis — biopsy with Warthin-Starry; PCR",
+    ],
+    treatment: [
+      "Immunocompetent cat-scratch disease — often self-limited; azithromycin may shorten lymph node duration",
+      "Severe/atypical or immunocompromised: azithromycin, doxycycline, rifampin, or gentamicin (endocarditis regimens)",
+      "Bacillary angiomatosis/peliosis in AIDS — erythromycin or doxycycline; treat HIV",
+      "Endocarditis — prolonged combination antibiotics ± valve surgery",
+    ],
+    distinguishFrom: [
+      "Sporotrichosis — nodular lymphangitis along arm; fungal culture; rose thorn exposure",
+      "Lymphoma — persistent generalized lymphadenopathy without inoculation papule",
+      "Tularemia — rabbit/tick exposure; ulceroglandular but different epidemiology and stain",
+      "Kaposi sarcoma — HHV-8; distinguish from bacillary angiomatosis with Warthin-Starry stain",
+      "Bartonella quintana — body louse; trench fever; bacillary angiomatosis in homeless populations",
+      "Pyogenic bacterial adenitis — acute, suppurative, often S. aureus or strep",
+    ],
+    boardsPearls: [
+      "Kitten scratch + regional lymphadenopathy = cat-scratch disease (Bartonella henselae)",
+      "Papule at inoculation site then ipsilateral lymph nodes — not sporotrichoid nodule chain",
+      "Warthin-Starry silver stain — classic histology boards mention",
+      "AIDS + vascular skin lesions → bacillary angiomatosis (Bartonella) vs Kaposi sarcoma",
+      "Azithromycin for treatment when indicated; often self-limited in healthy children",
+      "Culture-negative endocarditis — think Bartonella, Coxiella (Q fever), HACEK",
+    ],
+    pediatrics:
+      "Peak incidence under age 15; kitten exposure classic; most cases self-limited; azithromycin optional to reduce lymph node size/duration; educate on flea control in cats.",
+  },
+  {
     id: "mycoplasma-pneumoniae",
     name: "Mycoplasma pneumoniae",
     aliases: [

@@ -321,3 +321,9 @@ sporothrix-schenckii.jpg
   Description: Lymphocutaneous sporotrichosis with ascending arm lesions
   License: Public domain (U.S. federal government)
   Page: https://phil.cdc.gov/Details.aspx?pid=3940
+
+bartonella-henselae.jpg
+  Source: CDC PHIL #22328
+  Description: Cat-scratch inoculation lesion on hand (Bartonella henselae)
+  License: Public domain (U.S. federal government)
+  Page: https://phil.cdc.gov/Details.aspx?pid=22328

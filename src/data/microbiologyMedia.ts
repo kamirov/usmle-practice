@@ -45,6 +45,7 @@ import measlesVirus from "../media/images/microbiology/measles-virus.jpg?url";
 import mumpsVirus from "../media/images/microbiology/mumps-virus.jpg?url";
 import rubellaVirus from "../media/images/microbiology/rubella-virus.jpg?url";
 import sporothrixSchenckii from "../media/images/microbiology/sporothrix-schenckii.jpg?url";
+import bartonellaHenselae from "../media/images/microbiology/bartonella-henselae.jpg?url";
 
 export type MicrobiologyImageId = MicrobiologyEntry["id"];
 
@@ -86,6 +87,7 @@ export const MICROBIOLOGY_IMAGES: Partial<Record<MicrobiologyImageId, string>> =
     "mumps-virus": extensionAssetUrl(mumpsVirus),
     "rubella-virus": extensionAssetUrl(rubellaVirus),
     "sporothrix-schenckii": extensionAssetUrl(sporothrixSchenckii),
+    "bartonella-henselae": extensionAssetUrl(bartonellaHenselae),
     "toxoplasma-gondii": extensionAssetUrl(toxoplasmaGondii),
     "borrelia-burgdorferi": extensionAssetUrl(borreliaBurgdorferi),
     "aspergillus-fumigatus": extensionAssetUrl(aspergillusFumigatus),
@@ -228,6 +230,10 @@ export const MICROBIOLOGY_IMAGE_ATTRIBUTIONS: Partial<
     label: "CDC PHIL #3940",
     url: "https://phil.cdc.gov/Details.aspx?pid=3940",
   },
+  "bartonella-henselae": {
+    label: "CDC PHIL #22328",
+    url: "https://phil.cdc.gov/Details.aspx?pid=22328",
+  },
   "toxoplasma-gondii": {
     label: "CDC DPDx Parasite Image Library",
     url: "https://commons.wikimedia.org/wiki/File:Toxoplasma_gondii_tachy.jpg",
@@ -331,6 +337,8 @@ export const MICROBIOLOGY_IMAGE_CAPTIONS: Partial<
     "Negative-stain TEM of rubella virions budding from host cell surface",
   "sporothrix-schenckii":
     "Lymphocutaneous sporotrichosis — ascending nodular lesions on the arm (Sporothrix schenckii)",
+  "bartonella-henselae":
+    "Inoculation-site lesion on the hand after cat scratch (Bartonella henselae cat-scratch disease)",
   "toxoplasma-gondii": "Giemsa stain: crescent-shaped tachyzoites",
   "borrelia-burgdorferi":
     "Dark-field microscopy: corkscrew spirochetes (400×)",

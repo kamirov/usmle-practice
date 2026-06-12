@@ -1584,6 +1584,52 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
     pediatrics:
       "First MMR at 12–15 months because maternal IgG interferes with response before 12 months. Catch-up vaccination for unimmunized adolescents. Contraindicated in children with severe immunocompromise; household contact of immunocompromised child may still receive MMR if healthy. Febrile seizures slightly more common with MMRV than separate injections at 12–15 months — discuss with parents.",
   },
+  {
+    id: "dimorphic-fungus",
+    name: "Dimorphic Fungus",
+    aliases: [
+      "dimorphic fungus",
+      "dimorphic fungi",
+      "dimorphic fungal",
+      "thermally dimorphic fungus",
+      "thermally dimorphic fungi",
+      "thermal dimorphism",
+      "temperature dimorphism",
+      "dimorphism fungus",
+      "mold-yeast dimorphism",
+    ],
+    definition:
+      "Fungi that exist as environmental molds (hyphae/mold phase) at lower temperature (~25°C) and convert to a tissue phase at body temperature (~37°C) — the tissue form may be yeast or other specialized structures (spherules, cigar-shaped cells).",
+    examples: [
+      "Histoplasma capsulatum — mold in soil (Ohio/Mississippi valleys); small intracellular yeast in macrophages at 37°C",
+      "Blastomyces dermatitidis — mold in soil; broad-based budding yeast in tissue",
+      "Coccidioides immitis/posadasii — mold with arthroconidia; spherules with endospores in tissue (not yeast)",
+      "Paracoccidioides brasiliensis — mold; large yeast with multiple peripheral buds ('captain's wheel') in Latin America",
+      "Sporothrix schenckii — mold with rosette conidia; cigar-shaped budding yeast in cutaneous lesions",
+      "Penicillium marneffei — mold; fission yeast in AIDS (Southeast Asia) — dimorphic but different epidemiology",
+    ],
+    boardsPearls: [
+      "Mold in the cold (25°C), tissue form in the heat (37°C) — classic dimorphism rule",
+      "Systemic dimorphic fungi in U.S. boards: Histoplasma, Blastomyces, Coccidioides (+ Paracoccidioides in Latin America)",
+      "Histoplasma — small yeast inside macrophages; bird/bat droppings; Ohio/Mississippi valleys",
+      "Blastomyces — broad-based budding yeast; same endemic region as Histoplasma",
+      "Coccidioides — spherules with endospores (exception: not yeast in tissue); Southwest desert",
+      "Culture: grows as mold at room temperature, converts when incubated at 37°C",
+      "Amphotericin B for severe disease; azoles (itraconazole/fluconazole) for many mild-moderate cases",
+      "vs Cryptococcus/Candida — yeasts that are not classically thermally dimorphic systemic pathogens in this framework",
+      "vs dermatophytes — molds causing tinea; no 37°C yeast phase in human tissue",
+    ],
+    distinguishFrom: [
+      "Mold (filamentous fungus) only — Aspergillus, Mucor; no temperature-dependent conversion to yeast in tissue",
+      "Yeast only — Cryptococcus neoformans; no environmental mold phase relevant to boards vignettes",
+      "Candida — polymorphic yeast/pseudohyphae; normal flora; not endemic dimorphic systemic pathogen",
+      "Dermatophytes (Trichophyton, Microsporum) — keratinized tissue mold infection; not systemic dimorphism",
+      "Sporothrix — dimorphic but primarily subcutaneous lymphocutaneous inoculation, not classic inhalational endemic pneumonia pattern",
+      "Mycobacteria — acid-fast rods; not fungi despite similar granulomatous histology",
+    ],
+    pediatrics:
+      "Disseminated histoplasmosis and coccidioidomycosis occur in infant immunocompromise; endemic exposure history matters in children living in or traveling to Ohio/Mississippi valleys or the Southwest. Sporothrix dimorphism relevant to pediatric thorn injuries.",
+  },
 ];
 
 const pathogenesisById = new Map(
