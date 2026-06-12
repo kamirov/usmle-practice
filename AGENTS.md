@@ -14,6 +14,10 @@ Use pnpm for package management of any JS projects
 
 Specifically, any additions should pertain to Step 1 (not Step 2 or Step 3).
 
+## Data Types
+
+When new entries are specified for data, if it makes sense to establish a new data type for them (a new file), then please do so
+
 ## Pediatric
 
 Where relevant, include a note on pediatrics, e.g. how something changes if the patient is pediatric
