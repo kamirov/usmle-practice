@@ -542,6 +542,32 @@
   color: #0f766e;
 }
 
+.usmle-musculoskeletal-chip {
+  display: inline;
+  margin: 0;
+  padding: 0 2px;
+  border: none;
+  border-radius: 3px;
+  background: rgba(71, 85, 105, 0.06);
+  color: inherit;
+  font: inherit;
+  line-height: inherit;
+  text-decoration: underline dotted rgba(71, 85, 105, 0.35);
+  text-underline-offset: 2px;
+  cursor: help;
+}
+
+.usmle-musculoskeletal-chip:hover,
+.usmle-musculoskeletal-chip:focus-visible {
+  background: rgba(71, 85, 105, 0.12);
+  outline: 1px solid rgba(71, 85, 105, 0.3);
+  outline-offset: 1px;
+}
+
+.usmle-organ-popover__title--musculoskeletal {
+  color: #475569;
+}
+
 .usmle-organ-popover__meaning {
   margin-bottom: 8px;
 }
