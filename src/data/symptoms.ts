@@ -359,10 +359,7 @@ export const SYMPTOMS: SymptomEntry[] = [
       "Sudden, severe chest pain described as ripping or tearing, often maximal at onset.",
     mechanism:
       "Intimal tear in the aorta with dissection creates a false lumen; pain reflects acute aortic wall separation.",
-    thinkOf: [
-      "Aortic dissection",
-      "Aortic rupture",
-    ],
+    thinkOf: ["Aortic dissection", "Aortic rupture"],
     pairWith: [
       "Hypertension or connective tissue disease (Marfan, Ehlers-Danlos)",
       "Pulse or BP differential between arms",
@@ -531,7 +528,12 @@ export const SYMPTOMS: SymptomEntry[] = [
   {
     id: "headache",
     name: "Headache",
-    aliases: ["headache", "head pain", "severe headache", "worst headache of life"],
+    aliases: [
+      "headache",
+      "head pain",
+      "severe headache",
+      "worst headache of life",
+    ],
     definition:
       "Pain in the head or neck region; may be primary (migraine, tension) or secondary to underlying pathology.",
     mechanism:
@@ -831,8 +833,7 @@ export const SYMPTOMS: SymptomEntry[] = [
     id: "dysuria",
     name: "Dysuria",
     aliases: ["dysuria", "painful urination", "burning with urination"],
-    definition:
-      "Painful or burning sensation during urination.",
+    definition: "Painful or burning sensation during urination.",
     mechanism:
       "Inflammation of the urethra or bladder mucosa (infection, chemical irritation, or stones) lowers the threshold for pain with urine flow.",
     thinkOf: [
@@ -1056,7 +1057,7 @@ export const SYMPTOMS: SymptomEntry[] = [
     distinguishFrom: [
       "Hypoactive or absent bowel sounds — ileus, peritonitis, late obstruction",
       "Normal bowel sounds — not hyperactive",
-      "Borborygmi — very loud \"stomach growling\" without pathology",
+      'Borborygmi — very loud "stomach growling" without pathology',
     ],
   },
   {
@@ -1102,7 +1103,7 @@ export const SYMPTOMS: SymptomEntry[] = [
       "sausage toe",
     ],
     definition:
-      "Diffuse inflammatory swelling of an entire digit (finger or toe), producing a \"sausage-like\" appearance from involvement of all tissue compartments rather than isolated joint effusion alone.",
+      'Diffuse inflammatory swelling of an entire digit (finger or toe), producing a "sausage-like" appearance from involvement of all tissue compartments rather than isolated joint effusion alone.',
     mechanism:
       "Inflammation of joints, tenosynovium, and soft tissues of the digit — from psoriatic enthesitis, sickle vaso-occlusion, infection, or crystal/immune-mediated synovitis.",
     thinkOf: [
@@ -1165,7 +1166,7 @@ export const SYMPTOMS: SymptomEntry[] = [
     definition:
       "Fibrotic tightening and tapering of the skin over the fingers and toes, classically in systemic sclerosis, producing a shiny, bound-down appearance and flexion contractures.",
     mechanism:
-      "Dermal and subcutaneous collagen deposition with loss of skin compliance → fixed skin induration of digits; the \"S\" in CREST (limited cutaneous systemic sclerosis).",
+      'Dermal and subcutaneous collagen deposition with loss of skin compliance → fixed skin induration of digits; the "S" in CREST (limited cutaneous systemic sclerosis).',
     thinkOf: [
       "Systemic sclerosis / CREST syndrome",
       "Limited cutaneous systemic sclerosis — anti-centromere antibody",
@@ -1198,7 +1199,7 @@ export const SYMPTOMS: SymptomEntry[] = [
     mechanism:
       "Chronic vascular dilatation from local hypoxia, hormonal influence, or connective tissue disease; in CREST/systemic sclerosis reflects underlying microvascular injury and loss of capillary density at nailfolds.",
     thinkOf: [
-      "CREST syndrome / limited systemic sclerosis — the \"T\" in CREST",
+      'CREST syndrome / limited systemic sclerosis — the "T" in CREST',
       "Hereditary hemorrhagic telangiectasia (Osler-Weber-Rendu)",
       "Cirrhosis — spider angiomata on upper body",
       "Rosacea — centrofacial telangiectasias",
@@ -1228,7 +1229,7 @@ export const SYMPTOMS: SymptomEntry[] = [
     definition:
       "Deposition of calcium salts in skin, subcutaneous tissue, or other soft tissues, producing firm white nodules that may ulcerate and extrude chalky material.",
     mechanism:
-      "Dystrophic calcification in damaged or fibrotic tissue despite normal serum calcium; in CREST/systemic sclerosis the \"C\" reflects subcutaneous calcinosis over pressure points (fingers, elbows, knees).",
+      'Dystrophic calcification in damaged or fibrotic tissue despite normal serum calcium; in CREST/systemic sclerosis the "C" reflects subcutaneous calcinosis over pressure points (fingers, elbows, knees).',
     thinkOf: [
       "CREST syndrome / systemic sclerosis — calcinosis cutis",
       "Dermatomyositis — especially juvenile form",
@@ -1519,6 +1520,51 @@ export const SYMPTOMS: SymptomEntry[] = [
       "Muscle cramps — painful contraction, not joint rigidity",
       "Parkinson rigidity — continuous throughout day, not morning-specific",
       "Fibromyalgia — diffuse stiffness without synovitis or prolonged inflammatory duration",
+    ],
+  },
+  {
+    id: "hemianopsia",
+    name: "Hemianopsia",
+    aliases: [
+      "hemianopsia",
+      "hemianopia",
+      "visual field defect",
+      "visual field loss",
+      "homonymous hemianopsia",
+      "homonymous hemianopia",
+      "bitemporal hemianopsia",
+      "bitemporal hemianopia",
+      "bitemporal visual field defect",
+      "contralateral hemianopsia",
+      "quadrantanopia",
+      "quadrantanopsia",
+    ],
+    definition:
+      "Loss of vision in one half of the visual field of each eye — pattern (bitemporal vs homonymous) localizes the lesion along the visual pathway from retina to occipital cortex.",
+    mechanism:
+      "Nasal retinal fibers cross at the optic chiasm (carry temporal visual fields); lesions anterior to chiasm cause monocular defects; chiasmal compression causes bitemporal loss; post-chiasmal lesions (tract, radiation, cortex) cause homonymous hemianopia (same side of visual field lost in both eyes).",
+    thinkOf: [
+      "Pituitary macroadenoma / prolactinoma — bitemporal hemianopia (chiasm compression)",
+      "Craniopharyngioma — suprasellar mass, bitemporal fields",
+      "MCA stroke — contralateral homonymous hemianopia (often with face/arm weakness)",
+      "PCA stroke — homonymous hemianopia with macular sparing",
+      "Optic tract lesion — homonymous hemianopia + contralateral relative afferent pupillary defect",
+      "Meyer's loop (temporal lobe) lesion — superior quadrantanopia ('pie in the sky')",
+      "Parietal optic radiation — inferior quadrantanopia",
+    ],
+    pairWith: [
+      "Galactorrhea + amenorrhea + bitemporal fields → macroprolactinoma",
+      "Headache + bitemporal hemianopia → pituitary apoplexy or macroadenoma",
+      "Homonymous hemianopia + hemiparesis → MCA territory stroke",
+      "Homonymous hemianopia + macular sparing → PCA (occipital) infarct",
+      "Papilledema + headache → raised ICP; field loss pattern still localizes lesion",
+    ],
+    distinguishFrom: [
+      "Monocular vision loss — pre-chiasmal (optic nerve) disease, not hemianopsia",
+      "Bitemporal — chiasm (pituitary tumor classic on boards)",
+      "Homonymous — post-chiasmal (stroke, tumor); lesion is contralateral to field loss",
+      "Quadrantanopia — partial homonymous defect; temporal lobe (upper) vs parietal (lower)",
+      "Central scotoma — macular or optic nerve disease, not hemianopic pattern",
     ],
   },
 ];

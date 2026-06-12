@@ -1836,6 +1836,137 @@ export const CONDITIONS: ConditionEntry[] = [
     ],
   },
   {
+    id: "hyperprolactinemia",
+    name: "Hyperprolactinemia",
+    aliases: [
+      "hyperprolactinemia",
+      "elevated prolactin",
+      "increased prolactin",
+      "high prolactin",
+    ],
+    definition:
+      "Elevated serum prolactin above the reference range, causing lactotroph hormone excess that inhibits hypothalamic GnRH pulsatility and produces reproductive and galactorrheic symptoms when sustained.",
+    pathophysiology:
+      "Prolactin secretion from anterior pituitary lactotrophs is tonically inhibited by hypothalamic dopamine; disruption of dopamine delivery (stalk effect), dopamine antagonism (drugs), lactotroph adenoma, or TRH stimulation (hypothyroidism) → ↑ prolactin → ↓ GnRH pulsatility → ↓ LH/FSH → hypogonadism.",
+    classicPresentation: [
+      "Galactorrhea (women and men)",
+      "Amenorrhea, oligomenorrhea, or infertility (women)",
+      "Decreased libido, erectile dysfunction, gynecomastia (men)",
+      "Headache or bitemporal hemianopia if large pituitary mass",
+    ],
+    keyLabs: [
+      "↑ serum prolactin (confirm with repeat; consider macroprolactin assay if mildly elevated)",
+      "TSH — hypothyroidism can cause hyperprolactinemia",
+      "β-hCG — rule out pregnancy",
+      "MRI pituitary if prolactin persistently elevated or neurologic symptoms",
+    ],
+    keyFindings: [
+      "Galactorrhea on expression or spontaneous",
+      "Visual field defects with macroadenoma (chiasm compression)",
+      "Hypogonadal signs — low estrogen/testosterone effects",
+    ],
+    associations: [
+      "Prolactinoma — most common pathologic cause",
+      "Dopamine antagonists — antipsychotics, metoclopramide, verapamil",
+      "Primary hypothyroidism — ↑ TRH",
+      "Pregnancy and postpartum (physiologic)",
+      "Chronic kidney disease — decreased prolactin clearance",
+      "Chest wall/nipple stimulation or herpes zoster",
+      "Pituitary stalk interruption — non-secretory tumors block dopamine delivery (stalk effect)",
+    ],
+    complications: [
+      "Hypogonadotropic hypogonadism — infertility, osteoporosis",
+      "Tumor mass effect — vision loss, headache",
+    ],
+    distinguishFrom: [
+      "Prolactinoma — subset of hyperprolactinemia from lactotroph adenoma; prolactin often very high",
+      "Pregnancy — physiologic ↑ prolactin; check β-hCG first in reproductive-age amenorrhea",
+      "Macroprolactin (big-big prolactin) — biologically inactive complex; may cause falsely worrisome levels",
+      "Functional hypothalamic amenorrhea — low GnRH without elevated prolactin",
+    ],
+    treatment: [
+      "Treat underlying cause — levothyroxine for hypothyroidism, stop offending drug if possible",
+      "Dopamine agonists (cabergoline, bromocriptine) for symptomatic hyperprolactinemia or prolactinoma",
+      "Surgery/radiation for dopamine-agonist–refractory macroadenomas with mass effect",
+      "Estrogen/testosterone replacement if persistent hypogonadism and infertility not desired immediately",
+    ],
+    boardsPearls: [
+      "Galactorrhea + amenorrhea → check prolactin and TSH",
+      "Dopamine tonically inhibits prolactin — pituitary stalk lesion can ↑ prolactin without adenoma",
+      "Prolactinoma: prolactin often >200 ng/mL with macroadenoma; treat with dopamine agonists first",
+      "Antipsychotics block dopamine D2 → drug-induced hyperprolactinemia",
+      "Hypothyroidism → ↑ TRH → mild prolactin elevation — correct thyroid before pituitary surgery",
+      "vs hyperprolactinemia from prolactinoma — stalk effect usually modest prolactin elevation (<100 ng/mL)",
+    ],
+    pediatrics:
+      "Neonatal physiologic galactororrhea (witch's milk) is benign; adolescents on antipsychotics may develop drug-induced hyperprolactinemia — monitor growth and pubertal progression.",
+  },
+  {
+    id: "galactorrhea",
+    name: "Galactorrhea",
+    aliases: [
+      "galactorrhea",
+      "galactorrhoea",
+      "nipple discharge milk",
+      "abnormal lactation",
+      "witch's milk",
+      "witches milk",
+    ],
+    definition:
+      "Inappropriate milk secretion from the breast unrelated to recent childbirth or nursing — a clinical sign of prolactin excess or local breast stimulation rather than a primary breast disease.",
+    pathophysiology:
+      "Prolactin stimulates mammary alveolar cells → milk production; sustained hyperprolactinemia (prolactinoma, stalk effect, dopamine antagonists, hypothyroidism) inhibits GnRH → often coexists with amenorrhea; nipple/chest wall stimulation can cause reflex galactorrhea without markedly elevated prolactin.",
+    classicPresentation: [
+      "Milky nipple discharge — spontaneous or on expression",
+      "Often bilateral; unilateral discharge raises concern for intraductal pathology",
+      "Frequently accompanied by amenorrhea, oligomenorrhea, or infertility (women)",
+      "May occur in men with hyperprolactinemia (± gynecomastia, ↓ libido)",
+      "Headache or visual field loss if pituitary macroadenoma",
+    ],
+    keyFindings: [
+      "Milky discharge on breast exam (distinguish from serous, bloody, or purulent discharge)",
+      "Hypogonadal signs — absent menses, low estrogen effects",
+      "Visual field testing if pituitary mass suspected",
+    ],
+    keyLabs: [
+      "Serum prolactin — first-line when galactorrhea present",
+      "TSH — hypothyroidism can elevate prolactin via ↑ TRH",
+      "β-hCG — rule out pregnancy",
+      "Macroprolactin assay if prolactin mildly elevated and asymptomatic",
+      "MRI pituitary if prolactin persistently elevated or neurologic symptoms",
+    ],
+    associations: [
+      "Hyperprolactinemia — most common pathologic association on boards",
+      "Prolactinoma",
+      "Dopamine antagonists — antipsychotics, metoclopramide",
+      "Primary hypothyroidism",
+      "Pregnancy and postpartum lactation (physiologic, not galactorrhea)",
+      "Chest wall trauma, herpes zoster, nipple stimulation",
+      "Chronic kidney disease — decreased prolactin clearance",
+    ],
+    distinguishFrom: [
+      "Physiologic lactation — recent pregnancy or breastfeeding",
+      "Bloody nipple discharge — intraductal papilloma or carcinoma until proven otherwise",
+      "Purulent discharge — mastitis or abscess",
+      "Serous or green discharge — duct ectasia, fibrocystic change",
+      "Pituitary stalk effect — modest prolactin elevation without lactotroph adenoma",
+    ],
+    treatment: [
+      "Treat underlying cause — dopamine agonist for prolactinoma/hyperprolactinemia, levothyroxine for hypothyroidism, discontinue offending drug",
+      "Reassurance for physiologic neonatal galactorrhea (witch's milk)",
+      "Evaluate unilateral bloody discharge with imaging and possible biopsy",
+    ],
+    boardsPearls: [
+      "Galactorrhea + amenorrhea → check prolactin and TSH before extensive ovarian workup",
+      "Hyperprolactinemia inhibits GnRH pulsatility → hypogonadotropic hypogonadism",
+      "Dopamine tonically inhibits prolactin — stalk interruption can cause galactorrhea",
+      "Milky bilateral discharge + elevated prolactin = hyperprolactinemia; bloody unilateral discharge ≠ galactorrhea",
+      "Neonatal witch's milk — transient physiologic prolactin effect; no workup needed",
+    ],
+    pediatrics:
+      "Witch's milk — benign neonatal galactorrhea from maternal estrogen withdrawal; resolves spontaneously. Adolescents with galactorrhea need prolactin/TSH and medication review (antipsychotics); evaluate pubertal delay if amenorrhea coexists.",
+  },
+  {
     id: "cushing-syndrome",
     name: "Cushing Syndrome",
     aliases: ["cushing syndrome", "cushing's syndrome", "hypercortisolism"],

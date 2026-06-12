@@ -1234,7 +1234,6 @@ export const LAB_VALUES: LabValueEntry[] = [
       "hprl",
       "hp rl",
       "serum prolactin",
-      "hyperprolactinemia",
     ],
     measures:
       "Anterior pituitary hormone promoting lactation; inhibits GnRH → hypogonadism when elevated.",

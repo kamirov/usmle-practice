@@ -2078,7 +2078,7 @@ export const CELLS: CellEntry[] = [
       "neural crest derivatives",
     ],
     definition:
-      "Transient embryonic cell population arising from dorsal neuroectoderm at the neural tube border that migrates widely and differentiates into diverse structures — classic \"fourth germ layer\" in boards framing.",
+      'Transient embryonic cell population arising from dorsal neuroectoderm at the neural tube border that migrates widely and differentiates into diverse structures — classic "fourth germ layer" in boards framing.',
     characteristics: [
       "Arises from ectoderm at neural fold → migrates throughout embryo during organogenesis",
       "Gives rise to melanocytes, peripheral neurons, Schwann cells, adrenal medulla chromaffin cells",
@@ -2191,6 +2191,53 @@ export const CELLS: CellEntry[] = [
     ],
     pediatrics:
       "Bone marrow stroma supports pediatric hematopoiesis; stromal damage from chemotherapy or radiation contributes to cytopenias.",
+  },
+  {
+    id: "hypothalamus",
+    name: "Hypothalamus",
+    aliases: [
+      "hypothalamus",
+      "hypothalamic",
+      "hypothalamic nuclei",
+      "ventral hypothalamus",
+      "hypothalamic-pituitary axis",
+      "hypothalamic pituitary axis",
+      "hpa axis",
+    ],
+    definition:
+      "Ventrolateral diencephalic brain region that integrates endocrine, autonomic, and homeostatic control — releases releasing/inhibiting hormones into hypophyseal portal blood and synthesizes ADH and oxytocin for the posterior pituitary.",
+    characteristics: [
+      "Median eminence / arcuate nucleus — GnRH released in pulsatile fashion → anterior pituitary LH/FSH",
+      "Tuberoinfundibular dopamine neurons — tonically inhibit prolactin secretion (disrupted in stalk lesions and antipsychotic use)",
+      "Supraoptic and paraventricular nuclei — synthesize ADH and oxytocin transported to posterior pituitary",
+      "Paraventricular CRH neurons — ACTH axis; ventromedial satiety, lateral hunger centers",
+      "Preoptic nucleus — thermoregulation; prostaglandin E₂ acts here to trigger fever",
+      "Suprachiasmatic nucleus — circadian rhythm",
+    ],
+    clinicalRelevance: [
+      "Hyperprolactinemia — dopamine from hypothalamus normally suppresses prolactin; stalk interruption blocks inhibition",
+      "Kallmann syndrome — failed GnRH neuron migration from olfactory placode → anosmia + hypogonadotropic hypogonadism",
+      "Functional hypothalamic amenorrhea — stress/eating disorder/exercise ↓ GnRH pulsatility",
+      "Central diabetes insipidus — ADH deficiency from hypothalamic or pituitary stalk injury",
+      "SIADH — excessive ADH secretion (CNS pathology, paraneoplastic)",
+      "Hypothalamic obesity after craniopharyngioma or trauma",
+    ],
+    boardsPearls: [
+      "Hypothalamus → portal circulation → anterior pituitary (trophic hormones)",
+      "Posterior pituitary hormones (ADH, oxytocin) made in hypothalamus, stored/released from neurohypophysis",
+      "Dopamine = prolactin-inhibiting factor from hypothalamus",
+      "Pulsatile GnRH required for normal LH/FSH — continuous GnRH agonists paradoxically suppress axis",
+      "Fever: IL-1/IL-6/TNF → PGE₂ in hypothalamus → ↑ set point",
+      "vs pituitary — hypothalamus is upstream integrator; pituitary is effector gland",
+    ],
+    distinguishFrom: [
+      "Pituitary — downstream target of hypothalamic releasing hormones; site of prolactin, ACTH, TSH secretion",
+      "Thalamus — sensory relay nucleus group; not primary endocrine control center",
+      "Pineal gland — melatonin from epithalamus; circadian modulation but not HP axis hub",
+      "Brainstem — autonomic reflexes (respiration, BP) but not GnRH/ADH synthesis",
+    ],
+    pediatrics:
+      "Kallmann syndrome presents in adolescence with delayed puberty and anosmia; central precocious puberty from premature hypothalamic GnRH activation.",
   },
 ];
 

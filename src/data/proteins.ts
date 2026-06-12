@@ -716,6 +716,45 @@ export const PROTEINS: ProteinEntry[] = [
     ],
   },
   {
+    id: "aromatase",
+    name: "Aromatase",
+    aliases: [
+      "aromatase",
+      "aromatase enzyme",
+      "cyp19a1",
+      "cyp19",
+      "estrogen synthetase",
+      "aromatase inhibitors",
+      "anastrozole",
+      "letrozole",
+      "exemestane",
+    ],
+    gene: "CYP19A1",
+    location:
+      "Ovarian granulosa cells (converts theca-derived androgens to estrogen); placental syncytiotrophoblast; adipose tissue; brain; ER+ breast cancer stroma",
+    function:
+      "Cytochrome P450 enzyme that aromatizes C19 androgens (androstenedione, testosterone) to C18 estrogens (estrone, estradiol) — final step in estrogen biosynthesis; rate-limiting for estrogen production in postmenopausal women (peripheral/adipose) and in theca–granulosa two-cell model of the ovary.",
+    mutationCauses: [
+      "Pharmacologic inhibition (anastrozole, letrozole, exemestane) — ↓ estrogen synthesis in ER+ breast cancer (postmenopausal)",
+      "Aromatase excess syndrome (rare) — peripheral overproduction of estrogen → precocious puberty/gynecomastia",
+      "Aromatase deficiency (rare) — ↓ estrogen, maternal virilization during pregnancy, ambiguous genitalia in 46,XX offspring",
+    ],
+    boardsPearls: [
+      "Two-cell model: theca (LH) makes androgens → granulosa (FSH) aromatase converts to estrogen",
+      "Postmenopausal estrogen largely from adipose aromatase — explains obesity ↑ estrogen",
+      "Aromatase inhibitors (anastrozole, letrozole) — first-line hormone therapy for ER+ breast cancer in postmenopausal women",
+      "Exemestane — steroidal aromatase inactivator (suicide inhibitor)",
+      "vs 5α-reductase — converts testosterone → DHT (androgenic), not estrogen pathway",
+      "Tamoxifen blocks estrogen receptor; aromatase inhibitors block estrogen synthesis",
+    ],
+    distinguishFrom: [
+      "5α-reductase — androgen pathway (testosterone → DHT); finasteride target",
+      "17α-hydroxylase / 21-hydroxylase — adrenal steroid synthesis enzymes, not aromatase",
+      "Estrogen receptor — tamoxifen/SERMs act here; aromatase inhibitors act upstream on synthesis",
+      "CYP3A4 — general drug metabolism; CYP19A1 is specific aromatase isoform",
+    ],
+  },
+  {
     id: "cytochrome-p450",
     name: "Cytochrome P-450",
     aliases: [
@@ -1000,6 +1039,44 @@ export const PROTEINS: ProteinEntry[] = [
       "CTLA-4 — inhibitory receptor competing for B7 binding on T cells",
       "PD-L1 — binds PD-1, not CD28; second checkpoint pathway",
       "CD40 — separate co-stimulatory ligand on APC; binds CD40L on activated T cells",
+    ],
+  },
+  {
+    id: "sex-hormone-binding-globulin",
+    name: "Sex Hormone–Binding Globulin",
+    aliases: [
+      "sex-hormone binding globulin",
+      "sex hormone binding globulin",
+      "sex hormone-binding globulin",
+      "sex-hormone-binding globulin",
+      "shbg",
+      "sex steroid-binding globulin",
+      "tebg",
+      "testosterone-estrogen binding globulin",
+    ],
+    gene: "SHBG",
+    location:
+      "Synthesized primarily by hepatocytes; circulates in plasma as a β-globulin binding sex steroids",
+    function:
+      "High-affinity carrier protein that binds testosterone and estradiol (and to lesser extent DHT); only the free (unbound) fraction is biologically active at target tissues — SHBG regulates hormone bioavailability without itself mediating signaling.",
+    mutationCauses: [
+      "Physiologic/pharmacologic ↑ SHBG — estrogen therapy, OCPs, pregnancy, hyperthyroidism → ↓ free androgen index",
+      "Physiologic/pathologic ↓ SHBG — obesity, insulin resistance, PCOS, hypothyroidism, androgen excess, glucocorticoids, acromegaly → ↑ free testosterone",
+      "SHBG mutations (rare) — altered binding affinity and pubertal/endocrine phenotypes",
+    ],
+    boardsPearls: [
+      "Total testosterone ≠ bioavailable testosterone — always consider SHBG and free T",
+      "↑ SHBG (estrogen, OCPs, pregnancy) → ↓ free T despite normal total T",
+      "↓ SHBG in PCOS/obesity/insulin resistance → ↑ free androgens → hirsutism, acne",
+      "Hyperthyroidism ↑ SHBG; hypothyroidism ↓ SHBG",
+      "Free androgen index ≈ total testosterone / SHBG (lab-dependent)",
+      "vs albumin — loosely binds sex steroids; SHBG binds with much higher affinity",
+    ],
+    distinguishFrom: [
+      "Albumin — binds ~half of circulating testosterone weakly; SHBG binds tightly",
+      "Corticosteroid-binding globulin (CBG/transcortin) — binds cortisol, not sex steroids",
+      "Thyroid-binding globulin (TBG) — binds T4/T3, not androgens/estrogens",
+      "Total testosterone assay — includes SHBG-bound fraction; may mislead when SHBG abnormal",
     ],
   },
 ];
