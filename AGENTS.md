@@ -14,7 +14,7 @@ Use pnpm for package management of any JS projects
 
 Specifically, any additions should pertain to Step 1 (not Step 2 or Step 3).
 
-All data added should include an etymology section, including a very concise line about the etymology (for learning purposes, to help studying for Step 1)
+All data added should include an etymology section, including a very concise line about the etymology (for learning purposes, to help studying for Step 1). Make sure it appears under the item name in the popover
 
 ## Data Types
 
