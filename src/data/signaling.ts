@@ -326,6 +326,51 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
       "Atopic march in children — eczema, food allergy, asthma linked to Th2/IL-4 skew; early allergen sensitization drives IgE production.",
   },
   {
+    id: "tnf",
+    name: "Tumor necrosis factor (TNF)",
+    aliases: [
+      "tumor necrosis factor",
+      "tumor necrosis factor-alpha",
+      "tumor necrosis factor alpha",
+      "tnf",
+      "tnf-alpha",
+      "tnf alpha",
+      "tnf-α",
+      "tnf α",
+      "tnfα",
+    ],
+    type: "Cytokine",
+    source:
+      "Activated macrophages, monocytes, dendritic cells, T cells, NK cells, and mast cells",
+    receptor:
+      "TNF receptors (TNFR1/p55, TNFR2/p75) → NF-κB, JNK, and caspase-mediated apoptosis pathways",
+    function:
+      "Potent pro-inflammatory cytokine: activates endothelium (↑ adhesion molecules), recruits leukocytes, induces fever, supports granuloma formation, and can cause cachexia and septic shock at high systemic levels.",
+    clinicalRelevance: [
+      "Endogenous pyrogen with IL-1 and IL-6 → hypothalamic PGE₂ → fever",
+      "Central driver of RA, psoriasis, and IBD pathogenesis — target of anti-TNF biologics (infliximab, adalimumab, etanercept)",
+      "Anti-drug antibodies (ADAs) to biologics can neutralize anti-TNF drugs → secondary loss of response",
+      "Septic shock — excessive TNF and other cytokines → vasodilation, capillary leak, DIC",
+      "Latent TB reactivation with anti-TNF therapy — screen before starting",
+      "↑ adipose TNF-α contributes to insulin resistance in obesity",
+    ],
+    boardsPearls: [
+      "TNF-α → NF-κB activation → ↑ IL-1, IL-6, adhesion molecules, and other pro-inflammatory mediators",
+      "Anti-TNF drugs: infliximab/adalimumab (mAbs), etanercept (decoy receptor) — treat before TB, avoid live vaccines",
+      "Endogenous pyrogens: IL-1, IL-6, TNF-α — classic fever triad",
+      "Named for tumor necrosis in mice; in humans drives inflammation more than direct tumor killing",
+      "TNF vs IL-1 — both acute-phase drivers; TNF more central to granuloma formation and anti-TNF autoimmune indications",
+    ],
+    distinguishFrom: [
+      "IL-1 — also pyrogenic and pro-inflammatory; anakinra blocks IL-1 receptor",
+      "IL-6 — acute-phase response, hepatocyte stimulation; tocilizumab blocks IL-6 receptor",
+      "LT-α (lymphotoxin) — related TNF superfamily member; less emphasized on boards",
+      "Corticosteroids — broadly ↓ cytokine transcription including TNF, but not receptor-targeted",
+    ],
+    pediatrics:
+      "Same pyrogen pathway in children; anti-TNF agents used in pediatric IBD and JIA with mandatory latent TB screening and infection monitoring.",
+  },
+  {
     id: "pdgf",
     name: "Platelet-derived growth factor (PDGF)",
     aliases: [

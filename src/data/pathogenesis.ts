@@ -110,6 +110,115 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
     pediatrics:
       "Hematogenous osteomyelitis and septic arthritis peak in young children; suspect in febrile child refusing to bear weight or use a limb.",
   },
+  {
+    id: "anti-drug-antibodies",
+    name: "Anti-drug antibodies (ADAs)",
+    aliases: [
+      "anti-drug antibodies",
+      "antidrug antibodies",
+      "anti drug antibodies",
+      "adas",
+      "drug antibodies",
+      "neutralizing anti-drug antibodies",
+    ],
+    definition:
+      "Host antibodies generated against a therapeutic biologic drug (especially monoclonal antibodies) that can neutralize the drug, accelerate clearance, or cause infusion reactions and secondary loss of treatment response.",
+    examples: [
+      "Anti-infliximab antibodies in Crohn disease or RA — chimeric mAb is more immunogenic; may cause loss of response",
+      "Anti-adalimumab antibodies — reduced drug levels and flare despite adherence",
+      "Anti-factor VIII alloantibodies in hemophilia A — inhibitor development blocks replacement therapy",
+      "Anti-insulin antibodies (exogenous insulin) — rarely clinically significant with modern analogs",
+      "Methotrexate co-therapy with anti-TNF agents — lowers ADA formation and improves durability of response",
+    ],
+    boardsPearls: [
+      "Chimeric (e.g., infliximab, rituximab) > humanized > fully human (e.g., adalimumab) — ↓ immunogenicity down the spectrum",
+      "Loss of biologic efficacy → consider nonadherence, disease progression, or ADA-mediated neutralization",
+      "ADAs can cause acute infusion reactions (fever, urticaria, hypotension) or delayed secondary failure",
+      "vs drug allergy — ADAs are often IgG neutralizing antibodies; true IgE-mediated allergy is a separate mechanism",
+      "Concomitant immunosuppression (methotrexate, azathioprine) reduces ADA formation to anti-TNF therapy",
+    ],
+    distinguishFrom: [
+      "Autoantibodies (RF, anti-CCP, ANA) — directed against self antigens, not the drug molecule",
+      "IgE-mediated drug hypersensitivity — immediate-type allergy, not neutralizing anti-drug IgG",
+      "Antidrug antibodies vs anti-TNF therapy — ADAs are antibodies *to the drug*; anti-TNF drugs are antibodies *to TNF*",
+    ],
+    pediatrics:
+      "Pediatric IBD on infliximab — same ADA risk; methotrexate often added to reduce immunogenicity and prolong remission.",
+  },
+  {
+    id: "leukocyte-migration",
+    name: "Leukocyte Migration",
+    aliases: [
+      "leukocyte migration",
+      "leukocyte trafficking",
+      "leukocyte recruitment",
+      "leukocyte extravasation",
+      "wbc migration",
+      "white blood cell migration",
+    ],
+    definition:
+      "Directed movement of leukocytes from the bloodstream into tissues during inflammation, proceeding through margination, endothelial rolling, activation, firm adhesion, transmigration (diapedesis), and chemotaxis along a chemokine gradient.",
+    examples: [
+      "Acute bacterial infection — neutrophil recruitment to site via IL-8/CXCL8 and complement C5a",
+      "Atherosclerosis — monocyte adhesion to activated endothelium and migration into intima",
+      "Autoimmune synovitis — lymphocyte and macrophage infiltration in rheumatoid arthritis",
+      "Corticosteroids ↓ leukocyte migration by suppressing adhesion molecule expression and cytokines",
+      "Leukocyte adhesion deficiency (LAD) — defective integrins → recurrent infections without pus",
+    ],
+    boardsPearls: [
+      "Rolling: selectins (E-selectin, P-selectin); firm adhesion: integrins (LFA-1) bind ICAM-1/VCAM-1; diapedesis through endothelium",
+      "Chemokines (e.g., IL-8) create gradient guiding leukocytes to infection site",
+      "TNF-α and IL-1 ↑ endothelial adhesion molecules — key step upstream of migration",
+      "LAD type 1 — CD18/β₂ integrin defect; delayed umbilical cord separation, poor wound healing, ↑ neutrophils but no pus",
+      "Corticosteroids and leukocyte demargination — steroids cause apparent leukocytosis by releasing marginated pool",
+    ],
+    distinguishFrom: [
+      "Hematogenous dissemination — organisms travel in blood to distant sites, not leukocyte egress into tissue",
+      "Chemotaxis alone — one step of migration; full process includes adhesion and transmigration",
+      "Leukocytosis — ↑ WBC count in blood; does not by itself mean successful tissue migration",
+    ],
+    pediatrics:
+      "LAD presents in infancy with recurrent bacterial infections, delayed cord separation, and impaired pus formation despite neutrophilia.",
+  },
+  {
+    id: "granuloma",
+    name: "Granuloma",
+    aliases: [
+      "granuloma",
+      "granulomas",
+      "granulomatous inflammation",
+      "caseating granuloma",
+      "caseating granulomas",
+      "noncaseating granuloma",
+      "noncaseating granulomas",
+      "non-caseating granuloma",
+    ],
+    definition:
+      "Organized aggregate of activated macrophages (epithelioid histiocytes), often with multinucleated giant cells, usually surrounded by lymphocytes, forming a focal chronic inflammatory nodule to contain persistent antigen that cannot be cleared.",
+    examples: [
+      "Tuberculosis — caseating granulomas with central necrosis; AFB-positive",
+      "Sarcoidosis — noncaseating granulomas; bilateral hilar lymphadenopathy, ↑ ACE",
+      "Crohn disease — noncaseating transmural granulomas in bowel wall",
+      "Foreign-body granuloma — suture, silica, berylliosis",
+      "Schistosoma eggs — granulomatous periportal fibrosis in liver",
+      "PPD skin test — type IV hypersensitivity granuloma at injection site",
+    ],
+    boardsPearls: [
+      "Caseating (cheese-like necrosis) → think TB; noncaseating → sarcoidosis, Crohn disease, berylliosis",
+      "TNF-α is central to granuloma formation and maintenance — anti-TNF therapy can reactivate latent TB",
+      "Multinucleated giant cells (Langhans type with horseshoe nuclei in TB) and epithelioid macrophages are hallmarks",
+      "Sarcoidosis: noncaseating granulomas + ↑ ACE + hypercalcemia (macrophage 1α-hydroxylase)",
+      "vs abscess — pus and liquefactive necrosis, not organized epithelioid granuloma",
+    ],
+    distinguishFrom: [
+      "Abscess — neutrophil-rich pus cavity, not organized macrophage granuloma",
+      "Necrotizing vasculitis (GPA) — necrotizing granulomatous inflammation of vessels, not classic infectious granuloma",
+      "Malignancy — granulomatous reaction can mimic tumor; biopsy required",
+      "Acute suppurative inflammation — neutrophil predominance without granuloma architecture",
+    ],
+    pediatrics:
+      "TB in children may show Ghon complex with caseating granuloma; chronic granulomatous disease is a neutrophil oxidative burst defect (name is misleading — not a granuloma disease per se).",
+  },
 ];
 
 const pathogenesisById = new Map(

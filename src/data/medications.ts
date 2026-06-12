@@ -1514,6 +1514,96 @@ export const MEDICATIONS: MedicationEntry[] = [
       "Peds: used in pediatric transplant; growth and infection monitoring essential",
     ],
   },
+  {
+    id: "rituximab",
+    name: "Rituximab",
+    aliases: ["rituximab", "rituxan", "mabthera"],
+    drugClass: "Anti-CD20 monoclonal antibody",
+    mechanism:
+      "Chimeric monoclonal antibody against CD20 on B cells → complement- and antibody-mediated B-cell depletion → ↓ autoantibody production and malignant B-cell burden.",
+    indications: [
+      "CD20⁺ non-Hodgkin lymphoma and CLL",
+      "Rheumatoid arthritis (TNF-inhibitor refractory)",
+      "ANCA-associated vasculitis (alternative to cyclophosphamide for induction)",
+      "Autoimmune hemolytic anemia and ITP (refractory)",
+      "Post-transplant lymphoproliferative disorder (PTLD)",
+      "Pemphigus vulgaris and other antibody-mediated autoimmune diseases",
+    ],
+    adverseEffects: [
+      "Infusion reactions (fever, rigors, hypotension — premedicate)",
+      "Reactivation of hepatitis B and other latent infections",
+      "Progressive multifocal leukoencephalopathy (PML) with prolonged immunosuppression",
+      "Hypogammaglobulinemia and recurrent infections",
+      "Tumor lysis syndrome (high tumor burden lymphomas)",
+    ],
+    boardsPearls: [
+      "Anti-CD20 → depletes B cells; does not affect plasma cells (already differentiated)",
+      "ANCA vasculitis — rituximab noninferior to cyclophosphamide for induction",
+      "Screen for hepatitis B before use; HBV reactivation can be fatal",
+      "PTLD (EBV-driven) — reduce immunosuppression ± rituximab",
+      "Peds: used in refractory pediatric autoimmune cytopenias and CD20⁺ lymphomas; live vaccines contraindicated during and after therapy",
+    ],
+  },
+  {
+    id: "dupilumab",
+    name: "Dupilumab",
+    aliases: ["dupilumab", "dipilumab", "dupixent"],
+    drugClass: "Anti–IL-4 receptor α monoclonal antibody",
+    mechanism:
+      "Binds IL-4 receptor α subunit → blocks signaling of both IL-4 and IL-13 → ↓ type 2 (Th2) inflammation (↓ IgE, eosinophil recruitment, barrier dysfunction).",
+    indications: [
+      "Moderate-to-severe atopic dermatitis",
+      "Moderate-to-severe asthma with type 2 inflammation (eosinophilic or OCS-dependent)",
+      "Chronic rhinosinusitis with nasal polyps",
+      "Eosinophilic esophagitis",
+    ],
+    adverseEffects: [
+      "Conjunctivitis and keratitis",
+      "Injection-site reactions",
+      "Eosinophilia",
+      "Facial redness or dermatitis (uncommon)",
+      "Paradoxical asthma worsening if systemic steroids stopped abruptly",
+    ],
+    boardsPearls: [
+      "IL-4Rα blocker — interrupts IL-4 and IL-13 (type 2 / Th2 pathway)",
+      "Atopic triad: eczema, asthma, allergic rhinitis — targets shared type 2 inflammation",
+      "Conjunctivitis is the classic non-infectious adverse effect",
+      "Do not abruptly discontinue systemic corticosteroids in asthma when starting dupilumab",
+      "Peds: approved for atopic dermatitis in young children (age threshold varies); same type 2 mechanism as adults",
+    ],
+  },
+  {
+    id: "adalimumab",
+    name: "Adalimumab",
+    aliases: ["adalimumab", "dalimumab", "humira"],
+    drugClass: "Anti–TNF-α monoclonal antibody",
+    mechanism:
+      "Fully human monoclonal antibody that binds soluble and membrane-bound TNF-α → prevents TNF-α receptor interaction → ↓ pro-inflammatory cytokine signaling, leukocyte recruitment, and tissue destruction.",
+    indications: [
+      "Rheumatoid arthritis",
+      "Psoriasis and psoriatic arthritis",
+      "Ankylosing spondylitis",
+      "Crohn disease and ulcerative colitis",
+      "Hidradenitis suppurativa",
+      "Noninfectious uveitis",
+      "Juvenile idiopathic arthritis",
+    ],
+    adverseEffects: [
+      "Serious infections (including reactivation of latent tuberculosis)",
+      "Injection-site reactions",
+      "Malignancy risk (lymphoma, skin cancer)",
+      "Heart failure exacerbation",
+      "Demyelinating disease (rare)",
+      "Drug-induced lupus and positive ANA",
+    ],
+    boardsPearls: [
+      "TNF-α inhibitor — screen for latent TB (PPD/IGRA) and treat before starting; avoid live vaccines",
+      "Fully human mAb (vs chimeric infliximab) — lower infusion reaction risk; subcutaneous dosing",
+      "Contraindicated in untreated TB and moderate-to-severe heart failure",
+      "Paradoxical psoriasis and new-onset demyelination reported — stop if neurologic symptoms",
+      "Peds: approved for JIA and pediatric Crohn disease; same TB screening and infection precautions as adults",
+    ],
+  },
 ];
 
 const medicationById = new Map(MEDICATIONS.map((m) => [m.id, m]));

@@ -13,5 +13,8 @@
     "@types/chrome": "^0.0.304",
     "typescript": "^5.8.2",
     "vite": "^6.2.2"
+  },
+  "dependencies": {
+    "lucide": "^1.18.0"
   }
 }
