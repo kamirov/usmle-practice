@@ -14,13 +14,15 @@ Use pnpm for package management of any JS projects
 
 Specifically, any additions should pertain to Step 1 (not Step 2 or Step 3).
 
+All data added should include an etymology section, including a very concise line about the etymology (for learning purposes, to help studying for Step 1)
+
 ## Data Types
 
 When new entries are specified for data, if it makes sense to establish a new data type for them (a new file), then please do so
 
 ## Pediatric
 
-Where relevant, include a note on pediatrics, e.g. how something changes if the patient is pediatric
+Where relevant, include a note on pediatrics, e.g. how something changes if the patient is pediatric. If there is nothing Step 1 related to say about pediatrics for this data, then don't include a pediatric section
 
 ## Media
 
