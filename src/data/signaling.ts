@@ -319,6 +319,102 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
       "X-linked SCID from JAK3 or common γ-chain defects abolishes multiple cytokine JAK-STAT signals. Hyper-IgE (STAT3) presents in childhood with eczema and staph abscesses. JAK inhibitors used cautiously in pediatric autoimmune disease; ruxolitinib in pediatric MPNs per specialist guidance.",
   },
   {
+    id: "nf-kb",
+    name: "NF-κB (Nuclear Factor Kappa B)",
+    etymology: "nuclear factor kappa B; Greek kappa (letter Κ) + Latin factor",
+    aliases: [
+      "nf-kb",
+      "nf kb",
+      "nfκb",
+      "nf-κb",
+      "nf κb",
+      "nuclear factor kappa b",
+      "nuclear factor kappa-b",
+      "nuclear factor-kappa b",
+      "nuclear factor-kappa-b",
+      "nuclear factor κb",
+      "rel/nfkappa b",
+      "rel/nuclear factor kappa b",
+    ],
+    type: "Signaling pathway",
+    source:
+      "Activated downstream of innate PRRs (TLRs via MyD88/TRIF), pro-inflammatory cytokine receptors (TNF-R, IL-1R), CD40, some antigen receptors, and cellular stress — convergent hub for inflammatory gene transcription",
+    receptor:
+      "Multiple upstream pathways: TLRs → MyD88/IRAK4/TRAF6 or TRIF; TNF-R1 → TRADD/RIP/TRAF2; IL-1R → MyD88; BCR/TCR co-stimulation and CD40 in lymphocytes; IKK complex (IKKα, IKKβ, NEMO/IKKγ) phosphorylates IκB",
+    function:
+      "Master pro-inflammatory transcription factor. Resting NF-κB (classically p50/p65 RelA heterodimer) is sequestered in the cytoplasm bound to IκB inhibitor. Stimulus → IKK activation → IκB phosphorylation and proteasomal degradation → NF-κB translocates to nucleus → transcription of cytokines (TNF, IL-1, IL-6), chemokines, adhesion molecules (ICAM, VCAM, E-selectin), COX-2, iNOS, and survival genes.",
+    clinicalRelevance: [
+      "Central to endotoxic shock — LPS → TLR4 → NF-κB → cytokine storm (TNF-α, IL-1, IL-6)",
+      "Drives chronic inflammation in RA, IBD, and psoriasis — upstream of many anti-TNF/IL-1/IL-6 targets",
+      "Constitutive NF-κB activation in some lymphomas (e.g., MALT lymphoma with BCL10/MALT1/CARD11 mutations)",
+      "Proteasome inhibitors (bortezomib) block IκB degradation step — used in multiple myeloma",
+      "Aspirin (high dose) and some NSAIDs can inhibit NF-κB via IKKβ",
+      "Mutations in NF-κB pathway components cause combined immunodeficiency or autoinflammation (e.g., NEMO/IKKγ, IκBα)",
+    ],
+    boardsPearls: [
+      "Resting: NF-κB + IκB in cytoplasm → stimulus → IKK → IκB degraded → NF-κB to nucleus",
+      "LPS/TLR4 and TNF-α/TNF-R1 both converge on NF-κB — links innate and inflammatory cytokine signaling",
+      "MyD88 → IRAK4 → TRAF6 → TAK1 → IKK → NF-κB (shared with IL-1R; defective in MyD88/IRAK-4 deficiency)",
+      "vs JAK-STAT — cytokine JAK phosphorylation of STATs; NF-κB uses IκB degradation, not STAT",
+      "vs MAPK — parallel downstream of many receptors; distinct kinase cascade (Ras-Raf-MEK-ERK)",
+      "Proteasome inhibition traps NF-κB in cytoplasm by preventing IκB degradation",
+      "Rel/NF-κB family: p65 (RelA), c-Rel, RelB, p50, p52 — heterodimers bind κB DNA motifs",
+    ],
+    distinguishFrom: [
+      "JAK-STAT pathway — STAT phosphorylation and dimerization; dominant for many interleukins and interferons",
+      "MAPK/ERK pathway — growth factor and stress kinase cascade; overlaps upstream but different transcription factors",
+      "NLRP3 inflammasome — caspase-1 and IL-1β maturation; can be activated by DAMPs downstream of but distinct from NF-κB",
+      "IRF3 — type I interferon transcription factor from TRIF/TBK1 arm of TLR3/TLR4, not NF-κB",
+      "AP-1 (Fos/Jun) — often co-activated with NF-κB via MAPK but separate transcription factor",
+    ],
+    pediatrics:
+      "NEMO (IKKγ) deficiency — X-linked combined immunodeficiency with ectodermal dysplasia and susceptibility to pyogenic and mycobacterial infection. MyD88/IRAK-4 deficiency impairs TLR/IL-1R→NF-κB signaling → recurrent bacterial infections in infancy without severe viral susceptibility. Neonatal gram-negative sepsis — excessive NF-κB-driven cytokine release.",
+  },
+  {
+    id: "il-1",
+    name: "Interleukin-1 (IL-1)",
+    etymology: "interleukin; Latin inter + Greek leukos",
+    aliases: [
+      "interleukin-1",
+      "interleukin 1",
+      "il-1",
+      "il 1",
+      "il-1α",
+      "il-1β",
+      "il-1 alpha",
+      "il-1 beta",
+    ],
+    type: "Cytokine",
+    source:
+      "Activated macrophages, monocytes, dendritic cells, endothelial cells, and many other cell types (IL-1β is the predominant secreted form)",
+    receptor:
+      "IL-1 receptor type I (IL-1RI) → MyD88 → NF-κB and MAPK; naturally antagonized by IL-1 receptor antagonist (IL-1Ra)",
+    function:
+      "Potent pro-inflammatory cytokine and endogenous pyrogen: induces fever (hypothalamic PGE₂), activates endothelium (↑ adhesion molecules), stimulates acute-phase response, and promotes leukocyte recruitment and tissue catabolism.",
+    clinicalRelevance: [
+      "Endogenous pyrogen with IL-6 and TNF-α → fever in infection and inflammation",
+      "Central to autoinflammatory disease — unregulated IL-1 signaling (e.g., NLRP3 inflammasome → ↑ IL-1β)",
+      "Anakinra (recombinant IL-1Ra) — CAPS, gout flares, RA; canakinumab (anti–IL-1β) — autoinflammatory syndromes",
+      "Septic shock and SIRS — IL-1 contributes to cytokine cascade with TNF and IL-6",
+      "Bone resorption in inflammatory arthritis — IL-1 stimulates osteoclast activity",
+    ],
+    boardsPearls: [
+      "IL-1, IL-6, TNF-α — classic endogenous pyrogen triad → PGE₂ in hypothalamus → fever",
+      "IL-1β released via inflammasome (NLRP3) — gout crystals, CAPS, periodic fever syndromes",
+      "Anakinra = IL-1 receptor antagonist (blocks IL-1α and IL-1β)",
+      "IL-1 drives acute inflammation and endothelial activation; less hepatocyte-specific than IL-6",
+      "Corticosteroids ↓ IL-1 transcription among many cytokines",
+    ],
+    distinguishFrom: [
+      "IL-6 — primarily drives hepatic acute-phase proteins (CRP, fibrinogen) via STAT3; tocilizumab target",
+      "TNF-α — granuloma formation, anti-TNF indications in IBD/RA/psoriasis; overlaps in fever and inflammation",
+      "IL-2 — T-cell growth factor, not primary pyrogen or acute-phase driver",
+      "Prostaglandin E₂ — downstream mediator of fever, not the upstream cytokine",
+    ],
+    pediatrics:
+      "Periodic fever syndromes (CAPS, FMF) often IL-1–driven — anakinra/canakinumab used in pediatric autoinflammatory disease. Neonatal-onset multisystem inflammatory disease (NOMID/CINCA) responds to IL-1 blockade.",
+  },
+  {
     id: "il-2",
     name: "Interleukin-2 (IL-2)",
     etymology: "interleukin; Latin inter + Greek leukos",
@@ -385,6 +481,48 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
     ],
     pediatrics:
       "Atopic march in children — eczema, food allergy, asthma linked to Th2/IL-4 skew; early allergen sensitization drives IgE production.",
+  },
+  {
+    id: "il-6",
+    name: "Interleukin-6 (IL-6)",
+    etymology: "interleukin; Latin inter + Greek leukos",
+    aliases: [
+      "interleukin-6",
+      "interleukin 6",
+      "il-6",
+      "il 6",
+    ],
+    type: "Cytokine",
+    source:
+      "Activated macrophages, T cells, B cells, endothelial cells, fibroblasts, and adipocytes",
+    receptor:
+      "IL-6 receptor (membrane-bound or soluble) + gp130 → JAK → STAT3 (classic pathway); also trans-signaling via soluble IL-6R",
+    function:
+      "Pro-inflammatory cytokine and endogenous pyrogen that drives the hepatic acute-phase response (↑ CRP, fibrinogen, hepcidin), supports B-cell differentiation and antibody production, and with TGF-β promotes Th17 differentiation.",
+    clinicalRelevance: [
+      "↑ CRP in infection/inflammation — IL-6 is the main hepatocyte stimulus for acute-phase protein synthesis",
+      "Tocilizumab (anti–IL-6R) and siltuximab (anti–IL-6) — RA, cytokine release syndrome, Castleman disease",
+      "Endogenous pyrogen with IL-1 and TNF-α → hypothalamic PGE₂ → fever",
+      "Elevated in sepsis, cytokine storm, and MIS-C (post–COVID-19 pediatric hyperinflammation)",
+      "Contributes to anemia of chronic disease via hepcidin induction",
+      "STAT3 gain-of-function mutations → hyper-IgE syndrome (Job syndrome)",
+    ],
+    boardsPearls: [
+      "IL-6 → liver → ↑ CRP and fibrinogen — link IL-6 elevation to acute-phase reactants on boards",
+      "IL-1, IL-6, TNF-α — endogenous pyrogen triad",
+      "TGF-β + IL-6 → Th17 (RORγt); IL-6 also opposes Treg differentiation in inflammatory settings",
+      "Tocilizumab blocks IL-6 receptor — used in RA and severe cytokine release syndrome",
+      "IL-6 vs IL-1 — both pyrogenic; IL-6 more specific for hepatic acute-phase response",
+      "Hyper-IgE syndrome — STAT3 defect impairs IL-6/IL-10 signaling → impaired Th17 and ↑ IgE",
+    ],
+    distinguishFrom: [
+      "IL-1 — more endothelial/leukocyte activation; anakinra target; inflammasome-driven IL-1β in autoinflammatory disease",
+      "TNF-α — granuloma formation, anti-TNF biologics for IBD/psoriasis; NF-κB upstream of IL-6",
+      "CRP — downstream acute-phase protein, not the cytokine itself",
+      "IL-4 — Th2/IgE axis, not acute-phase or pyrogenic driver",
+    ],
+    pediatrics:
+      "MIS-C after COVID-19 — marked IL-6 elevation treated with IVIG and sometimes tocilizumab. Hyper-IgE (Job) syndrome presents in childhood with eczema, retained primary teeth, and staph abscesses from STAT3/IL-6 pathway defects.",
   },
   {
     id: "tnf",

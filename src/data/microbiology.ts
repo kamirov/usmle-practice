@@ -2229,6 +2229,10 @@ export const MICROBIOLOGY: MicrobiologyEntry[] = [
       "echoviruses",
       "hand-foot-mouth virus",
       "hfmd virus",
+      "hand-foot-and-mouth disease",
+      "hand foot and mouth disease",
+      "hfmd",
+      "herpangina",
     ],
     type: "virus",
     definition:

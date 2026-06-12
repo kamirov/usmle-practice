@@ -52,3 +52,18 @@ iga-vasculitis.jpg
 https://commons.wikimedia.org/wiki/File:Purpura2.JPG
 Okwikikim, public domain
 Description: Palpable purpura on the lower extremity in a child with IgA vasculitis (Henoch-Schönlein purpura)
+
+hand-foot-and-mouth-disease.jpg
+https://commons.wikimedia.org/wiki/File:Characteristic_rash_of_hand,_foot,_and_mouth_disease,_on_a_human_foot.jpg
+James Heilman, MD, CC BY-SA 3.0
+Description: Characteristic vesicular rash on the sole in hand-foot-and-mouth disease
+
+herpangina.jpg
+https://commons.wikimedia.org/wiki/File:Herpangina.jpg
+Klaus D. Peter, CC BY 3.0 DE
+Description: Posterior oropharyngeal vesicles and uvular ulceration in herpangina
+
+x-linked-agammaglobulinemia.png
+https://commons.wikimedia.org/wiki/File:B_cell_activation.png
+Miguelfo, CC BY-SA 3.0
+Description: B-cell activation pathway — relevant to BTK-dependent B-cell maturation in X-linked agammaglobulinemia

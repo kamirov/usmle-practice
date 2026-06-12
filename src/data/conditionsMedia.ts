@@ -48,6 +48,8 @@ import gangrene from "../media/images/conditions/gangrene.jpg?url";
 import glomerulonephritis from "../media/images/conditions/glomerulonephritis.jpg?url";
 import granulomatosisWithPolyangiitis from "../media/images/conditions/granulomatosis-with-polyangiitis.jpg?url";
 import gravesDisease from "../media/images/conditions/graves-disease.jpg?url";
+import handFootAndMouthDisease from "../media/images/conditions/hand-foot-and-mouth-disease.jpg?url";
+import herpangina from "../media/images/conditions/herpangina.jpg?url";
 import heartFailure from "../media/images/conditions/heart-failure.jpg?url";
 import hemothorax from "../media/images/conditions/hemothorax.png?url";
 import hivInfection from "../media/images/conditions/hiv-infection.jpg?url";
@@ -136,6 +138,7 @@ import vasculitis from "../media/images/conditions/vasculitis.jpg?url";
 import venousStasisDermatitis from "../media/images/conditions/venous-stasis-dermatitis.png?url";
 import ventricularSeptalDefect from "../media/images/conditions/ventricular-septal-defect.svg?url";
 import wilsonDisease from "../media/images/conditions/wilson-disease.jpg?url";
+import xLinkedAgammaglobulinemia from "../media/images/conditions/x-linked-agammaglobulinemia.png?url";
 import yellowFever from "../media/images/conditions/yellow-fever.jpg?url";
 import zikaVirusInfection from "../media/images/conditions/zika-virus-infection.jpg?url";
 import zollingerEllisonSyndrome from "../media/images/conditions/zollinger-ellison-syndrome.jpg?url";
@@ -189,7 +192,9 @@ export type ConditionImageId = Extract<
   | "glomerulonephritis"
   | "granulomatosis-with-polyangiitis"
   | "graves-disease"
+  | "hand-foot-and-mouth-disease"
   | "heart-failure"
+  | "herpangina"
   | "hemothorax"
   | "hiv-infection"
   | "hodgkin-lymphoma"
@@ -277,6 +282,7 @@ export type ConditionImageId = Extract<
   | "venous-stasis-dermatitis"
   | "ventricular-septal-defect"
   | "wilson-disease"
+  | "x-linked-agammaglobulinemia"
   | "yellow-fever"
   | "zika-virus-infection"
   | "zollinger-ellison-syndrome"
@@ -335,7 +341,9 @@ export const CONDITION_IMAGES: Partial<Record<ConditionImageId, string>> = {
   "glomerulonephritis": extensionAssetUrl(glomerulonephritis),
   "granulomatosis-with-polyangiitis": extensionAssetUrl(granulomatosisWithPolyangiitis),
   "graves-disease": extensionAssetUrl(gravesDisease),
+  "hand-foot-and-mouth-disease": extensionAssetUrl(handFootAndMouthDisease),
   "heart-failure": extensionAssetUrl(heartFailure),
+  "herpangina": extensionAssetUrl(herpangina),
   "hemothorax": extensionAssetUrl(hemothorax),
   "hiv-infection": extensionAssetUrl(hivInfection),
   "hodgkin-lymphoma": extensionAssetUrl(hodgkinLymphoma),
@@ -423,6 +431,7 @@ export const CONDITION_IMAGES: Partial<Record<ConditionImageId, string>> = {
   "venous-stasis-dermatitis": extensionAssetUrl(venousStasisDermatitis),
   "ventricular-septal-defect": extensionAssetUrl(ventricularSeptalDefect),
   "wilson-disease": extensionAssetUrl(wilsonDisease),
+  "x-linked-agammaglobulinemia": extensionAssetUrl(xLinkedAgammaglobulinemia),
   "yellow-fever": extensionAssetUrl(yellowFever),
   "zika-virus-infection": extensionAssetUrl(zikaVirusInfection),
   "zollinger-ellison-syndrome": extensionAssetUrl(zollingerEllisonSyndrome),
@@ -478,7 +487,9 @@ export const CONDITION_IMAGE_ATTRIBUTIONS: Partial<
   "glomerulonephritis": { label: "Wikimedia Commons (Crescentic glomerulonephritis - high mag.jpg)", url: "https://commons.wikimedia.org/wiki/File:Crescentic_glomerulonephritis_-_high_mag.jpg" },
   "granulomatosis-with-polyangiitis": { label: "Wikimedia Commons (Granulomatosis with polyangiitis.jpg)", url: "https://commons.wikimedia.org/wiki/File:Granulomatosis_with_polyangiitis.jpg" },
   "graves-disease": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:graves-disease.jpg" },
+  "hand-foot-and-mouth-disease": { label: "Wikimedia Commons (Characteristic rash of hand, foot, and mouth disease, on a human foot.jpg)", url: "https://commons.wikimedia.org/wiki/File:Characteristic_rash_of_hand,_foot,_and_mouth_disease,_on_a_human_foot.jpg" },
   "heart-failure": { label: "Wikimedia Commons (Depiction of a person suffering from heart failure.png)", url: "https://commons.wikimedia.org/wiki/File:Depiction_of_a_person_suffering_from_heart_failure.png" },
+  "herpangina": { label: "Wikimedia Commons (Herpangina.jpg)", url: "https://commons.wikimedia.org/wiki/File:Herpangina.jpg" },
   "hemothorax": { label: "Wikimedia Commons (Chest-X-ray-Left-sided-hemothorax.png)", url: "https://commons.wikimedia.org/wiki/File:Chest-X-ray-Left-sided-hemothorax.png" },
   "hiv-infection": { label: "Wikimedia Commons (The George Blumer edition of Billings-Forchheimer's Therapeusis of internal diseases- Anaphylaxis, Dietary, Deficiencies, Endocrins, Dvelopmental, Vasomotor, Metabolic, Digestion ... (IA georgeblumeredit04forc).pdf)", url: "https://commons.wikimedia.org/wiki/File:The_George_Blumer_edition_of_Billings-Forchheimer's_Therapeusis_of_internal_diseases-_Anaphylaxis,_Dietary,_Deficiencies,_Endocrins,_Dvelopmental,_Vasomotor,_Metabolic,_Digestion_..._(IA_georgeblumeredit04forc).pdf" },
   "hodgkin-lymphoma": { label: "Wikimedia Commons (Reed-Sternberg lymphocyte nci-vol-7172-300.jpg)", url: "https://commons.wikimedia.org/wiki/File:Reed-Sternberg_lymphocyte_nci-vol-7172-300.jpg" },
@@ -566,6 +577,7 @@ export const CONDITION_IMAGE_ATTRIBUTIONS: Partial<
   "venous-stasis-dermatitis": { label: "Wikimedia Commons (WIRA-Wiki-GH-012-de-Ulkus-Verlauf-unter-wIRA.png)", url: "https://commons.wikimedia.org/wiki/File:WIRA-Wiki-GH-012-de-Ulkus-Verlauf-unter-wIRA.png" },
   "ventricular-septal-defect": { label: "Wikimedia Commons (Ventricular septal defect-es.svg)", url: "https://commons.wikimedia.org/wiki/File:Ventricular_septal_defect-es.svg" },
   "wilson-disease": { label: "Wikimedia Commons (Kayser-Fleischer ringArrow.jpg)", url: "https://commons.wikimedia.org/wiki/File:Kayser-Fleischer_ringArrow.jpg" },
+  "x-linked-agammaglobulinemia": { label: "Wikimedia Commons (B cell activation.png)", url: "https://commons.wikimedia.org/wiki/File:B_cell_activation.png" },
   "yellow-fever": { label: "Wikimedia Commons (John Horsey sept 24 1821 yellow fever, Allegator.jpg)", url: "https://commons.wikimedia.org/wiki/File:John_Horsey_sept_24_1821_yellow_fever,_Allegator.jpg" },
   "zika-virus-infection": { label: "Wikimedia Commons (Alexius Salvador Zika-Virus.jpg)", url: "https://commons.wikimedia.org/wiki/File:Alexius_Salvador_Zika-Virus.jpg" },
   "zollinger-ellison-syndrome": { label: "Wikimedia Commons (ZES endo.jpg)", url: "https://commons.wikimedia.org/wiki/File:ZES_endo.jpg" },
@@ -621,7 +633,9 @@ export const CONDITION_IMAGE_CAPTIONS: Partial<
   "glomerulonephritis": "Clinical or pathologic image illustrating glomerulonephritis",
   "granulomatosis-with-polyangiitis": "Clinical or pathologic image illustrating granulomatosis with polyangiitis",
   "graves-disease": "Clinical or pathologic image illustrating graves disease",
+  "hand-foot-and-mouth-disease": "Characteristic vesicular rash on the sole in hand-foot-and-mouth disease",
   "heart-failure": "Clinical or pathologic image illustrating heart failure",
+  "herpangina": "Posterior oropharyngeal vesicles and uvular ulceration in herpangina",
   "hemothorax": "Clinical or pathologic image illustrating hemothorax",
   "hiv-infection": "Clinical or pathologic image illustrating hiv infection",
   "hodgkin-lymphoma": "Clinical or pathologic image illustrating hodgkin lymphoma",
@@ -709,6 +723,7 @@ export const CONDITION_IMAGE_CAPTIONS: Partial<
   "venous-stasis-dermatitis": "Clinical or pathologic image illustrating venous stasis dermatitis",
   "ventricular-septal-defect": "Clinical or pathologic image illustrating ventricular septal defect",
   "wilson-disease": "Clinical or pathologic image illustrating wilson disease",
+  "x-linked-agammaglobulinemia": "B-cell activation pathway — BTK is required for pre-B to mature B-cell transition; BTK mutation causes X-linked agammaglobulinemia",
   "yellow-fever": "Clinical or pathologic image illustrating yellow fever",
   "zika-virus-infection": "Clinical or pathologic image illustrating zika virus infection",
   "zollinger-ellison-syndrome": "Clinical or pathologic image illustrating zollinger ellison syndrome",
