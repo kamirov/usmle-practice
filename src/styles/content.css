@@ -320,15 +320,11 @@
 .usmle-organ-popover--rich {
   width: min(92vw, 680px);
   max-width: min(92vw, 680px);
-  max-height: min(70vh, 480px);
-  overflow-y: auto;
 }
 
 .usmle-organ-popover--with-media {
   width: min(94vw, 920px);
   max-width: min(94vw, 920px);
-  max-height: min(80vh, 520px);
-  overflow: hidden;
 }
 
 .usmle-organ-popover__layout {
@@ -340,8 +336,6 @@
 .usmle-organ-popover__body {
   flex: 1;
   min-width: 0;
-  overflow-y: auto;
-  max-height: min(80vh, 500px);
 }
 
 .usmle-organ-popover__media {
