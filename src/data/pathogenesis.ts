@@ -146,6 +146,42 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
       "Pediatric IBD on infliximab — same ADA risk; methotrexate often added to reduce immunogenicity and prolong remission.",
   },
   {
+    id: "autoantibodies",
+    name: "Autoantibodies",
+    aliases: [
+      "autoantibody",
+      "autoantibodies",
+      "auto-antibody",
+      "auto-antibodies",
+    ],
+    definition:
+      "Antibodies directed against self antigens that mediate autoimmune disease through type II (cell-surface/matrix) or type III (immune complex) hypersensitivity, or serve as diagnostic markers of autoimmunity.",
+    examples: [
+      "ANA, anti-dsDNA, anti-Smith — systemic lupus erythematosus",
+      "Anti–acetylcholine receptor — myasthenia gravis (type II)",
+      "Anti-GBM (Goodpasture) — type IV collagen in lung and kidney (type II)",
+      "Rheumatoid factor and anti-CCP — rheumatoid arthritis",
+      "Anti-desmoglein 3/1 — pemphigus vulgaris (type II blistering)",
+      "Anti-BP180/BP230 — bullous pemphigoid (type II)",
+      "Anti-TPO, anti-thyroglobulin — Hashimoto thyroiditis",
+    ],
+    boardsPearls: [
+      "Autoantibodies ≠ autoimmunity always — low-titer ANA can be nonspecific; correlate with clinical picture",
+      "Type II — antibody on cell surface/matrix (AIHA, MG, pemphigus); type III — immune complexes (SLE, PSGN)",
+      "vs anti-drug antibodies (ADAs) — ADAs target exogenous drug, not self antigen",
+      "Coombs positive = antibody on RBCs; anti-GBM on kidney biopsy = linear IgG staining",
+      "Pemphigus vs bullous pemphigoid — anti-desmoglein (intraepidermal) vs anti-hemidesmosome (subepidermal)",
+    ],
+    distinguishFrom: [
+      "Anti-drug antibodies — directed against therapeutic biologic, not self antigen",
+      "Alloantibodies — against foreign (non-self) antigen, e.g., anti-Rh in pregnancy",
+      "IgE — allergy to exogenous allergen; not classic autoantibody mechanism",
+      "Antinuclear antibodies (ANA) — subset of autoantibodies; positive ANA is screening, not diagnosis alone",
+    ],
+    pediatrics:
+      "Juvenile idiopathic arthritis may have RF or anti-CCP; type 1 diabetes has anti-GAD/IA-2/islet cell antibodies — different pediatric autoimmune panels.",
+  },
+  {
     id: "leukocyte-migration",
     name: "Leukocyte Migration",
     aliases: [
@@ -684,6 +720,35 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
     ],
     pediatrics:
       "Poison ivy exposure common in children playing outdoors; teach plant identification and prompt washing after contact.",
+  },
+  {
+    id: "hemosiderin",
+    name: "Hemosiderin",
+    aliases: ["hemosiderin", "hemosiderin deposition", "hemosiderin pigment"],
+    definition:
+      "Iron-storage complex formed when macrophages degrade hemoglobin from phagocytosed erythrocytes; golden-brown granular pigment in tissues after chronic or recurrent hemorrhage.",
+    examples: [
+      "Heart failure cells — hemosiderin-laden alveolar macrophages in left heart failure",
+      "Chronic pulmonary hemorrhage — idiopathic pulmonary hemosiderosis",
+      "Resolving bruise — macrophages clear extravasated RBCs → hemosiderin",
+      "Hemosiderinuria — renal tubular iron in chronic intravascular hemolysis",
+      "Chronic venous insufficiency — hemosiderin staining of lower extremity skin (\"stasis pigmentation\")",
+    ],
+    boardsPearls: [
+      "Hemosiderin = iron stored after RBC breakdown; Prussian blue stain confirms iron",
+      "Heart failure cells link prior pulmonary capillary hemorrhage to chronic left-sided heart failure",
+      "vs ferritin — soluble iron storage protein; hemosiderin is aggregated, insoluble iron-protein complex",
+      "vs melanin — brown skin pigment; hemosiderin is iron from blood, often golden-brown in macrophages",
+      "Siderophage = macrophage containing hemosiderin, not the pigment itself",
+    ],
+    distinguishFrom: [
+      "Siderophage (heart failure cell) — macrophage laden with hemosiderin, not the pigment alone",
+      "Ferritin — primary soluble intracellular iron storage; hemosiderin is degraded/aggregated form",
+      "Bilirubin — heme breakdown product excreted in bile; not tissue iron storage",
+      "Melanin — cutaneous pigment; unrelated to hemorrhage",
+    ],
+    pediatrics:
+      "Idiopathic pulmonary hemosiderosis in children — recurrent alveolar hemorrhage, iron-deficiency anemia, hemosiderin-laden macrophages in BAL; rule out mitral stenosis and coagulopathy.",
   },
 ];
 

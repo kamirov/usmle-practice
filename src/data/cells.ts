@@ -260,11 +260,55 @@ export const CELLS: CellEntry[] = [
       "Osteoclasts are multinucleated macrophage derivatives — bone resorption",
     ],
     distinguishFrom: [
+      "Macrophage — tissue-differentiated monocyte; same lineage, different compartment",
       "Neutrophil — acute bacterial infection, segmented nucleus",
       "Lymphocyte — smaller, round nucleus; adaptive immunity",
     ],
     pediatrics:
       "Juvenile myelomonocytic leukemia (JMML) — proliferation of myelomonocytic lineage in young children.",
+  },
+  {
+    id: "macrophage",
+    name: "Macrophage",
+    aliases: [
+      "macrophage",
+      "macrophages",
+      "tissue macrophage",
+      "tissue macrophages",
+      "histiocyte",
+      "histiocytes",
+    ],
+    definition:
+      "Tissue-resident phagocyte derived from circulating monocytes; engulfs pathogens, debris, and apoptotic cells and functions as an antigen-presenting cell in innate and adaptive immunity.",
+    characteristics: [
+      "Differentiates from monocytes after extravasation into tissues",
+      "Named by location: Kupffer (liver), alveolar (lung), microglia (CNS), splenic, peritoneal",
+      "Expresses MHC class II — presents antigen to CD4⁺ T cells",
+      "Activated by IFN-γ from Th1 cells → enhanced microbicidal activity (iNOS, ROI)",
+      "Can fuse to form multinucleated giant cells in granulomas or osteoclasts in bone",
+    ],
+    clinicalRelevance: [
+      "Granulomatous inflammation — epithelioid macrophages and giant cells (TB, sarcoidosis)",
+      "Atherosclerosis — foam cells are lipid-laden macrophages in intima",
+      "Gaucher disease — glucocerebroside-filled macrophages (Gaucher cells)",
+      "Hemophagocytic lymphohistiocytosis — activated macrophages phagocytose blood cells",
+      "Heart failure cells — hemosiderin-laden alveolar macrophages in pulmonary congestion",
+    ],
+    boardsPearls: [
+      "Monocyte in blood → macrophage in tissue (mononuclear phagocyte system)",
+      "Th1/IFN-γ activates macrophages for intracellular pathogens (TB, Listeria)",
+      "Lipid-laden macrophage = foam cell (atherosclerosis); hemosiderin-laden = heart failure cell",
+      "Osteoclasts and giant cells are macrophage derivatives",
+      "vs neutrophil — macrophage for chronic/granulomatous; neutrophil for acute pus",
+    ],
+    distinguishFrom: [
+      "Monocyte — circulating precursor; kidney-shaped nucleus in peripheral blood",
+      "Neutrophil — granulocyte; acute bacterial infection, pus formation",
+      "Dendritic cell — professional APC; Langerhans cell in epidermis, not dermal macrophage",
+      "NK cell — innate lymphocyte; no phagocytosis, kills via perforin/granzyme",
+    ],
+    pediatrics:
+      "HLH in children — fever, cytopenias, hyperferritin, hemophagocytosis on marrow; treat underlying trigger and immunosuppression.",
   },
   {
     id: "cd4-t-lymphocyte",

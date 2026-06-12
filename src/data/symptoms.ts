@@ -1322,6 +1322,62 @@ export const SYMPTOMS: SymptomEntry[] = [
     ],
   },
   {
+    id: "papule",
+    name: "Papule",
+    aliases: ["papule", "papules", "papular lesion", "papular rash"],
+    definition:
+      "Solid, elevated skin lesion ≤1 cm in diameter without visible fluid; may be erythematous, violaceous, or flesh-colored.",
+    mechanism:
+      "Localized dermal or epidermal inflammation, infiltration, or proliferation → palpable raised lesion smaller than a plaque.",
+    thinkOf: [
+      "Acne vulgaris — inflammatory papules and pustules",
+      "Guttate psoriasis — small drop-like papules after strep",
+      "Lichen planus — violaceous flat-topped papules",
+      "Molluscum contagiosum — umbilicated flesh-colored papules",
+      "Drug eruption — morbilliform papules",
+    ],
+    pairWith: [
+      "Flat-topped violaceous papules + Wickham striae → lichen planus",
+      "Comedones + papules on face/back → acne",
+      "Dewdrop papules after pharyngitis → guttate psoriasis",
+      "Grouped vesicles on erythematous base → HSV (vesicle stage may follow papule)",
+    ],
+    distinguishFrom: [
+      "Plaque — solid lesion >1 cm (papule and plaque differ by size only)",
+      "Vesicle — fluid-filled, not solid",
+      "Macule — flat, non-palpable color change only",
+      "Nodule — deeper or larger solid lesion (>1 cm, often dermal/subcutaneous)",
+    ],
+  },
+  {
+    id: "plaque",
+    name: "Plaque",
+    aliases: ["plaque", "plaques", "skin plaque", "cutaneous plaque"],
+    definition:
+      "Solid, elevated skin lesion >1 cm in diameter formed by confluence of papules or broad inflammatory infiltration; may be scaly, indurated, or erythematous.",
+    mechanism:
+      "Coalescence of papules or widespread epidermal/dermal inflammation → broad palpable lesion; scale reflects hyperkeratosis or parakeratosis when present.",
+    thinkOf: [
+      "Psoriasis — erythematous plaque with silvery scale on extensors",
+      "Lichen planus — coalescent violaceous plaques on wrists/shins",
+      "Tinea corporis — annular plaque with central clearing",
+      "Atherosclerosis — fibrous plaque in arterial intima (vascular context)",
+      "Actinic keratosis — rough hyperkeratotic plaque (premalignant)",
+    ],
+    pairWith: [
+      "Silvery scale + extensor distribution → psoriasis",
+      "Violaceous flat-topped + oral Wickham striae → lichen planus",
+      "Annular + KOH positive → tinea",
+      "Firm indurated plaque → see indurated plaque for sclerotic/infiltrative causes",
+    ],
+    distinguishFrom: [
+      "Papule — same solid morphology but ≤1 cm",
+      "Patch — flat, non-palpable macule >1 cm (e.g., mycosis fungoides patch stage)",
+      "Indurated plaque — emphasizes firmness; plaque describes size/morphology",
+      "Nodule — deeper, often dermal/subcutaneous mass",
+    ],
+  },
+  {
     id: "vesicle",
     name: "Vesicle",
     aliases: ["vesicle", "vesicles", "vesicular lesion", "vesicular rash"],

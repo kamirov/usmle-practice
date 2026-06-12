@@ -2760,6 +2760,126 @@ export const CONDITIONS: ConditionEntry[] = [
       "Plaque psoriasis occurs in children; guttate form common after streptococcal infection in school-age kids. Topical therapy first-line; systemic biologics used in severe pediatric psoriasis with specialist guidance.",
   },
   {
+    id: "lichen-planus",
+    name: "Lichen Planus",
+    aliases: [
+      "lichen planus",
+      "lp",
+      "lichen planus eruption",
+    ],
+    definition:
+      "Immune-mediated inflammatory dermatosis characterized by pruritic violaceous flat-topped papules and plaques, often with fine white Wickham striae on the surface and a predilection for wrists, shins, and oral mucosa.",
+    pathophysiology:
+      "CD8⁺ T-cell–mediated attack on basal keratinocytes (possibly triggered by drugs, hepatitis C, or unknown antigen) → apoptosis of basal cells (colloid bodies/Civatte bodies) → sawtooth rete ridges, bandlike lymphocytic infiltrate at dermoepidermal junction. Histology: hypergranulosis, hyperkeratosis.",
+    classicPresentation: [
+      "Pruritic, violaceous, flat-topped polygonal papules and plaques",
+      "Wrists, ankles, shins, lumbar region; bilateral and symmetric",
+      "Wickham striae — fine white lacy lines on plaque surface",
+      "Oral lichen planus — white reticular (Wickham) pattern on buccal mucosa; erosive form is painful",
+      "Koebner phenomenon — lesions at sites of trauma",
+      "Nail dystrophy — thinning, longitudinal ridging, pterygium (dorsal nail fold scarring)",
+    ],
+    keyFindings: [
+      "Violaceous flat-topped papules/plaques with Wickham striae",
+      "Histology: sawtooth rete ridges, hypergranulosis, bandlike lymphoid infiltrate",
+      "Oral white reticular or erosive mucosal lesions",
+      "Hepatitis C association (especially erosive oral LP in some populations)",
+    ],
+    associations: [
+      "Hepatitis C virus infection",
+      "Drug-induced lichen planus — thiazides, NSAIDs, antimalarials, ACE inhibitors",
+      "Hepatobiliary disease (primary biliary cholangitis overlap syndromes)",
+      "Squamous cell carcinoma risk in chronic erosive oral lichen planus",
+    ],
+    complications: [
+      "Erosive oral lichen planus — pain, dysphagia, SCC surveillance needed",
+      "Nail destruction and pterygium",
+      "Post-inflammatory hyperpigmentation",
+      "Scarring alopecia in lichen planopilaris (scalp variant)",
+    ],
+    distinguishFrom: [
+      "Psoriasis — silvery scale, extensor surfaces, nail pitting (not pterygium)",
+      "Lichenoid drug eruption — temporal link to medication; may be more eczematous",
+      "Secondary syphilis — palmar/plantar papules, positive serology",
+      "Guttate psoriasis — post-strep small papules, not violaceous flat-topped",
+      "Lichen sclerosus — atrophic white plaques in anogenital region",
+    ],
+    treatment: [
+      "Topical corticosteroids — first-line for cutaneous disease",
+      "Topical calcineurin inhibitors for face and oral erosive disease",
+      "Systemic corticosteroids, acitretin, or phototherapy for widespread disease",
+      "Treat hepatitis C if present; discontinue offending drug if drug-induced",
+    ],
+    boardsPearls: [
+      "6 P's mnemonic: pruritic, polygonal, planar (flat-topped), purple papules/plaques",
+      "Wickham striae + sawtooth rete ridges + hypergranulosis on histology",
+      "Oral lichen planus — white reticular pattern; erosive form needs SCC monitoring",
+      "vs psoriasis — violaceous and flat-topped (lichen planus) vs erythematous silvery scale (psoriasis)",
+      "CD8⁺ T cells attack basal keratinocytes — cell-mediated, not autoantibody blistering",
+    ],
+    pediatrics:
+      "Lichen planus uncommon in young children; when present, evaluate for drug trigger and consider hepatitis C in adolescents with erosive oral disease.",
+  },
+  {
+    id: "pemphigus-vulgaris",
+    name: "Pemphigus Vulgaris",
+    aliases: [
+      "pemphigus vulgaris",
+      "pemphigus",
+      "pemphis vulgaris",
+      "pv",
+    ],
+    definition:
+      "Autoimmune blistering disease in which IgG autoantibodies against desmosomal cadherins (desmoglein 3 ± desmoglein 1) cause loss of keratinocyte adhesion (acantholysis) and intraepidermal flaccid bullae, often beginning on oral mucosa.",
+    pathophysiology:
+      "IgG autoantibodies against desmoglein 3 (mucosal predominant) and desmoglein 1 (skin) → disruption of desmosomes → acantholysis → intraepidermal cleft with rounded acantholytic keratinocytes (Tzanck cells). Type II hypersensitivity.",
+    classicPresentation: [
+      "Painful oral erosions and ulcers often precede skin involvement",
+      "Flaccid bullae that rupture easily → painful erosions",
+      "Positive Nikolsky sign — lateral pressure extends blister or denudes skin",
+      "Skin involvement: face, scalp, chest; fragile superficial erosions more than intact bullae",
+      "No urticarial rim (vs bullous pemphigoid)",
+    ],
+    keyFindings: [
+      "Intraepidermal blister with acantholysis on biopsy",
+      "Direct immunofluorescence: intercellular (\"fishnet\") IgG/C3 in epidermis",
+      "Serum anti–desmoglein 3 (± anti–desmoglein 1) autoantibodies",
+      "Tzanck smear — acantholytic keratinocytes (supportive, not definitive)",
+    ],
+    associations: [
+      "Ashkenazi Jewish and Mediterranean populations at higher risk",
+      "Paraneoplastic pemphigus — associated with lymphoma/Castleman disease (different antibody profile)",
+      "Drug trigger possible (penicillamine, ACE inhibitors) — rare",
+    ],
+    complications: [
+      "Severe fluid/electrolyte loss and secondary infection from widespread erosions",
+      "Before steroids, often fatal; still serious without treatment",
+      "Ocular involvement in paraneoplastic variant",
+    ],
+    distinguishFrom: [
+      "Bullous pemphigoid — elderly, tense subepidermal bullae, urticarial base, anti-BP180; no acantholysis",
+      "Stevens-Johnson syndrome / TEN — drug trigger, epidermal necrosis, mucosal involvement, not desmoglein autoantibodies",
+      "Herpes simplex — grouped vesicles, not diffuse acantholysis or fishnet IF",
+      "Staphylococcal scalded skin syndrome — superficial split, children, exfoliative toxin not autoantibody",
+      "Mucous membrane pemphigoid — subepidermal, scarring mucosal disease",
+    ],
+    treatment: [
+      "Systemic corticosteroids — mainstay for disease control",
+      "Steroid-sparing: rituximab (anti-CD20), azathioprine, mycophenolate, cyclophosphamide",
+      "IVIG or plasmapheresis for severe refractory disease",
+      "Wound care and infection prevention",
+    ],
+    boardsPearls: [
+      "Pemphigus = intraepidermal, acantholysis, flaccid bullae, + Nikolsky sign",
+      "Bullous pemphigoid = subepidermal, tense bullae, eosinophils, anti-hemidesmosome (BP180)",
+      "Oral mucosa first in pemphigus vulgaris — desmoglein 3",
+      "Fishnet pattern on direct immunofluorescence — pathognomonic intercellular IgG",
+      "Anti-desmoglein autoantibodies — type II hypersensitivity",
+    ],
+    pediatrics:
+      "Pemphigus vulgaris rare in children; SSSS and bullous impetigo more common causes of blistering in infants — toxin-mediated superficial split, not autoimmune desmoglein antibodies.",
+  },
+  {
     id: "mastocytosis",
     name: "Mastocytosis",
     aliases: [
