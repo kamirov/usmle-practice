@@ -1088,6 +1088,55 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
     pediatrics:
       "Nontypeable H. influenzae uses pili for otitis media and bronchitis in children. Neonatal E. coli meningitis strains often carry K1 capsule and fimbriae for mucosal attachment and invasion.",
   },
+  {
+    id: "monoclonal-antibodies",
+    name: "Monoclonal Antibodies",
+    aliases: [
+      "monoclonal antibodies",
+      "monoclonal antibody",
+      "monoclonal ab",
+      "monoclonal abs",
+      "monoclonal immunoglobulin",
+      "monoclonal igg",
+      "mabs",
+      "therapeutic monoclonal antibody",
+      "hybridoma",
+      "hybridoma technology",
+    ],
+    definition:
+      "Identical antibody molecules produced by a single B-cell clone (or engineered cell line) that bind one epitope with uniform specificity — generated via hybridoma fusion or recombinant expression for diagnostics, research, and targeted therapy.",
+    examples: [
+      "Hybridoma — mouse B cell fused with myeloma → immortal clone secreting one antibody specificity",
+      "Rituximab (anti-CD20) — B-cell depletion in lymphoma and autoimmune disease",
+      "Infliximab/adalimumab (anti-TNF) — Crohn disease, RA, psoriasis",
+      "Pembrolizumab/nivolumab (anti–PD-1), ipilimumab (anti–CTLA-4) — immune checkpoint inhibition in cancer",
+      "Trastuzumab (anti-HER2) — HER2⁺ breast cancer",
+      "Omalizumab (anti-IgE) — severe allergic asthma",
+      "Dupilumab (anti–IL-4Rα) — atopic dermatitis, type 2 inflammation",
+      "Flow cytometry and immunohistochemistry — monoclonal antibodies detect cell-surface markers (CD markers)",
+      "Multiple myeloma — malignant plasma cell clone secretes monoclonal paraprotein (M spike on SPEP)",
+    ],
+    boardsPearls: [
+      "Monoclonal = single clone, single epitope; polyclonal = many clones, many epitopes",
+      "Hybridoma: B cell + myeloma → unlimited identical antibody production",
+      "Drug names ending in -mab are monoclonal antibodies",
+      "Chimeric (infliximab) > humanized > fully human (adalimumab) — ↓ immunogenicity and anti-drug antibodies",
+      "Anti-drug antibodies (ADAs) can neutralize biologics and cause loss of response",
+      "Rituximab — screen for hepatitis B before use (reactivation risk)",
+      "Checkpoint inhibitors release T-cell brakes → immune-related adverse events (colitis, pneumonitis, endocrinopathies)",
+      "vs polyclonal IVIG — pooled donor antibodies, not single specificity",
+      "Myeloma M protein — pathologic monoclonal immunoglobulin from plasma cell malignancy, not engineered therapy",
+    ],
+    distinguishFrom: [
+      "Polyclonal antibodies — mixture of specificities (serum, IVIG, antivenom)",
+      "Polyclonal B-cell proliferation (normal immune response) — not monoclonal malignancy",
+      "Neoplasia monoclonal — single malignant cell clone (lymphoma, myeloma), broader concept than therapeutic mAb",
+      "Small-molecule drugs — kinase inhibitors, steroids; not antibody proteins",
+      "Vaccine-induced antibodies — endogenous polyclonal response, not manufactured mAb product",
+    ],
+    pediatrics:
+      "Conjugate vaccines use monoclonal concepts indirectly (defined antigen specificity); therapeutic mAbs (e.g., infliximab for pediatric IBD) carry infection and infusion-reaction risks — live vaccines often contraindicated during therapy.",
+  },
 ];
 
 const pathogenesisById = new Map(

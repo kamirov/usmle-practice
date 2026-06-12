@@ -458,6 +458,104 @@ export const MUSCULOSKELETAL: MusculoskeletalEntry[] = [
     pediatrics:
       "Same sarcomere band anatomy in pediatric skeletal and cardiac muscle. Sarcomere gene mutations (e.g., MYH7, MYBPC3) cause familial hypertrophic cardiomyopathy that may present in adolescents with syncope or sudden death.",
   },
+  {
+    id: "metacarpophalangeal-joint",
+    name: "Metacarpophalangeal Joint",
+    aliases: [
+      "metacarpophalangeal joint",
+      "metacarpophalangeal joints",
+      "metacarpophalangeal",
+      "mcp joint",
+      "mcp joints",
+      "metacarpal phalangeal joint",
+      "knuckle joint",
+      "knuckle joints",
+    ],
+    definition:
+      "Synovial hinge-condyloid joints between the metacarpal heads and proximal phalanges of the fingers — the \"knuckles\" — allowing flexion/extension and limited abduction/adduction.",
+    anatomy:
+      "Metacarpal head articulates with base of proximal phalanx; reinforced by radial and ulnar collateral ligaments (tight in flexion, loose in extension — avoid hyperextending MCP when testing collateral integrity). Palmar plate (fibrocartilaginous) resists hyperextension. Thumb MCP is functionally key for opposition.",
+    action: [
+      "Flexion and extension of fingers at the knuckles",
+      "Slight abduction/adduction when MCP extended",
+      "Power grip and grasp initiated at MCP flexion",
+    ],
+    clinicalRelevance: [
+      "Rheumatoid arthritis — symmetric MCP swelling and tenderness (early target joint)",
+      "Boxer's fracture — metacarpal neck fracture (classically 5th) with MCP prominence",
+      "Gamekeeper's/skier's thumb — ulnar collateral ligament tear at thumb MCP",
+      "Swan-neck and boutonnière deformities involve MCP, PIP, and DIP balance",
+      "Subluxation of MCPs in advanced RA (ulnar drift)",
+    ],
+    boardsPearls: [
+      "MCP = knuckle; RA affects MCP and PIP, spares DIP",
+      "Collateral ligaments of MCP tested with finger flexed ~90°",
+      "OA less prominent at MCP than at DIP/PIP — MCP inflammation suggests inflammatory arthritis",
+      "Thumb MCP UCL injury — stress with valgus; Stener lesion if aponeurosis interposed",
+      "vs carpometacarpal (CMC) — thumb base (trapeziometacarpal) is CMC, not MCP",
+    ],
+    distinguishFrom: [
+      "Proximal interphalangeal (PIP) — distal to MCP, between proximal and middle phalanges",
+      "Carpometacarpal joint — metacarpal to carpus (thumb CMC = saddle joint for opposition)",
+      "Metatarsophalangeal (MTP) — analogous joint in the foot, not hand",
+      "Distal interphalangeal (DIP) — more distal; OA Heberden nodes at DIP, not MCP",
+    ],
+    pediatrics:
+      "Metacarpal fractures and MCP ligament injuries occur in sports; thumb UCL (gamekeeper's thumb) in skiers and children catching falls. Juvenile idiopathic arthritis can involve MCPs like adult RA.",
+  },
+  {
+    id: "interphalangeal-joint",
+    name: "Interphalangeal Joint",
+    aliases: [
+      "interphalangeal joint",
+      "interphalangeal joints",
+      "interphalangeal",
+      "ip joint",
+      "ip joints",
+      "proximal interphalangeal joint",
+      "proximal interphalangeal joints",
+      "distal interphalangeal joint",
+      "distal interphalangeal joints",
+      "pip joint",
+      "pip joints",
+      "dip joint",
+      "dip joints",
+      "pip",
+      "dip",
+    ],
+    definition:
+      "Hinge synovial joints between phalanges — proximal interphalangeal (PIP) between proximal and middle phalanges, and distal interphalangeal (DIP) between middle and distal phalanges; the thumb has a single interphalangeal joint (no separate PIP/DIP nomenclature).",
+    anatomy:
+      "Hinge joints with strong collateral ligaments and volar plates; extensor mechanism (central slip, lateral bands) crosses PIP and inserts at distal phalanx base — disruption causes boutonnière (PIP flexion) or swan-neck (PIP hyperextension) deformities.",
+    action: [
+      "PIP and DIP flexion and extension for fine finger motion and grip",
+      "Coordination with MCP for power vs precision pinch",
+    ],
+    clinicalRelevance: [
+      "Osteoarthritis — DIP (Heberden nodes) and PIP (Bouchard nodes) osteophytes",
+      "Rheumatoid arthritis — PIP involvement; DIP typically spared",
+      "Psoriatic arthritis — DIP involvement, dactylitis, pencil-in-cup deformity",
+      "Boutonnière deformity — central slip rupture → PIP flexed, DIP extended",
+      "Swan-neck deformity — volar plate/ligament imbalance → PIP hyperextended, DIP flexed",
+      "Mallet finger — extensor tendon avulsion at DIP",
+    ],
+    boardsPearls: [
+      "PIP vs DIP: fingers have both; thumb has one IP joint only",
+      "OA → DIP (Heberden) and PIP (Bouchard); RA → PIP/MCP, spares DIP",
+      "Psoriatic arthritis — classic DIP involvement (vs RA)",
+      "Boutonnière = PIP flexion + DIP extension; swan-neck = opposite",
+      "Mallet finger — DIP droop from extensor avulsion",
+      "vs MCP — MCP is metacarpal–proximal phalanx (knuckle), more proximal",
+    ],
+    distinguishFrom: [
+      "Metacarpophalangeal (MCP) — proximal knuckle joint, not between phalanges",
+      "Metatarsophalangeal — foot equivalent at toes",
+      "Interphalangeal of thumb — single IP, not labeled PIP/DIP",
+      "Carpometacarpal — wrist level, not finger interphalangeal",
+    ],
+    pediatrics:
+      "PIP/DIP fractures and mallet injuries in sports; juvenile arthritis may involve PIPs. Trigger finger (stenosing tenosynovitis) can lock a digit in flexion at A1 pulley (not IP joint itself but affects flexion).",
+  },
 ];
 
 const musculoskeletalById = new Map(
