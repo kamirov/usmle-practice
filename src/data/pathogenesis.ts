@@ -466,6 +466,225 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
     pediatrics:
       "Extravasation of IV infusions in infants — small veins, high risk of tissue injury; use appropriate cannula size and monitor site.",
   },
+  {
+    id: "acantholysis",
+    name: "Acantholysis",
+    aliases: ["acantholysis", "acantholytic"],
+    definition:
+      "Loss of intercellular adhesion between epidermal keratinocytes, causing rounded detached cells within the epidermis while the basement membrane remains intact.",
+    examples: [
+      "Pemphigus vulgaris — IgG against desmoglein 3 (± desmoglein 1) → intraepidermal flaccid bullae",
+      "Pemphigus foliaceus — anti–desmoglein 1 → superficial epidermal split",
+      "Staphylococcal scalded skin syndrome — exfoliative toxin cleaves desmoglein 1",
+      "Tombstone row of basal keratinocytes on biopsy when suprabasal acantholysis occurs",
+    ],
+    boardsPearls: [
+      "Acantholysis = loss of desmosomal adhesion between keratinocytes",
+      "Pemphigus — intraepidermal, acantholysis, flaccid bullae, positive Nikolsky sign",
+      "Bullous pemphigoid — subepidermal split, tense bullae, no acantholysis (anti-hemidesmosome)",
+      "SSSS in children — superficial desquamation from desmoglein 1 toxin, not autoimmune",
+      "Oral mucosa often involved first in pemphigus vulgaris",
+    ],
+    distinguishFrom: [
+      "Bullous pemphigoid — subepidermal, eosinophils, anti-BP180/BP230, tense bullae",
+      "Spongiosis — intercellular edema, keratinocytes remain attached",
+      "Epidermolysis — split at dermal-epidermal junction (junctional EB), not loss of cell-cell adhesion",
+      "Dyskeratosis — abnormal keratinocyte death (Darier disease), not primary desmosomal acantholysis",
+    ],
+    pediatrics:
+      "Staphylococcal scalded skin syndrome — exfoliative toxin causes acantholysis-like superficial split; pemphigus vulgaris rare in children but possible.",
+  },
+  {
+    id: "hypersensitivity",
+    name: "Hypersensitivity",
+    aliases: [
+      "hypersensitivity",
+      "hypersensitivity reaction",
+      "hypersensitivity reactions",
+      "immune hypersensitivity",
+      "gell and coombs classification",
+    ],
+    definition:
+      "Excessive or inappropriate immune response to antigen that causes tissue injury; classified by Gell and Coombs into four types (I–IV) based on effector mechanism.",
+    examples: [
+      "Type I — IgE/mast cell, immediate (anaphylaxis, urticaria, allergic rhinitis)",
+      "Type II — IgG/IgM against cell-surface or matrix antigen (AIHA, Goodpasture, MG)",
+      "Type III — antigen–antibody immune complexes deposit in tissues (SLE, PSGN, serum sickness)",
+      "Type IV — delayed T-cell–mediated (contact dermatitis, TB PPD, transplant rejection)",
+    ],
+    boardsPearls: [
+      "Types I–III are antibody-mediated; type IV is T-cell–mediated (no antibody effector)",
+      "Same antigen can provoke different types in different contexts (e.g., penicillin — type I anaphylaxis vs type IV contact)",
+      "Complement consumption prominent in types II and III, not type IV",
+      "Timing: type I minutes–hours; type IV 48–72 h (delayed)",
+    ],
+    distinguishFrom: [
+      "Autoimmunity — loss of self-tolerance; hypersensitivity is broader (includes allergy to exogenous antigen)",
+      "Infection — pathogen-driven inflammation without prior sensitization as primary mechanism",
+      "Type I hypersensitivity — one subtype; not interchangeable with umbrella term",
+    ],
+    pediatrics:
+      "Food allergy and atopic disease often type I; contact dermatitis to nickel or poison ivy is type IV — different workup and timing.",
+  },
+  {
+    id: "type-i-hypersensitivity",
+    name: "Type I Hypersensitivity",
+    aliases: [
+      "type i hypersensitivity",
+      "type 1 hypersensitivity",
+      "type i allergy",
+      "type 1 allergy",
+      "immediate hypersensitivity",
+      "immediate-type hypersensitivity",
+      "ige-mediated hypersensitivity",
+    ],
+    definition:
+      "IgE-mediated hypersensitivity in which antigen cross-links IgE on sensitized mast cells and basophils, triggering immediate degranulation and type 2 (late-phase) inflammation.",
+    examples: [
+      "Anaphylaxis — systemic mast cell degranulation (food, drug, insect venom, latex)",
+      "Allergic rhinitis, allergic asthma (early bronchoconstriction phase)",
+      "Urticaria and angioedema",
+      "Atopic dermatitis — IgE sensitization contributes to Th2 inflammation",
+    ],
+    boardsPearls: [
+      "First exposure → IgE production (Th2/IL-4); re-exposure → cross-linking → histamine, tryptase release",
+      "Epinephrine is first-line for anaphylaxis — not antihistamine alone",
+      "Skin prick test and serum IgE detect sensitization, not always clinical allergy",
+      "vs type IV — immediate (minutes), not delayed 48–72 h",
+    ],
+    distinguishFrom: [
+      "Type IV hypersensitivity — T-cell delayed; patch test positive in contact dermatitis",
+      "Nonallergic drug reaction — direct mast cell activation (e.g., vancomycin flushing), no IgE",
+      "Type III hypersensitivity — immune complexes, not IgE/mast cell",
+    ],
+    pediatrics:
+      "Food-induced anaphylaxis (milk, egg, peanut) common in young children; epinephrine auto-injector and allergen avoidance; many outgrow milk/egg allergy.",
+  },
+  {
+    id: "type-ii-hypersensitivity",
+    name: "Type II Hypersensitivity",
+    aliases: [
+      "type ii hypersensitivity",
+      "type 2 hypersensitivity",
+      "antibody-mediated cytotoxic hypersensitivity",
+      "cytotoxic hypersensitivity",
+    ],
+    definition:
+      "IgG or IgM antibodies bind antigens on cell surfaces or extracellular matrix, leading to complement-mediated lysis, opsonization/phagocytosis, or antibody-dependent cellular cytotoxicity (ADCC).",
+    examples: [
+      "Autoimmune hemolytic anemia — anti-RBC antibodies → hemolysis",
+      "Goodpasture syndrome — anti-GBM (type IV collagen) → pulmonary hemorrhage + glomerulonephritis",
+      "Myasthenia gravis — anti–acetylcholine receptor → neuromuscular blockade",
+      "Rh hemolytic disease of newborn — maternal anti-Rh IgG crosses placenta",
+      "Hyperacute transplant rejection — preformed donor-specific antibodies",
+    ],
+    boardsPearls: [
+      "Antibody targets cell surface or fixed tissue antigen — not soluble immune complexes (type III)",
+      "Complement activation → C3b opsonization, membrane attack complex",
+      "Coombs test positive in antibody-mediated hemolysis",
+      "Rh disease prevented by Rho(D) immune globulin (anti-D) to mother",
+    ],
+    distinguishFrom: [
+      "Type III hypersensitivity — immune complexes in tissues, not direct cell-surface antibody",
+      "Type I hypersensitivity — IgE/mast cell, not IgG cytotoxic",
+      "Type IV hypersensitivity — T cells, not antibody-mediated cytotoxicity",
+    ],
+    pediatrics:
+      "Rh hemolytic disease — maternal sensitization from prior Rh⁺ pregnancy; hydrops fetalis if severe; RhoGAM prevents sensitization.",
+  },
+  {
+    id: "type-iii-hypersensitivity",
+    name: "Type III Hypersensitivity",
+    aliases: [
+      "type iii hypersensitivity",
+      "type 3 hypersensitivity",
+      "immune complex hypersensitivity",
+      "immune complex disease",
+      "immune complex-mediated hypersensitivity",
+    ],
+    definition:
+      "Antigen–antibody immune complexes deposit in tissues, activate complement, and recruit neutrophils → vasculitis, glomerulonephritis, or serositis depending on deposition site.",
+    examples: [
+      "Systemic lupus erythematosus — widespread immune complex deposition",
+      "Poststreptococcal glomerulonephritis — streptococcal antigen–antibody complexes in glomeruli",
+      "Serum sickness — exogenous protein (antivenom, rituximab) → fever, rash, arthralgia, ↓ complement",
+      "Arthus reaction — local immune complex inflammation at injection site",
+      "Polyarteritis nodosa — sometimes hepatitis B–associated immune complexes",
+    ],
+    boardsPearls: [
+      "↓ C3/C4 (complement consumption) in active immune complex disease",
+      "Serum sickness: fever + rash + arthralgia 1–2 weeks after antigen exposure",
+      "PSGN follows group A strep pharyngitis/skin infection — low C3, resolves",
+      "vs type II — complexes in tissues, not antibody directly on cell surface",
+    ],
+    distinguishFrom: [
+      "Type II hypersensitivity — antibody against cell surface/matrix, direct cytotoxicity",
+      "Type IV hypersensitivity — T-cell mediated, no immune complex deposition",
+      "Vasculitis from ANCA — not classic immune complex (pauci-immune)",
+    ],
+    pediatrics:
+      "PSGN common after strep in children — hematuria, periorbital edema, hypertension; usually self-limited with supportive care.",
+  },
+  {
+    id: "type-iv-hypersensitivity",
+    name: "Type IV Hypersensitivity",
+    aliases: [
+      "type iv hypersensitivity",
+      "type 4 hypersensitivity",
+      "delayed-type hypersensitivity",
+      "delayed hypersensitivity",
+      "t-cell-mediated hypersensitivity",
+      "cell-mediated hypersensitivity",
+    ],
+    definition:
+      "Delayed T-cell–mediated hypersensitivity in which sensitized CD4⁺ (and sometimes CD8⁺) T cells release cytokines and recruit macrophages, causing inflammation 48–72 hours after antigen exposure.",
+    examples: [
+      "Allergic contact dermatitis — nickel, poison ivy (urushiol), topical medications",
+      "PPD (Mantoux) skin test — granulomatous reaction to tuberculin",
+      "Granulomatous diseases — sarcoidosis, TB (Th1/CD4⁺ macrophage activation)",
+      "Transplant rejection and graft-versus-host disease",
+      "Multiple sclerosis, type 1 diabetes (autoimmune type IV components)",
+    ],
+    boardsPearls: [
+      "No antibody effector — sensitized T cells drive inflammation (Th1/Th17 cytokines)",
+      "PPD positive = prior TB exposure or BCG; not active disease alone",
+      "Patch testing diagnoses allergic contact dermatitis (type IV), not IgE prick test",
+      "Contact dermatitis peaks 48–72 h after re-exposure — delayed vs type I immediate",
+    ],
+    distinguishFrom: [
+      "Type I hypersensitivity — IgE immediate; urticaria within minutes",
+      "Type III hypersensitivity — immune complexes, complement consumption",
+      "Irritant contact dermatitis — direct chemical injury, not immune sensitization",
+    ],
+    pediatrics:
+      "Nickel from jewelry/belt buckles and poison ivy common triggers; diaper dermatitis is usually irritant, not allergic type IV.",
+  },
+  {
+    id: "hapten",
+    name: "Hapten",
+    aliases: ["hapten", "haptens", "incomplete antigen"],
+    definition:
+      "Small molecule that is not immunogenic alone but becomes antigenic when bound to a carrier protein; the hapten–protein complex elicits T-cell and antibody responses.",
+    examples: [
+      "Urushiol in poison ivy — binds skin proteins → type IV contact dermatitis",
+      "Nickel and chromium — metal haptens in jewelry, occupational exposure",
+      "Penicillin metabolites — haptenate proteins → drug allergy (type I or IV)",
+      "DNP (dinitrophenyl) — classic experimental hapten in immunology",
+    ],
+    boardsPearls: [
+      "Hapten + carrier protein = complete antigen presented to T cells",
+      "Langerhans cells process haptenated skin proteins in contact dermatitis",
+      "Explains why small drugs/metals cause allergy without being proteins themselves",
+      "vs complete antigen — proteins like tetanus toxoid immunogenic without conjugation",
+    ],
+    distinguishFrom: [
+      "Adjuvant — enhances immune response, not the antigenic epitope itself",
+      "Autoantigen — self protein; hapten is exogenous small molecule",
+      "Allergen (protein) — intrinsically immunogenic without carrier binding",
+    ],
+    pediatrics:
+      "Poison ivy exposure common in children playing outdoors; teach plant identification and prompt washing after contact.",
+  },
 ];
 
 const pathogenesisById = new Map(

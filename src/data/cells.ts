@@ -270,15 +270,21 @@ export const CELLS: CellEntry[] = [
     id: "cd4-t-lymphocyte",
     name: "CD4+ T Lymphocyte",
     aliases: [
+      "cd4+",
+      "cd4⁺",
       "cd4+ t-lymphocyte",
       "cd4+ t lymphocyte",
+      "cd4⁺ t lymphocyte",
       "cd4 t lymphocyte",
       "cd4+ t cell",
       "cd4+ t cells",
+      "cd4⁺ t cell",
+      "cd4⁺ t cells",
       "cd4 t cell",
       "cd4 count",
       "cd4 lymphocyte",
       "cd4+ lymphocyte",
+      "cd4⁺ lymphocyte",
       "helper t cell",
       "helper t cells",
       "t helper cell",
@@ -305,11 +311,60 @@ export const CELLS: CellEntry[] = [
       "Peds: vertical HIV transmission — treat mother; neonatal prophylaxis; CD4 guides therapy",
     ],
     distinguishFrom: [
-      "CD8+ cytotoxic T cell — kills infected cells; MHC class I",
+      "CD8+ T lymphocyte — kills infected cells; MHC class I",
       "B lymphocyte — antibody production; CD19/CD20 markers",
     ],
     pediatrics:
       "HIV-infected children: CD4 percentage often used alongside absolute count because total lymphocyte numbers differ by age.",
+  },
+  {
+    id: "cd8-t-lymphocyte",
+    name: "CD8+ T Lymphocyte",
+    aliases: [
+      "cd8+",
+      "cd8⁺",
+      "cd8+ t-lymphocyte",
+      "cd8+ t lymphocyte",
+      "cd8⁺ t lymphocyte",
+      "cd8+ t cell",
+      "cd8+ t cells",
+      "cd8⁺ t cell",
+      "cd8⁺ t cells",
+      "cd8 t cell",
+      "cd8 lymphocyte",
+      "cd8+ lymphocyte",
+      "cd8⁺ lymphocyte",
+      "cytotoxic t cell",
+      "cytotoxic t cells",
+      "ctl",
+    ],
+    definition:
+      "T lymphocyte subset bearing CD8 co-receptor; recognizes endogenous antigen on MHC class I and kills infected or malignant cells via perforin/granzyme and Fas-FasL pathways.",
+    characteristics: [
+      "MHC class I restriction — surveys all nucleated cells for intracellular antigen",
+      "Effector mechanisms: perforin/granzyme apoptosis, Fas ligand, IFN-γ secretion",
+      "Central to antiviral immunity and tumor surveillance",
+      "Atypical lymphocytes in EBV mononucleosis are often reactive CD8⁺ T cells",
+    ],
+    clinicalRelevance: [
+      "Viral clearance — CMV, EBV, influenza, HIV (early control before CD4 loss)",
+      "Type IV hypersensitivity effector (alongside CD4⁺ Th1 cells)",
+      "GVHD and transplant rejection — donor CD8⁺ cells attack host MHC I",
+      "Checkpoint inhibitors (anti–PD-1, anti–CTLA-4) disinhibit CD8⁺ antitumor activity",
+    ],
+    boardsPearls: [
+      "CD8 + MHC I; CD4 + MHC II — co-receptor pairing is essential",
+      "EBV mono — atypical lymphocytes = reactive CD8⁺ T cells attacking infected B cells",
+      "Intracellular pathogens (viruses, Listeria) → CD8⁺ and Th1/CD4⁺ responses",
+      "vs NK cell — innate killing without TCR; CD8⁺ requires antigen-specific TCR",
+    ],
+    distinguishFrom: [
+      "CD4+ T lymphocyte — MHC II, helper/coordinator role",
+      "NK cell — innate lymphocyte; CD16/CD56⁺, no CD3/TCR",
+      "B lymphocyte — antibody production; CD19/CD20",
+    ],
+    pediatrics:
+      "EBV mononucleosis common in adolescents — marked atypical CD8⁺ lymphocytosis on smear.",
   },
   {
     id: "t-lymphocyte",
@@ -1286,6 +1341,86 @@ export const CELLS: CellEntry[] = [
     ],
     pediatrics:
       "Infant reflexes (Moro, grasp) involve CNS reflex arcs; GTO-mediated autogenic inhibition develops with mature motor control during childhood.",
+  },
+  {
+    id: "siderophage",
+    name: "Siderophage",
+    aliases: [
+      "siderophage",
+      "siderophages",
+      "hemosiderin-laden macrophage",
+      "hemosiderin laden macrophage",
+      "hemosiderin-laden macrophages",
+      "heart failure cell",
+      "heart failure cells",
+      "heart-failure cells",
+    ],
+    definition:
+      "Macrophage that has phagocytosed extravasated erythrocytes and stored iron as hemosiderin (golden-brown cytoplasmic granules); classically seen in alveoli with chronic pulmonary venous hypertension.",
+    characteristics: [
+      "Derived from alveolar or tissue macrophages after RBC breakdown",
+      "Golden-brown hemosiderin granules on H&E; Prussian blue (iron) stain positive",
+      "Also called \"heart failure cells\" when found in lung alveoli",
+      "Reflects prior—not active—hemorrhage or chronic congestion",
+    ],
+    clinicalRelevance: [
+      "Left-sided heart failure and mitral stenosis — pulmonary capillary pressure ↑ → RBC extravasation into alveoli → siderophages in sputum or lung biopsy",
+      "Chronic pulmonary congestion — brown induration of lung",
+      "Resolving bruises — hemosiderin-laden macrophages at hemorrhage site",
+      "Chronic subdural hematoma or repeated microhemorrhages",
+    ],
+    boardsPearls: [
+      "Heart failure cells = hemosiderin-laden alveolar macrophages → prior pulmonary hemorrhage from congestion",
+      "Mitral stenosis classic association — chronic pulmonary venous hypertension",
+      "Prussian blue stain confirms iron in macrophage cytoplasm",
+      "Links to extravasated RBCs → hemosiderin degradation pathway",
+      "vs anthracotic macrophages — carbon pigment in smokers/coal workers, not iron",
+    ],
+    distinguishFrom: [
+      "Foam cell — lipid-laden macrophage in atherosclerosis, not hemosiderin",
+      "Gaucher cell — glucocerebroside-filled macrophage in Gaucher disease",
+      "Anthracotic macrophage — carbon pigment from air pollution/smoking",
+      "Hemosiderinuria — renal tubular hemosiderin in hemolytic anemia, not alveolar macrophage",
+    ],
+    pediatrics:
+      "Chronic congenital heart disease with pulmonary venous congestion can produce similar hemosiderin-laden macrophages; evaluate cardiac cause in child with hemoptysis or pulmonary hemosiderosis.",
+  },
+  {
+    id: "langerhans-cell",
+    name: "Langerhans Cell",
+    aliases: [
+      "langerhans cell",
+      "langerhans cells",
+      "epidermal langerhans cell",
+    ],
+    definition:
+      "Dendritic antigen-presenting cell resident in epidermis and mucosa; captures cutaneous antigen and migrates to lymph nodes to activate T cells.",
+    characteristics: [
+      "Bone marrow–derived; expresses CD1a and langerin (CD207)",
+      "Birbeck granules on electron microscopy (tennis racket appearance)",
+      "Extends dendritic processes between keratinocytes in stratum spinosum",
+      "Key APC in contact hypersensitivity and cutaneous immune surveillance",
+    ],
+    clinicalRelevance: [
+      "Allergic contact dermatitis — presents haptenated antigen to CD4⁺ T cells",
+      "Langerhans cell histiocytosis — clonal proliferation (Letterer-Siwe, Hand-Schüller-Christian, eosinophilic granuloma)",
+      "HIV can infect Langerhans cells in mucosa during transmission",
+      "Reduced in aging skin and some immunosuppressed states",
+    ],
+    boardsPearls: [
+      "Epidermal dendritic APC — bridges innate cutaneous exposure to adaptive immunity",
+      "Birbeck granules + CD1a + langerin = Langerhans cell markers",
+      "LCH — CD1a⁺ histiocytes; may present with lytic bone lesions, diabetes insipidus, rash",
+      "vs dermal dendritic cells — Langerhans cells specifically in epidermis",
+    ],
+    distinguishFrom: [
+      "Keratinocyte — structural epidermal cell, not professional APC",
+      "Merkel cell — mechanoreceptor, not dendritic APC",
+      "Macrophage — phagocyte in dermis; Langerhans cells specialize in antigen presentation",
+      "Follicular dendritic cell — in lymph node germinal center, not epidermis",
+    ],
+    pediatrics:
+      "Letterer-Siwe disease (multisystem LCH) in infants — rash, bone lesions, hepatosplenomegaly; Hand-Schüller-Christian in older children.",
   },
 ];
 

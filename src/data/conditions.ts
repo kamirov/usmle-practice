@@ -2633,6 +2633,68 @@ export const CONDITIONS: ConditionEntry[] = [
       "Most common in infancy and childhood; 60% present in first year. Many outgrow by adolescence. Food allergy testing only if consistent history — elimination diet under guidance. Topical steroid potency must be age- and site-appropriate (lower potency on face/diaper area).",
   },
   {
+    id: "allergic-contact-dermatitis",
+    name: "Allergic Contact Dermatitis",
+    aliases: [
+      "allergic contact dermatitis",
+      "contact dermatitis",
+      "contact hypersensitivity",
+      "allergic contact eczema",
+      "acd",
+    ],
+    definition:
+      "Type IV (delayed) hypersensitivity reaction of the skin to a topical hapten or allergen, producing pruritic eczematous dermatitis localized to the site of contact (and sometimes distant sites with systemic exposure).",
+    pathophysiology:
+      "Hapten penetrates skin → binds self proteins → Langerhans cells capture and migrate to lymph nodes → sensitize CD4⁺ T cells. Re-exposure → Th1 cytokines recruit macrophages and lymphocytes → spongiotic dermatitis peaks at 48–72 hours.",
+    classicPresentation: [
+      "Pruritic erythema, vesicles, and oozing at site of allergen contact",
+      "Sharp demarcation at exposure border (e.g., wrist under watch, earlobe from nickel earrings)",
+      "Linear streaks after brushing against poison ivy (urushiol)",
+      "Chronic exposure → lichenification and hyperpigmentation",
+      "Common allergens: nickel, poison ivy/oak, neomycin, formaldehyde, rubber accelerators, fragrances",
+    ],
+    keyFindings: [
+      "Eczematous plaque with vesicles in acute phase; scaling and fissuring when chronic",
+      "Distribution matches exposure pattern — not flexural (vs atopic dermatitis)",
+      "Patch testing confirms culprit allergen (read at 48–96 h)",
+      "Histology: spongiosis, perivascular lymphocytic infiltrate (type IV)",
+    ],
+    associations: [
+      "Occupational dermatitis — healthcare workers (latex, antiseptics), hairdressers, machinists",
+      "Poison ivy/oak/sumac — urushiol hapten",
+      "Nickel — most common contact allergen worldwide",
+      "Topical antibiotics (neomycin, bacitracin) — sensitization",
+    ],
+    complications: [
+      "Secondary bacterial infection from excoriation",
+      "Chronic lichenified dermatitis with persistent exposure",
+      "Hyperpigmentation or hypopigmentation post-inflammation",
+    ],
+    distinguishFrom: [
+      "Irritant contact dermatitis — direct chemical injury, no prior sensitization; more common than allergic",
+      "Atopic dermatitis — flexural, bilateral, atopy history; not sharply demarcated to contact site",
+      "Tinea — annular, KOH positive; central clearing",
+      "Dyshidrotic eczema — vesicles on palms/soles; not linear exposure pattern",
+      "Nummular eczema — coin-shaped lesions without clear allergen border",
+    ],
+    treatment: [
+      "Identify and avoid allergen — cornerstone",
+      "Topical corticosteroids for acute flares",
+      "Systemic corticosteroids for severe widespread reactions (e.g., poison ivy)",
+      "Emollients and barrier protection (gloves, nickel-free jewelry)",
+      "Patch testing when cause unclear or occupational",
+    ],
+    boardsPearls: [
+      "Type IV hypersensitivity — delayed 48–72 h; not IgE-mediated",
+      "Hapten + skin protein → Langerhans cell presentation → CD4⁺ T cells",
+      "Patch test read at 48–96 h — do not confuse with prick test (type I)",
+      "Poison ivy — urushiol; wash within 30 min reduces severity; linear vesicles",
+      "vs irritant contact dermatitis — more common; soap, solvents; no immune sensitization required",
+    ],
+    pediatrics:
+      "Nickel from ear piercing and belt buckles common in children; poison ivy exposure during outdoor play. Diaper dermatitis is usually irritant (urine/feces), not allergic type IV.",
+  },
+  {
     id: "psoriasis",
     name: "Psoriasis",
     aliases: [

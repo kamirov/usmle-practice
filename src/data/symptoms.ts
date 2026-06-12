@@ -1321,6 +1321,117 @@ export const SYMPTOMS: SymptomEntry[] = [
       "Generalized lymphadenopathy — ≥2 noncontiguous regions; broader workup (HIV, lymphoma, SLE)",
     ],
   },
+  {
+    id: "vesicle",
+    name: "Vesicle",
+    aliases: ["vesicle", "vesicles", "vesicular lesion", "vesicular rash"],
+    definition:
+      "Superficial elevated fluid-filled skin lesion ≤1 cm in diameter; fluid may be serous, serosanguineous, or cloudy.",
+    mechanism:
+      "Intraepidermal or subcorneal accumulation of fluid from inflammation, infection, or autoimmune blistering → circumscribed, thin-walled blister.",
+    thinkOf: [
+      "Varicella-zoster — dewdrop on rose petal (chickenpox); dermatomal in zoster",
+      "Herpes simplex — grouped vesicles on erythematous base (oral, genital)",
+      "Dyshidrotic eczema — pruritic vesicles on palms/soles",
+      "Contact dermatitis — acute phase may show vesicles at exposure site",
+      "Pemphigus vulgaris — flaccid vesicles/bullae (intraepidermal)",
+    ],
+    pairWith: [
+      "Grouped vesicles on mucosa → HSV",
+      "Unilateral dermatomal distribution → herpes zoster",
+      "Pruritic vesicles on extensor surfaces + IgA deposits → dermatitis herpetiformis",
+      "Fever + monomorphic punched-out erosions in atopic child → eczema herpeticum",
+    ],
+    distinguishFrom: [
+      "Bulla — same morphology but >1 cm",
+      "Pustule — filled with pus, not clear fluid",
+      "Papule — solid elevation, no fluid",
+    ],
+  },
+  {
+    id: "bullae",
+    name: "Bullae",
+    aliases: ["bulla", "bullae", "blister", "blisters", "bullous lesion"],
+    definition:
+      "Fluid-filled skin lesion >1 cm in diameter; may be tense or flaccid depending on level of split and roof integrity.",
+    mechanism:
+      "Loss of adhesion or massive spongiosis at intraepidermal or subepidermal level → large fluid collection under or within epidermis.",
+    thinkOf: [
+      "Bullous pemphigoid — tense subepidermal bullae, elderly, anti-BP180",
+      "Pemphigus vulgaris — flaccid intraepidermal bullae, positive Nikolsky sign",
+      "Stevens-Johnson syndrome / TEN — drug reaction, mucosal involvement, epidermal necrosis",
+      "Friction or burn blisters — mechanical separation",
+      "Bullous impetigo — superficial subcorneal bullae, honey crust",
+    ],
+    pairWith: [
+      "Tense bullae + eosinophils + subepidermal split → bullous pemphigoid",
+      "Flaccid bullae + acantholysis + oral mucosa → pemphigus vulgaris",
+      "Drug + mucosal erosions + epidermal detachment → SJS/TEN",
+      "Linear IgA deposits → linear IgA bullous dermatosis",
+    ],
+    distinguishFrom: [
+      "Vesicle — ≤1 cm fluid-filled lesion",
+      "Pustule — purulent, not serous fluid",
+      "Bulla vs vesicle is size only — same basic mechanism",
+    ],
+  },
+  {
+    id: "lichenification",
+    name: "Lichenification",
+    aliases: ["lichenification", "lichenified", "lichenified skin"],
+    definition:
+      "Thickened, leathery skin with exaggerated skin markings from chronic rubbing or scratching; secondary to repeated mechanical trauma.",
+    mechanism:
+      "Chronic friction → epidermal hyperplasia (acanthosis) and dermal fibrosis → accentuated skin lines and firm texture; hallmark of the itch-scratch cycle.",
+    thinkOf: [
+      "Atopic dermatitis — flexural lichenification in chronic phase",
+      "Chronic contact dermatitis — persistent exposure or scratching",
+      "Lichen simplex chronicus — localized plaque from habitual scratching (occiput, ankles)",
+      "Neurodermatitis — psychogenic component to scratching",
+    ],
+    pairWith: [
+      "Pruritus + flexural distribution + atopy history → atopic dermatitis",
+      "Localized plaque + patient reports habitual rubbing → lichen simplex chronicus",
+      "vs psoriasis — silvery scale, well-demarcated plaque, extensor surfaces",
+    ],
+    distinguishFrom: [
+      "Skin thickening (scleroderma) — collagen deposition, not scratch-induced acanthosis",
+      "Indurated plaque — firm raised lesion; may be inflammatory not lichenified",
+      "Hyperkeratosis — thickened stratum corneum (callus, psoriasis scale)",
+    ],
+  },
+  {
+    id: "indurated-plaque",
+    name: "Indurated Plaque",
+    aliases: [
+      "indurated plaque",
+      "indurated plaques",
+      "firm plaque",
+      "firm plaques",
+    ],
+    definition:
+      "Raised, well-demarcated skin lesion with increased firmness on palpation from dermal inflammation, infiltration, or sclerosis.",
+    mechanism:
+      "Dermal collagen deposition, inflammatory infiltrate, or granulomatous inflammation increases tissue density → palpable firm plaque with or without scale.",
+    thinkOf: [
+      "Psoriasis — erythematous indurated plaque with silvery scale on extensors",
+      "Sarcoidosis — lupus pernio, violaceous indurated facial plaques",
+      "Cutaneous T-cell lymphoma (mycosis fungoides) — patches/plaques, may be indurated",
+      "Morphea (localized scleroderma) — waxy indurated plaque, ivory center",
+      "Granuloma annulare — annular firm plaque",
+    ],
+    pairWith: [
+      "Silvery scale + extensor knees/elbows → psoriasis",
+      "Violaceous facial plaque + hilar adenopathy → sarcoid",
+      "Anti–Scl-70 or anti-centromere absent + isolated plaque → morphea vs systemic sclerosis",
+      "Painless indurated plaque slowly enlarging → consider CTCL in adult",
+    ],
+    distinguishFrom: [
+      "Lichenification — accentuated skin lines from scratching, not primary infiltrative plaque",
+      "Edematous plaque — soft, pitting (urticaria, angioedema)",
+      "Skin thickening (diffuse) — widespread sclerosis rather than focal plaque",
+    ],
+  },
 ];
 
 const symptomById = new Map(SYMPTOMS.map((s) => [s.id, s]));
