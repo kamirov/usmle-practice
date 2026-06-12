@@ -566,6 +566,53 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
       "Prostaglandin E1 infusion critical for ductal-dependent lesions (e.g., hypoplastic left heart, interrupted aortic arch) until surgery; monitor for apnea and fever.",
   },
   {
+    id: "leukotriene",
+    name: "Leukotrienes",
+    aliases: [
+      "leukotriene",
+      "leukotrienes",
+      "ltb4",
+      "ltb₄",
+      "leukotriene b4",
+      "leukotriene b₄",
+      "ltc4",
+      "ltd4",
+      "lte4",
+      "cysteinyl leukotrienes",
+      "slow-reacting substance of anaphylaxis",
+      "srs-a",
+    ],
+    type: "Hormone",
+    source:
+      "Synthesized from arachidonic acid via 5-lipoxygenase pathway in mast cells, eosinophils, basophils, and macrophages; not stored preformed (synthesized on demand after PLA₂ activation)",
+    receptor:
+      "LTB₄ — BLT1/BLT2 (chemotaxis); LTC₄/LTD₄/LTE₄ (cysteinyl leukotrienes) — CysLT1/CysLT2 (bronchoconstriction, vascular permeability)",
+    function:
+      "Eicosanoid mediators of inflammation: LTB₄ is a potent neutrophil chemoattractant; cysteinyl leukotrienes (LTC₄, LTD₄, LTE₄) cause bronchoconstriction, increased vascular permeability, and mucus secretion.",
+    clinicalRelevance: [
+      "Asthma late-phase response — cysteinyl leukotrienes cause prolonged bronchoconstriction after allergen exposure",
+      "Aspirin-exacerbated respiratory disease — shunting to leukotriene pathway when COX blocked",
+      "Montelukast and zafirlukast — CysLT1 receptor antagonists for asthma and allergic rhinitis",
+      "Zileuton — 5-lipoxygenase inhibitor ↓ leukotriene synthesis",
+      "Anaphylaxis — leukotrienes contribute alongside histamine to bronchospasm and edema",
+    ],
+    boardsPearls: [
+      "Lipoxygenase pathway: arachidonic acid → 5-LOX → leukotrienes (not COX/prostaglandins)",
+      "Cysteinyl leukotrienes (LTC₄/D₄/E₄) — slow-reacting substance of anaphylaxis (SRS-A); potent bronchoconstrictors",
+      "LTB₄ — major neutrophil chemoattractant linking to chemotaxis",
+      "Leukotriene modifiers (montelukast) for mild asthma or aspirin-exacerbated respiratory disease",
+      "Corticosteroids ↓ phospholipase A₂ upstream — ↓ leukotriene production",
+    ],
+    distinguishFrom: [
+      "Histamine — preformed mast cell mediator; faster onset, H1/H2 receptors",
+      "Prostaglandins — COX pathway from arachidonic acid; PGE₂ causes fever and gastric protection",
+      "Thromboxane A₂ — COX pathway in platelets; aggregation and vasoconstriction",
+      "Chemokines (IL-8) — peptide chemoattractants, not lipoxygenase eicosanoids",
+    ],
+    pediatrics:
+      "Montelukast approved for pediatric asthma and allergic rhinitis; same CysLT1 mechanism as in adults.",
+  },
+  {
     id: "thromboxane-a2",
     name: "Thromboxane A₂",
     aliases: [

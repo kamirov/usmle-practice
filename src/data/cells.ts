@@ -98,15 +98,11 @@ export const CELLS: CellEntry[] = [
   {
     id: "eosinophil",
     name: "Eosinophil",
-    aliases: [
-      "eosinophil",
-      "eosinophils",
-      "eos",
-    ],
+    aliases: ["eosinophil", "eosinophils", "eos"],
     definition:
       "Granulocyte with bilobed nucleus and large eosinophilic cytoplasmic granules; defends against helminths and participates in allergic and atopic inflammation via granule proteins and cytokine release.",
     characteristics: [
-      "Bilobed nucleus; coarse orange-pink granules on H&E (eosinophilic = \"eosin-loving\" stain)",
+      'Bilobed nucleus; coarse orange-pink granules on H&E (eosinophilic = "eosin-loving" stain)',
       "Granule contents: major basic protein (MBP), eosinophil peroxidase, cationic protein, IL-5 receptor",
       "Activated by IL-5 (Th2) and eotaxins (chemokines); recruited to tissues in allergy and parasitic infection",
       "Kills helminths too large to phagocytose — degranulation onto parasite surface",
@@ -136,10 +132,7 @@ export const CELLS: CellEntry[] = [
   {
     id: "basophil",
     name: "Basophil",
-    aliases: [
-      "basophil",
-      "basophils",
-    ],
+    aliases: ["basophil", "basophils"],
     definition:
       "Least common granulocyte (<1% of WBCs); contains histamine and heparin granules. Participates in type I hypersensitivity and helminth defense. Surface IgE receptor (FcεRI).",
     characteristics: [
@@ -168,10 +161,7 @@ export const CELLS: CellEntry[] = [
   {
     id: "mast-cell",
     name: "Mast Cell",
-    aliases: [
-      "mast cell",
-      "mast cells",
-    ],
+    aliases: ["mast cell", "mast cells"],
     definition:
       "Tissue-resident granulated immune cell of myeloid lineage found in skin, mucosa, and perivascular spaces; central effector of type I hypersensitivity and innate defense against helminths via IgE-mediated degranulation.",
     characteristics: [
@@ -203,10 +193,7 @@ export const CELLS: CellEntry[] = [
   {
     id: "lymphocyte",
     name: "Lymphocyte",
-    aliases: [
-      "lymphocyte",
-      "lymphocytes",
-    ],
+    aliases: ["lymphocyte", "lymphocytes"],
     definition:
       "Agranular leukocyte central to adaptive immunity; includes B cells (antibody production), T cells (cell-mediated immunity), and NK cells (innate cytotoxicity).",
     characteristics: [
@@ -236,10 +223,7 @@ export const CELLS: CellEntry[] = [
   {
     id: "monocyte",
     name: "Monocyte",
-    aliases: [
-      "monocyte",
-      "monocytes",
-    ],
+    aliases: ["monocyte", "monocytes"],
     definition:
       "Largest circulating leukocyte; migrates into tissues as macrophage or dendritic cell. Phagocytosis, antigen presentation, and chronic inflammation.",
     characteristics: [
@@ -316,6 +300,7 @@ export const CELLS: CellEntry[] = [
     aliases: [
       "cd4+",
       "cd4⁺",
+      "cd4",
       "cd4+ t-lymphocyte",
       "cd4+ t lymphocyte",
       "cd4⁺ t lymphocyte",
@@ -367,6 +352,7 @@ export const CELLS: CellEntry[] = [
     aliases: [
       "cd8+",
       "cd8⁺",
+      "cd8",
       "cd8+ t-lymphocyte",
       "cd8+ t lymphocyte",
       "cd8⁺ t lymphocyte",
@@ -684,7 +670,7 @@ export const CELLS: CellEntry[] = [
       "Apical intercellular seal forming a continuous belt that blocks paracellular diffusion; composed of claudins, occludin, and ZO scaffold proteins.",
     characteristics: [
       "Most apical junction — creates selective paracellular barrier",
-      "\"Leaky\" epithelia (proximal tubule) vs \"tight\" epithelia (distal colon, bladder)",
+      '"Leaky" epithelia (proximal tubule) vs "tight" epithelia (distal colon, bladder)',
       "Maintains cell polarity by fencing apical vs basolateral membrane domains",
       "Claudin isoforms determine pore size and charge selectivity",
     ],
@@ -710,7 +696,12 @@ export const CELLS: CellEntry[] = [
   {
     id: "fenestrae",
     name: "Fenestrae",
-    aliases: ["fenestrae", "fenestra", "fenestrated endothelium", "fenestrations"],
+    aliases: [
+      "fenestrae",
+      "fenestra",
+      "fenestrated endothelium",
+      "fenestrations",
+    ],
     definition:
       "Circular transcellular pores (~60–80 nm) in fenestrated endothelial cells permitting rapid passage of water and small solutes; diaphragm-covered in some tissues, absent in glomerulus.",
     characteristics: [
@@ -741,12 +732,7 @@ export const CELLS: CellEntry[] = [
   {
     id: "gap-junction",
     name: "Gap Junction",
-    aliases: [
-      "gap junction",
-      "gap junctions",
-      "nexus",
-      "electrical synapse",
-    ],
+    aliases: ["gap junction", "gap junctions", "nexus", "electrical synapse"],
     definition:
       "Intercellular channel formed by paired connexons (hexameric connexin proteins) allowing direct cytoplasmic exchange of ions and small molecules (<1 kDa) between adjacent cells.",
     characteristics: [
@@ -777,11 +763,7 @@ export const CELLS: CellEntry[] = [
   {
     id: "dna-methylation",
     name: "DNA Methylation",
-    aliases: [
-      "dna methylation",
-      "cpg methylation",
-      "cytosine methylation",
-    ],
+    aliases: ["dna methylation", "cpg methylation", "cytosine methylation"],
     definition:
       "Epigenetic modification adding a methyl group to cytosine (usually in CpG dinucleotides) by DNA methyltransferases (DNMTs), generally repressing gene transcription when occurring in promoter CpG islands.",
     characteristics: [
@@ -1068,6 +1050,46 @@ export const CELLS: CellEntry[] = [
       "Necrotizing enterocolitis — mucosal injury and bacterial invasion in preterm gut; IgA in breast milk supports mucosal immunity in infants.",
   },
   {
+    id: "lamina-propria",
+    name: "Lamina Propria",
+    aliases: [
+      "lamina propria",
+      "lamina propria layer",
+      "lamina propria of mucosa",
+    ],
+    definition:
+      "Loose connective tissue layer of the mucosa lying directly beneath the epithelium and superficial to the muscularis mucosae — contains capillaries, lymphatics, nerves, and immune cells that support epithelial function and mucosal immunity.",
+    characteristics: [
+      "Middle component of mucosa: epithelium → lamina propria → muscularis mucosae",
+      "Rich in immune cells — plasma cells (IgA-producing), lymphocytes, macrophages, dendritic cells, mast cells",
+      "Vascular and lymphatic plexus supplies epithelium and drains absorbed antigens to regional nodes",
+      "Peyer's patches and other MALT aggregates extend into or lie immediately beneath lamina propria in gut",
+      "Fibroblasts and extracellular matrix provide structural support to overlying epithelium",
+    ],
+    clinicalRelevance: [
+      "Ulcerative colitis — inflammation confined to mucosa includes lamina propria with crypt abscesses",
+      "Celiac disease — intraepithelial lymphocytosis and lamina propria plasma cell expansion",
+      "H. pylori gastritis — inflammatory infiltrate in lamina propria",
+      "IgA-secreting plasma cells in lamina propria produce dimeric IgA transported into gut lumen",
+      "Allergic rhinitis and asthma — eosinophil and lymphocyte infiltration of respiratory lamina propria",
+    ],
+    boardsPearls: [
+      "Lamina propria = loose CT under epithelium, above muscularis mucosae — site of mucosal immune cells",
+      "Mucosa has three parts: epithelium, lamina propria, muscularis mucosae",
+      "Submucosa lies deep to muscularis mucosae — contains Meissner plexus, larger vessels, Brunner glands (duodenum)",
+      "UC affects mucosa (including lamina propria); Crohn is transmural beyond mucosa",
+      "IgA plasma cells in lamina propria — secretory IgA defends mucosal surfaces",
+    ],
+    distinguishFrom: [
+      "Submucosa — deeper layer below muscularis mucosae; Meissner plexus, submucosal glands",
+      "Muscularis mucosae — thin smooth muscle between lamina propria and submucosa",
+      "Dermis — connective tissue under skin epidermis; not part of mucosal layer nomenclature",
+      "Epithelium — cellular lining above lamina propria; absorption and secretion occur here",
+    ],
+    pediatrics:
+      "Breast milk IgA supports mucosal immunity in infant lamina propria; NEC involves mucosal and lamina propria injury in preterm gut.",
+  },
+  {
     id: "serosa",
     name: "Serosa",
     aliases: [
@@ -1271,12 +1293,7 @@ export const CELLS: CellEntry[] = [
   {
     id: "microtubule",
     name: "Microtubule",
-    aliases: [
-      "microtubule",
-      "microtubules",
-      "tubulin",
-      "tubulin filament",
-    ],
+    aliases: ["microtubule", "microtubules", "tubulin", "tubulin filament"],
     definition:
       "Hollow cylindrical polymers of α/β-tubulin dimers (~25 nm) — the largest cytoskeletal filaments; dynamic instability drives mitosis, intracellular transport, and ciliary/flagellar motility.",
     characteristics: [
@@ -1306,6 +1323,46 @@ export const CELLS: CellEntry[] = [
       "Kartagener syndrome often diagnosed in childhood with recurrent sinusitis and laterality defects; immotile sperm in males.",
   },
   {
+    id: "polymerization",
+    name: "Polymerization",
+    aliases: [
+      "polymerization",
+      "polymerisation",
+      "actin polymerization",
+      "microtubule polymerization",
+      "tubulin polymerization",
+      "filament polymerization",
+    ],
+    definition:
+      "Assembly of monomer subunits into linear or branched polymers — key cytoskeletal processes include G-actin → F-actin microfilaments and α/β-tubulin dimers → microtubules; also applies to bacterial peptidoglycan cross-linking.",
+    characteristics: [
+      "Actin: ATP-driven addition at barbed (+) end; Arp2/3 nucleates branching for lamellipodia and phagocytic cup formation",
+      "Microtubules: dynamic instability — growth and catastrophe at (+) end; γ-tubulin nucleates at centrosome/MTOC",
+      "Peptidoglycan polymerization — transpeptidase cross-links peptide side chains (β-lactams inhibit PBPs)",
+      "Colchicine binds tubulin → prevents polymerization; paclitaxel stabilizes polymers → arrests mitosis",
+    ],
+    clinicalRelevance: [
+      "Colchicine — inhibits microtubule polymerization → ↓ neutrophil chemotaxis and phagocytosis in gout",
+      "Vincristine/vinblastine — block microtubule assembly → M-phase arrest (chemotherapy)",
+      "Paclitaxel — hyperstabilizes microtubules → mitotic arrest",
+      "Cytochalasin D — blocks actin polymerization → impairs phagocytosis and cell motility",
+      "β-lactam antibiotics — inhibit peptidoglycan polymerization (cell wall synthesis)",
+    ],
+    boardsPearls: [
+      "Colchicine and vinca alkaloids prevent tubulin polymerization; taxanes stabilize existing microtubules",
+      "Actin polymerization drives phagocytosis, cytokinesis, and Listeria ActA rocket motility",
+      "Vancomycin inhibits peptidoglycan polymerization — Gram-positive cell wall",
+      "Dynamic instability of microtubules — growth/catastrophe underlies mitotic spindle function",
+    ],
+    distinguishFrom: [
+      "Depolymerization — filament disassembly (e.g., latrunculin sequesters G-actin)",
+      "Cross-linking — transpeptidase step in peptidoglycan, distinct from monomer addition alone",
+      "Intermediate filaments — assemble without dynamic polarity or treadmilling like actin/tubulin",
+    ],
+    pediatrics:
+      "Colchicine toxicity in children — GI symptoms predominate; same microtubule mechanism as in adults.",
+  },
+  {
     id: "a-delta-fiber",
     name: "A-delta fiber",
     aliases: [
@@ -1321,7 +1378,7 @@ export const CELLS: CellEntry[] = [
       "a-delta nociceptors",
     ],
     definition:
-      "Thinly myelinated peripheral nerve fibers (Aδ group) that conduct nociceptive and thermoreceptive signals rapidly; mediate sharp, well-localized \"first pain\" (pricking, stinging).",
+      'Thinly myelinated peripheral nerve fibers (Aδ group) that conduct nociceptive and thermoreceptive signals rapidly; mediate sharp, well-localized "first pain" (pricking, stinging).',
     characteristics: [
       "Conduction velocity ~5–30 m/s — faster than unmyelinated C fibers, slower than Aβ fibers",
       "Aβ (large, myelinated) — touch, pressure, proprioception; Aδ — fast pain, cold; C — slow pain, warmth, itch",
@@ -1404,7 +1461,7 @@ export const CELLS: CellEntry[] = [
     characteristics: [
       "Derived from alveolar or tissue macrophages after RBC breakdown",
       "Golden-brown hemosiderin granules on H&E; Prussian blue (iron) stain positive",
-      "Also called \"heart failure cells\" when found in lung alveoli",
+      'Also called "heart failure cells" when found in lung alveoli',
       "Reflects prior—not active—hemorrhage or chronic congestion",
     ],
     clinicalRelevance: [
@@ -1436,6 +1493,7 @@ export const CELLS: CellEntry[] = [
       "langerhans cell",
       "langerhans cells",
       "epidermal langerhans cell",
+      "epidermal langerhans cells",
     ],
     definition:
       "Dendritic antigen-presenting cell resident in epidermis and mucosa; captures cutaneous antigen and migrates to lymph nodes to activate T cells.",
@@ -1465,6 +1523,541 @@ export const CELLS: CellEntry[] = [
     ],
     pediatrics:
       "Letterer-Siwe disease (multisystem LCH) in infants — rash, bone lesions, hepatosplenomegaly; Hand-Schüller-Christian in older children.",
+  },
+  {
+    id: "kupffer-cell",
+    name: "Kupffer Cell",
+    aliases: [
+      "kupffer cell",
+      "kupffer cells",
+      "hepatic macrophage",
+      "hepatic macrophages",
+      "liver macrophage",
+      "liver macrophages",
+    ],
+    definition:
+      "Tissue-resident macrophage of the liver sinusoids derived from embryonic yolk sac and monocyte replenishment; clears blood-borne pathogens, immune complexes, and senescent erythrocytes.",
+    characteristics: [
+      "Myeloid lineage — expresses macrophage markers (CD68⁺, CD163⁺; CD14 on monocyte-derived subsets)",
+      "Resides in hepatic sinusoidal lumen on endothelial surface",
+      "Phagocytoses bacteria, LPS, and antibody-coated particles from portal and systemic blood",
+      "Activated by endotoxin → cytokine release (TNF-α, IL-1) contributing to hepatic inflammation",
+    ],
+    clinicalRelevance: [
+      "Alcoholic and nonalcoholic steatohepatitis — activated Kupffer cells drive hepatic inflammation",
+      "Liver abscess and sepsis — Kupffer cells are first-line hepatic innate defense",
+      "Gaucher disease — glucocerebroside-laden macrophages (Gaucher cells) in liver and marrow",
+      "Hemochromatosis — iron deposition; macrophages participate in iron handling",
+    ],
+    boardsPearls: [
+      "Kupffer cell = liver macrophage — myeloid, CD68⁺",
+      "vs Langerhans cell — epidermal dendritic APC; CD1a⁺/langerin⁺, not sinusoidal macrophage",
+      "vs hepatic stellate (Ito) cell — stores vitamin A, not a phagocyte",
+      "vs sinusoidal endothelial cell — fenestrated endothelium, not macrophage",
+    ],
+    distinguishFrom: [
+      "Macrophage — general tissue phagocyte; Kupffer cell is liver-specific resident macrophage",
+      "Langerhans cell — epidermal dendritic APC (CD1a⁺), not hepatic sinusoidal macrophage",
+      "Hepatic stellate cell — vitamin A storage and fibrosis, not phagocytic",
+      "Melanocyte — neural crest–derived pigment cell, not myeloid phagocyte",
+    ],
+    pediatrics:
+      "Neonatal liver macrophage function immature — ↑ susceptibility to certain disseminated infections; same Kupffer cell identity as adults.",
+  },
+  {
+    id: "merkel-cell",
+    name: "Merkel Cell",
+    aliases: [
+      "merkel cell",
+      "merkel cells",
+      "merkel's cell",
+      "merkel disc",
+      "merkel discs",
+      "tactile merkel cell",
+    ],
+    definition:
+      "Mechanoreceptor cell in the basal epidermis and hair follicles that transduces light touch and texture via synapse-like contacts with afferent sensory nerve fibers (Merkel disc).",
+    characteristics: [
+      "Neural crest–derived (not myeloid) — cytokeratin 20⁺ (CK20), neuroendocrine markers",
+      "Slowly adapting touch receptor — sustained response to pressure and texture",
+      "Dense in fingertips, lips, and hair follicle bulge regions",
+      "Does not express classic myeloid/macrophage surface markers (CD14, CD68)",
+    ],
+    clinicalRelevance: [
+      "Merkel cell carcinoma — aggressive neuroendocrine skin cancer; CK20⁺, often MCPyV-associated",
+      "Loss with aging reduces fine tactile discrimination",
+    ],
+    boardsPearls: [
+      "Merkel cell = touch mechanoreceptor — NOT macrophage, NOT dendritic APC, NOT melanocyte",
+      "CK20⁺ neuroendocrine skin tumor → Merkel cell carcinoma",
+      "vs Langerhans cell — APC in epidermis; Merkel cell is sensory mechanoreceptor",
+      "vs melanocyte — pigment production; Merkel cell senses touch",
+      "Neural crest origin — not myeloid lineage",
+    ],
+    distinguishFrom: [
+      "Langerhans cell — dendritic APC; CD1a⁺, Birbeck granules, antigen presentation",
+      "Melanocyte — melanin synthesis (tyrosinase); pigmentation, not mechanoreception",
+      "Macrophage/Kupffer cell — myeloid phagocyte; CD68⁺, innate immunity",
+      "Meissner corpuscle — dermal light-touch receptor, not epidermal Merkel cell",
+    ],
+    pediatrics:
+      "Merkel cell carcinoma rare in children; when present often virus-associated — not confused with Langerhans cell histiocytosis clinically.",
+  },
+  {
+    id: "melanocyte",
+    name: "Melanocyte",
+    aliases: [
+      "melanocyte",
+      "melanocytes",
+      "cutaneous melanocyte",
+      "epidermal melanocyte",
+    ],
+    definition:
+      "Neural crest–derived pigment-producing cell residing in the basal epidermis and hair bulb that synthesizes melanin via tyrosinase and transfers melanosomes to surrounding keratinocytes.",
+    characteristics: [
+      "Neural crest origin — NOT myeloid; does not express macrophage markers (CD68, CD14)",
+      "Synthesizes melanin from tyrosine — tyrosinase is rate-limiting enzyme",
+      "Transfers melanosomes to keratinocytes — skin color reflects keratinocyte pigment content",
+      "S100 and Melan-A (MART-1) immunostains used to identify melanocytic lesions",
+    ],
+    clinicalRelevance: [
+      "Melanoma — malignant transformation of melanocytes; BRAF mutations common",
+      "Albinism — defective melanin synthesis (tyrosinase or melanosome transport defects)",
+      "Vitiligo — autoimmune destruction of melanocytes",
+      "Cafe-au-lait macules — ↑ melanocyte activity or number (NF1, McCune-Albright)",
+    ],
+    boardsPearls: [
+      "Melanocyte = pigment cell, neural crest–derived — NOT myeloid phagocyte",
+      "Tyrosinase converts tyrosine → DOPA → melanin",
+      "vs Langerhans cell — immune APC; melanocyte makes pigment",
+      "vs Merkel cell — mechanoreceptor (CK20⁺); melanocyte is pigmented",
+      "vs macrophage — phagocyte (CD68⁺); melanocyte has no phagocytic role in immunity",
+    ],
+    distinguishFrom: [
+      "Keratinocyte — receives melanosomes; does not synthesize melanin",
+      "Langerhans cell — dendritic APC (CD1a⁺), immune surveillance not pigmentation",
+      "Merkel cell — touch receptor, neural crest but no melanin synthesis",
+      "Macrophage — myeloid phagocyte; may contain phagocytosed pigment but does not produce melanin",
+    ],
+    pediatrics:
+      "Congenital melanocytic nevi present at birth; large nevi carry ↑ melanoma risk — distinct from LCH skin rash.",
+  },
+  {
+    id: "epithelioid-cell",
+    name: "Epithelioid Cell",
+    aliases: [
+      "epithelioid cell",
+      "epithelioid cells",
+      "epithelioid macrophage",
+      "epithelioid macrophages",
+      "epithelioid histiocyte",
+      "epithelioid histiocytes",
+    ],
+    definition:
+      "Activated macrophage with abundant eosinophilic cytoplasm and rounded epithelial-like morphology that aggregates with lymphocytes to form granulomas in chronic inflammation.",
+    characteristics: [
+      "Myeloid/macrophage lineage — derived from monocytes; CD68⁺",
+      "Activated by IFN-γ and persistent antigen (e.g., mycobacteria, fungi, foreign body)",
+      "May fuse with other macrophages to form multinucleated giant cells (Langhans, foreign body types)",
+      "Secretes TNF-α and IL-12 — sustains Th1 response in granulomatous disease",
+      "Sarcoidosis epithelioid cells produce ACE and 1α-hydroxylase (↑ vitamin D, hypercalcemia)",
+    ],
+    clinicalRelevance: [
+      "Tuberculosis — caseating granulomas with epithelioid macrophages and Langhans giant cells",
+      "Sarcoidosis — noncaseating granulomas; ↑ ACE from epithelioid cells",
+      "Crohn disease — noncaseating intestinal granulomas",
+      "Foreign body granuloma — epithelioid cells surrounding nondegradable material",
+    ],
+    boardsPearls: [
+      "Epithelioid cell = activated macrophage in granuloma — myeloid, CD68⁺",
+      "Langhans giant cell — epithelioid macrophage fusion with horseshoe-arranged nuclei (TB)",
+      "Sarcoidosis: noncaseating granulomas, ↑ ACE, hypercalcemia from epithelioid 1α-hydroxylase",
+      "vs Langerhans cell — epidermal dendritic APC; epithelioid cell is activated tissue macrophage",
+      "vs epithelial cell — name reflects morphology only; epithelioid cells are macrophages, not epithelium",
+    ],
+    distinguishFrom: [
+      "Epithelial cell — forms linings and glands; not macrophage despite similar name",
+      "Langerhans cell — dendritic APC in epidermis (CD1a⁺); not granuloma macrophage",
+      "Giant cell tumor of bone — neoplastic stromal cells, not granulomatous epithelioid macrophage",
+      "Melanocyte/Merkel cell — neural crest derivatives, not myeloid granuloma cells",
+    ],
+    pediatrics:
+      "Pediatric TB and sarcoidosis both form epithelioid granulomas — TB more often caseating; sarcoidosis with uveitis and ↑ ACE in older children/adolescents.",
+  },
+  {
+    id: "myeloid-surface-markers",
+    name: "Myeloid Surface Markers",
+    aliases: [
+      "myeloid surface markers",
+      "myeloid surface marker",
+      "myeloid markers",
+      "myeloid marker",
+      "myeloid cell markers",
+      "myeloid lineage markers",
+      "myeloid antigens",
+      "cd14",
+      "cd68",
+      "cd163",
+      "cd33",
+      "cd15",
+      "cd13",
+      "cd11b",
+    ],
+    definition:
+      "Cell-surface proteins used to identify cells of myeloid hematopoietic lineage (granulocytes, monocytes, macrophages, dendritic cells of myeloid origin) by flow cytometry and immunohistochemistry.",
+    characteristics: [
+      "CD14 — LPS co-receptor on monocytes/macrophages; soluble CD14 in plasma",
+      "CD68 — lysosomal glycoprotein; pan-macrophage marker (Kupffer, alveolar, tissue macrophages)",
+      "CD163 — scavenger receptor; M2/alternatively activated macrophages, hemoglobin-haptoglobin uptake",
+      "CD13 (aminopeptidase N) and CD33 — broad myeloid markers; CD33 targeted by gemtuzumab in AML",
+      "CD15 (Lewis X) — granulocytes; also on some Reed-Sternberg cells (Hodgkin)",
+      "CD11b/CD18 (Mac-1, CR3) — integrin on neutrophils, monocytes, macrophages; complement receptor",
+    ],
+    clinicalRelevance: [
+      "Flow cytometry immunophenotyping in leukemia — AML blasts often CD13⁺/CD33⁺/CD34⁺; Auer rods confirm myeloid",
+      "Histiocyte identification — CD68⁺ cells in tissue (macrophages, epithelioid cells, giant cells)",
+      "Langerhans cell histiocytosis — CD1a⁺ and langerin⁺ (not classic macrophage immunophenotype alone)",
+      "Sepsis — ↑ soluble CD14 reflects monocyte activation",
+    ],
+    boardsPearls: [
+      "Myeloid phagocytes (monocyte/macrophage/Kupffer/epithelioid): CD68⁺, often CD14⁺",
+      "Langerhans cell: myeloid origin but mature marker profile CD1a⁺, langerin (CD207)⁺, S100⁺",
+      "Melanocytes and Merkel cells: neural crest — NOT CD68⁺/CD14⁺ myeloid markers",
+      "AML immunophenotype: CD13, CD33, CD34, MPO; lymphoid blasts are CD19/CD3/TdT",
+      "CD15 on granulocytes and Hodgkin Reed-Sternberg cells",
+    ],
+    distinguishFrom: [
+      "Lymphoid markers — CD3 (T cells), CD19/CD20 (B cells), not myeloid",
+      "CD1a/langerin — Langerhans/dendritic cell identity, not pan-myeloid macrophage marker",
+      "Tyrosinase/Melan-A — melanocyte markers, not myeloid",
+      "Cytokeratin 20 — Merkel cell/neuroendocrine, not myeloid",
+    ],
+    pediatrics:
+      "Pediatric AML and JMML diagnosed by flow cytometry myeloid markers (CD13, CD33, CD34); LCH uses CD1a not CD68 alone for diagnosis.",
+  },
+  {
+    id: "langhans-giant-cell",
+    name: "Langhans Giant Cell",
+    aliases: [
+      "langhans giant cell",
+      "langhans giant cells",
+      "langerhans giant cell",
+      "langerhans giant cells",
+      "langhans-type giant cell",
+      "langhans type giant cell",
+    ],
+    definition:
+      "Multinucleated giant cell formed by fusion of epithelioid macrophages, classically with nuclei arranged in a horseshoe pattern at the periphery — hallmark of granulomatous inflammation especially tuberculosis.",
+    characteristics: [
+      "Myeloid/macrophage derivative — CD68⁺ epithelioid macrophages fuse under chronic IFN-γ stimulation",
+      "Peripheral horseshoe or ring arrangement of nuclei (classic Langhans morphology)",
+      "Found in caseating granulomas of TB and some fungal infections",
+      "Distinct from foreign body giant cells (haphazard nuclei) and osteoclasts (bone resorption)",
+    ],
+    clinicalRelevance: [
+      "Tuberculosis — caseating granulomas with Langhans giant cells and central necrosis",
+      "Sarcoidosis — noncaseating granulomas; giant cells present but caseation absent",
+      "Fungal granulomas (histoplasmosis, coccidioidomycosis) may show Langhans-type giant cells",
+    ],
+    boardsPearls: [
+      "Langhans giant cell ≠ Langerhans cell — classic boards trap",
+      "Langhans (with G) = granuloma giant cell (TB); Langerhans (with R) = epidermal dendritic APC",
+      "Horseshoe peripheral nuclei — Langhans type; haphazard nuclei — foreign body type",
+      "Epithelioid macrophages fuse to form giant cells in chronic Th1/IFN-γ inflammation",
+    ],
+    distinguishFrom: [
+      "Langerhans cell — epidermal dendritic APC; CD1a⁺, Birbeck granules; NOT a multinucleated granuloma cell",
+      "Foreign body giant cell — haphazard nuclei around nondegradable material",
+      "Osteoclast — multinucleated bone-resorbing cell on bone surface (RANKL-driven)",
+      "Touton giant cell — xanthogranuloma; wreath of nuclei surrounded by foamy cytoplasm",
+    ],
+    pediatrics:
+      "Pediatric TB granulomas may show Langhans giant cells; distinguish from LCH (CD1a⁺ Langerhans cell proliferation, not granulomatous TB).",
+  },
+  {
+    id: "dendritic-cell",
+    name: "Dendritic Cell",
+    aliases: [
+      "dendritic cell",
+      "dendritic cells",
+      "dc",
+      "dcs",
+      "myeloid dendritic cell",
+      "plasmacytoid dendritic cell",
+    ],
+    definition:
+      "Professional antigen-presenting cell with dendritic processes specialized for antigen capture in peripheral tissues, migration to lymph nodes, and activation of naive T cells via MHC–peptide complexes and co-stimulatory molecules.",
+    characteristics: [
+      "Most potent activator of naive T cells among APCs",
+      "Subsets: conventional/myeloid DCs, plasmacytoid DCs (type I IFN production), Langerhans cells (epidermal)",
+      "Express MHC class II and B7 (CD80/CD86) — provides Signal 1 and Signal 2 to CD4⁺ T cells",
+      "Migrates from periphery to lymph node paracortex after antigen uptake and maturation",
+      "Follicular dendritic cells (FDCs) in germinal centers display native antigen to B cells — distinct lineage",
+    ],
+    clinicalRelevance: [
+      "Contact hypersensitivity — Langerhans cells present hapten to T cells",
+      "HIV infects dendritic cells and uses them for T-cell transmission",
+      "Dendritic cell vaccines and checkpoint immunotherapy exploit APC–T-cell interactions",
+      "Langerhans cell histiocytosis — clonal Langerhans cell proliferation",
+    ],
+    boardsPearls: [
+      "Professional APCs: dendritic cells (most potent), macrophages, B cells",
+      "Langerhans cell = epidermal dendritic cell subset (CD1a⁺, Birbeck granules)",
+      "vs follicular dendritic cell — in germinal center; presents antigen to B cells, not T cells",
+      "Dendritic cell maturation ↑ MHC II and B7, ↓ endocytic activity → ready to activate T cells",
+    ],
+    distinguishFrom: [
+      "Macrophage — phagocyte and APC but less efficient at naive T-cell activation",
+      "Langerhans cell — epidermal dendritic subset; do not confuse with Langhans giant cell",
+      "Follicular dendritic cell — B-cell follicle; retains native antigen on surface",
+      "Langhans giant cell — fused macrophages in granulomas, not dendritic APC",
+    ],
+    pediatrics:
+      "LCH is clonal proliferation of Langerhans-type dendritic cells — Letterer-Siwe in infants; not TB Langhans giant cells.",
+  },
+  {
+    id: "antigen-presenting-cell",
+    name: "Antigen-Presenting Cell",
+    aliases: [
+      "antigen-presenting cell",
+      "antigen presenting cell",
+      "antigen-presenting cells",
+      "antigen presenting cells",
+      "antigen presentation",
+      "antigen presenting",
+      "apc",
+      "apcs",
+      "professional antigen-presenting cell",
+      "professional apc",
+    ],
+    definition:
+      "Immune cell that internalizes, processes, and displays peptide antigen bound to MHC molecules on its surface for T-cell recognition, providing co-stimulation required for full T-cell activation.",
+    characteristics: [
+      "Professional APCs: dendritic cells (most potent), macrophages, B cells — constitutively express MHC II",
+      "Present exogenous antigen on MHC II to CD4⁺ T cells; cross-presenting DCs can also load MHC I",
+      "Provide Signal 2 via B7 (CD80/CD86) binding CD28 on naive T cells",
+      "Nonprofessional APCs (endothelium, epithelium) can upregulate MHC II under IFN-γ stimulation",
+    ],
+    clinicalRelevance: [
+      "Autoimmunity — APC presentation of self-antigen to autoreactive T cells",
+      "Transplant rejection — donor MHC on APCs recognized by recipient T cells (direct pathway)",
+      "Vaccines — aim to deliver antigen to dendritic APCs for durable immunity",
+      "Bare lymphocyte syndrome — absent MHC II on APCs → immunodeficiency",
+    ],
+    boardsPearls: [
+      "Professional APC trio: dendritic cell, macrophage, B cell",
+      "MHC II + CD4⁺ T cell; MHC I + CD8⁺ T cell — co-receptor restriction",
+      "Exogenous antigen → endocytosis → MHC II pathway; endogenous → proteasome → MHC I",
+      "B cells present specific captured antigen via surface Ig to Tfh cells in germinal centers",
+    ],
+    distinguishFrom: [
+      "NK cell — innate killing without antigen presentation to TCR",
+      "Neutrophil — phagocyte; not a professional APC for naive T-cell activation",
+      "Keratinocyte — can present antigen under inflammation but not professional APC",
+      "MHC molecule — displays peptide; APC is the cell presenting it",
+    ],
+    pediatrics:
+      "MHC class II deficiency (bare lymphocyte syndrome) — absent APC MHC II expression; severe immunodeficiency presenting in infancy.",
+  },
+  {
+    id: "birbeck-granules",
+    name: "Birbeck Granules",
+    aliases: [
+      "birbeck granules",
+      "birbeck granule",
+      "birbeck body",
+      "birbeck bodies",
+    ],
+    definition:
+      "Characteristic rod- or tennis racket–shaped cytoplasmic organelles in Langerhans cells formed by langerin (CD207)-induced membrane superimposition and zippering — ultrastructural hallmark of Langerhans cells.",
+    characteristics: [
+      "Seen on electron microscopy — central linear density with bulbous end (tennis racket appearance)",
+      "Formed by langerin (CD207) cross-linking and internalizing glycosylated lipids in Langerhans cells",
+      "Associated with CD1a⁺ Langerhans cells in epidermis and Langerhans cell histiocytosis lesions",
+      "Not found in Langhans giant cells, macrophages, or melanocytes",
+    ],
+    clinicalRelevance: [
+      "Langerhans cell histiocytosis — Birbeck granules on EM of lesional histiocytes",
+      "Diagnostic support alongside CD1a and langerin immunostaining",
+    ],
+    boardsPearls: [
+      "Birbeck granules = Langerhans cell ultrastructural marker — tennis racket on EM",
+      "CD1a⁺ + langerin⁺ + Birbeck granules → Langerhans cell identity",
+      "vs Langhans giant cell — granuloma macrophage fusion; NO Birbeck granules",
+      "Langerin (CD207) drives Birbeck granule formation",
+    ],
+    distinguishFrom: [
+      "Langhans giant cell — multinucleated granuloma cell; no Birbeck granules",
+      "Melanosome — melanin-containing organelle in melanocytes",
+      "Lysosome — generic degradative organelle in many cells",
+      "Weibel-Palade body — endothelial granules with vWF, not Langerhans-specific",
+    ],
+    pediatrics:
+      "LCH diagnosis in children uses CD1a/langerin IHC; Birbeck granules on EM confirm Langerhans cell lineage.",
+  },
+  {
+    id: "melanosome",
+    name: "Melanosome",
+    aliases: [
+      "melanosome",
+      "melanosomes",
+      "melanin granule",
+      "melanin granules",
+    ],
+    definition:
+      "Membrane-bound organelle in melanocytes in which tyrosinase sequentially oxidizes tyrosine to produce melanin pigment, later transferred to adjacent keratinocytes.",
+    characteristics: [
+      "Four stages of maturation — increasing melanin deposition from stage I (vesicular) to stage IV (fully melanized)",
+      "Tyrosinase catalyzes rate-limiting steps of melanin synthesis within melanosome",
+      "Transferred from melanocyte dendrites to keratinocytes — skin color reflects keratinocyte melanosome content",
+      "Ultrastructurally distinct from Birbeck granules (Langerhans cells) and lysosomes",
+    ],
+    clinicalRelevance: [
+      "Albinism — defective tyrosinase or melanosome transport → absent/reduced melanin",
+      "Melasma and post-inflammatory hyperpigmentation — ↑ melanosome transfer to keratinocytes",
+      "Melanoma — abnormal melanocytic proliferation and melanosome production",
+      "Griscelli syndrome — defective melanosome transport (MYO5A, RAB27A) → silvery hair, immunodeficiency",
+    ],
+    boardsPearls: [
+      "Melanosome = melanin factory in melanocytes — tyrosinase-dependent",
+      "Pigment transferred to keratinocytes; melanocytes themselves are not the main pigmented cell in epidermis",
+      "vs Birbeck granule — Langerhans cell tennis racket organelle, not pigment",
+      "vs hemosiderin — iron from hemorrhage, not tyrosinase-derived melanin",
+    ],
+    distinguishFrom: [
+      "Birbeck granule — Langerhans cell; CD1a⁺ cell marker, not pigment organelle",
+      "Lysosome — degradative; melanosome is specialized secretory pigment organelle",
+      "Keratinocyte — receives melanosomes but does not synthesize melanin de novo",
+      "Lipofuscin — age-related residual bodies, not melanin synthesis",
+    ],
+    pediatrics:
+      "Oculocutaneous albinism in infants — absent melanin in hair, skin, irides from melanosome dysfunction; ↑ skin cancer risk.",
+  },
+  {
+    id: "keratinocyte",
+    name: "Keratinocyte",
+    aliases: [
+      "keratinocyte",
+      "keratinocytes",
+      "epidermal keratinocyte",
+      "epidermal keratinocytes",
+    ],
+    definition:
+      "Predominant epidermal cell type that synthesizes keratin intermediate filaments, forms stratified layers from basal to cornified stratum, and receives melanosomes from melanocytes for photoprotection.",
+    characteristics: [
+      "Derived from surface ectoderm (not neural crest)",
+      "Stratified differentiation: stratum basale → spinosum → granulosum → corneum",
+      "Desmosomes (desmoglein/desmocollin) link adjacent keratinocytes — target in pemphigus vulgaris",
+      "Hemidesmosomes anchor basal keratinocytes to basement membrane — target in bullous pemphigoid",
+      "Receives melanosomes from melanocytes — main site of epidermal melanin distribution",
+    ],
+    clinicalRelevance: [
+      "Pemphigus vulgaris — anti-desmoglein antibodies → acantholysis between keratinocytes",
+      "Bullous pemphigoid — anti-hemidesmosome antibodies → subepidermal blister",
+      "Psoriasis — hyperproliferating keratinocytes with parakeratosis and Munro microabscesses",
+      "Squamous cell carcinoma — malignant keratinocyte neoplasm",
+      "Lichen planus — CD8⁺ T-cell attack on basal keratinocytes",
+    ],
+    boardsPearls: [
+      "Keratinocyte = structural epidermal cell; desmosomes between cells, hemidesmosomes to basement membrane",
+      "Pemphigus: intraepidermal (desmosome); pemphigoid: subepidermal (hemidesmosome)",
+      "vs melanocyte — neural crest pigment cell transfers melanosomes to keratinocytes",
+      "vs Langerhans cell — dendritic APC between keratinocytes, not structural barrier cell",
+      "vs Merkel cell — mechanoreceptor at keratinocyte–nerve interface",
+    ],
+    distinguishFrom: [
+      "Melanocyte — neural crest–derived; synthesizes melanin, transfers melanosomes",
+      "Langerhans cell — immune APC with Birbeck granules between keratinocytes",
+      "Merkel cell — touch receptor, not keratin-producing structural cell",
+      "Fibroblast — dermal mesenchymal cell, not epidermal keratinocyte",
+    ],
+    pediatrics:
+      "Epidermolysis bullosa — keratin or basement membrane defects → blistering from minor trauma in infants.",
+  },
+  {
+    id: "neural-crest",
+    name: "Neural Crest",
+    aliases: [
+      "neural crest",
+      "neural crest cells",
+      "neural crest cell",
+      "neural crest-derived",
+      "neural crest derived",
+      "neural crest derivative",
+      "neural crest derivatives",
+    ],
+    definition:
+      "Transient embryonic cell population arising from dorsal neuroectoderm at the neural tube border that migrates widely and differentiates into diverse structures — classic \"fourth germ layer\" in boards framing.",
+    characteristics: [
+      "Arises from ectoderm at neural fold → migrates throughout embryo during organogenesis",
+      "Gives rise to melanocytes, peripheral neurons, Schwann cells, adrenal medulla chromaffin cells",
+      "Also contributes to craniofacial bones/cartilage, odontoblasts, aorticopulmonary septum, enteric ganglia",
+      "NOT the origin of keratinocytes (surface ectoderm) or hematopoietic/myeloid cells (mesoderm)",
+    ],
+    clinicalRelevance: [
+      "Neurocristopathies — congenital defects from failed neural crest migration (DiGeorge, CHARGE, Hirschsprung)",
+      "Melanoma and neuroblastoma — tumors of neural crest derivatives",
+      "Hirschsprung disease — absent enteric ganglia (neural crest–derived) in rectum",
+      "Congenital megacolon — failed neural crest migration to distal colon",
+    ],
+    boardsPearls: [
+      "Neural crest gives: melanocytes, Merkel cells, adrenal medulla, peripheral ganglia, Schwann cells, craniofacial skeleton",
+      "Melanocyte and Merkel cell = neural crest; keratinocyte = surface ectoderm",
+      "vs mesoderm — muscle, bone (most), blood, macrophage lineage",
+      "vs endoderm — gut lining, lungs, liver parenchyma",
+      "Treacher Collins, cleft palate — cranial neural crest migration defects",
+    ],
+    distinguishFrom: [
+      "Surface ectoderm — epidermis (keratinocytes), lens, anterior pituitary from Rathke pouch",
+      "Mesoderm — muscle, cardiovascular mesenchyme, hematopoietic stem cells, most long bones",
+      "Endoderm — GI and respiratory epithelium, liver, pancreas",
+      "Neuroectoderm (neural tube) — CNS neurons and glia within brain/spinal cord, not migrating crest",
+    ],
+    pediatrics:
+      "Hirschsprung disease in neonates — neural crest–derived enteric ganglia absent in rectosigmoid; failure to pass meconium, megacolon.",
+  },
+  {
+    id: "hepatic-sinusoids",
+    name: "Hepatic Sinusoids",
+    aliases: [
+      "hepatic sinusoids",
+      "hepatic sinusoid",
+      "liver sinusoids",
+      "liver sinusoid",
+      "hepatic sinusoidal capillaries",
+      "discontinuous capillaries of liver",
+    ],
+    definition:
+      "Low-pressure, discontinuous capillary channels between plates of hepatocytes that receive mixed portal venous and hepatic arterial blood and permit plasma exchange with hepatocytes via the Space of Disse.",
+    characteristics: [
+      "Discontinuous (sinusoidal) capillary type — fenestrated endothelium with large pores and gaps, no continuous basement membrane",
+      "Space of Disse — perisinusoidal space between endothelium and hepatocytes; contains hepatic stellate (Ito) cells and matrix",
+      "Kupffer cells — tissue macrophages lining sinusoidal lumen on endothelial surface",
+      "Blood flows from portal triad (portal vein + hepatic artery + bile duct) toward central vein",
+      "Highly permeable to plasma proteins and chylomicron remnants — hepatocytes take up nutrients and toxins directly from sinusoidal plasma",
+    ],
+    clinicalRelevance: [
+      "Cirrhosis — fibrosis and capillarization of sinusoids (↑ resistance → portal hypertension)",
+      "Sinusoidal obstruction syndrome (veno-occlusive disease) — post-chemotherapy or transplant hepatic venule injury",
+      "Kupffer cell activation in alcoholic/nonalcoholic steatohepatitis drives hepatic inflammation",
+      "Hepatic stellate cell activation in Space of Disse → collagen deposition and fibrosis",
+    ],
+    boardsPearls: [
+      "Liver sinusoids = discontinuous capillaries — fenestrated endothelium, no basement membrane",
+      "Three capillary types: continuous (lung, muscle), fenestrated (kidney, endocrine), discontinuous/sinusoidal (liver, spleen, bone marrow)",
+      "Kupffer cells reside in hepatic sinusoids — myeloid macrophages clearing blood-borne pathogens",
+      "Space of Disse separates sinusoidal endothelium from hepatocyte plates — stellate cells store vitamin A here",
+      "vs portal triad — triad is inflow structure at lobule periphery; sinusoids are the channels between hepatocyte plates",
+    ],
+    distinguishFrom: [
+      "Central vein — drains sinusoidal blood at lobule center; not the exchange channel itself",
+      "Portal vein — inflow vessel in portal triad; blood then enters sinusoids",
+      "Hepatocyte — parenchymal liver cell adjacent to Space of Disse, not the vascular channel",
+      "Glomerular capillary — fenestrated but with GBM and podocytes; liver sinusoids lack continuous basement membrane",
+      "Kupffer cell — macrophage within sinusoid lumen, not the sinusoidal vessel",
+    ],
+    pediatrics:
+      "Neonatal liver has immature sinusoidal clearance; kernicterus risk when unconjugated bilirubin overwhelms hepatocyte conjugation and sinusoidal processing.",
   },
 ];
 

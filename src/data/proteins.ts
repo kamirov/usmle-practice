@@ -650,6 +650,38 @@ export const PROTEINS: ProteinEntry[] = [
     ],
   },
   {
+    id: "phospholipase-a2",
+    name: "Phospholipase A₂",
+    aliases: [
+      "phospholipase a2",
+      "phospholipase a₂",
+      "pla2",
+      "phospholipase a 2",
+      "cytosolic phospholipase a2",
+      "secretory phospholipase a2",
+    ],
+    gene: "PLA2G family (cPLA2, sPLA2)",
+    location:
+      "Membrane-associated enzyme in macrophages, mast cells, platelets, and many other cells; cleaves membrane phospholipids at sn-2 position",
+    function:
+      "Hydrolyzes arachidonic acid from membrane phospholipids (e.g., phosphatidylcholine) → releases free arachidonic acid as substrate for COX and lipoxygenase pathways → prostaglandins, thromboxane, and leukotrienes.",
+    mutationCauses: [
+      "Pharmacologic inhibition by corticosteroids — ↓ PLA₂ expression and arachidonic acid release → broad anti-inflammatory effect",
+    ],
+    boardsPearls: [
+      "Rate-limiting step upstream of eicosanoid synthesis — PLA₂ → arachidonic acid → COX or lipoxygenase",
+      "Corticosteroids ↓ phospholipase A₂ (among other effects) — reduces prostaglandins and leukotrienes",
+      "Aspirin/NSAIDs inhibit COX downstream; zileuton/montelukast target lipoxygenase/leukotriene pathway",
+      "vs phospholipase C — cleaves PIP₂ → IP₃ + DAG (second messengers), not arachidonic acid release",
+    ],
+    distinguishFrom: [
+      "Cyclooxygenase (COX) — converts arachidonic acid to prostaglandins (downstream of PLA₂)",
+      "5-Lipoxygenase — converts arachidonic acid to leukotrienes (parallel downstream pathway)",
+      "Phospholipase C — Gq pathway; generates IP₃ and DAG from membrane PIP₂",
+      "Phospholipase C (Clostridium perfringens α-toxin) — lecithinase; membrane destruction in gas gangrene",
+    ],
+  },
+  {
     id: "cyclooxygenase",
     name: "Cyclooxygenase (COX)",
     aliases: [
@@ -889,6 +921,85 @@ export const PROTEINS: ProteinEntry[] = [
       "Tacrolimus / cyclosporine — drugs that inhibit calcineurin, not the enzyme itself",
       "NFAT — transcription factor substrate of calcineurin; calcineurin is the phosphatase",
       "mTOR — target of sirolimus; downstream of IL-2 receptor, not Ca²⁺/calmodulin pathway",
+    ],
+  },
+  {
+    id: "mhc-class-ii",
+    name: "MHC Class II",
+    aliases: [
+      "mhc class ii",
+      "mhc class 2",
+      "mhc ii",
+      "mhc-2",
+      "mhc-ii",
+      "class ii mhc",
+      "class 2 mhc",
+      "hla-dr",
+      "hla-dp",
+      "hla-dq",
+      "hla class ii",
+      "major histocompatibility complex class ii",
+    ],
+    gene: "HLA-D region (HLA-DRA/DRB1, HLA-DPA/DPB1, HLA-DQA/DQB1)",
+    location:
+      "Expressed constitutively on professional antigen-presenting cells (dendritic cells, macrophages, B cells) and inducibly on other cells (e.g., activated endothelium); presents extracellular antigen to CD4⁺ T cells",
+    function:
+      "Transmembrane heterodimer (α and β chains) that displays processed exogenous peptide antigens in endosomal pathway to CD4⁺ T-helper cells via TCR recognition — essential for adaptive immune activation.",
+    mutationCauses: [
+      "HLA-DRB1*04:01 and shared epitope — ↑ rheumatoid arthritis risk",
+      "HLA-DQ2/DQ8 — celiac disease and type 1 diabetes susceptibility",
+      "Bare lymphocyte syndrome (MHC class II deficiency) — severe combined immunodeficiency phenotype from absent MHC II expression",
+    ],
+    boardsPearls: [
+      "MHC I (HLA-A/B/C) → CD8⁺ T cells; MHC II (HLA-DR/DP/DQ) → CD4⁺ T cells",
+      "Professional APCs constitutively express MHC II — dendritic cells, macrophages, B cells",
+      "Exogenous antigen: endocytosis → proteolysis in endosome → peptide loads onto MHC II → displayed on surface",
+      "Invariant chain blocks MHC II groove until replaced by peptide in MIIC compartment",
+      "vs MHC I — presents endogenous (cytosolic) peptides to CD8⁺ cells on all nucleated cells",
+    ],
+    distinguishFrom: [
+      "MHC class I — HLA-A/B/C; presents endogenous antigen to CD8⁺ T cells",
+      "CD4 — T-cell co-receptor that binds MHC II, not the presenting molecule itself",
+      "B2-microglobulin — associates with MHC I α chain, not MHC II",
+      "HLA class I — endogenous/cytosolic antigen presentation pathway",
+    ],
+  },
+  {
+    id: "b7-molecules",
+    name: "B7 Molecules",
+    aliases: [
+      "b7",
+      "b7 molecules",
+      "b7 cell surface molecules",
+      "b7 costimulatory molecules",
+      "cd80",
+      "cd86",
+      "b7-1",
+      "b7-2",
+      "b7.1",
+      "b7.2",
+    ],
+    gene: "CD80 (B7-1), CD86 (B7-2)",
+    location:
+      "Cell surface of professional antigen-presenting cells (dendritic cells, macrophages, B cells) and other activated immune cells",
+    function:
+      "Co-stimulatory ligands that bind CD28 on naive T cells (Signal 2) to promote full T-cell activation, IL-2 production, and survival; also bind CTLA-4 with higher affinity to inhibit T-cell responses.",
+    mutationCauses: [
+      "Pharmacologic blockade — ipilimumab (anti–CTLA-4) indirectly modulates B7–CTLA-4 inhibitory signaling in cancer immunotherapy",
+      "Absence of B7 co-stimulation during TCR engagement → T-cell anergy",
+    ],
+    boardsPearls: [
+      "Signal 2 of T-cell activation: CD28 on T cell binds B7 (CD80/CD86) on APC",
+      "CD80 (B7-1) and CD86 (B7-2) — both co-stimulate via CD28; CD86 expressed earlier",
+      "CTLA-4 binds B7 with higher affinity than CD28 → downregulates T-cell activation (checkpoint)",
+      "Missing B7/CD28 interaction → anergy despite TCR–MHC peptide recognition (Signal 1 alone)",
+      "vs PD-1/PD-L1 — separate checkpoint axis, not B7/CD28",
+    ],
+    distinguishFrom: [
+      "CD28 — T-cell receptor for B7, not the ligand on APC",
+      "CTLA-4 — inhibitory receptor competing for B7 binding on T cells",
+      "PD-L1 — binds PD-1, not CD28; second checkpoint pathway",
+      "CD40 — separate co-stimulatory ligand on APC; binds CD40L on activated T cells",
     ],
   },
 ];

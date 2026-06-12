@@ -1488,6 +1488,39 @@ export const SYMPTOMS: SymptomEntry[] = [
       "Skin thickening (diffuse) — widespread sclerosis rather than focal plaque",
     ],
   },
+  {
+    id: "morning-stiffness",
+    name: "Morning Stiffness",
+    aliases: [
+      "morning stiffness",
+      "am stiffness",
+      "stiffness in the morning",
+      "early morning stiffness",
+    ],
+    definition:
+      "Subjective rigidity or reduced joint mobility present upon waking that improves with activity; duration and pattern help distinguish inflammatory from mechanical arthropathy.",
+    mechanism:
+      "Overnight immobility allows inflammatory exudate and edema to accumulate in synovium and periarticular tissues → gelling phenomenon; inflammatory arthritis typically causes prolonged stiffness that eases with movement.",
+    thinkOf: [
+      "Rheumatoid arthritis — stiffness >1 hour, symmetric small joints",
+      "Ankylosing spondylitis — inflammatory back pain, stiffness improves with exercise",
+      "Psoriatic arthritis — morning stiffness with enthesitis or dactylitis",
+      "Polymyalgia rheumatica — proximal stiffness lasting hours in elderly",
+      "Osteoarthritis — brief stiffness <30 minutes after inactivity",
+    ],
+    pairWith: [
+      ">1 hour stiffness + symmetric MCP/PIP swelling → rheumatoid arthritis",
+      "Young male + low back stiffness improving with activity + sacroiliitis → ankylosing spondylitis",
+      "Brief stiffness + DIP/PIP osteophytes + no systemic symptoms → osteoarthritis",
+      "Stiffness + proximal muscle pain + elevated ESR in age >50 → polymyalgia rheumatica",
+    ],
+    distinguishFrom: [
+      "Gelling phenomenon (OA) — short-lived stiffness after rest, usually <30 min",
+      "Muscle cramps — painful contraction, not joint rigidity",
+      "Parkinson rigidity — continuous throughout day, not morning-specific",
+      "Fibromyalgia — diffuse stiffness without synovitis or prolonged inflammatory duration",
+    ],
+  },
 ];
 
 const symptomById = new Map(SYMPTOMS.map((s) => [s.id, s]));

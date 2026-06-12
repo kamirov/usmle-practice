@@ -217,6 +217,72 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
       "LAD presents in infancy with recurrent bacterial infections, delayed cord separation, and impaired pus formation despite neutrophilia.",
   },
   {
+    id: "chemotaxis",
+    name: "Chemotaxis",
+    aliases: [
+      "chemotaxis",
+      "leukocyte chemotaxis",
+      "neutrophil chemotaxis",
+      "chemotactic migration",
+    ],
+    definition:
+      "Directed migration of cells along a concentration gradient of chemoattractants toward a stimulus (usually infection or tissue injury), distinct from random motility.",
+    examples: [
+      "Neutrophil chemotaxis toward bacterial products and complement fragment C5a",
+      "IL-8 (CXCL8) gradient guides neutrophils to sites of acute inflammation",
+      "Leukotriene B₄ (LTB₄) — potent neutrophil chemoattractant",
+      "Colchicine ↓ neutrophil chemotaxis by inhibiting microtubule polymerization",
+      "LAD — leukocytes cannot adhere and migrate despite chemotactic signals",
+    ],
+    boardsPearls: [
+      "Chemoattractants: C5a, IL-8, LTB₄, bacterial N-formyl peptides (fMLP)",
+      "Final step of leukocyte recruitment after margination, rolling, adhesion, and diapedesis",
+      "Colchicine blocks chemotaxis in gout by disrupting microtubules in neutrophils",
+      "Chemokines create tissue gradient — leukocytes migrate up concentration gradient",
+    ],
+    distinguishFrom: [
+      "Leukocyte migration — full extravasation process including adhesion and diapedesis, not gradient-following alone",
+      "Random migration (chemokinesis) — increased motility without directional bias",
+      "Haptotaxis — migration along adhesive substrate gradients",
+    ],
+    pediatrics:
+      "LAD type 1 — impaired adhesion prevents chemotaxis from translating into tissue infiltration; recurrent infections without pus.",
+  },
+  {
+    id: "phagocytosis",
+    name: "Phagocytosis",
+    aliases: [
+      "phagocytosis",
+      "phagocyte",
+      "phagocytic",
+      "engulfment",
+      "cellular engulfment",
+    ],
+    definition:
+      "Receptor-mediated engulfment of particulate material (bacteria, apoptotic cells, debris) into a phagosome, followed by fusion with lysosomes and intracellular destruction — performed chiefly by neutrophils, macrophages, and dendritic cells.",
+    examples: [
+      "Neutrophil phagocytosis of opsonized bacteria → respiratory burst (NADPH oxidase) → killing",
+      "Macrophage clearance of apoptotic cells — prevents autoimmunity from secondary necrosis",
+      "Opsonization by IgG (Fc receptor) and C3b (complement receptor) enhances phagocytosis",
+      "Chronic granulomatous disease — phagocytosis intact but cannot generate reactive oxygen species",
+      "Mycobacterium tuberculosis survives within macrophage phagosomes (prevents phagolysosome fusion)",
+    ],
+    boardsPearls: [
+      "Opsonization (IgG, C3b) tags pathogens for Fcγ and complement receptor–mediated phagocytosis",
+      "Respiratory burst requires NADPH oxidase — defective in CGD → catalase-positive organism infections",
+      "Phagocytosis requires actin polymerization — cytochalasin D impairs engulfment",
+      "Type II hypersensitivity — antibody opsonizes cells for phagocytic destruction (AIHA, ITP)",
+    ],
+    distinguishFrom: [
+      "Pinocytosis — fluid-phase endocytosis, not particulate engulfment",
+      "Receptor-mediated endocytosis — clathrin-coated pits (e.g., LDL uptake), not microbial killing",
+      "Antibody-dependent cellular cytotoxicity (ADCC) — NK cell killing without phagocytosis",
+      "Chemotaxis — directed movement toward stimulus, not engulfment",
+    ],
+    pediatrics:
+      "CGD presents in childhood with catalase-positive infections (S. aureus, Aspergillus, Burkholderia); dihydrorhodamine or nitroblue tetrazolium test assesses oxidative burst.",
+  },
+  {
     id: "granuloma",
     name: "Granuloma",
     aliases: [
@@ -749,6 +815,71 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
     ],
     pediatrics:
       "Idiopathic pulmonary hemosiderosis in children — recurrent alveolar hemorrhage, iron-deficiency anemia, hemosiderin-laden macrophages in BAL; rule out mitral stenosis and coagulopathy.",
+  },
+  {
+    id: "endocytosis",
+    name: "Endocytosis",
+    aliases: [
+      "endocytosis",
+      "endocytic",
+      "cellular uptake",
+      "vesicular transport",
+    ],
+    definition:
+      "Energy-dependent internalization of extracellular material into the cell via membrane invagination and vesicle formation — includes phagocytosis, pinocytosis, and receptor-mediated endocytosis.",
+    examples: [
+      "Receptor-mediated endocytosis — LDL uptake via LDL receptor and clathrin-coated pits",
+      "Phagocytosis — macrophage engulfment of opsonized bacteria",
+      "Pinocytosis — fluid and dissolved solute uptake into pinosomes",
+      "Antigen uptake by dendritic cells — endocytosis followed by MHC loading and presentation",
+      "Clathrin-mediated endocytosis — internalization of transferrin, hormones, and many receptors",
+    ],
+    boardsPearls: [
+      "Three main types: phagocytosis (particles), pinocytosis (fluid), receptor-mediated (ligand-specific)",
+      "Clathrin-coated pits — classic receptor-mediated endocytosis (LDL, transferrin)",
+      "vs exocytosis — secretion of vesicle contents to extracellular space",
+      "vs passive diffusion — endocytosis requires ATP and membrane remodeling",
+    ],
+    distinguishFrom: [
+      "Exocytosis — vesicle fusion with plasma membrane releasing contents outward",
+      "Phagocytosis — subset for large particulate material",
+      "Pinocytosis — subset for extracellular fluid (\"cell drinking\")",
+      "Transcytosis — vesicle transport across cell from one side to the other",
+    ],
+    pediatrics:
+      "Familial hypercholesterolemia — defective LDL receptor endocytosis → ↑ serum LDL from birth.",
+  },
+  {
+    id: "pinocytosis",
+    name: "Pinocytosis",
+    aliases: [
+      "pinocytosis",
+      "pinocytic",
+      "cell drinking",
+      "fluid-phase endocytosis",
+    ],
+    definition:
+      "Fluid-phase endocytosis in which extracellular fluid and dissolved solutes are nonspecifically engulfed into small vesicles (pinosomes) — \"cell drinking.\"",
+    examples: [
+      "Capillary endothelium — continuous pinocytosis for plasma protein transport",
+      "Immature dendritic cells — macropinocytosis for antigen sampling in peripheral tissues",
+      "Renal proximal tubule — receptor-mediated and fluid-phase uptake of filtered proteins",
+      "Virus entry in some infections — exploited pinocytic or macropinocytic pathways",
+    ],
+    boardsPearls: [
+      "Pinocytosis = fluid uptake; phagocytosis = particulate uptake (\"cell eating\")",
+      "Nonspecific compared with receptor-mediated endocytosis (e.g., LDL receptor)",
+      "Macropinocytosis — large-volume pinocytosis used by dendritic cells for antigen capture",
+      "vs phagocytosis — pinosomes contain fluid, not bacteria or cellular debris",
+    ],
+    distinguishFrom: [
+      "Phagocytosis — particulate material (bacteria, apoptotic cells) into phagosome",
+      "Receptor-mediated endocytosis — ligand-specific (clathrin-coated pits), not bulk fluid",
+      "Osmosis — passive water movement, not vesicle-mediated solute uptake",
+      "Transcytosis — transport across cell, not just internalization",
+    ],
+    pediatrics:
+      "Same vesicular mechanisms as adults; neonatal intestinal pinocytosis historically noted for macromolecule absorption early in life.",
   },
 ];
 

@@ -433,11 +433,7 @@ export const CONDITIONS: ConditionEntry[] = [
   {
     id: "tension-pneumothorax",
     name: "Tension Pneumothorax",
-    aliases: [
-      "tension pneumothorax",
-      "tension ptx",
-      "tension pneumo",
-    ],
+    aliases: ["tension pneumothorax", "tension ptx", "tension pneumo"],
     definition:
       "Life-threatening pneumothorax in which air enters the pleural space but cannot exit, causing progressive intrathoracic pressure, mediastinal shift, and cardiovascular collapse.",
     pathophysiology:
@@ -1319,7 +1315,7 @@ export const CONDITIONS: ConditionEntry[] = [
       "Palpitations, fatigue, dyspnea, or asymptomatic irregular pulse",
       "Irregularly irregular rhythm on exam",
       "History of hypertension, heart failure, valvular disease, or hyperthyroidism",
-      "Alcohol binge (\"holiday heart\") or postoperative state",
+      'Alcohol binge ("holiday heart") or postoperative state',
     ],
     keyFindings: [
       "Irregularly irregular pulse",
@@ -2585,7 +2581,7 @@ export const CONDITIONS: ConditionEntry[] = [
     pathophysiology:
       "Skin barrier defect (filaggrin mutations common) → ↑ transepidermal water loss and allergen penetration; Th2-skewed immune response (IL-4, IL-13) → IgE sensitization, inflammation, and pruritus. S. aureus colonization often exacerbates disease.",
     classicPresentation: [
-      "Intense pruritus — \"eczema is the itch that rashes\"",
+      'Intense pruritus — "eczema is the itch that rashes"',
       "Infants: erythematous papules/plaques on cheeks and extensor surfaces",
       "Children/adults: flexural distribution (antecubital and popliteal fossae, neck)",
       "Xerosis (dry skin), lichenification from chronic scratching",
@@ -2598,7 +2594,7 @@ export const CONDITIONS: ConditionEntry[] = [
       "Secondary crusting/honey-colored lesions → impetiginization (S. aureus)",
     ],
     associations: [
-      "Atopic triad: eczema, asthma, allergic rhinitis (\"atopic march\")",
+      'Atopic triad: eczema, asthma, allergic rhinitis ("atopic march")',
       "Food allergy (egg, milk, peanut) especially in young children",
       "Filaggrin gene (FLG) mutations — barrier defect",
     ],
@@ -2695,6 +2691,72 @@ export const CONDITIONS: ConditionEntry[] = [
       "Nickel from ear piercing and belt buckles common in children; poison ivy exposure during outdoor play. Diaper dermatitis is usually irritant (urine/feces), not allergic type IV.",
   },
   {
+    id: "venous-stasis-dermatitis",
+    name: "Venous Stasis Dermatitis",
+    aliases: [
+      "venous stasis dermatitis",
+      "stasis dermatitis",
+      "venous eczema",
+      "stasis eczema",
+      "gravitational dermatitis",
+      "congestive dermatitis",
+    ],
+    definition:
+      "Inflammatory eczematous dermatitis of the lower legs caused by chronic venous insufficiency and sustained elevation of venous hydrostatic pressure, often preceding or coexisting with venous leg ulcers.",
+    pathophysiology:
+      "Valvular incompetence or prior DVT → venous hypertension → capillary leakage of fibrin, hemosiderin, and inflammatory mediators → dermal inflammation, fibrosis (lipodermatosclerosis), and impaired wound healing. Hemosiderin deposition causes brownish discoloration.",
+    classicPresentation: [
+      "Older adult with bilateral (or unilateral post-DVT) lower leg involvement",
+      "Pruritic, erythematous, scaling eczematous patches around medial malleolus (gaiter area)",
+      "Dependent edema worse at end of day; improves with elevation",
+      "Brownish hemosiderin staining of skin",
+      "Varicose veins and leg heaviness/aching",
+      "Chronic changes: lipodermatosclerosis (firm, woody induration) → \"inverted champagne bottle\" leg",
+    ],
+    keyFindings: [
+      "Eczematous dermatitis localized to lower legs, especially medial ankle",
+      "Pitting edema with chronic venous insufficiency",
+      "Hemosiderin pigmentation (golden-brown discoloration)",
+      "Varicose veins; may have prior DVT history",
+      "Duplex ultrasound — reflux in superficial or deep venous system",
+    ],
+    associations: [
+      "Chronic venous insufficiency and varicose veins",
+      "Prior deep vein thrombosis (post-thrombotic syndrome)",
+      "Obesity, prolonged standing, pregnancy",
+      "Venous leg ulcers — often medial malleolar, shallow with irregular borders",
+    ],
+    complications: [
+      "Venous stasis ulcers — most common leg ulcer type",
+      "Cellulitis — can be recurrent; distinguish from dermatitis flare",
+      "Contact sensitization from topical treatments (allergic contact dermatitis overlay)",
+      "Lipodermatosclerosis and chronic lymphedema-like changes",
+    ],
+    distinguishFrom: [
+      "Cellulitis — acute, unilateral warmth and tenderness, fever, sharply progressive; dermatitis is chronic and bilateral",
+      "Arterial insufficiency ulcer — distal toes/foot, painful, absent pulses, ABI <0.9",
+      "Atopic dermatitis — flexural, not dependent gaiter distribution",
+      "Allergic contact dermatitis — exposure pattern (topical agent), patch test positive",
+      "Necrobiosis lipoidica — yellow-brown atrophic plaques on shins, associated with diabetes",
+    ],
+    treatment: [
+      "Compression therapy (graduated stockings or wraps) — cornerstone",
+      "Leg elevation, exercise (calf pump), weight loss",
+      "Topical corticosteroids for active eczematous inflammation",
+      "Emollients; treat secondary infection if present",
+      "Address underlying venous disease; wound care for ulcers",
+    ],
+    boardsPearls: [
+      "Stasis dermatitis = chronic venous insufficiency + lower leg eczematous inflammation",
+      "Gaiter distribution (medial malleolus) + hemosiderin staining + edema + varicose veins",
+      "Lipodermatosclerosis — woody induration; inverted champagne bottle appearance",
+      "Venous ulcers are shallow, irregular, medial ankle; arterial ulcers are distal, painful, punched-out",
+      "Compression is mainstay — do not confuse with arterial disease (check ABI before compression if concern)",
+    ],
+    pediatrics:
+      "Rare in children; consider venous malformations or congenital venous insufficiency if similar findings. Most pediatric leg eczema is atopic, not stasis-related.",
+  },
+  {
     id: "psoriasis",
     name: "Psoriasis",
     aliases: [
@@ -2711,7 +2773,7 @@ export const CONDITIONS: ConditionEntry[] = [
       "Well-demarcated erythematous plaques with thick silvery-white scale",
       "Extensor surfaces (elbows, knees), scalp, lumbosacral region",
       "Pruritus or burning; often chronic and relapsing",
-      "Nail changes — pitting, onycholysis, \"oil spots,\" subungual hyperkeratosis",
+      'Nail changes — pitting, onycholysis, "oil spots," subungual hyperkeratosis',
       "Auspitz sign — pinpoint bleeding when scale is scraped (exposed dermal papillae)",
       "Koebner phenomenon — new lesions at sites of skin trauma",
     ],
@@ -2722,7 +2784,7 @@ export const CONDITIONS: ConditionEntry[] = [
       "Inverse psoriasis — smooth erythematous plaques in intertriginous areas (minimal scale)",
     ],
     associations: [
-      "Psoriatic arthritis — asymmetric oligoarthritis, DIP involvement, dactylitis (\"sausage digits\"), enthesitis",
+      'Psoriatic arthritis — asymmetric oligoarthritis, DIP involvement, dactylitis ("sausage digits"), enthesitis',
       "HLA-B27 association (especially with psoriatic spondylitis)",
       "Inflammatory bowel disease (Crohn disease, ulcerative colitis)",
       "Metabolic syndrome, obesity, cardiovascular disease",
@@ -2762,11 +2824,7 @@ export const CONDITIONS: ConditionEntry[] = [
   {
     id: "lichen-planus",
     name: "Lichen Planus",
-    aliases: [
-      "lichen planus",
-      "lp",
-      "lichen planus eruption",
-    ],
+    aliases: ["lichen planus", "lp", "lichen planus eruption"],
     definition:
       "Immune-mediated inflammatory dermatosis characterized by pruritic violaceous flat-topped papules and plaques, often with fine white Wickham striae on the surface and a predilection for wrists, shins, and oral mucosa.",
     pathophysiology:
@@ -2823,12 +2881,7 @@ export const CONDITIONS: ConditionEntry[] = [
   {
     id: "pemphigus-vulgaris",
     name: "Pemphigus Vulgaris",
-    aliases: [
-      "pemphigus vulgaris",
-      "pemphigus",
-      "pemphis vulgaris",
-      "pv",
-    ],
+    aliases: ["pemphigus vulgaris", "pemphigus", "pemphis vulgaris", "pv"],
     definition:
       "Autoimmune blistering disease in which IgG autoantibodies against desmosomal cadherins (desmoglein 3 ± desmoglein 1) cause loss of keratinocyte adhesion (acantholysis) and intraepidermal flaccid bullae, often beginning on oral mucosa.",
     pathophysiology:
@@ -2842,7 +2895,7 @@ export const CONDITIONS: ConditionEntry[] = [
     ],
     keyFindings: [
       "Intraepidermal blister with acantholysis on biopsy",
-      "Direct immunofluorescence: intercellular (\"fishnet\") IgG/C3 in epidermis",
+      'Direct immunofluorescence: intercellular ("fishnet") IgG/C3 in epidermis',
       "Serum anti–desmoglein 3 (± anti–desmoglein 1) autoantibodies",
       "Tzanck smear — acantholytic keratinocytes (supportive, not definitive)",
     ],
@@ -3391,12 +3444,7 @@ export const CONDITIONS: ConditionEntry[] = [
   {
     id: "aortic-regurgitation",
     name: "Aortic Regurgitation",
-    aliases: [
-      "aortic regurgitation",
-      "aortic insufficiency",
-      "ar",
-      "ai",
-    ],
+    aliases: ["aortic regurgitation", "aortic insufficiency", "ar", "ai"],
     definition:
       "Incompetence of the aortic valve allowing diastolic backflow from the aorta into the left ventricle, causing volume overload.",
     pathophysiology:
@@ -3757,7 +3805,7 @@ export const CONDITIONS: ConditionEntry[] = [
     ],
     boardsPearls: [
       "RBC casts = glomerulonephritis until proven otherwise",
-      "Post-strep GN: ↓ C3, normal C4, subepithelial \"humps\" on EM, resolves in 6–8 weeks",
+      'Post-strep GN: ↓ C3, normal C4, subepithelial "humps" on EM, resolves in 6–8 weeks',
       "IgA nephropathy: mesangial IgA deposition; synpharyngitic hematuria",
       "RPGN: crescents on biopsy — treat urgently (Goodpasture, ANCA vasculitis, severe lupus)",
       "Goodpasture: anti-GBM → pulmonary hemorrhage + RPGN; linear IgG on biopsy",
@@ -4018,7 +4066,6 @@ export const CONDITIONS: ConditionEntry[] = [
     name: "Ankylosing Spondylitis",
     aliases: [
       "ankylosing spondylitis",
-      "as",
       "bekhterev disease",
       "bechterew disease",
       "marie-strumpell disease",
@@ -4026,7 +4073,7 @@ export const CONDITIONS: ConditionEntry[] = [
     definition:
       "Chronic inflammatory seronegative spondyloarthropathy primarily affecting the axial skeleton (sacroiliac joints and spine), causing sacroiliitis, enthesitis, and progressive spinal fusion.",
     pathophysiology:
-      "HLA-B27–associated immune dysregulation → inflammation at entheses and sacroiliac joints → erosions and reactive bone formation (syndesmophytes) → spinal ankylosis (\"bamboo spine\") and reduced mobility.",
+      'HLA-B27–associated immune dysregulation → inflammation at entheses and sacroiliac joints → erosions and reactive bone formation (syndesmophytes) → spinal ankylosis ("bamboo spine") and reduced mobility.',
     classicPresentation: [
       "Young man with insidious inflammatory low back pain and morning stiffness >30 minutes",
       "Pain improves with exercise, worsens with rest",
@@ -4177,7 +4224,7 @@ export const CONDITIONS: ConditionEntry[] = [
       "Cardiac involvement (fibrosis, arrhythmias)",
     ],
     distinguishFrom: [
-      "Eosinophilic fasciitis — eosinophilia, groin sparing, \"peau d'orange\" skin",
+      'Eosinophilic fasciitis — eosinophilia, groin sparing, "peau d\'orange" skin',
       "SLE — inflammatory arthritis, malar rash, anti-dsDNA; less skin fibrosis",
       "Mixed connective tissue disease — anti-U1 RNP, overlap features",
       "Morphea (localized scleroderma) — skin plaques without systemic visceral disease",
@@ -4822,7 +4869,7 @@ export const CONDITIONS: ConditionEntry[] = [
       "Mediastinal mass → cough, SVC syndrome in severe cases",
     ],
     keyFindings: [
-      "Reed-Sternberg cells — large binucleate cells with \"owl-eye\" nucleoli (CD15⁺, CD30⁺, CD45⁻)",
+      'Reed-Sternberg cells — large binucleate cells with "owl-eye" nucleoli (CD15⁺, CD30⁺, CD45⁻)',
       "Contiguous lymph node group involvement on staging",
       "Mediastinal adenopathy especially in nodular sclerosis subtype",
       "Eosinophilia on CBC (common)",
@@ -4979,7 +5026,7 @@ export const CONDITIONS: ConditionEntry[] = [
       "Hairy cell leukemia — pancytopenia, splenomegaly, hairy projections; TRAP positive",
     ],
     treatment: [
-      "Asymptomatic early stage — observation (\"watch and wait\")",
+      'Asymptomatic early stage — observation ("watch and wait")',
       "Symptomatic or progressive: BTK inhibitors (ibrutinib), venetoclax ± obinutuzumab",
       "Rituximab-based regimens; fludarabine in fit patients (older regimens)",
       "Treat autoimmune cytopenias (steroids, IVIG) as indicated",
@@ -5097,7 +5144,7 @@ export const CONDITIONS: ConditionEntry[] = [
       "APL — AML M3 subtype; t(15;17); DIC; requires ATRA urgently",
     ],
     treatment: [
-      "Induction chemotherapy (\"7+3\": cytarabine + anthracycline)",
+      'Induction chemotherapy ("7+3": cytarabine + anthracycline)',
       "Consolidation and allogeneic transplant based on risk stratification",
       "APL treated differently — ATRA + arsenic trioxide (see APL entry)",
       "Supportive: transfusions, infection prophylaxis, tumor lysis prevention",
