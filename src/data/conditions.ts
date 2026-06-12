@@ -2570,6 +2570,71 @@ export const CONDITIONS: ConditionEntry[] = [
       "Most common in infancy and childhood; 60% present in first year. Many outgrow by adolescence. Food allergy testing only if consistent history — elimination diet under guidance. Topical steroid potency must be age- and site-appropriate (lower potency on face/diaper area).",
   },
   {
+    id: "psoriasis",
+    name: "Psoriasis",
+    aliases: [
+      "psoriasis",
+      "plaque psoriasis",
+      "psoriatic disease",
+      "guttate psoriasis",
+    ],
+    definition:
+      "Chronic immune-mediated inflammatory skin disease characterized by well-demarcated erythematous plaques with silvery scale, driven by dysregulated keratinocyte proliferation and Th1/Th17-mediated inflammation.",
+    pathophysiology:
+      "Dendritic cells and keratinocytes release IL-23 → Th17 differentiation → IL-17 and TNF-α → ↑ keratinocyte proliferation and neutrophil recruitment. Histology: acanthosis, parakeratosis, hypogranulosis, Munro microabscesses (neutrophils in stratum corneum).",
+    classicPresentation: [
+      "Well-demarcated erythematous plaques with thick silvery-white scale",
+      "Extensor surfaces (elbows, knees), scalp, lumbosacral region",
+      "Pruritus or burning; often chronic and relapsing",
+      "Nail changes — pitting, onycholysis, \"oil spots,\" subungual hyperkeratosis",
+      "Auspitz sign — pinpoint bleeding when scale is scraped (exposed dermal papillae)",
+      "Koebner phenomenon — new lesions at sites of skin trauma",
+    ],
+    keyFindings: [
+      "Silvery scale on erythematous plaques (extensor > flexural distribution)",
+      "Nail pitting and dystrophy",
+      "Guttate variant — small drop-like papules after streptococcal pharyngitis",
+      "Inverse psoriasis — smooth erythematous plaques in intertriginous areas (minimal scale)",
+    ],
+    associations: [
+      "Psoriatic arthritis — asymmetric oligoarthritis, DIP involvement, dactylitis (\"sausage digits\"), enthesitis",
+      "HLA-B27 association (especially with psoriatic spondylitis)",
+      "Inflammatory bowel disease (Crohn disease, ulcerative colitis)",
+      "Metabolic syndrome, obesity, cardiovascular disease",
+      "Post-streptococcal guttate psoriasis",
+    ],
+    complications: [
+      "Psoriatic arthritis (up to 30% of psoriasis patients)",
+      "Erythrodermic psoriasis — widespread erythema and desquamation; can be life-threatening",
+      "Generalized pustular psoriasis — sterile pustules, fever, systemic illness",
+      "Psychosocial burden and impaired quality of life",
+    ],
+    distinguishFrom: [
+      "Atopic dermatitis — flexural distribution, eczematous morphology, intense pruritus, no silvery scale",
+      "Seborrheic dermatitis — greasy yellow scales on scalp, face, central chest",
+      "Tinea corporis — annular with central clearing; KOH positive",
+      "Lichen planus — violaceous flat-topped papules, Wickham striae",
+      "Secondary syphilis — palmar/plantar lesions, lymphadenopathy, positive serology",
+      "Pityriasis rosea — herald patch, Christmas-tree distribution on trunk",
+    ],
+    treatment: [
+      "Mild/moderate: topical corticosteroids, vitamin D analogs (calcipotriene), coal tar, phototherapy (UVB)",
+      "Moderate/severe or psoriatic arthritis: methotrexate, cyclosporine, acitretin",
+      "Biologics: anti-TNF (infliximab, adalimumab, etanercept), anti–IL-17 (secukinumab), anti–IL-23 (guselkumab)",
+      "Guttate psoriasis — treat streptococcal infection; many cases remit spontaneously",
+    ],
+    boardsPearls: [
+      "Psoriasis = extensor surfaces + silvery scale; eczema = flexural + pruritic eczematous lesions",
+      "Nail pitting strongly supports psoriasis over eczema",
+      "Guttate psoriasis after strep throat — small papules; may resolve without chronic plaque disease",
+      "Th17/IL-17 axis is central — IL-23 → Th17 → IL-17 drives keratinocyte hyperproliferation",
+      "Psoriatic arthritis: DIP joints, dactylitis, pencil-in-cup deformity on X-ray, enthesitis",
+      "Anti-TNF agents treat both psoriasis and psoriatic arthritis — screen for latent TB first",
+    ],
+    pediatrics:
+      "Plaque psoriasis occurs in children; guttate form common after streptococcal infection in school-age kids. Topical therapy first-line; systemic biologics used in severe pediatric psoriasis with specialist guidance.",
+  },
+  {
     id: "mastocytosis",
     name: "Mastocytosis",
     aliases: [

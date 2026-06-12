@@ -219,6 +219,39 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
     pediatrics:
       "TB in children may show Ghon complex with caseating granuloma; chronic granulomatous disease is a neutrophil oxidative burst defect (name is misleading — not a granuloma disease per se).",
   },
+  {
+    id: "enterohepatic-recirculation",
+    name: "Enterohepatic Recirculation",
+    aliases: [
+      "enterohepatic recirculation",
+      "enterohepatic circulation",
+      "entero-hepatic recirculation",
+      "entero hepatic recirculation",
+    ],
+    definition:
+      "Cycling of drugs or metabolites from the liver into bile, into the intestine, and back into the systemic circulation after reabsorption — often after intestinal deconjugation by gut bacteria.",
+    examples: [
+      "Estrogen and oral contraceptives — glucuronide conjugates excreted in bile → bacterial β-glucuronidase deconjugates → reabsorption prolongs hormone exposure",
+      "Morphine metabolites (e.g., morphine-6-glucuronide) undergo enterohepatic cycling → prolonged opioid effect",
+      "Conjugated bilirubin secreted in bile → gut bacteria deconjugate → urobilinogen → partial reabsorption",
+      "Cholestyramine interrupts recirculation by binding bile acids and some drugs in the gut lumen (e.g., digoxin overdose adjunct)",
+      "Antibiotics altering gut flora can ↓ deconjugation and change drug/hormone levels (classically discussed with oral contraceptives)",
+    ],
+    boardsPearls: [
+      "Liver conjugates (often glucuronidation) → bile excretion → gut bacterial deconjugation → intestinal reabsorption → back to liver",
+      "Prolongs half-life of many lipophilic drugs and hormone metabolites",
+      "Neonatal jaundice worsened by ↑ enterohepatic circulation of bilirubin — sterile gut clears slowly; early feeding and phototherapy help",
+      "Bile acid sequestrants (cholestyramine) bind substances in gut and interrupt recirculation",
+      "vs first-pass metabolism — enterohepatic recirculation is post-absorption cycling, not initial gut/liver presystemic loss",
+    ],
+    distinguishFrom: [
+      "First-pass (presystemic) metabolism — drug metabolized before reaching systemic circulation on initial oral dose",
+      "Renal reabsorption — tubular recycling in kidney, not bile-intestine-liver loop",
+      "Biliary excretion without reabsorption — permanent elimination in stool",
+    ],
+    pediatrics:
+      "Physiologic neonatal jaundice is amplified by enterohepatic circulation of bilirubin; frequent feeding and meconium passage ↓ reabsorption. Breast milk jaundice also involves this pathway.",
+  },
 ];
 
 const pathogenesisById = new Map(

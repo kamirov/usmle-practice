@@ -1215,6 +1215,36 @@ export const MEDICATIONS: MedicationEntry[] = [
     ],
   },
   {
+    id: "insulin-glargine",
+    name: "Insulin Glargine",
+    aliases: [
+      "insulin glargine",
+      "glargine",
+      "glargine insulin",
+      "lantus",
+      "basaglar",
+    ],
+    drugClass: "Long-acting insulin analog (basal)",
+    mechanism:
+      "Insulin analog with amino acid substitutions → forms microprecipitates at the injection site after subcutaneous administration → slow, prolonged absorption with relatively peakless basal insulin effect over ~24 hours.",
+    indications: [
+      "Basal glucose control in type 1 and type 2 diabetes mellitus",
+      "Once-daily background insulin paired with prandial rapid-acting insulin or oral agents",
+    ],
+    adverseEffects: [
+      "Hypoglycemia (especially nocturnal if dose excessive)",
+      "Weight gain",
+      "Injection-site reactions and lipohypertrophy",
+    ],
+    boardsPearls: [
+      "Long-acting basal insulin — once daily, relatively peakless profile (~24 h duration)",
+      "vs NPH — glargine has flatter pharmacokinetics; NPH has more pronounced peak and often BID dosing",
+      "vs rapid insulin (lispro, aspart) — glargine is basal, not meal-time",
+      "Do not mix with other insulins in the same syringe",
+      "Peds: basal insulin in type 1 diabetes; same hypoglycemia precautions and weight-based dosing",
+    ],
+  },
+  {
     id: "levothyroxine",
     name: "Levothyroxine",
     aliases: ["levothyroxine", "synthroid"],
