@@ -1342,6 +1342,79 @@ export const CONDITIONS: ConditionEntry[] = [
       "Often presents in infancy with eczema and recurrent staph infections. IgE may be nondetectable before 6 months despite disease — do not rule out HIES on a single low infant IgE. Retained primary teeth and coarse facies become apparent in childhood. Prophylactic antibiotics reduce infection burden; family genetic counseling for STAT3 testing.",
   },
   {
+    id: "selective-iga-deficiency",
+    name: "Selective IgA Deficiency",
+    aliases: [
+      "selective iga deficiency",
+      "selective ig a deficiency",
+      "selective immunoglobulin a deficiency",
+      "siga deficiency",
+      "sigad",
+      "iga deficiency",
+      "immunoglobulin a deficiency",
+      "isolated iga deficiency",
+    ],
+    definition:
+      "Most common primary immunodeficiency — isolated undetectable or markedly reduced serum IgA (<7 mg/dL in adults) with normal IgG and IgM and otherwise intact immune function; many patients are asymptomatic.",
+    pathophysiology:
+      "Failure of B-cell class switching to IgA (defective IgA CSR in mucosal and systemic B cells) → ↓ secretory IgA at mucosal surfaces (respiratory, GI, genitourinary) → impaired mucosal barrier defense. Associated with HLA haplotypes; may coexist with common variable immunodeficiency (CVID) spectrum. Anti-IgA antibodies may develop in sensitized patients.",
+    classicPresentation: [
+      "Often asymptomatic — discovered incidentally on immunoglobulin panel",
+      "Recurrent sinopulmonary infections (otitis, sinusitis, bronchitis, pneumonia)",
+      "Allergic diseases — asthma, atopic dermatitis, food allergy",
+      "Autoimmune conditions — celiac disease, SLE, rheumatoid arthritis, IBD",
+      "Anaphylaxis during blood transfusion or IVIG (anti-IgA IgG antibodies)",
+    ],
+    keyFindings: [
+      "Serum IgA undetectable or <7 mg/dL with normal IgG and IgM",
+      "Normal T-cell and neutrophil function",
+      "May have ↓ IgG subclasses (especially IgG2) in subset of patients",
+    ],
+    keyLabs: [
+      "Quantitative serum immunoglobulins — ↓ IgA with normal IgG and IgM",
+      "Diagnosis confirmed after age 4 (transient physiologic IgA deficiency common in infancy)",
+      "If screening for celiac: check total IgA first — tTG IgA false negative if IgA deficient; use tTG IgG or deamidated gliadin IgG instead",
+      "Anti-IgA IgG antibodies before transfusion/IVIG in sensitized patients",
+    ],
+    associations: [
+      "Celiac disease — ↑ prevalence; screen with IgG-based serology if IgA deficient",
+      "Allergic rhinitis, asthma, atopic dermatitis",
+      "Autoimmune diseases — SLE, RA, IBD, autoimmune thyroiditis",
+      "Common variable immunodeficiency (CVID) — some patients progress from selective IgA deficiency",
+      "Giardia lamblia chronic infection",
+    ],
+    complications: [
+      "Recurrent mucosal infections",
+      "Anaphylaxis from blood products containing IgA",
+      "Progression to CVID (minority)",
+      "Autoimmune disease",
+    ],
+    distinguishFrom: [
+      "CVID — ↓ IgG and/or IgM in addition to ↓ IgA; more severe infections",
+      "Hyper-IgM syndrome — ↓ IgA, IgG, IgE with ↑ IgM; CD40L or AID defect",
+      "X-linked agammaglobulinemia — ↓ all immunoglobulin isotypes; absent B cells",
+      "Transient IgA deficiency of infancy — resolves by age 4",
+      "Protein-losing enteropathy — ↓ all immunoglobulins from loss, not isolated IgA defect",
+    ],
+    treatment: [
+      "No specific therapy for asymptomatic patients",
+      "Treat infections promptly; consider antibiotic prophylaxis if recurrent sinopulmonary disease",
+      "Avoid standard IVIG (contains IgA) — risk of anaphylaxis; use IgA-depleted IVIG if humoral replacement needed",
+      "Use washed RBCs or IgA-depleted blood products for transfusion in sensitized patients",
+      "Manage associated allergies and autoimmune disease as indicated",
+    ],
+    boardsPearls: [
+      "Most common primary immunodeficiency (~1 in 500 in Western populations)",
+      "Isolated ↓ IgA with normal IgG and IgM — memorize the lab pattern",
+      "Always check total IgA before tTG IgA celiac screen — false negative if IgA deficient",
+      "Anaphylaxis to blood transfusion/IVIG from anti-IgA IgG antibodies — use IgA-depleted products",
+      "Secretory IgA defends mucosal surfaces — sinopulmonary and GI infections when symptomatic",
+      "vs CVID — CVID has ↓ IgG (and often ↓ IgA); selective IgA deficiency has normal IgG",
+    ],
+    pediatrics:
+      "Transient IgA deficiency is common in infants and often resolves by age 4 — do not diagnose selective IgA deficiency before age 4. Symptomatic children may have recurrent otitis and sinusitis. Celiac screening in IgA-deficient children requires tTG IgG or deamidated gliadin IgG, not tTG IgA.",
+  },
+  {
     id: "hyperlipidemia",
     name: "Hyperlipidemia",
     aliases: [

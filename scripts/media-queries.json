@@ -60,6 +60,7 @@
   "conditions/granulomatosis-with-polyangiitis": "granulomatosis polyangiitis c-ANCA",
   "conditions/eosinophilic-granulomatosis-with-polyangiitis": "churg strauss eosinophilia asthma",
   "conditions/schizophrenia": "schizophrenia brain MRI",
+  "conditions/selective-iga-deficiency": "immunoglobulin IgA antibody isotype diagram",
   "conditions/major-depressive-disorder": "major depressive disorder brain PET",
   "conditions/lymphoma": "lymphoma lymphadenopathy biopsy",
   "conditions/non-hodgkin-lymphoma": "non hodgkin lymphoma histology",

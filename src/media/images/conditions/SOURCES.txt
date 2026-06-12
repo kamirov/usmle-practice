@@ -42,3 +42,8 @@ Mysid/Jmarchn, CC BY-SA 3.0
 hyper-ige-syndrome.jpg
 https://commons.wikimedia.org/wiki/File:Person_with_Job%27s_syndrome.jpg
 Asifa et al., CC BY 4.0 (JAAD Case Reports)
+
+selective-iga-deficiency.png
+https://commons.wikimedia.org/wiki/File:Antibody_Isotypes.png
+סתו כסלו, CC BY-SA 4.0
+Description: Immunoglobulin isotypes including IgA — relevant to isolated IgA deficiency

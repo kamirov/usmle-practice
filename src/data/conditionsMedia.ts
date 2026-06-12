@@ -109,6 +109,7 @@ import rhinitis from "../media/images/conditions/rhinitis.jpg?url";
 import rockyMountainSpottedFeverRash from "../media/images/conditions/rocky-mountain-spotted-fever-rash.jpg?url";
 import rotatorCuffSyndrome from "../media/images/conditions/rotator-cuff-syndrome.jpg?url";
 import sarcoidosis from "../media/images/conditions/sarcoidosis.jpg?url";
+import selectiveIgaDeficiency from "../media/images/conditions/selective-iga-deficiency.png?url";
 import schizophrenia from "../media/images/conditions/schizophrenia.jpg?url";
 import shock from "../media/images/conditions/shock.jpg?url";
 import sickleCellDisease from "../media/images/conditions/sickle-cell-disease.jpg?url";
@@ -248,6 +249,7 @@ export type ConditionImageId = Extract<
   | "rocky-mountain-spotted-fever"
   | "rotator-cuff-syndrome"
   | "sarcoidosis"
+  | "selective-iga-deficiency"
   | "schizophrenia"
   | "shock"
   | "sickle-cell-disease"
@@ -392,6 +394,7 @@ export const CONDITION_IMAGES: Partial<Record<ConditionImageId, string>> = {
   "rocky-mountain-spotted-fever": extensionAssetUrl(rockyMountainSpottedFeverRash),
   "rotator-cuff-syndrome": extensionAssetUrl(rotatorCuffSyndrome),
   "sarcoidosis": extensionAssetUrl(sarcoidosis),
+  "selective-iga-deficiency": extensionAssetUrl(selectiveIgaDeficiency),
   "schizophrenia": extensionAssetUrl(schizophrenia),
   "shock": extensionAssetUrl(shock),
   "sickle-cell-disease": extensionAssetUrl(sickleCellDisease),
@@ -533,6 +536,7 @@ export const CONDITION_IMAGE_ATTRIBUTIONS: Partial<
   "rocky-mountain-spotted-fever": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:rocky-mountain-spotted-fever-rash.jpg" },
   "rotator-cuff-syndrome": { label: "Wikimedia Commons (Subacromial Impingement with Supraspinatus Rupture.jpg)", url: "https://commons.wikimedia.org/wiki/File:Subacromial_Impingement_with_Supraspinatus_Rupture.jpg" },
   "sarcoidosis": { label: "Wikimedia Commons (Sarcoidosis histology skin involvement.jpg)", url: "https://commons.wikimedia.org/wiki/File:Sarcoidosis_histology_skin_involvement.jpg" },
+  "selective-iga-deficiency": { label: "Wikimedia Commons (Antibody Isotypes.png)", url: "https://commons.wikimedia.org/wiki/File:Antibody_Isotypes.png" },
   "schizophrenia": { label: "Wikimedia Commons (Schizophrenia fMRI working memory.jpg)", url: "https://commons.wikimedia.org/wiki/File:Schizophrenia_fMRI_working_memory.jpg" },
   "shock": { label: "Wikimedia Commons (Kolloidale Infusionslösungen.jpg)", url: "https://commons.wikimedia.org/wiki/File:Kolloidale_Infusionslösungen.jpg" },
   "sickle-cell-disease": { label: "Wikimedia Commons (Sickle Cell Disease in Newborns and Infants- A Guide for Parents (IA sicklecelldiseas00usde).pdf)", url: "https://commons.wikimedia.org/wiki/File:Sickle_Cell_Disease_in_Newborns_and_Infants-_A_Guide_for_Parents_(IA_sicklecelldiseas00usde).pdf" },
@@ -674,6 +678,7 @@ export const CONDITION_IMAGE_CAPTIONS: Partial<
   "rocky-mountain-spotted-fever": "Characteristic spotted rash of Rocky Mountain spotted fever on the wrist and hand",
   "rotator-cuff-syndrome": "Clinical or pathologic image illustrating rotator cuff syndrome",
   "sarcoidosis": "Clinical or pathologic image illustrating sarcoidosis",
+  "selective-iga-deficiency": "Immunoglobulin isotypes — selective IgA deficiency features isolated loss of IgA with normal IgG and IgM",
   "schizophrenia": "Clinical or pathologic image illustrating schizophrenia",
   "shock": "Clinical or pathologic image illustrating shock",
   "sickle-cell-disease": "Clinical or pathologic image illustrating sickle cell disease",
