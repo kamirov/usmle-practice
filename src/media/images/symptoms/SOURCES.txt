@@ -67,3 +67,10 @@ lymphadenopathy.jpg
   Author: James Heilman, MD
   License: CC BY-SA 3.0
   Page: https://commons.wikimedia.org/wiki/File:Cervical_lymphadenopathy.jpg
+
+excoriated.jpg
+  Source: Wikimedia Commons — Atopic dermatitis child 2.jpg
+  Author: Gzzz
+  Description: Inflamed atopic dermatitis on infant ankle with excoriations from scratching
+  License: CC BY-SA 4.0
+  Page: https://commons.wikimedia.org/wiki/File:Atopic_dermatitis_child_2.jpg

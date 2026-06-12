@@ -753,5 +753,380 @@
     "title": "File:Cholera patient stool.jpg",
     "page": "https://commons.wikimedia.org/wiki/File:Cholera_patient_stool.jpg",
     "query": "cholera watery diarrhea"
+  },
+  "conditions/cardiac-tamponade.jpg": {
+    "title": "File:Electrical Alternans.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File:Electrical_Alternans.JPG",
+    "query": "retry"
+  },
+  "conditions/tension-pneumothorax.jpg": {
+    "title": "File:Pneumothorax 001 cs.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Pneumothorax_001_cs.jpg",
+    "query": "retry"
+  },
+  "conditions/empyema.jpg": {
+    "title": "File:Empyema of the pleura Wellcome L0061158.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Empyema_of_the_pleura_Wellcome_L0061158.jpg",
+    "query": "retry"
+  },
+  "conditions/heart-failure.jpg": {
+    "title": "File:Depiction of a person suffering from heart failure.png",
+    "page": "https://commons.wikimedia.org/wiki/File:Depiction_of_a_person_suffering_from_heart_failure.png",
+    "query": "retry"
+  },
+  "conditions/hypertrophic-cardiomyopathy.jpg": {
+    "title": "File:Hypertrophic obstructive cardiomyopathy.png",
+    "page": "https://commons.wikimedia.org/wiki/File:Hypertrophic_obstructive_cardiomyopathy.png",
+    "query": "retry"
+  },
+  "conditions/dilated-cardiomyopathy.jpg": {
+    "title": "File:Blausen 0165 Cardiomyopathy Dilated.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Blausen_0165_Cardiomyopathy_Dilated.svg",
+    "query": "retry"
+  },
+  "conditions/atherosclerosis.jpg": {
+    "title": "File:Endothelial dysfunction Atherosclerosis (hy).png",
+    "page": "https://commons.wikimedia.org/wiki/File:Endothelial_dysfunction_Atherosclerosis_(hy).png",
+    "query": "retry"
+  },
+  "conditions/peripheral-artery-disease.jpg": {
+    "title": "File:Peripheral artery disease.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Peripheral_artery_disease.svg",
+    "query": "retry"
+  },
+  "conditions/hypertension.jpg": {
+    "title": "File:HE pulmonary hypertension artery concentric intimal fibrosis.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:HE_pulmonary_hypertension_artery_concentric_intimal_fibrosis.jpg",
+    "query": "retry"
+  },
+  "conditions/ischemic-stroke.jpg": {
+    "title": "File:Stroke ischemic.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Stroke_ischemic.jpg",
+    "query": "retry"
+  },
+  "conditions/ulcerative-colitis.jpg": {
+    "title": "File:Medical diagnosis for the student and practitioner (1922) (14598019059).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Medical_diagnosis_for_the_student_and_practitioner_(1922)_(14598019059).jpg",
+    "query": "retry"
+  },
+  "conditions/peptic-ulcer-disease.jpg": {
+    "title": "File:Depiction of a patient suffering from peptic ulcers.png",
+    "page": "https://commons.wikimedia.org/wiki/File:Depiction_of_a_patient_suffering_from_peptic_ulcers.png",
+    "query": "retry"
+  },
+  "conditions/cystic-fibrosis.jpg": {
+    "title": "File:Blausen 0286 CysticFibrosis.png",
+    "page": "https://commons.wikimedia.org/wiki/File:Blausen_0286_CysticFibrosis.png",
+    "query": "retry"
+  },
+  "conditions/allergic-contact-dermatitis.jpg": {
+    "title": "File:Blausen 0014 AllergicDermatitis.png",
+    "page": "https://commons.wikimedia.org/wiki/File:Blausen_0014_AllergicDermatitis.png",
+    "query": "retry"
+  },
+  "conditions/patent-ductus-arteriosus.jpg": {
+    "title": "File:Patent Ductus Arteriosus (Device Closure).png",
+    "page": "https://commons.wikimedia.org/wiki/File:Patent_Ductus_Arteriosus_(Device_Closure).png",
+    "query": "retry"
+  },
+  "conditions/bicuspid-aortic-valve.jpg": {
+    "title": "File:Heart bicuspid aortic valve.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Heart_bicuspid_aortic_valve.svg",
+    "query": "retry"
+  },
+  "conditions/aortic-regurgitation.jpg": {
+    "title": "File:Blausen 0039 AorticRegurgitation.png",
+    "page": "https://commons.wikimedia.org/wiki/File:Blausen_0039_AorticRegurgitation.png",
+    "query": "retry"
+  },
+  "conditions/interstitial-lung-disease.jpg": {
+    "title": "File:Interstitial lung disease overview.png",
+    "page": "https://commons.wikimedia.org/wiki/File:Interstitial_lung_disease_overview.png",
+    "query": "retry"
+  },
+  "conditions/pneumoconiosis.jpg": {
+    "title": "File:X-ray of slate pneumoconiosis sufferer's lungs. Wellcome L0029726.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:X-ray_of_slate_pneumoconiosis_sufferer's_lungs._Wellcome_L0029726.jpg",
+    "query": "retry"
+  },
+  "conditions/ankylosing-spondylitis.jpg": {
+    "title": "File:Bamboo spine ankylosing spondylitis.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Bamboo_spine_ankylosing_spondylitis.jpg",
+    "query": "retry"
+  },
+  "conditions/systemic-sclerosis.jpg": {
+    "title": "File:Crescentic glomerulonephritis Periodic acid silver methanamine stain.JPEG",
+    "page": "https://commons.wikimedia.org/wiki/File:Crescentic_glomerulonephritis_Periodic_acid_silver_methanamine_stain.JPEG",
+    "query": "retry"
+  },
+  "conditions/turner-syndrome.jpg": {
+    "title": "File:Gray808.png",
+    "page": "https://commons.wikimedia.org/wiki/File:Gray808.png",
+    "query": "retry"
+  },
+  "conditions/granulomatosis-with-polyangiitis.jpg": {
+    "title": "File:Granulomatosis with polyangiitis.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Granulomatosis_with_polyangiitis.jpg",
+    "query": "retry"
+  },
+  "conditions/major-depressive-disorder.jpg": {
+    "title": "File:A woman suffering from Clinical Depression.png",
+    "page": "https://commons.wikimedia.org/wiki/File:A_woman_suffering_from_Clinical_Depression.png",
+    "query": "retry"
+  },
+  "conditions/cll.jpg": {
+    "title": "File:C Louis Leipoldt05.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:C_Louis_Leipoldt05.jpg",
+    "query": "retry"
+  },
+  "conditions/endometriosis.jpg": {
+    "title": "File:Blausen 0349 Endometriosis-it.png",
+    "page": "https://commons.wikimedia.org/wiki/File:Blausen_0349_Endometriosis-it.png",
+    "query": "retry"
+  },
+  "conditions/hypogonadism.jpg": {
+    "title": "File:The genetic and molecular basis of idiopathic hypogonadotropic hypogonadism.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:The_genetic_and_molecular_basis_of_idiopathic_hypogonadotropic_hypogonadism.jpg",
+    "query": "retry"
+  },
+  "conditions/diverticulitis.jpg": {
+    "title": "File:Seed derived storage cells - Perforated diverticulitis (50706479398).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Seed_derived_storage_cells_-_Perforated_diverticulitis_(50706479398).jpg",
+    "query": "retry"
+  },
+  "conditions/intestinal-perforation.jpg": {
+    "title": "File:Nicholas Senn intestinal perforation.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Nicholas_Senn_intestinal_perforation.jpg",
+    "query": "retry"
+  },
+  "conditions/fecal-incontinence.jpg": {
+    "title": "File:Tri-State medical journal (1895) (14582735949).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Tri-State_medical_journal_(1895)_(14582735949).jpg",
+    "query": "retry"
+  },
+  "conditions/pyelonephritis.jpg": {
+    "title": "File:Chronic pyelonephritis slide.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Chronic_pyelonephritis_slide.jpg",
+    "query": "retry"
+  },
+  "conditions/primary-sclerosing-cholangitis.jpg": {
+    "title": "File:CT of primary sclerosing cholangitis (hy).png",
+    "page": "https://commons.wikimedia.org/wiki/File:CT_of_primary_sclerosing_cholangitis_(hy).png",
+    "query": "retry"
+  },
+  "symptoms/cough.jpg": {
+    "title": "File:Red Star Cough Cure (back) - 8558298660.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Red_Star_Cough_Cure_(back)_-_8558298660.jpg",
+    "query": "retry"
+  },
+  "symptoms/pulmonary-edema.jpg": {
+    "title": "File:Respiratory system - Pulmonary edema -- Smart-Servier.png",
+    "page": "https://commons.wikimedia.org/wiki/File:Respiratory_system_-_Pulmonary_edema_--_Smart-Servier.png",
+    "query": "retry"
+  },
+  "symptoms/edema.jpg": {
+    "title": "File:Depiction of different types of Edema.png",
+    "page": "https://commons.wikimedia.org/wiki/File:Depiction_of_different_types_of_Edema.png",
+    "query": "retry"
+  },
+  "symptoms/chest-pain.jpg": {
+    "title": "File:Depiction of a person suffering from chest pain.png",
+    "page": "https://commons.wikimedia.org/wiki/File:Depiction_of_a_person_suffering_from_chest_pain.png",
+    "query": "retry"
+  },
+  "symptoms/fever.jpg": {
+    "title": "File:Symptoms of coronavirus disease 2019 2.0.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Symptoms_of_coronavirus_disease_2019_2.0.svg",
+    "query": "retry"
+  },
+  "symptoms/melena.jpg": {
+    "title": "File:Melena Bleeding DU.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Melena_Bleeding_DU.jpg",
+    "query": "retry"
+  },
+  "symptoms/hematochezia.jpg": {
+    "title": "File:H\u00e4matochezie Dezember 2021.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:H\u00e4matochezie_Dezember_2021.jpg",
+    "query": "retry"
+  },
+  "symptoms/nausea.jpg": {
+    "title": "File:Fphar-09-00913-g005.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Fphar-09-00913-g005.jpg",
+    "query": "retry"
+  },
+  "symptoms/hemiplegia.jpg": {
+    "title": "File:Hemiatrophy and hemiplegia of the left side of the tongue Wellcome L0062734.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Hemiatrophy_and_hemiplegia_of_the_left_side_of_the_tongue_Wellcome_L0062734.jpg",
+    "query": "retry"
+  },
+  "cells/neutrophil.jpg": {
+    "title": "File:Blausen 0676 Neutrophil (crop).png",
+    "page": "https://commons.wikimedia.org/wiki/File:Blausen_0676_Neutrophil_(crop).png",
+    "query": "retry"
+  },
+  "cells/cervical-os.svg": {
+    "title": "File:Macro Os, vert\u00e8bres cervicales - M\u00e9tastases 55-o.apatho-219d-os.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Macro_Os,_vert\u00e8bres_cervicales_-_M\u00e9tastases_55-o.apatho-219d-os.jpg",
+    "query": "retry"
+  },
+  "cells/lamina-propria.jpg": {
+    "title": "File:Stomach - Iron Crystals In Gastric Lamina Propria And Epithelium (49270585877).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Stomach_-_Iron_Crystals_In_Gastric_Lamina_Propria_And_Epithelium_(49270585877).jpg",
+    "query": "retry"
+  },
+  "cells/intermediate-filament.jpg": {
+    "title": "File:Cytoskeleton - Intermediate filament -- Smart-Servier.png",
+    "page": "https://commons.wikimedia.org/wiki/File:Cytoskeleton_-_Intermediate_filament_--_Smart-Servier.png",
+    "query": "retry"
+  },
+  "cells/polymerization.svg": {
+    "title": "File:CSIRO ScienceImage 3020 Starch to Polymer.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:CSIRO_ScienceImage_3020_Starch_to_Polymer.jpg",
+    "query": "retry"
+  },
+  "cells/merkel-cell.jpg": {
+    "title": "File:Blausen 0805 Skin MerkelCell nl01.png",
+    "page": "https://commons.wikimedia.org/wiki/File:Blausen_0805_Skin_MerkelCell_nl01.png",
+    "query": "retry"
+  },
+  "cells/stroma.jpg": {
+    "title": "File:Spiral arteries in endometrial stroma.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Spiral_arteries_in_endometrial_stroma.jpg",
+    "query": "retry"
+  },
+  "conditions/hemothorax.jpg": {
+    "title": "File:Hamartoma.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Hamartoma.jpg",
+    "query": "hemothorax chest radiograph"
+  },
+  "conditions/thromboangiitis-obliterans.jpg": {
+    "title": "File:55 year old female with advanced Buerger's disease.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:55_year_old_female_with_advanced_Buerger's_disease.jpg",
+    "query": "thromboangiitis obliterans buerger"
+  },
+  "conditions/hyperlipidemia.jpg": {
+    "title": "File:Xanthoma histology.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Xanthoma_histology.jpg",
+    "query": "xanthoma hypercholesterolemia"
+  },
+  "conditions/zollinger-ellison-syndrome.jpg": {
+    "title": "File:ZES endo.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:ZES_endo.jpg",
+    "query": "zollinger ellison gastrinoma"
+  },
+  "conditions/ibd.jpg": {
+    "title": "File:CD colitis.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:CD_colitis.jpg",
+    "query": "crohn ulcerative colitis colonoscopy"
+  },
+  "conditions/amenorrhea.jpg": {
+    "title": "File:Lactational-amenorrhea-method-This-method-of-family-planning-evolved-from (1).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Lactational-amenorrhea-method-This-method-of-family-planning-evolved-from_(1).jpg",
+    "query": "primary amenorrhea"
+  },
+  "conditions/acute-cholangitis.svg": {
+    "title": "File:Charcot's cholangitis triad-en.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Charcot's_cholangitis_triad-en.svg",
+    "query": "ascending cholangitis charcot"
+  },
+  "symptoms/shortness-of-breath.jpg": {
+    "title": "File:SymptomsFeverCoughSOB (cropped).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:SymptomsFeverCoughSOB_(cropped).jpg",
+    "query": "dyspnea shortness breath"
+  },
+  "symptoms/pruritus.jpg": {
+    "title": "File:Photographic atlas of the diseases of the skin; a series of ninety-six plates, comprising nearly two hundred illustrations, with descriptive text, and a treatise on cutaneous therapeutics (1905) (14783268942).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Photographic_atlas_of_the_diseases_of_the_skin;_a_series_of_ninety-six_plates,_comprising_nearly_two_hundred_illustrations,_with_descriptive_text,_and_a_treatise_on_cutaneous_therapeutics_(1905)_(14783268942).jpg",
+    "query": "pruritus excoriation dermatitis"
+  },
+  "cells/adventitia.svg": {
+    "title": "File:Microscopic anatomy of an artery de.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Microscopic_anatomy_of_an_artery_de.svg",
+    "query": "tunica adventitia artery histology"
+  },
+  "cells/dermal-appendage.svg": {
+    "title": "File:Skin Hair Follicle (NIH BioArt 657).svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Skin_Hair_Follicle_(NIH_BioArt_657).svg",
+    "query": "skin hair follicle sebaceous gland"
+  },
+  "cells/a-delta-fiber.svg": {
+    "title": "File:Propagation of action potential along myelinated nerve fiber en.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Propagation_of_action_potential_along_myelinated_nerve_fiber_en.svg",
+    "query": "myelinated nerve fiber axon"
+  },
+  "cells/golgi-tendon-organ.png": {
+    "title": "File:Gray938.png",
+    "page": "https://commons.wikimedia.org/wiki/File:Gray938.png",
+    "query": "golgi tendon organ muscle spindle"
+  },
+  "cells/melanosome.jpg": {
+    "title": "File:Anuran melanosoms3 - Falk etal 2025.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Anuran_melanosoms3_-_Falk_etal_2025.jpg",
+    "query": "melanosome electron micrograph melanin"
+  },
+  "conditions/hemothorax.png": {
+    "title": "File:Chest-X-ray-Left-sided-hemothorax.png",
+    "page": "https://commons.wikimedia.org/wiki/File:Chest-X-ray-Left-sided-hemothorax.png",
+    "query": "hemothorax chest x-ray"
+  },
+  "conditions/prolactinoma.jpg": {
+    "title": "File:ProlactinomaMRI.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:ProlactinomaMRI.jpg",
+    "query": "prolactinoma adenoma"
+  },
+  "conditions/hyperprolactinemia.jpg": {
+    "title": "File:Lactation.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Lactation.jpg",
+    "query": "galactorrhea breast milk"
+  },
+  "conditions/galactorrhea.jpg": {
+    "title": "File:Lactation.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Lactation.jpg",
+    "query": "galactorrhea breast"
+  },
+  "conditions/pulmonary-hypertension.jpg": {
+    "title": "File:Pulmnary arterial atherosclerosis-Pulmonary hypertension.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Pulmnary_arterial_atherosclerosis-Pulmonary_hypertension.jpg",
+    "query": "pulmonary arterial hypertension"
+  },
+  "conditions/nephritic-syndrome.jpg": {
+    "title": "File:MicroHematuria.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File:MicroHematuria.JPG",
+    "query": "acute nephritic syndrome"
+  },
+  "conditions/female-athlete-triad.svg": {
+    "title": "File:RED-S DE.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:RED-S_DE.svg",
+    "query": "RED-S athlete triad"
+  },
+  "conditions/biliary-atresia.jpg": {
+    "title": "File:Bilatresia.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Bilatresia.jpg",
+    "query": "extrahepatic biliary atresia"
+  },
+  "symptoms/wheezing.jpg": {
+    "title": "File:UOTW 48 - Ultrasound of the Week 5.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:UOTW_48_-_Ultrasound_of_the_Week_5.jpg",
+    "query": "expiratory wheeze"
+  },
+  "symptoms/dry-mucous-membranes.jpg": {
+    "title": "File:Xerostomia - Dry Mouth.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Xerostomia_-_Dry_Mouth.jpg",
+    "query": "xerostomia dry mouth"
+  },
+  "cells/serosa.jpg": {
+    "title": "File:Chicken embryo at the stage of formation of trunk and amniotic folds.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Chicken_embryo_at_the_stage_of_formation_of_trunk_and_amniotic_folds.jpg",
+    "query": "serous membrane microscopy"
+  },
+  "musculoskeletal/atlantoaxial.png": {
+    "title": "File:Abyssuridae (10.3390-d17120827) Figure 3.png",
+    "page": "https://commons.wikimedia.org/wiki/File:Abyssuridae_(10.3390-d17120827)_Figure_3.png",
+    "query": "C1 C2 articulation"
+  },
+  "musculoskeletal/interphalangeal-joint.jpg": {
+    "title": "File:DIP, PIP and MCP joints of hand.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:DIP,_PIP_and_MCP_joints_of_hand.jpg",
+    "query": "proximal interphalangeal joint anatomy"
   }
 }

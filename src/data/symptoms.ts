@@ -712,10 +712,12 @@ export const SYMPTOMS: SymptomEntry[] = [
       "Burrowing tracks → scabies",
       "Aquagenic itch after hot shower → polycythemia vera",
       "Elevated creatinine → uremic pruritus",
+      "Excoriated skin → itch-scratch cycle (atopic dermatitis, scabies, lichen simplex)",
     ],
     distinguishFrom: [
       "Localized itch with rash → primary dermatologic condition",
       "Generalized itch without rash → systemic cause (cholestasis, CKD, hematologic)",
+      "Excoriated — visible scratch damage; pruritus is the sensation driving it",
     ],
   },
   {
@@ -1455,6 +1457,50 @@ export const SYMPTOMS: SymptomEntry[] = [
       "Skin thickening (scleroderma) — collagen deposition, not scratch-induced acanthosis",
       "Indurated plaque — firm raised lesion; may be inflammatory not lichenified",
       "Hyperkeratosis — thickened stratum corneum (callus, psoriasis scale)",
+      "Excoriated — acute scratch marks and erosions; lichenification is chronic thickening from repeated rubbing",
+    ],
+  },
+  {
+    id: "excoriated",
+    name: "Excoriated",
+    aliases: [
+      "excoriated",
+      "excoriation",
+      "excoriations",
+      "excoriated skin",
+      "excoriated lesions",
+      "scratch marks",
+      "skin picking",
+      "neurotic excoriation",
+      "acne excoriée",
+      "acne excoriee",
+    ],
+    definition:
+      "Superficial skin damage from rubbing, scratching, or picking — linear erosions, scratch marks, hemorrhagic crusts, or raw areas; a secondary finding on pruritic or compulsively manipulated skin rather than a primary lesion morphology.",
+    mechanism:
+      "Pruritus, irritation, or compulsive urge → mechanical trauma breaches epidermis → excoriations and erosions; chronic repetition drives lichenification; broken skin predisposes to secondary bacterial infection (impetigo).",
+    thinkOf: [
+      "Atopic dermatitis — itch-scratch cycle with flexural excoriations",
+      "Scabies — excoriations at burrows; wrists, finger webs, genitalia",
+      "Insect bites / papular urticaria — excoriated pruritic papules",
+      "Lichen simplex chronicus — localized habitual scratching",
+      "Excoriation disorder (dermatillomania) — compulsive skin picking; OCD spectrum",
+      "Acne excoriée — picking at comedones/papules without true severe acne",
+      "Delusions of parasitosis — self-induced excoriations with fixed parasitic belief",
+    ],
+    pairWith: [
+      "Nocturnal pruritus + interdigital burrows → scabies",
+      "Flexural excoriations + atopy + family history → atopic dermatitis",
+      "Honey-colored crust on excoriations → impetigo superinfection",
+      "Linear excoriations in reachable areas + psychiatric history → excoriation disorder",
+      "Excoriated papules without primary burrows → insect bites or neurotic excoriation",
+    ],
+    distinguishFrom: [
+      "Lichenification — chronic leathery thickened skin from repeated rubbing; may coexist with excoriations",
+      "Erosion — epidermal loss; excoriation specifies mechanical (scratch/pick) cause",
+      "Ulcer — deeper defect extending into dermis or subcutis",
+      "Primary vesicle or papule — excoriation is secondary change atop another lesion",
+      "Dermatographism — wheal from stroking intact skin, not frank excoriation",
     ],
   },
   {

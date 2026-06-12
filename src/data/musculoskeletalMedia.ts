@@ -2,9 +2,11 @@ import type { MediaAttribution } from "./media";
 import type { MusculoskeletalEntry } from "./musculoskeletal";
 
 import acromion from "../media/images/musculoskeletal/acromion.jpg?url";
+import atlantoaxial from "../media/images/musculoskeletal/atlantoaxial.png?url";
 import axillaryNerve from "../media/images/musculoskeletal/axillary-nerve.jpg?url";
 import humerus from "../media/images/musculoskeletal/humerus.jpg?url";
 import infraspinatus from "../media/images/musculoskeletal/infraspinatus.png?url";
+import interphalangealJoint from "../media/images/musculoskeletal/interphalangeal-joint.jpg?url";
 import metacarpophalangealJoint from "../media/images/musculoskeletal/metacarpophalangeal-joint.jpg?url";
 import rotatorCuff from "../media/images/musculoskeletal/rotator-cuff.svg?url";
 import sarcomereDiagram from "../media/images/musculoskeletal/sarcomere-diagram.svg?url";
@@ -17,9 +19,11 @@ import teresMinor from "../media/images/musculoskeletal/teres-minor.png?url";
 export type MUSCULOSKELETALImageId = Extract<
   MusculoskeletalEntry["id"],
   | "acromion"
+  | "atlantoaxial"
   | "axillary-nerve"
   | "humerus"
   | "infraspinatus"
+  | "interphalangeal-joint"
   | "metacarpophalangeal-joint"
   | "rotator-cuff"
   | "sarcomere"
@@ -37,9 +41,11 @@ function extensionAssetUrl(path: string): string {
 /** See src/media/images/musculoskeletal/SOURCES.txt */
 export const MUSCULOSKELETAL_IMAGES: Partial<Record<MUSCULOSKELETALImageId, string>> = {
   "acromion": extensionAssetUrl(acromion),
+  "atlantoaxial": extensionAssetUrl(atlantoaxial),
   "axillary-nerve": extensionAssetUrl(axillaryNerve),
   "humerus": extensionAssetUrl(humerus),
   "infraspinatus": extensionAssetUrl(infraspinatus),
+  "interphalangeal-joint": extensionAssetUrl(interphalangealJoint),
   "metacarpophalangeal-joint": extensionAssetUrl(metacarpophalangealJoint),
   "rotator-cuff": extensionAssetUrl(rotatorCuff),
   "sarcomere": extensionAssetUrl(sarcomereDiagram),
@@ -54,9 +60,11 @@ export const MUSCULOSKELETAL_IMAGE_ATTRIBUTIONS: Partial<
   Record<MUSCULOSKELETALImageId, MediaAttribution>
 > = {
   "acromion": { label: "Wikimedia Commons (Acromion of scapula02.png)", url: "https://commons.wikimedia.org/wiki/File:Acromion_of_scapula02.png" },
+  "atlantoaxial": { label: "Wikimedia Commons (Abyssuridae (10.3390-d17120827) Figure 3.png)", url: "https://commons.wikimedia.org/wiki/File:Abyssuridae_(10.3390-d17120827)_Figure_3.png" },
   "axillary-nerve": { label: "Wikimedia Commons (Anatomy of the cat (1991) (18006462720).jpg)", url: "https://commons.wikimedia.org/wiki/File:Anatomy_of_the_cat_(1991)_(18006462720).jpg" },
   "humerus": { label: "Wikimedia Commons (Right humerus, anterior aspect.jpg)", url: "https://commons.wikimedia.org/wiki/File:Right_humerus,_anterior_aspect.jpg" },
   "infraspinatus": { label: "Wikimedia Commons (Gray — musculus infraspinatus.png)", url: "https://commons.wikimedia.org/wiki/File:Gray_—_musculus_infraspinatus.png" },
+  "interphalangeal-joint": { label: "Wikimedia Commons (DIP, PIP and MCP joints of hand.jpg)", url: "https://commons.wikimedia.org/wiki/File:DIP,_PIP_and_MCP_joints_of_hand.jpg" },
   "metacarpophalangeal-joint": { label: "Wikimedia Commons (DIP, PIP and MCP joints of hand.jpg)", url: "https://commons.wikimedia.org/wiki/File:DIP,_PIP_and_MCP_joints_of_hand.jpg" },
   "rotator-cuff": { label: "Wikimedia Commons (Rotator cuff injury.svg)", url: "https://commons.wikimedia.org/wiki/File:Rotator_cuff_injury.svg" },
   "sarcomere": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:sarcomere-diagram.svg" },
@@ -69,9 +77,11 @@ export const MUSCULOSKELETAL_IMAGE_ATTRIBUTIONS: Partial<
 
 export const MUSCULOSKELETAL_IMAGE_CAPTIONS: Partial<Record<MUSCULOSKELETALImageId, string>> = {
   "acromion": "Clinical or pathologic image illustrating acromion",
+  "atlantoaxial": "Clinical or pathologic image illustrating atlantoaxial",
   "axillary-nerve": "Clinical or pathologic image illustrating axillary nerve",
   "humerus": "Clinical or pathologic image illustrating humerus",
   "infraspinatus": "Clinical or pathologic image illustrating infraspinatus",
+  "interphalangeal-joint": "Clinical or pathologic image illustrating interphalangeal joint",
   "metacarpophalangeal-joint": "Clinical or pathologic image illustrating metacarpophalangeal joint",
   "rotator-cuff": "Clinical or pathologic image illustrating rotator cuff",
   "sarcomere": "Sarcomere bands: Z line (boundaries), M line (center), A band (myosin length), I band (actin only), H zone (thick filaments only)",

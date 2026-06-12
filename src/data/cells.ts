@@ -4,6 +4,7 @@ export interface CellEntry {
   aliases: string[];
   definition: string;
   characteristics: string[];
+  normalLabResults?: string[];
   clinicalRelevance: string[];
   boardsPearls: string[];
   distinguishFrom?: string[];
@@ -27,8 +28,17 @@ export const CELLS: CellEntry[] = [
     characteristics: [
       "Granulocytes: neutrophils, eosinophils, basophils (lobed nuclei, cytoplasmic granules)",
       "Agranulocytes: lymphocytes, monocytes (round nuclei, no specific granules)",
-      "Normal differential (approximate): neutrophils ~40–70%, lymphocytes ~20–40%, monocytes ~2–8%, eosinophils ~1–4%, basophils <1%",
       "Left shift = ↑ immature neutrophils (bands) → acute bacterial infection or inflammation",
+    ],
+    normalLabResults: [
+      "Total WBC: ~4,500–11,000 /µL (4.5–11.0 × 10³/µL)",
+      "Neutrophils (segs): 40–70% of WBC; absolute ~1,800–7,700 /µL",
+      "Lymphocytes: 20–40%; absolute ~1,000–4,800 /µL",
+      "Monocytes: 2–8%; absolute ~200–800 /µL",
+      "Eosinophils: 1–4%; absolute ~50–500 /µL",
+      "Basophils: <1%; absolute ~0–300 /µL",
+      "Band neutrophils: normally <6% of total neutrophils (left shift when elevated)",
+      "Leukocytosis >11,000 /µL; leukopenia <4,500 /µL; neutropenia ANC <1,500 /µL (severe <500)",
     ],
     clinicalRelevance: [
       "Leukocytosis: infection, inflammation, leukemia, steroids (demargination)",
@@ -46,7 +56,7 @@ export const CELLS: CellEntry[] = [
       "Erythrocyte — red blood cell; carries O₂, anucleate in mammals",
     ],
     pediatrics:
-      "Neonates and infants have higher normal WBC and relative lymphocyte predominance; interpret counts with age-specific ranges.",
+      "Neonates: total WBC up to ~30,000 /µL with lymphocyte predominance. Infants and young children maintain higher WBC than adults; lymphocytes may exceed neutrophils until ~6–8 years — use age-adjusted reference ranges before calling leukocytosis or neutrophilia.",
   },
   {
     id: "neutrophil",

@@ -615,6 +615,7 @@ function renderCellPopover(cellId: string): boolean {
   `,
     `
     ${renderListSection("Characteristics", cell.characteristics)}
+    ${renderListSection("Normal lab results", cell.normalLabResults ?? [])}
     ${renderListSection("Clinical relevance", cell.clinicalRelevance)}
     ${renderListSection("Distinguish from", cell.distinguishFrom ?? [])}
     ${renderListSection("Boards pearls", cell.boardsPearls)}
