@@ -724,6 +724,40 @@ export const PROTEINS: ProteinEntry[] = [
       "Androgen insensitivity — 46,XY female phenotype, not structural thumb shortening",
     ],
   },
+  {
+    id: "homeobox-hox-gene",
+    name: "Homeobox (HOX) gene",
+    aliases: [
+      "homeobox (hox) gene",
+      "homeobox gene",
+      "homeobox genes",
+      "hox gene",
+      "hox genes",
+      "homeobox hox gene",
+    ],
+    gene: "HOX gene clusters — HOXA (chr 7), HOXB (chr 17), HOXC (chr 12), HOXD (chr 2)",
+    location:
+      "Four paralogous clusters; expressed in spatial and temporal colinear patterns along developing body axis and limbs",
+    function:
+      "Encode homeodomain transcription factors that specify segment identity along the anterior–posterior axis (head-to-tail and proximal-to-distal limb patterning).",
+    mutationCauses: [
+      "Limb malformations (polydactyly, synpolydactyly, brachydactyly)",
+      "Hand-foot-genital syndrome (HOXD13)",
+      "Hand-foot-uterus syndrome (HOXA13)",
+      "Vertebral segmentation defects when HOX patterning disrupted",
+    ],
+    boardsPearls: [
+      "Colinearity — 3′ HOX genes specify distal structures; 5′ genes specify proximal/cranial",
+      "HOX genes conserved across species — master developmental patterning genes",
+      "Specific HOX mutations (HOXD13, HOXA13) are high-yield; know phenotype over memorizing entire cluster",
+      "Peds: congenital limb and genitourinary anomalies → think HOX developmental patterning",
+    ],
+    distinguishFrom: [
+      "HOXD13 — specific distal limb/genital transcription factor within HOXD cluster",
+      "PAX genes — paired box family; Wilms tumor (PAX2), aniridia (PAX6)",
+      "Sonic hedgehog (SHH) — morphogen gradient in limb bud, not HOX segment identity",
+    ],
+  },
 ];
 
 const proteinById = new Map(PROTEINS.map((p) => [p.id, p]));

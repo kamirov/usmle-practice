@@ -475,6 +475,225 @@ export const CELLS: CellEntry[] = [
     pediatrics:
       "GJB2 (connexin 26) screening is standard in newborn hearing loss workup; often nonsyndromic but may pair with palmoplantar keratoderma (Vohwinkel).",
   },
+  {
+    id: "dna-methylation",
+    name: "DNA Methylation",
+    aliases: [
+      "dna methylation",
+      "cpg methylation",
+      "cytosine methylation",
+    ],
+    definition:
+      "Epigenetic modification adding a methyl group to cytosine (usually in CpG dinucleotides) by DNA methyltransferases (DNMTs), generally repressing gene transcription when occurring in promoter CpG islands.",
+    characteristics: [
+      "DNMT3 — de novo methylation during development; DNMT1 — maintenance methylation after replication",
+      "Methylated CpG attracts methyl-CpG-binding proteins (e.g., MeCP2) → chromatin compaction",
+      "Genomic imprinting — differential methylation of maternal vs paternal alleles",
+      "Global hypomethylation in aging and cancer; locus-specific hypermethylation silences tumor suppressors",
+    ],
+    clinicalRelevance: [
+      "Imprinting disorders — Prader-Willi (paternal deletion/methylation defect), Angelman (maternal)",
+      "Rett syndrome — MeCP2 mutation impairs reading of methylated DNA",
+      "MLH1 promoter hypermethylation → microsatellite instability in sporadic colon cancer",
+      "Fragile X — CGG expansion triggers abnormal methylation silencing FMR1",
+    ],
+    boardsPearls: [
+      "DNA methylation generally silences genes (vs histone acetylation → activation)",
+      "Imprinting: methylation marks parent-of-origin allele expression",
+      "5-azacytidine — demethylating agent used in myelodysplastic syndromes",
+    ],
+    distinguishFrom: [
+      "Histone acetylation — loosens chromatin, activates transcription",
+      "DNA mutation — permanent sequence change; methylation is epigenetic and potentially reversible",
+      "Uracil methylation — RNA modification, not DNA epigenetics",
+    ],
+    pediatrics:
+      "Imprinting disorders present in infancy/childhood — PWS (hypotonia, obesity, hyperphagia); Angelman (happy puppet, seizures, ataxia).",
+  },
+  {
+    id: "epigenetics",
+    name: "Epigenetics",
+    aliases: [
+      "epigenetics",
+      "epigenetic",
+      "epigenetic modification",
+      "epigenetic modifications",
+      "epigenetic regulation",
+    ],
+    definition:
+      "Heritable (through cell division) or reversible changes in gene expression without alteration of the underlying DNA sequence, mediated by chromatin structure and chemical modifications.",
+    characteristics: [
+      "Major mechanisms: DNA methylation, histone modifications (acetylation, methylation, phosphorylation), chromatin remodeling, noncoding RNA (miRNA)",
+      "Establishes cell-type-specific gene expression programs during differentiation",
+      "X-chromosome inactivation (Barr body) — epigenetic silencing via XIST RNA and heterochromatin",
+      "Environment and aging can alter epigenetic marks (boards context for cancer and imprinting)",
+    ],
+    clinicalRelevance: [
+      "Genomic imprinting disorders (Prader-Willi, Angelman, Beckwith-Wiedemann)",
+      "Cancer — silencing tumor suppressors via promoter methylation; altered histone marks",
+      "Rett syndrome — epigenetic reader (MeCP2) dysfunction",
+      "HDAC inhibitors (vorinostat) and demethylating agents in hematologic malignancies",
+    ],
+    boardsPearls: [
+      "Epigenetic = expression change without DNA sequence change",
+      "Methylation (silencing) vs acetylation (activation) — classic boards contrast",
+      "Imprinting is epigenetic parent-of-origin expression — not a mutation in the gene itself (usually)",
+    ],
+    distinguishFrom: [
+      "Genetic mutation — changes nucleotide sequence permanently",
+      "Post-translational modification of proteins — different layer from chromatin epigenetics",
+      "RNA splicing — co/post-transcriptional processing, not classic epigenetic mark",
+    ],
+    pediatrics:
+      "Beckwith-Wiedemann — overgrowth, omphalocele, Wilms tumor risk; epigenetic/imprinting defect at 11p15.",
+  },
+  {
+    id: "acetylation",
+    name: "Acetylation",
+    aliases: [
+      "acetylation",
+      "histone acetylation",
+      "histone acetylation and deacetylation",
+    ],
+    definition:
+      "Addition of an acetyl group to lysine residues on histone tails (by histone acetyltransferases, HATs), neutralizing positive charge → relaxed chromatin (euchromatin) → increased gene transcription.",
+    characteristics: [
+      "HATs (e.g., CBP/p300) add acetyl groups; HDACs remove them → chromatin condensation (heterochromatin)",
+      "Acetylation also occurs on non-histone proteins (p53, tubulin) with distinct functional effects",
+      "Bromodomains on transcription factors recognize acetylated lysines",
+      "Opposes the repressive effect of DNA methylation and histone deacetylation",
+    ],
+    clinicalRelevance: [
+      "HDAC inhibitors (vorinostat, romidepsin) — used in cutaneous T-cell lymphoma; re-express silenced genes",
+      "Rubinstein-Taybi — CBP/p300 HAT haploinsufficiency → intellectual disability, broad thumbs",
+      "HAT/HDAC balance dysregulated in cancer and neurodegenerative disease",
+    ],
+    boardsPearls: [
+      "Histone acetylation = transcriptionally ACTIVE chromatin (euchromatin)",
+      "Histone deacetylation (HDAC) = silencing; HDAC inhibitors used in oncology",
+      "Methylation of DNA or histones generally represses; acetylation of histones activates — boards favorite contrast",
+    ],
+    distinguishFrom: [
+      "DNA methylation — represses transcription via CpG island methylation",
+      "Histone methylation — can activate or repress depending on residue (e.g., H3K4me activates, H3K27me represses)",
+      "Phosphorylation — separate histone mark; e.g., linked to chromosome condensation in mitosis",
+    ],
+    pediatrics:
+      "Rubinstein-Taybi syndrome — congenital broad thumbs/toes, facial dysmorphism, intellectual disability; CBP HAT defect.",
+  },
+  {
+    id: "dna-transcription",
+    name: "DNA Transcription",
+    aliases: [
+      "dna transcription",
+      "transcription",
+      "gene transcription",
+      "rna transcription",
+    ],
+    definition:
+      "Synthesis of RNA from a DNA template by RNA polymerase; in eukaryotes, RNA Pol II transcribes mRNA genes in the nucleus to produce primary (pre-mRNA) transcripts.",
+    characteristics: [
+      "RNA Pol I — rRNA; Pol II — mRNA/hnRNA; Pol III — tRNA and 5S rRNA",
+      "Promoter recognition: TATA box (~−25), CAAT box; general transcription factors (TFIID, etc.) assemble at promoter",
+      "Product is pre-mRNA — requires 5′ cap, splicing, and 3′ poly-A tail before export to cytoplasm",
+      "Alpha-amanitin (death cap mushroom) inhibits RNA Pol II → liver failure",
+    ],
+    clinicalRelevance: [
+      "Alpha-amanitin poisoning — blocks Pol II transcription",
+      "Promoter mutations and transcription factor defects in developmental syndromes",
+      "HIV integrase inserts proviral DNA; viral transcription from LTR requires host Pol II",
+      "Corticosteroids and thyroid hormone act via nuclear receptors that regulate transcription",
+    ],
+    boardsPearls: [
+      "Transcription = DNA → RNA (nucleus); translation = RNA → protein (cytoplasm/ribosome)",
+      "RNA Pol II makes pre-mRNA; Pol I = rRNA; Pol III = tRNA — boards triplet",
+      "Alpha-amanitin → RNA Pol II inhibition",
+    ],
+    distinguishFrom: [
+      "DNA replication — DNA → DNA; occurs before cell division",
+      "mRNA translation — ribosome reads mature mRNA to synthesize protein",
+      "Reverse transcription — RNA → DNA (retroviruses, telomerase)",
+    ],
+    pediatrics:
+      "Congenital transcription factor mutations (e.g., TFIIH in xeroderma pigmentosum) impair DNA repair and transcription-coupled repair.",
+  },
+  {
+    id: "pre-mrna",
+    name: "Pre-mRNA",
+    aliases: [
+      "pre-mrna",
+      "pre mrna",
+      "premrna",
+      "primary transcript",
+      "primary rna transcript",
+      "hnrna",
+      "heterogeneous nuclear rna",
+    ],
+    definition:
+      "Initial RNA product of RNA polymerase II containing both exons and introns; processed in the nucleus into mature mRNA by capping, splicing, and polyadenylation before nuclear export.",
+    characteristics: [
+      "5′ cap (7-methylguanosine) added co-transcriptionally — ribosome recognition, stability",
+      "Spliceosome (snRNPs) removes introns and joins exons — lariat intermediate",
+      "3′ poly-A tail added after cleavage at polyadenylation signal (AAUAAA)",
+      "Alternative splicing — one gene → multiple protein isoforms from different exon combinations",
+    ],
+    clinicalRelevance: [
+      "β-thalassemia — splicing mutations in β-globin pre-mRNA → aberrant mRNA, ↓ β-chain",
+      "Spinal muscular atrophy — SMN2 splicing defect; nusinersen modifies splicing",
+      "Myotonic dystrophy — toxic RNA sequesters splicing factors (MBNL)",
+      "Intron retention or cryptic splice sites → frameshift or truncated proteins",
+    ],
+    boardsPearls: [
+      "Pre-mRNA processing order: 5′ cap → splicing → poly-A tail (all in nucleus)",
+      "Spliceosome snRNPs: U1, U2, U4, U5, U6 — U1 at 5′ splice site, U2 at branch point",
+      "Mature mRNA has exons only; introns never leave nucleus",
+    ],
+    distinguishFrom: [
+      "Mature mRNA — processed, exported to cytoplasm for translation",
+      "tRNA/rRNA — different RNA Pol products, not spliced pre-mRNA",
+      "cDNA — DNA copy of spliced mRNA (no introns); used in cloning and PCR",
+    ],
+    pediatrics:
+      "Spinal muscular atrophy — SMN1 deletion; SMN2 produces low functional SMN via inefficient splicing; nusinersen approved in infants.",
+  },
+  {
+    id: "mrna-translation",
+    name: "mRNA Translation",
+    aliases: [
+      "mrna translation",
+      "messenger rna translation",
+      "translation",
+      "protein synthesis",
+      "protein translation",
+    ],
+    definition:
+      "Ribosome-mediated synthesis of polypeptide chains using mature mRNA as template; tRNA anticodons pair with mRNA codons and deliver amino acids in the 5′→3′ direction.",
+    characteristics: [
+      "Initiation: small ribosomal subunit + initiator tRNA (Met) at start codon AUG; requires eIFs and 5′ cap",
+      "Elongation: peptidyl transferase (rRNA ribozyme activity) forms peptide bonds; ribosome translocates",
+      "Termination: release factors at stop codons (UAA, UAG, UGA)",
+      "Rough ER — ribosomes translate secreted and membrane proteins co-translationally into ER lumen",
+    ],
+    clinicalRelevance: [
+      "Antibiotics target bacterial ribosomes: aminoglycosides (30S), macrolides/clindamycin (50S)",
+      "Diphtheria toxin — ADP-ribosylates EF-2 → blocks elongation",
+      "Pseudomonas exotoxin A — same EF-2 target",
+      "Ricin — depurinates 28S rRNA → inactivates 60S subunit",
+    ],
+    boardsPearls: [
+      "Translation = mRNA → protein at ribosome; transcription = DNA → RNA in nucleus",
+      "Start codon AUG; stop codons need no tRNA — release factors instead",
+      "EF-2 is eukaryotic elongation factor — targeted by diphtheria toxin",
+      "Chloramphenicol, macrolides, clindamycin — 50S; aminoglycosides, tetracyclines — 30S",
+    ],
+    distinguishFrom: [
+      "DNA transcription — DNA template, RNA product, nuclear",
+      "Post-translational modification — glycosylation, phosphorylation after ribosome release",
+      "DNA replication — DNA polymerase, not ribosome",
+    ],
+    pediatrics:
+      "Aminoglycosides carry risk of ototoxicity and nephrotoxicity in neonates — avoid when possible; same 30S ribosomal target as in adults.",
+  },
 ];
 
 const cellById = new Map(CELLS.map((entry) => [entry.id, entry]));
