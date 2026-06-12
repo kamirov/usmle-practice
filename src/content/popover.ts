@@ -8,6 +8,11 @@ import { getCellById } from "../data/cells";
 import { getClinicalStrategyById } from "../data/clinicalStrategies";
 import { getConditionById } from "../data/conditions";
 import {
+  getConditionImageAttributionForId,
+  getConditionImageCaptionForId,
+  getConditionImageForId,
+} from "../data/conditionsMedia";
+import {
   getEcgFindingImageAttributionForId,
   getEcgFindingImageCaptionForId,
   getEcgFindingImageForId,
@@ -41,6 +46,11 @@ import { getNephronSegmentById } from "../data/nephron";
 import { getOrganById } from "../data/organs";
 import { getProteinById } from "../data/proteins";
 import { getSignalingById } from "../data/signaling";
+import {
+  getSymptomImageAttributionForId,
+  getSymptomImageCaptionForId,
+  getSymptomImageForId,
+} from "../data/symptomMedia";
 import { getSymptomById } from "../data/symptoms";
 import { renderPopoverTitle, type PopoverCategory } from "./popoverIcons";
 
@@ -324,8 +334,11 @@ function renderSymptomPopover(symptomId: string): boolean {
   const symptom = getSymptomById(symptomId);
   if (!symptom || !popoverEl) return false;
 
-  popoverEl.classList.add("usmle-organ-popover--rich");
-  popoverEl.innerHTML = renderRichPopoverContent(
+  const imageSrc = getSymptomImageForId(symptomId);
+  const imageCaption = getSymptomImageCaptionForId(symptomId);
+  const imageAttribution = getSymptomImageAttributionForId(symptomId);
+
+  const bodyContent = renderRichPopoverContent(
     `
     ${renderPopoverTitle(symptom.name, "symptom")}
     <div class="usmle-organ-popover__meaning">${symptom.definition}</div>
@@ -338,6 +351,24 @@ function renderSymptomPopover(symptomId: string): boolean {
     ${renderListSection("Distinguish from", symptom.distinguishFrom ?? [])}
   `,
   );
+
+  popoverEl.classList.add("usmle-organ-popover--rich");
+  if (imageSrc && imageCaption && imageAttribution) {
+    popoverEl.classList.add("usmle-organ-popover--with-media");
+    popoverEl.innerHTML = `
+      <div class="usmle-organ-popover__layout">
+        <div class="usmle-organ-popover__body">${bodyContent}</div>
+        ${renderPopoverMediaBlock({
+          src: imageSrc,
+          alt: `${symptom.name} clinical photo`,
+          caption: imageCaption,
+          attribution: imageAttribution,
+        })}
+      </div>
+    `;
+  } else {
+    popoverEl.innerHTML = bodyContent;
+  }
   return true;
 }
 
@@ -438,8 +469,11 @@ function renderConditionPopover(conditionId: string): boolean {
   const condition = getConditionById(conditionId);
   if (!condition || !popoverEl) return false;
 
-  popoverEl.classList.add("usmle-organ-popover--rich");
-  popoverEl.innerHTML = renderRichPopoverContent(
+  const imageSrc = getConditionImageForId(conditionId);
+  const imageCaption = getConditionImageCaptionForId(conditionId);
+  const imageAttribution = getConditionImageAttributionForId(conditionId);
+
+  const bodyContent = renderRichPopoverContent(
     `
     ${renderPopoverTitle(condition.name, "condition")}
     <div class="usmle-organ-popover__meaning">${condition.definition}</div>
@@ -458,6 +492,24 @@ function renderConditionPopover(conditionId: string): boolean {
     ${condition.pediatrics ? renderPediatricsSection(condition.pediatrics) : ""}
   `,
   );
+
+  popoverEl.classList.add("usmle-organ-popover--rich");
+  if (imageSrc && imageCaption && imageAttribution) {
+    popoverEl.classList.add("usmle-organ-popover--with-media");
+    popoverEl.innerHTML = `
+      <div class="usmle-organ-popover__layout">
+        <div class="usmle-organ-popover__body">${bodyContent}</div>
+        ${renderPopoverMediaBlock({
+          src: imageSrc,
+          alt: `${condition.name} histology`,
+          caption: imageCaption,
+          attribution: imageAttribution,
+        })}
+      </div>
+    `;
+  } else {
+    popoverEl.innerHTML = bodyContent;
+  }
   return true;
 }
 

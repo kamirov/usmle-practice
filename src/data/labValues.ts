@@ -2258,6 +2258,47 @@ export const LAB_VALUES: LabValueEntry[] = [
       "ANA+ with low titer only + no symptoms → may be nonspecific; correlate clinically",
     ],
   },
+  {
+    id: "lactic-acidosis",
+    name: "Lactic Acidosis",
+    aliases: [
+      "lactic acidosis",
+      "lactate acidosis",
+      "hyperlactatemia",
+      "elevated lactate",
+      "increased lactate",
+      "high lactate",
+      "serum lactate",
+      "lactate level",
+    ],
+    measures:
+      "Anion-gap metabolic acidosis from accumulation of lactate (L-lactate) when aerobic metabolism fails or lactate production exceeds clearance — reflects tissue hypoperfusion or impaired mitochondrial oxidation.",
+    normalRange: "Serum lactate ~0.5–2.2 mmol/L; lactic acidosis typically >4–5 mmol/L with ↓ HCO₃⁻ and ↑ anion gap",
+    increasedCauses: [
+      "Type A (hypoxic/hypoperfusion): septic shock, cardiogenic shock, hypovolemia, severe anemia, CO poisoning, seizures, strenuous exercise",
+      "Type B (non-hypoperfusion): metformin (especially with renal failure), liver failure, malignancy (Warburg effect), thiamine deficiency, linezolid, nucleoside reverse transcriptase inhibitors, mitochondrial disorders",
+      "D-lactic acidosis — bacterial overgrowth in short bowel (measured separately if suspected)",
+    ],
+    decreasedCauses: [
+      "Not a deficiency state — clinically relevant when elevated",
+    ],
+    boardsPearls: [
+      "MUDPILES includes lactic acidosis in anion-gap metabolic acidosis",
+      "Shock/sepsis → ↑ lactate from anaerobic glycolysis; lactate clearance guides resuscitation",
+      "Metformin-associated lactic acidosis — rare; risk ↑ with renal impairment, contrast, hypoperfusion",
+      "Type A = hypoperfusion/hypoxia; Type B = drugs, liver disease, malignancy, mitochondrial disease",
+      "Treat cause first — fluids, pressors, stop metformin; bicarbonate only if severe pH <7.1 (controversial)",
+      "vs ketoacidosis — DKA has ↑ ketones; both can have ↑ anion gap",
+      "vs ethylene glycol/methanol — osmolar gap elevated in toxic alcohols",
+    ],
+    pairWith: [
+      "Hypotension + ↑ lactate + fever → septic shock",
+      "Metformin + CKD + nausea + ↑ lactate → metformin-associated lactic acidosis",
+      "Chest pain + hypotension + ↑ lactate → cardiogenic shock",
+      "Low HCO₃⁻ + ↑ anion gap + ↑ lactate → lactic acidosis (not normal-gap diarrhea)",
+      "Mitochondrial myopathy + exercise intolerance + lactic acidosis → Type B mitochondrial cause",
+    ],
+  },
 ];
 
 const labValueById = new Map(LAB_VALUES.map((l) => [l.id, l]));

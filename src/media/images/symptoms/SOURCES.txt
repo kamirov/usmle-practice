@@ -1,0 +1,27 @@
+Symptom images for USMLE Study Tools popovers.
+
+All images resized to ≤1280 px width where applicable for popover display.
+
+papule.jpg
+  Source: Wikimedia Commons — Lichen Planus (2).JPG
+  Author: James Heilman, MD
+  Description: Lichen planus affecting the shins — violaceous flat-topped papules
+  License: CC BY-SA 3.0
+  Page: https://commons.wikimedia.org/wiki/File:Lichen_Planus_(2).JPG
+  Download: https://commons.wikimedia.org/wiki/Special:FilePath/Lichen_Planus_(2).JPG?width=1280
+
+plaque.jpg
+  Source: Wikimedia Commons — Psoriasis2010.JPG
+  Author: James Heilman, MD
+  Description: A plaque of psoriasis
+  License: CC BY-SA 3.0
+  Page: https://commons.wikimedia.org/wiki/File:Psoriasis2010.JPG
+  Download: https://commons.wikimedia.org/wiki/Special:FilePath/Psoriasis2010.JPG?width=1280
+
+erythema.jpg
+  Source: Wikimedia Commons — Recurrent erysipelas on edematous leg.jpg
+  Author: Mikael Häggström
+  Description: Recurrent erysipelas with sharply demarcated erythema on the leg
+  License: CC0 1.0 (public domain dedication)
+  Page: https://commons.wikimedia.org/wiki/File:Recurrent_erysipelas_on_edematous_leg.jpg
+  Download: https://commons.wikimedia.org/wiki/Special:FilePath/Recurrent_erysipelas_on_edematous_leg.jpg?width=1280

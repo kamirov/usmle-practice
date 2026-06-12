@@ -1224,6 +1224,90 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
     pediatrics:
       "Transient synovitis of the hip — acute limp in young child after URI; exclude septic arthritis (fever, refusal to bear weight, ↑ ESR/CRP, hip held flexed/abducted/externally rotated). Septic arthritis in children is orthopedic emergency.",
   },
+  {
+    id: "mosaicism",
+    name: "Mosaicism",
+    aliases: [
+      "mosaicism",
+      "genetic mosaicism",
+      "chromosomal mosaicism",
+      "somatic mosaicism",
+      "gonadal mosaicism",
+      "mosaic karyotype",
+      "mosaic",
+    ],
+    definition:
+      "Coexistence of two or more genetically distinct cell lines in one individual, usually from a post-zygotic mitotic error (nondisjunction or anaphase lag) after fertilization — not every cell carries the same chromosomal or gene mutation.",
+    examples: [
+      "Turner syndrome mosaic — 45,X/46,XX (or 45,X/46,XY); milder phenotype, possible spontaneous puberty or fertility",
+      "Down syndrome mosaic — trisomy 21 in some cells, 46 chromosomes in others; variable intellectual disability",
+      "McCune-Albright syndrome — post-zygotic GNAS activating mutation mosaicism → café-au-lait spots, polyostotic fibrous dysplasia, precocious puberty",
+      "Proteus syndrome — AKT1 somatic mosaic overgrowth",
+      "Gonadal mosaicism in a phenotypically normal parent — recurrence risk for trisomy 21 or other aneuploidy in offspring",
+      "Confined placental mosaicism — abnormal karyotype in placenta but normal fetal cells on amniocentesis",
+    ],
+    boardsPearls: [
+      "Mosaic = mitotic (post-zygotic) error; non-mosaic aneuploidy often from meiotic nondisjunction at gametogenesis",
+      "Turner mosaic (45,X/46,XX) — may have fewer stigmata, normal or streak gonads; karyotype from blood may miss low-level mosaicism",
+      "Phenotype severity often correlates with proportion of abnormal cells and which tissues are affected",
+      "McCune-Albright — mosaic GNAS; irregular café-au-lait borders ('coast of Maine'); precocious puberty in girls",
+      "vs chimerism — two different zygotes (e.g., twin absorption, IVF mix-up), not one zygote with mitotic mistake",
+      "vs heteroplasmy — mitochondrial DNA mixture in one individual, not nuclear chromosomal mosaicism",
+    ],
+    distinguishFrom: [
+      "Chimerism — two genetically distinct individuals fused (dizygotic); two different zygote lineages",
+      "Constitutional (germline) aneuploidy — every cell carries the abnormality (e.g., non-mosaic 45,X)",
+      "Somatic mutation in a focal lesion — localized mosaicism (e.g., cancer clone), not necessarily widespread cell lines",
+      "Heteroplasmy — mixed mitochondrial genomes, not nuclear chromosome complement mosaicism",
+    ],
+    pediatrics:
+      "Mosaic trisomy 21 may present with milder developmental delay than full trisomy 21. Turner mosaic may escape diagnosis until pubertal failure. McCune-Albright precocious puberty and fibrous dysplasia warrant endocrine and skeletal evaluation.",
+  },
+  {
+    id: "disomy",
+    name: "Disomy",
+    aliases: [
+      "disomy",
+      "chromosomal disomy",
+      "normal disomy",
+      "biparental disomy",
+      "uniparental disomy",
+      "upd",
+      "uniparental disomy",
+      "isodisomy",
+      "heterodisomy",
+      "paternal disomy",
+      "maternal disomy",
+    ],
+    definition:
+      "Presence of two copies of a chromosome (or chromosomal segment) in a cell — normal autosomal disomy is biparental (one maternal, one paternal homolog). Uniparental disomy (UPD) occurs when both copies derive from the same parent, often after trisomy rescue or monosomy rescue.",
+    examples: [
+      "Normal euploid cell — each autosome in disomy (2n, one copy from each parent)",
+      "Prader-Willi syndrome — paternal chromosome 15q deletion or maternal UPD 15 (both active copies effectively maternal; paternal imprinted genes silenced)",
+      "Angelman syndrome — maternal 15q deletion or paternal UPD 15 (paternal UBE3A not expressed)",
+      "UPD 14 (mat/pat) — growth restriction, developmental delay, thoracic dystrophy (rare boards mention)",
+      "UPD chromosome 6 — can unmask recessive HLA-linked disease",
+      "Isodisomy — both homologs from same parental meiosis (identical segments); heterodisomy — non-identical homologs from one parent",
+    ],
+    boardsPearls: [
+      "UPD = both chromosomes from one parent; often clinically silent unless imprinted region involved",
+      "Prader-Willi — need paternal 15q expression; lost by deletion OR maternal UPD",
+      "Angelman — need maternal UBE3A expression; lost by deletion OR paternal UPD",
+      "Imprinting + UPD explains ~25% of PWS/Angelman without visible deletion on standard testing",
+      "Isodisomy can unmask autosomal recessive disease if parent carried one mutant allele (both copies identical)",
+      "Trisomy rescue — fertilization with trisomic zygote, loss of one chromosome → may yield UPD in surviving embryo",
+      "vs deletion — UPD has normal copy number (2 copies) on karyotype; methylation or SNP studies detect UPD",
+    ],
+    distinguishFrom: [
+      "Trisomy — three copies of a chromosome (e.g., trisomy 21), not disomy",
+      "Monosomy — one copy (e.g., 45,X), not disomy",
+      "Deletion — only one copy of a segment remains; UPD has two copies but both from same parent",
+      "Mosaicism — mixed cell lines with different karyotypes, not necessarily UPD in any line",
+      "Genomic imprinting — epigenetic parent-of-origin expression; UPD disrupts normal biparental imprinting pattern",
+    ],
+    pediatrics:
+      "PWS and Angelman present in infancy — hypotonia, feeding difficulties (PWS), seizures and ataxia (Angelman). UPD accounts for a subset when FISH/microarray show no deletion — methylation study distinguishes PWS vs Angelman.",
+  },
 ];
 
 const pathogenesisById = new Map(

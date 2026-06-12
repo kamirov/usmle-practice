@@ -1567,6 +1567,43 @@ export const SYMPTOMS: SymptomEntry[] = [
       "Central scotoma — macular or optic nerve disease, not hemianopic pattern",
     ],
   },
+  {
+    id: "hemiplegia",
+    name: "Hemiplegia",
+    aliases: [
+      "hemiplegia",
+      "hemiplegic",
+      "contralateral hemiplegia",
+      "one-sided paralysis",
+      "unilateral paralysis",
+    ],
+    definition:
+      "Complete or near-complete loss of voluntary motor function on one side of the body — face, arm, and leg — reflecting contralateral upper motor neuron (corticospinal) pathway injury above the spinal cord.",
+    mechanism:
+      "Lesion of motor cortex, internal capsule, brainstem corticospinal tract, or rarely high cervical cord → interruption of UMN input to contralateral limbs and lower face → flaccid paralysis acutely, then spasticity, hyperreflexia, and Babinski sign; severity ranges from hemiparesis (weakness) to hemiplegia (no movement).",
+    thinkOf: [
+      "Ischemic or hemorrhagic stroke — MCA territory most common (face + arm > leg)",
+      "Internal capsule lacunar stroke — pure motor hemiplegia",
+      "Brain tumor or abscess compressing motor pathways",
+      "Migraine with aura (hemiplegic migraine — diagnosis of exclusion)",
+      "Postictal Todd paralysis after focal seizure",
+    ],
+    pairWith: [
+      "Sudden hemiplegia + facial droop + aphasia → left MCA stroke (dominant hemisphere)",
+      "Hemiplegia + homonymous hemianopsia → contralateral MCA or PCA stroke",
+      "Pure motor hemiplegia + hypertension + small deep stroke on CT → lacunar infarct",
+      "Hemiplegia in child with prior perinatal insult → cerebral palsy (hemiplegic subtype)",
+      "Head trauma + unilateral weakness → epidural/subdural hematoma until excluded",
+    ],
+    distinguishFrom: [
+      "Hemiparesis — weakness without complete paralysis; same localization principles",
+      "Monoplegia — one limb only, not entire hemibody",
+      "Paraplegia — both legs, spinal cord lesion below brainstem",
+      "Quadriplegia — all four limbs, cervical cord or bilateral brainstem injury",
+      "Functional (conversion) weakness — inconsistent exam, give-way strength, normal imaging",
+      "Peripheral nerve lesion — segmental deficit, LMN pattern (fasciculations, atrophy), not hemibody UMN pattern",
+    ],
+  },
 ];
 
 const symptomById = new Map(SYMPTOMS.map((s) => [s.id, s]));
