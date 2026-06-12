@@ -250,9 +250,9 @@
     "query": "langhans giant cell"
   },
   "cells/langerhans-cell.jpg": {
-    "title": "File:Beta-cells of islets of Langerhans.jpg",
-    "page": "https://commons.wikimedia.org/wiki/File:Beta-cells_of_islets_of_Langerhans.jpg",
-    "query": "langerhans cell histology"
+    "title": "File:Langerhans Cells in Normal Epidermis, CD1a Immunostain (4435883030).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Langerhans_Cells_in_Normal_Epidermis,_CD1a_Immunostain_(4435883030).jpg",
+    "query": "langerhans cell epidermis histology"
   },
   "cells/melanocyte.jpg": {
     "title": "File:Melanin Development in Melanocytes.svg",
@@ -263,5 +263,495 @@
     "title": "File:Acromion of scapula02.png",
     "page": "https://commons.wikimedia.org/wiki/File:Acromion_of_scapula02.png",
     "query": "acromion process shoulder"
+  },
+  "cells/acetylation.jpg": {
+    "title": "File:Histone acetylation in regulating glial response after CNS injury.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Histone_acetylation_in_regulating_glial_response_after_CNS_injury.jpg",
+    "query": "histone acetylation epigenetics"
+  },
+  "cells/actin.svg": {
+    "title": "File:Microfilament Structure.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Microfilament_Structure.svg",
+    "query": "actin microfilament cytoskeleton"
+  },
+  "cells/adherens-junction.svg": {
+    "title": "File:Adherens Junctions structural proteins-LangNeutral.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Adherens_Junctions_structural_proteins-LangNeutral.svg",
+    "query": "adherens junction cadherin"
+  },
+  "cells/antigen-presenting-cell.png": {
+    "title": "File:An MHC tetramer binding to T-cell receptors (left), and an MHC molecule on the surface of an antigen presenting cell binding to T-cell receptors (right).png",
+    "page": "https://commons.wikimedia.org/wiki/File:An_MHC_tetramer_binding_to_T-cell_receptors_(left),_and_an_MHC_molecule_on_the_surface_of_an_antigen_presenting_cell_binding_to_T-cell_receptors_(right).png",
+    "query": "antigen presenting cell MHC"
+  },
+  "cells/b-lymphocyte.png": {
+    "title": "File:Plasma B Cell (NIH BioArt 640981).png",
+    "page": "https://commons.wikimedia.org/wiki/File:Plasma_B_Cell_(NIH_BioArt_640981).png",
+    "query": "B lymphocyte plasma cell"
+  },
+  "cells/basophil.jpg": {
+    "title": "File:Blood-basophil2.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Blood-basophil2.jpg",
+    "query": "basophil blood smear"
+  },
+  "cells/birbeck-granules.jpg": {
+    "title": "File:Langerhans cell histiocytosis - Birbeck granules.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Langerhans_cell_histiocytosis_-_Birbeck_granules.jpg",
+    "query": "birbeck granules langerhans cell histiocytosis"
+  },
+  "cells/cd4-t-lymphocyte.jpg": {
+    "title": "File:Differentiation of helper T cell subsets is determined by cytokines.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Differentiation_of_helper_T_cell_subsets_is_determined_by_cytokines.jpg",
+    "query": "CD4 T helper lymphocyte"
+  },
+  "cells/cd8-t-lymphocyte.png": {
+    "title": "File:Killer T cells surround a cancer cell.png",
+    "page": "https://commons.wikimedia.org/wiki/File:Killer_T_cells_surround_a_cancer_cell.png",
+    "query": "CD8 cytotoxic T lymphocyte"
+  },
+  "cells/dendritic-cell.jpg": {
+    "title": "File:Antigen presentation by dendritic cell.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Antigen_presentation_by_dendritic_cell.jpg",
+    "query": "dendritic cell antigen presentation"
+  },
+  "cells/desmosome.jpg": {
+    "title": "File:Transmission electron micrograph of a normal apical junctional complex (AJC), the structure between two adjacent enterocytes from the ileal epithelium region of a 21 d old chick.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Transmission_electron_micrograph_of_a_normal_apical_junctional_complex_(AJC),_the_structure_between_two_adjacent_enterocytes_from_the_ileal_epithelium_region_of_a_21_d_old_chick.jpg",
+    "query": "desmosome electron micrograph"
+  },
+  "cells/dna-methylation.jpg": {
+    "title": "File:Methylation levels during mouse very early embryonic development.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Methylation_levels_during_mouse_very_early_embryonic_development.jpg",
+    "query": "DNA methylation epigenetics diagram"
+  },
+  "cells/dna-transcription.jpg": {
+    "title": "File:Regulatory sequence in a promoter at a transcription start site with a paused RNA polymerase and a TOP2B-induced DNA double-strand break.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Regulatory_sequence_in_a_promoter_at_a_transcription_start_site_with_a_paused_RNA_polymerase_and_a_TOP2B-induced_DNA_double-strand_break.jpg",
+    "query": "DNA transcription RNA polymerase"
+  },
+  "cells/endometrium.jpg": {
+    "title": "File:Diseases of women and abdominal surgery (1889) (14779613431).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Diseases_of_women_and_abdominal_surgery_(1889)_(14779613431).jpg",
+    "query": "endometrium histology menstrual"
+  },
+  "cells/eosinophil.jpg": {
+    "title": "File:Eosinophil blood smear.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File:Eosinophil_blood_smear.JPG",
+    "query": "eosinophil blood smear"
+  },
+  "cells/epigenetics.jpg": {
+    "title": "File:Nematode C. elegans germline chromatin Epigenetic imprint on the paternal X chromosome.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Nematode_C._elegans_germline_chromatin_Epigenetic_imprint_on_the_paternal_X_chromosome.jpg",
+    "query": "epigenetics chromatin histone"
+  },
+  "cells/epithelioid-cell.jpg": {
+    "title": "File:Sarcoidosis - Apoptotic bodies (6200975751).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Sarcoidosis_-_Apoptotic_bodies_(6200975751).jpg",
+    "query": "epithelioid cell granuloma histology"
+  },
+  "cells/fenestrae.jpg": {
+    "title": "File:Glandula parathyroidea \u2013 overview (HE stain).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Glandula_parathyroidea_\u2013_overview_(HE_stain).jpg",
+    "query": "fenestrated capillary endothelium"
+  },
+  "cells/hemidesmosome.png": {
+    "title": "File:Schematic illustration of the basement membrane zones of epithelium.png",
+    "page": "https://commons.wikimedia.org/wiki/File:Schematic_illustration_of_the_basement_membrane_zones_of_epithelium.png",
+    "query": "hemidesmosome basement membrane"
+  },
+  "cells/hepatic-sinusoids.png": {
+    "title": "File:Hepatic circulation and microcirculation.png",
+    "page": "https://commons.wikimedia.org/wiki/File:Hepatic_circulation_and_microcirculation.png",
+    "query": "hepatic sinusoid liver histology"
+  },
+  "cells/hypothalamus.jpg": {
+    "title": "File:1806 The Hypothalamus-Pituitary Complex.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:1806_The_Hypothalamus-Pituitary_Complex.jpg",
+    "query": "hypothalamus brain anatomy diagram"
+  },
+  "cells/keratinocyte.png": {
+    "title": "File:\u00c9piderme - FR.png",
+    "page": "https://commons.wikimedia.org/wiki/File:\u00c9piderme_-_FR.png",
+    "query": "keratinocyte epidermis histology"
+  },
+  "cells/kupffer-cell.png": {
+    "title": "File:Hepatic circulation and microcirculation.png",
+    "page": "https://commons.wikimedia.org/wiki/File:Hepatic_circulation_and_microcirculation.png",
+    "query": "kupffer cell liver sinusoid"
+  },
+  "cells/leukocyte.jpg": {
+    "title": "File:WBC (neutrophil) at centre, numerous erythrocytes and platelets (dot like bodies) in Wright's stained peripheral blood smear (PBS) microscopy.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:WBC_(neutrophil)_at_centre,_numerous_erythrocytes_and_platelets_(dot_like_bodies)_in_Wright's_stained_peripheral_blood_smear_(PBS)_microscopy.jpg",
+    "query": "white blood cell blood smear"
+  },
+  "cells/lymphocyte.png": {
+    "title": "File:Microphotographs of atypical lymphocytes observed in peripheral blood smears of quokkas on Rottnest Island.png",
+    "page": "https://commons.wikimedia.org/wiki/File:Microphotographs_of_atypical_lymphocytes_observed_in_peripheral_blood_smears_of_quokkas_on_Rottnest_Island.png",
+    "query": "lymphocyte blood smear wright stain"
+  },
+  "cells/macrophage.png": {
+    "title": "File:Infiltration of CD68+ tumor-associated macrophages (TAMs) in distinct histologic location.png",
+    "page": "https://commons.wikimedia.org/wiki/File:Infiltration_of_CD68+_tumor-associated_macrophages_(TAMs)_in_distinct_histologic_location.png",
+    "query": "macrophage histology"
+  },
+  "cells/microtubule.png": {
+    "title": "File:Chlorophyte-cell-diagram.png",
+    "page": "https://commons.wikimedia.org/wiki/File:Chlorophyte-cell-diagram.png",
+    "query": "microtubule cytoskeleton diagram"
+  },
+  "cells/monocyte.jpg": {
+    "title": "File:Blood-monocyte.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Blood-monocyte.jpg",
+    "query": "monocyte blood smear"
+  },
+  "cells/mrna-translation.svg": {
+    "title": "File:Ribosome mRNA translation en.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Ribosome_mRNA_translation_en.svg",
+    "query": "mRNA translation ribosome"
+  },
+  "cells/mtdna.jpg": {
+    "title": "File:Mitochondrial DNA lg.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Mitochondrial_DNA_lg.jpg",
+    "query": "mitochondrial DNA circular genome"
+  },
+  "cells/mucosa.jpg": {
+    "title": "File:Histology of transformation zone mucosa.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Histology_of_transformation_zone_mucosa.jpg",
+    "query": "mucosa epithelium histology"
+  },
+  "cells/myometrium.jpg": {
+    "title": "File:Uterus (myometrium).JPG",
+    "page": "https://commons.wikimedia.org/wiki/File:Uterus_(myometrium).JPG",
+    "query": "myometrium uterus histology"
+  },
+  "cells/neural-crest.svg": {
+    "title": "File:Neural.crest.cells.migration.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Neural.crest.cells.migration.svg",
+    "query": "neural crest cell migration diagram"
+  },
+  "cells/pre-mrna.jpg": {
+    "title": "File:Gene with introns and exons.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Gene_with_introns_and_exons.jpg",
+    "query": "pre-mRNA splicing intron exon"
+  },
+  "cells/siderophage.jpg": {
+    "title": "File:Siderophage CSF cytology.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Siderophage_CSF_cytology.jpg",
+    "query": "heart failure cell siderophage hemosiderin"
+  },
+  "cells/t-cell-signaling.svg": {
+    "title": "File:063-T-CellReceptor-MHC-ru.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:063-T-CellReceptor-MHC-ru.svg",
+    "query": "T cell receptor MHC diagram"
+  },
+  "cells/t-lymphocyte.jpg": {
+    "title": "File:HIV-infected T cell (6813384933).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:HIV-infected_T_cell_(6813384933).jpg",
+    "query": "T lymphocyte electron micrograph"
+  },
+  "cells/th2.png": {
+    "title": "File:M2 macrophages. S\u00e9zary cells produce the Th2 cytokines IL-4 and IL-13.png",
+    "page": "https://commons.wikimedia.org/wiki/File:M2_macrophages._S\u00e9zary_cells_produce_the_Th2_cytokines_IL-4_and_IL-13.png",
+    "query": "Th2 helper T cell cytokine"
+  },
+  "cells/tight-junction.png": {
+    "title": "File:Morphological modifications during EMT.png",
+    "page": "https://commons.wikimedia.org/wiki/File:Morphological_modifications_during_EMT.png",
+    "query": "tight junction epithelium claudin"
+  },
+  "conditions/aml.jpg": {
+    "title": "File:Acute Myeloid Leukemia (M2 type).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Acute_Myeloid_Leukemia_(M2_type).jpg",
+    "query": "acute myeloid leukemia auer rods"
+  },
+  "conditions/apl.png": {
+    "title": "File:Cytology of acute promyelocytic leukemia, annotated.png",
+    "page": "https://commons.wikimedia.org/wiki/File:Cytology_of_acute_promyelocytic_leukemia,_annotated.png",
+    "query": "acute promyelocytic leukemia faggot cells"
+  },
+  "conditions/atrial-fibrillation.jpg": {
+    "title": "File:Herz-EKG1kanalVorhofflimmernSmartwatch-171021.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Herz-EKG1kanalVorhofflimmernSmartwatch-171021.jpg",
+    "query": "atrial fibrillation ECG irregularly irregular"
+  },
+  "conditions/atrial-septal-defect.jpg": {
+    "title": "File:Echokardiogram von Atriumseptumdefekt (Ostium secundum).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Echokardiogram_von_Atriumseptumdefekt_(Ostium_secundum).jpg",
+    "query": "atrial septal defect echocardiography"
+  },
+  "conditions/atrioventricular-block.png": {
+    "title": "File:3rd degree heart block.PNG",
+    "page": "https://commons.wikimedia.org/wiki/File:3rd_degree_heart_block.PNG",
+    "query": "third degree heart block ECG"
+  },
+  "conditions/bph.jpg": {
+    "title": "File:Benign Prostatic Hyperplasia nci-vol-7137-300.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Benign_Prostatic_Hyperplasia_nci-vol-7137-300.jpg",
+    "query": "benign prostatic hyperplasia enlarged prostate"
+  },
+  "conditions/choledocholithiasis.jpg": {
+    "title": "File:ERCP stone.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:ERCP_stone.jpg",
+    "query": "choledocholithiasis ERCP common bile duct stone"
+  },
+  "conditions/chronic-bronchitis.svg": {
+    "title": "File:Chronic obstructive pulmonary disease world map - DALY - WHO2004.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Chronic_obstructive_pulmonary_disease_world_map_-_DALY_-_WHO2004.svg",
+    "query": "chronic bronchitis blue bloater COPD"
+  },
+  "conditions/cml.jpg": {
+    "title": "File:Bcrablmet.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Bcrablmet.jpg",
+    "query": "chronic myelogenous leukemia philadelphia chromosome"
+  },
+  "conditions/congenital-adrenal-hyperplasia.jpg": {
+    "title": "File:Congenital adrenal hyperplasia.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Congenital_adrenal_hyperplasia.jpg",
+    "query": "congenital adrenal hyperplasia ambiguous genitalia"
+  },
+  "conditions/dysmenorrhea.jpg": {
+    "title": "File:Period pain menstrual cramps uterus.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Period_pain_menstrual_cramps_uterus.jpg",
+    "query": "dysmenorrhea menstrual pain"
+  },
+  "conditions/endocarditis.jpg": {
+    "title": "File:Endocarditis ultrasound.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File:Endocarditis_ultrasound.JPG",
+    "query": "infective endocarditis vegetation echocardiography"
+  },
+  "conditions/eosinophilic-granulomatosis-with-polyangiitis.jpg": {
+    "title": "File:Churg-Strauss syndrome - high mag.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Churg-Strauss_syndrome_-_high_mag.jpg",
+    "query": "churg strauss eosinophilia asthma"
+  },
+  "conditions/glomerulonephritis.jpg": {
+    "title": "File:Crescentic glomerulonephritis - high mag.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Crescentic_glomerulonephritis_-_high_mag.jpg",
+    "query": "glomerulonephritis crescentic kidney biopsy"
+  },
+  "conditions/lymphoma.jpg": {
+    "title": "File:Progressive transformation of germinal centres -1- very low mag.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Progressive_transformation_of_germinal_centres_-1-_very_low_mag.jpg",
+    "query": "lymphoma lymphadenopathy biopsy"
+  },
+  "conditions/mastocytosis.jpg": {
+    "title": "File:Urticaria pigmentosa lesions on a child.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Urticaria_pigmentosa_lesions_on_a_child.jpg",
+    "query": "urticaria pigmentosa mastocytosis"
+  },
+  "conditions/meckel-diverticulum.jpg": {
+    "title": "File:Meckel's Diverticulum by Technetium-99m Pertechnetate Scan.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Meckel's_Diverticulum_by_Technetium-99m_Pertechnetate_Scan.jpg",
+    "query": "meckel diverticulum technetium scan"
+  },
+  "conditions/menopause.svg": {
+    "title": "File:TEWL hot flash plot.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:TEWL_hot_flash_plot.svg",
+    "query": "menopause hot flash"
+  },
+  "conditions/non-hodgkin-lymphoma.jpg": {
+    "title": "File:Centrocyte, centroblast and follicular dendritic cell in a follicular lymphoma.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Centrocyte,_centroblast_and_follicular_dendritic_cell_in_a_follicular_lymphoma.jpg",
+    "query": "non hodgkin lymphoma histology"
+  },
+  "conditions/pericarditis.jpg": {
+    "title": "File:PericarditisMyocarditis.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:PericarditisMyocarditis.jpg",
+    "query": "pericarditis ECG diffuse ST elevation"
+  },
+  "conditions/primary-brain-tumor.png": {
+    "title": "File:Studierfenster Brain Tumor Segmentation.png",
+    "page": "https://commons.wikimedia.org/wiki/File:Studierfenster_Brain_Tumor_Segmentation.png",
+    "query": "glioblastoma brain MRI"
+  },
+  "conditions/restrictive-cardiomyopathy.jpg": {
+    "title": "File:Fddsv-02-1015545-g001 (1).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Fddsv-02-1015545-g001_(1).jpg",
+    "query": "restrictive cardiomyopathy amyloid heart"
+  },
+  "conditions/rhinitis.jpg": {
+    "title": "File:Runny nose in cat.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Runny_nose_in_cat.jpg",
+    "query": "allergic rhinitis nasal mucosa"
+  },
+  "conditions/rotator-cuff-syndrome.jpg": {
+    "title": "File:Subacromial Impingement with Supraspinatus Rupture.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Subacromial_Impingement_with_Supraspinatus_Rupture.jpg",
+    "query": "rotator cuff tear MRI shoulder"
+  },
+  "conditions/schizophrenia.jpg": {
+    "title": "File:Schizophrenia fMRI working memory.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Schizophrenia_fMRI_working_memory.jpg",
+    "query": "schizophrenia brain MRI"
+  },
+  "conditions/shock.jpg": {
+    "title": "File:Kolloidale Infusionsl\u00f6sungen.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Kolloidale_Infusionsl\u00f6sungen.jpg",
+    "query": "hypovolemic shock hypotension"
+  },
+  "conditions/sinusitis.jpg": {
+    "title": "File:Odontogenic sinusitis.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Odontogenic_sinusitis.jpg",
+    "query": "sinusitis CT maxillary sinus opacification"
+  },
+  "conditions/type-1-diabetes-mellitus.jpeg": {
+    "title": "File:Type 1 (142240145).jpeg",
+    "page": "https://commons.wikimedia.org/wiki/File:Type_1_(142240145).jpeg",
+    "query": "type 1 diabetes insulin injection"
+  },
+  "conditions/type-2-diabetes-mellitus.jpg": {
+    "title": "File:The role of macrophage polarization in obesity and type 2 diabetes mellitus.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:The_role_of_macrophage_polarization_in_obesity_and_type_2_diabetes_mellitus.jpg",
+    "query": "type 2 diabetes obesity insulin resistance"
+  },
+  "conditions/urinary-tract-infection.jpg": {
+    "title": "File:Pyuria.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File:Pyuria.JPG",
+    "query": "urinary tract infection pyuria"
+  },
+  "conditions/valvular-heart-disease.jpg": {
+    "title": "File:Diseases of the chest and the principles of physical diagnosis (1920) (14778271964).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Diseases_of_the_chest_and_the_principles_of_physical_diagnosis_(1920)_(14778271964).jpg",
+    "query": "mitral stenosis rheumatic heart valve"
+  },
+  "conditions/venous-stasis-dermatitis.png": {
+    "title": "File:WIRA-Wiki-GH-012-de-Ulkus-Verlauf-unter-wIRA.png",
+    "page": "https://commons.wikimedia.org/wiki/File:WIRA-Wiki-GH-012-de-Ulkus-Verlauf-unter-wIRA.png",
+    "query": "stasis dermatitis venous insufficiency leg"
+  },
+  "conditions/wilson-disease.jpg": {
+    "title": "File:Kayser-Fleischer ringArrow.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Kayser-Fleischer_ringArrow.jpg",
+    "query": "kayser fleischer ring wilson disease"
+  },
+  "musculoskeletal/axillary-nerve.jpg": {
+    "title": "File:Anatomy of the cat (1991) (18006462720).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Anatomy_of_the_cat_(1991)_(18006462720).jpg",
+    "query": "axillary nerve shoulder anatomy"
+  },
+  "musculoskeletal/humerus.jpg": {
+    "title": "File:Right humerus, anterior aspect.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Right_humerus,_anterior_aspect.jpg",
+    "query": "humerus bone anatomy"
+  },
+  "musculoskeletal/infraspinatus.png": {
+    "title": "File:Gray \u2014 musculus infraspinatus.png",
+    "page": "https://commons.wikimedia.org/wiki/File:Gray_\u2014_musculus_infraspinatus.png",
+    "query": "infraspinatus muscle anatomy"
+  },
+  "musculoskeletal/metacarpophalangeal-joint.jpg": {
+    "title": "File:DIP, PIP and MCP joints of hand.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:DIP,_PIP_and_MCP_joints_of_hand.jpg",
+    "query": "metacarpophalangeal joint anatomy hand"
+  },
+  "musculoskeletal/rotator-cuff.svg": {
+    "title": "File:Rotator cuff injury.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Rotator_cuff_injury.svg",
+    "query": "rotator cuff muscles shoulder anatomy"
+  },
+  "musculoskeletal/subluxation.jpg": {
+    "title": "File:SubluxationLeftShoulder XRay Ax.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:SubluxationLeftShoulder_XRay_Ax.jpg",
+    "query": "shoulder subluxation xray"
+  },
+  "musculoskeletal/subscapularis.jpg": {
+    "title": "File:Insertion-of-subscapularis-muscle.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Insertion-of-subscapularis-muscle.jpg",
+    "query": "subscapularis muscle anatomy"
+  },
+  "musculoskeletal/suprascapular-nerve.jpg": {
+    "title": "File:The anatomy of the horse - a dissection guide (1922) (17574061253).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:The_anatomy_of_the_horse_-_a_dissection_guide_(1922)_(17574061253).jpg",
+    "query": "suprascapular nerve anatomy"
+  },
+  "musculoskeletal/supraspinatus.png": {
+    "title": "File:Gray \u2014 musculus supraspinatus.png",
+    "page": "https://commons.wikimedia.org/wiki/File:Gray_\u2014_musculus_supraspinatus.png",
+    "query": "supraspinatus muscle anatomy"
+  },
+  "musculoskeletal/teres-minor.png": {
+    "title": "File:Gray \u2014 musculus teres minor.png",
+    "page": "https://commons.wikimedia.org/wiki/File:Gray_\u2014_musculus_teres_minor.png",
+    "query": "teres minor muscle anatomy"
+  },
+  "symptoms/decreased-skin-turgor.jpg": {
+    "title": "File:LowSkinTurgor.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:LowSkinTurgor.jpg",
+    "query": "dehydration skin turgor"
+  },
+  "symptoms/dysuria.jpg": {
+    "title": "File:Bombax ceiba is a universe unto itself.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Bombax_ceiba_is_a_universe_unto_itself.jpg",
+    "query": "dysuria urinary infection"
+  },
+  "symptoms/headache.jpg": {
+    "title": "File:Migraine.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Migraine.jpg",
+    "query": "migraine headache"
+  },
+  "symptoms/hematuria.jpg": {
+    "title": "File:HematuriaTrauma.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File:HematuriaTrauma.JPG",
+    "query": "hematuria urine blood"
+  },
+  "symptoms/hemianopsia.svg": {
+    "title": "File:Left-homonymous-hemianopia.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Left-homonymous-hemianopia.svg",
+    "query": "hemianopsia visual field defect"
+  },
+  "symptoms/hemoptysis.jpg": {
+    "title": "File:Krev na g\u00e1zov\u00fdch \u010dtverc\u00edch.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Krev_na_g\u00e1zov\u00fdch_\u010dtverc\u00edch.jpg",
+    "query": "hemoptysis blood sputum"
+  },
+  "symptoms/hypoxemia.jpg": {
+    "title": "File:My Heartbeat and Peripheral Oxygen Saturation (SpO2) (29609885543).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:My_Heartbeat_and_Peripheral_Oxygen_Saturation_(SpO2)_(29609885543).jpg",
+    "query": "pulse oximetry hypoxemia"
+  },
+  "symptoms/palpitations.jpg": {
+    "title": "File:ECG Atrial Fibrillation 98 bpm.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:ECG_Atrial_Fibrillation_98_bpm.jpg",
+    "query": "atrial fibrillation ECG"
+  },
+  "symptoms/peripheral-edema.jpg": {
+    "title": "File:Pitting Edema2008.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Pitting_Edema2008.jpg",
+    "query": "peripheral pitting edema leg"
+  },
+  "symptoms/polyuria-polydipsia.jpg": {
+    "title": "File:Medical communications of the Massachusetts Medical Society (1913) (14781096501).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Medical_communications_of_the_Massachusetts_Medical_Society_(1913)_(14781096501).jpg",
+    "query": "polyuria diabetes insipidus"
+  },
+  "symptoms/presyncope.jpg": {
+    "title": "File:Pietro Longhi 027.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Pietro_Longhi_027.jpg",
+    "query": "syncope presyncope"
+  },
+  "symptoms/raynaud-phenomenon.jpg": {
+    "title": "File:Raynaud syndrome on female airman's hand.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Raynaud_syndrome_on_female_airman's_hand.jpg",
+    "query": "raynaud phenomenon fingers"
+  },
+  "symptoms/syncope.jpg": {
+    "title": "File:Pietro Longhi 027.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Pietro_Longhi_027.jpg",
+    "query": "syncope fainting"
+  },
+  "symptoms/thrombocytopenia.jpg": {
+    "title": "File:Oral petechiae.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File:Oral_petechiae.JPG",
+    "query": "thrombocytopenia petechiae purpura"
+  },
+  "symptoms/vomiting.jpg": {
+    "title": "File:Emesis (Emesis Cerea).JPG",
+    "page": "https://commons.wikimedia.org/wiki/File:Emesis_(Emesis_Cerea).JPG",
+    "query": "vomiting emesis"
+  },
+  "symptoms/watery-diarrhea.jpg": {
+    "title": "File:Cholera patient stool.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Cholera_patient_stool.jpg",
+    "query": "cholera watery diarrhea"
   }
 }

@@ -5,10 +5,15 @@ from __future__ import annotations
 import json
 import os
 import re
+import urllib.parse
 
 ROOT = os.path.join(os.path.dirname(__file__), "..")
 IMAGES = os.path.join(ROOT, "src", "media", "images")
 MANIFEST = os.path.join(ROOT, "src", "media", "download-manifest.json")
+
+
+def manifest_key_for_rel(category: str, filename: str) -> str:
+    return f"{category}/{filename}"
 
 # local path -> entry id when filename != id
 ID_ALIASES: dict[str, str] = {
@@ -131,14 +136,13 @@ def default_caption(category: str, entry_id: str) -> str:
 
 
 def default_attribution(manifest: dict, rel_path: str) -> tuple[str, str]:
-    m = manifest.get(rel_path.replace("../media/images/", ""))
+    rel = rel_path.replace("../media/images/", "").split("?")[0]
+    m = manifest.get(rel)
     if m:
         title = m.get("title", "").replace("File:", "")
         return f"Wikimedia Commons ({title})", m["page"]
-    # fallback from filename
-    fname = os.path.basename(rel_path).split("?")[0]
-    title = fname.replace("-", " ").rsplit(".", 1)[0]
-    page = f"https://commons.wikimedia.org/wiki/File:{fname}"
+    fname = os.path.basename(rel)
+    page = f"https://commons.wikimedia.org/wiki/File:{urllib.parse.quote(fname.replace(' ', '_'))}"
     return "Wikimedia Commons", page
 
 
