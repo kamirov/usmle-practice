@@ -47,3 +47,8 @@ selective-iga-deficiency.png
 https://commons.wikimedia.org/wiki/File:Antibody_Isotypes.png
 סתו כסלו, CC BY-SA 4.0
 Description: Immunoglobulin isotypes including IgA — relevant to isolated IgA deficiency
+
+iga-vasculitis.jpg
+https://commons.wikimedia.org/wiki/File:Purpura2.JPG
+Okwikikim, public domain
+Description: Palpable purpura on the lower extremity in a child with IgA vasculitis (Henoch-Schönlein purpura)

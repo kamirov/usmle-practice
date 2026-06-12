@@ -118,7 +118,10 @@ function playPopoverAudio(): void {
 
 function hidePopover(): void {
   stopPopoverAudio();
-  if (popoverEl) popoverEl.hidden = true;
+  if (popoverEl) {
+    popoverEl.hidden = true;
+    popoverEl.style.maxHeight = "";
+  }
   activeChip = null;
 }
 
@@ -150,12 +153,15 @@ function preparePopoverForDisplay(popover: HTMLDivElement): void {
 function positionPopover(chip: HTMLElement, popover: HTMLDivElement): void {
   const rect = chip.getBoundingClientRect();
   const margin = 8;
+  const vw = window.innerWidth;
+  const vh = window.innerHeight;
+  const maxHeight = vh - 2 * margin;
+
+  popover.style.maxHeight = `${maxHeight}px`;
   popover.style.visibility = "hidden";
   popover.hidden = false;
 
   const popRect = popover.getBoundingClientRect();
-  const vw = window.innerWidth;
-  const vh = window.innerHeight;
 
   let top: number;
   let left: number;
@@ -167,26 +173,40 @@ function positionPopover(chip: HTMLElement, popover: HTMLDivElement): void {
     left = fitsRight
       ? rect.right + margin
       : rect.left - popRect.width - margin;
-    top = clamp(
-      rect.top + rect.height / 2 - popRect.height / 2,
-      margin,
-      vh - popRect.height - margin,
-    );
+    top = rect.top + rect.height / 2 - popRect.height / 2;
   } else {
     top = rect.bottom + margin;
     if (top + popRect.height > vh - margin) {
-      top = rect.top - popRect.height - margin;
+      const aboveTop = rect.top - popRect.height - margin;
+      top = aboveTop >= margin ? aboveTop : margin;
     }
-    left = clamp(
-      rect.left + rect.width / 2 - popRect.width / 2,
-      margin,
-      vw - popRect.width - margin,
-    );
+    left = rect.left + rect.width / 2 - popRect.width / 2;
   }
+
+  top = clamp(top, margin, Math.max(margin, vh - popRect.height - margin));
+  left = clamp(left, margin, Math.max(margin, vw - popRect.width - margin));
 
   popover.style.top = `${top}px`;
   popover.style.left = `${left}px`;
   popover.style.visibility = "visible";
+}
+
+function bindPopoverImageReposition(
+  chip: HTMLElement,
+  popover: HTMLDivElement,
+): void {
+  for (const img of popover.querySelectorAll<HTMLImageElement>("img")) {
+    if (img.complete) continue;
+    img.addEventListener(
+      "load",
+      () => {
+        if (activeChip === chip && !popover.hidden) {
+          positionPopover(chip, popover);
+        }
+      },
+      { once: true },
+    );
+  }
 }
 
 function renderOrganPopover(organId: string): boolean {
@@ -936,6 +956,7 @@ function showPopover(chip: HTMLElement): void {
   preparePopoverForDisplay(popover);
   activeChip = chip;
   positionPopover(chip, popover);
+  bindPopoverImageReposition(chip, popover);
   playPopoverAudio();
 }
 

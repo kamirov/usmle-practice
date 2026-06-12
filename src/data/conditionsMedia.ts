@@ -57,6 +57,7 @@ import hyperlipidemia from "../media/images/conditions/hyperlipidemia.jpg?url";
 import hyperprolactinemia from "../media/images/conditions/hyperprolactinemia.jpg?url";
 import hypertension from "../media/images/conditions/hypertension.jpg?url";
 import hypertrophicCardiomyopathy from "../media/images/conditions/hypertrophic-cardiomyopathy.jpg?url";
+import igaVasculitis from "../media/images/conditions/iga-vasculitis.jpg?url";
 import hypogonadism from "../media/images/conditions/hypogonadism.jpg?url";
 import ibd from "../media/images/conditions/ibd.jpg?url";
 import infectiveEndocarditis from "../media/images/conditions/infective-endocarditis.jpg?url";
@@ -197,6 +198,7 @@ export type ConditionImageId = Extract<
   | "hyperprolactinemia"
   | "hypertension"
   | "hypertrophic-cardiomyopathy"
+  | "iga-vasculitis"
   | "hypogonadism"
   | "ibd"
   | "infective-endocarditis"
@@ -342,6 +344,7 @@ export const CONDITION_IMAGES: Partial<Record<ConditionImageId, string>> = {
   "hyperprolactinemia": extensionAssetUrl(hyperprolactinemia),
   "hypertension": extensionAssetUrl(hypertension),
   "hypertrophic-cardiomyopathy": extensionAssetUrl(hypertrophicCardiomyopathy),
+  "iga-vasculitis": extensionAssetUrl(igaVasculitis),
   "hypogonadism": extensionAssetUrl(hypogonadism),
   "ibd": extensionAssetUrl(ibd),
   "infective-endocarditis": extensionAssetUrl(infectiveEndocarditis),
@@ -484,6 +487,7 @@ export const CONDITION_IMAGE_ATTRIBUTIONS: Partial<
   "hyperprolactinemia": { label: "Wikimedia Commons (Lactation.jpg)", url: "https://commons.wikimedia.org/wiki/File:Lactation.jpg" },
   "hypertension": { label: "Wikimedia Commons (HE pulmonary hypertension artery concentric intimal fibrosis.jpg)", url: "https://commons.wikimedia.org/wiki/File:HE_pulmonary_hypertension_artery_concentric_intimal_fibrosis.jpg" },
   "hypertrophic-cardiomyopathy": { label: "Wikimedia Commons (Hypertrophic obstructive cardiomyopathy.png)", url: "https://commons.wikimedia.org/wiki/File:Hypertrophic_obstructive_cardiomyopathy.png" },
+  "iga-vasculitis": { label: "Wikimedia Commons (Purpura2.JPG)", url: "https://commons.wikimedia.org/wiki/File:Purpura2.JPG" },
   "hypogonadism": { label: "Wikimedia Commons (The genetic and molecular basis of idiopathic hypogonadotropic hypogonadism.jpg)", url: "https://commons.wikimedia.org/wiki/File:The_genetic_and_molecular_basis_of_idiopathic_hypogonadotropic_hypogonadism.jpg" },
   "ibd": { label: "Wikimedia Commons (CD colitis.jpg)", url: "https://commons.wikimedia.org/wiki/File:CD_colitis.jpg" },
   "infective-endocarditis": { label: "Wikimedia Commons (Janeway lesion.JPG)", url: "https://commons.wikimedia.org/wiki/File:Janeway_lesion.JPG" },
@@ -626,6 +630,7 @@ export const CONDITION_IMAGE_CAPTIONS: Partial<
   "hyperprolactinemia": "Clinical or pathologic image illustrating hyperprolactinemia",
   "hypertension": "Clinical or pathologic image illustrating hypertension",
   "hypertrophic-cardiomyopathy": "Clinical or pathologic image illustrating hypertrophic cardiomyopathy",
+  "iga-vasculitis": "Palpable purpura on the lower extremity in a child with IgA vasculitis (Henoch-Schönlein purpura)",
   "hypogonadism": "Clinical or pathologic image illustrating hypogonadism",
   "ibd": "Clinical or pathologic image illustrating ibd",
   "infective-endocarditis": "Clinical or pathologic image illustrating infective endocarditis",

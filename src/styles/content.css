@@ -350,15 +350,18 @@
   display: flex;
   gap: 12px;
   align-items: flex-start;
+  min-height: 0;
 }
 
 .usmle-organ-popover__body {
   flex: 1;
   min-width: 0;
+  min-height: 0;
 }
 
 .usmle-organ-popover__media {
   flex: 0 0 280px;
+  min-height: 0;
 }
 
 .usmle-organ-popover__media img {

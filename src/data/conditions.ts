@@ -4797,9 +4797,6 @@ export const CONDITIONS: ConditionEntry[] = [
       "giant cell arteritis",
       "temporal arteritis",
       "takayasu arteritis",
-      "henoch-schonlein purpura",
-      "henoch schonlein purpura",
-      "iga vasculitis",
       "microscopic polyangiitis",
       "mpa",
     ],
@@ -4973,6 +4970,75 @@ export const CONDITIONS: ConditionEntry[] = [
     ],
     pediatrics:
       "Very rare; eosinophilic vasculitis in children with asthma requires exclusion of parasitic infection and primary hypereosinophilic disorders.",
+  },
+  {
+    id: "iga-vasculitis",
+    name: "IgA Vasculitis",
+    aliases: [
+      "iga vasculitis",
+      "henoch-schonlein purpura",
+      "henoch schonlein purpura",
+      "henoch-schönlein purpura",
+      "henoch schönlein purpura",
+      "hsp",
+      "henoch-schonlein",
+      "schonlein-henoch purpura",
+    ],
+    definition:
+      "Most common systemic vasculitis in children — small-vessel leukocytoclastic vasculitis with IgA-dominant immune complex deposition (formerly Henoch-Schönlein purpura); typically follows an upper respiratory infection.",
+    pathophysiology:
+      "Post-infectious (often URI) IgA1-containing immune complexes deposit in small vessel walls → complement activation and leukocytoclastic vasculitis → palpable purpura, arthralgia, GI inflammation, and mesangial IgA nephritis.",
+    classicPresentation: [
+      "Palpable, non-blanching purpura on buttocks and lower extremities (often first sign)",
+      "Arthralgia or arthritis of knees/ankles without permanent deformity",
+      "Colicky abdominal pain (may precede rash; intussusception risk)",
+      "Hematuria or proteinuria from IgA nephritis",
+    ],
+    keyFindings: [
+      "Symmetric palpable purpura on dependent areas (buttocks, legs)",
+      "Periarticular swelling — knees and ankles most common",
+      "Abdominal tenderness; possible guaiac-positive stool",
+      "Scrotal swelling in boys (distinguish from testicular torsion)",
+    ],
+    keyLabs: [
+      "Normal platelet count and coagulation studies (vs ITP, DIC)",
+      "Urinalysis: hematuria, proteinuria; monitor creatinine and BP",
+      "Skin or renal biopsy: leukocytoclastic vasculitis with IgA deposition on IF",
+      "↑ serum IgA in some patients (nonspecific)",
+    ],
+    associations: [
+      "Recent upper respiratory infection (viral or streptococcal)",
+      "Peak age 4–7 years",
+      "Seasonal clustering (fall/winter)",
+    ],
+    complications: [
+      "IgA nephritis — most important long-term complication; may progress to CKD",
+      "Intussusception (ileoileal most common)",
+      "GI hemorrhage or bowel ischemia",
+      "Chronic hypertension from renal involvement",
+    ],
+    distinguishFrom: [
+      "ITP — isolated thrombocytopenia with petechiae, not palpable purpura",
+      "Meningococcemia — toxic, rapid progression, thrombocytopenia, DIC",
+      "ANCA-associated vasculitis — pauci-immune GN, ANCA positive, older patients",
+      "Child abuse — purpura distribution and history inconsistent with trauma pattern",
+      "Kawasaki disease — fever ≥5 days, mucocutaneous findings, coronary aneurysm risk",
+    ],
+    treatment: [
+      "Most cases self-limited (4–6 weeks) — supportive care and monitoring",
+      "NSAIDs for arthralgia; rest and hydration",
+      "Corticosteroids for severe abdominal pain, GI bleeding, or significant nephritis",
+      "Serial urinalysis, BP, and creatinine to monitor renal involvement",
+    ],
+    boardsPearls: [
+      "Tetrad: palpable purpura + arthralgia + abdominal pain + renal involvement",
+      "Palpable purpura WITHOUT thrombocytopenia — classic distinguishing feature",
+      "IgA deposition on immunofluorescence of skin or renal biopsy",
+      "Intussusception in child with HSP abdominal pain — consider ultrasound",
+      "Former name Henoch-Schönlein purpura; now IgA vasculitis",
+    ],
+    pediatrics:
+      "Peak incidence 4–7 years; >90% of cases occur before age 10. Usually self-limited but monitor urinalysis and BP for 6+ months after onset because nephritis may appear late. Intussusception and scrotal swelling (vs torsion) are key pediatric complications.",
   },
   {
     id: "schizophrenia",

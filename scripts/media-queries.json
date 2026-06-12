@@ -59,6 +59,7 @@
   "conditions/turner-syndrome": "turner syndrome neck webbing karyotype",
   "conditions/granulomatosis-with-polyangiitis": "granulomatosis polyangiitis c-ANCA",
   "conditions/eosinophilic-granulomatosis-with-polyangiitis": "churg strauss eosinophilia asthma",
+  "conditions/iga-vasculitis": "henoch schonlein purpura palpable purpura child",
   "conditions/schizophrenia": "schizophrenia brain MRI",
   "conditions/selective-iga-deficiency": "immunoglobulin IgA antibody isotype diagram",
   "conditions/major-depressive-disorder": "major depressive disorder brain PET",
