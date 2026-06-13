@@ -1166,8 +1166,8 @@ function showPopover(chip: HTMLElement): void {
     return;
   }
 
-  scanPopoverRoot(popover);
   preparePopoverForDisplay(popover);
+  scanPopoverRoot(popover);
   const entry = { chip, popover };
   popoverStack.push(entry);
   if (previousPopover) {

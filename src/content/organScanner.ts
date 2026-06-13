@@ -241,6 +241,9 @@ function getScanZone(node: Node): number {
 }
 
 function isVisibleElement(el: Element): boolean {
+  if (allowPopoverScan && el.closest(`.${POPOVER_CLASS}`)) {
+    return true;
+  }
   if (el instanceof HTMLElement && typeof el.checkVisibility === "function") {
     return el.checkVisibility({ checkOpacity: true, checkVisibilityCSS: true });
   }
