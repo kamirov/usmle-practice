@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" role="img" aria-labelledby="title desc">
+  <title id="title">Adenosine deaminase deficiency mechanism</title>
+  <desc id="desc">ADA normally clears deoxyadenosine; deficiency increases dATP, inhibits ribonucleotide reductase, and causes lymphocyte failure in SCID.</desc>
+  <rect width="900" height="520" fill="#f8fafc"/>
+  <rect x="48" y="48" width="804" height="424" rx="18" fill="#fff" stroke="#cbd5e1" stroke-width="3"/>
+  <text x="450" y="98" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#111827">ADA Deficiency → SCID</text>
+  <g font-family="Arial, sans-serif" font-size="18" fill="#111827">
+    <rect x="86" y="190" width="175" height="88" rx="14" fill="#dbeafe" stroke="#2563eb" stroke-width="4"/>
+    <text x="173" y="225" text-anchor="middle" font-weight="700">Deoxyadenosine</text>
+    <text x="173" y="252" text-anchor="middle" font-size="16">purine metabolite</text>
+    <path d="M282 234 H388" stroke="#64748b" stroke-width="5" marker-end="url(#arrow)"/>
+    <rect x="410" y="176" width="150" height="116" rx="14" fill="#ecfdf5" stroke="#16a34a" stroke-width="4"/>
+    <text x="485" y="222" text-anchor="middle" font-weight="700">ADA</text>
+    <text x="485" y="251" text-anchor="middle" font-size="16">deamination</text>
+    <path d="M582 234 H688" stroke="#64748b" stroke-width="5" marker-end="url(#arrow)"/>
+    <rect x="710" y="190" width="110" height="88" rx="14" fill="#dbeafe" stroke="#2563eb" stroke-width="4"/>
+    <text x="765" y="242" text-anchor="middle" font-weight="700">Inosine</text>
+    <path d="M485 305 V365" stroke="#dc2626" stroke-width="5" marker-end="url(#arrowRed)"/>
+    <rect x="235" y="374" width="500" height="58" rx="14" fill="#fee2e2" stroke="#dc2626" stroke-width="4"/>
+    <text x="485" y="410" text-anchor="middle" font-weight="700">ADA loss: ↑ dATP → ↓ ribonucleotide reductase → T, B, NK failure</text>
+  </g>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2 2 L10 6 L2 10 Z" fill="#64748b"/></marker>
+    <marker id="arrowRed" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2 2 L10 6 L2 10 Z" fill="#dc2626"/></marker>
+  </defs>
+</svg>

@@ -1,0 +1,19 @@
+antipsychotics.svg
+Created locally
+Reference: https://en.wikipedia.org/wiki/Dopaminergic_pathways
+Description: D2 blockade effects across mesolimbic, nigrostriatal, and tuberoinfundibular pathways
+
+polyclonal-fab-antivenom.png
+https://commons.wikimedia.org/wiki/File:Antibody.svg
+Wikimedia Commons
+Description: Antibody structure highlighting Fab antigen-binding regions
+
+riboflavin.png
+https://commons.wikimedia.org/wiki/File:Riboflavin.svg
+Wikimedia Commons
+Description: Riboflavin chemical structure
+
+vasopressors.png
+https://commons.wikimedia.org/wiki/File:Norepinephrine.svg
+Wikimedia Commons
+Description: Norepinephrine chemical structure as prototypical vasopressor

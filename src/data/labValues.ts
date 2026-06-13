@@ -2496,6 +2496,41 @@ export const LAB_VALUES: LabValueEntry[] = [
     pairWith: ["Flushing + urticaria pigmentosa + ↑ tryptase → mastocytosis"],
   },
   {
+    id: "dihydrorhodamine-flow-cytometry",
+    name: "Dihydrorhodamine Flow Cytometry",
+    etymology: "Greek di- = two + hydro = water/hydrogen + rhodon = rose + flow cytometry = cell measurement in flow",
+    aliases: [
+      "dihydrorhodamine flow cytometry",
+      "dihydrorhodamine test",
+      "dhr test",
+      "dhr flow cytometry",
+      "oxidative burst test",
+      "neutrophil oxidative burst test",
+    ],
+    measures:
+      "Neutrophil oxidative burst capacity by conversion of nonfluorescent dihydrorhodamine 123 to fluorescent rhodamine after stimulation.",
+    normalRange: "Robust fluorescence shift after neutrophil stimulation",
+    increasedCauses: [
+      "Not typically interpreted as a high disease marker; normal/high fluorescence indicates intact oxidative burst",
+    ],
+    decreasedCauses: [
+      "Chronic granulomatous disease from NADPH oxidase defects",
+      "Severe neutrophil oxidative burst impairment",
+      "Carrier/mosaic pattern in some X-linked CGD carriers",
+    ],
+    boardsPearls: [
+      "DHR is preferred modern test for chronic granulomatous disease",
+      "CGD: catalase-positive infections because microbes degrade their own H2O2",
+      "Classic organisms: S. aureus, Serratia, Burkholderia, Nocardia, Aspergillus",
+      "Nitroblue tetrazolium is older; normal neutrophils turn blue, CGD stays colorless",
+      "Peds: CGD often presents in childhood with recurrent skin/lung infections, abscesses, and granulomas",
+    ],
+    pairWith: [
+      "Recurrent Serratia/Aspergillus infections + abnormal DHR → CGD",
+      "Delayed umbilical cord separation + no pus → LAD, not CGD",
+    ],
+  },
+  {
     id: "tuberculin-skin-test",
     name: "Tuberculin Skin Test",
     etymology: "tuberculin = tuberculosis-derived protein extract + skin test = dermal assay",

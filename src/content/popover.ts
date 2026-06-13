@@ -34,6 +34,11 @@ import { getPathogenesisById } from "../data/pathogenesis";
 import { getProcedureById } from "../data/procedures";
 import { getHemodynamicById } from "../data/hemodynamics";
 import { getLabValueById } from "../data/labValues";
+import {
+  getLabValueImageAttributionForId,
+  getLabValueImageCaptionForId,
+  getLabValueImageForId,
+} from "../data/labValueMedia";
 import { getMicrobiologyById } from "../data/microbiology";
 import {
   getMicrobiologyImageAttributionForId,
@@ -41,6 +46,11 @@ import {
   getMicrobiologyImageForId,
 } from "../data/microbiologyMedia";
 import { getMedicationById } from "../data/medications";
+import {
+  getMedicationImageAttributionForId,
+  getMedicationImageCaptionForId,
+  getMedicationImageForId,
+} from "../data/medicationMedia";
 import { getMusculoskeletalById } from "../data/musculoskeletal";
 import {
   getMusculoskeletalImageAttributionForId,
@@ -49,7 +59,17 @@ import {
 } from "../data/musculoskeletalMedia";
 import { getNephronSegmentById } from "../data/nephron";
 import { getOrganById } from "../data/organs";
+import {
+  getOrganImageAttributionForId,
+  getOrganImageCaptionForId,
+  getOrganImageForId,
+} from "../data/organMedia";
 import { getProteinById } from "../data/proteins";
+import {
+  getProteinImageAttributionForId,
+  getProteinImageCaptionForId,
+  getProteinImageForId,
+} from "../data/proteinMedia";
 import { getSignalingById } from "../data/signaling";
 import {
   getSymptomImageAttributionForId,
@@ -213,6 +233,9 @@ function renderOrganPopover(organId: string): boolean {
   const organ = getOrganById(organId);
   if (!organ || !popoverEl) return false;
 
+  const imageSrc = getOrganImageForId(organId);
+  const imageCaption = getOrganImageCaptionForId(organId);
+  const imageAttribution = getOrganImageAttributionForId(organId);
   const derivatives =
     organ.derivatives && organ.derivatives.length > 0
       ? `<ul class="usmle-organ-popover__list">${organ.derivatives
@@ -220,12 +243,29 @@ function renderOrganPopover(organId: string): boolean {
           .join("")}</ul>`
       : "";
 
-  popoverEl.innerHTML = `
+  const bodyContent = `
     ${renderPopoverTitle(organ.name, "organ", organ.etymology)}
     <div class="usmle-organ-popover__layer"><strong>Germ layer:</strong> ${organ.germLayer}</div>
     <div class="usmle-organ-popover__origin">${organ.origin}</div>
     ${derivatives}
   `;
+  if (imageSrc && imageCaption && imageAttribution) {
+    popoverEl.classList.add("usmle-organ-popover--rich");
+    popoverEl.classList.add("usmle-organ-popover--with-media");
+    popoverEl.innerHTML = `
+      <div class="usmle-organ-popover__layout">
+        <div class="usmle-organ-popover__body">${bodyContent}</div>
+        ${renderPopoverMediaBlock({
+          src: imageSrc,
+          alt: `${organ.name} image`,
+          caption: imageCaption,
+          attribution: imageAttribution,
+        })}
+      </div>
+    `;
+  } else {
+    popoverEl.innerHTML = bodyContent;
+  }
   return true;
 }
 
@@ -429,6 +469,9 @@ function renderMedicationPopover(medicationId: string): boolean {
   const actionPotentialImage = getAntiarrhythmicImageForMedication(medicationId);
   const actionPotentialAttribution =
     getAntiarrhythmicAttributionForMedication(medicationId);
+  const imageSrc = getMedicationImageForId(medicationId);
+  const imageCaption = getMedicationImageCaptionForId(medicationId);
+  const imageAttribution = getMedicationImageAttributionForId(medicationId);
 
   const bodyContent = renderRichPopoverContent(
     `
@@ -458,6 +501,19 @@ function renderMedicationPopover(medicationId: string): boolean {
         })}
       </div>
     `;
+  } else if (imageSrc && imageCaption && imageAttribution) {
+    popoverEl.classList.add("usmle-organ-popover--with-media");
+    popoverEl.innerHTML = `
+      <div class="usmle-organ-popover__layout">
+        <div class="usmle-organ-popover__body">${bodyContent}</div>
+        ${renderPopoverMediaBlock({
+          src: imageSrc,
+          alt: `${medication.name} image`,
+          caption: imageCaption,
+          attribution: imageAttribution,
+        })}
+      </div>
+    `;
   } else {
     popoverEl.innerHTML = bodyContent;
   }
@@ -468,8 +524,10 @@ function renderLabValuePopover(labValueId: string): boolean {
   const lab = getLabValueById(labValueId);
   if (!lab || !popoverEl) return false;
 
-  popoverEl.classList.add("usmle-organ-popover--rich");
-  popoverEl.innerHTML = renderRichPopoverContent(
+  const imageSrc = getLabValueImageForId(labValueId);
+  const imageCaption = getLabValueImageCaptionForId(labValueId);
+  const imageAttribution = getLabValueImageAttributionForId(labValueId);
+  const bodyContent = renderRichPopoverContent(
     `
     ${renderPopoverTitle(lab.name, "lab", lab.etymology)}
     <div class="usmle-organ-popover__meaning">${lab.measures}</div>
@@ -482,6 +540,24 @@ function renderLabValuePopover(labValueId: string): boolean {
     ${renderListSection("Boards pearls", lab.boardsPearls)}
   `,
   );
+
+  popoverEl.classList.add("usmle-organ-popover--rich");
+  if (imageSrc && imageCaption && imageAttribution) {
+    popoverEl.classList.add("usmle-organ-popover--with-media");
+    popoverEl.innerHTML = `
+      <div class="usmle-organ-popover__layout">
+        <div class="usmle-organ-popover__body">${bodyContent}</div>
+        ${renderPopoverMediaBlock({
+          src: imageSrc,
+          alt: `${lab.name} diagram`,
+          caption: imageCaption,
+          attribution: imageAttribution,
+        })}
+      </div>
+    `;
+  } else {
+    popoverEl.innerHTML = bodyContent;
+  }
   return true;
 }
 
@@ -841,6 +917,9 @@ function renderProteinPopover(proteinId: string): boolean {
   const protein = getProteinById(proteinId);
   if (!protein || !popoverEl) return false;
 
+  const imageSrc = getProteinImageForId(proteinId);
+  const imageCaption = getProteinImageCaptionForId(proteinId);
+  const imageAttribution = getProteinImageAttributionForId(proteinId);
   const meta = [
     protein.gene ? `<strong>Gene:</strong> ${protein.gene}` : "",
     protein.location ? `<strong>Location:</strong> ${protein.location}` : "",
@@ -848,8 +927,7 @@ function renderProteinPopover(proteinId: string): boolean {
     .filter(Boolean)
     .join(" · ");
 
-  popoverEl.classList.add("usmle-organ-popover--rich");
-  popoverEl.innerHTML = renderRichPopoverContent(
+  const bodyContent = renderRichPopoverContent(
     `
     ${renderPopoverTitle(protein.name, "protein", protein.etymology)}
     ${meta ? `<div class="usmle-organ-popover__layer">${meta}</div>` : ""}
@@ -862,6 +940,24 @@ function renderProteinPopover(proteinId: string): boolean {
     ${renderListSection("Boards pearls", protein.boardsPearls)}
   `,
   );
+
+  popoverEl.classList.add("usmle-organ-popover--rich");
+  if (imageSrc && imageCaption && imageAttribution) {
+    popoverEl.classList.add("usmle-organ-popover--with-media");
+    popoverEl.innerHTML = `
+      <div class="usmle-organ-popover__layout">
+        <div class="usmle-organ-popover__body">${bodyContent}</div>
+        ${renderPopoverMediaBlock({
+          src: imageSrc,
+          alt: `${protein.name} diagram`,
+          caption: imageCaption,
+          attribution: imageAttribution,
+        })}
+      </div>
+    `;
+  } else {
+    popoverEl.innerHTML = bodyContent;
+  }
   return true;
 }
 

@@ -23,6 +23,7 @@ import biliaryAtresia from "../media/images/conditions/biliary-atresia.jpg?url";
 import bph from "../media/images/conditions/bph.jpg?url";
 import cardiacTamponade from "../media/images/conditions/cardiac-tamponade.jpg?url";
 import catScratchDisease from "../media/images/conditions/cat-scratch-disease.jpg?url";
+import cellulitis from "../media/images/conditions/cellulitis.jpg?url";
 import celiacDisease from "../media/images/conditions/celiac-disease.jpg?url";
 import chikungunyaRash from "../media/images/conditions/chikungunya-rash.jpg?url";
 import choledocholithiasis from "../media/images/conditions/choledocholithiasis.jpg?url";
@@ -73,6 +74,7 @@ import keratoconjunctivitisSicca from "../media/images/conditions/keratoconjunct
 import lichenPlanus from "../media/images/conditions/lichen-planus.jpg?url";
 import lungCancer from "../media/images/conditions/lung-cancer.jpg?url";
 import lymeDisease from "../media/images/conditions/lyme-disease.jpg?url";
+import lymphadenitis from "../media/images/conditions/lymphadenitis.jpg?url";
 import lymphogranulomaVenereum from "../media/images/conditions/lymphogranuloma-venereum.jpg?url";
 import lymphoma from "../media/images/conditions/lymphoma.jpg?url";
 import majorDepressiveDisorder from "../media/images/conditions/major-depressive-disorder.jpg?url";
@@ -91,6 +93,7 @@ import nephrolithiasis from "../media/images/conditions/nephrolithiasis.jpg?url"
 import nephroticSyndrome from "../media/images/conditions/nephrotic-syndrome.jpg?url";
 import nonHodgkinLymphoma from "../media/images/conditions/non-hodgkin-lymphoma.jpg?url";
 import otitisMedia from "../media/images/conditions/otitis-media.jpg?url";
+import osteomyelitis from "../media/images/conditions/osteomyelitis.png?url";
 import ovarianDermoidCystHistology from "../media/images/conditions/ovarian-dermoid-cyst-histology.jpg?url";
 import parapneumonicEffusion from "../media/images/conditions/parapneumonic-effusion.jpg?url";
 import parkinsonDisease from "../media/images/conditions/parkinson-disease.jpg?url";
@@ -172,6 +175,7 @@ export type ConditionImageId = Extract<
   | "bph"
   | "cardiac-tamponade"
   | "cat-scratch-disease"
+  | "cellulitis"
   | "celiac-disease"
   | "chikungunya-fever"
   | "choledocholithiasis"
@@ -222,6 +226,7 @@ export type ConditionImageId = Extract<
   | "lichen-planus"
   | "lung-cancer"
   | "lyme-disease"
+  | "lymphadenitis"
   | "lymphogranuloma-venereum"
   | "lymphoma"
   | "major-depressive-disorder"
@@ -240,6 +245,7 @@ export type ConditionImageId = Extract<
   | "nephrotic-syndrome"
   | "non-hodgkin-lymphoma"
   | "otitis-media"
+  | "osteomyelitis"
   | "teratoma"
   | "parapneumonic-effusion"
   | "parkinson-disease"
@@ -326,6 +332,7 @@ export const CONDITION_IMAGES: Partial<Record<ConditionImageId, string>> = {
   "bph": extensionAssetUrl(bph),
   "cardiac-tamponade": extensionAssetUrl(cardiacTamponade),
   "cat-scratch-disease": extensionAssetUrl(catScratchDisease),
+  "cellulitis": extensionAssetUrl(cellulitis),
   "celiac-disease": extensionAssetUrl(celiacDisease),
   "chikungunya-fever": extensionAssetUrl(chikungunyaRash),
   "choledocholithiasis": extensionAssetUrl(choledocholithiasis),
@@ -376,6 +383,7 @@ export const CONDITION_IMAGES: Partial<Record<ConditionImageId, string>> = {
   "lichen-planus": extensionAssetUrl(lichenPlanus),
   "lung-cancer": extensionAssetUrl(lungCancer),
   "lyme-disease": extensionAssetUrl(lymeDisease),
+  "lymphadenitis": extensionAssetUrl(lymphadenitis),
   "lymphogranuloma-venereum": extensionAssetUrl(lymphogranulomaVenereum),
   "lymphoma": extensionAssetUrl(lymphoma),
   "major-depressive-disorder": extensionAssetUrl(majorDepressiveDisorder),
@@ -394,6 +402,7 @@ export const CONDITION_IMAGES: Partial<Record<ConditionImageId, string>> = {
   "nephrotic-syndrome": extensionAssetUrl(nephroticSyndrome),
   "non-hodgkin-lymphoma": extensionAssetUrl(nonHodgkinLymphoma),
   "otitis-media": extensionAssetUrl(otitisMedia),
+  "osteomyelitis": extensionAssetUrl(osteomyelitis),
   "teratoma": extensionAssetUrl(ovarianDermoidCystHistology),
   "parapneumonic-effusion": extensionAssetUrl(parapneumonicEffusion),
   "parkinson-disease": extensionAssetUrl(parkinsonDisease),
@@ -477,6 +486,7 @@ export const CONDITION_IMAGE_ATTRIBUTIONS: Partial<
   "bph": { label: "Wikimedia Commons (Benign Prostatic Hyperplasia nci-vol-7137-300.jpg)", url: "https://commons.wikimedia.org/wiki/File:Benign_Prostatic_Hyperplasia_nci-vol-7137-300.jpg" },
   "cardiac-tamponade": { label: "Wikimedia Commons (Electrical Alternans.JPG)", url: "https://commons.wikimedia.org/wiki/File:Electrical_Alternans.JPG" },
   "cat-scratch-disease": { label: "Wikimedia Commons (ICD-10-CM (2010).djvu)", url: "https://commons.wikimedia.org/wiki/File:ICD-10-CM_(2010).djvu" },
+  "cellulitis": { label: "Wikimedia Commons (Cellulitis3.jpg)", url: "https://commons.wikimedia.org/wiki/File:Cellulitis3.jpg" },
   "celiac-disease": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:celiac-disease.jpg" },
   "chikungunya-fever": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:chikungunya-rash.jpg" },
   "choledocholithiasis": { label: "Wikimedia Commons (ERCP stone.jpg)", url: "https://commons.wikimedia.org/wiki/File:ERCP_stone.jpg" },
@@ -527,6 +537,7 @@ export const CONDITION_IMAGE_ATTRIBUTIONS: Partial<
   "lichen-planus": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:lichen-planus.jpg" },
   "lung-cancer": { label: "Wikimedia Commons (LungCancer-Xray-01.jpg)", url: "https://commons.wikimedia.org/wiki/File:LungCancer-Xray-01.jpg" },
   "lyme-disease": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:lyme-disease.jpg" },
+  "lymphadenitis": { label: "Wikimedia Commons (Scrofula.jpeg)", url: "https://commons.wikimedia.org/wiki/File:Scrofula.jpeg" },
   "lymphogranuloma-venereum": { label: "Wikimedia Commons (Poullignac Travaux LGV Caterpillar RM500 2013.jpg)", url: "https://commons.wikimedia.org/wiki/File:Poullignac_Travaux_LGV_Caterpillar_RM500_2013.jpg" },
   "lymphoma": { label: "Wikimedia Commons (Progressive transformation of germinal centres -1- very low mag.jpg)", url: "https://commons.wikimedia.org/wiki/File:Progressive_transformation_of_germinal_centres_-1-_very_low_mag.jpg" },
   "major-depressive-disorder": { label: "Wikimedia Commons (A woman suffering from Clinical Depression.png)", url: "https://commons.wikimedia.org/wiki/File:A_woman_suffering_from_Clinical_Depression.png" },
@@ -545,6 +556,7 @@ export const CONDITION_IMAGE_ATTRIBUTIONS: Partial<
   "nephrotic-syndrome": { label: "Wikimedia Commons (United States Navy Medical News Letter Vol. 32 1958 Index (IA NavyMedicalNewsletter19581231Index).pdf)", url: "https://commons.wikimedia.org/wiki/File:United_States_Navy_Medical_News_Letter_Vol._32_1958_Index_(IA_NavyMedicalNewsletter19581231Index).pdf" },
   "non-hodgkin-lymphoma": { label: "Wikimedia Commons (Centrocyte, centroblast and follicular dendritic cell in a follicular lymphoma.jpg)", url: "https://commons.wikimedia.org/wiki/File:Centrocyte,_centroblast_and_follicular_dendritic_cell_in_a_follicular_lymphoma.jpg" },
   "otitis-media": { label: "Wikimedia Commons (Acute Otitis Media Stage of Resolution.jpg)", url: "https://commons.wikimedia.org/wiki/File:Acute_Otitis_Media_Stage_of_Resolution.jpg" },
+  "osteomyelitis": { label: "Wikimedia Commons (OsteomylitisMark.png)", url: "https://commons.wikimedia.org/wiki/File:OsteomylitisMark.png" },
   "teratoma": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:ovarian-dermoid-cyst-histology.jpg" },
   "parapneumonic-effusion": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:parapneumonic-effusion.jpg" },
   "parkinson-disease": { label: "Wikimedia Commons (The Journal of nervous and mental disease (IA journalofnervous49ameruoft).pdf)", url: "https://commons.wikimedia.org/wiki/File:The_Journal_of_nervous_and_mental_disease_(IA_journalofnervous49ameruoft).pdf" },
@@ -628,6 +640,7 @@ export const CONDITION_IMAGE_CAPTIONS: Partial<
   "bph": "Clinical or pathologic image illustrating bph",
   "cardiac-tamponade": "Clinical or pathologic image illustrating cardiac tamponade",
   "cat-scratch-disease": "Clinical or pathologic image illustrating cat scratch disease",
+  "cellulitis": "Lower-leg cellulitis with erythema and edema from dermal/subcutaneous bacterial infection",
   "celiac-disease": "Clinical or pathologic image illustrating celiac disease",
   "chikungunya-fever": "Maculopapular chikungunya rash on the abdomen during acute illness",
   "choledocholithiasis": "Clinical or pathologic image illustrating choledocholithiasis",
@@ -678,6 +691,7 @@ export const CONDITION_IMAGE_CAPTIONS: Partial<
   "lichen-planus": "Clinical or pathologic image illustrating lichen planus",
   "lung-cancer": "Clinical or pathologic image illustrating lung cancer",
   "lyme-disease": "Clinical or pathologic image illustrating lyme disease",
+  "lymphadenitis": "Cervical lymphadenitis/scrofula with enlarged inflamed neck nodes",
   "lymphogranuloma-venereum": "Clinical or pathologic image illustrating lymphogranuloma venereum",
   "lymphoma": "Clinical or pathologic image illustrating lymphoma",
   "major-depressive-disorder": "Clinical or pathologic image illustrating major depressive disorder",
@@ -696,6 +710,7 @@ export const CONDITION_IMAGE_CAPTIONS: Partial<
   "nephrotic-syndrome": "Clinical or pathologic image illustrating nephrotic syndrome",
   "non-hodgkin-lymphoma": "Clinical or pathologic image illustrating non hodgkin lymphoma",
   "otitis-media": "Clinical or pathologic image illustrating otitis media",
+  "osteomyelitis": "Plain radiograph of first-toe osteomyelitis with marked bony involvement",
   "teratoma": "H&E histology of ovarian dermoid cyst (mature cystic teratoma) — well-differentiated tissues from multiple germ layers",
   "parapneumonic-effusion": "Clinical or pathologic image illustrating parapneumonic effusion",
   "parkinson-disease": "Clinical or pathologic image illustrating parkinson disease",

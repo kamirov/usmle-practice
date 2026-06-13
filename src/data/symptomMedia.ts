@@ -31,12 +31,14 @@ import hypoxemia from "../media/images/symptoms/hypoxemia.jpg?url";
 import induratedPlaque from "../media/images/symptoms/indurated-plaque.jpg?url";
 import jaundice from "../media/images/symptoms/jaundice.jpg?url";
 import kernigSign from "../media/images/symptoms/kernig-sign.jpg?url";
+import leukocytosis from "../media/images/cells/leukocyte.jpg?url";
 import lichenification from "../media/images/symptoms/lichenification.jpg?url";
 import lymphadenopathy from "../media/images/symptoms/lymphadenopathy.jpg?url";
 import maculopapularRash from "../media/images/symptoms/maculopapular-rash.jpg?url";
 import melena from "../media/images/symptoms/melena.jpg?url";
 import morningStiffness from "../media/images/symptoms/morning-stiffness.jpg?url";
 import nausea from "../media/images/symptoms/nausea.jpg?url";
+import neutrophilia from "../media/images/cells/neutrophil.jpg?url";
 import nodularLymphangitis from "../media/images/symptoms/nodular-lymphangitis.jpg?url";
 import nuchalRigidity from "../media/images/symptoms/nuchal-rigidity.jpg?url";
 import orthopnea from "../media/images/symptoms/orthopnea.jpg?url";
@@ -98,12 +100,14 @@ export type SymptomImageId = Extract<
   | "indurated-plaque"
   | "jaundice"
   | "kernig-sign"
+  | "leukocytosis"
   | "lichenification"
   | "lymphadenopathy"
   | "maculopapular-rash"
   | "melena"
   | "morning-stiffness"
   | "nausea"
+  | "neutrophilia"
   | "nodular-lymphangitis"
   | "nuchal-rigidity"
   | "orthopnea"
@@ -171,12 +175,14 @@ export const SYMPTOM_IMAGES: Partial<Record<SymptomImageId, string>> = {
   "indurated-plaque": extensionAssetUrl(induratedPlaque),
   "jaundice": extensionAssetUrl(jaundice),
   "kernig-sign": extensionAssetUrl(kernigSign),
+  "leukocytosis": extensionAssetUrl(leukocytosis),
   "lichenification": extensionAssetUrl(lichenification),
   "lymphadenopathy": extensionAssetUrl(lymphadenopathy),
   "maculopapular-rash": extensionAssetUrl(maculopapularRash),
   "melena": extensionAssetUrl(melena),
   "morning-stiffness": extensionAssetUrl(morningStiffness),
   "nausea": extensionAssetUrl(nausea),
+  "neutrophilia": extensionAssetUrl(neutrophilia),
   "nodular-lymphangitis": extensionAssetUrl(nodularLymphangitis),
   "nuchal-rigidity": extensionAssetUrl(nuchalRigidity),
   "orthopnea": extensionAssetUrl(orthopnea),
@@ -241,12 +247,14 @@ export const SYMPTOM_IMAGE_ATTRIBUTIONS: Partial<
   "indurated-plaque": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:indurated-plaque.jpg" },
   "jaundice": { label: "Wikimedia Commons (Troupial (Icterus icterus).jpg)", url: "https://commons.wikimedia.org/wiki/File:Troupial_(Icterus_icterus).jpg" },
   "kernig-sign": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:kernig-sign.jpg" },
+  "leukocytosis": { label: "Wikimedia Commons (WBC in peripheral smear)", url: "https://commons.wikimedia.org/wiki/File:WBC_(neutrophil)_at_centre,_numerous_erythrocytes_and_platelets_(dot_like_bodies)_in_Wright's_stained_peripheral_blood_smear_(PBS)_microscopy.jpg" },
   "lichenification": { label: "Wikimedia Commons (Clinical features of atopic dermatitis in English.png)", url: "https://commons.wikimedia.org/wiki/File:Clinical_features_of_atopic_dermatitis_in_English.png" },
   "lymphadenopathy": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:lymphadenopathy.jpg" },
   "maculopapular-rash": { label: "Wikimedia Commons (Generalized ACLE.jpg)", url: "https://commons.wikimedia.org/wiki/File:Generalized_ACLE.jpg" },
   "melena": { label: "Wikimedia Commons (Melena Bleeding DU.jpg)", url: "https://commons.wikimedia.org/wiki/File:Melena_Bleeding_DU.jpg" },
   "morning-stiffness": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:morning-stiffness.jpg" },
   "nausea": { label: "Wikimedia Commons (Fphar-09-00913-g005.jpg)", url: "https://commons.wikimedia.org/wiki/File:Fphar-09-00913-g005.jpg" },
+  "neutrophilia": { label: "Wikimedia Commons (Blausen Neutrophil)", url: "https://commons.wikimedia.org/wiki/File:Blausen_0676_Neutrophil_(crop).png" },
   "nodular-lymphangitis": { label: "Wikimedia Commons (Sporotrichosis by the fungus Sporothrix schenckii PHIL 3940 lores.jpg)", url: "https://commons.wikimedia.org/wiki/File:Sporotrichosis_by_the_fungus_Sporothrix_schenckii_PHIL_3940_lores.jpg" },
   "nuchal-rigidity": { label: "Wikimedia Commons (Books from the Library of Congress (IA moderndiagnosi00shef).pdf)", url: "https://commons.wikimedia.org/wiki/File:Books_from_the_Library_of_Congress_(IA_moderndiagnosi00shef).pdf" },
   "orthopnea": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:orthopnea.jpg" },
@@ -309,12 +317,14 @@ export const SYMPTOM_IMAGE_CAPTIONS: Partial<Record<SymptomImageId, string>> = {
   "indurated-plaque": "Clinical or pathologic image illustrating indurated plaque",
   "jaundice": "Scleral icterus — yellow discoloration of the conjunctiva from hyperbilirubinemia",
   "kernig-sign": "Kernig sign — resistance to knee extension with hip flexed suggests meningeal irritation",
+  "leukocytosis": "Peripheral blood smear with a leukocyte among erythrocytes and platelets",
   "lichenification": "Clinical or pathologic image illustrating lichenification",
   "lymphadenopathy": "Cervical lymphadenopathy — enlarged palpable anterior cervical lymph nodes",
   "maculopapular-rash": "Maculopapular eruption — coalescent erythematous macules and papules",
   "melena": "Clinical or pathologic image illustrating melena",
   "morning-stiffness": "Clinical or pathologic image illustrating morning stiffness",
   "nausea": "Clinical or pathologic image illustrating nausea",
+  "neutrophilia": "Neutrophil morphology — segmented granulocyte increased in bacterial infection and steroid demargination",
   "nodular-lymphangitis": "Clinical or pathologic image illustrating nodular lymphangitis",
   "nuchal-rigidity": "Nuchal rigidity — resistance to passive neck flexion in meningeal irritation",
   "orthopnea": "Clinical or pathologic image illustrating orthopnea",

@@ -1,0 +1,4 @@
+dihydrorhodamine-flow-cytometry.svg
+Created locally
+Reference: https://en.wikipedia.org/wiki/Flow_cytometry
+Description: DHR oxidative burst flow-cytometry mechanism and CGD abnormal result

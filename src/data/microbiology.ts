@@ -1064,6 +1064,76 @@ export const MICROBIOLOGY: MicrobiologyEntry[] = [
       "CF children colonized early with P. aeruginosa — eradication protocols with inhaled antibiotics; hot tub folliculitis in healthy children.",
   },
   {
+    id: "serratia-marcescens",
+    name: "Serratia marcescens",
+    etymology: "Serratia = named for Serafino Serrati + Latin marcescens = decaying/fading",
+    aliases: [
+      "serratia marcescens",
+      "s. marcescens",
+      "serratia",
+      "red pigment serratia",
+      "prodigiosin-producing serratia",
+    ],
+    type: "gram-negative-rod",
+    definition:
+      "Opportunistic Enterobacterales Gram-negative rod that can produce red prodigiosin pigment and causes nosocomial infections; high-yield catalase-positive CGD organism.",
+    morphology: [
+      "Gram-negative rod",
+      "Facultative anaerobe",
+      "Motile",
+      "Often non-lactose fermenting or slow lactose fermenting",
+      "Some strains produce red prodigiosin pigment",
+    ],
+    virulenceFactors: [
+      "Catalase positive — survives better in CGD phagocytes",
+      "Biofilm formation on catheters and hospital devices",
+      "AmpC beta-lactamase and other resistance mechanisms",
+      "Extracellular proteases, lipases, DNases",
+    ],
+    transmission: [
+      "Hospital water/solutions, catheters, ventilators, contaminated devices",
+      "Environmental damp surfaces",
+      "Opportunistic infection in immunocompromised hosts",
+    ],
+    diseases: [
+      "Catheter-associated UTI and bacteremia",
+      "Ventilator-associated or hospital-acquired pneumonia",
+      "Wound infection",
+      "Endocarditis and osteomyelitis in IVDU (less common)",
+      "Keratitis in contact lens users",
+      "Recurrent infections in chronic granulomatous disease",
+    ],
+    classicPresentation: [
+      "Hospitalized patient with catheter-associated Gram-negative bacteremia/UTI",
+      "CGD child with recurrent Serratia abscess/pneumonia",
+      "Pink-red colonies or pigment on culture in some strains",
+    ],
+    diagnosis: [
+      "Culture and susceptibility testing",
+      "Gram-negative rod; oxidase negative",
+      "Pigment may support identification but is not always present",
+      "DHR oxidative burst testing if recurrent catalase-positive infections suggest CGD",
+    ],
+    treatment: [
+      "Culture-directed antibiotics; resistance common",
+      "Avoid ampicillin and first-generation cephalosporins due intrinsic resistance",
+      "Severe infection often treated with cefepime, carbapenem, fluoroquinolone, aminoglycoside, or TMP-SMX depending on susceptibility/site",
+    ],
+    distinguishFrom: [
+      "Pseudomonas aeruginosa — oxidase positive, blue-green pigment, grape odor",
+      "Klebsiella pneumoniae — lactose fermenter, mucoid capsule",
+      "Salmonella — H2S producer; sickle cell osteomyelitis classic",
+    ],
+    boardsPearls: [
+      "CGD organisms include Serratia, Staph aureus, Burkholderia, Nocardia, Aspergillus",
+      "Abnormal DHR test + Serratia infections = chronic granulomatous disease",
+      "Red prodigiosin pigment is a classic clue",
+      "Nosocomial catheter/device infections are common clinical context",
+    ],
+    pediatrics:
+      "In children, recurrent Serratia infections are a red flag for CGD; evaluate oxidative burst with DHR flow cytometry.",
+  },
+  {
     id: "legionella-pneumophila",
     name: "Legionella pneumophila",
     etymology: "American Legion outbreak name + -ella diminutive + Greek pneumon = lung + philos = loving",

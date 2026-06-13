@@ -16,3 +16,8 @@ th17.png
 https://commons.wikimedia.org/wiki/File:Helper_T_Cell_Differentiation.png
 סתו כסלו, CC BY-SA 4.0
 Description: CD4⁺ T-helper differentiation pathways including Th17 (TGF-β + IL-6 → RORγt → IL-17)
+
+natural-killer-cell.jpg
+https://commons.wikimedia.org/wiki/File:Human_Natural_Killer_Cell_(29120480442).jpg
+National Institute of Allergy and Infectious Diseases (NIAID), CC BY 2.0
+Description: Colorized scanning electron micrograph of a human natural killer cell

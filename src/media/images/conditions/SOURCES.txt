@@ -92,3 +92,18 @@ dental-caries.jpg
 https://commons.wikimedia.org/wiki/File:Dental_Caries_Lower_Right_First_Molar.jpg
 Wikimedia Commons
 Description: Occlusal dental caries with enamel cavitation
+
+cellulitis.jpg
+https://commons.wikimedia.org/wiki/File:Cellulitis3.jpg
+Wikimedia Commons
+Description: Lower-leg cellulitis with erythema and edema
+
+osteomyelitis.png
+https://commons.wikimedia.org/wiki/File:OsteomylitisMark.png
+Wikimedia Commons
+Description: Plain radiograph of first-toe osteomyelitis with marked bony involvement
+
+lymphadenitis.jpg
+https://commons.wikimedia.org/wiki/File:Scrofula.jpeg
+Wikimedia Commons
+Description: Cervical lymphadenitis/scrofula with enlarged neck nodes

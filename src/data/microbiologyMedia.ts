@@ -27,11 +27,13 @@ import legionellaPneumophila from "../media/images/microbiology/legionella-pneum
 import listeriaMonocytogenes from "../media/images/microbiology/listeria-monocytogenes.jpg?url";
 import mycobacteriumTuberculosis from "../media/images/microbiology/mycobacterium-tuberculosis.jpg?url";
 import mycoplasmaPneumoniae from "../media/images/microbiology/mycoplasma-pneumoniae.jpeg?url";
+import neisseriaGenus from "../media/images/microbiology/neisseria-genus.jpg?url";
 import neisseriaMeningitidis from "../media/images/microbiology/neisseria-meningitidis.jpg?url";
 import plasmodiumFalciparum from "../media/images/microbiology/plasmodium-falciparum.jpg?url";
 import plasmodiumVivax from "../media/images/microbiology/plasmodium-vivax.jpg?url";
 import pseudomonasAeruginosa from "../media/images/microbiology/pseudomonas-aeruginosa.jpg?url";
 import salmonellaEnterica from "../media/images/microbiology/salmonella-enterica.jpg?url";
+import serratiaMarcescens from "../media/images/microbiology/serratia-marcescens.jpg?url";
 import schistosomaMansoni from "../media/images/microbiology/schistosoma-mansoni.jpg?url";
 import shigellaFlexneri from "../media/images/microbiology/shigella-flexneri.jpg?url";
 import staphylococcusAureus from "../media/images/microbiology/staphylococcus-aureus.jpg?url";
@@ -73,6 +75,7 @@ export const MICROBIOLOGY_IMAGES: Partial<Record<MicrobiologyImageId, string>> =
     "streptococcus-pneumoniae": extensionAssetUrl(streptococcusPneumoniae),
     "escherichia-coli": extensionAssetUrl(escherichiaColi),
     "haemophilus-influenzae": extensionAssetUrl(haemophilusInfluenzae),
+    "neisseria-genus": extensionAssetUrl(neisseriaGenus),
     "neisseria-meningitidis": extensionAssetUrl(neisseriaMeningitidis),
     "clostridium-perfringens": extensionAssetUrl(clostridiumPerfringens),
     "mycobacterium-tuberculosis": extensionAssetUrl(mycobacteriumTuberculosis),
@@ -127,6 +130,7 @@ export const MICROBIOLOGY_IMAGES: Partial<Record<MicrobiologyImageId, string>> =
     rhinovirus: extensionAssetUrl(rhinovirus),
     "rickettsia-rickettsii": extensionAssetUrl(rickettsiaRickettsii),
     "chlamydia-trachomatis": extensionAssetUrl(chlamydiaTrachomatis),
+    "serratia-marcescens": extensionAssetUrl(serratiaMarcescens),
   };
 
 export const MICROBIOLOGY_IMAGE_ATTRIBUTIONS: Partial<
@@ -151,6 +155,10 @@ export const MICROBIOLOGY_IMAGE_ATTRIBUTIONS: Partial<
   "haemophilus-influenzae": {
     label: "Wikimedia Commons (Stefan Walkowski, CC BY-SA 4.0)",
     url: "https://commons.wikimedia.org/wiki/File:Haemophilus_influenzae.jpg",
+  },
+  "neisseria-genus": {
+    label: "CDC PHIL #4085",
+    url: "https://commons.wikimedia.org/wiki/File:Gonococcal_urethritis_PHIL_4085_lores.jpg",
   },
   "neisseria-meningitidis": {
     label: "Wikimedia Commons (Microman12345)",
@@ -223,6 +231,10 @@ export const MICROBIOLOGY_IMAGE_ATTRIBUTIONS: Partial<
   "salmonella-enterica": {
     label: "NIAID/NIH (Rocky Mountain Laboratories)",
     url: "https://commons.wikimedia.org/wiki/File:SalmonellaNIAID.jpg",
+  },
+  "serratia-marcescens": {
+    label: "Wikimedia Commons (Serratia marcescens.jpg)",
+    url: "https://commons.wikimedia.org/wiki/File:Serratia_marcescens.jpg",
   },
   "shigella-flexneri": {
     label: "Wikimedia Commons (B. Domangue, CC BY-SA 4.0)",
@@ -379,6 +391,8 @@ export const MICROBIOLOGY_IMAGE_CAPTIONS: Partial<
     "Scanning electron micrograph of lancet-shaped diplococci",
   "escherichia-coli": "Gram stain: Gram-negative bacilli",
   "haemophilus-influenzae": "Colonies on chocolate agar",
+  "neisseria-genus":
+    "Gram stain showing Neisseria gonorrhoeae Gram-negative diplococci inside neutrophils",
   "neisseria-meningitidis":
     "Gram stain of CSF: Gram-negative diplococci (1000×)",
   "clostridium-perfringens": "Gram stain of broth culture",
@@ -474,6 +488,8 @@ export const MICROBIOLOGY_IMAGE_CAPTIONS: Partial<
     "Gimenez stain of R. rickettsii in tick hemolymph cells — obligate intracellular Gram-negative coccobacillus",
   "chlamydia-trachomatis":
     "Lugol-stained intracytoplasmic inclusion bodies (glycogen) in host cells — classic chlamydial morphology",
+  "serratia-marcescens":
+    "Serratia marcescens colonies with red prodigiosin pigment on agar",
 };
 
 export function getMicrobiologyImageForId(

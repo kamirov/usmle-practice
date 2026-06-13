@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" role="img" aria-labelledby="title desc">
+  <title id="title">Dihydrorhodamine flow cytometry</title>
+  <desc id="desc">Neutrophil oxidative burst converts DHR 123 to fluorescent rhodamine; chronic granulomatous disease shows low fluorescence.</desc>
+  <rect width="900" height="520" fill="#f8fafc"/>
+  <rect x="46" y="52" width="808" height="416" rx="18" fill="#fff" stroke="#cbd5e1" stroke-width="3"/>
+  <text x="450" y="102" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#0f172a">DHR Flow Cytometry</text>
+  <text x="450" y="139" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" fill="#334155">Oxidative burst test for chronic granulomatous disease</text>
+  <g font-family="Arial, sans-serif" font-size="18" fill="#0f172a">
+    <circle cx="157" cy="252" r="62" fill="#dbeafe" stroke="#2563eb" stroke-width="4"/>
+    <text x="157" y="247" text-anchor="middle" font-weight="700">Neutrophil</text>
+    <text x="157" y="273" text-anchor="middle" font-size="16">+ PMA stimulus</text>
+    <path d="M232 252 H344" stroke="#64748b" stroke-width="5" marker-end="url(#arrow)"/>
+    <rect x="369" y="196" width="178" height="112" rx="14" fill="#ecfdf5" stroke="#16a34a" stroke-width="4"/>
+    <text x="458" y="238" text-anchor="middle" font-weight="700">NADPH oxidase</text>
+    <text x="458" y="267" text-anchor="middle" font-size="16">O₂ → ROS</text>
+    <path d="M572 252 H684" stroke="#64748b" stroke-width="5" marker-end="url(#arrow)"/>
+    <circle cx="750" cy="252" r="62" fill="#dcfce7" stroke="#16a34a" stroke-width="4"/>
+    <text x="750" y="245" text-anchor="middle" font-weight="700">Rhodamine</text>
+    <text x="750" y="273" text-anchor="middle" font-size="16">fluoresces</text>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="17">
+    <rect x="120" y="362" width="280" height="58" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="3"/>
+    <text x="260" y="397" text-anchor="middle" fill="#14532d">Normal: strong fluorescence shift</text>
+    <rect x="500" y="362" width="280" height="58" rx="12" fill="#fee2e2" stroke="#dc2626" stroke-width="3"/>
+    <text x="640" y="397" text-anchor="middle" fill="#7f1d1d">CGD: low/absent fluorescence</text>
+  </g>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2 2 L10 6 L2 10 Z" fill="#64748b"/>
+    </marker>
+  </defs>
+</svg>

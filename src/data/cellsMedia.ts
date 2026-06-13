@@ -51,6 +51,7 @@ import mtdna from "../media/images/cells/mtdna.jpg?url";
 import mucosa from "../media/images/cells/mucosa.jpg?url";
 import myeloidSurfaceMarkers from "../media/images/cells/myeloid-surface-markers.jpg?url";
 import myometrium from "../media/images/cells/myometrium.jpg?url";
+import naturalKillerCell from "../media/images/cells/natural-killer-cell.jpg?url";
 import neuralCrest from "../media/images/cells/neural-crest.svg?url";
 import neutrophil from "../media/images/cells/neutrophil.jpg?url";
 import polymerization from "../media/images/cells/polymerization.svg?url";
@@ -116,6 +117,7 @@ export type CELLImageId = Extract<
   | "mucosa"
   | "myeloid-surface-markers"
   | "myometrium"
+  | "natural-killer-cell"
   | "neural-crest"
   | "neutrophil"
   | "polymerization"
@@ -186,6 +188,7 @@ export const CELL_IMAGES: Partial<Record<CELLImageId, string>> = {
   "mucosa": extensionAssetUrl(mucosa),
   "myeloid-surface-markers": extensionAssetUrl(myeloidSurfaceMarkers),
   "myometrium": extensionAssetUrl(myometrium),
+  "natural-killer-cell": extensionAssetUrl(naturalKillerCell),
   "neural-crest": extensionAssetUrl(neuralCrest),
   "neutrophil": extensionAssetUrl(neutrophil),
   "polymerization": extensionAssetUrl(polymerization),
@@ -253,6 +256,7 @@ export const CELL_IMAGE_ATTRIBUTIONS: Partial<
   "mucosa": { label: "Wikimedia Commons (Histology of transformation zone mucosa.jpg)", url: "https://commons.wikimedia.org/wiki/File:Histology_of_transformation_zone_mucosa.jpg" },
   "myeloid-surface-markers": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:myeloid-surface-markers.jpg" },
   "myometrium": { label: "Wikimedia Commons (Uterus (myometrium).JPG)", url: "https://commons.wikimedia.org/wiki/File:Uterus_(myometrium).JPG" },
+  "natural-killer-cell": { label: "Wikimedia Commons (Human Natural Killer Cell)", url: "https://commons.wikimedia.org/wiki/File:Human_Natural_Killer_Cell_(29120480442).jpg" },
   "neural-crest": { label: "Wikimedia Commons (Neural.crest.cells.migration.svg)", url: "https://commons.wikimedia.org/wiki/File:Neural.crest.cells.migration.svg" },
   "neutrophil": { label: "Wikimedia Commons (Blausen 0676 Neutrophil (crop).png)", url: "https://commons.wikimedia.org/wiki/File:Blausen_0676_Neutrophil_(crop).png" },
   "polymerization": { label: "Wikimedia Commons (CSIRO ScienceImage 3020 Starch to Polymer.jpg)", url: "https://commons.wikimedia.org/wiki/File:CSIRO_ScienceImage_3020_Starch_to_Polymer.jpg" },
@@ -318,6 +322,7 @@ export const CELL_IMAGE_CAPTIONS: Partial<Record<CELLImageId, string>> = {
   "mucosa": "Clinical or pathologic image illustrating mucosa",
   "myeloid-surface-markers": "Clinical or pathologic image illustrating myeloid surface markers",
   "myometrium": "Clinical or pathologic image illustrating myometrium",
+  "natural-killer-cell": "Colorized scanning electron micrograph of a human natural killer cell",
   "neural-crest": "Clinical or pathologic image illustrating neural crest",
   "neutrophil": "Clinical or pathologic image illustrating neutrophil",
   "polymerization": "Clinical or pathologic image illustrating polymerization",

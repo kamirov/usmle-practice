@@ -1639,6 +1639,38 @@ export const PROTEINS: ProteinEntry[] = [
     distinguishFrom: ["C4b — binds surface and forms C3 convertase", "C5a — strongest anaphylatoxin/chemotactic factor"],
   },
   {
+    id: "adenosine-deaminase",
+    name: "Adenosine Deaminase",
+    etymology: "adenosine = adenine nucleoside + deaminase = enzyme removing an amino group",
+    aliases: [
+      "adenosine deaminase",
+      "ada",
+      "ada enzyme",
+      "adenosine aminohydrolase",
+    ],
+    gene: "ADA",
+    location: "Cytosol, especially lymphocytes",
+    function:
+      "Purine salvage/catabolism enzyme converting adenosine and deoxyadenosine to inosine/deoxyinosine; prevents toxic deoxyadenosine/dATP accumulation in lymphocytes.",
+    mutationCauses: [
+      "ADA deficiency → autosomal recessive severe combined immunodeficiency (SCID)",
+      "Toxic dATP accumulation inhibits ribonucleotide reductase → impaired DNA synthesis in T, B, and NK cells",
+      "Low/absent thymic shadow and recurrent infections early in life",
+    ],
+    boardsPearls: [
+      "ADA deficiency is a classic cause of SCID",
+      "SCID labs: very low T cells with impaired B-cell function; live vaccines contraindicated",
+      "Treatment concepts: hematopoietic stem cell transplant, enzyme replacement, or gene therapy",
+      "Adenosine deaminase can be elevated in TB pleural effusion, but Step 1 genetics focuses on ADA-SCID",
+      "Peds: infants present with chronic diarrhea, failure to thrive, thrush, and recurrent viral/fungal/opportunistic infections",
+    ],
+    distinguishFrom: [
+      "PNP deficiency — T-cell immunodeficiency with neurologic/autoimmune findings",
+      "X-linked SCID — IL2RG defect; similar phenotype but different gene",
+      "Chronic granulomatous disease — abnormal DHR oxidative burst, neutrophil defect",
+    ],
+  },
+  {
     id: "cd16",
     name: "CD16 (FcγRIII)",
     etymology: "CD = cluster of differentiation + 16 = marker number",

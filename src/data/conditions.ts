@@ -711,6 +711,201 @@ export const CONDITIONS: ConditionEntry[] = [
       "Community MRSA causes common skin abscesses in children; I&D plus targeted antibiotics when cellulitis or systemic illness present. Peritonsillar abscess peaks in adolescents. Neonatal breast abscess (usually S. aureus) and pilonidal abscess in teens occur; avoid unnecessary broad antibiotics after adequate drainage of uncomplicated superficial abscess.",
   },
   {
+    id: "cellulitis",
+    name: "Cellulitis",
+    etymology: "Latin cellula = small cell/compartment + Greek -itis = inflammation",
+    aliases: [
+      "cellulitis",
+      "skin cellulitis",
+      "soft tissue cellulitis",
+      "nonpurulent cellulitis",
+      "purulent cellulitis",
+    ],
+    definition:
+      "Acute bacterial infection of the dermis and subcutaneous tissue causing spreading erythema, warmth, edema, and pain.",
+    pathophysiology:
+      "Break in skin barrier permits bacterial entry, most often beta-hemolytic streptococci in nonpurulent disease or S. aureus when purulence/abscess is present; neutrophil-rich inflammation spreads through dermis and subcutis.",
+    classicPresentation: [
+      "Tender, warm, erythematous, swollen skin with indistinct borders",
+      "Often lower extremity after tinea pedis, trauma, ulcer, edema, or venous disease",
+      "Fever, chills, lymphangitic streaking, or regional lymphadenitis in more severe infection",
+    ],
+    keyFindings: [
+      "Nonpurulent cellulitis: diffuse erythema without fluctuance",
+      "Purulent focus or abscess suggests S. aureus / MRSA coverage",
+      "Pain out of proportion, crepitus, bullae, or toxicity suggests necrotizing fasciitis",
+    ],
+    keyLabs: [
+      "Clinical diagnosis in uncomplicated cases",
+      "Leukocytosis/CRP may be elevated",
+      "Blood cultures if severe systemic toxicity, immunocompromise, or unusual exposure",
+    ],
+    associations: [
+      "Group A Streptococcus and other beta-hemolytic streptococci",
+      "Staphylococcus aureus, including MRSA when purulent",
+      "Lymphedema, venous insufficiency, diabetes, skin ulcers",
+      "Animal/human bites require broader organism coverage",
+    ],
+    complications: [
+      "Abscess",
+      "Lymphangitis and lymphadenitis",
+      "Bacteremia/sepsis",
+      "Necrotizing soft tissue infection if deeper spread",
+    ],
+    distinguishFrom: [
+      "Erysipelas — more superficial, raised, sharply demarcated border",
+      "Abscess — fluctuant pus collection requiring drainage",
+      "Necrotizing fasciitis — severe pain, rapid progression, systemic toxicity; surgical emergency",
+      "DVT or venous stasis dermatitis — leg erythema/edema without infectious source",
+      "Lyme erythema migrans — expanding annular rash, often less painful",
+    ],
+    treatment: [
+      "Nonpurulent outpatient: beta-lactam active against streptococci (e.g., cephalexin)",
+      "Add MRSA coverage when purulent, abscess, prior MRSA, IVDU, or severe infection",
+      "Elevation and treatment of portal of entry (tinea pedis, ulcers)",
+      "Hospitalize for systemic toxicity, rapid progression, immunocompromise, or concern for necrotizing infection",
+    ],
+    boardsPearls: [
+      "Nonpurulent cellulitis = streptococci; purulence/abscess = think S. aureus/MRSA",
+      "Indistinct border favors cellulitis; sharply raised border favors erysipelas",
+      "Always check for abscess because drainage changes management",
+      "Pain out of proportion should trigger necrotizing fasciitis workup and surgery",
+    ],
+    pediatrics:
+      "Children commonly get cellulitis after minor trauma, insect bites, or varicella lesions. Periorbital/preseptal cellulitis must be separated from orbital cellulitis, which has pain with eye movements, ophthalmoplegia, or proptosis and needs urgent imaging/IV therapy.",
+  },
+  {
+    id: "osteomyelitis",
+    name: "Osteomyelitis",
+    etymology: "Greek osteon = bone + myelos = marrow + -itis = inflammation",
+    aliases: [
+      "osteomyelitis",
+      "bone infection",
+      "acute hematogenous osteomyelitis",
+      "chronic osteomyelitis",
+      "diabetic foot osteomyelitis",
+    ],
+    definition:
+      "Infection of bone and marrow, usually bacterial, from hematogenous seeding, contiguous spread, trauma, surgery, or diabetic foot ulcer extension.",
+    pathophysiology:
+      "Bacteria seed metaphyseal bone or spread from adjacent tissue → neutrophilic inflammation in rigid bone → vascular compromise, necrotic sequestrum, and chronic biofilm if not cleared.",
+    classicPresentation: [
+      "Localized bone pain, tenderness, swelling, warmth, and fever",
+      "Child refusing to bear weight or use a limb",
+      "Diabetic foot ulcer with positive probe-to-bone test",
+    ],
+    keyFindings: [
+      "S. aureus is most common overall",
+      "Salmonella in sickle cell disease",
+      "Pseudomonas after puncture wound through sneaker",
+      "Vertebral osteomyelitis in adults may present with back pain and fever",
+    ],
+    keyLabs: [
+      "Elevated ESR/CRP; leukocytosis may be absent",
+      "Blood cultures can identify hematogenous infection",
+      "MRI is most sensitive early imaging test",
+      "Bone biopsy/culture is definitive when diagnosis/organism uncertain",
+    ],
+    associations: [
+      "S. aureus bacteremia",
+      "Sickle cell disease",
+      "Diabetes mellitus / foot ulcer",
+      "IV drug use",
+      "Open fracture or orthopedic hardware",
+    ],
+    complications: [
+      "Chronic osteomyelitis with sequestrum/involucrum",
+      "Septic arthritis if infection crosses joint space",
+      "Pathologic fracture",
+      "Amyloidosis in chronic suppurative disease",
+    ],
+    distinguishFrom: [
+      "Septic arthritis — painful joint with limited passive range of motion",
+      "Cellulitis — soft tissue infection without bone involvement",
+      "Ewing sarcoma — bone pain/fever can mimic infection; onion-skin periosteal reaction",
+      "Charcot arthropathy — neuropathic destructive joint, often diabetic",
+    ],
+    treatment: [
+      "Empiric antibiotics covering S. aureus, then culture-directed prolonged therapy",
+      "Surgical drainage/debridement for abscess, necrotic bone, hardware infection, or chronic disease",
+      "Control source such as diabetic ulcer or bacteremia",
+    ],
+    boardsPearls: [
+      "Most common cause overall: S. aureus",
+      "Sickle cell osteomyelitis: Salmonella is classic, but S. aureus still common",
+      "Puncture wound through shoe: Pseudomonas",
+      "MRI detects early osteomyelitis before plain x-ray changes",
+      "Sequestrum = dead bone; involucrum = new bone around sequestrum",
+    ],
+    pediatrics:
+      "Acute hematogenous osteomyelitis in children classically seeds metaphyses of long bones because blood flow is sluggish near growth plates; suspect with fever plus refusal to bear weight.",
+  },
+  {
+    id: "lymphadenitis",
+    name: "Lymphadenitis",
+    etymology: "Latin lympha = clear water + Greek aden = gland + -itis = inflammation",
+    aliases: [
+      "lymphadenitis",
+      "acute lymphadenitis",
+      "suppurative lymphadenitis",
+      "cervical lymphadenitis",
+      "mesenteric adenitis",
+      "inflamed lymph node",
+    ],
+    definition:
+      "Inflammation of lymph nodes, usually infectious, producing tender enlarged nodes that may suppurate depending on organism and host response.",
+    pathophysiology:
+      "Antigen and microbes drain from infected tissue to regional lymph nodes → lymphoid hyperplasia and neutrophilic or granulomatous inflammation; pyogenic bacteria can form abscesses within nodes.",
+    classicPresentation: [
+      "Tender, enlarged regional lymph node near skin, pharyngeal, dental, or cat-scratch inoculation source",
+      "Overlying warmth/erythema; fever possible",
+      "Fluctuant node suggests suppuration",
+    ],
+    keyFindings: [
+      "Acute unilateral cervical nodes in children: S. aureus or group A strep",
+      "Cat-scratch disease: Bartonella henselae with regional lymphadenitis",
+      "TB or atypical mycobacteria: chronic, firm, sometimes draining nodes",
+    ],
+    keyLabs: [
+      "Clinical diagnosis if obvious local infection",
+      "Ultrasound if abscess/suppuration suspected",
+      "Culture/biopsy for persistent, atypical, supraclavicular, or systemic-risk nodes",
+    ],
+    associations: [
+      "Staphylococcus aureus",
+      "Streptococcus pyogenes",
+      "Bartonella henselae",
+      "Mycobacterium tuberculosis / nontuberculous mycobacteria",
+      "EBV/CMV/HIV cause lymphadenopathy more than pyogenic lymphadenitis",
+    ],
+    complications: [
+      "Suppurative node abscess",
+      "Bacteremia",
+      "Fistula/sinus tract with mycobacterial disease",
+      "Missed malignancy if persistent hard/fixed nodes not evaluated",
+    ],
+    distinguishFrom: [
+      "Reactive lymphadenopathy — enlarged nodes without local node infection",
+      "Lymphoma — painless rubbery nodes, B symptoms, persistent growth",
+      "Metastatic cancer — hard fixed nodes, supraclavicular risk",
+      "Kawasaki disease — unilateral cervical node plus fever, conjunctivitis, mucositis, rash, extremity changes",
+    ],
+    treatment: [
+      "Treat bacterial source; cover S. aureus and GAS for acute suppurative cervical disease",
+      "Drain fluctuant suppurative nodes when needed",
+      "Bartonella often self-limited; azithromycin can shorten node duration in selected cases",
+      "Mycobacterial lymphadenitis requires organism-directed therapy and/or excision depending on cause",
+    ],
+    boardsPearls: [
+      "Tender acute node = infection/inflammation; painless hard node = malignancy concern",
+      "Cat scratch + regional lymphadenitis = Bartonella henselae",
+      "Chronic cervical lymphadenitis with caseating granulomas = think TB/scrofula",
+      "Suppurative unilateral cervical lymphadenitis in kids: S. aureus or GAS",
+    ],
+    pediatrics:
+      "Acute unilateral cervical lymphadenitis is common after URI/pharyngitis and usually S. aureus/GAS. Nontuberculous mycobacterial cervical nodes in children can be chronic with violaceous skin and sinus drainage.",
+  },
+  {
     id: "empyema",
     name: "Empyema",
     etymology: "Greek empyema = suppuration; en = in + pyon = pus",

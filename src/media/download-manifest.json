@@ -1183,5 +1183,55 @@
     "title": "File:Dental Caries Lower Right First Molar.jpg",
     "page": "https://commons.wikimedia.org/wiki/File:Dental_Caries_Lower_Right_First_Molar.jpg",
     "query": "dental caries tooth decay"
+  },
+  "conditions/cellulitis.jpg": {
+    "title": "File:Cellulitis3.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Cellulitis3.jpg",
+    "query": "cellulitis clinical photograph"
+  },
+  "conditions/osteomyelitis.png": {
+    "title": "File:OsteomylitisMark.png",
+    "page": "https://commons.wikimedia.org/wiki/File:OsteomylitisMark.png",
+    "query": "osteomyelitis xray"
+  },
+  "microbiology/serratia-marcescens.jpg": {
+    "title": "File:Serratia marcescens.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Serratia_marcescens.jpg",
+    "query": "serratia marcescens red pigment"
+  },
+  "conditions/lymphadenitis.jpg": {
+    "title": "File:Scrofula.jpeg",
+    "page": "https://commons.wikimedia.org/wiki/File:Scrofula.jpeg",
+    "query": "cervical lymphadenitis scrofula"
+  },
+  "cells/natural-killer-cell.jpg": {
+    "title": "File:Human Natural Killer Cell (29120480442).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Human_Natural_Killer_Cell_(29120480442).jpg",
+    "query": "natural killer cell scanning electron micrograph"
+  },
+  "microbiology/neisseria-genus.jpg": {
+    "title": "File:Gonococcal urethritis PHIL 4085 lores.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Gonococcal_urethritis_PHIL_4085_lores.jpg",
+    "query": "Neisseria gonorrhoeae gram stain diplococci"
+  },
+  "medications/riboflavin.png": {
+    "title": "File:Riboflavin.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Riboflavin.svg",
+    "query": "riboflavin chemical structure"
+  },
+  "medications/vasopressors.png": {
+    "title": "File:Norepinephrine.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Norepinephrine.svg",
+    "query": "norepinephrine chemical structure"
+  },
+  "medications/polyclonal-fab-antivenom.png": {
+    "title": "File:Antibody.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Antibody.svg",
+    "query": "antibody Fab fragment"
+  },
+  "organs/gingiva-oral.jpg": {
+    "title": "File:Gingiva.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Gingiva.jpg",
+    "query": "gingiva oral"
   }
 }

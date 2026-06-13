@@ -411,3 +411,15 @@ chlamydia-trachomatis.jpg
   Description: Lugol-stained chlamydial inclusion bodies in host cells
   Page: https://commons.wikimedia.org/wiki/File:ChlamydiaTrachomatisEinschlussk%C3%B6rperchen.jpg
   Download: https://commons.wikimedia.org/wiki/Special:FilePath/ChlamydiaTrachomatisEinschlussk%C3%B6rperchen.jpg?width=1280
+
+serratia-marcescens.jpg
+  Source: Wikimedia Commons — Serratia marcescens.jpg
+  Description: S. marcescens colonies with red prodigiosin pigment on agar
+  Page: https://commons.wikimedia.org/wiki/File:Serratia_marcescens.jpg
+  Download: https://commons.wikimedia.org/wiki/Special:FilePath/Serratia_marcescens.jpg?width=1280
+
+neisseria-genus.jpg
+  Source: CDC PHIL #4085 via Wikimedia Commons — Gonococcal urethritis PHIL 4085 lores.jpg
+  Description: Gram stain with intracellular and extracellular Neisseria gonorrhoeae diplococci
+  License: Public domain (U.S. federal government)
+  Page: https://commons.wikimedia.org/wiki/File:Gonococcal_urethritis_PHIL_4085_lores.jpg
