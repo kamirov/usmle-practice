@@ -458,7 +458,7 @@ export const METABOLISM: MetabolismEntry[] = [
     id: "histidine",
     name: "Histidine",
     etymology: "Greek histos = tissue + -idine = chemical suffix",
-    aliases: ["histidine", "his", "l-histidine"],
+    aliases: ["histidine", "l-histidine"],
     definition:
       "Essential amino acid with imidazole side chain; precursor to histamine, carnosine, and one-carbon metabolism via folate-linked pathways.",
     pathway: [
