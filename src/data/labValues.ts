@@ -2025,7 +2025,10 @@ export const LAB_VALUES: LabValueEntry[] = [
       "ldl-c",
       "ldl-c cholesterol",
       "low-density lipoprotein",
+      "low-density lipoproteins",
       "low-density lipoprotein cholesterol",
+      "low density lipoprotein",
+      "low density lipoproteins",
     ],
     measures:
       "Cholesterol in low-density lipoprotein particles; primary atherogenic lipoprotein driving foam cell formation and plaque.",
@@ -2062,7 +2065,10 @@ export const LAB_VALUES: LabValueEntry[] = [
       "hdl cholesterol",
       "hdl-c",
       "high-density lipoprotein",
+      "high-density lipoproteins",
       "high-density lipoprotein cholesterol",
+      "high density lipoprotein",
+      "high density lipoproteins",
     ],
     measures:
       "Cholesterol in high-density lipoprotein particles; participates in reverse cholesterol transport from periphery to liver.",
@@ -2089,6 +2095,51 @@ export const LAB_VALUES: LabValueEntry[] = [
     pairWith: [
       "Low HDL + ↑ TG + central obesity → metabolic syndrome",
       "Very low HDL + orange tonsils → Tangier disease",
+    ],
+  },
+  {
+    id: "vldl",
+    name: "VLDL Cholesterol",
+    etymology: "VLDL = very-low-density lipoprotein + Greek chole = bile + stereos = solid + -ol alcohol suffix",
+    aliases: [
+      "vldl",
+      "vldl cholesterol",
+      "vldl-c",
+      "very-low-density lipoprotein",
+      "very-low-density lipoproteins",
+      "very-low-density lipoprotein cholesterol",
+      "very low density lipoprotein",
+      "very low density lipoproteins",
+    ],
+    measures:
+      "Cholesterol carried in very-low-density lipoprotein particles; VLDL transports endogenous hepatic triglycerides to peripheral tissues.",
+    normalRange:
+      "VLDL-C roughly 2–30 mg/dL; often estimated as triglycerides/5 when TG <400 mg/dL",
+    increasedCauses: [
+      "Insulin resistance / type 2 diabetes",
+      "Obesity, metabolic syndrome, high carbohydrate intake",
+      "Alcohol use",
+      "Familial combined hyperlipidemia",
+      "Nephrotic syndrome and hypothyroidism",
+      "Type V hyperlipoproteinemia (↑ VLDL + chylomicrons)",
+    ],
+    decreasedCauses: [
+      "Severe liver disease or malnutrition (↓ hepatic lipoprotein synthesis)",
+      "Low-fat/low-calorie intake",
+      "Fibrates, omega-3 fatty acids, niacin, and statins (variable ↓ VLDL/TG)",
+    ],
+    boardsPearls: [
+      "VLDL carries endogenous triglycerides from liver; chylomicrons carry dietary triglycerides from intestine",
+      "ApoB-100 is structural; ApoC-II activates lipoprotein lipase; ApoE helps remnant uptake",
+      "LPL removes TG from VLDL → IDL → LDL",
+      "High VLDL tracks with high triglycerides and pancreatitis risk when TG very high",
+      "Bile acid sequestrants can raise VLDL/TG — avoid when triglycerides are markedly elevated",
+      "Peds: obesity and insulin resistance can raise VLDL/TG in adolescents; familial disorders present earlier with severe hypertriglyceridemia.",
+    ],
+    pairWith: [
+      "↑ VLDL + ↑ TG + central obesity → metabolic syndrome / insulin resistance",
+      "↑ chylomicrons + ↑ VLDL → type V hyperlipoproteinemia",
+      "Very high TG + abdominal pain → acute pancreatitis risk",
     ],
   },
   {

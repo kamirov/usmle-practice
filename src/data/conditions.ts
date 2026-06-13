@@ -2497,6 +2497,76 @@ export const CONDITIONS: ConditionEntry[] = [
       "Cerebral edema is leading cause of DKA mortality in children — avoid overly rapid fluid/insulin correction.",
   },
   {
+    id: "hyperosmolar-hyperglycemic-state",
+    name: "Hyperosmolar Hyperglycemic State (HHS)",
+    etymology: "Greek hyper = excess + osmos = pushing + Latin status = state",
+    aliases: [
+      "hyperosmolar hyperglycemic state",
+      "hhs",
+      "hyperosmolar nonketotic coma",
+      "hyperosmolar non-ketotic coma",
+      "hyperosmolar coma",
+      "hyperosmolar hyperglycemic nonketotic state",
+      "hyperosmolar hyperglycemic non-ketotic state",
+      "hyperosmolar nonketotic state",
+      "honks",
+      "hnkc",
+      "hhns",
+    ],
+    definition:
+      "Acute diabetic emergency with severe hyperglycemia, hyperosmolality, profound dehydration, and minimal or absent ketoacidosis.",
+    pathophysiology:
+      "Relative insulin deficiency in type 2 diabetes is enough to suppress lipolysis/ketogenesis but not enough to permit glucose uptake → severe hyperglycemia causes osmotic diuresis, free-water loss, hyperosmolality, and altered mental status.",
+    classicPresentation: [
+      "Older patient with type 2 diabetes, dehydration, weakness, confusion, or coma",
+      "Polyuria and polydipsia over days to weeks",
+      "Often triggered by infection, MI, stroke, poor access to water, or medication nonadherence",
+    ],
+    keyFindings: [
+      "Severe dehydration, hypotension, tachycardia",
+      "Altered mental status correlates with high serum osmolality",
+      "No Kussmaul respirations or fruity breath unless mixed DKA/HHS",
+    ],
+    keyLabs: [
+      "Glucose often >600 mg/dL",
+      "Serum osmolality >320 mOsm/kg",
+      "Minimal ketones, pH usually >7.30, bicarbonate usually >18 mEq/L",
+      "High total-body potassium deficit despite normal/high measured K⁺",
+    ],
+    associations: [
+      "Type 2 diabetes mellitus",
+      "Infection, MI, stroke, pancreatitis",
+      "Glucocorticoids, thiazides, atypical antipsychotics",
+      "Elderly or impaired thirst/access to water",
+    ],
+    complications: [
+      "Shock and acute kidney injury from dehydration",
+      "Thrombosis from hyperviscosity",
+      "Cerebral edema if osmolality corrected too rapidly",
+      "High mortality compared with DKA",
+    ],
+    distinguishFrom: [
+      "DKA — absolute insulin deficiency, ketosis, anion gap acidosis, often type 1 diabetes",
+      "Diabetes insipidus — hypernatremic dehydration without marked hyperglycemia",
+      "Lactic acidosis/sepsis — acidosis prominent without extreme glucose/osmolality pattern",
+    ],
+    treatment: [
+      "Aggressive IV isotonic fluids first",
+      "Insulin after initial fluids and potassium assessment",
+      "Potassium replacement based on serum K⁺ and renal function",
+      "Treat precipitating trigger such as infection or MI",
+    ],
+    boardsPearls: [
+      "HHS = very high glucose/osmolality + dehydration + minimal ketones",
+      "Residual insulin blocks ketogenesis, so coma comes from hyperosmolality rather than acidosis",
+      "Fluids before insulin — volume deficit is often massive",
+      "Measured sodium may be low from hyperglycemia; correct sodium for glucose",
+      "Mental status change usually appears when osmolality exceeds ~320 mOsm/kg",
+    ],
+    pediatrics:
+      "HHS is uncommon in children but can occur with type 2 diabetes and obesity; dehydration is profound and cerebral edema risk requires careful correction.",
+  },
+  {
     id: "graves-disease",
     name: "Graves Disease",
     etymology: "eponym: Robert Graves + disease = disordered function",
@@ -3426,6 +3496,74 @@ export const CONDITIONS: ConditionEntry[] = [
       "Squamous: hypercalcemia (PTHrP)",
       "Adenocarcinoma: most common in nonsmokers and women",
     ],
+  },
+  {
+    id: "breast-cancer",
+    name: "Breast Cancer",
+    etymology: "Old English breost = breast/chest + Greek karkinos = crab/cancer",
+    aliases: [
+      "breast cancer",
+      "breast carcinoma",
+      "invasive ductal carcinoma",
+      "invasive lobular carcinoma",
+      "ductal carcinoma in situ",
+      "dcis",
+      "lobular carcinoma in situ",
+      "lcis",
+    ],
+    definition:
+      "Malignant epithelial neoplasm of breast ductal or lobular tissue; most commonly invasive ductal carcinoma, with subtype behavior strongly influenced by ER/PR and HER2 status.",
+    pathophysiology:
+      "Accumulated driver mutations in ductal/lobular epithelium → uncontrolled proliferation, invasion, and metastatic potential; estrogen signaling, HER2 amplification, DNA repair defects (BRCA1/2), and tumor suppressor loss shape phenotype.",
+    classicPresentation: [
+      "Painless firm breast mass or abnormal screening mammogram",
+      "Skin dimpling, nipple retraction, or peau d'orange",
+      "Bloody nipple discharge or axillary lymphadenopathy",
+    ],
+    keyFindings: [
+      "Hard irregular fixed mass",
+      "Mammographic mass, architectural distortion, or microcalcifications",
+      "Sentinel axillary node involvement for staging",
+    ],
+    keyLabs: [
+      "Core needle biopsy for diagnosis",
+      "ER, PR, and HER2 testing guides therapy",
+      "BRCA1/2 genetic testing when family history/early onset suggests hereditary risk",
+    ],
+    associations: [
+      "Female sex, age, family history",
+      "BRCA1/BRCA2, TP53 (Li-Fraumeni), PTEN (Cowden)",
+      "Prolonged estrogen exposure: early menarche, late menopause, nulliparity",
+      "Radiation exposure",
+      "Alcohol use and obesity after menopause",
+    ],
+    complications: [
+      "Local invasion into skin/chest wall",
+      "Axillary lymph node metastasis",
+      "Bone, lung, liver, and brain metastases",
+      "Lymphedema after axillary surgery/radiation",
+    ],
+    distinguishFrom: [
+      "Fibroadenoma — mobile rubbery mass in young woman",
+      "Fibrocystic change — cyclic pain/lumpiness, benign cystic changes",
+      "Mastitis/abscess — painful erythematous infection, often lactation-associated",
+      "Intraductal papilloma — benign cause of bloody nipple discharge but requires evaluation",
+    ],
+    treatment: [
+      "Surgery: lumpectomy plus radiation or mastectomy depending on stage/patient factors",
+      "Endocrine therapy for ER/PR+ disease: tamoxifen or aromatase inhibitors",
+      "HER2-targeted therapy for HER2+ disease: trastuzumab-based regimens",
+      "Chemotherapy for high-risk, triple-negative, HER2+, or advanced disease",
+    ],
+    boardsPearls: [
+      "Most common breast cancer type = invasive ductal carcinoma",
+      "ER+ tumors respond to tamoxifen/aromatase inhibitors; HER2+ tumors respond to trastuzumab",
+      "BRCA1 often triple-negative; BRCA2 often ER+ and also raises male breast/prostate cancer risk",
+      "Peau d'orange comes from dermal lymphatic obstruction",
+      "LCIS increases bilateral breast cancer risk; DCIS is noninvasive but can progress",
+    ],
+    pediatrics:
+      "Breast cancer is extremely rare in children/adolescents; pediatric breast masses are usually benign (fibroadenoma). Strong hereditary syndromes can require early genetic counseling and surveillance planning.",
   },
   {
     id: "cystic-fibrosis",
@@ -5366,6 +5504,68 @@ export const CONDITIONS: ConditionEntry[] = [
       "Spares DIPs (unlike osteoarthritis)",
       "Methotrexate is anchor DMARD; TNF inhibitors for refractory disease",
     ],
+  },
+  {
+    id: "osteoarthritis",
+    name: "Osteoarthritis",
+    etymology: "Greek osteon = bone + arthron = joint + -itis = inflammation",
+    aliases: [
+      "osteoarthritis",
+      "oa",
+      "degenerative joint disease",
+      "degenerative arthritis",
+      "wear and tear arthritis",
+    ],
+    definition:
+      "Degenerative joint disease from progressive articular cartilage breakdown, subchondral bone remodeling, and osteophyte formation.",
+    pathophysiology:
+      "Mechanical stress and aging chondrocytes → cartilage matrix loss and fissuring → joint space narrowing; subchondral bone sclerosis/cysts and marginal osteophytes develop as reparative changes.",
+    classicPresentation: [
+      "Older adult with chronic joint pain worse with use and better with rest",
+      "Brief morning stiffness <30 minutes",
+      "Knee, hip, spine, first CMC, DIP, and PIP involvement",
+    ],
+    keyFindings: [
+      "Crepitus and decreased range of motion",
+      "Heberden nodes (DIP) and Bouchard nodes (PIP)",
+      "Bony enlargement without warm boggy synovitis",
+    ],
+    keyLabs: [
+      "Usually normal ESR/CRP",
+      "Synovial fluid noninflammatory: WBC <2,000/µL",
+      "X-ray: asymmetric joint space narrowing, osteophytes, subchondral sclerosis/cysts",
+    ],
+    associations: [
+      "Age, obesity, prior joint injury",
+      "Repetitive mechanical stress",
+      "Female sex for hand/knee OA",
+      "Hemochromatosis can cause secondary OA-like arthropathy",
+    ],
+    complications: [
+      "Chronic pain and disability",
+      "Joint replacement need in severe hip/knee disease",
+      "Falls from pain, weakness, or limited mobility",
+    ],
+    distinguishFrom: [
+      "Rheumatoid arthritis — inflammatory symmetric MCP/PIP arthritis, prolonged morning stiffness, RF/anti-CCP",
+      "Gout — acute episodic crystal arthritis, negatively birefringent needles",
+      "Septic arthritis — acute hot swollen joint with high synovial WBC",
+      "Psoriatic arthritis — dactylitis, nail pitting, DIP inflammation with psoriasis",
+    ],
+    treatment: [
+      "Exercise/physical therapy, weight loss, activity modification",
+      "Topical NSAIDs first-line for hand/knee pain; oral NSAIDs if needed and safe",
+      "Intra-articular corticosteroid injections for flares",
+      "Joint replacement for severe refractory hip/knee OA",
+    ],
+    boardsPearls: [
+      "OA pain worsens with activity; RA stiffness improves with activity",
+      "DIP involvement favors OA or psoriatic arthritis, not RA",
+      "Osteophytes + subchondral sclerosis + asymmetric narrowing = OA",
+      "Noninflammatory synovial fluid separates OA from inflammatory arthritis",
+    ],
+    pediatrics:
+      "Primary osteoarthritis is rare in children; pediatric degenerative joint disease suggests prior trauma, congenital/developmental hip disease, slipped capital femoral epiphysis, or inflammatory arthritis sequelae.",
   },
   {
     id: "systemic-sclerosis",

@@ -77,6 +77,7 @@ import {
   getSymptomImageForId,
 } from "../data/symptomMedia";
 import { getSymptomById } from "../data/symptoms";
+import { scanPopoverRoot } from "./organScanner";
 import { renderPopoverTitle, type PopoverCategory } from "./popoverIcons";
 
 const CHIP_SELECTOR =
@@ -84,38 +85,40 @@ const CHIP_SELECTOR =
 const POPOVER_AUDIO_SELECTOR = ".usmle-organ-popover__audio";
 const POPOVER_CLASS = "usmle-organ-popover";
 const HIDE_DELAY_MS = 120;
+const STACK_OFFSET_PX = 14;
 
-let popoverEl: HTMLDivElement | null = null;
 let hideTimer: ReturnType<typeof setTimeout> | null = null;
-let activeChip: HTMLElement | null = null;
 
-function ensurePopover(): HTMLDivElement {
-  if (popoverEl) return popoverEl;
+interface PopoverEntry {
+  chip: HTMLElement;
+  popover: HTMLDivElement;
+}
 
-  popoverEl = document.createElement("div");
-  popoverEl.className = POPOVER_CLASS;
-  popoverEl.setAttribute("role", "tooltip");
-  popoverEl.hidden = true;
+const popoverStack: PopoverEntry[] = [];
 
-  popoverEl.addEventListener("mouseenter", () => {
-    if (hideTimer) {
-      clearTimeout(hideTimer);
-      hideTimer = null;
-    }
+function createPopover(): HTMLDivElement {
+  const popover = document.createElement("div");
+  popover.className = POPOVER_CLASS;
+  popover.setAttribute("role", "tooltip");
+  popover.hidden = true;
+
+  popover.addEventListener("mouseenter", () => {
+    clearScheduledHide();
   });
 
-  popoverEl.addEventListener("mouseleave", () => {
+  popover.addEventListener("mouseleave", (event) => {
+    if (isPointerInsideStack(event.relatedTarget as Node | null)) return;
     scheduleHide();
   });
 
-  document.body.appendChild(popoverEl);
-  return popoverEl;
+  document.body.appendChild(popover);
+  return popover;
 }
 
 function scheduleHide(): void {
   if (hideTimer) clearTimeout(hideTimer);
   hideTimer = setTimeout(() => {
-    hidePopover();
+    hideAllPopovers();
     hideTimer = null;
   }, HIDE_DELAY_MS);
 }
@@ -126,15 +129,15 @@ function clearScheduledHide(): void {
   hideTimer = null;
 }
 
-function stopPopoverAudio(): void {
-  const audio = popoverEl?.querySelector<HTMLAudioElement>(POPOVER_AUDIO_SELECTOR);
+function stopPopoverAudio(popover: HTMLDivElement): void {
+  const audio = popover.querySelector<HTMLAudioElement>(POPOVER_AUDIO_SELECTOR);
   if (!audio) return;
   audio.pause();
   audio.currentTime = 0;
 }
 
-function playPopoverAudio(): void {
-  const audio = popoverEl?.querySelector<HTMLAudioElement>(POPOVER_AUDIO_SELECTOR);
+function playPopoverAudio(popover: HTMLDivElement): void {
+  const audio = popover.querySelector<HTMLAudioElement>(POPOVER_AUDIO_SELECTOR);
   if (!audio) return;
   audio.currentTime = 0;
   void audio.play().catch(() => {
@@ -142,13 +145,41 @@ function playPopoverAudio(): void {
   });
 }
 
-function hidePopover(): void {
-  stopPopoverAudio();
-  if (popoverEl) {
-    popoverEl.hidden = true;
-    popoverEl.style.maxHeight = "";
+function removePopoverEntry(entry: PopoverEntry): void {
+  stopPopoverAudio(entry.popover);
+  entry.popover.remove();
+}
+
+function hideAllPopovers(): void {
+  for (let i = popoverStack.length - 1; i >= 0; i--) {
+    removePopoverEntry(popoverStack[i]!);
   }
-  activeChip = null;
+  popoverStack.length = 0;
+}
+
+function popLastPopover(): void {
+  const entry = popoverStack.pop();
+  if (!entry) return;
+  removePopoverEntry(entry);
+}
+
+function closePopoversAfter(popover: HTMLDivElement): void {
+  const index = popoverStack.findIndex((entry) => entry.popover === popover);
+  if (index === -1) {
+    hideAllPopovers();
+    return;
+  }
+
+  while (popoverStack.length > index + 1) {
+    popLastPopover();
+  }
+}
+
+function isPointerInsideStack(node: Node | null): boolean {
+  if (!node) return false;
+  return popoverStack.some(
+    (entry) => entry.popover.contains(node) || entry.chip.contains(node),
+  );
 }
 
 function clamp(value: number, min: number, max: number): number {
@@ -217,8 +248,50 @@ function positionPopover(chip: HTMLElement, popover: HTMLDivElement): void {
   popover.style.visibility = "visible";
 }
 
+function positionStackedPopover(
+  previousPopover: HTMLDivElement,
+  popover: HTMLDivElement,
+): void {
+  const rect = previousPopover.getBoundingClientRect();
+  const margin = 8;
+  const vw = window.innerWidth;
+  const vh = window.innerHeight;
+  const maxHeight = vh - 2 * margin;
+
+  popover.style.maxHeight = `${maxHeight}px`;
+  popover.style.visibility = "hidden";
+  popover.hidden = false;
+
+  const popRect = popover.getBoundingClientRect();
+  const top = clamp(
+    rect.top + STACK_OFFSET_PX,
+    margin,
+    Math.max(margin, vh - popRect.height - margin),
+  );
+  const left = clamp(
+    rect.left + STACK_OFFSET_PX,
+    margin,
+    Math.max(margin, vw - popRect.width - margin),
+  );
+
+  popover.style.top = `${top}px`;
+  popover.style.left = `${left}px`;
+  popover.style.visibility = "visible";
+}
+
+function repositionPopoverStackFrom(index: number): void {
+  for (let i = Math.max(0, index); i < popoverStack.length; i++) {
+    const entry = popoverStack[i]!;
+    if (i === 0) {
+      positionPopover(entry.chip, entry.popover);
+      continue;
+    }
+    positionStackedPopover(popoverStack[i - 1]!.popover, entry.popover);
+  }
+}
+
 function bindPopoverImageReposition(
-  chip: HTMLElement,
+  entry: PopoverEntry,
   popover: HTMLDivElement,
 ): void {
   for (const img of popover.querySelectorAll<HTMLImageElement>("img")) {
@@ -226,18 +299,18 @@ function bindPopoverImageReposition(
     img.addEventListener(
       "load",
       () => {
-        if (activeChip === chip && !popover.hidden) {
-          positionPopover(chip, popover);
-        }
+        const index = popoverStack.indexOf(entry);
+        if (index === -1 || popover.hidden) return;
+        repositionPopoverStackFrom(index);
       },
       { once: true },
     );
   }
 }
 
-function renderOrganPopover(organId: string): boolean {
+function renderOrganPopover(organId: string, popover: HTMLDivElement): boolean {
   const organ = getOrganById(organId);
-  if (!organ || !popoverEl) return false;
+  if (!organ || !popover) return false;
 
   const imageSrc = getOrganImageForId(organId);
   const imageCaption = getOrganImageCaptionForId(organId);
@@ -261,10 +334,10 @@ function renderOrganPopover(organId: string): boolean {
     ${renderListSection("Step 1 pearls", organ.step1Pearls ?? [])}
   `,
   );
-  popoverEl.classList.add("usmle-organ-popover--rich");
+  popover.classList.add("usmle-organ-popover--rich");
   if (imageSrc && imageCaption && imageAttribution) {
-    popoverEl.classList.add("usmle-organ-popover--with-media");
-    popoverEl.innerHTML = `
+    popover.classList.add("usmle-organ-popover--with-media");
+    popover.innerHTML = `
       <div class="usmle-organ-popover__layout">
         <div class="usmle-organ-popover__body">${bodyContent}</div>
         ${renderPopoverMediaBlock({
@@ -276,12 +349,13 @@ function renderOrganPopover(organId: string): boolean {
       </div>
     `;
   } else {
-    popoverEl.innerHTML = bodyContent;
+    popover.innerHTML = bodyContent;
   }
   return true;
 }
 
 function renderDefinitionPopover(
+  popover: HTMLDivElement,
   title: string,
   category: PopoverCategory,
   definition: string,
@@ -289,13 +363,13 @@ function renderDefinitionPopover(
   items: string[],
   etymology?: string,
 ): boolean {
-  if (!popoverEl) return false;
+  if (!popover) return false;
 
   const list = `<ul class="usmle-organ-popover__list">${items
     .map((item) => `<li>${item}</li>`)
     .join("")}</ul>`;
 
-  popoverEl.innerHTML = `
+  popover.innerHTML = `
     ${renderPopoverTitle(title, category, etymology)}
     <div class="usmle-organ-popover__meaning">${definition}</div>
     <div class="usmle-organ-popover__section-label">${sectionLabel}</div>
@@ -304,11 +378,12 @@ function renderDefinitionPopover(
   return true;
 }
 
-function renderHeartSoundPopover(heartSoundId: string): boolean {
+function renderHeartSoundPopover(heartSoundId: string, popover: HTMLDivElement): boolean {
   const sound = getHeartSoundById(heartSoundId);
   if (!sound) return false;
 
   return renderDefinitionPopover(
+    popover,
     sound.name,
     "heart-sound",
     sound.meaning,
@@ -318,9 +393,9 @@ function renderHeartSoundPopover(heartSoundId: string): boolean {
   );
 }
 
-function renderHeartMurmurPopover(heartMurmurId: string): boolean {
+function renderHeartMurmurPopover(heartMurmurId: string, popover: HTMLDivElement): boolean {
   const murmur = getHeartMurmurById(heartMurmurId);
-  if (!murmur || !popoverEl) return false;
+  if (!murmur || !popover) return false;
 
   const audioSrc = getHeartMurmurAudioForId(heartMurmurId);
   const audioCaption = getHeartMurmurAudioCaptionForId(heartMurmurId);
@@ -336,10 +411,10 @@ function renderHeartMurmurPopover(heartMurmurId: string): boolean {
   `;
   const bodyContent = renderRichPopoverContent(header, sections);
 
-  popoverEl.classList.add("usmle-organ-popover--rich");
+  popover.classList.add("usmle-organ-popover--rich");
   if (audioSrc && audioCaption && audioAttribution) {
-    popoverEl.classList.add("usmle-organ-popover--with-media");
-    popoverEl.innerHTML = `
+    popover.classList.add("usmle-organ-popover--with-media");
+    popover.innerHTML = `
       <div class="usmle-organ-popover__layout">
         <div class="usmle-organ-popover__body">${bodyContent}</div>
         ${renderPopoverAudioBlock({
@@ -350,16 +425,17 @@ function renderHeartMurmurPopover(heartMurmurId: string): boolean {
       </div>
     `;
   } else {
-    popoverEl.innerHTML = bodyContent;
+    popover.innerHTML = bodyContent;
   }
   return true;
 }
 
-function renderHemodynamicPopover(hemodynamicId: string): boolean {
+function renderHemodynamicPopover(hemodynamicId: string, popover: HTMLDivElement): boolean {
   const term = getHemodynamicById(hemodynamicId);
   if (!term) return false;
 
   return renderDefinitionPopover(
+    popover,
     term.name,
     "hemodynamic",
     term.definition,
@@ -431,9 +507,9 @@ function renderPopoverAudioBlock(options: {
   `;
 }
 
-function renderSymptomPopover(symptomId: string): boolean {
+function renderSymptomPopover(symptomId: string, popover: HTMLDivElement): boolean {
   const symptom = getSymptomById(symptomId);
-  if (!symptom || !popoverEl) return false;
+  if (!symptom || !popover) return false;
 
   const imageSrc = getSymptomImageForId(symptomId);
   const imageCaption = getSymptomImageCaptionForId(symptomId);
@@ -454,10 +530,10 @@ function renderSymptomPopover(symptomId: string): boolean {
   `,
   );
 
-  popoverEl.classList.add("usmle-organ-popover--rich");
+  popover.classList.add("usmle-organ-popover--rich");
   if (imageSrc && imageCaption && imageAttribution) {
-    popoverEl.classList.add("usmle-organ-popover--with-media");
-    popoverEl.innerHTML = `
+    popover.classList.add("usmle-organ-popover--with-media");
+    popover.innerHTML = `
       <div class="usmle-organ-popover__layout">
         <div class="usmle-organ-popover__body">${bodyContent}</div>
         ${renderPopoverMediaBlock({
@@ -469,14 +545,14 @@ function renderSymptomPopover(symptomId: string): boolean {
       </div>
     `;
   } else {
-    popoverEl.innerHTML = bodyContent;
+    popover.innerHTML = bodyContent;
   }
   return true;
 }
 
-function renderMedicationPopover(medicationId: string): boolean {
+function renderMedicationPopover(medicationId: string, popover: HTMLDivElement): boolean {
   const medication = getMedicationById(medicationId);
-  if (!medication || !popoverEl) return false;
+  if (!medication || !popover) return false;
 
   const antiarrhythmicClass = getAntiarrhythmicClassForMedication(medicationId);
   const actionPotentialImage = getAntiarrhythmicImageForMedication(medicationId);
@@ -500,10 +576,10 @@ function renderMedicationPopover(medicationId: string): boolean {
   `,
   );
 
-  popoverEl.classList.add("usmle-organ-popover--rich");
+  popover.classList.add("usmle-organ-popover--rich");
   if (actionPotentialImage && antiarrhythmicClass && actionPotentialAttribution) {
-    popoverEl.classList.add("usmle-organ-popover--with-media");
-    popoverEl.innerHTML = `
+    popover.classList.add("usmle-organ-popover--with-media");
+    popover.innerHTML = `
       <div class="usmle-organ-popover__layout">
         <div class="usmle-organ-popover__body">${bodyContent}</div>
         ${renderPopoverMediaBlock({
@@ -515,8 +591,8 @@ function renderMedicationPopover(medicationId: string): boolean {
       </div>
     `;
   } else if (imageSrc && imageCaption && imageAttribution) {
-    popoverEl.classList.add("usmle-organ-popover--with-media");
-    popoverEl.innerHTML = `
+    popover.classList.add("usmle-organ-popover--with-media");
+    popover.innerHTML = `
       <div class="usmle-organ-popover__layout">
         <div class="usmle-organ-popover__body">${bodyContent}</div>
         ${renderPopoverMediaBlock({
@@ -528,14 +604,14 @@ function renderMedicationPopover(medicationId: string): boolean {
       </div>
     `;
   } else {
-    popoverEl.innerHTML = bodyContent;
+    popover.innerHTML = bodyContent;
   }
   return true;
 }
 
-function renderLabValuePopover(labValueId: string): boolean {
+function renderLabValuePopover(labValueId: string, popover: HTMLDivElement): boolean {
   const lab = getLabValueById(labValueId);
-  if (!lab || !popoverEl) return false;
+  if (!lab || !popover) return false;
 
   const imageSrc = getLabValueImageForId(labValueId);
   const imageCaption = getLabValueImageCaptionForId(labValueId);
@@ -554,10 +630,10 @@ function renderLabValuePopover(labValueId: string): boolean {
   `,
   );
 
-  popoverEl.classList.add("usmle-organ-popover--rich");
+  popover.classList.add("usmle-organ-popover--rich");
   if (imageSrc && imageCaption && imageAttribution) {
-    popoverEl.classList.add("usmle-organ-popover--with-media");
-    popoverEl.innerHTML = `
+    popover.classList.add("usmle-organ-popover--with-media");
+    popover.innerHTML = `
       <div class="usmle-organ-popover__layout">
         <div class="usmle-organ-popover__body">${bodyContent}</div>
         ${renderPopoverMediaBlock({
@@ -569,17 +645,17 @@ function renderLabValuePopover(labValueId: string): boolean {
       </div>
     `;
   } else {
-    popoverEl.innerHTML = bodyContent;
+    popover.innerHTML = bodyContent;
   }
   return true;
 }
 
-function renderNephronPopover(nephronSegmentId: string): boolean {
+function renderNephronPopover(nephronSegmentId: string, popover: HTMLDivElement): boolean {
   const segment = getNephronSegmentById(nephronSegmentId);
-  if (!segment || !popoverEl) return false;
+  if (!segment || !popover) return false;
 
-  popoverEl.classList.add("usmle-organ-popover--rich");
-  popoverEl.innerHTML = renderRichPopoverContent(
+  popover.classList.add("usmle-organ-popover--rich");
+  popover.innerHTML = renderRichPopoverContent(
     `
     ${renderPopoverTitle(segment.name, "nephron", segment.etymology)}
     <div class="usmle-organ-popover__section-label">Function</div>
@@ -603,9 +679,9 @@ function renderPediatricsSection(note: string): string {
   `;
 }
 
-function renderConditionPopover(conditionId: string): boolean {
+function renderConditionPopover(conditionId: string, popover: HTMLDivElement): boolean {
   const condition = getConditionById(conditionId);
-  if (!condition || !popoverEl) return false;
+  if (!condition || !popover) return false;
 
   const imageSrc = getConditionImageForId(conditionId);
   const imageCaption = getConditionImageCaptionForId(conditionId);
@@ -631,10 +707,10 @@ function renderConditionPopover(conditionId: string): boolean {
   `,
   );
 
-  popoverEl.classList.add("usmle-organ-popover--rich");
+  popover.classList.add("usmle-organ-popover--rich");
   if (imageSrc && imageCaption && imageAttribution) {
-    popoverEl.classList.add("usmle-organ-popover--with-media");
-    popoverEl.innerHTML = `
+    popover.classList.add("usmle-organ-popover--with-media");
+    popover.innerHTML = `
       <div class="usmle-organ-popover__layout">
         <div class="usmle-organ-popover__body">${bodyContent}</div>
         ${renderPopoverMediaBlock({
@@ -646,14 +722,14 @@ function renderConditionPopover(conditionId: string): boolean {
       </div>
     `;
   } else {
-    popoverEl.innerHTML = bodyContent;
+    popover.innerHTML = bodyContent;
   }
   return true;
 }
 
-function renderEcgFindingPopover(ecgFindingId: string): boolean {
+function renderEcgFindingPopover(ecgFindingId: string, popover: HTMLDivElement): boolean {
   const finding = getEcgFindingById(ecgFindingId);
-  if (!finding || !popoverEl) return false;
+  if (!finding || !popover) return false;
 
   const imageSrc = getEcgFindingImageForId(ecgFindingId);
   const imageCaption = getEcgFindingImageCaptionForId(ecgFindingId);
@@ -673,10 +749,10 @@ function renderEcgFindingPopover(ecgFindingId: string): boolean {
   `,
   );
 
-  popoverEl.classList.add("usmle-organ-popover--rich");
+  popover.classList.add("usmle-organ-popover--rich");
   if (imageSrc && imageCaption && imageAttribution) {
-    popoverEl.classList.add("usmle-organ-popover--with-media");
-    popoverEl.innerHTML = `
+    popover.classList.add("usmle-organ-popover--with-media");
+    popover.innerHTML = `
       <div class="usmle-organ-popover__layout">
         <div class="usmle-organ-popover__body">${bodyContent}</div>
         ${renderPopoverMediaBlock({
@@ -688,17 +764,17 @@ function renderEcgFindingPopover(ecgFindingId: string): boolean {
       </div>
     `;
   } else {
-    popoverEl.innerHTML = bodyContent;
+    popover.innerHTML = bodyContent;
   }
   return true;
 }
 
-function renderClinicalStrategyPopover(clinicalStrategyId: string): boolean {
+function renderClinicalStrategyPopover(clinicalStrategyId: string, popover: HTMLDivElement): boolean {
   const strategy = getClinicalStrategyById(clinicalStrategyId);
-  if (!strategy || !popoverEl) return false;
+  if (!strategy || !popover) return false;
 
-  popoverEl.classList.add("usmle-organ-popover--rich");
-  popoverEl.innerHTML = renderRichPopoverContent(
+  popover.classList.add("usmle-organ-popover--rich");
+  popover.innerHTML = renderRichPopoverContent(
     `
     ${renderPopoverTitle(strategy.name, "clinical-strategy", strategy.etymology)}
     <div class="usmle-organ-popover__meaning">${strategy.definition}</div>
@@ -712,9 +788,9 @@ function renderClinicalStrategyPopover(clinicalStrategyId: string): boolean {
   return true;
 }
 
-function renderCellPopover(cellId: string): boolean {
+function renderCellPopover(cellId: string, popover: HTMLDivElement): boolean {
   const cell = getCellById(cellId);
-  if (!cell || !popoverEl) return false;
+  if (!cell || !popover) return false;
 
   const imageSrc = getCellImageForId(cellId);
   const imageCaption = getCellImageCaptionForId(cellId);
@@ -735,10 +811,10 @@ function renderCellPopover(cellId: string): boolean {
   `,
   );
 
-  popoverEl.classList.add("usmle-organ-popover--rich");
+  popover.classList.add("usmle-organ-popover--rich");
   if (imageSrc && imageCaption && imageAttribution) {
-    popoverEl.classList.add("usmle-organ-popover--with-media");
-    popoverEl.innerHTML = `
+    popover.classList.add("usmle-organ-popover--with-media");
+    popover.innerHTML = `
       <div class="usmle-organ-popover__layout">
         <div class="usmle-organ-popover__body">${bodyContent}</div>
         ${renderPopoverMediaBlock({
@@ -750,14 +826,14 @@ function renderCellPopover(cellId: string): boolean {
       </div>
     `;
   } else {
-    popoverEl.innerHTML = bodyContent;
+    popover.innerHTML = bodyContent;
   }
   return true;
 }
 
-function renderMusculoskeletalPopover(musculoskeletalId: string): boolean {
+function renderMusculoskeletalPopover(musculoskeletalId: string, popover: HTMLDivElement): boolean {
   const entry = getMusculoskeletalById(musculoskeletalId);
-  if (!entry || !popoverEl) return false;
+  if (!entry || !popover) return false;
 
   const imageSrc = getMusculoskeletalImageForId(musculoskeletalId);
   const imageCaption = getMusculoskeletalImageCaptionForId(musculoskeletalId);
@@ -780,10 +856,10 @@ function renderMusculoskeletalPopover(musculoskeletalId: string): boolean {
   `,
   );
 
-  popoverEl.classList.add("usmle-organ-popover--rich");
+  popover.classList.add("usmle-organ-popover--rich");
   if (imageSrc && imageCaption && imageAttribution) {
-    popoverEl.classList.add("usmle-organ-popover--with-media");
-    popoverEl.innerHTML = `
+    popover.classList.add("usmle-organ-popover--with-media");
+    popover.innerHTML = `
       <div class="usmle-organ-popover__layout">
         <div class="usmle-organ-popover__body">${bodyContent}</div>
         ${renderPopoverMediaBlock({
@@ -795,17 +871,17 @@ function renderMusculoskeletalPopover(musculoskeletalId: string): boolean {
       </div>
     `;
   } else {
-    popoverEl.innerHTML = bodyContent;
+    popover.innerHTML = bodyContent;
   }
   return true;
 }
 
-function renderPathogenesisPopover(pathogenesisId: string): boolean {
+function renderPathogenesisPopover(pathogenesisId: string, popover: HTMLDivElement): boolean {
   const entry = getPathogenesisById(pathogenesisId);
-  if (!entry || !popoverEl) return false;
+  if (!entry || !popover) return false;
 
-  popoverEl.classList.add("usmle-organ-popover--rich");
-  popoverEl.innerHTML = renderRichPopoverContent(
+  popover.classList.add("usmle-organ-popover--rich");
+  popover.innerHTML = renderRichPopoverContent(
     `
     ${renderPopoverTitle(entry.name, "pathogenesis", entry.etymology)}
     <div class="usmle-organ-popover__meaning">${entry.definition}</div>
@@ -827,9 +903,9 @@ function formatMicrobeType(type: string): string {
     .join(" ");
 }
 
-function renderMicrobiologyPopover(microbiologyId: string): boolean {
+function renderMicrobiologyPopover(microbiologyId: string, popover: HTMLDivElement): boolean {
   const entry = getMicrobiologyById(microbiologyId);
-  if (!entry || !popoverEl) return false;
+  if (!entry || !popover) return false;
 
   const imageSrc = getMicrobiologyImageForId(microbiologyId);
   const imageCaption = getMicrobiologyImageCaptionForId(microbiologyId);
@@ -855,10 +931,10 @@ function renderMicrobiologyPopover(microbiologyId: string): boolean {
   `,
   );
 
-  popoverEl.classList.add("usmle-organ-popover--rich");
+  popover.classList.add("usmle-organ-popover--rich");
   if (imageSrc && imageCaption && imageAttribution) {
-    popoverEl.classList.add("usmle-organ-popover--with-media");
-    popoverEl.innerHTML = `
+    popover.classList.add("usmle-organ-popover--with-media");
+    popover.innerHTML = `
       <div class="usmle-organ-popover__layout">
         <div class="usmle-organ-popover__body">${bodyContent}</div>
         ${renderPopoverMediaBlock({
@@ -870,17 +946,17 @@ function renderMicrobiologyPopover(microbiologyId: string): boolean {
       </div>
     `;
   } else {
-    popoverEl.innerHTML = bodyContent;
+    popover.innerHTML = bodyContent;
   }
   return true;
 }
 
-function renderProcedurePopover(procedureId: string): boolean {
+function renderProcedurePopover(procedureId: string, popover: HTMLDivElement): boolean {
   const procedure = getProcedureById(procedureId);
-  if (!procedure || !popoverEl) return false;
+  if (!procedure || !popover) return false;
 
-  popoverEl.classList.add("usmle-organ-popover--rich");
-  popoverEl.innerHTML = renderRichPopoverContent(
+  popover.classList.add("usmle-organ-popover--rich");
+  popover.innerHTML = renderRichPopoverContent(
     `
     ${renderPopoverTitle(procedure.name, "procedure", procedure.etymology)}
     <div class="usmle-organ-popover__meaning">${procedure.definition}</div>
@@ -896,9 +972,9 @@ function renderProcedurePopover(procedureId: string): boolean {
   return true;
 }
 
-function renderSignalingPopover(signalingId: string): boolean {
+function renderSignalingPopover(signalingId: string, popover: HTMLDivElement): boolean {
   const molecule = getSignalingById(signalingId);
-  if (!molecule || !popoverEl) return false;
+  if (!molecule || !popover) return false;
 
   const meta = [
     `<strong>Type:</strong> ${molecule.type}`,
@@ -908,8 +984,8 @@ function renderSignalingPopover(signalingId: string): boolean {
     .filter(Boolean)
     .join(" · ");
 
-  popoverEl.classList.add("usmle-organ-popover--rich");
-  popoverEl.innerHTML = renderRichPopoverContent(
+  popover.classList.add("usmle-organ-popover--rich");
+  popover.innerHTML = renderRichPopoverContent(
     `
     ${renderPopoverTitle(molecule.name, "signaling", molecule.etymology)}
     ${meta ? `<div class="usmle-organ-popover__layer">${meta}</div>` : ""}
@@ -927,9 +1003,9 @@ function renderSignalingPopover(signalingId: string): boolean {
   return true;
 }
 
-function renderProteinPopover(proteinId: string): boolean {
+function renderProteinPopover(proteinId: string, popover: HTMLDivElement): boolean {
   const protein = getProteinById(proteinId);
-  if (!protein || !popoverEl) return false;
+  if (!protein || !popover) return false;
 
   const imageSrc = getProteinImageForId(proteinId);
   const imageCaption = getProteinImageCaptionForId(proteinId);
@@ -955,10 +1031,10 @@ function renderProteinPopover(proteinId: string): boolean {
   `,
   );
 
-  popoverEl.classList.add("usmle-organ-popover--rich");
+  popover.classList.add("usmle-organ-popover--rich");
   if (imageSrc && imageCaption && imageAttribution) {
-    popoverEl.classList.add("usmle-organ-popover--with-media");
-    popoverEl.innerHTML = `
+    popover.classList.add("usmle-organ-popover--with-media");
+    popover.innerHTML = `
       <div class="usmle-organ-popover__layout">
         <div class="usmle-organ-popover__body">${bodyContent}</div>
         ${renderPopoverMediaBlock({
@@ -970,7 +1046,7 @@ function renderProteinPopover(proteinId: string): boolean {
       </div>
     `;
   } else {
-    popoverEl.innerHTML = bodyContent;
+    popover.innerHTML = bodyContent;
   }
   return true;
 }
@@ -1016,61 +1092,91 @@ function showPopover(chip: HTMLElement): void {
   )
     return;
 
-  if (hideTimer) {
-    clearTimeout(hideTimer);
-    hideTimer = null;
+  clearScheduledHide();
+
+  const currentTop = popoverStack[popoverStack.length - 1];
+  if (currentTop?.chip === chip) return;
+
+  const sourcePopover = chip.closest<HTMLDivElement>(`.${POPOVER_CLASS}`);
+  if (sourcePopover) {
+    closePopoversAfter(sourcePopover);
+  } else {
+    hideAllPopovers();
   }
 
-  const popover = ensurePopover();
+  const previousPopover =
+    sourcePopover && popoverStack.length > 0
+      ? popoverStack[popoverStack.length - 1]!.popover
+      : null;
+  const popover = createPopover();
   popover.classList.remove(
     "usmle-organ-popover--rich",
     "usmle-organ-popover--wide",
     "usmle-organ-popover--with-media",
   );
   const rendered = organId
-    ? renderOrganPopover(organId)
+    ? renderOrganPopover(organId, popover)
     : heartSoundId
-      ? renderHeartSoundPopover(heartSoundId)
+      ? renderHeartSoundPopover(heartSoundId, popover)
       : heartMurmurId
-        ? renderHeartMurmurPopover(heartMurmurId)
+        ? renderHeartMurmurPopover(heartMurmurId, popover)
         : hemodynamicId
-        ? renderHemodynamicPopover(hemodynamicId)
+        ? renderHemodynamicPopover(hemodynamicId, popover)
         : symptomId
-          ? renderSymptomPopover(symptomId)
+          ? renderSymptomPopover(symptomId, popover)
           : medicationId
-            ? renderMedicationPopover(medicationId)
+            ? renderMedicationPopover(medicationId, popover)
             : labValueId
-              ? renderLabValuePopover(labValueId)
+              ? renderLabValuePopover(labValueId, popover)
               : nephronSegmentId
-                ? renderNephronPopover(nephronSegmentId)
+                ? renderNephronPopover(nephronSegmentId, popover)
                 : conditionId
-                  ? renderConditionPopover(conditionId)
+                  ? renderConditionPopover(conditionId, popover)
                   : proteinId
-                    ? renderProteinPopover(proteinId)
+                    ? renderProteinPopover(proteinId, popover)
                     : signalingId
-                      ? renderSignalingPopover(signalingId)
+                      ? renderSignalingPopover(signalingId, popover)
                       : ecgFindingId
-                        ? renderEcgFindingPopover(ecgFindingId)
+                        ? renderEcgFindingPopover(ecgFindingId, popover)
                         : procedureId
-                          ? renderProcedurePopover(procedureId)
+                          ? renderProcedurePopover(procedureId, popover)
                           : clinicalStrategyId
-                            ? renderClinicalStrategyPopover(clinicalStrategyId)
+                            ? renderClinicalStrategyPopover(
+                                clinicalStrategyId,
+                                popover,
+                              )
                             : cellId
-                              ? renderCellPopover(cellId)
+                              ? renderCellPopover(cellId, popover)
                               : pathogenesisId
-                                ? renderPathogenesisPopover(pathogenesisId)
+                                ? renderPathogenesisPopover(
+                                    pathogenesisId,
+                                    popover,
+                                  )
                                 : microbiologyId
-                                  ? renderMicrobiologyPopover(microbiologyId)
+                                  ? renderMicrobiologyPopover(
+                                      microbiologyId,
+                                      popover,
+                                    )
                                   : renderMusculoskeletalPopover(
                                       musculoskeletalId!,
+                                      popover,
                                     );
-  if (!rendered) return;
+  if (!rendered) {
+    popover.remove();
+    return;
+  }
 
+  scanPopoverRoot(popover);
   preparePopoverForDisplay(popover);
-  activeChip = chip;
-  positionPopover(chip, popover);
-  bindPopoverImageReposition(chip, popover);
-  playPopoverAudio();
+  const entry = { chip, popover };
+  popoverStack.push(entry);
+  if (previousPopover) {
+    positionStackedPopover(previousPopover, popover);
+  } else {
+    positionPopover(chip, popover);
+  }
+  bindPopoverImageReposition(entry, popover);
+  playPopoverAudio(popover);
 }
 
 export function startPopoverController(): void {
@@ -1089,13 +1195,15 @@ export function startPopoverController(): void {
   document.addEventListener(
     "mouseout",
     (event) => {
+      if (popoverStack.length === 0) return;
       const related = event.relatedTarget as Node | null;
       const from = (event.target as Element | null)?.closest(
         CHIP_SELECTOR,
       ) as HTMLElement | null;
-      if (!from || from !== activeChip) return;
-      if (related && (from.contains(related) || popoverEl?.contains(related)))
+      if (!from) return;
+      if (related && (from.contains(related) || isPointerInsideStack(related))) {
         return;
+      }
       scheduleHide();
     },
     true,
@@ -1105,23 +1213,19 @@ export function startPopoverController(): void {
     "keydown",
     (event) => {
       if (event.key !== "Escape" && event.key !== "Esc") return;
-      if (!activeChip || !popoverEl || popoverEl.hidden) return;
+      if (popoverStack.length === 0) return;
 
       clearScheduledHide();
-      hidePopover();
+      popLastPopover();
     },
     true,
   );
 
   window.addEventListener("scroll", () => {
-    if (activeChip && popoverEl && !popoverEl.hidden) {
-      positionPopover(activeChip, popoverEl);
-    }
+    repositionPopoverStackFrom(0);
   }, true);
 
   window.addEventListener("resize", () => {
-    if (activeChip && popoverEl && !popoverEl.hidden) {
-      positionPopover(activeChip, popoverEl);
-    }
+    repositionPopoverStackFrom(0);
   });
 }

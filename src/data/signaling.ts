@@ -7,6 +7,7 @@ export type SignalingType =
   | "Signaling pathway"
   | "Gasotransmitter"
   | "Hormone"
+  | "Metabolite"
   | "Vitamin";
 
 export interface SignalingEntry {
@@ -169,6 +170,48 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
     ],
     pediatrics:
       "Vitamin K deficiency bleeding (VKDB) in newborns — give IM vitamin K at birth; classic VKDB days 2–7, late VKDB weeks 2–12 in exclusively breastfed infants without prophylaxis.",
+  },
+  {
+    id: "bile-acid",
+    name: "Bile Acid",
+    etymology: "Latin bilis = bile + acid = sour/proton-donating substance",
+    aliases: [
+      "bile acid",
+      "bile acids",
+      "bile salt",
+      "bile salts",
+      "cholic acid",
+      "chenodeoxycholic acid",
+      "taurocholate",
+      "glycocholate",
+    ],
+    type: "Metabolite",
+    source:
+      "Hepatocytes synthesize primary bile acids from cholesterol; conjugated bile salts are secreted into bile and stored/concentrated in gallbladder",
+    receptor:
+      "Micellar detergent action in intestinal lumen; FXR/TGR5 signaling regulates bile acid and lipid metabolism",
+    function:
+      "Amphipathic cholesterol-derived molecules that emulsify dietary lipids, form micelles for fat and fat-soluble vitamin absorption, and undergo enterohepatic recirculation with terminal ileal reabsorption.",
+    clinicalRelevance: [
+      "Ileal disease or resection → bile acid malabsorption, watery diarrhea, fat malabsorption, and gallstone risk",
+      "Bile acid sequestrants bind bile acids in gut → ↓ LDL but can worsen hypertriglyceridemia",
+      "Cholestasis ↓ bile delivery to intestine → fat-soluble vitamin deficiency and steatorrhea",
+      "Bile acids solubilize cholesterol; imbalance promotes cholesterol gallstones",
+    ],
+    boardsPearls: [
+      "Bile acids come from cholesterol — major route for cholesterol elimination",
+      "Conjugation with glycine/taurine makes bile salts more water soluble",
+      "Terminal ileum reabsorbs bile acids; B12 also absorbed in ileum",
+      "Micelles are required for vitamins A, D, E, K absorption",
+      "Cholestyramine binds bile acids and interrupts enterohepatic recirculation",
+    ],
+    distinguishFrom: [
+      "Bilirubin — heme breakdown pigment excreted in bile, not lipid detergent",
+      "Pancreatic lipase — enzyme that digests triglycerides after bile emulsification",
+      "Cholesterol — precursor and gallstone component, not itself a bile acid",
+    ],
+    pediatrics:
+      "Biliary atresia or neonatal cholestasis can impair bile acid delivery, causing pale stools, conjugated hyperbilirubinemia, steatorrhea, and fat-soluble vitamin deficiency.",
   },
   {
     id: "active-vitamin-d",
@@ -688,6 +731,49 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
     ],
     pediatrics:
       "Same pyrogen pathway in children; anti-TNF agents used in pediatric IBD and JIA with mandatory latent TB screening and infection monitoring.",
+  },
+  {
+    id: "lymphotoxin-beta",
+    name: "Lymphotoxin Beta (LTβ)",
+    etymology: "Latin lympha = clear fluid + Greek toxikon = poison + beta = second letter",
+    aliases: [
+      "lymphotoxin beta",
+      "lymphotoxin b",
+      "lymphotoxin β",
+      "ltb",
+      "ltβ",
+      "lt beta",
+      "lymphotoxin-beta",
+      "lymphotoxin b beta",
+      "lymphotoxin b(beta)",
+      "lymphotoxin b (beta)",
+      "lymphotoxin beta receptor ligand",
+    ],
+    type: "Cytokine",
+    source:
+      "Activated lymphocytes, especially T cells, B cells, and lymphoid tissue inducer cells",
+    receptor:
+      "LTβ receptor (LTβR) on stromal, endothelial, and myeloid cells → noncanonical NF-κB signaling",
+    function:
+      "TNF-superfamily cytokine that helps organize secondary lymphoid tissue architecture, high endothelial venules, follicular dendritic cell networks, and lymphoid chemokine expression.",
+    clinicalRelevance: [
+      "Required for normal lymph node, Peyer patch, and splenic white pulp organization",
+      "LTβR signaling supports ectopic lymphoid follicles in chronic inflammation and autoimmunity",
+      "Links lymphocytes to stromal cells during lymphoid organ development",
+    ],
+    boardsPearls: [
+      "LTβ is membrane-bound and commonly pairs with LTα as LTα1β2 to signal through LTβR",
+      "LTβR → noncanonical NF-κB (NIK/RelB/p52) → lymphoid organogenesis and chemokines",
+      "Different from TNF-α: both are TNF-family cytokines, but LTβ is more about lymphoid architecture than fever/septic shock",
+      "Peyer patches and organized follicles require lymphotoxin signaling — useful immunology association",
+    ],
+    distinguishFrom: [
+      "TNF-α — soluble/systemic inflammation, fever, cachexia, septic shock",
+      "LT-α — related lymphotoxin subunit that can signal through TNF receptors",
+      "IL-7 — lymphocyte survival/development cytokine, not lymphoid stromal organization signal",
+    ],
+    pediatrics:
+      "Defective lymphoid organogenesis in development would impair organized mucosal and nodal immune responses; Step 1 usually tests conceptually through Peyer patches/secondary lymphoid tissue.",
   },
   {
     id: "pdgf",

@@ -954,6 +954,82 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
     ],
   },
   {
+    id: "immune-checkpoint",
+    name: "Immune Checkpoint",
+    etymology: "Latin immunis = exempt/protected + check = restrain + point = stage",
+    aliases: [
+      "immune checkpoint",
+      "immune checkpoints",
+      "checkpoint",
+      "checkpoints",
+      "checkpoint pathway",
+      "checkpoint pathways",
+      "t-cell checkpoint",
+      "t cell checkpoint",
+      "inhibitory checkpoint",
+      "immune checkpoint inhibition",
+    ],
+    definition:
+      "Inhibitory receptor-ligand pathway that restrains T-cell activation to preserve self-tolerance, limit tissue damage, and terminate immune responses.",
+    examples: [
+      "CTLA-4 on activated T cells/Tregs binds B7 (CD80/86) with higher affinity than CD28 → reduced early T-cell priming",
+      "PD-1 on chronically stimulated T cells binds PD-L1/PD-L2 → peripheral T-cell exhaustion and reduced effector function",
+      "Tumors exploit PD-L1 expression to suppress anti-tumor T-cell responses",
+      "Checkpoint inhibitors release these brakes: ipilimumab (anti-CTLA-4), nivolumab/pembrolizumab (anti-PD-1)",
+    ],
+    boardsPearls: [
+      "CTLA-4 acts mainly at priming in lymph nodes; PD-1 acts more in peripheral tissues/tumor microenvironment",
+      "Checkpoint blockade boosts anti-tumor immunity but can cause autoimmune-like immune-related adverse events",
+      "Abatacept is CTLA4-Ig and suppresses T-cell activation; ipilimumab blocks CTLA-4 and enhances activation",
+      "Missing co-stimulation → anergy; checkpoint signaling actively inhibits or exhausts activated T cells",
+    ],
+    distinguishFrom: [
+      "Co-stimulation — activating CD28-B7 signal 2, opposite direction from inhibitory checkpoints",
+      "Anergy — functional silence after inadequate activation, not necessarily checkpoint receptor engagement",
+      "Central tolerance — thymic deletion, not peripheral inhibitory receptor signaling",
+      "Immunodeficiency — broad immune failure, not regulated braking of specific T-cell responses",
+    ],
+    pediatrics:
+      "Primary checkpoint inhibitor use is uncommon in children but can treat select pediatric cancers; immune-related endocrinopathies, colitis, hepatitis, and dermatitis use same immunology principles.",
+  },
+  {
+    id: "cytotoxicity",
+    name: "Cytotoxicity",
+    etymology: "Greek kytos = cell + toxikon = poison + -ity = state",
+    aliases: [
+      "cytotoxicity",
+      "cytotoxic",
+      "cell-mediated cytotoxicity",
+      "cell mediated cytotoxicity",
+      "lymphocyte cytotoxicity",
+      "cytotoxic killing",
+    ],
+    definition:
+      "Immune-mediated target cell killing, usually by CD8⁺ T cells or NK cells inducing apoptosis in infected, malignant, or antibody-coated cells.",
+    examples: [
+      "CD8⁺ T cells recognize peptide-MHC I on infected or tumor cells → perforin/granzyme apoptosis",
+      "CD8⁺ T cells can use FasL-Fas signaling to trigger target-cell apoptosis",
+      "NK cells kill cells with low MHC I or stress ligands without antigen-specific TCR recognition",
+      "ADCC: NK-cell CD16 binds IgG-coated target cells → cytotoxic granule release",
+      "Cytotoxic chemotherapy kills rapidly dividing cells directly, not via antigen-specific immunity",
+    ],
+    boardsPearls: [
+      "CD8 = antigen-specific, MHC I-restricted cytotoxicity",
+      "NK = innate cytotoxicity, especially low MHC I; CD16/CD56 positive, no CD3/TCR",
+      "Perforin forms pores; granzymes activate caspases → apoptosis",
+      "ADCC uses IgG + CD16 and is a major type II hypersensitivity effector mechanism",
+      "Cytotoxic T cells drive viral clearance and transplant rejection",
+    ],
+    distinguishFrom: [
+      "Phagocytosis — engulfment by neutrophils/macrophages, not lymphocyte-mediated apoptosis",
+      "Complement MAC lysis — antibody/complement pore formation, not perforin/granzyme",
+      "Type IV delayed hypersensitivity — broader T-cell inflammation; cytotoxic CD8 killing is one arm",
+      "Cytostatic effect — growth arrest without killing",
+    ],
+    pediatrics:
+      "Inherited perforin/granule pathway defects can cause familial hemophagocytic lymphohistiocytosis with fever, cytopenias, hepatosplenomegaly, and severe inflammation.",
+  },
+  {
     id: "humoral-immunity",
     name: "Humoral Immunity",
     etymology: "Latin humor = body fluid + immunity = protection from disease",

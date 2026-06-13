@@ -272,6 +272,44 @@ export const SYMPTOMS: SymptomEntry[] = [
     ],
   },
   {
+    id: "dlco",
+    name: "Diffusing Capacity for Carbon Monoxide (DLCO)",
+    etymology: "Latin diffundere = spread out + carbon monoxide = one-carbon oxide gas",
+    aliases: [
+      "dlco",
+      "carbon monoxide diffusing capacity",
+      "diffusing capacity for carbon monoxide",
+      "diffusing capacity of lung for carbon monoxide",
+      "lung diffusing capacity",
+      "decreased dlco",
+      "low dlco",
+    ],
+    definition:
+      "Pulmonary function test estimate of gas transfer from alveoli across the alveolar-capillary membrane into pulmonary capillary blood.",
+    mechanism:
+      "A tiny inhaled CO dose binds hemoglobin avidly, so uptake reflects alveolar surface area, membrane thickness, pulmonary capillary blood volume, and hemoglobin concentration.",
+    thinkOf: [
+      "Emphysema — destroyed alveolar surface area",
+      "Interstitial lung disease / pulmonary fibrosis — thickened diffusion barrier",
+      "Pulmonary hypertension or chronic thromboembolism — reduced pulmonary capillary bed",
+      "Anemia — less hemoglobin to bind CO",
+      "Alveolar hemorrhage — increased DLCO from intra-alveolar hemoglobin",
+    ],
+    pairWith: [
+      "Obstructive PFTs + low DLCO → emphysema",
+      "Restrictive PFTs + low DLCO → interstitial lung disease",
+      "Restrictive PFTs + normal DLCO → obesity, scoliosis, or neuromuscular weakness",
+      "Hemoptysis + high DLCO → diffuse alveolar hemorrhage",
+    ],
+    distinguishFrom: [
+      "FEV1/FVC — airflow obstruction measure, not diffusion",
+      "TLC — lung volume/restriction measure, not membrane transfer",
+      "A-a gradient — gas exchange mismatch in blood gases, not PFT diffusion capacity",
+    ],
+    pediatrics:
+      "Pediatric DLCO uses age/size-adjusted predicted values; cystic fibrosis, pulmonary hypertension, or interstitial lung disease can lower DLCO when diffusion surface or capillary blood volume is reduced.",
+  },
+  {
     id: "pulmonary-edema",
     name: "Pulmonary Edema",
     etymology: "Latin pulmo = lung + Greek oidema = swelling",
@@ -617,6 +655,81 @@ export const SYMPTOMS: SymptomEntry[] = [
     ],
   },
   {
+    id: "night-sweats",
+    name: "Night Sweats",
+    etymology: "Old English niht = night + swat = perspiration",
+    aliases: [
+      "night sweats",
+      "nocturnal sweats",
+      "drenching night sweats",
+      "nighttime diaphoresis",
+    ],
+    definition:
+      "Recurrent, often drenching sweating during sleep; a constitutional symptom when not explained by room temperature or bedding.",
+    mechanism:
+      "Cytokine-driven changes in hypothalamic thermoregulation or autonomic activation cause sweating as the body dissipates heat during sleep.",
+    thinkOf: [
+      "Tuberculosis",
+      "Lymphoma (B symptom)",
+      "HIV or chronic infection",
+      "Infective endocarditis",
+      "Hyperthyroidism",
+      "Menopause / vasomotor symptoms",
+    ],
+    pairWith: [
+      "Fever + weight loss + cough/hemoptysis → tuberculosis",
+      "Painless lymphadenopathy + weight loss → lymphoma",
+      "Murmur + embolic findings → infective endocarditis",
+      "Heat intolerance + tremor + weight loss → hyperthyroidism",
+    ],
+    distinguishFrom: [
+      "Simple overheating during sleep — environmental trigger, no systemic features",
+      "Hot flashes — brief vasomotor episodes, often perimenopause/menopause",
+      "Diaphoresis with acute chest pain — sympathetic response to MI/shock, not chronic night sweats",
+    ],
+    pediatrics:
+      "Persistent night sweats with fever, weight loss, cough, or lymphadenopathy in a child should raise concern for TB, lymphoma, or chronic infection; isolated sweating can be benign.",
+  },
+  {
+    id: "weight-loss",
+    name: "Weight Loss",
+    etymology: "Old English gewiht = heaviness + los = loss/destruction",
+    aliases: [
+      "weight loss",
+      "unintentional weight loss",
+      "unexplained weight loss",
+      "loss of weight",
+      "cachexia",
+    ],
+    definition:
+      "Decrease in body weight, especially clinically significant when unintentional or paired with systemic symptoms.",
+    mechanism:
+      "Reduced intake, malabsorption, increased metabolic demand, catabolic cytokines, or endocrine excess can shift energy balance negative.",
+    thinkOf: [
+      "Malignancy",
+      "Tuberculosis or HIV",
+      "Hyperthyroidism",
+      "Type 1 diabetes mellitus",
+      "Addison disease",
+      "Malabsorption (celiac disease, pancreatic insufficiency)",
+      "Inflammatory bowel disease",
+    ],
+    pairWith: [
+      "Night sweats + fever → TB or lymphoma",
+      "Polyuria/polydipsia + ketones → new-onset type 1 diabetes",
+      "Heat intolerance + tremor → hyperthyroidism",
+      "Hyperpigmentation + hypotension → Addison disease",
+      "Chronic diarrhea + bloating → malabsorption",
+    ],
+    distinguishFrom: [
+      "Cachexia — inflammatory/catabolic wasting, often malignancy or chronic disease",
+      "Dehydration — acute water loss rather than tissue mass loss",
+      "Intentional dieting or exercise-related weight loss — expected cause and trajectory",
+    ],
+    pediatrics:
+      "In children, weight loss or poor weight gain suggests failure to thrive, malabsorption (celiac/CF), chronic infection, malignancy, or new-onset type 1 diabetes when paired with polyuria/polydipsia.",
+  },
+  {
     id: "headache",
     name: "Headache",
     etymology: "head + ache = pain",
@@ -931,6 +1044,81 @@ export const SYMPTOMS: SymptomEntry[] = [
       "Myoglobinuria — brown urine after rhabdomyolysis",
       "Menstrual contamination — consider in women",
     ],
+  },
+  {
+    id: "dysmorphic-red-blood-cells",
+    name: "Dysmorphic Red Blood Cells",
+    etymology: "Greek dys = abnormal + morphe = form + Old English blod = blood",
+    aliases: [
+      "dysmorphic red blood cells",
+      "dysmorphic rbcs",
+      "dysmorphic rbc",
+      "acanthocytes in urine",
+      "urinary acanthocytes",
+    ],
+    definition:
+      "Abnormally shaped red blood cells seen on urine microscopy, classically indicating glomerular hematuria.",
+    mechanism:
+      "RBCs are deformed while crossing an inflamed or damaged glomerular basement membrane and then exposed to tubular osmotic stress.",
+    thinkOf: [
+      "Glomerulonephritis",
+      "IgA nephropathy",
+      "Post-streptococcal glomerulonephritis",
+      "Lupus nephritis",
+      "Alport syndrome",
+      "Goodpasture syndrome / anti-GBM disease",
+    ],
+    pairWith: [
+      "RBC casts + proteinuria → nephritic syndrome",
+      "Hemoptysis → pulmonary-renal syndrome (Goodpasture, GPA)",
+      "Recent URI + hematuria → IgA nephropathy",
+      "Edema + hypertension → glomerulonephritis",
+    ],
+    distinguishFrom: [
+      "Isomorphic RBCs — lower urinary tract bleeding, stones, tumor, or UTI",
+      "Hemoglobinuria — dipstick blood positive without RBCs",
+      "Myoglobinuria — dipstick blood positive after muscle injury without RBCs",
+    ],
+    pediatrics:
+      "Children with dysmorphic RBCs plus edema, hypertension, or recent URI/pharyngitis should raise concern for nephritic syndromes such as IgA nephropathy or post-streptococcal GN.",
+  },
+  {
+    id: "proteinuria",
+    name: "Proteinuria",
+    etymology: "Greek proteios = primary + ouron = urine + -ia = condition",
+    aliases: [
+      "proteinuria",
+      "urine protein",
+      "protein in urine",
+      "albuminuria",
+      "microalbuminuria",
+      "heavy proteinuria",
+    ],
+    definition:
+      "Excess protein in urine; heavy proteinuria (>3.5 g/day) is the defining renal finding of nephrotic syndrome.",
+    mechanism:
+      "Podocyte slit diaphragm injury or glomerular basement membrane damage increases filtration of albumin and other plasma proteins.",
+    thinkOf: [
+      "Nephrotic syndrome (minimal change disease, FSGS, membranous nephropathy)",
+      "Diabetic nephropathy",
+      "Lupus nephritis",
+      "Glomerulonephritis",
+      "Multiple myeloma light chains",
+      "Hypertensive nephrosclerosis",
+    ],
+    pairWith: [
+      "Edema + hypoalbuminemia + hyperlipidemia → nephrotic syndrome",
+      "Hematuria + RBC casts → nephritic syndrome / glomerulonephritis",
+      "Diabetes + microalbuminuria → early diabetic nephropathy",
+      "Frothy urine → albumin-rich urine",
+    ],
+    distinguishFrom: [
+      "Albuminuria — albumin-specific proteinuria, common in glomerular disease",
+      "Bence Jones proteinuria — light chains; dipstick may miss because it detects albumin best",
+      "Transient proteinuria — fever, exercise, or orthostatic proteinuria without persistent renal disease",
+    ],
+    pediatrics:
+      "Minimal change disease is the classic pediatric nephrotic syndrome: periorbital edema, selective albuminuria, and response to steroids.",
   },
   {
     id: "dysuria",

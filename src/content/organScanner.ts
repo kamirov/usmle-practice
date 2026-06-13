@@ -132,11 +132,12 @@ interface TermMatch {
 
 let termIndex: TermMatch[] | null = null;
 let aliasesByTermKey: Map<string, Set<string>> | null = null;
-const highlightedOnQuestion = new Set<string>();
-const highlightedWordsOnQuestion = new Set<string>();
-const highlightedTermZone = new Map<string, number>();
+let highlightedOnQuestion = new Set<string>();
+let highlightedWordsOnQuestion = new Set<string>();
+let highlightedTermZone = new Map<string, number>();
 let questionFingerprint = "";
 let isApplyingHighlights = false;
+let allowPopoverScan = false;
 const pendingScanRoots = new Set<Element>();
 
 const QUESTION_HEADER_RE =
@@ -677,8 +678,13 @@ function shouldSkipNode(node: Node): boolean {
     for (const cls of OUR_CHIP_CLASSES) {
       if (parent.classList.contains(cls)) return true;
     }
-    if (parent.classList.contains(POPOVER_CLASS)) return true;
-    if (parent.closest(`${CHIP_SELECTOR}, .${POPOVER_CLASS}`)) return true;
+    if (!allowPopoverScan && parent.classList.contains(POPOVER_CLASS)) {
+      return true;
+    }
+    const closestSelector = allowPopoverScan
+      ? CHIP_SELECTOR
+      : `${CHIP_SELECTOR}, .${POPOVER_CLASS}`;
+    if (parent.closest(closestSelector)) return true;
     parent = parent.parentElement;
   }
   return false;
@@ -765,8 +771,11 @@ function shouldSkipElement(el: Element): boolean {
   for (const cls of OUR_CHIP_CLASSES) {
     if (el.classList.contains(cls)) return true;
   }
-  if (el.classList.contains(POPOVER_CLASS)) return true;
-  if (el.closest(`${CHIP_SELECTOR}, .${POPOVER_CLASS}`)) return true;
+  if (!allowPopoverScan && el.classList.contains(POPOVER_CLASS)) return true;
+  const closestSelector = allowPopoverScan
+    ? CHIP_SELECTOR
+    : `${CHIP_SELECTOR}, .${POPOVER_CLASS}`;
+  if (el.closest(closestSelector)) return true;
   return false;
 }
 
@@ -884,7 +893,7 @@ function collectCoalesceRoots(scanRoot: Node): Element[] {
   for (const textNode of textNodes) {
     const root = getCoalesceRoot(textNode);
     if (!root || seen.has(root)) continue;
-    if (isInsidePopover(root)) continue;
+    if (!allowPopoverScan && isInsidePopover(root)) continue;
     if (!isVisibleElement(root)) continue;
     seen.add(root);
     roots.push(root);
@@ -907,7 +916,9 @@ function compareNodeDocumentOrder(a: Node, b: Node): number {
 function collectHighlightableTextNodes(root: Node): Text[] {
   const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
     acceptNode(node) {
-      if (isInsidePopover(node)) return NodeFilter.FILTER_REJECT;
+      if (!allowPopoverScan && isInsidePopover(node)) {
+        return NodeFilter.FILTER_REJECT;
+      }
       if (shouldSkipNode(node)) return NodeFilter.FILTER_REJECT;
       const text = node.textContent ?? "";
       if (!text.trim()) return NodeFilter.FILTER_REJECT;
@@ -1018,6 +1029,33 @@ export function scanRoot(root: Node): void {
     }
   } finally {
     isApplyingHighlights = false;
+  }
+}
+
+export function scanPopoverRoot(popover: Element): void {
+  if (!popover.isConnected) return;
+
+  const previousHighlightedOnQuestion = highlightedOnQuestion;
+  const previousHighlightedWordsOnQuestion = highlightedWordsOnQuestion;
+  const previousHighlightedTermZone = highlightedTermZone;
+  const previousAllowPopoverScan = allowPopoverScan;
+  const previousIsApplyingHighlights = isApplyingHighlights;
+
+  highlightedOnQuestion = new Set();
+  highlightedWordsOnQuestion = new Set();
+  highlightedTermZone = new Map();
+  allowPopoverScan = true;
+  isApplyingHighlights = true;
+  try {
+    for (const coalesceRoot of collectCoalesceRoots(popover)) {
+      highlightCoalescedRoot(coalesceRoot, SCAN_ZONE.OTHER);
+    }
+  } finally {
+    highlightedOnQuestion = previousHighlightedOnQuestion;
+    highlightedWordsOnQuestion = previousHighlightedWordsOnQuestion;
+    highlightedTermZone = previousHighlightedTermZone;
+    allowPopoverScan = previousAllowPopoverScan;
+    isApplyingHighlights = previousIsApplyingHighlights;
   }
 }
 
