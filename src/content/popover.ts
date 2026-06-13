@@ -84,10 +84,7 @@ const CHIP_SELECTOR =
   ".usmle-organ-chip, .usmle-heart-sound-chip, .usmle-heart-murmur-chip, .usmle-hemodynamic-chip, .usmle-symptom-chip, .usmle-medication-chip, .usmle-lab-chip, .usmle-nephron-chip, .usmle-condition-chip, .usmle-protein-chip, .usmle-signaling-chip, .usmle-ecg-chip, .usmle-procedure-chip, .usmle-clinical-strategy-chip, .usmle-cell-chip, .usmle-pathogenesis-chip, .usmle-microbiology-chip, .usmle-musculoskeletal-chip";
 const POPOVER_AUDIO_SELECTOR = ".usmle-organ-popover__audio";
 const POPOVER_CLASS = "usmle-organ-popover";
-const HIDE_DELAY_MS = 120;
 const STACK_OFFSET_PX = 14;
-
-let hideTimer: ReturnType<typeof setTimeout> | null = null;
 
 interface PopoverEntry {
   chip: HTMLElement;
@@ -99,34 +96,11 @@ const popoverStack: PopoverEntry[] = [];
 function createPopover(): HTMLDivElement {
   const popover = document.createElement("div");
   popover.className = POPOVER_CLASS;
-  popover.setAttribute("role", "tooltip");
+  popover.setAttribute("role", "dialog");
   popover.hidden = true;
-
-  popover.addEventListener("mouseenter", () => {
-    clearScheduledHide();
-  });
-
-  popover.addEventListener("mouseleave", (event) => {
-    if (isPointerInsideStack(event.relatedTarget as Node | null)) return;
-    scheduleHide();
-  });
 
   document.body.appendChild(popover);
   return popover;
-}
-
-function scheduleHide(): void {
-  if (hideTimer) clearTimeout(hideTimer);
-  hideTimer = setTimeout(() => {
-    hideAllPopovers();
-    hideTimer = null;
-  }, HIDE_DELAY_MS);
-}
-
-function clearScheduledHide(): void {
-  if (!hideTimer) return;
-  clearTimeout(hideTimer);
-  hideTimer = null;
 }
 
 function stopPopoverAudio(popover: HTMLDivElement): void {
@@ -175,11 +149,10 @@ function closePopoversAfter(popover: HTMLDivElement): void {
   }
 }
 
-function isPointerInsideStack(node: Node | null): boolean {
-  if (!node) return false;
-  return popoverStack.some(
-    (entry) => entry.popover.contains(node) || entry.chip.contains(node),
-  );
+function isClickInsideOpenStack(target: EventTarget | null): boolean {
+  const el = target instanceof Element ? target : null;
+  if (!el) return false;
+  return el.closest(CHIP_SELECTOR) !== null || el.closest(`.${POPOVER_CLASS}`) !== null;
 }
 
 function clamp(value: number, min: number, max: number): number {
@@ -1092,10 +1065,11 @@ function showPopover(chip: HTMLElement): void {
   )
     return;
 
-  clearScheduledHide();
-
   const currentTop = popoverStack[popoverStack.length - 1];
-  if (currentTop?.chip === chip) return;
+  if (currentTop?.chip === chip) {
+    popLastPopover();
+    return;
+  }
 
   const sourcePopover = chip.closest<HTMLDivElement>(`.${POPOVER_CLASS}`);
   if (sourcePopover) {
@@ -1181,30 +1155,20 @@ function showPopover(chip: HTMLElement): void {
 
 export function startPopoverController(): void {
   document.addEventListener(
-    "mouseover",
+    "click",
     (event) => {
-      const target = (event.target as Element | null)?.closest(
+      const chip = (event.target as Element | null)?.closest(
         CHIP_SELECTOR,
       ) as HTMLElement | null;
-      if (!target) return;
-      showPopover(target);
-    },
-    true,
-  );
-
-  document.addEventListener(
-    "mouseout",
-    (event) => {
-      if (popoverStack.length === 0) return;
-      const related = event.relatedTarget as Node | null;
-      const from = (event.target as Element | null)?.closest(
-        CHIP_SELECTOR,
-      ) as HTMLElement | null;
-      if (!from) return;
-      if (related && (from.contains(related) || isPointerInsideStack(related))) {
+      if (chip) {
+        event.preventDefault();
+        showPopover(chip);
         return;
       }
-      scheduleHide();
+
+      if (popoverStack.length === 0) return;
+      if (isClickInsideOpenStack(event.target)) return;
+      hideAllPopovers();
     },
     true,
   );
@@ -1215,7 +1179,6 @@ export function startPopoverController(): void {
       if (event.key !== "Escape" && event.key !== "Esc") return;
       if (popoverStack.length === 0) return;
 
-      clearScheduledHide();
       popLastPopover();
     },
     true,

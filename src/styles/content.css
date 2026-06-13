@@ -10,7 +10,7 @@
   line-height: inherit;
   text-decoration: underline dotted rgba(37, 99, 235, 0.35);
   text-underline-offset: 2px;
-  cursor: help;
+  cursor: pointer;
 }
 
 .usmle-organ-chip:hover,
@@ -87,7 +87,7 @@
   line-height: inherit;
   text-decoration: underline dotted rgba(190, 18, 60, 0.35);
   text-underline-offset: 2px;
-  cursor: help;
+  cursor: pointer;
 }
 
 .usmle-heart-sound-chip:hover,
@@ -109,7 +109,7 @@
   line-height: inherit;
   text-decoration: underline dotted rgba(190, 18, 60, 0.35);
   text-underline-offset: 2px;
-  cursor: help;
+  cursor: pointer;
 }
 
 .usmle-heart-murmur-chip:hover,
@@ -131,7 +131,7 @@
   line-height: inherit;
   text-decoration: underline dotted rgba(5, 150, 105, 0.35);
   text-underline-offset: 2px;
-  cursor: help;
+  cursor: pointer;
 }
 
 .usmle-hemodynamic-chip:hover,
@@ -153,7 +153,7 @@
   line-height: inherit;
   text-decoration: underline dotted rgba(217, 119, 6, 0.35);
   text-underline-offset: 2px;
-  cursor: help;
+  cursor: pointer;
 }
 
 .usmle-symptom-chip:hover,
@@ -175,7 +175,7 @@
   line-height: inherit;
   text-decoration: underline dotted rgba(124, 58, 237, 0.35);
   text-underline-offset: 2px;
-  cursor: help;
+  cursor: pointer;
 }
 
 .usmle-medication-chip:hover,
@@ -197,7 +197,7 @@
   line-height: inherit;
   text-decoration: underline dotted rgba(14, 116, 144, 0.35);
   text-underline-offset: 2px;
-  cursor: help;
+  cursor: pointer;
 }
 
 .usmle-lab-chip:hover,
@@ -219,7 +219,7 @@
   line-height: inherit;
   text-decoration: underline dotted rgba(192, 38, 211, 0.35);
   text-underline-offset: 2px;
-  cursor: help;
+  cursor: pointer;
 }
 
 .usmle-nephron-chip:hover,
@@ -241,7 +241,7 @@
   line-height: inherit;
   text-decoration: underline dotted rgba(225, 29, 72, 0.35);
   text-underline-offset: 2px;
-  cursor: help;
+  cursor: pointer;
 }
 
 .usmle-condition-chip:hover,
@@ -263,7 +263,7 @@
   line-height: inherit;
   text-decoration: underline dotted rgba(190, 24, 93, 0.35);
   text-underline-offset: 2px;
-  cursor: help;
+  cursor: pointer;
 }
 
 .usmle-protein-chip:hover,
@@ -285,7 +285,7 @@
   line-height: inherit;
   text-decoration: underline dotted rgba(20, 184, 166, 0.35);
   text-underline-offset: 2px;
-  cursor: help;
+  cursor: pointer;
 }
 
 .usmle-signaling-chip:hover,
@@ -307,7 +307,7 @@
   line-height: inherit;
   text-decoration: underline dotted rgba(67, 56, 202, 0.35);
   text-underline-offset: 2px;
-  cursor: help;
+  cursor: pointer;
 }
 
 .usmle-ecg-chip:hover,
@@ -329,7 +329,7 @@
   line-height: inherit;
   text-decoration: underline dotted rgba(194, 65, 12, 0.35);
   text-underline-offset: 2px;
-  cursor: help;
+  cursor: pointer;
 }
 
 .usmle-procedure-chip:hover,
@@ -469,7 +469,7 @@
   line-height: inherit;
   text-decoration: underline dotted rgba(2, 132, 199, 0.35);
   text-underline-offset: 2px;
-  cursor: help;
+  cursor: pointer;
 }
 
 .usmle-clinical-strategy-chip:hover,
@@ -495,7 +495,7 @@
   line-height: inherit;
   text-decoration: underline dotted rgba(124, 58, 237, 0.35);
   text-underline-offset: 2px;
-  cursor: help;
+  cursor: pointer;
 }
 
 .usmle-cell-chip:hover,
@@ -521,7 +521,7 @@
   line-height: inherit;
   text-decoration: underline dotted rgba(217, 119, 6, 0.35);
   text-underline-offset: 2px;
-  cursor: help;
+  cursor: pointer;
 }
 
 .usmle-pathogenesis-chip:hover,
@@ -547,7 +547,7 @@
   line-height: inherit;
   text-decoration: underline dotted rgba(13, 148, 136, 0.35);
   text-underline-offset: 2px;
-  cursor: help;
+  cursor: pointer;
 }
 
 .usmle-microbiology-chip:hover,
@@ -573,7 +573,7 @@
   line-height: inherit;
   text-decoration: underline dotted rgba(71, 85, 105, 0.35);
   text-underline-offset: 2px;
-  cursor: help;
+  cursor: pointer;
 }
 
 .usmle-musculoskeletal-chip:hover,
