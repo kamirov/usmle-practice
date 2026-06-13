@@ -98,13 +98,43 @@ export const NEPHRON_SEGMENTS: NephronSegmentEntry[] = [
     ],
   },
   {
+    id: "peritubular-capillaries",
+    name: "Peritubular Capillaries",
+    etymology: "Latin peri = around + Latin tubulus = little tube + Latin capillaris = hairlike",
+    aliases: [
+      "peritubular capillary",
+      "peritubular capillaries",
+      "peritubular capillary network",
+      "cortical peritubular capillaries",
+      "peritubular capillary bed",
+    ],
+    function:
+      "Low-pressure capillary network surrounding cortical nephron tubules (proximal and distal), arising from the efferent arteriole. Delivers O₂ for tubular active transport and receives reabsorbed water and solutes from the peritubular interstitium into venous drainage.",
+    reabsorbs: [
+      "Water and solutes from peritubular interstitium (tubular reabsorbate)",
+      "O₂ delivery to proximal tubule mitochondria for Na⁺/K⁺-ATPase and other active transport",
+    ],
+    secretes: [],
+    boardsPearls: [
+      "Cortical nephrons: efferent arteriole → peritubular capillaries; juxtamedullary nephrons: efferent → vasa recta (medullary supply, not peritubular)",
+      "Low hydrostatic pressure + high oncotic pressure in peritubular capillaries favors reabsorption of filtered load back into blood",
+      "Receive ~90% of renal blood flow after glomerular filtration — bulk of RBF bypasses glomerulus as postglomerular capillaries",
+      "Peritubular interstitial fibroblasts (not endothelial cells) produce EPO in response to renal hypoxia",
+      "ACE inhibitors/ARBs dilate efferent arteriole → can ↓ peritubular perfusion and GFR",
+      "vs vasa recta — hairpin medullary vessels for countercurrent exchange, not cortical tubule supply",
+    ],
+  },
+  {
     id: "proximal-tubule",
     name: "Proximal Tubule",
     etymology: "Latin proximus = nearest + Latin tubulus = little tube",
     aliases: [
       "proximal convoluted tubule",
+      "proximal convoluted tubules",
       "proximal tubule",
+      "proximal tubules",
       "proximal renal tubule",
+      "proximal renal tubules",
       "pct",
     ],
     function:
@@ -180,8 +210,11 @@ export const NEPHRON_SEGMENTS: NephronSegmentEntry[] = [
     etymology: "Latin distare = stand apart + Latin convolvere = roll together + Latin tubulus = little tube",
     aliases: [
       "distal convoluted tubule",
+      "distal convoluted tubules",
       "distal tubule",
+      "distal tubules",
       "distal renal tubule",
+      "distal renal tubules",
       "dct",
     ],
     function:

@@ -2062,6 +2062,81 @@ export const CONDITIONS: ConditionEntry[] = [
       "Secondary causes (renal parenchymal disease, coarctation) are more common than essential HTN; evaluate if BP elevated on repeated measurements.",
   },
   {
+    id: "venous-thrombosis",
+    name: "Venous Thrombosis",
+    etymology: "Latin vena = vein + Greek thrombos = clot + -osis = condition",
+    aliases: [
+      "venous thrombosis",
+      "venous thromboses",
+      "venous thromboembolism",
+      "vte",
+      "deep vein thrombosis",
+      "deep venous thrombosis",
+      "dvt",
+      "dvts",
+      "lower extremity dvt",
+      "proximal dvt",
+    ],
+    definition:
+      "Thrombus formation in a deep vein — most often iliofemoral or popliteal — causing leg swelling and pain and risking pulmonary embolism if clot embolizes.",
+    pathophysiology:
+      "Virchow triad — venous stasis (immobility, surgery, long travel), endothelial injury (trauma, catheter, surgery), hypercoagulability (factor V Leiden, prothrombin G20210A, antiphospholipid syndrome, OCP, pregnancy, malignancy) → fibrin and platelet-rich clot in valve cusps of deep veins → inflammatory venous obstruction → unilateral edema; thrombus propagation or embolization to pulmonary arteries causes PE.",
+    classicPresentation: [
+      "Unilateral leg swelling, warmth, and calf or thigh pain",
+      "Recent surgery, immobilization, long flight, or hospitalization",
+      "Tenderness along deep venous system; calf swelling >3 cm compared to contralateral leg",
+      "May be asymptomatic if small or nonobstructive",
+      "Risk factors: malignancy, pregnancy/OCP, inherited thrombophilia, prior VTE",
+    ],
+    keyFindings: [
+      "Unilateral pitting edema and erythema",
+      "Homan sign (calf pain with passive dorsiflexion) — insensitive and nonspecific",
+      "Compression ultrasound — noncompressible venous segment diagnostic for DVT",
+      "D-dimer elevated when clot present but nonspecific (low pretest probability + negative D-dimer rules out)",
+    ],
+    keyLabs: [
+      "D-dimer — high sensitivity, low specificity",
+      "Hypercoagulable workup if unprovoked, young, or recurrent (factor V Leiden, prothrombin mutation, antiphospholipid antibodies, protein C/S, antithrombin)",
+    ],
+    associations: [
+      "Pulmonary embolism — most feared acute complication",
+      "Post-thrombotic syndrome — chronic venous insufficiency after DVT",
+      "Malignancy (Trousseau syndrome — migratory superficial thrombophlebitis)",
+      "Atrial fibrillation — arterial not venous, but both cause thromboembolism",
+      "Central venous catheters — upper extremity DVT",
+    ],
+    complications: [
+      "Pulmonary embolism — dyspnea, pleuritic chest pain, tachycardia, hypoxemia",
+      "Post-thrombotic syndrome and venous ulceration",
+      "Phlegmasia cerulea dolens — massive iliofemoral thrombosis with limb ischemia",
+      "Chronic thromboembolic pulmonary hypertension after recurrent PE",
+    ],
+    distinguishFrom: [
+      "Cellulitis — erythema without venous noncompressibility; may coexist",
+      "Ruptured Baker cyst — posterior knee fluid with crescent sign on MRI",
+      "Superficial thrombophlebitis — palpable cord in superficial vein; lower PE risk unless near saphenofemoral junction",
+      "Lymphedema — bilateral or chronic nonpitting edema without acute pain",
+      "Muscle strain or hematoma — trauma history, no venous filling defect on ultrasound",
+    ],
+    treatment: [
+      "Anticoagulation — DOAC (rivaroxaban, apixaban), LMWH bridging to warfarin, or LMWH alone per scenario",
+      "Compression stockings and early ambulation when tolerated",
+      "Thrombolysis or thrombectomy for massive iliofemoral DVT with threatened limb (selected cases)",
+      "Treat underlying cause; limit OCP if provoked by estrogen",
+      "IVC filter only when anticoagulation contraindicated — does not treat clot, prevents PE",
+    ],
+    boardsPearls: [
+      "Virchow triad: stasis, endothelial injury, hypercoagulability",
+      "Unilateral leg swelling + recent immobility → DVT until proven otherwise",
+      "Compression ultrasound is diagnostic; D-dimer rules out only with low pretest probability",
+      "Anticoagulate to prevent PE propagation — heparin/LMWH/DOAC/warfarin per guidelines",
+      "Factor V Leiden — most common inherited thrombophilia; activated protein C resistance",
+      "vs superficial thrombophlebitis — tender superficial cord; deep system ultrasound normal",
+    ],
+    pediatrics:
+      "DVT is rare in children but occurs with central lines, malignancy, congenital heart disease, or inherited thrombophilia. Neonatal renal vein thrombosis presents with hematuria, flank mass, and thrombocytopenia — distinct from lower-extremity DVT.",
+  },
+  {
     id: "atrial-fibrillation",
     name: "Atrial Fibrillation",
     etymology: "Latin atrium = entrance hall + fibrilla = small fiber; quivering atrial fibers",
@@ -2817,12 +2892,10 @@ export const CONDITIONS: ConditionEntry[] = [
     etymology: "Greek hyper = excess + para = beside + thyreos = shield gland + -ism = condition",
     aliases: [
       "hyperparathyroidism",
-      "primary hyperparathyroidism",
       "secondary hyperparathyroidism",
       "tertiary hyperparathyroidism",
       "elevated pth",
       "high pth",
-      "phpt",
       "shpt",
       "parathyroid hyperfunction",
     ],
@@ -2882,6 +2955,201 @@ export const CONDITIONS: ConditionEntry[] = [
     ],
     pediatrics:
       "Neonatal severe primary hyperparathyroidism is rare and presents with hypercalcemia and failure to thrive; familial hypocalciuric hypercalcemia is benign and does not need parathyroidectomy.",
+  },
+  {
+    id: "primary-hyperparathyroidism",
+    name: "Primary Hyperparathyroidism",
+    etymology: "Latin primus = first + Greek hyper = excess + para = beside + thyreos = shield gland + -ism = condition",
+    aliases: [
+      "primary hyperparathyroidism",
+      "primary hyperparathyroidisms",
+      "phpt",
+      "parathyroid adenoma disease",
+      "autonomous hyperparathyroidism",
+    ],
+    definition:
+      "Autonomous overproduction of PTH from parathyroid gland disease causing hypercalcemia — the most common outpatient cause of elevated calcium.",
+    pathophysiology:
+      "Solitary parathyroid adenoma (most common), four-gland hyperplasia, or rarely parathyroid carcinoma secretes PTH independent of calcium feedback → ↑ bone resorption, ↑ renal calcium reabsorption, ↑ 1,25-(OH)₂ vitamin D, and phosphaturia → hypercalcemia with hypophosphatemia.",
+    classicPresentation: [
+      "Often asymptomatic hypercalcemia on routine labs",
+      "Renal stones, bone pain, abdominal pain, constipation, depression, fatigue",
+      "Polyuria and polydipsia from hypercalcemia-induced nephrogenic DI",
+    ],
+    keyFindings: [
+      "Hypercalcemia with elevated or inappropriately normal PTH",
+      "Hypophosphatemia",
+      "Subperiosteal bone resorption, osteopenia, osteitis fibrosa cystica in advanced disease",
+      "Nephrolithiasis or nephrocalcinosis",
+    ],
+    keyLabs: [
+      "Serum calcium, phosphate, PTH, creatinine, 25-OH vitamin D",
+      "↑ Ca + ↑ PTH + ↓ phosphate pattern",
+      "24-hour urine calcium to distinguish from familial hypocalciuric hypercalcemia",
+    ],
+    associations: [
+      "Solitary parathyroid adenoma (~80–85%)",
+      "Four-gland hyperplasia (MEN1, MEN2A, familial isolated hyperparathyroidism)",
+      "Parathyroid carcinoma (rare)",
+      "Renal stones and bone disease",
+    ],
+    complications: [
+      "Nephrolithiasis and nephrocalcinosis",
+      "Osteoporosis and fragility fractures",
+      "Brown tumors from severe bone resorption",
+      "Hypercalcemic crisis",
+    ],
+    distinguishFrom: [
+      "Secondary hyperparathyroidism — PTH ↑ appropriately from hypocalcemia (CKD, vitamin D deficiency)",
+      "Familial hypocalciuric hypercalcemia — mild hypercalcemia, low urinary calcium, benign; do not operate",
+      "Malignancy-associated hypercalcemia — PTH suppressed; PTHrP or osteolytic metastases",
+      "Vitamin D toxicity — hypercalcemia with suppressed PTH",
+    ],
+    treatment: [
+      "Parathyroidectomy for symptomatic disease or marked hypercalcemia",
+      "Observation with hydration in mild asymptomatic selected cases",
+      "Avoid thiazide diuretics (worsen hypercalcemia)",
+      "Cinacalcet for nonsurgical candidates in selected cases",
+    ],
+    boardsPearls: [
+      "Stones, bones, groans, moans, psychiatric overtones",
+      "↑ Ca + ↑ PTH + ↓ phosphate → primary hyperparathyroidism",
+      "Solitary adenoma is most common cause",
+      "MEN1 and MEN2A can include primary hyperparathyroidism",
+      "vs FHH — low urinary calcium; benign; no surgery",
+      "Subperiosteal bone resorption on hand X-ray is classic advanced finding",
+    ],
+    pediatrics:
+      "Neonatal severe primary hyperparathyroidism is rare with marked hypercalcemia and failure to thrive; familial hypocalciuric hypercalcemia mimics primary disease but is benign.",
+  },
+  {
+    id: "vitamin-d-toxicity",
+    name: "Vitamin D Toxicity",
+    etymology: "vitamin = vital amine + D + Greek toxikon = poison",
+    aliases: [
+      "vitamin d toxicity",
+      "vitamin d intoxication",
+      "vitamin d overdose",
+      "hypervitaminosis d",
+      "vitamin d excess",
+    ],
+    definition:
+      "Hypercalcemia from excessive vitamin D (cholecalciferol/ergocalciferol) intake causing increased intestinal calcium absorption and bone resorption, with suppressed PTH.",
+    pathophysiology:
+      "Excess 25-OH vitamin D → ↑ 1,25-(OH)₂D (within autoregulatory limits initially) and direct hypercalcemia → ↑ intestinal Ca²⁺ absorption and bone mobilization → hypercalciuria, nephrolithiasis, and renal injury; PTH suppressed by hypercalcemia.",
+    classicPresentation: [
+      "Nausea, vomiting, constipation, polyuria, polydipsia",
+      "Confusion, weakness, depressed mood",
+      "History of high-dose vitamin D supplementation",
+      "Abdominal pain and nephrolithiasis symptoms",
+    ],
+    keyFindings: [
+      "Hypercalcemia on labs",
+      "Normal or elevated 25-OH vitamin D (storage form markedly ↑)",
+      "Suppressed PTH",
+    ],
+    keyLabs: [
+      "↑ serum calcium",
+      "↑ 25-OH vitamin D",
+      "↓ or suppressed PTH",
+      "Hypercalciuria; ↑ creatinine if nephrocalcinosis/AKI",
+    ],
+    associations: [
+      "Excessive OTC/prescription vitamin D supplementation",
+      "Milk-alkali syndrome overlap (calcium + absorbable alkali)",
+    ],
+    complications: [
+      "Acute kidney injury",
+      "Nephrolithiasis and nephrocalcinosis",
+      "Vascular calcification with chronic exposure",
+      "Hypercalcemic crisis",
+    ],
+    distinguishFrom: [
+      "Primary hyperparathyroidism — ↑ PTH, not excess vitamin D intake",
+      "Granulomatous disease (sarcoidosis) — macrophage 1α-hydroxylase; ↑ 1,25-(OH)₂D with normal/low 25-OH context",
+      "Malignancy-associated hypercalcemia — PTHrP or lytic bone disease; PTH suppressed",
+      "Familial hypocalciuric hypercalcemia — mild, lifelong, low urinary Ca",
+    ],
+    treatment: [
+      "Stop vitamin D and calcium supplements",
+      "IV normal saline hydration",
+      "Calcitonin or bisphosphonates for severe hypercalcemia",
+      "Glucocorticoids if granulomatous 1α-hydroxylase-driven (not pure supplement toxicity)",
+    ],
+    boardsPearls: [
+      "Vitamin D toxicity: ↑ Ca + ↑ 25-OH vitamin D + ↓ PTH",
+      "vs sarcoid — extrarenal 1α-hydroxylase; may have ↑ 1,25-(OH)₂D with granulomas",
+      "vs primary hyperparathyroidism — PTH high, not suppressed",
+      "Fat-soluble vitamin — toxicity from chronic excess, not acute single dose usually",
+    ],
+    pediatrics:
+      "Infant vitamin D overdose causes hypercalcemia, failure to thrive, and nephrocalcinosis; keep supplementation within recommended daily intake unless treating deficiency under supervision.",
+  },
+  {
+    id: "thyrotoxicosis",
+    name: "Thyrotoxicosis",
+    etymology: "Greek thyreos = shield gland + Latin toxicum = poison + -osis = condition",
+    aliases: [
+      "thyrotoxicosis",
+      "thyrotoxic",
+      "hyperthyroid state",
+      "thyrotoxic state",
+    ],
+    definition:
+      "Clinical syndrome of excess circulating thyroid hormone action causing hypermetabolism — may result from true hyperthyroidism (increased synthesis) or thyrotoxicosis without hyperfunction (e.g., thyroiditis release of stored hormone).",
+    pathophysiology:
+      "Excess T3/T4 at peripheral tissues → ↑ basal metabolic rate, β-adrenergic sensitivity, and thermogenesis. Graves/ toxic nodule: increased synthesis. Subacute/silent thyroiditis: gland destruction releases preformed hormone with low uptake. High β-hCG (molar pregnancy) can cross-stimulate TSH receptor.",
+    classicPresentation: [
+      "Weight loss despite increased appetite",
+      "Heat intolerance, sweating, warm moist skin",
+      "Tachycardia, palpitations, atrial fibrillation (especially elderly)",
+      "Tremor, anxiety, insomnia, hyperreflexia",
+      "Goiter (Graves, toxic multinodular) or tender thyroid (subacute thyroiditis)",
+    ],
+    keyFindings: [
+      "Fine resting tremor, lid lag (not specific to Graves exophthalmos)",
+      "Tachycardia or atrial fibrillation",
+      "Diffuse or nodular goiter depending on cause",
+    ],
+    keyLabs: [
+      "↓ TSH (suppressed) with ↑ free T4 and/or T3 in most causes",
+      "Thyroid radioiodine uptake: high in Graves/toxic adenoma; low in thyroiditis and factitious thyroxine",
+      "↑ TSI in Graves disease",
+    ],
+    associations: [
+      "Graves disease — most common cause overall",
+      "Toxic multinodular goiter or toxic adenoma",
+      "Subacute (de Quervain) or silent thyroiditis — transient",
+      "Thyroid storm — life-threatening severe thyrotoxicosis",
+      "Molar pregnancy — β-hCG-mediated stimulation",
+    ],
+    complications: [
+      "Thyroid storm (fever, agitation, tachycardia, heart failure, delirium)",
+      "Atrial fibrillation and high-output heart failure",
+      "Osteoporosis with chronic excess",
+      "Graves ophthalmopathy (Graves-specific)",
+    ],
+    distinguishFrom: [
+      "Graves disease — one cause of thyrotoxicosis with TSI and ophthalmopathy",
+      "Thyrotoxicosis factitia — exogenous levothyroxine; low uptake, no goiter, low thyroglobulin",
+      "Anxiety/pheochromocytoma — normal thyroid function tests",
+      "Euthyroid hyperthyroxinemia (TBG excess) — normal TSH, normal free T4 by equilibrium dialysis",
+    ],
+    treatment: [
+      "β-blockers (propranolol) for adrenergic symptoms",
+      "Thionamides (methimazole, PTU) when increased synthesis (Graves, toxic nodule)",
+      "Thyroiditis often self-limited — supportive care; avoid antithyroid drugs if low uptake destructive thyroiditis",
+      "Thyroid storm: PTU, iodide (after thionamide), β-blocker, glucocorticoids, cooling",
+    ],
+    boardsPearls: [
+      "Thyrotoxicosis = clinical syndrome; hyperthyroidism = increased hormone synthesis (subset)",
+      "↓ TSH + ↑ T4/T3 in most causes; uptake distinguishes synthesis vs release",
+      "Graves: diffuse uptake, TSI+, ophthalmopathy",
+      "Thyroiditis: painful or painless, low uptake, transient hyper then possible hypothyroid phase",
+      "Thyroid storm — emergency: PTU, iodine, steroids, propranolol",
+    ],
+    pediatrics:
+      "Neonatal thyrotoxicosis from transplacental TSI in maternal Graves; children may present with behavioral changes, weight loss, and accelerated growth.",
   },
   {
     id: "multiple-endocrine-neoplasia",
@@ -3872,6 +4140,128 @@ export const CONDITIONS: ConditionEntry[] = [
     ],
   },
   {
+    id: "hyperaldosteronism",
+    name: "Hyperaldosteronism",
+    etymology: "hyper- = excess + aldosterone mineralocorticoid hormone + -ism = condition",
+    aliases: [
+      "hyperaldosteronism",
+      "hyperaldosteronisms",
+      "aldosteronism",
+      "aldosterone excess",
+      "excess aldosterone",
+      "primary hyperaldosteronism",
+      "primary aldosteronism",
+      "secondary hyperaldosteronism",
+      "secondary aldosteronism",
+    ],
+    definition:
+      "Pathologic excess of aldosterone causing renal Na⁺ retention, K⁺ wasting, and H⁺ excretion — presenting with hypertension and often hypokalemia and metabolic alkalosis — classified as primary (autonomous adrenal secretion) or secondary (renin-driven).",
+    pathophysiology:
+      "↑ Aldosterone acts on mineralocorticoid receptors in collecting duct → ENaC-mediated Na⁺ reabsorption and K⁺/H⁺ secretion → volume expansion, hypertension, hypokalemia, metabolic alkalosis. Primary forms suppress renin; secondary forms have ↑ renin from perceived hypoperfusion or low effective arterial volume.",
+    classicPresentation: [
+      "Resistant hypertension in adult",
+      "Muscle weakness or cramps from hypokalemia (may be absent with mild disease)",
+      "Polyuria/polydipsia from hypokalemia-induced nephrogenic DI-like effect",
+      "Headache; often asymptomatic except elevated BP",
+    ],
+    keyLabs: [
+      "↑ aldosterone with ↓ renin → primary hyperaldosteronism",
+      "↑ aldosterone with ↑ renin → secondary hyperaldosteronism",
+      "Hypokalemia and metabolic alkalosis (not required for diagnosis)",
+      "Saline suppression test or captopril challenge for confirmation",
+    ],
+    associations: [
+      "Adrenal adenoma or bilateral adrenal hyperplasia (primary)",
+      "Renal artery stenosis, diuretics, heart failure, cirrhosis (secondary)",
+      "Liddle syndrome mimics with low aldosterone (ENaC gain-of-function)",
+      "Glucocorticoid-remediable aldosteronism (familial hybrid gene)",
+    ],
+    complications: [
+      "Resistant hypertension and cardiovascular remodeling",
+      "Severe hypokalemia — weakness, arrhythmias",
+      "Target organ damage (LVH, stroke risk)",
+    ],
+    distinguishFrom: [
+      "Conn syndrome — eponym for classic primary hyperaldosteronism, often adrenal adenoma",
+      "Essential hypertension — normal aldosterone/renin ratio",
+      "Renovascular hypertension — secondary with ↑ renin and ↑ aldosterone",
+      "Apparent mineralocorticoid excess (licorice, 11β-HSD2 deficiency) — low aldosterone",
+      "Cushing syndrome — cortisol can activate mineralocorticoid receptor",
+    ],
+    treatment: [
+      "Primary unilateral adenoma — laparoscopic adrenalectomy",
+      "Bilateral hyperplasia — spironolactone or eplerenone (MRA)",
+      "Secondary — treat underlying cause (revascularization, diuretic adjustment)",
+    ],
+    boardsPearls: [
+      "Hypertension + hypokalemia → think hyperaldosteronism (but normokalemia does not exclude)",
+      "↓ renin + ↑ aldosterone = primary; ↑ renin + ↑ aldosterone = secondary",
+      "Spironolactone/eplerenone block mineralocorticoid receptor",
+      "Adrenal vein sampling localizes unilateral vs bilateral primary disease",
+      "vs Liddle — low renin hypertension with low aldosterone",
+    ],
+    pediatrics:
+      "Primary hyperaldosteronism is rare in children; consider glucocorticoid-remediable aldosteronism in young hypertensive patients with family history. Secondary forms occur with renal artery stenosis or heart failure.",
+  },
+  {
+    id: "conn-syndrome",
+    name: "Conn Syndrome",
+    etymology: "eponym: Jerome Conn + syndrome = running together of findings",
+    aliases: [
+      "conn syndrome",
+      "conn's syndrome",
+      "conns syndrome",
+      "aldosterone-producing adenoma",
+      "apa",
+    ],
+    definition:
+      "Primary hyperaldosteronism — autonomous aldosterone secretion from the adrenal cortex (classically aldosterone-producing adenoma) causing hypertension with renin suppression, often with hypokalemia and metabolic alkalosis.",
+    pathophysiology:
+      "Aldosterone-secreting adrenal adenoma or bilateral zona glomerulosa hyperplasia → uninhibited mineralocorticoid activity → Na⁺ retention, K⁺ and H⁺ loss → hypertension; negative feedback suppresses plasma renin.",
+    classicPresentation: [
+      "Middle-aged patient with resistant hypertension",
+      "Episodic muscle weakness from hypokalemia",
+      "Headache; may be clinically silent except elevated BP",
+      "No edema despite sodium retention (aldosterone escape at kidney)",
+    ],
+    keyLabs: [
+      "↑ plasma aldosterone, ↓ plasma renin activity",
+      "Hypokalemia, metabolic alkalosis",
+      "Elevated aldosterone-to-renin ratio as screening test",
+      "CT adrenal gland; adrenal vein sampling if surgery contemplated",
+    ],
+    associations: [
+      "Aldosterone-producing adenoma (classic Conn adenoma)",
+      "Bilateral idiopathic hyperplasia (also primary hyperaldosteronism)",
+      "Familial hyperaldosteronism types I–III",
+    ],
+    complications: [
+      "Cardiovascular hypertensive damage",
+      "Severe hypokalemia and arrhythmia",
+    ],
+    distinguishFrom: [
+      "Secondary hyperaldosteronism — ↑ renin (renal artery stenosis, diuretics)",
+      "Essential hypertension — normal aldosterone/renin",
+      "Cushing syndrome — cortisol excess, not isolated aldosterone",
+      "Liddle syndrome — low aldosterone, ENaC mutation",
+      "Hyperaldosteronism — broader umbrella including secondary causes",
+    ],
+    treatment: [
+      "Unilateral adenoma — adrenalectomy",
+      "Bilateral disease — mineralocorticoid receptor antagonist (spironolactone, eplerenone)",
+      "Correct hypokalemia before surgery",
+    ],
+    boardsPearls: [
+      "Conn = primary hyperaldosteronism classic boards association",
+      "↓ renin + ↑ aldosterone + hypertension — screen with aldosterone-renin ratio",
+      "Unilateral adenoma → surgery; bilateral hyperplasia → spironolactone",
+      "Hypokalemia supports diagnosis but many patients are normokalemic",
+      "vs renovascular HTN — both have high aldosterone but Conn has suppressed renin",
+    ],
+    pediatrics:
+      "Rare in children; familial forms (e.g., glucocorticoid-remediable aldosteronism) should be considered in pediatric hypertension workup.",
+  },
+  {
     id: "zollinger-ellison-syndrome",
     name: "Zollinger-Ellison Syndrome",
     etymology: "eponyms: Zollinger + Ellison + syndrome = running together of findings",
@@ -4017,6 +4407,324 @@ export const CONDITIONS: ConditionEntry[] = [
     ],
     pediatrics:
       "Rickets is primarily a pediatric diagnosis; breastfed infants, preterm infants, and children with malabsorption are highest risk; leg bowing and rachitic rosary are classic exam findings.",
+  },
+  {
+    id: "osteomalacia",
+    name: "Osteomalacia",
+    etymology: "Greek osteon = bone + malakia = softness",
+    aliases: [
+      "osteomalacia",
+      "adult rickets",
+      "soft bones",
+      "vitamin d deficiency osteomalacia",
+    ],
+    definition:
+      "Disorder of defective mineralization of mature bone matrix (osteoid) in adults, most commonly from vitamin D deficiency, causing bone pain, weakness, and fracture risk.",
+    pathophysiology:
+      "Insufficient vitamin D, calcium, or phosphate → impaired hydroxyapatite deposition on osteoid seams → accumulated unmineralized osteoid → soft, weak bones; secondary hyperparathyroidism increases bone resorption.",
+    classicPresentation: [
+      "Diffuse bone pain and proximal muscle weakness",
+      "Difficulty rising from chair or climbing stairs",
+      "Waddling gait",
+      "Fractures with minimal trauma",
+      "Often insidious in elderly, malnourished, or housebound adults",
+    ],
+    keyFindings: [
+      "Tenderness over ribs, pelvis, and thighs",
+      "Pseudofractures (Looser zones) on X-ray — radiolucent bands perpendicular to cortex",
+    ],
+    keyLabs: [
+      "↓ 25-OH vitamin D",
+      "↓ serum calcium and phosphate (variable)",
+      "↑ alkaline phosphatase",
+      "↑ PTH (secondary hyperparathyroidism)",
+    ],
+    associations: [
+      "Vitamin D deficiency — limited sun, malabsorption (celiac, bariatric surgery), elderly",
+      "Chronic kidney disease — failed calcitriol synthesis (renal osteodystrophy overlap)",
+      "Anticonvulsants inducing vitamin D metabolism",
+      "Tumor-induced osteomalacia (FGF23-mediated phosphate wasting) — rare boards pearl",
+    ],
+    complications: [
+      "Pathologic fractures (hip, ribs, pelvis)",
+      "Hypocalcemic tetany or seizures in severe deficiency",
+      "Progressive debility from pain and weakness",
+    ],
+    distinguishFrom: [
+      "Rickets — same mineralization defect in children with open physes and growth plate changes",
+      "Osteoporosis — reduced bone mass with normal mineralization; no Looser zones",
+      "Osteitis fibrosa cystica — hyperparathyroidism with subperiosteal resorption and brown tumors",
+      "Multiple myeloma — lytic lesions, CRAB features",
+    ],
+    treatment: [
+      "Vitamin D and calcium repletion",
+      "Treat underlying malabsorption or CKD with active vitamin D (calcitriol) when indicated",
+      "Phosphate supplementation if phosphate-wasting cause",
+    ],
+    boardsPearls: [
+      "Osteomalacia = adults; rickets = children — both defective mineralization",
+      "Looser zones (pseudofractures) on X-ray are classic",
+      "↑ ALP + ↓ vitamin D + bone pain → osteomalacia",
+      "vs osteoporosis — osteoporosis is low bone density with normal mineralization",
+    ],
+    pediatrics:
+      "Osteomalacia is primarily an adult diagnosis; children with the same defect present as rickets with physeal changes.",
+  },
+  {
+    id: "osteoporosis",
+    name: "Osteoporosis",
+    etymology: "Greek osteon = bone + poros = passage/pore + -osis = condition",
+    aliases: [
+      "osteoporosis",
+      "primary osteoporosis",
+      "postmenopausal osteoporosis",
+      "senile osteoporosis",
+      "low bone density",
+      "fragility fracture",
+      "fragility fractures",
+    ],
+    definition:
+      "Systemic skeletal disease of reduced bone mass and microarchitectural deterioration, increasing fragility fracture risk.",
+    pathophysiology:
+      "Imbalance favoring osteoclast-mediated bone resorption over osteoblast formation → trabecular thinning and cortical porosity → weakened bone; estrogen deficiency after menopause removes restraint on osteoclasts; aging and glucocorticoids accelerate loss.",
+    classicPresentation: [
+      "Often asymptomatic until fracture",
+      "Height loss and kyphosis from vertebral compression fractures",
+      "Hip or wrist fracture after low-energy trauma",
+      "Back pain from vertebral collapse",
+    ],
+    keyFindings: [
+      "Loss of height (>2 cm) or thoracic kyphosis",
+      "T-score ≤ −2.5 on DEXA defines osteoporosis",
+      "Vertebral wedge/compression fractures on imaging",
+    ],
+    keyLabs: [
+      "DEXA bone mineral density (BMD)",
+      "↑ alkaline phosphatase during fracture healing only",
+      "Evaluate secondary causes if young or atypical: TSH, calcium, 25-OH vitamin D, SPEP, testosterone",
+    ],
+    associations: [
+      "Postmenopausal estrogen deficiency",
+      "Advanced age",
+      "Glucocorticoid use",
+      "Hyperparathyroidism, hyperthyroidism, malabsorption",
+      "Rheumatoid arthritis, anorexia, chronic immobilization",
+      "Cushing syndrome, hypogonadism",
+    ],
+    complications: [
+      "Hip fracture — high morbidity and mortality in elderly",
+      "Vertebral compression fractures — chronic pain, deformity",
+      "Loss of independence and functional decline",
+    ],
+    distinguishFrom: [
+      "Osteomalacia — defective mineralization, Looser zones, ↓ vitamin D",
+      "Osteopetrosis — abnormally dense brittle bone from failed resorption",
+      "Paget disease — focal accelerated remodeling with ↑ ALP and mosaic bone",
+      "Multiple myeloma — lytic lesions, anemia, renal dysfunction",
+    ],
+    treatment: [
+      "Bisphosphonates (alendronate, zoledronate) — first-line antiresorptive therapy",
+      "Calcium and vitamin D supplementation",
+      "Denosumab (RANKL inhibitor), teriparatide (anabolic) in selected cases",
+      "Fall prevention, weight-bearing exercise, smoking/alcohol cessation",
+    ],
+    boardsPearls: [
+      "T-score ≤ −2.5 on DEXA = osteoporosis; −1.0 to −2.5 = osteopenia",
+      "Postmenopausal estrogen loss → ↑ osteoclast activity",
+      "Glucocorticoids cause osteoporosis — bisphosphonate prophylaxis with prolonged use",
+      "Vertebral compression fracture + low trauma → think osteoporosis",
+      "vs osteomalacia — osteoporosis has normal mineralization of remaining matrix",
+    ],
+    pediatrics:
+      "Primary osteoporosis is rare in children; consider secondary causes (glucocorticoids, anorexia, immobilization, juvenile idiopathic osteoporosis). Rickets is the pediatric mineralization disorder, not osteoporosis.",
+  },
+  {
+    id: "paget-disease-of-bone",
+    name: "Paget Disease of Bone",
+    etymology: "eponym: Sir James Paget + disease = disordered function",
+    aliases: [
+      "paget disease of bone",
+      "paget disease",
+      "paget's disease of bone",
+      "pagets disease of bone",
+      "osteitis deformans",
+    ],
+    definition:
+      "Focal disorder of accelerated, disorganized bone remodeling causing enlarged, weakened, mosaic-pattern bone with complications in skull, spine, pelvis, and long bones.",
+    pathophysiology:
+      "Initial osteoclast-driven lytic phase → mixed osteoblastic-osteoclastic chaotic remodeling → dense sclerotic mosaic lamellar bone with poor mechanical strength; increased vascularity in active lesions.",
+    classicPresentation: [
+      "Often asymptomatic; discovered on ↑ ALP or incidental imaging",
+      "Bone pain, warmth over affected site",
+      "Increased hat size, skull enlargement",
+      "Hearing loss from skull/otic capsule involvement",
+      "Bowing of weight-bearing bones (tibia, femur)",
+    ],
+    keyFindings: [
+      "Localized bone enlargement and deformity",
+      "Mixed lytic and sclerotic lesions on X-ray (cotton wool skull)",
+      "Marked ↑ alkaline phosphatase with normal calcium and phosphate",
+    ],
+    keyLabs: [
+      "↑ ALP (marker of disease activity)",
+      "Normal calcium, phosphate, PTH in uncomplicated disease",
+      "Bone scan or MRI for extent of active disease",
+    ],
+    associations: [
+      "Older age (rare before 40)",
+      "Pelvis, skull, spine, femur, tibia common sites",
+      "High-output heart failure if extensive active disease (rare)",
+    ],
+    complications: [
+      "Pathologic fracture through pagetic bone",
+      "Secondary osteosarcoma (rare but serious)",
+      "Deafness, basilar invagination (skull)",
+      "High-output cardiac failure in polyostotic active disease",
+    ],
+    distinguishFrom: [
+      "Metastatic bone disease — multifocal lytic/blastic lesions, primary malignancy history",
+      "Osteoporosis — diffuse low density, not focal mosaic remodeling",
+      "Primary hyperparathyroidism — hypercalcemia, subperiosteal resorption",
+      "Fibrous dysplasia — ground-glass lesions in young patients",
+    ],
+    treatment: [
+      "Bisphosphonates (zoledronate, risedronate) or calcitonin for active symptomatic disease",
+      "Analgesia and orthopedic management of deformity/fracture",
+      "Monitor for sarcomatous transformation",
+    ],
+    boardsPearls: [
+      "Paget = chaotic osteoclast/osteoblast coupling → mosaic bone",
+      "↑ ALP with normal Ca/Phos in older adult → Paget until proven otherwise",
+      "Skull enlargement + hearing loss classic",
+      "Secondary osteosarcoma is feared complication",
+      "vs osteoporosis — Paget is focal remodeling disorder, not diffuse bone loss",
+    ],
+    pediatrics:
+      "Paget disease of bone is almost exclusively an adult disorder; juvenile Paget is a separate rare genetic condition.",
+  },
+  {
+    id: "osteosarcoma",
+    name: "Osteosarcoma",
+    etymology: "Greek osteon = bone + sarx = flesh + -oma = tumor",
+    aliases: [
+      "osteosarcoma",
+      "osteosarcomas",
+      "osteogenic sarcoma",
+      "osteogenic sarcomas",
+      "bone osteosarcoma",
+    ],
+    definition:
+      "Primary malignant bone tumor producing osteoid by malignant osteoblasts, classically arising in the metaphysis of long bones in adolescents.",
+    pathophysiology:
+      "Malignant osteoblastic proliferation in metaphysis → destructive lytic/blastic lesion with periosteal elevation → hematogenous spread to lungs; associated with RB1 and TP53 mutations; prior radiation and Paget disease increase risk.",
+    classicPresentation: [
+      "Adolescent with progressive bone pain and swelling",
+      "Distal femur, proximal tibia, or proximal humerus (metaphyseal location)",
+      "Night pain, may mimic infection but usually lacks high fever",
+      "Pathologic fracture possible",
+    ],
+    keyFindings: [
+      "Tender firm mass over metaphysis",
+      "X-ray: destructive lesion with sunburst periosteal reaction and Codman triangle",
+      "MRI defines marrow and soft tissue extent",
+    ],
+    keyLabs: [
+      "↑ alkaline phosphatase (tumor marker of bone formation)",
+      "Biopsy required for diagnosis — do not proceed to amputation without tissue diagnosis",
+      "Staging CT chest for pulmonary metastases",
+    ],
+    associations: [
+      "Teenage growth spurt",
+      "Li-Fraumeni syndrome (TP53), hereditary retinoblastoma (RB1)",
+      "Paget disease of bone and prior radiation (adult forms)",
+    ],
+    complications: [
+      "Pulmonary metastases (most common site)",
+      "Pathologic fracture",
+      "Local recurrence after inadequate margins",
+    ],
+    distinguishFrom: [
+      "Ewing sarcoma — diaphyseal, onion-skin periosteal reaction, t(11;22)",
+      "Osteomyelitis — fever, ↑ ESR/CRP, metaphyseal infection in child",
+      "Osteoid osteoma/osteoblastoma — benign, nidus with night pain relieved by NSAIDs (osteoid osteoma)",
+      "Metastatic carcinoma to bone — older adults, breast/prostate/lung primaries",
+    ],
+    treatment: [
+      "Neoadjuvant chemotherapy plus limb-sparing surgery or amputation",
+      "Resection with wide margins; pulmonary metastasectomy in selected cases",
+    ],
+    boardsPearls: [
+      "Peak age: teenage growth spurt",
+      "Metaphysis of distal femur/proximal tibia most common",
+      "Sunburst periosteal reaction + Codman triangle",
+      "Malignant osteoid production defines osteosarcoma",
+      "Lungs are common metastatic site",
+    ],
+    pediatrics:
+      "Most common primary malignant bone tumor in children/adolescents; suspect in teen with persistent metaphyseal bone pain and mass.",
+  },
+  {
+    id: "ewing-sarcoma",
+    name: "Ewing Sarcoma",
+    etymology: "eponym: James Ewing + Greek sarx = flesh + -oma = tumor",
+    aliases: [
+      "ewing sarcoma",
+      "ewing's sarcoma",
+      "ewing sarcoma of bone",
+      "ewing family of tumors",
+      "primitive neuroectodermal tumor of bone",
+      "pnet bone",
+    ],
+    definition:
+      "Malignant small round blue cell tumor of bone or soft tissue, typically in children and adolescents, characterized by t(11;22) EWSR1-FLI1 translocation.",
+    pathophysiology:
+      "EWS-FLI1 fusion oncogene drives proliferation of undifferentiated small round cells → diaphyseal marrow invasion with onion-skin layered periosteal reaction → early hematogenous metastases to lungs and bone.",
+    classicPresentation: [
+      "Child or adolescent with localized bone pain, swelling, and sometimes fever",
+      "Diaphysis of femur, tibia, or pelvis common",
+      "May mimic osteomyelitis (fever, elevated inflammatory markers)",
+      "Soft tissue mass may be prominent",
+    ],
+    keyFindings: [
+      "Tender swelling over diaphyseal lesion",
+      "X-ray: permeative lytic lesion with onion-skin (lamellated) periosteal reaction",
+      "MRI shows marrow replacement and extraosseous extension",
+    ],
+    keyLabs: [
+      "Biopsy shows sheets of small round blue cells",
+      "Cytogenetics/FISH: t(11;22) EWSR1-FLI1 fusion",
+      "↑ LDH correlates with tumor burden",
+      "Staging imaging for pulmonary metastases",
+    ],
+    associations: [
+      "Peak incidence in second decade of life",
+      "White population predominance",
+      "Part of Ewing family of tumors (PNET, Askin tumor of chest wall)",
+    ],
+    complications: [
+      "Pulmonary and bone marrow metastases",
+      "Pathologic fracture",
+      "Treatment-related sequelae (chemotherapy, radiation)",
+    ],
+    distinguishFrom: [
+      "Osteosarcoma — metaphyseal, osteoid production, sunburst/Codman triangle",
+      "Osteomyelitis — cultures, clinical response to antibiotics; can be difficult to separate",
+      "Acute lymphoblastic leukemia — marrow involvement, not solitary bone tumor",
+      "Lymphoma of bone — older adults more common for primary bone lymphoma",
+    ],
+    treatment: [
+      "Multimodality: systemic chemotherapy plus local control (surgery and/or radiation)",
+      "Prognosis depends on metastatic status at diagnosis",
+    ],
+    boardsPearls: [
+      "Small round blue cell tumor of bone in child/teen",
+      "t(11;22) EWS-FLI1 translocation is hallmark",
+      "Onion-skin periosteal reaction on X-ray",
+      "Diaphyseal location favors Ewing over osteosarcoma (metaphysis)",
+      "Can mimic osteomyelitis — biopsy required",
+    ],
+    pediatrics:
+      "Classic pediatric/adolescent bone malignancy; persistent diaphyseal bone pain with mass or fever warrants imaging and biopsy to distinguish from infection.",
   },
   {
     id: "meckel-diverticulum",
@@ -4540,6 +5248,60 @@ export const CONDITIONS: ConditionEntry[] = [
       "Neonatal intestinal obstruction emergency; do not delay diagnosis in infant who never passed meconium. Enterocolitis is life-threatening complication after diagnosis or surgery.",
   },
   {
+    id: "umbilical-hernia",
+    name: "Umbilical Hernia",
+    etymology: "Latin umbilicus = navel + hernia = protrusion through weakened wall",
+    aliases: [
+      "umbilical hernia",
+      "umbilical hernias",
+      "belly button hernia",
+    ],
+    definition:
+      "Protrusion of abdominal contents through a defect in the linea alba at the umbilicus, common in infants and usually benign when small.",
+    pathophysiology:
+      "Incomplete closure of the umbilical ring after cord separation → intra-abdominal pressure pushes peritoneum and sometimes bowel through the fascial defect; increased intra-abdominal pressure (crying, ascites) accentuates bulge.",
+    classicPresentation: [
+      "Soft, reducible bulge at umbilicus prominent with crying or straining",
+      "Often asymptomatic",
+      "Most common in infants and young children",
+      "May be noted incidentally on exam",
+    ],
+    keyFindings: [
+      "Reducible midline umbilical mass",
+      "Defect palpable in linea alba",
+      "No overlying skin breakdown in uncomplicated cases",
+    ],
+    associations: [
+      "Congenital hypothyroidism (weak connective tissue, prolonged umbilical drainage)",
+      "Down syndrome",
+      "Beckwith-Wiedemann syndrome",
+      "Ascites or chronic cough (↑ intra-abdominal pressure)",
+    ],
+    complications: [
+      "Incarceration/strangulation (rare in typical pediatric umbilical hernia)",
+      "Cosmetic concern if persistent into school age",
+    ],
+    distinguishFrom: [
+      "Omphalocele — congenital midline defect with herniated viscera covered by peritoneum/amnion at birth, not postnatal umbilical bulge",
+      "Gastroschisis — paraumbilical abdominal wall defect without covering membrane",
+      "Inguinal hernia — groin location, not umbilicus",
+      "Umbilical granuloma — moist pink tissue at cord stump, not fascial defect",
+    ],
+    treatment: [
+      "Observation in most infants — majority close spontaneously by age 3–5",
+      "Surgical repair if large, symptomatic, incarcerated, or persistent beyond ~4–5 years",
+      "Treat underlying condition (e.g., hypothyroidism) if contributing",
+    ],
+    boardsPearls: [
+      "Common in infants; usually closes spontaneously",
+      "Congenital hypothyroidism triad includes umbilical hernia + macroglossia + prolonged jaundice",
+      "vs omphalocele — present at birth with membrane-covered viscera",
+      "Elective repair if still present after early childhood",
+    ],
+    pediatrics:
+      "Very common in infants; reassurance unless large or persistent. Do not confuse with omphalocele (congenital anterior abdominal wall defect at delivery).",
+  },
+  {
     id: "ibd",
     name: "Inflammatory Bowel Disease (IBD)",
     etymology: "Latin inflammare = set on fire + bowel = intestine + disease = disordered function",
@@ -4651,6 +5413,72 @@ export const CONDITIONS: ConditionEntry[] = [
       "May present with growth failure and delayed puberty before GI symptoms; perianal disease common.",
   },
   {
+    id: "ischemic-colitis",
+    name: "Ischemic Colitis",
+    etymology: "Greek ischein = restrain + haima = blood + kolon = colon + -itis = inflammation",
+    aliases: [
+      "ischemic colitis",
+      "colonic ischemia",
+      "ischemic bowel",
+      "ischemic colonic disease",
+      "intestinal ischemia",
+    ],
+    definition:
+      "Acute hypoperfusion of the colon causing mucosal injury, typically in watershed zones, presenting with crampy abdominal pain and hematochezia.",
+    pathophysiology:
+      "↓ colonic blood flow from hypotension, dehydration, vasospasm, or mesenteric hypoperfusion (often low-flow states rather than major arterial occlusion) → mucosal and submucosal ischemia → inflammation, edema, and bleeding; splenic flexure and rectosigmoid watershed areas are most vulnerable.",
+    classicPresentation: [
+      "Crampy lower abdominal pain followed by bloody diarrhea",
+      "Elderly patient after hypotensive episode, sepsis, dehydration, or recent cardiac surgery",
+      "Often self-limited with supportive care in mild cases",
+      "Severe pain out of proportion or peritoneal signs suggest transmural necrosis (gangrenous colitis)",
+    ],
+    keyFindings: [
+      "Tenderness over affected colonic segment",
+      "Bright red or maroon blood in stool",
+      "Thumbprinting on abdominal imaging from submucosal edema/hemorrhage",
+    ],
+    keyLabs: [
+      "Leukocytosis and elevated lactate in severe disease",
+      "Stool studies negative for infectious pathogens when mimics considered",
+      "Metabolic acidosis if transmural ischemia or sepsis",
+    ],
+    associations: [
+      "Hypotension, shock, dehydration",
+      "Recent aortic surgery or embolic phenomena (less common isolated cause)",
+      "Hypercoagulability, oral contraceptives, cocaine",
+      "Constipation with fecal impaction and mucosal ischemia",
+    ],
+    complications: [
+      "Gangrenous colitis with perforation",
+      "Stricture formation after healing",
+      "Recurrent ischemia",
+      "Massive hemorrhage (uncommon)",
+    ],
+    distinguishFrom: [
+      "Ulcerative colitis — chronic bloody diarrhea, continuous rectal involvement, younger IBD population",
+      "Infectious colitis — stool pathogens, fever, often self-limited viral or bacterial pattern",
+      "Diverticulitis — LLQ pain, fever, localized tenderness; bleeding less prominent",
+      "Mesenteric ischemia (small bowel) — pain out of proportion early, different vascular territory",
+      "Colorectal cancer — insidious bleeding, weight loss, older adult",
+    ],
+    treatment: [
+      "Supportive care: bowel rest, IV fluids, treat underlying hypotension",
+      "Broad-spectrum antibiotics if systemic toxicity or gangrenous concern",
+      "Surgery for peritonitis, perforation, or persistent gangrenous segment",
+      "Avoid vasoconstrictors when possible",
+    ],
+    boardsPearls: [
+      "Elderly + hypotension + crampy pain + bloody diarrhea → ischemic colitis",
+      "Watershed areas: splenic flexure and rectosigmoid",
+      "Thumbprinting on abdominal X-ray/CT from submucosal edema",
+      "Usually non-occlusive hypoperfusion, not classic embolic SMA occlusion",
+      "Gangrenous colitis needs urgent surgical evaluation",
+    ],
+    pediatrics:
+      "Ischemic colitis is rare in children; consider vasculitis, hypercoagulability, or cardiac anomaly with low output before attributing bloody diarrhea to ischemia.",
+  },
+  {
     id: "ulcerative-colitis",
     name: "Ulcerative Colitis",
     etymology: "Latin ulcus = sore + Greek kolon = colon + -itis = inflammation",
@@ -4690,6 +5518,278 @@ export const CONDITIONS: ConditionEntry[] = [
     ],
   },
   {
+    id: "rectal-cancer",
+    name: "Rectal Cancer",
+    etymology: "Latin rectum = straight + Latin cancer = crab/tumor",
+    aliases: [
+      "rectal cancer",
+      "rectal carcinoma",
+      "rectal adenocarcinoma",
+      "cancer of the rectum",
+      "carcinoma of the rectum",
+    ],
+    definition:
+      "Adenocarcinoma arising in the rectum (distal large bowel), often presenting with rectal bleeding, altered bowel habits, and tenesmus; staging and treatment differ from colon cancer due to pelvic anatomy.",
+    pathophysiology:
+      "Adenoma-carcinoma sequence (APC → KRAS → p53) or sporadic/serrated pathway → mucosal dysplasia → invasive adenocarcinoma; long-standing ulcerative colitis and Lynch syndrome increase risk; local spread to mesorectum and pelvic structures.",
+    classicPresentation: [
+      "Hematochezia or occult blood in stool",
+      "Change in stool caliber, constipation, or tenesmus",
+      "Abdominal pain or pelvic discomfort",
+      "Weight loss and anemia in advanced disease",
+      "Age >50 or strong family history — screen with colonoscopy",
+    ],
+    keyFindings: [
+      "Rectal mass on digital rectal exam or colonoscopy",
+      "Iron deficiency anemia",
+      "Possible liver metastases or ascites if advanced",
+    ],
+    keyLabs: [
+      "Colonoscopy with biopsy — diagnostic",
+      "CEA tumor marker — prognostic and surveillance (not screening)",
+      "Iron studies — microcytic anemia from chronic blood loss",
+      "MSI/MMR testing for Lynch syndrome workup",
+    ],
+    associations: [
+      "Adenomatous polyps",
+      "Long-standing ulcerative colitis",
+      "Lynch syndrome (HNPCC)",
+      "Family history of colorectal cancer",
+      "Low fiber, high red/processed meat diet",
+      "FAP (though more classic for colon)",
+    ],
+    complications: [
+      "Obstruction and perforation",
+      "Local invasion (ureters, bladder, sacrum)",
+      "Distant metastasis (liver, lung)",
+      "Recurrence after resection",
+    ],
+    distinguishFrom: [
+      "Hemorrhoids — painless bleeding, prolapsed vascular cushions; cancer may coexist",
+      "Anal cancer — squamous cell carcinoma below dentate line; different histology and HPV association",
+      "Ulcerative proctitis — mucosal inflammation without mass; biopsy distinguishes",
+      "Diverticular bleeding — often brisk, painless; no mass on colonoscopy",
+    ],
+    treatment: [
+      "Neoadjuvant chemoradiation for locally advanced rectal cancer",
+      "Low anterior resection or abdominoperineal resection depending on level and stage",
+      "Systemic chemotherapy for metastatic disease",
+      "Surveillance colonoscopy and CEA monitoring after treatment",
+    ],
+    boardsPearls: [
+      "Rectal bleeding + weight loss + age >50 → colorectal cancer until proven otherwise",
+      "Adenoma-carcinoma sequence: APC → KRAS → p53",
+      "UC with long duration/extent → increased colorectal cancer risk",
+      "Lynch syndrome — MSI-high, MMR deficiency, early colon/rectal cancer",
+      "vs hemorrhoids — cancer may cause tenesmus, weight loss, anemia; colonoscopy required",
+    ],
+    pediatrics:
+      "Colorectal cancer is rare in children; adolescent GI bleeding more often IBD, polyps, or Meckel — still evaluate persistent bleeding appropriately.",
+  },
+  {
+    id: "hemorrhoids",
+    name: "Hemorrhoids",
+    etymology: "Greek haima = blood + rhoia = flow → bleeding vessels",
+    aliases: [
+      "hemorrhoids",
+      "hemorrhoid",
+      "haemorrhoids",
+      "piles",
+      "internal hemorrhoids",
+      "external hemorrhoids",
+      "thrombosed hemorrhoid",
+    ],
+    definition:
+      "Dilated submucosal vascular cushions in the anal canal — internal (above pectinate line) or external (below pectinate line) — causing bleeding, prolapse, or perianal discomfort.",
+    pathophysiology:
+      "Chronic increased intra-abdominal pressure (straining, pregnancy, portal hypertension) → engorgement of internal hemorrhoidal plexus → sliding of anal cushions → bleeding and prolapse; external hemorrhoids involve somatic innervation below pectinate line → pain especially if thrombosed.",
+    classicPresentation: [
+      "Bright red blood on toilet paper or coating stool (often painless if internal)",
+      "Perianal itching or mucous discharge",
+      "Prolapsed tissue with defecation (internal hemorrhoids)",
+      "Sudden severe perianal pain if thrombosed external hemorrhoid",
+      "Portal hypertension — caput medusae and anorectal varices context",
+    ],
+    keyFindings: [
+      "Internal: prolapsed soft vascular tissue above dentate/pectinate line on anoscopy",
+      "External: painful perianal swelling below pectinate line if thrombosed",
+      "No indurated ulcerated mass (cancer concern if present)",
+    ],
+    keyLabs: [
+      "Clinical diagnosis on exam/anoscopy",
+      "Colonoscopy if age-appropriate bleeding workup for colorectal cancer",
+      "CBC if chronic anemia from bleeding",
+    ],
+    associations: [
+      "Constipation and straining",
+      "Pregnancy",
+      "Portal hypertension and cirrhosis",
+      "Prolonged sitting",
+      "Low-fiber diet",
+    ],
+    complications: [
+      "Chronic anemia from occult bleeding",
+      "Thrombosed external hemorrhoid — excruciating pain",
+      "Strangulated internal hemorrhoid (rare)",
+      "Misattribution of rectal cancer symptoms to benign hemorrhoids",
+    ],
+    distinguishFrom: [
+      "Anal fissure — linear tear, severe pain with defecation, sentinel pile",
+      "Rectal cancer — mass, weight loss, tenesmus; colonoscopy if red flags",
+      "Anorectal abscess — fluctuant tender swelling, fever",
+      "Rectal prolapse — full-thickness concentric rings of rectal wall",
+    ],
+    treatment: [
+      "Fiber supplementation, increased fluids, stool softeners",
+      "Topical agents (hydrocortisone, witch hazel) for symptoms",
+      "Rubber band ligation for symptomatic internal hemorrhoids",
+      "Excision for thrombosed external hemorrhoid within 72 h if severe",
+      "Treat portal hypertension underlying anorectal varices separately",
+    ],
+    boardsPearls: [
+      "Above pectinate line = internal = visceral innervation = usually painless bleeding",
+      "Below pectinate line = external = somatic innervation = pain, especially thrombosed",
+      "Portal hypertension → anorectal varices (not true hemorrhoids but overlap clinically)",
+      "Bright red blood + no weight loss in young adult may be hemorrhoids — still rule out cancer if >45 or alarm features",
+      "Rubber band ligation for internal hemorrhoids",
+    ],
+    pediatrics:
+      "Hemorrhoids uncommon in children — consider constipation, portal hypertension, or Crohn perianal disease when anorectal vascular lesions present.",
+  },
+  {
+    id: "proctitis",
+    name: "Proctitis",
+    etymology: "Greek proktos = anus/rectum + -itis = inflammation",
+    aliases: [
+      "proctitis",
+      "rectal inflammation",
+      "infectious proctitis",
+      "ulcerative proctitis",
+      "radiation proctitis",
+    ],
+    definition:
+      "Inflammation limited to the rectal mucosa causing rectal pain, tenesmus, bleeding, and urgency — from inflammatory bowel disease, infection, radiation, or ischemia.",
+    pathophysiology:
+      "Mucosal injury from autoimmune inflammation (UC limited to rectum), sexually transmitted pathogens (Neisseria, HSV, Chlamydia, syphilis), radiation fibrosis/vascular injury, or ischemia → erythema, ulceration, friability → bleeding and tenesmus.",
+    classicPresentation: [
+      "Rectal pain, tenesmus, urgency",
+      "Bloody mucoid stools or rectal bleeding",
+      "Constipation or frequent small-volume stools",
+      "Fevers and discharge in infectious proctitis (especially MSM)",
+      "History of radiation to pelvis or ulcerative colitis",
+    ],
+    keyFindings: [
+      "Friable erythematous rectal mucosa on anoscopy/proctoscopy",
+      "Ulcers or exudate in infectious causes",
+      "Tenderness on digital rectal exam",
+    ],
+    keyLabs: [
+      "Stool studies — C. difficile, culture if infectious suspected",
+      "NAAT/culture for GC/Chlamydia; HSV PCR/swab; syphilis serology",
+      "Colonoscopy with biopsy for IBD vs infection vs ischemia",
+      "Calprotectin or fecal markers adjunct in IBD",
+    ],
+    associations: [
+      "Ulcerative colitis — ulcerative proctitis (limited disease)",
+      "Crohn disease — may involve anorectum",
+      "Receptive anal intercourse — GC/Chlamydia, HSV, syphilis",
+      "Pelvic radiation for prostate/cervical cancer",
+      "Antibiotic-associated (C. difficile)",
+    ],
+    complications: [
+      "Severe bleeding",
+      "Stricture after radiation",
+      "Progression to extensive colitis (UC)",
+      "Perianal fistula if Crohn",
+    ],
+    distinguishFrom: [
+      "Hemorrhoids — vascular cushions without diffuse mucosal inflammation",
+      "Rectal cancer — mass lesion; biopsy required",
+      "Anal fissure — distal tear, not diffuse proctitis",
+      "Full ulcerative colitis — extends proximal to rectum continuously",
+    ],
+    treatment: [
+      "Topical mesalamine suppositories for mild ulcerative proctitis",
+      "Antibiotics for bacterial STI proctitis (ceftriaxone + doxycycline for GC/Chlamydia per guidelines)",
+      "Acyclovir for HSV proctitis",
+      "Treat C. difficile if positive",
+      "Steroids/biologics for moderate-severe IBD proctitis",
+    ],
+    boardsPearls: [
+      "UC can be limited to rectum — ulcerative proctitis; continuous mucosal disease",
+      "MSM with proctitis → test for GC, Chlamydia, HSV, syphilis",
+      "Tenesmus + bloody mucus + friable rectal mucosa = proctitis",
+      "Radiation proctitis — history of pelvic RT; telangiectasias and bleeding",
+      "vs hemorrhoids — proctitis is mucosal inflammation, not vascular cushions",
+    ],
+    pediatrics:
+      "Juvenile ulcerative proctitis occurs; infectious proctitis in adolescents warrants STI testing when sexually active.",
+  },
+  {
+    id: "rectal-prolapse",
+    name: "Rectal Prolapse",
+    etymology: "Latin rectum = straight + Latin prolabere = to fall forward",
+    aliases: [
+      "rectal prolapse",
+      "rectal procidentia",
+      "complete rectal prolapse",
+      "full-thickness rectal prolapse",
+      "mucosal prolapse",
+    ],
+    definition:
+      "Protrusion of rectal wall through the anus — full-thickness (complete) prolapse involves all layers of rectal wall; partial/mucosal prolapse involves only mucosa.",
+    pathophysiology:
+      "Weakening of rectal attachments and pelvic floor (elderly, multiparity, chronic straining, neurologic disease) → intussusception and telescoping of rectum through anus during increased intra-abdominal pressure.",
+    classicPresentation: [
+      "Red concentric rings of prolapsed tissue after defecation (full-thickness)",
+      "Mass protruding through anus with straining, reducible manually or spontaneously",
+      "Fecal incontinence or mucous discharge",
+      "Constipation and sense of incomplete evacuation",
+      "Elderly woman with chronic straining — classic demographic",
+    ],
+    keyFindings: [
+      "Full-thickness prolapse — circular folds of rectal wall on exam",
+      "Mucosal prolapse — radial folds only (hemorrhoidal mimic)",
+      "Weak anal sphincter tone often coexists",
+    ],
+    keyLabs: [
+      "Clinical diagnosis on straining exam or video defecography",
+      "Colonoscopy to exclude concurrent neoplasm if bleeding",
+      "Anorectal manometry if incontinence workup needed",
+    ],
+    associations: [
+      "Chronic constipation and straining",
+      "Multiparity and pelvic floor weakness",
+      "Cystic fibrosis in children",
+      "Neurologic disorders (spina bifida, spinal cord injury)",
+      "Advanced age",
+    ],
+    complications: [
+      "Incarceration and ulceration of prolapsed segment (rare)",
+      "Fecal incontinence",
+      "Bleeding and mucous discharge",
+    ],
+    distinguishFrom: [
+      "Prolapsed internal hemorrhoids — vascular cushions, not full concentric rectal wall rings",
+      "Mucosal prolapse — partial; fewer concentric folds than full-thickness",
+      "Rectal intussusception without external prolapse — imaging finding",
+      "Anal cancer — ulcerated/firm mass, not reducible prolapsed wall",
+    ],
+    treatment: [
+      "Conservative: fiber, stool softeners, pelvic floor physical therapy in mild cases",
+      "Surgical rectopexy or perineal procedures for symptomatic complete prolapse",
+      "Treat underlying constipation",
+    ],
+    boardsPearls: [
+      "Full-thickness rectal prolapse = concentric rings of rectal wall",
+      "vs prolapsed hemorrhoids — hemorrhoids are vascular cushions with radial tags, not full wall layers",
+      "Elderly woman + constipation + protruding mass on straining → rectal prolapse",
+      "Often associated with fecal incontinence",
+    ],
+    pediatrics:
+      "Rectal prolapse can occur in cystic fibrosis and chronic constipation in children — evaluate for CF if recurrent in young child.",
+  },
+  {
     id: "peptic-ulcer-disease",
     name: "Peptic Ulcer Disease",
     etymology: "Greek peptikos = digestive + Latin ulcus = sore + disease = disordered function",
@@ -4726,6 +5826,358 @@ export const CONDITIONS: ConditionEntry[] = [
       "Gastric ulcer: pain worsens with eating; biopsy margins to rule out malignancy",
       "H. pylori triple therapy: PPI + clarithromycin + amoxicillin",
     ],
+  },
+  {
+    id: "gerd",
+    name: "Gastroesophageal Reflux Disease",
+    etymology: "gastro = stomach + esophageal = food tube + reflux = backflow + disease = disordered function",
+    aliases: [
+      "gerd",
+      "gastroesophageal reflux disease",
+      "gastro-oesophageal reflux disease",
+      "gastroesophageal reflux",
+      "acid reflux",
+      "reflux disease",
+      "chronic reflux",
+    ],
+    definition:
+      "Chronic reflux of gastric contents into the esophagus causing symptoms or mucosal injury, usually from transient lower esophageal sphincter relaxations and/or decreased LES tone.",
+    pathophysiology:
+      "Incompetent or transiently relaxed LES + delayed esophageal clearance and acid exposure → mucosal inflammation (esophagitis); hiatal hernia and obesity worsen reflux; chronic injury predisposes to Barrett metaplasia.",
+    classicPresentation: [
+      "Heartburn and regurgitation, worse after meals and when supine",
+      "Sour taste, chronic cough, hoarseness (extraesophageal reflux)",
+      "Epigastric discomfort; odynophagia if severe esophagitis",
+    ],
+    keyFindings: [
+      "Normal exam in uncomplicated disease",
+      "Erosions or erythema on endoscopy if esophagitis present",
+    ],
+    keyLabs: [
+      "Endoscopy for alarm features or refractory symptoms",
+      "Ambulatory pH monitoring when diagnosis unclear",
+    ],
+    associations: [
+      "Obesity, hiatal hernia, pregnancy",
+      "Smoking, alcohol, fatty meals",
+      "Barrett esophagus with chronic untreated reflux",
+    ],
+    complications: [
+      "Barrett esophagus and esophageal adenocarcinoma risk",
+      "Esophageal stricture",
+      "Aspiration and asthma-like symptoms",
+    ],
+    distinguishFrom: [
+      "Peptic ulcer disease — epigastric pain pattern; ulcer on endoscopy",
+      "Achalasia — dysphagia to solids and liquids, bird-beak esophagus",
+      "Esophageal cancer — progressive dysphagia, weight loss",
+      "Cardiac chest pain — exertional angina; esophageal spasm mimics",
+    ],
+    treatment: [
+      "Lifestyle: weight loss, head-of-bed elevation, avoid late meals/triggers",
+      "PPIs first-line for symptomatic or erosive disease",
+      "H2 blockers for mild intermittent symptoms",
+    ],
+    boardsPearls: [
+      "Heartburn + regurgitation worse supine → GERD",
+      "PPIs heal esophagitis and relieve symptoms",
+      "Chronic GERD → Barrett metaplasia → adenocarcinoma risk in distal esophagus",
+      "Alarm features (dysphagia, weight loss, bleeding) → endoscopy",
+    ],
+    pediatrics:
+      "Infants often have physiologic reflux; pathologic GERD causes poor weight gain, irritability, or respiratory symptoms — distinguish from normal spitting up.",
+  },
+  {
+    id: "barrett-esophagus",
+    name: "Barrett Esophagus",
+    etymology: "eponym: Norman Barrett + esophagus = food tube",
+    aliases: [
+      "barrett esophagus",
+      "barrett's esophagus",
+      "barrett oesophagus",
+      "barrett mucosa",
+      "intestinal metaplasia of esophagus",
+      "columnar-lined esophagus",
+    ],
+    definition:
+      "Replacement of normal distal squamous esophageal epithelium by intestinal-type columnar metaplasia (including goblet cells) from chronic gastroesophageal reflux, conferring increased esophageal adenocarcinoma risk.",
+    pathophysiology:
+      "Chronic acid/bile exposure → mucosal injury → adaptive intestinal metaplasia in distal esophagus (classically salmon-colored mucosa above GE junction) → progression through low-grade to high-grade dysplasia to invasive adenocarcinoma in a subset.",
+    classicPresentation: [
+      "Often asymptomatic; history of long-standing GERD",
+      "May have ongoing heartburn or dysphagia if stricture or cancer develops",
+    ],
+    keyFindings: [
+      "Salmon-colored mucosa in distal esophagus on endoscopy",
+      "Biopsy required for diagnosis — intestinal metaplasia with goblet cells",
+    ],
+    keyLabs: [
+      "Endoscopy with biopsies per Seattle protocol in surveillance",
+      "No serum marker — histologic diagnosis",
+    ],
+    associations: [
+      "Chronic GERD",
+      "Obesity, white male sex, smoking",
+      "Hiatal hernia",
+    ],
+    complications: [
+      "Esophageal adenocarcinoma",
+      "Esophageal stricture",
+    ],
+    distinguishFrom: [
+      "GERD without metaplasia — squamous mucosa on biopsy",
+      "Esophageal adenocarcinoma — invasive malignancy, not premalignant metaplasia alone",
+      "Gastric cardia intestinal metaplasia — different anatomic origin",
+    ],
+    treatment: [
+      "High-dose PPI to control reflux",
+      "Endoscopic surveillance by dysplasia grade",
+      "Endoscopic resection/ablation or esophagectomy for high-grade dysplasia or intramucosal cancer",
+    ],
+    boardsPearls: [
+      "Barrett = intestinal metaplasia (goblet cells) in esophagus from chronic GERD",
+      "Premalignant → esophageal adenocarcinoma pathway",
+      "Salmon-colored mucosa at GE junction on endoscopy",
+      "Metaplasia is reversible conceptually but clinically managed as cancer precursor",
+    ],
+    pediatrics:
+      "Barrett esophagus is rare in children but can occur with severe chronic GERD; endoscopic biopsy confirms intestinal metaplasia.",
+  },
+  {
+    id: "achalasia",
+    name: "Achalasia",
+    etymology: "Greek a = without + chalasis = relaxation",
+    aliases: [
+      "achalasia",
+      "achalasia of the esophagus",
+      "esophageal achalasia",
+      "primary achalasia",
+    ],
+    definition:
+      "Primary esophageal motility disorder from degeneration of myenteric (Auerbach) plexus neurons causing impaired LES relaxation and absent esophageal peristalsis.",
+    pathophysiology:
+      "Loss of inhibitory nitric oxide/VIP neurons in myenteric plexus → failed LES relaxation with food bolus and aperistaltic esophageal body → stasis, dilation, and progressive dysphagia; Chagas disease can cause secondary achalasia.",
+    classicPresentation: [
+      "Progressive dysphagia to solids and liquids (both from onset)",
+      "Regurgitation of undigested food, nocturnal cough/aspiration",
+      "Chest pain and weight loss",
+      "Heartburn may occur from stasis without true acid hypersecretion",
+    ],
+    keyFindings: [
+      "Bird-beak tapering of distal esophagus on barium swallow",
+      "Dilated esophagus with air-fluid level",
+      "Incomplete LES relaxation on manometry (gold standard)",
+    ],
+    keyLabs: [
+      "Esophageal manometry — impaired LES relaxation, absent peristalsis",
+      "Barium swallow — bird-beak appearance",
+      "Endoscopy to exclude pseudoachalasia (distal cancer)",
+    ],
+    associations: [
+      "Chagas disease (Trypanosoma cruzi) in endemic areas",
+      "Increased esophageal squamous cell carcinoma risk with long-standing stasis",
+    ],
+    complications: [
+      "Aspiration pneumonia",
+      "Megaesophagus",
+      "Esophageal cancer (long-term)",
+    ],
+    distinguishFrom: [
+      "GERD — heartburn predominant; normal peristalsis",
+      "Esophageal cancer (pseudoachalasia) — older patient, short history, weight loss",
+      "Scleroderma esophagus — low LES pressure, wide reflux; connective tissue disease features",
+      "Diffuse esophageal spasm — intermittent chest pain, corkscrew esophagus",
+    ],
+    treatment: [
+      "Pneumatic dilation or laparoscopic Heller myotomy",
+      "Botulinum toxin injection into LES (temporary)",
+      "POEM (peroral endoscopic myotomy) in selected centers",
+    ],
+    boardsPearls: [
+      "Dysphagia to solids AND liquids + bird-beak on barium = achalasia",
+      "Myenteric (Auerbach) plexus degeneration — failed LES relaxation",
+      "Manometry is diagnostic gold standard",
+      "vs GERD — reflux symptoms without motility loss pattern",
+    ],
+    pediatrics:
+      "Childhood achalasia presents with regurgitation, weight loss, and recurrent aspiration; manometry confirms diagnosis.",
+  },
+  {
+    id: "esophageal-varices",
+    name: "Esophageal Varices",
+    etymology: "Greek oisophagos = food tube + Latin varix = twisted vein",
+    aliases: [
+      "esophageal varices",
+      "esophageal varice",
+      "esophageal varix",
+      "gastroesophageal varices",
+      "bleeding esophageal varices",
+    ],
+    definition:
+      "Dilated submucosal portosystemic collateral veins in the distal esophagus from portal hypertension, at risk of life-threatening hemorrhage.",
+    pathophysiology:
+      "Portal hypertension (usually cirrhosis) → ↑ pressure in left gastric and short gastric veins → collateral flow through esophageal venous plexus to azygos/systemic circulation → tortuous submucosal varices prone to rupture from increased portal pressure.",
+    classicPresentation: [
+      "Often asymptomatic until rupture",
+      "Hematemesis or melena from acute variceal bleed",
+      "Signs of chronic liver disease and portal hypertension (ascites, splenomegaly, caput medusae)",
+    ],
+    keyFindings: [
+      "Dilated tortuous veins in lower esophagus on endoscopy",
+      "Stigmata of cirrhosis and portal hypertension on exam",
+    ],
+    keyLabs: [
+      "Endoscopy — diagnostic and therapeutic (band ligation)",
+      "CBC for anemia; coagulation studies; type and crossmatch",
+      "Hepatic panel and imaging for cirrhosis etiology",
+    ],
+    associations: [
+      "Cirrhosis (most common)",
+      "Portal vein thrombosis",
+      "Schistosomiasis",
+      "Non-cirrhotic portal hypertension",
+    ],
+    complications: [
+      "Massive upper GI hemorrhage and shock",
+      "Hepatic encephalopathy after bleed",
+      "Rebleeding — high mortality without prophylaxis",
+    ],
+    distinguishFrom: [
+      "Mallory-Weiss tear — mucosal laceration at GE junction after retching; no portal HTN required",
+      "Peptic ulcer bleeding — ulcer crater on endoscopy",
+      "Esophagitis — erosions, not varices",
+      "Gastric varices — different endoscopic location (GOV2, IGV)",
+    ],
+    treatment: [
+      "Acute bleed: octreotide, IV antibiotics, resuscitation, emergent endoscopic band ligation",
+      "Secondary prophylaxis: nonselective β-blocker ± repeat ligation; TIPS if refractory",
+      "Primary prophylaxis in high-risk varices: β-blocker or prophylactic ligation",
+    ],
+    boardsPearls: [
+      "Portal hypertension → esophageal varices at gastroesophageal junction",
+      "Left gastric vein anastomoses with esophageal veins — portosystemic collateral",
+      "Acute management: octreotide + antibiotics + band ligation",
+      "Caput medusae and hemorrhoids are other portosystemic collaterals",
+    ],
+    pediatrics:
+      "Esophageal varices occur in children with biliary atresia, congenital hepatic fibrosis, or cirrhosis; same bleeding precautions and endoscopic principles apply with specialist care.",
+  },
+  {
+    id: "esophageal-squamous-cell-carcinoma",
+    name: "Esophageal Squamous Cell Carcinoma",
+    etymology: "Greek oisophagos = food tube + squama = scale + carcinoma = malignant epithelial tumor",
+    aliases: [
+      "esophageal squamous cell carcinoma",
+      "esophageal squamous carcinoma",
+      "esophageal scc",
+      "squamous cell carcinoma of the esophagus",
+      "esophageal cancer squamous",
+    ],
+    definition:
+      "Malignant tumor of esophageal squamous epithelium, classically involving the upper and middle thirds, strongly linked to smoking and alcohol.",
+    pathophysiology:
+      "Chronic carcinogen exposure (smoking, alcohol, hot beverages, achalasia stasis) → squamous dysplasia → invasive SCC → luminal obstruction and local invasion; lymphatic spread to mediastinal nodes.",
+    classicPresentation: [
+      "Progressive dysphagia — solids then liquids",
+      "Unintentional weight loss",
+      "Odynophagia, chest or back pain",
+      "Smoking and heavy alcohol use",
+    ],
+    keyFindings: [
+      "Progressive solid-food dysphagia",
+      "Weight loss and anemia",
+    ],
+    keyLabs: [
+      "Endoscopy with biopsy — confirms SCC histology",
+      "CT/PET for staging",
+    ],
+    associations: [
+      "Tobacco and alcohol (synergistic risk)",
+      "Achalasia and long-standing esophageal stasis",
+      "Plummer-Vinson syndrome (rare)",
+      "HPV in some cases (more common in oropharyngeal SCC)",
+    ],
+    complications: [
+      "Tracheoesophageal fistula",
+      "Esophageal obstruction and malnutrition",
+      "Metastasis to liver, lung, bone",
+    ],
+    distinguishFrom: [
+      "Esophageal adenocarcinoma — distal esophagus/GE junction; Barrett/GERD pathway",
+      "Achalasia — motility disorder without mass lesion",
+      "Esophageal stricture — benign peptic or caustic",
+    ],
+    treatment: [
+      "Chemoradiation and/or esophagectomy depending on stage",
+      "Palliative stenting for obstruction",
+    ],
+    boardsPearls: [
+      "Upper/middle esophagus SCC — smoking + alcohol",
+      "Progressive dysphagia solids → liquids = esophageal cancer until proven otherwise",
+      "vs adenocarcinoma — distal esophagus, GERD/Barrett association",
+      "Worldwide SCC more common; US adenocarcinoma rising in distal esophagus",
+    ],
+    pediatrics:
+      "Esophageal SCC is extremely rare in children; dysphagia in pediatrics more often structural or eosinophilic esophagitis.",
+  },
+  {
+    id: "esophageal-adenocarcinoma",
+    name: "Esophageal Adenocarcinoma",
+    etymology: "Greek oisophagos = food tube + aden = gland + carcinoma = malignant epithelial tumor",
+    aliases: [
+      "esophageal adenocarcinoma",
+      "esophageal adenocarcinomas",
+      "adenocarcinoma of the esophagus",
+      "distal esophageal adenocarcinoma",
+      "ge junction adenocarcinoma",
+      "gastroesophageal junction adenocarcinoma",
+    ],
+    definition:
+      "Malignant glandular tumor arising in the distal esophagus or gastroesophageal junction, usually on a background of chronic GERD and Barrett esophagus.",
+    pathophysiology:
+      "Chronic acid reflux → Barrett intestinal metaplasia → dysplasia → invasive adenocarcinoma in distal esophagus; obesity and male sex increase risk; often presents late with luminal obstruction.",
+    classicPresentation: [
+      "Progressive dysphagia and weight loss",
+      "History of long-standing GERD",
+      "Older white male demographic (epidemiologic pattern on boards)",
+      "Odynophagia or bleeding in advanced disease",
+    ],
+    keyFindings: [
+      "Distal esophageal or GE junction mass on endoscopy",
+      "Barrett mucosa adjacent to tumor in many cases",
+    ],
+    keyLabs: [
+      "Endoscopy with biopsy — glandular/architectural malignancy",
+      "CT/PET staging",
+    ],
+    associations: [
+      "Barrett esophagus",
+      "GERD, obesity, hiatal hernia",
+      "Tobacco use",
+    ],
+    complications: [
+      "Obstruction and cachexia",
+      "Tracheoesophageal fistula",
+      "Metastatic disease",
+    ],
+    distinguishFrom: [
+      "Esophageal squamous cell carcinoma — upper/middle esophagus; smoking/alcohol",
+      "Gastric adenocarcinoma — primarily gastric cardia/body origin",
+      "Barrett esophagus without invasion — no adenocarcinoma on biopsy",
+    ],
+    treatment: [
+      "Endoscopic therapy for intramucosal disease",
+      "Esophagectomy, chemoradiation for invasive cancer",
+      "Palliative stenting",
+    ],
+    boardsPearls: [
+      "Distal esophagus adenocarcinoma — GERD → Barrett → cancer sequence",
+      "Barrett is premalignant metaplasia with goblet cells",
+      "vs SCC — upper/middle esophagus, alcohol/tobacco, squamous histology",
+      "Obesity and chronic reflux increase US adenocarcinoma incidence",
+    ],
+    pediatrics:
+      "Esophageal adenocarcinoma essentially does not occur in childhood; adolescent GERD management aims to prevent long-term complications.",
   },
   {
     id: "hemolytic-anemia",
@@ -4802,6 +6254,72 @@ export const CONDITIONS: ConditionEntry[] = [
     ],
     pediatrics:
       "Hereditary spherocytosis, G6PD deficiency, sickle cell disease, HUS after bloody diarrhea, and parvovirus B19 aplastic crisis are high-yield pediatric hemolysis settings.",
+  },
+  {
+    id: "pernicious-anemia",
+    name: "Pernicious Anemia",
+    etymology: "Latin perniciosus = destructive/deadly + Greek an- = without + haima = blood",
+    aliases: [
+      "pernicious anemia",
+      "pernicious anaemia",
+      "pa",
+      "autoimmune gastritis with b12 deficiency",
+      "intrinsic factor deficiency anemia",
+    ],
+    definition:
+      "Autoimmune destruction of gastric parietal cells and intrinsic factor causing vitamin B12 malabsorption, megaloblastic anemia, and risk of subacute combined degeneration.",
+    pathophysiology:
+      "Autoantibodies against parietal cells and/or intrinsic factor → loss of intrinsic factor–cobalamin complex formation in stomach → B12 cannot be absorbed in terminal ileum → impaired DNA synthesis (megaloblastic anemia) and defective myelin maintenance (neurologic injury). Associated with chronic autoimmune atrophic gastritis.",
+    classicPresentation: [
+      "Fatigue, pallor, glossitis (beefy red tongue)",
+      "Paresthesias, ataxia, weakness from subacute combined degeneration",
+      "Elderly patient with macrocytic anemia",
+      "May precede overt anemia with neurologic symptoms",
+    ],
+    keyFindings: [
+      "Macrocytic anemia with hypersegmented neutrophils on smear",
+      "Loss of parietal cells → achlorhydria; may have autoimmune gastritis",
+      "Posterolateral column and corticospinal tract signs if neurologic involvement",
+    ],
+    keyLabs: [
+      "↓ Serum vitamin B12",
+      "↑ Methylmalonic acid and ↑ homocysteine (B12-specific metabolites)",
+      "Anti-intrinsic factor antibodies (highly specific) and anti-parietal cell antibodies",
+      "Bone marrow: megaloblastic changes if severe",
+    ],
+    associations: [
+      "Autoimmune gastritis and achlorhydria",
+      "Other autoimmune diseases — Hashimoto thyroiditis, type 1 diabetes, vitiligo",
+      "Increased gastric adenocarcinoma and carcinoid tumor risk with long-standing atrophic gastritis",
+      "Strict vegan diet — B12 deficiency but not autoimmune pernicious anemia mechanism",
+    ],
+    complications: [
+      "Subacute combined degeneration — irreversible if untreated",
+      "Gastric adenocarcinoma and neuroendocrine tumors in chronic atrophic gastritis",
+      "Heart failure from severe anemia",
+    ],
+    distinguishFrom: [
+      "Folate deficiency — macrocytic anemia without ↑ MMA or neurologic subacute combined degeneration",
+      "Crohn disease / ileal resection — B12 malabsorption without anti-intrinsic factor antibodies",
+      "Alcoholism and liver disease — macrocytosis without classic B12 deficiency pattern",
+      "Hypothyroidism — macrocytosis from ↓ marrow turnover, not megaloblastosis",
+      "Myelodysplastic syndrome — macrocytosis with cytopenias and dysplasia",
+    ],
+    treatment: [
+      "Lifelong parenteral (IM) or high-dose oral B12 replacement (cyanocobalamin or hydroxocobalamin)",
+      "Correct folate only after B12 repletion if dual deficiency suspected",
+      "Monitor for gastric malignancy in chronic atrophic gastritis",
+    ],
+    boardsPearls: [
+      "Autoimmune destruction of parietal cells → no intrinsic factor → B12 not absorbed in terminal ileum",
+      "Anti-intrinsic factor antibody is highly specific for pernicious anemia",
+      "B12 deficiency → ↑ MMA + ↑ homocysteine; folate deficiency → ↑ homocysteine only",
+      "Subacute combined degeneration: dorsal columns (↓ vibration/proprioception) + lateral corticospinal tracts",
+      "Give B12 before folate — folate alone can fix anemia but worsen neurologic damage",
+      "Beefy red tongue (glossitis) + macrocytic anemia + neurologic signs → B12 deficiency",
+    ],
+    pediatrics:
+      "Classic autoimmune pernicious anemia is an adult disease; congenital intrinsic factor deficiency or transcobalamin II deficiency causes B12 deficiency in infants with failure to thrive, developmental delay, and megaloblastic anemia.",
   },
   {
     id: "sickle-cell-disease",
@@ -5937,6 +7455,73 @@ export const CONDITIONS: ConditionEntry[] = [
     ],
   },
   {
+    id: "erythema-nodosum",
+    name: "Erythema Nodosum",
+    etymology: "Greek erythros = red + Latin nodus = knot + -osis = condition",
+    aliases: [
+      "erythema nodosum",
+      "en",
+      "subacute nodular migratory panniculitis",
+      "septal panniculitis",
+    ],
+    definition:
+      "Acute inflammatory hypersensitivity reaction causing tender erythematous nodules, classically on the anterior shins, from septal panniculitis without vasculitis — a sign of underlying systemic disease in many cases.",
+    pathophysiology:
+      "Immune complex–mediated or delayed hypersensitivity inflammation of subcutaneous fat septa → tender nodules without primary vasculitis on biopsy; reflects underlying infection, sarcoidosis, IBD, drug reaction, or pregnancy.",
+    classicPresentation: [
+      "Tender, erythematous, raised nodules on anterior shins (bilateral)",
+      "Nodules do not ulcerate and heal without scarring over weeks",
+      "May precede or accompany systemic illness (cough, joint pain, GI symptoms)",
+      "Young adult woman — common demographic",
+    ],
+    keyFindings: [
+      "Painful subcutaneous nodules 1–5 cm on shins",
+      "No primary ulceration (vs erythema induratum/nodular vasculitis)",
+      "Associated arthralgia especially in Löfgren syndrome",
+    ],
+    keyLabs: [
+      "Clinical diagnosis often; biopsy if atypical — septal panniculitis without vasculitis",
+      "Workup for underlying cause: CXR (sarcoid), ASO/strep, IBD evaluation, pregnancy test, medication review",
+      "Coccidioides serology in endemic areas (desert rheumatism)",
+    ],
+    associations: [
+      "Sarcoidosis — Löfgren syndrome (BHL + EN + arthritis)",
+      "Streptococcal infection (post-pharyngitis)",
+      "Inflammatory bowel disease (Crohn > UC)",
+      "Oral contraceptives and sulfonamides",
+      "Coccidioidomycosis (Valley fever)",
+      "Pregnancy",
+      "Behçet disease and other autoinflammatory conditions",
+    ],
+    complications: [
+      "Recurrence with re-exposure to trigger",
+      "Underlying systemic disease morbidity (sarcoid, IBD) more concerning than skin lesions",
+    ],
+    distinguishFrom: [
+      "Cellulitis — spreading erythema with warmth, not discrete nodules",
+      "Necrotizing fasciitis — systemic toxicity, rapid progression",
+      "Erythema induratum (nodular vasculitis) — often posterior legs, may ulcerate, vasculitis on biopsy",
+      "Insect bites — pruritic, not symmetric shin nodules",
+      "Panniculitis from pancreatic disease — associated abdominal symptoms, different histology",
+    ],
+    treatment: [
+      "Treat underlying cause (antibiotics for strep, manage IBD/sarcoid)",
+      "NSAIDs for symptomatic nodules",
+      "Rest and leg elevation",
+      "Potassium iodide or corticosteroids in severe/refractory cases (specialist-guided)",
+      "Stop offending drug if drug-induced",
+    ],
+    boardsPearls: [
+      "Tender nodules on shins — erythema nodosum until proven otherwise",
+      "Löfgren syndrome: bilateral hilar lymphadenopathy + erythema nodosum + arthritis = sarcoidosis",
+      "Associations: sarcoid, strep, IBD, OCPs, coccidioidomycosis",
+      "Septal panniculitis without vasculitis on biopsy",
+      "vs cellulitis — discrete tender nodules, not diffuse spreading infection",
+    ],
+    pediatrics:
+      "Streptococcal pharyngitis-associated EN occurs in children; sarcoidosis and IBD are less common but considered in appropriate clinical context.",
+  },
+  {
     id: "neonatal-respiratory-distress-syndrome",
     name: "Neonatal Respiratory Distress Syndrome",
     etymology: "Greek neos = new + Latin natus = born + respirare = breathe + distringere = pull apart + syndrome = grouped findings",
@@ -5986,6 +7571,76 @@ export const CONDITIONS: ConditionEntry[] = [
     ],
     pediatrics:
       "Classic disease of prematurity; antenatal corticosteroids accelerate fetal surfactant production and reduce incidence.",
+  },
+  {
+    id: "digeorge-syndrome",
+    name: "DiGeorge Syndrome",
+    etymology: "eponym Angelo DiGeorge + Greek syn = together + dromos = running (syndrome)",
+    aliases: [
+      "digeorge syndrome",
+      "digeorge syndromes",
+      "22q11 deletion syndrome",
+      "22q11.2 deletion syndrome",
+      "velocardiofacial syndrome",
+      "vcfs",
+      "catch-22 syndrome",
+      "conotruncal anomaly face syndrome",
+    ],
+    definition:
+      "Microdeletion syndrome (most often 22q11.2) from failed development of third and fourth pharyngeal pouches causing conotruncal cardiac defects, thymic aplasia, parathyroid hypoplasia, and characteristic facies.",
+    pathophysiology:
+      "22q11.2 deletion disrupts TBX1 and related genes → defective neural crest/pharyngeal pouch development → hypoplastic thymus (↓ T-cell maturation), hypoplastic parathyroids (↓ PTH → hypocalcemia), and conotruncal cardiac malformations; palate and facial development also affected.",
+    classicPresentation: [
+      "Neonatal hypocalcemic seizures or tetany",
+      "Congenital heart disease — tetralogy of Fallot, truncus arteriosus, interrupted aortic arch",
+      "Recurrent viral and fungal infections from T-cell deficiency",
+      "Cleft palate, nasal speech, hooded eyelids, bulbous nasal tip",
+    ],
+    keyFindings: [
+      "Hypocalcemia with low PTH",
+      "Absent or hypoplastic thymic shadow on chest imaging",
+      "Conotruncal cardiac defect on echocardiography",
+      "Low CD3⁺ T-cell count with relatively normal B cells",
+    ],
+    keyLabs: [
+      "Serum calcium, ionized calcium, PTH",
+      "FISH or microarray for 22q11.2 deletion",
+      "Flow cytometry — T-cell lymphopenia",
+      "Echocardiography for cardiac anomalies",
+    ],
+    associations: [
+      "22q11.2 microdeletion (TBX1 region)",
+      "Tetralogy of Fallot, truncus arteriosus, interrupted aortic arch",
+      "Velocardiofacial syndrome — same deletion, variable phenotype",
+      "Schizophrenia and psychiatric disease in adolescence/adulthood (some cohorts)",
+    ],
+    complications: [
+      "Severe infections from T-cell immunodeficiency",
+      "Refractory hypocalcemia and seizures in infancy",
+      "Feeding and speech problems from palatal defects",
+      "Developmental delay and learning difficulties",
+    ],
+    distinguishFrom: [
+      "CHARGE syndrome — coloboma, choanal atresia, distinct genetic cause",
+      "Neonatal hypoparathyroidism without 22q deletion — isolated parathyroid failure",
+      "Down syndrome — trisomy 21, not conotruncal-focused microdeletion",
+      "Severe combined immunodeficiency — more profound T/B defect, different genetics",
+    ],
+    treatment: [
+      "Calcium and active vitamin D for hypoparathyroidism",
+      "Cardiac surgical repair as indicated",
+      "Infection prophylaxis and live-vaccine caution with severe T-cell deficiency",
+      "Palate and speech therapy; developmental support",
+    ],
+    boardsPearls: [
+      "CATCH-22: Cardiac, Abnormal facies, Thymic aplasia, Cleft palate, Hypocalcemia, 22q11",
+      "3rd and 4th pharyngeal pouch failure → thymus + parathyroids + conotruncal heart",
+      "↓ ionized Ca + low PTH + 22q11 deletion → DiGeorge",
+      "Absent thymic shadow + hypocalcemic seizures in neonate",
+      "T-cell deficiency with relatively preserved B cells",
+    ],
+    pediatrics:
+      "Classic neonatal presentation is hypocalcemic seizures and conotruncal heart disease; absent thymic shadow and T-cell lymphopenia distinguish from isolated hypoparathyroidism.",
   },
   {
     id: "tetralogy-of-fallot",
@@ -6339,10 +7994,80 @@ export const CONDITIONS: ConditionEntry[] = [
       "Rheumatic AR still seen globally; bicuspid AV may present in adolescence with exercise intolerance.",
   },
   {
+    id: "copd",
+    name: "COPD",
+    etymology: "COPD = chronic obstructive pulmonary disease; Latin pulmo = lung + obstructio = blockage",
+    aliases: [
+      "copd",
+      "chronic obstructive pulmonary disease",
+      "chronic obstructive pulmonary diseases",
+      "chronic obstructive lung disease",
+    ],
+    definition:
+      "Progressive airflow limitation from chronic airway and/or parenchymal lung disease, usually related to tobacco smoke — encompasses emphysema (alveolar destruction) and chronic bronchitis (mucus hypersecretion) phenotypes.",
+    pathophysiology:
+      "Chronic irritant exposure → neutrophilic inflammation, protease–antiprotease imbalance, and small-airway fibrosis → irreversible obstruction (↓ FEV₁, ↓ FEV₁/FVC); hypoxemia and hypercapnia develop in advanced disease → secondary polycythemia via EPO.",
+    classicPresentation: [
+      "Long smoking history with progressive dyspnea",
+      "Chronic cough with sputum (chronic bronchitis phenotype) or minimal cough (emphysema)",
+      "Exertional dyspnea, wheeze, prolonged expiration",
+      "Barrel chest, pursed-lip breathing, weight loss in emphysema",
+    ],
+    keyFindings: [
+      "Obstructive PFTs — ↓ FEV₁, ↓ FEV₁/FVC, ↑ RV, air trapping",
+      "Hyperinflation and flattened diaphragm on CXR (emphysema)",
+      "Cyanosis and polycythemia in advanced chronic bronchitis (blue bloater)",
+    ],
+    keyLabs: [
+      "ABG — hypoxemia, hypercapnia in severe disease",
+      "↑ hematocrit from chronic hypoxia (secondary polycythemia)",
+      "↓ DLCO in emphysema",
+    ],
+    associations: [
+      "Emphysema — alveolar wall destruction, pink puffer",
+      "Chronic bronchitis — productive cough ≥3 months × 2 years, blue bloater",
+      "α1-antitrypsin deficiency — panacinar emphysema in younger patients",
+      "Cor pulmonale and pulmonary hypertension",
+    ],
+    complications: [
+      "Acute exacerbations (infection, pollution)",
+      "Respiratory failure and cor pulmonale",
+      "Secondary polycythemia and hyperviscosity",
+      "Pneumothorax (especially with bullous emphysema)",
+      "Lung cancer (shared smoking risk)",
+    ],
+    distinguishFrom: [
+      "Asthma — reversible obstruction, younger onset, atopy",
+      "Interstitial lung disease — restrictive PFTs, ↓ TLC, fine crackles",
+      "Congestive heart failure — orthopnea, S3, pulmonary edema on CXR",
+    ],
+    treatment: [
+      "Smoking cessation — most important intervention",
+      "Bronchodilators (SABA, LAMA, LABA) ± inhaled corticosteroids",
+      "Supplemental O₂ for chronic hypoxemia; pulmonary rehabilitation",
+      "Treat exacerbations with bronchodilators, steroids, antibiotics when indicated",
+    ],
+    boardsPearls: [
+      "COPD = chronic obstructive pulmonary disease; irreversible airflow limitation",
+      "Obstructive PFTs: ↓ FEV₁/FVC (<0.7 post-bronchodilator in adults)",
+      "Pink puffer = emphysema; blue bloater = chronic bronchitis with hypercapnia",
+      "Chronic hypoxia → ↑ EPO → secondary polycythemia",
+      "α1-antitrypsin deficiency — panacinar emphysema, lower lobes, liver disease",
+    ],
+    pediatrics:
+      "COPD is an adult disease from chronic smoke exposure; children with recurrent wheeze have asthma or cystic fibrosis, not COPD.",
+  },
+  {
     id: "emphysema",
     name: "Emphysema",
     etymology: "Greek emphysan = inflate/blow in",
-    aliases: ["emphysema", "pulmonary emphysema"],
+    aliases: [
+      "emphysema",
+      "pulmonary emphysema",
+      "pulmonary emphysemas",
+      "copd emphysema",
+      "emphysematous copd",
+    ],
     definition:
       "COPD phenotype with permanent enlargement of airspaces distal to terminal bronchioles due to alveolar wall destruction.",
     pathophysiology:
@@ -6375,7 +8100,11 @@ export const CONDITIONS: ConditionEntry[] = [
       "Centriacinar (centrilobular): smoking, upper lobes",
       "Panacinar: α1-antitrypsin deficiency, lower lobes",
       "Pink puffer (emphysema) vs blue bloater (chronic bronchitis)",
+      "COPD phenotype — one component of chronic obstructive pulmonary disease",
+      "Chronic hypoxia → secondary polycythemia via EPO",
     ],
+    pediatrics:
+      "Emphysema in children is rare — consider α1-antitrypsin deficiency or cystic fibrosis; adult centriacinar emphysema is smoking-related.",
   },
   {
     id: "interstitial-lung-disease",
@@ -6875,6 +8604,79 @@ export const CONDITIONS: ConditionEntry[] = [
     ],
   },
   {
+    id: "calcium-nephrolithiasis",
+    name: "Calcium Nephrolithiasis",
+    etymology: "Latin calx = lime + Greek nephros = kidney + lithos = stone + -iasis = condition",
+    aliases: [
+      "calcium nephrolithiasis",
+      "calcium kidney stones",
+      "calcium kidney stone",
+      "calcium oxalate nephrolithiasis",
+      "calcium oxalate stones",
+      "calcium oxalate stone",
+      "calcium oxalate kidney stones",
+      "calcium phosphate stones",
+      "calcium phosphate nephrolithiasis",
+      "hypercalciuria stones",
+      "calcium renal calculi",
+    ],
+    definition:
+      "Renal or ureteral stone disease composed primarily of calcium salts — most often calcium oxalate, less commonly calcium phosphate — representing the majority of kidney stones.",
+    pathophysiology:
+      "Supersaturation of urine with calcium and oxalate (or phosphate) → crystal nucleation and growth → stone formation; hypercalciuria, hyperoxaluria, low urine citrate, and dehydration are major promoters; Randall plaques on papillary tips may seed calcium oxalate stones.",
+    classicPresentation: [
+      "Sudden colicky flank pain radiating to groin",
+      "Hematuria",
+      "Restlessness — cannot find comfortable position",
+      "History of prior stones, dehydration, or high oxalate diet",
+    ],
+    keyFindings: [
+      "Calcium oxalate crystals — envelope- or dumbbell-shaped on urinalysis",
+      "Radiopaque stone on CT/KUB (most calcium stones)",
+      "Hydronephrosis if obstructing",
+    ],
+    keyLabs: [
+      "Hematuria on urinalysis",
+      "24-h urine: calcium, oxalate, citrate, uric acid, volume, pH",
+      "Serum calcium, PTH if hypercalcemia suspected",
+      "Noncontrast CT — gold standard for acute stone evaluation",
+    ],
+    associations: [
+      "Hypercalciuria — idiopathic most common; hyperparathyroidism, sarcoidosis, malignancy",
+      "Hyperoxaluria — high oxalate diet, malabsorption (Crohn, gastric bypass), ethylene glycol",
+      "Hypocitraturia — renal tubular acidosis type I, chronic diarrhea",
+      "Dehydration and low urine volume",
+      "Obesity and metabolic syndrome",
+    ],
+    complications: [
+      "Obstructive uropathy and hydronephrosis",
+      "Pyelonephritis above obstructing stone",
+      "Recurrent stone formation",
+      "Chronic kidney disease with repeated obstruction/infection",
+    ],
+    distinguishFrom: [
+      "Struvite stones — infection-related, staghorn, urease-positive organisms",
+      "Uric acid stones — radiolucent, acidic urine, gout",
+      "Cystine stones — hexagonal crystals, young patient, cystinuria",
+      "General nephrolithiasis — umbrella term; calcium stones are most common subtype",
+    ],
+    treatment: [
+      "Acute: NSAIDs for pain, hydration, urologic intervention if obstructing/infected",
+      "Prevention: ↑ fluid intake, thiazide/chlorthalidone for hypercalciuria, citrate supplementation, treat hyperparathyroidism",
+      "Dietary oxalate moderation if hyperoxaluric; adequate calcium intake with meals (binds oxalate in gut)",
+    ],
+    boardsPearls: [
+      "Calcium oxalate = most common kidney stone (~70–80%)",
+      "Envelope-shaped crystals on urinalysis → calcium oxalate",
+      "Thiazides/chlorthalidone ↓ urinary Ca²⁺ — stone prevention in hypercalciuria",
+      "Loop diuretics ↑ Ca²⁺ excretion — worsen calcium stones",
+      "Citrate (potassium citrate) inhibits stone formation — correct hypocitraturia",
+      "Staghorn calculi = think struvite (infection), not typical calcium oxalate alone",
+    ],
+    pediatrics:
+      "Pediatric stones are less common; consider cystinuria, RTA, and metabolic workup in children with recurrent calcium stones.",
+  },
+  {
     id: "renal-cell-carcinoma",
     name: "Renal Cell Carcinoma",
     etymology: "Latin ren = kidney + cellula = small cell + carcinoma = malignant epithelial tumor",
@@ -6956,6 +8758,9 @@ export const CONDITIONS: ConditionEntry[] = [
       "adpkd",
       "adult polycystic kidney disease",
       "adult-onset polycystic kidney disease",
+      "polycystic kidney disease",
+      "polycystic kidney diseases",
+      "pkd",
       "pkd1",
       "pkd2",
     ],
@@ -7007,6 +8812,7 @@ export const CONDITIONS: ConditionEntry[] = [
       "Berry aneurysm association — worst headache of life if SAH",
       "Multiple bilateral renal cysts + family history + HTN in young adult = ADPKD",
       "PKD1 (chrom 16) more common and severe than PKD2 (chrom 4)",
+      "Unqualified 'polycystic kidney disease' in adults usually means ADPKD; ARPKD is recessive neonatal/childhood form",
     ],
     pediatrics:
       "Cysts may be too small to detect in childhood; large-enough cysts can rarely appear in adolescents with known family history — adult diagnostic criteria apply by age.",
@@ -7020,6 +8826,7 @@ export const CONDITIONS: ConditionEntry[] = [
       "arpkd",
       "infantile polycystic kidney disease",
       "childhood polycystic kidney disease",
+      "recessive polycystic kidney disease",
       "pkhd1",
     ],
     definition:
@@ -7557,6 +9364,147 @@ export const CONDITIONS: ConditionEntry[] = [
     ],
     pediatrics:
       "Primary osteoarthritis is rare in children; pediatric degenerative joint disease suggests prior trauma, congenital/developmental hip disease, slipped capital femoral epiphysis, or inflammatory arthritis sequelae.",
+  },
+  {
+    id: "gout",
+    name: "Gout",
+    etymology: "Latin gutta = drop (historical belief in dropped humors)",
+    aliases: [
+      "gout",
+      "gouty arthritis",
+      "gouty arthropathy",
+      "acute gout",
+      "chronic gout",
+      "podagra",
+      "hyperuricemia gout",
+      "monosodium urate crystal arthritis",
+    ],
+    definition:
+      "Crystal-induced inflammatory arthritis caused by deposition of monosodium urate (MSU) crystals in joints and soft tissues from chronic hyperuricemia, presenting with recurrent acute flares and potential tophaceous disease.",
+    pathophysiology:
+      "Hyperuricemia → MSU crystal precipitation in joints → phagocytosis by neutrophils → NLRP3 inflammasome activation → IL-1β release → intense acute synovitis; chronic deposits form tophi in joints, ear helix, and soft tissues.",
+    classicPresentation: [
+      "Acute monoarticular arthritis — classic first MTP (podagra)",
+      "Exquisitely painful, red, swollen joint; may wake patient from sleep",
+      "Middle-aged man with hyperuricemia, alcohol, obesity, or diuretic use",
+      "Chronic tophaceous gout — subcutaneous urate deposits, joint deformity",
+    ],
+    keyFindings: [
+      "Synovial fluid: needle-shaped, negatively birefringent MSU crystals under polarized light",
+      "Tophi — chalky subcutaneous deposits (helix of ear, olecranon, fingers)",
+      "Joint erythema, warmth, swelling in acute flare",
+    ],
+    keyLabs: [
+      "↑ serum uric acid (may be normal during acute flare)",
+      "Synovial fluid analysis — crystals, exclude septic arthritis",
+      "↑ ESR/CRP during acute attack",
+    ],
+    associations: [
+      "Hyperuricemia — ↓ renal excretion (thiazides, cyclosporine) or ↑ production (Lesch-Nyhan, tumor lysis)",
+      "Metabolic syndrome, obesity, alcohol (especially beer), high purine diet",
+      "Hypertension treated with hydrochlorothiazide/chlorthalidone",
+      "Uric acid nephrolithiasis",
+      "Chronic kidney disease",
+    ],
+    complications: [
+      "Recurrent flares and chronic arthropathy",
+      "Tophaceous deposits and joint destruction",
+      "Uric acid kidney stones",
+      "Urate nephropathy in chronic disease",
+    ],
+    distinguishFrom: [
+      "Pseudogout (CPPD) — positively birefringent rhomboid CPPD crystals; often knee in elderly",
+      "Septic arthritis — septic joint until excluded; synovial culture essential if concern",
+      "Rheumatoid arthritis — chronic symmetric polyarthritis, RF/anti-CCP, not crystal monoarthritis",
+      "Cellulitis over joint — no crystals on aspiration",
+    ],
+    treatment: [
+      "Acute flare: NSAIDs, colchicine, or corticosteroids (intra-articular or systemic)",
+      "Do not start urate-lowering therapy (allopurinol, febuxostat) during acute flare alone without anti-inflammatory cover",
+      "Long-term: allopurinol or febuxostat to ↓ uric acid; lifestyle modification",
+      "Probenecid if underexcretion (less common choice on boards)",
+    ],
+    boardsPearls: [
+      "Gout = negatively birefringent needle-shaped MSU crystals",
+      "First MTP podagra is classic presentation",
+      "NLRP3 inflammasome → IL-1β in acute gout flare",
+      "Thiazide diuretics ↑ uric acid → precipitate gout",
+      "Allopurinol inhibits xanthine oxidase — chronic urate lowering, not first-line in acute attack",
+      "Colchicine inhibits microtubule polymerization in neutrophils",
+      "Uric acid stones are radiolucent",
+    ],
+    pediatrics:
+      "Pediatric gout is rare; consider Lesch-Nyhan syndrome (HGPRT deficiency, self-injury, hyperuricemia) or tumor lysis syndrome in malignancy.",
+  },
+  {
+    id: "pseudogout",
+    name: "Pseudogout",
+    etymology: "Greek pseudes = false + gutta = drop + -itis pattern (mimics gout)",
+    aliases: [
+      "pseudogout",
+      "cppd disease",
+      "cppd",
+      "calcium pyrophosphate deposition disease",
+      "calcium pyrophosphate dihydrate disease",
+      "calcium pyrophosphate crystal arthritis",
+      "chondrocalcinosis",
+      "pyrophosphate arthropathy",
+    ],
+    definition:
+      "Acute or chronic crystal-induced arthritis from calcium pyrophosphate dihydrate (CPPD) deposition in cartilage and synovium — clinically mimics gout but with different crystals and associations.",
+    pathophysiology:
+      "CPPD crystal deposition in articular cartilage (chondrocalcinosis) → crystal shedding into synovial fluid → NLRP3 inflammasome activation and acute synovitis; chronic CPPD arthropathy resembles osteoarthritis with inflammatory flares.",
+    classicPresentation: [
+      "Acute mono- or oligoarthritis — knee most common, also wrist",
+      "Elderly patient; may follow joint trauma or surgery",
+      "Chronic CPPD — degenerative arthritis with superimposed flares",
+      "Often mistaken for gout or septic arthritis",
+    ],
+    keyFindings: [
+      "Synovial fluid: rhomboid-shaped, positively birefringent CPPD crystals (polarized light)",
+      "Chondrocalcinosis — calcification of articular cartilage on X-ray (knee meniscus, symphysis pubis, TFCC)",
+      "Joint swelling, warmth, effusion during flare",
+    ],
+    keyLabs: [
+      "Synovial fluid crystal analysis — key diagnostic test",
+      "Exclude septic arthritis with Gram stain/culture when indicated",
+      "Check calcium, phosphate, magnesium, TSH, iron studies for secondary associations",
+    ],
+    associations: [
+      "Hyperparathyroidism",
+      "Hemochromatosis",
+      "Hypomagnesemia",
+      "Hypothyroidism",
+      "Ochronosis (alkaptonuria)",
+      "Advanced age and osteoarthritis",
+    ],
+    complications: [
+      "Recurrent inflammatory flares",
+      "Chronic joint damage mimicking OA",
+      "Secondary degenerative arthropathy",
+    ],
+    distinguishFrom: [
+      "Gout — negatively birefringent needle MSU crystals; podagra classic",
+      "Septic arthritis — very high synovial WBC, positive culture",
+      "Osteoarthritis — noninflammatory synovial fluid without CPPD crystals in typical OA",
+      "Rheumatoid arthritis — symmetric inflammatory polyarthritis, RF/anti-CCP",
+    ],
+    treatment: [
+      "Acute flare: NSAIDs, colchicine, or intra-articular corticosteroids",
+      "Joint aspiration for diagnosis and pressure relief",
+      "Treat underlying metabolic disorder (e.g., hemochromatosis, hyperparathyroidism)",
+      "No definitive therapy to dissolve CPPD deposits on Step 1 level",
+    ],
+    boardsPearls: [
+      "Pseudogout = positively birefringent rhomboid CPPD crystals",
+      "Gout = negatively birefringent needle MSU crystals — memorize both",
+      "Knee and wrist common; chondrocalcinosis on X-ray",
+      "Think hemochromatosis, hyperparathyroidism, hypothyroidism workup",
+      "Same NLRP3/IL-1 pathway as gout for acute inflammation",
+      "Colchicine and NSAIDs treat acute pseudogout flares",
+    ],
+    pediatrics:
+      "CPPD disease is primarily a disorder of older adults; pediatric crystal arthritis is uncommon — consider septic arthritis or autoimmune disease in acute monoarthritis.",
   },
   {
     id: "systemic-sclerosis",
@@ -8572,6 +10520,73 @@ export const CONDITIONS: ConditionEntry[] = [
     ],
     pediatrics:
       "CLL essentially an adult disease; pediatric small lymphocytic proliferations are rare and require specialist evaluation.",
+  },
+  {
+    id: "polycythemia-vera",
+    name: "Polycythemia Vera",
+    etymology: "Greek poly = many + kytos = cell + haima = blood + Latin verus = true",
+    aliases: [
+      "polycythemia vera",
+      "polycythaemia vera",
+      "polycythemia rubra vera",
+      "prv",
+      "primary polycythemia",
+      "jak2 polycythemia",
+    ],
+    definition:
+      "Myeloproliferative neoplasm with clonal erythrocytosis (and often leukocytosis and thrombocytosis) driven by JAK2 V617F mutation in most cases — true increase in red cell mass with inappropriately low erythropoietin.",
+    pathophysiology:
+      "Activating JAK2 mutation → constitutive EPO receptor/JAK2–STAT signaling → autonomous erythropoiesis independent of hypoxia; marrow hypercellularity with panmyelosis; splenic sequestration and extramedullary hematopoiesis as disease progresses.",
+    classicPresentation: [
+      "Middle-aged or older patient with headache, dizziness, pruritus (especially after hot shower — aquagenic pruritus)",
+      "Plethoric (ruddy) complexion, splenomegaly",
+      "Thrombotic events — DVT, PE, Budd-Chiari syndrome, stroke",
+      "Incidental ↑ hematocrit on routine labs",
+    ],
+    keyFindings: [
+      "Elevated hematocrit and hemoglobin with low serum EPO",
+      "Splenomegaly",
+      "Aquagenic pruritus after bathing",
+      "Hyperviscosity symptoms — blurred vision, tinnitus",
+    ],
+    keyLabs: [
+      "↑ Hct/Hgb, often ↑ WBC and platelets",
+      "↓ Erythropoietin level (inappropriate for degree of polycythemia)",
+      "JAK2 V617F mutation (majority of cases)",
+      "↑ Leukocyte alkaline phosphatase (LAP) — vs CML",
+    ],
+    associations: [
+      "Myeloproliferative neoplasm spectrum — essential thrombocythemia, primary myelofibrosis",
+      "JAK2 V617F mutation",
+      "Hyperuricemia and gout from high cell turnover",
+    ],
+    complications: [
+      "Arterial and venous thrombosis (hyperviscosity)",
+      "Transformation to myelofibrosis or acute leukemia (rare)",
+      "Bleeding paradoxically possible with extreme thrombocytosis",
+      "Peptic ulcer disease (histamine from basophils)",
+    ],
+    distinguishFrom: [
+      "Secondary polycythemia — ↑ EPO from chronic hypoxia (COPD), high altitude, or EPO-secreting RCC",
+      "Relative polycythemia — dehydration/hemoconcentration without ↑ RBC mass",
+      "CML — BCR-ABL positive, left shift, ↓ LAP",
+      "Essential thrombocythemia — thrombocytosis predominant; may overlap MPN spectrum",
+    ],
+    treatment: [
+      "Phlebotomy to target hematocrit",
+      "Low-dose aspirin for thrombosis prophylaxis",
+      "Hydroxyurea or ruxolitinib (JAK inhibitor) for high-risk or symptomatic disease",
+    ],
+    boardsPearls: [
+      "PV = ↑ RBC mass + ↓ EPO + JAK2 V617F in most cases",
+      "Aquagenic pruritus after hot shower — classic PV clue",
+      "vs secondary polycythemia — COPD/hypoxia has ↑ EPO; PV has low EPO",
+      "vs dehydration — relative ↑ Hct only; no splenomegaly or aquagenic pruritus",
+      "Budd-Chiari syndrome + polycythemia → think PV",
+      "Ruxolitinib inhibits JAK1/JAK2 — same pathway mutated in PV",
+    ],
+    pediatrics:
+      "PV is essentially an adult MPN; pediatric erythrocytosis workup focuses on congenital causes, EPO-secreting tumors, and cyanotic heart disease.",
   },
   {
     id: "cml",
@@ -9761,6 +11776,77 @@ export const CONDITIONS: ConditionEntry[] = [
       "Diverticulitis is rare in children; Meckel diverticulitis or appendicitis are more likely in pediatric acute abdomen. Juvenile colonic diverticulosis exists but is uncommon.",
   },
   {
+    id: "ileus",
+    name: "Ileus",
+    etymology: "Greek eileos = intestinal colic/twisting",
+    aliases: [
+      "ileus",
+      "paralytic ileus",
+      "adynamic ileus",
+      "functional ileus",
+      "nonobstructive ileus",
+      "postoperative ileus",
+    ],
+    definition:
+      "Functional failure of coordinated intestinal motility without a mechanical luminal obstruction — bowel contents and gas accumulate proximal to the hypomotile segment.",
+    pathophysiology:
+      "Inflammation, surgery, electrolyte derangements, opioids, or peritoneal irritation disrupt enteric neural/hormonal motility → coordinated peristalsis stops → gas and fluid accumulate → abdominal distension, nausea, and absent propagated bowel sounds; distinguish from mechanical obstruction where a physical barrier blocks the lumen.",
+    classicPresentation: [
+      "Abdominal distension and diffuse discomfort",
+      "Nausea, vomiting (often bilious if prolonged)",
+      "Absent or hypoactive bowel sounds",
+      "No passage of flatus or stool",
+      "Recent abdominal surgery, opioid use, electrolyte abnormality, or peritonitis",
+    ],
+    keyFindings: [
+      "Diffuse abdominal distension without focal peritoneal signs (unless underlying cause)",
+      "Hypoactive or absent bowel sounds",
+      "Abdominal X-ray — dilated small and large bowel loops with air in colon/rectum (vs cutoff in mechanical SBO)",
+      "CT — dilated bowel without transition point if paralytic; identifies mechanical cause if present",
+    ],
+    keyLabs: [
+      "Electrolytes — hypokalemia, hypercalcemia, hyponatremia impair motility",
+      "Magnesium",
+      "Medication review — opioids, anticholinergics",
+    ],
+    associations: [
+      "Postoperative state — most common cause after abdominal surgery",
+      "Opioids and anticholinergic drugs",
+      "Electrolyte disturbances (hypokalemia, hypercalcemia)",
+      "Peritonitis, pancreatitis, pneumonia (reflex ileus)",
+      "Sepsis and critical illness",
+    ],
+    complications: [
+      "Aspiration from vomiting",
+      "Bowel ischemia if superimposed closed-loop or prolonged distension (rare in pure ileus)",
+      "Malnutrition and dehydration",
+      "Aspiration pneumonia",
+    ],
+    distinguishFrom: [
+      "Small bowel obstruction — high-pitched or hyperactive early sounds, transition point on CT, no colonic air distal to obstruction",
+      "Large bowel obstruction — marked colonic dilation, often absent rectal air; tumor or volvulus",
+      "Gallstone ileus — mechanical SBO from ectopic gallstone; Rigler triad on imaging",
+      "Meconium ileus — neonatal mechanical obstruction in cystic fibrosis",
+      "Hirschsprung disease — functional obstruction from aganglionosis, not paralytic ileus",
+    ],
+    treatment: [
+      "NPO, nasogastric decompression if severe distension or vomiting",
+      "IV fluids and correct electrolytes (especially K⁺, Mg²⁺)",
+      "Minimize opioids; treat underlying cause (infection, pancreatitis)",
+      "Early ambulation after surgery to reduce postoperative ileus duration",
+      "Mechanical obstruction — surgery; ileus alone does not require operation",
+    ],
+    boardsPearls: [
+      "Ileus = hypomotility without mechanical blockage; obstruction = physical barrier",
+      "Postoperative ileus — diffuse dilation with air in colon distinguishes from SBO",
+      "Hypokalemia and opioids are classic reversible causes",
+      "Gallstone ileus is mechanical obstruction (not paralytic ileus) — cholecystoenteric fistula",
+      "NG tube, NPO, fluids, electrolyte repletion — supportive management for paralytic ileus",
+    ],
+    pediatrics:
+      "Meconium ileus in CF is mechanical obstruction from inspissated meconium, not paralytic ileus. Neonatal paralytic ileus may follow necrotizing enterocolitis or sepsis; evaluate for Hirschsprung if chronic constipation and failure to pass meconium.",
+  },
+  {
     id: "intestinal-perforation",
     name: "Intestinal Perforation",
     etymology: "Latin intestinum = internal gut + perforare = bore through",
@@ -10052,6 +12138,132 @@ export const CONDITIONS: ConditionEntry[] = [
     ],
     pediatrics:
       "BPH is an adult disease. Pediatric boys with urinary obstruction — consider posterior urethral valves, phimosis, or neurogenic bladder, not BPH.",
+  },
+  {
+    id: "prostate-adenocarcinoma",
+    name: "Prostate Adenocarcinoma",
+    etymology: "Greek prostatēs = one standing before + Greek aden = gland + karkinos = crab/malignancy",
+    aliases: [
+      "prostate adenocarcinoma",
+      "prostate cancer",
+      "prostate carcinoma",
+      "prostatic adenocarcinoma",
+      "adenocarcinoma of the prostate",
+      "prostate adenocarcinomas",
+    ],
+    definition:
+      "Malignant glandular neoplasm of the prostate, most often arising in the peripheral (posterior) zone and detected via PSA screening, digital rectal exam, or symptoms of local/advanced disease.",
+    pathophysiology:
+      "Accumulated genetic alterations (TMPRSS2-ERG fusion common) → malignant epithelial proliferation in peripheral zone → local invasion of seminal vesicles/bladder neck, lymphatic spread to pelvic nodes, hematogenous spread to bone (osteoblastic metastases) preferentially.",
+    classicPresentation: [
+      "Often asymptomatic when localized (screen-detected ↑ PSA or incidental DRE finding)",
+      "Lower urinary tract symptoms if bulky or obstructing",
+      "Painless hematuria (less common than bladder cancer)",
+      "Bone pain, pathologic fracture, or constitutional symptoms if metastatic",
+    ],
+    keyFindings: [
+      "Hard, nodular, irregular prostate on DRE (peripheral zone)",
+      "Osteoblastic bone lesions on imaging if metastatic",
+      "Gleason score/Grade Group on biopsy defines aggressiveness",
+    ],
+    keyLabs: [
+      "↑ PSA (prostate-specific antigen) — sensitive but not specific",
+      "Transrectal ultrasound-guided biopsy for diagnosis",
+      "Alkaline phosphatase ↑ with extensive bone metastases",
+    ],
+    associations: [
+      "Older age and family history",
+      "African ancestry (higher incidence)",
+      "BRCA2 and Lynch syndrome associations",
+    ],
+    complications: [
+      "Local invasion (seminal vesicles, bladder neck, rectum)",
+      "Metastasis to bone, lymph nodes, lung, liver",
+      "Urinary obstruction and renal failure",
+      "Spinal cord compression from vertebral metastases",
+    ],
+    distinguishFrom: [
+      "Benign prostatic hyperplasia — smooth symmetric enlargement in transition zone; LUTS without hard nodule",
+      "Prostatitis — tender boggy prostate, fever, ↑ PSA from inflammation",
+      "Bladder cancer — painless hematuria primary clue; cystoscopy diagnosis",
+    ],
+    treatment: [
+      "Localized: active surveillance, radical prostatectomy, or radiation therapy based on risk stratification",
+      "Advanced/metastatic: androgen deprivation therapy (GnRH agonists/antagonists, antiandrogens)",
+    ],
+    boardsPearls: [
+      "Cancer arises in peripheral (posterior) zone; BPH in transition zone",
+      "PSA ↑ in cancer, BPH, and prostatitis — not cancer-specific",
+      "Hard irregular nodule on DRE → biopsy",
+      "Metastases often osteoblastic (↑ alkaline phosphatase)",
+      "TMPRSS2-ERG fusion is classic molecular association",
+    ],
+    pediatrics:
+      "Prostate adenocarcinoma is essentially an adult disease; pediatric prostate tumors are exceedingly rare.",
+  },
+  {
+    id: "prostatitis",
+    name: "Prostatitis",
+    etymology: "Greek prostatēs = one standing before + -itis = inflammation",
+    aliases: [
+      "prostatitis",
+      "acute prostatitis",
+      "chronic prostatitis",
+      "acute bacterial prostatitis",
+      "chronic bacterial prostatitis",
+      "chronic pelvic pain syndrome",
+    ],
+    definition:
+      "Inflammation of the prostate, most often infectious (acute or chronic bacterial) or chronic pelvic pain syndrome, presenting with pelvic/perineal pain, urinary symptoms, and sometimes fever.",
+    pathophysiology:
+      "Ascending urethral pathogens (E. coli most common) or reflux of infected urine into prostatic ducts → prostatic inflammation and edema → tender enlarged prostate; chronic forms may involve biofilms in prostatic ducts and persistent infection or noninfectious pain syndromes.",
+    classicPresentation: [
+      "Acute bacterial: fever, chills, dysuria, urinary frequency, perineal/suprapubic/pelvic pain",
+      "Tender, boggy, warm prostate on DRE (avoid vigorous massage — risk bacteremia)",
+      "Painful hematuria possible",
+      "Chronic bacterial: recurrent UTIs, pelvic pain, irritative voiding symptoms",
+    ],
+    keyFindings: [
+      "Exquisitely tender prostate on gentle DRE in acute bacterial prostatitis",
+      "Pyuria and bacteriuria",
+      "Expressible prostatic secretions with WBCs/bacteria (chronic evaluation)",
+    ],
+    keyLabs: [
+      "Urinalysis and urine culture",
+      "↑ PSA during acute inflammation (recheck after treatment)",
+      "Blood cultures if septic",
+    ],
+    associations: [
+      "Recent urethral instrumentation or catheterization",
+      "Acute epididymitis overlap",
+      "Chronic pelvic pain syndrome (NIH category III)",
+    ],
+    complications: [
+      "Bacteremia and sepsis",
+      "Acute urinary retention",
+      "Chronic pelvic pain",
+    ],
+    distinguishFrom: [
+      "Benign prostatic hyperplasia — nontender smooth enlargement, LUTS without fever",
+      "Prostate cancer — hard irregular nodule, usually nontender",
+      "Cystitis alone — dysuria without prominent prostate tenderness or perineal pain",
+      "Pyelonephritis — flank/CVA tenderness, WBC casts",
+    ],
+    treatment: [
+      "Acute bacterial: fluoroquinolone or TMP-SMX for weeks (lipophilic agents penetrate prostate)",
+      "IV antibiotics if septic",
+      "Avoid vigorous prostate massage during acute infection",
+      "Alpha-blockers and anti-inflammatories for chronic symptom relief",
+    ],
+    boardsPearls: [
+      "Acute prostatitis = fever + dysuria + tender boggy prostate",
+      "Fluoroquinolone or TMP-SMX — good prostatic penetration",
+      "↑ PSA during prostatitis — recheck after treatment before cancer workup",
+      "Do not perform vigorous DRE in acute prostatitis — can precipitate sepsis",
+      "Painful hematuria + perineal pain → prostatitis vs cystitis",
+    ],
+    pediatrics:
+      "Prostatitis is rare in prepubertal boys; consider epididymo-orchitis or UTI in pediatric males with dysuria and pelvic pain.",
   },
   {
     id: "hypospadias",
@@ -10843,6 +13055,80 @@ export const CONDITIONS: ConditionEntry[] = [
     ],
     pediatrics:
       "Ascending cholangitis can complicate choledochal cysts or biliary atresia post-Kasai; same need for antibiotics and drainage.",
+  },
+  {
+    id: "cholelithiasis",
+    name: "Cholelithiasis",
+    etymology: "Greek chole = bile + lithos = stone + -iasis = condition",
+    aliases: [
+      "cholelithiasis",
+      "gallstone",
+      "gallstones",
+      "gall stone",
+      "gall stones",
+      "biliary calculus",
+      "biliary calculi",
+      "cholesterol gallstone",
+      "cholesterol gallstones",
+      "pigment gallstone",
+      "pigment gallstones",
+    ],
+    definition:
+      "Formation of calculi (stones) in the gallbladder — most commonly cholesterol stones in Western adults, or black/brown pigment stones in hemolysis or biliary stasis.",
+    pathophysiology:
+      "Cholesterol supersaturation (↓ bile salts or lecithin, ↑ cholesterol) with mucin and calcium bilirubinate nucleation → cholesterol stones; chronic hemolysis or cirrhosis → ↑ unconjugated bilirubin → black pigment stones; biliary infection/stasis → brown pigment stones. Stones may remain asymptomatic or cause biliary colic when cystic duct transiently obstructed.",
+    classicPresentation: [
+      "Asymptomatic incidental finding on imaging",
+      "Biliary colic — postprandial RUQ/epigastric pain after fatty meal, lasting <6 h",
+      "Nausea and vomiting during colic",
+      "Risk factors: female, fat, fertile, forty (4 F's); obesity, rapid weight loss, Native American or Hispanic ethnicity, Crohn ileal disease",
+    ],
+    keyFindings: [
+      "Echogenic focus with posterior acoustic shadowing in gallbladder on ultrasound",
+      "Gallbladder wall thickening or pericholecystic fluid if complicated by cholecystitis",
+      "Painless jaundice suggests CBD stone (choledocholithiasis), not uncomplicated cholelithiasis alone",
+    ],
+    keyLabs: [
+      "Usually normal LFTs in uncomplicated disease",
+      "↑ Alkaline phosphatase, direct bilirubin if stone migrates to CBD",
+      "↑ Amylase/lipase if gallstone pancreatitis",
+    ],
+    associations: [
+      "Obesity, diabetes, metabolic syndrome",
+      "Hemolytic anemias (pigment stones)",
+      "Crohn disease with terminal ileum resection (↓ bile acid pool)",
+      "Oral contraceptives and pregnancy (↓ gallbladder motility)",
+      "Native American populations — high cholesterol stone prevalence",
+    ],
+    complications: [
+      "Acute cholecystitis — sustained cystic duct obstruction",
+      "Choledocholithiasis and cholangitis",
+      "Acute biliary pancreatitis",
+      "Gallstone ileus (cholecystoenteric fistula with obstructing gallstone in small bowel)",
+      "Gallbladder cancer (chronic inflammation, porcelain gallbladder)",
+    ],
+    distinguishFrom: [
+      "Choledocholithiasis — jaundice, dilated CBD, stone in duct not just gallbladder",
+      "Biliary sludge — mobile echogenic material without discrete shadowing stone",
+      "Acute hepatitis — transaminase-predominant jaundice, no gallstone on ultrasound",
+      "Cholangiocarcinoma — painless progressive jaundice, no stone, older patient",
+    ],
+    treatment: [
+      "Asymptomatic — observation (no prophylactic cholecystectomy routinely)",
+      "Symptomatic or complicated — laparoscopic cholecystectomy",
+      "Ursodeoxycholic acid may dissolve small cholesterol stones in selected patients",
+      "ERCP if concurrent CBD stone",
+    ],
+    boardsPearls: [
+      "4 F's risk factors: female, fat, fertile, forty",
+      "Cholesterol stones — most common in US; radiolucent on X-ray",
+      "Black pigment stones — chronic hemolysis (sickle cell, spherocytosis); radiopaque",
+      "Brown pigment stones — biliary infection and stasis",
+      "Biliary colic <6 h vs cholecystitis >6 h RUQ pain with fever and Murphy sign",
+      "Gallstone ileus — Rigler triad: pneumobilia, small-bowel obstruction, ectopic gallstone",
+    ],
+    pediatrics:
+      "Gallstones uncommon in children; consider hemolytic disease, total parenteral nutrition, fibrate therapy, or ileal disease. Pigment stones predominate in pediatric hemolysis.",
   },
   {
     id: "choledocholithiasis",
@@ -12947,6 +15233,7 @@ export const CONDITIONS: ConditionEntry[] = [
       "chronic renal failure",
       "crf",
       "chronic renal insufficiency",
+      "renal insufficiency",
       "chronic nephropathy",
     ],
     definition:
@@ -13130,6 +15417,9 @@ export const CONDITIONS: ConditionEntry[] = [
       "bladder cancer",
       "bladder carcinoma",
       "urothelial carcinoma of bladder",
+      "urothelial bladder cancer",
+      "urothelial bladder carcinoma",
+      "ubc",
       "transitional cell carcinoma of bladder",
       "tcc bladder",
       "bladder urothelial carcinoma",
@@ -14284,6 +16574,133 @@ export const CONDITIONS: ConditionEntry[] = [
       "Pediatric airway emergency; distinguish from benign viral croup by toxic appearance and failure to improve with standard croup therapy.",
   },
   {
+    id: "croup",
+    name: "Croup",
+    etymology: "Middle English croup = to cry hoarsely (describing the cough sound)",
+    aliases: [
+      "croup",
+      "viral croup",
+      "laryngotracheobronchitis",
+      "acute laryngotracheobronchitis",
+      "acute laryngotracheitis",
+      "spasmodic croup",
+    ],
+    definition:
+      "Viral upper-airway infection causing subglottic inflammation, inspiratory stridor, and characteristic barking cough — most common cause of stridor in young children.",
+    pathophysiology:
+      "Parainfluenza and other respiratory viruses infect larynx/trachea → subglottic edema and inflammation narrows airway below vocal cords → turbulent airflow → inspiratory stridor and harsh barking cough; symptoms often worse at night.",
+    classicPresentation: [
+      "Child 6 months to 3 years with URI prodrome",
+      "Barking/seal-like cough and inspiratory stridor",
+      "Low-grade fever; child usually not toxic-appearing",
+      "Symptoms worse at night; may improve with humidified air",
+    ],
+    keyFindings: [
+      "Inspiratory stridor at rest in moderate–severe disease",
+      "Barking cough",
+      "Steeple sign on AP neck/chest X-ray (subglottic narrowing)",
+      "Minimal drooling; child can swallow",
+    ],
+    keyLabs: [
+      "Clinical diagnosis in typical cases",
+      "Neck/chest X-ray — steeple sign (supportive, not required)",
+      "Pulse oximetry for hypoxemia",
+    ],
+    associations: [
+      "Parainfluenza virus (most common)",
+      "RSV, influenza, adenovirus, Mycoplasma",
+      "Peak age 6 months to 3 years",
+    ],
+    complications: [
+      "Respiratory distress and hypoxemia",
+      "Rare progression to airway obstruction",
+      "Secondary bacterial tracheitis if illness worsens with high fever and toxicity",
+    ],
+    distinguishFrom: [
+      "Epiglottitis — drooling, tripod posture, toxic, minimal cough; supraglottic",
+      "Bacterial tracheitis — toxic, high fever, poor response to racemic epinephrine",
+      "Foreign body aspiration — sudden onset choking, unilateral wheeze",
+      "Retropharyngeal abscess — neck stiffness, drooling, limited neck movement",
+    ],
+    treatment: [
+      "Mild: supportive care, single-dose dexamethasone",
+      "Moderate–severe: dexamethasone plus nebulized racemic epinephrine; observe after epinephrine",
+      "Hospitalize if persistent stridor at rest, hypoxemia, or dehydration",
+    ],
+    boardsPearls: [
+      "Most common cause of stridor in children",
+      "Barking cough + inspiratory stridor + low-grade fever → croup",
+      "Steeple sign = subglottic narrowing",
+      "Dexamethasone is mainstay; racemic epinephrine for moderate–severe obstruction",
+      "vs epiglottitis — no drooling/tripod; less toxic",
+    ],
+    pediatrics:
+      "Peak 6 months to 3 years; parainfluenza is classic cause. Single-dose oral/IM dexamethasone reduces return visits and hospitalization.",
+  },
+  {
+    id: "epiglottitis",
+    name: "Epiglottitis",
+    etymology: "Greek epi = upon + glottis = tongue/tongue-shaped laryngeal structure + -itis = inflammation",
+    aliases: [
+      "epiglottitis",
+      "acute epiglottitis",
+      "supraglottitis",
+      "supraglottic epiglottitis",
+      "hib epiglottitis",
+    ],
+    definition:
+      "Acute supraglottic infection causing rapid airway obstruction — classically from Haemophilus influenzae type b, now rare in vaccinated populations.",
+    pathophysiology:
+      "Bacterial invasion of epiglottis and supraglottic structures → intense edema and purulent inflammation → sudden upper-airway narrowing → drooling, dysphagia, and life-threatening obstruction if untreated.",
+    classicPresentation: [
+      "Toxic-appearing child or adult with high fever",
+      "Dysphagia, odynophagia, muffled “hot potato” voice",
+      "Tripod posture and excessive drooling (cannot swallow secretions)",
+      "Soft stridor; minimal cough compared with croup",
+    ],
+    keyFindings: [
+      "Drooling and inability to handle oral secretions",
+      "Tripod positioning (leaning forward, neck extended)",
+      "Cherry-red swollen epiglottis on direct visualization in controlled setting",
+      "Thumbprint sign on lateral neck X-ray (swollen epiglottis) — if imaging obtained without agitating patient",
+    ],
+    keyLabs: [
+      "Clinical diagnosis — do not provoke with blind tongue depressor exam",
+      "Direct laryngoscopy in controlled airway setting (OR)",
+      "Blood cultures if septic; H. influenzae historically",
+    ],
+    associations: [
+      "Haemophilus influenzae type b (classic; now uncommon with Hib vaccine)",
+      "Streptococcus pneumoniae, Staphylococcus aureus, viruses in post-vaccine era",
+      "Unvaccinated or immunocompromised patients at higher risk",
+    ],
+    complications: [
+      "Complete airway obstruction and death",
+      "Bacteremia and sepsis",
+      "Epiglottic abscess",
+    ],
+    distinguishFrom: [
+      "Croup — barking cough, steeple sign, subglottic; less toxic, responds to racemic epinephrine",
+      "Bacterial tracheitis — barky cough persists; purulent tracheal membranes",
+      "Retropharyngeal abscess — posterior pharyngeal bulge, neck extension pain",
+      "Anaphylaxis — urticaria, wheeze, rapid onset after exposure",
+    ],
+    treatment: [
+      "Secure airway first — controlled intubation in OR; do not agitate child",
+      "IV antibiotics covering H. influenzae and other airway pathogens (e.g., ceftriaxone)",
+      "Avoid lying supine or invasive throat exam in unstable patient",
+    ],
+    boardsPearls: [
+      "Drooling + tripod + toxic appearance = epiglottitis until proven otherwise",
+      "Do NOT examine throat with tongue depressor — may precipitate complete obstruction",
+      "Hib vaccine dramatically reduced pediatric epiglottitis",
+      "Airway first, then IV antibiotics",
+      "vs croup — supraglottic, drooling, minimal barky cough",
+    ],
+    pediatrics:
+      "Pediatric emergency; Hib vaccination made classic childhood epiglottitis rare. Maintain calm environment and prepare for OR intubation.",
+  },
+  {
     id: "preeclampsia",
     name: "Preeclampsia",
     etymology: "Latin prae = before + Greek eklampsis = flashing out (originally pre-convulsive toxemia)",
@@ -14628,6 +17045,135 @@ export const CONDITIONS: ConditionEntry[] = [
     ],
   },
   {
+    id: "hepatitis-b",
+    name: "Hepatitis B",
+    etymology: "Greek hepar = liver + -itis = inflammation + B = second identified hepatitis virus",
+    aliases: [
+      "hepatitis b",
+      "hepatitis b virus",
+      "hbv",
+      "hbv infection",
+      "chronic hepatitis b",
+      "acute hepatitis b",
+    ],
+    definition:
+      "Liver infection caused by hepatitis B virus (partially double-stranded DNA hepadnavirus) transmitted via blood and body fluids — may present as acute self-limited illness or chronic infection with cirrhosis and hepatocellular carcinoma risk.",
+    pathophysiology:
+      "HBV infects hepatocytes → viral replication and immune-mediated hepatocyte injury → acute hepatitis; failure to clear HBsAg after 6 months defines chronic infection → ongoing inflammation, fibrosis, cirrhosis, and HCC (often with integrated viral DNA).",
+    classicPresentation: [
+      "Acute: fatigue, jaundice, RUQ pain, dark urine (incubation ~1–4 months)",
+      "Chronic: often asymptomatic until cirrhosis or HCC",
+      "IV drug use, unprotected sex, perinatal exposure, healthcare needlestick",
+      "Asian/endemic area birth — high chronic carrier prevalence",
+    ],
+    keyFindings: [
+      "Hepatomegaly and jaundice in symptomatic acute infection",
+      "Stigmata of cirrhosis in chronic disease",
+    ],
+    keyLabs: [
+      "HBsAg — active infection",
+      "Anti-HBc IgM — acute infection; IgG — past or chronic",
+      "Anti-HBs — immunity (vaccination or recovery)",
+      "HBeAg/anti-HBe and HBV DNA — infectivity and treatment monitoring",
+      "↑ ALT/AST",
+    ],
+    associations: [
+      "Cirrhosis and hepatocellular carcinoma",
+      "Polyarteritis nodosa (classic association)",
+      "Membranous glomerulonephritis",
+      "Immunosuppression — HBV reactivation on TNF inhibitors or chemotherapy",
+    ],
+    complications: [
+      "Chronic hepatitis, cirrhosis, HCC",
+      "Fulminant hepatic failure (rare acute)",
+      "HBV reactivation with immunosuppression",
+      "Vertical transmission to neonate without prophylaxis",
+    ],
+    distinguishFrom: [
+      "Hepatitis C — RNA flavivirus; different serology and treatment",
+      "Hepatitis A — fecal-oral, self-limited, no chronic state",
+      "Alcoholic liver disease — AST:ALT >2:1 pattern, negative HBV serology",
+    ],
+    treatment: [
+      "Acute — supportive care; antivirals if severe/fulminant",
+      "Chronic — tenofovir or entecavir (first-line nucleos(t)ide analogues)",
+      "Vaccination prevention: recombinant HBsAg vaccine series",
+      "Neonatal HBIG + vaccine at birth if mother HBsAg positive",
+    ],
+    boardsPearls: [
+      "HBV serology: HBsAg (+) chronic/active; anti-HBs (+) immunity; anti-HBc IgM acute",
+      "Chronic HBV → cirrhosis and HCC — screen with ultrasound/AFP",
+      "Vaccine = anti-HBs immunity only (no anti-HBc)",
+      "Screen for HBV before TNF inhibitors/biologics — reactivation risk",
+      "Neonatal prophylaxis: HBIG + vaccine within 12 h of birth",
+    ],
+    pediatrics:
+      "Perinatal transmission causes ~90% chronic infection if untreated; universal birth-dose vaccination and HBIG for HBsAg+ mothers are critical.",
+  },
+  {
+    id: "hepatitis-c",
+    name: "Hepatitis C",
+    etymology: "Greek hepar = liver + -itis = inflammation + C = third identified hepatitis virus",
+    aliases: [
+      "hepatitis c",
+      "hepatitis c virus",
+      "hcv",
+      "hcv infection",
+      "chronic hepatitis c",
+      "acute hepatitis c",
+    ],
+    definition:
+      "Bloodborne liver infection caused by hepatitis C virus (RNA flavivirus) that frequently becomes chronic and can lead to cirrhosis and hepatocellular carcinoma if untreated.",
+    pathophysiology:
+      "HCV infects hepatocytes → immune-mediated injury and direct cytopathic effects → chronic infection in ~75% without treatment → progressive fibrosis → cirrhosis and HCC over decades.",
+    classicPresentation: [
+      "Often asymptomatic for years — detected on screening or elevated LFTs",
+      "History of IV drug use, blood transfusion before 1992, tattoos, needlestick",
+      "Fatigue and mild jaundice in symptomatic acute infection (less common)",
+    ],
+    keyFindings: [
+      "Normal exam until advanced liver disease",
+      "Cirrhosis stigmata in long-standing infection",
+    ],
+    keyLabs: [
+      "Anti-HCV antibody — screening test",
+      "HCV RNA PCR — confirms active infection and genotype",
+      "↑ ALT/AST (may fluctuate or be normal)",
+      "Liver biopsy or elastography for fibrosis staging (historical/adjunct)",
+    ],
+    associations: [
+      "Cirrhosis and hepatocellular carcinoma",
+      "Mixed cryoglobulinemia and membranoproliferative GN",
+      "Porphyria cutanea tarda and lichen planus",
+      "HIV coinfection accelerates progression",
+    ],
+    complications: [
+      "Chronic hepatitis and cirrhosis",
+      "HCC in cirrhotic patients",
+      "Extrahepatic immune-complex manifestations",
+    ],
+    distinguishFrom: [
+      "Hepatitis B — DNA virus; different serology (HBsAg)",
+      "Hepatitis A/E — acute self-limited, fecal-oral",
+      "Autoimmune hepatitis — ANA/SMA, different serology",
+      "Alcoholic liver disease — history and AST:ALT pattern",
+    ],
+    treatment: [
+      "Direct-acting antivirals (DAAs) — cure >95% with pangenotypic regimens",
+      "Treat all chronic HCV regardless of fibrosis stage (current paradigm)",
+      "Avoid alcohol; vaccinate against HBV and HAV if not immune",
+    ],
+    boardsPearls: [
+      "Anti-HCV (+) → confirm with HCV RNA",
+      "Most common chronic bloodborne hepatitis in US historically",
+      "HCV → cirrhosis → HCC (screen cirrhotics)",
+      "DAAs achieve sustained virologic response (cure)",
+      "Cryoglobulinemia and MPGN association",
+    ],
+    pediatrics:
+      "Vertical HCV transmission ~5%; children born to HCV+ mothers need testing; pediatric treatment follows specialist protocols with DAAs.",
+  },
+  {
     id: "hepatitis",
     name: "Hepatitis",
     etymology: "Greek hepar = liver + -itis = inflammation",
@@ -14745,6 +17291,7 @@ export const CONDITIONS: ConditionEntry[] = [
       "↓ albumin and ↑ INR reflect impaired synthetic function",
       "Spider angiomata, ascites, and varices are classic stigmata",
       "All cirrhotics need HCC surveillance",
+      "Aflatoxin exposure (Aspergillus-contaminated grains) synergizes with HBV for HCC in endemic regions",
     ],
     pediatrics:
       "Pediatric cirrhosis may follow biliary atresia, metabolic liver disease, or chronic cholestatic disorders; portal hypertension complications occur in children as in adults.",
@@ -15005,6 +17552,73 @@ export const CONDITIONS: ConditionEntry[] = [
     ],
     pediatrics:
       "Viral myositis and inherited metabolic myopathies (McArdle) can cause rhabdomyolysis with exertion; maintain hydration and monitor CK and renal function.",
+  },
+  {
+    id: "acute-tubular-necrosis",
+    name: "Acute Tubular Necrosis",
+    etymology: "Latin acutus = sudden + Latin tubulus = little tube + Greek nekros = dead tissue",
+    aliases: [
+      "acute tubular necrosis",
+      "atn",
+      "acute tubular injury",
+      "ati",
+      "ischemic atn",
+      "toxic atn",
+    ],
+    definition:
+      "Most common intrinsic cause of acute kidney injury — acute injury and sloughing of renal tubular epithelial cells causing impaired reabsorption and concentration, typically after ischemic or nephrotoxic insult.",
+    pathophysiology:
+      "Ischemia (shock, sepsis) or toxins (aminoglycosides, contrast, myoglobin, ethylene glycol) damage proximal tubule cells → cell necrosis and detachment → tubular obstruction by casts and back-leak of filtrate → oliguria and ↑ creatinine; recovery phase shows tubular regeneration and polyuria.",
+    classicPresentation: [
+      "Rising creatinine/BUN days after hypotension, sepsis, surgery, or nephrotoxin exposure",
+      "Oliguric or nonoliguric AKI depending on severity",
+      "Recent rhabdomyolysis, contrast administration, or aminoglycoside use",
+      "Recovery: increasing urine output with hypotonic polyuria",
+    ],
+    keyFindings: [
+      "Oliguria (not universal)",
+      "Uremic symptoms if severe",
+    ],
+    keyLabs: [
+      "↑ creatinine and BUN",
+      "Muddy brown granular casts on urine microscopy",
+      "Fractional excretion of Na⁺ (FeNa) >2% in oliguric phase (vs prerenal <1%)",
+      "Urine osmolality ~300 mOsm/kg (isosthenuric) in established ATN",
+      "Positive dipstick blood with pigmented granular casts in myoglobinuric ATN",
+    ],
+    associations: [
+      "Sepsis and hypovolemic/cardiogenic shock",
+      "Rhabdomyolysis and hemoglobinuria/myoglobinuria",
+      "Aminoglycosides, amphotericin B, cisplatin",
+      "Iodinated contrast (especially with dehydration, CKD, diabetes)",
+      "Ethylene glycol and other nephrotoxins",
+    ],
+    complications: [
+      "Hyperkalemia, metabolic acidosis, volume overload",
+      "Uremic encephalopathy and pericarditis",
+      "Need for renal replacement therapy",
+    ],
+    distinguishFrom: [
+      "Prerenal azotemia — BUN:Cr >20:1, FeNa <1%, responds to fluids",
+      "Acute interstitial nephritis — WBC casts, eosinophils, drug rash",
+      "Glomerulonephritis — RBC casts, proteinuria, active urine sediment",
+      "Postrenal obstruction — hydronephrosis on imaging",
+    ],
+    treatment: [
+      "Treat underlying cause; discontinue nephrotoxins",
+      "IV fluids if hypovolemic; avoid overload if oliguric",
+      "Manage hyperkalemia and acidosis; dialysis if indicated",
+      "Renal recovery expected over days to weeks if insult removed",
+    ],
+    boardsPearls: [
+      "ATN = intrinsic AKI with muddy brown casts",
+      "Ischemic ATN after prolonged hypotension; toxic ATN after myoglobin, contrast, aminoglycosides",
+      "FeNa >2% favors ATN over prerenal in oliguric patient",
+      "Recovery polyuria phase — replace ongoing losses cautiously",
+      "vs prerenal — prerenal improves with volume; ATN does not quickly",
+    ],
+    pediatrics:
+      "Children develop ATN from dehydration, HUS, sepsis, and nephrotoxic drugs; maintain strict fluid and electrolyte monitoring during recovery diuresis.",
   },
   {
     id: "ards",

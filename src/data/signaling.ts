@@ -222,8 +222,11 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
       "1,25-dihydroxyvitamin d",
       "1,25 dihydroxycholecalciferol",
       "1,25 dihydroxyvitamin d",
+      "1,25-(oh)2d",
+      "1,25 oh vitamin d",
       "calcitriol",
       "active vitamin d",
+      "active vitamin d hormone",
     ],
     type: "Hormone",
     source: "Renal proximal tubule (1α-hydroxylation of 25-OH vitamin D)",
@@ -277,6 +280,51 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
     ],
     pediatrics:
       "Neonatal seizures may involve GABAergic immaturity; phenobarbital enhances GABA-A in neonatal epilepsy.",
+  },
+  {
+    id: "neurotransmitter",
+    name: "Neurotransmitter",
+    etymology: "Greek neuron = nerve + Latin transmittere = to send across",
+    aliases: [
+      "neurotransmitter",
+      "neurotransmitters",
+      "chemical neurotransmitter",
+      "chemical neurotransmitters",
+      "synaptic transmitter",
+      "synaptic transmitters",
+    ],
+    type: "Neurotransmitter",
+    source:
+      "Synthesized in presynaptic neurons (or imported, e.g., platelet serotonin), stored in synaptic vesicles, released by Ca²⁺-dependent exocytosis at chemical synapses; also released from some glia and peripheral endocrine-like cells",
+    receptor:
+      "Postsynaptic ligand-gated ion channels (ionotropic) or GPCRs (metabotropic); termination via reuptake transporters, enzymatic degradation, or diffusion",
+    function:
+      "Chemical messengers bridging presynaptic and postsynaptic cells to excite, inhibit, or modulate target neurons, muscle, or glands. Major classes: amino acids (glutamate, GABA, glycine), biogenic amines (dopamine, norepinephrine, serotonin, histamine), acetylcholine, peptides, and gasotransmitters (NO).",
+    clinicalRelevance: [
+      "SSRIs block serotonin reuptake; SNRIs block serotonin and norepinephrine reuptake",
+      "MAO inhibitors and COMT inhibitors prolong catecholamine/serotonin signaling",
+      "Benzodiazepines potentiate GABA-A; organophosphates inhibit AChE → excess acetylcholine",
+      "Parkinson disease — dopamine deficiency in substantia nigra; L-DOPA replaces dopamine precursor",
+      "Myasthenia gravis — antibodies to nicotinic ACh receptors at neuromuscular junction",
+      "Serotonin syndrome — excess serotonergic signaling (hyperthermia, clonus, autonomic instability)",
+    ],
+    boardsPearls: [
+      "Life cycle: synthesis → vesicular storage → Ca²⁺-triggered release → receptor binding → termination (reuptake or degradation)",
+      "Excitatory: glutamate (CNS); inhibitory: GABA (CNS), glycine (spinal cord)",
+      "Biogenic amines derived from amino acids: Trp → serotonin; Tyr → dopamine/NE/Epi; His → histamine",
+      "Acetylcholine — nicotinic (ion channel) vs muscarinic (GPCR) receptors",
+      "vs hormone — neurotransmitters act across synapses at short range; hormones often endocrine and systemic",
+      "vs neuromodulator — neurotransmitters cause fast direct postsynaptic potentials; neuromodulators tune circuit excitability",
+    ],
+    distinguishFrom: [
+      "Hormone — endocrine signaling, often systemic; overlap exists (epinephrine acts as both)",
+      "Cytokine — immune/inflammatory signaling proteins, not primary synaptic transmitters",
+      "Second messenger — intracellular signaling molecule downstream of receptors (cAMP, IP3, Ca²⁺)",
+      "Neuromodulator — alters efficacy of other transmitters over broader regions and slower time course",
+      "Receptor — protein that binds transmitter; not the signaling molecule itself",
+    ],
+    pediatrics:
+      "Neonatal neurologic immaturity shifts excitatory-inhibitory balance (GABA can be depolarizing early); neurotransmitter pathway defects (e.g., BH₄ deficiency) cause seizures and dystonia in infancy.",
   },
   {
     id: "cytokine",
@@ -839,6 +887,93 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
       "Neonatal myasthenia gravis from transplacental anti-AChR antibodies — hypotonia, poor feeding, respiratory weakness.",
   },
   {
+    id: "catecholamines",
+    name: "Catecholamines",
+    etymology: "catechol = benzene ring with two adjacent hydroxyl groups + amine = nitrogen-containing group",
+    aliases: [
+      "catecholamines",
+      "catecholamine",
+      "catecholaminergic",
+      "catacholamines",
+      "catacholamine",
+    ],
+    type: "Neurotransmitter",
+    source:
+      "Synthesized from tyrosine in sympathetic neurons, adrenal medullary chromaffin cells, and specific CNS nuclei (locus ceruleus, ventral tegmental area, substantia nigra)",
+    receptor:
+      "Adrenergic receptors (α₁ Gq, α₂ Gi, β₁/β₂/β₃ Gs) and dopamine receptors (D₁ Gs, D₂ Gi); dopamine, norepinephrine, and epinephrine bind adrenergic receptors with different affinities",
+    function:
+      "Biogenic amine class mediating sympathetic fight-or-flight responses, vascular tone, cardiac output, bronchodilation, and CNS reward/motor pathways. Sequential biosynthesis: dopamine → norepinephrine → epinephrine.",
+    clinicalRelevance: [
+      "Pheochromocytoma — excess catecholamine secretion → paroxysmal hypertension, tachycardia, headache, sweating",
+      "Parkinson disease — dopamine deficiency in substantia nigra; L-DOPA replaces precursor",
+      "Cocaine and tricyclic antidepressants — block catecholamine reuptake → sympathomimetic toxicity",
+      "MAO inhibitors + tyramine-rich foods → hypertensive crisis from excess norepinephrine",
+      "Beta-blockers, alpha-blockers, and sympathomimetics modulate catecholamine receptor signaling",
+    ],
+    boardsPearls: [
+      "Biosynthesis: tyrosine → L-DOPA (tyrosine hydroxylase, rate-limiting) → dopamine → NE (DBH) → Epi (PNMT in adrenal medulla)",
+      "Dopamine at low renal dose (D₁) dilates; higher doses lose selectivity → α/β effects",
+      "Epinephrine: low dose β₂ bronchodilation; high dose α₁ vasoconstriction",
+      "MAO degrades cytosolic catecholamines; COMT degrades extracellular/metabolites → metanephrines (pheo workup)",
+      "Chromaffin cells and postganglionic sympathetic neurons release catecholamines — adrenal medulla is endocrine",
+    ],
+    distinguishFrom: [
+      "Serotonin — tryptophan-derived biogenic amine; mood, GI motility, platelets; not catechol structure",
+      "Histamine — histidine-derived; allergy and gastric acid; H1/H2 receptors not adrenergic",
+      "Acetylcholine — cholinergic transmitter at preganglionic autonomic synapses and parasympathetic targets",
+      "Norepinephrine — single member of catecholamine class, not the whole group",
+      "Tyrosine — amino acid precursor; not the active signaling molecule",
+    ],
+    pediatrics:
+      "Neuroblastoma may secrete catecholamines — urine VMA/HVA elevated. Neonatal stress triggers catecholamine surge; pheochromocytoma rare in children but screen in MEN2 kindreds.",
+  },
+  {
+    id: "norepinephrine",
+    name: "Norepinephrine",
+    etymology: "nor- = chemical prefix (demethylated amine form) + Greek epi = upon + nephros = kidney + -ine = substance suffix",
+    aliases: [
+      "norepinephrine",
+      "noradrenaline",
+      "nor epinephrine",
+      "nor-epinephrine",
+      "ne",
+      "na",
+    ],
+    type: "Neurotransmitter",
+    source:
+      "Postganglionic sympathetic neurons (primary peripheral source), adrenal medulla chromaffin cells (minor fraction vs epinephrine), locus coeruleus and other brainstem noradrenergic nuclei in CNS",
+    receptor:
+      "α1 (Gq — vasoconstriction), α2 (Gi — presynaptic inhibition, ↓ sympathetic outflow), β1 (Gs — ↑ heart rate and contractility); minimal β2 activity compared with epinephrine",
+    function:
+      "Catecholamine neurotransmitter and hormone that increases vascular tone, maintains blood pressure, supports cardiac output, and modulates arousal, attention, and mood in the CNS. Synthesized from tyrosine → L-DOPA → dopamine → norepinephrine (dopamine β-hydroxylase).",
+    clinicalRelevance: [
+      "First-line vasopressor in septic shock (with fluids and source control)",
+      "SNRIs (venlafaxine, duloxetine) inhibit norepinephrine and serotonin reuptake",
+      "Tricyclic antidepressants block NE reuptake (and other receptors)",
+      "Pheochromocytoma may secrete norepinephrine and/or epinephrine → episodic hypertension",
+      "MAO and COMT degrade catecholamines — MAO inhibitors ↑ NE signaling",
+      "Clonidine and α2 agonists ↓ central sympathetic outflow",
+    ],
+    boardsPearls: [
+      "Synthesis: tyrosine → L-DOPA → dopamine → norepinephrine → (PNMT in adrenal medulla) epinephrine",
+      "α1 → vasoconstriction; β1 → ↑ HR/contractility; α2 presynaptic → ↓ NE release",
+      "Septic shock: norepinephrine first-line vasopressor after fluid resuscitation",
+      "Unopposed α if β-blocker given before α-blocker in pheochromocytoma → hypertensive crisis",
+      "vs epinephrine — NE has stronger α vasoconstriction; Epi has more β2 bronchodilation",
+      "vs angiotensin II — NE is catecholamine sympathetic signal; Ang II is RAAS peptide",
+    ],
+    distinguishFrom: [
+      "Epinephrine — adrenal medulla predominant catecholamine; stronger β2 effects",
+      "Dopamine — immediate precursor of norepinephrine; also used as vasopressor at low/mid/high doses",
+      "Angiotensin II — RAAS peptide vasoconstrictor, not catecholamine",
+      "Isoproterenol — nonselective β-agonist without α activity",
+      "Phenylephrine — pure α1 agonist without endogenous NE reuptake effects",
+    ],
+    pediatrics:
+      "Pediatric septic shock: fluids first; epinephrine favored in cold shock with low cardiac output, norepinephrine in warm vasodilatory shock per PALS guidance.",
+  },
+  {
     id: "histamine",
     name: "Histamine",
     etymology: "Greek histos = tissue + amine = nitrogen group",
@@ -869,6 +1004,50 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
     ],
     pediatrics:
       "Food-induced anaphylaxis — histamine and other mediators from mast cell degranulation; epinephrine IM is first-line in children.",
+  },
+  {
+    id: "serotonin",
+    name: "Serotonin",
+    etymology: "Latin serum = whey + Greek tonos = tension; 5-hydroxytryptamine (5-HT) from tryptophan",
+    aliases: [
+      "serotonin",
+      "seratonin",
+      "5-ht",
+      "5-hydroxytryptamine",
+      "5 hydroxytryptamine",
+      "5ht",
+    ],
+    type: "Neurotransmitter",
+    source:
+      "Raphe nuclei neurons in brainstem (CNS serotonergic pathways); enterochromaffin cells in GI mucosa; platelets uptake serotonin from plasma (platelets do not synthesize it)",
+    receptor:
+      "Multiple 5-HT receptor subtypes (5-HT1–5-HT7); mix of Gi, Gq, and ion-channel linked receptors — boards focus on 5-HT1 (anxiolytic/migraine), 5-HT2 (psychedelic/vascular), 5-HT3 (nausea, ion channel)",
+    function:
+      "Biogenic amine neurotransmitter regulating mood, sleep, appetite, thermoregulation, GI motility, and platelet aggregation; synthesized from tryptophan and terminated largely by presynaptic reuptake (SERT).",
+    clinicalRelevance: [
+      "SSRIs (fluoxetine, sertraline) — selective serotonin reuptake inhibition → ↑ synaptic 5-HT",
+      "Serotonin syndrome — SSRI + MAOI or other serotonergic drugs → hyperthermia, clonus, agitation, autonomic instability",
+      "Carcinoid syndrome — serotonin and histamine release → flushing, diarrhea, bronchospasm; urinary 5-HIAA elevated",
+      "Triptans (5-HT1B/1D agonists) — acute migraine treatment",
+      "Ondansetron — 5-HT3 antagonist for chemotherapy-induced nausea",
+    ],
+    boardsPearls: [
+      "Synthesis: tryptophan → 5-HTP (tryptophan hydroxylase) → serotonin (aromatic L-amino acid decarboxylase); BH₄ cofactor like PAH",
+      "Major metabolite 5-HIAA — elevated in carcinoid tumor workup",
+      "Platelets store serotonin — contributes to primary hemostasis; SSRIs may ↑ bleeding risk",
+      "MDMA and amphetamines increase synaptic serotonin release — serotonin syndrome risk with SSRIs",
+      "vs dopamine/norepinephrine — separate catecholamine pathway from tyrosine, not tryptophan",
+      "vs histamine — separate biogenic amine from histidine; both involved in carcinoid flushing",
+    ],
+    distinguishFrom: [
+      "Tryptophan — essential amino acid precursor; not the active synaptic transmitter",
+      "Dopamine — catecholamine from tyrosine; Parkinson and psychosis pathways",
+      "Histamine — from histidine; allergy and gastric acid, not mood/platelet primary role",
+      "Melatonin — also from tryptophan but downstream of serotonin N-acetylation; circadian hormone",
+      "Serotonin syndrome — clinical toxicity state, not the molecule itself",
+    ],
+    pediatrics:
+      "SSRIs used cautiously in pediatric depression with monitoring for activation and suicidality; carcinoid tumors are rare in children but 5-HIAA remains the classic screening metabolite.",
   },
   {
     id: "nitric-oxide",
@@ -1880,8 +2059,8 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
       "erythropoietin",
       "erythropoetin",
       "epo",
-      "epoetin",
-      "recombinant erythropoietin",
+      "epogen",
+      "hematopoietin",
     ],
     type: "Peptide hormone",
     source:
@@ -2045,6 +2224,8 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
       "ang 2",
       "at ii",
       "angiotensin-ii",
+      "angiotensin-2",
+      "angiotensin two",
     ],
     type: "Peptide hormone",
     source:
@@ -2066,6 +2247,8 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
       "ACE = kininase II — converts Ang I → Ang II and breaks down bradykinin",
       "ARBs block AT1 without affecting bradykinin — less cough than ACE inhibitors",
       "Captopril/enalapril/lisinopril = ACE inhibitors; losartan = ARB",
+      "Stimulates zona glomerulosa aldosterone release — links RAAS to mineralocorticoid axis",
+      "Licorice (glycyrrhizin) mimics mineralocorticoid excess downstream of Ang II–aldosterone pathway by blocking 11β-HSD2",
     ],
     distinguishFrom: [
       "Angiotensin I — inactive precursor; requires ACE conversion",
@@ -2117,6 +2300,210 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
     ],
     pediatrics:
       "Neonatal effective hypovolemia (dehydration, sepsis) activates RAAS; ACE inhibitor fetopathy from in utero RAAS blockade causes renal agenesis-like maldevelopment and oligohydramnios.",
+  },
+  {
+    id: "alpha-2-adrenergic-receptor",
+    name: "Alpha-2 Adrenergic Receptor",
+    etymology: "Greek alpha = first letter + -ergic = work/active + 2 = subtype + receptor = receiver",
+    aliases: [
+      "alpha-2 adrenergic receptor",
+      "alpha-2 adrenergic receptors",
+      "α2 adrenergic receptor",
+      "α2 adrenergic receptors",
+      "alpha-2 receptor",
+      "alpha-2 receptors",
+      "α2 receptor",
+      "α2 receptors",
+      "alpha 2 adrenergic receptor",
+    ],
+    type: "Signaling pathway",
+    source:
+      "Postsynaptic on brainstem and spinal cord neurons; presynaptic autoreceptors on sympathetic nerve terminals; also on pancreatic β cells and platelets",
+    receptor: "Gi/Go-coupled GPCR → inhibits adenylyl cyclase → ↓ cAMP",
+    function:
+      "Presynaptic α2 activation inhibits norepinephrine release (negative feedback); central α2 activation ↓ sympathetic outflow → ↓ BP and sedation; reduces insulin secretion from β cells.",
+    clinicalRelevance: [
+      "Clonidine and dexmedetomidine — central α2 agonists for hypertension and sedation",
+      "Brimonidine — α2 agonist eye drops lower IOP in glaucoma",
+      "Yohimbine — α2 antagonist (historical use)",
+      "Tricyclic antidepressants and MAOIs can block α2 autoreceptors → ↑ NE release",
+    ],
+    boardsPearls: [
+      "α2 = Gi → ↓ cAMP (opposite of β2 Gs)",
+      "Presynaptic α2 autoreceptor — less NE release when activated",
+      "Clonidine/dexmedetomidine — central α2 agonists",
+      "vs α1 — α1 is Gq vasoconstriction; α2 is mainly Gi inhibitory",
+      "vs β2 — β2 bronchodilation via Gs ↑ cAMP",
+    ],
+    distinguishFrom: [
+      "Alpha-1 adrenergic receptor — Gq → vasoconstriction, mydriasis",
+      "Beta-1 adrenergic receptor — Gs → ↑ heart rate and contractility",
+      "Imidazoline receptors — some clonidine effects also involve non-adrenergic receptors",
+    ],
+    pediatrics:
+      "Clonidine used cautiously in pediatric ADHD and tic disorders; abrupt withdrawal can cause rebound hypertension.",
+  },
+  {
+    id: "beta-2-adrenergic-receptor",
+    name: "Beta-2 Adrenergic Receptor",
+    etymology: "Greek beta = second letter + -ergic = work/active + 2 = subtype + receptor = receiver",
+    aliases: [
+      "beta-2 adrenergic receptor",
+      "beta-2 adrenergic receptors",
+      "β2 adrenergic receptor",
+      "β2 adrenergic receptors",
+      "beta-2 receptor",
+      "beta-2 receptors",
+      "β2 receptor",
+      "β2 receptors",
+      "beta 2 adrenergic receptor",
+      "b2 receptor",
+    ],
+    type: "Signaling pathway",
+    source:
+      "Bronchial smooth muscle, uterine myometrium, skeletal muscle vasculature, liver (glycogenolysis), and pancreatic β cells",
+    receptor: "Gs-coupled GPCR → activates adenylyl cyclase → ↑ cAMP → PKA",
+    function:
+      "Bronchial smooth muscle relaxation (bronchodilation), uterine relaxation (tocolysis), vasodilation in skeletal muscle beds, stimulation of insulin and glucagon secretion, and hepatic glycogenolysis.",
+    clinicalRelevance: [
+      "Albuterol/salbutamol, terbutaline — selective β2 agonists for asthma and COPD",
+      "Ritodrine/terbutaline — tocolysis for preterm labor (↓ uterine contractions)",
+      "Epinephrine activates β1 and β2 (and α receptors) — bronchodilation in anaphylaxis",
+      "β-blockers without selectivity block β2 → bronchospasm risk in asthmatics",
+    ],
+    boardsPearls: [
+      "β2 = Gs → ↑ cAMP → bronchodilation and uterine relaxation",
+      "Albuterol is selective β2 agonist for asthma",
+      "Nonselective β-blockers (propranolol) contraindicated in asthma — block β2 bronchodilation",
+      "Terbutaline/ritodrine — tocolysis via uterine β2",
+      "vs β1 — β1 mainly heart (↑ HR, contractility)",
+    ],
+    distinguishFrom: [
+      "Beta-1 adrenergic receptor — cardiac Gs effects, not bronchial selectivity",
+      "Alpha-1 adrenergic receptor — Gq vasoconstriction",
+      "Muscarinic M3 receptor — ACh-mediated bronchoconstriction (blocked by ipratropium)",
+    ],
+    pediatrics:
+      "Albuterol is first-line bronchodilator in pediatric asthma; β-blocker exposure can precipitate severe bronchospasm in reactive airway disease.",
+  },
+  {
+    id: "histamine-h2-receptor",
+    name: "Histamine H2 Receptor",
+    etymology: "Greek histos = tissue + amine + H2 = second histamine receptor subtype",
+    aliases: [
+      "histamine h2 receptor",
+      "histamine h2 receptors",
+      "h2 receptor",
+      "h2 receptors",
+      "h2 histamine receptor",
+      "h2 histamine receptors",
+      "histamine-2 receptor",
+    ],
+    type: "Signaling pathway",
+    source:
+      "Gastric parietal cells (primary boards target); also cardiac, uterine, and vascular smooth muscle",
+    receptor: "Gs-coupled GPCR on parietal cells → ↑ cAMP → activates H⁺/K⁺-ATPase proton pump",
+    function:
+      "Stimulates gastric acid secretion from parietal cells after histamine release from enterochromaffin-like cells; histamine acts with gastrin and acetylcholine (M3) to potentiate acid output.",
+    clinicalRelevance: [
+      "H2 blockers: famotidine, ranitidine, cimetidine — ↓ gastric acid in PUD and GERD",
+      "Cimetidine inhibits CYP450 and has antiandrogenic side effects",
+      "Carcinoid flushing partially mediated by histamine — H2 blockers adjunctive",
+      "Now largely supplanted by PPIs for acid suppression but remain boards-relevant",
+    ],
+    boardsPearls: [
+      "H2 on parietal cells = Gs → ↑ cAMP → ↑ acid secretion",
+      "H1 vs H2: H1 allergy/itch (often Gq); H2 gastric acid (Gs)",
+      "Triple acid stimulation: histamine (H2) + gastrin + ACh (M3) on parietal cell",
+      "Famotidine/ranitidine = H2 blockers; omeprazole = PPI (different target)",
+      "Cimetidine — CYP inhibition and gynecomastia",
+    ],
+    distinguishFrom: [
+      "Histamine H1 receptor — allergy, pruritus, bronchoconstriction; antihistamines (diphenhydramine)",
+      "Muscarinic M3 receptor — also stimulates parietal acid via Gq, blocked by atropine",
+      "Gastrin receptor — separate parietal cell secretagogue",
+    ],
+    pediatrics:
+      "H2 blockers used in pediatric GERD/PUD when indicated; PPIs increasingly preferred for erosive disease.",
+  },
+  {
+    id: "muscarinic-m3-receptor",
+    name: "Muscarinic M3 Receptor",
+    etymology: "Latin musca = fly (muscarine from Amanita muscaria) + -inic = related + M3 = third muscarinic subtype",
+    aliases: [
+      "muscarinic m3 receptor",
+      "muscarinic m3 receptors",
+      "m3 receptor",
+      "m3 receptors",
+      "m3 muscarinic receptor",
+      "m3 muscarinic receptors",
+      "muscarinic acetylcholine m3 receptor",
+    ],
+    type: "Signaling pathway",
+    source:
+      "Parasympathetic effector organs: smooth muscle (bronchial, GI, bladder detrusor), exocrine glands, gastric parietal cells; vascular endothelium (indirect vasodilation via NO)",
+    receptor: "Gq-coupled GPCR → phospholipase C → IP3/DAG → ↑ intracellular Ca²⁺",
+    function:
+      "Mediates parasympathetic 'rest and digest' responses: bronchoconstriction, increased GI motility and secretion, bladder detrusor contraction, pupillary sphincter constriction (miosis), and contribution to gastric acid secretion.",
+    clinicalRelevance: [
+      "Atropine/scopolamine — nonselective muscarinic antagonists block M3 (and others)",
+      "Ipratropium/tiotropium — inhaled M3 antagonists for COPD/asthma bronchodilation",
+      "Oxybutynin/solifenacin — M3 antagonists for overactive bladder",
+      "Pilocarpine — muscarinic agonist for glaucoma (miosis)",
+      "Organophosphate poisoning — excess ACh overstimulates M3 → SLUDGE + bronchospasm",
+    ],
+    boardsPearls: [
+      "M3 = Gq → IP3/Ca²⁺ → smooth muscle contraction and gland secretion",
+      "M3 on detrusor muscle — contraction for voiding (pelvic splanchnic S2–S4)",
+      "Atropine blocks M3 → ↓ secretions, mydriasis, tachycardia (also M2 on heart)",
+      "Ipratropium blocks M3 in lungs → bronchodilation",
+      "vs M2 — M2 on heart is Gi ↓ HR; M3 on smooth muscle is Gq contraction",
+    ],
+    distinguishFrom: [
+      "Nicotinic acetylcholine receptor — ion channel at NMJ and autonomic ganglia",
+      "Muscarinic M2 receptor — Gi on cardiac SA node ↓ heart rate",
+      "Beta-2 adrenergic receptor — epinephrine-mediated bronchodilation (Gs), not ACh",
+      "Histamine H1 receptor — also Gq smooth muscle effects in allergy",
+    ],
+    pediatrics:
+      "Anticholinergics reduce secretions before surgery; paradoxical CNS excitation possible in children with atropine overdose.",
+  },
+  {
+    id: "aflatoxin",
+    name: "Aflatoxin",
+    etymology: "Aspergillus flavus toxin — a = Aspergillus + flavus = yellow + toxin",
+    aliases: [
+      "aflatoxin",
+      "aflatoxins",
+      "aflatoxin b1",
+      "afb1",
+    ],
+    type: "Metabolite",
+    source:
+      "Mycotoxin produced by Aspergillus flavus and Aspergillus parasiticus contaminating stored grains, peanuts, and corn in hot, humid climates",
+    receptor:
+      "Metabolized to epoxide that forms DNA adducts (especially TP53 codon 249 mutation in hepatocytes)",
+    function:
+      "Potent hepatocarcinogen — no physiologic function; causes mutagenic injury to hepatocytes and synergizes with chronic hepatitis B for hepatocellular carcinoma development.",
+    clinicalRelevance: [
+      "Major environmental risk factor for hepatocellular carcinoma in sub-Saharan Africa and Asia",
+      "Synergistic with chronic HBV infection for HCC",
+      "Contamination of food supply in resource-limited settings with poor storage",
+      "Acute aflatoxicosis — high-dose ingestion causes acute liver failure (outbreaks)",
+    ],
+    boardsPearls: [
+      "Aflatoxin (Aspergillus) + HBV → hepatocellular carcinoma in endemic regions",
+      "TP53 mutation classic association with aflatoxin exposure",
+      "vs alcohol — both cause liver disease but aflatoxin is mycotoxin carcinogen",
+      "HCC risk factors: cirrhosis, HBV, HCV, aflatoxin, hemochromatosis, alcohol",
+    ],
+    distinguishFrom: [
+      "Alcohol — metabolic hepatotoxin, not fungal mycotoxin",
+      "Cyclophosphamide metabolites — bladder carcinogen, not liver mycotoxin",
+      "Aromatic amines — bladder/urothelial carcinogen in dye workers",
+    ],
+    pediatrics:
+      "Children in endemic areas exposed via contaminated food; HCC from aflatoxin + HBV typically manifests in adulthood but exposure begins in childhood.",
   },
 ];
 

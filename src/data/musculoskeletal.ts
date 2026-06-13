@@ -571,6 +571,163 @@ export const MUSCULOSKELETAL: MusculoskeletalEntry[] = [
     pediatrics:
       "PIP/DIP fractures and mallet injuries in sports; juvenile arthritis may involve PIPs. Trigger finger (stenosing tenosynovitis) can lock a digit in flexion at A1 pulley (not IP joint itself but affects flexion).",
   },
+  {
+    id: "pelvic-floor",
+    name: "Pelvic Floor",
+    etymology: "Latin pelvis = basin + Old English flor = floor",
+    aliases: [
+      "pelvic floor",
+      "pelvic floors",
+      "pelvic floor muscles",
+      "pelvic floor musculature",
+      "pelvic diaphragm",
+      "pelvic diaphragm muscles",
+      "levator ani",
+      "levator ani muscle",
+      "levator ani muscles",
+    ],
+    definition:
+      "Muscular sling at the base of the pelvis — primarily levator ani and coccygeus — that supports the bladder, uterus/prostate, and rectum and contributes to urinary and fecal continence.",
+    anatomy:
+      "Levator ani (pubococcygeus, puborectalis, iliococcygeus) and coccygeus form the pelvic diaphragm spanning the pubic symphysis to coccyx; puborectalis creates the anorectal angle; external urethral and anal sphincters coordinate with pelvic floor for continence.",
+    action: [
+      "Supports pelvic viscera against intra-abdominal pressure",
+      "Maintains urethral and anal continence via tonic contraction and coordinated relaxation during voiding/defecation",
+      "Puborectalis contraction maintains anorectal angle for fecal continence",
+      "Relaxes during micturition and defecation under coordinated neural control",
+    ],
+    innervation:
+      "Levator ani — pudendal nerve (S2–S4) and direct sacral ventral rami; external urethral/anal sphincters — pudendal nerve (S2–S4); parasympathetic pelvic splanchnic nerves (S2–S4) drive detrusor contraction for voiding",
+    clinicalRelevance: [
+      "Pelvic floor weakness → stress urinary incontinence and pelvic organ prolapse",
+      "Obstetric trauma, chronic straining, and aging weaken pelvic floor support",
+      "Kegel exercises strengthen levator ani for stress incontinence",
+      "Denervation (pudendal nerve injury, cauda equina) impairs continence and support",
+    ],
+    boardsPearls: [
+      "Pelvic floor = levator ani + coccygeus — supports bladder, uterus, rectum",
+      "Stress incontinence — leakage with cough/sneeze from pelvic floor/sphincter incompetence",
+      "Pudendal nerve (S2–S4) innervates external sphincters and much of pelvic floor",
+      "Parasympathetic S2–S4 → detrusor contraction; sympathetic hypogastric → storage",
+      "vs transverse perineal muscles — superficial perineal layer, not primary pelvic diaphragm",
+    ],
+    distinguishFrom: [
+      "Transverse perineal muscles — superficial perineal pouch, not primary pelvic diaphragm",
+      "Detrusor muscle — bladder wall smooth muscle; pelvic floor supports continence externally",
+      "Internal anal sphincter — smooth muscle; pelvic floor includes external sphincter (skeletal)",
+      "Abdominal wall — rectus/obliques; pelvic floor is separate continence/support layer",
+    ],
+    pediatrics:
+      "Pediatric enuresis and voiding dysfunction may involve pelvic floor dyssynergia; congenital anomalies (epispadias, cloaca) disrupt normal pelvic floor anatomy.",
+  },
+  {
+    id: "s2-s4-sacral-segments",
+    name: "S2–S4 Sacral Segments",
+    etymology: "S = sacral + 2–4 = second through fourth sacral spinal cord segments",
+    aliases: [
+      "s2-s4",
+      "s2–s4",
+      "s2 - s4",
+      "s2 to s4",
+      "s2 through s4",
+      "sacral segments s2-s4",
+      "sacral segments s2–s4",
+      "sacral nerve roots s2-s4",
+      "s2-s4 sacral segments",
+      "s2-s4 spinal segments",
+      "s2-s4 spinal level",
+      "s2-s4 spinal levels",
+      "s2, s3, s4",
+      "s2 s3 s4",
+      "pelvic splanchnic nerves s2-s4",
+    ],
+    definition:
+      "Second through fourth sacral spinal cord segments and nerve roots — the sacral micturition/defecation/erection center and origin of pelvic splanchnic (parasympathetic) and pudendal somatic innervation to the bladder, rectum, and external sphincters.",
+    anatomy:
+      "Sacral spinal cord segments S2–S4 give rise to ventral rami forming pelvic splanchnic nerves (parasympathetic) and contributing to the pudendal nerve; cauda equina below conus medullaris (~L1–L2) contains S2–S4 nerve roots as individual filaments.",
+    action: [
+      "Parasympathetic (pelvic splanchnic, S2–S4) → detrusor contraction and internal sphincter relaxation for voiding",
+      "Pudendal nerve (S2–S4) → external urethral and anal sphincter tone and perineal sensation",
+      "Sacral reflex arcs — anal wink (S2–S4), bulbocavernosus reflex, micturition reflex",
+      "Parasympathetic S2–S4 → penile/clitoral erection via NO/cGMP pathway",
+    ],
+    innervation:
+      "Not a muscle — sacral spinal segments S2, S3, S4; parasympathetic outflow via pelvic splanchnic nerves; somatic outflow via pudendal nerve to external sphincters and pelvic floor",
+    clinicalRelevance: [
+      "Cauda equina syndrome — compression of S2–S4 roots → saddle anesthesia, urinary retention, overflow incontinence, ↓ anal wink",
+      "Spinal cord injury above sacral center → spastic neurogenic bladder; sacral root injury → areflexic bladder",
+      "Pudendal nerve block (S2–S4) for perineal procedures and obstetric analgesia",
+      "Diabetic neuropathy can affect sacral autonomic fibers → neurogenic bladder dysfunction",
+    ],
+    boardsPearls: [
+      "S2–S4 = sacral spinal segments — NOT heart sounds S2/S4",
+      "Parasympathetic micturition and erection = pelvic splanchnic nerves (S2–S4)",
+      "Pudendal nerve (S2–S4) — external urethral/anal sphincters, perineal sensation",
+      "Anal wink reflex tests S2–S4 integrity",
+      "Cauda equina — bilateral leg pain/weakness, saddle anesthesia, bladder/bowel dysfunction",
+      "vs S2/S4 heart sounds — semilunar/atrial gallop sounds on auscultation, not spinal levels",
+    ],
+    distinguishFrom: [
+      "S2 (second heart sound) — aortic/pulmonic valve closure at end of systole",
+      "S4 (fourth heart sound) — atrial kick into stiff ventricle in late diastole",
+      "Lumbosacral plexus — broader nerve network; S2–S4 are specific sacral segment levels",
+      "Conus medullaris — terminal spinal cord at ~L1–L2; S2–S4 roots are cauda equina below",
+    ],
+    pediatrics:
+      "Sacral agenesis and tethered cord can impair S2–S4 function → neurogenic bladder and constipation; posterior urethral valves cause bladder outlet obstruction independent of sacral cord but chronic retention damages upper tracts.",
+  },
+  {
+    id: "fontanelle",
+    name: "Fontanelle",
+    etymology: "French fontaine = spring/fountain; soft spot where skull sutures meet",
+    aliases: [
+      "fontanelle",
+      "fontanel",
+      "fontanelles",
+      "fontanels",
+      "anterior fontanelle",
+      "anterior fontanel",
+      "posterior fontanelle",
+      "posterior fontanel",
+      "soft spot",
+      "soft spots",
+      "cranial fontanelle",
+      "cranial fontanel",
+    ],
+    definition:
+      "Membrane-covered gaps at intersections of fetal/neonatal cranial sutures where ossification is incomplete — allow skull molding during birth and accommodate rapid brain growth in infancy.",
+    anatomy:
+      "Anterior fontanelle (bregmatic) — junction of coronal and sagittal sutures; diamond-shaped, closes ~12–18 months. Posterior fontanelle (lambdoid) — junction of sagittal and lambdoid sutures; triangular, closes ~2–3 months. Patency reflects normal skull growth; delayed closure suggests pathology.",
+    action: [
+      "Permits skull deformation during vaginal delivery",
+      "Expands with increasing intracranial volume during brain growth",
+      "Bulges with ↑ intracranial pressure or crying; sinks with dehydration",
+      "Palpation assesses hydration status and intracranial pressure in infants",
+    ],
+    clinicalRelevance: [
+      "Bulging fontanelle — meningitis, hydrocephalus, intracranial hemorrhage, hypervitaminosis A",
+      "Sunken fontanelle — dehydration, malnutrition",
+      "Delayed closure — hypothyroidism, Down syndrome, rickets, achondroplasia",
+      "Premature closure (craniosynostosis) — abnormal head shape, ↑ intracranial pressure risk",
+      "Large anterior fontanelle — hypothyroidism, osteogenesis imperfecta, trisomy 21",
+    ],
+    boardsPearls: [
+      "Anterior fontanelle closes ~12–18 months; posterior ~2–3 months",
+      "Bulging + fever + lethargy in infant → meningitis until proven otherwise",
+      "Sunken fontanelle + dry mucosa + ↓ urine output → dehydration",
+      "Delayed fontanelle closure + hypotonia → congenital hypothyroidism",
+      "Craniosynostosis — premature suture fusion, not enlarged fontanelle",
+      "vs open suture — fontanelle is membrane-filled gap; suture is fibrous joint between bones",
+    ],
+    distinguishFrom: [
+      "Cranial suture — fibrous joint line between skull bones, not soft membranous gap",
+      "Craniosynostosis — premature suture fusion with ridging and abnormal head shape",
+      "Caput succedaneum — soft tissue scalp swelling from birth trauma, not fontanelle bulging",
+      "Cephalohematoma — subperiosteal hemorrhage limited by suture lines",
+    ],
+    pediatrics:
+      "Fontanelle examination is central to neonatal and infant assessment; bulging fontanelle with meningitis signs warrants urgent lumbar puncture and antibiotics. Congenital hypothyroidism screening is separate but delayed fontanelle closure is a classic physical clue.",
+  },
 ];
 
 const musculoskeletalById = new Map(

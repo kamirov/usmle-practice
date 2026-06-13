@@ -154,6 +154,30 @@ export const ORGANS: OrganEntry[] = [
     derivatives: ["Fundus", "Body", "Pylorus"],
   },
   {
+    id: "intestines",
+    name: "Intestines",
+    etymology: "Latin intestinum = internal/gut",
+    aliases: [
+      "intestines",
+      "intestine",
+      "intestinal",
+      "intestinal tract",
+      "bowel",
+      "bowels",
+      "gut",
+      "small and large intestine",
+    ],
+    germLayer: "Endoderm",
+    origin:
+      "Midgut and hindgut endoderm form the small intestine (jejunum, ileum) and large intestine (colon, rectum); proximal duodenum is foregut-derived; muscularis and serosa from splanchnic mesoderm.",
+    derivatives: [
+      "Small intestine — absorption of nutrients, water, electrolytes",
+      "Large intestine — water/electrolyte reabsorption, microbial fermentation",
+      "Intestinal mucosa — villi, crypts, goblet cells, enteroendocrine cells",
+      "Peyer patches and gut-associated lymphoid tissue (GALT)",
+    ],
+  },
+  {
     id: "duodenum-proximal",
     name: "Duodenum (proximal)",
     etymology: "Latin duodeni = twelve each + Latin proximus = nearest",
@@ -198,6 +222,57 @@ export const ORGANS: OrganEntry[] = [
     origin:
       "Ascending and transverse colon from midgut; descending and sigmoid colon from hindgut endoderm.",
     derivatives: ["Ascending colon", "Transverse colon", "Descending colon", "Sigmoid colon"],
+  },
+  {
+    id: "ascending-colon",
+    name: "Ascending Colon",
+    etymology: "Latin ascendere = to climb + Greek kolon = large intestine",
+    aliases: [
+      "ascending colon",
+      "ascending colons",
+      "right colon",
+    ],
+    germLayer: "Endoderm",
+    origin:
+      "Midgut derivative; forms the right-sided vertical segment from cecum to hepatic flexure during intestinal rotation.",
+  },
+  {
+    id: "transverse-colon",
+    name: "Transverse Colon",
+    etymology: "Latin transversus = lying across + Greek kolon = large intestine",
+    aliases: [
+      "transverse colon",
+      "transverse colons",
+    ],
+    germLayer: "Endoderm",
+    origin:
+      "Midgut derivative; horizontal segment from hepatic flexure to splenic flexure, longest intraperitoneal portion of colon.",
+  },
+  {
+    id: "descending-colon",
+    name: "Descending Colon",
+    etymology: "Latin descendere = to go down + Greek kolon = large intestine",
+    aliases: [
+      "descending colon",
+      "descending colons",
+      "left colon",
+    ],
+    germLayer: "Endoderm",
+    origin:
+      "Hindgut derivative; left-sided vertical segment from splenic flexure to sigmoid colon.",
+  },
+  {
+    id: "sigmoid-colon",
+    name: "Sigmoid Colon",
+    etymology: "Greek sigma = S-shaped letter + kolon = large intestine",
+    aliases: [
+      "sigmoid colon",
+      "sigmoid colons",
+      "sigmoid",
+    ],
+    germLayer: "Endoderm",
+    origin:
+      "Hindgut derivative; S-shaped loop between descending colon and rectum, suspended by sigmoid mesocolon.",
   },
   {
     id: "rectum",
@@ -312,6 +387,20 @@ export const ORGANS: OrganEntry[] = [
       "Forms from the urogenital sinus; prostatic/membranous/spongy portions differ by sex.",
   },
   {
+    id: "urogenital-membrane",
+    name: "Urogenital membrane",
+    etymology: "Greek ouron = urine + Latin genitalis = origin/birth + Latin membrana = skin/layer",
+    aliases: [
+      "urogenital membrane",
+      "urogenital membranes",
+      "ug membrane",
+      "cloacal membrane urogenital portion",
+    ],
+    germLayer: "Ectoderm / Endoderm",
+    origin:
+      "After the urorectal septum divides the cloaca, the ventral urogenital sinus remains covered externally by the urogenital membrane (closely related to the cloacal membrane region); perforation/canalization of this membrane establishes communication between the urogenital sinus and amniotic cavity — forming the external urethral/urogenital opening.",
+  },
+  {
     id: "prostate",
     name: "Prostate",
     etymology: "Greek prostates = one standing before",
@@ -414,14 +503,61 @@ export const ORGANS: OrganEntry[] = [
       "adrenal cortex",
       "adrenal cortices",
       "cortex of adrenal gland",
-      "zona glomerulosa",
-      "zona fasciculata",
-      "zona reticularis",
+      "cortex of the adrenal gland",
+      "suprarenal cortex",
     ],
     germLayer: "Mesoderm",
     origin:
       "Mesodermal mesenchyme from celomic (coelomic) epithelium of the posterior abdominal wall near the urogenital ridge; condenses into a cortical primordium that envelops the migrating neural crest–derived medulla. Fetal cortex predominates in utero and involutes after birth; the permanent adult cortex differentiates into zona glomerulosa (outer), fasciculata (middle), and reticularis (inner).",
     derivatives: ["Zona glomerulosa", "Zona fasciculata", "Zona reticularis"],
+  },
+  {
+    id: "zona-glomerulosa",
+    name: "Zona Glomerulosa",
+    etymology: "Latin zona = belt/band + glomerulus = small ball (clustered histologic appearance)",
+    aliases: [
+      "zona glomerulosa",
+      "zona g",
+      "zona g.",
+      "outer adrenal cortex",
+      "adrenal zona glomerulosa",
+    ],
+    germLayer: "Mesoderm",
+    origin:
+      "Outermost zone of the permanent adult adrenal cortex, arising from mesodermal celomic epithelium–derived cortical primordium; histologically arranged in rounded cell clusters beneath the adrenal capsule.",
+    derivatives: ["Aldosterone-producing mineralocorticoid cells"],
+  },
+  {
+    id: "zona-fasciculata",
+    name: "Zona Fasciculata",
+    etymology: "Latin zona = belt/band + fasciculus = small bundle (parallel cordlike cell columns)",
+    aliases: [
+      "zona fasciculata",
+      "zona f",
+      "zona f.",
+      "middle adrenal cortex",
+      "adrenal zona fasciculata",
+    ],
+    germLayer: "Mesoderm",
+    origin:
+      "Middle and largest zone of the adrenal cortex between glomerulosa and reticularis; cells form radially oriented cords with lipid-rich cytoplasm (foamy appearance) from cholesterol stores used for steroid synthesis.",
+    derivatives: ["Glucocorticoid-producing cells (cortisol)"],
+  },
+  {
+    id: "zona-reticularis",
+    name: "Zona Reticularis",
+    etymology: "Latin zona = belt/band + reticulum = network (anastomosing cell cords)",
+    aliases: [
+      "zona reticularis",
+      "zona r",
+      "zona r.",
+      "inner adrenal cortex",
+      "adrenal zona reticularis",
+    ],
+    germLayer: "Mesoderm",
+    origin:
+      "Innermost zone of the adrenal cortex adjacent to the medulla; cells form a network of cords that synthesize adrenal androgens (DHEA, androstenedione), especially after puberty.",
+    derivatives: ["Adrenal androgen-producing cells"],
   },
   {
     id: "adrenal-medulla",
@@ -431,8 +567,11 @@ export const ORGANS: OrganEntry[] = [
       "adrenal medulla",
       "adrenal medullas",
       "medulla of adrenal gland",
+      "medulla of the adrenal gland",
+      "suprarenal medulla",
       "chromaffin cells",
       "chromaffin cell",
+      "chromaffin tissue",
     ],
     germLayer: "Ectoderm / Neural crest",
     origin:
@@ -863,6 +1002,18 @@ const ORGAN_DETAILS: Record<
     step1Pearls: ["Parietal cells secrete HCl and intrinsic factor", "H. pylori increases ulcers and gastric cancer risk", "Pernicious anemia targets parietal cells/intrinsic factor"],
     pediatrics: "Projectile nonbilious vomiting at 2-8 weeks suggests hypertrophic pyloric stenosis.",
   },
+  intestines: {
+    functionSummary: "Digest and absorb nutrients, water, and electrolytes; host microbiome; mucosal immunity and endocrine signaling (GLP-1, secretin, CCK).",
+    commonPathologies: ["Celiac disease", "Crohn disease", "Ulcerative colitis", "Small bowel obstruction", "Short bowel syndrome", "Lactose intolerance"],
+    step1Pearls: [
+      "Small intestine — villi increase surface area; jejunum absorbs most nutrients; ileum absorbs B12 and bile acids",
+      "Large intestine — water/sodium reabsorption; colonocytes use short-chain fatty acids from fermentation",
+      "Peyer patches in ileum — mucosal immunity; GALT throughout intestinal lamina propria",
+      "Portal circulation carries absorbed nutrients to liver first (first-pass metabolism)",
+      "Crypts of Lieberkühn contain stem cells; villi shorten in celiac and tropical sprue",
+    ],
+    pediatrics: "Necrotizing enterocolitis affects preterm intestinal mucosa; Hirschsprung disease causes functional obstruction from absent ganglia in distal colon.",
+  },
   "duodenum-proximal": {
     functionSummary: "Receives gastric chyme plus bile and pancreatic enzymes; major site of iron absorption.",
     commonPathologies: ["Duodenal ulcer", "Celiac disease", "Annular pancreas", "Superior mesenteric artery syndrome"],
@@ -888,6 +1039,29 @@ const ORGAN_DETAILS: Record<
     functionSummary: "Absorbs water/electrolytes, stores stool, and hosts microbiota that produce short-chain fatty acids/vitamin K.",
     commonPathologies: ["Ulcerative colitis", "Diverticulosis/diverticulitis", "Colorectal cancer", "Ischemic colitis", "C. difficile colitis"],
     step1Pearls: ["Left colon/hindgut supplied by IMA; right colon/midgut by SMA", "UC is continuous from rectum; Crohn is skip lesions", "Adenoma-carcinoma sequence involves APC then KRAS then p53"],
+  },
+  "ascending-colon": {
+    functionSummary: "Receives cecal contents and absorbs water/sodium as feces begin forming; retroperitoneal right colon segment.",
+    commonPathologies: ["Crohn disease", "Colorectal adenocarcinoma", "Ischemic colitis (less common than watershed flexures)", "Infectious colitis"],
+    step1Pearls: ["Midgut derivative — SMA supply (ileocolic, right colic arteries)", "Retroperitoneal — covered by adventitia not serosa", "Crohn can affect ascending colon with skip lesions", "Right-sided colon cancer may present with anemia from occult bleeding"],
+    pediatrics: "Same midgut embryology; intussusception ileocolic junction is adjacent anatomic landmark in infants.",
+  },
+  "transverse-colon": {
+    functionSummary: "Intraperitoneal horizontal colon segment continuing water absorption; suspended by transverse mesocolon.",
+    commonPathologies: ["Colorectal cancer", "Ulcerative colitis (extensive colitis)", "Ischemic colitis at splenic flexure watershed", "Volvulus (rare)"],
+    step1Pearls: ["Midgut derivative — primarily SMA (middle colic artery); marginal artery connects to IMA", "Intraperitoneal — serosa and transverse mesocolon", "Splenic flexure is watershed between SMA and IMA — ischemic colitis risk", "Greater omentum attaches to transverse colon"],
+    pediatrics: "Malrotation/volvulus can involve midgut including transverse colon; same vascular watershed principles apply.",
+  },
+  "descending-colon": {
+    functionSummary: "Left retroperitoneal colon segment continuing fecal dehydration and storage before sigmoid loop.",
+    commonPathologies: ["Diverticulosis", "Colorectal cancer", "Ulcerative colitis", "Ischemic colitis"],
+    step1Pearls: ["Hindgut derivative — IMA supply (left colic artery)", "Retroperitoneal — adventitia outer layer", "Diverticulosis more common in left colon than right", "UC extends continuously through descending colon when pancolitis present"],
+  },
+  "sigmoid-colon": {
+    functionSummary: "S-shaped intraperitoneal colon loop storing formed stool before rectum; highly mobile on sigmoid mesocolon.",
+    commonPathologies: ["Diverticulosis/diverticulitis", "Sigmoid volvulus", "Colorectal cancer", "Ulcerative colitis"],
+    step1Pearls: ["Hindgut — IMA sigmoid arteries", "Most common site for diverticulosis and diverticulitis in Western adults", "Sigmoid volvulus — coffee-bean sign on abdominal X-ray; elderly/institutionalized", "Intraperitoneal with long mesocolon → increased mobility and volvulus risk"],
+    pediatrics: "Sigmoid volvulus rare in children; Hirschsprung disease affects rectosigmoid transition zone.",
   },
   rectum: {
     functionSummary: "Stores feces and coordinates defecation reflex with anal sphincters.",
@@ -924,6 +1098,28 @@ const ORGAN_DETAILS: Record<
     functionSummary: "Filters plasma, regulates electrolytes/acid-base/volume, secretes renin and EPO, activates vitamin D.",
     commonPathologies: ["Acute kidney injury", "Glomerulonephritis", "Nephrotic syndrome", "Pyelonephritis", "Polycystic kidney disease"],
     step1Pearls: ["Juxtaglomerular cells release renin", "PCT reabsorbs most filtered Na/water/glucose/amino acids", "Podocyte injury drives proteinuria"],
+  },
+  metanephros: {
+    functionSummary: "Embryonic definitive kidney primordium formed by reciprocal induction between ureteric bud and metanephric mesenchyme.",
+    commonPathologies: ["Renal agenesis", "Renal dysplasia", "Wilms tumor", "Horseshoe kidney", "UPJ obstruction"],
+    step1Pearls: [
+      "Metanephric mesenchyme → nephron (glomerulus through DCT); ureteric bud → collecting system",
+      "Reciprocal induction — each tissue requires the other or kidney fails to form",
+      "Failure → bilateral agenesis → oligohydramnios → Potter sequence",
+      "vs mesonephros/pronephros — transient earlier kidneys; metanephros is permanent",
+    ],
+    pediatrics: "Congenital renal anomalies originate in metanephric development; Wilms tumor arises from persistent blastema.",
+  },
+  "urogenital-membrane": {
+    functionSummary: "Temporary membrane covering the ventral urogenital sinus outlet; perforates to form the external urogenital opening after cloacal partitioning.",
+    commonPathologies: ["Abnormal perforation timing", "Bladder exstrophy spectrum (developmental field defect)", "Imperforate urogenital membrane (rare)"],
+    step1Pearls: [
+      "Urorectal septum divides cloaca → urogenital sinus (ventral) and rectum (dorsal)",
+      "Urogenital membrane must break down/perforate for external urethral opening",
+      "Failure of cloacal development links to exstrophy-epispadias complex on boards",
+      "vs anal membrane — dorsal counterpart after septation",
+    ],
+    pediatrics: "Neonatal urinary outlet anomalies reflect abnormal urogenital sinus and membrane development; distinguish from patent urachus (allantoic remnant).",
   },
   ureter: {
     functionSummary: "Moves urine from renal pelvis to bladder by peristalsis.",
@@ -990,15 +1186,51 @@ const ORGAN_DETAILS: Record<
     pediatrics: "DiGeorge syndrome causes hypocalcemic tetany/seizures from parathyroid aplasia.",
   },
   "adrenal-cortex": {
-    functionSummary: "Makes aldosterone, cortisol, and adrenal androgens in glomerulosa, fasciculata, and reticularis.",
+    functionSummary: "Steroid-producing outer adrenal layer organized into three zones — glomerulosa (aldosterone), fasciculata (cortisol), reticularis (adrenal androgens).",
     commonPathologies: ["Addison disease", "Cushing syndrome", "Conn syndrome", "Congenital adrenal hyperplasia"],
     step1Pearls: [
-      "GFR: salt (glomerulosa), sugar (fasciculata), sex (reticularis)",
+      "GFR mnemonic: salt (glomerulosa), sugar (fasciculata), sex (reticularis)",
       "Embryology: cortex = mesoderm from celomic epithelium; medulla = neural crest inside cortex",
-      "21-hydroxylase deficiency causes low cortisol +/- aldosterone and high androgens",
-      "ACTH stimulates cortisol and androgens, not aldosterone primarily (renin-angiotensin drives aldosterone)",
+      "21-hydroxylase deficiency → ↓ cortisol ± aldosterone, ↑ androgens",
+      "ACTH drives cortisol and adrenal androgens; aldosterone primarily driven by angiotensin II and K⁺",
+      "vs medulla — cortex makes steroids; medulla makes catecholamines",
     ],
     pediatrics: "Classic CAH can cause salt wasting and virilization/ambiguous genitalia in newborns.",
+  },
+  "zona-glomerulosa": {
+    functionSummary: "Outermost adrenal cortical zone; secretes aldosterone to promote distal nephron Na⁺ reabsorption and K⁺/H⁺ excretion.",
+    commonPathologies: ["Primary hyperaldosteronism (Conn syndrome)", "Adrenal adenoma with aldosterone excess", "17α-hydroxylase deficiency (↑ mineralocorticoids, ↓ cortisol/sex steroids)"],
+    step1Pearls: [
+      "Salt layer — mineralocorticoid (aldosterone) production",
+      "Stimulated by angiotensin II and hyperkalemia; ACTH has minor acute effect",
+      "Spironolactone and eplerenone block mineralocorticoid receptor downstream",
+      "vs zona fasciculata — aldosterone not cortisol; renin-angiotensin driven not primary ACTH axis",
+    ],
+    pediatrics: "CAH forms with mineralocorticoid excess (e.g., 17α-hydroxylase deficiency) can cause hypertension and hypokalemic alkalosis in children.",
+  },
+  "zona-fasciculata": {
+    functionSummary: "Middle and largest adrenal cortical zone; secretes cortisol in response to ACTH, regulating glucose metabolism, stress response, and immune function.",
+    commonPathologies: ["Cushing syndrome", "Adrenal adenoma/carcinoma with cortisol excess", "Addison disease (cortisol deficiency)", "21-hydroxylase CAH (↓ cortisol)"],
+    step1Pearls: [
+      "Sugar layer — glucocorticoid (cortisol) production",
+      "ACTH from anterior pituitary is primary regulator via CRH–HPA axis",
+      "Histology: lipid-rich foamy cytoplasm from cholesterol ester stores",
+      "Dexamethasone suppression test evaluates cortisol feedback",
+      "vs zona glomerulosa — cortisol not aldosterone; ACTH-dependent",
+    ],
+    pediatrics: "Exogenous glucocorticoids suppress ACTH and can cause adrenal insufficiency on withdrawal; congenital adrenal hyperplasia lowers cortisol and raises ACTH.",
+  },
+  "zona-reticularis": {
+    functionSummary: "Inner adrenal cortical zone; secretes adrenal androgens (DHEA, androstenedione) in an ACTH-dependent manner, contributing to pubic hair and secondary sexual characteristics.",
+    commonPathologies: ["Adrenal virilization", "21-hydroxylase CAH (↑ androgens)", "11β-hydroxylase CAH", "Adrenocortical carcinoma with androgen excess"],
+    step1Pearls: [
+      "Sex layer — adrenal androgen (DHEA/DHEAS, androstenedione) production",
+      "Becomes functionally prominent at adrenarche (puberty)",
+      "ACTH stimulates androgen synthesis; 21-hydroxylase block shunts precursors to androgens",
+      "vs ovarian/testicular androgens — zona reticularis is adrenal source of weak androgens",
+      "vs zona fasciculata — androgens not cortisol",
+    ],
+    pediatrics: "Premature adrenarche or CAH-related adrenal androgen excess can cause pubic hair, clitoromegaly, or accelerated growth in children.",
   },
   "adrenal-medulla": {
     functionSummary: "Chromaffin cells secrete epinephrine and norepinephrine as modified postganglionic sympathetic neurons.",
@@ -1006,9 +1238,10 @@ const ORGAN_DETAILS: Record<
     step1Pearls: [
       "Embryology: neural crest (ectoderm) migrates into mesodermal adrenal cortex primordium",
       "Chromaffin cells = modified sympathetic postganglionic neurons releasing catecholamines into blood",
+      "PNMT converts norepinephrine → epinephrine in medulla (requires cortisol induction from cortex)",
       "Episodic headache, sweating, tachycardia, hypertension suggests pheochromocytoma",
-      "Treat alpha blockade before beta blockade",
-      "Neural crest origin links medulla to neuroblastoma and pheochromocytoma",
+      "Treat alpha blockade before beta blockade (unopposed α if β blocked first)",
+      "vs adrenal cortex — catecholamines not steroids",
     ],
     pediatrics: "Neuroblastoma is a common pediatric adrenal medulla/sympathetic chain tumor with elevated HVA/VMA.",
   },

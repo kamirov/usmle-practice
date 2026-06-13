@@ -252,6 +252,8 @@ export const HEMODYNAMICS: HemodynamicEntry[] = [
       "gfr",
       "glomerular filtration",
       "estimated gfr",
+      "estimated glomerular filtration rate",
+      "egfr",
     ],
     definition:
       "Volume of plasma ultrafiltrate formed by all glomeruli per unit time (~120 mL/min/1.73 m² in healthy adults). Primary index of kidney excretory function; estimated clinically from creatinine (eGFR) or measured with inulin/Iohexol clearance.",
@@ -323,6 +325,32 @@ export const HEMODYNAMICS: HemodynamicEntry[] = [
       "Squatting and knee-chest position ↑ SVR — used in tetralogy of Fallot to ↓ right-to-left shunt",
       "Shock profiles: hypovolemic/cardiogenic → ↑ SVR; early septic → ↓ SVR with ↑ or normal CO",
       "Afterload ≈ SVR for the left ventricle ejecting into the aorta",
+    ],
+  },
+  {
+    id: "intravascular-volume",
+    name: "Intravascular Volume",
+    etymology: "Latin intra = within + vasculum = small vessel + Latin volumen = amount/roll",
+    aliases: [
+      "intravascular volume",
+      "intravascular fluid volume",
+      "circulating volume",
+      "circulating blood volume",
+      "effective circulating volume",
+      "effective arterial blood volume",
+      "plasma volume",
+      "blood volume",
+    ],
+    definition:
+      "Volume of blood contained within the vascular space (arteries, veins, capillaries, and heart chambers), comprising plasma and erythrocytes; the primary determinant of venous return, preload, and organ perfusion pressure.",
+    factors: [
+      "↑ Intravascular volume: IV fluids, blood transfusion, sodium/water retention (aldosterone, ADH), mineralocorticoid excess",
+      "↓ Intravascular volume: hemorrhage, vomiting/diarrhea, diuretics, burns, third-spacing (pancreatitis, sepsis, ascites)",
+      "Effective circulating volume — portion perfusing tissues; may be low despite edema in heart failure or cirrhosis (arterial underfilling theory)",
+      "Compensatory responses to ↓ volume: ↑ sympathetic tone, RAAS, ADH → tachycardia, vasoconstriction, oliguria",
+      "Signs of depletion: tachycardia, hypotension, ↓ JVP/CVP, dry mucous membranes, ↓ urine output",
+      "Signs of overload: ↑ JVP, peripheral edema, pulmonary crackles, S3, hypertension in hypervolemia",
+      "vs interstitial fluid — extracellular but outside vessels; third space is nonfunctional interstitial sequestration",
     ],
   },
 ];

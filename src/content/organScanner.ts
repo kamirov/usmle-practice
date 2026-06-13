@@ -586,6 +586,22 @@ function hasWordBoundaryAfter(text: string, index: number): boolean {
   return index >= text.length || !/\w/.test(text[index]);
 }
 
+/** S2/S4 heart-sound aliases must not match sacral spinal notation (e.g. S2-S4, S2–S4). */
+function isSacralSpinalRangeHeartSound(
+  text: string,
+  index: number,
+  matchLen: number,
+  heartSoundId: string,
+): boolean {
+  if (heartSoundId !== "s2" && heartSoundId !== "s4") return false;
+  const end = index + matchLen;
+  const before = text.slice(Math.max(0, index - 8), index);
+  const after = text.slice(end, end + 8);
+  const rangeAfter = /^[-–]\s*S?[1-4]\b/i.test(after);
+  const rangeBefore = /S?[1-4]\s*[-–]\s*$/i.test(before);
+  return rangeAfter || rangeBefore;
+}
+
 function matchedLengthAt(
   text: string,
   index: number,
@@ -598,7 +614,15 @@ function matchedLengthAt(
   const singularLen = matchAliasLengthAt(text, index, alias);
   if (singularLen !== null) {
     const end = index + singularLen;
-    if (hasWordBoundaryAfter(text, end)) return singularLen;
+    if (hasWordBoundaryAfter(text, end)) {
+      if (
+        entry.kind === "heart-sound" &&
+        isSacralSpinalRangeHeartSound(text, index, singularLen, entry.id)
+      ) {
+        return null;
+      }
+      return singularLen;
+    }
   }
 
   if (entry.kind === "organ" && !alias.endsWith("s")) {

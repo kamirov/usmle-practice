@@ -391,6 +391,129 @@ export const SYMPTOMS: SymptomEntry[] = [
     ],
   },
   {
+    id: "myxedema",
+    name: "Myxedema",
+    etymology: "Greek myxa = mucus + oidema = swelling",
+    aliases: [
+      "myxedema",
+      "myxoedema",
+      "myxedematous",
+      "pretibial myxedema",
+      "periorbital myxedema",
+    ],
+    definition:
+      "Nonpitting accumulation of glycosaminoglycans (hyaluronic acid and other mucopolysaccharides) in the dermis causing doughy, swollen skin — classic in hypothyroidism; pretibial form is specific to Graves disease.",
+    mechanism:
+      "↓ thyroid hormone (hypothyroidism) or local autoimmune fibroblast stimulation (Graves pretibial myxedema) → ↑ dermal GAG deposition and water binding → thickened, nonpitting, indurated skin without true interstitial fluid overload.",
+    thinkOf: [
+      "Hypothyroidism — periorbital puffiness, coarse skin",
+      "Graves disease — pretibial myxedema (orange-peel texture over shins)",
+      "Severe hypothyroidism progressing to myxedema coma",
+    ],
+    pairWith: [
+      "↑ TSH + ↓ free T4 + periorbital puffiness → hypothyroid myxedema",
+      "Hyperthyroidism + ophthalmopathy + pretibial plaques → Graves pretibial myxedema",
+      "Bradycardia, delayed reflexes, hoarse voice → hypothyroidism",
+      "Nonpitting doughy skin that does not leave pit with pressure → myxedema not pitting edema",
+    ],
+    distinguishFrom: [
+      "Pitting edema — interstitial fluid from heart failure, nephrotic syndrome, DVT",
+      "Angioedema — acute allergic or bradykinin-mediated swelling",
+      "Lipedema — painful adipose hypertrophy, spares feet",
+      "Acromegaly — soft tissue overgrowth from GH excess, not GAG myxedema",
+      "Hypothyroidism (condition) — systemic disease; myxedema is the skin manifestation",
+    ],
+    pediatrics:
+      "Congenital hypothyroidism can cause periorbital puffiness and macroglossia; pretibial myxedema in Graves is rare in children but Graves hyperthyroidism occurs in adolescents.",
+  },
+  {
+    id: "goiter",
+    name: "Goiter",
+    etymology: "Latin guttur = throat + -itis/-oma pattern → goiter = throat swelling",
+    aliases: [
+      "goiter",
+      "goitre",
+      "goiters",
+      "goitres",
+      "thyroid enlargement",
+      "enlarged thyroid",
+      "enlarged thyroid gland",
+      "diffuse goiter",
+      "nodular goiter",
+      "thyromegaly",
+    ],
+    definition:
+      "Enlargement of the thyroid gland — may be diffuse or nodular, euthyroid, hypothyroid, or hyperthyroid depending on cause.",
+    mechanism:
+      "Chronic TSH stimulation (iodine deficiency, Hashimoto early phase), autonomous nodule hormone production, autoimmune inflammation, or infiltrative disease increases thyroid volume; compressive symptoms arise when gland enlarges into mediastinum.",
+    thinkOf: [
+      "Iodine deficiency — endemic multinodular goiter",
+      "Hashimoto thyroiditis — autoimmune hypothyroidism with goiter",
+      "Graves disease — diffuse toxic goiter with bruit",
+      "Toxic multinodular goiter — hot nodules with hyperthyroidism",
+      "Thyroid cancer — firm nodule within goiter",
+      "Dyshormonogenesis — congenital hypothyroidism with goiter",
+    ],
+    pairWith: [
+      "Diffuse goiter + bruit + hyperthyroid symptoms → Graves disease",
+      "Painless goiter + ↑ TSH + anti-TPO → Hashimoto thyroiditis",
+      "Solitary cold nodule in adult → exclude thyroid cancer (FNA)",
+      "Dysphagia, hoarseness, stridor → substernal goiter compressing airway/esophagus",
+      "Low dietary iodine in endemic region → colloid goiter",
+    ],
+    distinguishFrom: [
+      "Thyroid nodule — focal mass within gland; may occur inside goiter",
+      "Cervical lymphadenopathy — separate lymph node enlargement, not thyroid",
+      "Thyroglossal duct cyst — midline neck mass that moves with tongue protrusion",
+      "Subacute thyroiditis — painful tender thyroid, not painless goiter alone",
+    ],
+    pediatrics:
+      "Congenital hypothyroidism from dyshormonogenesis may present with goiter at birth; iodine deficiency goiter in endemic areas. Pediatric thyroid nodules have higher malignancy risk than adult nodules — evaluate promptly.",
+  },
+  {
+    id: "proptosis",
+    name: "Proptosis",
+    etymology: "Greek pro = forward + ptosis = falling; forward displacement of the globe",
+    aliases: [
+      "proptosis",
+      "exophthalmos",
+      "exophthalmus",
+      "exophthalmia",
+      "eye protrusion",
+      "bulging eyes",
+      "bulging eye",
+      "protruding eyes",
+      "graves ophthalmopathy",
+      "thyroid eye disease",
+    ],
+    definition:
+      "Anterior displacement of the eyeball beyond the orbital rim — measured clinically or by exophthalmometry; causes exposure keratopathy and optic nerve compression when severe.",
+    mechanism:
+      "↑ orbital contents (inflamed extraocular muscles and adipose tissue in Graves ophthalmopathy, orbital cellulitis abscess, or tumor) or shallow orbit push the globe forward; venous congestion at orbital apex worsens edema.",
+    thinkOf: [
+      "Graves ophthalmopathy — most common cause of bilateral proptosis",
+      "Orbital cellulitis — painful, ophthalmoplegia, pediatric emergency",
+      "Retrobulbar hematoma — post-trauma or surgery, acute vision loss",
+      "Orbital tumor or cavernous sinus thrombosis",
+      "Rhabdomyosarcoma — unilateral proptosis in child",
+    ],
+    pairWith: [
+      "Hyperthyroidism + lid retraction + proptosis → Graves ophthalmopathy",
+      "Fever + painful eye movements + proptosis → orbital cellulitis (not preseptal)",
+      "Acute vision loss + proptosis after trauma → retrobulbar hematoma → lateral canthotomy",
+      "Cranial nerve III/IV/VI palsies + headache + proptosis → cavernous sinus thrombosis",
+      "Unilateral proptosis in child → rhabdomyosarcoma until proven otherwise",
+    ],
+    distinguishFrom: [
+      "Lid retraction (Dalrymple sign) — lid position without true globe protrusion",
+      "Preseptal cellulitis — eyelid swelling without painful eye movements or proptosis",
+      "Pseudoproptosis — contralateral enophthalmos or large myopic globe",
+      "Horner syndrome — ptosis and miosis, not proptosis",
+    ],
+    pediatrics:
+      "Orbital cellulitis complicating ethmoid sinusitis is a pediatric emergency — distinguish from preseptal cellulitis (no proptosis, no ophthalmoplegia). Rhabdomyosarcoma is the most common primary orbital malignancy in children.",
+  },
+  {
     id: "peripheral-edema",
     name: "Peripheral Edema",
     etymology: "Greek peri = around + pherein = carry + Greek oidema = swelling",
@@ -1101,6 +1224,84 @@ export const SYMPTOMS: SymptomEntry[] = [
     ],
   },
   {
+    id: "painless-hematuria",
+    name: "Painless Hematuria",
+    etymology: "Latin poena = penalty/pain + Greek haima = blood + ouron = urine",
+    aliases: [
+      "painless hematuria",
+      "painless bloody urine",
+      "painless blood in urine",
+      "gross painless hematuria",
+      "asymptomatic hematuria",
+    ],
+    definition:
+      "Visible or microscopic blood in urine without associated dysuria, flank pain, or suprapubic discomfort — a high-yield red flag for urothelial malignancy.",
+    mechanism:
+      "Neoplastic or vascular bleeding from renal pelvis, ureter, bladder, or urethra urothelium without inflammatory pain fibers prominently activated; contrast with calculi or infection where distension/inflammation causes pain.",
+    thinkOf: [
+      "Bladder cancer (urothelial carcinoma)",
+      "Renal cell carcinoma",
+      "Upper tract urothelial carcinoma",
+      "Prostate adenocarcinoma (less classic but possible)",
+      "Anticoagulation or benign vascular lesions",
+      "IgA nephropathy (may be painless gross hematuria after URI)",
+    ],
+    pairWith: [
+      "Older smoker + gross hematuria → bladder cancer until proven otherwise",
+      "Flank mass + hematuria + constitutional symptoms → renal cell carcinoma",
+      "Schistosomiasis exposure → squamous bladder cancer",
+      "Microscopic hematuria in older adult → urologic malignancy workup",
+      "Peds: painless gross hematuria after URI → IgA nephropathy; still evaluate for UTI and stones",
+    ],
+    distinguishFrom: [
+      "Painful hematuria — stones, UTI, prostatitis more typical",
+      "Hemoglobinuria — no RBCs on microscopy",
+      "Menstrual contamination — external blood, not urologic hematuria",
+      "Glomerular hematuria with RBC casts — nephritic syndrome, may lack dysuria",
+    ],
+    pediatrics:
+      "Painless gross hematuria after viral URI suggests IgA nephropathy in adolescents; bladder rhabdomyosarcoma is rare pediatric cause of painless hematuria.",
+  },
+  {
+    id: "painful-hematuria",
+    name: "Painful Hematuria",
+    etymology: "Latin poena = penalty/pain + Greek haima = blood + ouron = urine",
+    aliases: [
+      "painful hematuria",
+      "painful bloody urine",
+      "painful blood in urine",
+      "dysuria with hematuria",
+      "hematuria with dysuria",
+    ],
+    definition:
+      "Blood in the urine accompanied by pain — dysuria, suprapubic discomfort, flank colic, or pelvic/perineal pain — suggesting inflammatory, infectious, or obstructive lower/upper urinary tract disease.",
+    mechanism:
+      "Mucosal inflammation (infection), bladder/ureteral distension (calculus), or prostate inflammation triggers afferent pain fibers alongside bleeding from damaged urothelium or glomeruli.",
+    thinkOf: [
+      "Cystitis / urinary tract infection",
+      "Acute prostatitis",
+      "Nephrolithiasis (colicky flank pain + hematuria)",
+      "Pyelonephritis",
+      "Urethritis / STD (gonorrhea, chlamydia)",
+      "Bladder stone",
+    ],
+    pairWith: [
+      "Dysuria + frequency + suprapubic pain → acute cystitis",
+      "Fever + flank pain + CVA tenderness + WBC casts → pyelonephritis",
+      "Colicky flank pain radiating to groin → nephrolithiasis",
+      "Fever + tender boggy prostate + perineal pain → acute prostatitis",
+      "Urethral discharge + dysuria → urethritis (GC/chlamydia)",
+    ],
+    distinguishFrom: [
+      "Painless hematuria — classic for bladder cancer in older smoker",
+      "Glomerulonephritis — RBC casts and hypertension; dysuria absent",
+      "Renal cell carcinoma — classically painless hematuria ± flank mass",
+      "Menstrual blood contamination — no inflammatory urinary symptoms",
+    ],
+    pediatrics:
+      "Febrile UTI with hematuria in children warrants upper tract evaluation; stones and post-strep glomerulonephritis are additional painful or symptomatic hematuria causes.",
+  },
+  {
     id: "flank-pain",
     name: "Flank Pain",
     etymology: "Old English flanc = side of body + Latin poena = penalty/pain",
@@ -1224,7 +1425,7 @@ export const SYMPTOMS: SymptomEntry[] = [
     id: "dysuria",
     name: "Dysuria",
     etymology: "Greek dys = painful/difficult + ouron = urine",
-    aliases: ["dysuria", "painful urination", "burning with urination"],
+    aliases: ["dysuria", "dysurias", "painful urination", "burning with urination", "burning on urination", "pain on urination"],
     definition: "Painful or burning sensation during urination.",
     mechanism:
       "Inflammation of the urethra or bladder mucosa (infection, chemical irritation, or stones) lowers the threshold for pain with urine flow.",
@@ -1247,6 +1448,46 @@ export const SYMPTOMS: SymptomEntry[] = [
       "Pelvic pain without dysuria → gynecologic cause",
       "Asymptomatic bacteriuria — positive culture without symptoms",
     ],
+    pediatrics:
+      "Febrile infant without source — consider UTI; dysuria may be absent in young children (irritability, poor feeding). Circumcision status and voiding dysfunction matter in boys.",
+  },
+  {
+    id: "nocturia",
+    name: "Nocturia",
+    etymology: "Latin nox = night + Greek ouron = urine + -ia = condition",
+    aliases: [
+      "nocturia",
+      "nocturnal urination",
+      "nighttime urination",
+      "waking to urinate at night",
+    ],
+    definition:
+      "Awakening from sleep to void urine one or more times per night — a symptom of increased nighttime urine production, reduced bladder capacity, or incomplete emptying.",
+    mechanism:
+      "Nocturnal polyuria (↓ ADH effect at night, heart failure redistribution, diabetes), bladder outlet obstruction (BPH), overactive bladder, or excessive evening fluid intake increases nighttime voiding; edema mobilization when recumbent in heart failure also increases nocturnal urine output.",
+    thinkOf: [
+      "Benign prostatic hyperplasia — outlet obstruction, incomplete emptying",
+      "Heart failure — nocturnal fluid mobilization from recumbency",
+      "Diabetes mellitus — osmotic diuresis (may also have polyuria daytime)",
+      "Diabetes insipidus — large volumes",
+      "Chronic kidney disease",
+      "Overactive bladder / detrusor instability",
+      "Excessive evening caffeine or fluid intake",
+    ],
+    pairWith: [
+      "Weak stream, hesitancy, older man → BPH",
+      "Orthopnea, PND, edema → heart failure",
+      "Polyuria, polydipsia, hyperglycemia → diabetes mellitus",
+      "Large volumes, dilute urine → diabetes insipidus",
+      "Peds: nocturnal enuresis in children is distinct; evaluate for UTI, constipation, DM if atypical",
+    ],
+    distinguishFrom: [
+      "Polyuria — increased 24-hour urine volume; nocturia is nighttime-specific symptom",
+      "Urinary frequency — daytime voiding without necessarily waking from sleep",
+      "Nocturnal enuresis (pediatrics) — involuntary voiding during sleep in children without full awakening",
+    ],
+    pediatrics:
+      "Primary nocturnal enuresis is common in children; isolated nocturia with large volumes or systemic symptoms warrants evaluation for diabetes or renal disease.",
   },
   {
     id: "polyuria-polydipsia",
@@ -1343,6 +1584,47 @@ export const SYMPTOMS: SymptomEntry[] = [
       "Anorexia without nausea — systemic illness, depression",
       "Early satiety — gastric outlet obstruction or gastroparesis",
     ],
+  },
+  {
+    id: "loss-of-appetite",
+    name: "Loss of Appetite",
+    etymology: "Old English los = deprivation + Latin appetitus = desire for food",
+    aliases: [
+      "loss of appetite",
+      "decreased appetite",
+      "reduced appetite",
+      "poor appetite",
+      "lack of appetite",
+      "appetite loss",
+    ],
+    definition:
+      "Reduced desire to eat without necessarily implying a psychiatric eating disorder; a nonspecific constitutional symptom of systemic illness, inflammation, or organ dysfunction.",
+    mechanism:
+      "Pro-inflammatory cytokines (IL-1, IL-6, TNF-α), hypothalamic dysregulation, elevated leptin or altered gut hormones, uremia, and cholestasis suppress appetite; malignancy and chronic infection drive cachexia pathways.",
+    thinkOf: [
+      "Malignancy (especially GI, lung, pancreatic)",
+      "Chronic infection (TB, HIV)",
+      "Heart failure, COPD, advanced liver or kidney disease",
+      "Depression and other psychiatric illness",
+      "Medications (chemotherapy, opioids, digoxin toxicity)",
+      "Hypercalcemia, uremia, DKA",
+      "Peptic ulcer disease, gastritis, early satiety from gastric cancer",
+    ],
+    pairWith: [
+      "Weight loss + night sweats → malignancy or TB",
+      "Nausea and vomiting → GI disease, uremia, ↑ ICP",
+      "Fatigue + pallor → anemia or chronic illness",
+      "Early satiety + epigastric pain → gastric outlet obstruction or cancer",
+      "Fever + malaise → infection or inflammatory disease",
+    ],
+    distinguishFrom: [
+      "Anorexia nervosa — psychiatric disorder with fear of weight gain, body image distortion, and low BMI",
+      "Nausea — urge to vomit; may coexist but distinct sensation",
+      "Early satiety — fullness after small meals; gastric outlet or gastroparesis",
+      "Dysphagia — difficulty swallowing, not loss of desire to eat",
+    ],
+    pediatrics:
+      "Infants and young children with poor feeding, lethargy, or failure to thrive need urgent evaluation for infection, congenital heart disease, metabolic disorders, and nonaccidental trauma.",
   },
   {
     id: "kussmaul-breathing",
@@ -3123,6 +3405,79 @@ export const SYMPTOMS: SymptomEntry[] = [
     ],
   },
   {
+    id: "epicanthal-folds",
+    name: "Epicanthal Folds",
+    etymology: "Greek epi = upon + kanthos = corner of eye + fold = skin crease",
+    aliases: [
+      "epicanthal folds",
+      "epicanthal fold",
+      "epicanthus",
+      "inner canthal folds",
+      "medial epicanthal folds",
+    ],
+    definition:
+      "Skin folds of the upper eyelid that partially cover the medial canthus, extending from nose toward the inner corner of the eye.",
+    mechanism:
+      "Variations in orbicularis oculi and medial canthal tendon development create a fold that can be normal (especially in Asian populations) or syndromic when combined with other dysmorphic features.",
+    thinkOf: [
+      "Down syndrome (trisomy 21)",
+      "Fetal alcohol syndrome",
+      "Potter sequence / oligohydramnios facies",
+      "Normal variant in Asian ancestry",
+      "Zellweger syndrome and other peroxisomal disorders",
+    ],
+    pairWith: [
+      "Upslanting palpebral fissures + flat nasal bridge + hypotonia → Down syndrome",
+      "Smooth philtrum + short palpebral fissures → fetal alcohol syndrome",
+      "Oligohydramnios + pulmonary hypoplasia facies → Potter sequence",
+      "Isolated folds in Asian child without other anomalies → normal ethnic variant",
+    ],
+    distinguishFrom: [
+      "Ptosis — drooping eyelid margin, not medial skin fold alone",
+      "Telecanthus — increased intercanthal distance; may coexist but distinct measurement",
+      "Blepharophimosis — narrow palpebral fissures from eyelid malformation",
+    ],
+    pediatrics:
+      "Common normal finding in infants of Asian descent; in non-Asian infants, pair with other dysmorphic features to screen for trisomy 21 and teratogenic syndromes.",
+  },
+  {
+    id: "single-palmar-crease",
+    name: "Single Palmar Crease",
+    etymology: "Latin singulus = one + palma = palm + crease = skin fold",
+    aliases: [
+      "single palmar crease",
+      "single palmar creases",
+      "single transverse palmar crease",
+      "simian crease",
+      "simian line",
+      "simian creases",
+      "single simian crease",
+    ],
+    definition:
+      "One transverse crease across the palm formed by fusion of proximal and distal palmar flexion lines, instead of the usual two or three creases.",
+    mechanism:
+      "Altered dermatoglyphic development during fetal hand growth; when isolated may be normal (~4% population), but when paired with hypotonia and dysmorphic facies suggests chromosomal aneuploidy.",
+    thinkOf: [
+      "Down syndrome (trisomy 21)",
+      "Fetal alcohol syndrome",
+      "Normal familial variant (isolated finding)",
+      "Other chromosomal disorders (Edwards, Patau less commonly emphasized)",
+    ],
+    pairWith: [
+      "Hypotonia + upslanting fissures + epicanthal folds → Down syndrome",
+      "Growth restriction + facial dysmorphism → fetal alcohol syndrome",
+      "Isolated crease in healthy child with normal development → benign variant",
+      "Congenital heart disease + dysmorphic facies → trisomy 21 workup",
+    ],
+    distinguishFrom: [
+      "Sydney line — extra transverse crease near hypothenar eminence, not single crease",
+      "Clinodactyly — incurved fifth finger, separate hand finding",
+      "Palmar erythema — vascular redness, not crease pattern",
+    ],
+    pediatrics:
+      "Seen in ~50% of Down syndrome infants but also in normal children; interpret in context of tone, facies, and cardiac exam — not diagnostic alone.",
+  },
+  {
     id: "ecchymosis",
     name: "Ecchymosis",
     etymology: "Greek ek = out + chymos = juice/fluid",
@@ -3648,6 +4003,53 @@ export const SYMPTOMS: SymptomEntry[] = [
       "Guillain-Barré syndrome can present with ascending numbness and weakness in children post-infection. Leukodystrophies and pediatric MS are rare causes of persistent sensory symptoms.",
   },
   {
+    id: "paresthesia",
+    name: "Paresthesia",
+    etymology: "Greek para = beside + aisthēsis = sensation (abnormal sensation alongside normal feeling)",
+    aliases: [
+      "paresthesia",
+      "paresthesias",
+      "paraesthesia",
+      "paraesthesias",
+      "pins and needles",
+      "pins-and-needles",
+      "tingling",
+      "tingling sensation",
+      "tingling sensations",
+    ],
+    definition:
+      "Abnormal spontaneous sensory perception — typically tingling, pins-and-needles, crawling, or burning — without an external stimulus, reflecting irritative or compressive pathology along peripheral or central sensory pathways.",
+    mechanism:
+      "Ectopic firing or dysesthetic signaling in damaged, demyelinated, compressed, or metabolically impaired sensory neurons — often large myelinated Aβ fibers — produces positive sensory symptoms distinct from numbness (negative sensory loss).",
+    thinkOf: [
+      "Carpal tunnel syndrome — median nerve compression at wrist",
+      "Peripheral neuropathy — diabetes, B12 deficiency, uremia, alcohol",
+      "Hypocalcemia / hyperventilation — perioral and distal tingling",
+      "Multiple sclerosis — transient demyelinating sensory symptoms",
+      "Radiculopathy — dermatomal tingling before numbness",
+      "Topiramate, isoniazid, and other neurotoxic drugs",
+      "Acute limb ischemia — 6 Ps include paresthesias",
+      "Fabry disease — acroparesthesias in childhood",
+    ],
+    pairWith: [
+      "Hand tingling at night + thenar weakness → carpal tunnel",
+      "Perioral tingling + carpopedal spasm → hypocalcemia",
+      "Stocking-glove tingling + diabetes → diabetic neuropathy",
+      "Tingling + glossitis + macrocytic anemia → B12 deficiency",
+      "Relapsing focal sensory symptoms in young woman → MS",
+      "Tingling with hyperventilation and anxiety → respiratory alkalosis",
+      "Distal tingling on isoniazid → B6 deficiency neuropathy",
+    ],
+    distinguishFrom: [
+      "Numbness — decreased or absent sensation (negative symptom), not tingling",
+      "Dysesthesia — unpleasant painful/abnormal sensation, often chronic neuropathic pain",
+      "Allodynia — pain from normally nonpainful touch",
+      "Formication — sensation of insects crawling; consider withdrawal or toxidrome",
+    ],
+    pediatrics:
+      "Fabry disease causes episodic burning hand/foot paresthesias in childhood. Guillain-Barré may begin with tingling in feet before weakness. Migraine equivalents in children can include sensory aura.",
+  },
+  {
     id: "sneezing",
     name: "Sneezing",
     etymology: "Middle English snesen = sudden expulsion through nose",
@@ -3772,6 +4174,280 @@ export const SYMPTOMS: SymptomEntry[] = [
     ],
     pediatrics:
       "Spastic cerebral palsy is the most common motor pattern after perinatal brain injury; early hypertonia and persistent primitive reflexes warrant developmental follow-up and physical therapy.",
+  },
+  {
+    id: "incontinence",
+    name: "Incontinence",
+    etymology: "Latin in- = not + continere = to hold together",
+    aliases: [
+      "incontinence",
+      "incontinent",
+      "loss of continence",
+    ],
+    definition:
+      "Involuntary loss of urine or stool — failure of normal storage and voluntary release mechanisms; classify as urinary or fecal and by underlying mechanism (stress, urge, overflow, etc.).",
+    mechanism:
+      "Continence requires intact sphincters, pelvic floor support, adequate sensation, and coordinated neural control; disruption at any level — urethral/bladder dysfunction, pelvic floor weakness, spinal cord or sacral root injury, cognitive impairment — causes leakage.",
+    thinkOf: [
+      "Urinary incontinence — stress, urge, overflow, mixed, functional",
+      "Fecal incontinence — obstetric sphincter tear, neuropathy, overflow from constipation",
+      "Neurogenic bladder — spinal cord injury, MS, cauda equina",
+      "Dementia or immobility — functional incontinence",
+      "Pediatric enuresis — separate developmental/voiding disorder category",
+    ],
+    pairWith: [
+      "Leak with cough/sneeze → stress urinary incontinence",
+      "Sudden strong urge → urge incontinence / overactive bladder",
+      "Dribbling + high PVR → overflow incontinence",
+      "Saddle anesthesia + retention → cauda equina",
+      "Constipation + seepage → overflow fecal incontinence",
+    ],
+    distinguishFrom: [
+      "Urinary incontinence — bladder/urethral mechanism; fecal incontinence — anal sphincter/bowel mechanism",
+      "Frequency without leakage — irritative voiding, not incontinence",
+      "Normal postpartum or postoperative transient leakage — may resolve vs persistent incontinence",
+    ],
+    pediatrics:
+      "Pediatric urinary incontinence includes enuresis and voiding dysfunction; fecal incontinence in encopresis often reflects overflow from chronic constipation, not primary sphincter failure.",
+  },
+  {
+    id: "urinary-incontinence",
+    name: "Urinary Incontinence",
+    etymology: "Latin urina = urine + in- = not + continere = to hold together",
+    aliases: [
+      "urinary incontinence",
+      "urine incontinence",
+      "bladder incontinence",
+      "involuntary urination",
+      "involuntary urine loss",
+    ],
+    definition:
+      "Involuntary loss of urine; on boards, classify by mechanism into stress, urge, overflow, mixed, and functional types to guide workup and treatment.",
+    mechanism:
+      "Stress — sphincter/pelvic floor cannot withstand ↑ intra-abdominal pressure; urge — detrusor overactivity; overflow — bladder overdistension from outlet obstruction or detrusor underactivity; functional — inability to reach toilet despite intact physiology.",
+    thinkOf: [
+      "Stress incontinence — pelvic floor laxity, multiparity, obesity",
+      "Urge incontinence — overactive bladder, UTI, neurogenic detrusor overactivity",
+      "Overflow incontinence — BPH, cauda equina, anticholinergic retention",
+      "Mixed incontinence — stress + urge (common in older women)",
+      "Functional incontinence — dementia, immobility, delirium",
+    ],
+    pairWith: [
+      "Leak with Valsalva/cough → stress incontinence",
+      "Strong urgency, frequency, nocturia → urge incontinence",
+      "Weak stream, high PVR, dribbling → overflow incontinence",
+      "Dysuria + urgency → UTI mimicking urge incontinence",
+      "BPH symptoms + retention → overflow from outlet obstruction",
+    ],
+    distinguishFrom: [
+      "Stress incontinence — leakage only with increased abdominal pressure",
+      "Urge incontinence — leakage preceded by sudden urge",
+      "Overflow incontinence — constant dribbling with incomplete emptying",
+      "Vesicovaginal fistula — continuous leakage unrelated to bladder pressure (post-surgical/obstetric)",
+    ],
+    pediatrics:
+      "Daytime wetting after toilet training suggests voiding dysfunction, UTI, or constipation; monosymptomatic nocturnal enuresis is common and often self-limited.",
+  },
+  {
+    id: "stress-incontinence",
+    name: "Stress Incontinence",
+    etymology: "Latin stringere = to draw tight + in- = not + continere = to hold (leakage under physical stress/pressure)",
+    aliases: [
+      "stress incontinence",
+      "stress urinary incontinence",
+      "sui",
+      "genuine stress incontinence",
+      "urinary stress incontinence",
+    ],
+    definition:
+      "Involuntary urine leakage with increases in intra-abdominal pressure (cough, sneeze, laugh, exercise, Valsalva) due to urethral sphincter and/or pelvic floor incompetence.",
+    mechanism:
+      "Pelvic floor laxity or intrinsic sphincter deficiency → urethral closure pressure insufficient to resist transmitted abdominal pressure → urine escapes during straining without preceding detrusor contraction.",
+    thinkOf: [
+      "Pelvic floor laxity — multiparity, vaginal delivery, menopause",
+      "Obesity and chronic cough — sustained ↑ intra-abdominal pressure",
+      "Prior pelvic surgery or prolapse",
+      "Intrinsic sphincter deficiency — post-prostatectomy (males)",
+      "Urethral hypermobility",
+    ],
+    pairWith: [
+      "Leak with cough/sneeze/exercise → stress incontinence",
+      "Pelvic organ prolapse + leakage with strain → shared pelvic floor failure",
+      "Normal bladder emptying, low PVR — unlike overflow",
+      "No strong urge before leak — unlike urge incontinence",
+      "Kegel exercises improve mild stress incontinence",
+    ],
+    distinguishFrom: [
+      "Urge incontinence — preceded by sudden compelling urge; detrusor overactivity",
+      "Overflow incontinence — high PVR, constant dribbling, weak stream",
+      "Vesicovaginal fistula — continuous leakage, often post-hysterectomy/C-section",
+      "UTI — dysuria and urgency may mimic urge, not classic stress pattern",
+    ],
+    pediatrics:
+      "True stress incontinence is rare in children; giggle incontinence (involuntary voiding with laughter) is a distinct pediatric entity.",
+  },
+  {
+    id: "urge-incontinence",
+    name: "Urge Incontinence",
+    etymology: "Latin urgere = to press/drive + in- = not + continere = to hold",
+    aliases: [
+      "urge incontinence",
+      "urge urinary incontinence",
+      "overactive bladder incontinence",
+      "oab incontinence",
+      "detrusor overactivity incontinence",
+    ],
+    definition:
+      "Involuntary urine loss preceded by a sudden, compelling urge to void, reflecting detrusor overactivity or decreased cortical inhibition of the micturition reflex.",
+    mechanism:
+      "Uninhibited detrusor contractions (idiopathic overactive bladder, UTI, bladder stone, neurogenic causes) → intravesical pressure exceeds urethral resistance before patient reaches toilet → urge then leak.",
+    thinkOf: [
+      "Overactive bladder syndrome — urgency, frequency, nocturia ± incontinence",
+      "UTI — irritative voiding with urgency",
+      "Neurogenic detrusor overactivity — MS, spinal cord injury above sacral center",
+      "Bladder outlet obstruction with detrusor overactivity (mixed)",
+      "Caffeine, diuretics — transient urgency",
+    ],
+    pairWith: [
+      "Sudden urge + leak → urge incontinence",
+      "Frequency and nocturia without infection → overactive bladder",
+      "Dysuria + urgency → UTI first",
+      "Neurologic disease + bladder symptoms → neurogenic overactivity",
+      "Antimuscarinics (oxybutynin) or β3-agonist (mirabegron) reduce urgency",
+    ],
+    distinguishFrom: [
+      "Stress incontinence — leak with Valsalva, no urge",
+      "Overflow incontinence — high PVR, weak stream, dribbling without classic urge",
+      "Stress + urge features → mixed incontinence",
+      "Normal urgency without leak — not incontinence",
+    ],
+    pediatrics:
+      "Urge syndrome (overactive bladder) in children presents with urgency, frequency, and daytime wetting with normal upper tracts; treat constipation and use timed voiding before medications.",
+  },
+  {
+    id: "overflow-incontinence",
+    name: "Overflow Incontinence",
+    etymology: "Old English ofer = beyond + flow + in- = not + continere = to hold",
+    aliases: [
+      "overflow incontinence",
+      "overflow urinary incontinence",
+      "paradoxical incontinence",
+      "chronic urinary retention with overflow",
+      "retention with overflow",
+    ],
+    definition:
+      "Involuntary dribbling of urine from an overdistended bladder that cannot empty completely — intravesical pressure eventually exceeds outlet resistance, causing continuous or intermittent overflow leakage.",
+    mechanism:
+      "Bladder outlet obstruction (BPH, urethral stricture) or detrusor underactivity (diabetic neuropathy, cauda equina, anticholinergic drugs) → progressive retention → high post-void residual → passive overflow when capacity exceeded.",
+    thinkOf: [
+      "Benign prostatic hyperplasia — bladder outlet obstruction in men",
+      "Cauda equina syndrome — S2–S4 injury, areflexic bladder",
+      "Diabetic autonomic neuropathy — hypocontractile detrusor",
+      "Anticholinergic medications — impaired detrusor contraction",
+      "Posterior urethral valves — pediatric outlet obstruction",
+      "Spinal cord injury (areflexic phase) — flaccid bladder with retention",
+    ],
+    pairWith: [
+      "Weak stream, hesitancy, high PVR → overflow incontinence",
+      "Constant dribbling + inability to fully empty → overflow",
+      "BPH + urinary retention → α-blocker, 5α-reductase inhibitor, catheterization if needed",
+      "Saddle anesthesia + retention → cauda equina emergency",
+      "Palpable distended bladder or suprapubic fullness",
+    ],
+    distinguishFrom: [
+      "Stress incontinence — normal emptying, leak only with Valsalva",
+      "Urge incontinence — strong urge with detrusor overactivity, usually normal PVR",
+      "Vesicovaginal fistula — continuous leak, bladder not necessarily distended",
+      "Diabetes insipidus — large volume dilute urine output, not retention with overflow",
+    ],
+    pediatrics:
+      "Posterior urethral valves in infant boys cause obstructive uropathy with distended bladder and overflow dribbling; chronic retention leads to hydronephrosis — early urologic intervention.",
+  },
+  {
+    id: "claudication",
+    name: "Claudication",
+    etymology: "Latin claudicare = to limp",
+    aliases: [
+      "claudication",
+      "intermittent claudication",
+      "exertional leg pain",
+      "leg claudication",
+      "calf claudication",
+      "walking pain relieved by rest",
+    ],
+    definition:
+      "Reproducible pain in the legs (or rarely arms/jaw) induced by exercise and relieved by rest, most often from limb ischemia due to atherosclerotic peripheral artery disease.",
+    mechanism:
+      "Fixed arterial stenosis limits blood flow during exertion → muscle ischemia and buildup of metabolites → cramping pain; rest restores supply-demand balance and relieves pain within minutes.",
+    thinkOf: [
+      "Peripheral artery disease — atherosclerotic iliac/femoral/popiteal disease",
+      "Critical limb ischemia — rest pain, ulcers if advanced",
+      "Neurogenic claudication — spinal stenosis (pulses normal, relief with flexion/sitting)",
+      "Venous claudication — post-thrombotic, edema, normal pulses",
+      "Popliteal entrapment — young athlete with calf claudication",
+      "Giant cell arteritis — jaw claudication (distinct vascular territory)",
+    ],
+    pairWith: [
+      "Calf pain with walking, relief <10 min rest → intermittent claudication (PAD)",
+      "↓ pedal pulses + smoking/diabetes → peripheral artery disease",
+      "ABI <0.9 confirms PAD",
+      "Leg pain with walking but normal pulses + relief when sitting → neurogenic claudication",
+      "Jaw pain when chewing + headache in elderly → giant cell arteritis jaw claudication",
+      "Cilostazol for symptomatic claudication — contraindicated in heart failure",
+    ],
+    distinguishFrom: [
+      "Neurogenic claudication — spinal stenosis; flexion relieves, pulses normal",
+      "Rest pain — advanced ischemia, not classic exertional claudication",
+      "Muscle strain — not reproducible with same distance/walking pattern",
+      "Venous claudication — heavy legs, edema, history of DVT",
+      "Jaw claudication in GCA — not lower extremity PAD pattern",
+    ],
+    pediatrics:
+      "Claudication is rare in children; consider coarctation of the aorta, anomalous origin of coronary arteries, or vasculitis if exertional limb pain occurs.",
+  },
+  {
+    id: "cramping",
+    name: "Cramping",
+    etymology: "Middle English crampe = painful muscle contraction",
+    aliases: [
+      "cramping",
+      "cramp",
+      "cramps",
+      "muscle cramp",
+      "muscle cramps",
+      "muscle cramping",
+      "crampy pain",
+      "crampy",
+    ],
+    definition:
+      "Painful, involuntary sustained muscle contraction or spasm — may affect skeletal muscle (calf, abdomen, uterus) and produce colicky or aching quality depending on organ.",
+    mechanism:
+      "Local muscle overuse, electrolyte imbalance (Na⁺, K⁺, Ca²⁺, Mg²⁺), ischemia, dehydration, or smooth muscle spasm (GI, uterine prostaglandins) triggers excessive actin-myosin cross-bridging or smooth muscle contraction.",
+    thinkOf: [
+      "Peripheral artery disease — calf claudication (ischemic cramping with walking)",
+      "Electrolyte disturbance — hypokalemia, hypocalcemia, hypomagnesemia",
+      "Dehydration and heat cramps in athletes",
+      "Menstrual cramps (dysmenorrhea) — prostaglandin-mediated uterine cramping",
+      "Gastroenteritis — intestinal smooth muscle cramping with diarrhea",
+      "Third-trimester leg cramps — common in pregnancy",
+      "Diuretic-induced hypokalemia",
+    ],
+    pairWith: [
+      "Calf cramping with exertion, relief with rest → claudication/PAD",
+      "Cramping + diarrhea after reheated food → Bacillus cereus or Staph food poisoning",
+      "Cramping abdominal pain + bloody diarrhea → ischemic colitis, IBD",
+      "Leg cramps on diuretics → hypokalemia",
+      "Menstrual cramping in adolescent → primary dysmenorrhea vs endometriosis if severe",
+      "Hand cramping with writing → writer's cramp (focal dystonia, not electrolyte)",
+    ],
+    distinguishFrom: [
+      "Colicky pain — waxing/waning smooth muscle pain; overlaps with cramping quality",
+      "Spasticity — velocity-dependent tone increase, not acute painful cramp",
+      "Restless legs — urge to move, not sustained painful contraction",
+      "Claudication — specific exertional ischemic cramping pattern with PAD",
+    ],
+    pediatrics:
+      "Growing pains cause nocturnal aching without true cramping; abdominal cramps with vomiting in child may indicate intussusception or gastroenteritis depending on context.",
   },
 ];
 

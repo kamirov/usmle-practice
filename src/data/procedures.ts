@@ -508,6 +508,268 @@ export const PROCEDURES: ProcedureEntry[] = [
     pediatrics:
       "Elevated PVR in boys with weak stream suggests posterior urethral valves; in children with recurrent febrile UTIs, assess PVR and consider VCUG for reflux or obstruction.",
   },
+  {
+    id: "arterial-blood-gas",
+    name: "Arterial Blood Gas",
+    etymology: "Latin arteria = artery + blood + gas + analysis",
+    aliases: [
+      "arterial blood gas",
+      "arterial blood gases",
+      "abg",
+      "abgs",
+      "blood gas",
+      "blood gases",
+      "arterial blood gas analysis",
+    ],
+    definition:
+      "Direct arterial sampling (usually radial artery) to measure pH, partial pressures of oxygen and carbon dioxide, and derived bicarbonate — used to assess ventilation, oxygenation, and acid-base status.",
+    indications: [
+      "Respiratory failure or hypoxemia — evaluate PaO₂ and PaCO₂",
+      "Acid-base disorders — metabolic vs respiratory; calculate anion gap with concurrent chemistry",
+      "Ventilator management and weaning trials",
+      "Suspected carbon monoxide poisoning (co-oximetry if available)",
+      "Severe sepsis, DKA, salicylate toxicity, toxic alcohol ingestion",
+    ],
+    keyMeasurements: [
+      "pH — acidemia vs alkalemia",
+      "PaCO₂ — respiratory component (hypoventilation ↑ CO₂ → acidosis; hyperventilation ↓ CO₂ → alkalosis)",
+      "PaO₂ and SaO₂ — oxygenation (A-a gradient with PAO₂ equation if needed)",
+      "HCO₃⁻ (calculated or measured) — metabolic component",
+      "Base excess/deficit; lactate if co-drawn",
+    ],
+    complications: [
+      "Pain and arterial spasm at puncture site",
+      "Hematoma, distal ischemia (rare with Allen test–confirmed collateral flow)",
+      "Needle-stick exposure",
+      "Incorrect heparin dilution artifact ( falsely low PaCO₂ if excessive liquid heparin)",
+    ],
+    boardsPearls: [
+      "Winter formula: expected PaCO₂ ≈ 1.5 × HCO₃⁻ + 8 (±2) for metabolic acidosis compensation",
+      "Respiratory acidosis: ↓ pH, ↑ PaCO₂; respiratory alkalosis: ↑ pH, ↓ PaCO₂",
+      "Metabolic acidosis: ↓ pH, ↓ HCO₃⁻; metabolic alkalosis: ↑ pH, ↑ HCO₃⁻",
+      "Anion gap = Na⁺ − (Cl⁻ + HCO₃⁻); MUDPILES for ↑ gap acidosis",
+      "Hypoxemia with normal A-a gradient → hypoventilation or low FiO₂; ↑ A-a gradient → V/Q mismatch, shunt, diffusion defect",
+      "vs venous blood gas — VBG approximates pH and CO₂ trend but not reliable for oxygenation",
+    ],
+    pediatrics:
+      "Same interpretation principles; capillary or arterial sample in neonates for respiratory distress; avoid excessive heparin in small-volume samples.",
+  },
+  {
+    id: "cystoscopy",
+    name: "Cystoscopy",
+    etymology: "Greek kystis = bladder + skopein = to look",
+    aliases: [
+      "cystoscopy",
+      "cystoscopies",
+      "flexible cystoscopy",
+      "rigid cystoscopy",
+      "bladder scope",
+      "bladder cystoscopy",
+    ],
+    definition:
+      "Endoscopic examination of the urethra and bladder interior using a cystoscope — diagnostic and therapeutic for hematuria, bladder tumors, and lower urinary tract pathology.",
+    indications: [
+      "Painless gross hematuria — rule out bladder cancer",
+      "Persistent microscopic hematuria after urologic evaluation",
+      "Bladder tumor surveillance after transurethral resection",
+      "Evaluation of irritative voiding symptoms with suspicion of carcinoma in situ",
+      "Removal of foreign body or assessment of bladder outlet obstruction",
+      "Workup of recurrent UTIs with anatomic concern",
+    ],
+    keyMeasurements: [
+      "Urethral anatomy and strictures",
+      "Bladder mucosa — papillary masses, erythematous patches (CIS), trabeculation",
+      "Ureteral orifices and bladder capacity",
+      "Biopsy and TURBT specimens for histology",
+    ],
+    complications: [
+      "Urinary tract infection",
+      "Dysuria and hematuria short-term after procedure",
+      "Urethral injury or false passage (rare)",
+      "Bladder perforation (rare with resection)",
+    ],
+    boardsPearls: [
+      "Painless hematuria in older smoker → cystoscopy for bladder cancer",
+      "Cystoscopy + biopsy is diagnostic for bladder urothelial carcinoma",
+      "Transitional cell (urothelial) carcinoma most common bladder cancer in US",
+      "vs CT urogram — imaging complements but does not replace direct mucosal visualization for cancer",
+      "Schistosoma haematobium → squamous bladder cancer; endemic exposure history",
+    ],
+    pediatrics:
+      "Pediatric cystoscopy used for posterior urethral valves, ureterocele, and refractory hematuria — usually specialist-performed under anesthesia in young children.",
+  },
+  {
+    id: "dialysis",
+    name: "Dialysis",
+    etymology: "Greek dia = through + lysis = loosening/separation",
+    aliases: [
+      "dialysis",
+      "renal dialysis",
+      "kidney dialysis",
+      "hemodialysis",
+      "hd",
+      "peritoneal dialysis",
+      "pd",
+      "renal replacement therapy",
+      "rrt",
+    ],
+    definition:
+      "Renal replacement therapy that removes uremic toxins, corrects fluid and electrolyte imbalances, and maintains acid-base balance when native kidney function is insufficient — via hemodialysis (extracorporeal blood filtration) or peritoneal dialysis (intraperitoneal diffusion/exchange).",
+    indications: [
+      "End-stage renal disease (GFR <15 or uremic symptoms)",
+      "Refractory hyperkalemia, acidosis, or volume overload in AKI/CKD",
+      "Certain intoxications (methanol, ethylene glycol, lithium, salicylate — hemodialysis preferred)",
+      "Uremic pericarditis, encephalopathy, or bleeding diathesis",
+    ],
+    keyMeasurements: [
+      "Hemodialysis — blood urea clearance via semipermeable membrane with dialysate bath",
+      "Peritoneal dialysis — dialysate instilled into peritoneal cavity; exchanges remove solutes",
+      "Adequacy targets: urea reduction ratio / Kt/V (Step 1 concept; details Step 2/3)",
+    ],
+    complications: [
+      "Hypotension during hemodialysis (rapid fluid shift)",
+      "Dialysis disequilibrium syndrome (cerebral edema with rapid urea removal)",
+      "Infection — vascular access or peritonitis (PD)",
+      "Amyloidosis (β2-microglobulin) in long-term HD",
+      "Anemia, bone disease, and cardiovascular disease persist — manage separately",
+    ],
+    boardsPearls: [
+      "Hemodialysis requires vascular access (AV fistula preferred); PD uses peritoneal membrane",
+      "Dialysis removes small water-soluble molecules — not protein-bound toxins as effectively",
+      "Uremic pericarditis may need dialysis for resolution",
+      "Contrast nephropathy prevention ≠ dialysis unless established ESRD/AKI indication",
+      "vs kidney transplant — definitive RRT but requires immunosuppression",
+    ],
+    pediatrics:
+      "Pediatric ESRD often managed with peritoneal dialysis initially; growth and nutrition require specialized care.",
+  },
+  {
+    id: "arteriovenous-fistula",
+    name: "Arteriovenous Fistula",
+    etymology: "Latin arteria = artery + vena = vein + fistula = pipe/tube connection",
+    aliases: [
+      "arteriovenous fistula",
+      "arteriovenous fistulas",
+      "av fistula",
+      "av fistulas",
+      "a-v fistula",
+      "dialysis fistula",
+      "hemodialysis access",
+      "vascular access for dialysis",
+    ],
+    definition:
+      "Direct surgical or congenital connection between an artery and vein that shunts arterial blood into the venous system — the preferred long-term hemodialysis access when autogenous (e.g., radiocephalic fistula).",
+    indications: [
+      "Chronic hemodialysis access once veins mature (typically 6–8 weeks after creation)",
+      "Preferred over grafts and tunneled catheters when feasible — lower infection/thrombosis rates",
+    ],
+    keyMeasurements: [
+      "Palpable thrill and audible bruit over fistula site",
+      "Adequate flow for dialysis (typically >600 mL/min for mature fistula)",
+      "Maturation of venous outflow before first cannulation",
+    ],
+    complications: [
+      "Steal syndrome — distal ischemia of hand (pain, pallor, neurologic symptoms)",
+      "High-output heart failure with large shunts",
+      "Thrombosis and failure to mature",
+      "Infection (less common than catheter access)",
+      "Aneurysmal dilation of outflow vein from repeated cannulation",
+    ],
+    boardsPearls: [
+      "Radiocephalic AV fistula — gold standard dialysis access (Cimino-Brescia)",
+      "Fistula = artery + vein anastomosis; thrill + bruit on exam",
+      "Steal syndrome from excessive shunting → distal hand ischemia",
+      "vs AV graft — synthetic conduit, not native artery-vein connection",
+      "Congenital AV fistula (e.g., pulmonary) is different context from dialysis access",
+    ],
+    pediatrics:
+      "Pediatric hemodialysis access is challenging due to vessel size; specialist surgical planning required.",
+  },
+  {
+    id: "fine-needle-aspiration",
+    name: "Fine Needle Aspiration",
+    etymology: "Latin finis = thin/end + Latin acus = needle + Latin aspiratio = breathing in/suction",
+    aliases: [
+      "fine needle aspiration",
+      "fine needle aspirations",
+      "fna",
+      "fnab",
+      "fine needle aspiration biopsy",
+      "needle aspiration biopsy",
+      "thyroid fna",
+    ],
+    definition:
+      "Minimally invasive percutaneous procedure using a thin needle to aspirate cells or fluid from a palpable or image-guided lesion for cytologic diagnosis.",
+    indications: [
+      "Thyroid nodules with suspicious ultrasound features or size thresholds",
+      "Palpable breast masses or lymphadenopathy of uncertain etiology",
+      "Superficial soft-tissue or salivary gland masses",
+      "Drainage of simple cysts when diagnostic sampling needed",
+    ],
+    keyMeasurements: [
+      "Bethesda System classification for thyroid FNA cytology (I–VI)",
+      "Adequacy of cellular material (especially thyroid colloid and follicular cells)",
+      "Rapid on-site evaluation (ROSE) in selected centers",
+    ],
+    complications: [
+      "Local bleeding or hematoma",
+      "Inadequate nondiagnostic sample requiring repeat FNA",
+      "Pneumothorax if lung adjacent (rare with proper technique)",
+      "Tumor seeding along needle tract (rare; more concern with core biopsy)",
+    ],
+    boardsPearls: [
+      "Thyroid nodule workup: TSH → ultrasound → FNA if suspicious",
+      "Bethesda categories guide surgery vs observation",
+      "Papillary thyroid carcinoma may show orphan Annie nuclei and psammoma bodies on cytology/histology",
+      "FNA is cytology (cells), not full tissue architecture — core biopsy when needed",
+      "Hot thyroid nodule on scan usually benign; cold nodule needs malignancy exclusion",
+    ],
+    pediatrics:
+      "Thyroid nodules are less common in children but higher malignancy rate — lower threshold for FNA than in adults.",
+  },
+  {
+    id: "thyroidectomy",
+    name: "Thyroidectomy",
+    etymology: "Greek thyreos = shield-shaped gland + Latin -ectomy = surgical removal",
+    aliases: [
+      "thyroidectomy",
+      "thyroidectomies",
+      "total thyroidectomy",
+      "partial thyroidectomy",
+      "thyroid surgery",
+      "thyroid resection",
+    ],
+    definition:
+      "Surgical removal of part or all of the thyroid gland for malignant, hyperfunctioning, compressive, or prophylactic indications.",
+    indications: [
+      "Differentiated thyroid carcinoma or suspicious/malignant FNA",
+      "Graves disease refractory to medical therapy or with large goiter",
+      "Toxic multinodular goiter or toxic adenoma (selected cases)",
+      "Prophylactic surgery in RET mutation carriers (MEN2) by risk-based timing",
+      "Airway or esophageal compression from large goiter",
+    ],
+    keyMeasurements: [
+      "Intraoperative nerve monitoring for recurrent laryngeal nerve",
+      "Serum calcium and PTH postoperatively to detect hypoparathyroidism",
+      "Thyroglobulin surveillance after total thyroidectomy for differentiated cancer",
+    ],
+    complications: [
+      "Hypoparathyroidism from parathyroid injury/removal → hypocalcemia",
+      "Recurrent laryngeal nerve injury → hoarseness (unilateral) or stridor (bilateral)",
+      "Postoperative hematoma compressing airway (surgical emergency)",
+      "Hypothyroidism after total thyroidectomy",
+      "Superior laryngeal nerve injury → voice pitch changes",
+    ],
+    boardsPearls: [
+      "Hoarseness after thyroidectomy → recurrent laryngeal nerve injury",
+      "Tingling/perioral numbness post-op → hypocalcemia from hypoparathyroidism",
+      "Neck hematoma after thyroid surgery can obstruct airway — reopen wound at bedside if needed",
+      "Screen for pheochromocytoma before thyroidectomy in MEN2",
+      "Total thyroidectomy + radioiodine for many differentiated thyroid cancers",
+    ],
+    pediatrics:
+      "RET-positive children may need prophylactic thyroidectomy in infancy or childhood based on codon risk; always rule out pheochromocytoma in MEN2 before surgery.",
+  },
 ];
 
 const procedureById = new Map(PROCEDURES.map((entry) => [entry.id, entry]));

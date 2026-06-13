@@ -207,6 +207,41 @@ export const CLINICAL_STRATEGIES: ClinicalStrategyEntry[] = [
       "Fundal height tracks in utero fetal growth; after birth, length/weight/head circumference percentiles replace SFH for growth monitoring.",
   },
   {
+    id: "apgar-score",
+    name: "APGAR Score",
+    etymology: "eponym: Virginia Apgar + score = numerical rating",
+    aliases: [
+      "apgar",
+      "apgar score",
+      "apgar scores",
+      "apgar scoring",
+      "apgar assessment",
+      "apgar test",
+      "apgar evaluation",
+    ],
+    definition:
+      "Rapid bedside assessment of newborn transition at 1 and 5 minutes after birth, scoring five parameters (0–2 each) to identify infants needing resuscitation or ongoing support.",
+    details: [
+      "A — Appearance (skin color): 2 pink all over; 1 pink body, blue extremities; 0 pale/blue all over",
+      "P — Pulse (heart rate): 2 >100 bpm; 1 <100 bpm; 0 absent",
+      "G — Grimace (reflex irritability): 2 cough/sneeze/cry with stimulation; 1 grimace only; 0 no response",
+      "A — Activity (muscle tone): 2 active motion; 1 some flexion; 0 limp/flaccid",
+      "R — Respiration: 2 strong cry; 1 weak/irregular; 0 absent",
+      "Total score 0–10; recorded at 1 minute and 5 minutes (and at 10/20 minutes if <7 at 5 minutes)",
+      "Score <7 at 5 minutes suggests need for evaluation and possible intervention",
+    ],
+    boardsPearls: [
+      "APGAR mnemonic: Appearance, Pulse, Grimace, Activity, Respiration",
+      "1 and 5 minutes — standard timing; not a long-term neurologic outcome predictor alone",
+      "Low score at 1 min may improve by 5 min after resuscitation — reassess",
+      "Score 0–3 severe distress; 4–6 moderate; 7–10 generally reassuring",
+      "vs Silverman-Anderson — respiratory distress scoring in neonates, not whole newborn status",
+      "Birth asphyxia workup uses cord gases and neuro exam — APGAR supports but does not define HIE alone",
+    ],
+    pediatrics:
+      "APGAR is a neonatal assessment tool; premature infants may score lower on Activity and Respiration without necessarily indicating poor long-term outcome. Resuscitation follows NRP algorithms independent of waiting for 1-minute score.",
+  },
+  {
     id: "glycemic-control",
     name: "Glycemic Control",
     etymology: "Greek glykys = sweet + haima = blood + Latin control = restraint/regulation",
