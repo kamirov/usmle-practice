@@ -39,6 +39,12 @@
   overscroll-behavior: contain;
 }
 
+.usmle-organ-popover__loading {
+  padding: 8px 4px;
+  color: #64748b;
+  font-size: 13px;
+}
+
 .usmle-organ-popover__title {
   margin-bottom: 4px;
   font-size: 14px;

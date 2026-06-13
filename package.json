@@ -4,6 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "generate:aliases": "node --experimental-strip-types scripts/generate-alias-index.ts",
+    "prebuild": "pnpm generate:aliases",
     "dev": "vite build --watch",
     "build": "vite build",
     "typecheck": "tsc --noEmit"

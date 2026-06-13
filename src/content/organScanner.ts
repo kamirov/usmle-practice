@@ -1,22 +1,20 @@
-import { buildCellAliasIndex } from "../data/cells";
-import { buildClinicalStrategyAliasIndex } from "../data/clinicalStrategies";
-import { buildConditionAliasIndex } from "../data/conditions";
-import { buildEcgFindingAliasIndex } from "../data/ecgFindings";
-import { buildHeartMurmurAliasIndex } from "../data/heartMurmurs";
-import { buildHeartSoundAliasIndex } from "../data/heartSounds";
-import { buildHemodynamicAliasIndex } from "../data/hemodynamics";
-import { buildPathogenesisAliasIndex } from "../data/pathogenesis";
-import { buildProcedureAliasIndex } from "../data/procedures";
-import { buildLabValueAliasIndex } from "../data/labValues";
-import { buildMicrobiologyAliasIndex } from "../data/microbiology";
-import { buildMedicationAliasIndex } from "../data/medications";
-import { buildMetabolismAliasIndex } from "../data/metabolism";
-import { buildMusculoskeletalAliasIndex } from "../data/musculoskeletal";
-import { buildNephronAliasIndex } from "../data/nephron";
-import { buildAliasIndex } from "../data/organs";
-import { buildProteinAliasIndex } from "../data/proteins";
-import { buildSignalingAliasIndex } from "../data/signaling";
-import { buildSymptomAliasIndex } from "../data/symptoms";
+import {
+  ALIASES_BY_TERM_KEY,
+  deserializeTermEntries,
+} from "../generated/aliasIndex";
+import {
+  clearHighlightQueue,
+  enqueueHighlightRoot,
+  enqueueHighlightRoots,
+  getIsApplyingHighlights,
+} from "./scanScheduler";
+import {
+  buildTermTrie,
+  findAllMatchesInTrie,
+  normalizedWordKey,
+  type MatchValidationContext,
+} from "./termMatcher";
+import type { TermKind, TermMatch } from "./termTypes";
 
 const ORGAN_CHIP_CLASS = "usmle-organ-chip";
 const HEART_SOUND_CHIP_CLASS = "usmle-heart-sound-chip";
@@ -108,40 +106,13 @@ interface CoalescedTextView {
   segments: TextSegment[];
 }
 
-type TermKind =
-  | "organ"
-  | "heart-sound"
-  | "heart-murmur"
-  | "hemodynamic"
-  | "symptom"
-  | "medication"
-  | "lab"
-  | "nephron"
-  | "condition"
-  | "protein"
-  | "signaling"
-  | "ecg"
-  | "procedure"
-  | "clinical-strategy"
-  | "cell"
-  | "pathogenesis"
-  | "metabolism"
-  | "microbiology"
-  | "musculoskeletal";
+type TermTrie = ReturnType<typeof buildTermTrie>;
 
-interface TermMatch {
-  alias: string;
-  kind: TermKind;
-  id: string;
-}
-
-let termIndex: TermMatch[] | null = null;
-let aliasesByTermKey: Map<string, Set<string>> | null = null;
+let termTrie: TermTrie | null = null;
 let highlightedOnQuestion = new Set<string>();
 let highlightedWordsOnQuestion = new Set<string>();
 let highlightedTermZone = new Map<string, number>();
 let questionFingerprint = "";
-let isApplyingHighlights = false;
 let allowPopoverScan = false;
 const pendingScanRoots = new Set<Element>();
 
@@ -165,36 +136,14 @@ function termKey(term: TermMatch): string {
   return `${term.kind}:${term.id.toLowerCase()}`;
 }
 
-/** Strip styling/invisible chars so bold, Unicode styled, and plain text dedupe together. */
-function normalizeForComparison(text: string): string {
-  return text
-    .normalize("NFKC")
-    .toLowerCase()
-    .replace(/[\u00AD\u200B-\u200D\u2060\uFEFF]/g, "");
-}
-
-function normalizedWordKey(matchText: string): string {
-  return normalizeForComparison(matchText).replace(/\s+/g, " ").trim();
+function getTermTrie(): TermTrie {
+  if (!termTrie) termTrie = buildTermTrie(deserializeTermEntries());
+  return termTrie;
 }
 
 function getAliasesForTerm(term: TermMatch): Set<string> {
-  if (!aliasesByTermKey) {
-    aliasesByTermKey = new Map();
-    for (const entry of getTermIndex()) {
-      const key = termKey(entry);
-      if (!aliasesByTermKey.has(key)) aliasesByTermKey.set(key, new Set());
-      const aliases = aliasesByTermKey.get(key)!;
-      aliases.add(normalizedWordKey(entry.alias));
-      if (entry.kind === "organ" && !entry.alias.endsWith("s")) {
-        aliases.add(normalizedWordKey(`${entry.alias}s`));
-        aliases.add(normalizedWordKey(`${entry.alias}es`));
-      }
-    }
-  }
-  return (
-    aliasesByTermKey.get(termKey(term)) ??
-    new Set([normalizedWordKey(term.alias)])
-  );
+  const aliases = ALIASES_BY_TERM_KEY[termKey(term)];
+  return new Set(aliases ?? [normalizedWordKey(term.alias)]);
 }
 
 function isSynonymAlreadyHighlighted(term: TermMatch): boolean {
@@ -213,29 +162,6 @@ function unwrapAllChips(): void {
   }
 }
 
-function matchAliasLengthAt(
-  text: string,
-  index: number,
-  alias: string,
-): number | null {
-  const target = normalizedWordKey(alias);
-  if (!target) return null;
-
-  let i = index;
-  let matched = "";
-
-  while (i < text.length && matched.length < target.length) {
-    const codePoint = text.codePointAt(i);
-    if (codePoint === undefined) break;
-    const char = String.fromCodePoint(codePoint);
-    matched += normalizeForComparison(char);
-    i += char.length;
-  }
-
-  if (normalizedWordKey(matched) !== target) return null;
-  return i - index;
-}
-
 function getScanZone(node: Node): number {
   const el =
     node instanceof Element ? node : node.parentElement;
@@ -247,6 +173,9 @@ function getScanZone(node: Node): number {
 
 function isVisibleElement(el: Element): boolean {
   if (allowPopoverScan && el.closest(`.${POPOVER_CLASS}`)) {
+    return true;
+  }
+  if (el.closest("#questionInformation, #explanation")) {
     return true;
   }
   if (el instanceof HTMLElement && typeof el.checkVisibility === "function") {
@@ -394,6 +323,7 @@ function syncQuestionContext(): boolean {
     highlightedWordsOnQuestion.clear();
     highlightedTermZone.clear();
     pendingScanRoots.clear();
+    clearHighlightQueue();
   }
   questionFingerprint = next;
   return changed;
@@ -416,301 +346,15 @@ function mutationsRemovedOurChips(mutations: MutationRecord[]): boolean {
   return false;
 }
 
-function getTermIndex(): TermMatch[] {
-  if (!termIndex) termIndex = buildTermIndex();
-  return termIndex;
-}
-
-function buildTermIndex(): TermMatch[] {
-  const organMatches: TermMatch[] = buildAliasIndex().map(
-    ({ alias, organId }) => ({
-      alias,
-      kind: "organ" as const,
-      id: organId,
-    }),
-  );
-  const heartSoundMatches: TermMatch[] = buildHeartSoundAliasIndex().map(
-    ({ alias, heartSoundId }) => ({
-      alias,
-      kind: "heart-sound" as const,
-      id: heartSoundId,
-    }),
-  );
-  const heartMurmurMatches: TermMatch[] = buildHeartMurmurAliasIndex().map(
-    ({ alias, heartMurmurId }) => ({
-      alias,
-      kind: "heart-murmur" as const,
-      id: heartMurmurId,
-    }),
-  );
-  const hemodynamicMatches: TermMatch[] = buildHemodynamicAliasIndex().map(
-    ({ alias, hemodynamicId }) => ({
-      alias,
-      kind: "hemodynamic" as const,
-      id: hemodynamicId,
-    }),
-  );
-  const symptomMatches: TermMatch[] = buildSymptomAliasIndex().map(
-    ({ alias, symptomId }) => ({
-      alias,
-      kind: "symptom" as const,
-      id: symptomId,
-    }),
-  );
-  const medicationMatches: TermMatch[] = buildMedicationAliasIndex().map(
-    ({ alias, medicationId }) => ({
-      alias,
-      kind: "medication" as const,
-      id: medicationId,
-    }),
-  );
-  const labMatches: TermMatch[] = buildLabValueAliasIndex().map(
-    ({ alias, labValueId }) => ({
-      alias,
-      kind: "lab" as const,
-      id: labValueId,
-    }),
-  );
-  const nephronMatches: TermMatch[] = buildNephronAliasIndex().map(
-    ({ alias, nephronSegmentId }) => ({
-      alias,
-      kind: "nephron" as const,
-      id: nephronSegmentId,
-    }),
-  );
-  const conditionMatches: TermMatch[] = buildConditionAliasIndex().map(
-    ({ alias, conditionId }) => ({
-      alias,
-      kind: "condition" as const,
-      id: conditionId,
-    }),
-  );
-  const proteinMatches: TermMatch[] = buildProteinAliasIndex().map(
-    ({ alias, proteinId }) => ({
-      alias,
-      kind: "protein" as const,
-      id: proteinId,
-    }),
-  );
-  const signalingMatches: TermMatch[] = buildSignalingAliasIndex().map(
-    ({ alias, signalingId }) => ({
-      alias,
-      kind: "signaling" as const,
-      id: signalingId,
-    }),
-  );
-  const ecgMatches: TermMatch[] = buildEcgFindingAliasIndex().map(
-    ({ alias, ecgFindingId }) => ({
-      alias,
-      kind: "ecg" as const,
-      id: ecgFindingId,
-    }),
-  );
-  const procedureMatches: TermMatch[] = buildProcedureAliasIndex().map(
-    ({ alias, procedureId }) => ({
-      alias,
-      kind: "procedure" as const,
-      id: procedureId,
-    }),
-  );
-  const clinicalStrategyMatches: TermMatch[] =
-    buildClinicalStrategyAliasIndex().map(({ alias, clinicalStrategyId }) => ({
-      alias,
-      kind: "clinical-strategy" as const,
-      id: clinicalStrategyId,
-    }));
-  const cellMatches: TermMatch[] = buildCellAliasIndex().map(
-    ({ alias, cellId }) => ({
-      alias,
-      kind: "cell" as const,
-      id: cellId,
-    }),
-  );
-  const pathogenesisMatches: TermMatch[] = buildPathogenesisAliasIndex().map(
-    ({ alias, pathogenesisId }) => ({
-      alias,
-      kind: "pathogenesis" as const,
-      id: pathogenesisId,
-    }),
-  );
-  const metabolismMatches: TermMatch[] = buildMetabolismAliasIndex().map(
-    ({ alias, metabolismId }) => ({
-      alias,
-      kind: "metabolism" as const,
-      id: metabolismId,
-    }),
-  );
-  const microbiologyMatches: TermMatch[] = buildMicrobiologyAliasIndex().map(
-    ({ alias, microbiologyId }) => ({
-      alias,
-      kind: "microbiology" as const,
-      id: microbiologyId,
-    }),
-  );
-  const musculoskeletalMatches: TermMatch[] =
-    buildMusculoskeletalAliasIndex().map(({ alias, musculoskeletalId }) => ({
-      alias,
-      kind: "musculoskeletal" as const,
-      id: musculoskeletalId,
-    }));
-  return [
-    ...organMatches,
-    ...heartSoundMatches,
-    ...heartMurmurMatches,
-    ...hemodynamicMatches,
-    ...symptomMatches,
-    ...medicationMatches,
-    ...labMatches,
-    ...nephronMatches,
-    ...conditionMatches,
-    ...proteinMatches,
-    ...signalingMatches,
-    ...ecgMatches,
-    ...procedureMatches,
-    ...clinicalStrategyMatches,
-    ...cellMatches,
-    ...pathogenesisMatches,
-    ...metabolismMatches,
-    ...microbiologyMatches,
-    ...musculoskeletalMatches,
-  ].sort(
-    (a, b) => b.alias.length - a.alias.length || a.alias.localeCompare(b.alias),
-  );
-}
-
-function hasWordBoundaryBefore(text: string, index: number): boolean {
-  return index === 0 || !/\w/.test(text[index - 1]);
-}
-
-function hasWordBoundaryAfter(text: string, index: number): boolean {
-  return index >= text.length || !/\w/.test(text[index]);
-}
-
-/** S2/S4 heart-sound aliases must not match sacral spinal notation (e.g. S2-S4, S2–S4). */
-function isSacralSpinalRangeHeartSound(
-  text: string,
-  index: number,
-  matchLen: number,
-  heartSoundId: string,
-): boolean {
-  if (heartSoundId !== "s2" && heartSoundId !== "s4") return false;
-  const end = index + matchLen;
-  const before = text.slice(Math.max(0, index - 8), index);
-  const after = text.slice(end, end + 8);
-  const rangeAfter = /^[-–]\s*S?[1-4]\b/i.test(after);
-  const rangeBefore = /S?[1-4]\s*[-–]\s*$/i.test(before);
-  return rangeAfter || rangeBefore;
-}
-
-function matchedLengthAt(
-  text: string,
-  index: number,
-  entry: TermMatch,
-): number | null {
-  const alias = entry.alias;
-
-  if (!hasWordBoundaryBefore(text, index)) return null;
-
-  const singularLen = matchAliasLengthAt(text, index, alias);
-  if (singularLen !== null) {
-    const end = index + singularLen;
-    if (hasWordBoundaryAfter(text, end)) {
-      if (
-        entry.kind === "heart-sound" &&
-        isSacralSpinalRangeHeartSound(text, index, singularLen, entry.id)
-      ) {
-        return null;
-      }
-      return singularLen;
-    }
-  }
-
-  if (entry.kind === "organ" && !alias.endsWith("s")) {
-    for (const suffix of ["s", "es"] as const) {
-      const pluralLen = matchAliasLengthAt(text, index, alias + suffix);
-      if (pluralLen !== null) {
-        const end = index + pluralLen;
-        if (hasWordBoundaryAfter(text, end)) return pluralLen;
-      }
-    }
-  }
-
-  return null;
-}
-
 function findAllMatches(
   text: string,
   zone: number,
 ): { start: number; end: number; matchText: string; term: TermMatch }[] {
-  const matches: {
-    start: number;
-    end: number;
-    matchText: string;
-    term: TermMatch;
-  }[] = [];
-  let remaining = text;
-  let offset = 0;
-
-  while (remaining.length > 0) {
-    const next = findNextMatch(remaining, zone);
-    if (!next) break;
-    const start = offset + next.index;
-    matches.push({
-      start,
-      end: start + next.matchText.length,
-      matchText: next.matchText,
-      term: next.term,
-    });
-    // Reserve this term (and all its aliases) before searching further so only
-    // one synonym is highlighted per question (e.g. "lips turn blue" vs "cyanotic").
-    recordHighlight(next.term, next.matchText, zone);
-    const advance = next.index + next.matchText.length;
-    offset += advance;
-    remaining = remaining.slice(advance);
-  }
-
-  return matches;
-}
-
-function findNextMatch(
-  text: string,
-  zone: number,
-): { index: number; matchText: string; term: TermMatch } | null {
-  const index = getTermIndex();
-  let leftmost = text.length;
-
-  for (let i = 0; i < text.length; i++) {
-    for (const entry of index) {
-      const len = matchedLengthAt(text, i, entry);
-      if (len === null) continue;
-      const matchText = text.slice(i, i + len);
-      if (isAlreadyHighlighted(entry, matchText, zone)) continue;
-      leftmost = i;
-      break;
-    }
-    if (leftmost < text.length) break;
-  }
-
-  if (leftmost >= text.length) return null;
-
-  let best: { matchText: string; term: TermMatch; length: number } | null =
-    null;
-  for (const entry of index) {
-    const len = matchedLengthAt(text, leftmost, entry);
-    if (len === null) continue;
-    const matchText = text.slice(leftmost, leftmost + len);
-    if (isAlreadyHighlighted(entry, matchText, zone)) continue;
-    if (!best || len > best.length) {
-      best = {
-        matchText,
-        term: entry,
-        length: len,
-      };
-    }
-  }
-
-  if (!best) return null;
-  return { index: leftmost, matchText: best.matchText, term: best.term };
+  const ctx: MatchValidationContext = {
+    zone,
+    isAlreadyHighlighted,
+  };
+  return findAllMatchesInTrie(text, getTermTrie(), ctx, recordHighlight);
 }
 
 function shouldSkipNode(node: Node): boolean {
@@ -1018,16 +662,9 @@ function collectCoalesceRootsForAreas(areas: Element[]): Element[] {
 
 function flushPendingScans(): void {
   if (pendingScanRoots.size === 0) return;
-
-  isApplyingHighlights = true;
-  try {
-    for (const root of pendingScanRoots) {
-      if (root.isConnected) highlightCoalescedRoot(root, getScanZone(root));
-    }
-  } finally {
-    pendingScanRoots.clear();
-    isApplyingHighlights = false;
-  }
+  const roots = [...pendingScanRoots].filter((root) => root.isConnected);
+  pendingScanRoots.clear();
+  enqueueHighlightRoots(roots, getScanZone, highlightCoalescedRoot);
 }
 
 function scheduleIncrementalScan(from: Node): void {
@@ -1051,14 +688,7 @@ function performFullScan(): void {
 
   pendingScanRoots.clear();
   const coalesceRoots = collectCoalesceRootsForAreas(getScanAreas());
-  isApplyingHighlights = true;
-  try {
-    for (const root of coalesceRoots) {
-      highlightCoalescedRoot(root, getScanZone(root));
-    }
-  } finally {
-    isApplyingHighlights = false;
-  }
+  enqueueHighlightRoots(coalesceRoots, getScanZone, highlightCoalescedRoot);
 }
 
 function scanPage(): void {
@@ -1076,18 +706,24 @@ export function scanRoot(root: Node): void {
   syncQuestionContext();
   if (!nodeInScanArea(root)) return;
 
-  isApplyingHighlights = true;
-  try {
-    for (const coalesceRoot of collectCoalesceRoots(root)) {
-      highlightCoalescedRoot(coalesceRoot, getScanZone(coalesceRoot));
-    }
-  } finally {
-    isApplyingHighlights = false;
+  for (const coalesceRoot of collectCoalesceRoots(root)) {
+    enqueueHighlightRoot(
+      coalesceRoot,
+      getScanZone(coalesceRoot),
+      highlightCoalescedRoot,
+    );
   }
 }
 
 export function schedulePopoverRootScan(popover: Element): void {
-  requestAnimationFrame(() => {
+  const idle =
+    window.requestIdleCallback ??
+    ((cb: IdleRequestCallback) =>
+      window.setTimeout(
+        () => cb({ didTimeout: false, timeRemaining: () => 50 }),
+        0,
+      ));
+  idle(() => {
     if (!popover.isConnected) return;
     scanPopoverRoot(popover);
   });
@@ -1100,24 +736,18 @@ export function scanPopoverRoot(popover: Element): void {
   const previousHighlightedWordsOnQuestion = highlightedWordsOnQuestion;
   const previousHighlightedTermZone = highlightedTermZone;
   const previousAllowPopoverScan = allowPopoverScan;
-  const previousIsApplyingHighlights = isApplyingHighlights;
 
   highlightedOnQuestion = new Set();
   highlightedWordsOnQuestion = new Set();
   highlightedTermZone = new Map();
   allowPopoverScan = true;
-  isApplyingHighlights = true;
-  try {
-    for (const coalesceRoot of collectCoalesceRoots(popover)) {
-      highlightCoalescedRoot(coalesceRoot, SCAN_ZONE.OTHER);
-    }
-  } finally {
-    highlightedOnQuestion = previousHighlightedOnQuestion;
-    highlightedWordsOnQuestion = previousHighlightedWordsOnQuestion;
-    highlightedTermZone = previousHighlightedTermZone;
-    allowPopoverScan = previousAllowPopoverScan;
-    isApplyingHighlights = previousIsApplyingHighlights;
+  for (const coalesceRoot of collectCoalesceRoots(popover)) {
+    highlightCoalescedRoot(coalesceRoot, SCAN_ZONE.OTHER);
   }
+  highlightedOnQuestion = previousHighlightedOnQuestion;
+  highlightedWordsOnQuestion = previousHighlightedWordsOnQuestion;
+  highlightedTermZone = previousHighlightedTermZone;
+  allowPopoverScan = previousAllowPopoverScan;
 }
 
 export function startOrganScanner(): void {
@@ -1130,7 +760,7 @@ export function startOrganScanner(): void {
   let scanScheduled = false;
 
   const observer = new MutationObserver((mutations) => {
-    if (isApplyingHighlights) return;
+    if (getIsApplyingHighlights()) return;
 
     if (mutationsRemovedOurChips(mutations)) {
       resetQuestionHighlights();
