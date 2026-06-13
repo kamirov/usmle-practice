@@ -18,6 +18,7 @@ export interface SignalingEntry {
   source?: string;
   receptor?: string;
   function: string;
+  mnemonic?: string;
   clinicalRelevance: string[];
   boardsPearls: string[];
   distinguishFrom?: string[];
@@ -391,6 +392,8 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
       "IL-1 receptor type I (IL-1RI) → MyD88 → NF-κB and MAPK; naturally antagonized by IL-1 receptor antagonist (IL-1Ra)",
     function:
       "Potent pro-inflammatory cytokine and endogenous pyrogen: induces fever (hypothalamic PGE₂), activates endothelium (↑ adhesion molecules), stimulates acute-phase response, and promotes leukocyte recruitment and tissue catabolism.",
+    mnemonic:
+      "IL-1 = first alarm: fever + endothelium wakes up first in acute inflammation.",
     clinicalRelevance: [
       "Endogenous pyrogen with IL-6 and TNF-α → fever in infection and inflammation",
       "Central to autoinflammatory disease — unregulated IL-1 signaling (e.g., NLRP3 inflammasome → ↑ IL-1β)",
@@ -429,6 +432,8 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
     receptor: "IL-2 receptor (high-affinity on activated T cells)",
     function:
       "T-cell growth factor: drives clonal expansion and survival of antigen-activated T cells; supports regulatory and effector T-cell populations.",
+    mnemonic:
+      "IL-2 = T cells make copies of two: activated T cell → more T cells.",
     clinicalRelevance: [
       "Aldesleukin (recombinant IL-2) for metastatic melanoma and renal cell carcinoma",
       "IL-2 signaling blockade (basiliximab) prevents transplant rejection",
@@ -462,6 +467,8 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
     receptor: "IL-4 receptor (type I and type II; signals via JAK-STAT6)",
     function:
       "Key Th2 cytokine driving B-cell class switching to IgE and IgG4, promoting B-cell proliferation, and suppressing Th1 (macrophage-activating) responses.",
+    mnemonic:
+      "IL-4 = FOR allergy: Th2 → IgE class switch, unlike IL-5 eosinophils.",
     clinicalRelevance: [
       "Central to allergic/atopic disease — ↑ IL-4 → ↑ IgE → mast cell sensitization",
       "Helminth defense — coordinates eosinophil and IgE-mediated parasite clearance",
@@ -499,13 +506,15 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
       "IL-6 receptor (membrane-bound or soluble) + gp130 → JAK → STAT3 (classic pathway); also trans-signaling via soluble IL-6R",
     function:
       "Pro-inflammatory cytokine and endogenous pyrogen that drives the hepatic acute-phase response (↑ CRP, fibrinogen, hepcidin), supports B-cell differentiation and antibody production, and with TGF-β promotes Th17 differentiation.",
+    mnemonic:
+      "IL-6 = six to the liver: CRP, fibrinogen, hepcidin; acute-phase response.",
     clinicalRelevance: [
       "↑ CRP in infection/inflammation — IL-6 is the main hepatocyte stimulus for acute-phase protein synthesis",
       "Tocilizumab (anti–IL-6R) and siltuximab (anti–IL-6) — RA, cytokine release syndrome, Castleman disease",
       "Endogenous pyrogen with IL-1 and TNF-α → hypothalamic PGE₂ → fever",
       "Elevated in sepsis, cytokine storm, and MIS-C (post–COVID-19 pediatric hyperinflammation)",
       "Contributes to anemia of chronic disease via hepcidin induction",
-      "STAT3 gain-of-function mutations → hyper-IgE syndrome (Job syndrome)",
+      "STAT3 loss-of-function mutations → hyper-IgE syndrome (Job syndrome)",
     ],
     boardsPearls: [
       "IL-6 → liver → ↑ CRP and fibrinogen — link IL-6 elevation to acute-phase reactants on boards",
@@ -523,6 +532,116 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
     ],
     pediatrics:
       "MIS-C after COVID-19 — marked IL-6 elevation treated with IVIG and sometimes tocilizumab. Hyper-IgE (Job) syndrome presents in childhood with eczema, retained primary teeth, and staph abscesses from STAT3/IL-6 pathway defects.",
+  },
+  {
+    id: "il-5",
+    name: "Interleukin-5 (IL-5)",
+    etymology: "Latin inter = between + Greek leukos = white cell + 5 = fifth numbered subtype",
+    aliases: [
+      "interleukin-5",
+      "interleukin 5",
+      "il-5",
+      "il 5",
+      "eosinophil differentiation factor",
+      "edf",
+    ],
+    type: "Cytokine",
+    source: "Th2 CD4⁺ T helper cells, mast cells, and eosinophils",
+    receptor: "IL-5 receptor α (CD125) + common β chain (CD131) → JAK-STAT",
+    function:
+      "Th2 cytokine that promotes eosinophil growth, differentiation, recruitment, activation, and survival; also supports B-cell differentiation and IgA production.",
+    mnemonic:
+      "IL-5 = fivE for Eosinophils; allergy/helminths need eosinophil help.",
+    clinicalRelevance: [
+      "Helminth defense — eosinophils kill antibody-coated parasites via major basic protein",
+      "Allergic asthma and eosinophilic esophagitis — type 2 inflammation with IL-5-driven eosinophilia",
+      "Anti–IL-5 biologics (mepolizumab, reslizumab) and anti–IL-5R (benralizumab) treat severe eosinophilic asthma",
+      "Hypereosinophilic syndromes can involve excessive IL-5 signaling",
+    ],
+    boardsPearls: [
+      "IL-5 is the eosinophil cytokine; IL-4 is IgE class switching; IL-13 is mucus/airway hyperreactivity",
+      "Th2 triad: IL-4, IL-5, IL-13 — IgE, eosinophils, mucus",
+      "Eosinophils contain major basic protein toxic to helminths and epithelium",
+      "Asthma with eosinophilia can be treated by blocking IL-5 or IL-5 receptor",
+    ],
+    distinguishFrom: [
+      "IL-4 — B-cell class switch to IgE and Th2 differentiation",
+      "IL-13 — mucus production, airway hyperreactivity, and fibrosis",
+      "GM-CSF — broader granulocyte/macrophage progenitor growth, not eosinophil-focused",
+      "Eotaxin (CCL11) — eosinophil chemotaxis chemokine; IL-5 keeps eosinophils alive/activated",
+    ],
+    pediatrics:
+      "Pediatric atopic asthma can show IL-5-driven eosinophilia; helminth infection remains high-yield for eosinophilia in children with travel or exposure history.",
+  },
+  {
+    id: "il-7",
+    name: "Interleukin-7 (IL-7)",
+    etymology: "Latin inter = between + Greek leukos = white cell + 7 = seventh numbered subtype",
+    aliases: ["interleukin-7", "interleukin 7", "il-7", "il 7"],
+    type: "Cytokine",
+    source: "Bone marrow and thymic stromal cells; epithelial and fibroblastic stromal cells",
+    receptor: "IL-7 receptor α (CD127) + common γ chain (CD132) → JAK1/JAK3-STAT5",
+    function:
+      "Lymphoid survival and development cytokine: supports early T-cell development, naïve/memory T-cell homeostasis, and early B-cell development in marrow.",
+    mnemonic:
+      "IL-7 = heaven for lymphocytes: keeps developing T cells alive.",
+    clinicalRelevance: [
+      "IL7R or common γ-chain defects impair T-cell development and can cause SCID phenotypes",
+      "HIV and chemotherapy lymphopenia research often tracks IL-7/T-cell recovery",
+      "Common γ chain shared with IL-2, IL-4, IL-7, IL-9, IL-15, IL-21 — X-linked SCID when defective",
+    ],
+    boardsPearls: [
+      "IL-7 is the T-cell development/homeostasis cytokine",
+      "Common γ-chain failure → absent T/NK cells with dysfunctional B-cell immunity",
+      "Contrast IL-2: activated mature T-cell proliferation; IL-7: lymphoid development/survival",
+    ],
+    distinguishFrom: [
+      "IL-2 — clonal expansion after antigen activation",
+      "IL-15 — NK-cell and memory CD8 T-cell survival",
+      "IL-3 — early myeloid hematopoietic progenitor growth",
+    ],
+    pediatrics:
+      "Infants with SCID present with severe recurrent infections, chronic diarrhea, thrush, and failure to thrive; IL7R/common γ-chain defects are classic cytokine signaling causes.",
+  },
+  {
+    id: "il-8",
+    name: "Interleukin-8 (IL-8 / CXCL8)",
+    etymology: "Latin inter = between + Greek leukos = white cell + 8 = eighth numbered subtype; CXCL8 = C-X-C chemokine ligand 8",
+    aliases: [
+      "interleukin-8",
+      "interleukin 8",
+      "il-8",
+      "il 8",
+      "cxcl8",
+      "c-x-c motif chemokine ligand 8",
+      "neutrophil chemotactic factor",
+    ],
+    type: "Cytokine",
+    source:
+      "Macrophages, epithelial cells, endothelial cells, airway smooth muscle cells, and other TLR-activated cells",
+    receptor: "CXCR1 and CXCR2 chemokine receptors (GPCRs) on neutrophils",
+    function:
+      "Chemokine that recruits and activates neutrophils at sites of acute inflammation; promotes neutrophil chemotaxis, degranulation, respiratory burst, and angiogenesis.",
+    mnemonic:
+      "IL-8 = innate 'ate' call: neutrophils eat bacteria after following CXCL8.",
+    clinicalRelevance: [
+      "Acute bacterial infection and abscesses — neutrophil recruitment via IL-8/CXCL8, C5a, LTB₄, and fMLP",
+      "ARDS, COPD, and severe pneumonia involve IL-8-driven neutrophilic inflammation",
+      "Leukocyte adhesion defects impair neutrophil tissue entry downstream of chemotactic signals",
+    ],
+    boardsPearls: [
+      "IL-8/CXCL8 is the classic neutrophil chemotaxis cytokine",
+      "Major neutrophil chemoattractants: IL-8, C5a, LTB₄, fMLP",
+      "IL-17 induces epithelial/stromal IL-8 and G-CSF → neutrophil recruitment",
+      "IL-8 is a chemokine (CXCL8), but still historically named an interleukin",
+    ],
+    distinguishFrom: [
+      "IL-17 — upstream Th17 cytokine that induces IL-8/G-CSF production",
+      "C5a — complement-derived chemoattractant and anaphylatoxin",
+      "IL-5 — eosinophil growth/activation, not neutrophil chemotaxis",
+    ],
+    pediatrics:
+      "Neonatal neutrophil chemotaxis is relatively immature, contributing to infection susceptibility; leukocyte adhesion deficiency presents in infancy with delayed umbilical cord separation and absent pus despite chemotactic cytokines.",
   },
   {
     id: "tnf",
@@ -1137,6 +1256,8 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
     receptor: "IL-3 receptor (JAK-STAT)",
     function:
       "Stimulates proliferation and differentiation of early hematopoietic progenitors, especially myeloid lineages.",
+    mnemonic:
+      "IL-3 = three marrow lines: broad early hematopoietic progenitor support.",
     clinicalRelevance: [
       "Links T-cell activation to marrow myelopoiesis",
       "Less clinically tested than IL-5/G-CSF but high-yield as hematopoietic growth signal",
@@ -1156,6 +1277,8 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
     receptor: "IL-10 receptor (JAK-STAT)",
     function:
       "Anti-inflammatory cytokine that suppresses macrophage and dendritic cell cytokine production and antigen presentation.",
+    mnemonic:
+      "IL-10 = ten down: turns inflammatory macrophage/Th1 responses down.",
     clinicalRelevance: [
       "Limits Th1/macrophage inflammation",
       "Treg-mediated immune tolerance uses IL-10 and TGF-β",
@@ -1167,6 +1290,34 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
     distinguishFrom: ["IL-12 — promotes Th1 and IFN-γ", "IFN-γ — activates macrophages"],
   },
   {
+    id: "il-11",
+    name: "Interleukin-11 (IL-11)",
+    etymology: "interleukin = between leukocytes + 11 = cytokine number",
+    aliases: ["il-11", "il 11", "interleukin-11", "interleukin 11"],
+    type: "Cytokine",
+    source: "Bone marrow stromal cells, fibroblasts, epithelial cells, and osteoblast-lineage cells",
+    receptor: "IL-11 receptor α + gp130 → JAK-STAT3",
+    function:
+      "IL-6-family cytokine that supports megakaryocyte maturation and platelet recovery, modulates stromal/epithelial repair, and can drive fibrosis when chronically activated.",
+    mnemonic:
+      "IL-11 = two ones look like platelet sticks: megakaryocytes/platelets.",
+    clinicalRelevance: [
+      "Oprelvekin (recombinant IL-11) was used for chemotherapy-associated thrombocytopenia",
+      "IL-11/gp130 signaling overlaps with IL-6-family acute-phase and stromal repair pathways",
+      "Excess IL-11 signaling has been implicated in fibrotic remodeling",
+    ],
+    boardsPearls: [
+      "IL-11 is the platelet-support cytokine in classic interleukin tables",
+      "Thrombopoietin is the main physiologic platelet regulator; IL-11 is the board-style adjunct",
+      "gp130 receptor family links IL-11 with IL-6 signaling logic",
+    ],
+    distinguishFrom: [
+      "Thrombopoietin — primary megakaryocyte/platelet growth factor from liver and kidney",
+      "IL-3 — broad hematopoietic progenitor growth",
+      "GM-CSF — granulocyte/macrophage progenitors, not platelet-focused",
+    ],
+  },
+  {
     id: "il-12",
     name: "Interleukin-12 (IL-12)",
     etymology: "interleukin = between leukocytes + 12 = cytokine number",
@@ -1176,6 +1327,8 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
     receptor: "IL-12 receptor (JAK-STAT)",
     function:
       "Promotes Th1 differentiation and stimulates NK/T cells to produce IFN-γ, enhancing intracellular pathogen killing.",
+    mnemonic:
+      "IL-12 = one-two punch: APC tells T/NK cells → IFN-γ → macrophage killing.",
     clinicalRelevance: [
       "IL-12 receptor deficiency → mycobacterial and Salmonella susceptibility",
       "Key bridge from innate APCs to Th1 immunity",
@@ -1185,6 +1338,235 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
       "Defects in IL-12/IFN-γ axis → disseminated atypical mycobacteria",
     ],
     distinguishFrom: ["IL-10 — inhibits macrophages/Th1", "IL-4 — promotes Th2 and IgE"],
+  },
+  {
+    id: "il-13",
+    name: "Interleukin-13 (IL-13)",
+    etymology: "interleukin = between leukocytes + 13 = cytokine number",
+    aliases: ["il-13", "il 13", "interleukin-13", "interleukin 13"],
+    type: "Cytokine",
+    source: "Th2 cells, type 2 innate lymphoid cells (ILC2), mast cells, basophils, and eosinophils",
+    receptor:
+      "IL-13 receptor α1 with IL-4 receptor α (type II IL-4 receptor) → JAK-STAT6",
+    function:
+      "Type 2 cytokine that increases mucus production, goblet-cell metaplasia, airway hyperreactivity, alternative macrophage activation, tissue remodeling, and IgE-associated allergic inflammation.",
+    mnemonic:
+      "IL-13 = unlucky airways: mucus + hyperreactivity, like IL-4 but more airway/barrier.",
+    clinicalRelevance: [
+      "Asthma, allergic rhinitis, atopic dermatitis, and eosinophilic esophagitis involve IL-13/IL-4 type 2 signaling",
+      "Dupilumab blocks IL-4Rα shared by IL-4 and IL-13 pathways",
+      "IL-13 contributes to fibrosis and mucus plugging in chronic type 2 inflammation",
+    ],
+    boardsPearls: [
+      "Th2 triad: IL-4 = IgE switch; IL-5 = eosinophils; IL-13 = mucus/airway hyperreactivity",
+      "IL-13 overlaps with IL-4 because both can signal through IL-4Rα",
+      "Alternative macrophage activation and tissue repair/fibrosis are type 2 themes",
+    ],
+    distinguishFrom: [
+      "IL-4 — stronger association with Th2 differentiation and IgE class switching",
+      "IL-5 — eosinophil survival/activation",
+      "IL-17 — neutrophilic mucosal inflammation, not type 2 mucus/eosinophil pattern",
+    ],
+    pediatrics:
+      "Childhood asthma and atopic dermatitis commonly reflect type 2 inflammation; IL-13/IL-4 blockade is used in selected pediatric atopic disease.",
+  },
+  {
+    id: "il-15",
+    name: "Interleukin-15 (IL-15)",
+    etymology: "interleukin = between leukocytes + 15 = cytokine number",
+    aliases: ["il-15", "il 15", "interleukin-15", "interleukin 15"],
+    type: "Cytokine",
+    source: "Monocytes, macrophages, dendritic cells, epithelial cells, and stromal cells",
+    receptor:
+      "IL-15 receptor α presents IL-15 to IL-2/15Rβ (CD122) + common γ chain (CD132) → JAK1/JAK3-STAT5",
+    function:
+      "Supports NK-cell development, survival, and activation; maintains memory CD8⁺ T cells and promotes cytotoxic lymphocyte function.",
+    mnemonic:
+      "IL-15 = fifteen natural killers on patrol: NK cells + memory CD8 survival.",
+    clinicalRelevance: [
+      "Common γ-chain defects impair IL-15 signaling and cause absent NK cells in X-linked SCID",
+      "Cancer immunotherapy research uses IL-15 agonists to expand NK and CD8 cytotoxic responses",
+      "IL-15 can contribute to inflammatory cytotoxic T-cell activation in autoimmune disease",
+    ],
+    boardsPearls: [
+      "IL-15 is the NK-cell survival/development cytokine",
+      "IL-2 and IL-15 share receptor β/γ components but IL-2 expands activated T cells; IL-15 maintains NK/memory CD8 cells",
+      "Absent NK cells in common γ-chain SCID reflects failed IL-15 signaling",
+    ],
+    distinguishFrom: [
+      "IL-2 — activated T-cell clonal expansion and Treg support",
+      "IL-7 — early T-cell development and lymphoid survival",
+      "IL-12 — induces NK/T-cell IFN-γ production, but does not build NK cells",
+    ],
+    pediatrics:
+      "X-linked SCID in infants includes failed IL-15 signaling with absent NK cells; presents with severe viral, fungal, and opportunistic infections.",
+  },
+  {
+    id: "il-17",
+    name: "Interleukin-17 (IL-17)",
+    etymology: "interleukin = between leukocytes + 17 = cytokine number",
+    aliases: [
+      "il-17",
+      "il 17",
+      "interleukin-17",
+      "interleukin 17",
+      "il-17a",
+      "il-17f",
+      "th17 cytokine",
+    ],
+    type: "Cytokine",
+    source: "Th17 cells, γδ T cells, innate lymphoid cells, and mucosal lymphocytes",
+    receptor: "IL-17RA/IL-17RC receptor complex → Act1/TRAF6 → NF-κB and MAPK",
+    function:
+      "Th17 effector cytokine that induces epithelial, endothelial, fibroblast, and macrophage release of chemokines (especially IL-8/CXCL8) and G-CSF, recruiting neutrophils and strengthening mucosal defense against extracellular bacteria and fungi.",
+    mnemonic:
+      "IL-17 = seventeen neutrophils: Th17 calls neutrophils to mucosa.",
+    clinicalRelevance: [
+      "Chronic mucocutaneous candidiasis with IL-17 pathway defects",
+      "Psoriasis and ankylosing spondylitis — IL-17-driven keratinocyte and neutrophilic inflammation",
+      "Secukinumab/ixekizumab block IL-17A; brodalumab blocks IL-17 receptor",
+      "Th17 defects contribute to recurrent Candida and Staphylococcus infections in hyper-IgE syndrome",
+    ],
+    boardsPearls: [
+      "IL-17 recruits neutrophils indirectly by inducing IL-8/CXCL8 and G-CSF",
+      "Th17 differentiation starts with TGF-β + IL-6; IL-23 sustains Th17 cells",
+      "Extracellular bacteria/fungi at mucosa = Th17/IL-17 axis",
+      "IL-17 is neutrophil-skewed; IL-5 is eosinophil-skewed",
+    ],
+    distinguishFrom: [
+      "IL-8/CXCL8 — direct neutrophil chemokine downstream of IL-17",
+      "IL-23 — sustains/expands Th17 cells; upstream of IL-17 production",
+      "IL-12 — Th1/IFN-γ axis for intracellular pathogens",
+    ],
+    pediatrics:
+      "Hyper-IgE syndrome presents in childhood with impaired Th17/IL-17 mucosal defense, recurrent staph abscesses, Candida, eczema, and retained primary teeth.",
+  },
+  {
+    id: "il-18",
+    name: "Interleukin-18 (IL-18)",
+    etymology: "interleukin = between leukocytes + 18 = cytokine number",
+    aliases: ["il-18", "il 18", "interleukin-18", "interleukin 18", "ifn-gamma-inducing factor"],
+    type: "Cytokine",
+    source: "Macrophages, dendritic cells, epithelial cells, and inflammasome-activated innate cells",
+    receptor: "IL-18 receptor → MyD88 → NF-κB/MAPK; mature IL-18 generated by caspase-1",
+    function:
+      "Inflammasome-processed IL-1-family cytokine that synergizes with IL-12 to induce IFN-γ from NK and T cells, amplifying Th1/macrophage responses.",
+    mnemonic:
+      "IL-18 = eighteen helps twelve: with IL-12, drives IFN-γ.",
+    clinicalRelevance: [
+      "Inflammasome activation processes IL-1β and IL-18 via caspase-1",
+      "High IL-18 is linked to macrophage activation syndrome/HLH and severe systemic inflammation",
+      "Contributes to Th1 inflammation and host defense against intracellular pathogens",
+    ],
+    boardsPearls: [
+      "IL-18 belongs with IL-1 family/inflammasome logic, not JAK-STAT common γ-chain cytokines",
+      "IL-12 + IL-18 → strong IFN-γ from NK/T cells",
+      "Caspase-1 processes pro–IL-1β and pro–IL-18",
+    ],
+    distinguishFrom: [
+      "IL-12 — APC cytokine that independently promotes Th1 differentiation",
+      "IL-1β — inflammasome pyrogen/endothelial activation cytokine",
+      "IFN-γ — downstream macrophage-activating cytokine induced by IL-12/IL-18",
+    ],
+    pediatrics:
+      "Macrophage activation syndrome and HLH in children can involve very high IL-18 with fever, cytopenias, hepatitis, and hyperferritinemia.",
+  },
+  {
+    id: "il-21",
+    name: "Interleukin-21 (IL-21)",
+    etymology: "interleukin = between leukocytes + 21 = cytokine number",
+    aliases: ["il-21", "il 21", "interleukin-21", "interleukin 21"],
+    type: "Cytokine",
+    source: "T follicular helper cells, Th17 cells, and activated CD4⁺ T cells",
+    receptor: "IL-21 receptor + common γ chain (CD132) → JAK1/JAK3-STAT3",
+    function:
+      "Tfh-linked cytokine that promotes germinal center B-cell proliferation, plasma-cell differentiation, class switching, CD8⁺ T-cell function, NK-cell activity, and Th17 amplification.",
+    mnemonic:
+      "IL-21 = blackjack helper: Tfh helps B cells win germinal centers.",
+    clinicalRelevance: [
+      "Important for antibody responses and Tfh-B cell collaboration",
+      "Common γ-chain cytokine; signaling overlaps with IL-2/4/7/9/15 via CD132",
+      "Dysregulated IL-21 contributes to autoantibody production in autoimmune disease models",
+    ],
+    boardsPearls: [
+      "IL-21 is the Tfh/B-cell help cytokine",
+      "STAT3 pathway links IL-21 to B-cell differentiation and Th17 biology",
+      "Contrast IL-4: class switch to IgE; IL-21: broader germinal center/plasma-cell support",
+    ],
+    distinguishFrom: [
+      "IL-4 — Th2 IgE class-switching signal",
+      "IL-2 — T-cell proliferation and Treg support",
+      "CD40L — required contact-dependent T-cell help for class switching",
+    ],
+  },
+  {
+    id: "il-22",
+    name: "Interleukin-22 (IL-22)",
+    etymology: "interleukin = between leukocytes + 22 = cytokine number",
+    aliases: ["il-22", "il 22", "interleukin-22", "interleukin 22"],
+    type: "Cytokine",
+    source: "Th17 cells, Th22 cells, type 3 innate lymphoid cells, and NK-like cells",
+    receptor: "IL-22 receptor (IL-22R1 + IL-10R2) on epithelial/stromal cells → JAK-STAT3",
+    function:
+      "Barrier cytokine that acts mainly on epithelial cells to induce antimicrobial peptides, mucin, tight-junction support, tissue repair, and acute-phase-like responses at mucosal surfaces.",
+    mnemonic:
+      "IL-22 = two-two walls: reinforces epithelial barriers on both sides.",
+    clinicalRelevance: [
+      "Mucosal defense against extracellular bacteria and fungi, especially gut and skin barriers",
+      "Can be protective in epithelial repair but pathogenic in psoriasis and chronic inflammation",
+      "Works with IL-17 in keratinocytes and mucosal epithelium",
+    ],
+    boardsPearls: [
+      "IL-22 acts on epithelium more than leukocytes — barrier repair and antimicrobial peptides",
+      "Th17 output includes IL-17, IL-21, IL-22; IL-17 recruits neutrophils, IL-22 repairs barrier",
+      "IL-22 is in the IL-10 cytokine family but is pro-barrier, not broadly anti-inflammatory like IL-10",
+    ],
+    distinguishFrom: [
+      "IL-17 — neutrophil recruitment via chemokines/G-CSF",
+      "IL-10 — suppresses macrophages/APCs",
+      "IL-13 — type 2 mucus/airway hyperreactivity rather than Th17 barrier defense",
+    ],
+    pediatrics:
+      "Barrier immunity matters in pediatric IBD and recurrent mucocutaneous infections; IL-22 can be protective in epithelial repair but harmful if chronically overactive.",
+  },
+  {
+    id: "il-23",
+    name: "Interleukin-23 (IL-23)",
+    etymology: "interleukin = between leukocytes + 23 = cytokine number",
+    aliases: [
+      "il-23",
+      "il 23",
+      "interleukin-23",
+      "interleukin 23",
+      "il-23p19",
+      "il12b",
+      "il-12p40",
+    ],
+    type: "Cytokine",
+    source: "Dendritic cells and macrophages",
+    receptor: "IL-23 receptor + IL-12Rβ1 → JAK2/TYK2-STAT3/STAT4",
+    function:
+      "IL-12-family cytokine that sustains and expands committed Th17 cells, promoting IL-17, IL-21, IL-22, and GM-CSF production for mucosal defense and chronic inflammation.",
+    mnemonic:
+      "IL-23 = twenty-THRee keeps TH17: maintains Th17, not first differentiation.",
+    clinicalRelevance: [
+      "Psoriasis, psoriatic arthritis, ankylosing spondylitis, and IBD involve IL-23/Th17 inflammation",
+      "Ustekinumab blocks shared IL-12/23 p40; guselkumab/risankizumab/tildrakizumab block IL-23 p19",
+      "IL-23 shares p40 subunit and IL-12Rβ1 receptor component with IL-12",
+    ],
+    boardsPearls: [
+      "TGF-β + IL-6 initiates Th17 differentiation; IL-23 maintains/expands Th17",
+      "IL-23 → Th17 → IL-17/IL-22 → neutrophils + barrier defense",
+      "IL-12 drives Th1/IFN-γ; IL-23 drives Th17/IL-17",
+      "Anti-p40 biologics hit both IL-12 and IL-23; anti-p19 is IL-23-selective",
+    ],
+    distinguishFrom: [
+      "IL-12 — p35+p40 cytokine for Th1 and IFN-γ",
+      "IL-17 — downstream Th17 effector cytokine",
+      "IL-6 — starts Th17 differentiation with TGF-β and drives acute phase response",
+    ],
+    pediatrics:
+      "Pediatric psoriasis and IBD can involve IL-23/Th17 inflammation; IL-12/23 or IL-23 biologics may be used by specialty indication and age.",
   },
   {
     id: "ifn-gamma",

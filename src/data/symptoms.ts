@@ -8,6 +8,7 @@ export interface SymptomEntry {
   thinkOf: string[];
   pairWith: string[];
   distinguishFrom?: string[];
+  pediatrics?: string;
 }
 
 export const SYMPTOMS: SymptomEntry[] = [
@@ -108,6 +109,78 @@ export const SYMPTOMS: SymptomEntry[] = [
       "Rhonchi — low-pitched, often clears with cough",
       "Crackles — discontinuous, alveolar fluid (not wheeze)",
     ],
+  },
+  {
+    id: "stridor",
+    name: "Stridor",
+    etymology: "Latin stridere = to make a harsh, creaking sound",
+    aliases: ["stridor", "inspiratory stridor", "stridorous breathing"],
+    definition:
+      "Harsh, high-pitched upper-airway sound, classically louder during inspiration, caused by turbulent airflow through a narrowed larynx, trachea, or large airway.",
+    mechanism:
+      "Upper-airway obstruction accelerates airflow through a narrowed segment; extrathoracic obstruction worsens on inspiration as negative pressure narrows the airway further.",
+    thinkOf: [
+      "Croup (laryngotracheobronchitis)",
+      "Epiglottitis",
+      "Anaphylaxis with laryngeal edema",
+      "Foreign body aspiration",
+      "Vocal cord dysfunction or paralysis",
+      "Laryngeal/tracheal tumor or subglottic stenosis",
+    ],
+    pairWith: [
+      "Barking cough, low-grade fever → croup",
+      "Drooling, tripod posture, toxic appearance → epiglottitis",
+      "Urticaria, angioedema, hypotension → anaphylaxis",
+      "Sudden onset after choking → foreign body aspiration",
+      "Hoarseness after thyroid/neck surgery → recurrent laryngeal nerve injury",
+    ],
+    distinguishFrom: [
+      "Wheezing — usually expiratory, lower-airway narrowing (asthma/COPD)",
+      "Stertor — low-pitched snoring sound from nasopharyngeal obstruction",
+      "Rhonchi — low-pitched lower-airway secretions, often changes with cough",
+    ],
+    pediatrics:
+      "Stridor in a child is an airway warning sign. Croup is most common and has barking cough; drooling/toxic appearance suggests epiglottitis and requires controlled airway management without aggressive throat exam.",
+  },
+  {
+    id: "hoarseness",
+    name: "Hoarseness",
+    etymology: "Old English has = rough/harsh voice",
+    aliases: [
+      "hoarseness",
+      "hoarse voice",
+      "hoarse",
+      "dysphonia",
+      "raspy voice",
+      "voice hoarseness",
+    ],
+    definition:
+      "Abnormally rough, breathy, weak, or strained voice from impaired vocal fold vibration or laryngeal function.",
+    mechanism:
+      "Inflammation, edema, mass effect, neuromuscular dysfunction, or recurrent laryngeal nerve injury prevents normal symmetric vocal cord apposition and vibration.",
+    thinkOf: [
+      "Viral laryngitis / upper respiratory infection",
+      "Laryngopharyngeal reflux",
+      "Vocal cord nodules or polyps",
+      "Recurrent laryngeal nerve palsy",
+      "Lung cancer or thyroid malignancy compressing recurrent laryngeal nerve",
+      "Hypothyroidism (myxedematous vocal cord edema)",
+      "Croup or epiglottitis when paired with stridor",
+    ],
+    pairWith: [
+      "Chronic smoker + weight loss → laryngeal cancer or lung cancer",
+      "Hoarseness after thyroidectomy → recurrent laryngeal nerve injury",
+      "Dysphagia, aspiration, weak cough → vocal cord paralysis",
+      "Heartburn, throat clearing → laryngopharyngeal reflux",
+      "Stridor, drooling, respiratory distress → upper-airway emergency",
+    ],
+    distinguishFrom: [
+      "Aphonia — complete loss of voice",
+      "Dysarthria — impaired articulation from neurologic/motor disorder, voice quality may be normal",
+      "Nasal speech — velopharyngeal dysfunction, not vocal fold vibration",
+    ],
+    pediatrics:
+      "Hoarseness with barking cough suggests croup; hoarseness with drooling, tripod posture, or stridor at rest suggests dangerous upper-airway obstruction such as epiglottitis or bacterial tracheitis.",
   },
   {
     id: "cough",
@@ -1369,6 +1442,65 @@ export const SYMPTOMS: SymptomEntry[] = [
     ],
   },
   {
+    id: "macule",
+    name: "Macule",
+    etymology: "Latin macula = spot/stain",
+    aliases: ["macule", "macules", "macular lesion", "flat skin spot"],
+    definition:
+      "Flat, non-palpable circumscribed color change ≤1 cm in diameter; no elevation, depression, fluid, or texture change.",
+    mechanism:
+      "Altered pigment, vascular flow, or dermal blood/exogenous material changes skin color without changing contour or thickness.",
+    thinkOf: [
+      "Freckle / lentigo — hyperpigmented macule",
+      "Rose spots in typhoid fever",
+      "Early viral exanthem or drug eruption",
+      "Petechiae — hemorrhagic macules that do not blanch",
+      "Vitiligo macules — depigmentation from melanocyte loss",
+    ],
+    pairWith: [
+      "Blanching erythematous macules → vasodilation/exanthem",
+      "Non-blanching pinpoint macules → petechiae",
+      "Brown macules on sun-exposed skin → lentigines",
+      "Depigmented macules with autoimmune history → vitiligo",
+    ],
+    distinguishFrom: [
+      "Patch — same flat morphology but >1 cm",
+      "Papule — raised/palpable lesion ≤1 cm",
+      "Petechiae — subtype of non-blanching hemorrhagic macules",
+      "Purpura/ecchymosis — larger non-blanching blood extravasation",
+    ],
+  },
+  {
+    id: "patch",
+    name: "Patch",
+    etymology: "Old French pieche = piece/portion",
+    aliases: ["patch", "patches", "skin patch", "cutaneous patch"],
+    definition:
+      "Flat, non-palpable circumscribed color change >1 cm in diameter; essentially a large macule.",
+    mechanism:
+      "Broad alteration in pigment, perfusion, or dermal contents changes color over a larger area without palpable elevation.",
+    thinkOf: [
+      "Vitiligo — depigmented patches",
+      "Café-au-lait macules/patches — neurofibromatosis type 1",
+      "Mongolian spot / congenital dermal melanocytosis",
+      "Mycosis fungoides patch stage",
+      "Port-wine stain — capillary malformation",
+    ],
+    pairWith: [
+      "≥6 café-au-lait patches + axillary freckling → NF1",
+      "Depigmented patch + autoimmune disease → vitiligo",
+      "Salmon patch vs port-wine stain in infant → vascular birthmark distinction",
+      "Persistent scaly patch in sun-protected area → consider cutaneous T-cell lymphoma",
+    ],
+    distinguishFrom: [
+      "Macule — same flat morphology but ≤1 cm",
+      "Plaque — raised/palpable lesion >1 cm",
+      "Scale — surface keratin change; may overlay a patch",
+    ],
+    pediatrics:
+      "Birthmarks are high-yield pediatric patches: café-au-lait lesions suggest NF1 when multiple; congenital dermal melanocytosis is benign and common over the sacrum.",
+  },
+  {
     id: "papule",
     name: "Papule",
     etymology: "Latin papula = pimple",
@@ -1483,6 +1615,136 @@ export const SYMPTOMS: SymptomEntry[] = [
     ],
   },
   {
+    id: "nodule",
+    name: "Nodule",
+    etymology: "Latin nodulus = little knot",
+    aliases: ["nodule", "nodules", "skin nodule", "cutaneous nodule", "nodular lesion"],
+    definition:
+      "Solid, palpable lesion usually >1 cm with depth in the dermis or subcutis; may be elevated, firm, tender, or mobile.",
+    mechanism:
+      "Dermal/subcutaneous inflammation, granuloma, neoplasm, cyst wall contents, or lipid/urate deposition forms a deeper palpable mass.",
+    thinkOf: [
+      "Erythema nodosum — tender shin nodules",
+      "Rheumatoid nodules — extensor surfaces",
+      "Dermatofibroma — firm button-like nodule",
+      "Basal cell carcinoma — pearly nodule",
+      "Metastatic or infectious subcutaneous nodules",
+    ],
+    pairWith: [
+      "Tender anterior shin nodules + sarcoid/strep/IBD/OCPs → erythema nodosum",
+      "Firm extensor nodules + RF/anti-CCP → rheumatoid arthritis",
+      "Pearly papule/nodule + telangiectasias → basal cell carcinoma",
+      "Linear proximal nodules from inoculation site → nodular lymphangitis",
+    ],
+    distinguishFrom: [
+      "Papule — smaller superficial solid lesion ≤1 cm",
+      "Plaque — broad raised lesion >1 cm, usually less deep than nodule",
+      "Cyst — encapsulated cavity with fluid/keratin/sebum",
+      "Tumor — larger mass; often >2 cm or neoplastic implication",
+    ],
+  },
+  {
+    id: "pustule",
+    name: "Pustule",
+    etymology: "Latin pustula = blister/pimple filled with pus",
+    aliases: ["pustule", "pustules", "pustular lesion", "pustular rash", "pus-filled lesion"],
+    definition:
+      "Small elevated lesion containing purulent material; may be sterile inflammatory pus or infectious pus.",
+    mechanism:
+      "Neutrophil accumulation within epidermis, follicle, or superficial dermis creates visible pus; follicular pustules often center on hair follicles.",
+    thinkOf: [
+      "Acne vulgaris — comedones plus inflammatory papules/pustules",
+      "Folliculitis — Staph aureus or Pseudomonas hot-tub folliculitis",
+      "Impetigo — pustules/vesicles rupture into honey-colored crust",
+      "Pustular psoriasis — sterile pustules",
+      "Disseminated gonococcal infection — pustular acral lesions",
+    ],
+    pairWith: [
+      "Comedones + papules/pustules → acne vulgaris",
+      "Follicle-centered pustules after hot tub → Pseudomonas folliculitis",
+      "Honey-colored crust after pustules rupture → impetigo",
+      "Fever + migratory polyarthralgia + tenosynovitis → disseminated gonorrhea",
+    ],
+    distinguishFrom: [
+      "Vesicle — clear/serous fluid, not pus",
+      "Papule — solid, no fluid",
+      "Abscess — deeper pus collection, often fluctuant",
+      "Bullae — larger fluid-filled lesion >1 cm, not necessarily purulent",
+    ],
+    pediatrics:
+      "Neonatal acne and erythema toxicum can show pustules but are benign; bullous impetigo is a high-yield pediatric Staph aureus pustule/bulla pattern.",
+  },
+  {
+    id: "wheal",
+    name: "Wheal",
+    etymology: "Old English hwele = raised welt",
+    aliases: [
+      "wheal",
+      "wheals",
+      "welt",
+      "welts",
+      "hive",
+      "hives",
+      "urticaria",
+      "urticarial rash",
+      "urticarial eruption",
+      "urticarial wheal",
+      "urticarial wheals",
+    ],
+    definition:
+      "Transient, edematous, raised, often pruritic plaque that usually blanches and changes location or resolves within 24 hours.",
+    mechanism:
+      "Mast-cell degranulation releases histamine and other mediators → dermal edema, vasodilation, and pruritus; deeper edema is angioedema.",
+    thinkOf: [
+      "Urticaria — allergic, viral, idiopathic, physical triggers",
+      "Anaphylaxis when wheals occur with airway/GI/cardiovascular symptoms",
+      "Serum sickness-like reaction",
+      "Mastocytosis — urtication with rubbing (Darier sign)",
+      "Dermatographism — wheal after stroking skin",
+    ],
+    pairWith: [
+      "Wheals + hypotension/wheeze/vomiting → anaphylaxis",
+      "Migratory pruritic lesions lasting <24 h → urticaria",
+      "Fever + arthralgia after drug/antiserum → serum sickness",
+      "Brown macules that wheal with rubbing → urticaria pigmentosa/mastocytosis",
+    ],
+    distinguishFrom: [
+      "Plaque — persistent raised lesion; wheal is transient edema",
+      "Angioedema — deeper swelling, often lips/eyelids/airway",
+      "Erythema multiforme target lesion — fixed target morphology, not fleeting wheal",
+    ],
+    pediatrics:
+      "Acute urticaria in children is commonly post-viral; wheals plus respiratory distress, hypotension, or repetitive vomiting still means anaphylaxis.",
+  },
+  {
+    id: "cyst",
+    name: "Cyst",
+    etymology: "Greek kystis = bladder/sac",
+    aliases: ["cyst", "cysts", "epidermoid cyst", "sebaceous cyst", "cutaneous cyst"],
+    definition:
+      "Encapsulated, fluid- or keratin-filled cavity in skin or subcutaneous tissue; usually dome-shaped, mobile, and slow-growing.",
+    mechanism:
+      "Epithelial-lined sac traps keratin, sebum-like material, or fluid; rupture releases contents into dermis and triggers foreign-body inflammation.",
+    thinkOf: [
+      "Epidermoid inclusion cyst — central punctum, keratin debris",
+      "Pilar cyst — scalp",
+      "Acne cyst/nodule — severe inflammatory acne",
+      "Steatocystoma multiplex",
+      "Branchial cleft or thyroglossal duct cyst when neck mass context",
+    ],
+    pairWith: [
+      "Central punctum + cheesy keratin → epidermoid cyst",
+      "Multiple painful acne nodules/cysts → nodulocystic acne",
+      "Midline neck cyst moves with tongue protrusion → thyroglossal duct cyst",
+      "Lateral neck cyst after URI → branchial cleft cyst",
+    ],
+    distinguishFrom: [
+      "Nodule — solid tissue mass, not a cavity",
+      "Abscess — infected pus collection with warmth/fluctuance",
+      "Lipoma — soft fatty tumor, no central punctum",
+    ],
+  },
+  {
     id: "lichenification",
     name: "Lichenification",
     etymology: "Latin lichen = moss + facere = make",
@@ -1552,6 +1814,265 @@ export const SYMPTOMS: SymptomEntry[] = [
       "Primary vesicle or papule — excoriation is secondary change atop another lesion",
       "Dermatographism — wheal from stroking intact skin, not frank excoriation",
     ],
+  },
+  {
+    id: "erosion",
+    name: "Erosion",
+    etymology: "Latin erodere = gnaw away",
+    aliases: ["erosion", "erosions", "skin erosion", "mucosal erosion", "eroded lesion"],
+    definition:
+      "Superficial loss of epidermis or mucosal epithelium that does not extend through the basement membrane; heals without scarring.",
+    mechanism:
+      "Ruptured vesicle/bulla, friction, scratching, maceration, or epithelial necrosis removes surface epithelium while sparing deeper dermis.",
+    thinkOf: [
+      "Pemphigus vulgaris — painful oral erosions",
+      "HSV — vesicles rupture into shallow erosions/ulcers",
+      "Atopic dermatitis — excoriated erosions",
+      "Stevens-Johnson syndrome / TEN — mucosal erosions",
+      "Intertrigo or diaper dermatitis — macerated erosions",
+    ],
+    pairWith: [
+      "Painful oral erosions + flaccid bullae → pemphigus vulgaris",
+      "Grouped vesicles that rupture → HSV erosions",
+      "Drug exposure + mucosal erosions + skin pain → SJS/TEN",
+      "Pruritus + scratch marks → excoriated erosions",
+    ],
+    distinguishFrom: [
+      "Ulcer — deeper loss into dermis/subcutis; scars",
+      "Excoriation — erosion caused specifically by scratching/picking",
+      "Fissure — linear crack rather than broad shallow epithelial loss",
+    ],
+  },
+  {
+    id: "ulcer",
+    name: "Ulcer",
+    etymology: "Latin ulcus = sore",
+    aliases: ["ulcer", "ulcers", "skin ulcer", "cutaneous ulcer", "mucosal ulcer", "ulceration"],
+    definition:
+      "Full-thickness loss of epidermis with extension into dermis or deeper tissue; often heals with scarring.",
+    mechanism:
+      "Ischemia, pressure, infection, immune-mediated injury, malignancy, or neuropathy destroys epidermis and dermis, creating a crater-like defect.",
+    thinkOf: [
+      "Venous stasis ulcer — medial malleolus, edema, hemosiderin",
+      "Arterial ulcer — punched out, painful, distal, poor pulses",
+      "Diabetic neuropathic ulcer — pressure points, painless",
+      "Pressure ulcer — immobility over bony prominences",
+      "Aphthous ulcer / Behçet disease",
+      "Pyoderma gangrenosum — pathergy, IBD association",
+    ],
+    pairWith: [
+      "Medial ankle + edema + hyperpigmentation → venous stasis ulcer",
+      "Painful punched-out toes + weak pulses → arterial insufficiency",
+      "Plantar pressure ulcer + neuropathy → diabetes mellitus",
+      "Sacrum/heel in immobilized patient → pressure ulcer",
+      "Oral/genital ulcers + uveitis → Behçet disease",
+    ],
+    distinguishFrom: [
+      "Erosion — superficial; no scarring",
+      "Abscess — pus cavity, not tissue-loss crater",
+      "Fissure — linear crack, often at folds or dry skin",
+    ],
+    pediatrics:
+      "Oral ulcers in children are commonly aphthous, HSV, hand-foot-mouth disease, or herpangina; genital/perianal ulcers raise infection, IBD, trauma, or abuse-context concerns.",
+  },
+  {
+    id: "fissure",
+    name: "Fissure",
+    etymology: "Latin fissura = cleft/split",
+    aliases: ["fissure", "fissures", "skin fissure", "crack", "cracked skin", "linear crack"],
+    definition:
+      "Linear split or crack in epidermis that may extend into dermis; often painful and located in dry or thickened skin.",
+    mechanism:
+      "Loss of elasticity from xerosis, inflammation, maceration, or hyperkeratosis causes skin to crack under tension or movement.",
+    thinkOf: [
+      "Atopic dermatitis with xerosis",
+      "Tinea pedis — interdigital fissures",
+      "Angular cheilitis — mouth corner fissures",
+      "Anal fissure — painful defecation, bright red blood",
+      "Psoriasis plaques cracking on palms/soles",
+    ],
+    pairWith: [
+      "Pruritic dry flexural skin → atopic dermatitis",
+      "Toe-web scale/fissures → tinea pedis",
+      "Pain with bowel movement + blood on toilet paper → anal fissure",
+      "Mouth corner fissures + anemia/B vitamin deficiency/candida → angular cheilitis",
+    ],
+    distinguishFrom: [
+      "Erosion — broad shallow loss, not linear split",
+      "Ulcer — deeper crater-like defect",
+      "Excoriation — scratch/pick-induced erosion",
+    ],
+  },
+  {
+    id: "scale",
+    name: "Scale",
+    etymology: "Old Norse skal = shell",
+    aliases: ["scale", "scales", "scaling", "scaly lesion", "desquamation", "flaking skin"],
+    definition:
+      "Visible flakes or plates of stratum corneum from abnormal keratinization or increased epidermal turnover.",
+    mechanism:
+      "Hyperproliferation, parakeratosis, impaired barrier lipids, or infection increases retained keratin sheets on the skin surface.",
+    thinkOf: [
+      "Psoriasis — silvery scale over erythematous plaques",
+      "Tinea corporis/pedis — annular or interdigital scale",
+      "Seborrheic dermatitis — greasy scale",
+      "Pityriasis rosea — collarette scale",
+      "Ichthyosis vulgaris — fish-scale xerosis",
+    ],
+    pairWith: [
+      "Silvery scale + extensor plaques → psoriasis",
+      "Annular scale + central clearing + KOH hyphae → tinea corporis",
+      "Greasy scalp/nasolabial scale → seborrheic dermatitis",
+      "Herald patch + Christmas-tree trunk rash → pityriasis rosea",
+    ],
+    distinguishFrom: [
+      "Crust — dried serum/blood/pus, not keratin flakes",
+      "Xerosis — dry skin; may produce fine scale",
+      "Lichenification — thickened skin lines from scratching",
+    ],
+  },
+  {
+    id: "crust",
+    name: "Crust",
+    etymology: "Latin crusta = shell/scab",
+    aliases: ["crust", "crusts", "crusting", "crusted lesion", "scab", "honey-colored crust"],
+    definition:
+      "Dried serum, blood, pus, or exudate on the skin surface; often forms after vesicles, pustules, erosions, or ulcers drain.",
+    mechanism:
+      "Inflammatory or infectious exudate escapes through damaged epidermis and dries, leaving yellow, brown, red, or black surface material.",
+    thinkOf: [
+      "Impetigo — honey-colored crust from Staph aureus or Strep pyogenes",
+      "Eczema with secondary bacterial infection",
+      "HSV or varicella lesions after vesicles rupture",
+      "Scabies with excoriated/crusted lesions",
+      "Eschar — black necrotic crust in ecthyma, anthrax, rickettsial disease",
+    ],
+    pairWith: [
+      "Honey-colored crust around nose/mouth → nonbullous impetigo",
+      "Atopic dermatitis + weeping/crust → impetiginization",
+      "Black eschar + tick/travel exposure → rickettsial disease clue",
+      "Crusted widespread hyperkeratosis + immunosuppression → crusted scabies",
+    ],
+    distinguishFrom: [
+      "Scale — dry keratin flakes",
+      "Eschar — necrotic black crust; severe subtype",
+      "Scab — common term for dried blood crust",
+    ],
+    pediatrics:
+      "Honey-colored crusted impetigo around nose/mouth is classic in children and spreads by scratching/autoinoculation.",
+  },
+  {
+    id: "atrophy",
+    name: "Atrophy",
+    etymology: "Greek a = without + trophe = nourishment",
+    aliases: ["atrophy", "skin atrophy", "atrophic skin", "atrophic lesion", "cigarette-paper skin"],
+    definition:
+      "Thinning or depression of epidermis, dermis, or subcutaneous tissue; skin may look shiny, wrinkled, or fragile.",
+    mechanism:
+      "Loss of collagen, elastin, epidermal thickness, adnexal structures, or fat reduces tissue volume and tensile strength.",
+    thinkOf: [
+      "Chronic topical or systemic corticosteroid exposure",
+      "Aging / photoaging",
+      "Systemic sclerosis late changes",
+      "Lupus or dermatomyositis poikiloderma",
+      "Striae — dermal atrophy from stretching/glucocorticoids",
+    ],
+    pairWith: [
+      "Thin shiny skin + telangiectasias after steroids → steroid atrophy",
+      "Purple striae + central obesity → Cushing syndrome",
+      "Poikiloderma + proximal weakness → dermatomyositis",
+      "Hair loss/shiny skin over ischemic limb → peripheral artery disease",
+    ],
+    distinguishFrom: [
+      "Scar — fibrous replacement after injury",
+      "Erosion/ulcer — active tissue loss rather than chronic thinning",
+      "Lichenification — thickening, opposite contour change",
+    ],
+  },
+  {
+    id: "scar",
+    name: "Scar",
+    etymology: "Greek eschara = scab/hearth, later wound mark",
+    aliases: ["scar", "scars", "cicatrix", "cicatrices", "keloid", "hypertrophic scar"],
+    definition:
+      "Fibrous tissue replacing normal skin after dermal injury; may be flat, atrophic, hypertrophic, or extend beyond wound margins as a keloid.",
+    mechanism:
+      "Wound healing deposits collagen and extracellular matrix; excess fibroblast/TGF-β activity produces hypertrophic scars or keloids.",
+    thinkOf: [
+      "Keloid — scar extends beyond original wound",
+      "Hypertrophic scar — raised but confined to wound",
+      "Acne scarring",
+      "Burn or surgical scars",
+      "Ehlers-Danlos — thin atrophic scars from collagen defects",
+    ],
+    pairWith: [
+      "Raised scar beyond incision/piercing → keloid",
+      "Hyperextensible skin + atrophic scars → Ehlers-Danlos",
+      "Pitted facial scars + prior acne → acne scarring",
+      "Contracture over burn site → scar remodeling complication",
+    ],
+    distinguishFrom: [
+      "Atrophy — thinning without necessarily prior wound fibrosis",
+      "Lichenification — thickened scratched skin, not healed injury",
+      "Granulation tissue — healing wound bed, not mature scar",
+    ],
+  },
+  {
+    id: "burrow",
+    name: "Burrow",
+    etymology: "Old English burg = shelter/dug place",
+    aliases: ["burrow", "burrows", "scabies burrow", "linear burrow", "serpiginous burrow"],
+    definition:
+      "Thin, short, linear or wavy track in the stratum corneum made by an organism moving through superficial skin.",
+    mechanism:
+      "Mite or parasite migration creates a tunnel and triggers delayed hypersensitivity, producing intense pruritus and excoriations.",
+    thinkOf: [
+      "Scabies — interdigital spaces, wrists, beltline, genitalia",
+      "Crusted scabies — immunosuppressed or institutionalized",
+      "Cutaneous larva migrans — longer serpiginous migrating track",
+    ],
+    pairWith: [
+      "Nocturnal pruritus + finger-web burrows → scabies",
+      "Household contacts itching → scabies",
+      "Barefoot beach exposure + migrating serpiginous track → cutaneous larva migrans",
+      "Hyperkeratotic crusted plaques in immunosuppressed → crusted scabies",
+    ],
+    distinguishFrom: [
+      "Excoriation — scratch mark; often secondary to itchy burrows",
+      "Serpiginous lesion — broader winding pattern; may be parasite migration",
+      "Lymphangitis streak — deeper red linear inflammation, not epidermal tunnel",
+    ],
+    pediatrics:
+      "In infants, scabies can involve palms, soles, scalp, and face; household treatment matters because reinfestation is common.",
+  },
+  {
+    id: "comedo",
+    name: "Comedo",
+    etymology: "Latin comedere = eat up; historical 'worm-like' plug",
+    aliases: ["comedo", "comedone", "comedones", "blackhead", "blackheads", "whitehead", "whiteheads"],
+    definition:
+      "Keratin and sebum plug within a hair follicle; open comedo is a blackhead, closed comedo is a whitehead.",
+    mechanism:
+      "Follicular hyperkeratinization plus sebum retention obstructs the pilosebaceous unit; Cutibacterium acnes inflammation can progress to papules, pustules, nodules, or cysts.",
+    thinkOf: [
+      "Acne vulgaris — comedones are defining primary lesions",
+      "Androgen excess — severe or sudden acne with hirsutism/irregular menses",
+      "Medication acneiform eruptions — steroids, lithium, EGFR inhibitors",
+      "Chloracne — halogenated aromatic hydrocarbon exposure",
+    ],
+    pairWith: [
+      "Comedones + papules/pustules on face/back → acne vulgaris",
+      "Severe cystic acne + hirsutism → hyperandrogenism/PCOS",
+      "Monomorphic papules/pustules without comedones → acneiform drug eruption or folliculitis",
+      "Open black plug → blackhead; closed white papule → whitehead",
+    ],
+    distinguishFrom: [
+      "Pustule — pus-filled inflammatory lesion",
+      "Milia — tiny keratin cysts, not follicular acne comedones",
+      "Folliculitis — follicular pustules without comedones",
+    ],
+    pediatrics:
+      "Comedonal acne commonly starts in adolescence with puberty-driven sebum; prepubertal severe acne should prompt androgen-excess consideration.",
   },
   {
     id: "indurated-plaque",
@@ -1926,6 +2447,7 @@ export const SYMPTOMS: SymptomEntry[] = [
       "maculopapular rashes",
       "maculopapular eruption",
       "maculopapular exanthem",
+      "maculopapular",
       "morbilliform rash",
       "morbilliform eruption",
     ],
@@ -1957,6 +2479,154 @@ export const SYMPTOMS: SymptomEntry[] = [
       "Petechial/purpuric rash — non-blanching hemorrhage, not simple maculopapular erythema",
       "Erythema migrans — expanding annular lesion at tick bite (Lyme)",
     ],
+  },
+  {
+    id: "annular-lesion",
+    name: "Annular Lesion",
+    etymology: "Latin annulus = little ring",
+    aliases: [
+      "annular lesion",
+      "annular rash",
+      "annular plaque",
+      "ring-shaped lesion",
+      "ring shaped lesion",
+      "ring lesion",
+      "circular rash",
+    ],
+    definition:
+      "Ring-shaped lesion with central clearing or relative central fading; may be macular, papular, plaque-like, or scaly.",
+    mechanism:
+      "Peripheral spread of inflammation or infection with central resolution creates a ring; scale, palpability, and exposure narrow cause.",
+    thinkOf: [
+      "Tinea corporis — annular scaly plaque with central clearing",
+      "Erythema migrans — expanding annular Lyme lesion",
+      "Granuloma annulare — firm smooth annular papules/plaques",
+      "Erythema multiforme — target/annular lesions",
+      "Subacute cutaneous lupus — annular photosensitive plaques",
+    ],
+    pairWith: [
+      "Annular scale + KOH hyphae → tinea corporis",
+      "Expanding annular lesion after tick exposure → Lyme disease",
+      "Smooth annular papules without scale → granuloma annulare",
+      "Photosensitive annular plaques + anti-Ro/SSA → subacute cutaneous lupus",
+    ],
+    distinguishFrom: [
+      "Target lesion — concentric rings with dusky center",
+      "Serpiginous lesion — snake-like/wavy border rather than closed ring",
+      "Reticular lesion — netlike/lacy pattern",
+    ],
+  },
+  {
+    id: "target-lesion",
+    name: "Target Lesion",
+    etymology: "target = circular mark + lesion = injury",
+    aliases: [
+      "target lesion",
+      "target lesions",
+      "iris lesion",
+      "iris lesions",
+      "targetoid lesion",
+      "targetoid rash",
+    ],
+    definition:
+      "Concentric lesion with at least three zones: dusky or necrotic center, paler edematous ring, and outer erythematous rim.",
+    mechanism:
+      "Interface dermatitis and keratinocyte apoptosis create central injury while surrounding inflammation forms concentric rings.",
+    thinkOf: [
+      "Erythema multiforme — HSV-triggered, acral target lesions",
+      "Stevens-Johnson syndrome/TEN — atypical targetoid lesions plus mucosal necrosis",
+      "Fixed drug eruption — recurrent targetoid plaque at same site",
+      "Lyme erythema migrans — can be target-like but usually expanding annular lesion",
+    ],
+    pairWith: [
+      "Acral target lesions after HSV → erythema multiforme",
+      "Mucosal erosions + skin pain + drug exposure → SJS/TEN",
+      "Same site after medication exposure → fixed drug eruption",
+      "Tick exposure + expanding lesion → erythema migrans, not classic EM target",
+    ],
+    distinguishFrom: [
+      "Annular lesion — ring-shaped, often central clearing but not three-zone target",
+      "Urticaria — transient wheals, not fixed target lesions",
+      "Purpura — non-blanching hemorrhage without concentric zones",
+    ],
+    pediatrics:
+      "Erythema multiforme in children is often HSV- or Mycoplasma-associated; mucosal involvement and skin pain should raise SJS/TEN concern.",
+  },
+  {
+    id: "reticular-lesion",
+    name: "Reticular Lesion",
+    etymology: "Latin rete = net + -icular = small/related",
+    aliases: [
+      "reticular lesion",
+      "reticular rash",
+      "retiform rash",
+      "netlike rash",
+      "net-like rash",
+      "lacy rash",
+      "livedo reticularis",
+    ],
+    definition:
+      "Netlike or lacy vascular skin pattern, often violaceous or erythematous, produced by uneven blood flow through cutaneous vascular plexuses.",
+    mechanism:
+      "Vasospasm, vascular obstruction, or inflammation reduces flow in portions of the dermal plexus while adjacent vessels remain perfused, creating a netlike pattern.",
+    thinkOf: [
+      "Livedo reticularis — cold-induced or idiopathic",
+      "Antiphospholipid syndrome — livedo with thrombosis/recurrent pregnancy loss",
+      "Polyarteritis nodosa or other vasculitis",
+      "Cholesterol emboli — livedo reticularis with renal dysfunction/eosinophilia",
+      "Erythema infectiosum — lacy rash from parvovirus B19",
+    ],
+    pairWith: [
+      "Livedo + thrombosis/miscarriages → antiphospholipid syndrome",
+      "Livedo + hypertension + neuropathy → polyarteritis nodosa",
+      "After vascular procedure + blue toes + eosinophilia → cholesterol emboli",
+      "Slapped cheek then lacy body rash in child → parvovirus B19",
+    ],
+    distinguishFrom: [
+      "Annular lesion — ring-shaped, not netlike",
+      "Serpiginous lesion — winding track or border",
+      "Telangiectasia — discrete dilated superficial vessels",
+    ],
+    pediatrics:
+      "Parvovirus B19 causes slapped-cheek facial erythema followed by a lacy reticular trunk/extremity rash; aplastic crisis risk in sickle cell disease.",
+  },
+  {
+    id: "serpiginous-lesion",
+    name: "Serpiginous Lesion",
+    etymology: "Latin serpere = to creep",
+    aliases: [
+      "serpiginous lesion",
+      "serpiginous rash",
+      "serpiginous track",
+      "serpiginous eruption",
+      "snake-like lesion",
+      "wavy lesion",
+      "migrating track",
+    ],
+    definition:
+      "Wavy, creeping, snake-like lesion or border that may migrate over time; commonly describes parasite tracks or advancing inflammatory edges.",
+    mechanism:
+      "A moving organism, advancing inflammatory front, or irregular peripheral extension leaves a curving trail or border.",
+    thinkOf: [
+      "Cutaneous larva migrans — hookworm larvae after barefoot sand/soil exposure",
+      "Scabies burrows — short wavy tracks in finger webs/wrists",
+      "Tinea corporis — serpiginous scaly active border",
+      "Erythema gyratum repens — rare paraneoplastic wood-grain pattern",
+      "Creeping eruption from other parasites",
+    ],
+    pairWith: [
+      "Barefoot beach exposure + intensely pruritic migrating track → cutaneous larva migrans",
+      "Finger-web burrows + nocturnal pruritus → scabies",
+      "Scaly advancing edge + central clearing → tinea corporis",
+      "Rapidly migrating concentric wood-grain rash → erythema gyratum repens",
+    ],
+    distinguishFrom: [
+      "Burrow — specific superficial tunnel, usually scabies",
+      "Annular lesion — ring-shaped; serpiginous is winding/creeping",
+      "Lymphangitis — straight or branching red streak along lymphatics",
+    ],
+    pediatrics:
+      "Cutaneous larva migrans is common in children after barefoot play on contaminated sand/soil; lesion migration is the clue.",
   },
   {
     id: "thrombocytopenia",

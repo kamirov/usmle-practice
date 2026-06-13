@@ -120,6 +120,12 @@ function scheduleHide(): void {
   }, HIDE_DELAY_MS);
 }
 
+function clearScheduledHide(): void {
+  if (!hideTimer) return;
+  clearTimeout(hideTimer);
+  hideTimer = null;
+}
+
 function stopPopoverAudio(): void {
   const audio = popoverEl?.querySelector<HTMLAudioElement>(POPOVER_AUDIO_SELECTOR);
   if (!audio) return;
@@ -238,19 +244,25 @@ function renderOrganPopover(organId: string): boolean {
   const imageAttribution = getOrganImageAttributionForId(organId);
   const derivatives =
     organ.derivatives && organ.derivatives.length > 0
-      ? `<ul class="usmle-organ-popover__list">${organ.derivatives
-          .map((d) => `<li>${d}</li>`)
-          .join("")}</ul>`
+      ? renderListSection("Derivatives", organ.derivatives)
       : "";
 
-  const bodyContent = `
+  const bodyContent = renderRichPopoverContent(
+    `
     ${renderPopoverTitle(organ.name, "organ", organ.etymology)}
     <div class="usmle-organ-popover__layer"><strong>Germ layer:</strong> ${organ.germLayer}</div>
     <div class="usmle-organ-popover__origin">${organ.origin}</div>
     ${derivatives}
-  `;
+    ${organ.functionSummary ? `<div class="usmle-organ-popover__section-label">Function</div><div class="usmle-organ-popover__mechanism">${organ.functionSummary}</div>` : ""}
+    ${organ.pediatrics ? renderPediatricsSection(organ.pediatrics) : ""}
+  `,
+    `
+    ${renderListSection("Common pathologies", organ.commonPathologies ?? [])}
+    ${renderListSection("Step 1 pearls", organ.step1Pearls ?? [])}
+  `,
+  );
+  popoverEl.classList.add("usmle-organ-popover--rich");
   if (imageSrc && imageCaption && imageAttribution) {
-    popoverEl.classList.add("usmle-organ-popover--rich");
     popoverEl.classList.add("usmle-organ-popover--with-media");
     popoverEl.innerHTML = `
       <div class="usmle-organ-popover__layout">
@@ -433,6 +445,7 @@ function renderSymptomPopover(symptomId: string): boolean {
     <div class="usmle-organ-popover__meaning">${symptom.definition}</div>
     <div class="usmle-organ-popover__section-label">Mechanism</div>
     <div class="usmle-organ-popover__mechanism">${symptom.mechanism}</div>
+    ${symptom.pediatrics ? renderPediatricsSection(symptom.pediatrics) : ""}
   `,
     `
     ${renderListSection("Think of", symptom.thinkOf)}
@@ -902,6 +915,7 @@ function renderSignalingPopover(signalingId: string): boolean {
     ${meta ? `<div class="usmle-organ-popover__layer">${meta}</div>` : ""}
     <div class="usmle-organ-popover__section-label">Function</div>
     <div class="usmle-organ-popover__mechanism">${molecule.function}</div>
+    ${molecule.mnemonic ? `<div class="usmle-organ-popover__section-label">Mnemonic</div><div class="usmle-organ-popover__mechanism">${molecule.mnemonic}</div>` : ""}
   `,
     `
     ${renderListSection("Clinical relevance", molecule.clinicalRelevance)}
@@ -1083,6 +1097,18 @@ export function startPopoverController(): void {
       if (related && (from.contains(related) || popoverEl?.contains(related)))
         return;
       scheduleHide();
+    },
+    true,
+  );
+
+  document.addEventListener(
+    "keydown",
+    (event) => {
+      if (event.key !== "Escape" && event.key !== "Esc") return;
+      if (!activeChip || !popoverEl || popoverEl.hidden) return;
+
+      clearScheduledHide();
+      hidePopover();
     },
     true,
   );

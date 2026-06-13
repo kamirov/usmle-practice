@@ -1154,7 +1154,6 @@ export const CONDITIONS: ConditionEntry[] = [
       "distributive shock",
       "obstructive shock",
       "septic shock",
-      "anaphylactic shock",
       "neurogenic shock",
     ],
     definition:
@@ -1211,6 +1210,74 @@ export const CONDITIONS: ConditionEntry[] = [
     ],
     pediatrics:
       "Infants compensate with tachycardia until late decompensation — hypotension is a late and ominous sign. Septic shock in neonates/children: fluids first, then epinephrine or norepinephrine per PALS; adrenal crisis and congenital heart disease are important pediatric differentials.",
+  },
+  {
+    id: "anaphylaxis",
+    name: "Anaphylaxis",
+    etymology: "Greek ana = against/back + phylaxis = protection",
+    aliases: [
+      "anaphylaxis",
+      "anaphylactic reaction",
+      "anaphylactic shock",
+      "systemic anaphylaxis",
+      "severe allergic reaction",
+      "ige-mediated anaphylaxis",
+    ],
+    definition:
+      "Acute, life-threatening systemic hypersensitivity reaction with airway, breathing, or circulatory compromise, usually from widespread mast cell and basophil mediator release.",
+    pathophysiology:
+      "Most cases are type I hypersensitivity: prior sensitization → allergen re-exposure cross-links IgE on FcεRI receptors of mast cells/basophils → release of histamine, tryptase, leukotrienes, prostaglandins, and platelet-activating factor → vasodilation, capillary leak, bronchoconstriction, and mucous secretion. Non-IgE direct mast cell activation can mimic this.",
+    classicPresentation: [
+      "Minutes to hours after food, drug, insect venom, latex, or contrast exposure",
+      "Urticaria, pruritus, flushing, angioedema",
+      "Wheeze, stridor, throat tightness, dyspnea",
+      "Hypotension, syncope, tachycardia, GI cramping, vomiting, diarrhea",
+    ],
+    keyFindings: [
+      "Skin/mucosal involvement plus respiratory compromise or hypotension",
+      "Bronchospasm and upper-airway edema",
+      "Distributive shock: low SVR from vasodilation and capillary leak",
+      "Biphasic recurrence can occur after initial improvement",
+    ],
+    keyLabs: [
+      "Serum tryptase elevated within ~1–2 h supports mast cell activation; normal level does not exclude anaphylaxis",
+      "Specific IgE or skin testing later can identify culprit allergen; do not delay treatment",
+    ],
+    associations: [
+      "Foods: peanut/tree nuts, shellfish, milk, egg",
+      "Medications: β-lactams, NSAIDs, chemotherapy biologics",
+      "Hymenoptera venom, latex, exercise-associated food allergy",
+      "Mastocytosis increases risk of severe venom anaphylaxis",
+    ],
+    complications: [
+      "Airway obstruction from laryngeal edema",
+      "Refractory distributive shock",
+      "Biphasic anaphylaxis",
+      "Death without prompt epinephrine",
+    ],
+    distinguishFrom: [
+      "Vasovagal syncope — bradycardia, pallor, no urticaria/wheeze",
+      "Panic attack — dyspnea/paresthesias without hypotension, wheeze, or hives",
+      "Hereditary angioedema — bradykinin-mediated swelling without urticaria; poor response to epinephrine/antihistamines",
+      "Serum sickness — type III hypersensitivity days to weeks later with fever, rash, arthralgia, low complement",
+      "Vancomycin flushing reaction — direct histamine release from rapid infusion, not IgE-mediated",
+    ],
+    treatment: [
+      "Immediate IM epinephrine in anterolateral thigh; repeat every 5–15 min if needed",
+      "Airway support, high-flow O₂, supine positioning with legs elevated, aggressive isotonic IV fluids",
+      "Adjuncts: H1 antihistamine, H2 blocker, bronchodilator for wheeze, glucocorticoid for prolonged/biphasic risk",
+      "Glucagon for refractory anaphylaxis in patients taking β-blockers",
+      "Observe after stabilization; prescribe epinephrine auto-injector and allergen avoidance plan",
+    ],
+    boardsPearls: [
+      "Epinephrine is first-line; antihistamines are adjuncts and do not treat airway edema or shock",
+      "α₁ effect reverses vasodilation/edema; β₂ bronchodilates and reduces mediator release; β₁ supports cardiac output",
+      "Tryptase = mast cell granule marker; draw acutely and compare with baseline if needed",
+      "Type I hypersensitivity: IL-4 class switching to IgE, mast cell sensitization, then re-exposure degranulation",
+      "β-blocker use can make anaphylaxis refractory to epinephrine; glucagon bypasses β-receptor blockade",
+    ],
+    pediatrics:
+      "Food allergy is the leading pediatric trigger. Children may present with repetitive vomiting, cough/wheeze, or behavior change before hypotension; use weight-based IM epinephrine (0.01 mg/kg) promptly.",
   },
   {
     id: "hypertrophic-cardiomyopathy",
@@ -1716,6 +1783,158 @@ export const CONDITIONS: ConditionEntry[] = [
     ],
     pediatrics:
       "Classic presentation in male infant after 6 months when maternal IgG wanes — recurrent otitis and pneumonia. Exam shows absent tonsillar tissue. Live vaccines (MMR, varicella, rotavirus, OPV) are contraindicated. IVIG replacement started early prevents bronchiectasis. Family history of male relatives with early childhood infections suggests X-linked inheritance.",
+  },
+  {
+    id: "chronic-granulomatous-disease",
+    name: "Chronic Granulomatous Disease",
+    etymology: "Greek chronos = time + Latin granulum = small grain + -oma = mass + disease = disordered function",
+    aliases: [
+      "chronic granulomatous disease",
+      "cgd",
+      "nadph oxidase deficiency",
+      "respiratory burst defect",
+      "oxidative burst defect",
+      "phagocyte oxidative burst defect",
+      "gp91phox deficiency",
+      "p47phox deficiency",
+    ],
+    definition:
+      "Primary phagocyte immunodeficiency from defective NADPH oxidase respiratory burst, causing impaired intracellular killing of catalase-positive bacteria and fungi with recurrent infections and granuloma formation.",
+    pathophysiology:
+      "NADPH oxidase cannot generate superoxide in neutrophils/macrophages → ↓ reactive oxygen species and ↓ myeloperoxidase-mediated microbial killing. Catalase-positive organisms destroy their own H₂O₂, so host phagocytes cannot borrow microbial peroxide for killing. Persistent organisms trigger chronic inflammation and granulomas.",
+    classicPresentation: [
+      "Recurrent skin, lung, lymph node, liver, and bone infections in childhood",
+      "Abscesses with Staphylococcus aureus",
+      "Pneumonia from Aspergillus or Burkholderia",
+      "Granulomatous obstruction — GI or GU tract",
+      "Family history; most common form is X-linked",
+    ],
+    keyFindings: [
+      "Recurrent catalase-positive infections",
+      "Granulomas on biopsy due to persistent antigen",
+      "Normal neutrophil count with defective killing",
+      "Lymphadenitis, hepatosplenic abscesses, osteomyelitis",
+    ],
+    keyLabs: [
+      "Dihydrorhodamine (DHR) flow cytometry — abnormal/low oxidative burst (preferred test)",
+      "Nitroblue tetrazolium test — negative/no blue color change (older test)",
+      "Genetic testing: CYBB gp91phox X-linked; NCF1 p47phox autosomal recessive",
+      "Cultures often grow S. aureus, Serratia, Burkholderia cepacia, Nocardia, Aspergillus",
+    ],
+    associations: [
+      "Catalase-positive organisms: S. aureus, Serratia marcescens, Burkholderia cepacia, Nocardia, Aspergillus",
+      "X-linked CYBB mutation — most common and often more severe",
+      "Autosomal recessive NADPH oxidase subunit defects",
+      "Inflammatory bowel disease-like colitis",
+      "Granulomatous obstruction of hollow organs",
+    ],
+    complications: [
+      "Recurrent life-threatening bacterial/fungal infections",
+      "Aspergillus pneumonia",
+      "Hepatic abscess",
+      "Osteomyelitis",
+      "Bronchiectasis or chronic lung damage",
+      "Granulomatous GI/GU obstruction",
+    ],
+    distinguishFrom: [
+      "Leukocyte adhesion deficiency — delayed cord separation, no pus, neutrophilia; adhesion/migration defect",
+      "Chediak-Higashi syndrome — giant granules, partial albinism, neuropathy; lysosomal trafficking defect",
+      "Myeloperoxidase deficiency — impaired bleach generation, usually mild Candida susceptibility; normal DHR",
+      "Hyper-IgE syndrome — cold staph abscesses, eczema, retained primary teeth, ↑ IgE",
+      "Complement deficiency — Neisseria or encapsulated organisms depending pathway, not catalase-positive phagocyte pattern",
+    ],
+    treatment: [
+      "Lifelong prophylaxis: trimethoprim-sulfamethoxazole plus itraconazole/azole antifungal",
+      "Interferon-γ reduces serious infections in some patients",
+      "Aggressive culture-directed antibiotics/antifungals for acute infections",
+      "Hematopoietic stem cell transplant can be curative in severe disease",
+      "Avoid high-risk mold exposures (mulch, decaying leaves, construction dust)",
+    ],
+    boardsPearls: [
+      "CGD = NADPH oxidase defect → no respiratory burst",
+      "Catalase-positive organisms mnemonic: Staph aureus, Serratia, Burkholderia, Nocardia, Aspergillus",
+      "DHR flow cytometry is the modern diagnostic test; NBT is classic board test",
+      "Catalase-positive organisms remove H₂O₂, so CGD phagocytes cannot use microbial peroxide",
+      "Granulomas are from persistent intracellular organisms, not an adaptive T-cell problem",
+    ],
+    pediatrics:
+      "Usually presents in early childhood with recurrent abscesses, pneumonia, lymphadenitis, or osteomyelitis. X-linked disease often affects boys and may be severe; prophylaxis and early infection treatment prevent organ damage.",
+  },
+  {
+    id: "asplenic-sepsis",
+    name: "Asplenic Sepsis",
+    etymology: "Greek a- = without + Greek splen = spleen + Greek sepsis = putrefaction/infection",
+    aliases: [
+      "asplenic sepsis",
+      "overwhelming post-splenectomy infection",
+      "opsi",
+      "overwhelming postsplenectomy infection",
+      "post splenectomy sepsis",
+      "postsplenectomy sepsis",
+      "functional asplenia sepsis",
+      "hyposplenic sepsis",
+      "asplenia sepsis",
+      "autosplenectomy sepsis",
+    ],
+    definition:
+      "Rapid, severe bloodstream infection in an anatomic or functionally asplenic patient, classically from encapsulated bacteria that normally require splenic macrophages and IgM/complement opsonization for clearance.",
+    pathophysiology:
+      "Loss of splenic marginal-zone B cells, macrophage filtration, and IgM-mediated complement opsonization → impaired clearance of blood-borne encapsulated organisms → fulminant bacteremia, DIC, shock, and death can develop within hours.",
+    classicPresentation: [
+      "Asplenic or splenectomized patient with fever, chills, malaise, vomiting, or diarrhea",
+      "Rapid progression to hypotension, altered mental status, DIC, purpura, or shock",
+      "History of sickle cell disease, splenectomy, trauma, celiac disease, or splenic irradiation",
+      "May initially look like a viral illness before sudden collapse",
+    ],
+    keyFindings: [
+      "Fever in asplenia is an emergency",
+      "Howell-Jolly bodies on peripheral smear indicate impaired splenic function",
+      "Purpura fulminans/DIC in severe cases",
+      "Shock out of proportion to early symptoms",
+    ],
+    keyLabs: [
+      "Blood cultures before antibiotics if this does not delay therapy",
+      "CBC may show leukocytosis or leukopenia; thrombocytosis after splenectomy",
+      "Coagulation studies may show DIC: ↑ PT/PTT, ↓ fibrinogen, ↑ D-dimer",
+      "Peripheral smear — Howell-Jolly bodies",
+    ],
+    associations: [
+      "Streptococcus pneumoniae — most common classic cause",
+      "Haemophilus influenzae type b",
+      "Neisseria meningitidis",
+      "Capnocytophaga canimorsus after dog bite",
+      "Babesia and Plasmodium — severe parasitemia risk",
+      "Sickle cell disease with autosplenectomy",
+    ],
+    complications: [
+      "Septic shock",
+      "DIC and purpura fulminans",
+      "Waterhouse-Friderichsen syndrome with meningococcemia",
+      "Multiorgan failure",
+      "Death within hours if untreated",
+    ],
+    distinguishFrom: [
+      "Ordinary viral syndrome — asplenic fever must be treated as bacteremia until proven otherwise",
+      "Neutropenic fever — chemotherapy/ANC-driven risk; different immune defect",
+      "Complement terminal pathway deficiency — recurrent Neisseria, but spleen intact",
+      "Sickle vaso-occlusive crisis — pain crisis may coexist; fever still requires sepsis workup",
+    ],
+    treatment: [
+      "Immediate empiric IV antibiotics for fever: ceftriaxone or cefotaxime; add vancomycin if severe illness or resistant pneumococcus concern",
+      "Sepsis resuscitation: fluids, vasopressors, source evaluation, ICU care as needed",
+      "Vaccination: pneumococcal, Hib, meningococcal ACWY/B, annual influenza; ideally before elective splenectomy",
+      "Antibiotic prophylaxis in high-risk patients, especially children with sickle cell disease or early post-splenectomy",
+      "Patient education: carry emergency antibiotics/medical alert and seek care immediately for fever or animal bites",
+    ],
+    boardsPearls: [
+      "Asplenia = encapsulated bacteria risk: S. pneumoniae, H. influenzae, N. meningitidis",
+      "Howell-Jolly bodies = nuclear remnants in RBCs from absent splenic filtration",
+      "Fever in asplenic patient is emergency empiric ceftriaxone, not watchful waiting",
+      "Sickle cell disease causes functional asplenia/autosplenectomy early in childhood",
+      "Dog bite + asplenia + sepsis → Capnocytophaga canimorsus",
+    ],
+    pediatrics:
+      "Children with sickle cell disease are functionally asplenic early and need penicillin prophylaxis plus pneumococcal/Hib/meningococcal vaccination. Any fever in a sickle/asplenic child needs urgent evaluation and empiric antibiotics.",
   },
   {
     id: "hyperlipidemia",
@@ -2317,6 +2536,73 @@ export const CONDITIONS: ConditionEntry[] = [
     ],
     pediatrics:
       "Less common than Hashimoto in children; weight loss and behavioral changes may be presenting features.",
+  },
+  {
+    id: "medullary-thyroid-carcinoma",
+    name: "Medullary Thyroid Carcinoma",
+    etymology: "Latin medulla = middle/core + Greek thyreos = shield + carcinoma = malignant epithelial tumor",
+    aliases: [
+      "medullary thyroid carcinoma",
+      "medullary thyroid cancer",
+      "mtc",
+      "c-cell carcinoma",
+      "parafollicular c cell carcinoma",
+      "calcitonin-secreting thyroid cancer",
+    ],
+    definition:
+      "Neuroendocrine thyroid malignancy arising from parafollicular C cells that secretes calcitonin and is strongly associated with RET mutations and MEN2 syndromes.",
+    pathophysiology:
+      "Parafollicular C cells, derived from neural crest via the ultimobranchial body, undergo neoplastic transformation. Sporadic disease is often solitary; familial disease is due to germline activating RET mutations. Tumor cells secrete calcitonin and may deposit amyloid stroma derived from calcitonin peptides.",
+    classicPresentation: [
+      "Painless thyroid nodule or cervical lymphadenopathy",
+      "Flushing or watery diarrhea from peptide secretion",
+      "Family history of MEN2, pheochromocytoma, or hyperparathyroidism",
+      "Hoarseness or dysphagia if locally invasive",
+    ],
+    keyFindings: [
+      "Firm thyroid nodule with possible cervical nodes",
+      "Amyloid stroma on histology with malignant C cells",
+      "May coexist with mucosal neuromas/marfanoid habitus in MEN2B",
+    ],
+    keyLabs: [
+      "↑ Serum calcitonin — key tumor marker",
+      "↑ CEA can follow tumor burden/recurrence",
+      "RET mutation testing in patient and first-degree relatives",
+      "Screen for pheochromocytoma before thyroid surgery in suspected MEN2",
+    ],
+    associations: [
+      "MEN2A: medullary thyroid carcinoma, pheochromocytoma, parathyroid hyperplasia",
+      "MEN2B: medullary thyroid carcinoma, pheochromocytoma, mucosal neuromas, marfanoid habitus",
+      "RET proto-oncogene gain-of-function",
+      "Amyloid deposition from calcitonin peptides",
+    ],
+    complications: [
+      "Cervical lymph node and distant metastases",
+      "Secretory diarrhea and dehydration",
+      "Recurrent laryngeal nerve invasion → hoarseness",
+      "Hypertensive crisis if unrecognized pheochromocytoma is present during surgery",
+    ],
+    distinguishFrom: [
+      "Papillary thyroid carcinoma — orphan Annie nuclei, psammoma bodies, lymphatic spread, thyroglobulin marker",
+      "Follicular thyroid carcinoma — hematogenous spread, capsular/vascular invasion, thyroglobulin marker",
+      "Anaplastic thyroid carcinoma — rapidly enlarging invasive mass in older adult",
+      "Graves disease — diffuse hyperthyroidism with TSI, not calcitonin-secreting C-cell tumor",
+    ],
+    treatment: [
+      "Total thyroidectomy with lymph node dissection when indicated",
+      "Treat pheochromocytoma first if MEN2-associated disease is suspected",
+      "RET-targeted therapy for advanced/metastatic RET-mutant disease",
+      "Genetic counseling and RET screening of relatives",
+    ],
+    boardsPearls: [
+      "C cells secrete calcitonin; medullary thyroid carcinoma = ↑ calcitonin",
+      "MEN2A/2B are RET gain-of-function syndromes with medullary thyroid carcinoma",
+      "Amyloid stroma in medullary thyroid carcinoma comes from calcitonin peptides",
+      "Always screen for pheochromocytoma before thyroidectomy in MEN2 to avoid catecholamine crisis",
+      "Thyroglobulin tracks follicular-derived cancers, not medullary thyroid carcinoma",
+    ],
+    pediatrics:
+      "Familial MEN2 can present in childhood. RET-positive children may need prophylactic thyroidectomy, with timing based on mutation risk; screen family members early.",
   },
   {
     id: "congenital-adrenal-hyperplasia",
@@ -2972,6 +3258,82 @@ export const CONDITIONS: ConditionEntry[] = [
     ],
   },
   {
+    id: "hemolytic-anemia",
+    name: "Hemolytic Anemia",
+    etymology:
+      "Greek haima = blood + lysis = loosening/breakdown + an- = without + haima = blood",
+    aliases: [
+      "hemolytic anemia",
+      "haemolytic anemia",
+      "hemolytic anaemia",
+      "haemolytic anaemia",
+      "hemolysis",
+      "intravascular hemolysis",
+      "extravascular hemolysis",
+      "autoimmune hemolytic anemia",
+      "aiha",
+    ],
+    definition:
+      "Anemia caused by premature red blood cell destruction, either intravascularly in the circulation or extravascularly by splenic/hepatic macrophages.",
+    pathophysiology:
+      "RBC destruction exceeds marrow replacement → reticulocytosis; heme breakdown raises indirect bilirubin and LDH, while free hemoglobin consumes haptoglobin. Extravascular hemolysis occurs mainly in spleen/liver macrophages; intravascular hemolysis releases hemoglobin into plasma and urine.",
+    classicPresentation: [
+      "Fatigue, pallor, dyspnea from anemia",
+      "Jaundice or scleral icterus from indirect hyperbilirubinemia",
+      "Dark urine in intravascular hemolysis",
+      "Splenomegaly in chronic extravascular hemolysis",
+    ],
+    keyFindings: [
+      "Jaundice without primary liver disease",
+      "Splenomegaly",
+      "Pigment gallstones in chronic hemolysis",
+      "Peripheral smear clues: spherocytes, schistocytes, bite cells, sickled cells",
+    ],
+    keyLabs: [
+      "↑ Reticulocyte count",
+      "↑ LDH and ↑ indirect bilirubin",
+      "↓ Haptoglobin",
+      "Direct Coombs test positive in immune hemolysis",
+      "Urine hemoglobin/hemosiderin in intravascular hemolysis",
+    ],
+    associations: [
+      "Warm autoimmune hemolytic anemia — IgG, spherocytes, extravascular hemolysis",
+      "Cold agglutinin disease — IgM, complement, Mycoplasma pneumoniae or EBV association",
+      "Hereditary spherocytosis — ankyrin/spectrin defects, ↑ MCHC",
+      "G6PD deficiency — oxidant stress, Heinz bodies and bite cells",
+      "Microangiopathic hemolytic anemia — schistocytes in TTP/HUS/DIC",
+      "Paroxysmal nocturnal hemoglobinuria — PIGA mutation, absent CD55/CD59",
+    ],
+    complications: [
+      "Pigment gallstones",
+      "Aplastic crisis from parvovirus B19",
+      "Folate deficiency from high erythropoiesis",
+      "Acute kidney injury in severe intravascular hemolysis",
+    ],
+    distinguishFrom: [
+      "Iron deficiency anemia — low ferritin, microcytosis, low reticulocyte response",
+      "Anemia of chronic disease — inflammatory iron sequestration, not RBC destruction",
+      "Acute blood loss — anemia from hemorrhage, not hemolysis labs",
+      "Megaloblastic anemia — macrocytosis and hypersegmented neutrophils",
+    ],
+    treatment: [
+      "Treat underlying cause; transfuse if severe or unstable",
+      "Folate supplementation for chronic hemolysis",
+      "Warm autoimmune hemolytic anemia: corticosteroids ± rituximab or splenectomy",
+      "TTP: urgent plasma exchange; PNH: complement inhibition (eculizumab/ravulizumab)",
+      "G6PD deficiency: avoid oxidant drugs and foods; supportive care during episodes",
+    ],
+    boardsPearls: [
+      "Hemolysis labs: ↑ reticulocytes, ↑ LDH, ↑ indirect bilirubin, ↓ haptoglobin",
+      "Coombs positive = immune hemolysis",
+      "Spherocytes suggest warm AIHA or hereditary spherocytosis; schistocytes suggest MAHA",
+      "Bite cells/Heinz bodies suggest G6PD deficiency after oxidant stress",
+      "Extravascular hemolysis → splenomegaly; intravascular hemolysis → hemoglobinuria",
+    ],
+    pediatrics:
+      "Hereditary spherocytosis, G6PD deficiency, sickle cell disease, HUS after bloody diarrhea, and parvovirus B19 aplastic crisis are high-yield pediatric hemolysis settings.",
+  },
+  {
     id: "sickle-cell-disease",
     name: "Sickle Cell Disease",
     etymology: "Old English sicol = curved blade + cell = small biological unit + disease = disordered function",
@@ -3285,11 +3647,15 @@ export const CONDITIONS: ConditionEntry[] = [
     etymology: "Greek a- = not + topos = place + derma = skin + -itis = inflammation",
     aliases: [
       "atopic dermatitis",
+      "ad",
       "eczema",
       "atopic eczema",
       "infantile eczema",
       "childhood eczema",
       "endogenous eczema",
+      "flexural eczema",
+      "flexural dermatitis",
+      "pruritic flexural dermatitis",
     ],
     definition:
       "Chronic, relapsing inflammatory skin disease characterized by pruritus and eczematous lesions; the most common form of eczema and a core component of the atopic triad (with asthma and allergic rhinitis).",
@@ -3308,14 +3674,22 @@ export const CONDITIONS: ConditionEntry[] = [
       "Keratosis pilaris, palmar hyperlinearity",
       "Secondary crusting/honey-colored lesions → impetiginization (S. aureus)",
     ],
+    keyLabs: [
+      "Clinical diagnosis — no routine lab required",
+      "↑ IgE or eosinophilia can occur but is nonspecific",
+      "Bacterial culture if recurrent or treatment-resistant impetiginization",
+      "HSV PCR/culture if eczema herpeticum suspected",
+    ],
     associations: [
       'Atopic triad: eczema, asthma, allergic rhinitis ("atopic march")',
       "Food allergy (egg, milk, peanut) especially in young children",
       "Filaggrin gene (FLG) mutations — barrier defect",
+      "Higher risk with family history of atopy",
     ],
     complications: [
       "Secondary bacterial infection (impetigo, cellulitis — S. aureus)",
       "Eczema herpeticum — HSV superinfection with monomorphic punched-out erosions, fever; dermatologic emergency",
+      "Molluscum contagiosum and viral warts more extensive with impaired barrier",
       "Sleep disturbance, psychosocial impact",
     ],
     distinguishFrom: [
@@ -3328,9 +3702,12 @@ export const CONDITIONS: ConditionEntry[] = [
     ],
     treatment: [
       "Emollients/moisturizers — cornerstone of maintenance; restore skin barrier",
+      "Gentle skin care: fragrance-free cleanser, short lukewarm baths, avoid harsh irritants",
       "Topical corticosteroids — flares; use appropriate potency for site and age",
       "Topical calcineurin inhibitors (tacrolimus, pimecrolimus) — face/folds, steroid-sparing",
+      "Wet wraps for severe flares; dilute bleach baths may reduce recurrent S. aureus burden",
       "Dupilumab (anti–IL-4Rα) — moderate-to-severe disease refractory to topicals",
+      "Oral JAK inhibitors or phototherapy for selected refractory disease",
       "Trigger avoidance; treat secondary infection; oral antihistamines for sleep-disturbing pruritus",
     ],
     boardsPearls: [
@@ -3339,6 +3716,7 @@ export const CONDITIONS: ConditionEntry[] = [
       "Filaggrin mutation → impaired skin barrier — high-yield genetics link",
       "Eczema herpeticum — punched-out vesicles/erosions in atopic patient with fever → IV acyclovir",
       "S. aureus colonization common; crusted weeping lesions may need antibiotics",
+      "Distribution changes with age: infant face/extensors; child/adult flexural surfaces",
     ],
     pediatrics:
       "Most common in infancy and childhood; 60% present in first year. Many outgrow by adolescence. Food allergy testing only if consistent history — elimination diet under guidance. Topical steroid potency must be age- and site-appropriate (lower potency on face/diaper area).",
@@ -4548,6 +4926,77 @@ export const CONDITIONS: ConditionEntry[] = [
     ],
     pediatrics:
       "Post-streptococcal GN is classic in children after pharyngitis or skin infection; usually self-limited. Minimal change disease causes nephrotic (not primarily nephritic) presentation — distinguish by RBC casts vs heavy proteinuria.",
+  },
+  {
+    id: "goodpasture-syndrome",
+    name: "Goodpasture Syndrome",
+    etymology:
+      "Eponym for Ernest Goodpasture + syndrome = grouped findings",
+    aliases: [
+      "goodpasture",
+      "goodpasture syndrome",
+      "goodpasture disease",
+      "anti-gbm disease",
+      "anti gbm disease",
+      "anti-gbm antibody disease",
+      "anti glomerular basement membrane disease",
+      "pulmonary renal syndrome anti-gbm",
+    ],
+    definition:
+      "Autoimmune pulmonary-renal syndrome caused by IgG antibodies against the α3 chain of type IV collagen in glomerular and alveolar basement membranes.",
+    pathophysiology:
+      "Anti-GBM IgG binds fixed basement membrane antigen → type II hypersensitivity, complement activation, glomerular necrosis/crescents, and alveolar capillary injury with pulmonary hemorrhage. Kidney biopsy shows linear IgG/C3 along the GBM.",
+    classicPresentation: [
+      "Young adult with hemoptysis plus hematuria",
+      "Dyspnea or hypoxemia from pulmonary hemorrhage",
+      "Oliguria, edema, hypertension from rapidly progressive glomerulonephritis",
+      "Recent respiratory infection, smoking, or hydrocarbon exposure may precede symptoms",
+    ],
+    keyFindings: [
+      "Pulmonary hemorrhage",
+      "Nephritic urine sediment with RBC casts",
+      "Rapidly rising creatinine",
+      "Crescentic glomerulonephritis on biopsy",
+    ],
+    keyLabs: [
+      "Serum anti-GBM antibodies",
+      "Urinalysis: hematuria, RBC casts, proteinuria",
+      "Kidney biopsy immunofluorescence: linear IgG along GBM",
+      "Chest imaging: bilateral infiltrates if alveolar hemorrhage",
+    ],
+    associations: [
+      "Type II hypersensitivity",
+      "Type IV collagen α3 chain (COL4A3) target",
+      "HLA-DR15 association",
+      "Smoking and hydrocarbon exposure increase pulmonary hemorrhage risk",
+    ],
+    complications: [
+      "Rapidly progressive renal failure",
+      "End-stage renal disease",
+      "Life-threatening pulmonary hemorrhage",
+      "Respiratory failure",
+    ],
+    distinguishFrom: [
+      "Granulomatosis with polyangiitis — c-ANCA/PR3, granulomas, upper airway disease",
+      "Microscopic polyangiitis — p-ANCA/MPO, pauci-immune GN, no granulomas",
+      "Lupus nephritis — granular immune complex deposition/full-house immunofluorescence",
+      "Post-streptococcal GN — low C3, subepithelial humps, post-strep timing",
+    ],
+    treatment: [
+      "Urgent plasmapheresis to remove anti-GBM antibodies",
+      "High-dose corticosteroids plus cyclophosphamide or rituximab",
+      "Dialysis for severe renal failure",
+      "Smoking cessation and avoidance of pulmonary irritants",
+    ],
+    boardsPearls: [
+      "Linear IgG along GBM = Goodpasture; granular deposition = immune complex disease",
+      "Pulmonary hemorrhage + RPGN → think anti-GBM disease",
+      "Mechanism is type II hypersensitivity against fixed basement membrane antigen",
+      "Anti-GBM target is type IV collagen α3 chain in glomerular and alveolar basement membrane",
+      "Treat fast: plasmapheresis plus immunosuppression",
+    ],
+    pediatrics:
+      "Rare in children, but pulmonary hemorrhage with nephritic urine or rapidly rising creatinine is a renal emergency requiring immediate anti-GBM testing and nephrology involvement.",
   },
   {
     id: "nephritic-syndrome",
@@ -8900,6 +9349,80 @@ export const CONDITIONS: ConditionEntry[] = [
     ],
     pediatrics:
       "Peak incidence 6 months to 5 years; extremely common in daycare. Monitor hydration — oral ulcers cause refusal to eat/drink. EV-A71-associated brainstem encephalitis is rare outside endemic regions but presents with myoclonus, ataxia, and autonomic instability. Nail shedding 1–2 months later is a recognized benign sequela.",
+  },
+  {
+    id: "herpes-labialis",
+    name: "Herpes Labialis",
+    etymology: "Greek herpein = to creep + Latin labium = lip",
+    aliases: [
+      "herpes labialis",
+      "herpes labialis hsv-1",
+      "herpes labialis, hsv-1",
+      "cold sore",
+      "cold sores",
+      "fever blister",
+      "fever blisters",
+      "oral herpes",
+      "recurrent oral herpes",
+      "orolabial herpes",
+      "orolabial hsv",
+    ],
+    definition:
+      "Recurrent HSV infection of the lip or perioral skin, usually HSV-1, causing painful grouped vesicles on an erythematous base that crust and heal.",
+    pathophysiology:
+      "Primary HSV-1 infection establishes latency in the trigeminal ganglion. Reactivation triggered by fever, stress, UV exposure, menstruation, or immunosuppression causes anterograde viral travel to the lip/perioral epithelium, cytolysis, vesicle formation, and contagious viral shedding.",
+    classicPresentation: [
+      "Prodrome of tingling, burning, or pain at vermilion border",
+      "Grouped vesicles on erythematous base around lip",
+      "Vesicles rupture into shallow erosions, then crust",
+      "Recurrent episodes at the same site",
+    ],
+    keyFindings: [
+      "Painful grouped vesicles rather than isolated aphthous ulcer",
+      "Usually keratinized mucosa/lip/perioral skin",
+      "Tender regional lymphadenopathy possible in primary infection",
+      "Triggers: fever, sunlight, stress, immunosuppression",
+    ],
+    keyLabs: [
+      "Clinical diagnosis in classic recurrence",
+      "HSV PCR from lesion swab if diagnosis uncertain or severe disease",
+      "Tzanck smear: multinucleated giant cells and Cowdry type A inclusions (historic/less specific)",
+    ],
+    associations: [
+      "HSV-1 classically oral; HSV-2 classically genital, but either can infect either site",
+      "Latency in trigeminal sensory ganglion",
+      "Eczema herpeticum risk in atopic dermatitis",
+      "Herpetic keratitis risk if ocular involvement",
+    ],
+    complications: [
+      "Secondary bacterial infection of erosions",
+      "Herpetic keratitis with dendritic corneal ulcers",
+      "Eczema herpeticum in patients with atopic dermatitis",
+      "Severe disseminated disease in immunocompromised patients or neonates",
+    ],
+    distinguishFrom: [
+      "Aphthous ulcer — nonkeratinized mucosa, no vesicles, not HSV",
+      "Herpangina — posterior oropharyngeal enterovirus lesions in children",
+      "Hand-foot-mouth disease — oral lesions plus palms/soles vesicles",
+      "Impetigo — honey-colored crusts, usually Staph/Strep, not recurrent grouped vesicles",
+      "Angular cheilitis — fissures at mouth corners, often Candida/irritation",
+    ],
+    treatment: [
+      "Supportive care for mild self-limited episodes",
+      "Oral valacyclovir, acyclovir, or famciclovir early in prodrome for frequent/severe recurrences",
+      "Topical antivirals have modest benefit",
+      "Suppressive antiviral therapy for frequent recurrences or immunocompromised patients",
+      "Avoid direct contact/kissing/oral-genital contact during active lesions",
+    ],
+    boardsPearls: [
+      "HSV-1 classically causes herpes labialis; HSV establishes latency in trigeminal ganglion",
+      "Grouped painful vesicles on erythematous base is the morphology clue",
+      "Reactivation triggers: fever, stress, UV light, immunosuppression",
+      "Acyclovir/valacyclovir inhibit viral DNA polymerase after thymidine kinase activation",
+      "Dendritic corneal ulcer → HSV keratitis; treat urgently to protect vision",
+    ],
+    pediatrics:
+      "Primary HSV-1 in young children often presents as gingivostomatitis with fever, drooling, painful anterior mouth ulcers, and dehydration risk. Neonatal HSV can disseminate and requires IV acyclovir.",
   },
   {
     id: "serum-sickness",

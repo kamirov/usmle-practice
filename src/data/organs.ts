@@ -6,6 +6,10 @@ export interface OrganEntry {
   germLayer: string;
   origin: string;
   derivatives?: string[];
+  functionSummary?: string;
+  commonPathologies?: string[];
+  step1Pearls?: string[];
+  pediatrics?: string;
 }
 
 export const ORGANS: OrganEntry[] = [
@@ -425,6 +429,27 @@ export const ORGANS: OrganEntry[] = [
       "Develop from lymph sacs (mesoderm) and mesenchymal condensations along lymphatic vessels.",
   },
   {
+    id: "systemic-lymphoid-system",
+    name: "Systemic Lymphoid System",
+    etymology: "Latin lympha = clear fluid + Greek eidos = form + Greek systema = organized whole",
+    aliases: [
+      "systemic lymphoid system",
+      "lymphoid system",
+      "lymphatic system",
+      "immune lymphoid system",
+      "secondary lymphoid organs",
+      "lymphoid organs",
+    ],
+    germLayer: "Mesoderm / Endoderm / Ectoderm",
+    origin:
+      "Lymphatic vessels and nodes arise mainly from venous endothelium/mesoderm; thymic epithelium from third pharyngeal pouch endoderm; marrow stroma and spleen from mesoderm. Hematopoietic lymphocytes seed these organs from bone marrow precursors.",
+    derivatives: [
+      "Primary lymphoid organs: bone marrow, thymus",
+      "Secondary lymphoid organs: lymph nodes, spleen, MALT/Peyer patches, tonsils",
+      "Lymphatic vessels and lymph",
+    ],
+  },
+  {
     id: "brain",
     name: "Brain",
     etymology: "Old English braegen + Greek enkephalos = brain",
@@ -645,7 +670,403 @@ export const ORGANS: OrganEntry[] = [
   },
 ];
 
-const organById = new Map(ORGANS.map((o) => [o.id, o]));
+const ORGAN_DETAILS: Record<
+  string,
+  Pick<OrganEntry, "functionSummary" | "commonPathologies" | "step1Pearls" | "pediatrics">
+> = {
+  heart: {
+    functionSummary: "Pumps blood through pulmonary and systemic circuits; coordinated electrical conduction produces effective cardiac output.",
+    commonPathologies: ["Myocardial infarction", "Heart failure", "Arrhythmias", "Valvular disease", "Congenital septal defects"],
+    step1Pearls: ["Coronary occlusion causes coagulative necrosis", "Left-sided failure causes pulmonary edema; right-sided failure causes peripheral edema", "S3 = volume overload; S4 = stiff ventricle"],
+    pediatrics: "Congenital heart disease often presents with cyanosis, poor feeding, failure to thrive, or a murmur rather than adult angina symptoms.",
+  },
+  aorta: {
+    functionSummary: "Elastic conduit that buffers systolic ejection and distributes oxygenated blood to systemic circulation.",
+    commonPathologies: ["Atherosclerosis", "Aortic aneurysm", "Aortic dissection", "Coarctation of the aorta", "Aortic regurgitation/stenosis"],
+    step1Pearls: ["Cystic medial degeneration predisposes to dissection in Marfan syndrome", "Coarctation causes upper-extremity hypertension and rib notching", "AAA classically occurs below renal arteries"],
+  },
+  "pulmonary-artery": {
+    functionSummary: "Carries deoxygenated blood from right ventricle to lungs for gas exchange.",
+    commonPathologies: ["Pulmonary embolism", "Pulmonary hypertension", "Pulmonic stenosis", "Patent ductus arteriosus shunts"],
+    step1Pearls: ["Pulmonary arteries are low-pressure, high-compliance vessels", "Pulmonary emboli increase dead space and can cause acute right heart strain", "Eisenmenger physiology reverses left-to-right shunts to right-to-left"],
+  },
+  "pulmonary-vein": {
+    functionSummary: "Returns oxygenated blood from lungs to left atrium.",
+    commonPathologies: ["Pulmonary venous congestion", "Atrial fibrillation trigger foci", "Total anomalous pulmonary venous return"],
+    step1Pearls: ["Pulmonary veins are the usual ablation target in atrial fibrillation", "Left heart failure raises pulmonary venous pressure -> pulmonary edema"],
+    pediatrics: "Total anomalous pulmonary venous return is a cyanotic congenital lesion that requires mixing through ASD/PFO/PDA.",
+  },
+  svc: {
+    functionSummary: "Returns venous blood from head, neck, upper limbs, and upper thorax to right atrium.",
+    commonPathologies: ["SVC syndrome", "Thrombosis from central lines", "Mediastinal mass compression"],
+    step1Pearls: ["Facial plethora, upper-extremity swelling, and distended chest veins point to SVC obstruction", "Bronchogenic carcinoma and lymphoma are classic causes"],
+  },
+  ivc: {
+    functionSummary: "Returns venous blood from lower body and abdominal viscera to right atrium.",
+    commonPathologies: ["IVC thrombosis", "Budd-Chiari outflow obstruction", "Compression by pregnancy or mass"],
+    step1Pearls: ["IVC filters trap emboli from lower-extremity DVT", "Budd-Chiari causes painful hepatomegaly, ascites, and hepatic congestion"],
+  },
+  "ductus-arteriosus": {
+    functionSummary: "Fetal shunt from pulmonary artery to aorta that bypasses high-resistance fetal lungs.",
+    commonPathologies: ["Patent ductus arteriosus", "Ductal-dependent congenital heart disease", "Premature closure"],
+    step1Pearls: ["PGE1 keeps ductus open; indomethacin/NSAIDs close it", "PDA causes continuous machine-like murmur and left-to-right shunt"],
+    pediatrics: "Premature infants have higher PDA risk; some cyanotic lesions require prostaglandin to maintain ductal flow until repair.",
+  },
+  lungs: {
+    functionSummary: "Perform gas exchange, acid-base regulation via CO2 elimination, and pulmonary vascular filtering/metabolism.",
+    commonPathologies: ["Asthma", "COPD", "Pneumonia", "Pulmonary edema", "ARDS", "Pulmonary embolism"],
+    step1Pearls: ["Type II pneumocytes make surfactant and regenerate alveolar epithelium", "V/Q mismatch is commonest hypoxemia mechanism", "Low DLCO suggests diffusion barrier or emphysema"],
+    pediatrics: "Neonatal respiratory distress syndrome reflects surfactant deficiency; bronchiolitis from RSV is common in infants.",
+  },
+  larynx: {
+    functionSummary: "Protects airway during swallowing and produces voice through vocal fold vibration.",
+    commonPathologies: ["Croup", "Epiglottitis", "Vocal cord paralysis", "Laryngeal cancer"],
+    step1Pearls: ["Recurrent laryngeal nerve injury causes hoarseness", "Croup causes inspiratory stridor and barking cough", "Epiglottitis is a drooling tripod emergency"],
+    pediatrics: "Croup is usually parainfluenza; Hib vaccine sharply reduced pediatric epiglottitis.",
+  },
+  trachea: {
+    functionSummary: "Conducts air from larynx to bronchi; ciliated mucosa clears particles upward.",
+    commonPathologies: ["Tracheoesophageal fistula", "Tracheomalacia", "Foreign body obstruction", "Tracheitis"],
+    step1Pearls: ["TE fistula presents with choking, coughing, cyanosis during feeds", "C-shaped cartilage rings keep airway patent", "Smoking impairs mucociliary clearance"],
+    pediatrics: "Infants with esophageal atresia/TE fistula often have polyhydramnios history and feeding-associated respiratory distress.",
+  },
+  bronchi: {
+    functionSummary: "Distribute airflow through branching conducting airways; smooth muscle controls airway resistance.",
+    commonPathologies: ["Asthma", "Chronic bronchitis", "Bronchiectasis", "Aspiration", "Foreign body"],
+    step1Pearls: ["Right main bronchus is wider, shorter, more vertical -> aspiration site", "Goblet cell hyperplasia defines chronic bronchitis", "Bronchiectasis causes permanent dilation from infection/inflammation"],
+    pediatrics: "Unilateral wheeze in a child is foreign body until proven otherwise.",
+  },
+  pleura: {
+    functionSummary: "Serous membrane lowers friction and couples lung expansion to chest wall mechanics.",
+    commonPathologies: ["Pleural effusion", "Pneumothorax", "Mesothelioma", "Pleuritis"],
+    step1Pearls: ["Transudate = pressure/oncotic problem; exudate = inflammation/malignancy", "Tension pneumothorax shifts mediastinum and needs immediate decompression", "Asbestos exposure causes pleural plaques and mesothelioma"],
+  },
+  esophagus: {
+    functionSummary: "Transports food from pharynx to stomach via peristalsis and sphincter relaxation.",
+    commonPathologies: ["GERD", "Barrett esophagus", "Achalasia", "Esophageal varices", "Squamous cell carcinoma/adenocarcinoma"],
+    step1Pearls: ["Barrett = intestinal metaplasia from chronic GERD", "Achalasia = failure of LES relaxation from myenteric plexus loss", "Varices arise from portal-systemic anastomoses"],
+  },
+  stomach: {
+    functionSummary: "Stores and churns food; secretes acid, intrinsic factor, pepsinogen, mucus, and hormones.",
+    commonPathologies: ["Peptic ulcer disease", "Gastritis", "Gastric adenocarcinoma", "GIST", "Hypertrophic pyloric stenosis"],
+    step1Pearls: ["Parietal cells secrete HCl and intrinsic factor", "H. pylori increases ulcers and gastric cancer risk", "Pernicious anemia targets parietal cells/intrinsic factor"],
+    pediatrics: "Projectile nonbilious vomiting at 2-8 weeks suggests hypertrophic pyloric stenosis.",
+  },
+  "duodenum-proximal": {
+    functionSummary: "Receives gastric chyme plus bile and pancreatic enzymes; major site of iron absorption.",
+    commonPathologies: ["Duodenal ulcer", "Celiac disease", "Annular pancreas", "Superior mesenteric artery syndrome"],
+    step1Pearls: ["Duodenal ulcers improve with meals and are often H. pylori-related", "Celiac disease damages proximal small bowel villi", "Ampulla marks foregut-midgut boundary"],
+  },
+  jejunum: {
+    functionSummary: "Absorbs most carbohydrates, amino acids, lipids, folate, and water.",
+    commonPathologies: ["Celiac disease", "Ischemia", "Small bowel obstruction", "Whipple disease"],
+    step1Pearls: ["Jejunum has tall plicae circulares and long vasa recta compared with ileum", "Folate absorbed in jejunum; B12/bile acids in ileum"],
+  },
+  ileum: {
+    functionSummary: "Absorbs bile acids and vitamin B12; contains Peyer patches for mucosal immunity.",
+    commonPathologies: ["Crohn disease", "Meckel diverticulum", "Gallstone ileus", "B12 deficiency after resection"],
+    step1Pearls: ["Crohn commonly affects terminal ileum", "Meckel = true diverticulum from vitelline duct; rule of 2s", "Peyer patches are lymphoid aggregates"],
+    pediatrics: "Meckel diverticulum classically causes painless lower GI bleeding in children.",
+  },
+  cecum: {
+    functionSummary: "Receives ileal contents and begins large-bowel water/electrolyte handling; appendix arises from cecum.",
+    commonPathologies: ["Appendicitis", "Cecal volvulus", "Adenocarcinoma", "Typhlitis in neutropenia"],
+    step1Pearls: ["Cecum is common site of distention in large-bowel obstruction", "Midgut blood supply from SMA"],
+  },
+  colon: {
+    functionSummary: "Absorbs water/electrolytes, stores stool, and hosts microbiota that produce short-chain fatty acids/vitamin K.",
+    commonPathologies: ["Ulcerative colitis", "Diverticulosis/diverticulitis", "Colorectal cancer", "Ischemic colitis", "C. difficile colitis"],
+    step1Pearls: ["Left colon/hindgut supplied by IMA; right colon/midgut by SMA", "UC is continuous from rectum; Crohn is skip lesions", "Adenoma-carcinoma sequence involves APC then KRAS then p53"],
+  },
+  rectum: {
+    functionSummary: "Stores feces and coordinates defecation reflex with anal sphincters.",
+    commonPathologies: ["Rectal cancer", "Hemorrhoids", "Proctitis", "Rectal prolapse"],
+    step1Pearls: ["Rectal venous drainage partly bypasses portal system", "Internal hemorrhoids are above pectinate line and usually painless"],
+  },
+  "anal-canal": {
+    functionSummary: "Controls continence and defecation through internal and external sphincters.",
+    commonPathologies: ["Hemorrhoids", "Anal fissure", "Anal abscess/fistula", "Squamous cell carcinoma"],
+    step1Pearls: ["Above pectinate line: visceral, painless, columnar; below: somatic pain, squamous", "HPV 16/18 increases anal cancer risk"],
+  },
+  liver: {
+    functionSummary: "Performs metabolism, detoxification, bile production, glycogen storage, plasma protein synthesis, and immune filtering.",
+    commonPathologies: ["Hepatitis", "Cirrhosis", "Portal hypertension", "Hepatocellular carcinoma", "Fatty liver disease"],
+    step1Pearls: ["Centrilobular zone 3 is vulnerable to ischemia and acetaminophen toxicity", "Albumin and clotting factors reflect synthetic function", "Kupffer cells are liver macrophages"],
+  },
+  gallbladder: {
+    functionSummary: "Stores and concentrates bile, then contracts in response to CCK after fatty meals.",
+    commonPathologies: ["Cholelithiasis", "Acute cholecystitis", "Choledocholithiasis", "Gallstone pancreatitis"],
+    step1Pearls: ["Cholesterol stones are radiolucent; pigment stones occur with hemolysis/infection", "RUQ pain after fatty meals points to biliary colic", "Porcelain gallbladder increases carcinoma risk"],
+  },
+  pancreas: {
+    functionSummary: "Secretes digestive enzymes/bicarbonate and endocrine hormones insulin, glucagon, somatostatin, and pancreatic polypeptide.",
+    commonPathologies: ["Acute pancreatitis", "Pancreatic adenocarcinoma", "Diabetes mellitus", "Cystic fibrosis pancreatic insufficiency", "Insulinoma"],
+    step1Pearls: ["Pancreatic head cancer causes painless jaundice", "Pancreatitis from gallstones/alcohol; autodigestion by activated enzymes", "Beta cells secrete insulin in islets"],
+  },
+  spleen: {
+    functionSummary: "Filters blood, removes old RBCs/platelets, mounts immune responses to blood-borne encapsulated organisms.",
+    commonPathologies: ["Splenomegaly", "Functional asplenia", "Splenic rupture", "Auto-splenectomy in sickle cell disease"],
+    step1Pearls: ["Asplenia increases sepsis risk from S. pneumoniae, H. influenzae, N. meningitidis", "Howell-Jolly bodies indicate impaired splenic function", "Red pulp filters RBCs; white pulp is lymphoid"],
+    pediatrics: "Children with sickle cell disease develop functional asplenia early and need vaccination/prophylaxis.",
+  },
+  kidney: {
+    functionSummary: "Filters plasma, regulates electrolytes/acid-base/volume, secretes renin and EPO, activates vitamin D.",
+    commonPathologies: ["Acute kidney injury", "Glomerulonephritis", "Nephrotic syndrome", "Pyelonephritis", "Polycystic kidney disease"],
+    step1Pearls: ["Juxtaglomerular cells release renin", "PCT reabsorbs most filtered Na/water/glucose/amino acids", "Podocyte injury drives proteinuria"],
+  },
+  ureter: {
+    functionSummary: "Moves urine from renal pelvis to bladder by peristalsis.",
+    commonPathologies: ["Nephrolithiasis obstruction", "Vesicoureteral reflux", "Ureteropelvic junction obstruction"],
+    step1Pearls: ["Stones lodge at UPJ, pelvic brim, and UVJ", "Pain radiates flank to groin due to T11-L2 fibers"],
+  },
+  bladder: {
+    functionSummary: "Stores urine at low pressure and coordinates voiding via detrusor contraction and sphincter relaxation.",
+    commonPathologies: ["Cystitis", "Bladder cancer", "Neurogenic bladder", "Vesicoureteral reflux"],
+    step1Pearls: ["Transitional cell carcinoma is linked to smoking, aniline dyes, cyclophosphamide, schistosomiasis", "Parasympathetic pelvic nerves contract detrusor"],
+    pediatrics: "Vesicoureteral reflux predisposes to recurrent UTIs and renal scarring in children.",
+  },
+  urethra: {
+    functionSummary: "Conducts urine from bladder to exterior; male urethra also carries semen.",
+    commonPathologies: ["Urethritis", "Hypospadias/epispadias", "Urethral stricture", "Traumatic urethral injury"],
+    step1Pearls: ["Gonorrhea causes purulent urethritis; chlamydia often watery/mucoid", "Blood at urethral meatus after pelvic fracture suggests urethral injury"],
+  },
+  prostate: {
+    functionSummary: "Produces alkaline prostatic fluid that contributes to semen and supports sperm motility.",
+    commonPathologies: ["Benign prostatic hyperplasia", "Prostate adenocarcinoma", "Prostatitis"],
+    step1Pearls: ["BPH arises in periurethral transition zone; cancer often posterior peripheral zone", "PSA is prostate kallikrein; increased in cancer, BPH, prostatitis"],
+  },
+  testis: {
+    functionSummary: "Produces sperm in seminiferous tubules and testosterone from Leydig cells.",
+    commonPathologies: ["Testicular torsion", "Germ cell tumors", "Cryptorchidism", "Orchitis", "Varicocele-related infertility"],
+    step1Pearls: ["Sertoli cells make inhibin B and AMH; Leydig cells make testosterone", "Seminomas are radiosensitive; yolk sac tumors increase AFP", "Torsion loses cremasteric reflex"],
+    pediatrics: "Cryptorchidism increases infertility and germ cell tumor risk; torsion is a surgical emergency in adolescents.",
+  },
+  epididymis: {
+    functionSummary: "Stores and matures sperm acquired from seminiferous tubules.",
+    commonPathologies: ["Epididymitis", "Spermatocele", "Obstruction causing infertility"],
+    step1Pearls: ["Young sexually active: Chlamydia/gonorrhea; older men: E. coli", "Pain relief with elevation suggests epididymitis more than torsion"],
+  },
+  ovary: {
+    functionSummary: "Produces oocytes, estrogen, progesterone, inhibin, and androgen precursors.",
+    commonPathologies: ["Polycystic ovary syndrome", "Ovarian torsion", "Epithelial ovarian cancer", "Germ cell tumors", "Endometrioma"],
+    step1Pearls: ["Granulosa cells aromatize theca androgens via FSH", "BRCA1/2 increase ovarian cancer risk", "Dysgerminoma is ovarian seminoma counterpart"],
+  },
+  uterus: {
+    functionSummary: "Supports implantation, menstruation, pregnancy, and labor via endometrium and myometrium.",
+    commonPathologies: ["Leiomyomas", "Endometrial hyperplasia/carcinoma", "Adenomyosis", "Endometritis", "Müllerian anomalies"],
+    step1Pearls: ["Unopposed estrogen drives endometrial hyperplasia", "Fibroids are estrogen-sensitive benign smooth muscle tumors", "Adenomyosis = endometrial glands in myometrium"],
+  },
+  "fallopian-tube": {
+    functionSummary: "Captures ovulated oocyte, supports fertilization, and transports embryo to uterus.",
+    commonPathologies: ["Ectopic pregnancy", "Salpingitis/PID", "Hydrosalpinx", "High-grade serous carcinoma origin"],
+    step1Pearls: ["Most ectopic pregnancies occur in ampulla", "PID scarring increases infertility and ectopic risk", "Ciliated cells move ovum toward uterus"],
+  },
+  vagina: {
+    functionSummary: "Fibromuscular canal for intercourse, menstrual flow, and childbirth; acidic microbiome protects against infection.",
+    commonPathologies: ["Vaginitis", "Bacterial vaginosis", "Candida", "Trichomoniasis", "Vaginal atresia"],
+    step1Pearls: ["Lactobacilli produce lactic acid", "BV has clue cells and fishy odor", "Candida causes thick white discharge with pseudohyphae"],
+  },
+  thyroid: {
+    functionSummary: "Produces T3/T4 to regulate metabolism and calcitonin from C cells to lower calcium.",
+    commonPathologies: ["Graves disease", "Hashimoto thyroiditis", "Thyroid nodules/cancer", "Congenital hypothyroidism"],
+    step1Pearls: ["T4 converts to T3 peripherally", "Parafollicular C cells are neural crest-derived and cause medullary carcinoma", "PTU blocks peroxidase and peripheral conversion"],
+    pediatrics: "Congenital hypothyroidism causes intellectual disability if untreated; screen newborns.",
+  },
+  parathyroid: {
+    functionSummary: "Secretes PTH to increase serum calcium and lower phosphate via bone, kidney, and vitamin D activation.",
+    commonPathologies: ["Primary hyperparathyroidism", "Secondary hyperparathyroidism in CKD", "Hypoparathyroidism after surgery", "DiGeorge syndrome"],
+    step1Pearls: ["PTH increases calcium reabsorption and phosphate wasting in kidney", "PTH indirectly increases gut calcium absorption via 1-alpha hydroxylase", "DiGeorge: failed 3rd/4th pouch development"],
+    pediatrics: "DiGeorge syndrome causes hypocalcemic tetany/seizures from parathyroid aplasia.",
+  },
+  "adrenal-cortex": {
+    functionSummary: "Makes aldosterone, cortisol, and adrenal androgens in glomerulosa, fasciculata, and reticularis.",
+    commonPathologies: ["Addison disease", "Cushing syndrome", "Conn syndrome", "Congenital adrenal hyperplasia"],
+    step1Pearls: ["GFR: salt, sugar, sex", "21-hydroxylase deficiency causes low cortisol +/- aldosterone and high androgens", "ACTH stimulates cortisol and androgens, not aldosterone primarily"],
+    pediatrics: "Classic CAH can cause salt wasting and virilization/ambiguous genitalia in newborns.",
+  },
+  "adrenal-medulla": {
+    functionSummary: "Chromaffin cells secrete catecholamines as modified postganglionic sympathetic neurons.",
+    commonPathologies: ["Pheochromocytoma", "Neuroblastoma", "MEN2-associated tumors"],
+    step1Pearls: ["Episodic headache, sweating, tachycardia, hypertension suggests pheochromocytoma", "Treat alpha blockade before beta blockade", "Neural crest origin links to neuroblastoma"],
+    pediatrics: "Neuroblastoma is a common pediatric adrenal medulla/sympathetic chain tumor with elevated HVA/VMA.",
+  },
+  pituitary: {
+    functionSummary: "Coordinates endocrine axes through anterior pituitary hormones and posterior ADH/oxytocin release.",
+    commonPathologies: ["Prolactinoma", "Pituitary adenoma", "Diabetes insipidus", "Sheehan syndrome", "Craniopharyngioma"],
+    step1Pearls: ["Anterior pituitary from Rathke pouch; posterior from neuroectoderm", "Dopamine inhibits prolactin", "Bitemporal hemianopsia from optic chiasm compression"],
+    pediatrics: "Craniopharyngioma is a common suprasellar pediatric tumor causing endocrine deficits and visual symptoms.",
+  },
+  pineal: {
+    functionSummary: "Secretes melatonin and helps regulate circadian rhythm.",
+    commonPathologies: ["Pinealoma", "Germinoma", "Parinaud syndrome", "Precocious puberty"],
+    step1Pearls: ["Pineal mass can compress dorsal midbrain causing vertical gaze palsy", "Beta-hCG-secreting germinoma can trigger precocious puberty"],
+  },
+  thymus: {
+    functionSummary: "Site of T-cell maturation, positive/negative selection, and central tolerance.",
+    commonPathologies: ["Thymic aplasia in DiGeorge", "Thymoma", "Myasthenia gravis association"],
+    step1Pearls: ["Hassall corpuscles are thymic medullary epithelial structures", "AIRE mutation causes autoimmune polyendocrine syndrome", "Thymus derives from third pouch endoderm"],
+    pediatrics: "DiGeorge syndrome causes thymic aplasia with recurrent viral/fungal infections and hypocalcemia.",
+  },
+  "bone-marrow": {
+    functionSummary: "Produces blood cells and houses hematopoietic stem cells and plasma cells.",
+    commonPathologies: ["Leukemia", "Aplastic anemia", "Myelofibrosis", "Multiple myeloma", "Marrow infiltration"],
+    step1Pearls: ["Adult hematopoiesis occurs mostly in axial skeleton", "Fatty marrow increases with age", "Pancytopenia suggests marrow failure or infiltration"],
+  },
+  "lymph-nodes": {
+    functionSummary: "Filter lymph and organize adaptive immune responses between antigen-presenting cells, B cells, and T cells.",
+    commonPathologies: ["Reactive lymphadenopathy", "Lymphoma", "Metastatic carcinoma", "Cat-scratch disease", "TB lymphadenitis"],
+    step1Pearls: ["Follicles/germinal centers are B-cell zones; paracortex is T-cell zone", "HIV depletes paracortical CD4 T cells", "Painful nodes often reactive; rubbery painless nodes suggest lymphoma"],
+  },
+  "systemic-lymphoid-system": {
+    functionSummary: "Coordinates immune surveillance and lymph drainage: primary organs generate/mature lymphocytes; secondary organs trap antigen and activate adaptive immune responses.",
+    commonPathologies: ["Lymphoma/leukemia", "Asplenic sepsis", "HIV/AIDS", "SCID/DiGeorge syndrome", "Chronic granulomatous disease", "Autoimmune lymphadenopathy"],
+    step1Pearls: [
+      "Primary lymphoid organs = bone marrow and thymus; secondary = lymph node, spleen, MALT, tonsils",
+      "Spleen filters blood-borne encapsulated organisms; lymph nodes filter lymph-borne antigens",
+      "T-cell zones: thymic paracortex/lymph node paracortex/PALS in spleen; B-cell zones: follicles and germinal centers",
+      "MALT includes Peyer patches, appendix, tonsils, and mucosal lymphoid aggregates",
+    ],
+    pediatrics:
+      "Pediatric immune defects often localize by lymphoid compartment: DiGeorge affects thymic T-cell maturation; XLA affects B cells/germinal centers; asplenia/sickle autosplenectomy raises encapsulated-bacteria sepsis risk.",
+  },
+  brain: {
+    functionSummary: "Integrates sensory, motor, autonomic, cognitive, emotional, and endocrine control.",
+    commonPathologies: ["Stroke", "Brain tumors", "Meningitis/encephalitis", "Demyelinating disease", "Neurodegenerative disease"],
+    step1Pearls: ["MCA stroke affects face/arm and language in dominant hemisphere", "Watershed infarcts follow global hypoperfusion", "Astrocytes form glial scar"],
+    pediatrics: "Neural tube defects are prevented by folate; pediatric brain tumors often arise infratentorially.",
+  },
+  "spinal-cord": {
+    functionSummary: "Conducts motor/sensory/autonomic signals and mediates reflexes.",
+    commonPathologies: ["Spinal cord injury", "Syringomyelia", "Subacute combined degeneration", "Poliomyelitis", "Multiple sclerosis lesions"],
+    step1Pearls: ["Dorsal columns carry vibration/proprioception; spinothalamic carries pain/temp", "Anterior horn lesions cause LMN signs", "Brown-Sequard gives ipsilateral motor/proprioception loss and contralateral pain/temp loss"],
+  },
+  retina: {
+    functionSummary: "Converts light into neural signals via rods/cones and retinal ganglion cells.",
+    commonPathologies: ["Diabetic retinopathy", "Hypertensive retinopathy", "Retinal detachment", "Retinitis pigmentosa", "Macular degeneration"],
+    step1Pearls: ["Rods handle night/peripheral vision; cones handle color/acuity", "Central retinal artery occlusion causes cherry-red spot", "Vitamin A deficiency causes night blindness"],
+    pediatrics: "Retinoblastoma presents with leukocoria; mutation of both RB alleles is classic.",
+  },
+  lens: {
+    functionSummary: "Focuses light onto retina by changing shape during accommodation.",
+    commonPathologies: ["Cataracts", "Ectopia lentis", "Presbyopia"],
+    step1Pearls: ["Sorbitol accumulation contributes to diabetic/galactosemic cataracts", "Marfan: superotemporal lens dislocation; homocystinuria: inferonasal", "Lens has no blood supply"],
+    pediatrics: "Congenital cataracts can occur with rubella, galactosemia, or genetic syndromes.",
+  },
+  cornea: {
+    functionSummary: "Transparent anterior refractive surface and barrier against pathogens/trauma.",
+    commonPathologies: ["Corneal abrasion", "Keratitis", "Keratoconus", "Fuchs dystrophy", "Corneal ulcer"],
+    step1Pearls: ["CN V1 mediates corneal reflex afferent; CN VII efferent blink", "HSV keratitis causes dendritic ulcers", "Wilson disease deposits copper in Descemet membrane as Kayser-Fleischer rings"],
+  },
+  "inner-ear": {
+    functionSummary: "Cochlea mediates hearing; vestibular apparatus mediates balance and head acceleration.",
+    commonPathologies: ["Sensorineural hearing loss", "Ménière disease", "BPPV", "Vestibular schwannoma", "Labyrinthitis"],
+    step1Pearls: ["Hair cells transduce motion through K+ influx from endolymph", "Aminoglycosides can cause ototoxicity", "CN VIII carries hearing/balance"],
+    pediatrics: "Congenital CMV is a major cause of sensorineural hearing loss.",
+  },
+  skin: {
+    functionSummary: "Barrier, immune surveillance, thermoregulation, sensation, vitamin D synthesis, and fluid-loss prevention.",
+    commonPathologies: ["Atopic dermatitis", "Psoriasis", "Melanoma", "Basal/squamous cell carcinoma", "Burns"],
+    step1Pearls: ["Epidermis is ectoderm; dermis is mesoderm", "Langerhans cells present antigen; Merkel cells sense touch", "UVB converts 7-dehydrocholesterol to vitamin D3"],
+    pediatrics: "Atopic dermatitis commonly starts in infancy and may precede food allergy/asthma in the atopic march.",
+  },
+  bone: {
+    functionSummary: "Provides structure, protects organs, stores calcium/phosphate, and hosts marrow hematopoiesis.",
+    commonPathologies: ["Osteoporosis", "Osteomalacia/rickets", "Osteomyelitis", "Paget disease", "Bone tumors"],
+    step1Pearls: ["Osteoblasts build bone; osteoclasts resorb via RANKL signaling", "PTH increases osteoclast activity indirectly through osteoblasts", "Woven bone is immature; lamellar bone is mature"],
+    pediatrics: "Rickets causes defective mineralization of growth plates in children, commonly from vitamin D deficiency.",
+  },
+  "skeletal-muscle": {
+    functionSummary: "Generates voluntary movement, posture, heat, and glucose disposal.",
+    commonPathologies: ["Muscular dystrophy", "Myasthenia gravis", "Inflammatory myopathy", "Rhabdomyolysis", "Malignant hyperthermia"],
+    step1Pearls: ["Dystrophin links cytoskeleton to extracellular matrix", "ACh receptor antibodies cause myasthenia gravis", "RYR1 mutation predisposes to malignant hyperthermia"],
+    pediatrics: "Duchenne muscular dystrophy presents in boys with Gowers sign and calf pseudohypertrophy.",
+  },
+  teeth: {
+    functionSummary: "Cut and grind food; enamel/dentin protect pulp and transmit mechanical forces.",
+    commonPathologies: ["Dental caries", "Periodontal disease", "Enamel defects", "Tooth abscess"],
+    step1Pearls: ["Enamel from ectodermal ameloblasts; dentin from neural crest odontoblasts", "S. mutans produces acid from sucrose -> caries"],
+    pediatrics: "Delayed tooth eruption or enamel defects can point to endocrine, nutritional, or genetic disorders.",
+  },
+  tongue: {
+    functionSummary: "Supports taste, speech articulation, chewing, and swallowing.",
+    commonPathologies: ["Glossitis", "Oral candidiasis", "Tongue cancer", "Macroglossia", "Ankyloglossia"],
+    step1Pearls: ["CN XII controls motor except palatoglossus (CN X)", "Anterior 2/3 taste via CN VII; general sensation via V3", "Posterior 1/3 taste/sensation via CN IX"],
+    pediatrics: "Macroglossia is seen in Beckwith-Wiedemann syndrome and congenital hypothyroidism.",
+  },
+  diaphragm: {
+    functionSummary: "Primary muscle of inspiration; separates thoracic and abdominal cavities.",
+    commonPathologies: ["Diaphragmatic hernia", "Phrenic nerve palsy", "Hiatal hernia", "Hiccups"],
+    step1Pearls: ["Phrenic nerve C3-C5 keeps diaphragm alive", "Irritation can refer pain to shoulder", "Bochdalek hernia is posterolateral"],
+    pediatrics: "Congenital diaphragmatic hernia causes pulmonary hypoplasia and severe neonatal respiratory distress.",
+  },
+  pericardium: {
+    functionSummary: "Fibroserous sac that limits acute cardiac dilation and reduces friction around the beating heart.",
+    commonPathologies: ["Pericarditis", "Pericardial effusion", "Cardiac tamponade", "Constrictive pericarditis"],
+    step1Pearls: ["Tamponade causes Beck triad and pulsus paradoxus", "Pericarditis pain improves leaning forward", "Uremia can cause fibrinous pericarditis"],
+  },
+  appendix: {
+    functionSummary: "Lymphoid-rich blind pouch with minor gut immune function.",
+    commonPathologies: ["Acute appendicitis", "Carcinoid tumor", "Mucocele"],
+    step1Pearls: ["Pain classically migrates from periumbilical to RLQ", "Luminal obstruction leads to bacterial overgrowth and ischemia", "Appendix is a common GI carcinoid site"],
+    pediatrics: "Appendicitis can present atypically in young children and perforates more readily.",
+  },
+  tonsils: {
+    functionSummary: "Sample oropharyngeal antigens and support mucosal immune responses.",
+    commonPathologies: ["Tonsillitis", "Peritonsillar abscess", "Sleep-disordered breathing", "Tonsillar lymphoma"],
+    step1Pearls: ["Palatine tonsils lie between palatoglossal and palatopharyngeal arches", "Group A strep pharyngitis can lead to rheumatic fever or PSGN"],
+    pediatrics: "Recurrent tonsillitis and tonsillar hypertrophy are common pediatric ENT problems.",
+  },
+  parotid: {
+    functionSummary: "Serous salivary gland secreting amylase-rich saliva into oral cavity via Stensen duct.",
+    commonPathologies: ["Mumps parotitis", "Sialolithiasis", "Pleomorphic adenoma", "Warthin tumor", "Sjogren syndrome"],
+    step1Pearls: ["CN VII passes through parotid but does not innervate it", "Parasympathetic secretomotor pathway uses CN IX -> otic ganglion -> auriculotemporal nerve"],
+    pediatrics: "Mumps causes painful parotitis and is prevented by MMR vaccination.",
+  },
+  submandibular: {
+    functionSummary: "Mixed serous/mucous salivary gland producing most unstimulated saliva.",
+    commonPathologies: ["Sialolithiasis", "Sialadenitis", "Sjogren syndrome"],
+    step1Pearls: ["Wharton duct stones are common due to uphill flow and viscous saliva", "Parasympathetic input from CN VII via chorda tympani/submandibular ganglion"],
+  },
+  suprarenal: {
+    functionSummary: "Adrenal gland combining steroid-producing cortex and catecholamine-producing medulla.",
+    commonPathologies: ["Addison disease", "Cushing syndrome", "Hyperaldosteronism", "Pheochromocytoma"],
+    step1Pearls: ["Cortex = mesoderm; medulla = neural crest", "Adrenal vein sampling can localize aldosterone excess", "Waterhouse-Friderichsen = adrenal hemorrhage, classically meningococcemia"],
+  },
+  clitoris: {
+    functionSummary: "Erectile sensory organ homologous to glans penis.",
+    commonPathologies: ["Clitoromegaly from androgen excess", "Trauma", "Congenital virilization"],
+    step1Pearls: ["DHT-dependent external genital development links clitoromegaly to androgen excess", "21-hydroxylase deficiency is classic cause of virilized XX infant"],
+    pediatrics: "Ambiguous genitalia/clitoromegaly in newborn should prompt CAH evaluation, especially 21-hydroxylase deficiency.",
+  },
+  penis: {
+    functionSummary: "Male external organ for urination and sexual function; erectile tissue enables intercourse.",
+    commonPathologies: ["Hypospadias", "Erectile dysfunction", "Peyronie disease", "Penile cancer", "Phimosis/paraphimosis"],
+    step1Pearls: ["Parasympathetic erection, sympathetic emission/ejaculation", "Hypospadias opens on ventral surface; do not circumcise before repair planning", "HPV increases penile squamous cell carcinoma risk"],
+    pediatrics: "Hypospadias is a common congenital anomaly and may indicate androgen synthesis/action problems if severe.",
+  },
+  placenta: {
+    functionSummary: "Transfers gases/nutrients/waste, produces hormones, and creates maternal-fetal immune interface.",
+    commonPathologies: ["Preeclampsia", "Placenta previa", "Placental abruption", "Placenta accreta", "Molar pregnancy"],
+    step1Pearls: ["Syncytiotrophoblast produces hCG", "Spiral artery remodeling failure contributes to preeclampsia", "IgG crosses placenta via FcRn"],
+    pediatrics: "Placental insufficiency can cause fetal growth restriction and neonatal hypoglycemia/polycythemia.",
+  },
+  "umbilical-cord": {
+    functionSummary: "Connects fetus to placenta and contains two arteries plus one vein in Wharton jelly.",
+    commonPathologies: ["Single umbilical artery", "Nuchal cord", "Cord prolapse", "Omphalitis"],
+    step1Pearls: ["Umbilical vein carries oxygenated blood to fetus", "Umbilical arteries carry deoxygenated blood to placenta", "Ductus venosus shunts umbilical venous blood toward IVC"],
+    pediatrics: "Single umbilical artery is associated with renal/cardiac anomalies and warrants careful newborn evaluation.",
+  },
+  "gingiva-oral": {
+    functionSummary: "Keratinized oral mucosa protects tooth roots/alveolar bone and forms a seal around teeth.",
+    commonPathologies: ["Gingivitis", "Periodontitis", "Scurvy gingival bleeding", "Drug-induced gingival hyperplasia", "Leukemia gingival infiltration"],
+    step1Pearls: ["Vitamin C deficiency impairs collagen hydroxylation -> swollen bleeding gums", "Phenytoin, cyclosporine, and calcium channel blockers cause gingival hyperplasia", "Poor oral hygiene drives plaque-mediated gingivitis"],
+    pediatrics: "Teething does not cause high fever; gingival bleeding in children should raise hygiene, platelet, leukemia, or vitamin C considerations depending context.",
+  },
+};
+
+const organById = new Map(
+  ORGANS.map((o) => [o.id, { ...o, ...(ORGAN_DETAILS[o.id] ?? {}) }]),
+);
 
 export function getOrganById(id: string): OrganEntry | undefined {
   return organById.get(id);

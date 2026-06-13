@@ -36,6 +36,7 @@ import cushingSyndrome from "../media/images/conditions/cushing-syndrome.jpg?url
 import cysticFibrosis from "../media/images/conditions/cystic-fibrosis.jpg?url";
 import dengueRecoveryRash from "../media/images/conditions/dengue-recovery-rash.jpg?url";
 import dentalCaries from "../media/images/conditions/dental-caries.jpg?url";
+import dihydrorhodamineFlowCytometry from "../media/images/lab-values/dihydrorhodamine-flow-cytometry.svg?url";
 import diabeticKetoacidosis from "../media/images/conditions/diabetic-ketoacidosis.jpg?url";
 import dilatedCardiomyopathy from "../media/images/conditions/dilated-cardiomyopathy.jpg?url";
 import diverticulitis from "../media/images/conditions/diverticulitis.jpg?url";
@@ -179,6 +180,7 @@ export type ConditionImageId = Extract<
   | "celiac-disease"
   | "chikungunya-fever"
   | "choledocholithiasis"
+  | "chronic-granulomatous-disease"
   | "chronic-bronchitis"
   | "cll"
   | "cml"
@@ -336,6 +338,7 @@ export const CONDITION_IMAGES: Partial<Record<ConditionImageId, string>> = {
   "celiac-disease": extensionAssetUrl(celiacDisease),
   "chikungunya-fever": extensionAssetUrl(chikungunyaRash),
   "choledocholithiasis": extensionAssetUrl(choledocholithiasis),
+  "chronic-granulomatous-disease": extensionAssetUrl(dihydrorhodamineFlowCytometry),
   "chronic-bronchitis": extensionAssetUrl(chronicBronchitis),
   "cll": extensionAssetUrl(cll),
   "cml": extensionAssetUrl(cml),
@@ -490,6 +493,7 @@ export const CONDITION_IMAGE_ATTRIBUTIONS: Partial<
   "celiac-disease": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:celiac-disease.jpg" },
   "chikungunya-fever": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:chikungunya-rash.jpg" },
   "choledocholithiasis": { label: "Wikimedia Commons (ERCP stone.jpg)", url: "https://commons.wikimedia.org/wiki/File:ERCP_stone.jpg" },
+  "chronic-granulomatous-disease": { label: "Local SVG, reference: Wikipedia Flow cytometry", url: "https://en.wikipedia.org/wiki/Flow_cytometry" },
   "chronic-bronchitis": { label: "Wikimedia Commons (Chronic obstructive pulmonary disease world map - DALY - WHO2004.svg)", url: "https://commons.wikimedia.org/wiki/File:Chronic_obstructive_pulmonary_disease_world_map_-_DALY_-_WHO2004.svg" },
   "cll": { label: "Wikimedia Commons (C Louis Leipoldt05.jpg)", url: "https://commons.wikimedia.org/wiki/File:C_Louis_Leipoldt05.jpg" },
   "cml": { label: "Wikimedia Commons (Bcrablmet.jpg)", url: "https://commons.wikimedia.org/wiki/File:Bcrablmet.jpg" },
@@ -644,6 +648,7 @@ export const CONDITION_IMAGE_CAPTIONS: Partial<
   "celiac-disease": "Clinical or pathologic image illustrating celiac disease",
   "chikungunya-fever": "Maculopapular chikungunya rash on the abdomen during acute illness",
   "choledocholithiasis": "Clinical or pathologic image illustrating choledocholithiasis",
+  "chronic-granulomatous-disease": "Dihydrorhodamine oxidative-burst flow cytometry — CGD shows absent/low fluorescence after neutrophil stimulation",
   "chronic-bronchitis": "Clinical or pathologic image illustrating chronic bronchitis",
   "cll": "Clinical or pathologic image illustrating cll",
   "cml": "Clinical or pathologic image illustrating cml",
