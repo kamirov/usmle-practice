@@ -16,6 +16,12 @@ Specifically, any additions should pertain to Step 1 (not Step 2 or Step 3).
 
 All data added should include an etymology section, including a very concise line about the etymology (for learning purposes, to help studying for Step 1). Make sure it appears under the item name in the popover
 
+Avoid clustering data. If you're asked to add new data items, prefer to add new items, or match them as aliases to existing data. Do not cluster multiple findings under grouped headings. For example, if I ask you to add "hydrochlorothiazide, spironolactone, furosemide". Then add 3 separate entries; do not create a single entry called "diuretics" for these 3. If I ask you to create an entry for "diuretics" however, do that.
+
+Where relevant, include the plural of a term and common acronyms in the alias. For example "red blood cell" should include "red blood cells" and "rbcs" as aliases.
+
+
+
 ## Data Types
 
 When new entries are specified for data, if it makes sense to establish a new data type for them (a new file), then please do so
