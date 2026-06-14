@@ -20,8 +20,6 @@ Avoid clustering data. If you're asked to add new data items, prefer to add new 
 
 Where relevant, include the plural of a term and common acronyms in the alias. For example "red blood cell" should include "red blood cells" and "rbcs" as aliases.
 
-
-
 ## Data Types
 
 When new entries are specified for data, if it makes sense to establish a new data type for them (a new file), then please do so
@@ -32,8 +30,12 @@ Where relevant, include a note on pediatrics, e.g. how something changes if the 
 
 ## Media
 
-Do not add any media  for new data. Our network currently does not support media fetches, so just focus on the content for now
+Do not add any media for new data. Our network currently does not support media fetches, so just focus on the content for now
 
 ## Attributions
 
 Any media fetched should have their URLs in SOURCES.txt. Any media used should show an attribution somewhere
+
+## Building
+
+After every AI change, please run the package's build command
