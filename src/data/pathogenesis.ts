@@ -3913,6 +3913,50 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
     pediatrics:
       "Fetal nicotine exposure from maternal smoking → low birth weight, preterm delivery, SIDS risk, and childhood asthma. Adolescent smoking initiation predicts lifelong addiction; Buerger disease is extremely rare in children.",
   },
+  {
+    id: "arrhythmias",
+    name: "Arrhythmias",
+    etymology: "Greek a- = without + rhythmos = measured flow + -ia = condition",
+    aliases: [
+      "arrhythmia",
+      "arrhythmias",
+      "cardiac arrhythmia",
+      "cardiac arrhythmias",
+      "dysrhythmia",
+      "dysrhythmias",
+      "cardiac dysrhythmia",
+      "cardiac dysrhythmias",
+      "abnormal heart rhythm",
+      "abnormal heart rhythms",
+    ],
+    definition:
+      "Disorders of cardiac impulse formation or conduction producing abnormally slow, fast, or irregular heart rhythms — ranging from benign ectopy to life-threatening ventricular fibrillation.",
+    examples: [
+      "Reentry — atrial fibrillation, AV reentrant tachycardia (WPW), ventricular tachycardia post-MI",
+      "Enhanced automaticity — ectopic atrial or ventricular foci accelerating rate",
+      "Triggered activity — early/late afterdepolarizations; torsades de pointes with prolonged QT",
+      "Conduction block — first-, second-, or third-degree AV block; bundle branch block",
+      "Electrolyte disturbances — hyperkalemia (peaked T, widened QRS), hypokalemia (U waves, flat T), hypomagnesemia (torsades)",
+      "Drug-induced — class IA/III antiarrhythmics, macrolides, antipsychotics (QT prolongation); digoxin (AV block, arrhythmias); TCAs",
+    ],
+    boardsPearls: [
+      "Three mechanisms: reentry, enhanced automaticity, triggered activity (afterdepolarizations)",
+      "Torsades de pointes — polymorphic VT with prolonged QT; treat Mg²⁺, remove offending drug",
+      "Hyperkalemia → peaked T waves → widened QRS → sine wave → VF/asystole",
+      "Hypokalemia → flattened T waves, prominent U waves, predisposes to torsades",
+      "AF — irregularly irregular, stroke risk; VT/VF — hemodynamic collapse",
+      "Digoxin toxicity → arrhythmias plus hyperkalemia, yellow vision, GI symptoms",
+      "Post-MI ventricular arrhythmia risk highest early; reentry around scar",
+    ],
+    distinguishFrom: [
+      "Palpitations — patient symptom that may or may not reflect clinically significant arrhythmia",
+      "Sinus arrhythmia — benign respiratory-related RR variation with normal P waves",
+      "Artifact on ECG — motion or loose leads mimicking arrhythmia",
+      "Heart murmur — acoustic turbulent flow, not electrical rhythm disorder",
+    ],
+    pediatrics:
+      "Supraventricular tachycardia is the most common symptomatic pediatric arrhythmia; congenital long QT and WPW present in childhood. Neonatal bradycardia with maternal anti-Ro/La suggests congenital complete heart block.",
+  },
 ];
 
 const pathogenesisById = new Map(

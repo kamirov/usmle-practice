@@ -634,6 +634,49 @@ export const METABOLISM: MetabolismEntry[] = [
     pediatrics:
       "Fetal erythropoiesis occurs in liver then marrow; hemoglobin F (α2γ2) predominates until γ-to-β switch after birth. Neonatal anemia of prematurity reflects low EPO response; physiologic nadir at ~6–8 weeks in term infants.",
   },
+  {
+    id: "hydrogen-ion",
+    name: "H⁺",
+    etymology: "H = hydrogen + ⁺ = cation (proton)",
+    aliases: [
+      "h+",
+      "h⁺",
+      "h +",
+      "hydrogen ion",
+      "hydrogen ions",
+      "proton",
+      "protons",
+      "hydrogen cation",
+      "hydrogen cations",
+    ],
+    definition:
+      "Hydrogen ion (proton) — the chemical species whose concentration defines acid-base status; freely dissociated H⁺ in aqueous body fluids determines pH and drives enzymatic, transport, and buffering reactions.",
+    pathway: [
+      "pH = −log₁₀[H⁺]; each 0.3 pH unit ≈ 2-fold change in [H⁺]",
+      "Strong acids (HCl in stomach) dissociate to H⁺ + anion; fixed acid load buffered then excreted renally as NH₄Cl",
+      "Intracellular and extracellular buffers: bicarbonate (open system), hemoglobin, plasma proteins, phosphate",
+      "Renal α-intercalated cells secrete H⁺ via H⁺-ATPase and H⁺/K⁺-ATPase; titrated by filtered bicarbonate and trapped as NH₄⁺",
+      "Gastric parietal cells secrete H⁺ via H⁺/K⁺-ATPase (proton pump) — blocked by PPIs",
+      "Metabolic acidosis: ↑ [H⁺] → K⁺ shifts out of cells; alkalosis → H⁺ enters cells and K⁺ exits",
+    ],
+    boardsPearls: [
+      "Acidosis = ↑ [H⁺] = ↓ pH; alkalosis = ↓ [H⁺] = ↑ pH",
+      "Henderson-Hasselbalch: pH relates HCO₃⁻ and dissolved CO₂ (H₂CO₃)",
+      "Vomiting removes gastric H⁺ → metabolic alkalosis; diarrhea loses HCO₃⁻ → metabolic acidosis",
+      "Renal NH₄⁺ excretion (with H⁺) is key adaptive response to chronic acidosis",
+      "Osteoclasts secrete H⁺ at ruffled border to resorb bone mineral",
+      "vs H₂ — molecular hydrogen gas, not the acid-base proton",
+    ],
+    distinguishFrom: [
+      "Hydronium (H₃O⁺) — proton associated with water in solution; boards shorthand uses H⁺",
+      "H₂ — diatomic hydrogen gas, not acid-base proton",
+      "HCO₃⁻ — bicarbonate buffer base, not free proton",
+      "NH₃/NH₄⁺ — ammonia/ammonium buffer system in kidney, distinct from free H⁺ pool",
+      "Proton pump (H⁺/K⁺-ATPase) — transporter protein, not the ion itself",
+    ],
+    pediatrics:
+      "Neonates have lower renal net acid excretion capacity — premature infants are prone to metabolic acidosis with protein-rich feeding; urea cycle and renal ammoniagenesis mature over weeks.",
+  },
 ];
 
 const metabolismById = new Map(METABOLISM.map((entry) => [entry.id, entry]));

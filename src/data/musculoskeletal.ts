@@ -728,6 +728,64 @@ export const MUSCULOSKELETAL: MusculoskeletalEntry[] = [
     pediatrics:
       "Fontanelle examination is central to neonatal and infant assessment; bulging fontanelle with meningitis signs warrants urgent lumbar puncture and antibiotics. Congenital hypothyroidism screening is separate but delayed fontanelle closure is a classic physical clue.",
   },
+  {
+    id: "l1-l2-spinal-level",
+    name: "L1–L2 Spinal Level",
+    etymology: "L = lumbar + 1–2 = first and second lumbar vertebrae/segments",
+    aliases: [
+      "l1-l2",
+      "l1–l2",
+      "l1 - l2",
+      "l1 to l2",
+      "l1 through l2",
+      "l1 l2",
+      "l1, l2",
+      "l1-l2 level",
+      "l1-l2 levels",
+      "l1-l2 spinal level",
+      "l1-l2 spinal levels",
+      "l1-l2 vertebral level",
+      "l1-l2 vertebral levels",
+      "l1-l2 segment",
+      "l1-l2 segments",
+      "first and second lumbar vertebrae",
+      "lumbar 1-2",
+      "lumbar 1–2",
+    ],
+    definition:
+      "First and second lumbar vertebral and spinal cord segment levels — landmark for termination of the spinal cord (conus medullaris) and upper lumbar neurologic/reflex testing.",
+    anatomy:
+      "Vertebral bodies L1 and L2 lie below the thoracic spine; spinal cord segments L1–L2 correspond to lower abdominal wall and upper leg dermatomes/myotomes. Conus medullaris (terminal spinal cord) typically ends at the L1–L2 vertebral level in adults; nerve roots of the cauda equina continue inferiorly within the lumbar and sacral canal.",
+    action: [
+      "Landmark for conus medullaris — cord ends ~L1–L2; cauda equina (individual nerve roots) lies below",
+      "Cremaster reflex arc — afferent/efferent fibers via genitofemoral nerve (L1–L2); ipsilateral testicular elevation with inner thigh stroke",
+      "Upper limit of sympathetic preganglionic outflow — IML horn T1–L2 (L2 is most caudal sympathetic segment)",
+      "Lateral sacral branches of abdominal aorta typically arise at L1–L2 vertebral level",
+    ],
+    innervation:
+      "L1 — iliopsoas (partial), abdominal wall; L2 — iliopsoas, hip adductors, anterior thigh sensation; cremaster reflex L1–L2 via genitofemoral nerve",
+    clinicalRelevance: [
+      "Lumbar puncture performed at L3–L4 or L4–L5 interspace — below conus to avoid cord injury",
+      "Conus medullaris syndrome — injury at L1–L2 cord level → early bladder dysfunction, symmetric leg weakness, saddle anesthesia variable",
+      "Cauda equina syndrome — compression of roots below conus (often L4–S1) → bilateral radiculopathy, saddle anesthesia, urinary retention",
+      "L1–L2 disc herniation — less common than L4–L5/L5–S1; can affect upper lumbar roots",
+    ],
+    boardsPearls: [
+      "Conus medullaris ends ~L1–L2 — LP below this at L3–L4 or L4–L5",
+      "Cremaster reflex = L1–L2 (genitofemoral nerve)",
+      "Sympathetic preganglionic neurons originate T1–L2 IML horn",
+      "Conus syndrome = cord termination injury; cauda equina = root injury below conus",
+      "Lateral sacral arteries branch at L1–L2 — renal artery anatomy boards tie-in",
+    ],
+    distinguishFrom: [
+      "L3–L4 / L4–L5 — standard lumbar puncture levels below conus",
+      "T11–L2 — broader dermatomal band for ureteral referred pain (not same as conus landmark)",
+      "S2–S4 — sacral parasympathetic/pudendal segments below cauda equina",
+      "Chlamydia L1–L3 serovars — lymphogranuloma venereum designation, not spinal levels",
+    ],
+    pediatrics:
+      "Conus medullaris may terminate slightly lower (L2–L3) in neonates before ascending with growth; LP level selection still uses palpable iliac crest (L4) landmarks.",
+  },
 ];
 
 const musculoskeletalById = new Map(

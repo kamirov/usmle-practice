@@ -879,6 +879,52 @@ export const PROCEDURES: ProcedureEntry[] = [
     pediatrics:
       "Wilms tumor treatment emphasizes nephron-sparing when bilateral or solitary kidney; radical nephrectomy with lymph node sampling is standard for unilateral localized Wilms when nephron-sparing is not feasible.",
   },
+  {
+    id: "adrenalectomy",
+    name: "Adrenalectomy",
+    etymology: "Latin ad = toward + ren = kidney + Greek ektome = cutting out",
+    aliases: [
+      "adrenalectomy",
+      "adrenalectomies",
+      "adrenal resection",
+      "adrenal gland removal",
+      "laparoscopic adrenalectomy",
+      "laparoscopic adrenalectomies",
+      "unilateral adrenalectomy",
+      "bilateral adrenalectomy",
+    ],
+    definition:
+      "Surgical removal of one or both adrenal glands — performed for hormonally active adrenal tumors, localized malignancy, or selected functional disorders.",
+    indications: [
+      "Primary hyperaldosteronism from unilateral aldosterone-producing adenoma (Conn syndrome)",
+      "Cushing syndrome from adrenal adenoma or carcinoma (after biochemical confirmation)",
+      "Pheochromocytoma — after adequate α-blockade and volume repletion",
+      "Adrenocortical carcinoma — en bloc resection when localized",
+      "Bilateral disease requiring subtotal or total adrenalectomy (selected Cushing, metastatic disease)",
+      "Nonfunctional adrenal mass meeting size/morphology criteria for resection (selected cases)",
+    ],
+    keyMeasurements: [
+      "Preoperative hormonal localization — aldosterone, cortisol, catecholamines/metanephrines as indicated",
+      "Adrenal vein sampling for lateralizing primary aldosteronism when imaging equivocal",
+      "Pheochromocytoma: α-blockade (phenoxybenzamine) before surgery; rule out bilateral/malignant disease",
+      "Postoperative cortisol and mineralocorticoid replacement planning if bilateral or contralateral suppressed",
+    ],
+    complications: [
+      "Intraoperative hypertensive crisis if pheochromocytoma inadequately blocked",
+      "Postoperative adrenal insufficiency after bilateral resection or prolonged contralateral suppression",
+      "Bleeding, infection, injury to kidney, pancreas, or vena cava",
+      "Persistent or recurrent hormone excess if incomplete resection",
+    ],
+    boardsPearls: [
+      "Unilateral aldosterone-producing adenoma → laparoscopic adrenalectomy cures Conn syndrome",
+      "Pheochromocytoma — never operate before α-blockade (hypertensive crisis risk)",
+      "Bilateral adrenalectomy → lifelong glucocorticoid and mineralocorticoid replacement",
+      "Adrenal vein sampling lateralizes aldosterone source when CT/MRI inconclusive",
+      "vs medical therapy alone — surgery is definitive for unilateral functioning adrenal adenomas",
+    ],
+    pediatrics:
+      "Neuroblastoma arises from adrenal medulla in children — distinct from adult adrenal adenoma; pediatric adrenal tumors require specialized oncology workup. Congenital adrenal hyperplasia is managed medically, not routinely by adrenalectomy.",
+  },
 ];
 
 const procedureById = new Map(PROCEDURES.map((entry) => [entry.id, entry]));

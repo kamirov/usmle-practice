@@ -4896,6 +4896,47 @@ export const SYMPTOMS: SymptomEntry[] = [
     pediatrics:
       "Children with ureteral stones may describe abdominal pain more than flank-to-groin radiation; adolescent presentation mirrors adults. Always consider testicular torsion in boy with groin/scrotal pain — do not attribute solely to stones without exam.",
   },
+  {
+    id: "abdominal-bruit",
+    name: "Abdominal Bruit",
+    etymology: "Latin abdomin = belly + Greek brachy = short + bruit = noise (originally a short harsh sound)",
+    aliases: [
+      "abdominal bruit",
+      "abdominal bruits",
+      "abdominal vascular bruit",
+      "abdominal vascular bruits",
+      "epigastric bruit",
+      "epigastric bruits",
+      "renal bruit",
+      "renal bruits",
+    ],
+    definition:
+      "Audible vascular murmur on auscultation over the abdomen — reflects turbulent flow through a stenotic, aneurysmal, or high-flow arterial segment.",
+    mechanism:
+      "Laminar flow becomes turbulent when vessel lumen narrows or flow increases (stenosis, AV fistula, hyperdynamic circulation) → vibratory sound transmitted to abdominal wall; location and timing (systolic vs continuous) narrow the differential.",
+    thinkOf: [
+      "Renal artery stenosis — fibromuscular dysplasia (young woman) or atherosclerosis (older)",
+      "Abdominal aortic aneurysm — systolic bruit over midline aorta",
+      "Hepatic arteriovenous malformation or cirrhosis with increased hepatic flow",
+      "Celiac or mesenteric artery stenosis (less common on boards)",
+      "Pregnancy — physiologic increased renal/aortic flow (benign)",
+    ],
+    pairWith: [
+      "Young woman + resistant HTN + epigastric/flank bruit → renal artery fibromuscular dysplasia",
+      "Older smoker + HTN + pulsatile abdominal mass + bruit → AAA",
+      "Resistant HTN + ↑ renin/aldosterone + bruit → renovascular hypertension",
+      "ACE inhibitor-induced creatinine rise + bruit → bilateral or significant unilateral renal artery stenosis",
+      "Continuous bruit over liver → hepatic AV malformation or fistula",
+    ],
+    distinguishFrom: [
+      "Bowel sounds — gurgling peristaltic clicks, not harsh vascular murmur",
+      "Venous hum — soft continuous sound from high-flow states; not focal stenotic bruit",
+      "Cardiac murmur radiating to abdomen — origin at precordium, not isolated epigastric focus",
+      "Normal epigastric bruit in thin young adults — up to ~20% prevalence; interpret with clinical context",
+    ],
+    pediatrics:
+      "Renal artery stenosis from fibromuscular dysplasia can present in adolescents; coarctation-related abdominal bruits are less common than femoral/brachial BP discrepancies. Always correlate bruit with BP pattern and renal function.",
+  },
 ];
 
 const symptomById = new Map(SYMPTOMS.map((s) => [s.id, s]));

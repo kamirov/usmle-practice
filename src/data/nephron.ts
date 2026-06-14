@@ -11,6 +11,39 @@ export interface NephronSegmentEntry {
 
 export const NEPHRON_SEGMENTS: NephronSegmentEntry[] = [
   {
+    id: "nephron",
+    name: "Nephron",
+    etymology: "Greek nephros = kidney",
+    aliases: [
+      "nephron",
+      "nephrons",
+      "renal nephron",
+      "renal nephrons",
+      "kidney nephron",
+      "kidney nephrons",
+    ],
+    function:
+      "Functional unit of the kidney — each nephron consists of a glomerulus (filtering capillary tuft in Bowman capsule) and a renal tubule (proximal tubule, loop of Henle, distal convoluted tubule) that modifies glomerular ultrafiltrate through reabsorption and secretion; urine from many nephrons drains via collecting ducts (ureteric bud derivative) to the renal pelvis.",
+    reabsorbs: [
+      "~99% of filtered water and most filtered Na⁺, Cl⁻, HCO₃⁻, glucose, and amino acids (chiefly proximal tubule)",
+      "Urea, K⁺, Ca²⁺, phosphate — segment-specific reabsorption along tubule and collecting duct",
+      "Filtered load reclaimed into peritubular capillaries (cortical nephrons) or medullary vasa recta (juxtamedullary nephrons)",
+    ],
+    secretes: [
+      "H⁺, K⁺, NH₄⁺, and organic acids/bases added along tubule and collecting duct",
+      "Renin from juxtaglomerular cells of the same nephron (via macula densa feedback)",
+    ],
+    boardsPearls: [
+      "~1 million nephrons per kidney; nephron loss is irreversible",
+      "Metanephric mesenchyme → nephron (glomerulus through DCT); ureteric bud → collecting system",
+      "Cortical nephrons (~85%) — short loops, peritubular capillaries; juxtamedullary (~15%) — long loops + vasa recta for urine concentration",
+      "Filtration (glomerulus) → reabsorption/secretion (tubule) → final urine (collecting duct + ADH/aldosterone)",
+      "Juxtaglomerular apparatus (JGA) — macula densa + juxtaglomerular cells + mesangial cells at same nephron",
+      "GFR set at glomerulus; tubule reclaims filtered load and fine-tunes electrolytes/acid-base",
+      "vs collecting duct — embryologically distinct (ureteric bud) but functionally continuous with nephron tubule",
+    ],
+  },
+  {
     id: "bowmans-space",
     name: "Bowman Space",
     etymology: "eponym: Sir William Bowman + Latin spatium = space",
@@ -49,6 +82,39 @@ export const NEPHRON_SEGMENTS: NephronSegmentEntry[] = [
       "Filters water and solutes by size/charge — not selective reabsorption",
       "GFR driven by hydrostatic vs oncotic pressure in glomerular capillaries",
       "Injury → proteinuria (podocyte disease) or hematuria (GBM disease)",
+    ],
+  },
+  {
+    id: "ultrafiltrate",
+    name: "Ultrafiltrate",
+    etymology: "Latin ultra = beyond + filtrare = to strain + -ate = product",
+    aliases: [
+      "ultrafiltrate",
+      "ultrafiltrates",
+      "glomerular ultrafiltrate",
+      "glomerular ultrafiltrates",
+      "glomerular filtrate",
+      "glomerular filtrates",
+      "renal ultrafiltrate",
+      "plasma ultrafiltrate",
+    ],
+    function:
+      "Protein-free fluid formed when glomerular capillary hydrostatic pressure drives plasma water and small solutes across the filtration barrier (fenestrated endothelium, GBM, podocyte slit diaphragm) into Bowman space — identical in composition to plasma except for absence of proteins and cells; becomes tubular fluid after entering the nephron and urine after post-glomerular modification.",
+    reabsorbs: [
+      "Not reabsorbed at formation — ~20% of renal plasma flow is filtered; the remaining ~80% passes through efferent arterioles to peritubular capillaries/vasa recta",
+      "Subsequent tubular segments reabsorb ~99% of filtered water and solutes from the ultrafiltrate",
+    ],
+    secretes: [
+      "No secretion at glomerulus — tubular secretion adds solutes downstream (e.g., H⁺, K⁺, PAH, creatinine)",
+    ],
+    boardsPearls: [
+      "Ultrafiltrate = plasma minus proteins and cells — formed by size/charge selectivity, not active transport",
+      "Freely filtered: water, Na⁺, K⁺, Cl⁻, HCO₃⁻, glucose, amino acids, urea, creatinine, inulin",
+      "Not filtered: albumin and large proteins (normally), RBCs, WBCs, platelets",
+      "GFR (~120 mL/min) = volume of ultrafiltrate formed per minute; measured with inulin or creatinine clearance",
+      "Starling forces: GFR ↑ with ↑ glomerular capillary hydrostatic pressure or ↓ Bowman/oncotic pressure",
+      "Proteinuria = abnormal protein in ultrafiltrate/urine from GBM or podocyte injury",
+      "vs urine — ultrafiltrate is pre-tubular; urine is after reabsorption/secretion and collecting duct processing",
     ],
   },
   {
@@ -122,6 +188,38 @@ export const NEPHRON_SEGMENTS: NephronSegmentEntry[] = [
       "Peritubular interstitial fibroblasts (not endothelial cells) produce EPO in response to renal hypoxia",
       "ACE inhibitors/ARBs dilate efferent arteriole → can ↓ peritubular perfusion and GFR",
       "vs vasa recta — hairpin medullary vessels for countercurrent exchange, not cortical tubule supply",
+    ],
+  },
+  {
+    id: "vasa-recta",
+    name: "Vasa Recta",
+    etymology: "Latin vas = vessel + recta = straight (hairpin straight vessels)",
+    aliases: [
+      "vasa recta",
+      "vasa recta capillaries",
+      "vasa recta capillary",
+      "medullary vasa recta",
+      "juxtamedullary vasa recta",
+      "countercurrent exchanger",
+      "countercurrent exchangers",
+    ],
+    function:
+      "Hairpin peritubular capillaries arising from efferent arterioles of juxtamedullary nephrons — descend into the hypertonic renal medulla alongside the loop of Henle and ascend back to cortex, exchanging solutes and water passively to preserve the medullary osmotic gradient while delivering blood to the medulla.",
+    reabsorbs: [
+      "Water and solutes from medullary interstitium in descending limb (equilibration with hypertonic medulla)",
+      "Solutes (NaCl, urea) from ascending limb back into interstitium — countercurrent exchange",
+    ],
+    secretes: [
+      "Water and solutes to medullary interstitium in ascending limb as blood dilutes — prevents washout of gradient",
+    ],
+    boardsPearls: [
+      "Juxtamedullary nephrons: efferent arteriole → vasa recta; cortical nephrons → peritubular capillaries instead",
+      "Countercurrent exchanger (vasa recta) preserves gradient built by countercurrent multiplier (loop of Henle)",
+      "Slow medullary blood flow minimizes solute washout while supplying O₂ to deep tubules",
+      "Loop diuretics ↓ medullary gradient over time → impaired urine concentration despite ADH",
+      "Nephrogenic diabetes insipidus — collecting duct unresponsive to ADH; gradient may be intact but water not reabsorbed",
+      "vs peritubular capillaries — cortical tubule supply; vasa recta is medullary hairpin exchanger",
+      "vs jejunal vasa recta — intestinal straight vessels to mucosa; different anatomy, same Latin name",
     ],
   },
   {

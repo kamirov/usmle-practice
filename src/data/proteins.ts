@@ -633,6 +633,41 @@ export const PROTEINS: ProteinEntry[] = [
     ],
   },
   {
+    id: "enac",
+    name: "ENaC",
+    etymology: "E = epithelial + Na = sodium + C = channel",
+    aliases: [
+      "enac",
+      "epithelial sodium channel",
+      "epithelial sodium channels",
+      "epithelial na channel",
+      "epithelial na channels",
+      "amiloride-sensitive sodium channel",
+    ],
+    gene: "SCNN1A / SCNN1B / SCNN1G (α, β, γ subunits)",
+    location:
+      "Apical membrane of renal collecting duct principal cells, respiratory and colon epithelia, taste receptors",
+    function:
+      "Amiloride-sensitive epithelial Na⁺ channel — rate-limiting step for aldosterone-mediated Na⁺ reabsorption and lumen-negative voltage driving K⁺ and H⁺ secretion in the distal nephron and airway surface liquid homeostasis.",
+    mutationCauses: [
+      "Liddle syndrome — gain-of-function β/γ subunit mutations → constitutive ENaC activity → hypertension, hypokalemia, metabolic alkalosis with low aldosterone",
+      "Pseudohypoaldosteronism type 1 — loss-of-function ENaC mutations → salt wasting, hyperkalemia, metabolic acidosis in neonates",
+    ],
+    boardsPearls: [
+      "Aldosterone → MR → ↑ ENaC insertion in principal cells → Na⁺ retention, K⁺/H⁺ loss",
+      "Amiloride and triamterene block ENaC; trimethoprim also blocks ENaC → hyperkalemia risk",
+      "Liddle syndrome mimics hyperaldosteronism but aldosterone is low — ENaC gain-of-function",
+      "CFTR dysfunction → impaired Cl⁻ secretion with relative ENaC-mediated Na⁺ hyperabsorption → dehydrated airway surface",
+      "Spironolactone blocks mineralocorticoid receptor upstream of ENaC, not the channel directly",
+    ],
+    distinguishFrom: [
+      "CFTR — apical Cl⁻ channel; mutated in cystic fibrosis; opposite salt/water effect in airways",
+      "Na⁺/K⁺-ATPase — basolateral pump establishing gradient; ENaC is apical entry step",
+      "NKCC2 / NCC — proximal/thick ascending limb and DCT transporters, not collecting duct ENaC",
+      "Mineralocorticoid receptor — aldosterone receptor that upregulates ENaC, not the channel itself",
+    ],
+  },
+  {
     id: "alpha-galactosidase-a",
     name: "Alpha-galactosidase A",
     etymology: "Greek alpha = first letter + galactose = milk sugar + -ase = enzyme + A = enzyme subtype",
