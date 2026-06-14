@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 180" role="img" aria-label="Nystagmus">
+  <rect width="480" height="180" fill="#f8fafc"/>
+  <text x="240" y="24" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" font-weight="600">Nystagmus</text>
+  <circle cx="240" cy="88" r="36" fill="#fff" stroke="#334155" stroke-width="2"/>
+  <circle cx="228" cy="88" r="10" fill="#1e293b"/>
+  <path d="M200 88 Q240 58 280 88 Q240 118 200 88" stroke="#dc2626" stroke-width="2" fill="none"/>
+  <text x="240" y="140" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11">Rhythmic involuntary eye oscillation</text>
+  <text x="120" y="162" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#64748b">Fast phase + slow phase</text>
+  <text x="360" y="162" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#64748b">INO ’ abducting nystagmus</text>
+</svg>

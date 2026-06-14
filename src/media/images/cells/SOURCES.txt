@@ -21,3 +21,53 @@ natural-killer-cell.jpg
 https://commons.wikimedia.org/wiki/File:Human_Natural_Killer_Cell_(29120480442).jpg
 National Institute of Allergy and Infectious Diseases (NIAID), CC BY 2.0
 Description: Colorized scanning electron micrograph of a human natural killer cell
+
+hepatocyte.jpg
+https://commons.wikimedia.org/wiki/File:Human_liver.jpg
+Department of Histology, Jagiellonian University Medical College, CC BY-SA 3.0 / GFDL
+Description: Human liver H&E section showing hepatocytes organized into plates and lobules
+
+osteoblast.jpg
+https://commons.wikimedia.org/wiki/File:Bone_hypercalcemia_-_cropped_-_very_high_mag.jpg
+Nephron, CC BY-SA 3.0
+Description: High-magnification H&E bone micrograph showing osteoblasts lining osteoid/bone surface
+
+osteoclast.jpg
+https://commons.wikimedia.org/wiki/File:Osteoclast.jpg
+Robert M. Hunt, public domain
+Description: Light micrograph of a multinucleated osteoclast with foamy cytoplasm
+
+saltatory-conduction.svg
+https://commons.wikimedia.org/wiki/File:Saltatory_Conduction.gif
+Wikimedia Commons (derivative diagram)
+Description: Saltatory conduction along myelinated axon at nodes of Ranvier
+
+white-matter.svg
+Created locally
+Reference: https://en.wikipedia.org/wiki/White_matter
+Description: CNS white matter — myelinated axon tracts
+
+gray-matter.svg
+Created locally
+Reference: https://en.wikipedia.org/wiki/Grey_matter
+Description: CNS gray matter — neuronal cell bodies and synapses
+
+periventricular-white-matter.jpg
+https://commons.wikimedia.org/wiki/File:Disseminated_sclerosis_(IA_b2810349x).pdf
+Wikimedia Commons
+Description: Periventricular demyelinating plaques in MS
+
+medial-longitudinal-fasciculus.svg
+Created locally
+Reference: https://en.wikipedia.org/wiki/Medial_longitudinal_fasciculus
+Description: MLF brainstem tract coordinating horizontal gaze
+
+preterm-lung-maturity.svg
+Created locally
+Reference: https://en.wikipedia.org/wiki/Fetal_lung_maturity
+Description: Antenatal corticosteroids and surfactant production
+
+immunosuppression.svg
+Created locally
+Reference: https://en.wikipedia.org/wiki/Immunosuppression
+Description: Reduced immune cell activation from immunosuppressive drugs

@@ -3648,6 +3648,267 @@ export const CELLS: CellEntry[] = [
     pediatrics:
       "Neonatal hematopoiesis transitions from fetal liver to bone marrow; HSC transplant treats SCID, osteopetrosis, and some inborn errors. NEC and celiac disease injure intestinal stem cell niche — impaired mucosal regeneration.",
   },
+  {
+    id: "saltatory-conduction",
+    name: "Saltatory conduction",
+    etymology: "Latin saltare = to jump/leap + conductio = leading together",
+    aliases: [
+      "saltatory conduction",
+      "saltatory nerve conduction",
+      "jumping conduction",
+    ],
+    definition:
+      "Rapid propagation of action potentials along myelinated axons where depolarization jumps between nodes of Ranvier rather than spreading continuously along the entire membrane.",
+    characteristics: [
+      "Myelin insulates internodal axon membrane → ion channels concentrated at nodes of Ranvier",
+      "Local current loops depolarize adjacent nodes → action potential 'jumps' node to node",
+      "Faster and more energy-efficient than continuous conduction in unmyelinated fibers",
+      "Oligodendrocytes (CNS) and Schwann cells (PNS) form myelin",
+    ],
+    clinicalRelevance: [
+      "Multiple sclerosis — demyelination disrupts saltatory conduction → slowed or blocked nerve signals",
+      "Guillain-Barré — peripheral demyelination impairs conduction velocity",
+      "Local anesthetics block Na⁺ channels — preferentially affect smaller/unmyelinated fibers at low doses",
+      "Multiple sclerosis plaques cause conduction block and variable symptoms (Uhthoff phenomenon)",
+    ],
+    boardsPearls: [
+      "Saltatory = jumping between nodes of Ranvier",
+      "Myelin ↑ conduction velocity — Aβ fastest, C fibers slowest (unmyelinated)",
+      "Demyelination → slowed conduction or block — basis of MS neurologic deficits",
+      "Nodes of Ranvier rich in voltage-gated Na⁺ channels",
+    ],
+    distinguishFrom: [
+      "Continuous conduction — unmyelinated C fibers, slower propagation along entire membrane",
+      "Synaptic transmission — chemical across synapse, not axonal conduction",
+    ],
+    pediatrics:
+      "Pediatric MS and leukodystrophies disrupt myelination and saltatory conduction; developmental myelination continues into early adulthood.",
+  },
+  {
+    id: "white-matter",
+    name: "White matter",
+    etymology: "white = myelin lipid appearance + matter = brain substance",
+    aliases: ["white matter", "white matters", "cns white matter", "brain white matter"],
+    definition:
+      "CNS tissue composed predominantly of myelinated axon tracts — appears white grossly due to myelin lipid content; connects cortical and subcortical regions and carries ascending/descending pathways.",
+    characteristics: [
+      "Myelinated axons — oligodendrocytes produce myelin in CNS",
+      "Tracts: corticospinal, spinothalamic, dorsal columns, commissural fibers (corpus callosum)",
+      "Saltatory conduction enables rapid long-distance signaling",
+      "Vulnerable to demyelinating diseases (MS), ischemia, and leukodystrophies",
+    ],
+    clinicalRelevance: [
+      "MS plaques — inflammatory demyelination of periventricular and other white matter",
+      "Ischemic stroke — white matter lacunes and watershed infarcts",
+      "Normal pressure hydrocephalus — transependymal flow affects periventricular white matter",
+      "Leukoaraiosis — age-related white matter hyperintensities on MRI",
+    ],
+    boardsPearls: [
+      "White = myelin (oligodendrocytes); gray = neuronal cell bodies and synapses",
+      "MS targets white matter — periventricular plaques classic on MRI",
+      "Corpus callosum is commissural white matter — MS often affects it",
+      "vs gray matter — cortex, deep nuclei (basal ganglia, thalamus)",
+    ],
+    distinguishFrom: [
+      "Gray matter — neuronal somata, dendrites, synapses; cortex appears gray",
+      "PNS nerve — Schwann cell myelin, not oligodendrocyte",
+    ],
+    pediatrics:
+      "Leukodystrophies (e.g., metachromatic, adrenoleukodystrophy) destroy pediatric white matter; developmental myelination milestones relevant in infancy.",
+  },
+  {
+    id: "gray-matter",
+    name: "Gray matter",
+    etymology: "gray = neuronal cell body color without myelin + matter = brain substance",
+    aliases: [
+      "gray matter",
+      "gray matters",
+      "grey matter",
+      "grey matters",
+      "brain gray matter",
+      "cns gray matter",
+    ],
+    definition:
+      "CNS tissue rich in neuronal cell bodies, dendrites, synapses, and glia with relatively little myelin — forms cerebral cortex, deep nuclei (basal ganglia, thalamus), cerebellar cortex, and central gray of spinal cord.",
+    characteristics: [
+      "Neuronal somata and synaptic neuropil — integration and processing",
+      "Cerebral cortex — six layers of gray matter overlying subcortical white matter",
+      "Basal ganglia and thalamus — deep gray matter nuclei",
+      "Spinal cord — butterfly-shaped central gray matter surrounded by white matter tracts",
+    ],
+    clinicalRelevance: [
+      "Alzheimer disease — cortical gray matter atrophy",
+      "Huntington disease — caudate gray matter degeneration",
+      "Poliomyelitis — anterior horn gray matter motor neuron loss",
+      "MS can affect gray matter but classic plaques are white matter predominant",
+    ],
+    boardsPearls: [
+      "Gray = cell bodies; white = myelinated tracts",
+      "Cortex is gray matter; internal capsule is white matter",
+      "Spinal cord — gray matter central (H-shape), white matter peripheral (opposite of brain)",
+      "Polio destroys anterior horn gray matter → LMN paralysis",
+    ],
+    distinguishFrom: [
+      "White matter — myelinated axon tracts connecting regions",
+      "Nucleus — cluster of gray matter cell bodies (can be deep or cortical)",
+    ],
+    pediatrics:
+      "Pediatric neurodegenerative diseases may preferentially affect gray matter (e.g., neuronal ceroid lipofuscinosis); spinal muscular atrophy affects anterior horn gray matter motor neurons.",
+  },
+  {
+    id: "periventricular-white-matter",
+    name: "Periventricular white matter",
+    etymology: "Latin peri = around + ventriculus = small belly + white matter",
+    aliases: [
+      "periventricular white matter",
+      "periventricular white matters",
+      "periventricular region",
+      "periventricular plaques",
+      "periventricular lesions",
+    ],
+    definition:
+      "White matter tracts immediately surrounding the lateral ventricles — common site of demyelinating plaques in MS and age-related changes on MRI.",
+    characteristics: [
+      "Includes periventricular corpus callosum, centrum semiovale adjacent to ventricles",
+      "Oligodendrocyte-rich region — targeted in MS autoimmune demyelination",
+      "Dawson fingers — ovoid periventricular lesions perpendicular to ventricles on MRI (MS)",
+      "Also shows nonspecific T2 hyperintensities with aging and vascular disease",
+    ],
+    clinicalRelevance: [
+      "Multiple sclerosis — Dawson fingers on MRI are periventricular demyelinating plaques",
+      "Dissemination in space criterion for MS diagnosis includes periventricular lesions",
+      "Periventricular leukomalacia — neonatal white matter injury near ventricles",
+      "Normal pressure hydrocephalus — transependymal CSF flow affects this region",
+    ],
+    boardsPearls: [
+      "Periventricular plaques = classic MS MRI finding",
+      "Dawson fingers — ovoid lesions perpendicular to lateral ventricles",
+      "Pair with oligoclonal bands and INO for MS vignette",
+      "vs subcortical/juxtacortical lesions — also count toward MS dissemination in space",
+    ],
+    distinguishFrom: [
+      "Juxtacortical lesions — abut cortex, U-fiber involvement",
+      "Deep gray matter — thalamus, basal ganglia (not periventricular white matter)",
+      "Corpus callosum alone — part of periventricular region but distinct anatomic label",
+    ],
+    pediatrics:
+      "Periventricular leukomalacia in premature infants — ischemic injury to periventricular white matter → spastic diplegia and cognitive sequelae.",
+  },
+  {
+    id: "medial-longitudinal-fasciculus",
+    name: "Medial longitudinal fasciculus",
+    etymology: "Latin medialis = middle + longitudo = length + fasciculus = small bundle",
+    aliases: [
+      "medial longitudinal fasciculus",
+      "medial longitudinal fasciculi",
+      "mlf",
+      "medial longitudinal fascicle",
+    ],
+    definition:
+      "Paired brainstem white matter tract running near the midline in the dorsal pons and midbrain that coordinates conjugate horizontal gaze by linking CN VI and CN III nuclei.",
+    characteristics: [
+      "Connects abducens (CN VI) nucleus to contralateral oculomotor (CN III) nucleus",
+      "Lesion → internuclear ophthalmoplegia (INO)",
+      "Also carries vestibulo-ocular reflex fibers for horizontal gaze holding",
+      "Adjacent to CN VI nucleus in dorsal pontine tegmentum — vulnerable to MS plaques and lacunar stroke",
+    ],
+    clinicalRelevance: [
+      "MLF lesion → INO: impaired ipsilateral adduction, contralateral abducting nystagmus",
+      "Bilateral MLF lesions → bilateral INO — classic for MS",
+      "Unilateral MLF infarct — pontine lacunar stroke in older patients",
+      "One-and-a-half syndrome — PPRF + MLF lesion",
+    ],
+    boardsPearls: [
+      "MLF lesion = INO",
+      "Bilateral INO in young woman → MS",
+      "Unilateral INO in older patient → stroke",
+      "MLF coordinates horizontal gaze — not vertical (that involves rostral interstitial nucleus of MLF for vertical)",
+    ],
+    distinguishFrom: [
+      "PPRF (paramedian pontine reticular formation) — generates horizontal gaze; lesion causes ipsilateral conjugate gaze palsy",
+      "CN III nucleus — causes ipsilateral 'down and out' eye with ptosis",
+      "Fasciculus solitarius — visceral sensory, not gaze",
+    ],
+    pediatrics:
+      "MLF demyelination in pediatric MS causes INO; brainstem glioma can mimic by compressing gaze pathways.",
+  },
+  {
+    id: "preterm-lung-maturity",
+    name: "Preterm lung maturity",
+    etymology: "Latin prae = before + terminus = limit + Latin pulmo = lung + Latin maturus = ripe",
+    aliases: [
+      "preterm lung maturity",
+      "fetal lung maturity",
+      "lung maturity",
+      "pulmonary maturity",
+      "antenatal corticosteroid effect",
+    ],
+    definition:
+      "Developmental readiness of fetal lungs for extrauterine gas exchange, marked by sufficient surfactant production by type II pneumocytes to reduce alveolar surface tension and prevent atelectasis.",
+    characteristics: [
+      "Surfactant (dipalmitoylphosphatidylcholine) lowers surface tension at air-liquid interface",
+      "Type II pneumocytes produce surfactant — increases in late gestation",
+      "Antenatal corticosteroids (betamethasone or dexamethasone) accelerate surfactant synthesis",
+      "Lecithin/sphingomyelin (L/S) ratio ≥2 historically indicated maturity",
+    ],
+    clinicalRelevance: [
+      "Immature lungs → neonatal respiratory distress syndrome (NRDS/hyaline membrane disease)",
+      "Antenatal steroids given to mothers at risk of preterm delivery ↓ NRDS, IVH, NEC mortality",
+      "Cesarean without labor may deliver infant before natural cortisol/surfactant surge",
+      "Maternal diabetes — delayed fetal lung maturity despite gestational age",
+    ],
+    boardsPearls: [
+      "Antenatal betamethasone/dexamethasone for preterm lung maturity — ↓ NRDS",
+      "Surfactant deficiency = NRDS pathophysiology",
+      "Type II pneumocytes — source of surfactant",
+      "Give antenatal steroids if preterm delivery anticipated 24–34 weeks (protocols vary)",
+    ],
+    distinguishFrom: [
+      "Transient tachypnea of newborn — fluid in lungs, near-term, resolves quickly",
+      "Meconium aspiration — obstructive pneumonitis, not surfactant deficiency primary",
+    ],
+    pediatrics:
+      "NRDS peaks in prematurity; exogenous surfactant replacement treats established disease while antenatal steroids prevent it.",
+  },
+  {
+    id: "immunosuppression",
+    name: "Immunosuppression",
+    etymology: "Latin immunis = exempt + supprimere = press down",
+    aliases: [
+      "immunosuppression",
+      "immunosuppressions",
+      "immunosuppressed",
+      "immunocompromised",
+      "immunocompromise",
+      "immune suppression",
+    ],
+    definition:
+      "Reduced capacity of the immune system to mount effective responses against pathogens and malignancy — iatrogenic (drugs) or disease-related (HIV, malignancy).",
+    characteristics: [
+      "↓ T-cell activation (calcineurin inhibitors, corticosteroids)",
+      "↓ B-cell function (rituximab, alkylating agents)",
+      "↓ phagocyte oxidative burst (chronic granulomatous disease — not drug-induced)",
+      "Impaired cytokine signaling and lymphocyte proliferation",
+    ],
+    clinicalRelevance: [
+      "Glucocorticoids — broad immunosuppression; mask infection signs",
+      "Calcineurin inhibitors — transplant regimens; nephrotoxicity plus infection risk",
+      "Anti-TNF agents — TB reactivation, fungal infections",
+      "Opportunistic infections: PCP, CMV, EBV (PTLD), JC virus (PML)",
+    ],
+    boardsPearls: [
+      "Steroids impair cell-mediated immunity — reactivation TB, fungal, atypical infections",
+      "Transplant patients need prophylaxis (TMP-SMX for PCP, antivirals)",
+      "Live vaccines contraindicated in significant immunosuppression",
+      "Immunosuppression + new neurologic deficit → consider PML (JC virus)",
+    ],
+    distinguishFrom: [
+      "Immunodeficiency (primary) — genetic (SCID, CVID, CGD)",
+      "Neutropenia — quantitative granulocyte defect, distinct from drug immunosuppression",
+    ],
+    pediatrics:
+      "Children on chemotherapy or transplant immunosuppression need aggressive evaluation of fever; vaccination schedules adjusted per live-vaccine contraindications.",
+  },
 ];
 
 const cellById = new Map(CELLS.map((entry) => [entry.id, entry]));

@@ -7,3 +7,27 @@ sarcomere-diagram.svg
   Description: Labeled sarcomere diagram (Z line, M line, A band, I band, H zone)
   Page: https://commons.wikimedia.org/wiki/File:Sarcomere_diagram.svg
   Download: https://commons.wikimedia.org/wiki/Special:FilePath/Sarcomere_diagram.svg
+
+pelvic-floor.png
+  Source: Wikimedia Commons — Gray404.png
+  Author: Henry Vandyke Carter / Gray's Anatomy
+  License: Public domain
+  Description: Internal view of left levator ani, a major pelvic floor muscle
+  Page: https://commons.wikimedia.org/wiki/File:Gray404.png
+  Download: https://commons.wikimedia.org/wiki/Special:FilePath/Gray404.png
+
+s2-s4-sacral-segments.png
+  Source: Wikimedia Commons — Gray828.png
+  Author: Henry Vandyke Carter / Gray's Anatomy
+  License: Public domain
+  Description: Plan of sacral and pudendal plexuses showing S2, S3, and S4 branches
+  Page: https://commons.wikimedia.org/wiki/File:Gray828.png
+  Download: https://commons.wikimedia.org/wiki/Special:FilePath/Gray828.png
+
+fontanelle.png
+  Source: Wikimedia Commons — Gray197.png
+  Author: Henry Vandyke Carter / Gray's Anatomy
+  License: Public domain
+  Description: Newborn skull showing anterior and posterior fontanelles
+  Page: https://commons.wikimedia.org/wiki/File:Gray197.png
+  Download: https://commons.wikimedia.org/wiki/Special:FilePath/Gray197.png

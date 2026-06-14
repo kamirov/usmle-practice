@@ -15,6 +15,7 @@ import apl from "../media/images/conditions/apl.png?url";
 import asthma from "../media/images/conditions/asthma.jpg?url";
 import atherosclerosis from "../media/images/conditions/atherosclerosis.jpg?url";
 import atopicDermatitis from "../media/images/conditions/atopic-dermatitis.jpg?url";
+import avascularNecrosis from "../media/images/conditions/avascular-necrosis.svg?url";
 import atrialFibrillation from "../media/images/conditions/atrial-fibrillation.jpg?url";
 import atrialSeptalDefect from "../media/images/conditions/atrial-septal-defect.jpg?url";
 import atrioventricularBlock from "../media/images/conditions/atrioventricular-block.png?url";
@@ -23,6 +24,7 @@ import biliaryAtresia from "../media/images/conditions/biliary-atresia.jpg?url";
 import bph from "../media/images/conditions/bph.jpg?url";
 import cardiacTamponade from "../media/images/conditions/cardiac-tamponade.jpg?url";
 import catScratchDisease from "../media/images/conditions/cat-scratch-disease.jpg?url";
+import cataracts from "../media/images/conditions/cataracts.svg?url";
 import cellulitis from "../media/images/conditions/cellulitis.jpg?url";
 import celiacDisease from "../media/images/conditions/celiac-disease.jpg?url";
 import chikungunyaRash from "../media/images/conditions/chikungunya-rash.jpg?url";
@@ -50,6 +52,7 @@ import fecalIncontinence from "../media/images/conditions/fecal-incontinence.jpg
 import femaleAthleteTriad from "../media/images/conditions/female-athlete-triad.svg?url";
 import galactorrhea from "../media/images/conditions/galactorrhea.jpg?url";
 import gangrene from "../media/images/conditions/gangrene.jpg?url";
+import glaucoma from "../media/images/conditions/glaucoma.svg?url";
 import glomerulonephritis from "../media/images/conditions/glomerulonephritis.jpg?url";
 import granulomatosisWithPolyangiitis from "../media/images/conditions/granulomatosis-with-polyangiitis.jpg?url";
 import gravesDisease from "../media/images/conditions/graves-disease.jpg?url";
@@ -87,6 +90,7 @@ import menopause from "../media/images/conditions/menopause.svg?url";
 import merkelCellCarcinoma from "../media/images/conditions/merkel-cell-carcinoma.jpg?url";
 import molarPregnancyUltrasound from "../media/images/conditions/molar-pregnancy-ultrasound.jpg?url";
 import multipleSclerosis from "../media/images/conditions/multiple-sclerosis.jpg?url";
+import neuromyelitisOptica from "../media/images/conditions/neuromyelitis-optica.svg?url";
 import myocardialInfarction from "../media/images/conditions/myocardial-infarction.jpg?url";
 import neonatalRespiratoryDistressSyndrome from "../media/images/conditions/neonatal-respiratory-distress-syndrome.jpg?url";
 import nephriticSyndrome from "../media/images/conditions/nephritic-syndrome.jpg?url";
@@ -168,6 +172,7 @@ export type ConditionImageId = Extract<
   | "asthma"
   | "atherosclerosis"
   | "atopic-dermatitis"
+  | "avascular-necrosis"
   | "atrial-fibrillation"
   | "atrial-septal-defect"
   | "atrioventricular-block"
@@ -176,6 +181,7 @@ export type ConditionImageId = Extract<
   | "bph"
   | "cardiac-tamponade"
   | "cat-scratch-disease"
+  | "cataracts"
   | "cellulitis"
   | "celiac-disease"
   | "chikungunya-fever"
@@ -203,6 +209,7 @@ export type ConditionImageId = Extract<
   | "female-athlete-triad"
   | "galactorrhea"
   | "gangrene"
+  | "glaucoma"
   | "glomerulonephritis"
   | "granulomatosis-with-polyangiitis"
   | "graves-disease"
@@ -240,6 +247,7 @@ export type ConditionImageId = Extract<
   | "merkel-cell-carcinoma"
   | "hydatidiform-mole"
   | "multiple-sclerosis"
+  | "neuromyelitis-optica"
   | "myocardial-infarction"
   | "neonatal-respiratory-distress-syndrome"
   | "nephritic-syndrome"
@@ -326,6 +334,7 @@ export const CONDITION_IMAGES: Partial<Record<ConditionImageId, string>> = {
   "asthma": extensionAssetUrl(asthma),
   "atherosclerosis": extensionAssetUrl(atherosclerosis),
   "atopic-dermatitis": extensionAssetUrl(atopicDermatitis),
+  "avascular-necrosis": extensionAssetUrl(avascularNecrosis),
   "atrial-fibrillation": extensionAssetUrl(atrialFibrillation),
   "atrial-septal-defect": extensionAssetUrl(atrialSeptalDefect),
   "atrioventricular-block": extensionAssetUrl(atrioventricularBlock),
@@ -334,6 +343,7 @@ export const CONDITION_IMAGES: Partial<Record<ConditionImageId, string>> = {
   "bph": extensionAssetUrl(bph),
   "cardiac-tamponade": extensionAssetUrl(cardiacTamponade),
   "cat-scratch-disease": extensionAssetUrl(catScratchDisease),
+  "cataracts": extensionAssetUrl(cataracts),
   "cellulitis": extensionAssetUrl(cellulitis),
   "celiac-disease": extensionAssetUrl(celiacDisease),
   "chikungunya-fever": extensionAssetUrl(chikungunyaRash),
@@ -361,6 +371,7 @@ export const CONDITION_IMAGES: Partial<Record<ConditionImageId, string>> = {
   "female-athlete-triad": extensionAssetUrl(femaleAthleteTriad),
   "galactorrhea": extensionAssetUrl(galactorrhea),
   "gangrene": extensionAssetUrl(gangrene),
+  "glaucoma": extensionAssetUrl(glaucoma),
   "glomerulonephritis": extensionAssetUrl(glomerulonephritis),
   "granulomatosis-with-polyangiitis": extensionAssetUrl(granulomatosisWithPolyangiitis),
   "graves-disease": extensionAssetUrl(gravesDisease),
@@ -398,6 +409,7 @@ export const CONDITION_IMAGES: Partial<Record<ConditionImageId, string>> = {
   "merkel-cell-carcinoma": extensionAssetUrl(merkelCellCarcinoma),
   "hydatidiform-mole": extensionAssetUrl(molarPregnancyUltrasound),
   "multiple-sclerosis": extensionAssetUrl(multipleSclerosis),
+  "neuromyelitis-optica": extensionAssetUrl(neuromyelitisOptica),
   "myocardial-infarction": extensionAssetUrl(myocardialInfarction),
   "neonatal-respiratory-distress-syndrome": extensionAssetUrl(neonatalRespiratoryDistressSyndrome),
   "nephritic-syndrome": extensionAssetUrl(nephriticSyndrome),
@@ -481,6 +493,7 @@ export const CONDITION_IMAGE_ATTRIBUTIONS: Partial<
   "asthma": { label: "Wikimedia Commons (2311 Lung Tissue.jpg)", url: "https://commons.wikimedia.org/wiki/File:2311_Lung_Tissue.jpg" },
   "atherosclerosis": { label: "Wikimedia Commons (Endothelial dysfunction Atherosclerosis (hy).png)", url: "https://commons.wikimedia.org/wiki/File:Endothelial_dysfunction_Atherosclerosis_(hy).png" },
   "atopic-dermatitis": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:atopic-dermatitis.jpg" },
+  "avascular-necrosis": { label: "Created locally; reference: Avascular necrosis", url: "https://en.wikipedia.org/wiki/Avascular_necrosis" },
   "atrial-fibrillation": { label: "Wikimedia Commons (Herz-EKG1kanalVorhofflimmernSmartwatch-171021.jpg)", url: "https://commons.wikimedia.org/wiki/File:Herz-EKG1kanalVorhofflimmernSmartwatch-171021.jpg" },
   "atrial-septal-defect": { label: "Wikimedia Commons (Echokardiogram von Atriumseptumdefekt (Ostium secundum).jpg)", url: "https://commons.wikimedia.org/wiki/File:Echokardiogram_von_Atriumseptumdefekt_(Ostium_secundum).jpg" },
   "atrioventricular-block": { label: "Wikimedia Commons (3rd degree heart block.PNG)", url: "https://commons.wikimedia.org/wiki/File:3rd_degree_heart_block.PNG" },
@@ -489,6 +502,7 @@ export const CONDITION_IMAGE_ATTRIBUTIONS: Partial<
   "bph": { label: "Wikimedia Commons (Benign Prostatic Hyperplasia nci-vol-7137-300.jpg)", url: "https://commons.wikimedia.org/wiki/File:Benign_Prostatic_Hyperplasia_nci-vol-7137-300.jpg" },
   "cardiac-tamponade": { label: "Wikimedia Commons (Electrical Alternans.JPG)", url: "https://commons.wikimedia.org/wiki/File:Electrical_Alternans.JPG" },
   "cat-scratch-disease": { label: "Wikimedia Commons (ICD-10-CM (2010).djvu)", url: "https://commons.wikimedia.org/wiki/File:ICD-10-CM_(2010).djvu" },
+  "cataracts": { label: "Created locally; reference: Cataract", url: "https://en.wikipedia.org/wiki/Cataract" },
   "cellulitis": { label: "Wikimedia Commons (Cellulitis3.jpg)", url: "https://commons.wikimedia.org/wiki/File:Cellulitis3.jpg" },
   "celiac-disease": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:celiac-disease.jpg" },
   "chikungunya-fever": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:chikungunya-rash.jpg" },
@@ -516,6 +530,7 @@ export const CONDITION_IMAGE_ATTRIBUTIONS: Partial<
   "female-athlete-triad": { label: "Wikimedia Commons (RED-S DE.svg)", url: "https://commons.wikimedia.org/wiki/File:RED-S_DE.svg" },
   "galactorrhea": { label: "Wikimedia Commons (Lactation.jpg)", url: "https://commons.wikimedia.org/wiki/File:Lactation.jpg" },
   "gangrene": { label: "Wikimedia Commons (Dry gangrene of the foot Wellcome L0062216.jpg)", url: "https://commons.wikimedia.org/wiki/File:Dry_gangrene_of_the_foot_Wellcome_L0062216.jpg" },
+  "glaucoma": { label: "Created locally; reference: Glaucoma", url: "https://en.wikipedia.org/wiki/Glaucoma" },
   "glomerulonephritis": { label: "Wikimedia Commons (Crescentic glomerulonephritis - high mag.jpg)", url: "https://commons.wikimedia.org/wiki/File:Crescentic_glomerulonephritis_-_high_mag.jpg" },
   "granulomatosis-with-polyangiitis": { label: "Wikimedia Commons (Granulomatosis with polyangiitis.jpg)", url: "https://commons.wikimedia.org/wiki/File:Granulomatosis_with_polyangiitis.jpg" },
   "graves-disease": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:graves-disease.jpg" },
@@ -553,6 +568,7 @@ export const CONDITION_IMAGE_ATTRIBUTIONS: Partial<
   "merkel-cell-carcinoma": { label: "Wikimedia Commons (Merkel cell carcinoma - very high mag.jpg)", url: "https://commons.wikimedia.org/wiki/File:Merkel_cell_carcinoma_-_very_high_mag.jpg" },
   "hydatidiform-mole": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:molar-pregnancy-ultrasound.jpg" },
   "multiple-sclerosis": { label: "Wikimedia Commons (Disseminated sclerosis (IA b2810349x).pdf)", url: "https://commons.wikimedia.org/wiki/File:Disseminated_sclerosis_(IA_b2810349x).pdf" },
+  "neuromyelitis-optica": { label: "Created locally; reference: Neuromyelitis optica", url: "https://en.wikipedia.org/wiki/Neuromyelitis_optica" },
   "myocardial-infarction": { label: "Wikimedia Commons (ST elevation myocardial infarction ECG (cropped).jpg)", url: "https://commons.wikimedia.org/wiki/File:ST_elevation_myocardial_infarction_ECG_(cropped).jpg" },
   "neonatal-respiratory-distress-syndrome": { label: "Wikimedia Commons (Annual report - National Institutes of Health. National Heart, Lung, and Blood Advisory Council (IA annualreportnatio1985nati).pdf)", url: "https://commons.wikimedia.org/wiki/File:Annual_report_-_National_Institutes_of_Health._National_Heart,_Lung,_and_Blood_Advisory_Council_(IA_annualreportnatio1985nati).pdf" },
   "nephritic-syndrome": { label: "Wikimedia Commons (MicroHematuria.JPG)", url: "https://commons.wikimedia.org/wiki/File:MicroHematuria.JPG" },
@@ -636,6 +652,7 @@ export const CONDITION_IMAGE_CAPTIONS: Partial<
   "asthma": "Clinical or pathologic image illustrating asthma",
   "atherosclerosis": "Clinical or pathologic image illustrating atherosclerosis",
   "atopic-dermatitis": "Clinical or pathologic image illustrating atopic dermatitis",
+  "avascular-necrosis": "Ischemic femoral head necrosis — steroids, sickle cell, alcohol classic causes",
   "atrial-fibrillation": "Clinical or pathologic image illustrating atrial fibrillation",
   "atrial-septal-defect": "Clinical or pathologic image illustrating atrial septal defect",
   "atrioventricular-block": "Clinical or pathologic image illustrating atrioventricular block",
@@ -644,6 +661,7 @@ export const CONDITION_IMAGE_CAPTIONS: Partial<
   "bph": "Clinical or pathologic image illustrating bph",
   "cardiac-tamponade": "Clinical or pathologic image illustrating cardiac tamponade",
   "cat-scratch-disease": "Clinical or pathologic image illustrating cat scratch disease",
+  "cataracts": "Lens opacity — steroids, diabetes, galactosemia, congenital rubella",
   "cellulitis": "Lower-leg cellulitis with erythema and edema from dermal/subcutaneous bacterial infection",
   "celiac-disease": "Clinical or pathologic image illustrating celiac disease",
   "chikungunya-fever": "Maculopapular chikungunya rash on the abdomen during acute illness",
@@ -671,6 +689,7 @@ export const CONDITION_IMAGE_CAPTIONS: Partial<
   "female-athlete-triad": "Clinical or pathologic image illustrating female athlete triad",
   "galactorrhea": "Clinical or pathologic image illustrating galactorrhea",
   "gangrene": "Clinical or pathologic image illustrating gangrene",
+  "glaucoma": "Optic neuropathy with elevated IOP — steroids increase risk",
   "glomerulonephritis": "Clinical or pathologic image illustrating glomerulonephritis",
   "granulomatosis-with-polyangiitis": "Clinical or pathologic image illustrating granulomatosis with polyangiitis",
   "graves-disease": "Clinical or pathologic image illustrating graves disease",
@@ -708,6 +727,7 @@ export const CONDITION_IMAGE_CAPTIONS: Partial<
   "merkel-cell-carcinoma": "Clinical or pathologic image illustrating merkel cell carcinoma",
   "hydatidiform-mole": "Transvaginal ultrasound of molar pregnancy — classic 'snowstorm' / bunch-of-grapes intrauterine pattern",
   "multiple-sclerosis": "Clinical or pathologic image illustrating multiple sclerosis",
+  "neuromyelitis-optica": "NMO — severe optic neuritis and longitudinally extensive transverse myelitis with anti-AQP4 antibodies",
   "myocardial-infarction": "Clinical or pathologic image illustrating myocardial infarction",
   "neonatal-respiratory-distress-syndrome": "Clinical or pathologic image illustrating neonatal respiratory distress syndrome",
   "nephritic-syndrome": "Clinical or pathologic image illustrating nephritic syndrome",

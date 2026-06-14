@@ -26,21 +26,27 @@ import hematuria from "../media/images/symptoms/hematuria.jpg?url";
 import hemianopsia from "../media/images/symptoms/hemianopsia.svg?url";
 import hemiplegia from "../media/images/symptoms/hemiplegia.jpg?url";
 import hemoptysis from "../media/images/symptoms/hemoptysis.jpg?url";
+import internuclearOphthalmoplegia from "../media/images/symptoms/internuclear-ophthalmoplegia.svg?url";
+import impairedWoundHealing from "../media/images/symptoms/impaired-wound-healing.svg?url";
 import hyperactiveBowelSounds from "../media/images/symptoms/hyperactive-bowel-sounds.jpg?url";
 import hypoxemia from "../media/images/symptoms/hypoxemia.jpg?url";
 import induratedPlaque from "../media/images/symptoms/indurated-plaque.jpg?url";
 import jaundice from "../media/images/symptoms/jaundice.jpg?url";
 import kernigSign from "../media/images/symptoms/kernig-sign.jpg?url";
+import lhermitteSign from "../media/images/symptoms/lhermitte-sign.svg?url";
 import leukocytosis from "../media/images/cells/leukocyte.jpg?url";
 import lichenification from "../media/images/symptoms/lichenification.jpg?url";
 import lymphadenopathy from "../media/images/symptoms/lymphadenopathy.jpg?url";
 import maculopapularRash from "../media/images/symptoms/maculopapular-rash.jpg?url";
+import mania from "../media/images/symptoms/mania.svg?url";
 import melena from "../media/images/symptoms/melena.jpg?url";
 import morningStiffness from "../media/images/symptoms/morning-stiffness.jpg?url";
+import moonFacies from "../media/images/symptoms/moon-facies.svg?url";
 import nausea from "../media/images/symptoms/nausea.jpg?url";
 import neutrophilia from "../media/images/cells/neutrophil.jpg?url";
 import nodularLymphangitis from "../media/images/symptoms/nodular-lymphangitis.jpg?url";
 import nuchalRigidity from "../media/images/symptoms/nuchal-rigidity.jpg?url";
+import nystagmus from "../media/images/symptoms/nystagmus.svg?url";
 import orthopnea from "../media/images/symptoms/orthopnea.jpg?url";
 import palpitations from "../media/images/symptoms/palpitations.jpg?url";
 import papule from "../media/images/symptoms/papule.jpg?url";
@@ -50,6 +56,7 @@ import pleuriticChestPain from "../media/images/symptoms/pleuritic-chest-pain.jp
 import pnd from "../media/images/symptoms/pnd.jpg?url";
 import polyuriaPolydipsia from "../media/images/symptoms/polyuria-polydipsia.jpg?url";
 import presyncope from "../media/images/symptoms/presyncope.jpg?url";
+import psychosis from "../media/images/symptoms/psychosis.svg?url";
 import pruritus from "../media/images/symptoms/pruritus.jpg?url";
 import pulmonaryEdema from "../media/images/symptoms/pulmonary-edema.jpg?url";
 import purpura from "../media/images/symptoms/purpura.jpg?url";
@@ -95,21 +102,27 @@ export type SymptomImageId = Extract<
   | "hemianopsia"
   | "hemiplegia"
   | "hemoptysis"
+  | "internuclear-ophthalmoplegia"
+  | "impaired-wound-healing"
   | "hyperactive-bowel-sounds"
   | "hypoxemia"
   | "indurated-plaque"
   | "jaundice"
   | "kernig-sign"
+  | "lhermitte-sign"
   | "leukocytosis"
   | "lichenification"
   | "lymphadenopathy"
   | "maculopapular-rash"
+  | "mania"
   | "melena"
   | "morning-stiffness"
+  | "moon-facies"
   | "nausea"
   | "neutrophilia"
   | "nodular-lymphangitis"
   | "nuchal-rigidity"
+  | "nystagmus"
   | "orthopnea"
   | "palpitations"
   | "papule"
@@ -119,6 +132,7 @@ export type SymptomImageId = Extract<
   | "pnd"
   | "polyuria-polydipsia"
   | "presyncope"
+  | "psychosis"
   | "pruritus"
   | "pulmonary-edema"
   | "purpura"
@@ -170,21 +184,27 @@ export const SYMPTOM_IMAGES: Partial<Record<SymptomImageId, string>> = {
   "hemianopsia": extensionAssetUrl(hemianopsia),
   "hemiplegia": extensionAssetUrl(hemiplegia),
   "hemoptysis": extensionAssetUrl(hemoptysis),
+  "internuclear-ophthalmoplegia": extensionAssetUrl(internuclearOphthalmoplegia),
+  "impaired-wound-healing": extensionAssetUrl(impairedWoundHealing),
   "hyperactive-bowel-sounds": extensionAssetUrl(hyperactiveBowelSounds),
   "hypoxemia": extensionAssetUrl(hypoxemia),
   "indurated-plaque": extensionAssetUrl(induratedPlaque),
   "jaundice": extensionAssetUrl(jaundice),
   "kernig-sign": extensionAssetUrl(kernigSign),
+  "lhermitte-sign": extensionAssetUrl(lhermitteSign),
   "leukocytosis": extensionAssetUrl(leukocytosis),
   "lichenification": extensionAssetUrl(lichenification),
   "lymphadenopathy": extensionAssetUrl(lymphadenopathy),
   "maculopapular-rash": extensionAssetUrl(maculopapularRash),
+  "mania": extensionAssetUrl(mania),
   "melena": extensionAssetUrl(melena),
   "morning-stiffness": extensionAssetUrl(morningStiffness),
+  "moon-facies": extensionAssetUrl(moonFacies),
   "nausea": extensionAssetUrl(nausea),
   "neutrophilia": extensionAssetUrl(neutrophilia),
   "nodular-lymphangitis": extensionAssetUrl(nodularLymphangitis),
   "nuchal-rigidity": extensionAssetUrl(nuchalRigidity),
+  "nystagmus": extensionAssetUrl(nystagmus),
   "orthopnea": extensionAssetUrl(orthopnea),
   "palpitations": extensionAssetUrl(palpitations),
   "papule": extensionAssetUrl(papule),
@@ -194,6 +214,7 @@ export const SYMPTOM_IMAGES: Partial<Record<SymptomImageId, string>> = {
   "pnd": extensionAssetUrl(pnd),
   "polyuria-polydipsia": extensionAssetUrl(polyuriaPolydipsia),
   "presyncope": extensionAssetUrl(presyncope),
+  "psychosis": extensionAssetUrl(psychosis),
   "pruritus": extensionAssetUrl(pruritus),
   "pulmonary-edema": extensionAssetUrl(pulmonaryEdema),
   "purpura": extensionAssetUrl(purpura),
@@ -242,21 +263,27 @@ export const SYMPTOM_IMAGE_ATTRIBUTIONS: Partial<
   "hemianopsia": { label: "Wikimedia Commons (Left-homonymous-hemianopia.svg)", url: "https://commons.wikimedia.org/wiki/File:Left-homonymous-hemianopia.svg" },
   "hemiplegia": { label: "Wikimedia Commons (Hemiatrophy and hemiplegia of the left side of the tongue Wellcome L0062734.jpg)", url: "https://commons.wikimedia.org/wiki/File:Hemiatrophy_and_hemiplegia_of_the_left_side_of_the_tongue_Wellcome_L0062734.jpg" },
   "hemoptysis": { label: "Wikimedia Commons (Krev na gázových čtvercích.jpg)", url: "https://commons.wikimedia.org/wiki/File:Krev_na_gázových_čtvercích.jpg" },
+  "internuclear-ophthalmoplegia": { label: "Created locally; reference: Internuclear ophthalmoplegia", url: "https://en.wikipedia.org/wiki/Internuclear_ophthalmoplegia" },
+  "impaired-wound-healing": { label: "Created locally; reference: Wound healing", url: "https://en.wikipedia.org/wiki/Wound_healing" },
   "hyperactive-bowel-sounds": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:hyperactive-bowel-sounds.jpg" },
   "hypoxemia": { label: "Wikimedia Commons (My Heartbeat and Peripheral Oxygen Saturation (SpO2) (29609885543).jpg)", url: "https://commons.wikimedia.org/wiki/File:My_Heartbeat_and_Peripheral_Oxygen_Saturation_(SpO2)_(29609885543).jpg" },
   "indurated-plaque": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:indurated-plaque.jpg" },
   "jaundice": { label: "Wikimedia Commons (Troupial (Icterus icterus).jpg)", url: "https://commons.wikimedia.org/wiki/File:Troupial_(Icterus_icterus).jpg" },
   "kernig-sign": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:kernig-sign.jpg" },
+  "lhermitte-sign": { label: "Created locally; reference: Lhermitte's sign", url: "https://en.wikipedia.org/wiki/Lhermitte%27s_sign" },
   "leukocytosis": { label: "Wikimedia Commons (WBC in peripheral smear)", url: "https://commons.wikimedia.org/wiki/File:WBC_(neutrophil)_at_centre,_numerous_erythrocytes_and_platelets_(dot_like_bodies)_in_Wright's_stained_peripheral_blood_smear_(PBS)_microscopy.jpg" },
   "lichenification": { label: "Wikimedia Commons (Clinical features of atopic dermatitis in English.png)", url: "https://commons.wikimedia.org/wiki/File:Clinical_features_of_atopic_dermatitis_in_English.png" },
   "lymphadenopathy": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:lymphadenopathy.jpg" },
   "maculopapular-rash": { label: "Wikimedia Commons (Generalized ACLE.jpg)", url: "https://commons.wikimedia.org/wiki/File:Generalized_ACLE.jpg" },
+  "mania": { label: "Created locally; reference: Mania", url: "https://en.wikipedia.org/wiki/Mania" },
   "melena": { label: "Wikimedia Commons (Melena Bleeding DU.jpg)", url: "https://commons.wikimedia.org/wiki/File:Melena_Bleeding_DU.jpg" },
   "morning-stiffness": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:morning-stiffness.jpg" },
+  "moon-facies": { label: "Created locally; reference: Cushing's syndrome", url: "https://en.wikipedia.org/wiki/Cushing%27s_syndrome" },
   "nausea": { label: "Wikimedia Commons (Fphar-09-00913-g005.jpg)", url: "https://commons.wikimedia.org/wiki/File:Fphar-09-00913-g005.jpg" },
   "neutrophilia": { label: "Wikimedia Commons (Blausen Neutrophil)", url: "https://commons.wikimedia.org/wiki/File:Blausen_0676_Neutrophil_(crop).png" },
   "nodular-lymphangitis": { label: "Wikimedia Commons (Sporotrichosis by the fungus Sporothrix schenckii PHIL 3940 lores.jpg)", url: "https://commons.wikimedia.org/wiki/File:Sporotrichosis_by_the_fungus_Sporothrix_schenckii_PHIL_3940_lores.jpg" },
   "nuchal-rigidity": { label: "Wikimedia Commons (Books from the Library of Congress (IA moderndiagnosi00shef).pdf)", url: "https://commons.wikimedia.org/wiki/File:Books_from_the_Library_of_Congress_(IA_moderndiagnosi00shef).pdf" },
+  "nystagmus": { label: "Created locally; reference: Nystagmus", url: "https://en.wikipedia.org/wiki/Nystagmus" },
   "orthopnea": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:orthopnea.jpg" },
   "palpitations": { label: "Wikimedia Commons (ECG Atrial Fibrillation 98 bpm.jpg)", url: "https://commons.wikimedia.org/wiki/File:ECG_Atrial_Fibrillation_98_bpm.jpg" },
   "papule": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:papule.jpg" },
@@ -266,6 +293,7 @@ export const SYMPTOM_IMAGE_ATTRIBUTIONS: Partial<
   "pnd": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:pnd.jpg" },
   "polyuria-polydipsia": { label: "Wikimedia Commons (Medical communications of the Massachusetts Medical Society (1913) (14781096501).jpg)", url: "https://commons.wikimedia.org/wiki/File:Medical_communications_of_the_Massachusetts_Medical_Society_(1913)_(14781096501).jpg" },
   "presyncope": { label: "Wikimedia Commons (Pietro Longhi 027.jpg)", url: "https://commons.wikimedia.org/wiki/File:Pietro_Longhi_027.jpg" },
+  "psychosis": { label: "Created locally; reference: Psychosis", url: "https://en.wikipedia.org/wiki/Psychosis" },
   "pruritus": { label: "Wikimedia Commons (Photographic atlas of the diseases of the skin; a series of ninety-six plates, comprising nearly two hundred illustrations, with descriptive text, and a treatise on cutaneous therapeutics (1905) (14783268942).jpg)", url: "https://commons.wikimedia.org/wiki/File:Photographic_atlas_of_the_diseases_of_the_skin;_a_series_of_ninety-six_plates,_comprising_nearly_two_hundred_illustrations,_with_descriptive_text,_and_a_treatise_on_cutaneous_therapeutics_(1905)_(14783268942).jpg" },
   "pulmonary-edema": { label: "Wikimedia Commons (Respiratory system - Pulmonary edema -- Smart-Servier.png)", url: "https://commons.wikimedia.org/wiki/File:Respiratory_system_-_Pulmonary_edema_--_Smart-Servier.png" },
   "purpura": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:purpura.jpg" },
@@ -312,21 +340,27 @@ export const SYMPTOM_IMAGE_CAPTIONS: Partial<Record<SymptomImageId, string>> = {
   "hemianopsia": "Clinical or pathologic image illustrating hemianopsia",
   "hemiplegia": "Clinical or pathologic image illustrating hemiplegia",
   "hemoptysis": "Clinical or pathologic image illustrating hemoptysis",
+  "internuclear-ophthalmoplegia": "INO — impaired ipsilateral adduction with contralateral abducting nystagmus from MLF lesion",
+  "impaired-wound-healing": "Delayed tissue repair — classic with chronic glucocorticoids and diabetes",
   "hyperactive-bowel-sounds": "Clinical or pathologic image illustrating hyperactive bowel sounds",
   "hypoxemia": "Clinical or pathologic image illustrating hypoxemia",
   "indurated-plaque": "Clinical or pathologic image illustrating indurated plaque",
   "jaundice": "Scleral icterus — yellow discoloration of the conjunctiva from hyperbilirubinemia",
   "kernig-sign": "Kernig sign — resistance to knee extension with hip flexed suggests meningeal irritation",
+  "lhermitte-sign": "Lhermitte sign — electric shock down the spine on neck flexion from cervical cord demyelination",
   "leukocytosis": "Peripheral blood smear with a leukocyte among erythrocytes and platelets",
   "lichenification": "Clinical or pathologic image illustrating lichenification",
   "lymphadenopathy": "Cervical lymphadenopathy — enlarged palpable anterior cervical lymph nodes",
   "maculopapular-rash": "Maculopapular eruption — coalescent erythematous macules and papules",
+  "mania": "Elevated mood, decreased sleep need, grandiosity — bipolar I or steroid-induced",
   "melena": "Clinical or pathologic image illustrating melena",
   "morning-stiffness": "Clinical or pathologic image illustrating morning stiffness",
+  "moon-facies": "Rounded puffy face from cortisol excess — classic Cushingoid feature",
   "nausea": "Clinical or pathologic image illustrating nausea",
   "neutrophilia": "Neutrophil morphology — segmented granulocyte increased in bacterial infection and steroid demargination",
   "nodular-lymphangitis": "Clinical or pathologic image illustrating nodular lymphangitis",
   "nuchal-rigidity": "Nuchal rigidity — resistance to passive neck flexion in meningeal irritation",
+  "nystagmus": "Rhythmic involuntary eye oscillation — fast and slow phases; abducting nystagmus in INO",
   "orthopnea": "Clinical or pathologic image illustrating orthopnea",
   "palpitations": "Clinical or pathologic image illustrating palpitations",
   "papule": "Violaceous flat-topped papules of lichen planus on the shins (solid, ≤1 cm)",
@@ -336,6 +370,7 @@ export const SYMPTOM_IMAGE_CAPTIONS: Partial<Record<SymptomImageId, string>> = {
   "pnd": "Clinical or pathologic image illustrating pnd",
   "polyuria-polydipsia": "Clinical or pathologic image illustrating polyuria polydipsia",
   "presyncope": "Clinical or pathologic image illustrating presyncope",
+  "psychosis": "Hallucinations and delusions — schizophrenia, steroids, substances",
   "pruritus": "Clinical or pathologic image illustrating pruritus",
   "pulmonary-edema": "Clinical or pathologic image illustrating pulmonary edema",
   "purpura": "Petechiae and purpura on the lower limb from medication-induced leukocytoclastic vasculitis",

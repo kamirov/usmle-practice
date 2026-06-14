@@ -96,3 +96,38 @@ xerostomia.jpg
   Source: Wikimedia Commons — Xerostomia - Dry Mouth.jpg
   Description: Dry mouth illustration showing reduced salivary moisture
   Page: https://commons.wikimedia.org/wiki/File:Xerostomia_-_Dry_Mouth.jpg
+
+internuclear-ophthalmoplegia.svg
+Created locally
+Reference: https://en.wikipedia.org/wiki/Internuclear_ophthalmoplegia
+Description: INO — impaired adduction ipsilateral eye, abducting nystagmus contralateral eye
+
+lhermitte-sign.svg
+Created locally
+Reference: https://en.wikipedia.org/wiki/Lhermitte%27s_sign
+Description: Electric shock down spine on neck flexion from cervical cord lesion
+
+nystagmus.svg
+Created locally
+Reference: https://en.wikipedia.org/wiki/Nystagmus
+Description: Rhythmic involuntary eye oscillation with fast and slow phases
+
+mania.svg
+Created locally
+Reference: https://en.wikipedia.org/wiki/Mania
+Description: Manic episode features in bipolar disorder
+
+psychosis.svg
+Created locally
+Reference: https://en.wikipedia.org/wiki/Psychosis
+Description: Hallucinations and delusions — loss of contact with reality
+
+moon-facies.svg
+Created locally
+Reference: https://en.wikipedia.org/wiki/Cushing%27s_syndrome
+Description: Moon facies from glucocorticoid excess
+
+impaired-wound-healing.svg
+Created locally
+Reference: https://en.wikipedia.org/wiki/Wound_healing
+Description: Delayed wound closure with glucocorticoids and diabetes

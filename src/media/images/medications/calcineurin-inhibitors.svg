@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 200" role="img" aria-label="Calcineurin inhibitors">
+  <rect width="480" height="200" fill="#f8fafc"/>
+  <text x="240" y="24" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" font-weight="600">Calcineurin inhibitors</text>
+  <rect x="30" y="50" width="100" height="44" rx="6" fill="#e0e7ff" stroke="#4f46e5"/>
+  <text x="80" y="76" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10">TCR signal</text>
+  <rect x="150" y="50" width="100" height="44" rx="6" fill="#fecaca" stroke="#dc2626"/>
+  <text x="200" y="76" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10">Calcineurin</text>
+  <rect x="270" y="50" width="100" height="44" rx="6" fill="#fef3c7" stroke="#d97706"/>
+  <text x="320" y="76" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10">NFAT</text>
+  <rect x="390" y="50" width="60" height="44" rx="6" fill="#dcfce7" stroke="#16a34a"/>
+  <text x="420" y="76" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10">IL-2</text>
+  <path d="M130 72 H150 M250 72 H270 M370 72 H390" stroke="#334155" marker-end="url(#a)"/>
+  <defs><marker id="a" markerWidth="6" markerHeight="6" refX="5" refY="3"><path d="M0,0 L6,3 L0,6 Z" fill="#334155"/></marker></defs>
+  <text x="120" y="120" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10">Cyclosporine</text>
+  <text x="120" y="134" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#64748b">binds cyclophilin</text>
+  <text x="360" y="120" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10">Tacrolimus</text>
+  <text x="360" y="134" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#64748b">binds FKBP-12</text>
+  <text x="240" y="168" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#64748b">Transplant immunosuppression  nephrotoxicity, monitor trough levels</text>
+</svg>

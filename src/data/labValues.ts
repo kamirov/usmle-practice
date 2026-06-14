@@ -4303,6 +4303,46 @@ export const LAB_VALUES: LabValueEntry[] = [
       "Normal PFT between asthma attacks — diagnosis still clinical/history-based",
     ],
   },
+  {
+    id: "oligoclonal-bands",
+    name: "Oligoclonal bands",
+    etymology: "Greek oligos = few + klonos = twig/branch + Latin banda = strip",
+    aliases: [
+      "oligoclonal bands",
+      "oligoclonal band",
+      "csf oligoclonal bands",
+      "intrathecal oligoclonal bands",
+      "ocb",
+      "ocbs",
+    ],
+    measures:
+      "Discrete IgG bands on CSF protein electrophoresis/immunofixation that are absent in matched serum — indicates intrathecal IgG synthesis by clonally expanded B cells/plasma cells in the CNS.",
+    normalRange: "Absent in CSF or present in CSF only if identical bands appear in serum (systemic source)",
+    increasedCauses: [
+      "Multiple sclerosis — most classic Step 1 association",
+      "CNS infections (neurosyphilis, Lyme neuroborreliosis, viral encephalitis)",
+      "CNS lymphoma",
+      "Subacute sclerosing panencephalitis (SSPE)",
+      "Inflammatory CNS diseases",
+    ],
+    decreasedCauses: [
+      "Not applicable — qualitative finding; absence does not exclude MS",
+    ],
+    boardsPearls: [
+      "Bands in CSF NOT in serum = intrathecal IgG synthesis",
+      "Present in ~85–95% of MS patients but not required for diagnosis",
+      "Must compare CSF and serum simultaneously",
+      "↑ IgG index often accompanies oligoclonal bands in MS",
+      "NMO may be OCB-negative more often than MS",
+    ],
+    pairWith: [
+      "Oligoclonal bands + periventricular MRI lesions → MS",
+      "OCB + young woman + INO → MS",
+      "OCB + positive VDRL in CSF → neurosyphilis",
+      "OCB absent + anti-AQP4 → consider NMO",
+      "IgG index elevation supports intrathecal synthesis",
+    ],
+  },
 ];
 
 const labValueById = new Map(LAB_VALUES.map((l) => [l.id, l]));

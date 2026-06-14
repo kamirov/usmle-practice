@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 200" role="img" aria-label="Glaucoma">
+  <rect width="480" height="200" fill="#f8fafc"/>
+  <text x="240" y="24" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" font-weight="600">Glaucoma</text>
+  <ellipse cx="240" cy="95" rx="70" ry="45" fill="#fff" stroke="#334155"/>
+  <circle cx="240" cy="95" r="22" fill="#94a3b8"/>
+  <path d="M218 95 L240 75 L262 95" fill="none" stroke="#dc2626" stroke-width="2"/>
+  <text x="240" y="55" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#dc2626">‘ IOP</text>
+  <text x="120" y="150" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10">Open-angle  gradual</text>
+  <text x="360" y="150" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10">Angle-closure  acute pain</text>
+  <text x="240" y="178" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#64748b">Optic nerve cupping; steroids can precipitate</text>
+</svg>

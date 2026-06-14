@@ -107,3 +107,23 @@ lymphadenitis.jpg
 https://commons.wikimedia.org/wiki/File:Scrofula.jpeg
 Wikimedia Commons
 Description: Cervical lymphadenitis/scrofula with enlarged neck nodes
+
+neuromyelitis-optica.svg
+Created locally
+Reference: https://en.wikipedia.org/wiki/Neuromyelitis_optica
+Description: NMO schematic — optic neuritis and longitudinally extensive transverse myelitis
+
+cataracts.svg
+Created locally
+Reference: https://en.wikipedia.org/wiki/Cataract
+Description: Lens opacity compared to clear lens
+
+glaucoma.svg
+Created locally
+Reference: https://en.wikipedia.org/wiki/Glaucoma
+Description: Elevated intraocular pressure and optic neuropathy
+
+avascular-necrosis.svg
+Created locally
+Reference: https://en.wikipedia.org/wiki/Avascular_necrosis
+Description: Femoral head avascular necrosis schematic

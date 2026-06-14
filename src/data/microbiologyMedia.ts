@@ -7,6 +7,7 @@ import bordetellaPertussis from "../media/images/microbiology/bordetella-pertuss
 import campylobacterJejuni from "../media/images/microbiology/campylobacter-jejuni.jpg?url";
 import borreliaBurgdorferi from "../media/images/microbiology/borrelia-burgdorferi.jpg?url";
 import candidaAlbicans from "../media/images/microbiology/candida-albicans.jpg?url";
+import clostridiumBotulinum from "../media/images/microbiology/clostridium-botulinum.png?url";
 import clostridiumPerfringens from "../media/images/microbiology/clostridium-perfringens.jpg?url";
 import coccidioidesImmitis from "../media/images/microbiology/coccidioides-immitis.jpg?url";
 import corynebacteriumDiphtheriae from "../media/images/microbiology/corynebacterium-diphtheriae.jpg?url";
@@ -76,7 +77,9 @@ export const MICROBIOLOGY_IMAGES: Partial<Record<MicrobiologyImageId, string>> =
     "escherichia-coli": extensionAssetUrl(escherichiaColi),
     "haemophilus-influenzae": extensionAssetUrl(haemophilusInfluenzae),
     "neisseria-genus": extensionAssetUrl(neisseriaGenus),
+    "neisseria-gonorrhoeae": extensionAssetUrl(neisseriaGenus),
     "neisseria-meningitidis": extensionAssetUrl(neisseriaMeningitidis),
+    "clostridium-botulinum": extensionAssetUrl(clostridiumBotulinum),
     "clostridium-perfringens": extensionAssetUrl(clostridiumPerfringens),
     "mycobacterium-tuberculosis": extensionAssetUrl(mycobacteriumTuberculosis),
     "treponema-pallidum": extensionAssetUrl(treponemaPallidum),
@@ -160,9 +163,17 @@ export const MICROBIOLOGY_IMAGE_ATTRIBUTIONS: Partial<
     label: "CDC PHIL #4085",
     url: "https://commons.wikimedia.org/wiki/File:Gonococcal_urethritis_PHIL_4085_lores.jpg",
   },
+  "neisseria-gonorrhoeae": {
+    label: "CDC PHIL #4085",
+    url: "https://commons.wikimedia.org/wiki/File:Gonococcal_urethritis_PHIL_4085_lores.jpg",
+  },
   "neisseria-meningitidis": {
     label: "Wikimedia Commons (Microman12345)",
     url: "https://commons.wikimedia.org/wiki/File:Neisseria_meningitidis_CSF_Gram_1000.jpg",
+  },
+  "clostridium-botulinum": {
+    label: "CDC PHIL #2107",
+    url: "https://commons.wikimedia.org/wiki/File:Clostridium_botulinum_01.png",
   },
   "clostridium-perfringens": {
     label: "CDC PHIL #2995",
@@ -393,8 +404,12 @@ export const MICROBIOLOGY_IMAGE_CAPTIONS: Partial<
   "haemophilus-influenzae": "Colonies on chocolate agar",
   "neisseria-genus":
     "Gram stain showing Neisseria gonorrhoeae Gram-negative diplococci inside neutrophils",
+  "neisseria-gonorrhoeae":
+    "Gram stain showing intracellular and extracellular N. gonorrhoeae Gram-negative diplococci",
   "neisseria-meningitidis":
     "Gram stain of CSF: Gram-negative diplococci (1000×)",
+  "clostridium-botulinum":
+    "Gentian violet photomicrograph of C. botulinum rod-shaped bacteria with oval endospores",
   "clostridium-perfringens": "Gram stain of broth culture",
   "mycobacterium-tuberculosis":
     "Ziehl-Neelsen acid-fast stain: red bacilli (1000×)",

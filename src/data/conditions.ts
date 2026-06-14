@@ -2401,6 +2401,67 @@ export const CONDITIONS: ConditionEntry[] = [
     ],
   },
   {
+    id: "neuromyelitis-optica",
+    name: "Neuromyelitis optica",
+    etymology: "Greek neuron = nerve + myelos = marrow + ops = eye + Latin optica = of vision",
+    aliases: [
+      "neuromyelitis optica",
+      "neuromyelitis opticas",
+      "nmo",
+      "devic disease",
+      "devic's disease",
+      "devic syndrome",
+      "neuromyelitis optica spectrum disorder",
+      "nmosd",
+    ],
+    definition:
+      "Autoimmune astrocytopathy targeting aquaporin-4 (AQP4) on astrocyte foot processes, causing severe optic neuritis and longitudinally extensive transverse myelitis — distinct from multiple sclerosis.",
+    pathophysiology:
+      "Anti-AQP4 IgG (NMO-IgG) binds astrocyte AQP4 at blood-brain barrier → complement-mediated astrocyte injury → demyelination and necrosis predominantly in optic nerves and spinal cord (not classic periventricular MS plaques).",
+    classicPresentation: [
+      "Severe bilateral or sequential optic neuritis with poor recovery",
+      "Longitudinally extensive transverse myelitis (≥3 vertebral segments)",
+      "Area postrema syndrome — intractable hiccups, nausea, vomiting",
+    ],
+    keyFindings: [
+      "Anti-AQP4 antibody (NMO-IgG) positive",
+      "Spinal cord lesion extending ≥3 segments on MRI",
+      "Fewer typical periventricular MS-type brain lesions",
+    ],
+    keyLabs: [
+      "Serum anti-AQP4 IgG",
+      "CSF may lack oligoclonal bands (unlike MS in many cases)",
+    ],
+    associations: [
+      "Other autoimmune diseases (SLE, Sjögren)",
+      "Asian and African ancestry higher prevalence than classic MS in some cohorts",
+    ],
+    complications: [
+      "Severe vision loss",
+      "Paraplegia from extensive myelitis",
+      "Respiratory failure from high cervical cord lesions",
+    ],
+    distinguishFrom: [
+      "Multiple sclerosis — periventricular plaques, oligoclonal bands, shorter cord lesions",
+      "MOG antibody disease — anti-MOG, often more optic nerve predominant in children",
+      "ADEM — monophasic, post-infectious, often pediatric",
+    ],
+    treatment: [
+      "Acute attacks — high-dose IV corticosteroids; plasma exchange if refractory",
+      "Maintenance — rituximab, eculizumab, inebilizumab (B-cell/complement pathways)",
+      "Avoid IFN-β — may worsen NMO",
+    ],
+    boardsPearls: [
+      "NMO = optic neuritis + longitudinally extensive transverse myelitis (LETM)",
+      "Anti-AQP4 IgG is the serologic hallmark",
+      "≥3 vertebral segments on spinal MRI — classic LETM",
+      "Do not treat like MS — IFN-β contraindicated",
+      "Area postrema syndrome (hiccups, vomiting) is highly suggestive",
+    ],
+    pediatrics:
+      "MOG antibody-associated disease overlaps clinically in children; anti-AQP4 NMO is less common in pediatrics but LETM and severe optic neuritis warrant AQP4 and MOG testing.",
+  },
+  {
     id: "parkinson-disease",
     name: "Parkinson Disease",
     etymology: "eponym: James Parkinson + disease = disordered function",
@@ -21994,6 +22055,159 @@ export const CONDITIONS: ConditionEntry[] = [
     ],
     pediatrics:
       "Pediatric FUO definitions use similar prolonged fever frameworks; common causes include occult UTI, EBV/CMV, JIA, and malignancy. Neonatal FUO requires aggressive sepsis evaluation — different threshold than classic adult FUO.",
+  },
+  {
+    id: "cataracts",
+    name: "Cataracts",
+    etymology: "Latin cataracta = waterfall (opacity obscuring vision like falling water)",
+    aliases: ["cataract", "cataracts", "lens opacity", "lens opacities"],
+    definition:
+      "Opacification of the lens that reduces light transmission and causes progressive painless vision loss — may be age-related, congenital, metabolic, traumatic, or drug-induced.",
+    pathophysiology:
+      "Lens fiber protein aggregation and oxidative damage → loss of lens transparency; sorbitol accumulation in hyperglycemia and galactosemia contributes to metabolic cataracts.",
+    classicPresentation: [
+      "Gradual painless blurry vision, glare, difficulty with night driving",
+      "Monocular diplopia (unlike refractive error affecting both eyes similarly)",
+      "Age-related — bilateral, slowly progressive",
+    ],
+    keyFindings: [
+      "Cloudy lens on slit-lamp or ophthalmoscopic exam",
+      "Absent red reflex in dense congenital cataracts",
+    ],
+    associations: [
+      "Aging — most common cause",
+      "Diabetes mellitus",
+      "Chronic glucocorticoid use",
+      "Galactosemia, galactokinase deficiency",
+      "Congenital rubella syndrome",
+      "Down syndrome, Marfan syndrome, homocystinuria (ectopia lentis)",
+    ],
+    complications: [
+      "Vision impairment, falls in elderly",
+      "Phacomorphic or phacolytic glaucoma (rare lens-induced)",
+    ],
+    distinguishFrom: [
+      "Glaucoma — optic nerve disease, often with elevated IOP; lens clear",
+      "Macular degeneration — central scotoma; lens clear",
+      "Refractive error — improves with refraction",
+    ],
+    treatment: [
+      "Surgical lens extraction with intraocular lens implant when vision affects function",
+      "Treat underlying metabolic cause (galactose-free diet in galactosemia)",
+    ],
+    boardsPearls: [
+      "Steroids → posterior subcapsular cataracts (classic boards association)",
+      "Galactosemia triad: jaundice, E. coli sepsis, cataracts in neonate",
+      "Congenital rubella — PDA, cataracts, deafness",
+      "Painless progressive vision loss — cataract until proven otherwise in elderly",
+    ],
+    pediatrics:
+      "Congenital cataracts require urgent evaluation — amblyopia risk if not cleared early; rubella, galactosemia, and TORCH infections are key causes.",
+  },
+  {
+    id: "glaucoma",
+    name: "Glaucoma",
+    etymology: "Greek glaukos = bluish-green (cloudy hue of advanced disease)",
+    aliases: ["glaucoma", "glaucomas", "open angle glaucoma", "angle closure glaucoma"],
+    definition:
+      "Optic neuropathy characterized by progressive retinal ganglion cell loss and visual field defects, usually associated with elevated intraocular pressure — leading cause of irreversible blindness worldwide.",
+    pathophysiology:
+      "Impaired aqueous humor outflow (trabecular meshwork in open-angle; anatomically narrow angle in angle-closure) → ↑ IOP → mechanical and vascular injury to optic nerve head → cupping and field loss.",
+    classicPresentation: [
+      "Open-angle — insidious peripheral field loss, often asymptomatic until advanced",
+      "Acute angle-closure — severe eye pain, headache, nausea, halos, fixed mid-dilated pupil",
+      "Chronic steroid use — increased IOP risk",
+    ],
+    keyFindings: [
+      "Increased intraocular pressure",
+      "Optic disc cupping (↑ cup-to-disc ratio)",
+      "Visual field defects (arcuate scotomas)",
+      "Shallow anterior chamber in angle-closure risk",
+    ],
+    associations: [
+      "Age, African ancestry (open-angle)",
+      "Hyperopia (narrow angle risk)",
+      "Diabetes, myopia",
+      "Chronic glucocorticoids (any route)",
+    ],
+    complications: [
+      "Irreversible blindness",
+      "Acute angle-closure — permanent vision loss if untreated",
+    ],
+    distinguishFrom: [
+      "Cataracts — lens opacity, painless blur without disc cupping",
+      "Optic neuritis — painful vision loss, young MS patient, disc swelling early",
+      "Papilledema — bilateral disc swelling from ↑ ICP",
+    ],
+    treatment: [
+      "Topical prostaglandin analogs, beta-blockers, carbonic anhydrase inhibitors (open-angle)",
+      "Acute angle-closure — timolol, acetazolamide, pilocarpine, iridotomy",
+      "Minimize unnecessary systemic/topical steroids",
+    ],
+    boardsPearls: [
+      "Glaucoma = optic neuropathy; IOP is major risk factor not sole criterion",
+      "Steroids ↑ IOP — monitor in chronic use",
+      "Acute angle-closure: painful red eye, mid-dilated nonreactive pupil, emergency",
+      "Open-angle is painless and insidious — screening in at-risk patients",
+    ],
+    pediatrics:
+      "Infantile glaucoma presents with tearing, photophobia, and buphthalmos (enlarged cornea); congenital glaucoma is a surgical emergency.",
+  },
+  {
+    id: "avascular-necrosis",
+    name: "Avascular necrosis",
+    etymology: "a- = without + Latin vas = vessel + necrosis = cell death",
+    aliases: [
+      "avascular necrosis",
+      "avascular necroses",
+      "avn",
+      "osteonecrosis",
+      "aseptic necrosis of bone",
+      "ischemic necrosis of bone",
+    ],
+    definition:
+      "Ischemic death of bone and marrow from compromised blood supply, most commonly affecting the femoral head — causes joint pain and collapse if untreated.",
+    pathophysiology:
+      "Interruption of subchondral blood supply (steroid-induced fat emboli to vessels, sickle cell vaso-occlusion, trauma, alcohol toxicity) → osteocyte death → subchondral fracture and femoral head collapse.",
+    classicPresentation: [
+      "Insidious groin or hip pain worsened by weight-bearing",
+      "Limited internal rotation of hip",
+      "Bilateral in up to half of cases (steroids, sickle cell)",
+    ],
+    keyFindings: [
+      "MRI most sensitive early — edema and demarcation of necrotic segment",
+      "X-ray: sclerosis, subchondral crescent sign, collapse in late disease",
+    ],
+    associations: [
+      "Chronic glucocorticoid use — classic boards association",
+      "Sickle cell disease",
+      "Alcoholism",
+      "Trauma (fracture/dislocation)",
+      "Legg-Calvé-Perthes disease (pediatric femoral head AVN)",
+      "Caisson disease (dysbaric osteonecrosis)",
+    ],
+    complications: [
+      "Femoral head collapse",
+      "Secondary osteoarthritis requiring joint replacement",
+    ],
+    distinguishFrom: [
+      "Osteoarthritis — older patient, gradual wear; preserved femoral head contour early",
+      "Hip fracture — acute trauma, distinct radiographic pattern",
+      "Septic arthritis — fever, elevated ESR/CRP, joint effusion",
+    ],
+    treatment: [
+      "Limit weight-bearing early; core decompression in selected cases",
+      "Treat underlying cause (↓ steroids if possible)",
+      "Total hip arthroplasty for collapse",
+    ],
+    boardsPearls: [
+      "Steroids + hip pain → AVN until proven otherwise",
+      "Sickle cell — multiple sites including femoral head",
+      "MRI before X-ray changes — diagnose early",
+      "Legg-Calvé-Perthes = idiopathic AVN of femoral head in children 4–10 years",
+    ],
+    pediatrics:
+      "Legg-Calvé-Perthes disease is avascular necrosis of the pediatric femoral head; sickle cell AVN can present in childhood.",
   },
 ];
 

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 200" role="img" aria-label="Lhermitte sign">
+  <rect width="480" height="200" fill="#f8fafc"/>
+  <text x="240" y="24" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" font-weight="600">Lhermitte sign</text>
+  <path d="M200 50 Q240 55 280 50" stroke="#334155" stroke-width="3" fill="none"/>
+  <ellipse cx="240" cy="48" rx="44" ry="20" fill="#fde68a" stroke="#d97706"/>
+  <rect x="228" y="68" width="24" height="90" rx="8" fill="#e2e8f0" stroke="#64748b"/>
+  <rect x="232" y="72" width="16" height="82" rx="4" fill="#fff"/>
+  <path d="M236 90 L244 90 M236 110 L244 110 M236 130 L244 130" stroke="#94a3b8"/>
+  <path d="M240 68 Q260 80 240 92" stroke="#dc2626" stroke-width="2" fill="none" marker-end="url(#bolt)"/>
+  <defs><marker id="bolt" markerWidth="6" markerHeight="6" refX="3" refY="3"><circle cx="3" cy="3" r="2" fill="#dc2626"/></marker></defs>
+  <text x="310" y="100" text-anchor="start" font-family="system-ui,sans-serif" font-size="11">Neck flexion ’</text>
+  <text x="310" y="118" text-anchor="start" font-family="system-ui,sans-serif" font-size="11">electric shock down spine</text>
+  <text x="240" y="178" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#64748b">Cervical dorsal column demyelination  classic in MS</text>
+</svg>

@@ -17,3 +17,28 @@ vasopressors.png
 https://commons.wikimedia.org/wiki/File:Norepinephrine.svg
 Wikimedia Commons
 Description: Norepinephrine chemical structure as prototypical vasopressor
+
+interferon-beta.svg
+Created locally
+Reference: https://en.wikipedia.org/wiki/Interferon_beta
+Description: IFN-β JAK-STAT immunomodulation in relapsing-remitting MS
+
+glatiramer.svg
+Created locally
+Reference: https://en.wikipedia.org/wiki/Glatiramer_acetate
+Description: Glatiramer acetate myelin-mimic immunomodulation mechanism
+
+dexamethasone.svg
+Created locally
+Reference: https://en.wikipedia.org/wiki/Dexamethasone
+Description: Dexamethasone indications including antenatal lung maturity
+
+hydrocortisone.svg
+Created locally
+Reference: https://en.wikipedia.org/wiki/Hydrocortisone
+Description: Physiologic cortisol replacement and adrenal crisis treatment
+
+calcineurin-inhibitors.svg
+Created locally
+Reference: https://en.wikipedia.org/wiki/Calcineurin
+Description: Calcineurin inhibitor pathway blocking IL-2 transcription

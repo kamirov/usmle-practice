@@ -16,3 +16,19 @@ inferior-stemi.jpg
   Page: https://commons.wikimedia.org/wiki/File:12_lead_generated_inferior_MI.JPG
   Download: https://commons.wikimedia.org/wiki/Special:FilePath/12_lead_generated_inferior_MI.JPG?width=1280
   Resized to 1280 px width for popover display.
+
+absent-p-waves.png
+  Source: Wikimedia Commons — Atrial Fibrillation.png
+  Author: BruceBlaus
+  Description: Atrial fibrillation ECG schematic demonstrating absent P waves with irregular rhythm
+  License: Creative Commons Attribution-Share Alike 4.0 International
+  Page: https://commons.wikimedia.org/wiki/File:Atrial_Fibrillation.png
+  Download: https://commons.wikimedia.org/wiki/Special:FilePath/Atrial_Fibrillation.png
+
+qtc-prolongation.jpg
+  Source: Wikimedia Commons — Long QT syndrome type 1.jpg
+  Author: PeaBrainC
+  Description: ECG demonstrating LQT1 pattern with QTc annotated as greater than 480 ms
+  License: Creative Commons Attribution-Share Alike 4.0 International
+  Page: https://commons.wikimedia.org/wiki/File:Long_QT_syndrome_type_1.jpg
+  Download: https://commons.wikimedia.org/wiki/Special:FilePath/Long_QT_syndrome_type_1.jpg

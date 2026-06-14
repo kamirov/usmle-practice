@@ -423,3 +423,10 @@ neisseria-genus.jpg
   Description: Gram stain with intracellular and extracellular Neisseria gonorrhoeae diplococci
   License: Public domain (U.S. federal government)
   Page: https://commons.wikimedia.org/wiki/File:Gonococcal_urethritis_PHIL_4085_lores.jpg
+
+clostridium-botulinum.png
+  Source: CDC PHIL #2107 via Wikimedia Commons — Clostridium botulinum 01.png
+  Description: Gentian violet photomicrograph of Clostridium botulinum rod-shaped bacteria with oval endospores
+  License: Public domain (U.S. federal government)
+  Page: https://commons.wikimedia.org/wiki/File:Clostridium_botulinum_01.png
+  Download: https://commons.wikimedia.org/wiki/Special:FilePath/Clostridium_botulinum_01.png

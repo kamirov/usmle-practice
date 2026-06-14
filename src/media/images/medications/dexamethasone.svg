@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 200" role="img" aria-label="Dexamethasone">
+  <rect width="480" height="200" fill="#f8fafc"/>
+  <text x="240" y="24" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" font-weight="600">Dexamethasone</text>
+  <rect x="40" y="48" width="180" height="56" rx="8" fill="#dbeafe" stroke="#2563eb"/>
+  <text x="130" y="72" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11">Potent glucocorticoid</text>
+  <text x="130" y="90" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10">No mineralocorticoid activity</text>
+  <rect x="260" y="48" width="180" height="56" rx="8" fill="#dcfce7" stroke="#16a34a"/>
+  <text x="350" y="72" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11">Crosses BBB well</text>
+  <text x="350" y="90" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10">Long half-life</text>
+  <text x="240" y="130" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11">Antenatal: ‘ fetal lung maturity (surfactant)</text>
+  <text x="240" y="150" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10">Croup, cerebral edema, meningitis adjunct</text>
+  <text x="240" y="178" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#64748b">Low-dose suppression test for Cushing workup</text>
+</svg>

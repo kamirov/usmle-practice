@@ -5400,6 +5400,230 @@ export const SYMPTOMS: SymptomEntry[] = [
     pediatrics:
       "Children are at higher risk for heat stroke due to higher surface-area-to-mass ratio and dependence on caregivers for hydration. Malignant hyperthermia susceptibility presents across ages if exposed to triggering anesthetics.",
   },
+  {
+    id: "internuclear-ophthalmoplegia",
+    name: "Internuclear ophthalmoplegia",
+    etymology: "Latin inter = between + nucleus = kernel + Greek ophthalmos = eye + plege = stroke",
+    aliases: [
+      "internuclear ophthalmoplegia",
+      "internuclear ophthalmoplegias",
+      "ino",
+      "internuclear ophthalmoplegia syndrome",
+    ],
+    definition:
+      "Disconjugate horizontal gaze from a lesion in the medial longitudinal fasciculus (MLF) — impaired adduction of the ipsilateral eye with nystagmus of the abducting contralateral eye on attempted lateral gaze.",
+    mechanism:
+      "MLF connects CN VI nucleus (abducens) to contralateral CN III nucleus (oculomotor) to coordinate conjugate horizontal gaze → MLF lesion breaks communication → ipsilateral medial rectus fails to adduct; contralateral lateral rectus abducts with nystagmus.",
+    thinkOf: [
+      "Multiple sclerosis — bilateral INO in young woman",
+      "Lacunar stroke — unilateral INO in older patient with vascular risk factors",
+      "Brainstem demyelination or infarction",
+      "Wernicke encephalopathy — ophthalmoplegia spectrum",
+    ],
+    pairWith: [
+      "Young woman + INO + periventricular lesions → MS",
+      "Unilateral INO + hypertension, diabetes → pontine stroke",
+      "Bilateral INO → MS until proven otherwise",
+      "MLF lesion at level of CN VI nucleus in pons",
+      "One-and-a-half syndrome — INO plus ipsilateral conjugate gaze palsy (PPRF lesion)",
+    ],
+    distinguishFrom: [
+      "CN III palsy — ptosis, mydriasis, 'down and out' eye, not isolated adduction failure with contralateral nystagmus",
+      "Myasthenia gravis — fatigable ptosis/diplopia, not classic INO pattern",
+      "Conjugate gaze palsy — both eyes fail to move in same direction",
+    ],
+    pediatrics:
+      "Bilateral INO can occur in pediatric MS or brainstem glioma; unilateral INO after head trauma or pontine stroke — evaluate with MRI.",
+  },
+  {
+    id: "lhermitte-sign",
+    name: "Lhermitte sign",
+    etymology: "eponym: Jean Lhermitte + sign = clinical indicator",
+    aliases: [
+      "lhermitte sign",
+      "lhermitte's sign",
+      "lhermitte phenomenon",
+      "lhermitte signs",
+    ],
+    definition:
+      "Brief electric-shock–like sensation radiating down the spine (and sometimes into the limbs) triggered by neck flexion — indicates dorsal column or cervical cord irritation/demyelination.",
+    mechanism:
+      "Neck flexion stretches demyelinated cervical dorsal column fibers or adjacent cord → ectopic impulse generation or ephaptic transmission → dysesthetic shock sensation along affected tract distribution.",
+    thinkOf: [
+      "Multiple sclerosis — cervical plaque",
+      "Cervical spondylosis with cord compression",
+      "Cervical cord tumor or transverse myelitis",
+      "Vitamin B12 deficiency — subacute combined degeneration",
+      "Radiation myelopathy",
+    ],
+    pairWith: [
+      "Young woman + neck flexion shock + INO → MS",
+      "B12 deficiency + macrocytic anemia + posterior column signs → subacute combined degeneration",
+      "Cervical MRI with demyelinating plaque at C-spine",
+      "Not pathognomonic for MS — any cervical cord lesion can cause it",
+    ],
+    distinguishFrom: [
+      "Radicular pain — dermatomal, often unilateral, not electric shock on flexion alone",
+      "Tinel sign — percussion over nerve, peripheral not spinal",
+      "Meningismus — neck flexion causes pain/resistance, not electric radiation",
+    ],
+    pediatrics:
+      "Can occur in pediatric MS or cervical cord pathology; always warrants cervical spine imaging if unexplained.",
+  },
+  {
+    id: "nystagmus",
+    name: "Nystagmus",
+    etymology: "Greek nystagmos = drowsiness/nodding (from rapid eye movements resembling nodding)",
+    aliases: ["nystagmus", "nystagmuses", "nystagmic eye movements"],
+    definition:
+      "Rhythmic, involuntary oscillation of the eyes with a slow drift in one direction and a corrective fast phase in the opposite direction — may be physiologic or pathologic.",
+    mechanism:
+      "Disruption of vestibular, cerebellar, or gaze-holding pathways → inability to maintain steady eye position → slow phase drift corrected by fast saccade; direction named by fast phase.",
+    thinkOf: [
+      "Internuclear ophthalmoplegia — abducting eye nystagmus",
+      "Vestibular neuritis or labyrinthitis — horizontal nystagmus",
+      "Wernicke encephalopathy — gaze palsies with nystagmus",
+      "Cerebellar stroke or degeneration — downbeat/upbeat nystagmus",
+      "Congenital nystagmus — infantile onset",
+    ],
+    pairWith: [
+      "INO → nystagmus in abducting eye",
+      "Vertigo + horizontal nystagmus after URI → vestibular neuritis",
+      "Thiamine deficiency + ophthalmoplegia + ataxia → Wernicke",
+      "Downbeat nystagmus → cervicomedullary junction lesion",
+      "Alcohol intoxication — gaze-evoked nystagmus",
+    ],
+    distinguishFrom: [
+      "Opsoclonus — rapid multidirectional saccades without slow phase (dancing eyes)",
+      "Seizure — ocular flutter is brief, not sustained rhythmic nystagmus",
+      "End-gaze physiologic nystagmus — brief, at extremes of gaze, normal",
+    ],
+    pediatrics:
+      "Congenital nystagmus presents in infancy; acquired nystagmus in a child warrants neuroimaging. Opsoclonus-myoclonus syndrome (neuroblastoma association) causes chaotic eye movements distinct from rhythmic nystagmus.",
+  },
+  {
+    id: "mania",
+    name: "Mania",
+    etymology: "Greek mania = madness/frenzy",
+    aliases: ["mania", "manias", "manic episode", "manic episodes", "manic state"],
+    definition:
+      "Distinct period of abnormally elevated, expansive, or irritable mood with increased energy and goal-directed activity — core feature of bipolar I disorder and can be substance- or medication-induced.",
+    mechanism:
+      "Dysregulated monoaminergic and glutamatergic neurotransmission (dopamine, serotonin, norepinephrine) with disrupted circadian and limbic circuitry; glucocorticoids and dopaminergic drugs can precipitate manic symptoms.",
+    thinkOf: [
+      "Bipolar I disorder — mania ± depression",
+      "Glucocorticoid-induced mood disorder — steroids",
+      "Levodopa, stimulants, antidepressant-induced mania",
+      "Hyperthyroidism — irritability, insomnia, agitation",
+    ],
+    pairWith: [
+      "Decreased sleep need + grandiosity + pressured speech → mania",
+      "Steroids + new-onset euphoria/agitation → steroid-induced mania",
+      "Bipolar I requires at least one manic episode",
+      "Lithium, valproate, atypical antipsychotics for acute mania",
+    ],
+    distinguishFrom: [
+      "Hypomania — bipolar II; less severe, no psychosis, no marked impairment",
+      "ADHD — chronic inattention/hyperactivity, not episodic elevated mood",
+      "Substance intoxication — amphetamines; resolve with clearance",
+    ],
+    pediatrics:
+      "Pediatric bipolar disorder presents with irritability and rapid cycling more often than classic euphoric mania; ADHD and disruptive disorders are important differentials.",
+  },
+  {
+    id: "psychosis",
+    name: "Psychosis",
+    etymology: "Greek psyche = mind + -osis = abnormal condition",
+    aliases: ["psychosis", "psychoses", "psychotic", "psychotic symptoms", "psychotic episode"],
+    definition:
+      "Loss of contact with reality characterized by hallucinations (perceptions without external stimulus), delusions (fixed false beliefs), and/or disorganized thought and behavior.",
+    mechanism:
+      "Dopaminergic hyperactivity in mesolimbic pathway (positive symptoms) with cortical-subcortical disconnectivity; NMDA hypofunction and glutamate dysregulation also implicated; can be primary (schizophrenia), mood-related, substance-induced, or organic.",
+    thinkOf: [
+      "Schizophrenia — chronic psychosis with negative symptoms",
+      "Schizoaffective disorder — psychosis concurrent with mood episode",
+      "Glucocorticoid psychosis — high-dose steroids",
+      "Stimulant intoxication, alcohol withdrawal (DTs)",
+      "Wernicke-Korsakoff — acute psychosis with ophthalmoplegia",
+    ],
+    pairWith: [
+      "Auditory hallucinations + flat affect + social withdrawal → schizophrenia",
+      "Steroids + new paranoia/hallucinations → glucocorticoid psychosis",
+      "Psychosis + mood episode → schizoaffective or bipolar with psychotic features",
+      "Always rule out substances, steroids, neurologic disease",
+    ],
+    distinguishFrom: [
+      "Delirium — fluctuating consciousness, inattention, visual hallucinations common",
+      "Obsessive intrusive thoughts — ego-dystonic, insight preserved",
+      "Malingering — inconsistent, secondary gain",
+    ],
+    pediatrics:
+      "Early-onset schizophrenia is rare; psychosis in adolescents warrants substance screening, autoimmune encephalitis, and mood disorder evaluation.",
+  },
+  {
+    id: "moon-facies",
+    name: "Moon facies",
+    etymology: "moon = round lunar appearance + Latin facies = face",
+    aliases: ["moon facies", "moon face", "moon faces", "cushingoid facies", "cushingoid face"],
+    definition:
+      "Rounded, puffy facial appearance from fat redistribution and fluid retention — classic cushingoid feature of excess glucocorticoids (endogenous or exogenous).",
+    mechanism:
+      "Excess cortisol → lipogenesis and fat deposition in cheeks and temporal regions with relative limb thinning (centripetal obesity pattern); also contributes to facial plethora and edema.",
+    thinkOf: [
+      "Cushing syndrome — endogenous or exogenous steroids",
+      "Chronic prednisone therapy",
+      "Iatrogenic Cushing from inhaled steroids at high doses",
+    ],
+    pairWith: [
+      "Moon facies + purple striae + buffalo hump → Cushing syndrome",
+      "Moon facies + hyperglycemia + hypertension → glucocorticoid excess",
+      "Exogenous steroids = most common cause of Cushing overall",
+      "Distinguish from familial round face — no striae or proximal weakness",
+    ],
+    distinguishFrom: [
+      "Congenital round face — no cushingoid metabolic features",
+      "Angioedema — acute, asymmetric swelling",
+      "Nephrotic syndrome facial edema — periorbital, not classic moon facies",
+    ],
+    pediatrics:
+      "Iatrogenic Cushing from chronic asthma steroids can cause moon facies in children; monitor growth velocity and bone density.",
+  },
+  {
+    id: "impaired-wound-healing",
+    name: "Impaired wound healing",
+    etymology: "im- = not + Latin parare = prepare + heal = restore + -ing",
+    aliases: [
+      "impaired wound healing",
+      "poor wound healing",
+      "delayed wound healing",
+      "impaired wound healings",
+      "poor wound healings",
+    ],
+    definition:
+      "Delayed or incomplete closure of tissue injury with deficient granulation, re-epithelialization, or collagen deposition — increases infection and dehiscence risk.",
+    mechanism:
+      "Glucocorticoids ↓ fibroblast proliferation, collagen synthesis, and inflammatory phase coordination; also impaired by diabetes (microangiopathy, neuropathy), malnutrition (vitamin C, zinc), venous hypertension, radiation, and immunosuppression.",
+    thinkOf: [
+      "Chronic glucocorticoid therapy",
+      "Diabetes mellitus",
+      "Venous stasis ulcers",
+      "Malnutrition, vitamin C deficiency",
+      "Immunosuppressants (transplant regimens)",
+    ],
+    pairWith: [
+      "Chronic steroids + surgical site → impaired healing",
+      "Diabetes + foot ulcer → neuropathic + vascular impairment",
+      "Venous stasis dermatitis → chronic leg ulcers",
+      "Taper steroids perioperatively when possible; stress-dose if needed",
+    ],
+    distinguishFrom: [
+      "Normal delayed healing in elderly — slower but progresses",
+      "Wound infection — erythema, purulence, failure to epithelialize",
+      "Arterial insufficiency ulcer — painful, distal, absent pulses",
+    ],
+    pediatrics:
+      "Neonates and malnourished children heal more slowly; corticosteroids for chronic lung disease in prematurity affect skin integrity.",
+  },
 ];
 
 const symptomById = new Map(SYMPTOMS.map((s) => [s.id, s]));

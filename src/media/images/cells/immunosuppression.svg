@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 180" role="img" aria-label="Immunosuppression">
+  <rect width="480" height="180" fill="#f8fafc"/>
+  <text x="240" y="24" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" font-weight="600">Immunosuppression</text>
+  <circle cx="120" cy="95" r="28" fill="#fecaca" stroke="#dc2626"/>
+  <text x="120" y="99" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10">T cell</text>
+  <circle cx="240" cy="95" r="28" fill="#fecaca" stroke="#dc2626"/>
+  <text x="240" y="99" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10">B cell</text>
+  <circle cx="360" cy="95" r="28" fill="#fecaca" stroke="#dc2626"/>
+  <text x="360" y="99" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10">macro</text>
+  <path d="M148 95 H212 M268 95 H332" stroke="#dc2626" stroke-width="2"/>
+  <text x="180" y="88" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#dc2626"></text>
+  <text x="300" y="88" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#dc2626"></text>
+  <text x="240" y="155" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#64748b">Steroids, calcineurin inhibitors, biologics  ‘ infection risk</text>
+</svg>

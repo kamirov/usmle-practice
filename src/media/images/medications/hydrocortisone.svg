@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 200" role="img" aria-label="Hydrocortisone">
+  <rect width="480" height="200" fill="#f8fafc"/>
+  <text x="240" y="24" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" font-weight="600">Hydrocortisone</text>
+  <rect x="60" y="52" width="150" height="48" rx="8" fill="#fef3c7" stroke="#d97706"/>
+  <text x="135" y="72" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11">Glucocorticoid</text>
+  <text x="135" y="88" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10">+ mineralocorticoid activity</text>
+  <rect x="270" y="52" width="150" height="48" rx="8" fill="#fecaca" stroke="#dc2626"/>
+  <text x="345" y="72" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11">Adrenal crisis</text>
+  <text x="345" y="88" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10">IV replacement first-line</text>
+  <text x="240" y="130" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11">Physiologic cortisol replacement in Addison disease</text>
+  <text x="240" y="150" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10">Stress-dose perioperatively if chronic steroid use</text>
+  <text x="240" y="178" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#64748b">Endogenous cortisol analog  shortest-acting systemic steroid</text>
+</svg>

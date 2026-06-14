@@ -2,3 +2,8 @@ dihydrorhodamine-flow-cytometry.svg
 Created locally
 Reference: https://en.wikipedia.org/wiki/Flow_cytometry
 Description: DHR oxidative burst flow-cytometry mechanism and CGD abnormal result
+
+oligoclonal-bands.svg
+Created locally
+Reference: https://en.wikipedia.org/wiki/Oligoclonal_band
+Description: CSF-specific IgG bands indicating intrathecal synthesis in MS
