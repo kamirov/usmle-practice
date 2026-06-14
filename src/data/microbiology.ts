@@ -462,6 +462,78 @@ export const MICROBIOLOGY: MicrobiologyEntry[] = [
       "Children <5 and adolescents 16–23 peak incidence; petechiae in febrile child requires urgent evaluation.",
   },
   {
+    id: "neisseria-gonorrhoeae",
+    name: "Neisseria gonorrhoeae",
+    etymology: "eponym: Albert Neisser + Greek gone = seed/semen + Greek rhoia = flow",
+    aliases: [
+      "neisseria gonorrhoeae",
+      "n. gonorrhoeae",
+      "gonococcus",
+      "gonococci",
+      "gonococcal",
+    ],
+    type: "gram-negative-cocci",
+    definition:
+      "Gram-negative diplococcus (kidney bean-shaped pairs); oxidase positive. Major sexually transmitted pathogen causing mucosal infections of the urogenital tract and disseminated gonococcal infection.",
+    morphology: [
+      "Gram− diplococci intracellular in neutrophils on Gram stain",
+      "Oxidase positive",
+      "Thayer-Martin or chocolate agar with CO₂",
+    ],
+    virulenceFactors: [
+      "Pili — attachment to urogenital epithelium; antigenic variation",
+      "Opacity (Opa) proteins — invasion and tropism",
+      "Porin (PorB) — serum resistance",
+      "IgA protease",
+      "Lipooligosaccharide (LOS) endotoxin",
+    ],
+    transmission: [
+      "Sexual contact (genital, oral, rectal)",
+      "Vertical — neonatal ophthalmia neonatorum during birth",
+    ],
+    diseases: [
+      "Urethritis and cervicitis",
+      "Pelvic inflammatory disease (PID)",
+      "Disseminated gonococcal infection (DGI) — migratory polyarthralgia, tenosynovitis, pustular skin lesions",
+      "Gonococcal septic arthritis",
+      "Neonatal conjunctivitis (ophthalmia neonatorum)",
+      "Pharyngitis and proctitis",
+    ],
+    classicPresentation: [
+      "Purulent urethral or cervical discharge",
+      "Dysuria; often asymptomatic in women",
+      "Cervical friability and mucopurulent discharge",
+      "DGI: fever, migratory polyarthralgia, tenosynovitis, pustules on extremities",
+    ],
+    diagnosis: [
+      "NAAT (PCR) of urine, urethral, cervical, rectal, or pharyngeal swab — preferred",
+      "Gram stain of urethral discharge in symptomatic men — intracellular Gram− diplococci",
+      "Culture on Thayer-Martin if needed for susceptibility",
+    ],
+    treatment: [
+      "Ceftriaxone IM single dose — first line for uncomplicated gonorrhea",
+      "Add doxycycline × 7 days if chlamydia not excluded (dual therapy)",
+      "DGI/septic arthritis — ceftriaxone IV, then step down",
+      "Neonatal conjunctivitis — ceftriaxone/cefotaxime; urgent evaluation",
+      "Treat sexual partners; test for HIV, syphilis, chlamydia",
+    ],
+    distinguishFrom: [
+      "Chlamydia trachomatis — obligate intracellular; often co-infected; NAAT distinguishes",
+      "N. meningitidis — same genus; meningitis/meningococcemia, not primary STI",
+      "Herpes simplex — grouped vesicles; PCR positive for HSV",
+      "Trichomonas vaginalis — motile flagellated protozoan on wet mount",
+    ],
+    boardsPearls: [
+      "Gram− intracellular diplococci in neutrophils = gonorrhea on urethral smear (men)",
+      "Treat gonorrhea with ceftriaxone + doxycycline if chlamydia not ruled out",
+      "DGI classic triad — migratory polyarthralgia + tenosynovitis + pustular lesions",
+      "Neonatal conjunctivitis day 2–5 → gonorrhea (vs chlamydia days 5–14)",
+      "Rising ceftriaxone resistance — always follow current CDC guidelines",
+    ],
+    pediatrics:
+      "Sexually active adolescents — same treatment as adults; screen for co-infections and abuse if prepubertal. Neonatal gonococcal conjunctivitis can cause corneal perforation — treat urgently and prophylaxis at birth where indicated.",
+  },
+  {
     id: "clostridium-perfringens",
     name: "Clostridium perfringens",
     etymology: "Greek kloster = spindle + Latin perfringere = break through",
@@ -1905,6 +1977,7 @@ export const MICROBIOLOGY: MicrobiologyEntry[] = [
     aliases: [
       "herpes simplex virus",
       "herpes simplex",
+      "herpes",
       "hsv",
       "hsv-1",
       "hsv-2",
@@ -1979,6 +2052,10 @@ export const MICROBIOLOGY: MicrobiologyEntry[] = [
       "chickenpox",
       "chicken pox",
       "chicken-pox",
+      "herpes zoster",
+      "herpes zosters",
+      "shingles",
+      "zoster",
     ],
     type: "virus",
     definition:
@@ -3249,6 +3326,8 @@ export const MICROBIOLOGY: MicrobiologyEntry[] = [
       "histoplasma capsulatum",
       "histoplasma",
       "h. capsulatum",
+      "histoplasmosis",
+      "histoplasmoses",
     ],
     type: "fungus",
     definition:

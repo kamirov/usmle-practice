@@ -281,6 +281,60 @@ export const ORGANS: OrganEntry[] = [
       "Distal midgut derivative; forms the lower portion of the small intestine before the cecum.",
   },
   {
+    id: "peyer-patches",
+    name: "Peyer Patches",
+    etymology: "eponym: Johann Conrad Peyer + patch = localized area",
+    aliases: [
+      "peyer patch",
+      "peyer patches",
+      "peyer's patches",
+      "peyers patches",
+      "peyer patchs",
+      "aggregated lymphoid follicles",
+      "aggregated lymphoid follicle",
+      "ileal lymphoid aggregates",
+      "galt peyer patches",
+    ],
+    germLayer: "Endoderm (overlying epithelium) / Mesoderm (lymphoid stroma)",
+    origin:
+      "Organized secondary lymphoid tissue developing in ileal submucosa and lamina propria as part of gut-associated lymphoid tissue (GALT); follicles form under influence of lymphotoxin and chemokines (CCL20/CCL21) during mucosal immune maturation.",
+    derivatives: [
+      "B-cell follicles with germinal centers",
+      "M (microfold) cells overlying follicles — antigen sampling",
+      "T-cell zones in interfollicular regions",
+      "IgA-producing plasma cell precursors after class switching",
+    ],
+  },
+  {
+    id: "crypts-of-lieberkuhn",
+    name: "Crypts of Lieberkühn",
+    etymology: "eponym: Johann Nathanael Lieberkühn + Greek kryptos = hidden",
+    aliases: [
+      "crypts of lieberkuhn",
+      "crypts of lieberkühn",
+      "crypt of lieberkuhn",
+      "crypt of lieberkühn",
+      "lieberkuhn crypts",
+      "lieberkühn crypts",
+      "intestinal crypts",
+      "intestinal crypt",
+      "intestinal glands",
+      "intestinal gland",
+      "crypts of the small intestine",
+      "small intestinal crypts",
+    ],
+    germLayer: "Endoderm",
+    origin:
+      "Invaginations of small intestinal (and colonic) mucosa between villi formed from endodermal epithelium; base houses intestinal stem cells that regenerate the entire villus/crypt axis every ~3–5 days.",
+    derivatives: [
+      "Intestinal stem cells (crypt base columnar cells)",
+      "Paneth cells — defensins, lysozyme at crypt base",
+      "Goblet cells — mucin secretion",
+      "Enterocytes — absorption on villus surface",
+      "Enteroendocrine cells — secretin, CCK, GIP secreting cells",
+    ],
+  },
+  {
     id: "cecum",
     name: "Cecum",
     etymology: "Latin caecus = blind",
@@ -527,6 +581,39 @@ export const ORGANS: OrganEntry[] = [
     origin:
       "Definitive kidney from metanephros (ureteric bud + metanephric mesenchyme); intermediate mesoderm origin.",
     derivatives: ["Glomerulus", "Tubules", "Collecting system"],
+  },
+  {
+    id: "costovertebral-angle",
+    name: "Costovertebral Angle",
+    etymology: "Latin costa = rib + vertebra = joint of spine + Latin angulus = corner",
+    aliases: [
+      "costovertebral angle",
+      "costovertebral angles",
+      "cva",
+      "renal angle",
+      "renal angles",
+      "costovertebral angle cva",
+    ],
+    germLayer: "Mesoderm",
+    origin:
+      "Anatomic landmark formed where the 12th rib meets the vertebral column posteriorly — overlying the upper pole of the kidney bilaterally; used for percussion to assess renal/perinephric pathology.",
+    derivatives: [],
+  },
+  {
+    id: "renal-capsule",
+    name: "Renal Capsule",
+    etymology: "Latin ren = kidney + Latin capsula = little box/covering",
+    aliases: [
+      "renal capsule",
+      "renal capsules",
+      "kidney capsule",
+      "kidney capsules",
+      "fibrous renal capsule",
+    ],
+    germLayer: "Mesoderm",
+    origin:
+      "Dense fibrous connective tissue envelope surrounding the kidney parenchyma immediately beneath perinephric fat; richly innervated — distension causes severe flank pain.",
+    derivatives: [],
   },
   {
     id: "renal-artery",
@@ -1400,6 +1487,31 @@ const ORGAN_DETAILS: Record<
     step1Pearls: ["Crohn commonly affects terminal ileum", "Meckel = true diverticulum from vitelline duct; rule of 2s", "Peyer patches are lymphoid aggregates"],
     pediatrics: "Meckel diverticulum classically causes painless lower GI bleeding in children.",
   },
+  "peyer-patches": {
+    functionSummary: "Aggregated lymphoid follicles in ileal submucosa that sample luminal antigen via M cells and initiate mucosal IgA immune responses as part of GALT/MALT.",
+    commonPathologies: ["Salmonella typhi invasion (typhoid)", "Yersinia ileitis", "MALT lymphoma", "HIV-associated mucosal depletion"],
+    step1Pearls: [
+      "Peyer patches = organized lymphoid follicles in ileum — part of GALT/MALT",
+      "M cells overlying patches transport antigen to underlying lymphoid tissue",
+      "Typhoid (S. Typhi) invades through M cells → Peyer's patch hypertrophy/necrosis → ileal ulceration/perforation",
+      "Oral polio vaccine replicates in intestinal lymphoid tissue including Peyer patches",
+      "vs isolated lamina propria lymphocytes — Peyer patches are macroscopic aggregated follicles",
+    ],
+    pediatrics: "Typhoid ileal perforation classically described in endemic settings; oral live-attenuated vaccines exploit intestinal lymphoid tissue for mucosal immunity in children.",
+  },
+  "crypts-of-lieberkuhn": {
+    functionSummary: "Intestinal gland crypts between villi housing stem cells and secretory cells (Paneth, goblet, enteroendocrine) that regenerate and maintain the mucosal epithelium.",
+    commonPathologies: ["Celiac disease (crypt hyperplasia)", "Tropical sprue", "Radiation enteritis", "Cryptosporidiosis", "Necrotizing enterocolitis"],
+    step1Pearls: [
+      "Crypts of Lieberkühn contain intestinal stem cells at the base",
+      "Paneth cells at crypt base secrete defensins and lysozyme — antimicrobial",
+      "Stem cells regenerate villus epithelium every ~3–5 days",
+      "Celiac disease — villous blunting + crypt hyperplasia (increased crypt:villus ratio)",
+      "Enteroendocrine cells in crypts secrete GI hormones (secretin, CCK, GIP)",
+      "vs gastric pits — stomach has gastric glands, not Lieberkühn crypts",
+    ],
+    pediatrics: "NEC damages neonatal intestinal crypts and mucosa; celiac disease can present in toddlers with failure to thrive and crypt hyperplasia on biopsy.",
+  },
   cecum: {
     functionSummary: "Receives ileal contents and begins large-bowel water/electrolyte handling; appendix arises from cecum.",
     commonPathologies: ["Appendicitis", "Cecal volvulus", "Adenocarcinoma", "Typhlitis in neutropenia"],
@@ -1561,6 +1673,42 @@ const ORGAN_DETAILS: Record<
     functionSummary: "Filters plasma, regulates electrolytes/acid-base/volume, secretes renin and EPO, activates vitamin D.",
     commonPathologies: ["Acute kidney injury", "Glomerulonephritis", "Nephrotic syndrome", "Pyelonephritis", "Polycystic kidney disease"],
     step1Pearls: ["Juxtaglomerular cells release renin", "PCT reabsorbs most filtered Na/water/glucose/amino acids", "Podocyte injury drives proteinuria"],
+  },
+  "costovertebral-angle": {
+    functionSummary:
+      "Posterior flank landmark over the kidney used for physical examination — percussion tenderness suggests renal or perinephric inflammation.",
+    commonPathologies: [
+      "Pyelonephritis with CVA tenderness",
+      "Perinephric abscess",
+      "Renal infarction",
+      "Obstructive hydronephrosis",
+    ],
+    step1Pearls: [
+      "CVA = angle of 12th rib and vertebral column — percussion elicits renal tenderness",
+      "CVA tenderness + fever + WBC casts → pyelonephritis",
+      "Murphy punch / renal punch = percussing the costovertebral angle",
+      "Dysuria without CVA tenderness favors cystitis over pyelonephritis",
+    ],
+    pediatrics:
+      "Febrile infant UTI may have subtle CVA tenderness; percussion can be difficult — maintain high suspicion for pyelonephritis with fever and positive urinalysis.",
+  },
+  "renal-capsule": {
+    functionSummary:
+      "Fibrous envelope of the kidney; when stretched by inflammation, infection, or rapid distension (hydronephrosis, hematoma), produces somatic flank pain and CVA tenderness.",
+    commonPathologies: [
+      "Acute pyelonephritis — capsular inflammation",
+      "Renal subcapsular hematoma (trauma, angiomyolipoma rupture)",
+      "Hydronephrosis from obstructing stone — capsular distension",
+      "Perinephric abscess spreading to capsule",
+    ],
+    step1Pearls: [
+      "Renal capsule distension → severe flank pain (stone, hematoma, infection)",
+      "Pyelonephritis pain reflects renal parenchymal and capsular inflammation",
+      "Subcapsular hematoma can compress kidney without hematuria initially",
+      "Gerota fascia — perirenal fascia outside the renal capsule, not the fibrous capsule itself",
+    ],
+    pediatrics:
+      "Same capsular distension physiology in children; Wilms tumor or trauma can cause flank mass and pain from capsular/perinephric involvement.",
   },
   "renal-artery": {
     functionSummary: "Delivers ~20–25% of cardiac output to kidneys; perfusion pressure drives GFR and oxygen delivery to renal parenchyma.",
@@ -2114,6 +2262,13 @@ const ORGAN_METASTASIS: Record<string, string[]> = {
     "Mesenteric lymph nodes",
     "Liver (carcinoid syndrome classically from ileal NET liver metastases)",
     "Lung",
+  ],
+  "peyer-patches": [
+    "Not a primary carcinoma site — MALT lymphoma can arise in mucosal lymphoid tissue",
+    "Regional mesenteric lymph nodes with advanced GI lymphoma",
+  ],
+  "crypts-of-lieberkuhn": [
+    "Not an independent metastatic organ — epithelial malignancies arise from surrounding mucosa (adenocarcinoma)",
   ],
   cecum: [
     "Regional colonic lymph nodes",

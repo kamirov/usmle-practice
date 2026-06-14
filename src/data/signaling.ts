@@ -133,6 +133,47 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
       "Breastfed infants without supplementation at high risk for rickets; vitamin D 400 IU/day recommended; leg bowing and widened growth plates on X-ray.",
   },
   {
+    id: "pth",
+    name: "Parathyroid Hormone (PTH)",
+    etymology: "Greek para = beside + thyreos = shield (thyroid) + hormon = excite/set in motion",
+    aliases: [
+      "pth",
+      "parathyroid hormone",
+      "parathyroid hormones",
+      "parathormone",
+      "parathyrin",
+    ],
+    type: "Peptide hormone",
+    source: "Chief cells of the parathyroid glands (usually four glands on posterior thyroid)",
+    receptor:
+      "PTH1 receptor (Gs-coupled) on osteoblasts and renal tubular cells → ↑ cAMP; PTH-related peptide (PTHrP) uses same receptor family",
+    function:
+      "Raises serum calcium and lowers serum phosphate: stimulates osteoblast RANKL → osteoclast-mediated bone resorption; increases distal tubule calcium reabsorption and proximal phosphate excretion; stimulates renal 1α-hydroxylase → ↑ calcitriol and intestinal calcium absorption.",
+    clinicalRelevance: [
+      "Primary hyperparathyroidism — ↑ PTH + ↑ calcium (adenoma most common)",
+      "Secondary hyperparathyroidism — ↑ PTH + ↓ calcium (vitamin D deficiency, CKD)",
+      "Tertiary hyperparathyroidism — autonomous ↑ PTH after long secondary state (ESRD)",
+      "Hypoparathyroidism — ↓ PTH + ↓ calcium + ↑ phosphate (post-thyroidectomy, DiGeorge)",
+      "PTHrP from malignancy — ↑ calcium with suppressed PTH (humoral hypercalcemia of malignancy)",
+    ],
+    boardsPearls: [
+      "↑ Ca + ↑ PTH → primary hyperparathyroidism (stones, bones, groans, psychiatric overtones moans)",
+      "↓ Ca + ↑ PTH → secondary hyperparathyroidism (vitamin D deficiency, CKD)",
+      "↓ Ca + ↓ PTH → hypoparathyroidism (tetany, Chvostek/Trousseau signs)",
+      "↑ Ca + ↓ PTH → PTHrP or osteolytic malignancy — not primary hyperparathyroidism",
+      "PTH ↑ bone resorption indirectly via osteoblast RANKL, not direct osteoclast receptor",
+      "Magnesium deficiency can impair PTH secretion and cause functional hypoparathyroidism",
+    ],
+    distinguishFrom: [
+      "Calcitonin — from thyroid C cells; lowers calcium; MTC tumor marker",
+      "Calcitriol (1,25-dihydroxyvitamin D) — downstream effector increasing gut calcium absorption",
+      "PTHrP — paraneoplastic peptide causing hypercalcemia with low PTH",
+      "FGF23 — phosphatonin lowering phosphate; opposes vitamin D axis (not primary calcium hormone)",
+    ],
+    pediatrics:
+      "Neonatal hypocalcemia with 22q11.2 deletion (DiGeorge) reflects hypoplastic parathyroids and ↓ PTH. Rickets drives secondary ↑ PTH from vitamin D deficiency. Familial hypocalciuric hypercalcemia mimics hyperparathyroidism with inappropriately normal/high PTH but benign course.",
+  },
+  {
     id: "vitamin-k",
     name: "Vitamin K",
     etymology: "vitamin = vital amine historical term + K = Koagulation German spelling",
@@ -2685,6 +2726,49 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
       "Octreotide used in neonatal hyperinsulinism and chylothorax in specialized pediatric settings; somatostatin physiology same across ages.",
   },
   {
+    id: "vasoactive-intestinal-peptide",
+    name: "Vasoactive Intestinal Peptide (VIP)",
+    etymology: "Latin vas = vessel + activus = active + Latin intestinum = intestine + peptos = digested",
+    aliases: [
+      "vasoactive intestinal peptide",
+      "vasoactive intestinal peptides",
+      "vasoactive peptide",
+      "vasoactive peptides",
+      "vip",
+      "vip hormone",
+    ],
+    type: "Peptide hormone",
+    source:
+      "Parasympathetic neurons and VIPergic enteric neurons in GI tract; also pancreatic islet and adrenal medulla; overproduced by VIPoma (pancreatic neuroendocrine tumor)",
+    receptor:
+      "VIP receptors VPAC1/VPAC2 (Gs-coupled) → ↑ cAMP → smooth muscle relaxation and epithelial chloride/water secretion",
+    function:
+      "Potent vasodilation; relaxes GI smooth muscle (including lower esophageal sphincter); stimulates intestinal and pancreatic bicarbonate-rich fluid secretion — major mediator of secretory diarrhea when pathologically elevated.",
+    clinicalRelevance: [
+      "VIPoma — pancreatic NET secreting excess VIP → WDHA syndrome (Watery Diarrhea, Hypokalemia, Achlorhydria)",
+      "Achalasia — loss of inhibitory myenteric neurons (NO/VIP) → failed LES relaxation",
+      "Octreotide/lanreotide suppress VIP secretion in VIPoma and secretory diarrhea",
+      "Contributes to vasodilatory flushing in some neuroendocrine syndromes",
+    ],
+    boardsPearls: [
+      "VIP = vasoactive intestinal peptide — secretory diarrhea + hypokalemia → think VIPoma",
+      "WDHA syndrome: Watery Diarrhea, Hypokalemia, Achlorhydria",
+      "VIP relaxes LES — achalasia involves loss of NO/VIP inhibitory neurons",
+      "Octreotide = somatostatin analog treats VIPoma diarrhea",
+      "Secretory diarrhea (VIP, cholera) — high-volume, persists with fasting; vs osmotic diarrhea",
+      "vs gastrinoma — peptic ulcers and acid hypersecretion, not WDHA secretory pattern",
+    ],
+    distinguishFrom: [
+      "Somatostatin — inhibits VIP and other secretions; octreotide is its analog",
+      "Cholera toxin — ADP-ribosylates Gs in enterocytes → secretory diarrhea without VIPoma",
+      "Gastrin — stimulates acid secretion; gastrinoma causes ulcers not WDHA",
+      "Serotonin/carcinoid — flushing and diarrhea; elevated 5-HIAA, not VIP",
+      "Acetylcholine — parasympathetic muscarinic effects overlap but VIP is non-cholinergic co-transmitter in some pathways",
+    ],
+    pediatrics:
+      "VIPoma is rare in children but occurs in MEN1 kindreds; secretory diarrhea with dehydration and hypokalemia requires aggressive fluids and electrolyte replacement. Achalasia physiology (loss of inhibitory neurons) applies across ages.",
+  },
+  {
     id: "hepcidin",
     name: "Hepcidin",
     etymology: "Greek hepar = liver + Latin caedere = to cut (hepcidin was first identified as liver-derived antimicrobial peptide)",
@@ -2727,6 +2811,86 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
     ],
     pediatrics:
       "Neonatal hemochromatosis is a distinct fulminant syndrome unrelated to HFE hepcidin regulation; juvenile hemochromatosis from HAMP/HJV presents in teens with heart failure and hypogonadism.",
+  },
+  {
+    id: "secretin",
+    name: "Secretin",
+    etymology: "Latin secretio = separation/secretion + -in = protein suffix",
+    aliases: [
+      "secretin",
+      "intestinal secretin",
+      "duodenal secretin",
+    ],
+    type: "Peptide hormone",
+    source:
+      "S cells in duodenal and proximal jejunal mucosa (enteroendocrine cells in crypts of Lieberkühn)",
+    receptor:
+      "Secretin receptor (Gs-coupled GPCR on pancreatic ductal cells and biliary epithelium) → ↑ cAMP → bicarbonate-rich fluid secretion",
+    function:
+      "Classic enterogastrone — released when acidic gastric chyme enters duodenum → stimulates bicarbonate-rich pancreatic duct secretion and bile flow to neutralize duodenal pH; inhibits gastric acid secretion and gastric motility.",
+    clinicalRelevance: [
+      "Secretin stimulation test — IV secretin normally ↓ gastrin; gastrinoma shows paradoxical ↑ gastrin (diagnostic)",
+      "Zollinger-Ellison syndrome (gastrinoma) — secretin test distinguishes from other hypergastrinemia",
+      "Part of duodenal hormonal response to acid and fat alongside CCK",
+      "Recombinant secretin historically used in pancreatic function testing",
+    ],
+    boardsPearls: [
+      "Secretin released by duodenal S cells in response to H⁺ (acidic chyme)",
+      "Secretin → pancreatic bicarbonate (neutralizes acid) + bile secretion",
+      "Secretin ↓ gastric acid secretion — enterogastrone",
+      "Secretin stimulation test: gastrinoma → paradoxical ↑ gastrin",
+      "vs CCK — CCK responds to fats/amino acids; stimulates enzymes and gallbladder contraction",
+      "Acid in duodenum → secretin → bicarbonate; fat/protein → CCK → enzymes",
+    ],
+    distinguishFrom: [
+      "CCK — stimulated by fats and amino acids; pancreatic enzymes and gallbladder contraction, not primary bicarbonate response",
+      "Gastrin — stimulates acid; secretin inhibits acid and is used diagnostically for gastrinoma",
+      "Somatostatin — inhibits secretin and other GI hormones",
+      "GIP (K cells) — glucose-dependent insulinotropic peptide; responds to fat and carbohydrate",
+    ],
+    pediatrics:
+      "Cystic fibrosis impairs pancreatic bicarbonate secretion despite secretin signaling — thick mucus blocks ducts; presents with steatorrhea and failure to thrive.",
+  },
+  {
+    id: "cholecystokinin",
+    name: "Cholecystokinin",
+    etymology: "Greek chole = bile + kystis = bladder + kinēsis = movement + -in = protein suffix",
+    aliases: [
+      "cholecystokinin",
+      "cck",
+      "pancreozymin",
+      "pancreozymin-cck",
+      "intestinal cck",
+    ],
+    type: "Peptide hormone",
+    source:
+      "I cells in duodenal and jejunal mucosa (enteroendocrine cells); also neurons in enteric nervous system and brain (satiety)",
+    receptor:
+      "CCK-A (CCK1) receptor on gallbladder smooth muscle and pancreatic acinar cells; CCK-B (CCK2) receptor overlaps gastrin receptor on parietal cells",
+    function:
+      "Released when fats and amino acids enter duodenum → stimulates pancreatic enzyme secretion, gallbladder contraction, and relaxation of sphincter of Oddi to deliver bile and enzymes for fat digestion; contributes to satiety via vagal and central pathways.",
+    clinicalRelevance: [
+      "Post-cholecystectomy — loss of CCK-coordinated gallbladder emptying; bile drips continuously",
+      "CCK-B/gastrin receptor overlap — CCK can stimulate acid at high levels (less prominent than gastrin)",
+      "CCK antagonists investigated for pancreatitis and satiety modulation (boards concept)",
+      "Gallstone risk altered with impaired CCK-gallbladder axis",
+    ],
+    boardsPearls: [
+      "CCK from I cells — fat and amino acids in duodenum trigger release",
+      "CCK → pancreatic enzyme secretion + gallbladder contraction + sphincter of Oddi relaxation",
+      "Secretin (acid) → bicarbonate; CCK (fat/protein) → enzymes + bile delivery",
+      "CCK-A on gallbladder and pancreas; CCK-B overlaps gastrin receptor",
+      "Satiety hormone — slows gastric emptying and reduces food intake",
+      "vs secretin — different stimulus (fat/amino acid vs acid) and effect (enzymes vs bicarbonate)",
+    ],
+    distinguishFrom: [
+      "Secretin — acid-triggered bicarbonate secretion; inhibits acid",
+      "Gastrin — primary gastric acid secretagogue from G cells in antrum",
+      "GIP — incretin from K cells; potentiates insulin release",
+      "Motilin — interdigestive motility between meals; not fat-triggered enzyme secretion",
+    ],
+    pediatrics:
+      "Neonates have immature CCK-mediated gallbladder and pancreatic responses; breast milk fat triggers physiologic CCK release promoting satiety after feeds.",
   },
 ];
 

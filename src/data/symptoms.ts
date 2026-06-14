@@ -5147,6 +5147,259 @@ export const SYMPTOMS: SymptomEntry[] = [
     pediatrics:
       "Tenesmus with bloody diarrhea in children suggests Shigella or severe bacterial colitis; UC can present in adolescence with urgency and rectal bleeding.",
   },
+  {
+    id: "uremic-symptoms",
+    name: "Uremic Symptoms",
+    etymology: "Greek ouron = urine + haima = blood + Latin symptoma = occurrence",
+    aliases: [
+      "uremic symptoms",
+      "uremic symptom",
+      "uremia symptoms",
+      "symptoms of uremia",
+      "uremic syndrome symptoms",
+      "uremic manifestations",
+    ],
+    definition:
+      "Multisystem clinical manifestations of severe kidney failure from accumulation of uremic toxins, fluid overload, and endocrine/metabolic derangements — indicating need for dialysis or transplant when advanced.",
+    mechanism:
+      "Loss of glomerular filtration → retention of nitrogenous waste and middle molecules → endothelial dysfunction, platelet dysfunction, pericardial inflammation, pruritus from phosphate/parathyroid axis, and CNS toxicity; fluid overload and hyperkalemia add cardiovascular and neuromuscular symptoms.",
+    thinkOf: [
+      "End-stage renal disease / CKD stage 5",
+      "Acute kidney injury with severe azotemia",
+      "Inadequate dialysis (missed sessions, access failure)",
+      "Obstructive uropathy with bilateral renal failure",
+    ],
+    pairWith: [
+      "↑ BUN/Cr + ↓ GFR → uremia",
+      "Pericardial rub + renal failure → uremic pericarditis (dialyze)",
+      "Asterixis or confusion + renal failure → uremic encephalopathy",
+      "Pruritus + phosphate ↑ + secondary hyperparathyroidism → CKD-MBD",
+      "Bleeding with normal platelet count → uremic platelet dysfunction",
+      "Metallic taste, anorexia, nausea → classic uremic GI symptoms",
+    ],
+    distinguishFrom: [
+      "Prerenal azotemia — improves with volume repletion, fewer chronic uremic stigmata",
+      "Early CKD (stages 1–3) — often asymptomatic despite ↓ GFR",
+      "Non-uremic pruritus — normal renal function; dermatologic cause",
+      "Hepatic encephalopathy — liver failure, asterixis, ↑ ammonia; renal function may be preserved",
+      "Pericarditis from viral or autoimmune cause — without renal failure context",
+    ],
+    pediatrics:
+      "Children with CKD/ESRD may present with growth failure, bone deformities (renal osteodystrophy), and developmental delay before overt adult-type uremic symptoms; monitor growth, nutrition, and bone labs.",
+  },
+  {
+    id: "encephalopathy",
+    name: "Encephalopathy",
+    etymology: "Greek enkephalos = brain + pathos = suffering",
+    aliases: [
+      "encephalopathy",
+      "encephalopathies",
+      "metabolic encephalopathy",
+      "toxic encephalopathy",
+      "acute encephalopathy",
+    ],
+    definition:
+      "Diffuse brain dysfunction causing altered mental status, cognitive impairment, or behavioral change — a syndrome with many metabolic, toxic, infectious, and structural causes rather than a single disease.",
+    mechanism:
+      "Global cerebral dysfunction from impaired energy metabolism, neurotransmitter imbalance, toxin accumulation, edema, or seizures — without a focal structural lesion as the primary explanation; severity ranges from mild confusion to coma.",
+    thinkOf: [
+      "Hepatic encephalopathy — cirrhosis, ↑ ammonia, asterixis",
+      "Uremic encephalopathy — renal failure, dialysis indication",
+      "Wernicke encephalopathy — thiamine deficiency, ophthalmoplegia, ataxia",
+      "Hypertensive encephalopathy — severe BP elevation, papilledema",
+      "Hypoxic-ischemic encephalopathy — post cardiac arrest, near drowning",
+      "Hyperammonemia — urea cycle defects, valproate toxicity",
+      "Hypoglycemia, severe hyponatremia, hypercalcemia",
+      "Sepsis, stroke (global hypoperfusion), post-ictal state",
+    ],
+    pairWith: [
+      "Cirrhosis + asterixis + confusion → hepatic encephalopathy (lactulose, rifaximin)",
+      "Renal failure + asterixis → uremic encephalopathy (dialysis)",
+      "Alcoholism + ophthalmoplegia + ataxia → Wernicke (thiamine before glucose)",
+      "Severe HTN + headache + papilledema → hypertensive encephalopathy",
+      "↑ Ammonia → hepatic or urea cycle disorder",
+      "Post arrest + myoclonus → hypoxic-ischemic encephalopathy",
+    ],
+    distinguishFrom: [
+      "Delirium from single pharmacologic cause — often reversible with drug cessation",
+      "Dementia — chronic progressive decline, not acute metabolic encephalopathy",
+      "Focal neurologic deficit from stroke — localized lesion on imaging",
+      "Meningitis/encephalitis — fever, meningismus, CSF pleocytosis",
+      "Psychiatric primary disorder — no metabolic trigger or objective encephalopathic signs",
+      "Wernicke encephalopathy — specific triad subset of acute encephalopathy",
+    ],
+    pediatrics:
+      "Neonatal encephalopathy often reflects hypoxic-ischemic injury at birth or inborn errors (hyperammonemia from urea cycle defects). Reye syndrome and metabolic crises present with acute encephalopathy in children — evaluate glucose, ammonia, and electrolytes urgently.",
+  },
+  {
+    id: "leg-bowing",
+    name: "Leg Bowing",
+    etymology: "Old English leg = limb + bow = curved/bent",
+    aliases: [
+      "leg bowing",
+      "bow legs",
+      "bowed legs",
+      "bowed leg",
+      "genu varum",
+      "tibial bowing",
+      "lower extremity bowing",
+      "curved legs",
+    ],
+    definition:
+      "Outward curvature of the lower legs so the knees stay apart when the feet are together (genu varum) — may be physiologic in toddlers or pathologic from bone softening, growth plate disease, or skeletal dysplasia.",
+    mechanism:
+      "Physiologic: wide infant hip angle and tibial torsion normalize with weight-bearing. Pathologic: weakened or unmineralized bone (rickets/osteomalacia), asymmetric physeal growth (Blount disease), or genetic short-limb dysplasia → mechanical bowing under load at the knee.",
+    thinkOf: [
+      "Physiologic genu varum — symmetric, toddlers up to ~2 years, resolves",
+      "Rickets — vitamin D deficiency, renal osteodystrophy, hypophosphatemic rickets",
+      "Blount disease (tibia vara) — progressive unilateral or asymmetric bowing after age 2",
+      "Achondroplasia — rhizomelic shortening with bowing",
+      "Osteogenesis imperfecta — bowing with fractures and blue sclerae",
+      "Metabolic bone disease — ↑ ALP, abnormal calcium/phosphate/vitamin D",
+    ],
+    pairWith: [
+      "Toddler + symmetric mild bowing → physiologic (reassurance if improving)",
+      "Widened wrists/ankles + rachitic rosary + breastfed infant → rickets",
+      "↑ ALP + ↓ vitamin D + ↑ PTH → rickets",
+      "Unilateral or progressive after age 2 → Blount disease",
+      "Disproportionate short stature + frontal bossing → achondroplasia",
+      "Bone pain + fractures + blue sclerae → osteogenesis imperfecta",
+    ],
+    distinguishFrom: [
+      "Genu valgum (knock-knees) — knees together, ankles apart; common physiologic phase ages 3–4",
+      "Femoral anteversion — in-toeing gait, not true tibial bowing",
+      "Tibial torsion — rotational deformity, not coronal plane bowing",
+      "Rickets vs physiologic bowing — rickets has metaphyseal widening, lab abnormalities, systemic signs",
+    ],
+    pediatrics:
+      "Physiologic bow legs are common from infancy until ~18–24 months and resolve with normal growth. Persistent, asymmetric, or progressive bowing after age 2 warrants X-ray and labs for rickets or Blount disease. Vitamin D 400 IU/day prevents nutritional rickets in breastfed infants.",
+  },
+  {
+    id: "constipation",
+    name: "Constipation",
+    etymology: "Latin constipare = to press/crowd together",
+    aliases: [
+      "constipation",
+      "constipated",
+      "chronic constipation",
+      "functional constipation",
+      "slow transit constipation",
+      "infrequent bowel movements",
+    ],
+    definition:
+      "Difficult, infrequent, or incomplete defecation — typically fewer than three bowel movements per week, hard stools, straining, or sensation of blockage — from slowed colonic transit, outlet dysfunction, or secondary causes.",
+    mechanism:
+      "Reduced colonic motility (↓ parasympathetic tone, drugs, hypothyroidism), excessive water reabsorption in colon, outlet obstruction (pelvic floor dyssynergia, stricture), or neurologic/metabolic disorders impair propulsion and evacuation; chronic retention → fecal impaction and possible overflow incontinence.",
+    thinkOf: [
+      "Functional constipation — most common in adults and children",
+      "Opioids and anticholinergic drugs",
+      "Hypothyroidism",
+      "Hypercalcemia / hyperparathyroidism",
+      "Irritable bowel syndrome (constipation-predominant)",
+      "Hirschsprung disease — failure to pass meconium, distension in infant",
+      "Parkinson disease, multiple sclerosis, spinal cord injury (neurogenic)",
+      "Celiac disease, low-fiber diet, dehydration",
+      "Mechanical obstruction or stricture — if red flags present",
+    ],
+    pairWith: [
+      "Opioid use + hard stools + abdominal discomfort → opioid-induced constipation",
+      "No meconium in first 48 h + abdominal distension → Hirschsprung disease",
+      "Cold intolerance + weight gain + fatigue → hypothyroidism",
+      "Polyuria + stones + bone pain + constipation → hypercalcemia",
+      "Bloody stool + weight loss + anemia → colorectal cancer (not simple constipation)",
+      "Liquid stool seepage in elderly → overflow from fecal impaction",
+      "Rectal prolapse on straining + chronic straining → outlet dysfunction",
+    ],
+    distinguishFrom: [
+      "Diarrhea — increased frequency and loose stools, opposite pattern",
+      "Fecal impaction — complication of chronic constipation, not the primary symptom label",
+      "Small bowel obstruction — vomiting, distension, high-pitched or absent bowel sounds",
+      "Ileus — absent motility after surgery, infection, or electrolyte disturbance",
+      "Tenesmus — painful urge with little stool; think proctitis, IBD, cancer",
+      "Normal stool frequency variation — not every daily bowel movement required for health",
+    ],
+    pediatrics:
+      "Functional constipation is very common after toilet training; treat with disimpaction and maintenance laxatives (PEG). Failure to pass meconium within 48 hours, abdominal distension, or poor growth suggests Hirschsprung disease — rectal biopsy. Encopresis often reflects overflow from chronic retentive constipation.",
+  },
+  {
+    id: "rigors",
+    name: "Rigors",
+    etymology: "Latin rigor = stiffness/shaking",
+    aliases: [
+      "rigors",
+      "rigor",
+      "shaking chills",
+      "shaking chill",
+      "shivering rigors",
+      "febrile rigors",
+    ],
+    definition:
+      "Intense, often violent shivering episodes accompanying a rapid rise in body temperature — reflecting maximal heat-generating muscular activity as the hypothalamic set point increases.",
+    mechanism:
+      "Pyrogen-driven ↑ hypothalamic thermostat → perceived cold → sympathetic activation and involuntary skeletal muscle contraction (shivering) to raise core temperature — more severe than mild chills and commonly associated with high-grade bacteremia or malaria paroxysms.",
+    thinkOf: [
+      "Bacteremia and sepsis",
+      "Infective endocarditis",
+      "Pyelonephritis and ascending UTI",
+      "Malaria (cyclical paroxysms with rigors)",
+      "Abscess (intra-abdominal, pelvic, soft tissue)",
+      "Drug infusion reactions (amphotericin B — shake and bake)",
+    ],
+    pairWith: [
+      "Fever spike + hypotension → sepsis/bacteremia",
+      "New murmur + embolic phenomena → endocarditis",
+      "Flank pain + pyuria → pyelonephritis",
+      "Travel to endemic area + cyclic fever → malaria",
+      "IV amphotericin infusion → infusion-related rigors",
+    ],
+    distinguishFrom: [
+      "Simple chills — milder shivering without the intense shaking of rigors",
+      "Hyperthermia shivering — initial phase of heat stroke before set-point confusion clears",
+      "Essential tremor or seizure — not tied to febrile illness pattern",
+      "Hypothermia shivering — body temperature below normal, not pyrogen-mediated fever rise",
+    ],
+    pediatrics:
+      "Rigors with fever in infants and young children warrant careful evaluation for bacteremia and UTI; neonates may not mount rigors and instead present with lethargy or hypothermia during serious infection.",
+  },
+  {
+    id: "hyperthermia",
+    name: "Hyperthermia",
+    etymology: "Greek hyper = excessive + Greek therme = heat",
+    aliases: [
+      "hyperthermia",
+      "hyperthermias",
+      "hyperthermic state",
+      "elevated body temperature without fever",
+      "non-pyrogenic hyperthermia",
+    ],
+    definition:
+      "Elevated core body temperature from failure of thermoregulation or excess heat production — without a reset hypothalamic set point driven by pyrogens (unlike true fever).",
+    mechanism:
+      "Heat gain exceeds dissipation (environmental heat stroke, exertion) or unregulated metabolic heat production (malignant hyperthermia from RYR1 mutation with anesthetics, neuroleptic malignant syndrome, serotonin syndrome, thyroid storm, salicylate toxicity) — hypothalamic set point is normal or overwhelmed rather than cytokine-elevated.",
+    thinkOf: [
+      "Heat stroke — hot dry skin, high ambient temperature, exertion",
+      "Malignant hyperthermia — volatile anesthetics or succinylcholine in susceptible patients",
+      "Neuroleptic malignant syndrome — antipsychotic exposure, rigidity, ↑ CK",
+      "Serotonin syndrome — serotonergic drugs, clonus, hyperreflexia",
+      "Anticholinergic toxidrome — dry skin, mydriasis, urinary retention",
+      "Thyroid storm — hypermetabolic state with fever",
+    ],
+    pairWith: [
+      "Recent anesthesia + ↑ EtCO₂ + rigidity → malignant hyperthermia",
+      "New antipsychotic + lead-pipe rigidity + ↑ CK → NMS",
+      "SSRI + MAOI + clonus/agitation → serotonin syndrome",
+      "Hot environment + altered mental status + dry skin → heat stroke",
+      "Normal set point physiology — cooling measures work; antipyretics less effective than in true fever",
+    ],
+    distinguishFrom: [
+      "Fever — pyrogen-mediated hypothalamic set-point rise; responds to antipyretics and treats underlying infection",
+      "Factitious fever — fabricated readings without true temperature elevation",
+      "Hyperpyrexia — extreme elevation (>41.5°C) can occur in either fever or hyperthermia",
+      "Hypothalamic stroke — rare central fever with structural lesion",
+    ],
+    pediatrics:
+      "Children are at higher risk for heat stroke due to higher surface-area-to-mass ratio and dependence on caregivers for hydration. Malignant hyperthermia susceptibility presents across ages if exposed to triggering anesthetics.",
+  },
 ];
 
 const symptomById = new Map(SYMPTOMS.map((s) => [s.id, s]));

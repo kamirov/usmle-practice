@@ -3590,6 +3590,64 @@ export const CELLS: CellEntry[] = [
     pediatrics:
       "Congenital hypothyroidism from dyshormonogenesis may involve NIS or other basolateral/apical transport steps in thyroid hormone synthesis.",
   },
+  {
+    id: "stem-cell",
+    name: "Stem Cell",
+    etymology: "Old English stemn = trunk/main axis + Latin cella = small room",
+    aliases: [
+      "stem cell",
+      "stem cells",
+      "stem-cell",
+      "stem-cells",
+      "pluripotent stem cell",
+      "pluripotent stem cells",
+      "multipotent stem cell",
+      "multipotent stem cells",
+      "hematopoietic stem cell",
+      "hematopoietic stem cells",
+      "hscs",
+      "hsc",
+      "adult stem cell",
+      "adult stem cells",
+      "tissue stem cell",
+      "tissue stem cells",
+      "intestinal stem cell",
+      "intestinal stem cells",
+    ],
+    definition:
+      "Undifferentiated cell with capacity for self-renewal and differentiation into one or more specialized cell lineages — maintaining tissue homeostasis, repair, and (in hematopoietic line) lifelong blood cell production.",
+    characteristics: [
+      "Self-renewal — asymmetric division produces one stem cell and one progenitor/differentiated cell",
+      "Potency hierarchy: totipotent (zygote) → pluripotent (embryonic stem cells) → multipotent (HSC, neural stem cells) → unipotent",
+      "Hematopoietic stem cells (HSCs) in bone marrow — CD34⁺; give rise to all blood lineages via common myeloid and lymphoid progenitors",
+      "Intestinal stem cells at crypt base (Lgr5⁺ crypt base columnar cells) — regenerate villus enterocytes, goblet, Paneth, enteroendocrine cells every ~3–5 days",
+      "Epidermal basal keratinocytes and limbal stem cells — skin and corneal renewal",
+      "Mesenchymal stromal cells in marrow niche support HSC maintenance (SCF, CXCL12)",
+    ],
+    clinicalRelevance: [
+      "Hematopoietic stem cell transplant — curative for aplastic anemia, leukemia, SCID, severe combined immunodeficiency",
+      "Chemotherapy and radiation damage rapidly dividing progenitors — marrow suppression",
+      "Cancer stem cell concept — subpopulation with self-renewal drives tumor recurrence (boards overview)",
+      "Embryonic stem cells (inner cell mass) — pluripotent; ethical/regulatory context on Step 1 peripherally",
+      "iPSCs — reprogrammed somatic cells to pluripotency (Yamanaka factors: Oct4, Sox2, Klf4, c-Myc)",
+    ],
+    boardsPearls: [
+      "Stem cell = self-renewal + differentiation",
+      "HSC (CD34⁺) → all blood cells; transplant replaces diseased marrow",
+      "Intestinal stem cells in crypts of Lieberkühn regenerate mucosa rapidly",
+      "Totipotent → zygote; pluripotent → embryonic stem cells; multipotent → HSC",
+      "Bone marrow failure (aplastic anemia) = stem cell/progenitor deficiency",
+      "vs progenitor cell — more committed, limited division capacity, not long-term self-renewal",
+    ],
+    distinguishFrom: [
+      "Progenitor (committed precursor) — limited self-renewal; more differentiated (e.g., CFU-GEMM)",
+      "Differentiated effector cell — terminal function, no self-renewal (e.g., neutrophil, enterocyte)",
+      "Tumor cell — uncontrolled proliferation without normal differentiation program (cancer stem cell hypothesis overlaps)",
+      "Plasma cell — terminally differentiated B cell, not stem cell",
+    ],
+    pediatrics:
+      "Neonatal hematopoiesis transitions from fetal liver to bone marrow; HSC transplant treats SCID, osteopetrosis, and some inborn errors. NEC and celiac disease injure intestinal stem cell niche — impaired mucosal regeneration.",
+  },
 ];
 
 const cellById = new Map(CELLS.map((entry) => [entry.id, entry]));

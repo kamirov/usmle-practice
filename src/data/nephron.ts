@@ -366,6 +366,37 @@ export const NEPHRON_SEGMENTS: NephronSegmentEntry[] = [
     ],
   },
   {
+    id: "juxtaglomerular-apparatus",
+    name: "Juxtaglomerular Apparatus",
+    etymology: "Latin juxta = near + glomerulus = small ball + Latin apparatus = equipment/structure",
+    aliases: [
+      "juxtaglomerular apparatus",
+      "juxtaglomerular apparatuses",
+      "juxtaglomerular (g) apparatus",
+      "juxtaglomerular g apparatus",
+      "jga",
+      "jg apparatus",
+      "juxtaglomerular complex",
+      "juxtaglomerular cell apparatus",
+    ],
+    function:
+      "Specialized structure at the vascular pole of each nephron linking the distal nephron to its parent glomerulus — composed of juxtaglomerular (granular) cells of the afferent arteriole, macula densa of the thick ascending limb, and extraglomerular mesangial (lacis) cells — mediating tubuloglomerular feedback and renin-angiotensin-aldosterone system (RAAS) regulation.",
+    reabsorbs: [],
+    secretes: [
+      "Renin from juxtaglomerular cells (effector arm of JGA)",
+      "Paracrine mediators (adenosine, prostaglandins, nitric oxide) for tubuloglomerular feedback",
+    ],
+    boardsPearls: [
+      "JGA = JG cells + macula densa + extraglomerular (lacis) mesangial cells",
+      "Macula densa senses tubular NaCl delivery; JG cells release renin in response",
+      "Three renin triggers: β1 sympathetic tone, ↓ afferent arteriole stretch (↓ perfusion), ↓ macula densa NaCl",
+      "↓ NaCl at macula densa → renin → angiotensin II → efferent arteriole constriction + aldosterone",
+      "Loop/thiazide diuretics ↓ NaCl delivery to macula densa → compensatory ↑ renin",
+      "Renal artery stenosis → ↓ perfusion → JG renin → secondary hypertension",
+      "vs intraglomerular mesangial cells — inside glomerular tuft; lacis cells are extraglomerular in JGA",
+    ],
+  },
+  {
     id: "loop-of-henle",
     name: "Loop of Henle",
     etymology: "loop = hairpin bend + eponym: Friedrich Henle",
