@@ -131,3 +131,6 @@ impaired-wound-healing.svg
 Created locally
 Reference: https://en.wikipedia.org/wiki/Wound_healing
 Description: Delayed wound closure with glucocorticoids and diabetes
+hyperpigmentation.svg | Created locally
+polyuria.svg | Created locally
+polydipsia.svg | Created locally

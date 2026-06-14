@@ -10,15 +10,25 @@ import interferonBeta from "../media/images/medications/interferon-beta.svg?url"
 import polyclonalFabAntivenom from "../media/images/medications/polyclonal-fab-antivenom.png?url";
 import riboflavin from "../media/images/medications/riboflavin.png?url";
 import vasopressors from "../media/images/medications/vasopressors.png?url";
+import antiTnfTherapy from "../media/images/medications/anti-tnf-therapy.svg?url";
+import daptomycin from "../media/images/medications/daptomycin.svg?url";
+import linezolid from "../media/images/medications/linezolid.svg?url";
+import nafcillin from "../media/images/medications/nafcillin.svg?url";
+import oxacillin from "../media/images/medications/oxacillin.svg?url";
 
 export type MedicationImageId = Extract<
   MedicationEntry["id"],
   | "antipsychotics"
+  | "anti-tnf-therapy"
   | "calcineurin-inhibitors"
+  | "daptomycin"
   | "dexamethasone"
   | "glatiramer"
   | "hydrocortisone"
   | "interferon-beta"
+  | "linezolid"
+  | "nafcillin"
+  | "oxacillin"
   | "polyclonal-fab-antivenom"
   | "riboflavin"
   | "vasopressors"
@@ -31,11 +41,16 @@ function extensionAssetUrl(path: string): string {
 /** See src/media/images/medications/SOURCES.txt */
 export const MEDICATION_IMAGES: Partial<Record<MedicationImageId, string>> = {
   antipsychotics: extensionAssetUrl(antipsychotics),
+  "anti-tnf-therapy": extensionAssetUrl(antiTnfTherapy),
   "calcineurin-inhibitors": extensionAssetUrl(calcineurinInhibitors),
+  daptomycin: extensionAssetUrl(daptomycin),
   dexamethasone: extensionAssetUrl(dexamethasone),
   glatiramer: extensionAssetUrl(glatiramer),
   hydrocortisone: extensionAssetUrl(hydrocortisone),
   "interferon-beta": extensionAssetUrl(interferonBeta),
+  linezolid: extensionAssetUrl(linezolid),
+  nafcillin: extensionAssetUrl(nafcillin),
+  oxacillin: extensionAssetUrl(oxacillin),
   "polyclonal-fab-antivenom": extensionAssetUrl(polyclonalFabAntivenom),
   riboflavin: extensionAssetUrl(riboflavin),
   vasopressors: extensionAssetUrl(vasopressors),
@@ -48,6 +63,10 @@ export const MEDICATION_IMAGE_ATTRIBUTIONS: Partial<
     label: "Created locally; reference: Dopaminergic pathways",
     url: "https://en.wikipedia.org/wiki/Dopaminergic_pathways",
   },
+  "anti-tnf-therapy": {
+    label: "Created locally; reference: Tumor necrosis factor alpha",
+    url: "https://en.wikipedia.org/wiki/Tumor_necrosis_factor_alpha",
+  },
   "calcineurin-inhibitors": {
     label: "Created locally; reference: Calcineurin",
     url: "https://en.wikipedia.org/wiki/Calcineurin",
@@ -55,6 +74,22 @@ export const MEDICATION_IMAGE_ATTRIBUTIONS: Partial<
   dexamethasone: {
     label: "Created locally; reference: Dexamethasone",
     url: "https://en.wikipedia.org/wiki/Dexamethasone",
+  },
+  daptomycin: {
+    label: "Created locally; reference: Daptomycin",
+    url: "https://en.wikipedia.org/wiki/Daptomycin",
+  },
+  linezolid: {
+    label: "Created locally; reference: Linezolid",
+    url: "https://en.wikipedia.org/wiki/Linezolid",
+  },
+  nafcillin: {
+    label: "Created locally; reference: Nafcillin",
+    url: "https://en.wikipedia.org/wiki/Nafcillin",
+  },
+  oxacillin: {
+    label: "Created locally; reference: Oxacillin",
+    url: "https://en.wikipedia.org/wiki/Oxacillin",
   },
   glatiramer: {
     label: "Created locally; reference: Glatiramer acetate",
@@ -87,10 +122,20 @@ export const MEDICATION_IMAGE_CAPTIONS: Partial<
 > = {
   antipsychotics:
     "D2 blockade reduces mesolimbic psychosis but causes nigrostriatal EPS and tuberoinfundibular hyperprolactinemia",
+  "anti-tnf-therapy":
+    "Anti-TNF biologics block TNF-α — screen for latent TB before starting; risk of granuloma breakdown and infection",
   "calcineurin-inhibitors":
     "Calcineurin blockade prevents NFAT activation — ↓ IL-2 and T-cell proliferation in transplant",
   dexamethasone:
     "Potent glucocorticoid — antenatal lung maturity, croup, cerebral edema, meningitis adjunct",
+  daptomycin:
+    "Daptomycin depolarizes Gram-positive bacterial membranes — effective for MRSA bacteremia but inactivated by pulmonary surfactant",
+  linezolid:
+    "Linezolid inhibits 50S ribosomal initiation — covers MRSA pneumonia with oral bioavailability",
+  nafcillin:
+    "Nafcillin — penicillinase-resistant penicillin for MSSA; not active against MRSA",
+  oxacillin:
+    "Oxacillin — anti-staphylococcal penicillin; oxacillin disk screens for MRSA resistance",
   glatiramer:
     "Glatiramer acetate mimics myelin basic protein — shifts T cells toward Th2/regulatory phenotype in MS",
   "interferon-beta":

@@ -4916,6 +4916,8 @@ export const CONDITIONS: ConditionEntry[] = [
     aliases: [
       "wilson disease",
       "wilson's disease",
+      "wilsons disease",
+      "wilson's",
       "hepatolenticular degeneration",
     ],
     definition:
@@ -10392,7 +10394,7 @@ export const CONDITIONS: ConditionEntry[] = [
     id: "schizophrenia",
     name: "Schizophrenia",
     etymology: "Greek schizein = split + phren = mind",
-    aliases: ["schizophrenia"],
+    aliases: ["schizophrenia", "schizophrenias", "schizophrenic", "schizophrenic disorder"],
     definition:
       "Chronic psychotic disorder with positive symptoms (hallucinations, delusions), negative symptoms, and cognitive dysfunction lasting ≥6 months.",
     pathophysiology:
@@ -22208,6 +22210,678 @@ export const CONDITIONS: ConditionEntry[] = [
     ],
     pediatrics:
       "Legg-Calvé-Perthes disease is avascular necrosis of the pediatric femoral head; sickle cell AVN can present in childhood.",
+  },
+  {
+    id: "copper-deficiency",
+    name: "Copper deficiency",
+    etymology: "Latin cuprum = copper + de- = away + facere = make",
+    aliases: [
+      "copper deficiency",
+      "copper deficiencies",
+      "hypocupremia",
+      "copper deficiency syndrome",
+    ],
+    definition:
+      "Inadequate copper stores causing impaired cuproenzyme function — neurologic, hematologic, and connective tissue manifestations; opposite of Wilson disease (copper overload).",
+    pathophysiology:
+      "Copper is cofactor for cytochrome c oxidase (mitochondrial respiration), lysyl oxidase (collagen cross-linking), ceruloplasmin (iron mobilization), and superoxide dismutase → deficiency causes myelopathy, sideroblastic anemia, neutropenia, and poor wound healing.",
+    classicPresentation: [
+      "Peripheral neuropathy and myelopathy mimicking B12 deficiency",
+      "Fatigue, anemia refractory to iron",
+      "Neutropenia with recurrent infections",
+    ],
+    keyLabs: [
+      "↓ serum copper",
+      "↓ ceruloplasmin (also low in Wilson disease — interpret with total copper and clinical context)",
+      "Sideroblastic anemia with ringed sideroblasts on marrow",
+    ],
+    associations: [
+      "Excess zinc intake (zinc competes with copper absorption — denture adhesive, supplements)",
+      "Total parenteral nutrition without copper supplementation",
+      "Malabsorption (bariatric surgery, celiac disease)",
+      "Nephrotic syndrome (urinary copper loss)",
+    ],
+    complications: [
+      "Irreversible myelopathy if untreated",
+      "Severe cytopenias",
+    ],
+    distinguishFrom: [
+      "Wilson disease — copper overload, Kayser-Fleischer rings, liver disease, ↑ urinary copper",
+      "Vitamin B12 deficiency — subacute combined degeneration; check B12 and methylmalonic acid",
+      "Iron deficiency anemia — low ferritin; copper deficiency causes sideroblastic pattern",
+    ],
+    treatment: [
+      "Oral or IV copper supplementation",
+      "Reduce excess zinc if present",
+      "Correct underlying malabsorption",
+    ],
+    boardsPearls: [
+      "Zinc excess → copper deficiency (competitive intestinal absorption)",
+      "Myelopathy + sideroblastic anemia + neutropenia → think copper deficiency",
+      "↓ ceruloplasmin in both Wilson (overload) and deficiency — use total copper and clinical picture",
+      "Menkes disease (infantile) — X-linked copper transport defect; kinky hair, neurodegeneration",
+    ],
+    pediatrics:
+      "Menkes disease presents in infancy with failure to thrive, seizures, and hypopigmented kinky hair; copper histidine injection is treatment. TPN in neonates must include trace copper.",
+  },
+  {
+    id: "dementia",
+    name: "Dementia",
+    etymology: "Latin de- = away + mens = mind",
+    aliases: ["dementia", "dementias", "major neurocognitive disorder", "neurocognitive disorder"],
+    definition:
+      "Syndrome of chronic progressive cognitive decline in memory, executive function, language, or visuospatial skills severe enough to impair independence in daily activities — not due to delirium or psychiatric disorder alone.",
+    pathophysiology:
+      "Etiology-dependent: Alzheimer — amyloid plaques and neurofibrillary tau tangles; vascular — infarcts and small-vessel disease; Lewy body — α-synuclein Lewy bodies; frontotemporal — tau or TDP-43 pathology.",
+    classicPresentation: [
+      "Insidious memory loss and word-finding difficulty (Alzheimer pattern)",
+      "Stepwise decline with focal neurologic signs (vascular)",
+      "Fluctuating cognition, visual hallucinations, parkinsonism (Lewy body)",
+      "Personality change and disinhibition (frontotemporal)",
+    ],
+    keyFindings: [
+      "Impaired ADLs and instrumental ADLs",
+      "Cognitive testing deficits in ≥2 domains",
+      "Brain MRI: atrophy pattern varies by etiology",
+    ],
+    associations: [
+      "Advanced age",
+      "Vascular risk factors (hypertension, diabetes)",
+      "Family history (early-onset Alzheimer)",
+      "Down syndrome (Alzheimer risk)",
+    ],
+    complications: [
+      "Falls, aspiration, malnutrition",
+      "Behavioral and psychological symptoms (agitation, psychosis)",
+      "Caregiver burden",
+    ],
+    distinguishFrom: [
+      "Delirium — acute, fluctuating, inattention, often reversible trigger",
+      "Pseudodementia — depression in elderly mimics cognitive decline",
+      "Normal aging — mild forgetfulness without functional impairment",
+    ],
+    treatment: [
+      "Cholinesterase inhibitors (donepezil) for Alzheimer and Lewy body dementia",
+      "Memantine (NMDA antagonist) for moderate Alzheimer disease",
+      "Treat reversible contributors (B12, hypothyroidism, NPH, depression)",
+      "Avoid antipsychotics in Lewy body dementia when possible (severe sensitivity)",
+    ],
+    boardsPearls: [
+      "Alzheimer = most common cause; insidious memory loss, hippocampal atrophy",
+      "Lewy body dementia — visual hallucinations + parkinsonism; avoid typical antipsychotics",
+      "Vascular dementia — stepwise decline, focal signs, white matter changes",
+      "Delirium is acute; dementia is chronic progressive",
+      "Korsakoff amnesia is not global dementia — isolated anterograde amnesia",
+    ],
+    pediatrics:
+      "Childhood dementia is rare; consider metabolic disorders, Niemann-Pick, or mitochondrial disease rather than Alzheimer-type pathology.",
+  },
+  {
+    id: "brief-psychotic-disorder",
+    name: "Brief Psychotic Disorder",
+    etymology: "Latin brevis = short + Greek psychosis = abnormal mind",
+    aliases: [
+      "brief psychotic disorder",
+      "brief psychotic disorders",
+      "brief reactive psychosis",
+    ],
+    definition:
+      "Sudden onset of psychotic symptoms (delusions, hallucinations, disorganized speech/behavior) lasting more than 1 day but less than 1 month, with eventual full return to premorbid functioning.",
+    pathophysiology:
+      "Stress-related dysregulation of dopaminergic and glutamatergic circuits; postpartum hormonal and immunologic factors in peripartum cases; often precipitated by severe psychosocial stress.",
+    classicPresentation: [
+      "Acute psychosis after major stressor, immigration, or postpartum period",
+      "Confusion, emotional turmoil, paranoid or bizarre delusions",
+      "Full recovery within weeks",
+    ],
+    keyFindings: [
+      "Psychotic symptoms >1 day and <1 month",
+      "No prior chronic psychotic illness",
+      "Return to baseline functioning",
+    ],
+    associations: [
+      "Postpartum state",
+      "Severe psychosocial stress",
+      "Immigration or cultural displacement",
+    ],
+    complications: [
+      "Risk of progression to schizophrenia or schizoaffective disorder (minority)",
+      "Self-harm or harm to others during acute episode",
+    ],
+    distinguishFrom: [
+      "Schizophreniform disorder — 1–6 months duration",
+      "Schizophrenia — ≥6 months total including prodrome/active/residual",
+      "Substance-induced psychosis — intoxication/withdrawal timeline",
+    ],
+    treatment: [
+      "Short-course antipsychotics during acute episode",
+      "Supportive psychotherapy and stressor management",
+      "Hospitalize if danger to self/others",
+    ],
+    boardsPearls: [
+      "Duration <1 month distinguishes from schizophreniform and schizophrenia",
+      "Postpartum psychosis is brief psychotic disorder until proven otherwise",
+      "Full recovery expected — unlike chronic schizophrenia",
+    ],
+    pediatrics:
+      "Acute psychosis in adolescents requires substance, autoimmune, and mood disorder workup; brief psychotic disorder is uncommon but recognized in DSM-5.",
+  },
+  {
+    id: "psychotic-mood-disorder",
+    name: "Psychotic Mood Disorder",
+    etymology: "Greek psyche = mind + -osis + Latin mood + dis- = apart + ordo = order",
+    aliases: [
+      "psychotic mood disorder",
+      "psychotic mood disorders",
+      "mood disorder with psychotic features",
+      "psychotic depression",
+      "psychotic mania",
+      "mood-congruent psychosis",
+    ],
+    definition:
+      "Mood episode (major depressive or manic) accompanied by delusions and/or hallucinations that occur exclusively during the mood episode — psychotic features are mood-congruent or mood-incongruent but temporally linked to affective symptoms.",
+    pathophysiology:
+      "Severe monoamine dysregulation in depression or mania with secondary limbic-cortical dysfunction producing psychotic content aligned with mood (guilt delusions in depression, grandiose delusions in mania).",
+    classicPresentation: [
+      "Severe depression with nihilistic or guilt delusions, auditory hallucinations",
+      "Mania with grandiose delusions and irritable psychosis",
+      "Psychosis resolves when mood episode treats",
+    ],
+    keyFindings: [
+      "Psychotic symptoms concurrent with mood episode",
+      "No independent psychosis between mood episodes (vs schizoaffective)",
+      "Mood-congruent delusions classic (worthlessness in depression, grandiosity in mania)",
+    ],
+    associations: [
+      "Bipolar I disorder",
+      "Severe major depressive disorder",
+      "Family history of mood or psychotic disorders",
+    ],
+    complications: [
+      "Suicide risk in psychotic depression",
+      "Need for hospitalization",
+    ],
+    distinguishFrom: [
+      "Schizophrenia — psychosis ≥6 months with negative symptoms independent of mood",
+      "Schizoaffective disorder — psychosis persists ≥2 weeks in absence of mood episode",
+      "Schizophreniform — duration 1–6 months without prominent mood episode",
+    ],
+    treatment: [
+      "Antidepressant + antipsychotic or ECT for psychotic depression",
+      "Mood stabilizer + antipsychotic for psychotic mania",
+      "Avoid antidepressant monotherapy in bipolar psychotic depression",
+    ],
+    boardsPearls: [
+      "Psychosis only during mood episode → psychotic mood disorder",
+      "Schizoaffective = psychosis persists without mood symptoms for ≥2 weeks",
+      "ECT highly effective for psychotic depression",
+      "Mood-congruent delusions: guilt/poverty/illness in depression; grandiosity in mania",
+    ],
+    pediatrics:
+      "Psychotic features in adolescent depression or mania warrant hospitalization and careful bipolar screening before starting antidepressants alone.",
+  },
+  {
+    id: "adjustment-disorder",
+    name: "Adjustment Disorder",
+    etymology: "Latin ad- = toward + iustare = make right + dis- + ordo",
+    aliases: [
+      "adjustment disorder",
+      "adjustment disorders",
+      "adjustment disorder with depressed mood",
+      "adjustment disorder with anxiety",
+      "situational depression",
+    ],
+    definition:
+      "Emotional or behavioral symptoms developing within 3 months of an identifiable psychosocial stressor, out of proportion to the stressor or causing significant impairment, and not meeting criteria for another mental disorder.",
+    pathophysiology:
+      "Maladaptive stress response with HPA axis activation and vulnerability-stress interaction; symptoms reflect difficulty coping rather than endogenous mood circuit disease.",
+    classicPresentation: [
+      "Symptoms begin after job loss, divorce, bereavement, or academic failure",
+      "Mixed anxiety and depressed mood, conduct disturbance, or work impairment",
+      "Symptoms resolve within 6 months after stressor or its consequences end",
+    ],
+    keyFindings: [
+      "Clear temporal link to stressor",
+      "Symptoms do not meet full MDD, PTSD, or anxiety disorder criteria",
+      "Functional impairment in social/occupational domains",
+    ],
+    associations: [
+      "Recent life change or loss",
+      "Limited social support",
+      "Prior psychiatric history increases vulnerability",
+    ],
+    complications: [
+      "Progression to major depression if stressor chronic",
+      "Substance use as maladaptive coping",
+    ],
+    distinguishFrom: [
+      "Major depressive disorder — meets SIGECAPS threshold independent of proportional stress response",
+      "PTSD — trauma with intrusion, avoidance, hyperarousal; specific trauma criteria",
+      "Normal grief — bereavement may be proportional; complicated grief if prolonged/severe",
+    ],
+    treatment: [
+      "Psychotherapy first-line (supportive, CBT)",
+      "Short-term pharmacotherapy if symptoms severe (SSRIs)",
+      "Address stressor and strengthen coping resources",
+    ],
+    boardsPearls: [
+      "Stressor within 3 months; symptoms resolve within 6 months of stressor ending",
+      "Out of proportion to stressor OR significant impairment",
+      "Does not meet full criteria for MDD, PTSD, or other primary disorder",
+      "Supportive therapy and CBT — not always medication",
+    ],
+    pediatrics:
+      "Common in children after parental divorce, bullying, or school change; behavioral disturbances may predominate over depressed mood.",
+  },
+  {
+    id: "schizoid-personality-disorder",
+    name: "Schizoid Personality Disorder",
+    etymology: "Greek schizein = split + -oid = resembling + Latin persona = mask",
+    aliases: [
+      "schizoid personality disorder",
+      "schizoid personality disorders",
+      "schizoid",
+      "schizoid personality",
+      "spd schizoid",
+    ],
+    definition:
+      "Cluster A personality disorder characterized by pervasive detachment from social relationships and restricted emotional expression — patient prefers solitude and shows little desire for close bonds.",
+    pathophysiology:
+      "Temperamental low sociability and affective blunting; not psychotic — thought to reflect schizoid-spectrum traits without frank schizophrenia pathology.",
+    classicPresentation: [
+      "Lifelong preference for solitary activities",
+      "Indifferent to praise or criticism",
+      "Limited emotional expression; appears cold or aloof",
+      "No close friends or confidants",
+    ],
+    keyFindings: [
+      "Pervasive pattern since early adulthood across contexts",
+      "Neither desires nor enjoys close relationships",
+      "Almost always chooses solitary activities",
+    ],
+    associations: [
+      "Cluster A personality disorders (schizotypal, paranoid)",
+      "Family history of schizophrenia spectrum traits",
+    ],
+    complications: [
+      "Social isolation",
+      "Depression secondary to loneliness (less common due to low desire for contact)",
+    ],
+    distinguishFrom: [
+      "Schizotypal personality disorder — odd beliefs, magical thinking, eccentric behavior",
+      "Avoidant personality disorder — desires relationships but fears rejection",
+      "Autism spectrum disorder — social communication deficits from childhood, restricted interests",
+      "Schizophrenia — psychosis, negative symptoms with functional decline",
+    ],
+    treatment: [
+      "Psychotherapy if patient engages — often low treatment-seeking",
+      "Antipsychotics not indicated unless comorbid psychosis",
+    ],
+    boardsPearls: [
+      "Cluster A: 'weird' — schizoid (detached), schizotypal (odd), paranoid (suspicious)",
+      "Schizoid = neither wants nor enjoys close relationships",
+      "No psychosis required — personality pattern, not psychotic disorder",
+      "Content with isolation — vs avoidant (wants friends but fears rejection)",
+    ],
+    pediatrics:
+      "Personality disorders diagnosed in adulthood; childhood shows solitary temperament but formal diagnosis deferred until patterns persist into adult life.",
+  },
+  {
+    id: "schizotypal-personality-disorder",
+    name: "Schizotypal Personality Disorder",
+    etymology: "Greek schizein = split + typos = type/form + -al",
+    aliases: [
+      "schizotypal personality disorder",
+      "schizotypal personality disorders",
+      "schizotypal",
+      "schizotypal personality",
+      "stp schizotypal",
+    ],
+    definition:
+      "Cluster A personality disorder with acute discomfort in close relationships, cognitive/perceptual distortions, eccentric behavior, and odd speech — schizophrenia spectrum personality without sustained psychosis.",
+    pathophysiology:
+      "Schizophrenia spectrum genetic vulnerability with dopaminergic dysregulation; increased risk of conversion to schizophrenia especially with family history.",
+    classicPresentation: [
+      "Odd beliefs, magical thinking, or unusual perceptual experiences",
+      "Eccentric appearance or behavior",
+      "Social anxiety with paranoid ideation",
+      "Odd speech (vague, circumstantial, overelaborate)",
+    ],
+    keyFindings: [
+      "Ideas of reference without full delusions",
+      "Suspiciousness or paranoid cognition",
+      "Inappropriate or constricted affect",
+    ],
+    associations: [
+      "Family history of schizophrenia",
+      "Social isolation",
+      "Substance use",
+    ],
+    complications: [
+      "Progression to schizophrenia in subset",
+      "Depression and social dysfunction",
+    ],
+    distinguishFrom: [
+      "Schizoid personality disorder — detachment without odd beliefs or eccentricity",
+      "Paranoid personality disorder — pervasive distrust without magical thinking",
+      "Schizophrenia — sustained psychosis ≥6 months with functional decline",
+      "Delusional disorder — fixed delusion ≥1 month",
+    ],
+    treatment: [
+      "Low-dose antipsychotics for cognitive-perceptual symptoms if distressing",
+      "Social skills training and supportive psychotherapy",
+    ],
+    boardsPearls: [
+      "Cluster A odd/wizard archetype — magical thinking, eccentric, social anxiety",
+      "↑ risk schizophrenia but no required psychotic episode for diagnosis",
+      "vs schizoid — schizotypal has odd beliefs and eccentricity",
+      "vs schizophrenia — no ≥6-month psychotic syndrome with negative symptoms",
+    ],
+    pediatrics:
+      "Childhood schizotypal traits may precede schizophrenia; early intervention focuses on social functioning and monitoring for psychosis onset.",
+  },
+  {
+    id: "food-allergy",
+    name: "Food Allergy",
+    etymology: "Old English foda = nourishment + Greek allos = other + ergon = work",
+    aliases: [
+      "food allergy",
+      "food allergies",
+      "food allergic reaction",
+      "ige-mediated food allergy",
+      "food hypersensitivity",
+      "food allergen",
+    ],
+    definition:
+      "Adverse immune response to food protein, most commonly IgE-mediated type I hypersensitivity causing urticaria, angioedema, vomiting, or anaphylaxis within minutes to hours of ingestion.",
+    pathophysiology:
+      "Sensitization → food allergen cross-links IgE on mast cells/basophils (FcεRI) → degranulation (histamine, tryptase, leukotrienes) → urticaria, GI symptoms, bronchospasm, or anaphylaxis. Non-IgE mechanisms (e.g., FPIES) occur but IgE-mediated is highest yield for Step 1.",
+    classicPresentation: [
+      "Minutes to 2 h after eating specific food",
+      "Urticaria, angioedema, lip/tongue swelling",
+      "Vomiting, abdominal pain, diarrhea",
+      "Wheeze, throat tightness, anaphylaxis",
+      "Common triggers: peanut, tree nuts, milk, egg, wheat, soy, shellfish, fish",
+    ],
+    keyFindings: [
+      "Temporal relationship to food ingestion",
+      "Skin and GI involvement common in children",
+      "↑ specific IgE or positive skin prick test supports sensitization — must match clinical history",
+      "Serum tryptase elevated during anaphylaxis",
+    ],
+    associations: [
+      "Atopic dermatitis and atopic march",
+      "Eosinophilic esophagitis (chronic non-IgE/IgE mixed mechanisms)",
+      "Oral allergy syndrome (pollen-food cross-reactivity)",
+      "Exercise-induced food anaphylaxis",
+    ],
+    complications: [
+      "Anaphylaxis and death without epinephrine",
+      "Failure to thrive if multiple foods avoided without dietitian guidance",
+      "Poor quality of life and anxiety around eating",
+    ],
+    distinguishFrom: [
+      "Food intolerance — lactose intolerance (non-immune, osmotic diarrhea)",
+      "Celiac disease — T-cell mediated gluten enteropathy, not IgE food allergy",
+      "Food protein–induced enterocolitis (FPIES) — delayed vomiting, lethargy, not urticaria",
+      "Anaphylaxis from drugs/venom — same mechanism, different trigger",
+    ],
+    treatment: [
+      "Strict allergen avoidance",
+      "IM epinephrine for anaphylaxis — auto-injector prescription",
+      "Oral immunotherapy for selected peanut allergy (specialist setting)",
+      "Antihistamines for mild urticaria only — not substitute for epinephrine in anaphylaxis",
+    ],
+    boardsPearls: [
+      "IgE-mediated: prior sensitization → re-exposure → mast cell degranulation",
+      "Leading pediatric anaphylaxis trigger — peanut, milk, egg",
+      "Test only foods with compatible history — positive test without symptoms ≠ clinical allergy",
+      "vs contact dermatitis (nickel) — type IV delayed, not food IgE",
+      "Epinephrine first-line in anaphylaxis; antihistamines adjunct only",
+    ],
+    pediatrics:
+      "Food allergy is the leading cause of anaphylaxis in children. Many outgrow milk, egg, soy, wheat allergies; peanut/tree nut allergy often persists. Early peanut introduction (after risk assessment) may reduce peanut allergy in high-risk infants.",
+  },
+  {
+    id: "melanoma",
+    name: "Melanoma",
+    etymology: "Greek melas = black + -oma = tumor",
+    aliases: [
+      "melanoma",
+      "melanomas",
+      "malignant melanoma",
+      "cutaneous melanoma",
+      "melanoma skin cancer",
+    ],
+    definition:
+      "Malignant neoplasm of melanocytes with potential for early vertical growth and widespread hematogenous metastasis — most lethal common skin cancer.",
+    pathophysiology:
+      "UV-induced DNA damage (BRAF, NRAS mutations common) → uncontrolled melanocyte proliferation → radial then vertical growth phases → early metastasis via blood (liver, lung, brain, bone).",
+    classicPresentation: [
+      "Changing pigmented lesion — ABCDE (Asymmetry, Border, Color, Diameter >6 mm, Evolution)",
+      "Often on sun-exposed skin but acral and mucosal sites in darker skin",
+      "Bleeding, itching, or rapid growth of nevus",
+      "Nodular melanoma — early vertical growth, may lack classic ABCDE",
+    ],
+    keyFindings: [
+      "Biopsy — atypical melanocytes, pagetoid spread",
+      "Immunohistochemistry: S100+, SOX10+, Melan-A/HMB-45+",
+      "Breslow thickness and ulceration guide prognosis/staging",
+      "Sentinel lymph node biopsy for intermediate-thickness lesions",
+    ],
+    associations: [
+      "Dysplastic nevus syndrome",
+      "Fair skin, intense/intermittent UV exposure, sunburn history",
+      "Family history of melanoma",
+      "Xeroderma pigmentosum — defective nucleotide excision repair",
+      "Immunosuppression",
+    ],
+    complications: [
+      "Early hematogenous metastasis (brain, liver, lung)",
+      "High mortality if not detected early",
+    ],
+    distinguishFrom: [
+      "Basal cell carcinoma — pearly rolled border, indolent, hedgehog pathway",
+      "Squamous cell carcinoma — keratin pearls, actinic damage",
+      "Seborrheic keratosis — stuck-on appearance, benign",
+      "Benign nevus — symmetric, stable",
+      "Merkel cell carcinoma — CK20+ neuroendocrine, not melanocytic markers",
+    ],
+    treatment: [
+      "Wide local excision with margins by Breslow depth",
+      "Sentinel lymph node biopsy when indicated",
+      "Immunotherapy (anti–PD-1) and BRAF/MEK inhibitors for metastatic disease",
+    ],
+    boardsPearls: [
+      "Melanoma — S100+/Melan-A+; BRAF V600E common target",
+      "ABCDE mnemonic for suspicious pigmented lesion",
+      "Most common skin cancer death — hematogenous spread early",
+      "vs BCC — melanoma more aggressive; BCC rarely metastasizes",
+      "Choroidal/uveal melanoma — common primary intraocular malignancy in adults",
+    ],
+    pediatrics:
+      "Pediatric melanoma is rare; spitzoid lesions and congenital nevi require specialist evaluation. Sun protection from infancy reduces lifetime risk.",
+  },
+  {
+    id: "basal-cell-carcinoma",
+    name: "Basal Cell Carcinoma",
+    etymology: "Latin basis = base + cell + Greek karkinos = crab/cancer + -oma = tumor",
+    aliases: [
+      "basal cell carcinoma",
+      "basal cell carcinomas",
+      "bcc",
+      "basal cell cancer",
+      "rodent ulcer",
+    ],
+    definition:
+      "Malignant neoplasm of basal keratinocytes — most common skin cancer; locally invasive but very rarely metastasizes.",
+    pathophysiology:
+      "UV-induced hedgehog pathway activation (PTCH1/SMO mutations) → uncontrolled basal keratinocyte proliferation → local invasion with rolled pearly borders and telangiectasia; perineural spread possible.",
+    classicPresentation: [
+      "Sun-exposed face (nose, periorbital) in older fair-skinned adult",
+      "Pearly papule/nodule with rolled border and central depression",
+      "Telangiectasias on surface",
+      "Ulcerated 'rodent ulcer' variant",
+      "Slow growth over months to years",
+    ],
+    keyFindings: [
+      "Biopsy — nests of basaloid cells with peripheral palisading",
+      "May show retraction artifact from stroma on histology",
+      "Gorlin syndrome — multiple BCCs at young age (PTCH1 mutation)",
+    ],
+    associations: [
+      "Chronic UV exposure, fair skin",
+      "Gorlin syndrome (basal cell nevus syndrome) — PTCH1, jaw keratocysts, medulloblastoma",
+      "Arsenic exposure, radiation",
+      "Immunosuppression post-transplant",
+    ],
+    complications: [
+      "Local tissue destruction (eye, ear, nose)",
+      "Perineural invasion (rare but serious)",
+      "Recurrence after incomplete excision",
+    ],
+    distinguishFrom: [
+      "Melanoma — pigmented, S100+, metastatic potential",
+      "Squamous cell carcinoma — keratin pearls, more metastatic risk",
+      "Sebaceous hyperplasia — yellow lobules with central dell",
+      "Trichoepithelioma — benign hair germ tumor",
+    ],
+    treatment: [
+      "Surgical excision with clear margins (Mohs for high-risk sites)",
+      "Topical imiquimod or 5-FU for superficial BCC",
+      "Hedgehog pathway inhibitors (vismodegib) for advanced/unresectable disease",
+    ],
+    boardsPearls: [
+      "Most common skin cancer — BCC > SCC > melanoma (incidence)",
+      "Pearly rolled border + telangiectasia + sun-exposed elderly patient = BCC",
+      "Hedgehog pathway — PTCH1 loss → SMO activation",
+      "Rarely metastasizes — locally destructive",
+      "Gorlin syndrome — multiple BCCs + jaw cysts + falx cerebri calcification",
+    ],
+    pediatrics:
+      "BCC unusual in children except Gorlin syndrome or prior radiation; new skin lesion in child warrants different differential (hemangioma, nevus, mastocytoma).",
+  },
+  {
+    id: "hyperthyroidism",
+    name: "Hyperthyroidism",
+    etymology: "Greek hyper = excess + thyreos = shield (thyroid) + -ism = condition",
+    aliases: [
+      "hyperthyroidism",
+      "hyperthyroid",
+      "overactive thyroid",
+      "thyroid hyperfunction",
+      "excess thyroid hormone",
+    ],
+    definition:
+      "Syndrome of increased thyroid hormone synthesis and secretion (true hyperthyroidism) causing hypermetabolism — distinct from thyrotoxicosis without hyperfunction (e.g., thyroiditis hormone leak).",
+    pathophysiology:
+      "Graves: TSI stimulates TSH receptor → ↑ T4/T3. Toxic multinodular goiter/hot nodule: autonomous hormone production. Excess iodine (Jod-Basedow) or hCG (gestational) can unmask hyperfunction.",
+    classicPresentation: [
+      "Weight loss despite increased appetite",
+      "Heat intolerance, sweating, warm moist skin",
+      "Tachycardia, palpitations, atrial fibrillation (elderly)",
+      "Tremor, anxiety, insomnia",
+      "Proximal muscle weakness",
+      "Goiter (diffuse in Graves, nodular in toxic MNG)",
+    ],
+    keyFindings: [
+      "↓ TSH with ↑ free T4 and/or T3",
+      "Diffuse uptake on radioiodine scan (Graves) vs focal hot nodule",
+      "Graves: ophthalmopathy, pretibial myxedema",
+      "Thyroid bruit in Graves (increased vascularity)",
+    ],
+    associations: [
+      "Graves disease (most common cause overall)",
+      "Toxic multinodular goiter — elderly",
+      "Toxic adenoma — solitary hot nodule",
+      "TSH-secreting pituitary adenoma (rare — ↑ TSH and ↑ T4)",
+    ],
+    complications: [
+      "Thyroid storm — life-threatening thyrotoxic crisis",
+      "Atrial fibrillation and high-output heart failure",
+      "Osteoporosis from increased bone turnover",
+      "Graves ophthalmopathy",
+    ],
+    distinguishFrom: [
+      "Thyrotoxicosis without hyperthyroidism — subacute/destructive thyroiditis (↓ uptake)",
+      "Factitious thyrotoxicosis — exogenous levothyroxine (↓ uptake, no goiter)",
+      "Euthyroid hyperthyroxinemia — TBG excess, acute illness",
+      "Graves disease — specific autoimmune cause with TSI and eye disease",
+    ],
+    treatment: [
+      "Thionamides — methimazole (PTU first trimester pregnancy)",
+      "Radioiodine ablation",
+      "Thyroidectomy (large goiter, pregnancy constraints, eye disease)",
+      "β-blockers for symptomatic control",
+    ],
+    boardsPearls: [
+      "↓ TSH + ↑ T4/T3 = hyperthyroidism until proven otherwise",
+      "Graves = diffuse uptake + TSI + ophthalmopathy",
+      "Thyroiditis thyrotoxicosis — hormone leak, ↓ radioiodine uptake, self-limited",
+      "Amiodarone — can cause hyperthyroidism (type I) or hypothyroidism",
+      "Thyroid storm: fever, AMS, tachycardia — propylthiouracil, iodine, steroids, β-blocker",
+    ],
+    pediatrics:
+      "Graves is the main pediatric cause of hyperthyroidism; children may present with behavioral change, weight loss, and accelerated growth. Methimazole is first-line; monitor for agranulocytosis.",
+  },
+  {
+    id: "berylliosis",
+    name: "Berylliosis",
+    etymology: "beryllium element + Greek -osis = condition",
+    aliases: [
+      "berylliosis",
+      "chronic beryllium disease",
+      "cbd",
+      "beryllium disease",
+      "beryllium sensitization",
+      "occupational beryllium exposure",
+    ],
+    definition:
+      "Hypersensitivity granulomatous lung disease from beryllium exposure — type IV (and sensitization phase) causing noncaseating granulomas clinically resembling sarcoidosis.",
+    pathophysiology:
+      "Beryllium acts as hapten → CD4+ T-cell sensitization (HLA-DP2 association) → granulomatous inflammation in lung and hilar lymph nodes → restrictive lung disease and fibrosis chronically.",
+    classicPresentation: [
+      "Aerospace, nuclear, or electronics worker with beryllium exposure",
+      "Dyspnea, cough, fatigue years after exposure",
+      "Noncaseating granulomas on biopsy — mimics sarcoidosis",
+      "Bilateral hilar lymphadenopathy on imaging",
+    ],
+    keyFindings: [
+      "Beryllium lymphocyte proliferation test (BeLPT) positive — key diagnostic test",
+      "Noncaseating granulomas on transbronchial biopsy",
+      "↑ ACE possible (nonspecific, also in sarcoidosis)",
+      "Restrictive PFT pattern with ↓ DLCO",
+    ],
+    associations: [
+      "Occupational exposure — machining, welding beryllium alloys",
+      "HLA-DP2 genetic susceptibility",
+      "Can progress to pulmonary fibrosis",
+    ],
+    complications: [
+      "Progressive pulmonary fibrosis",
+      "Cor pulmonale from chronic lung disease",
+      "Chronic disability in sensitized workers",
+    ],
+    distinguishFrom: [
+      "Sarcoidosis — noncaseating granulomas but negative BeLPT, no beryllium exposure",
+      "Silicosis — silica exposure, upper lobe fibrosis, eggshell calcifications",
+      "Hypersensitivity pneumonitis — organic antigen exposure, different pathology",
+      "TB — caseating granulomas, AFB positive",
+    ],
+    treatment: [
+      "Remove from beryllium exposure",
+      "Glucocorticoids for symptomatic granulomatous disease",
+      "Long-term monitoring of pulmonary function",
+    ],
+    boardsPearls: [
+      "Berylliosis = sarcoidosis mimic with occupational beryllium exposure",
+      "BeLPT distinguishes beryllium sensitization/disease from sarcoidosis",
+      "Noncaseating granulomas + bilateral hilar LAD — add occupational history",
+      "Foreign-body granulomatous disease from inhaled metal hapten",
+      "vs silicosis — silica not beryllium; different imaging and exposure",
+    ],
+    pediatrics:
+      "Pediatric cases are rare and usually household exposure to parental occupational dust; diagnosis same with exposure history and BeLPT.",
   },
 ];
 

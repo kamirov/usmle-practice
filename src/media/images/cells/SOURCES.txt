@@ -170,3 +170,6 @@ clear-cytoplasm.svg
 Created locally
 Reference: https://en.wikipedia.org/wiki/Clear-cell_carcinoma
 Description: Schematic clear cell morphology showing optically clear cytoplasm after lipid/glycogen processing
+endothelial-cell.svg | Created locally
+fibroblast.svg | Created locally
+multinucleated-giant-cell.svg | Created locally

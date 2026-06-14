@@ -2523,6 +2523,40 @@ export const PROTEINS: ProteinEntry[] = [
       "Calcitriol — hormonal product of 1α-hydroxylase, not the enzyme",
     ],
   },
+  {
+    id: "filaggrin",
+    name: "Filaggrin (FLG)",
+    etymology: "filament + aggregating + -in protein suffix",
+    aliases: [
+      "filaggrin",
+      "flg",
+      "flg gene",
+      "filaggrin gene",
+      "filaggrin protein",
+    ],
+    gene: "FLG",
+    location: "Epidermal keratinocytes — profilaggrin in keratohyalin granules (stratum granulosum)",
+    function:
+      "Aggregates keratin intermediate filaments into tight bundles, promoting corneocyte flattening and stratum corneum barrier integrity; breakdown products are natural moisturizing factors (NMF) that retain skin hydration.",
+    mutationCauses: [
+      "Atopic dermatitis — loss-of-function FLG variants ↑ barrier defect and allergen penetration",
+      "Ichthyosis vulgaris — FLG mutations → retained scale, dry skin",
+      "↑ risk of asthma and allergic sensitization in atopic march (with eczema)",
+    ],
+    boardsPearls: [
+      "FLG = epidermal barrier protein; mutations → dry skin, eczema, atopy risk",
+      "Atopic march: FLG defect → eczema → food allergy/sensitization → asthma",
+      "Profilaggrin cleaved to filaggrin in stratum granulosum",
+      "vs loricrin — another cornified envelope protein; FLG is aggregating filament protein",
+      "Ichthyosis vulgaris + atopic dermatitis — think FLG loss-of-function",
+    ],
+    distinguishFrom: [
+      "Keratin — structural intermediate filament, not aggregating protein",
+      "Loricrin — cornified envelope component",
+      "TSLP — cytokine from keratinocytes in atopy, not structural protein",
+      "Filaggrin vs filgrastim — homophone trap; filgrastim is G-CSF drug",
+    ],
+  },
 ];
 
 const proteinById = new Map(PROTEINS.map((p) => [p.id, p]));

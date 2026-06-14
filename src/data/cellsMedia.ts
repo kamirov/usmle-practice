@@ -29,7 +29,8 @@ import epithelialPolarity from "../media/images/cells/epithelial-polarity.svg?ur
 import epigenetics from "../media/images/cells/epigenetics.jpg?url";
 import epithelioidCell from "../media/images/cells/epithelioid-cell.jpg?url";
 import extracellularMatrixLabeled from "../media/images/cells/extracellular-matrix-labeled.png?url";
-import fenestrae from "../media/images/cells/fenestrae.jpg?url";
+import endothelialCell from "../media/images/cells/endothelial-cell.svg?url";
+import fibroblast from "../media/images/cells/fibroblast.svg?url";
 import gapJunction from "../media/images/cells/gap-junction.svg?url";
 import golgiTendonOrgan from "../media/images/cells/golgi-tendon-organ.png?url";
 import hepaticStructure from "../media/images/cells/hepatic-structure.svg?url";
@@ -47,6 +48,7 @@ import kupfferCell from "../media/images/cells/kupffer-cell.png?url";
 import laminaPropria from "../media/images/cells/lamina-propria.jpg?url";
 import langerhansCell from "../media/images/cells/langerhans-cell.jpg?url";
 import langhansGiantCell from "../media/images/cells/langhans-giant-cell.jpg?url";
+import multinucleatedGiantCell from "../media/images/cells/multinucleated-giant-cell.svg?url";
 import leukocyte from "../media/images/cells/leukocyte.jpg?url";
 import grayMatter from "../media/images/cells/gray-matter.svg?url";
 import lymphocyte from "../media/images/cells/lymphocyte.png?url";
@@ -119,11 +121,13 @@ export type CELLImageId = Extract<
   | "dna-methylation"
   | "dna-transcription"
   | "endometrium"
+  | "endothelial-cell"
   | "eosinophil"
   | "epigenetics"
   | "epithelioid-cell"
   | "interstitial-fibroblast"
   | "fenestrae"
+  | "fibroblast"
   | "gap-junction"
   | "golgi-tendon-organ"
   | "hemidesmosome"
@@ -153,6 +157,7 @@ export type CELLImageId = Extract<
   | "oxidative-phosphorylation"
   | "monocyte"
   | "mrna-translation"
+  | "multinucleated-giant-cell"
   | "mtdna"
   | "mucosa"
   | "myeloid-surface-markers"
@@ -220,11 +225,13 @@ export const CELL_IMAGES: Partial<Record<CELLImageId, string>> = {
   "dna-methylation": extensionAssetUrl(dnaMethylation),
   "dna-transcription": extensionAssetUrl(dnaTranscription),
   "endometrium": extensionAssetUrl(endometrium),
+  "endothelial-cell": extensionAssetUrl(endothelialCell),
   "eosinophil": extensionAssetUrl(eosinophil),
   "epigenetics": extensionAssetUrl(epigenetics),
   "epithelioid-cell": extensionAssetUrl(epithelioidCell),
   "interstitial-fibroblast": extensionAssetUrl(extracellularMatrixLabeled),
   "fenestrae": extensionAssetUrl(fenestrae),
+  fibroblast: extensionAssetUrl(fibroblast),
   "gap-junction": extensionAssetUrl(gapJunction),
   "golgi-tendon-organ": extensionAssetUrl(golgiTendonOrgan),
   "hemidesmosome": extensionAssetUrl(hemidesmosome),
@@ -254,6 +261,7 @@ export const CELL_IMAGES: Partial<Record<CELLImageId, string>> = {
   "oxidative-phosphorylation": extensionAssetUrl(mitochondrialRespiratoryChain),
   "monocyte": extensionAssetUrl(monocyte),
   "mrna-translation": extensionAssetUrl(mrnaTranslation),
+  "multinucleated-giant-cell": extensionAssetUrl(multinucleatedGiantCell),
   "mtdna": extensionAssetUrl(mtdna),
   "mucosa": extensionAssetUrl(mucosa),
   "myeloid-surface-markers": extensionAssetUrl(myeloidSurfaceMarkers),

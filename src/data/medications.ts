@@ -4021,6 +4021,151 @@ export const MEDICATIONS: MedicationEntry[] = [
       "Peds: pediatric transplant regimens; growth and infection surveillance",
     ],
   },
+  {
+    id: "daptomycin",
+    name: "Daptomycin",
+    etymology: "dapto- = bacterial naming element + -mycin = antibiotic suffix",
+    aliases: ["daptomycin", "cubicin"],
+    drugClass: "Cyclic lipopeptide antibiotic",
+    mechanism:
+      "Binds bacterial membrane in a calcium-dependent manner → membrane depolarization → cell death; bactericidal against Gram-positive cocci including MRSA and VRE.",
+    indications: [
+      "MRSA/MSSA bacteremia and complicated skin infections",
+      "Right-sided infective endocarditis (S. aureus)",
+      "VRE bloodstream infection",
+    ],
+    adverseEffects: [
+      "Myopathy and ↑ CK — monitor; avoid with statins if possible",
+      "Eosinophilic pneumonia (rare)",
+      "Inactivated by pulmonary surfactant — ineffective for pneumonia",
+    ],
+    boardsPearls: [
+      "Gram-positive only — NOT for Gram-negatives",
+      "Contraindicated in pneumonia (surfactant binds and inactivates drug)",
+      "MRSA bacteremia alternative to vancomycin",
+      "Monitor CK for myopathy; once-daily dosing",
+      "vs linezolid — linezolid OK for pneumonia (protein synthesis inhibitor)",
+    ],
+  },
+  {
+    id: "linezolid",
+    name: "Linezolid",
+    etymology: "line- = oxazolidinone class element + -zolid = oxazolidinone suffix",
+    aliases: ["linezolid", "zyvox"],
+    drugClass: "Oxazolidinone antibiotic",
+    mechanism:
+      "Binds 50S ribosomal subunit → inhibits formation of initiation complex → bacteriostatic (sometimes bactericidal) against Gram-positive organisms including MRSA and VRE.",
+    indications: [
+      "MRSA pneumonia and complicated skin/soft tissue infection",
+      "VRE infection",
+      "Nocardia (off-label/salvage)",
+    ],
+    adverseEffects: [
+      "Myelosuppression (thrombocytopenia, anemia) with prolonged use",
+      "Peripheral and optic neuropathy (long courses)",
+      "Serotonin syndrome with SSRIs (weak MAO inhibition)",
+      "Lactic acidosis",
+    ],
+    boardsPearls: [
+      "50S ribosomal inhibitor — like clindamycin/chloramphenicol site (distinct drug class)",
+      "Oral bioavailability 100% — good for outpatient MRSA",
+      "Covers MRSA pneumonia (unlike daptomycin)",
+      "Avoid with SSRIs/SNRIs — MAO inhibitor activity → serotonin syndrome risk",
+      "vs daptomycin — use linezolid for MRSA pneumonia; daptomycin for bacteremia without pneumonia",
+    ],
+  },
+  {
+    id: "nafcillin",
+    name: "Nafcillin",
+    etymology: "na- = chemical prefix + Latin facio = make + -cillin = penicillin suffix",
+    aliases: ["nafcillin", "nafcil"],
+    drugClass: "Penicillinase-resistant penicillin (anti-staphylococcal penicillin)",
+    mechanism:
+      "β-lactam binds penicillin-binding proteins (PBPs) → inhibits peptidoglycan cross-linking → bactericidal; resistant to staphylococcal β-lactamase (penicillinase).",
+    indications: [
+      "MSSA bacteremia, endocarditis, osteomyelitis",
+      "Serious staphylococcal infections when susceptible",
+    ],
+    adverseEffects: [
+      "Hypersensitivity reactions (rash, anaphylaxis)",
+      "Interstitial nephritis",
+      "Hepatotoxicity (cholestatic jaundice — nafcillin-associated)",
+      "Phlebitis with IV administration",
+    ],
+    boardsPearls: [
+      "Anti-staphylococcal penicillin — MSSA only (NOT MRSA)",
+      "IV nafcillin/oxacillin preferred over vancomycin for MSSA bacteremia",
+      "Penicillinase-resistant — covers Staph, not extended-spectrum Gram-negatives",
+      "vs oxacillin — same class and spectrum; both MSSA drugs",
+      "vs cefazolin — 1st-gen cephalosporin also used for MSSA",
+    ],
+  },
+  {
+    id: "oxacillin",
+    name: "Oxacillin",
+    etymology: "oxy- = oxygen-containing + Latin facio = make + -cillin = penicillin suffix",
+    aliases: ["oxacillin", "oxacil"],
+    drugClass: "Penicillinase-resistant penicillin (anti-staphylococcal penicillin)",
+    mechanism:
+      "β-lactam inhibits transpeptidation of peptidoglycan by binding PBPs; penicillinase-resistant side chain protects against S. aureus β-lactamase.",
+    indications: [
+      "MSSA skin/soft tissue infection (IV)",
+      "MSSA bacteremia, endocarditis, osteomyelitis",
+    ],
+    adverseEffects: [
+      "Hypersensitivity (rash, anaphylaxis)",
+      "Nephritis, hepatitis (less cholestatic than nafcillin)",
+      "IV phlebitis",
+    ],
+    boardsPearls: [
+      "Oxacillin disk/cefoxitin screen tests for MRSA — resistant = MRSA",
+      "MSSA → oxacillin/nafcillin/cefazolin; MRSA → vancomycin/daptomycin/linezolid",
+      "Same anti-staphylococcal penicillin class as nafcillin",
+      "Not active against MRSA (PBP2a)",
+    ],
+  },
+  {
+    id: "anti-tnf-therapy",
+    name: "Anti-TNF Therapy",
+    etymology: "anti- = against + tumor necrosis factor + Greek therapeia = treatment",
+    aliases: [
+      "anti-tnf therapy",
+      "anti tnf therapy",
+      "anti-tnf",
+      "anti tnf",
+      "anti-tnf agents",
+      "anti-tnf biologics",
+      "tnf inhibitors",
+      "tnf inhibitor",
+      "tumor necrosis factor inhibitors",
+      "tumor necrosis factor inhibitor",
+    ],
+    drugClass: "Biologic immunomodulator — TNF-α blockade",
+    mechanism:
+      "Neutralize or sequester TNF-α — monoclonal antibodies (infliximab, adalimumab) bind TNF; etanercept is soluble decoy receptor — ↓ NF-κB–driven inflammation, leukocyte recruitment, and granuloma maintenance.",
+    indications: [
+      "Rheumatoid arthritis, psoriatic arthritis, ankylosing spondylitis",
+      "Crohn disease and ulcerative colitis",
+      "Plaque psoriasis",
+      "Juvenile idiopathic arthritis (selected agents)",
+    ],
+    adverseEffects: [
+      "Reactivation of latent tuberculosis (screen with PPD/IGRA before starting)",
+      "Serious bacterial, fungal (histoplasmosis), and opportunistic infections",
+      "Heart failure exacerbation",
+      "Drug-induced lupus (positive ANA)",
+      "Demyelinating disease (rare)",
+      "Anti-drug antibodies → secondary loss of response",
+    ],
+    boardsPearls: [
+      "Screen for latent TB before anti-TNF — can disrupt granuloma containment",
+      "Avoid live vaccines during therapy",
+      "Infliximab/adalimumab = mAbs; etanercept = decoy receptor (fusion protein)",
+      "TNF-α drives RA, IBD, psoriasis — same pathway blocked",
+      "vs anakinra — IL-1 receptor antagonist, not TNF blockade",
+      "Peds: pediatric Crohn and JIA indications; mandatory TB screening",
+    ],
+  },
 ];
 
 const medicationById = new Map(MEDICATIONS.map((m) => [m.id, m]));

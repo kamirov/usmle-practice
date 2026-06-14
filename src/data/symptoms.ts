@@ -1494,11 +1494,9 @@ export const SYMPTOMS: SymptomEntry[] = [
     name: "Polyuria and Polydipsia",
     etymology: "Greek poly = much + ouron = urine + dipsa = thirst",
     aliases: [
-      "polyuria",
-      "polydipsia",
       "polyuria and polydipsia",
-      "increased urination",
-      "excessive thirst",
+      "polyuria with polydipsia",
+      "increased urination with thirst",
     ],
     definition:
       "Excessive urine output (>3 L/day) often accompanied by increased thirst and fluid intake.",
@@ -1523,6 +1521,115 @@ export const SYMPTOMS: SymptomEntry[] = [
       "Nocturia alone → BPH, heart failure, not necessarily polyuria",
       "Diuretic use — iatrogenic increased urine output",
     ],
+  },
+  {
+    id: "polyuria",
+    name: "Polyuria",
+    etymology: "Greek poly = much + ouron = urine",
+    aliases: [
+      "polyuria",
+      "increased urine output",
+      "excessive urination",
+      "high urine volume",
+    ],
+    definition:
+      "Urine output greater than ~3 liters per day in adults (or >2 L/m²/day in children) — reflects osmotic diuresis, impaired concentrating ability, or excessive fluid intake.",
+    mechanism:
+      "Hyperglycemia causes osmotic diuresis; ADH deficiency or resistance prevents water reabsorption; hypercalcemia impairs concentrating ability; primary polydipsia dilutes urine after excessive intake.",
+    thinkOf: [
+      "Diabetes mellitus (osmotic diuresis)",
+      "Diabetes insipidus (central or nephrogenic)",
+      "Hypercalcemia",
+      "Primary polydipsia",
+      "Recovery (diuretic) phase of ATN",
+      "Post-obstructive diuresis",
+    ],
+    pairWith: [
+      "Polydipsia + hyperglycemia → diabetes mellitus",
+      "Dilute urine + high serum osmolality → central DI",
+      "Lithium, hypercalcemia → nephrogenic DI",
+      "Weight loss, ketones → new-onset type 1 DM",
+    ],
+    distinguishFrom: [
+      "Urinary frequency — many voids with normal total volume",
+      "Nocturia — nighttime voiding without necessarily increased 24h volume",
+      "Polyuria-polydipsia syndrome — combined presentation with compensatory thirst",
+    ],
+    pediatrics:
+      "New-onset type 1 diabetes in children presents with polyuria, polydipsia, weight loss; infants may present with diaper flooding and irritability.",
+  },
+  {
+    id: "polydipsia",
+    name: "Polydipsia",
+    etymology: "Greek poly = much + dipsa = thirst",
+    aliases: [
+      "polydipsia",
+      "excessive thirst",
+      "increased thirst",
+      "excessive fluid intake",
+    ],
+    definition:
+      "Abnormally increased thirst and voluntary fluid intake — often compensatory for polyuria but may be primary (psychogenic polydipsia).",
+    mechanism:
+      "Osmoreceptors detect hyperosmolality from dehydration or osmotic diuresis → thirst center activation; primary polydipsia overrides normal osmotic regulation with excessive water intake → dilutional hyponatremia.",
+    thinkOf: [
+      "Diabetes mellitus (compensatory to osmotic diuresis)",
+      "Diabetes insipidus",
+      "Primary (psychogenic) polydipsia",
+      "Hypercalcemia",
+      "Dehydration from any cause",
+    ],
+    pairWith: [
+      "Polyuria + glucosuria → DM",
+      "Low serum sodium + dilute urine + psychiatric history → primary polydipsia",
+      "Hypernatremia + polyuria → DI with inadequate intake",
+      "Dry mucous membranes → dehydration",
+    ],
+    distinguishFrom: [
+      "Xerostomia — dry mouth without true increased fluid need",
+      "Salt craving — different pathway (adrenal insufficiency)",
+      "Polyuria — increased urine volume; polydipsia is thirst/intake",
+    ],
+    pediatrics:
+      "Young children with DI may present with polydipsia and preference for water; primary polydipsia in adolescents on psychotropic medications can cause dilutional hyponatremia.",
+  },
+  {
+    id: "hyperpigmentation",
+    name: "Hyperpigmentation",
+    etymology: "Greek hyper = excess + Latin pigmentum = paint/color",
+    aliases: [
+      "hyperpigmentation",
+      "skin hyperpigmentation",
+      "increased pigmentation",
+      "darkened skin",
+      "bronze skin",
+      "skin darkening",
+    ],
+    definition:
+      "Excess melanin deposition or other pigment in skin (or mucosa) causing darkened areas — localized or diffuse.",
+    mechanism:
+      "↑ ACTH/MSH (Addison), hemochromatosis iron deposition, chronic inflammation (post-inflammatory hyperpigmentation), UV stimulation, or drug effects increase melanin or pigment in skin.",
+    thinkOf: [
+      "Primary adrenal insufficiency (Addison) — diffuse hyperpigmentation",
+      "Hemochromatosis — bronze diabetes, slate-gray skin",
+      "Venous stasis dermatitis — medial ankle hyperpigmentation (hemosiderin)",
+      "Acanthosis nigricans — insulin resistance",
+      "Melasma — estrogen/sun-related facial patches",
+      "Minocycline, amiodarone — drug-induced pigmentation",
+    ],
+    pairWith: [
+      "Hypotension + hyperkalemia + hyperpigmentation → Addison disease",
+      "Diabetes + arthropathy + liver disease → hemochromatosis",
+      "Obesity + acanthosis nigricans → insulin resistance/type 2 DM",
+      "Medial ankle pigmentation + edema → venous stasis",
+    ],
+    distinguishFrom: [
+      "Hypopigmentation — vitiligo, albinism (↓ melanin)",
+      "Cyanosis — deoxygenated hemoglobin, bluish not brown",
+      "Jaundice — bilirubin yellowing, not melanin",
+    ],
+    pediatrics:
+      "Congenital adrenal hyperplasia may cause hyperpigmentation from ↑ ACTH; café-au-lait spots are distinct neurofibromatosis finding, not diffuse hyperpigmentation.",
   },
   {
     id: "watery-diarrhea",

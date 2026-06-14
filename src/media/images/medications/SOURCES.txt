@@ -42,3 +42,8 @@ calcineurin-inhibitors.svg
 Created locally
 Reference: https://en.wikipedia.org/wiki/Calcineurin
 Description: Calcineurin inhibitor pathway blocking IL-2 transcription
+anti-tnf-therapy.svg | Created locally
+daptomycin.svg | Created locally
+linezolid.svg | Created locally
+nafcillin.svg | Created locally
+oxacillin.svg | Created locally

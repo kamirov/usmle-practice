@@ -5,6 +5,7 @@ import abscess from "../media/images/conditions/abscess.jpg?url";
 import acromegaly from "../media/images/conditions/acromegaly.jpg?url";
 import acuteCholangitis from "../media/images/conditions/acute-cholangitis.svg?url";
 import addisonDisease from "../media/images/conditions/addison-disease.jpg?url";
+import adjustmentDisorder from "../media/images/conditions/adjustment-disorder.svg?url";
 import allergicContactDermatitis from "../media/images/conditions/allergic-contact-dermatitis.jpg?url";
 import amenorrhea from "../media/images/conditions/amenorrhea.jpg?url";
 import anaphylaxis from "../media/images/conditions/anaphylaxis.svg?url";
@@ -23,6 +24,9 @@ import atrioventricularBlock from "../media/images/conditions/atrioventricular-b
 import bicuspidAorticValve from "../media/images/conditions/bicuspid-aortic-valve.jpg?url";
 import biliaryAtresia from "../media/images/conditions/biliary-atresia.jpg?url";
 import bph from "../media/images/conditions/bph.jpg?url";
+import basalCellCarcinoma from "../media/images/conditions/basal-cell-carcinoma.svg?url";
+import berylliosis from "../media/images/conditions/berylliosis.svg?url";
+import briefPsychoticDisorder from "../media/images/conditions/brief-psychotic-disorder.svg?url";
 import cardiacTamponade from "../media/images/conditions/cardiac-tamponade.jpg?url";
 import catScratchDisease from "../media/images/conditions/cat-scratch-disease.jpg?url";
 import cataracts from "../media/images/conditions/cataracts.svg?url";
@@ -34,10 +38,12 @@ import chronicBronchitis from "../media/images/conditions/chronic-bronchitis.svg
 import cll from "../media/images/conditions/cll.jpg?url";
 import cml from "../media/images/conditions/cml.jpg?url";
 import congenitalAdrenalHyperplasia from "../media/images/conditions/congenital-adrenal-hyperplasia.jpg?url";
+import copperDeficiency from "../media/images/conditions/copper-deficiency.svg?url";
 import crohnDisease from "../media/images/conditions/crohn-disease.jpg?url";
 import cushingSyndrome from "../media/images/conditions/cushing-syndrome.jpg?url";
 import cysticFibrosis from "../media/images/conditions/cystic-fibrosis.jpg?url";
 import dengueRecoveryRash from "../media/images/conditions/dengue-recovery-rash.jpg?url";
+import dementia from "../media/images/conditions/dementia.svg?url";
 import dentalCaries from "../media/images/conditions/dental-caries.jpg?url";
 import dihydrorhodamineFlowCytometry from "../media/images/lab-values/dihydrorhodamine-flow-cytometry.svg?url";
 import diabeticKetoacidosis from "../media/images/conditions/diabetic-ketoacidosis.jpg?url";
@@ -53,6 +59,7 @@ import endometriosis from "../media/images/conditions/endometriosis.jpg?url";
 import eosinophilicGranulomatosisWithPolyangiitis from "../media/images/conditions/eosinophilic-granulomatosis-with-polyangiitis.jpg?url";
 import fecalIncontinence from "../media/images/conditions/fecal-incontinence.jpg?url";
 import femaleAthleteTriad from "../media/images/conditions/female-athlete-triad.svg?url";
+import foodAllergy from "../media/images/conditions/food-allergy.svg?url";
 import galactorrhea from "../media/images/conditions/galactorrhea.jpg?url";
 import gangrene from "../media/images/conditions/gangrene.jpg?url";
 import glaucoma from "../media/images/conditions/glaucoma.svg?url";
@@ -71,6 +78,7 @@ import hyperlipidemia from "../media/images/conditions/hyperlipidemia.jpg?url";
 import hyperosmolarHyperglycemicState from "../media/images/conditions/hyperosmolar-hyperglycemic-state.svg?url";
 import hyperparathyroidism from "../media/images/conditions/hyperparathyroidism.jpg?url";
 import hyperprolactinemia from "../media/images/conditions/hyperprolactinemia.jpg?url";
+import hyperthyroidism from "../media/images/conditions/hyperthyroidism.svg?url";
 import hypertension from "../media/images/conditions/hypertension.jpg?url";
 import hypertrophicCardiomyopathy from "../media/images/conditions/hypertrophic-cardiomyopathy.jpg?url";
 import igaVasculitis from "../media/images/conditions/iga-vasculitis.jpg?url";
@@ -92,6 +100,7 @@ import malaria from "../media/images/conditions/malaria.jpg?url";
 import mastocytosis from "../media/images/conditions/mastocytosis.jpg?url";
 import meckelDiverticulum from "../media/images/conditions/meckel-diverticulum.jpg?url";
 import meningesDiagram from "../media/images/conditions/meninges-diagram.svg?url";
+import melanoma from "../media/images/conditions/melanoma.svg?url";
 import menopause from "../media/images/conditions/menopause.svg?url";
 import medullaryThyroidCarcinoma from "../media/images/conditions/medullary-thyroid-carcinoma.jpg?url";
 import merkelCellCarcinoma from "../media/images/conditions/merkel-cell-carcinoma.jpg?url";
@@ -123,6 +132,7 @@ import primaryBrainTumor from "../media/images/conditions/primary-brain-tumor.pn
 import primaryHyperparathyroidism from "../media/images/conditions/primary-hyperparathyroidism.png?url";
 import primarySclerosingCholangitis from "../media/images/conditions/primary-sclerosing-cholangitis.jpg?url";
 import prolactinoma from "../media/images/conditions/prolactinoma.jpg?url";
+import psychoticMoodDisorder from "../media/images/conditions/psychotic-mood-disorder.svg?url";
 import psoriasis from "../media/images/conditions/psoriasis.jpg?url";
 import pulmonaryHypertension from "../media/images/conditions/pulmonary-hypertension.jpg?url";
 import pyelonephritis from "../media/images/conditions/pyelonephritis.jpg?url";
@@ -135,6 +145,8 @@ import rotatorCuffSyndrome from "../media/images/conditions/rotator-cuff-syndrom
 import sarcoidosis from "../media/images/conditions/sarcoidosis.jpg?url";
 import selectiveIgaDeficiency from "../media/images/conditions/selective-iga-deficiency.png?url";
 import schizophrenia from "../media/images/conditions/schizophrenia.jpg?url";
+import schizoidPersonalityDisorder from "../media/images/conditions/schizoid-personality-disorder.svg?url";
+import schizotypalPersonalityDisorder from "../media/images/conditions/schizotypal-personality-disorder.svg?url";
 import serumSickness from "../media/images/conditions/serum-sickness.jpg?url";
 import shock from "../media/images/conditions/shock.jpg?url";
 import sickleCellDisease from "../media/images/conditions/sickle-cell-disease.jpg?url";
@@ -172,6 +184,7 @@ export type ConditionImageId = Extract<
   | "acromegaly"
   | "acute-cholangitis"
   | "addison-disease"
+  | "adjustment-disorder"
   | "allergic-contact-dermatitis"
   | "amenorrhea"
   | "anaphylaxis"
@@ -190,6 +203,9 @@ export type ConditionImageId = Extract<
   | "bicuspid-aortic-valve"
   | "biliary-atresia"
   | "bph"
+  | "basal-cell-carcinoma"
+  | "berylliosis"
+  | "brief-psychotic-disorder"
   | "cardiac-tamponade"
   | "cat-scratch-disease"
   | "cataracts"
@@ -202,10 +218,12 @@ export type ConditionImageId = Extract<
   | "cll"
   | "cml"
   | "congenital-adrenal-hyperplasia"
+  | "copper-deficiency"
   | "crohn-disease"
   | "cushing-syndrome"
   | "cystic-fibrosis"
   | "dengue-fever"
+  | "dementia"
   | "dental-caries"
   | "diabetic-ketoacidosis"
   | "diabetic-nephropathy"
@@ -220,6 +238,7 @@ export type ConditionImageId = Extract<
   | "eosinophilic-granulomatosis-with-polyangiitis"
   | "fecal-incontinence"
   | "female-athlete-triad"
+  | "food-allergy"
   | "galactorrhea"
   | "gangrene"
   | "glaucoma"
@@ -238,6 +257,7 @@ export type ConditionImageId = Extract<
   | "hyperosmolar-hyperglycemic-state"
   | "hyperparathyroidism"
   | "hyperprolactinemia"
+  | "hyperthyroidism"
   | "hypertension"
   | "hypertrophic-cardiomyopathy"
   | "iga-vasculitis"
@@ -261,6 +281,7 @@ export type ConditionImageId = Extract<
   | "meningitis"
   | "menopause"
   | "medullary-thyroid-carcinoma"
+  | "melanoma"
   | "merkel-cell-carcinoma"
   | "hydatidiform-mole"
   | "multiple-sclerosis"
@@ -290,6 +311,7 @@ export type ConditionImageId = Extract<
   | "primary-hyperparathyroidism"
   | "primary-sclerosing-cholangitis"
   | "prolactinoma"
+  | "psychotic-mood-disorder"
   | "psoriasis"
   | "pulmonary-hypertension"
   | "pyelonephritis"
@@ -302,6 +324,8 @@ export type ConditionImageId = Extract<
   | "sarcoidosis"
   | "selective-iga-deficiency"
   | "schizophrenia"
+  | "schizoid-personality-disorder"
+  | "schizotypal-personality-disorder"
   | "serum-sickness"
   | "shock"
   | "sickle-cell-disease"
@@ -344,6 +368,7 @@ export const CONDITION_IMAGES: Partial<Record<ConditionImageId, string>> = {
   "acromegaly": extensionAssetUrl(acromegaly),
   "acute-cholangitis": extensionAssetUrl(acuteCholangitis),
   "addison-disease": extensionAssetUrl(addisonDisease),
+  "adjustment-disorder": extensionAssetUrl(adjustmentDisorder),
   "allergic-contact-dermatitis": extensionAssetUrl(allergicContactDermatitis),
   "amenorrhea": extensionAssetUrl(amenorrhea),
   "anaphylaxis": extensionAssetUrl(anaphylaxis),
@@ -362,6 +387,9 @@ export const CONDITION_IMAGES: Partial<Record<ConditionImageId, string>> = {
   "bicuspid-aortic-valve": extensionAssetUrl(bicuspidAorticValve),
   "biliary-atresia": extensionAssetUrl(biliaryAtresia),
   "bph": extensionAssetUrl(bph),
+  "basal-cell-carcinoma": extensionAssetUrl(basalCellCarcinoma),
+  "berylliosis": extensionAssetUrl(berylliosis),
+  "brief-psychotic-disorder": extensionAssetUrl(briefPsychoticDisorder),
   "cardiac-tamponade": extensionAssetUrl(cardiacTamponade),
   "cat-scratch-disease": extensionAssetUrl(catScratchDisease),
   "cataracts": extensionAssetUrl(cataracts),
@@ -374,10 +402,12 @@ export const CONDITION_IMAGES: Partial<Record<ConditionImageId, string>> = {
   "cll": extensionAssetUrl(cll),
   "cml": extensionAssetUrl(cml),
   "congenital-adrenal-hyperplasia": extensionAssetUrl(congenitalAdrenalHyperplasia),
+  "copper-deficiency": extensionAssetUrl(copperDeficiency),
   "crohn-disease": extensionAssetUrl(crohnDisease),
   "cushing-syndrome": extensionAssetUrl(cushingSyndrome),
   "cystic-fibrosis": extensionAssetUrl(cysticFibrosis),
   "dengue-fever": extensionAssetUrl(dengueRecoveryRash),
+  "dementia": extensionAssetUrl(dementia),
   "dental-caries": extensionAssetUrl(dentalCaries),
   "diabetic-ketoacidosis": extensionAssetUrl(diabeticKetoacidosis),
   "diabetic-nephropathy": extensionAssetUrl(diabeticNephropathy),
@@ -392,6 +422,7 @@ export const CONDITION_IMAGES: Partial<Record<ConditionImageId, string>> = {
   "eosinophilic-granulomatosis-with-polyangiitis": extensionAssetUrl(eosinophilicGranulomatosisWithPolyangiitis),
   "fecal-incontinence": extensionAssetUrl(fecalIncontinence),
   "female-athlete-triad": extensionAssetUrl(femaleAthleteTriad),
+  "food-allergy": extensionAssetUrl(foodAllergy),
   "galactorrhea": extensionAssetUrl(galactorrhea),
   "gangrene": extensionAssetUrl(gangrene),
   "glaucoma": extensionAssetUrl(glaucoma),
@@ -410,6 +441,7 @@ export const CONDITION_IMAGES: Partial<Record<ConditionImageId, string>> = {
   "hyperosmolar-hyperglycemic-state": extensionAssetUrl(hyperosmolarHyperglycemicState),
   "hyperparathyroidism": extensionAssetUrl(hyperparathyroidism),
   "hyperprolactinemia": extensionAssetUrl(hyperprolactinemia),
+  "hyperthyroidism": extensionAssetUrl(hyperthyroidism),
   "hypertension": extensionAssetUrl(hypertension),
   "hypertrophic-cardiomyopathy": extensionAssetUrl(hypertrophicCardiomyopathy),
   "iga-vasculitis": extensionAssetUrl(igaVasculitis),
@@ -431,6 +463,7 @@ export const CONDITION_IMAGES: Partial<Record<ConditionImageId, string>> = {
   "mastocytosis": extensionAssetUrl(mastocytosis),
   "meckel-diverticulum": extensionAssetUrl(meckelDiverticulum),
   "meningitis": extensionAssetUrl(meningesDiagram),
+  "melanoma": extensionAssetUrl(melanoma),
   "menopause": extensionAssetUrl(menopause),
   "medullary-thyroid-carcinoma": extensionAssetUrl(medullaryThyroidCarcinoma),
   "merkel-cell-carcinoma": extensionAssetUrl(merkelCellCarcinoma),
@@ -462,6 +495,7 @@ export const CONDITION_IMAGES: Partial<Record<ConditionImageId, string>> = {
   "primary-hyperparathyroidism": extensionAssetUrl(primaryHyperparathyroidism),
   "primary-sclerosing-cholangitis": extensionAssetUrl(primarySclerosingCholangitis),
   "prolactinoma": extensionAssetUrl(prolactinoma),
+  "psychotic-mood-disorder": extensionAssetUrl(psychoticMoodDisorder),
   "psoriasis": extensionAssetUrl(psoriasis),
   "pulmonary-hypertension": extensionAssetUrl(pulmonaryHypertension),
   "pyelonephritis": extensionAssetUrl(pyelonephritis),
@@ -474,6 +508,8 @@ export const CONDITION_IMAGES: Partial<Record<ConditionImageId, string>> = {
   "sarcoidosis": extensionAssetUrl(sarcoidosis),
   "selective-iga-deficiency": extensionAssetUrl(selectiveIgaDeficiency),
   "schizophrenia": extensionAssetUrl(schizophrenia),
+  "schizoid-personality-disorder": extensionAssetUrl(schizoidPersonalityDisorder),
+  "schizotypal-personality-disorder": extensionAssetUrl(schizotypalPersonalityDisorder),
   "serum-sickness": extensionAssetUrl(serumSickness),
   "shock": extensionAssetUrl(shock),
   "sickle-cell-disease": extensionAssetUrl(sickleCellDisease),
@@ -513,6 +549,7 @@ export const CONDITION_IMAGE_ATTRIBUTIONS: Partial<
   "acromegaly": { label: "Wikimedia Commons (Acromegaly facial features.JPEG)", url: "https://commons.wikimedia.org/wiki/File:Acromegaly_facial_features.JPEG" },
   "acute-cholangitis": { label: "Wikimedia Commons (Charcot's cholangitis triad-en.svg)", url: "https://commons.wikimedia.org/wiki/File:Charcot's_cholangitis_triad-en.svg" },
   "addison-disease": { label: "Wikimedia Commons (T. Addison; On...supra-renal capsules Wellcome L0018484.jpg)", url: "https://commons.wikimedia.org/wiki/File:T._Addison;_On...supra-renal_capsules_Wellcome_L0018484.jpg" },
+  "adjustment-disorder": { label: "Created locally; reference: Adjustment disorder", url: "https://en.wikipedia.org/wiki/Adjustment_disorder" },
   "allergic-contact-dermatitis": { label: "Wikimedia Commons (Blausen 0014 AllergicDermatitis.png)", url: "https://commons.wikimedia.org/wiki/File:Blausen_0014_AllergicDermatitis.png" },
   "amenorrhea": { label: "Wikimedia Commons (Lactational-amenorrhea-method-This-method-of-family-planning-evolved-from (1).jpg)", url: "https://commons.wikimedia.org/wiki/File:Lactational-amenorrhea-method-This-method-of-family-planning-evolved-from_(1).jpg" },
   "anaphylaxis": { label: "Wikimedia Commons (Signs and symptoms of anaphylaxis.svg)", url: "https://commons.wikimedia.org/wiki/File:Signs_and_symptoms_of_anaphylaxis.svg" },
@@ -531,6 +568,9 @@ export const CONDITION_IMAGE_ATTRIBUTIONS: Partial<
   "bicuspid-aortic-valve": { label: "Wikimedia Commons (Heart bicuspid aortic valve.svg)", url: "https://commons.wikimedia.org/wiki/File:Heart_bicuspid_aortic_valve.svg" },
   "biliary-atresia": { label: "Wikimedia Commons (Bilatresia.jpg)", url: "https://commons.wikimedia.org/wiki/File:Bilatresia.jpg" },
   "bph": { label: "Wikimedia Commons (Benign Prostatic Hyperplasia nci-vol-7137-300.jpg)", url: "https://commons.wikimedia.org/wiki/File:Benign_Prostatic_Hyperplasia_nci-vol-7137-300.jpg" },
+  "basal-cell-carcinoma": { label: "Created locally; reference: Basal-cell carcinoma", url: "https://en.wikipedia.org/wiki/Basal-cell_carcinoma" },
+  "berylliosis": { label: "Created locally; reference: Berylliosis", url: "https://en.wikipedia.org/wiki/Berylliosis" },
+  "brief-psychotic-disorder": { label: "Created locally; reference: Brief psychotic disorder", url: "https://en.wikipedia.org/wiki/Brief_psychotic_disorder" },
   "cardiac-tamponade": { label: "Wikimedia Commons (Electrical Alternans.JPG)", url: "https://commons.wikimedia.org/wiki/File:Electrical_Alternans.JPG" },
   "cat-scratch-disease": { label: "Wikimedia Commons (ICD-10-CM (2010).djvu)", url: "https://commons.wikimedia.org/wiki/File:ICD-10-CM_(2010).djvu" },
   "cataracts": { label: "Created locally; reference: Cataract", url: "https://en.wikipedia.org/wiki/Cataract" },
@@ -543,10 +583,12 @@ export const CONDITION_IMAGE_ATTRIBUTIONS: Partial<
   "cll": { label: "Wikimedia Commons (C Louis Leipoldt05.jpg)", url: "https://commons.wikimedia.org/wiki/File:C_Louis_Leipoldt05.jpg" },
   "cml": { label: "Wikimedia Commons (Bcrablmet.jpg)", url: "https://commons.wikimedia.org/wiki/File:Bcrablmet.jpg" },
   "congenital-adrenal-hyperplasia": { label: "Wikimedia Commons (Congenital adrenal hyperplasia.jpg)", url: "https://commons.wikimedia.org/wiki/File:Congenital_adrenal_hyperplasia.jpg" },
+  "copper-deficiency": { label: "Created locally; reference: Copper deficiency", url: "https://en.wikipedia.org/wiki/Copper_deficiency" },
   "crohn-disease": { label: "Wikimedia Commons (Severe ulcerative colitis.jpg)", url: "https://commons.wikimedia.org/wiki/File:Severe_ulcerative_colitis.jpg" },
   "cushing-syndrome": { label: "Wikimedia Commons (United States Navy Medical News Letter Vol. 28, No. 5, 7 September 1956 (IA NavyMedicalNewsletter19560907).pdf)", url: "https://commons.wikimedia.org/wiki/File:United_States_Navy_Medical_News_Letter_Vol._28,_No._5,_7_September_1956_(IA_NavyMedicalNewsletter19560907).pdf" },
   "cystic-fibrosis": { label: "Wikimedia Commons (Blausen 0286 CysticFibrosis.png)", url: "https://commons.wikimedia.org/wiki/File:Blausen_0286_CysticFibrosis.png" },
   "dengue-fever": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:dengue-recovery-rash.jpg" },
+  "dementia": { label: "Created locally; reference: Dementia", url: "https://en.wikipedia.org/wiki/Dementia" },
   "dental-caries": { label: "Wikimedia Commons (Dental Caries Lower Right First Molar.jpg)", url: "https://commons.wikimedia.org/wiki/File:Dental_Caries_Lower_Right_First_Molar.jpg" },
   "diabetic-ketoacidosis": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:diabetic-ketoacidosis.jpg" },
   "diabetic-nephropathy": { label: "Wikimedia Commons (Diabetic nephropathy.jpg)", url: "https://commons.wikimedia.org/wiki/File:Diabetic_nephropathy.jpg" },
@@ -561,6 +603,7 @@ export const CONDITION_IMAGE_ATTRIBUTIONS: Partial<
   "eosinophilic-granulomatosis-with-polyangiitis": { label: "Wikimedia Commons (Churg-Strauss syndrome - high mag.jpg)", url: "https://commons.wikimedia.org/wiki/File:Churg-Strauss_syndrome_-_high_mag.jpg" },
   "fecal-incontinence": { label: "Wikimedia Commons (Tri-State medical journal (1895) (14582735949).jpg)", url: "https://commons.wikimedia.org/wiki/File:Tri-State_medical_journal_(1895)_(14582735949).jpg" },
   "female-athlete-triad": { label: "Wikimedia Commons (RED-S DE.svg)", url: "https://commons.wikimedia.org/wiki/File:RED-S_DE.svg" },
+  "food-allergy": { label: "Created locally; reference: Food allergy", url: "https://en.wikipedia.org/wiki/Food_allergy" },
   "galactorrhea": { label: "Wikimedia Commons (Lactation.jpg)", url: "https://commons.wikimedia.org/wiki/File:Lactation.jpg" },
   "gangrene": { label: "Wikimedia Commons (Dry gangrene of the foot Wellcome L0062216.jpg)", url: "https://commons.wikimedia.org/wiki/File:Dry_gangrene_of_the_foot_Wellcome_L0062216.jpg" },
   "glaucoma": { label: "Created locally; reference: Glaucoma", url: "https://en.wikipedia.org/wiki/Glaucoma" },
@@ -600,6 +643,7 @@ export const CONDITION_IMAGE_ATTRIBUTIONS: Partial<
   "mastocytosis": { label: "Wikimedia Commons (Urticaria pigmentosa lesions on a child.jpg)", url: "https://commons.wikimedia.org/wiki/File:Urticaria_pigmentosa_lesions_on_a_child.jpg" },
   "meckel-diverticulum": { label: "Wikimedia Commons (Meckel's Diverticulum by Technetium-99m Pertechnetate Scan.jpg)", url: "https://commons.wikimedia.org/wiki/File:Meckel's_Diverticulum_by_Technetium-99m_Pertechnetate_Scan.jpg" },
   "meningitis": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:meninges-diagram.svg" },
+  "melanoma": { label: "Created locally; reference: Melanoma", url: "https://en.wikipedia.org/wiki/Melanoma" },
   "menopause": { label: "Wikimedia Commons (TEWL hot flash plot.svg)", url: "https://commons.wikimedia.org/wiki/File:TEWL_hot_flash_plot.svg" },
   "medullary-thyroid-carcinoma": { label: "Wikimedia Commons (Medullary thyroid carcinoma - high mag.jpg)", url: "https://commons.wikimedia.org/wiki/File:Medullary_thyroid_carcinoma_-_high_mag.jpg" },
   "merkel-cell-carcinoma": { label: "Wikimedia Commons (Merkel cell carcinoma - very high mag.jpg)", url: "https://commons.wikimedia.org/wiki/File:Merkel_cell_carcinoma_-_very_high_mag.jpg" },
@@ -631,6 +675,7 @@ export const CONDITION_IMAGE_ATTRIBUTIONS: Partial<
   "primary-hyperparathyroidism": { label: "Wikimedia Commons (Blausen 0533 Parathyroid adenoma.png)", url: "https://commons.wikimedia.org/wiki/File:Blausen_0533_Parathyroid_adenoma.png" },
   "primary-sclerosing-cholangitis": { label: "Wikimedia Commons (CT of primary sclerosing cholangitis (hy).png)", url: "https://commons.wikimedia.org/wiki/File:CT_of_primary_sclerosing_cholangitis_(hy).png" },
   "prolactinoma": { label: "Wikimedia Commons (ProlactinomaMRI.jpg)", url: "https://commons.wikimedia.org/wiki/File:ProlactinomaMRI.jpg" },
+  "psychotic-mood-disorder": { label: "Created locally; reference: Mood disorder with psychotic features", url: "https://en.wikipedia.org/wiki/Mood_disorder" },
   "psoriasis": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:psoriasis.jpg" },
   "pulmonary-hypertension": { label: "Wikimedia Commons (Pulmnary arterial atherosclerosis-Pulmonary hypertension.jpg)", url: "https://commons.wikimedia.org/wiki/File:Pulmnary_arterial_atherosclerosis-Pulmonary_hypertension.jpg" },
   "pyelonephritis": { label: "Wikimedia Commons (Chronic pyelonephritis slide.jpg)", url: "https://commons.wikimedia.org/wiki/File:Chronic_pyelonephritis_slide.jpg" },
@@ -643,6 +688,8 @@ export const CONDITION_IMAGE_ATTRIBUTIONS: Partial<
   "sarcoidosis": { label: "Wikimedia Commons (Sarcoidosis histology skin involvement.jpg)", url: "https://commons.wikimedia.org/wiki/File:Sarcoidosis_histology_skin_involvement.jpg" },
   "selective-iga-deficiency": { label: "Wikimedia Commons (Antibody Isotypes.png)", url: "https://commons.wikimedia.org/wiki/File:Antibody_Isotypes.png" },
   "schizophrenia": { label: "Wikimedia Commons (Schizophrenia fMRI working memory.jpg)", url: "https://commons.wikimedia.org/wiki/File:Schizophrenia_fMRI_working_memory.jpg" },
+  "schizoid-personality-disorder": { label: "Created locally; reference: Schizoid personality disorder", url: "https://en.wikipedia.org/wiki/Schizoid_personality_disorder" },
+  "schizotypal-personality-disorder": { label: "Created locally; reference: Schizotypal personality disorder", url: "https://en.wikipedia.org/wiki/Schizotypal_personality_disorder" },
   "serum-sickness": { label: "Wikimedia Commons (RashUrticaria.jpg)", url: "https://commons.wikimedia.org/wiki/File:RashUrticaria.jpg" },
   "shock": { label: "Wikimedia Commons (Kolloidale Infusionslösungen.jpg)", url: "https://commons.wikimedia.org/wiki/File:Kolloidale_Infusionslösungen.jpg" },
   "sickle-cell-disease": { label: "Wikimedia Commons (Sickle Cell Disease in Newborns and Infants- A Guide for Parents (IA sicklecelldiseas00usde).pdf)", url: "https://commons.wikimedia.org/wiki/File:Sickle_Cell_Disease_in_Newborns_and_Infants-_A_Guide_for_Parents_(IA_sicklecelldiseas00usde).pdf" },
@@ -682,6 +729,7 @@ export const CONDITION_IMAGE_CAPTIONS: Partial<
   "acromegaly": "Coarse facial features and prognathism in acromegaly from chronic growth hormone excess",
   "acute-cholangitis": "Clinical or pathologic image illustrating acute cholangitis",
   "addison-disease": "Clinical or pathologic image illustrating addison disease",
+  "adjustment-disorder": "Stress-related symptoms within 3 months of identifiable stressor — resolves within 6 months",
   "allergic-contact-dermatitis": "Clinical or pathologic image illustrating allergic contact dermatitis",
   "amenorrhea": "Clinical or pathologic image illustrating amenorrhea",
   "anaphylaxis": "Systemic anaphylaxis schematic — urticaria/angioedema, bronchospasm/stridor, GI symptoms, and distributive shock",
@@ -700,6 +748,9 @@ export const CONDITION_IMAGE_CAPTIONS: Partial<
   "bicuspid-aortic-valve": "Clinical or pathologic image illustrating bicuspid aortic valve",
   "biliary-atresia": "Clinical or pathologic image illustrating biliary atresia",
   "bph": "Clinical or pathologic image illustrating bph",
+  "basal-cell-carcinoma": "Pearly rolled border nodule — most common skin cancer; hedgehog pathway; rarely metastasizes",
+  "berylliosis": "Occupational beryllium exposure → noncaseating granulomas mimicking sarcoidosis; BeLPT positive",
+  "brief-psychotic-disorder": "Acute psychosis lasting less than 1 month — often postpartum or stress-related",
   "cardiac-tamponade": "Clinical or pathologic image illustrating cardiac tamponade",
   "cat-scratch-disease": "Clinical or pathologic image illustrating cat scratch disease",
   "cataracts": "Lens opacity — steroids, diabetes, galactosemia, congenital rubella",
@@ -712,10 +763,12 @@ export const CONDITION_IMAGE_CAPTIONS: Partial<
   "cll": "Clinical or pathologic image illustrating cll",
   "cml": "Clinical or pathologic image illustrating cml",
   "congenital-adrenal-hyperplasia": "Clinical or pathologic image illustrating congenital adrenal hyperplasia",
+  "copper-deficiency": "Copper deficiency — myelopathy, sideroblastic anemia; zinc excess is classic cause",
   "crohn-disease": "Clinical or pathologic image illustrating crohn disease",
   "cushing-syndrome": "Clinical or pathologic image illustrating cushing syndrome",
   "cystic-fibrosis": "Clinical or pathologic image illustrating cystic fibrosis",
   "dengue-fever": "Dengue recovery rash — classic 'white islands in a sea of red' pattern",
+  "dementia": "Chronic progressive cognitive decline impairing independence — Alzheimer most common",
   "dental-caries": "Occlusal dental caries with enamel cavitation",
   "diabetic-ketoacidosis": "Clinical or pathologic image illustrating diabetic ketoacidosis",
   "diabetic-nephropathy": "Nodular glomerulosclerosis (Kimmelstiel-Wilson lesion) in diabetic nephropathy",
@@ -730,6 +783,7 @@ export const CONDITION_IMAGE_CAPTIONS: Partial<
   "eosinophilic-granulomatosis-with-polyangiitis": "Clinical or pathologic image illustrating eosinophilic granulomatosis with polyangiitis",
   "fecal-incontinence": "Clinical or pathologic image illustrating fecal incontinence",
   "female-athlete-triad": "Clinical or pathologic image illustrating female athlete triad",
+  "food-allergy": "IgE-mediated food allergy — urticaria, vomiting, wheeze, or anaphylaxis after allergen ingestion",
   "galactorrhea": "Clinical or pathologic image illustrating galactorrhea",
   "gangrene": "Clinical or pathologic image illustrating gangrene",
   "glaucoma": "Optic neuropathy with elevated IOP — steroids increase risk",
@@ -748,6 +802,7 @@ export const CONDITION_IMAGE_CAPTIONS: Partial<
   "hyperosmolar-hyperglycemic-state": "HHS pattern — extreme hyperglycemia and hyperosmolality with profound dehydration and minimal ketosis",
   "hyperparathyroidism": "Enlarged parathyroid glands in hyperparathyroidism, the PTH excess state that drives calcium-phosphate abnormalities",
   "hyperprolactinemia": "Clinical or pathologic image illustrating hyperprolactinemia",
+  "hyperthyroidism": "Excess thyroid hormone — weight loss, heat intolerance, tachycardia, low TSH",
   "hypertension": "Clinical or pathologic image illustrating hypertension",
   "hypertrophic-cardiomyopathy": "Clinical or pathologic image illustrating hypertrophic cardiomyopathy",
   "iga-vasculitis": "Palpable purpura on the lower extremity in a child with IgA vasculitis (Henoch-Schönlein purpura)",
@@ -769,6 +824,7 @@ export const CONDITION_IMAGE_CAPTIONS: Partial<
   "mastocytosis": "Clinical or pathologic image illustrating mastocytosis",
   "meckel-diverticulum": "Clinical or pathologic image illustrating meckel diverticulum",
   "meningitis": "Cross-section of cranial meninges — dura mater, arachnoid mater, pia mater, and subarachnoid space",
+  "melanoma": "Malignant melanocyte tumor — ABCDE criteria; S100+/Melan-A+; early hematogenous metastasis",
   "menopause": "Clinical or pathologic image illustrating menopause",
   "medullary-thyroid-carcinoma": "Medullary thyroid carcinoma histology — malignant C cells with amyloid stroma from calcitonin peptides",
   "merkel-cell-carcinoma": "Clinical or pathologic image illustrating merkel cell carcinoma",
@@ -800,6 +856,7 @@ export const CONDITION_IMAGE_CAPTIONS: Partial<
   "primary-hyperparathyroidism": "Parathyroid adenoma schematic — most common cause of primary hyperparathyroidism with high calcium and PTH",
   "primary-sclerosing-cholangitis": "Clinical or pathologic image illustrating primary sclerosing cholangitis",
   "prolactinoma": "Clinical or pathologic image illustrating prolactinoma",
+  "psychotic-mood-disorder": "Psychosis occurring only during mood episodes — mood-congruent delusions",
   "psoriasis": "Clinical or pathologic image illustrating psoriasis",
   "pulmonary-hypertension": "Clinical or pathologic image illustrating pulmonary hypertension",
   "pyelonephritis": "Clinical or pathologic image illustrating pyelonephritis",
@@ -812,6 +869,8 @@ export const CONDITION_IMAGE_CAPTIONS: Partial<
   "sarcoidosis": "Clinical or pathologic image illustrating sarcoidosis",
   "selective-iga-deficiency": "Immunoglobulin isotypes — selective IgA deficiency features isolated loss of IgA with normal IgG and IgM",
   "schizophrenia": "Clinical or pathologic image illustrating schizophrenia",
+  "schizoid-personality-disorder": "Cluster A — detachment from relationships, restricted affect, prefers solitude",
+  "schizotypal-personality-disorder": "Cluster A — eccentric behavior, magical thinking, social anxiety",
   "serum-sickness": "Urticarial rash pattern that can occur in serum sickness after immune-complex complement activation",
   "shock": "Clinical or pathologic image illustrating shock",
   "sickle-cell-disease": "Clinical or pathologic image illustrating sickle cell disease",

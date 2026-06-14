@@ -61,6 +61,10 @@ import enterovirus from "../media/images/microbiology/enterovirus.jpg?url";
 import rhinovirus from "../media/images/microbiology/rhinovirus.png?url";
 import rickettsiaRickettsii from "../media/images/microbiology/rickettsia-rickettsii.jpg?url";
 import chlamydiaTrachomatis from "../media/images/microbiology/chlamydia-trachomatis.jpg?url";
+import coagulasePositive from "../media/images/microbiology/coagulase-positive.svg?url";
+import mrsa from "../media/images/microbiology/mrsa.svg?url";
+import mssa from "../media/images/microbiology/mssa.svg?url";
+import staphylococcusEpidermidis from "../media/images/microbiology/staphylococcus-epidermidis.svg?url";
 
 export type MicrobiologyImageId = MicrobiologyEntry["id"];
 
@@ -121,6 +125,10 @@ export const MICROBIOLOGY_IMAGES: Partial<Record<MicrobiologyImageId, string>> =
     "plasmodium-vivax": extensionAssetUrl(plasmodiumVivax),
     "strongyloides-stercoralis": extensionAssetUrl(strongyloidesStercoralis),
     "schistosoma-mansoni": extensionAssetUrl(schistosomaMansoni),
+    mssa: extensionAssetUrl(mssa),
+    mrsa: extensionAssetUrl(mrsa),
+    "staphylococcus-epidermidis": extensionAssetUrl(staphylococcusEpidermidis),
+    "coagulase-positive": extensionAssetUrl(coagulasePositive),
     "dengue-virus": extensionAssetUrl(aedesAegypti),
     "chikungunya-virus": extensionAssetUrl(aedesAegypti),
     "respiratory-syncytial-virus": extensionAssetUrl(rsv),

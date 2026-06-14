@@ -4153,6 +4153,237 @@ export const MICROBIOLOGY: MicrobiologyEntry[] = [
     pediatrics:
       "Children in endemic areas with freshwater exposure; Katayama fever in acute infection; praziquantel safe in school-age children (weight-based); chronic disease causes growth delay and anemia.",
   },
+  {
+    id: "mssa",
+    name: "Methicillin-Sensitive Staphylococcus aureus (MSSA)",
+    etymology: "methyl + Greek theke = case + Latin sensibilis = sensitive + Staphylococcus aureus",
+    aliases: [
+      "mssa",
+      "methicillin-sensitive staph aureus",
+      "methicillin sensitive staphylococcus aureus",
+      "methicillin-sensitive s. aureus",
+      "methicillin sensitive s aureus",
+      "oxacillin-sensitive s. aureus",
+      "oxacillin sensitive staph aureus",
+    ],
+    type: "gram-positive-cocci",
+    definition:
+      "Staphylococcus aureus strains without mecA-mediated PBP2a — remain susceptible to anti-staphylococcal β-lactams (nafcillin, oxacillin, cefazolin).",
+    morphology: [
+      "Gram+ cocci in clusters",
+      "Catalase-positive, coagulase-positive",
+      "β-hemolytic on blood agar",
+      "Golden colonies",
+    ],
+    virulenceFactors: [
+      "Same as S. aureus — protein A, coagulase, toxins",
+      "No PBP2a (mecA) — β-lactams bind PBPs effectively",
+    ],
+    diseases: [
+      "Skin/soft tissue infection — abscess, cellulitis, impetigo",
+      "Bacteremia, endocarditis, osteomyelitis",
+      "Pneumonia (post-influenza, IV drug use)",
+      "Toxic shock syndrome, scalded skin syndrome",
+    ],
+    diagnosis: [
+      "Oxacillin/cefoxitin screen negative (no MRSA)",
+      "Blood cultures in invasive disease",
+      "Coagulase+ distinguishes from S. epidermidis",
+    ],
+    treatment: [
+      "Nafcillin, oxacillin, or cefazolin for serious infection",
+      "Cephalexin, dicloxacillin for mild outpatient SSTI",
+      "Vancomycin if severe β-lactam allergy (less optimal for MSSA)",
+    ],
+    distinguishFrom: [
+      "MRSA — oxacillin/cefoxitin resistant; mecA/PBP2a",
+      "S. epidermidis — coagulase-negative; contaminant on devices",
+      "Streptococcus pyogenes — chains, bacitracin sensitive, coagulase-negative",
+    ],
+    boardsPearls: [
+      "MSSA serious infection → nafcillin/oxacillin/cefazolin (β-lactam preferred over vancomycin)",
+      "Coagulase+ cluster-forming staph = S. aureus; then check oxacillin susceptibility",
+      "Cefazolin often used for MSSA bacteremia and osteomyelitis",
+      "vs MRSA — do not use nafcillin/oxacillin; use vancomycin, daptomycin, or linezolid",
+    ],
+    pediatrics:
+      "MSSA remains common cause of pediatric skin abscess and osteomyelitis; anti-staphylococcal β-lactams first-line when susceptible.",
+  },
+  {
+    id: "mrsa",
+    name: "Methicillin-Resistant Staphylococcus aureus (MRSA)",
+    etymology: "methyl + Latin resistere = to withstand + Staphylococcus aureus",
+    aliases: [
+      "mrsa",
+      "methicillin-resistant staph aureus",
+      "methicillin resistant staphylococcus aureus",
+      "methicillin-resistant s. aureus",
+      "methicillin resistant s aureus",
+      "oxacillin-resistant s. aureus",
+      "oxacillin resistant staph aureus",
+    ],
+    type: "gram-positive-cocci",
+    definition:
+      "S. aureus with mecA gene encoding altered penicillin-binding protein 2a (PBP2a) — resistant to all β-lactams except ceftaroline; requires non–β-lactam or advanced agents.",
+    morphology: [
+      "Gram+ cocci in clusters",
+      "Catalase-positive, coagulase-positive",
+      "Oxacillin/cefoxitin screen positive",
+    ],
+    virulenceFactors: [
+      "PBP2a (mecA) — low-affinity PBP conferring β-lactam resistance",
+      "Same toxin repertoire as MSSA — PVL, TSST-1, enterotoxins",
+      "USA300 clone — community MRSA with PVL (skin abscess, necrotizing infection)",
+    ],
+    diseases: [
+      "Purulent skin abscess and cellulitis (community MRSA)",
+      "Health care–associated bacteremia, pneumonia, device infection",
+      "Necrotizing fasciitis (PVL-positive strains)",
+      "Osteomyelitis and septic arthritis",
+    ],
+    diagnosis: [
+      "Oxacillin or cefoxitin disk/screen positive",
+      "PCR for mecA in some settings",
+      "Distinguish community vs health care–associated risk factors",
+    ],
+    treatment: [
+      "Vancomycin — serious invasive MRSA (monitor trough)",
+      "Daptomycin — bacteremia/endocarditis (not pneumonia — inactivated by surfactant)",
+      "Linezolid — pneumonia, skin, bone (oral bioavailability)",
+      "Mild SSTI: TMP-SMX, doxycycline, clindamycin (check local resistance)",
+      "Ceftaroline — 5th-gen cephalosporin with anti-MRSA activity (β-lactam exception)",
+    ],
+    distinguishFrom: [
+      "MSSA — oxacillin susceptible; treat with nafcillin/oxacillin",
+      "S. epidermidis — coagulase-negative; often contaminant but can be methicillin-resistant on devices",
+      "VISA/VRSA — vancomycin intermediate/resistant MRSA (rare)",
+    ],
+    boardsPearls: [
+      "mecA → PBP2a → resistance to nafcillin, oxacillin, cephalosporins (except ceftaroline)",
+      "Purulent SSTI + community risk → think MRSA; I&D ± TMP-SMX/doxycycline",
+      "Vancomycin for serious MRSA; daptomycin OK for bacteremia but NOT pneumonia",
+      "Health care MRSA: prior antibiotics, devices, dialysis, nursing home",
+      "Screen with oxacillin/cefoxitin before choosing anti-staphylococcal β-lactam",
+    ],
+    pediatrics:
+      "Community MRSA common in pediatric skin abscesses; clindamycin or TMP-SMX when indicated after drainage. CA-MRSA pneumonia can follow influenza.",
+  },
+  {
+    id: "staphylococcus-epidermidis",
+    name: "Staphylococcus epidermidis",
+    etymology: "Greek staphyle = grape cluster + kokkos = berry + Greek epidermis = upon the skin",
+    aliases: [
+      "staphylococcus epidermidis",
+      "s. epidermidis",
+      "s epidermidis",
+      "staph epidermidis",
+      "coagulase-negative staphylococcus",
+      "coagulase negative staphylococcus",
+      "coagulase-negative staph",
+      "coagulase negative staph",
+      "cons",
+    ],
+    type: "gram-positive-cocci",
+    definition:
+      "Coagulase-negative, catalase-positive staphylococcus — normal skin flora that commonly contaminates blood cultures but causes true infection on prosthetic devices and in immunocompromised hosts.",
+    morphology: [
+      "Gram+ cocci in clusters",
+      "Catalase-positive, coagulase-negative",
+      "Non-hemolytic or weak hemolysis",
+      "White colonies on agar",
+    ],
+    virulenceFactors: [
+      "Biofilm formation on foreign surfaces (catheters, prosthetic valves, shunts)",
+      "Slime-associated antigenic polysaccharide",
+      "Novobiocin sensitivity (vs S. saprophyticus resistant)",
+    ],
+    diseases: [
+      "Prosthetic valve endocarditis",
+      "Catheter-related bloodstream infection",
+      "Prosthetic joint infection",
+      "CSF shunt infection",
+      "Neonatal sepsis (especially premature infants)",
+    ],
+    classicPresentation: [
+      "Fever in patient with indwelling catheter or prosthetic device",
+      "Persistent positive blood cultures from line (multiple bottles)",
+      "Low-grade bacteremia with device dysfunction",
+    ],
+    diagnosis: [
+      "Coagulase-negative staph on culture — correlate with clinical context",
+      "Multiple positive cultures from different sites support true infection",
+      "Novobiocin sensitive (distinguishes S. saprophyticus)",
+    ],
+    treatment: [
+      "Remove infected device when possible",
+      "Vancomycin for serious infection (often methicillin-resistant)",
+      "Rifampin + vancomycin for biofilm on retained hardware (specialist-guided)",
+    ],
+    distinguishFrom: [
+      "S. aureus — coagulase-positive; more virulent invasive disease",
+      "S. saprophyticus — novobiocin resistant; young women UTI",
+      "Blood culture contaminant — single bottle positive, common skin flora",
+    ],
+    boardsPearls: [
+      "Coagulase− staph on culture — often contaminant UNLESS device present",
+      "Biofilm producer — antibiotics alone often fail without device removal",
+      "Premature neonate + indwelling line → S. epidermidis sepsis risk",
+      "Novobiocin test: S. epidermidis sensitive; S. saprophyticus resistant",
+    ],
+    pediatrics:
+      "Leading cause of late-onset neonatal ICU sepsis with central lines; extremely low birth weight infants at highest risk.",
+  },
+  {
+    id: "coagulase-positive",
+    name: "Coagulase-Positive Staphylococcus",
+    etymology: "Latin coagulare = to curdle + Latin positivus = placed/affirmed",
+    aliases: [
+      "coagulase-positive",
+      "coagulase positive",
+      "coagulase-positive staph",
+      "coagulase positive staph",
+      "coagulase-positive staphylococcus",
+      "coagulase positive staphylococcus",
+      "coagulase test positive",
+    ],
+    type: "gram-positive-cocci",
+    definition:
+      "Staphylococcal species that produce coagulase enzyme converting fibrinogen to fibrin — clinically, coagulase-positive almost always means Staphylococcus aureus (vs coagulase-negative S. epidermidis and S. saprophyticus).",
+    morphology: [
+      "Gram+ cocci in clusters",
+      "Catalase-positive",
+      "Coagulase test positive (bound or free coagulase)",
+      "Golden colonies (S. aureus)",
+    ],
+    virulenceFactors: [
+      "Coagulase — coats bacteria with fibrin, evading phagocytosis",
+      "Protein A — binds IgG Fc",
+      "Same virulence repertoire as S. aureus",
+    ],
+    diseases: [
+      "All S. aureus syndromes — abscess, bacteremia, endocarditis, osteomyelitis",
+    ],
+    diagnosis: [
+      "Coagulase test positive → S. aureus",
+      "Slide coagulase (bound) or tube coagulase (free)",
+      "Then oxacillin screen for MRSA vs MSSA",
+    ],
+    treatment: [
+      "Per MSSA/MRSA susceptibility — nafcillin/oxacillin vs vancomycin/daptomycin/linezolid",
+    ],
+    distinguishFrom: [
+      "Coagulase-negative staphylococcus — S. epidermidis, S. saprophyticus",
+      "Streptococcus — catalase-negative, chains, coagulase-negative",
+    ],
+    boardsPearls: [
+      "Coagulase+ = S. aureus until proven otherwise",
+      "Coagulase test distinguishes Staph aureus from Staph epidermidis",
+      "Catalase+ AND coagulase+ = S. aureus (both tests needed with catalase for Staph ID)",
+      "Coagulase− staph on blood culture — suspect contaminant unless device infection",
+    ],
+    pediatrics:
+      "S. aureus (coagulase-positive) causes pediatric impetigo, abscess, and scalded skin syndrome; MRSA increasingly common in community.",
+  },
 ];
 
 const microbiologyById = new Map(

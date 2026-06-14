@@ -3909,6 +3909,133 @@ export const CELLS: CellEntry[] = [
     pediatrics:
       "Children on chemotherapy or transplant immunosuppression need aggressive evaluation of fever; vaccination schedules adjusted per live-vaccine contraindications.",
   },
+  {
+    id: "fibroblast",
+    name: "Fibroblast",
+    etymology: "Latin fibra = fiber + Greek blastos = germ/bud",
+    aliases: [
+      "fibroblast",
+      "fibroblasts",
+      "fibroblastic cell",
+      "fibroblastic cells",
+    ],
+    definition:
+      "Mesenchymal stromal cell that synthesizes and remodels extracellular matrix (collagen, elastin, fibronectin) — central to wound healing, fibrosis, and organ stromal architecture.",
+    characteristics: [
+      "Vimentin-positive mesenchymal cell",
+      "Secrete type I and III collagen, ground substance",
+      "Activate to myofibroblast (α-SMA+) during wound contraction",
+      "Renal cortical peritubular interstitial fibroblasts produce erythropoietin",
+    ],
+    clinicalRelevance: [
+      "Wound healing — fibroblasts deposit granulation tissue collagen",
+      "Keloid and hypertrophic scar — excessive fibroblast collagen deposition",
+      "Idiopathic pulmonary fibrosis — activated lung fibroblasts",
+      "Scleroderma — dermal and visceral fibroblast activation",
+      "Cancer-associated fibroblasts support tumor stroma",
+    ],
+    boardsPearls: [
+      "Fibroblasts produce collagen in dermis (mesoderm) and granulation tissue",
+      "Myofibroblast = activated fibroblast with contractile α-SMA",
+      "Renal EPO from peritubular interstitial fibroblasts (not JG cells)",
+      "vs osteoblast — bone matrix mineralization, not general ECM",
+      "Graves ophthalmopathy — orbital fibroblast activation by TSI/IGF-1",
+    ],
+    distinguishFrom: [
+      "Interstitial fibroblast — organ-specific location/function (e.g., renal EPO)",
+      "Myofibroblast — α-SMA–expressing activated fibroblast",
+      "Keratinocyte — epidermal epithelial cell, not mesenchymal",
+      "Endothelial cell — lines vessels, vimentin+ but distinct function",
+    ],
+    pediatrics:
+      "Hypertrophic scars more common in children; fetal wound healing has less scarring due to distinct fibroblast/ECM milieu.",
+  },
+  {
+    id: "endothelial-cell",
+    name: "Endothelial Cell",
+    etymology: "Greek endon = within + thele = nipple/breast (historical vessel lining term) + cell",
+    aliases: [
+      "endothelial cell",
+      "endothelial cells",
+      "endothelium",
+      "vascular endothelium",
+      "endothelial lining",
+    ],
+    definition:
+      "Single layer of cells lining blood and lymphatic vessels — regulates permeability, leukocyte trafficking, coagulation, and vasomotor tone.",
+    characteristics: [
+      "Continuous, fenestrated, or sinusoidal subtypes by organ",
+      "Weibel-Palade bodies store vWF and P-selectin",
+      "Express adhesion molecules (E-selectin, ICAM, VCAM) when activated",
+      "Tight junctions in BBB; fenestrae in glomerulus and endocrine organs",
+    ],
+    clinicalRelevance: [
+      "Atherosclerosis begins with endothelial dysfunction and LDL entry",
+      "Leukocyte rolling/adhesion/transmigration on activated endothelium",
+      "Infective endocarditis — bacterial seeding on damaged endothelium",
+      "Vasculitis — inflammation of vessel wall including endothelium",
+      "Angiogenesis in wound healing and tumors (VEGF-driven)",
+    ],
+    boardsPearls: [
+      "Endothelium regulates hemostasis — prostacyclin (anti-platelet) vs von Willebrand factor (pro-adhesion)",
+      "TNF/IL-1 activate endothelium → ↑ adhesion molecules → leukocyte recruitment",
+      "Fenestrated endothelium in glomerulus, endocrine glands; continuous in muscle/skin",
+      "Weibel-Palade bodies — vWF release; hallmark of endothelial cell",
+      "vs epithelial cell — lines lumens of organs (GI, lung), not blood vessels",
+    ],
+    distinguishFrom: [
+      "Epithelial cell — lines body surfaces and glandular lumens",
+      "Fibroblast — stromal ECM producer, not luminal lining",
+      "Podocyte — visceral glomerular epithelial cell, not endothelial",
+      "Smooth muscle cell — vessel wall contractile layer beneath endothelium",
+    ],
+    pediatrics:
+      "Premature infants have immature pulmonary endothelium contributing to RDS and BPD; Kawasaki disease targets coronary endothelium.",
+  },
+  {
+    id: "multinucleated-giant-cell",
+    name: "Multinucleated Giant Cell",
+    etymology: "Latin multus = many + nucleus + Latin gigas = giant + cell",
+    aliases: [
+      "multinucleated giant cell",
+      "multinucleated giant cells",
+      "multinucleate giant cell",
+      "multinucleate giant cells",
+      "giant cell",
+      "giant cells",
+      "syncytial giant cell",
+    ],
+    definition:
+      "Large cell formed by fusion of macrophages (or other mononuclear phagocytes) containing multiple nuclei — seen in granulomatous inflammation, foreign-body reactions, and bone resorption.",
+    characteristics: [
+      "Langhans type — horseshoe/peripheral nuclei (TB, sarcoid)",
+      "Foreign-body type — haphazardly scattered nuclei around inert material",
+      "Touton type — wreath of nuclei surrounded by foamy cytoplasm (xanthogranuloma)",
+      "Osteoclast — multinucleated bone-resorbing cell (RANKL-driven)",
+    ],
+    clinicalRelevance: [
+      "Tuberculosis and fungal granulomas — Langhans giant cells",
+      "Sarcoidosis — noncaseating granulomas with giant cells",
+      "Foreign-body granuloma — foreign-body type giant cells",
+      "Giant cell tumor of bone — osteoclast-like giant cells",
+      "Measles — Warthin-Finkeldey giant cells in lymph nodes",
+    ],
+    boardsPearls: [
+      "Langhans (G) = granuloma giant cell; Langerhans (R) = epidermal dendritic APC",
+      "Langhans — peripheral horseshoe nuclei; foreign-body — random nuclei",
+      "Epithelioid macrophages fuse to form giant cells in chronic Th1/IFN-γ inflammation",
+      "Osteoclasts are multinucleated but function in bone resorption, not granulomas",
+      "vs Langhans giant cell entry — specific subtype within this broader category",
+    ],
+    distinguishFrom: [
+      "Langhans giant cell — specific granulomatous subtype with horseshoe nuclei",
+      "Langerhans cell — dendritic APC; CD1a+, Birbeck granules; NOT fused macrophage",
+      "Osteoclast — bone surface resorption, TRAP+, not granuloma",
+      "Syncytiotrophoblast — placental multinucleated layer, not inflammatory",
+    ],
+    pediatrics:
+      "Pediatric TB granulomas may show Langhans giant cells; do not confuse Langerhans cell histiocytosis (CD1a+ clonal proliferation) with granulomatous giant cells.",
+  },
 ];
 
 const cellById = new Map(CELLS.map((entry) => [entry.id, entry]));

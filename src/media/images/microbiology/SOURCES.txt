@@ -430,3 +430,7 @@ clostridium-botulinum.png
   License: Public domain (U.S. federal government)
   Page: https://commons.wikimedia.org/wiki/File:Clostridium_botulinum_01.png
   Download: https://commons.wikimedia.org/wiki/Special:FilePath/Clostridium_botulinum_01.png
+mssa.svg | Created locally
+mrsa.svg | Created locally
+staphylococcus-epidermidis.svg | Created locally
+coagulase-positive.svg | Created locally

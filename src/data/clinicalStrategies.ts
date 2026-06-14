@@ -274,6 +274,37 @@ export const CLINICAL_STRATEGIES: ClinicalStrategyEntry[] = [
     pediatrics:
       "Pediatric T1DM targets slightly higher A1c than adults to limit hypoglycemia-related neurocognitive harm; family-centered insulin regimens and carbohydrate counting are core.",
   },
+  {
+    id: "cbt",
+    name: "Cognitive Behavioral Therapy",
+    etymology: "Latin cognoscere = to know + Latin comportare = behave + Greek therapeia = healing",
+    aliases: [
+      "cbt",
+      "cognitive behavioral therapy",
+      "cognitive behavioural therapy",
+      "cognitive behavior therapy",
+      "cognitive-behavioral therapy",
+    ],
+    definition:
+      "Structured psychotherapy targeting maladaptive thoughts (cognitions) and behaviors to reduce psychiatric symptoms and improve functioning — evidence-based for depression, anxiety, PTSD, and adjunctive use in psychosis and adjustment disorders.",
+    details: [
+      "Cognitive restructuring — identify and challenge distorted automatic thoughts",
+      "Behavioral activation — schedule rewarding activities in depression",
+      "Exposure and response prevention — OCD and phobias",
+      "Skills training — coping, problem-solving, relapse prevention",
+      "Time-limited, goal-directed sessions with homework between visits",
+    ],
+    boardsPearls: [
+      "First-line psychotherapy for mild–moderate MDD and anxiety disorders",
+      "As effective as SSRIs for many depression/anxiety cases; combined therapy + SSRI for severe depression",
+      "CBT for psychosis — adjunct to antipsychotics in delusional disorder and schizophrenia",
+      "Adjustment disorder — supportive therapy and CBT preferred over medication initially",
+      "vs psychoanalysis — CBT is present-focused, structured, shorter duration",
+      "Peds: CBT adapted for children with anxiety, OCD, and depression; family involvement common",
+    ],
+    pediatrics:
+      "Evidence-supported for pediatric anxiety, OCD, and depression; parental involvement and school coordination improve outcomes.",
+  },
 ];
 
 const strategyById = new Map(

@@ -128,6 +128,41 @@ Created locally
 Reference: https://en.wikipedia.org/wiki/Avascular_necrosis
 Description: Femoral head avascular necrosis schematic
 
+copper-deficiency.svg
+Created locally
+Reference: https://en.wikipedia.org/wiki/Copper_deficiency
+Description: Copper deficiency cuproenzyme effects vs Wilson overload
+
+dementia.svg
+Created locally
+Reference: https://en.wikipedia.org/wiki/Dementia
+Description: Chronic progressive neurocognitive decline
+
+brief-psychotic-disorder.svg
+Created locally
+Reference: https://en.wikipedia.org/wiki/Brief_psychotic_disorder
+Description: Psychosis lasting less than one month
+
+psychotic-mood-disorder.svg
+Created locally
+Reference: https://en.wikipedia.org/wiki/Mood_disorder
+Description: Psychosis linked to mood episodes only
+
+adjustment-disorder.svg
+Created locally
+Reference: https://en.wikipedia.org/wiki/Adjustment_disorder
+Description: Stressor-linked emotional response out of proportion to stressor
+
+schizoid-personality-disorder.svg
+Created locally
+Reference: https://en.wikipedia.org/wiki/Schizoid_personality_disorder
+Description: Cluster A detachment and restricted affect
+
+schizotypal-personality-disorder.svg
+Created locally
+Reference: https://en.wikipedia.org/wiki/Schizotypal_personality_disorder
+Description: Cluster A eccentricity and magical thinking
+
 anaphylaxis.svg
 https://commons.wikimedia.org/wiki/File:Signs_and_symptoms_of_anaphylaxis.svg
 Mikael Häggström, CC0
@@ -177,3 +212,8 @@ primary-hyperparathyroidism.png
 https://commons.wikimedia.org/wiki/File:Blausen_0533_Parathyroid_adenoma.png
 BruceBlaus, CC BY 3.0
 Description: Parathyroid adenoma illustration, relevant to primary hyperparathyroidism
+basal-cell-carcinoma.svg | Created locally
+berylliosis.svg | Created locally
+food-allergy.svg | Created locally
+hyperthyroidism.svg | Created locally
+melanoma.svg | Created locally

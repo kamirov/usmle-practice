@@ -1122,10 +1122,71 @@ export const ORGANS: OrganEntry[] = [
     id: "skin",
     name: "Skin",
     etymology: "Old Norse skinn = hide",
-    aliases: ["skin", "epidermis", "dermis"],
+    aliases: ["skin"],
     germLayer: "Ectoderm / Mesoderm",
     origin:
       "Epidermis from surface ectoderm; dermis from underlying mesoderm (dermatome).",
+  },
+  {
+    id: "epidermis",
+    name: "Epidermis",
+    etymology: "Greek epi = upon + derma = skin",
+    aliases: ["epidermis", "epidermal", "epidermal layer", "outer skin layer"],
+    germLayer: "Ectoderm",
+    origin:
+      "Derived from surface ectoderm; stratified squamous keratinizing epithelium with keratinocytes, melanocytes, Langerhans cells, and Merkel cells.",
+    derivatives: [
+      "Stratum corneum, granulosum, spinosum, basale",
+      "Hair follicle outer root sheath",
+      "Eccrine sweat duct epithelium",
+    ],
+    functionSummary:
+      "Barrier against water loss, microbes, and UV; keratinocyte differentiation and melanin transfer; antigen sampling by Langerhans cells.",
+    commonPathologies: [
+      "Atopic dermatitis",
+      "Psoriasis",
+      "Impetigo",
+      "Melanoma (melanocyte origin)",
+      "Basal/squamous cell carcinoma",
+    ],
+    step1Pearls: [
+      "Epidermis = ectoderm; avascular — nutrients from dermal capillaries",
+      "Keratinocytes produce keratin; melanocytes transfer melanin to keratinocytes",
+      "Langerhans cells (APCs) vs Langhans giant cells (macrophage fusion in granulomas)",
+      "FLG (filaggrin) loss → impaired barrier → atopic dermatitis risk",
+    ],
+    pediatrics:
+      "Infant epidermis is thinner with immature barrier — ↑ transepidermal water loss and atopic dermatitis risk; sunscreen and emollients important.",
+  },
+  {
+    id: "dermis",
+    name: "Dermis",
+    etymology: "Greek derma = skin",
+    aliases: ["dermis", "dermal", "dermal layer", "corium"],
+    germLayer: "Mesoderm",
+    origin:
+      "Derived from underlying mesoderm (dermatome); papillary dermis (loose CT) over reticular dermis (dense CT).",
+    derivatives: [
+      "Fibroblasts and extracellular matrix (collagen, elastin)",
+      "Blood vessels, lymphatics, nerves",
+      "Dermal appendages — hair follicles, sebaceous and eccrine glands",
+    ],
+    functionSummary:
+      "Structural support, thermoregulation, sensation, and wound repair; houses appendages and immune cells.",
+    commonPathologies: [
+      "Scleroderma (dermal fibrosis)",
+      "Keloid/hypertrophic scar",
+      "Cellulitis (spreads in dermis/subcutis)",
+      "Graves pretibial myxedema (dermal mucin)",
+    ],
+    step1Pearls: [
+      "Dermis = mesoderm; rich in collagen (type I/III) produced by fibroblasts",
+      "Papillary dermis — dermal papillae interdigitate with epidermis",
+      "Reticular dermis — thicker, dense collagen; site of appendages",
+      "Epidermis ectoderm + dermis mesoderm — classic germ-layer pairing",
+    ],
+    pediatrics:
+      "Dermal collagen matures with age; infants have less dense dermis — easier bruising and faster wound healing relative to depth.",
   },
   {
     id: "bone",

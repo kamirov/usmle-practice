@@ -4439,6 +4439,266 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
     pediatrics:
       "Neonatal hypoxic-ischemic encephalopathy involves global cerebral hypoperfusion with injury in vulnerable border regions. Dehydration-related ischemic colitis in children can affect colonic watershed zones similarly to adults.",
   },
+  {
+    id: "bacteremia",
+    name: "Bacteremia",
+    etymology: "Greek bakterion = small rod + haima = blood",
+    aliases: [
+      "bacteremia",
+      "bacteraemia",
+      "bloodstream infection",
+      "bacterial bloodstream infection",
+      "positive blood culture",
+      "bacteremic",
+    ],
+    definition:
+      "Presence of viable bacteria in the bloodstream — may be transient (dental procedure, manipulation), continuous (abscess, endocarditis), or intermittent (seeding from a focus).",
+    examples: [
+      "S. aureus bacteremia — skin abscess, IV catheter, endocarditis, osteomyelitis",
+      "Gram-negative bacteremia — UTI/pyelonephritis, cholangitis, peritonitis, neutropenic fever",
+      "Streptococcal bacteremia — cellulitis, pneumonia, meningitis",
+      "Transient bacteremia after dental cleaning or tooth brushing",
+      "Neonatal sepsis — E. coli, GBS, Listeria bacteremia",
+    ],
+    boardsPearls: [
+      "Positive blood culture = bacteremia until proven contaminant (esp. coagulase− staph from skin)",
+      "S. aureus bacteremia always warrants source search — endocarditis, osteomyelitis, device infection",
+      "Asplenic patient + fever = bacteremia emergency (encapsulated organisms)",
+      "Two sets of blood cultures from different sites before antibiotics when feasible",
+      "vs sepsis — bacteremia is microbiologic finding; sepsis adds organ dysfunction",
+    ],
+    distinguishFrom: [
+      "Sepsis — life-threatening organ dysfunction from infection (SIRS + source)",
+      "SIRS without infection — noninfectious inflammatory states",
+      "Blood culture contaminant — single bottle, common skin flora (S. epidermidis)",
+      "Fungemia — yeast or mold in blood (Candida, Aspergillus)",
+    ],
+    pediatrics:
+      "Febrile infant ≤60 days with bacteremia risk — aggressive evaluation and empiric antibiotics; UTI is common occult source. Asplenic children need urgent treatment for any febrile illness.",
+  },
+  {
+    id: "oxidative-burst",
+    name: "Oxidative Burst",
+    etymology: "Latin oxidare = to make acid + Old English berstan = break forth suddenly",
+    aliases: [
+      "oxidative burst",
+      "respiratory burst",
+      "phagocyte oxidative burst",
+      "nadph oxidase burst",
+      "reactive oxygen species burst",
+      "respiratory burst of phagocytes",
+    ],
+    definition:
+      "Rapid production of reactive oxygen species (superoxide, H₂O₂, hypochlorous acid) by phagocytes via NADPH oxidase (phox) during microbial killing — the 'respiratory burst' despite not involving mitochondrial respiration.",
+    examples: [
+      "Neutrophil killing of ingested bacteria — NADPH oxidase → O₂⁻ → H₂O₂ → HOCl (via myeloperoxidase)",
+      "Chronic granulomatous disease — defective NADPH oxidase → absent/low DHR fluorescence",
+      "Macrophage activation by IFN-γ enhances microbicidal capacity",
+      "Catalase-positive organisms survive in CGD (S. aureus, Aspergillus, Burkholderia, Nocardia)",
+    ],
+    boardsPearls: [
+      "NADPH oxidase (phox complex) generates superoxide — rate-limiting step of respiratory burst",
+      "Myeloperoxidase uses H₂O₂ + Cl⁻ → hypochlorous acid (bleach)",
+      "CGD: defective oxidative burst → recurrent catalase-positive infections + granulomas",
+      "Dihydrorhodamine (DHR) flow cytometry — preferred screening test for CGD",
+      "vs myeloperoxidase deficiency — downstream defect; DHR often normal, milder phenotype",
+    ],
+    distinguishFrom: [
+      "Mitochondrial oxidative phosphorylation — ATP production, not microbial killing",
+      "Catalase test — bacterial enzyme degrading H₂O₂, not host phagocyte function",
+      "Reactive nitrogen species — iNOS/NO in macrophages, parallel pathway",
+      "Myeloperoxidase deficiency — cannot make HOCl despite normal superoxide",
+    ],
+    pediatrics:
+      "CGD presents in childhood with recurrent abscesses, lymphadenitis, and catalase-positive infections; DHR flow cytometry is standard diagnostic test in infants with suspicious history.",
+  },
+  {
+    id: "foreign-body-granuloma",
+    name: "Foreign-Body Granuloma",
+    etymology: "Latin foris = outside + corpus = body + granulum = small grain + Greek -oma = mass",
+    aliases: [
+      "foreign-body granuloma",
+      "foreign body granuloma",
+      "foreign-body granulomatous inflammation",
+      "foreign body granulomatous inflammation",
+      "foreign body reaction",
+      "foreign-body reaction",
+    ],
+    definition:
+      "Granulomatous inflammatory response to indigestible exogenous material that macrophages cannot clear — epithelioid macrophages and foreign-body type multinucleated giant cells surround the inciting particle.",
+    examples: [
+      "Suture granuloma — nonabsorbable surgical material",
+      "Silicosis — inhaled silica crystals in lung",
+      "Berylliosis — beryllium exposure → noncaseating granulomas",
+      "Talc or starch granulomas (IV drug use, surgical glove powder)",
+      "Splinter or wood foreign body in skin",
+      "Lipogranuloma from ruptured fat (panniculitis)",
+    ],
+    boardsPearls: [
+      "Foreign-body giant cells — haphazardly arranged nuclei (vs horseshoe Langhans nuclei in TB)",
+      "Noncaseating granulomas — think sarcoidosis, Crohn, berylliosis, foreign body",
+      "Macrophages cannot degrade inert material → chronic granulomatous walling-off",
+      "Beryllium lymphocyte proliferation test (BeLPT) distinguishes berylliosis from sarcoidosis",
+      "vs Langhans giant cell — TB/sarcoid epithelioid fusion with peripheral horseshoe nuclei",
+    ],
+    distinguishFrom: [
+      "Langhans giant cell granuloma — TB, some fungal infections; horseshoe nuclear arrangement",
+      "Caseating granuloma — central necrosis, classic TB",
+      "Abscess — neutrophilic pus, not organized macrophage granuloma",
+      "Sarcoidosis — noncaseating granulomas without identifiable foreign material",
+    ],
+    pediatrics:
+      "Children may develop foreign-body granulomas from retained suture, splinter, or aspirated vegetable matter; pediatric sarcoidosis is rare — consider foreign material and infection first.",
+  },
+  {
+    id: "malabsorption",
+    name: "Malabsorption",
+    etymology: "Latin malus = bad + Latin absorbere = to suck in",
+    aliases: [
+      "malabsorption",
+      "malabsorption syndrome",
+      "nutrient malabsorption",
+      "intestinal malabsorption",
+      "malabsorptive diarrhea",
+    ],
+    definition:
+      "Failure to adequately absorb macronutrients, vitamins, minerals, or bile acids in the small intestine — from mucosal disease, luminal deficiency (enzymes/bile), or lymphatic obstruction.",
+    examples: [
+      "Celiac disease — villous atrophy, anti-tTG, HLA-DQ2/DQ8",
+      "Cystic fibrosis — pancreatic insufficiency → fat malabsorption/steatorrhea",
+      "Tropical sprue, Whipple disease, small bowel bacterial overgrowth",
+      "Short bowel syndrome after resection",
+      "Chronic pancreatitis or pancreatic cancer — enzyme deficiency",
+      "Bile acid malabsorption (ileal disease/resection, Crohn)",
+    ],
+    boardsPearls: [
+      "Steatorrhea (bulky, foul, floating stools) → fat malabsorption",
+      "D-xylose test — mucosal absorption defect if low (celiac, tropical sprue)",
+      "Celiac: anti-tTG IgA + biopsy (villous atrophy, crypt hyperplasia, ↑ IELs)",
+      "B12 malabsorption — terminal ileum disease, pernicious anemia, bacterial overgrowth",
+      "Fat-soluble vitamin deficiencies (A, D, E, K) with chronic steatorrhea",
+    ],
+    distinguishFrom: [
+      "Maldigestion — inadequate luminal breakdown (pancreatic insufficiency) vs mucosal absorption defect",
+      "Secretory diarrhea — watery stools with normal absorption (cholera, VIPoma)",
+      "Osmotic diarrhea — lactose intolerance, laxatives; improves with fasting",
+      "Increased GI motility — rapid transit without primary absorptive defect",
+    ],
+    pediatrics:
+      "Celiac and CF are classic pediatric malabsorption causes — failure to thrive, steatorrhea, vitamin deficiencies. CF newborn screen positive → confirm with sweat chloride; pancreatic enzyme replacement for malabsorption.",
+  },
+  {
+    id: "pyrogen",
+    name: "Pyrogen",
+    etymology: "Greek pyre = fire + genes = producing",
+    aliases: [
+      "pyrogen",
+      "pyrogens",
+      "endogenous pyrogen",
+      "endogenous pyrogens",
+      "exogenous pyrogen",
+      "exogenous pyrogens",
+      "fever-inducing substance",
+    ],
+    definition:
+      "Substance that raises the hypothalamic temperature set point and causes fever — endogenous cytokines (IL-1, IL-6, TNF-α) released by immune cells, or exogenous microbial products (LPS/endotoxin, superantigens).",
+    examples: [
+      "Endogenous pyrogens — IL-1β, IL-6, TNF-α from macrophages during infection",
+      "Exogenous pyrogens — LPS (gram-negative endotoxin), lipoteichoic acid, superantigens (TSST-1)",
+      "IL-1 from inflammasome activation (cryopyrinopathies)",
+      "Prostaglandin E₂ (PGE₂) — downstream mediator in hypothalamus after pyrogen signaling",
+    ],
+    boardsPearls: [
+      "Endogenous pyrogen triad: IL-1, IL-6, TNF-α → hypothalamic COX → PGE₂ → fever",
+      "Antipyretics (acetaminophen, NSAIDs) block COX → ↓ PGE₂ (treat symptom, not always source)",
+      "Exogenous pyrogens trigger cytokine release — LPS is classic PAMP",
+      "vs hyperthermia — no set-point reset; heat stroke, malignant hyperthermia, serotonin syndrome",
+      "LPS → TLR4 → NF-κB → cytokine release → fever and septic shock at high doses",
+    ],
+    distinguishFrom: [
+      "Hyperthermia — thermoregulatory failure or excess heat production without pyrogen-mediated set-point rise",
+      "Chills/rigors — motor response to rising set point, not the pyrogen itself",
+      "PGE₂ — downstream effector in hypothalamus, not the initiating pyrogen",
+    ],
+    pediatrics:
+      "Same cytokine pyrogen pathway in children; neonates may have blunted fever response or hypothermia during serious infection — low threshold for sepsis workup.",
+  },
+  {
+    id: "hematopoiesis",
+    name: "Hematopoiesis",
+    etymology: "Greek haima = blood + poiesis = making",
+    aliases: [
+      "hematopoiesis",
+      "haematopoiesis",
+      "blood cell formation",
+      "hemopoiesis",
+      "hematopoietic",
+      "hematopoiesis process",
+    ],
+    definition:
+      "Formation and development of blood cells from hematopoietic stem cells (HSCs) in bone marrow (and fetal liver/spleen) — produces erythrocytes, leukocytes, and platelets via lineage-specific growth factors.",
+    examples: [
+      "Erythropoiesis — EPO from renal interstitial fibroblasts → RBC production",
+      "Myelopoiesis — G-CSF, GM-CSF → neutrophils, monocytes",
+      "Lymphopoiesis — IL-7 in marrow/thymus → B and T cells",
+      "Megakaryopoiesis — thrombopoietin → platelets",
+      "Extramedullary hematopoiesis — spleen/liver in fetal life or severe marrow stress",
+    ],
+    boardsPearls: [
+      "Adult HSC niche — bone marrow endosteal and vascular niches",
+      "EPO from kidney peritubular interstitial fibroblasts (not JG cells)",
+      "G-CSF stimulates neutrophil production; used after chemotherapy",
+      "Left shift — ↑ bands/immature neutrophils during acute demand (infection)",
+      "Fetal hematopoiesis: yolk sac → liver → spleen → bone marrow",
+    ],
+    distinguishFrom: [
+      "Hemostasis — clot formation cascade, not blood cell production",
+      "Hemolysis — destruction of RBCs, not marrow production failure",
+      "Leukemogenesis — malignant clonal proliferation, not normal differentiation",
+    ],
+    pediatrics:
+      "Neonatal hematopoiesis transitions from liver to marrow; physiologic nadir of hemoglobin at ~8–10 weeks. HSC transplant treats SCID and some inborn errors; extramedullary hematopoiesis causes hepatosplenomegaly in fetal hydrops.",
+  },
+  {
+    id: "agar",
+    name: "Agar",
+    etymology: "Malay agar-agar = gelatinous seaweed extract",
+    aliases: [
+      "agar",
+      "agar plate",
+      "agar plates",
+      "blood agar",
+      "chocolate agar",
+      "macconkey agar",
+      "sabouraud agar",
+      "culture agar",
+      "solid culture medium",
+    ],
+    definition:
+      "Polysaccharide gel derived from seaweed used as solidifying agent in microbiologic culture media — bacteria grow as isolated colonies on the surface, enabling identification by morphology, hemolysis, and selective growth.",
+    examples: [
+      "Blood agar — enriched medium; α/β/γ hemolysis patterns (Strep, Staph)",
+      "Chocolate agar — lysed RBCs release factors V and X for Haemophilus and Neisseria",
+      "MacConkey agar — selects Gram-negatives; lactose fermenters pink (E. coli), nonfermenters clear (Salmonella)",
+      "Thayer-Martin — selective chocolate agar for Neisseria gonorrhoeae",
+      "Sabouraud agar — fungal culture (low pH, antibiotics inhibit bacteria)",
+      "Mannitol salt agar — selects Staphylococcus (mannitol fermentation → yellow)",
+    ],
+    boardsPearls: [
+      "β-hemolysis = complete RBC lysis → clear zone (S. pyogenes, S. aureus)",
+      "α-hemolysis = partial → green zone (S. pneumoniae)",
+      "Chocolate agar = heated blood agar — needed for fastidious organisms (H. flu, Neisseria)",
+      "MacConkey: pink = lactose fermenter (E. coli, Klebsiella); colorless = nonfermenter (Salmonella, Shigella)",
+      "Eosin-methylene blue (EMB) — lactose fermentation with green metallic sheen (E. coli)",
+    ],
+    distinguishFrom: [
+      "Broth culture — liquid medium for quantification and blood cultures",
+      "Gram stain — rapid microscopy, not culture on agar",
+      "Selective vs differential — selective inhibits some species; differential distinguishes survivors",
+    ],
+    pediatrics:
+      "Same culture principles in pediatrics; throat culture on blood agar for GAS pharyngitis; chocolate agar for neonatal gonococcal conjunctivitis workup.",
+  },
 ];
 
 const pathogenesisById = new Map(

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 180" role="img" aria-label="Schizoid personality disorder">
+  <rect width="480" height="180" fill="#f8fafc"/>
+  <text x="240" y="24" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" font-weight="600">Schizoid personality disorder</text>
+  <circle cx="240" cy="95" r="40" fill="#e2e8f0" stroke="#64748b"/>
+  <circle cx="240" cy="95" r="22" fill="#f8fafc" stroke="#94a3b8" stroke-dasharray="4 3"/>
+  <text x="240" y="100" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10">alone</text>
+  <text x="240" y="150" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#64748b">Cluster A  emotional detachment, solitary, indifferent to praise/criticism</text>
+  <text x="240" y="168" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#64748b">No psychosis  vs schizotypal (odd beliefs) and schizophrenia</text>
+</svg>

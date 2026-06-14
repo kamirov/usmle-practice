@@ -22,6 +22,7 @@ import exertionalDyspnea from "../media/images/symptoms/exertional-dyspnea.jpg?u
 import fever from "../media/images/symptoms/fever.jpg?url";
 import headache from "../media/images/symptoms/headache.jpg?url";
 import hematochezia from "../media/images/symptoms/hematochezia.jpg?url";
+import hyperpigmentation from "../media/images/symptoms/hyperpigmentation.svg?url";
 import hematuria from "../media/images/symptoms/hematuria.jpg?url";
 import hemianopsia from "../media/images/symptoms/hemianopsia.svg?url";
 import hemiplegia from "../media/images/symptoms/hemiplegia.jpg?url";
@@ -55,6 +56,8 @@ import plaque from "../media/images/symptoms/plaque.jpg?url";
 import pleuriticChestPain from "../media/images/symptoms/pleuritic-chest-pain.jpg?url";
 import pnd from "../media/images/symptoms/pnd.jpg?url";
 import polyuriaPolydipsia from "../media/images/symptoms/polyuria-polydipsia.jpg?url";
+import polydipsia from "../media/images/symptoms/polydipsia.svg?url";
+import polyuria from "../media/images/symptoms/polyuria.svg?url";
 import presyncope from "../media/images/symptoms/presyncope.jpg?url";
 import psychosis from "../media/images/symptoms/psychosis.svg?url";
 import pruritus from "../media/images/symptoms/pruritus.jpg?url";
@@ -98,6 +101,7 @@ export type SymptomImageId = Extract<
   | "fever"
   | "headache"
   | "hematochezia"
+  | "hyperpigmentation"
   | "hematuria"
   | "hemianopsia"
   | "hemiplegia"
@@ -131,6 +135,8 @@ export type SymptomImageId = Extract<
   | "pleuritic-chest-pain"
   | "pnd"
   | "polyuria-polydipsia"
+  | "polyuria"
+  | "polydipsia"
   | "presyncope"
   | "psychosis"
   | "pruritus"
@@ -179,6 +185,7 @@ export const SYMPTOM_IMAGES: Partial<Record<SymptomImageId, string>> = {
   "exertional-dyspnea": extensionAssetUrl(exertionalDyspnea),
   "fever": extensionAssetUrl(fever),
   "headache": extensionAssetUrl(headache),
+  "hyperpigmentation": extensionAssetUrl(hyperpigmentation),
   "hematochezia": extensionAssetUrl(hematochezia),
   "hematuria": extensionAssetUrl(hematuria),
   "hemianopsia": extensionAssetUrl(hemianopsia),
@@ -213,6 +220,8 @@ export const SYMPTOM_IMAGES: Partial<Record<SymptomImageId, string>> = {
   "pleuritic-chest-pain": extensionAssetUrl(pleuriticChestPain),
   "pnd": extensionAssetUrl(pnd),
   "polyuria-polydipsia": extensionAssetUrl(polyuriaPolydipsia),
+  polyuria: extensionAssetUrl(polyuria),
+  polydipsia: extensionAssetUrl(polydipsia),
   "presyncope": extensionAssetUrl(presyncope),
   "psychosis": extensionAssetUrl(psychosis),
   "pruritus": extensionAssetUrl(pruritus),
@@ -258,6 +267,10 @@ export const SYMPTOM_IMAGE_ATTRIBUTIONS: Partial<
   "exertional-dyspnea": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:exertional-dyspnea.jpg" },
   "fever": { label: "Wikimedia Commons (Symptoms of coronavirus disease 2019 2.0.svg)", url: "https://commons.wikimedia.org/wiki/File:Symptoms_of_coronavirus_disease_2019_2.0.svg" },
   "headache": { label: "Wikimedia Commons (Migraine.jpg)", url: "https://commons.wikimedia.org/wiki/File:Migraine.jpg" },
+  hyperpigmentation: {
+    label: "Created locally; reference: Hyperpigmentation",
+    url: "https://en.wikipedia.org/wiki/Hyperpigmentation",
+  },
   "hematochezia": { label: "Wikimedia Commons (Hämatochezie Dezember 2021.jpg)", url: "https://commons.wikimedia.org/wiki/File:Hämatochezie_Dezember_2021.jpg" },
   "hematuria": { label: "Wikimedia Commons (HematuriaTrauma.JPG)", url: "https://commons.wikimedia.org/wiki/File:HematuriaTrauma.JPG" },
   "hemianopsia": { label: "Wikimedia Commons (Left-homonymous-hemianopia.svg)", url: "https://commons.wikimedia.org/wiki/File:Left-homonymous-hemianopia.svg" },
@@ -292,6 +305,14 @@ export const SYMPTOM_IMAGE_ATTRIBUTIONS: Partial<
   "pleuritic-chest-pain": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:pleuritic-chest-pain.jpg" },
   "pnd": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:pnd.jpg" },
   "polyuria-polydipsia": { label: "Wikimedia Commons (Medical communications of the Massachusetts Medical Society (1913) (14781096501).jpg)", url: "https://commons.wikimedia.org/wiki/File:Medical_communications_of_the_Massachusetts_Medical_Society_(1913)_(14781096501).jpg" },
+  polyuria: {
+    label: "Created locally; reference: Polyuria",
+    url: "https://en.wikipedia.org/wiki/Polyuria",
+  },
+  polydipsia: {
+    label: "Created locally; reference: Polydipsia",
+    url: "https://en.wikipedia.org/wiki/Polydipsia",
+  },
   "presyncope": { label: "Wikimedia Commons (Pietro Longhi 027.jpg)", url: "https://commons.wikimedia.org/wiki/File:Pietro_Longhi_027.jpg" },
   "psychosis": { label: "Created locally; reference: Psychosis", url: "https://en.wikipedia.org/wiki/Psychosis" },
   "pruritus": { label: "Wikimedia Commons (Photographic atlas of the diseases of the skin; a series of ninety-six plates, comprising nearly two hundred illustrations, with descriptive text, and a treatise on cutaneous therapeutics (1905) (14783268942).jpg)", url: "https://commons.wikimedia.org/wiki/File:Photographic_atlas_of_the_diseases_of_the_skin;_a_series_of_ninety-six_plates,_comprising_nearly_two_hundred_illustrations,_with_descriptive_text,_and_a_treatise_on_cutaneous_therapeutics_(1905)_(14783268942).jpg" },
@@ -369,6 +390,9 @@ export const SYMPTOM_IMAGE_CAPTIONS: Partial<Record<SymptomImageId, string>> = {
   "pleuritic-chest-pain": "Clinical or pathologic image illustrating pleuritic chest pain",
   "pnd": "Clinical or pathologic image illustrating pnd",
   "polyuria-polydipsia": "Clinical or pathologic image illustrating polyuria polydipsia",
+  polyuria: "Excessive urine output — osmotic diuresis in diabetes mellitus or impaired concentrating in diabetes insipidus",
+  polydipsia: "Excessive thirst — compensatory to polyuria or primary psychogenic polydipsia",
+  hyperpigmentation: "Increased skin pigment — Addison disease (↑ ACTH/MSH), hemochromatosis, or venous stasis hemosiderin",
   "presyncope": "Clinical or pathologic image illustrating presyncope",
   "psychosis": "Hallucinations and delusions — schizophrenia, steroids, substances",
   "pruritus": "Clinical or pathologic image illustrating pruritus",

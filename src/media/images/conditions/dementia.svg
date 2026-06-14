@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 180" role="img" aria-label="Dementia">
+  <rect width="480" height="180" fill="#f8fafc"/>
+  <text x="240" y="24" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" font-weight="600">Dementia</text>
+  <ellipse cx="240" cy="90" rx="80" ry="50" fill="#e2e8f0" stroke="#64748b"/>
+  <path d="M180 75 Q240 55 300 75 Q260 110 180 95 Z" fill="#94a3b8" opacity="0.6"/>
+  <text x="240" y="95" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#fff">cortical atrophy</text>
+  <text x="120" y="145" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10">Memory “</text>
+  <text x="240" y="145" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10">Executive “</text>
+  <text x="360" y="145" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10">Function “</text>
+  <text x="240" y="168" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#64748b">Alzheimer, Lewy body, vascular  chronic progressive</text>
+</svg>

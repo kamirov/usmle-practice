@@ -2025,12 +2025,18 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
       "IGRA TB tests measure IFN-γ release after TB antigen stimulation",
       "Therapeutic IFN-γ can reduce infections in chronic granulomatous disease",
     ],
+    mnemonic:
+      "IFN-γ = Gamma Granuloma-activator: type II interferon from Th1/NK → activates macrophages (TB, CGD therapy).",
     boardsPearls: [
       "Th1 signature cytokine = IFN-γ",
       "IFN-γ activates macrophages for intracellular pathogen killing",
       "IL-12 induces IFN-γ; IL-10 suppresses this axis",
+      "IFN mnemonic — ABG: Alpha/Beta = Antiviral (type I); Gamma = Granuloma/macrophage activation (type II)",
     ],
-    distinguishFrom: ["Type I interferons (IFN-α/β) — antiviral state", "IL-4 — Th2 cytokine"],
+    distinguishFrom: [
+      "IFN-α/β (type I) — antiviral JAK-STAT state; not macrophage-activating",
+      "IL-4 — Th2 cytokine",
+    ],
   },
   {
     id: "interferons",
@@ -2891,6 +2897,131 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
     ],
     pediatrics:
       "Neonates have immature CCK-mediated gallbladder and pancreatic responses; breast milk fat triggers physiologic CCK release promoting satiety after feeds.",
+  },
+  {
+    id: "chemokines",
+    name: "Chemokines",
+    etymology: "Greek chemeia = chemistry + kinein = to move",
+    aliases: [
+      "chemokine",
+      "chemokines",
+      "cxc chemokines",
+      "cc chemokines",
+      "chemotactic cytokines",
+      "chemoattractant cytokines",
+    ],
+    type: "Cytokine",
+    source:
+      "Endothelial cells, fibroblasts, macrophages, epithelial cells, and activated leukocytes",
+    receptor:
+      "G protein–coupled chemokine receptors (e.g., CXCR1/2, CCR5) on leukocytes",
+    function:
+      "Small chemotactic cytokines that create tissue concentration gradients directing leukocyte migration (chemotaxis) during inflammation, lymphocyte homing, and angiogenesis.",
+    clinicalRelevance: [
+      "IL-8/CXCL8 recruits neutrophils to bacterial infection sites",
+      "RANTES/CCL5 and MIP — HIV co-receptor CCR5 on macrophages (maraviroc target)",
+      "Eotaxin/CCL11 recruits eosinophils in allergy and parasitic disease",
+      "Chemokine gradients guide lymphocyte entry into lymph nodes and inflamed tissues",
+    ],
+    boardsPearls: [
+      "Chemokines = chemotactic cytokines; named CXC, CC, CX3C, C by cysteine motif",
+      "IL-8 (CXCL8) — classic neutrophil chemoattractant (still called interleukin-8)",
+      "C5a and LTB₄ are lipid chemoattractants, not chemokines",
+      "Th17 → IL-17 → epithelial IL-8/G-CSF → neutrophil recruitment",
+      "vs cytokine broadly — chemokines specifically direct cell trafficking",
+    ],
+    distinguishFrom: [
+      "Complement C5a — anaphylatoxin and chemoattractant, not a chemokine",
+      "Leukotriene B₄ (LTB₄) — lipid chemoattractant from lipoxygenase pathway",
+      "Selectins — endothelial adhesion molecules for rolling, not soluble gradients",
+      "Interleukins (non-chemokine) — e.g., IL-2 T-cell growth, IL-4 Th2, without primary chemotaxis role",
+    ],
+    pediatrics:
+      "Neonatal leukocyte chemotaxis is relatively immature; leukocyte adhesion deficiency impairs tissue entry despite normal chemokine production.",
+  },
+  {
+    id: "ifn-alpha",
+    name: "Interferon-alpha (IFN-α)",
+    etymology: "interferon = interferes with viral replication + alpha = first type I class",
+    aliases: [
+      "ifn-alpha",
+      "ifn alpha",
+      "ifn-α",
+      "ifn α",
+      "interferon-alpha",
+      "interferon alpha",
+      "interferon-α",
+      "type i interferon alpha",
+      "alpha interferon",
+    ],
+    type: "Cytokine",
+    source: "Plasmacytoid dendritic cells, virus-infected leukocytes, therapeutic recombinant forms",
+    receptor: "Type I interferon receptor (IFNAR1/IFNAR2) → JAK1/TYK2 → STAT1/STAT2",
+    function:
+      "Type I interferon that induces antiviral state (↑ MHC I, PKR, oligoadenylate synthetase), enhances antigen presentation, and modulates innate/adaptive immunity.",
+    mnemonic:
+      "IFN-α = Alpha Antiviral: type I interferon from plasmacytoid DCs — classic antiviral and hep C therapy (historically).",
+    clinicalRelevance: [
+      "Historically used for chronic hepatitis C (now largely replaced by DAAs)",
+      "Used in hairy cell leukemia and some viral malignancies",
+      "Autoimmune diseases (SLE) may have ↑ type I interferon signature",
+      "PEGylated IFN-α with ribavirin was standard HCV regimen pre-DAA era",
+    ],
+    boardsPearls: [
+      "Type I IFNs (α and β) bind IFNAR → JAK-STAT antiviral program",
+      "IFN-α from plasmacytoid dendritic cells during viral infection",
+      "vs IFN-γ — type II, macrophage-activating, not primary antiviral",
+      "IFN mnemonic — ABG: Alpha/Beta = Antiviral (type I); Gamma = Granuloma/macrophage activation (type II)",
+    ],
+    distinguishFrom: [
+      "IFN-β — type I interferon; MS therapy, similar IFNAR signaling",
+      "IFN-γ — type II; Th1/NK product activating macrophages",
+      "IL-12 — induces IFN-γ, not type I antiviral interferon",
+    ],
+    pediatrics:
+      "Congenital type I interferonopathies (e.g., Aicardi-Goutières) show interferon signature; IFN-α rarely used in children for HCV now.",
+  },
+  {
+    id: "ifn-beta",
+    name: "Interferon-beta (IFN-β)",
+    etymology: "interferon = interferes with viral replication + beta = second type I class",
+    aliases: [
+      "ifn-beta",
+      "ifn beta",
+      "ifn-β",
+      "ifn β",
+      "interferon-beta",
+      "interferon beta",
+      "interferon-β",
+      "type i interferon beta",
+      "beta interferon",
+    ],
+    type: "Cytokine",
+    source: "Fibroblasts, epithelial cells, most nucleated cells (endogenous); recombinant forms for MS",
+    receptor: "Type I interferon receptor (IFNAR1/IFNAR2) → JAK1/TYK2 → STAT1/STAT2",
+    function:
+      "Type I interferon with antiviral and immunomodulatory effects — ↓ T-cell trafficking to CNS, shifts cytokine balance, and upregulates anti-inflammatory pathways relevant to MS.",
+    mnemonic:
+      "IFN-β = Beta Brain (MS): type I interferon — fibroblast-derived antiviral signal; therapeutic DMT for relapsing-remitting multiple sclerosis.",
+    clinicalRelevance: [
+      "Disease-modifying therapy for relapsing-remitting multiple sclerosis",
+      "Flu-like symptoms and injection-site reactions with subcutaneous/IM forms",
+      "Same IFNAR pathway as IFN-α but distinct tissue sources and clinical use",
+      "Interferon-beta-1a (Avonex, Rebif) and interferon-beta-1b (Betaseron) formulations",
+    ],
+    boardsPearls: [
+      "Type I interferon — binds IFNAR, not IFN-γ receptor",
+      "MS DMT: interferon-β, glatiramer, natalizumab, fingolimod (know class)",
+      "IFN mnemonic — ABG: Alpha/Beta = Antiviral (type I); Gamma = Granuloma/macrophage activation (type II)",
+      "vs IFN-α — both type I; β classically fibroblast-derived and used in MS",
+    ],
+    distinguishFrom: [
+      "IFN-α — type I; plasmacytoid DC source; HCV therapy historically",
+      "IFN-γ — type II; macrophage activation, TB/CGD therapy",
+      "Glatiramer acetate — MS immunomodulator, not interferon",
+    ],
+    pediatrics:
+      "MS in adolescents may use interferon-β; pediatric MS is rare — distinguish from ADEM and other demyelinating disorders.",
   },
 ];
 
