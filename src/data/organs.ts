@@ -145,6 +145,10 @@ export const ORGANS: OrganEntry[] = [
       "pulmonary lingula",
       "lung lingula",
       "left lung lingula",
+      "lingular segment",
+      "lingular segments",
+      "lingular pneumonia",
+      "left lingula",
     ],
     germLayer: "Endoderm",
     origin:
@@ -2370,7 +2374,9 @@ const ORGAN_DETAILS: Record<
       "Left lung has 2 lobes (upper + lower) but lingula is tongue-like projection of upper lobe — analogous to right middle lobe",
       "Separated from rest of left upper lobe by lingular fissure; overlies cardiac notch",
       "Pneumonia may localize to lingula on chest X-ray as retrocardiac opacity",
-      "Right main bronchus is more vertical — aspiration favors right lower lobe; lingula is left-sided dependent segment in some positions",
+      "Right main bronchus is more vertical — aspiration favors right lower lobe when upright; supine aspiration → RUL and RLL",
+      "Lingula is left upper lobe structure — can consolidate with left-sided dependent aspiration or lingular pneumonia",
+      "Superior and inferior lingular segments (left upper lobe) — know for localization on imaging",
       "vs cerebellar lingula — midline cerebellar vermis structure, not pulmonary anatomy",
     ],
     pediatrics:

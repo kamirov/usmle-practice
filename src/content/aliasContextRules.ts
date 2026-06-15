@@ -32,8 +32,29 @@ function isNotAllCapsMatch(ctx: AliasContextRuleContext): boolean {
   return ctx.matchText !== ctx.matchText.toUpperCase();
 }
 
+function getNearbyContext(
+  ctx: AliasContextRuleContext,
+  before = 120,
+  after = 80,
+): string {
+  return normalizeRuleText(
+    ctx.text.slice(
+      Math.max(0, ctx.index - before),
+      ctx.index + ctx.matchText.length + after,
+    ),
+  );
+}
+
+const NEONATAL_CONTEXT_RE =
+  /\b(?:neonatal|premature|preterm|newborn|newborns|infant|infants|gestational age|weeks gestation|surfactant deficiency|hyaline membrane disease|lecithin|sphingomyelin)\b/u;
+
+function hasNeonatalContext(ctx: AliasContextRuleContext): boolean {
+  return NEONATAL_CONTEXT_RE.test(getNearbyContext(ctx));
+}
+
 const ALIAS_CONTEXT_RULES: Record<string, readonly AliasContextRule[]> = {
   "condition:acute-lymphoblastic-leukemia:all": [isNotAllCapsMatch],
+  "condition:ards:respiratory distress syndrome": [hasNeonatalContext],
   "protein:amyloid-precursor-protein:app": [isNotAllCapsMatch],
   "symptom:menses:period": [hasTemporalPeriodLeftContext],
   "symptom:menses:periods": [hasTemporalPeriodLeftContext],

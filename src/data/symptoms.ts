@@ -6654,6 +6654,55 @@ export const SYMPTOMS: SymptomEntry[] = [
       "Pattern hair loss is uncommon before puberty; adolescent females with vertex thinning plus hyperandrogenic features should be evaluated for PCOS.",
   },
   {
+    id: "altered-consciousness",
+    name: "Altered Consciousness",
+    etymology: "Latin alter = other/changed + Latin conscire = to know + -ness = state",
+    aliases: [
+      "altered consciousness",
+      "altered level of consciousness",
+      "altered levels of consciousness",
+      "change in consciousness",
+      "changes in consciousness",
+      "loc altered",
+      "level of consciousness altered",
+      "abnormal consciousness",
+      "impaired consciousness",
+      "consciousness change",
+    ],
+    definition:
+      "Any acute deviation from normal arousal and responsiveness — spans hyperactive delirium, lethargy, obtundation, stupor, and coma; on boards, a key risk factor for aspiration and airway compromise when protective reflexes fail.",
+    mechanism:
+      "Diffuse or focal CNS dysfunction impairs the reticular activating system and cortical integration — from toxic-metabolic causes (hypoglycemia, electrolyte disorders, uremia, hepatic encephalopathy, drugs), hypoxia/hypercapnia, infection, seizure/postictal state, stroke, hemorrhage, or raised ICP → reduced or fluctuating arousal with impaired cough/gag reflexes and aspiration risk.",
+    thinkOf: [
+      "Toxic-metabolic — hypoglycemia, opioid/benzo overdose, alcohol, hyponatremia, hypercapnia",
+      "Postictal state after generalized seizure",
+      "Stroke, intracranial hemorrhage, meningitis/encephalitis",
+      "Delirium — hyperactive or hypoactive altered consciousness with inattention",
+      "Hepatic or uremic encephalopathy",
+      "Hypoxia from respiratory failure, PE, or aspiration event",
+      "Traumatic brain injury — declining GCS",
+    ],
+    pairWith: [
+      "Altered consciousness + vomiting → aspiration pneumonitis or pneumonia risk; protect airway",
+      "GCS ≤8 → intubate for airway protection (boards pearl)",
+      "Altered consciousness + focal neurologic deficit → stroke or hemorrhage — emergent CT",
+      "Altered consciousness + fever + neck stiffness → meningitis",
+      "Altered consciousness + pinpoint pupils + ↓ respirations → opioid overdose; naloxone",
+      "Altered consciousness + asterixis → metabolic encephalopathy (hepatic, uremic)",
+      "Stroke, overdose, or seizure history + foul sputum → aspiration lung abscess",
+    ],
+    distinguishFrom: [
+      "Confusion / altered mental status — emphasizes disorientation and inattention; may occur with relatively preserved arousal",
+      "Central nervous system depression — subset with reduced arousal from sedative-toxic causes",
+      "Delirium — acute fluctuating attention and awareness; hyperactive or hypoactive",
+      "Coma — unarousable extreme of altered consciousness spectrum",
+      "Psychiatric unresponsiveness — catatonia or malingering; exam and glucose/tox screen distinguish",
+      "Locked-in syndrome — conscious patient with quadriplegia and vertical gaze only",
+    ],
+    pediatrics:
+      "Infants and toddlers show altered consciousness as lethargy, poor feeding, or irritability rather than clear disorientation. Maintain airway; check glucose; consider meningitis, ingestion, and nonaccidental head trauma. Aspiration risk with vomiting and ↓ mental status same as adults.",
+  },
+  {
     id: "central-nervous-system-depression",
     name: "Central Nervous System Depression",
     etymology:
@@ -6694,6 +6743,7 @@ export const SYMPTOMS: SymptomEntry[] = [
       "GCS or AVPU scoring quantifies severity of depressed consciousness",
     ],
     distinguishFrom: [
+      "Altered consciousness — broader umbrella including hyperactive delirium and all LOC changes; CNS depression is depressed arousal subset",
       "Encephalopathy — diffuse brain dysfunction with broader cognitive/behavioral change; CNS depression emphasizes reduced arousal",
       "Delirium — fluctuating attention, often agitation or hyperactivity, not pure sedation",
       "Focal neurologic deficit from stroke — localized weakness/sensory loss with relatively preserved arousal unless large lesion",
@@ -9338,6 +9388,7 @@ export const SYMPTOMS: SymptomEntry[] = [
       "Fluctuating confusion + inattention + new environment → delirium",
     ],
     distinguishFrom: [
+      "Altered consciousness — broader LOC change including agitated delirium; confusion emphasizes disorientation and inattention",
       "Brain fog — subjective cognitive clouding without clear disorientation or AMS",
       "Dementia — chronic progressive decline, not acute fluctuating confusion",
       "Psychosis — organized delusions/hallucinations with less prominent disorientation",

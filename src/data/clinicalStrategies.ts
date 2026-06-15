@@ -445,6 +445,108 @@ export const CLINICAL_STRATEGIES: ClinicalStrategyEntry[] = [
     pediatrics:
       "Aspirin avoided for fever in children (Reye syndrome); aspirin used in Kawasaki disease with IVIG. Pediatric stroke secondary prevention is specialist-guided — antiplatelet therapy may be used but differs from adult DAPT protocols.",
   },
+  {
+    id: "recumbent",
+    name: "Recumbent",
+    etymology: "Latin recumbere = to lie back, recline",
+    aliases: [
+      "recumbent",
+      "recumbent position",
+      "recumbent positions",
+      "lying down",
+      "lying flat",
+      "horizontal position",
+      "recumbent posture",
+    ],
+    definition:
+      "Body position lying horizontally — includes both supine (face up) and prone (face down); relevant to hemodynamics, aspiration anatomy, nocturnal symptoms, and imaging interpretation.",
+    details: [
+      "General term for non-upright posture; specify supine vs prone when clinical context matters",
+      "↑ Venous return vs standing — increases preload; worsens orthopnea/PND in heart failure when flat",
+      "Nocturnal polyuria in heart failure from redistribution of edema fluid when recumbent",
+      "Aspiration routes to dependent lung segments based on recumbent orientation (see supine/prone pearls)",
+      "Fundal height and many abdominal exams performed with patient supine (most common recumbent position)",
+    ],
+    boardsPearls: [
+      "Recumbent = lying down; clarify supine (face up) vs prone (face down) on boards",
+      "HF patient worse when recumbent → orthopnea, PND; sleeps upright",
+      "Aspiration risk ↑ when recumbent with altered consciousness and vomiting",
+      "Orthostatic vitals: compare supine (recumbent) to standing BP",
+      "vs supine — face up; vs prone — face down; vs lateral decubitus — on side",
+    ],
+    pediatrics:
+      "Infants spend most time recumbent; aspiration and GERD symptoms may worsen when supine after feeds — prone positioning only when awake and supervised per safe sleep guidelines (supine for sleep).",
+  },
+  {
+    id: "supine",
+    name: "Supine",
+    etymology: "Latin supinus = lying on the back, thrown backward",
+    aliases: [
+      "supine",
+      "supine position",
+      "supine positions",
+      "supine posture",
+      "lying supine",
+      "on the back",
+      "face up",
+      "face-up position",
+      "dorsal recumbent",
+    ],
+    definition:
+      "Recumbent position with the patient lying on the back, face upward — standard exam and bed position; alters hemodynamics, reflux, and which lung segments are dependent for aspiration.",
+    details: [
+      "↑ Venous return and preload vs standing — used for fundal height, abdominal exam, central line placement",
+      "Orthostatic hypotension testing — supine BP then standing after 1–3 min",
+      "Aspiration in supine patient → dependent segments include right upper lobe and right lower lobe (posterior segments)",
+      "PND and GERD symptoms worsen when supine; elevate head of bed for relief",
+      "Supine CXR — pneumothorax may show deep sulcus sign; air-fluid levels need upright film to see meniscus",
+      "Closing capacity may exceed FRC in elderly supine patients → small airway closure → hypoxemia",
+    ],
+    boardsPearls: [
+      "Supine aspiration → RUL and RLL dependent (boards classic with Mendelson/aspiration)",
+      "Orthopnea/PND — dyspnea when supine in left heart failure",
+      "Supine abdominal exam — Murphy sign, McBurney point, fundal height",
+      "Deep sulcus sign on supine CXR — pneumothorax",
+      "vs prone — opposite orientation; prone used in ARDS ventilation",
+      "Lingula and left lower lobe can be dependent in left lateral or partial supine positions",
+    ],
+    pediatrics:
+      "Safe infant sleep is supine (face up) to reduce SIDS risk — distinct from supervised prone tummy time while awake. Supine aspiration anatomy same as adults for boards vignettes.",
+  },
+  {
+    id: "prone",
+    name: "Prone",
+    etymology: "Latin pronus = leaning forward, inclined; lying face down",
+    aliases: [
+      "prone",
+      "prone position",
+      "prone positions",
+      "prone posture",
+      "lying prone",
+      "face down",
+      "face-down position",
+      "ventral recumbent",
+    ],
+    definition:
+      "Recumbent position with the patient lying on the front, face downward — used therapeutically in severe ARDS, for certain exams, and referenced in anatomy when describing dependent lung segments or nerve compression.",
+    details: [
+      "Prone positioning in ARDS — improves V/Q matching and dorsal lung recruitment in severe hypoxemia",
+      "Superior vena cava syndrome — symptoms may improve when prone (reduces venous compression in some positions)",
+      "Piriformis syndrome — pain with internal rotation of hip while hip flexed in supine; prolonged sitting/supine driving can contribute",
+      "Surgical and procedural access — spine surgery, some ICU turns for pressure injury prevention",
+      "Aspiration less commonly described in prone; vomiting while prone still risks aspiration",
+    ],
+    boardsPearls: [
+      "Prone positioning — severe ARDS adjunct to lung-protective ventilation",
+      "vs supine — prone is face down; supine is face up",
+      "Infant supervised prone tummy time while awake — not for sleep (SIDS prevention = supine sleep)",
+      "MACE (superior mesenteric artery) syndrome — relief in prone or left lateral decubitus",
+      "Prone leg raise (reverse straight leg raise) — tests hip extension / L5-S1 nerve roots",
+      "vs supine — face up; vs knee-chest — flexed posture in ToF tet spells",
+    ],
+    pediatrics:
+      "Prone positioning in pediatric ARDS follows adult ICU principles under specialist care. Awake prone tummy time strengthens infants; sleep must be supine. Pierre Robin sequence may use prone positioning while awake to keep airway open.",
+  },
 ];
 
 const strategyById = new Map(
