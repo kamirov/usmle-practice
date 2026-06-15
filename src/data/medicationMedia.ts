@@ -18,6 +18,7 @@ import glatiramer from "../media/images/medications/glatiramer.webp?url";
 import hydrocortisone from "../media/images/medications/hydrocortisone.svg?url";
 import interferonBeta from "../media/images/medications/interferon-beta.svg?url";
 import linezolid from "../media/images/medications/linezolid.svg?url";
+import metoclopramide from "../media/images/medications/metoclopramide.svg?url";
 import nafcillin from "../media/images/medications/nafcillin.svg?url";
 import naproxen from "../media/images/medications/naproxen.svg?url";
 import oxacillin from "../media/images/medications/oxacillin.svg?url";
@@ -27,6 +28,8 @@ import quetiapine from "../media/images/medications/quetiapine.svg?url";
 import pyridoxine from "../media/images/medications/pyridoxine.svg?url";
 import ramelteon from "../media/images/medications/ramelteon.svg?url";
 import riboflavin from "../media/images/medications/riboflavin.png?url";
+import sumatriptan from "../media/images/medications/sumatriptan.svg?url";
+import topiramate from "../media/images/medications/topiramate.svg?url";
 import vasopressors from "../media/images/medications/vasopressors.png?url";
 import antiTnfTherapy from "../media/images/medications/anti-tnf-therapy.png?url";
 
@@ -50,6 +53,7 @@ export type MedicationImageId = Extract<
   | "hydrocortisone"
   | "interferon-beta"
   | "linezolid"
+  | "metoclopramide"
   | "nafcillin"
   | "naproxen"
   | "oxacillin"
@@ -59,6 +63,8 @@ export type MedicationImageId = Extract<
   | "pyridoxine"
   | "ramelteon"
   | "riboflavin"
+  | "sumatriptan"
+  | "topiramate"
   | "vasopressors"
 >;
 
@@ -86,6 +92,7 @@ export const MEDICATION_IMAGES: Partial<Record<MedicationImageId, string>> = {
   hydrocortisone: extensionAssetUrl(hydrocortisone),
   "interferon-beta": extensionAssetUrl(interferonBeta),
   linezolid: extensionAssetUrl(linezolid),
+  metoclopramide: extensionAssetUrl(metoclopramide),
   nafcillin: extensionAssetUrl(nafcillin),
   naproxen: extensionAssetUrl(naproxen),
   oxacillin: extensionAssetUrl(oxacillin),
@@ -95,6 +102,8 @@ export const MEDICATION_IMAGES: Partial<Record<MedicationImageId, string>> = {
   pyridoxine: extensionAssetUrl(pyridoxine),
   ramelteon: extensionAssetUrl(ramelteon),
   riboflavin: extensionAssetUrl(riboflavin),
+  sumatriptan: extensionAssetUrl(sumatriptan),
+  topiramate: extensionAssetUrl(topiramate),
   vasopressors: extensionAssetUrl(vasopressors),
 };
 
@@ -161,6 +170,10 @@ export const MEDICATION_IMAGE_ATTRIBUTIONS: Partial<
     label: "Wikimedia Commons (Struktur Linezolid.svg)",
     url: "https://commons.wikimedia.org/wiki/File:Struktur_Linezolid.svg",
   },
+  metoclopramide: {
+    label: "Wikimedia Commons (Metoclopramide.svg)",
+    url: "https://commons.wikimedia.org/wiki/File:Metoclopramide.svg",
+  },
   nafcillin: {
     label: "Wikimedia Commons (Nafcillin.svg)",
     url: "https://commons.wikimedia.org/wiki/File:Nafcillin.svg",
@@ -209,6 +222,14 @@ export const MEDICATION_IMAGE_ATTRIBUTIONS: Partial<
     label: "Wikimedia Commons (Riboflavin.svg)",
     url: "https://commons.wikimedia.org/wiki/File:Riboflavin.svg",
   },
+  sumatriptan: {
+    label: "Wikimedia Commons (Sumatriptan.svg)",
+    url: "https://commons.wikimedia.org/wiki/File:Sumatriptan.svg",
+  },
+  topiramate: {
+    label: "Wikimedia Commons (Topiramate.svg)",
+    url: "https://commons.wikimedia.org/wiki/File:Topiramate.svg",
+  },
   vasopressors: {
     label: "Wikimedia Commons (Norepinephrine.svg)",
     url: "https://commons.wikimedia.org/wiki/File:Norepinephrine.svg",
@@ -248,6 +269,8 @@ export const MEDICATION_IMAGE_CAPTIONS: Partial<
     "Diphenhydramine — first-generation H1 blocker with antimuscarinic sedation and toxidrome risk in overdose",
   linezolid:
     "Linezolid inhibits 50S ribosomal initiation — covers MRSA pneumonia with oral bioavailability",
+  metoclopramide:
+    "Metoclopramide — D₂ antagonist antiemetic and prokinetic; EPS risk limits duration",
   nafcillin:
     "Nafcillin — penicillinase-resistant penicillin for MSSA; not active against MRSA",
   naproxen:
@@ -272,6 +295,10 @@ export const MEDICATION_IMAGE_CAPTIONS: Partial<
     "Antibody structure highlighting Fab antigen-binding regions relevant to Fab antivenom fragments",
   riboflavin:
     "Riboflavin (vitamin B2) chemical structure — precursor for FMN and FAD redox cofactors",
+  sumatriptan:
+    "Sumatriptan — 5-HT₁B/₁D agonist triptan for acute migraine and cluster headache",
+  topiramate:
+    "Topiramate — anticonvulsant used for migraine prophylaxis with weight loss and paresthesia side effects",
   vasopressors:
     "Norepinephrine structure — prototypical alpha-adrenergic vasopressor used in septic shock",
 };

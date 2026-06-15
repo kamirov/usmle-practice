@@ -291,3 +291,9 @@ fasciculation.jpg
   Source: CDC PHIL #8171
   Description: Visible muscle fasciculation in neuromuscular disease
   Page: https://phil.cdc.gov/Details.aspx?pid=8171
+
+photophobia.jpg
+  Source: Wikimedia Commons — Iritis.jpg
+  Page: https://commons.wikimedia.org/wiki/File:Iritis.jpg
+  Download: https://upload.wikimedia.org/wikipedia/commons/e/ec/Iritis.jpg
+

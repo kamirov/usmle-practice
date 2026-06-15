@@ -176,6 +176,39 @@ export const CLINICAL_STRATEGIES: ClinicalStrategyEntry[] = [
       "Pediatric migraine prophylaxis uses weight-based topiramate, propranolol, or amitriptyline when attacks are frequent/disabling; behavioral therapy and lifestyle measures are first-line in many children before daily medication.",
   },
   {
+    id: "hundred-percent-oxygen",
+    name: "100% Oxygen",
+    etymology: "Latin centum = hundred + Latin per = through + centum + oxygen = O₂ gas",
+    aliases: [
+      "100% oxygen",
+      "100 percent oxygen",
+      "high flow oxygen",
+      "high-flow oxygen",
+      "normobaric oxygen therapy",
+      "oxygen therapy cluster headache",
+      "non-rebreather oxygen",
+      "non rebreather mask oxygen",
+    ],
+    definition:
+      "Inhalation of high-concentration oxygen (typically 12–15 L/min via non-rebreather mask) — first-line acute abortive therapy for cluster headache and used in selected hypoxemic emergencies.",
+    details: [
+      "Cluster headache: 12–15 L/min 100% O₂ via non-rebreather mask for 15–20 minutes at attack onset",
+      "Mechanism in cluster headache likely involves carotid body chemoreceptor modulation and trigeminovascular pathway effects",
+      "Also used in carbon monoxide poisoning, decompression sickness, and preoxygenation before intubation",
+      "Non-rebreather mask delivers highest FiO₂ without mechanical ventilation",
+      "Does not replace sumatriptan when oxygen unavailable — sumatriptan SC is alternative acute cluster therapy",
+    ],
+    boardsPearls: [
+      "Cluster headache acute treatment: 100% oxygen OR sumatriptan SC",
+      "O₂ at 12–15 L/min non-rebreather for 15–20 min — classic boards answer",
+      "vs migraine abortive — triptans/NSAIDs for migraine; oxygen is cluster-specific acute therapy",
+      "Cluster headache: unilateral periorbital pain + autonomic symptoms (lacrimation, rhinorrhea, ptosis)",
+      "Verapamil is cluster prophylaxis — not acute abortive like oxygen",
+    ],
+    pediatrics:
+      "Cluster headache is rare in children; same oxygen protocol applies when diagnosed. Use caution with high-flow oxygen in infants — specialist-guided.",
+  },
+  {
     id: "fundal-height",
     name: "Fundal Height",
     etymology: "Latin fundus = bottom/base (uterine top) + Old English hiehthu = height",

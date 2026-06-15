@@ -771,6 +771,41 @@ export const MEDICATIONS: MedicationEntry[] = [
     ],
   },
   {
+    id: "topiramate",
+    name: "Topiramate",
+    etymology: "topo- = structural/topological naming element + -iramate = sulfamate anticonvulsant suffix",
+    aliases: [
+      "topiramate",
+      "topamax",
+      "topiramates",
+    ],
+    drugClass: "Anticonvulsant / migraine prophylactic",
+    mechanism:
+      "Blocks voltage-gated Na⁺ channels, augments GABA-A activity, and antagonizes AMPA/kainate glutamate receptors → ↓ neuronal excitability and trigeminovascular activation.",
+    indications: [
+      "Migraine prophylaxis",
+      "Epilepsy (focal and generalized seizures)",
+      "Adjunct weight loss (selected patients)",
+    ],
+    adverseEffects: [
+      "Cognitive slowing, word-finding difficulty, sedation",
+      "Paresthesias (tingling in fingers/toes)",
+      "Weight loss, anorexia",
+      "Nephrolithiasis (kidney stones)",
+      "Metabolic acidosis (carbonic anhydrase inhibition)",
+      "Acute angle-closure glaucoma",
+      "Teratogenic — cleft lip/palate risk",
+    ],
+    boardsPearls: [
+      "Migraine prophylaxis with propranolol, amitriptyline, valproate — topiramate is classic boards choice",
+      "Weight loss (vs valproate weight gain)",
+      "Paresthesias and cognitive side effects are common — \"dope-a-max\" mnemonic",
+      "Teratogenic — avoid in pregnancy; use contraception",
+      "Carbonic anhydrase effect → metabolic acidosis and kidney stones",
+      "vs sumatriptan — topiramate is daily prophylaxis, not acute abortive therapy",
+    ],
+  },
+  {
     id: "alteplase",
     name: "Alteplase",
     etymology: "altered tissue plasminogen activator + -ase = enzyme suffix",
@@ -3805,6 +3840,77 @@ export const MEDICATIONS: MedicationEntry[] = [
       "vs metoclopramide — ondansetron is pure 5-HT₃ block without D₂ prokinetic effects",
       "Peds: used for chemotherapy and postoperative nausea; weight-based dosing",
     ],
+  },
+  {
+    id: "metoclopramide",
+    name: "Metoclopramide",
+    etymology: "meto- = substituted benzamide naming element + -clopramide = prokinetic/antiemetic suffix",
+    aliases: [
+      "metoclopramide",
+      "reglan",
+      "metoclopramides",
+    ],
+    drugClass: "Prokinetic / antiemetic (D₂ antagonist)",
+    mechanism:
+      "Dopamine D₂ receptor antagonism in the chemoreceptor trigger zone and gut → antiemetic effect; also ↑ gastric emptying and lower esophageal sphincter tone; weak 5-HT₃ antagonism at higher doses.",
+    indications: [
+      "Nausea and vomiting (including migraine-associated)",
+      "Gastroparesis (especially diabetic)",
+      "GERD adjunct (short-term)",
+      "Facilitates gastric emptying before radiologic procedures",
+    ],
+    adverseEffects: [
+      "Extrapyramidal symptoms — dystonia, akathisia, parkinsonism (especially young women)",
+      "Tardive dyskinesia with prolonged use",
+      "Galactorrhea, amenorrhea (hyperprolactinemia)",
+      "Depression, fatigue",
+    ],
+    boardsPearls: [
+      "D₂ antagonist → EPS risk; limit duration especially in young patients",
+      "Drug-induced parkinsonism — metoclopramide and antipsychotics",
+      "Migraine: antiemetic + may improve oral triptan absorption",
+      "vs ondansetron — metoclopramide has prokinetic D₂ block; ondansetron is pure 5-HT₃ block",
+      "Contraindicated in GI obstruction, Parkinson disease, seizure disorders",
+    ],
+    pediatrics:
+      "EPS/dystonia risk in children — use lowest effective dose and shortest duration; diphenhydramine treats acute dystonic reaction.",
+  },
+  {
+    id: "sumatriptan",
+    name: "Sumatriptan",
+    etymology: "suma- = triptan class prefix + -triptan = serotonin 5-HT1 receptor agonist suffix",
+    aliases: [
+      "sumatriptan",
+      "imitrex",
+      "sumatriptans",
+      "triptan",
+      "triptans",
+      "5-ht1 agonist",
+      "5-ht1 receptor agonist",
+    ],
+    drugClass: "Triptan (5-HT₁B/₁D agonist)",
+    mechanism:
+      "Selective 5-HT₁B/₁D receptor agonism → cranial vasoconstriction, inhibition of trigeminal neuropeptide release, and ↓ pain transmission in the trigeminovascular system.",
+    indications: [
+      "Acute migraine attack (abortive therapy)",
+      "Acute cluster headache (especially subcutaneous formulation)",
+    ],
+    adverseEffects: [
+      "Chest tightness or pressure (usually noncardiac vasospasm sensation)",
+      "Coronary vasospasm — avoid in CAD or uncontrolled hypertension",
+      "Paresthesias, flushing, dizziness",
+      "Serotonin syndrome with SSRIs/SNRIs/MAOIs",
+    ],
+    boardsPearls: [
+      "Triptans = acute migraine abortive therapy — not prophylaxis",
+      "Contraindicated in CAD, uncontrolled HTN, hemiplegic/basilar migraine, recent stroke/TIA",
+      "Serotonin syndrome risk with serotonergic drugs (SSRIs, MAOIs, linezolid)",
+      "Cluster headache: sumatriptan SC or 100% oxygen are acute treatments",
+      "vs NSAIDs — triptans for moderate–severe migraine when NSAIDs fail",
+      "Oral triptans less effective if vomiting — consider SC/IN or give metoclopramide first",
+    ],
+    pediatrics:
+      "Triptans used in adolescents for acute migraine when NSAIDs fail; coronary risk assessment still applies in older adolescents.",
   },
   {
     id: "chlorpheniramine",

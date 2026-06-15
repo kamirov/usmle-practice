@@ -148,3 +148,15 @@ general-anesthetic.png
 isoflurane.png
   Source: Wikimedia Commons — Isoflurane 3d.png
   Page: https://commons.wikimedia.org/wiki/File:Isoflurane_3d.png
+
+sumatriptan.svg
+  Source: Wikimedia Commons — Sumatriptan.svg
+  Page: https://commons.wikimedia.org/wiki/File:Sumatriptan.svg
+
+topiramate.svg
+  Source: Wikimedia Commons — Topiramate.svg
+  Page: https://commons.wikimedia.org/wiki/File:Topiramate.svg
+
+metoclopramide.svg
+  Source: Wikimedia Commons — Metoclopramide.svg
+  Page: https://commons.wikimedia.org/wiki/File:Metoclopramide.svg

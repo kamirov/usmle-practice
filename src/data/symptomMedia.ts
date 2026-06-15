@@ -75,6 +75,7 @@ import papule from "../media/images/symptoms/papule.jpg?url";
 import paresis from "../media/images/symptoms/paresis.jpg?url";
 import peripheralEdema from "../media/images/symptoms/peripheral-edema.jpg?url";
 import plaque from "../media/images/symptoms/plaque.jpg?url";
+import photophobia from "../media/images/symptoms/photophobia.jpg?url";
 import pleuriticChestPain from "../media/images/symptoms/pleuritic-chest-pain.jpg?url";
 import pnd from "../media/images/symptoms/pnd.jpg?url";
 import polydipsia from "../media/images/symptoms/polydipsia.jpg?url";
@@ -215,6 +216,7 @@ export type SymptomImageId = Extract<
   | "xerosis"
   | "xerostomia"
   | "petechiae"
+  | "photophobia"
 >;
 
 function extensionAssetUrl(path: string): string {
@@ -329,6 +331,7 @@ export const SYMPTOM_IMAGES: Partial<Record<SymptomImageId, string>> = {
   "xerosis": extensionAssetUrl(xerosis),
   "xerostomia": extensionAssetUrl(xerostomia),
   "petechiae": extensionAssetUrl(purpura),
+  "photophobia": extensionAssetUrl(photophobia),
 };
 
 export const SYMPTOM_IMAGE_ATTRIBUTIONS: Partial<
@@ -440,6 +443,7 @@ export const SYMPTOM_IMAGE_ATTRIBUTIONS: Partial<
   "xerosis": { label: "Wikimedia Commons (Xeroderma knuckles.jpg)", url: "https://commons.wikimedia.org/wiki/File:Xeroderma_knuckles.jpg" },
   "xerostomia": { label: "Wikimedia Commons (Xerostomia - Dry Mouth.jpg)", url: "https://commons.wikimedia.org/wiki/File:Xerostomia_-_Dry_Mouth.jpg" },
   "petechiae": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:purpura.jpg" },
+  "photophobia": { label: "Wikimedia Commons (Iritis.jpg)", url: "https://commons.wikimedia.org/wiki/File:Iritis.jpg" },
 };
 
 export const SYMPTOM_IMAGE_CAPTIONS: Partial<Record<SymptomImageId, string>> = {
@@ -549,6 +553,7 @@ export const SYMPTOM_IMAGE_CAPTIONS: Partial<Record<SymptomImageId, string>> = {
   "xerosis": "Dry, scaling skin over the knuckles consistent with xerosis",
   "xerostomia": "Dry mouth illustration showing reduced salivary moisture",
   "petechiae": "Non-blanching petechiae on the lower limb from leukocytoclastic vasculitis",
+  "photophobia": "Acute iritis — painful red eye with photophobia from intraocular inflammation",
 };
 
 export function getSymptomImageForId(id: string): string | undefined {

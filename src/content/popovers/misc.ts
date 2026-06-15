@@ -1,10 +1,16 @@
 import { getClinicalStrategyById } from "../../data/clinicalStrategies";
+import {
+  getClinicalStrategyImageAttributionForId,
+  getClinicalStrategyImageCaptionForId,
+  getClinicalStrategyImageForId,
+} from "../../data/clinicalStrategyMedia";
 import { getNephronSegmentById } from "../../data/nephron";
 import { getProcedureById } from "../../data/procedures";
 import { renderPopoverTitle } from "../popoverIcons";
 import {
   renderListSection,
   renderPediatricsSection,
+  renderPopoverMediaBlock,
   renderRichPopoverContent,
 } from "../popoverShared";
 
@@ -62,8 +68,12 @@ export function renderClinicalStrategyPopover(
   const strategy = getClinicalStrategyById(clinicalStrategyId);
   if (!strategy || !popover) return false;
 
-  popover.classList.add("usmle-organ-popover--rich");
-  popover.innerHTML = renderRichPopoverContent(
+  const imageSrc = getClinicalStrategyImageForId(clinicalStrategyId);
+  const imageCaption = getClinicalStrategyImageCaptionForId(clinicalStrategyId);
+  const imageAttribution =
+    getClinicalStrategyImageAttributionForId(clinicalStrategyId);
+
+  const bodyContent = renderRichPopoverContent(
     `
     ${renderPopoverTitle(strategy.name, "clinical-strategy", strategy.etymology)}
     <div class="usmle-organ-popover__meaning">${strategy.definition}</div>
@@ -74,5 +84,23 @@ export function renderClinicalStrategyPopover(
     ${strategy.pediatrics ? renderPediatricsSection(strategy.pediatrics) : ""}
   `,
   );
+
+  popover.classList.add("usmle-organ-popover--rich");
+  if (imageSrc && imageCaption && imageAttribution) {
+    popover.classList.add("usmle-organ-popover--with-media");
+    popover.innerHTML = `
+      <div class="usmle-organ-popover__layout">
+        <div class="usmle-organ-popover__body">${bodyContent}</div>
+        ${renderPopoverMediaBlock({
+          src: imageSrc,
+          alt: `${strategy.name} image`,
+          caption: imageCaption,
+          attribution: imageAttribution,
+        })}
+      </div>
+    `;
+  } else {
+    popover.innerHTML = bodyContent;
+  }
   return true;
 }

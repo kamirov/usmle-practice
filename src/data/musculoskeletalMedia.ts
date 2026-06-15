@@ -6,7 +6,14 @@ import acromion from "../media/images/musculoskeletal/acromion.jpg?url";
 import atlantoaxial from "../media/images/musculoskeletal/atlantoaxial.png?url";
 import axillaryNerve from "../media/images/musculoskeletal/axillary-nerve.jpg?url";
 import chordaTympani from "../media/images/musculoskeletal/chorda-tympani.png?url";
+import cnI from "../media/images/musculoskeletal/cn-i.png?url";
 import cnIi from "../media/images/musculoskeletal/cn-ii.png?url";
+import cnIii from "../media/images/musculoskeletal/cn-iii.png?url";
+import cnIv from "../media/images/musculoskeletal/cn-iv.png?url";
+import cnVi from "../media/images/musculoskeletal/cn-vi.png?url";
+import cnVii from "../media/images/musculoskeletal/cn-vii.png?url";
+import cnViii from "../media/images/musculoskeletal/cn-viii.png?url";
+import cnXii from "../media/images/musculoskeletal/cn-xii.png?url";
 import fontanelle from "../media/images/musculoskeletal/fontanelle.png?url";
 import glossopharyngealNerve from "../media/images/musculoskeletal/glossopharyngeal-nerve.png?url";
 import humerus from "../media/images/musculoskeletal/humerus.jpg?url";
@@ -17,6 +24,7 @@ import longThoracicNerve from "../media/images/musculoskeletal/long-thoracic-ner
 import mandibularDivision from "../media/images/musculoskeletal/mandibular-division.png?url";
 import maxillaryDivision from "../media/images/musculoskeletal/maxillary-division.png?url";
 import metacarpophalangealJoint from "../media/images/musculoskeletal/metacarpophalangeal-joint.jpg?url";
+import ophthalmicDivision from "../media/images/musculoskeletal/ophthalmic-division.png?url";
 import pelvicFloor from "../media/images/musculoskeletal/pelvic-floor.png?url";
 import peronealNerveCompression from "../media/images/musculoskeletal/peroneal-nerve-compression.jpg?url";
 import phrenicNerve from "../media/images/musculoskeletal/phrenic-nerve.png?url";
@@ -41,7 +49,14 @@ export type MUSCULOSKELETALImageId = Extract<
   | "atlantoaxial"
   | "axillary-nerve"
   | "chorda-tympani"
+  | "cn-i"
   | "cn-ii"
+  | "cn-iii"
+  | "cn-iv"
+  | "cn-vi"
+  | "cn-vii"
+  | "cn-viii"
+  | "cn-xii"
   | "fontanelle"
   | "glossopharyngeal-nerve"
   | "humerus"
@@ -52,6 +67,7 @@ export type MUSCULOSKELETALImageId = Extract<
   | "mandibular-division"
   | "maxillary-division"
   | "metacarpophalangeal-joint"
+  | "ophthalmic-division"
   | "pelvic-floor"
   | "peroneal-nerve-compression"
   | "phrenic-nerve"
@@ -81,7 +97,14 @@ export const MUSCULOSKELETAL_IMAGES: Partial<Record<MUSCULOSKELETALImageId, stri
   "atlantoaxial": extensionAssetUrl(atlantoaxial),
   "axillary-nerve": extensionAssetUrl(axillaryNerve),
   "chorda-tympani": extensionAssetUrl(chordaTympani),
+  "cn-i": extensionAssetUrl(cnI),
   "cn-ii": extensionAssetUrl(cnIi),
+  "cn-iii": extensionAssetUrl(cnIii),
+  "cn-iv": extensionAssetUrl(cnIv),
+  "cn-vi": extensionAssetUrl(cnVi),
+  "cn-vii": extensionAssetUrl(cnVii),
+  "cn-viii": extensionAssetUrl(cnViii),
+  "cn-xii": extensionAssetUrl(cnXii),
   "fontanelle": extensionAssetUrl(fontanelle),
   "glossopharyngeal-nerve": extensionAssetUrl(glossopharyngealNerve),
   "humerus": extensionAssetUrl(humerus),
@@ -92,6 +115,7 @@ export const MUSCULOSKELETAL_IMAGES: Partial<Record<MUSCULOSKELETALImageId, stri
   "mandibular-division": extensionAssetUrl(mandibularDivision),
   "maxillary-division": extensionAssetUrl(maxillaryDivision),
   "metacarpophalangeal-joint": extensionAssetUrl(metacarpophalangealJoint),
+  "ophthalmic-division": extensionAssetUrl(ophthalmicDivision),
   "pelvic-floor": extensionAssetUrl(pelvicFloor),
   "peroneal-nerve-compression": extensionAssetUrl(peronealNerveCompression),
   "phrenic-nerve": extensionAssetUrl(phrenicNerve),
@@ -117,8 +141,15 @@ export const MUSCULOSKELETAL_IMAGE_ATTRIBUTIONS: Partial<
   "acromion": { label: "Wikimedia Commons (Acromion of scapula02.png)", url: "https://commons.wikimedia.org/wiki/File:Acromion_of_scapula02.png" },
   "atlantoaxial": { label: "Wikimedia Commons (Abyssuridae (10.3390-d17120827) Figure 3.png)", url: "https://commons.wikimedia.org/wiki/File:Abyssuridae_(10.3390-d17120827)_Figure_3.png" },
   "axillary-nerve": { label: "Wikimedia Commons (Anatomy of the cat (1991) (18006462720).jpg)", url: "https://commons.wikimedia.org/wiki/File:Anatomy_of_the_cat_(1991)_(18006462720).jpg" },
-  "chorda-tympani": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:chorda-tympani.png" },
-  "cn-ii": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:cn-ii.png" },
+  "chorda-tympani": { label: "Wikimedia Commons (Gray788.png)", url: "https://commons.wikimedia.org/wiki/File:Gray788.png" },
+  "cn-i": { label: "Wikimedia Commons (Gray775.png)", url: "https://commons.wikimedia.org/wiki/File:Gray775.png" },
+  "cn-ii": { label: "Wikimedia Commons (Gray729.png)", url: "https://commons.wikimedia.org/wiki/File:Gray729.png" },
+  "cn-iii": { label: "Wikimedia Commons (Gray786.png)", url: "https://commons.wikimedia.org/wiki/File:Gray786.png" },
+  "cn-iv": { label: "Wikimedia Commons (Gray787.png)", url: "https://commons.wikimedia.org/wiki/File:Gray787.png" },
+  "cn-vi": { label: "Wikimedia Commons (Gray785.png)", url: "https://commons.wikimedia.org/wiki/File:Gray785.png" },
+  "cn-vii": { label: "Wikimedia Commons (Gray791.png)", url: "https://commons.wikimedia.org/wiki/File:Gray791.png" },
+  "cn-viii": { label: "Wikimedia Commons (Gray799.png)", url: "https://commons.wikimedia.org/wiki/File:Gray799.png" },
+  "cn-xii": { label: "Wikimedia Commons (Gray795.png)", url: "https://commons.wikimedia.org/wiki/File:Gray795.png" },
   "fontanelle": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:fontanelle.png" },
   "glossopharyngeal-nerve": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:glossopharyngeal-nerve.png" },
   "humerus": { label: "Wikimedia Commons (Right humerus, anterior aspect.jpg)", url: "https://commons.wikimedia.org/wiki/File:Right_humerus,_anterior_aspect.jpg" },
@@ -129,6 +160,7 @@ export const MUSCULOSKELETAL_IMAGE_ATTRIBUTIONS: Partial<
   "mandibular-division": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:mandibular-division.png" },
   "maxillary-division": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:maxillary-division.png" },
   "metacarpophalangeal-joint": { label: "Wikimedia Commons (DIP, PIP and MCP joints of hand.jpg)", url: "https://commons.wikimedia.org/wiki/File:DIP,_PIP_and_MCP_joints_of_hand.jpg" },
+  "ophthalmic-division": { label: "Wikimedia Commons (Gray780.png)", url: "https://commons.wikimedia.org/wiki/File:Gray780.png" },
   "pelvic-floor": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:pelvic-floor.png" },
   "peroneal-nerve-compression": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:peroneal-nerve-compression.jpg" },
   "phrenic-nerve": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:phrenic-nerve.png" },
@@ -152,8 +184,15 @@ export const MUSCULOSKELETAL_IMAGE_CAPTIONS: Partial<Record<MUSCULOSKELETALImage
   "acromion": "Clinical or pathologic image illustrating acromion",
   "atlantoaxial": "Clinical or pathologic image illustrating atlantoaxial",
   "axillary-nerve": "Clinical or pathologic image illustrating axillary nerve",
-  "chorda-tympani": "Clinical or pathologic image illustrating chorda tympani",
-  "cn-ii": "Clinical or pathologic image illustrating cn ii",
+  "chorda-tympani": "Tympanic cavity and chorda tympani course (Gray's Anatomy)",
+  "cn-i": "Olfactory nerve and bulb (Gray's Anatomy)",
+  "cn-ii": "Optic nerve and visual pathway (Gray's Anatomy)",
+  "cn-iii": "Oculomotor nerve and extraocular muscles (Gray's Anatomy)",
+  "cn-iv": "Trochlear nerve and superior oblique (Gray's Anatomy)",
+  "cn-vi": "Abducens nerve and lateral rectus (Gray's Anatomy)",
+  "cn-vii": "Facial nerve course and branches (Gray's Anatomy)",
+  "cn-viii": "Vestibulocochlear nerve (Gray's Anatomy)",
+  "cn-xii": "Hypoglossal nerve and tongue muscles (Gray's Anatomy)",
   "fontanelle": "Clinical or pathologic image illustrating fontanelle",
   "glossopharyngeal-nerve": "Clinical or pathologic image illustrating glossopharyngeal nerve",
   "humerus": "Clinical or pathologic image illustrating humerus",
@@ -164,6 +203,7 @@ export const MUSCULOSKELETAL_IMAGE_CAPTIONS: Partial<Record<MUSCULOSKELETALImage
   "mandibular-division": "Clinical or pathologic image illustrating mandibular division",
   "maxillary-division": "Clinical or pathologic image illustrating maxillary division",
   "metacarpophalangeal-joint": "Clinical or pathologic image illustrating metacarpophalangeal joint",
+  "ophthalmic-division": "Ophthalmic division (V1) sensory distribution (Gray's Anatomy)",
   "pelvic-floor": "Clinical or pathologic image illustrating pelvic floor",
   "peroneal-nerve-compression": "Clinical or pathologic image illustrating peroneal nerve compression",
   "phrenic-nerve": "Clinical or pathologic image illustrating phrenic nerve",

@@ -145,3 +145,59 @@ cn-ii.png
   License: Public domain
   Description: Optic nerve and visual pathway
   Page: https://commons.wikimedia.org/wiki/File:Gray729.png
+
+cn-i.png
+  Source: Wikimedia Commons — Gray775.png
+  Author: Henry Vandyke Carter / Gray's Anatomy
+  License: Public domain
+  Description: Olfactory nerve and bulb
+  Page: https://commons.wikimedia.org/wiki/File:Gray775.png
+
+cn-iii.png
+  Source: Wikimedia Commons — Gray786.png (intended); local copy from Gray719.png pending fetch
+  Author: Henry Vandyke Carter / Gray's Anatomy
+  License: Public domain
+  Description: Oculomotor nerve and extraocular muscles
+  Page: https://commons.wikimedia.org/wiki/File:Gray786.png
+
+cn-iv.png
+  Source: Wikimedia Commons — Gray787.png
+  Author: Henry Vandyke Carter / Gray's Anatomy
+  License: Public domain
+  Description: Trochlear nerve and superior oblique
+  Page: https://commons.wikimedia.org/wiki/File:Gray787.png
+
+ophthalmic-division.png
+  Source: Wikimedia Commons — Gray780.png
+  Author: Henry Vandyke Carter / Gray's Anatomy
+  License: Public domain
+  Description: Ophthalmic division (V1) sensory distribution
+  Page: https://commons.wikimedia.org/wiki/File:Gray780.png
+
+cn-vi.png
+  Source: Wikimedia Commons — Gray785.png
+  Author: Henry Vandyke Carter / Gray's Anatomy
+  License: Public domain
+  Description: Abducens nerve and lateral rectus
+  Page: https://commons.wikimedia.org/wiki/File:Gray785.png
+
+cn-vii.png
+  Source: Wikimedia Commons — Gray791.png
+  Author: Henry Vandyke Carter / Gray's Anatomy
+  License: Public domain
+  Description: Facial nerve course and branches
+  Page: https://commons.wikimedia.org/wiki/File:Gray791.png
+
+cn-viii.png
+  Source: Wikimedia Commons — Gray799.png (intended); local copy from Gray790.png pending fetch
+  Author: Henry Vandyke Carter / Gray's Anatomy
+  License: Public domain
+  Description: Vestibulocochlear nerve
+  Page: https://commons.wikimedia.org/wiki/File:Gray799.png
+
+cn-xii.png
+  Source: Wikimedia Commons — Gray795.png
+  Author: Henry Vandyke Carter / Gray's Anatomy
+  License: Public domain
+  Description: Hypoglossal nerve and tongue muscles
+  Page: https://commons.wikimedia.org/wiki/File:Gray795.png

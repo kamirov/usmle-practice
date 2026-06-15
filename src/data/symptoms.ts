@@ -3301,6 +3301,49 @@ export const SYMPTOMS: SymptomEntry[] = [
     ],
   },
   {
+    id: "photophobia",
+    name: "Photophobia",
+    etymology: "Greek phos = light + phobos = fear + -ia = condition",
+    aliases: [
+      "photophobia",
+      "photophobias",
+      "light sensitivity",
+      "sensitivity to light",
+      "intolerance to light",
+      "aversion to light",
+    ],
+    definition:
+      "Abnormal intolerance to light causing eye discomfort or pain and often prompting avoidance of bright environments — a common feature of migraine and meningeal irritation.",
+    mechanism:
+      "Trigeminal sensitization (migraine), meningeal inflammation stretching pain-sensitive structures, or intraocular inflammation (uveitis) amplifies light-induced discomfort via optic and trigeminal pathways.",
+    thinkOf: [
+      "Migraine",
+      "Meningitis and subarachnoid hemorrhage",
+      "Encephalitis",
+      "Uveitis / iritis",
+      "Corneal abrasion or keratitis",
+      "Albinism (lack of iris pigment)",
+      "Concussion / post-traumatic headache",
+    ],
+    pairWith: [
+      "Pulsating headache + nausea + phonophobia → migraine",
+      "Fever + neck stiffness + headache → meningitis",
+      "Thunderclap headache + nuchal rigidity → subarachnoid hemorrhage",
+      "Painful red eye + miosis → acute iritis/uveitis",
+      "Kernig/Brudzinski signs → meningeal irritation triad",
+      "vs phonophobia — sound intolerance; often co-occurs in migraine",
+    ],
+    distinguishFrom: [
+      "Phonophobia — intolerance to sound, not light",
+      "Photopsia — perceived flashes of light (retinal detachment, migraine aura)",
+      "Blepharospasm — eyelid spasm, not primary light aversion from meningeal/migraine mechanisms",
+      "Normal dim-light preference — not pathologic photophobia",
+      "Diplopia — double vision, distinct symptom",
+    ],
+    pediatrics:
+      "Neonatal meningitis and congenital glaucoma can present with photophobia; infantile glaucoma adds tearing and buphthalmos.",
+  },
+  {
     id: "maculopapular-rash",
     name: "Maculopapular Rash",
     etymology: "Latin macula = spot + papula = pimple + rash = skin eruption",
