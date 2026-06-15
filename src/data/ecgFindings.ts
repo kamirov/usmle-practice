@@ -255,6 +255,48 @@ export const ECG_FINDINGS: EcgFindingEntry[] = [
     pediatrics:
       "Atrial flutter can occur in congenital heart disease or after palliative surgery; same sawtooth pattern with rate-related symptoms in infants.",
   },
+  {
+    id: "sinus-arrhythmia",
+    name: "Sinus Arrhythmia",
+    etymology:
+      "Latin sinus = hollow/channel (sinus node) + Greek a- = without + rhythmos = measured flow",
+    aliases: [
+      "sinus arrhythmia",
+      "sinus arrhythmias",
+      "respiratory sinus arrhythmia",
+      "respiratory sinus arrhythmias",
+      "sinus respiratory arrhythmia",
+      "phasic sinus arrhythmia",
+      "physiologic sinus arrhythmia",
+      "rsa",
+    ],
+    interpretation:
+      "Physiologic variation in sinus rate with respiration — R-R interval shortens during inspiration and lengthens during expiration, with normal P-wave morphology and axis preceding each QRS.",
+    territory:
+      "Sinus node–driven rhythm — not a coronary territory finding; reflects normal vagal tone modulation of SA node automaticity.",
+    thinkOf: [
+      "Normal finding in healthy young patients — especially athletes and children",
+      "Respiratory phasic rate change with intact sinus P waves",
+      "Increased vagal tone — sleep, deep breathing, high fitness",
+      "Benign unless accompanied by symptomatic bradycardia or pauses",
+    ],
+    distinguishFrom: [
+      "Sinus arrhythmia absent — fixed regular rate may suggest sick sinus syndrome or beta-blocker effect in elderly",
+      "Atrial fibrillation — irregularly irregular without discrete P waves",
+      "Sinus arrest/sinoatrial block — pause without respiratory phasic pattern; may need pacemaker",
+      "Premature atrial contractions — early P with compensatory pause, not smooth respiratory cycling",
+      "Second-degree AV block — dropped QRS complexes, not rate variation with every beat",
+    ],
+    boardsPearls: [
+      "Sinus arrhythmia = normal in young healthy patients — rate varies with breathing",
+      "P waves present and upright in II with variable R-R interval",
+      "vs AF — sinus arrhythmia has organized P waves and mild phasic irregularity",
+      "Loss of respiratory variation in elderly may reflect decreased vagal tone or sick sinus",
+      "No treatment required when isolated and asymptomatic",
+    ],
+    pediatrics:
+      "Pronounced respiratory sinus arrhythmia is normal in infants and children — reflects high vagal tone; distinguish from pathologic bradyarrhythmias causing syncope or pauses >3 seconds.",
+  },
 ];
 
 const ecgFindingById = new Map(ECG_FINDINGS.map((entry) => [entry.id, entry]));

@@ -50,6 +50,7 @@ import hepatocyte from "../media/images/cells/hepatocyte.jpg?url";
 import hypersegmentedNeutrophil from "../media/images/cells/hypersegmented-neutrophil.png?url";
 import hypothalamus from "../media/images/cells/hypothalamus.jpg?url";
 import immunologicalMemory from "../media/images/cells/immunological-memory.png?url";
+import immunosuppression from "../media/images/cells/immunosuppression.png?url";
 import intermediateFilament from "../media/images/cells/intermediate-filament.jpg?url";
 import intestinalLCell from "../media/images/cells/intestinal-l-cell.png?url";
 import keratinocyte from "../media/images/cells/keratinocyte.png?url";
@@ -163,6 +164,7 @@ export type CELLImageId = Extract<
   | "hypersegmented-neutrophil"
   | "hypothalamus"
   | "memory-t-lymphocyte"
+  | "immunosuppression"
   | "intermediate-filament"
   | "intestinal-l-cell"
   | "keratinocyte"
@@ -281,6 +283,7 @@ export const CELL_IMAGES: Partial<Record<CELLImageId, string>> = {
   "hypersegmented-neutrophil": extensionAssetUrl(hypersegmentedNeutrophil),
   "hypothalamus": extensionAssetUrl(hypothalamus),
   "memory-t-lymphocyte": extensionAssetUrl(immunologicalMemory),
+  "immunosuppression": extensionAssetUrl(immunosuppression),
   "intermediate-filament": extensionAssetUrl(intermediateFilament),
   "intestinal-l-cell": extensionAssetUrl(intestinalLCell),
   "keratinocyte": extensionAssetUrl(keratinocyte),
@@ -396,6 +399,7 @@ export const CELL_IMAGE_ATTRIBUTIONS: Partial<
   "hypersegmented-neutrophil": { label: "Wikimedia Commons (Hypersegmented neutrophil.png)", url: "https://commons.wikimedia.org/wiki/File:Hypersegmented_neutrophil.png" },
   "hypothalamus": { label: "Wikimedia Commons (1806 The Hypothalamus-Pituitary Complex.jpg)", url: "https://commons.wikimedia.org/wiki/File:1806_The_Hypothalamus-Pituitary_Complex.jpg" },
   "memory-t-lymphocyte": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:immunological-memory.png" },
+  "immunosuppression": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:immunosuppression.png" },
   "intermediate-filament": { label: "Wikimedia Commons (Cytoskeleton - Intermediate filament -- Smart-Servier.png)", url: "https://commons.wikimedia.org/wiki/File:Cytoskeleton_-_Intermediate_filament_--_Smart-Servier.png" },
   "intestinal-l-cell": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:intestinal-l-cell.png" },
   "keratinocyte": { label: "Wikimedia Commons (Épiderme - FR.png)", url: "https://commons.wikimedia.org/wiki/File:Épiderme_-_FR.png" },
@@ -509,6 +513,7 @@ export const CELL_IMAGE_CAPTIONS: Partial<Record<CELLImageId, string>> = {
   "hypersegmented-neutrophil": "This is a peripheral blood smear of a patient with megaloblastic anemia. The red arrow points out a hypersegmented neutrophil. The image was found on a telepathvision site of the US VA: http://www.va.gov/telepathvisn6/megalops.GIF The home page of this collection of images is http://www.va.gov/telep",
   "hypothalamus": "1806 The Hypothalamus-Pituitary Complex",
   "memory-t-lymphocyte": "Immunological memory: long-lived memory B and T lymphocytes enable rapid secondary responses on re-exposure",
+  "immunosuppression": "Immunosuppression — reduced immune response allowing transplant rejection or opportunistic infection",
   "intermediate-filament": "Cytoskeleton - Intermediate filament -- Smart-Servier",
   "intestinal-l-cell": "Confocal ileum image showing PYY-GFP enteroendocrine L cells in green",
   "keratinocyte": "Epidermal keratinocytes in stratified squamous epithelium",

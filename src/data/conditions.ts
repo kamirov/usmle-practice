@@ -3245,6 +3245,85 @@ export const CONDITIONS: ConditionEntry[] = [
       "Narcolepsy often presents in adolescence with school failure mistaken for laziness; cataplexy may manifest as knee buckling during laughter. Pediatric MSLT criteria similar; low CSF hypocretin-1 confirms type 1.",
   },
   {
+    id: "restless-legs-syndrome",
+    name: "Restless Legs Syndrome",
+    etymology:
+      "English restless = unable to rest + legs + syndrome = Greek syn = together + dromos = running (group of co-occurring symptoms)",
+    aliases: [
+      "restless legs syndrome",
+      "restless leg syndrome",
+      "restless legs syndromes",
+      "rls",
+      "willis-ekbom disease",
+      "willis ekbom disease",
+      "ekbom syndrome",
+      "ekbom disease",
+      "wittmaack-ekbom syndrome",
+    ],
+    definition:
+      "Sensorimotor neurologic disorder characterized by an urge to move the legs, usually with uncomfortable leg sensations — worse at rest and in the evening, relieved by movement, and often accompanied by periodic limb movements during sleep.",
+    pathophysiology:
+      "Dopaminergic dysfunction in central motor pathways (A11 hypothalamic neurons projecting to spinal cord) plus brain iron deficiency in substantia nigra → altered striatal dopamine signaling; secondary causes include iron deficiency anemia, CKD, pregnancy, and neuropathy.",
+    classicPresentation: [
+      "Urge to move legs with crawling, tingling, or aching sensations — predominantly in the evening or at night",
+      "Symptoms worsen with rest (sitting, lying in bed) and improve with walking or leg movement",
+      "Insomnia and daytime fatigue from sleep disruption",
+      "Partner reports rhythmic leg kicking during sleep (periodic limb movements of sleep)",
+      "Often chronic and progressive; may remit in pregnancy then recur postpartum",
+    ],
+    keyFindings: [
+      "Clinical diagnosis by IRLSSG criteria — urge to move, worsened by rest, evening predominance, relieved by movement",
+      "Periodic limb movements on polysomnography or partner history",
+      "Low serum ferritin (<75 ng/mL often treated even if hemoglobin normal)",
+      "Normal neurologic exam unless coexisting peripheral neuropathy",
+    ],
+    keyLabs: [
+      "Serum ferritin and iron studies — treat if ferritin low",
+      "CBC — iron deficiency anemia",
+      "BUN/creatinine — uremic RLS in CKD",
+      "Consider B₁₂, folate, TSH if neuropathy suspected",
+    ],
+    associations: [
+      "Iron deficiency — most important reversible cause",
+      "Chronic kidney disease and hemodialysis",
+      "Pregnancy (especially third trimester)",
+      "Peripheral neuropathy (diabetes, B₁₂ deficiency)",
+      "Parkinson disease and other dopaminergic disorders",
+      "ADHD in children (bidirectional association)",
+    ],
+    complications: [
+      "Chronic insomnia and daytime sleepiness",
+      "Depression and impaired quality of life",
+      "Augmentation from long-term dopamine agonists — earlier onset, spread to arms/torso",
+      "Iron deficiency if untreated underlying cause",
+    ],
+    distinguishFrom: [
+      "Akathisia — whole-body inner restlessness after starting antipsychotics or metoclopramide, not evening leg-focused urge",
+      "Peripheral neuropathy — constant burning/numbness, not primarily movement-relieved evening urge",
+      "Peripheral arterial disease — leg pain with exertion (claudication), not at rest at night",
+      "Nocturnal leg cramps — sudden painful muscle contraction, not prolonged urge to move",
+      "ADHD motor restlessness — daytime hyperactivity, not classic evening leg sensory symptoms",
+    ],
+    treatment: [
+      "Correct iron deficiency — oral or IV iron if ferritin low",
+      "Dopamine agonists — pramipexole, ropinirole (first-line pharmacotherapy)",
+      "α₂δ ligands — gabapentin, pregabalin (especially if pain prominent or augmentation risk)",
+      "Avoid caffeine and sedating antihistamines that worsen symptoms",
+      "Treat CKD and optimize dialysis if uremic RLS",
+      "Monitor for augmentation with dopamine agonists — switch to gabapentinoid if occurs",
+    ],
+    boardsPearls: [
+      "RLS tetrad: urge to move + worse at rest + evening/night + relief with movement",
+      "Check ferritin — replete iron even if anemia absent (target often >75–100 ng/mL)",
+      "Dopamine agonists treat RLS but can cause augmentation with chronic use",
+      "Gabapentin/pregabalin — good alternative, especially with pain or CKD",
+      "vs akathisia — antipsychotic timing, whole-body restlessness, not leg-focused evening pattern",
+      "Periodic limb movements of sleep — stereotyped leg jerks during NREM sleep",
+    ],
+    pediatrics:
+      "RLS occurs in children with ADHD-like restlessness or growing pains misdiagnosis; ask about evening leg discomfort and sleep disruption. Iron deficiency is common — check ferritin. Dopamine agonists used cautiously; iron repletion and sleep hygiene first-line in mild cases.",
+  },
+  {
     id: "multiple-myeloma",
     name: "Multiple Myeloma",
     etymology:

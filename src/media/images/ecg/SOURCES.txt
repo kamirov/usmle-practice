@@ -50,3 +50,12 @@ saw-toothed-flutter-waves.jpg
   Page: https://commons.wikimedia.org/wiki/File:AtrialFlutter12.JPG
   Download: https://commons.wikimedia.org/wiki/Special:FilePath/AtrialFlutter12.JPG?width=1280
   Resized to 1280 px width for popover display.
+
+sinus-arrhythmia.jpg
+  Source: Wikimedia Commons — ECG Sinus Arrhythmia 79 bpm.jpg
+  Author: Michael Rosengarten BEng, MD.McGill
+  Description: ECG lead showing sinus arrhythmia with respiratory R-R variation at 79 bpm
+  License: Creative Commons Attribution-Share Alike 3.0 Unported
+  Page: https://commons.wikimedia.org/wiki/File:ECG_Sinus_Arrhythmia_79_bpm.jpg
+  Download: https://commons.wikimedia.org/wiki/Special:FilePath/ECG_Sinus_Arrhythmia_79_bpm.jpg?width=1280
+  Resized to 1280 px width for popover display.

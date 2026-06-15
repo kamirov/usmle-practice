@@ -93,8 +93,10 @@ import lhermitteSign from "../media/images/symptoms/lhermitte-sign.jpg?url";
 import lichenification from "../media/images/symptoms/lichenification.jpg?url";
 import lymphadenopathy from "../media/images/symptoms/lymphadenopathy.jpg?url";
 import maculopapularRash from "../media/images/symptoms/maculopapular-rash.jpg?url";
+import mania from "../media/images/symptoms/mania.jpg?url";
 import melena from "../media/images/symptoms/melena.jpg?url";
 import miotic from "../media/images/symptoms/miotic.jpg?url";
+import moonFacies from "../media/images/symptoms/moon-facies.jpg?url";
 import morningStiffness from "../media/images/symptoms/morning-stiffness.jpg?url";
 import mydriasis from "../media/images/symptoms/mydriasis.jpg?url";
 import myelopathy from "../media/images/symptoms/myelopathy.jpg?url";
@@ -104,7 +106,9 @@ import neuropathicPain from "../media/images/symptoms/neuropathic-pain.jpg?url";
 import neutropenia from "../media/images/symptoms/neutropenia.jpg?url";
 import nodularLymphangitis from "../media/images/symptoms/nodular-lymphangitis.jpg?url";
 import nuchalRigidity from "../media/images/symptoms/nuchal-rigidity.jpg?url";
+import nystagmus from "../media/images/symptoms/nystagmus.jpg?url";
 import oligomenorrhea from "../media/images/symptoms/oligomenorrhea.png?url";
+import ophthalmoplegia from "../media/images/symptoms/ophthalmoplegia.jpg?url";
 import orthopnea from "../media/images/symptoms/orthopnea.jpg?url";
 import orthostaticHypotension from "../media/images/symptoms/orthostatic-hypotension.jpg?url";
 import otorrhea from "../media/images/symptoms/otorrhea.jpg?url";
@@ -253,8 +257,10 @@ export type SymptomImageId = Extract<
   | "lichenification"
   | "lymphadenopathy"
   | "maculopapular-rash"
+  | "mania"
   | "melena"
   | "miotic"
+  | "moon-facies"
   | "morning-stiffness"
   | "mydriasis"
   | "myelopathy"
@@ -264,7 +270,9 @@ export type SymptomImageId = Extract<
   | "neutropenia"
   | "nodular-lymphangitis"
   | "nuchal-rigidity"
+  | "nystagmus"
   | "oligomenorrhea"
+  | "ophthalmoplegia"
   | "orthopnea"
   | "orthostatic-hypotension"
   | "otorrhea"
@@ -419,8 +427,10 @@ export const SYMPTOM_IMAGES: Partial<Record<SymptomImageId, string>> = {
   "lichenification": extensionAssetUrl(lichenification),
   "lymphadenopathy": extensionAssetUrl(lymphadenopathy),
   "maculopapular-rash": extensionAssetUrl(maculopapularRash),
+  "mania": extensionAssetUrl(mania),
   "melena": extensionAssetUrl(melena),
   "miotic": extensionAssetUrl(miotic),
+  "moon-facies": extensionAssetUrl(moonFacies),
   "morning-stiffness": extensionAssetUrl(morningStiffness),
   "mydriasis": extensionAssetUrl(mydriasis),
   "myelopathy": extensionAssetUrl(myelopathy),
@@ -430,7 +440,9 @@ export const SYMPTOM_IMAGES: Partial<Record<SymptomImageId, string>> = {
   "neutropenia": extensionAssetUrl(neutropenia),
   "nodular-lymphangitis": extensionAssetUrl(nodularLymphangitis),
   "nuchal-rigidity": extensionAssetUrl(nuchalRigidity),
+  "nystagmus": extensionAssetUrl(nystagmus),
   "oligomenorrhea": extensionAssetUrl(oligomenorrhea),
+  "ophthalmoplegia": extensionAssetUrl(ophthalmoplegia),
   "orthopnea": extensionAssetUrl(orthopnea),
   "orthostatic-hypotension": extensionAssetUrl(orthostaticHypotension),
   "otorrhea": extensionAssetUrl(otorrhea),
@@ -582,8 +594,10 @@ export const SYMPTOM_IMAGE_ATTRIBUTIONS: Partial<
   "lichenification": { label: "Wikimedia Commons (Clinical features of atopic dermatitis in English.png)", url: "https://commons.wikimedia.org/wiki/File:Clinical_features_of_atopic_dermatitis_in_English.png" },
   "lymphadenopathy": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:lymphadenopathy.jpg" },
   "maculopapular-rash": { label: "Wikimedia Commons (Generalized ACLE.jpg)", url: "https://commons.wikimedia.org/wiki/File:Generalized_ACLE.jpg" },
+  "mania": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:mania.jpg" },
   "melena": { label: "Wikimedia Commons (Melena Bleeding DU.jpg)", url: "https://commons.wikimedia.org/wiki/File:Melena_Bleeding_DU.jpg" },
   "miotic": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:miotic.jpg" },
+  "moon-facies": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:moon-facies.jpg" },
   "morning-stiffness": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:morning-stiffness.jpg" },
   "mydriasis": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:mydriasis.jpg" },
   "myelopathy": { label: "Wikimedia Commons (Cervical Spine MRI (T2W).jpg)", url: "https://commons.wikimedia.org/wiki/File:Cervical_Spine_MRI_(T2W).jpg" },
@@ -593,7 +607,9 @@ export const SYMPTOM_IMAGE_ATTRIBUTIONS: Partial<
   "neutropenia": { label: "Wikimedia Commons (A blood smear with neutropenia in United States.jpg)", url: "https://commons.wikimedia.org/wiki/File:A_blood_smear_with_neutropenia_in_United_States.jpg" },
   "nodular-lymphangitis": { label: "Wikimedia Commons (Sporotrichosis by the fungus Sporothrix schenckii PHIL 3940 lores.jpg)", url: "https://commons.wikimedia.org/wiki/File:Sporotrichosis_by_the_fungus_Sporothrix_schenckii_PHIL_3940_lores.jpg" },
   "nuchal-rigidity": { label: "Wikimedia Commons (Neck stiffness.jpg)", url: "https://commons.wikimedia.org/wiki/File:Neck_stiffness.jpg" },
+  "nystagmus": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:nystagmus.jpg" },
   "oligomenorrhea": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:oligomenorrhea.png" },
+  "ophthalmoplegia": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:ophthalmoplegia.jpg" },
   "orthopnea": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:orthopnea.jpg" },
   "orthostatic-hypotension": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:orthostatic-hypotension.jpg" },
   "otorrhea": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:otorrhea.jpg" },
@@ -743,8 +759,10 @@ export const SYMPTOM_IMAGE_CAPTIONS: Partial<Record<SymptomImageId, string>> = {
   "lichenification": "Clinical features of atopic dermatitis in English",
   "lymphadenopathy": "Cervical lymphadenopathy — enlarged palpable anterior cervical lymph nodes",
   "maculopapular-rash": "Maculopapular eruption — coalescent erythematous macules and papules",
+  "mania": "Mania — elevated mood, hyperactivity, and decreased need for sleep in bipolar disorder",
   "melena": "Melena Bleeding DU",
   "miotic": "Example of Horner's syndrome in a cat",
+  "moon-facies": "Moon facies — rounded facial fullness from chronic cortisol excess in Cushing syndrome",
   "morning-stiffness": "Morning Stiffness",
   "mydriasis": "Mydriasis due to LSD usage",
   "myelopathy": "Cervical Spine MRI",
@@ -754,7 +772,9 @@ export const SYMPTOM_IMAGE_CAPTIONS: Partial<Record<SymptomImageId, string>> = {
   "neutropenia": "A blood smear with neutropenia in United States",
   "nodular-lymphangitis": "Sporotrichosis by the fungus Sporothrix schenckii",
   "nuchal-rigidity": "Nuchal rigidity — resistance to passive neck flexion in meningeal irritation",
+  "nystagmus": "Nystagmus — rhythmic involuntary oscillation of the eyes",
   "oligomenorrhea": "Estradiol, progesterone, LH, and FSH across the normal menstrual cycle — disrupted in anovulatory oligomenorrhea",
+  "ophthalmoplegia": "Ophthalmoplegia — weakness or paralysis of extraocular muscles",
   "orthopnea": "Orthopnea",
   "orthostatic-hypotension": "The Faint label QS:Lde,\"Die Ohnmacht\"label QS:Len,\"The Faint\"",
   "otorrhea": "Battle sign — retroauricular ecchymosis associated with basilar skull fracture and possible CSF otorrhea",

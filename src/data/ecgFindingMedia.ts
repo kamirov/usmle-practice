@@ -7,6 +7,7 @@ import escapeRhythm from "../media/images/ecg/escape-rhythm.png?url";
 import inferiorStemi from "../media/images/ecg/inferior-stemi.jpg?url";
 import qtcProlongation from "../media/images/ecg/qtc-prolongation.jpg?url";
 import sawToothedFlutterWaves from "../media/images/ecg/saw-toothed-flutter-waves.jpg?url";
+import sinusArrhythmia from "../media/images/ecg/sinus-arrhythmia.jpg?url";
 
 export type EcgFindingImageId = EcgFindingEntry["id"];
 
@@ -22,6 +23,7 @@ export const ECG_FINDING_IMAGES: Partial<Record<EcgFindingImageId, string>> = {
   "inferior-stemi": extensionAssetUrl(inferiorStemi),
   "qtc-prolongation": extensionAssetUrl(qtcProlongation),
   "saw-toothed-flutter-waves": extensionAssetUrl(sawToothedFlutterWaves),
+  "sinus-arrhythmia": extensionAssetUrl(sinusArrhythmia),
 };
 
 export const ECG_FINDING_IMAGE_ATTRIBUTIONS: Partial<
@@ -51,6 +53,10 @@ export const ECG_FINDING_IMAGE_ATTRIBUTIONS: Partial<
     label: "Wikimedia Commons (James Heilman, MD, CC BY-SA 3.0)",
     url: "https://commons.wikimedia.org/wiki/File:AtrialFlutter12.JPG",
   },
+  "sinus-arrhythmia": {
+    label: "Wikimedia Commons (Michael Rosengarten BEng, MD.McGill, CC BY-SA 3.0)",
+    url: "https://commons.wikimedia.org/wiki/File:ECG_Sinus_Arrhythmia_79_bpm.jpg",
+  },
 };
 
 export const ECG_FINDING_IMAGE_CAPTIONS: Partial<
@@ -68,6 +74,8 @@ export const ECG_FINDING_IMAGE_CAPTIONS: Partial<
     "Long QT syndrome type 1 ECG annotated with QTc greater than 480 ms",
   "saw-toothed-flutter-waves":
     "12-lead ECG demonstrating sawtooth flutter waves characteristic of atrial flutter",
+  "sinus-arrhythmia":
+    "ECG lead II showing sinus arrhythmia with phasic R-R interval variation during respiration at 79 bpm",
 };
 
 export function getEcgFindingImageForId(id: string): string | undefined {

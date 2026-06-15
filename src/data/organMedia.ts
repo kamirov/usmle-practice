@@ -138,8 +138,8 @@ export const ORGAN_IMAGE_ATTRIBUTIONS: Partial<
     url: "https://commons.wikimedia.org/wiki/File:Crista_terminalis.png",
   },
   "cavotricuspid-isthmus": {
-    label: "Wikimedia Commons (Heart numlabels.svg)",
-    url: "https://commons.wikimedia.org/wiki/File:Heart_numlabels.svg",
+    label: "Wikimedia Commons (Cavotricuspid isthmus.png)",
+    url: "https://commons.wikimedia.org/wiki/File:Cavotricuspid_isthmus.png",
   },
   "av-node": {
     label: "Wikimedia Commons (Triangle of Koch (large).jpg)",
@@ -215,7 +215,7 @@ export const ORGAN_IMAGE_CAPTIONS: Partial<Record<OrganImageId, string>> = {
   "crista-terminalis":
     "Crista terminalis — internal ridge separating smooth sinus venarum from trabeculated right atrial appendage",
   "cavotricuspid-isthmus":
-    "Heart anatomy — cavotricuspid isthmus in the low right atrium is the ablation target for typical atrial flutter",
+    "Cavotricuspid isthmus — low right atrial isthmus targeted in typical atrial flutter ablation",
   "av-node":
     "Triangle of Koch — anatomic boundaries containing the atrioventricular node in the interatrial septum",
   "his-purkinje-system":

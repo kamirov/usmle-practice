@@ -124,11 +124,6 @@ Created locally
 Reference: https://en.wikipedia.org/wiki/Glaucoma
 Description: Elevated intraocular pressure and optic neuropathy
 
-avascular-necrosis.svg
-Created locally
-Reference: https://en.wikipedia.org/wiki/Avascular_necrosis
-Description: Femoral head avascular necrosis schematic
-
 copper-deficiency.svg
 Created locally
 Reference: https://en.wikipedia.org/wiki/Copper_deficiency
@@ -487,7 +482,23 @@ paroxysmal-supraventricular-tachycardia.jpg
   Description: Supraventricular tachycardia on ECG (lead II)
 
 atrial-tachycardia.png
-  Source: Wikimedia Commons — atrial-tachycardia
+  Source: Wikimedia Commons — Multifocal atrial tachycardia - MAT.png
   Page: https://commons.wikimedia.org/wiki/File:Multifocal_atrial_tachycardia_-_MAT.png
   Description: Multifocal atrial tachycardia on ECG
+
+lacunar-stroke.jpg
+  Source: Wikimedia Commons — Lacunar stroke MRI.jpg
+  Author: Ptrump16
+  License: CC BY-SA 4.0
+  Page: https://commons.wikimedia.org/wiki/File:Lacunar_stroke_MRI.jpg
+  Description: MRI showing chronic lacunar infarct in the left corona radiata
+
+restless-legs-syndrome.png
+  Source: Wikimedia Commons — Lokalisation sensorischer Missempfindungen beim Restless-Legs-Syndrom.png
+  Author: Andre Hold
+  Description: Distribution of sensory disturbances in restless legs syndrome
+  License: Creative Commons Attribution-Share Alike 3.0 Germany
+  Page: https://commons.wikimedia.org/wiki/File:Lokalisation_sensorischer_Missempfindungen_beim_Restless-Legs-Syndrom.png
+  Download: https://commons.wikimedia.org/wiki/Special:FilePath/Lokalisation_sensorischer_Missempfindungen_beim_Restless-Legs-Syndrom.png?width=1280
+  Resized to 1280 px width for popover display.
 

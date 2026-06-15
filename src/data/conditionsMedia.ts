@@ -10,6 +10,7 @@ import acuteLymphoblasticLeukemia from "../media/images/conditions/acute-lymphob
 import acuteMegakaryoblasticLeukemia from "../media/images/conditions/acute-megakaryoblastic-leukemia.jpg?url";
 import addisonDisease from "../media/images/conditions/addison-disease.jpg?url";
 import adhd from "../media/images/conditions/adhd.png?url";
+import adjustmentDisorder from "../media/images/conditions/adjustment-disorder.png?url";
 import alcoholUseDisorder from "../media/images/conditions/alcohol-use-disorder.jpg?url";
 import alcoholWithdrawal from "../media/images/conditions/alcohol-withdrawal.jpg?url";
 import allergicContactDermatitis from "../media/images/conditions/allergic-contact-dermatitis.jpg?url";
@@ -198,6 +199,7 @@ import nephriticSyndrome from "../media/images/conditions/nephritic-syndrome.jpg
 import nephrolithiasis from "../media/images/conditions/nephrolithiasis.jpg?url";
 import nephroticSyndrome from "../media/images/conditions/nephrotic-syndrome.jpg?url";
 import neuralTubeDefects from "../media/images/conditions/neural-tube-defects.jpg?url";
+import neuromyelitisOptica from "../media/images/conditions/neuromyelitis-optica.jpg?url";
 import nonHodgkinLymphoma from "../media/images/conditions/non-hodgkin-lymphoma.jpg?url";
 import ocd from "../media/images/conditions/ocd.jpg?url";
 import opticNeuritis from "../media/images/conditions/optic-neuritis.jpg?url";
@@ -237,12 +239,14 @@ import prolactinoma from "../media/images/conditions/prolactinoma.jpg?url";
 import pseudodementia from "../media/images/conditions/pseudodementia.jpg?url";
 import psoriasis from "../media/images/conditions/psoriasis.jpg?url";
 import psoriaticArthritis from "../media/images/conditions/psoriatic-arthritis.jpg?url";
+import psychoticMoodDisorder from "../media/images/conditions/psychotic-mood-disorder.jpg?url";
 import ptsd from "../media/images/conditions/ptsd.png?url";
 import pulmonaryEmbolism from "../media/images/conditions/pulmonary-embolism.jpg?url";
 import pulmonaryHypertension from "../media/images/conditions/pulmonary-hypertension.jpg?url";
 import pyelonephritis from "../media/images/conditions/pyelonephritis.jpg?url";
 import pyloricStenosis from "../media/images/conditions/pyloric-stenosis.jpg?url";
 import raggedRedFibersGomori from "../media/images/conditions/ragged-red-fibers-gomori.jpg?url";
+import restlessLegsSyndrome from "../media/images/conditions/restless-legs-syndrome.png?url";
 import restrictiveCardiomyopathy from "../media/images/conditions/restrictive-cardiomyopathy.jpg?url";
 import rheumatoidArthritis from "../media/images/conditions/rheumatoid-arthritis.jpg?url";
 import rhinitis from "../media/images/conditions/rhinitis.jpg?url";
@@ -322,6 +326,7 @@ export type ConditionImageId = Extract<
   | "acute-megakaryoblastic-leukemia"
   | "addison-disease"
   | "adhd"
+  | "adjustment-disorder"
   | "alcohol-use-disorder"
   | "alcohol-withdrawal"
   | "allergic-contact-dermatitis"
@@ -510,6 +515,7 @@ export type ConditionImageId = Extract<
   | "nephrolithiasis"
   | "nephrotic-syndrome"
   | "neural-tube-defects"
+  | "neuromyelitis-optica"
   | "non-hodgkin-lymphoma"
   | "ocd"
   | "optic-neuritis"
@@ -549,12 +555,14 @@ export type ConditionImageId = Extract<
   | "pseudodementia"
   | "psoriasis"
   | "psoriatic-arthritis"
+  | "psychotic-mood-disorder"
   | "ptsd"
   | "pulmonary-embolism"
   | "pulmonary-hypertension"
   | "pyelonephritis"
   | "pyloric-stenosis"
   | "mitochondrial-encephalomyopathy"
+  | "restless-legs-syndrome"
   | "restrictive-cardiomyopathy"
   | "rheumatoid-arthritis"
   | "rhinitis"
@@ -639,6 +647,7 @@ export const CONDITION_IMAGES: Partial<Record<ConditionImageId, string>> = {
   "acute-megakaryoblastic-leukemia": extensionAssetUrl(acuteMegakaryoblasticLeukemia),
   "addison-disease": extensionAssetUrl(addisonDisease),
   "adhd": extensionAssetUrl(adhd),
+  "adjustment-disorder": extensionAssetUrl(adjustmentDisorder),
   "alcohol-use-disorder": extensionAssetUrl(alcoholUseDisorder),
   "alcohol-withdrawal": extensionAssetUrl(alcoholWithdrawal),
   "allergic-contact-dermatitis": extensionAssetUrl(allergicContactDermatitis),
@@ -827,6 +836,7 @@ export const CONDITION_IMAGES: Partial<Record<ConditionImageId, string>> = {
   "nephrolithiasis": extensionAssetUrl(nephrolithiasis),
   "nephrotic-syndrome": extensionAssetUrl(nephroticSyndrome),
   "neural-tube-defects": extensionAssetUrl(neuralTubeDefects),
+  "neuromyelitis-optica": extensionAssetUrl(neuromyelitisOptica),
   "non-hodgkin-lymphoma": extensionAssetUrl(nonHodgkinLymphoma),
   "ocd": extensionAssetUrl(ocd),
   "optic-neuritis": extensionAssetUrl(opticNeuritis),
@@ -866,12 +876,14 @@ export const CONDITION_IMAGES: Partial<Record<ConditionImageId, string>> = {
   "pseudodementia": extensionAssetUrl(pseudodementia),
   "psoriasis": extensionAssetUrl(psoriasis),
   "psoriatic-arthritis": extensionAssetUrl(psoriaticArthritis),
+  "psychotic-mood-disorder": extensionAssetUrl(psychoticMoodDisorder),
   "ptsd": extensionAssetUrl(ptsd),
   "pulmonary-embolism": extensionAssetUrl(pulmonaryEmbolism),
   "pulmonary-hypertension": extensionAssetUrl(pulmonaryHypertension),
   "pyelonephritis": extensionAssetUrl(pyelonephritis),
   "pyloric-stenosis": extensionAssetUrl(pyloricStenosis),
   "mitochondrial-encephalomyopathy": extensionAssetUrl(raggedRedFibersGomori),
+  "restless-legs-syndrome": extensionAssetUrl(restlessLegsSyndrome),
   "restrictive-cardiomyopathy": extensionAssetUrl(restrictiveCardiomyopathy),
   "rheumatoid-arthritis": extensionAssetUrl(rheumatoidArthritis),
   "rhinitis": extensionAssetUrl(rhinitis),
@@ -953,6 +965,7 @@ export const CONDITION_IMAGE_ATTRIBUTIONS: Partial<
   "acute-megakaryoblastic-leukemia": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:acute-megakaryoblastic-leukemia.jpg" },
   "addison-disease": { label: "Wikimedia Commons (T. Addison; On...supra-renal capsules Wellcome L0018484.jpg)", url: "https://commons.wikimedia.org/wiki/File:T._Addison;_On...supra-renal_capsules_Wellcome_L0018484.jpg" },
   "adhd": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:adhd.png" },
+  "adjustment-disorder": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:adjustment-disorder.png" },
   "alcohol-use-disorder": { label: "Wikimedia Commons (Cirrhosis of Alcoholic Liver Disease (5517625829).jpg)", url: "https://commons.wikimedia.org/wiki/File:Cirrhosis_of_Alcoholic_Liver_Disease_(5517625829).jpg" },
   "alcohol-withdrawal": { label: "Wikimedia Commons (Local copy from conditions/alcohol-use-disorder.jpg)", url: "https://commons.wikimedia.org/" },
   "allergic-contact-dermatitis": { label: "Wikimedia Commons (Blausen 0014 AllergicDermatitis.png)", url: "https://commons.wikimedia.org/wiki/File:Blausen_0014_AllergicDermatitis.png" },
@@ -1141,6 +1154,7 @@ export const CONDITION_IMAGE_ATTRIBUTIONS: Partial<
   "nephrolithiasis": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:nephrolithiasis.jpg" },
   "nephrotic-syndrome": { label: "Wikimedia Commons (United States Navy Medical News Letter Vol. 32 1958 Index (IA NavyMedicalNewsletter19581231Index).pdf)", url: "https://commons.wikimedia.org/wiki/File:United_States_Navy_Medical_News_Letter_Vol._32_1958_Index_(IA_NavyMedicalNewsletter19581231Index).pdf" },
   "neural-tube-defects": { label: "Wikimedia Commons (Spina bifida lombare sagittale.jpg)", url: "https://commons.wikimedia.org/wiki/File:Spina_bifida_lombare_sagittale.jpg" },
+  "neuromyelitis-optica": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:neuromyelitis-optica.jpg" },
   "non-hodgkin-lymphoma": { label: "Wikimedia Commons (Centrocyte, centroblast and follicular dendritic cell in a follicular lymphoma.jpg)", url: "https://commons.wikimedia.org/wiki/File:Centrocyte,_centroblast_and_follicular_dendritic_cell_in_a_follicular_lymphoma.jpg" },
   "ocd": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:ocd.jpg" },
   "optic-neuritis": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:optic-neuritis.jpg" },
@@ -1180,12 +1194,14 @@ export const CONDITION_IMAGE_ATTRIBUTIONS: Partial<
   "pseudodementia": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:pseudodementia.jpg" },
   "psoriasis": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:psoriasis.jpg" },
   "psoriatic-arthritis": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:psoriatic-arthritis.jpg" },
+  "psychotic-mood-disorder": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:psychotic-mood-disorder.jpg" },
   "ptsd": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:ptsd.png" },
   "pulmonary-embolism": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:pulmonary-embolism.jpg" },
   "pulmonary-hypertension": { label: "Wikimedia Commons (Pulmnary arterial atherosclerosis-Pulmonary hypertension.jpg)", url: "https://commons.wikimedia.org/wiki/File:Pulmnary_arterial_atherosclerosis-Pulmonary_hypertension.jpg" },
   "pyelonephritis": { label: "Wikimedia Commons (Chronic pyelonephritis slide.jpg)", url: "https://commons.wikimedia.org/wiki/File:Chronic_pyelonephritis_slide.jpg" },
   "pyloric-stenosis": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:pyloric-stenosis.jpg" },
   "mitochondrial-encephalomyopathy": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:ragged-red-fibers-gomori.jpg" },
+  "restless-legs-syndrome": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:restless-legs-syndrome.png" },
   "restrictive-cardiomyopathy": { label: "Wikimedia Commons (Fddsv-02-1015545-g001 (1).jpg)", url: "https://commons.wikimedia.org/wiki/File:Fddsv-02-1015545-g001_(1).jpg" },
   "rheumatoid-arthritis": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:rheumatoid-arthritis.jpg" },
   "rhinitis": { label: "Wikimedia Commons (Runny nose in cat.jpg)", url: "https://commons.wikimedia.org/wiki/File:Runny_nose_in_cat.jpg" },
@@ -1267,6 +1283,7 @@ export const CONDITION_IMAGE_CAPTIONS: Partial<
   "acute-megakaryoblastic-leukemia": "Bone marrow blasts of acute megakaryoblastic leukemia",
   "addison-disease": "T. Addison; On...supra-renal capsules Wellcome L0018484",
   "adhd": "Stressor-linked emotional response out of proportion to stressor",
+  "adjustment-disorder": "Adjustment disorder — emotional or behavioral symptoms within 3 months of an identifiable stressor",
   "alcohol-use-disorder": "Reticulin stain Pathological and histological images courtesy of Ed Uthman at flickr.",
   "alcohol-withdrawal": "Alcoholic liver disease — chronic heavy alcohol use underlying withdrawal risk",
   "allergic-contact-dermatitis": "Allergic contact dermatitis — pruritic eczematous eruption at site of allergen exposure",
@@ -1455,6 +1472,7 @@ export const CONDITION_IMAGE_CAPTIONS: Partial<
   "nephrolithiasis": "Nephrolithiasis",
   "nephrotic-syndrome": "Nephrotic syndrome — heavy proteinuria with peripheral edema and hypoalbuminemia",
   "neural-tube-defects": "Spina bifida lombare sagittale",
+  "neuromyelitis-optica": "Neuromyelitis optica — longitudinally extensive transverse myelitis (AQP4-IgG)",
   "non-hodgkin-lymphoma": "Centrocyte, centroblast and follicular dendritic cell in a follicular lymphoma",
   "ocd": "Atopic dermatitis child 2",
   "optic-neuritis": "OpticNeuritisExample",
@@ -1494,12 +1512,14 @@ export const CONDITION_IMAGE_CAPTIONS: Partial<
   "pseudodementia": "Historical portrait of a patient with acute melancholia, illustrating depressive cognitive impairment",
   "psoriasis": "Psoriasis",
   "psoriatic-arthritis": "Distal interphalangeal pencil-in-cup deformity on radiograph in psoriatic arthritis",
+  "psychotic-mood-disorder": "Psychotic mood disorder — major mood episode with superimposed psychotic features",
   "ptsd": "GAD At-A-Glance",
   "pulmonary-embolism": "Pulmnary arterial atherosclerosis-Pulmonary hypertension",
   "pulmonary-hypertension": "Pulmnary arterial atherosclerosis-Pulmonary hypertension",
   "pyelonephritis": "Chronic pyelonephritis slide",
   "pyloric-stenosis": "Hypertrophic pyloric stenosis — thickened pyloric muscle causing gastric outlet obstruction in infant",
   "mitochondrial-encephalomyopathy": "Ragged red fibers (subsarcolemmal mitochondrial aggregates) on Gomori trichrome muscle biopsy in mitochondrial myopathy",
+  "restless-legs-syndrome": "Distribution of sensory disturbances in restless legs syndrome — legs most affected, sometimes arms",
   "restrictive-cardiomyopathy": "Fddsv-02-1015545-g001",
   "rheumatoid-arthritis": "Rheumatoid Arthritis",
   "rhinitis": "Runny nose in cat",
