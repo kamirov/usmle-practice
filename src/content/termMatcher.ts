@@ -6,7 +6,8 @@ export function normalizeForComparison(text: string): string {
   return text
     .normalize("NFKC")
     .toLowerCase()
-    .replace(/[\u00AD\u200B-\u200D\u2060\uFEFF]/g, "");
+    .replace(/[\u00AD\u200B-\u200D\u2060\uFEFF]/g, "")
+    .replace(/[\u2212\u207B\uFE63]/g, "-");
 }
 
 export function normalizedWordKey(matchText: string): string {

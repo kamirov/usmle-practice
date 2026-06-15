@@ -799,6 +799,29 @@ export const ORGANS: OrganEntry[] = [
       "Mesonephric (Wolffian) duct derivative; forms efferent ductules and epididymis under testosterone.",
   },
   {
+    id: "vas-deferens",
+    name: "Vas Deferens",
+    etymology: "Latin vas = vessel + deferens = carrying away",
+    aliases: [
+      "vas deferens",
+      "vasa deferentia",
+      "ductus deferens",
+      "ductus deferentia",
+      "deferent duct",
+      "deferent ducts",
+      "sperm duct",
+      "sperm ducts",
+      "vas deferentia",
+    ],
+    germLayer: "Mesoderm",
+    origin:
+      "Distal mesonephric (Wolffian) duct derivative; develops and persists in males under testosterone and absence of müllerian-inhibiting factor (MIF/AMH).",
+    derivatives: [
+      "Ampulla of vas deferens",
+      "Ejaculatory duct (with seminal vesicle duct)",
+    ],
+  },
+  {
     id: "scrotum",
     name: "Scrotum",
     etymology: "Latin scrotum = skin/pouch",
@@ -2772,6 +2795,28 @@ const ORGAN_DETAILS: Record<
     commonPathologies: ["Epididymitis", "Spermatocele", "Obstruction causing infertility"],
     step1Pearls: ["Young sexually active: Chlamydia/gonorrhea; older men: E. coli", "Pain relief with elevation suggests epididymitis more than torsion"],
   },
+  "vas-deferens": {
+    functionSummary:
+      "Paired thick-walled muscular ducts that transport sperm from the epididymis through the inguinal canal and pelvis to the ejaculatory ducts during emission — part of the Wolffian duct male reproductive outflow tract.",
+    commonPathologies: [
+      "Congenital bilateral absence (CBAVD) — cystic fibrosis / CFTR mutations",
+      "Obstructive azoospermia from infection, inflammation, or prior surgery",
+      "Iatrogenic injury during inguinal hernia repair or vasectomy",
+      "Epididymo-orchitis with secondary ductal obstruction",
+    ],
+    step1Pearls: [
+      "Wolffian (mesonephric) duct derivative — with epididymis, seminal vesicles, ejaculatory duct",
+      "Travels in spermatic cord through inguinal canal to pelvis",
+      "\"Water under the bridge\" — ureter passes posterior to vas deferens near bladder base",
+      "Ampulla of vas deferens joins seminal vesicle duct → ejaculatory duct → prostatic urethra",
+      "Absent palpable vas deferens on exam → CBAVD; test CFTR even without lung disease",
+      "Vasectomy interrupts vas deferens for contraception — obstructive azoospermia",
+      "Sympathetic hypogastric innervation drives peristaltic transport during ejaculation",
+      "vs ureter — ureter carries urine; vas deferens carries sperm; anatomic crossing near bladder",
+    ],
+    pediatrics:
+      "Congenital bilateral absence of vas deferens (CBAVD) occurs in ~98% of males with classic cystic fibrosis and in ~2% of infertile men without overt CF — may be first presentation in adolescence with obstructive azoospermia and normal testicular size.",
+  },
   ovary: {
     functionSummary: "Produces oocytes, estrogen, progesterone, inhibin, and androgen precursors.",
     commonPathologies: ["Polycystic ovary syndrome", "Ovarian torsion", "Epithelial ovarian cancer", "Germ cell tumors", "Endometrioma"],
@@ -3439,6 +3484,10 @@ const ORGAN_METASTASIS: Record<string, string[]> = {
   epididymis: [
     "Adenocarcinoma of epididymis is rare",
     "Testicular germ cell tumors may involve epididymis locally; spread follows testicular pattern → retroperitoneal nodes, lung",
+  ],
+  "vas-deferens": [
+    "Not a common primary malignancy site",
+    "Local involvement by adjacent prostate or bladder pathology is uncommon; primary adenocarcinoma of vas deferens is rare",
   ],
   scrotum: [
     "Inguinal lymph nodes (scrotal skin drainage)",
