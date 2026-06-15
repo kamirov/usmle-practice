@@ -2516,6 +2516,7 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
       "Full cascade = cyclic AMP–PKA pathway entry; cAMP is the second messenger molecule",
     ],
     distinguishFrom: [
+      "Protein Kinase A (PKA) — cAMP-activated serine/threonine kinase effector",
       "cyclic AMP–PKA pathway — full Gs → adenylyl cyclase → cAMP → PKA signaling cascade",
       "cGMP — guanylyl cyclase second messenger (NO, natriuretic peptides)",
       "ATP — substrate for cAMP synthesis, not the active second messenger",
@@ -2524,6 +2525,59 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
     ],
     pediatrics:
       "Same Gs–adenylyl cyclase–cAMP logic in children; β-agonists for asthma and cholera dehydration risk are especially critical in infants.",
+  },
+  {
+    id: "pka",
+    name: "Protein Kinase A (PKA)",
+    etymology:
+      "protein = polypeptide substrate + Greek kinein = to move + -ase = enzyme + A = first named cAMP-dependent isoform",
+    aliases: [
+      "pka",
+      "protein kinase a",
+      "protein kinase a (pka)",
+      "camp-dependent protein kinase",
+      "camp dependent protein kinase",
+      "cyclic amp-dependent protein kinase",
+      "cyclic amp dependent protein kinase",
+      "cAMP-PKA",
+      "camp-pka",
+      "camp pka",
+      "protein kinase a enzyme",
+    ],
+    type: "Signaling pathway",
+    source:
+      "Inactive tetramer in cytoplasm — two regulatory (R) subunits bind four cAMP molecules; catalytic (C) subunits released when cAMP accumulates after Gs-stimulated adenylyl cyclase activity",
+    receptor:
+      "Activated by cAMP (second messenger); not a membrane receptor itself — downstream effector of Gs-coupled GPCR signaling",
+    function:
+      "Serine/threonine kinase that phosphorylates enzymes, ion channels, and transcription factors after cAMP binding — mediates glycogenolysis (phosphorylates glycogen phosphorylase kinase), lipolysis (HSL, perilipin), hormone secretion, aquaporin-2 trafficking (V2/ADH), bronchial smooth muscle relaxation (β₂), and CREB-mediated gene transcription.",
+    clinicalRelevance: [
+      "Glucagon and epinephrine (β-receptors) → ↑ cAMP → PKA → hepatic glycogenolysis and gluconeogenesis",
+      "β-agonists (albuterol) → ↑ cAMP → PKA → bronchodilation",
+      "PTH → renal cAMP → PKA → phosphate excretion and calcitriol synthesis",
+      "ADH at V2 receptor → cAMP → PKA → aquaporin-2 insertion in collecting duct",
+      "Cholera toxin and pertussis toxin ↑ cAMP → excessive PKA activity in enterocytes/respiratory epithelium",
+      "Phosphodiesterase inhibitors (milrinone, theophylline, caffeine) ↑ cAMP → amplify PKA signaling",
+    ],
+    boardsPearls: [
+      "Gs → adenylyl cyclase → cAMP → PKA — classic GPCR second-messenger cascade",
+      "PKA phosphorylates serine/threonine residues (not tyrosine — that's RTKs/JAKs)",
+      "vs PKC — PKC activated by DAG + Ca²⁺ from Gq/PLC pathway, not cAMP",
+      "PKA activates glycogen phosphorylase kinase → glycogenolysis in liver",
+      "PKA phosphorylates CREB → gene transcription (long-term signaling)",
+      "cAMP binds PKA regulatory subunits → releases active catalytic subunits",
+      "Cholera = ↑ cAMP → ↑ PKA → Cl⁻ secretion; pertussis = Gi blockade → ↑ cAMP → ↑ PKA",
+    ],
+    distinguishFrom: [
+      "cyclic AMP (cAMP) — second messenger that activates PKA; not the kinase itself",
+      "cyclic AMP–PKA pathway — full Gs → adenylyl cyclase → cAMP → PKA cascade entry",
+      "Protein Kinase C (PKC) — activated by DAG and Ca²⁺ from Gq/PLC, not cAMP",
+      "Tyrosine kinase — phosphorylates tyrosine on RTK/JAK substrates, not serine/threonine via cAMP",
+      "Protein kinase G (PKG) — activated by cGMP from guanylyl cyclase (NO, ANP/BNP)",
+      "Adenylyl cyclase — synthesizes cAMP upstream of PKA",
+    ],
+    pediatrics:
+      "Same cAMP–PKA logic in children — glucagon for neonatal hypoglycemia, β-agonists for asthma, and cholera secretory diarrhea all act through ↑ cAMP → PKA.",
   },
   {
     id: "camp-pka-pathway",
@@ -2559,6 +2613,7 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
       "PKA phosphorylates glycogen phosphorylase kinase in liver (glycogenolysis)",
     ],
     distinguishFrom: [
+      "Protein Kinase A (PKA) — cAMP-activated kinase; this entry is the full upstream-to-downstream pathway",
       "cGMP/PKG pathway — NO and natriuretic peptides, not adenylyl cyclase",
       "IP3/DAG pathway — Gq GPCRs use phospholipase C, not adenylyl cyclase",
       "JAK-STAT — cytokine receptors without cAMP second messenger",

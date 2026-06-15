@@ -1450,6 +1450,63 @@ export const PROCEDURES: ProcedureEntry[] = [
       "Uncuffed tubes traditionally used in young children; cuffed ETT increasingly accepted. Weight-based sizing; post-extubation stridor from subglottic edema is a common complication.",
   },
   {
+    id: "nasogastric-tube",
+    name: "Nasogastric Tube",
+    etymology:
+      "Latin nasus = nose + Greek gaster = stomach + Latin tubus = pipe",
+    aliases: [
+      "nasogastric tube",
+      "nasogastric tubes",
+      "ng tube",
+      "ng tubes",
+      "ngt",
+      "ngts",
+      "nasogastric tube (ngt)",
+      "nasogastric feeding tube",
+      "nasogastric decompression tube",
+      "gastric tube",
+      "levin tube",
+      "salem sump tube",
+      "nasogastric intubation",
+    ],
+    definition:
+      "Flexible tube inserted through the nose, esophagus, and into the stomach for gastric decompression, enteral feeding, medication delivery, or gastric lavage — placement must be confirmed before use to avoid pulmonary misplacement.",
+    indications: [
+      "Gastric decompression — small/large bowel obstruction, paralytic ileus, postoperative distension, acute pancreatitis",
+      "Enteral nutrition and hydration when oral intake unsafe or insufficient",
+      "Gastric lavage in selected toxic ingestions (limited modern use)",
+      "Administration of medications (e.g., activated charcoal when indicated)",
+      "Preoperative gastric emptying in emergent surgery when time permits",
+      "Diagnostic — inability to pass NG tube suggests esophageal atresia with tracheoesophageal fistula in neonates",
+    ],
+    keyMeasurements: [
+      "Confirm intragastric placement before suction or feeding — chest X-ray showing tip below diaphragm in stomach (most reliable initial confirmation)",
+      "Aspirated gastric fluid pH ≤4 supports gastric placement (supportive, not sole confirmation)",
+      "Auscultation over stomach while insufflating air — least reliable alone; do not rely without imaging if any doubt",
+      "Mark insertion depth at nare; reassess after patient movement or vomiting",
+      "Intermittent low intermittent suction for decompression; continuous suction increases electrolyte losses",
+    ],
+    complications: [
+      "Pulmonary misplacement — intubation of bronchus with suction/feed → pneumonitis, pneumonia, respiratory distress",
+      "Esophageal perforation (rare)",
+      "Nasal and pharyngeal mucosal injury, epistaxis, sinusitis with prolonged use",
+      "Aspiration of gastric contents if patient vomits with impaired airway reflexes",
+      "Electrolyte losses (hypokalemia, hyponatremia) with prolonged gastric suction",
+      "Feeding into lung if placement not verified — catastrophic",
+    ],
+    boardsPearls: [
+      "NG tube = nose → stomach; confirm placement on X-ray before suction or feeds",
+      "Cannot pass NG + drooling neonate → esophageal atresia / TEF; coiled tube on CXR",
+      "Base of skull fracture — avoid NG (risk intracranial placement); orogastric preferred if gastric access needed",
+      "Bowel obstruction / ileus — NG decompression + NPO + IV fluids",
+      "vs orogastric tube — mouth route; preferred in some trauma/skull fracture settings",
+      "vs PEG — long-term enteral access; NG for short-term decompression or feeding",
+      "Never assume placement by auscultation alone in boards vignettes — check imaging",
+    ],
+    pediatrics:
+      "Esophageal atresia with TEF — classic failure to pass NG into stomach in newborn. Weight-based tube size; confirm gastric position on X-ray before first feed. NG decompression in pyloric stenosis is temporizing before surgery; do not replace definitive pyloromyotomy.",
+  },
+  {
     id: "tracheostomy",
     name: "Tracheostomy",
     etymology:

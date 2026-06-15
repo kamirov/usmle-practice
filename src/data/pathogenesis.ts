@@ -7773,6 +7773,84 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
     pediatrics:
       "Physiologic irregular cycles after menarche are not pathologic ovulatory dysfunction; persistent oligomenorrhea with hyperandrogenism in adolescence warrants PCOS evaluation.",
   },
+  {
+    id: "aspiration",
+    name: "Aspiration",
+    etymology: "Latin aspirare = to breathe in, inhale",
+    aliases: [
+      "aspiration",
+      "pulmonary aspiration",
+      "aspiration event",
+      "aspiration events",
+      "oropharyngeal aspiration",
+      "gastric aspiration",
+      "silent aspiration",
+      "microaspiration",
+    ],
+    definition:
+      "Entry of oropharyngeal or gastric contents into the tracheobronchial tree below the true vocal cords — may cause chemical pneumonitis, bacterial aspiration pneumonia, airway obstruction, or lung abscess depending on material aspirated.",
+    examples: [
+      "Gastric acid aspiration during labor or anesthesia — Mendelson syndrome → aspiration pneumonitis within hours",
+      "Stroke with dysphagia — chronic microaspiration → recurrent aspiration pneumonia",
+      "Vomiting with ↓ GCS — oral secretions and gastric contents → pneumonitis then secondary pneumonia",
+      "Particulate food aspiration — lung abscess or obstructive symptoms",
+      "Severe aspiration with diffuse injury — ARDS precipitant",
+    ],
+    boardsPearls: [
+      "Classic ARDS precipitant (with sepsis, trauma, pancreatitis)",
+      "Two board entities: aspiration pneumonitis (chemical, hours) vs aspiration pneumonia (infectious, antibiotics)",
+      "Pneumonitis — bilateral infiltrates, hypoxemia, minimal early fever; supportive care",
+      "Pneumonia — fever, purulent sputum, anaerobes; ampicillin-sulbactam or clindamycin",
+      "Dependent segments: supine → RUL and RLL; upright → lower lobes",
+      "Risk: ↓ GCS, anesthesia, GERD, neuromuscular dysphagia, vomiting, stroke",
+    ],
+    distinguishFrom: [
+      "Aspiration pneumonitis — acute chemical injury from gastric acid",
+      "Aspiration pneumonia — bacterial infection requiring antibiotics",
+      "Foreign body aspiration — obstructive wheeze/stridor, often pediatric",
+      "Community-acquired pneumonia — no aspiration risk or event",
+    ],
+    pediatrics:
+      "Meconium aspiration is a distinct neonatal entity. Foreign body aspiration causes acute obstruction. Gastric acid aspiration in children with seizure or overdose resembles adult chemical pneumonitis.",
+  },
+  {
+    id: "physical-trauma",
+    name: "Physical Trauma",
+    etymology: "Greek trauma = wound, injury",
+    aliases: [
+      "trauma",
+      "physical trauma",
+      "blunt trauma",
+      "blunt force trauma",
+      "polytrauma",
+      "major trauma",
+      "traumatic injury",
+      "traumatic injuries",
+    ],
+    definition:
+      "Physical injury from external mechanical force (blunt or penetrating) causing tissue disruption and systemic inflammatory response — a classic precipitant of ARDS, DIC, fat embolism, and hypovolemic shock.",
+    examples: [
+      "MVA with pulmonary contusion → noncardiogenic pulmonary edema and ARDS",
+      "Long-bone or pelvic fractures → fat embolism syndrome (dyspnea, petechiae, confusion)",
+      "Blunt abdominal trauma → acute pancreatitis from ductal injury",
+      "Massive hemorrhage → hypovolemic shock and MODS",
+      "Burns — capillary leak, fluid shifts, and distributive shock physiology",
+    ],
+    boardsPearls: [
+      "Trauma is classic ARDS precipitant alongside sepsis, pancreatitis, aspiration",
+      "Fat embolism after long-bone fracture — triad: hypoxemia, neurologic changes, petechial rash ~24–72 h",
+      "Pulmonary contusion — chest trauma with infiltrates and hypoxemia",
+      "Blunt abdominal trauma can cause pancreatitis — epigastric pain + ↑ lipase",
+      "vs traumatic brain injury — TBI is intracranial subset; trauma here = systemic mechanical insult",
+    ],
+    distinguishFrom: [
+      "Traumatic brain injury — focal intracranial injury, not systemic blunt trauma umbrella",
+      "Psychological trauma — not Step 1 pulmonary/cardiovascular context",
+      "Barotrauma — pressure-related lung injury from ventilation, not external blunt force",
+    ],
+    pediatrics:
+      "Nonaccidental trauma must be considered in unexplained injuries in infants. Children have flexible chest walls — pulmonary contusion without rib fractures is common.",
+  },
 ];
 
 const pathogenesisById = new Map(

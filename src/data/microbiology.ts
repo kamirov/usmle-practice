@@ -3976,6 +3976,79 @@ export const MICROBIOLOGY: MicrobiologyEntry[] = [
       "Common in children; puppies as exposure source; Guillain-Barré can follow pediatric Campylobacter infection — monitor for weakness after diarrhea.",
   },
   {
+    id: "vibrio-cholerae",
+    name: "Vibrio cholerae",
+    etymology: "Latin vibrare = to shake + Greek kholera = bile + -ae = species suffix",
+    aliases: [
+      "vibrio cholerae",
+      "v. cholerae",
+      "vibrio",
+      "cholera vibrio",
+      "cholera bacterium",
+      "cholera bacillus",
+      "toxigenic vibrio cholerae",
+    ],
+    type: "gram-negative-rod",
+    definition:
+      "Comma-shaped (curved) Gram-negative rod with single polar flagellum; toxigenic strains (O1, O139) produce cholera toxin and cause epidemic secretory diarrhea with life-threatening dehydration.",
+    mnemonic:
+      "Curved Gram− rod in rice-water stool — Vibrio vibrates (flagellum) in cholera",
+    morphology: [
+      "Gram-negative curved/comma-shaped rods (\"vibrio\" = to vibrate — motile)",
+      "Single polar flagellum — darting motility",
+      "Oxidase-positive",
+      "Grows on alkaline media; selective TCBS agar (yellow sucrose-fermenting colonies)",
+      "Facultative anaerobe; halotolerant (thrives in brackish/coastal water)",
+    ],
+    virulenceFactors: [
+      "Cholera toxin (Ctx) — AB5 exotoxin; A subunit ADP-ribosylates Gαs → constitutive ↑ cAMP → ↑ Cl⁻ secretion via CFTR",
+      "TCP (toxin-coregulated pilus) — intestinal colonization",
+      "Hemagglutinin/protease — mucin degradation and colonization",
+      "LPS endotoxin — less central to secretory pathogenesis than toxin",
+    ],
+    transmission: [
+      "Fecal-oral via contaminated water or food (especially seafood, raw shellfish)",
+      "Human reservoir in endemic areas; explosive epidemics with sanitation breakdown",
+      "Coastal/brackish water environmental reservoir",
+    ],
+    diseases: [
+      "Cholera — massive secretory \"rice-water\" diarrhea",
+      "Asymptomatic carriage in endemic regions",
+    ],
+    classicPresentation: [
+      "Profuse painless watery diarrhea after exposure in endemic area or outbreak",
+      "Rice-water stools — gray, flecked, high volume, nonbloody",
+      "Severe dehydration with minimal fever",
+    ],
+    diagnosis: [
+      "Stool culture on TCBS agar — yellow colonies",
+      "Dark-field microscopy — motile curved rods (research/outbreak setting)",
+      "Oxidase test positive",
+      "Clinical diagnosis in epidemic context with classic rice-water stools",
+    ],
+    treatment: [
+      "Primary treatment is rehydration (ORS or IV fluids) — not antibiotics alone",
+      "Antibiotics for moderate-severe disease shorten duration and reduce spread — doxycycline, azithromycin, or fluoroquinolone (local resistance patterns)",
+      "Oral cholera vaccine for outbreak control in endemic areas",
+    ],
+    distinguishFrom: [
+      "Vibrio parahaemolyticus — raw seafood; inflammatory gastroenteritis, not classic rice-water cholera",
+      "Vibrio vulnificus — wound infection/sepsis in cirrhosis; not epidemic secretory diarrhea",
+      "Campylobacter — curved Gram− rod but inflammatory bloody diarrhea; 42°C growth",
+      "ETEC — traveler's diarrhea; heat-labile toxin also ↑ cAMP but milder course",
+    ],
+    boardsPearls: [
+      "Cholera toxin → ADP-ribosylates Gαs → ↑ cAMP → ↑ Cl⁻ secretion → secretory diarrhea",
+      "Comma-shaped oxidase-positive Gram− rod — Vibrio cholerae",
+      "Rice-water stool + epidemic setting + massive dehydration",
+      "TCBS agar — selective culture; yellow colonies",
+      "Fluids are lifesaving; antibiotics are secondary",
+      "vs pertussis toxin — pertussis ADP-ribosylates Gi (opposite G-protein target)",
+    ],
+    pediatrics:
+      "Infants and young children at highest dehydration risk; aggressive ORS/IV rehydration essential. Zinc supplementation per WHO. Non-O1/non-O139 strains usually do not cause epidemic cholera.",
+  },
+  {
     id: "helicobacter-pylori",
     name: "Helicobacter pylori",
     etymology: "Greek helix = spiral + bakterion = rod + Greek pylorus = gatekeeper",
