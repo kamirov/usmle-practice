@@ -24,13 +24,15 @@ Where relevant, include the plural of a term and common acronyms in the alias. F
 
 When new entries are specified for data, if it makes sense to establish a new data type for them (a new file), then please do so
 
-## Additional data
+## Mnemonics
 
 - For any interleukins, include a mnemonic to differentiate from others
 - For any viruses, include a mnemonic to remember if it is:
   - DNA or RNA
   - Single or double
   - Enveloped or not enveloped
+  - Positive or negative sense
+- Where it may be relevant, add a mnemonic to remember some key element(s)
 
 ## Pediatric
 
