@@ -1066,6 +1066,78 @@ export const CONDITIONS: ConditionEntry[] = [
       "Spontaneous pneumothorax in adolescents resembles adult primary pattern (tall thin males). CF, asthma, and pneumonia complications are common secondary causes in children. Tension pneumothorax management is the same emergency — decompress without delaying for imaging.",
   },
   {
+    id: "barotrauma",
+    name: "Barotrauma",
+    etymology:
+      "Greek baros = pressure + trauma = injury",
+    aliases: [
+      "barotrauma",
+      "barotraumas",
+      "ventilator barotrauma",
+      "ventilator-associated barotrauma",
+      "pulmonary barotrauma",
+      "pulmonary barotraumas",
+      "air pressure injury lung",
+      "positive pressure barotrauma",
+    ],
+    definition:
+      "Lung or pleural injury from excessive alveolar or airway pressure — most often during mechanical ventilation or positive-pressure ventilation — causing alveolar rupture with pneumothorax, pneumomediastinum, subcutaneous emphysema, or pneumoperitoneum.",
+    pathophysiology:
+      "High transpulmonary pressure (high plateau or peak airway pressure, or high auto-PEEP in obstructive disease) → alveolar overdistension and rupture → air dissects along bronchovascular sheaths into mediastinum (pneumomediastinum) or pleural space (pneumothorax); on a ventilator, one-way valve physiology can create tension pneumothorax with hemodynamic collapse.",
+    classicPresentation: [
+      "Sudden hypoxemia, chest pain, or hypotension in intubated/ventilated patient",
+      "Unilateral absent breath sounds if pneumothorax",
+      "Subcutaneous crepitus in neck/chest with subcutaneous emphysema",
+      "Hamman crunch (mediastinal air synchronous with heartbeat) with pneumomediastinum",
+      "↑ Peak and plateau airway pressures on ventilator",
+    ],
+    keyFindings: [
+      "Pneumothorax — visceral pleural line, absent peripheral markings",
+      "Pneumomediastinum — air outlining mediastinal structures on CXR/CT",
+      "Subcutaneous emphysema on exam",
+      "Sudden ↑ airway pressures and ↓ BP in ventilated patient → tension pneumothorax until proven otherwise",
+    ],
+    keyLabs: [
+      "Chest X-ray or bedside ultrasound for pneumothorax",
+      "ABG — hypoxemia",
+      "Ventilator waveform analysis — auto-PEEP in asthma/COPD contributing to barotrauma risk",
+    ],
+    associations: [
+      "Mechanical ventilation — especially high pressures or inadequate sedation in status asthmaticus",
+      "ARDS with high PEEP or tidal volumes (volutrauma overlap)",
+      "Status asthmaticus with auto-PEEP and air trapping",
+      "SCUBA diving or rapid altitude change (non-ventilator barotrauma)",
+      "Blast injury",
+    ],
+    complications: [
+      "Tension pneumothorax and obstructive shock",
+      "Reexpansion pulmonary edema after large pneumothorax drainage",
+      "Pneumoperitoneum if air tracks into peritoneum",
+      "Death if tension physiology unrecognized on ventilator",
+    ],
+    distinguishFrom: [
+      "Volutrauma / VILI — microinjury from overdistension without necessarily gross air leak",
+      "Simple pneumothorax from other causes (spontaneous, trauma) — not pressure-related",
+      "Mainstem intubation — unilateral breath sounds without necessarily pneumothorax",
+      "Mucus plugging — ↑ peak pressure with normal plateau; improves with suction",
+    ],
+    treatment: [
+      "Lower airway pressures — ↓ tidal volume, optimize PEEP, treat bronchospasm/auto-PEEP",
+      "Needle decompression and chest tube for pneumothorax (especially tension)",
+      "Reduce ventilator pressures after chest tube; lung-protective strategy in ARDS",
+      "Sedation/paralysis in severe status asthmaticus to reduce ventilator dyssynchrony (selected cases)",
+    ],
+    boardsPearls: [
+      "Barotrauma = pressure-induced lung injury — pneumothorax, pneumomediastinum, subcutaneous emphysema",
+      "Ventilated patient + sudden ↓ BP + ↑ airway pressures → tension pneumothorax (barotrauma) until proven otherwise",
+      "Status asthmaticus on vent — auto-PEEP and high pressures ↑ barotrauma risk",
+      "Lung-protective ventilation (low Vₜ, plateau ≤30) reduces volutrauma/barotrauma in ARDS",
+      "vs volutrauma — barotrauma implies macroscopic air leak; volutrauma is stretch injury at alveolar level",
+    ],
+    pediatrics:
+      "Same principles in ventilated children; asthma and RSV bronchiolitis with ventilation require careful pressure limits. Neonatal ventilation uses lung-protective strategies to minimize barotrauma.",
+  },
+  {
     id: "tension-pneumothorax",
     name: "Tension Pneumothorax",
     etymology: "Latin tendere = stretch + Greek pneuma = air + thorax = chest",
@@ -4601,7 +4673,6 @@ export const CONDITIONS: ConditionEntry[] = [
     aliases: [
       "ischemic optic neuropathy",
       "ischemic optic neuropathies",
-      "ion",
       "anterior ischemic optic neuropathy",
       "aion",
       "posterior ischemic optic neuropathy",
@@ -10811,6 +10882,85 @@ export const CONDITIONS: ConditionEntry[] = [
     ],
     pediatrics:
       "Most common chronic disease of childhood; viral URIs are common triggers; watch for atypical presentations (cough-only asthma).",
+  },
+  {
+    id: "status-asthmaticus",
+    name: "Status Asthmaticus",
+    etymology:
+      "Latin status = standing/continuing + Greek asthma = panting + -icus = pertaining to",
+    aliases: [
+      "status asthmaticus",
+      "acute severe asthma",
+      "severe asthma exacerbation",
+      "severe asthma exacerbations",
+      "life-threatening asthma",
+      "life-threatening asthma attack",
+      "refractory asthma exacerbation",
+      "near-fatal asthma",
+      "failed asthma therapy",
+    ],
+    definition:
+      "Severe asthma exacerbation that fails to respond adequately to standard bronchodilator and anti-inflammatory therapy — progressive bronchospasm with respiratory distress, air trapping, and risk of respiratory failure requiring intubation and mechanical ventilation.",
+    pathophysiology:
+      "Severe bronchospasm + mucus plugging + airway inflammation → markedly reduced expiratory airflow and auto-PEEP → hyperinflation and ↑ work of breathing → fatigue → hypoventilation with hypercapnia and hypoxemia; high intrathoracic pressures can impair venous return and precipitate arrest.",
+    classicPresentation: [
+      "Known asthmatic with severe dyspnea, wheeze, accessory muscle use, inability to speak in full sentences",
+      "Poor or absent response to repeated inhaled SABA",
+      "Tachypnea progressing to fatigue and decreased respiratory effort (silent chest ominous)",
+      "Peak flow or FEV₁ markedly reduced; pulsus paradoxus may be present",
+      "Hypoxemia; hypercapnia signals impending respiratory failure",
+    ],
+    keyFindings: [
+      "Severe wheeze or paradoxically quiet chest (severe obstruction)",
+      "Tachycardia, tachypnea, diaphoresis, agitation then somnolence if CO₂ retaining",
+      "Hyperinflation on chest X-ray",
+      "ABG — hypoxemia with initially low PaCO₂ (hyperventilation); **normal or rising PaCO₂** in tiring asthmatic is ominous",
+      "↓ Peak expiratory flow / FEV₁ despite bronchodilators",
+    ],
+    keyLabs: [
+      "ABG — assess oxygenation and ventilatory fatigue (rising PaCO₂)",
+      "Peak flow or spirometry when feasible",
+      "Chest X-ray — hyperinflation; evaluate for pneumothorax or pneumonia",
+    ],
+    associations: [
+      "Asthma — underlying reactive airway disease",
+      "Viral URI, allergen exposure, nonadherence to controllers",
+      "NSAID/aspirin-exacerbated respiratory disease",
+      "Anaphylaxis overlapping bronchospasm",
+      "Mechanical ventilation if respiratory failure ensues",
+    ],
+    complications: [
+      "Respiratory failure and need for intubation",
+      "Barotrauma / pneumothorax (including during ventilation)",
+      "Cardiac arrest from hypoxia or severe auto-PEEP",
+      "Metabolic acidosis and lactic acidosis from respiratory muscle fatigue",
+    ],
+    distinguishFrom: [
+      "Mild–moderate asthma exacerbation — responds to SABA and systemic steroids",
+      "Anaphylaxis — urticaria, angioedema, hypotension; epinephrine first-line",
+      "COPD exacerbation — smoking history, fixed obstruction, less reversibility",
+      "Foreign body aspiration — sudden onset, unilateral findings",
+      "Vocal cord dysfunction — inspiratory stridor/wheeze, normal inter-attack spirometry",
+    ],
+    treatment: [
+      "Continuous or frequent nebulized SABA ± ipratropium",
+      "Systemic corticosteroids early",
+      "Supplemental O₂ to maintain adequate saturation",
+      "Magnesium sulfate IV for severe refractory bronchospasm",
+      "Avoid excessive sedation that depresses respiratory drive",
+      "Intubation and mechanical ventilation if exhaustion, hypercapnia, or altered mental status — permissive hypercapnia and low tidal volumes; watch for auto-PEEP and barotrauma",
+      "Ketamine or volatile anesthetics in refractory cases (specialty/ICU)",
+    ],
+    boardsPearls: [
+      "Status asthmaticus = severe asthma not responding to initial bronchodilator therapy",
+      "Normal or ↑ PaCO₂ in acute asthma = fatigue/impending respiratory failure (early asthma has ↓ PaCO₂ from hyperventilation)",
+      "Silent chest = extremely severe obstruction — prepare for intubation",
+      "First-line: continuous SABA + systemic steroids ± ipratropium; magnesium if refractory",
+      "Intubated asthmatic — watch auto-PEEP, barotrauma, and hemodynamic compromise from high intrathoracic pressure",
+      "vs anaphylaxis — epinephrine IM is first-line in anaphylaxis with bronchospasm",
+    ],
+    pediatrics:
+      "Children with status asthmaticus need aggressive inhaled SABA, systemic steroids, and close monitoring; same ABG pearl — rising PaCO₂ is ominous. Weight-based drug dosing; family history and atopy common.",
   },
   {
     id: "sinusitis",
@@ -18137,6 +18287,81 @@ export const CONDITIONS: ConditionEntry[] = [
     ],
     pediatrics:
       "S. pneumoniae, H. influenzae (type b reduced by vaccine), and viruses (RSV) are common in children; parapneumonic effusion and empyema occur; amoxicillin first line for uncomplicated CAP; atypical coverage with macrolide when indicated.",
+  },
+  {
+    id: "ventilator-associated-pneumonia",
+    name: "Ventilator-Associated Pneumonia",
+    etymology:
+      "Latin ventilare = fan + -ator = agent + associated = linked + pneumonia = lung inflammation",
+    aliases: [
+      "ventilator-associated pneumonia",
+      "ventilator associated pneumonia",
+      "ventilator-associated pneumonias",
+      "vap",
+      "vaps",
+      "nosocomial ventilator pneumonia",
+      "intubation-associated pneumonia",
+      "ventilator acquired pneumonia",
+      "hospital ventilator pneumonia",
+    ],
+    definition:
+      "Hospital-acquired pneumonia developing ≥48 hours after endotracheal intubation and mechanical ventilation — caused by aspiration of colonized oropharyngeal/ gastric secretions past the cuff with impaired host defenses.",
+    pathophysiology:
+      "Endotracheal tube bypasses upper airway defenses → biofilm on tube → microaspiration of colonized secretions → alveolar infection; prolonged sedation, supine positioning, and prior antibiotics alter flora toward gram-negative rods and MRSA.",
+    classicPresentation: [
+      "Fever, purulent tracheal secretions, and new or worsening infiltrate in intubated ICU patient",
+      "Hypoxemia requiring ↑ FiO₂ or PEEP",
+      "↑ WBC or leukopenia in sepsis",
+      "Often develops after ≥48–72 h of mechanical ventilation",
+    ],
+    keyFindings: [
+      "New or progressive pulmonary infiltrate on CXR/CT",
+      "Purulent endotracheal aspirate",
+      "Hypoxemia and increased ventilator requirements",
+      "Fever and leukocytosis (may be blunted in critically ill)",
+    ],
+    keyLabs: [
+      "Quantitative endotracheal aspirate or BAL cultures (diagnostic thresholds institution-specific)",
+      "Blood cultures if hemodynamically unstable",
+      "Procalcitonin adjunct only — not definitive alone",
+    ],
+    associations: [
+      "Mechanical ventilation and endotracheal intubation",
+      "ICU stay, sedation, supine positioning",
+      "Prior broad-spectrum antibiotics — selects resistant organisms",
+      "Common pathogens: Pseudomonas aeruginosa, Klebsiella, Acinetobacter, S. aureus (including MRSA), S. pneumoniae",
+      "ARDS and status asthmaticus requiring prolonged ventilation",
+    ],
+    complications: [
+      "Prolonged ventilation and ICU stay",
+      "Sepsis and multiorgan failure",
+      "Increased mortality in critically ill",
+      "Antimicrobial resistance from broad empiric therapy",
+    ],
+    distinguishFrom: [
+      "Community-acquired pneumonia — present on admission, not ventilator-associated timing",
+      "Aspiration pneumonitis — chemical injury without primary infection",
+      "ARDS noninfectious worsening — no purulent secretions or positive quantitative culture",
+      "Atelectasis — fever possible post-op but no infectious infiltrate pattern",
+      "Tracheobronchitis — airway inflammation without parenchymal infiltrate",
+    ],
+    treatment: [
+      "Empiric broad-spectrum antibiotics covering gram-negatives and MRSA per local ICU antibiogram",
+      "Narrow therapy when culture sensitivities return",
+      "Noninvasive ventilation strategies to limit intubation when possible (not once intubated for VAP treatment)",
+      "Ventilator bundle — head of bed elevation, oral care, sedation minimization, DVT prophylaxis, peptic ulcer prophylaxis",
+      "Early extubation when feasible to reduce VAP risk",
+    ],
+    boardsPearls: [
+      "VAP = pneumonia ≥48 h after intubation/mechanical ventilation",
+      "Think Pseudomonas, Klebsiella, Acinetobacter, MRSA in ICU ventilated patients",
+      "New infiltrate + fever + purulent secretions in intubated patient",
+      "Prevention: head of bed ↑, oral decontamination, minimize sedation, extubate early",
+      "vs CAP/HAP without ventilator — VAP specific to intubated patients",
+      "Prolonged mechanical ventilation ↑ VAP risk — link to ETT microaspiration",
+    ],
+    pediatrics:
+      "Ventilated children in PICU/NICU develop VAP with similar pathogens; prevention bundles and early extubation apply. Neonatal VAP is a serious complication of prolonged intubation for RDS.",
   },
   {
     id: "aspiration-pneumonitis",

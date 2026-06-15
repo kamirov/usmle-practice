@@ -2312,6 +2312,114 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
     ],
   },
   {
+    id: "gpcr",
+    name: "G Protein-Coupled Receptor (GPCR)",
+    etymology:
+      "G = GTP-binding protein + coupled = linked + receptor = receiver (Latin recipere = to receive)",
+    aliases: [
+      "gpcr",
+      "gpcrs",
+      "g-protein-coupled receptor",
+      "g-protein-coupled receptors",
+      "g protein coupled receptor",
+      "g protein coupled receptors",
+      "g protein-coupled receptor",
+      "g protein-coupled receptors",
+      "seven transmembrane receptor",
+      "seven transmembrane receptors",
+      "7 transmembrane receptor",
+      "7tm receptor",
+      "7tm receptors",
+      "serpentine receptor",
+      "serpentine receptors",
+      "metabotropic receptor",
+      "metabotropic receptors",
+    ],
+    type: "Signaling pathway",
+    source:
+      "Largest family of cell-surface receptors — seven-transmembrane (heptahelical) proteins that transduce extracellular ligand binding into intracellular signals via heterotrimeric G proteins (Gs, Gi, Gq, G12/13)",
+    receptor:
+      "Couples to heterotrimeric Gαβγ subunits — Gs (adenylyl cyclase/cAMP), Gi (↓ adenylyl cyclase), Gq (phospholipase C/IP3-DAG), G12/13 (Rho pathway)",
+    function:
+      "Ligand binds GPCR → conformational change → G protein GDP→GTP exchange on Gα → Gα-GTP and Gβγ dissociate → effector activation (adenylyl cyclase, phospholipase C, ion channels) → second-messenger cascades; signal terminated by GTPase activity, receptor phosphorylation, and β-arrestin-mediated desensitization/internalization.",
+    clinicalRelevance: [
+      "Most hormones and neurotransmitters use GPCRs — adrenergic, muscarinic, dopaminergic, histaminergic, opioid, chemokine receptors",
+      "β-blockers, H1/H2 antihistamines, anticholinergics, and many psychotropics target GPCRs",
+      "Cholera toxin and pertussis toxin modify G protein signaling downstream of GPCRs",
+      "GPCR desensitization — β-arrestin recruitment after phosphorylation limits continued signaling",
+      "Many pharmacologic agonists/antagonists are GPCR-targeted (e.g., albuterol, propranolol, atropine)",
+    ],
+    boardsPearls: [
+      "GPCR = 7-transmembrane receptor → heterotrimeric G protein → second messenger",
+      "Gs → adenylyl cyclase → ↑ cAMP; Gi → ↓ cAMP; Gq → PLC → IP3/DAG/Ca²⁺",
+      "Metabotropic (GPCR) vs ionotropic (ligand-gated channel) — e.g., muscarinic vs nicotinic ACh",
+      "Largest receptor superfamily — target of ~30–40% of drugs",
+      "β-arrestin mediates GPCR desensitization and internalization",
+      "Cholera toxin (Gs) and pertussis toxin (Gi) are classic toxin–GPCR pathway board links",
+    ],
+    distinguishFrom: [
+      "Receptor tyrosine kinase (RTK) — single transmembrane kinase domain; uses autophosphorylation and MAPK/PI3K, not heterotrimeric G proteins",
+      "Ionotropic receptor — ligand-gated ion channel (nicotinic ACh, GABA-A, NMDA)",
+      "Nuclear hormone receptor — intracellular DNA-binding receptors (steroids, thyroid hormone)",
+      "JAK-STAT cytokine receptors — associate with JAK kinases, not G proteins",
+      "Gs protein — intracellular transducer, not the membrane receptor itself",
+    ],
+    pediatrics:
+      "Same GPCR pharmacology in children — β-agonists for asthma, H1 blockers for urticaria, and adenosine for SVT use GPCR pathways; neonatal caffeine for apnea acts partly via adenosine antagonism.",
+  },
+  {
+    id: "gs-coupled-hormones",
+    name: "Gs-Coupled Hormones",
+    etymology:
+      "Gs = stimulatory G protein + coupled = linked + Latin hormon = excite/set in motion",
+    aliases: [
+      "gs-coupled hormones",
+      "gs coupled hormones",
+      "gs-coupled hormone",
+      "gs coupled hormone",
+      "gs-coupled ligands",
+      "gs coupled ligands",
+      "gs linked hormones",
+      "gs linked hormone",
+      "hormones that use gs",
+      "gs pathway hormones",
+      "camp raising hormones",
+      "cAMP-raising hormones",
+    ],
+    type: "Signaling pathway",
+    source:
+      "Endocrine, paracrine, and neurotransmitter ligands whose receptors couple to Gs (Gαs) → activate adenylyl cyclase → ↑ cAMP → PKA",
+    receptor:
+      "Gs-coupled GPCRs on target cells — β-adrenergic, glucagon, PTH1, TSH, LH, FSH, CRH, V2 vasopressin, H2 histamine, D1 dopamine, calcitonin, GLP-1, secretin, and related receptors",
+    function:
+      "Hormone/neurotransmitter binds Gs-linked GPCR → Gαs-GTP stimulates adenylyl cyclase → cAMP accumulates → PKA phosphorylates enzymes, channels, and transcription factors → tissue-specific responses (glycogenolysis, lipolysis, hormone secretion, water reabsorption, bronchodilation, gastric acid secretion).",
+    clinicalRelevance: [
+      "Glucagon and epinephrine (β-receptors) raise hepatic cAMP → glycogenolysis and gluconeogenesis",
+      "PTH raises renal cAMP → phosphate excretion and ↑ calcitriol synthesis",
+      "TSH, LH, and FSH drive thyroid and gonadal hormone synthesis via cAMP",
+      "ADH at V2 receptor inserts aquaporin-2 via cAMP in collecting duct",
+      "H2 histamine on parietal cells → cAMP → H⁺/K⁺-ATPase activation (gastric acid)",
+      "Phosphodiesterase inhibitors (caffeine, theophylline, milrinone) amplify cAMP signals downstream",
+    ],
+    boardsPearls: [
+      "Gs-coupled → adenylyl cyclase → ↑ cAMP → PKA",
+      "Classic list: glucagon, epinephrine (β), PTH, TSH, LH/FSH, CRH, ADH (V2), H2 histamine, D1, calcitonin, GLP-1, secretin",
+      "vs Gi-coupled — α2-adrenergic, M2 muscarinic, opioid, somatostatin → ↓ cAMP",
+      "vs Gq-coupled — α1, M1/M3, H1, V1, GnRH, angiotensin II → IP3/DAG/Ca²⁺, not cAMP",
+      "Cholera toxin locks Gαs ON → all Gs-coupled pathways conceptually hyperactive in enterocytes",
+      "PDE inhibitors ↑ cAMP without needing hormone — theophylline, caffeine, milrinone",
+    ],
+    distinguishFrom: [
+      "Gi-coupled hormones/neurotransmitters — ↓ adenylyl cyclase (α2, M2, opioids)",
+      "Gq-coupled hormones — phospholipase C pathway (α1, M3, H1, V1, angiotensin II)",
+      "Receptor tyrosine kinase hormones — insulin, growth hormone, prolactin (JAK/MAPK not Gs)",
+      "Gs protein — the intracellular GTPase transducer, not the hormone group itself",
+      "cAMP — second messenger downstream, not the hormone classification",
+    ],
+    pediatrics:
+      "Same Gs–cAMP hormones in pediatrics — neonatal hypoglycemia treated with glucagon; congenital hypothyroidism involves TSH axis; β-agonists for asthma raise cAMP in airway smooth muscle.",
+  },
+  {
     id: "gs-protein",
     name: "Gs Protein",
     etymology:

@@ -1570,6 +1570,41 @@ export const MEDICATIONS: MedicationEntry[] = [
     ],
   },
   {
+    id: "milrinone",
+    name: "Milrinone",
+    etymology:
+      "mil- = milrinone proprietary stem + -inone = inodilator (inotropic + vasodilator) suffix",
+    aliases: [
+      "milrinone",
+      "milrinones",
+      "milrinone lactate",
+      "primacor",
+      "pde-3 inhibitor milrinone",
+      "phosphodiesterase-3 inhibitor milrinone",
+    ],
+    drugClass: "Phosphodiesterase-3 inhibitor / inodilator",
+    mechanism:
+      "Selective PDE-3 inhibition in cardiomyocytes and vascular smooth muscle → ↓ cAMP degradation → ↑ intracellular cAMP → enhanced Ca²⁺ influx and contractility (inotropy) plus vasodilation (afterload reduction).",
+    indications: [
+      "Acute decompensated heart failure with low cardiac output (short-term IV inotrope)",
+      "Cardiogenic shock bridge when inotropic support needed",
+      "Pulmonary hypertension with RV failure in selected perioperative/ICU settings",
+    ],
+    adverseEffects: [
+      "Hypotension from vasodilation",
+      "Arrhythmias (ventricular ectopy, tachycardia)",
+      "Thrombocytopenia with prolonged infusion",
+      "Chronic oral PDE-3 inhibitors ↑ mortality in heart failure — milrinone is short-term IV only",
+    ],
+    boardsPearls: [
+      "PDE-3 inhibitor → ↑ cAMP in heart → inotropy + vasodilation (inodilator)",
+      "Acute HF/cardiogenic shock — IV milrinone when inotropic support needed",
+      "Same PDE-3 class as cilostazol — chronic oral PDE-3 inhibitors contraindicated in HF (↑ mortality)",
+      "vs dobutamine — dobutamine is β₁ agonist (Gs/cAMP); milrinone bypasses receptor via PDE inhibition",
+      "vs digoxin — milrinone ↑ cAMP; digoxin ↑ Ca²⁺ via Na⁺/K⁺-ATPase inhibition",
+    ],
+  },
+  {
     id: "acetaminophen",
     name: "Acetaminophen",
     etymology: "acetyl = CH3CO group + amino = nitrogen group + phenol = benzene-OH",
@@ -4725,6 +4760,79 @@ export const MEDICATIONS: MedicationEntry[] = [
       "β₂-selective but tachycardia still occurs at higher doses",
       "Overuse (≥2 canisters/year) signals poor control — step up controller therapy",
       "Peds: same rescue role; spacer device improves delivery in young children",
+    ],
+  },
+  {
+    id: "theophylline",
+    name: "Theophylline",
+    etymology:
+      "Greek theion = sulfur-containing xanthine base + phyllon = leaf (found in tea leaves) + -ine = alkaloid suffix",
+    aliases: [
+      "theophylline",
+      "theophyllines",
+      "aminophylline",
+      "methylxanthine theophylline",
+      "theo-dur",
+      "theophylline oral",
+      "theophylline iv",
+    ],
+    drugClass: "Methylxanthine / nonselective phosphodiesterase inhibitor",
+    mechanism:
+      "Nonselective phosphodiesterase inhibition → ↓ cAMP breakdown → ↑ cAMP in smooth muscle and other tissues; also nonselective adenosine receptor antagonist → bronchodilation and CNS/ cardiac stimulation.",
+    indications: [
+      "Asthma and COPD maintenance bronchodilator (second- or third-line after inhaled SABA/LABA/ICS)",
+      "Apnea of prematurity (caffeine citrate preferred; theophylline historically used)",
+      "Adjunct in refractory bronchospasm when inhaled therapy insufficient",
+    ],
+    adverseEffects: [
+      "Narrow therapeutic index — nausea, vomiting, tremor, insomnia",
+      "Tachycardia, arrhythmias, seizures (especially at toxic levels)",
+      "Drug interactions via CYP1A2 (ciprofloxacin, cimetidine ↑ levels; smoking ↓ levels)",
+      "Antagonizes adenosine used in cardiac stress testing",
+    ],
+    boardsPearls: [
+      "Methylxanthine → PDE inhibitor → ↑ cAMP → bronchodilation (same pathway as β-agonists downstream)",
+      "Also adenosine antagonist — blocks adenosine-mediated AV nodal slowing",
+      "Narrow therapeutic window — toxicity causes seizures and arrhythmias",
+      "CYP1A2 substrate — levels ↑ with macrolides/fluoroquinolones/cimetidine; ↓ with smoking",
+      "Second-line asthma therapy — inhaled bronchodilators and steroids preferred",
+      "vs caffeine — similar methylxanthine class; theophylline more selective boards focus for asthma",
+    ],
+  },
+  {
+    id: "caffeine",
+    name: "Caffeine",
+    etymology:
+      "German Kaffee = coffee + -ine = alkaloid suffix (methylxanthine from coffee/tea)",
+    aliases: [
+      "caffeine",
+      "caffeines",
+      "caffeine citrate",
+      "caffeine citrates",
+      "methylxanthine caffeine",
+      "coffee caffeine",
+      "caf citrate",
+    ],
+    drugClass: "Methylxanthine / CNS stimulant / phosphodiesterase inhibitor",
+    mechanism:
+      "Nonselective adenosine A₁/A₂ receptor antagonist → CNS stimulation and reduced drowsiness; phosphodiesterase inhibition → ↑ cAMP; weak diuresis from ↑ renal blood flow.",
+    indications: [
+      "Apnea of prematurity (caffeine citrate — reduces extubation failure and BPD risk)",
+      "Adjunct analgesia (combined with acetaminophen/aspirin in some formulations)",
+      "Migraine therapy (combined with analgesics in some OTC products)",
+    ],
+    adverseEffects: [
+      "Insomnia, anxiety, tremor, palpitations",
+      "Tachycardia and arrhythmias at high doses",
+      "Withdrawal headache with abrupt cessation",
+      "Excessive intake can trigger MAT or worsen arrhythmias in susceptible patients",
+    ],
+    boardsPearls: [
+      "Methylxanthine — adenosine antagonist + PDE inhibitor → ↑ cAMP",
+      "Neonatal apnea — caffeine citrate is standard; ↓ apnea/bradycardia episodes in preterm infants",
+      "Blocks adenosine effects (including adenosine used in SVT cardioversion/stress testing)",
+      "CYP1A2 metabolism — interacts like theophylline but less narrow index at typical doses",
+      "vs theophylline — caffeine more CNS stimulant; theophylline more asthma/COPD bronchodilator focus",
     ],
   },
   {
