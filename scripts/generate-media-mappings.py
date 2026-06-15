@@ -56,6 +56,10 @@ PRESERVE_CAPTIONS: dict[str, dict[str, str]] = {
         "keratoconjunctivitis-sicca": "Dry eye with ocular surface staining/keratitis pattern",
         "diabetes-insipidus": "Massive polyuria — large volumes of dilute urine in diabetes insipidus",
         "carotid-stenosis": "Carotid duplex ultrasound showing near-occlusive internal carotid artery stenosis",
+        "alcohol-withdrawal": "Alcoholic liver disease — chronic heavy alcohol use underlying withdrawal risk",
+        "delirium-tremens": "Severe alcohol withdrawal delirium with autonomic hyperactivity",
+        "status-epilepticus": "Prolonged seizure activity — neurologic emergency requiring urgent benzodiazepines",
+        "postherpetic-neuralgia": "Dermatomal herpes zoster rash — acute shingles preceding postherpetic neuralgia",
     },
     "symptoms": {
         "erythema": "Sharply demarcated erythema of recurrent erysipelas (vasodilation with infection)",
@@ -82,6 +86,8 @@ PRESERVE_CAPTIONS: dict[str, dict[str, str]] = {
         "xerosis": "Dry, scaling skin over the knuckles consistent with xerosis",
         "xerostomia": "Dry mouth illustration showing reduced salivary moisture",
         "hypotonia": "Hypotonic infant — reduced muscle tone with floppy posture on handling",
+        "anxiety": "Generalized anxiety — persistent excessive worry with somatic symptoms",
+        "enuresis": "Nocturnal enuresis — involuntary bedwetting during sleep in children",
     },
     "cells": {
         "oxidative-phosphorylation": "Inner mitochondrial membrane respiratory chain: complexes I–IV pass electrons to O₂; proton pumping drives ATP synthase (Complex V)",
@@ -98,6 +104,9 @@ PRESERVE_CAPTIONS: dict[str, dict[str, str]] = {
     "ecg": {
         "electrical-alternans": "QRS alternans with tachycardia and low voltage in large pericardial effusion",
         "inferior-stemi": "12-lead ECG with ST elevation in inferior leads II, III, and aVF with reciprocal changes in anterolateral leads",
+    },
+    "pathogenesis": {
+        "neuralgia": "Trigeminal nerve distribution — classic site of lancinating neuralgic pain",
     },
 }
 

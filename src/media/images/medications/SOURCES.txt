@@ -192,3 +192,12 @@ mao-inhibitors.png
 anticholinergics.svg
   Source: Local copy from medications/diphenhydramine.svg
   Reference: https://commons.wikimedia.org/wiki/File:Diphenhydramine.svg
+
+benzodiazepines.svg
+  Source: Wikimedia Commons — Diazepam structure.svg
+  Page: https://commons.wikimedia.org/wiki/File:Diazepam_structure.svg
+
+flumazenil.svg
+  Source: Wikimedia Commons — Flumazenil.svg
+  Page: https://commons.wikimedia.org/wiki/File:Flumazenil.svg
+

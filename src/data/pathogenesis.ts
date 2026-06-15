@@ -3072,6 +3072,44 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
       "GBS is the classic acute pediatric demyelinating neuropathy post-Campylobacter/viral illness; Charcot-Marie-Tooth may present in childhood with pes cavus and distal weakness.",
   },
   {
+    id: "neuralgia",
+    name: "Neuralgia",
+    etymology: "Greek neuron = nerve + algos = pain",
+    aliases: [
+      "neuralgia",
+      "neuralgias",
+      "nerve pain",
+      "nerve pains",
+      "neuralgic pain",
+    ],
+    definition:
+      "Paroxysmal or persistent severe pain along the distribution of a sensory nerve or nerve root — often lancinating, electric shock–like, or burning; reflects nerve irritation or injury rather than musculoskeletal pain.",
+    examples: [
+      "Trigeminal neuralgia — sudden lancinating V2/V3 pain, trigger zones; carbamazepine first-line",
+      "Postherpetic neuralgia — burning dermatomal pain after herpes zoster",
+      "Glossopharyngeal neuralgia — paroxysmal throat/ear/tongue base pain",
+      "Sciatica — radicular pain down posterior leg from L4–S1 nerve root compression",
+      "Occipital neuralgia — shooting pain from occiput radiating to scalp",
+      "Diabetic neuropathy — chronic burning neuralgic pain in stocking-glove distribution",
+    ],
+    boardsPearls: [
+      "Neuralgia = nerve distribution pain; myalgia = muscle pain; arthralgia = joint pain",
+      "Trigeminal neuralgia — carbamazepine (Na⁺ channel blocker) is first-line",
+      "Postherpetic neuralgia — gabapentin/pregabalin after shingles",
+      "Lancinating electric pain in dermatome → think radiculopathy or zoster",
+      "vs nociceptive pain — neuralgia is neuropathic (allodynia, burning, dysesthesia)",
+      "Microvascular compression of trigeminal nerve root — common cause of trigeminal neuralgia",
+    ],
+    distinguishFrom: [
+      "Neuropathy — broader nerve dysfunction (sensory loss, weakness, reflex changes), not just pain",
+      "Myalgia — muscle aching without dermatomal/nerve distribution",
+      "Radiculopathy — nerve root compression; neuralgia describes the pain quality/pattern",
+      "Nociceptive somatic pain — localized injury pain without nerve injury features",
+    ],
+    pediatrics:
+      "Trigeminal neuralgia is rare in children; pediatric facial pain more often dental, sinus, or migraine. Postherpetic neuralgia uncommon after childhood zoster.",
+  },
+  {
     id: "refeeding-syndrome",
     name: "Refeeding Syndrome",
     etymology: "re- = again + feed = nourish + syndrome = grouped findings",
@@ -5743,6 +5781,46 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
     ],
     pediatrics:
       "Failure to pass meconium within 48 hours is a neonatal red flag for Hirschsprung disease or distal obstruction; meconium ileus strongly suggests cystic fibrosis — sweat chloride testing.",
+  },
+  {
+    id: "acid-fast-bacteria",
+    name: "Acid-Fast Bacteria",
+    etymology: "Latin acidus = sour + Old English fæst = firm/fixed + Latin bacterium = small rod",
+    aliases: [
+      "acid-fast bacteria",
+      "acid-fast bacterium",
+      "acid-fast bacilli",
+      "acid-fast bacillus",
+      "afb",
+      "acid fast bacilli",
+      "acid fast bacteria",
+      "acid-fast organisms",
+    ],
+    definition:
+      "Organisms whose cell walls contain mycolic acid or related waxy lipids that retain carbol fuchsin dye despite acid-alcohol decolorization — appear red on Ziehl-Neelsen or Kinyoun stain.",
+    examples: [
+      "Mycobacterium tuberculosis — classic red rods on sputum smear; RIPE therapy",
+      "Mycobacterium avium complex (MAC) — AIDS disseminated infection; clarithromycin-based regimen",
+      "Mycobacterium leprae — cannot culture in vitro; dapsone + rifampin + clofazimine",
+      "Nocardia — weakly acid-fast branching filaments; sulfonamides",
+      "Cryptosporidium oocysts — modified acid-fast stain in stool (protozoan, not bacterium)",
+    ],
+    boardsPearls: [
+      "Acid-fastness = mycolic acid in cell wall — poor Gram stain penetration",
+      "Ziehl-Neelsen: heat-fixed carbol fuchsin; red AFB on blue background",
+      "M. tuberculosis — aerobic, slow-growing, caseating granulomas",
+      "Nocardia — weakly acid-fast, branching; soil exposure; sulfonamide treatment",
+      "vs Gram-positive rods — Corynebacterium not acid-fast",
+      "Isoniazid targets mycolic acid synthesis (katG activation required)",
+      "Modified acid-fast for Cryptosporidium oocysts — not bacteria but boards association",
+    ],
+    distinguishFrom: [
+      "Gram-positive bacteria — retain crystal violet, decolorize with alcohol without mycolic acid step",
+      "Fungi — KOH prep or silver stains, not Ziehl-Neelsen (except some overlap in clinical workup)",
+      "Nocardia vs Actinomyces — Nocardia weakly acid-fast; Actinomyces not acid-fast, sulfur granules",
+    ],
+    pediatrics:
+      "Neonatal and pediatric TB diagnosed by culture/PCR and contact history; BCG vaccination causes positive PPD without active disease. Disseminated MAC in pediatric AIDS.",
   },
 ];
 

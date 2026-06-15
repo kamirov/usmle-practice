@@ -1037,6 +1037,87 @@ export const ORGANS: OrganEntry[] = [
     derivatives: ["Telencephalon", "Diencephalon", "Mesencephalon", "Metencephalon", "Myelencephalon"],
   },
   {
+    id: "meninges",
+    name: "Meninges",
+    etymology: "Greek meninx = membrane + plural -es",
+    aliases: [
+      "meninges",
+      "meninx",
+      "cranial meninges",
+      "spinal meninges",
+      "leptomeninges",
+      "leptomeninx",
+      "meningeal layers",
+      "meningeal membranes",
+    ],
+    germLayer: "Mesoderm (dura) and neural crest (leptomeninges)",
+    origin:
+      "Dura mater derives from mesoderm (periosteal and meningeal layers); arachnoid and pia mater (leptomeninges) derive from neural crest surrounding the developing neural tube.",
+    derivatives: [
+      "Dura mater — tough outer layer; folds into falx cerebri and tentorium cerebelli",
+      "Arachnoid mater — middle avascular layer; arachnoid granulations reabsorb CSF",
+      "Pia mater — thin inner layer adherent to brain and spinal cord surface",
+      "Subarachnoid space — between arachnoid and pia; contains CSF and cerebral vessels",
+    ],
+    functionSummary:
+      "Protect and suspend the CNS; dura provides mechanical barrier and venous sinuses; subarachnoid space circulates CSF and houses major cerebral arteries; pain-sensitive meninges mediate headache in inflammation.",
+    commonPathologies: [
+      "Meningitis — inflammation of meninges",
+      "Subarachnoid hemorrhage — blood in subarachnoid space",
+      "Meningioma — arachnoid cap cell tumor",
+      "Epidural hematoma — blood between skull and dura",
+      "Subdural hematoma — blood between dura and arachnoid",
+    ],
+    step1Pearls: [
+      "Three layers: dura (outer), arachnoid (middle), pia (inner)",
+      "Subarachnoid space = CSF + major cerebral arteries (site of SAH and LP)",
+      "Epidural space is outside dura; subdural space is between dura and arachnoid",
+      "Meningioma arises from arachnoid cap cells — extra-axial, dural tail on MRI",
+      "Meninges are pain-sensitive — meningeal irritation causes headache and nuchal rigidity",
+      "Arachnoid granulations protrude into dural venous sinuses for CSF reabsorption",
+    ],
+    pediatrics:
+      "Neonatal meningitis inflames leptomeninges with subtle signs (bulging fontanelle); myelomeningocele exposes meninges and neural tissue through vertebral defect.",
+  },
+  {
+    id: "arachnoid-villi",
+    name: "Arachnoid Villi",
+    etymology: "Greek arachne = spider + -oid = like + Latin villus = shaggy hair/tuft",
+    aliases: [
+      "arachnoid villi",
+      "arachnoid villus",
+      "arachnoid granulations",
+      "arachnoid granulation",
+      "pacchionian granulations",
+      "pacchionian bodies",
+      "csf reabsorption villi",
+    ],
+    germLayer: "Neural crest (arachnoid mater derivative)",
+    origin:
+      "Outpouchings of the arachnoid mater that protrude through the dura mater into dural venous sinuses — histologically contain arachnoid cap cells over a core of subarachnoid space and collagen.",
+    derivatives: [
+      "Arachnoid cap cells — meningioma cell of origin",
+      "CSF drainage pathway into superior sagittal sinus",
+    ],
+    functionSummary:
+      "Primary site of CSF reabsorption from subarachnoid space into venous circulation — one-way valve-like flow driven by venous pressure gradient.",
+    commonPathologies: [
+      "Communicating hydrocephalus — impaired CSF absorption at arachnoid villi (post-meningitis, SAH)",
+      "Meningioma — neoplasm from arachnoid cap cells",
+      "Increased ICP — compressed or dysfunctional villi",
+      "Normal pressure hydrocephalus — debated villi dysfunction component",
+    ],
+    step1Pearls: [
+      "Arachnoid villi = CSF reabsorption into dural venous sinuses",
+      "Post-meningitis or SAH scarring can impair villi → communicating hydrocephalus",
+      "Meningioma arises from arachnoid cap cells at villi",
+      "Villi protrude into superior sagittal sinus — visible on autopsy/imaging in severe ICP",
+      "vs choroid plexus — choroid plexus produces CSF; villi reabsorb CSF",
+    ],
+    pediatrics:
+      "Post-hemorrhagic or post-meningitic hydrocephalus in infants may reflect impaired CSF absorption at arachnoid villi; requires neurosurgical evaluation.",
+  },
+  {
     id: "forebrain",
     name: "Forebrain",
     etymology: "Old English fore = front + brain = enkephalos",
@@ -1099,6 +1180,79 @@ export const ORGANS: OrganEntry[] = [
     ],
     pediatrics:
       "Prosencephalon maldevelopment causes holoprosencephaly with midline facial defects; trisomy 13 and fetal alcohol are common associations in pediatrics.",
+  },
+  {
+    id: "caudate",
+    name: "Caudate Nucleus",
+    etymology: "Latin cauda = tail + -ate = resembling (tail-like curve around lateral ventricle)",
+    aliases: [
+      "caudate",
+      "caudate nucleus",
+      "caudate nuclei",
+      "caudates",
+      "head of caudate",
+      "caudate head",
+      "dorsal striatum caudate",
+    ],
+    origin:
+      "Develops from the telencephalic ventricular zone as part of the basal ganglia; forms the C-shaped gray matter lateral to the lateral ventricle with head, body, and tail components.",
+    germLayer: "Ectoderm",
+    derivatives: [
+      "Head — adjacent to lateral ventricle frontal horn",
+      "Body — along lateral ventricle body",
+      "Tail — curves into temporal lobe toward amygdala",
+    ],
+    functionSummary:
+      "Principal input nucleus of the basal ganglia (dorsal striatum with putamen); receives glutamatergic input from cortex and modulates movement, cognition, and motivation via direct/indirect pathway medium spiny neurons.",
+    commonPathologies: [
+      "Huntington disease — caudate atrophy first on imaging",
+      "Wilson disease — basal ganglia degeneration",
+      "Vascular lacunar stroke in caudate — contralateral motor deficits",
+      "Hyperglycemic hemichorea-hemiballismus — putamen/caudate involvement",
+    ],
+    step1Pearls: [
+      "Caudate + putamen = dorsal striatum (motor); nucleus accumbens = ventral striatum (reward)",
+      "Huntington disease — caudate degeneration → enlarged lateral ventricles on CT/MRI",
+      "Direct pathway (D1) promotes movement; indirect (D2) inhibits — Huntington loses indirect MSNs",
+      "Caudate wraps around lateral ventricle — classic neuroanatomy landmark",
+    ],
+    pediatrics:
+      "Juvenile Huntington disease shows caudate atrophy with rigidity and seizures; metabolic disorders (Wilson, PKAN) can affect caudate in childhood.",
+  },
+  {
+    id: "putamen",
+    name: "Putamen",
+    etymology: "Latin putamen = shell/husk (outer shell of lentiform nucleus)",
+    aliases: [
+      "putamen",
+      "putamens",
+      "lentiform nucleus putamen",
+      "dorsal striatum putamen",
+    ],
+    origin:
+      "Telencephalic basal ganglia derivative forming the outer part of the lentiform nucleus (with internal globus pallidus); separated from caudate by the internal capsule on coronal sections.",
+    germLayer: "Ectoderm",
+    derivatives: [
+      "Dorsal striatum (with caudate nucleus)",
+      "Medium spiny neuron-rich motor circuit input zone",
+    ],
+    functionSummary:
+      "Motor component of dorsal striatum receiving cortical glutamatergic input; integrates with globus pallidus and substantia nigra for initiation and suppression of voluntary movement.",
+    commonPathologies: [
+      "Parkinson disease — dopamine depletion in putamen/caudate striatum",
+      "Huntington disease — striatal neuron loss including putamen",
+      "Hypertensive putaminal hemorrhage — classic lacunar/bleeding site with contralateral hemiparesis",
+      "Carbon monoxide poisoning — bilateral putamen necrosis",
+    ],
+    step1Pearls: [
+      "Putamen + globus pallidus = lentiform nucleus; caudate is separate but functionally striatum together",
+      "Internal capsule separates caudate (medial) from lentiform nucleus (lateral) on axial MRI",
+      "Putaminal hemorrhage — sudden hemiparesis, hypertension risk",
+      "MPTP toxicity and Parkinson disease affect nigrostriatal input to putamen",
+      "vs caudate — Huntington caudate atrophy is earlier/more prominent on imaging",
+    ],
+    pediatrics:
+      "Inherited dystonias and juvenile parkinsonism reflect striatal dysfunction; Wilson disease may cause putaminal signal change in adolescents.",
   },
   {
     id: "midbrain",

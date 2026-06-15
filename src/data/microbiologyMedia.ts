@@ -477,6 +477,8 @@ export const MICROBIOLOGY_IMAGE_CAPTIONS: Partial<
   "clostridium-botulinum":
     "Gentian violet photomicrograph of C. botulinum rod-shaped bacteria with oval endospores",
   "clostridium-perfringens": "Gram stain of broth culture",
+  "clostridium-tetani":
+    "Opisthotonos in tetanus — sustained spasm from tetanospasmin blocking inhibitory neurotransmitter release",
   "mycobacterium-tuberculosis":
     "Ziehl-Neelsen acid-fast stain: red bacilli (1000×)",
   "treponema-pallidum": "Electron micrograph of spirochetes on epithelium",

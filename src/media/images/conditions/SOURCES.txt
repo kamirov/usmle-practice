@@ -497,3 +497,38 @@ ischemic-optic-neuropathy.jpg
 hypertensive-retinopathy.jpg
   Source: Wikimedia Commons — Hypertensiveretinopathy.jpg
   Page: https://commons.wikimedia.org/wiki/File:Hypertensiveretinopathy.jpg
+
+encephalitis.jpg
+  Source: Wikimedia Commons — Hsv encephalitis.jpg
+  Page: https://commons.wikimedia.org/wiki/File:Hsv_encephalitis.jpg
+
+alcohol-withdrawal.jpg
+  Source: Local copy from conditions/alcohol-use-disorder.jpg
+  Reference: https://commons.wikimedia.org/wiki/File:Cirrhosis_of_Alcoholic_Liver_Disease_(5517625829).jpg
+
+delirium-tremens.jpg
+  Source: Wikimedia Commons — Delirium tremens Skalarjevo brezno Peter Gedei 2020-8-8.jpg
+  Page: https://commons.wikimedia.org/wiki/File:Delirium_tremens_Skalarjevo_brezno_Peter_Gedei_2020-8-8.jpg
+
+status-epilepticus.jpg
+  Source: Wikimedia Commons — MRIinFIRES.jpg
+  Page: https://commons.wikimedia.org/wiki/File:MRIinFIRES.jpg
+
+epilepsy.jpg
+  Source: Wikimedia Commons — Spike-waves.png
+  Page: https://commons.wikimedia.org/wiki/File:Spike-waves.png
+  Download: https://commons.wikimedia.org/wiki/Special:FilePath/File:Spike-waves.png?width=1280
+
+postherpetic-neuralgia.png
+  Source: Wikimedia Commons — Herpes zoster chest.png
+  Page: https://commons.wikimedia.org/wiki/File:Herpes_zoster_chest.png
+
+huntington-disease.png
+  Source: Wikimedia Commons — Overview of reward structures in the human brain.jpg
+  Page: https://commons.wikimedia.org/wiki/File:Overview_of_reward_structures_in_the_human_brain.jpg
+  Download: https://commons.wikimedia.org/wiki/Special:FilePath/File:Overview_of_reward_structures_in_the_human_brain.jpg?width=1280
+
+juvenile-parkinsonism.jpg
+  Source: Wikimedia Commons — The Journal of nervous and mental disease (IA journalofnervous49ameruoft).pdf
+  Page: https://commons.wikimedia.org/wiki/File:The_Journal_of_nervous_and_mental_disease_(IA_journalofnervous49ameruoft).pdf
+

@@ -9,10 +9,13 @@ import prosencephalon from "../media/images/organs/prosencephalon.jpg?url";
 import midbrain from "../media/images/organs/midbrain.jpg?url";
 import hindbrain from "../media/images/organs/hindbrain.jpg?url";
 import lateralVentricles from "../media/images/organs/lateral-ventricles.svg?url";
+import meninges from "../media/images/organs/meninges.svg?url";
 import opticChiasm from "../media/images/organs/optic-chiasm.png?url";
 import rightAtrium from "../media/images/organs/right-atrium.png?url";
 import cristaTerminalis from "../media/images/organs/crista-terminalis.png?url";
+import caudate from "../media/images/organs/caudate.png?url";
 import papillaryMuscle from "../media/images/organs/papillary-muscle.png?url";
+import putamen from "../media/images/organs/putamen.png?url";
 import medianSulcusOfTheTongue from "../media/images/organs/median-sulcus-of-the-tongue.jpg?url";
 import foramenCecum from "../media/images/organs/foramen-cecum.jpg?url";
 import septumPellucidum from "../media/images/organs/septum-pellucidum.jpg?url";
@@ -28,9 +31,12 @@ export type OrganImageId = Extract<
   | "optic-chiasm"
   | "hindbrain"
   | "lateral-ventricles"
+  | "meninges"
   | "right-atrium"
   | "crista-terminalis"
+  | "caudate"
   | "papillary-muscle"
+  | "putamen"
   | "median-sulcus-of-the-tongue"
   | "foramen-cecum"
   | "septum-pellucidum"
@@ -51,9 +57,12 @@ export const ORGAN_IMAGES: Partial<Record<OrganImageId, string>> = {
   "optic-chiasm": extensionAssetUrl(opticChiasm),
   hindbrain: extensionAssetUrl(hindbrain),
   "lateral-ventricles": extensionAssetUrl(lateralVentricles),
+  meninges: extensionAssetUrl(meninges),
   "right-atrium": extensionAssetUrl(rightAtrium),
   "crista-terminalis": extensionAssetUrl(cristaTerminalis),
+  caudate: extensionAssetUrl(caudate),
   "papillary-muscle": extensionAssetUrl(papillaryMuscle),
+  putamen: extensionAssetUrl(putamen),
   "median-sulcus-of-the-tongue": extensionAssetUrl(medianSulcusOfTheTongue),
   "foramen-cecum": extensionAssetUrl(foramenCecum),
   "septum-pellucidum": extensionAssetUrl(septumPellucidum),
@@ -98,6 +107,10 @@ export const ORGAN_IMAGE_ATTRIBUTIONS: Partial<
     label: "Wikimedia Commons (Lateral Ventricles - DK ATLAS.png)",
     url: "https://commons.wikimedia.org/wiki/File:Lateral_Ventricles_-_DK_ATLAS.png",
   },
+  meninges: {
+    label: "Wikimedia Commons (Meninges-en.svg)",
+    url: "https://commons.wikimedia.org/wiki/File:Meninges-en.svg",
+  },
   "right-atrium": {
     label: "Wikimedia Commons (Right atrium.png)",
     url: "https://commons.wikimedia.org/wiki/File:Right_atrium.png",
@@ -106,9 +119,17 @@ export const ORGAN_IMAGE_ATTRIBUTIONS: Partial<
     label: "Wikimedia Commons (Crista terminalis.png)",
     url: "https://commons.wikimedia.org/wiki/File:Crista_terminalis.png",
   },
+  caudate: {
+    label: "Wikimedia Commons (Overview of reward structures in the human brain.jpg)",
+    url: "https://commons.wikimedia.org/wiki/File:Overview_of_reward_structures_in_the_human_brain.jpg",
+  },
   "papillary-muscle": {
     label: "Wikimedia Commons (Chordae tendineae spuriae of left ventricle.png)",
     url: "https://commons.wikimedia.org/wiki/File:Chordae_tendineae_spuriae_of_left_ventricle.png",
+  },
+  putamen: {
+    label: "Wikimedia Commons (Overview of reward structures in the human brain.jpg)",
+    url: "https://commons.wikimedia.org/wiki/File:Overview_of_reward_structures_in_the_human_brain.jpg",
   },
   "median-sulcus-of-the-tongue": {
     label: "CDC PHIL #8325",
@@ -143,12 +164,18 @@ export const ORGAN_IMAGE_CAPTIONS: Partial<Record<OrganImageId, string>> = {
     "Hindbrain (rhombencephalon) — pons, cerebellum, and medulla oblongata",
   "lateral-ventricles":
     "Lateral ventricles within the telencephalon — CSF-filled cavities connected to the third ventricle via foramen of Monro",
+  meninges:
+    "Cranial meninges — dura mater, arachnoid mater, pia mater, and subarachnoid space containing CSF",
   "right-atrium":
     "Right atrium — receives SVC, IVC, and coronary sinus; contains fossa ovalis, crista terminalis, and SA node",
   "crista-terminalis":
     "Crista terminalis — internal ridge separating smooth sinus venarum from trabeculated right atrial appendage",
+  caudate:
+    "Caudate nucleus — C-shaped dorsal striatum wrapping the lateral ventricle; degenerates in Huntington disease",
   "papillary-muscle":
     "Papillary muscles and chordae tendineae anchoring atrioventricular valve leaflets in the left ventricle",
+  putamen:
+    "Putamen — outer lentiform nucleus component of dorsal striatum; target of nigrostriatal dopamine",
   "median-sulcus-of-the-tongue":
     "Dorsal tongue anatomy — midline median sulcus dividing the tongue into right and left halves",
   "foramen-cecum":

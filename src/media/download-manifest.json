@@ -1713,5 +1713,20 @@
     "title": "Local copy from conditions/alcohol-use-disorder.jpg",
     "page": "https://commons.wikimedia.org/",
     "query": "fallback"
+  },
+  "symptoms/enuresis.jpg": {
+    "title": "File:Plastic Pants suitable for nocturnal enuresis in larger child or small adult.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File:Plastic_Pants_suitable_for_nocturnal_enuresis_in_larger_child_or_small_adult.JPG",
+    "query": "nocturnal enuresis bedwetting"
+  },
+  "conditions/postherpetic-neuralgia.png": {
+    "title": "File:Herpes zoster chest.png",
+    "page": "https://commons.wikimedia.org/wiki/File:Herpes_zoster_chest.png",
+    "query": "herpes zoster shingles"
+  },
+  "pathogenesis/neuralgia.png": {
+    "title": "File:Gray778.png",
+    "page": "https://commons.wikimedia.org/wiki/File:Gray778.png",
+    "query": "trigeminal nerve anatomy neuralgia"
   }
 }

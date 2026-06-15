@@ -69,3 +69,18 @@ papillary-muscle.png
 septum-pellucidum.jpg
   Source: Wikimedia Commons — Cavum septi pellucidi - Cavum vergae.jpg
   Page: https://commons.wikimedia.org/wiki/File:Cavum_septi_pellucidi_-_Cavum_vergae.jpg
+
+caudate.png
+  Source: Wikimedia Commons — Overview of reward structures in the human brain.jpg
+  Page: https://commons.wikimedia.org/wiki/File:Overview_of_reward_structures_in_the_human_brain.jpg
+  Download: https://commons.wikimedia.org/wiki/Special:FilePath/File:Overview_of_reward_structures_in_the_human_brain.jpg?width=1280
+
+putamen.png
+  Source: Wikimedia Commons — Overview of reward structures in the human brain.jpg
+  Page: https://commons.wikimedia.org/wiki/File:Overview_of_reward_structures_in_the_human_brain.jpg
+  Download: https://commons.wikimedia.org/wiki/Special:FilePath/File:Overview_of_reward_structures_in_the_human_brain.jpg?width=1280
+
+meninges.svg
+  Source: Wikimedia Commons — Meninges-en.svg
+  Page: https://commons.wikimedia.org/wiki/File:Meninges-en.svg
+  Author: Mysid/Jmarchn, CC BY-SA 3.0

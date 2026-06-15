@@ -1373,7 +1373,7 @@ export const PROTEINS: ProteinEntry[] = [
     id: "prion-protein",
     name: "Prion protein",
     etymology: "proteinaceous infectious particle + Greek proteios = primary + -in protein suffix",
-    aliases: ["prion protein", "prp", "prpc"],
+    aliases: ["prion protein", "prp", "prpc", "prion", "prions", "prpsc", "prion diseases"],
     gene: "PRNP",
     location: "Neuronal membrane (normal PrP^C)",
     function:

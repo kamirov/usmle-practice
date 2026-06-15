@@ -121,6 +121,10 @@ clot-dissolution.png
   Source: Wikimedia Commons — D-dimer.png
   Page: https://commons.wikimedia.org/wiki/File:D-dimer.png
 
+neuralgia.png
+  Source: Wikimedia Commons — Gray778.png
+  Page: https://commons.wikimedia.org/wiki/File:Gray778.png
+
 blood-brain-barrier.svg
   Source: Local copy from conditions/meninges-diagram.svg
   Reference: https://commons.wikimedia.org/wiki/File:Meninges_diagram.svg

@@ -484,3 +484,8 @@ west-nile-virus.jpg
   Source: CDC PHIL #8149
   Description: Culex mosquito — West Nile virus vector
   Page: https://phil.cdc.gov/Details.aspx?pid=8149
+
+clostridium-tetani.jpg
+  Source: Wikimedia Commons — Opisthotonus in a patient suffering from tetanus - Painting by Sir Charles Bell - 1809.jpg
+  Page: https://commons.wikimedia.org/wiki/File:Opisthotonus_in_a_patient_suffering_from_tetanus_-_Painting_by_Sir_Charles_Bell_-_1809.jpg
+

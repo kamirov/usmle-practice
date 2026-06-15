@@ -240,6 +240,51 @@ export const PROCEDURES: ProcedureEntry[] = [
       "Nemaline rod myopathy and mitochondrial myopathies present in infancy — hypotonia, weakness; muscle biopsy with Gomori trichrome shows diagnostic rods or ragged red fibers. Distinguish from benign congenital hypotonia.",
   },
   {
+    id: "methenamine-silver-stain",
+    name: "Methenamine Silver Stain",
+    etymology: "meth- = methyl + Latin a(m)men = ammonia-related + Latin argentum = silver + stain = dye",
+    aliases: [
+      "methenamine silver stain",
+      "methenamine silver",
+      "methanamine silver",
+      "methanamine silver stain",
+      "gomori methenamine silver",
+      "gomori methenamine silver stain",
+      "gms stain",
+      "gms",
+      "gomori's methenamine silver",
+      "silver stain fungi",
+    ],
+    definition:
+      "Histochemical silver stain (Gomori methenamine silver, GMS) that deposits black silver on fungal cell walls — standard stain for identifying Pneumocystis jirovecii and fungi in tissue sections.",
+    indications: [
+      "Lung biopsy or BAL specimen when Pneumocystis pneumonia (PCP) suspected",
+      "Identification of fungi in tissue (Aspergillus, Cryptococcus, Candida, Histoplasma)",
+      "AIDS patient with diffuse interstitial pneumonia — PCP diagnosis",
+      "Granulomatous lung disease workup alongside AFB stain for TB",
+    ],
+    keyMeasurements: [
+      "Pneumocystis — cup-shaped or crushed ping-pong ball cysts staining black on GMS",
+      "Fungal hyphae and yeast forms — black against green counterstain background",
+      "Negative GMS does not exclude PCP if clinical suspicion high — PCR or immunofluorescence",
+    ],
+    complications: [
+      "False negatives with scant organism burden or poor sample",
+      "Artifact and background staining require experienced interpretation",
+      "Special stains must be ordered specifically — not on routine H&E",
+    ],
+    boardsPearls: [
+      "GMS (methenamine silver) — fungi and Pneumocystis stain black",
+      "PCP in AIDS — diffuse bilateral infiltrates; GMS shows disc-shaped cysts in alveoli",
+      "vs Ziehl-Neelsen — acid-fast stain for mycobacteria (red rods), not GMS",
+      "vs Giemsa — trophozoites of PCP on Giemsa; GMS highlights cyst wall",
+      "TMP-SMX prophylaxis and treatment for PCP in HIV with CD4 <200",
+      "Aspergillus — septate hyphae acute angle branching on GMS",
+    ],
+    pediatrics:
+      "PCP occurs in infants with severe combined immunodeficiency or malnutrition; GMS on BAL or lung biopsy confirms Pneumocystis. Pediatric HIV with low CD4 requires PCP prophylaxis.",
+  },
+  {
     id: "lumbar-puncture",
     name: "Lumbar Puncture",
     etymology: "Latin lumbus = loin/lower back + punctura = prick",

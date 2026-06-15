@@ -309,6 +309,14 @@ hypotonia.jpg
   Source: Wikimedia Commons — Nervous and mental diseases (1911) (14591720128).jpg
   Page: https://commons.wikimedia.org/wiki/File:Nervous_and_mental_diseases_(1911)_(14591720128).jpg
 
+anxiety.png
+  Source: Wikimedia Commons — GAD At-A-Glance.png
+  Page: https://commons.wikimedia.org/wiki/File:GAD_At-A-Glance.png
+
+enuresis.jpg
+  Source: Wikimedia Commons — Plastic Pants suitable for nocturnal enuresis in larger child or small adult.JPG
+  Page: https://commons.wikimedia.org/wiki/File:Plastic_Pants_suitable_for_nocturnal_enuresis_in_larger_child_or_small_adult.JPG
+
 dystonia.jpg
   Source: Wikimedia Commons — Traité des torticolis spasmodiques, spasmes, tics, rythmies du cou, torticolis mental, etc. (1907) (14778054521).jpg
   Page: https://commons.wikimedia.org/wiki/File:Trait%C3%A9_des_torticolis_spasmodiques,_spasmes,_tics,_rythmies_du_cou,_torticolis_mental,_etc._(1907)_(14778054521).jpg
@@ -338,3 +346,22 @@ cotton-wool-spots.png
 drusen.jpg
   Source: Wikimedia Commons — Peripheral Drusen.jpg
   Page: https://commons.wikimedia.org/wiki/File:Peripheral_Drusen.jpg
+
+chorea.jpg
+  Source: Wikimedia Commons — Traité des torticolis spasmodiques, spasmes, tics, rythmies du cou, torticolis mental, etc. (1907) (14778054521).jpg
+  Page: https://commons.wikimedia.org/wiki/File:Trait%C3%A9_des_torticolis_spasmodiques,_spasmes,_tics,_rythmies_du_cou,_torticolis_mental,_etc._(1907)_(14778054521).jpg
+  Download: https://commons.wikimedia.org/wiki/Special:FilePath/Traite%CC%81%20des%20torticolis%20spasmodiques,%20spasmes,%20tics,%20rythmies%20du%20cou,%20torticolis%20mental,%20etc.%20(1907)%20(14778054521).jpg?width=1280
+
+bradykinesia.jpg
+  Source: Wikimedia Commons — The Journal of nervous and mental disease (IA journalofnervous49ameruoft).pdf
+  Page: https://commons.wikimedia.org/wiki/File:The_Journal_of_nervous_and_mental_disease_(IA_journalofnervous49ameruoft).pdf
+
+prodromal.jpg
+  Source: Wikimedia Commons — Koplik spots, measles 6111 lores.jpg
+  Page: https://commons.wikimedia.org/wiki/File:Koplik_spots,_measles_6111_lores.jpg
+
+akathisia.jpg
+  Source: Wikimedia Commons — Overview of reward structures in the human brain.jpg
+  Page: https://commons.wikimedia.org/wiki/File:Overview_of_reward_structures_in_the_human_brain.jpg
+  Download: https://commons.wikimedia.org/wiki/Special:FilePath/File:Overview_of_reward_structures_in_the_human_brain.jpg?width=1280
+
