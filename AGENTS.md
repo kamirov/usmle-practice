@@ -40,7 +40,9 @@ Where relevant, include a note on pediatrics, e.g. how something changes if the 
 
 ## Media
 
-For each new data item, attach a media item to it. This could be an image, a video, a gif, audio, etc. Follow the format used by the other data items.
+Do not download media for items unless you are explicitly told to do so. If you are told to download media, follow the rules of this section.
+
+Media - this could be an image, a video, a gif, audio, etc. Follow the format used by the other data items.
 
 Do not generate your own SVGs or your own media, browse the internet for an appropriate image. Prefer pictures of symptoms where possible
 
