@@ -37,3 +37,7 @@ plasmin.png
   Source: Wikimedia Commons — Coagulation cascade.png
   Page: https://commons.wikimedia.org/wiki/File:Coagulation_cascade.png
 
+prion-protein.jpg
+  Source: Local copy from proteins/14-3-3-protein.jpg
+  Reference: https://commons.wikimedia.org/wiki/File:Mechanisms_of_amyloid_fibril_formation.jpg
+

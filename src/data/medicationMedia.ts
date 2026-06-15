@@ -2,6 +2,7 @@ import type { MedicationEntry } from "./medications";
 import type { MediaAttribution } from "./media";
 
 import alprazolam from "../media/images/medications/alprazolam.svg?url";
+import analgesics from "../media/images/medications/analgesics.png?url";
 import anticholinergics from "../media/images/medications/anticholinergics.svg?url";
 import amitriptyline from "../media/images/medications/amitriptyline.png?url";
 import amphetamines from "../media/images/medications/amphetamines.svg?url";
@@ -32,11 +33,14 @@ import oxycodone from "../media/images/medications/oxycodone.png?url";
 import polyclonalFabAntivenom from "../media/images/medications/polyclonal-fab-antivenom.png?url";
 import quetiapine from "../media/images/medications/quetiapine.svg?url";
 import reserpine from "../media/images/medications/reserpine.svg?url";
+import snris from "../media/images/medications/snris.svg?url";
+import ssris from "../media/images/medications/ssris.svg?url";
 import pyridoxine from "../media/images/medications/pyridoxine.svg?url";
 import ramelteon from "../media/images/medications/ramelteon.svg?url";
 import riboflavin from "../media/images/medications/riboflavin.png?url";
 import sumatriptan from "../media/images/medications/sumatriptan.svg?url";
 import topiramate from "../media/images/medications/topiramate.svg?url";
+import tramadol from "../media/images/medications/tramadol.png?url";
 import vasopressors from "../media/images/medications/vasopressors.png?url";
 import antiTnfTherapy from "../media/images/medications/anti-tnf-therapy.png?url";
 import benzodiazepines from "../media/images/medications/benzodiazepines.svg?url";
@@ -46,6 +50,7 @@ import retinoicAcid from "../media/images/medications/retinoic-acid.svg?url";
 export type MedicationImageId = Extract<
   MedicationEntry["id"],
   | "alprazolam"
+  | "analgesics"
   | "anticholinergics"
   | "amitriptyline"
   | "amphetamines"
@@ -77,11 +82,14 @@ export type MedicationImageId = Extract<
   | "polyclonal-fab-antivenom"
   | "quetiapine"
   | "reserpine"
+  | "snris"
+  | "ssris"
   | "pyridoxine"
   | "ramelteon"
   | "riboflavin"
   | "sumatriptan"
   | "topiramate"
+  | "tramadol"
   | "vasopressors"
   | "retinoic-acid"
   | "benzodiazepines"
@@ -95,6 +103,7 @@ function extensionAssetUrl(path: string): string {
 /** See src/media/images/medications/SOURCES.txt */
 export const MEDICATION_IMAGES: Partial<Record<MedicationImageId, string>> = {
   alprazolam: extensionAssetUrl(alprazolam),
+  analgesics: extensionAssetUrl(analgesics),
   anticholinergics: extensionAssetUrl(anticholinergics),
   amitriptyline: extensionAssetUrl(amitriptyline),
   amphetamines: extensionAssetUrl(amphetamines),
@@ -126,11 +135,14 @@ export const MEDICATION_IMAGES: Partial<Record<MedicationImageId, string>> = {
   "polyclonal-fab-antivenom": extensionAssetUrl(polyclonalFabAntivenom),
   quetiapine: extensionAssetUrl(quetiapine),
   reserpine: extensionAssetUrl(reserpine),
+  snris: extensionAssetUrl(snris),
+  ssris: extensionAssetUrl(ssris),
   pyridoxine: extensionAssetUrl(pyridoxine),
   ramelteon: extensionAssetUrl(ramelteon),
   riboflavin: extensionAssetUrl(riboflavin),
   sumatriptan: extensionAssetUrl(sumatriptan),
   topiramate: extensionAssetUrl(topiramate),
+  tramadol: extensionAssetUrl(tramadol),
   vasopressors: extensionAssetUrl(vasopressors),
   "retinoic-acid": extensionAssetUrl(retinoicAcid),
   benzodiazepines: extensionAssetUrl(benzodiazepines),
@@ -143,6 +155,10 @@ export const MEDICATION_IMAGE_ATTRIBUTIONS: Partial<
   alprazolam: {
     label: "Wikimedia Commons (Alprazolam structure.svg)",
     url: "https://commons.wikimedia.org/wiki/File:Alprazolam_structure.svg",
+  },
+  analgesics: {
+    label: "Wikimedia Commons (Oxycodone structure.png)",
+    url: "https://commons.wikimedia.org/wiki/File:Oxycodone_structure.png",
   },
   anticholinergics: {
     label: "Wikimedia Commons (Diphenhydramine.svg)",
@@ -248,6 +264,14 @@ export const MEDICATION_IMAGE_ATTRIBUTIONS: Partial<
     label: "Wikimedia Commons (Reserpine.svg)",
     url: "https://commons.wikimedia.org/wiki/File:Reserpine.svg",
   },
+  snris: {
+    label: "Wikimedia Commons (Duloxetine-structure.svg)",
+    url: "https://commons.wikimedia.org/wiki/File:Duloxetine-structure.svg",
+  },
+  ssris: {
+    label: "Wikimedia Commons ((R)-Fluoxetine structure.svg)",
+    url: "https://commons.wikimedia.org/wiki/File:(R)-Fluoxetine_structure.svg",
+  },
   pyridoxine: {
     label: "Wikimedia Commons (Pyridoxine structure ver2.svg)",
     url: "https://commons.wikimedia.org/wiki/File:Pyridoxine_structure_ver2.svg",
@@ -288,6 +312,10 @@ export const MEDICATION_IMAGE_ATTRIBUTIONS: Partial<
     label: "Wikimedia Commons (Topiramate.svg)",
     url: "https://commons.wikimedia.org/wiki/File:Topiramate.svg",
   },
+  tramadol: {
+    label: "Wikimedia Commons (Oxycodone structure.png)",
+    url: "https://commons.wikimedia.org/wiki/File:Oxycodone_structure.png",
+  },
   vasopressors: {
     label: "Wikimedia Commons (Norepinephrine.svg)",
     url: "https://commons.wikimedia.org/wiki/File:Norepinephrine.svg",
@@ -311,6 +339,8 @@ export const MEDICATION_IMAGE_CAPTIONS: Partial<
 > = {
   alprazolam:
     "Alprazolam — triazolobenzodiazepine enhancing GABA-A inhibition for anxiety and panic disorder",
+  analgesics:
+    "Analgesic drug classes — opioids, NSAIDs, and acetaminophen reduce pain via distinct mechanisms",
   anticholinergics:
     "Muscarinic receptor antagonists — dry mouth, urinary retention, mydriasis; toxidrome reversed by physostigmine when appropriate",
   amitriptyline:
@@ -363,6 +393,10 @@ export const MEDICATION_IMAGE_CAPTIONS: Partial<
     "Quetiapine — atypical antipsychotic blocking D2/5-HT2A and H1 (sedation at low doses)",
   reserpine:
     "Reserpine — irreversible VMAT2 inhibitor depleting vesicular dopamine, norepinephrine, and serotonin stores",
+  snris:
+    "SNRIs — dual serotonin and norepinephrine reuptake inhibition for depression, anxiety, and neuropathic pain",
+  ssris:
+    "SSRIs — selective serotonin reuptake inhibitors; first-line for depression and generalized anxiety disorder",
   pyridoxine:
     "Pyridoxine (vitamin B6) — PLP cofactor precursor; co-administered with isoniazid to prevent neuropathy",
   oxycodone:
@@ -383,6 +417,8 @@ export const MEDICATION_IMAGE_CAPTIONS: Partial<
     "Sumatriptan — 5-HT₁B/₁D agonist triptan for acute migraine and cluster headache",
   topiramate:
     "Topiramate — anticonvulsant used for migraine prophylaxis with weight loss and paresthesia side effects",
+  tramadol:
+    "Tramadol — weak μ-opioid agonist with serotonin and norepinephrine reuptake inhibition; serotonin syndrome risk",
   vasopressors:
     "Norepinephrine structure — prototypical alpha-adrenergic vasopressor used in septic shock",
   "retinoic-acid":

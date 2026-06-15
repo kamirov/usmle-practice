@@ -11,3 +11,9 @@ funduscopy.jpg
 radiofrequency-ablation.jpg
   Source: Local copy from symptoms/palpitations.jpg
   Page: https://commons.wikimedia.org/wiki/File:ECG_Atrial_Fibrillation_98_bpm.jpg
+
+methenamine-silver-stain.jpg
+  Source: Local copy from microbiology/histoplasma-capsulatum.jpg
+  Description: Methenamine silver stain of Histoplasma capsulatum yeast in tissue (GMS stain example)
+  Page: https://phil.cdc.gov/Details.aspx?pid=4223
+

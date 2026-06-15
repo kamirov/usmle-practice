@@ -84,3 +84,7 @@ meninges.svg
   Source: Wikimedia Commons — Meninges-en.svg
   Page: https://commons.wikimedia.org/wiki/File:Meninges-en.svg
   Author: Mysid/Jmarchn, CC BY-SA 3.0
+
+arachnoid-villi.jpg
+  Source: Wikimedia Commons — Pacchionische Granulation mit kleiner Enzephalozele 60M - MR - 001.jpg
+  Page: https://commons.wikimedia.org/wiki/File:Pacchionische_Granulation_mit_kleiner_Enzephalozele_60M_-_MR_-_001.jpg

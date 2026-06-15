@@ -6457,6 +6457,69 @@ export const CONDITIONS: ConditionEntry[] = [
       "Pediatric functional abdominal pain and IBS overlap; evaluate for celiac disease and IBD if growth failure, anemia, or inflammatory signs. Reassurance and dietary strategies are first-line when alarm features absent.",
   },
   {
+    id: "fibromyalgia",
+    name: "Fibromyalgia",
+    etymology: "Latin fibra = fiber + Greek mys = muscle + algos = pain",
+    aliases: [
+      "fibromyalgia",
+      "fibromyalgias",
+      "fibromyalgia syndrome",
+      "fibromyalgia syndromes",
+      "fms",
+      "chronic widespread pain syndrome",
+    ],
+    definition:
+      "Chronic pain disorder of widespread musculoskeletal pain, fatigue, and cognitive symptoms without inflammatory or structural explanation — abnormal central pain processing and sensory amplification.",
+    pathophysiology:
+      "Central sensitization with ↑ excitatory neurotransmitters (substance P, glutamate) and ↓ inhibitory pain modulation (serotonin, norepinephrine) in spinal cord and brain → lowered pain threshold and allodynia; sleep disturbance perpetuates symptoms.",
+    classicPresentation: [
+      "Chronic widespread pain ≥3 months both sides of body, above and below waist",
+      "Fatigue and nonrestorative sleep",
+      "Cognitive complaints ('fibro fog')",
+      "Multiple tender points on exam (historical criteria)",
+      "Normal inflammatory markers and imaging",
+    ],
+    keyFindings: [
+      "Widespread pain without synovitis or muscle weakness",
+      "Normal ESR, CRP, CK, and rheumatologic serologies",
+      "Symptoms often comorbid with IBS, migraine, depression, and GAD",
+    ],
+    associations: [
+      "Irritable bowel syndrome and tension headache",
+      "Major depressive disorder and generalized anxiety disorder",
+      "Temporomandibular disorder and interstitial cystitis",
+      "History of physical or emotional trauma (contributory, not required)",
+    ],
+    complications: [
+      "Disability and reduced quality of life",
+      "Opioid dependence if misdiagnosed as inflammatory disease",
+      "Depression and sleep disorder perpetuation",
+    ],
+    distinguishFrom: [
+      "Polymyalgia rheumatica — age >50, elevated ESR, morning stiffness in shoulders/hips",
+      "Hypothyroidism — weight gain, cold intolerance, ↑ TSH",
+      "Systemic lupus erythematosus — ANA, multisystem inflammation",
+      "Inflammatory myopathy — ↑ CK, proximal weakness",
+      "Chronic fatigue syndrome — overlap but fatigue may predominate without widespread pain focus",
+    ],
+    treatment: [
+      "Aerobic exercise and CBT — foundational",
+      "Duloxetine or milnacipran (SNRIs) — FDA-approved",
+      "Pregabalin or gabapentin — neuropathic pain modulation",
+      "Amitriptyline at low dose (off-label) — sleep and pain",
+      "Avoid chronic opioids — limited efficacy and dependence risk",
+    ],
+    boardsPearls: [
+      "Normal labs and imaging — diagnosis of central sensitization syndrome",
+      "SNRIs (duloxetine) and pregabalin are first-line pharmacotherapy",
+      "vs polymyalgia rheumatica — elderly, ↑ ESR, responds to low-dose steroids",
+      "Comorbid IBS and depression common — brain-gut and pain axis",
+      "Tender points and widespread pain ≥3 months — classic vignette",
+    ],
+    pediatrics:
+      "Juvenile fibromyalgia presents with widespread pain, fatigue, and school absence; exercise and CBT are first-line. Rule out juvenile idiopathic arthritis and hypothyroidism before diagnosing.",
+  },
+  {
     id: "crohn-disease",
     name: "Crohn Disease",
     etymology: "eponym: Burrill Crohn + disease = disordered function",
@@ -11477,6 +11540,68 @@ export const CONDITIONS: ConditionEntry[] = [
       "SSRIs first-line; do not start until bipolar disorder ruled out",
       "Electroconvulsive therapy for severe/refractory or psychotic depression",
     ],
+  },
+  {
+    id: "generalized-anxiety-disorder",
+    name: "Generalized Anxiety Disorder",
+    etymology: "Latin generalis = overall + anxiety + disorder = disturbed order",
+    aliases: [
+      "generalized anxiety disorder",
+      "generalized anxiety disorders",
+      "gad",
+      "general anxiety disorder",
+      "generalised anxiety disorder",
+      "chronic anxiety disorder",
+    ],
+    definition:
+      "Anxiety disorder characterized by excessive, difficult-to-control worry about multiple domains for most days ≥6 months, with associated somatic symptoms (restlessness, fatigue, concentration difficulty, irritability, muscle tension, sleep disturbance).",
+    pathophysiology:
+      "Amygdala hyperreactivity and impaired prefrontal inhibitory control with HPA axis dysregulation; ↓ GABAergic tone and serotonergic/noradrenergic imbalance contribute to chronic hypervigilance and autonomic arousal.",
+    classicPresentation: [
+      "Chronic excessive worry about work, health, finances, or relationships",
+      "Muscle tension, headaches, GI upset",
+      "Restlessness, fatigue, poor concentration",
+      "Sleep disturbance with difficulty falling or staying asleep",
+      "Symptoms cause distress or functional impairment ≥6 months",
+    ],
+    keyFindings: [
+      "Normal physical exam and labs if no comorbid medical cause",
+      "No discrete panic attacks required (unlike panic disorder)",
+      "Worry is pervasive, not limited to one situation (unlike specific phobia)",
+    ],
+    associations: [
+      "Major depressive disorder — high comorbidity",
+      "Irritable bowel syndrome and fibromyalgia",
+      "Substance use (caffeine, alcohol self-medication)",
+      "Hyperthyroidism and pheochromocytoma (rule out medical causes)",
+    ],
+    complications: [
+      "Impaired occupational and social functioning",
+      "Depression and substance use disorders",
+      "Somatic symptom burden and unnecessary medical testing",
+    ],
+    distinguishFrom: [
+      "Panic disorder — recurrent unexpected panic attacks with worry about attacks",
+      "Adjustment disorder with anxiety — clear stressor, <6 months duration",
+      "Hyperthyroidism — tremor, weight loss, tachycardia, abnormal TSH",
+      "Akathisia — antipsychotic-induced restlessness, not primary worry",
+      "Normal stress — proportionate, time-limited, not pervasive ≥6 months",
+    ],
+    treatment: [
+      "SSRIs or SNRIs first-line pharmacotherapy (sertraline, escitalopram, duloxetine)",
+      "Cognitive behavioral therapy — first-line psychotherapy",
+      "Buspirone — non-sedating anxiolytic without dependence risk",
+      "Benzodiazepines — short-term adjunct only (dependence risk)",
+    ],
+    boardsPearls: [
+      "GAD = excessive worry ≥6 months + ≥3 somatic/cognitive symptoms",
+      "SSRIs/SNRIs first-line — same classes as depression",
+      "Rule out hyperthyroidism and substance-induced anxiety",
+      "vs panic disorder — panic attacks with palpitations and fear of dying",
+      "Benzodiazepines avoid long-term use — tolerance and dependence",
+    ],
+    pediatrics:
+      "Children with GAD worry about performance, catastrophes, and social approval; somatic complaints (stomachache, headache) are common. CBT is first-line; SSRIs used when severe with monitoring for suicidality.",
   },
   {
     id: "hiv-infection",
@@ -24569,6 +24694,74 @@ export const CONDITIONS: ConditionEntry[] = [
     ],
     pediatrics:
       "Alcohol withdrawal in adolescents is uncommon but can occur with heavy binge patterns; benzodiazepine dosing is weight-based with close monitoring.",
+  },
+  {
+    id: "serotonin-syndrome",
+    name: "Serotonin Syndrome",
+    etymology: "serotonin = 5-HT neurotransmitter + syndrome = running together of symptoms",
+    aliases: [
+      "serotonin syndrome",
+      "serotonin syndromes",
+      "serotonergic syndrome",
+      "serotonergic syndromes",
+      "serotonin toxicity",
+      "serotonin toxicities",
+      "ss",
+    ],
+    definition:
+      "Potentially life-threatening toxidrome from excess serotonergic activity — classically after combining serotonergic drugs (SSRI + MAOI, SSRI + tramadol) — with altered mental status, autonomic instability, and neuromuscular hyperactivity.",
+    pathophysiology:
+      "Excessive synaptic and postsynaptic serotonin stimulation (especially 5-HT₂A) from drug interactions or overdose → hyperthermia, neuromuscular excitation (clonus, hyperreflexia), and autonomic dysfunction; can progress to rhabdomyolysis and death.",
+    classicPresentation: [
+      "Agitation, confusion, or anxiety",
+      "Hyperthermia, diaphoresis, tachycardia, hypertension",
+      "Myoclonus, clonus (especially inducible ankle clonus), hyperreflexia",
+      "Tremor, akathisia-like restlessness",
+      "Diarrhea, shivering, dilated pupils",
+      "Onset hours after drug addition or dose increase",
+    ],
+    keyFindings: [
+      "Inducible or spontaneous clonus — key distinguishing neuromuscular sign",
+      "Hyperreflexia (lower extremities > upper)",
+      "Hyperthermia without antipsychotic exposure",
+      "Recent SSRI, SNRI, MAOI, tramadol, linezolid, or MDMA use",
+    ],
+    associations: [
+      "SSRI + MAO inhibitor combination",
+      "SSRI/SNRI + tramadol or meperidine",
+      "SSRI + linezolid (weak MAO inhibition)",
+      "SSRI + triptans (controversial but tested)",
+      "MDMA (ecstasy) overdose or polypharmacy",
+    ],
+    complications: [
+      "Rhabdomyolysis and acute kidney injury",
+      "Disseminated intravascular coagulation",
+      "Respiratory failure and death",
+    ],
+    distinguishFrom: [
+      "Neuroleptic malignant syndrome — antipsychotic exposure, lead-pipe rigidity, slow onset days, ↑ CK",
+      "Malignant hyperthermia — anesthetic trigger, OR setting, RYR1",
+      "Anticholinergic toxidrome — dry skin, urinary retention, ↓ bowel sounds, no clonus",
+      "Sympathomimetic toxicity — cocaine/amphetamines; may coexist but check serotonergic drugs",
+      "Infection/sepsis — fever without clonus or serotonergic drug history",
+    ],
+    treatment: [
+      "Stop all serotonergic agents immediately",
+      "Benzodiazepines for agitation and muscle hyperactivity",
+      "Supportive care — cooling, IV fluids, airway management",
+      "Cyproheptadine — 5-HT₂A antagonist for moderate-severe cases",
+      "Avoid antipsychotics that worsen hyperthermia/rigidity",
+    ],
+    boardsPearls: [
+      "Triad: mental status change + autonomic instability + neuromuscular hyperactivity",
+      "Clonus and hyperreflexia distinguish from NMS (rigidity predominates)",
+      "SSRI + MAOI = classic fatal combination — washout periods required",
+      "Tramadol + SSRI/SNRI — high-yield serotonin syndrome trigger",
+      "Linezolid has MAOI activity — same precautions as MAO inhibitors",
+      "vs NMS — antipsychotic cause, bradykinesia/rigidity, onset over days",
+    ],
+    pediatrics:
+      "Serotonin syndrome reported in children on SSRIs with drug interactions; tramadol is not routine in pediatrics. Cyproheptadine dosing is weight-based in severe pediatric cases.",
   },
   {
     id: "delirium-tremens",

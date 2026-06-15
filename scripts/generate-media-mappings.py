@@ -60,6 +60,7 @@ PRESERVE_CAPTIONS: dict[str, dict[str, str]] = {
         "delirium-tremens": "Severe alcohol withdrawal delirium with autonomic hyperactivity",
         "status-epilepticus": "Prolonged seizure activity — neurologic emergency requiring urgent benzodiazepines",
         "postherpetic-neuralgia": "Dermatomal herpes zoster rash — acute shingles preceding postherpetic neuralgia",
+        "tuberculoma": "Mycobacterium tuberculosis — acid-fast bacilli associated with tuberculoma and CNS TB",
     },
     "symptoms": {
         "erythema": "Sharply demarcated erythema of recurrent erysipelas (vasodilation with infection)",
@@ -107,6 +108,7 @@ PRESERVE_CAPTIONS: dict[str, dict[str, str]] = {
     },
     "pathogenesis": {
         "neuralgia": "Trigeminal nerve distribution — classic site of lancinating neuralgic pain",
+        "acid-fast-bacteria": "Ziehl-Neelsen stain — red acid-fast bacilli (mycolic acid cell wall) of Mycobacterium tuberculosis",
     },
 }
 

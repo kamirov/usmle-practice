@@ -28,4 +28,8 @@ mycolic-acid.jpg
 tetrahydrobiopterin.png
   Source: Wikimedia Commons — Biosynthesis and regeneration of tetrahydrobiopterin and its functions.png
   Page: https://commons.wikimedia.org/wiki/File:Biosynthesis_and_regeneration_of_tetrahydrobiopterin_and_its_functions.png
+
+nadph.png
+  Source: Wikimedia Commons — Pentosephosphatweg NADPH.png
+  Page: https://commons.wikimedia.org/wiki/File:Pentosephosphatweg_NADPH.png
   Download: https://commons.wikimedia.org/wiki/Special:FilePath/File:Biosynthesis_and_regeneration_of_tetrahydrobiopterin_and_its_functions.png?width=1280

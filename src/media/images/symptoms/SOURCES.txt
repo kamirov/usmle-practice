@@ -365,3 +365,11 @@ akathisia.jpg
   Page: https://commons.wikimedia.org/wiki/File:Overview_of_reward_structures_in_the_human_brain.jpg
   Download: https://commons.wikimedia.org/wiki/Special:FilePath/File:Overview_of_reward_structures_in_the_human_brain.jpg?width=1280
 
+babinski-reflex.png
+  Source: Wikimedia Commons — PlantarReflex.png
+  Page: https://commons.wikimedia.org/wiki/File:PlantarReflex.png
+
+neuropathic-pain.jpg
+  Source: Wikimedia Commons — Diabetic Neuropathy Device pic.jpg
+  Page: https://commons.wikimedia.org/wiki/File:Diabetic_Neuropathy_Device_pic.jpg
+

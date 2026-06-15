@@ -137,3 +137,19 @@ meconium.jpg
   Source: Local copy from conditions/hirschsprung-disease.jpg
   Reference: https://commons.wikimedia.org/wiki/File:Biliary_atresia.jpg
 
+reuptake.png
+  Source: Local copy from pathogenesis/presynaptic-dopamine-reuptake.png
+  Reference: https://commons.wikimedia.org/wiki/File:TAAR1_Dopamine.svg
+
+hepatotoxicity.jpg
+  Source: Local copy from conditions/alcohol-use-disorder.jpg
+  Reference: https://commons.wikimedia.org/wiki/File:Cirrhosis_of_Alcoholic_Liver_Disease_(5517625829).jpg
+
+oxidative-stress.png
+  Source: Wikimedia Commons — Role of reactive oxygen species in development of cancer.png
+  Page: https://commons.wikimedia.org/wiki/File:Role_of_reactive_oxygen_species_in_development_of_cancer.png
+
+acid-fast-bacteria.jpg
+  Source: Wikimedia Commons — Acid fast bacilli of Mycobacterium tuberculosis.jpg
+  Page: https://commons.wikimedia.org/wiki/File:Acid_fast_bacilli_of_Mycobacterium_tuberculosis.jpg
+

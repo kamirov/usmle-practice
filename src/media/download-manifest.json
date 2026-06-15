@@ -1000,9 +1000,9 @@
     "query": "retry"
   },
   "conditions/hemothorax.jpg": {
-    "title": "File:Hamartoma.jpg",
-    "page": "https://commons.wikimedia.org/wiki/File:Hamartoma.jpg",
-    "query": "hemothorax chest radiograph"
+    "title": "File:Pneumothorax hemothorax pneumomediastinum contusion.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File:Pneumothorax_hemothorax_pneumomediastinum_contusion.JPG",
+    "query": "retry"
   },
   "conditions/thromboangiitis-obliterans.jpg": {
     "title": "File:55 year old female with advanced Buerger's disease.jpg",
@@ -1728,5 +1728,80 @@
     "title": "File:Gray778.png",
     "page": "https://commons.wikimedia.org/wiki/File:Gray778.png",
     "query": "trigeminal nerve anatomy neuralgia"
+  },
+  "organs/arachnoid-villi.jpg": {
+    "title": "File:Pacchionische Granulation mit kleiner Enzephalozele 60M - MR - 001.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Pacchionische_Granulation_mit_kleiner_Enzephalozele_60M_-_MR_-_001.jpg",
+    "query": "arachnoid granulations superior sagittal sinus"
+  },
+  "pathogenesis/acid-fast-bacteria.jpg": {
+    "title": "File:Acid fast bacilli of Mycobacterium tuberculosis.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Acid_fast_bacilli_of_Mycobacterium_tuberculosis.jpg",
+    "query": "Ziehl Neelsen acid fast bacilli tuberculosis"
+  },
+  "conditions/tuberculoma.jpg": {
+    "title": "Local copy microbiology/mycobacterium-tuberculosis.jpg",
+    "page": "https://commons.wikimedia.org/",
+    "query": "fallback"
+  },
+  "conditions/achalasia.jpg": {
+    "title": "File:Acha.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File:Acha.JPG",
+    "query": "retry"
+  },
+  "conditions/anemia.jpg": {
+    "title": "File:Anemia.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File:Anemia.JPG",
+    "query": "retry"
+  },
+  "conditions/esophageal-varices.jpg": {
+    "title": "File:Esophageal varices - wale.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Esophageal_varices_-_wale.jpg",
+    "query": "retry"
+  },
+  "conditions/ewing-sarcoma.jpg": {
+    "title": "File:Ewing sarcoma - very high mag.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Ewing_sarcoma_-_very_high_mag.jpg",
+    "query": "retry"
+  },
+  "conditions/gout.jpg": {
+    "title": "File:Gouty tophus - intermed mag.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Gouty_tophus_-_intermed_mag.jpg",
+    "query": "retry"
+  },
+  "conditions/oral-candidiasis.jpg": {
+    "title": "File:Fungal tongue.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Fungal_tongue.jpg",
+    "query": "retry"
+  },
+  "conditions/osteoporosis.jpg": {
+    "title": "File:Osteop.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Osteop.jpg",
+    "query": "retry"
+  },
+  "conditions/rickets.jpg": {
+    "title": "File:X-ray of Hands Identifying Rickets.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:X-ray_of_Hands_Identifying_Rickets.jpg",
+    "query": "retry"
+  },
+  "symptoms/goiter.jpg": {
+    "title": "File:Thyroid, Diffuse Hyperplasia.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Thyroid,_Diffuse_Hyperplasia.jpg",
+    "query": "retry"
+  },
+  "symptoms/pallor.jpg": {
+    "title": "File:Anemia.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File:Anemia.JPG",
+    "query": "retry"
+  },
+  "symptoms/proptosis.jpg": {
+    "title": "File:Proptosis and lid retraction from Graves' Disease.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Proptosis_and_lid_retraction_from_Graves'_Disease.jpg",
+    "query": "retry"
+  },
+  "symptoms/trousseau-sign.jpg": {
+    "title": "File:Trousseau's Sign of Latent Tetany.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Trousseau's_Sign_of_Latent_Tetany.jpg",
+    "query": "retry"
   }
 }

@@ -201,3 +201,19 @@ flumazenil.svg
   Source: Wikimedia Commons — Flumazenil.svg
   Page: https://commons.wikimedia.org/wiki/File:Flumazenil.svg
 
+ssris.svg
+  Source: Local copy from medications/fluoxetine.svg
+  Reference: https://commons.wikimedia.org/wiki/File:(R)-Fluoxetine_structure.svg
+
+snris.svg
+  Source: Local copy from medications/duloxetine.svg
+  Reference: https://commons.wikimedia.org/wiki/File:Duloxetine-structure.svg
+
+tramadol.png
+  Source: Local copy from medications/opioids.png
+  Reference: https://commons.wikimedia.org/wiki/File:Oxycodone_structure.png
+
+analgesics.png
+  Source: Local copy from medications/opioids.png
+  Reference: https://commons.wikimedia.org/wiki/File:Oxycodone_structure.png
+

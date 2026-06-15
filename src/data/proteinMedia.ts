@@ -9,6 +9,7 @@ import phenylalanineHydroxylase from "../media/images/proteins/phenylalanine-hyd
 import tyrosineHydroxylase from "../media/images/proteins/tyrosine-hydroxylase.png?url";
 import fourteenThreeThreeProtein from "../media/images/proteins/14-3-3-protein.jpg?url";
 import plasmin from "../media/images/proteins/plasmin.png?url";
+import prionProtein from "../media/images/proteins/prion-protein.jpg?url";
 
 export type ProteinImageId = Extract<
   ProteinEntry["id"],
@@ -20,6 +21,7 @@ export type ProteinImageId = Extract<
   | "tyrosine-hydroxylase"
   | "14-3-3-protein"
   | "plasmin"
+  | "prion-protein"
 >;
 
 function extensionAssetUrl(path: string): string {
@@ -36,6 +38,7 @@ export const PROTEIN_IMAGES: Partial<Record<ProteinImageId, string>> = {
   "tyrosine-hydroxylase": extensionAssetUrl(tyrosineHydroxylase),
   "14-3-3-protein": extensionAssetUrl(fourteenThreeThreeProtein),
   plasmin: extensionAssetUrl(plasmin),
+  "prion-protein": extensionAssetUrl(prionProtein),
 };
 
 export const PROTEIN_IMAGE_ATTRIBUTIONS: Partial<
@@ -73,6 +76,10 @@ export const PROTEIN_IMAGE_ATTRIBUTIONS: Partial<
     label: "Wikimedia Commons (Coagulation cascade.png)",
     url: "https://commons.wikimedia.org/wiki/File:Coagulation_cascade.png",
   },
+  "prion-protein": {
+    label: "Wikimedia Commons (Mechanisms of amyloid fibril formation.jpg)",
+    url: "https://commons.wikimedia.org/wiki/File:Mechanisms_of_amyloid_fibril_formation.jpg",
+  },
 };
 
 export const PROTEIN_IMAGE_CAPTIONS: Partial<Record<ProteinImageId, string>> = {
@@ -92,6 +99,8 @@ export const PROTEIN_IMAGE_CAPTIONS: Partial<Record<ProteinImageId, string>> = {
     "CSF 14-3-3 protein — supportive marker of neuronal injury in Creutzfeldt-Jakob disease",
   plasmin:
     "Plasmin — serine protease effector of fibrinolysis that degrades fibrin within the coagulation-fibrinolysis balance",
+  "prion-protein":
+    "Misfolded PrP^Sc propagates spongiform encephalopathy — rapidly progressive dementia and myoclonus in CJD",
 };
 
 export function getProteinImageForId(id: string): string | undefined {

@@ -532,3 +532,19 @@ juvenile-parkinsonism.jpg
   Source: Wikimedia Commons — The Journal of nervous and mental disease (IA journalofnervous49ameruoft).pdf
   Page: https://commons.wikimedia.org/wiki/File:The_Journal_of_nervous_and_mental_disease_(IA_journalofnervous49ameruoft).pdf
 
+generalized-anxiety-disorder.png
+  Source: Wikimedia Commons — GAD At-A-Glance.png
+  Page: https://commons.wikimedia.org/wiki/File:GAD_At-A-Glance.png
+
+fibromyalgia.jpg
+  Source: Local copy from symptoms/morning-stiffness.jpg
+  Reference: https://commons.wikimedia.org/wiki/File:Arthritic_hands_in_pain.jpg
+
+serotonin-syndrome.png
+  Source: Local copy from medications/mao-inhibitors.png
+  Reference: https://commons.wikimedia.org/wiki/File:Synaptic_dopamine_concentration.png
+
+tuberculoma.jpg
+  Source: Local copy from microbiology/mycobacterium-tuberculosis.jpg
+  Reference: https://commons.wikimedia.org/wiki/File:Mycobacterium_tuberculosis_Ziehl-Neelsen_stain.jpg
+

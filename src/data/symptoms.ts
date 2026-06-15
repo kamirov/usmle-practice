@@ -4499,6 +4499,52 @@ export const SYMPTOMS: SymptomEntry[] = [
       "Fabry disease causes episodic burning hand/foot paresthesias in childhood. Guillain-Barré may begin with tingling in feet before weakness. Migraine equivalents in children can include sensory aura.",
   },
   {
+    id: "neuropathic-pain",
+    name: "Neuropathic Pain",
+    etymology: "Greek neuron = nerve + pathos = suffering + Latin poena = penalty/pain",
+    aliases: [
+      "neuropathic pain",
+      "neuropathic pains",
+      "nerve pain",
+      "neuralgia",
+      "neuralgias",
+      "neuropathy pain",
+      "nerve-mediated pain",
+      "positive neuropathic symptoms",
+    ],
+    definition:
+      "Pain arising from damage or dysfunction of the somatosensory nervous system — characterized by burning, shooting, electric, or stabbing quality, often with allodynia and hyperalgesia.",
+    mechanism:
+      "Peripheral nerve injury or central sensitization → ectopic firing of damaged afferents, ↓ inhibitory interneurons in dorsal horn, and wind-up → spontaneous pain and exaggerated response to normally nonpainful stimuli (allodynia).",
+    thinkOf: [
+      "Diabetic peripheral neuropathy",
+      "Postherpetic neuralgia (shingles complication)",
+      "Trigeminal neuralgia",
+      "Sciatica / radiculopathy",
+      "Complex regional pain syndrome (CRPS)",
+      "Chemotherapy-induced peripheral neuropathy",
+      "Central post-stroke pain",
+      "Phantom limb pain",
+    ],
+    pairWith: [
+      "Burning feet + diabetes → diabetic neuropathic pain",
+      "Dermatomal burning pain after shingles rash → postherpetic neuralgia",
+      "Electric shock-like unilateral face pain → trigeminal neuralgia",
+      "Neuropathic pain + allodynia (pain to light touch) → dorsal horn sensitization",
+      "Gabapentin/pregabalin or duloxetine response → supports neuropathic mechanism",
+      "Stocking-glove pain + absent ankle reflexes → length-dependent polyneuropathy",
+    ],
+    distinguishFrom: [
+      "Nociceptive pain — tissue injury (inflammation, trauma); responds to NSAIDs/opioids",
+      "Nociceptive vs neuropathic — neuropathic is burning/shooting with sensory loss or allodynia",
+      "Paresthesia — tingling without necessarily pain",
+      "Radicular pain — may be neuropathic if nerve root compressed but assess motor/reflex level",
+      "Psychogenic pain — diagnosis of exclusion after neurologic workup",
+    ],
+    pediatrics:
+      "Neuropathic pain occurs in children with hereditary neuropathies, chemotherapy, and complex regional pain syndrome; gabapentinoids and physical therapy are used with specialist guidance.",
+  },
+  {
     id: "sneezing",
     name: "Sneezing",
     etymology: "Middle English snesen = sudden expulsion through nose",
@@ -6990,6 +7036,50 @@ export const SYMPTOMS: SymptomEntry[] = [
     ],
     pediatrics:
       "Ankle reflexes may be difficult to elicit in infants; physiologic hyperreflexia is common early in life. Absent reflexes with hypotonia in infancy suggest peripheral neuropathy or spinal muscular atrophy; asymmetric reflexes warrant neurologic evaluation.",
+  },
+  {
+    id: "babinski-reflex",
+    name: "Babinski Reflex",
+    etymology: "Eponym: Joseph Babinski (Polish-French neurologist, 1857–1932) + Latin reflexus = bent back",
+    aliases: [
+      "babinski reflex",
+      "babinski sign",
+      "babinski's sign",
+      "babinskis sign",
+      "positive babinski",
+      "upgoing toe",
+      "upgoing toes",
+      "extensor plantar response",
+      "plantar reflex abnormal",
+    ],
+    definition:
+      "Pathologic superficial reflex — stroking the lateral sole from heel toward the ball of the foot causes dorsiflexion of the big toe and fanning of other toes; indicates upper motor neuron (pyramidal tract) dysfunction when present in adults.",
+    mechanism:
+      "Loss of UMN inhibition on the spinal flexor reflex arc (L5–S1) → extensor plantar response instead of normal plantar flexion; in infants the corticospinal tract is immature so upgoing toe can be normal until ~12–24 months.",
+    thinkOf: [
+      "Stroke (corticospinal tract lesion)",
+      "Multiple sclerosis",
+      "Spinal cord compression or transection",
+      "Brain tumor",
+      "ALS (UMN and LMN signs)",
+      "Normal in infants until myelination complete",
+    ],
+    pairWith: [
+      "Babinski + hyperreflexia + spasticity → UMN syndrome",
+      "Babinski + weakness + sensory level → spinal cord lesion",
+      "Unilateral Babinski + hemiparesis → contralateral corticospinal tract stroke",
+      "Babinski + absent ankle reflex on same side → mixed UMN and LMN (e.g., ALS)",
+      "Normal flexor plantar response in adult → no UMN sign",
+      "Bilateral Babinski + back pain + urinary retention → cauda equina or cord compression emergency",
+    ],
+    distinguishFrom: [
+      "Normal plantar reflex — toes plantarflex (curl downward) in adults",
+      "Withdrawal reflex — nonspecific flexion from pain, not specific extensor sign",
+      "Ankle reflex (Achilles) — deep tendon reflex testing S1, not plantar superficial reflex",
+      "Babinski in infant <2 years — may be physiologic until pyramidal tract myelination",
+    ],
+    pediatrics:
+      "Upgoing Babinski is normal in infants until corticospinal tract myelination (~12–24 months). Persistent or asymmetric Babinski in older children warrants CNS imaging for structural lesion.",
   },
   {
     id: "miotic",

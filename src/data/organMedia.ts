@@ -19,6 +19,7 @@ import putamen from "../media/images/organs/putamen.png?url";
 import medianSulcusOfTheTongue from "../media/images/organs/median-sulcus-of-the-tongue.jpg?url";
 import foramenCecum from "../media/images/organs/foramen-cecum.jpg?url";
 import septumPellucidum from "../media/images/organs/septum-pellucidum.jpg?url";
+import arachnoidVilli from "../media/images/organs/arachnoid-villi.jpg?url";
 
 export type OrganImageId = Extract<
   OrganEntry["id"],
@@ -40,6 +41,7 @@ export type OrganImageId = Extract<
   | "median-sulcus-of-the-tongue"
   | "foramen-cecum"
   | "septum-pellucidum"
+  | "arachnoid-villi"
 >;
 
 function extensionAssetUrl(path: string): string {
@@ -66,6 +68,7 @@ export const ORGAN_IMAGES: Partial<Record<OrganImageId, string>> = {
   "median-sulcus-of-the-tongue": extensionAssetUrl(medianSulcusOfTheTongue),
   "foramen-cecum": extensionAssetUrl(foramenCecum),
   "septum-pellucidum": extensionAssetUrl(septumPellucidum),
+  "arachnoid-villi": extensionAssetUrl(arachnoidVilli),
 };
 
 export const ORGAN_IMAGE_ATTRIBUTIONS: Partial<
@@ -143,6 +146,11 @@ export const ORGAN_IMAGE_ATTRIBUTIONS: Partial<
     label: "Wikimedia Commons (Cavum septi pellucidi - Cavum vergae.jpg)",
     url: "https://commons.wikimedia.org/wiki/File:Cavum_septi_pellucidi_-_Cavum_vergae.jpg",
   },
+  "arachnoid-villi": {
+    label:
+      "Wikimedia Commons (Pacchionische Granulation mit kleiner Enzephalozele 60M - MR - 001.jpg)",
+    url: "https://commons.wikimedia.org/wiki/File:Pacchionische_Granulation_mit_kleiner_Enzephalozele_60M_-_MR_-_001.jpg",
+  },
 };
 
 export const ORGAN_IMAGE_CAPTIONS: Partial<Record<OrganImageId, string>> = {
@@ -182,6 +190,8 @@ export const ORGAN_IMAGE_CAPTIONS: Partial<Record<OrganImageId, string>> = {
     "Thyroglossal duct embryology — foramen cecum marks thyroid diverticulum origin at the tongue base",
   "septum-pellucidum":
     "Septum pellucidum — thin midline membrane separating the lateral ventricles beneath the corpus callosum",
+  "arachnoid-villi":
+    "Arachnoid granulations (Pacchionian bodies) — arachnoid villi protruding into dural venous sinuses for CSF reabsorption",
 };
 
 export function getOrganImageForId(id: string): string | undefined {
