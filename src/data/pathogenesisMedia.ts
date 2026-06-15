@@ -30,6 +30,7 @@ import anovulation from "../media/images/pathogenesis/anovulation.svg?url";
 import ovulation from "../media/images/pathogenesis/ovulation.png?url";
 import ovulatoryDysfunction from "../media/images/pathogenesis/ovulatory-dysfunction.png?url";
 import analgesia from "../media/images/pathogenesis/analgesia.png?url";
+import antiemesis from "../media/images/pathogenesis/antiemesis.jpg?url";
 import autocrine from "../media/images/pathogenesis/autocrine.png?url";
 import bronchodilation from "../media/images/pathogenesis/bronchodilation.png?url";
 import paracrine from "../media/images/pathogenesis/paracrine.png?url";
@@ -70,6 +71,7 @@ export type PathogenesisImageId = Extract<
   | "ovulation"
   | "ovulatory-dysfunction"
   | "analgesia"
+  | "antiemesis"
   | "autocrine"
   | "bronchodilation"
   | "paracrine"
@@ -117,6 +119,7 @@ export const PATHOGENESIS_IMAGES: Partial<
   ovulation: extensionAssetUrl(ovulation),
   "ovulatory-dysfunction": extensionAssetUrl(ovulatoryDysfunction),
   analgesia: extensionAssetUrl(analgesia),
+  antiemesis: extensionAssetUrl(antiemesis),
   autocrine: extensionAssetUrl(autocrine),
   bronchodilation: extensionAssetUrl(bronchodilation),
   paracrine: extensionAssetUrl(paracrine),
@@ -249,6 +252,10 @@ export const PATHOGENESIS_IMAGE_ATTRIBUTIONS: Partial<
     label: "Wikimedia Commons (Touch Pain Pathways.png)",
     url: "https://commons.wikimedia.org/wiki/File:Touch_Pain_Pathways.png",
   },
+  antiemesis: {
+    label: "Wikimedia Commons (Area postrema micrograph.jpg)",
+    url: "https://commons.wikimedia.org/wiki/File:Area_postrema_micrograph.jpg",
+  },
   autocrine: {
     label: "Wikimedia Commons (Autocrine and Paracrine.png)",
     url: "https://commons.wikimedia.org/wiki/File:Autocrine_and_Paracrine.png",
@@ -345,6 +352,8 @@ export const PATHOGENESIS_IMAGE_CAPTIONS: Partial<
     "Transvaginal ultrasound of polycystic ovaries with multiple subcapsular follicles — classic morphology in PCOS-related ovulatory dysfunction",
   analgesia:
     "Spinothalamic and trigeminal pain pathways — nociceptive afferents ascend to thalamus and cortex; analgesia interrupts transmission at peripheral, spinal, or central sites",
+  antiemesis:
+    "Area postrema histology — circumventricular organ outside the blood–brain barrier; chemoreceptor trigger zone for vomiting and antiemetic drug targets",
   autocrine:
     "Autocrine signaling — secreted ligand binds receptors on the same cell that released it",
   bronchodilation:

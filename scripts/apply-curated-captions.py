@@ -28,6 +28,7 @@ CURATED: dict[str, dict[str, str]] = {
         "type-2-pneumocyte": "Type II pneumocyte with lamellar bodies — produces pulmonary surfactant",
         "myometrium": "Uterine myometrium — smooth muscle layer of the uterine wall",
         "periventricular-white-matter": "Periventricular white matter — myelinated tracts adjacent to lateral ventricles",
+        "immunosuppression": "Immunosuppression — reduced immune response allowing transplant rejection or opportunistic infection",
         "cervical-os": "Cervical os — external opening of the uterine cervix into the vagina",
         "fibroblast": "Fibroblast in connective tissue — synthesizes collagen and extracellular matrix",
     },
@@ -55,6 +56,11 @@ CURATED: dict[str, dict[str, str]] = {
         "primary-biliary-cholangitis": "Primary biliary cholangitis — autoimmune destruction of intrahepatic bile ducts",
         "sickle-cell-disease": "Sickle cell disease — hemoglobin S polymerization causing sickled erythrocytes",
         "systemic-lupus-erythematosus": "Systemic lupus erythematosus — malar rash and multisystem autoimmune disease",
+        "adjustment-disorder": "Adjustment disorder — emotional or behavioral symptoms within 3 months of an identifiable stressor",
+        "avascular-necrosis": "Avascular necrosis of the femoral head — cystic radiolucencies and irregular subchondral surface on hip X-ray",
+        "glaucoma": "Glaucomatous optic disc — increased cupping and neuroretinal rim loss",
+        "neuromyelitis-optica": "Neuromyelitis optica — longitudinally extensive transverse myelitis (AQP4-IgG)",
+        "psychotic-mood-disorder": "Psychotic mood disorder — major mood episode with superimposed psychotic features",
     },
     "symptoms": {
         "bradykinesia": "Bradykinesia — slowed voluntary movement seen in parkinsonism",
@@ -66,6 +72,11 @@ CURATED: dict[str, dict[str, str]] = {
         "polyuria-polydipsia": "Polyuria and polydipsia — classic presentation of uncontrolled diabetes mellitus",
         "sciatica": "Sciatica — radicular leg pain along L4–S1 distribution from lumbosacral nerve root compression",
         "skin-thickening": "Skin thickening — indurated dermal sclerosis as in systemic sclerosis",
+        "internuclear-ophthalmoplegia": "Internuclear ophthalmoplegia — impaired adduction with contralateral abduction nystagmus (MLF lesion)",
+        "mania": "Mania — elevated mood, hyperactivity, and decreased need for sleep in bipolar disorder",
+        "moon-facies": "Moon facies — rounded facial fullness from chronic cortisol excess in Cushing syndrome",
+        "nystagmus": "Nystagmus — rhythmic involuntary oscillation of the eyes",
+        "ophthalmoplegia": "Ophthalmoplegia — weakness or paralysis of extraocular muscles",
     },
 }
 

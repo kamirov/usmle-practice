@@ -38,6 +38,10 @@ IMAGE_ID_ALIASES: dict[str, dict[str, str]] = {
     "symptoms": {"petechiae": "purpura"},
 }
 
+IMPORT_VAR_OVERRIDES: dict[str, str] = {
+    "21-hydroxylase-deficiency": "hydroxylase21Deficiency",
+}
+
 PRESERVE_CAPTIONS: dict[str, dict[str, str]] = {
     "cells": {
         "a-delta-fiber": "Propagation of action potential along myelinated nerve fiber en",
@@ -87,6 +91,7 @@ PRESERVE_CAPTIONS: dict[str, dict[str, str]] = {
         "hepatocyte": "Human liver H&E section showing hepatocytes organized into plates and lobules",
         "hypersegmented-neutrophil": "This is a peripheral blood smear of a patient with megaloblastic anemia. The red arrow points out a hypersegmented neutrophil. The image was found on a telepathvision site of the US VA: http://www.va.gov/telepathvisn6/megalops.GIF The home page of this collection of images is http://www.va.gov/telep",
         "hypothalamus": "1806 The Hypothalamus-Pituitary Complex",
+        "immunosuppression": "Immunosuppression — reduced immune response allowing transplant rejection or opportunistic infection",
         "intermediate-filament": "Cytoskeleton - Intermediate filament -- Smart-Servier",
         "intestinal-l-cell": "Confocal ileum image showing PYY-GFP enteroendocrine L cells in green",
         "keratinocyte": "Epidermal keratinocytes in stratified squamous epithelium",
@@ -159,6 +164,7 @@ PRESERVE_CAPTIONS: dict[str, dict[str, str]] = {
         "acute-megakaryoblastic-leukemia": "Bone marrow blasts of acute megakaryoblastic leukemia",
         "addison-disease": "T. Addison; On...supra-renal capsules Wellcome L0018484",
         "adhd": "Stressor-linked emotional response out of proportion to stressor",
+        "adjustment-disorder": "Adjustment disorder — emotional or behavioral symptoms within 3 months of an identifiable stressor",
         "alcohol-use-disorder": "Reticulin stain Pathological and histological images courtesy of Ed Uthman at flickr.",
         "alcohol-withdrawal": "Alcoholic liver disease — chronic heavy alcohol use underlying withdrawal risk",
         "allergic-contact-dermatitis": "Allergic contact dermatitis — pruritic eczematous eruption at site of allergen exposure",
@@ -178,8 +184,9 @@ PRESERVE_CAPTIONS: dict[str, dict[str, str]] = {
         "atopic-dermatitis": "Atopic dermatitis — pruritic flexural eczema in atopy-prone patients",
         "atrial-fibrillation": "Herz-EKG1kanalVorhofflimmernSmartwatch-171021",
         "atrial-septal-defect": "Echokardiogram von Atriumseptumdefekt",
-        "atrial-tachycardia": "Multifocal Atrial Tachycardia",
+        "atrial-tachycardia": "Multifocal atrial tachycardia on ECG",
         "atrioventricular-block": "3rd degree heart block",
+        "avascular-necrosis": "AP pelvis radiograph showing avascular necrosis of the femoral head",
         "azoospermia": "Semen analysis specimen under microscopy — used to evaluate sperm concentration in male infertility workup",
         "bacterial-meningitis": "Gram-stained CSF — neutrophilic pleocytosis with intracellular diplococci in bacterial meningitis",
         "basal-cell-carcinoma": "Histopathology of micronodular basal-cell carcinoma",
@@ -248,7 +255,7 @@ PRESERVE_CAPTIONS: dict[str, dict[str, str]] = {
         "fabry-disease": "Fabry disease — angiokeratomas and α-galactosidase A deficiency with Gb3 accumulation",
         "fecal-incontinence": "Tri-State medical journal",
         "female-athlete-triad": "RED-S DE",
-        "femoral-neck-fracture": "Femoral neck fracture on radiograph — intracapsular hip fracture in elderly",
+        "femoral-neck-fracture": "Hip fracture on radiograph (femoral neck region)",
         "fibromyalgia": "Arthritic hands in pain",
         "food-allergy": "Food Allergy",
         "fungal-meningitis": "Fungal Meningitis",
@@ -258,6 +265,7 @@ PRESERVE_CAPTIONS: dict[str, dict[str, str]] = {
         "gastroenteritis": "Norovirus — leading cause of epidemic viral gastroenteritis with vomiting and watery diarrhea",
         "generalized-anxiety-disorder": "GAD At-A-Glance",
         "gestational-diabetes-mellitus": "Blood glucose monitoring kit used in gestational diabetes management",
+        "glaucoma": "Glaucomatous optic disc — increased cupping and neuroretinal rim loss on disc topography",
         "glomerulonephritis": "Crescentic glomerulonephritis",
         "gout": "Gouty tophus histology with urate crystal deposition",
         "granulomatosis-with-polyangiitis": "Granulomatosis with polyangiitis",
@@ -306,7 +314,7 @@ PRESERVE_CAPTIONS: dict[str, dict[str, str]] = {
         "klinefelter-syndrome": "47,XXY karyotype — extra X chromosome in Klinefelter syndrome",
         "korsakoff-syndrome": "Cirrhosis of Alcoholic Liver Disease",
         "l4-radiculopathy": "Anterior dermatomes of trunk and limbs",
-        "l5-radiculopathy": "MRI of L4–L5 disc extrusion compressing L5 nerve root",
+        "l5-radiculopathy": "Lumbar disc herniation compressing the traversing nerve root (radiculopathy)",
         "lacunar-stroke": "CT showing lacunar strokes",
         "lambert-eaton-myasthenic-syndrome": "Neuromuscular junction synapse — presynaptic VGCC antibodies in Lambert-Eaton reduce acetylcholine release",
         "lichen-planus": "Lichen Planus",
@@ -345,6 +353,7 @@ PRESERVE_CAPTIONS: dict[str, dict[str, str]] = {
         "nephrolithiasis": "Nephrolithiasis",
         "nephrotic-syndrome": "Nephrotic syndrome — heavy proteinuria with peripheral edema and hypoalbuminemia",
         "neural-tube-defects": "Spina bifida lombare sagittale",
+        "neuromyelitis-optica": "Neuromyelitis optica — longitudinally extensive transverse myelitis (AQP4-IgG)",
         "non-hodgkin-lymphoma": "Centrocyte, centroblast and follicular dendritic cell in a follicular lymphoma",
         "ocd": "Atopic dermatitis child 2",
         "optic-neuritis": "OpticNeuritisExample",
@@ -358,7 +367,7 @@ PRESERVE_CAPTIONS: dict[str, dict[str, str]] = {
         "parapneumonic-effusion": "Parapneumonic Effusion",
         "parinaud-syndrome": "Axial midbrain — dorsal midbrain (tectum/pretectum) site of Parinaud syndrome",
         "parkinson-disease": "Parkinson disease — resting tremor, rigidity, bradykinesia, and postural instability",
-        "paroxysmal-supraventricular-tachycardia": "Supraventricular Tachycardia",
+        "paroxysmal-supraventricular-tachycardia": "Supraventricular tachycardia on ECG (lead II)",
         "patent-ductus-arteriosus": "Patent Ductus Arteriosus",
         "pellagra": "Casal necklace — broad collar photosensitive dermatitis in niacin (vitamin B₃) deficiency",
         "pemphigus-vulgaris": "Pemphigus vulgaris",
@@ -383,6 +392,7 @@ PRESERVE_CAPTIONS: dict[str, dict[str, str]] = {
         "pseudodementia": "Historical portrait of a patient with acute melancholia, illustrating depressive cognitive impairment",
         "psoriasis": "Psoriasis",
         "psoriatic-arthritis": "Distal interphalangeal pencil-in-cup deformity on radiograph in psoriatic arthritis",
+        "psychotic-mood-disorder": "Psychotic mood disorder — major mood episode with superimposed psychotic features",
         "ptsd": "GAD At-A-Glance",
         "pulmonary-embolism": "Pulmnary arterial atherosclerosis-Pulmonary hypertension",
         "pulmonary-hypertension": "Pulmnary arterial atherosclerosis-Pulmonary hypertension",
@@ -412,6 +422,7 @@ PRESERVE_CAPTIONS: dict[str, dict[str, str]] = {
         "sinusitis": "Odontogenic sinusitis",
         "sjogren-syndrome": "Sjogren's syndrome",
         "small-cell-lung-cancer": "LungCancer-Xray-01",
+        "spasmodic-torticollis": "Spasmodic torticollis — sustained involuntary neck deviation in cervical dystonia",
         "spherocytosis": "Peripheral smear with spherocytes in hereditary spherocytosis",
         "sporotrichosis": "Feline sporotrichosis 4",
         "stable-angina": "Stable Angina",
@@ -426,6 +437,7 @@ PRESERVE_CAPTIONS: dict[str, dict[str, str]] = {
         "teratoma": "H&E histology of ovarian dermoid cyst (mature cystic teratoma) — well-differentiated tissues from multiple germ layers",
         "tetralogy-of-fallot": "Tetralogy of Fallot-IT",
         "thromboangiitis-obliterans": "55 year old female with advanced Buerger's disease",
+        "tourette-syndrome": "Tourette syndrome — motor and vocal tics with urge-suppression premonitory sensation",
         "transient-ischemic-attack": "Illustration of transient ischemic attack",
         "traumatic-brain-injury": "Noncontrast head CT — hemorrhagic contusion and traumatic brain injury",
         "trisomy-13": "Trisomy 13",
@@ -484,7 +496,7 @@ PRESERVE_CAPTIONS: dict[str, dict[str, str]] = {
         "metacarpophalangeal-joint": "DIP, PIP and MCP joints of hand",
         "ophthalmic-division": "Ophthalmic division (V1) sensory distribution",
         "pelvic-floor": "Internal view of left levator ani, a major pelvic floor muscle",
-        "peroneal-nerve-compression": "Foot drop from common peroneal nerve palsy",
+        "peroneal-nerve-compression": "Sciatic nerve bifurcation into tibial and common peroneal nerves at the popliteal fossa",
         "phrenic-nerve": "Position of esophagus, trachea, heart, and phrenic nerves",
         "piriformis": "Piriformis",
         "recurrent-laryngeal-nerve": "Laryngeal muscles and nerves",
@@ -496,10 +508,13 @@ PRESERVE_CAPTIONS: dict[str, dict[str, str]] = {
         "subscapularis": "Insertion-of-subscapularis-muscle",
         "suprascapular-nerve": "The anatomy of the horse - a dissection guide",
         "supraspinatus": "Gray — musculus supraspinatus",
-        "sympathetic-trunk": "Sympathetic trunk and splanchnic nerves",
+        "sympathetic-trunk": "Sympathetic trunk and splanchnic nerves (Gray's Anatomy)",
         "teres-minor": "Gray — musculus teres minor",
         "trigeminal-nerve": "Trigeminal nerve and divisions",
         "vagus-nerve": "Vagus nerve course in neck and thorax",
+    },
+    "organs": {
+        "cavotricuspid-isthmus": "Cavotricuspid isthmus — low right atrial isthmus targeted in typical atrial flutter ablation",
     },
     "pathogenesis": {
         "acid-fast-bacteria": "Ziehl-Neelsen stain — red acid-fast bacilli (mycolic acid cell wall) of Mycobacterium tuberculosis",
@@ -513,6 +528,7 @@ PRESERVE_CAPTIONS: dict[str, dict[str, str]] = {
     },
     "symptoms": {
         "acanthosis-nigricans": "Velvety hyperpigmented plaques in the axilla — cutaneous marker of insulin resistance",
+        "acute-dystonic-reaction": "Acute dystonic reaction — sustained muscle spasms (often neck/eyes) from dopamine blockade",
         "afferent-pupillary-defect": "The left optic nerve and the optic tracts.",
         "agonal-respirations": "My Heartbeat and Peripheral Oxygen Saturation (SpO2)",
         "akathisia": "Overview of reward structures in the human brain. Dopaminergic neurons are located in the midbrain structures substantia nigra (SNc) and the ventral tegmental area (VTA). Their axons project to the striatum (caudate nucleus, putamen and ventral striatum including nucleus accumbens), the dorsal and v",
@@ -568,6 +584,7 @@ PRESERVE_CAPTIONS: dict[str, dict[str, str]] = {
         "erythema": "Sharply demarcated erythema of recurrent erysipelas (vasodilation with infection)",
         "excoriated": "Inflamed atopic dermatitis on infant ankle with excoriations from scratching",
         "exertional-dyspnea": "Exertional Dyspnea",
+        "extrapyramidal-symptoms": "Basal ganglia direct and indirect pathways — dopaminergic nigrostriatal circuit underlying extrapyramidal motor symptoms",
         "facial-cleft": "Holoprosencephaly",
         "facial-palsy": "Bells Palsy CDC",
         "fasciculation": "Visible muscle fasciculation in neuromuscular disease",
@@ -593,6 +610,7 @@ PRESERVE_CAPTIONS: dict[str, dict[str, str]] = {
         "impaired-wound-healing": "Example of the healing process of a chronic venous stasis ulcer of the lower leg under therapy with wIRA (Study Tromsø/Hillerød). (28 times 30 minutes irradiation with water-filtered infrared-A (wIRA) and visible light (VIS) within 52 days = approximately 7 weeks) with normal view, thermographic ima",
         "indurated-plaque": "Indurated Plaque",
         "insomnia": "Depiction of a person suffering from Insomnia (sleeplessness)",
+        "internuclear-ophthalmoplegia": "Internuclear ophthalmoplegia — impaired adduction with contralateral abduction nystagmus (MLF lesion)",
         "jaundice": "Scleral icterus — yellow discoloration of the conjunctiva from hyperbilirubinemia",
         "kernig-sign": "Kernig sign — resistance to knee extension with hip flexed suggests meningeal irritation",
         "koplik-spots": "Koplik spots, measles 6111 lores",
@@ -601,8 +619,10 @@ PRESERVE_CAPTIONS: dict[str, dict[str, str]] = {
         "lichenification": "Clinical features of atopic dermatitis in English",
         "lymphadenopathy": "Cervical lymphadenopathy — enlarged palpable anterior cervical lymph nodes",
         "maculopapular-rash": "Maculopapular eruption — coalescent erythematous macules and papules",
+        "mania": "Mania — elevated mood, hyperactivity, and decreased need for sleep in bipolar disorder",
         "melena": "Melena Bleeding DU",
         "miotic": "Example of Horner's syndrome in a cat",
+        "moon-facies": "Moon facies — rounded facial fullness from chronic cortisol excess in Cushing syndrome",
         "morning-stiffness": "Morning Stiffness",
         "mydriasis": "Mydriasis due to LSD usage",
         "myelopathy": "Cervical Spine MRI",
@@ -612,7 +632,9 @@ PRESERVE_CAPTIONS: dict[str, dict[str, str]] = {
         "neutropenia": "A blood smear with neutropenia in United States",
         "nodular-lymphangitis": "Sporotrichosis by the fungus Sporothrix schenckii",
         "nuchal-rigidity": "Nuchal rigidity — resistance to passive neck flexion in meningeal irritation",
+        "nystagmus": "Nystagmus — rhythmic involuntary oscillation of the eyes",
         "oligomenorrhea": "Estradiol, progesterone, LH, and FSH across the normal menstrual cycle — disrupted in anovulatory oligomenorrhea",
+        "ophthalmoplegia": "Ophthalmoplegia — weakness or paralysis of extraocular muscles",
         "orthopnea": "Orthopnea",
         "orthostatic-hypotension": "The Faint label QS:Lde,\"Die Ohnmacht\"label QS:Len,\"The Faint\"",
         "otorrhea": "Battle sign — retroauricular ecchymosis associated with basilar skull fracture and possible CSF otorrhea",
@@ -689,7 +711,8 @@ def list_images(category: str) -> list[tuple[str, str, str]]:
             continue
         rel = f"{category}/{fname}"
         entry_id = ID_ALIASES.get(rel, os.path.splitext(fname)[0])
-        var = camel_case(os.path.splitext(fname)[0])
+        stem = os.path.splitext(fname)[0]
+        var = IMPORT_VAR_OVERRIDES.get(entry_id, camel_case(stem))
         items.append((entry_id, f"../media/images/{category}/{fname}?url", var))
     for entry_id, var_name in IMAGE_ID_ALIASES.get(category, {}).items():
         # reuse existing image file via shared import variable

@@ -1,7 +1,7 @@
 import type { MediaAttribution } from "./media";
 import type { ConditionEntry } from "./conditions";
 
-import 21HydroxylaseDeficiency from "../media/images/conditions/21-hydroxylase-deficiency.png?url";
+import hydroxylase21Deficiency from "../media/images/conditions/21-hydroxylase-deficiency.png?url";
 import abscess from "../media/images/conditions/abscess.jpg?url";
 import achalasia from "../media/images/conditions/achalasia.jpg?url";
 import acromegaly from "../media/images/conditions/acromegaly.jpg?url";
@@ -10,7 +10,6 @@ import acuteLymphoblasticLeukemia from "../media/images/conditions/acute-lymphob
 import acuteMegakaryoblasticLeukemia from "../media/images/conditions/acute-megakaryoblastic-leukemia.jpg?url";
 import addisonDisease from "../media/images/conditions/addison-disease.jpg?url";
 import adhd from "../media/images/conditions/adhd.png?url";
-import adjustmentDisorder from "../media/images/conditions/adjustment-disorder.svg?url";
 import alcoholUseDisorder from "../media/images/conditions/alcohol-use-disorder.jpg?url";
 import alcoholWithdrawal from "../media/images/conditions/alcohol-withdrawal.jpg?url";
 import allergicContactDermatitis from "../media/images/conditions/allergic-contact-dermatitis.jpg?url";
@@ -30,9 +29,9 @@ import atherosclerosis from "../media/images/conditions/atherosclerosis.jpg?url"
 import atopicDermatitis from "../media/images/conditions/atopic-dermatitis.jpg?url";
 import atrialFibrillation from "../media/images/conditions/atrial-fibrillation.jpg?url";
 import atrialSeptalDefect from "../media/images/conditions/atrial-septal-defect.jpg?url";
-import atrialTachycardia from "../media/images/conditions/atrial-tachycardia.svg?url";
+import atrialTachycardia from "../media/images/conditions/atrial-tachycardia.png?url";
 import atrioventricularBlock from "../media/images/conditions/atrioventricular-block.png?url";
-import avascularNecrosis from "../media/images/conditions/avascular-necrosis.svg?url";
+import avascularNecrosis from "../media/images/conditions/avascular-necrosis.jpg?url";
 import azoospermia from "../media/images/conditions/azoospermia.jpg?url";
 import bacterialMeningitis from "../media/images/conditions/bacterial-meningitis.jpg?url";
 import basalCellCarcinoma from "../media/images/conditions/basal-cell-carcinoma.jpg?url";
@@ -111,7 +110,7 @@ import gastricAdenocarcinoma from "../media/images/conditions/gastric-adenocarci
 import gastroenteritis from "../media/images/conditions/gastroenteritis.jpg?url";
 import generalizedAnxietyDisorder from "../media/images/conditions/generalized-anxiety-disorder.png?url";
 import gestationalDiabetesMellitus from "../media/images/conditions/gestational-diabetes-mellitus.jpg?url";
-import glaucoma from "../media/images/conditions/glaucoma.svg?url";
+import glaucoma from "../media/images/conditions/glaucoma.png?url";
 import glomerulonephritis from "../media/images/conditions/glomerulonephritis.jpg?url";
 import gout from "../media/images/conditions/gout.jpg?url";
 import granulomatosisWithPolyangiitis from "../media/images/conditions/granulomatosis-with-polyangiitis.jpg?url";
@@ -160,7 +159,7 @@ import keratoconjunctivitisSicca from "../media/images/conditions/keratoconjunct
 import klinefelterSyndrome from "../media/images/conditions/klinefelter-syndrome.jpg?url";
 import korsakoffSyndrome from "../media/images/conditions/korsakoff-syndrome.jpg?url";
 import l4Radiculopathy from "../media/images/conditions/l4-radiculopathy.png?url";
-import l5Radiculopathy from "../media/images/conditions/l5-radiculopathy.png?url";
+import l5Radiculopathy from "../media/images/conditions/l5-radiculopathy.jpg?url";
 import lacunarStroke from "../media/images/conditions/lacunar-stroke.jpg?url";
 import lambertEatonMyasthenicSyndrome from "../media/images/conditions/lambert-eaton-myasthenic-syndrome.png?url";
 import lichenPlanus from "../media/images/conditions/lichen-planus.jpg?url";
@@ -199,7 +198,6 @@ import nephriticSyndrome from "../media/images/conditions/nephritic-syndrome.jpg
 import nephrolithiasis from "../media/images/conditions/nephrolithiasis.jpg?url";
 import nephroticSyndrome from "../media/images/conditions/nephrotic-syndrome.jpg?url";
 import neuralTubeDefects from "../media/images/conditions/neural-tube-defects.jpg?url";
-import neuromyelitisOptica from "../media/images/conditions/neuromyelitis-optica.svg?url";
 import nonHodgkinLymphoma from "../media/images/conditions/non-hodgkin-lymphoma.jpg?url";
 import ocd from "../media/images/conditions/ocd.jpg?url";
 import opticNeuritis from "../media/images/conditions/optic-neuritis.jpg?url";
@@ -214,7 +212,7 @@ import panicDisorder from "../media/images/conditions/panic-disorder.jpg?url";
 import parapneumonicEffusion from "../media/images/conditions/parapneumonic-effusion.jpg?url";
 import parinaudSyndrome from "../media/images/conditions/parinaud-syndrome.jpg?url";
 import parkinsonDisease from "../media/images/conditions/parkinson-disease.jpg?url";
-import paroxysmalSupraventricularTachycardia from "../media/images/conditions/paroxysmal-supraventricular-tachycardia.svg?url";
+import paroxysmalSupraventricularTachycardia from "../media/images/conditions/paroxysmal-supraventricular-tachycardia.jpg?url";
 import patentDuctusArteriosus from "../media/images/conditions/patent-ductus-arteriosus.jpg?url";
 import pellagra from "../media/images/conditions/pellagra.jpg?url";
 import pemphigusVulgaris from "../media/images/conditions/pemphigus-vulgaris.jpg?url";
@@ -239,7 +237,6 @@ import prolactinoma from "../media/images/conditions/prolactinoma.jpg?url";
 import pseudodementia from "../media/images/conditions/pseudodementia.jpg?url";
 import psoriasis from "../media/images/conditions/psoriasis.jpg?url";
 import psoriaticArthritis from "../media/images/conditions/psoriatic-arthritis.jpg?url";
-import psychoticMoodDisorder from "../media/images/conditions/psychotic-mood-disorder.svg?url";
 import ptsd from "../media/images/conditions/ptsd.png?url";
 import pulmonaryEmbolism from "../media/images/conditions/pulmonary-embolism.jpg?url";
 import pulmonaryHypertension from "../media/images/conditions/pulmonary-hypertension.jpg?url";
@@ -270,6 +267,7 @@ import sideroblasticAnemia from "../media/images/conditions/sideroblastic-anemia
 import sinusitis from "../media/images/conditions/sinusitis.jpg?url";
 import sjogrenSyndrome from "../media/images/conditions/sjogren-syndrome.jpg?url";
 import smallCellLungCancer from "../media/images/conditions/small-cell-lung-cancer.jpg?url";
+import spasmodicTorticollis from "../media/images/conditions/spasmodic-torticollis.jpg?url";
 import spherocytosis from "../media/images/conditions/spherocytosis.jpg?url";
 import sporotrichosis from "../media/images/conditions/sporotrichosis.jpg?url";
 import stableAngina from "../media/images/conditions/stable-angina.jpg?url";
@@ -284,6 +282,7 @@ import tensionPneumothorax from "../media/images/conditions/tension-pneumothorax
 import tetralogyOfFallotCyanosis from "../media/images/conditions/tetralogy-of-fallot-cyanosis.jpg?url";
 import tetralogyOfFallot from "../media/images/conditions/tetralogy-of-fallot.svg?url";
 import thromboangiitisObliterans from "../media/images/conditions/thromboangiitis-obliterans.jpg?url";
+import touretteSyndrome from "../media/images/conditions/tourette-syndrome.jpg?url";
 import transientIschemicAttack from "../media/images/conditions/transient-ischemic-attack.png?url";
 import traumaticBrainInjury from "../media/images/conditions/traumatic-brain-injury.jpg?url";
 import trisomy13 from "../media/images/conditions/trisomy-13.jpg?url";
@@ -323,7 +322,6 @@ export type ConditionImageId = Extract<
   | "acute-megakaryoblastic-leukemia"
   | "addison-disease"
   | "adhd"
-  | "adjustment-disorder"
   | "alcohol-use-disorder"
   | "alcohol-withdrawal"
   | "allergic-contact-dermatitis"
@@ -512,7 +510,6 @@ export type ConditionImageId = Extract<
   | "nephrolithiasis"
   | "nephrotic-syndrome"
   | "neural-tube-defects"
-  | "neuromyelitis-optica"
   | "non-hodgkin-lymphoma"
   | "ocd"
   | "optic-neuritis"
@@ -552,7 +549,6 @@ export type ConditionImageId = Extract<
   | "pseudodementia"
   | "psoriasis"
   | "psoriatic-arthritis"
-  | "psychotic-mood-disorder"
   | "ptsd"
   | "pulmonary-embolism"
   | "pulmonary-hypertension"
@@ -583,6 +579,7 @@ export type ConditionImageId = Extract<
   | "sinusitis"
   | "sjogren-syndrome"
   | "small-cell-lung-cancer"
+  | "spasmodic-torticollis"
   | "spherocytosis"
   | "sporotrichosis"
   | "stable-angina"
@@ -597,6 +594,7 @@ export type ConditionImageId = Extract<
   | "tetralogy-of-fallot"
   | "tetralogy-of-fallot"
   | "thromboangiitis-obliterans"
+  | "tourette-syndrome"
   | "transient-ischemic-attack"
   | "traumatic-brain-injury"
   | "trisomy-13"
@@ -632,7 +630,7 @@ function extensionAssetUrl(path: string): string {
 
 /** See src/media/images/conditions/SOURCES.txt */
 export const CONDITION_IMAGES: Partial<Record<ConditionImageId, string>> = {
-  "21-hydroxylase-deficiency": extensionAssetUrl(21HydroxylaseDeficiency),
+  "21-hydroxylase-deficiency": extensionAssetUrl(hydroxylase21Deficiency),
   "abscess": extensionAssetUrl(abscess),
   "achalasia": extensionAssetUrl(achalasia),
   "acromegaly": extensionAssetUrl(acromegaly),
@@ -641,7 +639,6 @@ export const CONDITION_IMAGES: Partial<Record<ConditionImageId, string>> = {
   "acute-megakaryoblastic-leukemia": extensionAssetUrl(acuteMegakaryoblasticLeukemia),
   "addison-disease": extensionAssetUrl(addisonDisease),
   "adhd": extensionAssetUrl(adhd),
-  "adjustment-disorder": extensionAssetUrl(adjustmentDisorder),
   "alcohol-use-disorder": extensionAssetUrl(alcoholUseDisorder),
   "alcohol-withdrawal": extensionAssetUrl(alcoholWithdrawal),
   "allergic-contact-dermatitis": extensionAssetUrl(allergicContactDermatitis),
@@ -830,7 +827,6 @@ export const CONDITION_IMAGES: Partial<Record<ConditionImageId, string>> = {
   "nephrolithiasis": extensionAssetUrl(nephrolithiasis),
   "nephrotic-syndrome": extensionAssetUrl(nephroticSyndrome),
   "neural-tube-defects": extensionAssetUrl(neuralTubeDefects),
-  "neuromyelitis-optica": extensionAssetUrl(neuromyelitisOptica),
   "non-hodgkin-lymphoma": extensionAssetUrl(nonHodgkinLymphoma),
   "ocd": extensionAssetUrl(ocd),
   "optic-neuritis": extensionAssetUrl(opticNeuritis),
@@ -870,7 +866,6 @@ export const CONDITION_IMAGES: Partial<Record<ConditionImageId, string>> = {
   "pseudodementia": extensionAssetUrl(pseudodementia),
   "psoriasis": extensionAssetUrl(psoriasis),
   "psoriatic-arthritis": extensionAssetUrl(psoriaticArthritis),
-  "psychotic-mood-disorder": extensionAssetUrl(psychoticMoodDisorder),
   "ptsd": extensionAssetUrl(ptsd),
   "pulmonary-embolism": extensionAssetUrl(pulmonaryEmbolism),
   "pulmonary-hypertension": extensionAssetUrl(pulmonaryHypertension),
@@ -901,6 +896,7 @@ export const CONDITION_IMAGES: Partial<Record<ConditionImageId, string>> = {
   "sinusitis": extensionAssetUrl(sinusitis),
   "sjogren-syndrome": extensionAssetUrl(sjogrenSyndrome),
   "small-cell-lung-cancer": extensionAssetUrl(smallCellLungCancer),
+  "spasmodic-torticollis": extensionAssetUrl(spasmodicTorticollis),
   "spherocytosis": extensionAssetUrl(spherocytosis),
   "sporotrichosis": extensionAssetUrl(sporotrichosis),
   "stable-angina": extensionAssetUrl(stableAngina),
@@ -915,6 +911,7 @@ export const CONDITION_IMAGES: Partial<Record<ConditionImageId, string>> = {
   "tetralogy-of-fallot": extensionAssetUrl(tetralogyOfFallotCyanosis),
   "tetralogy-of-fallot": extensionAssetUrl(tetralogyOfFallot),
   "thromboangiitis-obliterans": extensionAssetUrl(thromboangiitisObliterans),
+  "tourette-syndrome": extensionAssetUrl(touretteSyndrome),
   "transient-ischemic-attack": extensionAssetUrl(transientIschemicAttack),
   "traumatic-brain-injury": extensionAssetUrl(traumaticBrainInjury),
   "trisomy-13": extensionAssetUrl(trisomy13),
@@ -956,7 +953,6 @@ export const CONDITION_IMAGE_ATTRIBUTIONS: Partial<
   "acute-megakaryoblastic-leukemia": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:acute-megakaryoblastic-leukemia.jpg" },
   "addison-disease": { label: "Wikimedia Commons (T. Addison; On...supra-renal capsules Wellcome L0018484.jpg)", url: "https://commons.wikimedia.org/wiki/File:T._Addison;_On...supra-renal_capsules_Wellcome_L0018484.jpg" },
   "adhd": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:adhd.png" },
-  "adjustment-disorder": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:adjustment-disorder.svg" },
   "alcohol-use-disorder": { label: "Wikimedia Commons (Cirrhosis of Alcoholic Liver Disease (5517625829).jpg)", url: "https://commons.wikimedia.org/wiki/File:Cirrhosis_of_Alcoholic_Liver_Disease_(5517625829).jpg" },
   "alcohol-withdrawal": { label: "Wikimedia Commons (Local copy from conditions/alcohol-use-disorder.jpg)", url: "https://commons.wikimedia.org/" },
   "allergic-contact-dermatitis": { label: "Wikimedia Commons (Blausen 0014 AllergicDermatitis.png)", url: "https://commons.wikimedia.org/wiki/File:Blausen_0014_AllergicDermatitis.png" },
@@ -976,9 +972,9 @@ export const CONDITION_IMAGE_ATTRIBUTIONS: Partial<
   "atopic-dermatitis": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:atopic-dermatitis.jpg" },
   "atrial-fibrillation": { label: "Wikimedia Commons (Herz-EKG1kanalVorhofflimmernSmartwatch-171021.jpg)", url: "https://commons.wikimedia.org/wiki/File:Herz-EKG1kanalVorhofflimmernSmartwatch-171021.jpg" },
   "atrial-septal-defect": { label: "Wikimedia Commons (Echokardiogram von Atriumseptumdefekt (Ostium secundum).jpg)", url: "https://commons.wikimedia.org/wiki/File:Echokardiogram_von_Atriumseptumdefekt_(Ostium_secundum).jpg" },
-  "atrial-tachycardia": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:atrial-tachycardia.svg" },
+  "atrial-tachycardia": { label: "Wikimedia Commons (Multifocal atrial tachycardia - MAT.png)", url: "https://commons.wikimedia.org/wiki/File:Multifocal_atrial_tachycardia_-_MAT.png" },
   "atrioventricular-block": { label: "Wikimedia Commons (3rd degree heart block.PNG)", url: "https://commons.wikimedia.org/wiki/File:3rd_degree_heart_block.PNG" },
-  "avascular-necrosis": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:avascular-necrosis.svg" },
+  "avascular-necrosis": { label: "Wikimedia Commons (X-ray of idiopathic avascular necrosis of the femoral head - Anteroposterior.jpg)", url: "https://commons.wikimedia.org/wiki/File:X-ray_of_idiopathic_avascular_necrosis_of_the_femoral_head_-_Anteroposterior.jpg" },
   "azoospermia": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:azoospermia.jpg" },
   "bacterial-meningitis": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:bacterial-meningitis.jpg" },
   "basal-cell-carcinoma": { label: "Wikimedia Commons (Histopathology of micronodular basal-cell carcinoma (original).jpg)", url: "https://commons.wikimedia.org/wiki/File:Histopathology_of_micronodular_basal-cell_carcinoma_(original).jpg" },
@@ -1047,7 +1043,7 @@ export const CONDITION_IMAGE_ATTRIBUTIONS: Partial<
   "fabry-disease": { label: "Wikimedia Commons (Morbus Fabry Angiokeratoma 01.jpg)", url: "https://commons.wikimedia.org/wiki/File:Morbus_Fabry_Angiokeratoma_01.jpg" },
   "fecal-incontinence": { label: "Wikimedia Commons (Tri-State medical journal (1895) (14582735949).jpg)", url: "https://commons.wikimedia.org/wiki/File:Tri-State_medical_journal_(1895)_(14582735949).jpg" },
   "female-athlete-triad": { label: "Wikimedia Commons (RED-S DE.svg)", url: "https://commons.wikimedia.org/wiki/File:RED-S_DE.svg" },
-  "femoral-neck-fracture": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:femoral-neck-fracture.jpg" },
+  "femoral-neck-fracture": { label: "Wikimedia Commons (Cdm hip fracture 343.jpg)", url: "https://commons.wikimedia.org/wiki/File:Cdm_hip_fracture_343.jpg" },
   "fibromyalgia": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:fibromyalgia.jpg" },
   "food-allergy": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:food-allergy.jpg" },
   "fungal-meningitis": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:fungal-meningitis.jpg" },
@@ -1057,7 +1053,7 @@ export const CONDITION_IMAGE_ATTRIBUTIONS: Partial<
   "gastroenteritis": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:gastroenteritis.jpg" },
   "generalized-anxiety-disorder": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:generalized-anxiety-disorder.png" },
   "gestational-diabetes-mellitus": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:gestational-diabetes-mellitus.jpg" },
-  "glaucoma": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:glaucoma.svg" },
+  "glaucoma": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:glaucoma.png" },
   "glomerulonephritis": { label: "Wikimedia Commons (Crescentic glomerulonephritis - high mag.jpg)", url: "https://commons.wikimedia.org/wiki/File:Crescentic_glomerulonephritis_-_high_mag.jpg" },
   "gout": { label: "Wikimedia Commons (Gouty tophus - intermed mag.jpg)", url: "https://commons.wikimedia.org/wiki/File:Gouty_tophus_-_intermed_mag.jpg" },
   "granulomatosis-with-polyangiitis": { label: "Wikimedia Commons (Granulomatosis with polyangiitis.jpg)", url: "https://commons.wikimedia.org/wiki/File:Granulomatosis_with_polyangiitis.jpg" },
@@ -1106,7 +1102,7 @@ export const CONDITION_IMAGE_ATTRIBUTIONS: Partial<
   "klinefelter-syndrome": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:klinefelter-syndrome.jpg" },
   "korsakoff-syndrome": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:korsakoff-syndrome.jpg" },
   "l4-radiculopathy": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:l4-radiculopathy.png" },
-  "l5-radiculopathy": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:l5-radiculopathy.png" },
+  "l5-radiculopathy": { label: "Wikimedia Commons (Spinal disc herniation stage 3.jpg)", url: "https://commons.wikimedia.org/wiki/File:Spinal_disc_herniation_stage_3.jpg" },
   "lacunar-stroke": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:lacunar-stroke.jpg" },
   "lambert-eaton-myasthenic-syndrome": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:lambert-eaton-myasthenic-syndrome.png" },
   "lichen-planus": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:lichen-planus.jpg" },
@@ -1145,7 +1141,6 @@ export const CONDITION_IMAGE_ATTRIBUTIONS: Partial<
   "nephrolithiasis": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:nephrolithiasis.jpg" },
   "nephrotic-syndrome": { label: "Wikimedia Commons (United States Navy Medical News Letter Vol. 32 1958 Index (IA NavyMedicalNewsletter19581231Index).pdf)", url: "https://commons.wikimedia.org/wiki/File:United_States_Navy_Medical_News_Letter_Vol._32_1958_Index_(IA_NavyMedicalNewsletter19581231Index).pdf" },
   "neural-tube-defects": { label: "Wikimedia Commons (Spina bifida lombare sagittale.jpg)", url: "https://commons.wikimedia.org/wiki/File:Spina_bifida_lombare_sagittale.jpg" },
-  "neuromyelitis-optica": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:neuromyelitis-optica.svg" },
   "non-hodgkin-lymphoma": { label: "Wikimedia Commons (Centrocyte, centroblast and follicular dendritic cell in a follicular lymphoma.jpg)", url: "https://commons.wikimedia.org/wiki/File:Centrocyte,_centroblast_and_follicular_dendritic_cell_in_a_follicular_lymphoma.jpg" },
   "ocd": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:ocd.jpg" },
   "optic-neuritis": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:optic-neuritis.jpg" },
@@ -1160,7 +1155,7 @@ export const CONDITION_IMAGE_ATTRIBUTIONS: Partial<
   "parapneumonic-effusion": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:parapneumonic-effusion.jpg" },
   "parinaud-syndrome": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:parinaud-syndrome.jpg" },
   "parkinson-disease": { label: "Wikimedia Commons (The Journal of nervous and mental disease (IA journalofnervous49ameruoft).pdf)", url: "https://commons.wikimedia.org/wiki/File:The_Journal_of_nervous_and_mental_disease_(IA_journalofnervous49ameruoft).pdf" },
-  "paroxysmal-supraventricular-tachycardia": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:paroxysmal-supraventricular-tachycardia.svg" },
+  "paroxysmal-supraventricular-tachycardia": { label: "Wikimedia Commons (SVT Lead II-2.JPG)", url: "https://commons.wikimedia.org/wiki/File:SVT_Lead_II-2.JPG" },
   "patent-ductus-arteriosus": { label: "Wikimedia Commons (Patent Ductus Arteriosus (Device Closure).png)", url: "https://commons.wikimedia.org/wiki/File:Patent_Ductus_Arteriosus_(Device_Closure).png" },
   "pellagra": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:pellagra.jpg" },
   "pemphigus-vulgaris": { label: "Wikimedia Commons (Pemphigus vulgaris.jpg)", url: "https://commons.wikimedia.org/wiki/File:Pemphigus_vulgaris.jpg" },
@@ -1185,7 +1180,6 @@ export const CONDITION_IMAGE_ATTRIBUTIONS: Partial<
   "pseudodementia": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:pseudodementia.jpg" },
   "psoriasis": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:psoriasis.jpg" },
   "psoriatic-arthritis": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:psoriatic-arthritis.jpg" },
-  "psychotic-mood-disorder": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:psychotic-mood-disorder.svg" },
   "ptsd": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:ptsd.png" },
   "pulmonary-embolism": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:pulmonary-embolism.jpg" },
   "pulmonary-hypertension": { label: "Wikimedia Commons (Pulmnary arterial atherosclerosis-Pulmonary hypertension.jpg)", url: "https://commons.wikimedia.org/wiki/File:Pulmnary_arterial_atherosclerosis-Pulmonary_hypertension.jpg" },
@@ -1216,6 +1210,7 @@ export const CONDITION_IMAGE_ATTRIBUTIONS: Partial<
   "sinusitis": { label: "Wikimedia Commons (Odontogenic sinusitis.jpg)", url: "https://commons.wikimedia.org/wiki/File:Odontogenic_sinusitis.jpg" },
   "sjogren-syndrome": { label: "Wikimedia Commons (Sjogren's syndrome (2).jpg)", url: "https://commons.wikimedia.org/wiki/File:Sjogren's_syndrome_(2).jpg" },
   "small-cell-lung-cancer": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:small-cell-lung-cancer.jpg" },
+  "spasmodic-torticollis": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:spasmodic-torticollis.jpg" },
   "spherocytosis": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:spherocytosis.jpg" },
   "sporotrichosis": { label: "Wikimedia Commons (Feline sporotrichosis 4.jpg)", url: "https://commons.wikimedia.org/wiki/File:Feline_sporotrichosis_4.jpg" },
   "stable-angina": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:stable-angina.jpg" },
@@ -1230,6 +1225,7 @@ export const CONDITION_IMAGE_ATTRIBUTIONS: Partial<
   "tetralogy-of-fallot": { label: "Wikimedia Commons (Heart Surgery Practice.jpg)", url: "https://commons.wikimedia.org/wiki/File:Heart_Surgery_Practice.jpg" },
   "tetralogy-of-fallot": { label: "Wikimedia Commons (Tetralogy of Fallot-IT.png)", url: "https://commons.wikimedia.org/wiki/File:Tetralogy_of_Fallot-IT.png" },
   "thromboangiitis-obliterans": { label: "Wikimedia Commons (55 year old female with advanced Buerger's disease.jpg)", url: "https://commons.wikimedia.org/wiki/File:55_year_old_female_with_advanced_Buerger's_disease.jpg" },
+  "tourette-syndrome": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:tourette-syndrome.jpg" },
   "transient-ischemic-attack": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:transient-ischemic-attack.png" },
   "traumatic-brain-injury": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:traumatic-brain-injury.jpg" },
   "trisomy-13": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:trisomy-13.jpg" },
@@ -1271,7 +1267,6 @@ export const CONDITION_IMAGE_CAPTIONS: Partial<
   "acute-megakaryoblastic-leukemia": "Bone marrow blasts of acute megakaryoblastic leukemia",
   "addison-disease": "T. Addison; On...supra-renal capsules Wellcome L0018484",
   "adhd": "Stressor-linked emotional response out of proportion to stressor",
-  "adjustment-disorder": "Clinical or pathologic image illustrating adjustment disorder",
   "alcohol-use-disorder": "Reticulin stain Pathological and histological images courtesy of Ed Uthman at flickr.",
   "alcohol-withdrawal": "Alcoholic liver disease — chronic heavy alcohol use underlying withdrawal risk",
   "allergic-contact-dermatitis": "Allergic contact dermatitis — pruritic eczematous eruption at site of allergen exposure",
@@ -1291,9 +1286,9 @@ export const CONDITION_IMAGE_CAPTIONS: Partial<
   "atopic-dermatitis": "Atopic dermatitis — pruritic flexural eczema in atopy-prone patients",
   "atrial-fibrillation": "Herz-EKG1kanalVorhofflimmernSmartwatch-171021",
   "atrial-septal-defect": "Echokardiogram von Atriumseptumdefekt",
-  "atrial-tachycardia": "Multifocal Atrial Tachycardia",
+  "atrial-tachycardia": "Multifocal atrial tachycardia on ECG",
   "atrioventricular-block": "3rd degree heart block",
-  "avascular-necrosis": "Clinical or pathologic image illustrating avascular necrosis",
+  "avascular-necrosis": "AP pelvis radiograph showing avascular necrosis of the femoral head",
   "azoospermia": "Semen analysis specimen under microscopy — used to evaluate sperm concentration in male infertility workup",
   "bacterial-meningitis": "Gram-stained CSF — neutrophilic pleocytosis with intracellular diplococci in bacterial meningitis",
   "basal-cell-carcinoma": "Histopathology of micronodular basal-cell carcinoma",
@@ -1362,7 +1357,7 @@ export const CONDITION_IMAGE_CAPTIONS: Partial<
   "fabry-disease": "Fabry disease — angiokeratomas and α-galactosidase A deficiency with Gb3 accumulation",
   "fecal-incontinence": "Tri-State medical journal",
   "female-athlete-triad": "RED-S DE",
-  "femoral-neck-fracture": "Femoral neck fracture on radiograph — intracapsular hip fracture in elderly",
+  "femoral-neck-fracture": "Hip fracture on radiograph (femoral neck region)",
   "fibromyalgia": "Arthritic hands in pain",
   "food-allergy": "Food Allergy",
   "fungal-meningitis": "Fungal Meningitis",
@@ -1372,7 +1367,7 @@ export const CONDITION_IMAGE_CAPTIONS: Partial<
   "gastroenteritis": "Norovirus — leading cause of epidemic viral gastroenteritis with vomiting and watery diarrhea",
   "generalized-anxiety-disorder": "GAD At-A-Glance",
   "gestational-diabetes-mellitus": "Blood glucose monitoring kit used in gestational diabetes management",
-  "glaucoma": "Clinical or pathologic image illustrating glaucoma",
+  "glaucoma": "Glaucomatous optic disc — increased cupping and neuroretinal rim loss on disc topography",
   "glomerulonephritis": "Crescentic glomerulonephritis",
   "gout": "Gouty tophus histology with urate crystal deposition",
   "granulomatosis-with-polyangiitis": "Granulomatosis with polyangiitis",
@@ -1421,7 +1416,7 @@ export const CONDITION_IMAGE_CAPTIONS: Partial<
   "klinefelter-syndrome": "47,XXY karyotype — extra X chromosome in Klinefelter syndrome",
   "korsakoff-syndrome": "Cirrhosis of Alcoholic Liver Disease",
   "l4-radiculopathy": "Anterior dermatomes of trunk and limbs",
-  "l5-radiculopathy": "MRI of L4–L5 disc extrusion compressing L5 nerve root",
+  "l5-radiculopathy": "Lumbar disc herniation compressing the traversing nerve root (radiculopathy)",
   "lacunar-stroke": "CT showing lacunar strokes",
   "lambert-eaton-myasthenic-syndrome": "Neuromuscular junction synapse — presynaptic VGCC antibodies in Lambert-Eaton reduce acetylcholine release",
   "lichen-planus": "Lichen Planus",
@@ -1460,7 +1455,6 @@ export const CONDITION_IMAGE_CAPTIONS: Partial<
   "nephrolithiasis": "Nephrolithiasis",
   "nephrotic-syndrome": "Nephrotic syndrome — heavy proteinuria with peripheral edema and hypoalbuminemia",
   "neural-tube-defects": "Spina bifida lombare sagittale",
-  "neuromyelitis-optica": "Clinical or pathologic image illustrating neuromyelitis optica",
   "non-hodgkin-lymphoma": "Centrocyte, centroblast and follicular dendritic cell in a follicular lymphoma",
   "ocd": "Atopic dermatitis child 2",
   "optic-neuritis": "OpticNeuritisExample",
@@ -1475,7 +1469,7 @@ export const CONDITION_IMAGE_CAPTIONS: Partial<
   "parapneumonic-effusion": "Parapneumonic Effusion",
   "parinaud-syndrome": "Axial midbrain — dorsal midbrain (tectum/pretectum) site of Parinaud syndrome",
   "parkinson-disease": "Parkinson disease — resting tremor, rigidity, bradykinesia, and postural instability",
-  "paroxysmal-supraventricular-tachycardia": "Supraventricular Tachycardia",
+  "paroxysmal-supraventricular-tachycardia": "Supraventricular tachycardia on ECG (lead II)",
   "patent-ductus-arteriosus": "Patent Ductus Arteriosus",
   "pellagra": "Casal necklace — broad collar photosensitive dermatitis in niacin (vitamin B₃) deficiency",
   "pemphigus-vulgaris": "Pemphigus vulgaris",
@@ -1500,7 +1494,6 @@ export const CONDITION_IMAGE_CAPTIONS: Partial<
   "pseudodementia": "Historical portrait of a patient with acute melancholia, illustrating depressive cognitive impairment",
   "psoriasis": "Psoriasis",
   "psoriatic-arthritis": "Distal interphalangeal pencil-in-cup deformity on radiograph in psoriatic arthritis",
-  "psychotic-mood-disorder": "Clinical or pathologic image illustrating psychotic mood disorder",
   "ptsd": "GAD At-A-Glance",
   "pulmonary-embolism": "Pulmnary arterial atherosclerosis-Pulmonary hypertension",
   "pulmonary-hypertension": "Pulmnary arterial atherosclerosis-Pulmonary hypertension",
@@ -1531,6 +1524,7 @@ export const CONDITION_IMAGE_CAPTIONS: Partial<
   "sinusitis": "Odontogenic sinusitis",
   "sjogren-syndrome": "Sjogren's syndrome",
   "small-cell-lung-cancer": "LungCancer-Xray-01",
+  "spasmodic-torticollis": "Spasmodic torticollis — sustained involuntary neck deviation in cervical dystonia",
   "spherocytosis": "Peripheral smear with spherocytes in hereditary spherocytosis",
   "sporotrichosis": "Feline sporotrichosis 4",
   "stable-angina": "Stable Angina",
@@ -1545,6 +1539,7 @@ export const CONDITION_IMAGE_CAPTIONS: Partial<
   "tetralogy-of-fallot": "Tetralogy of Fallot-IT",
   "tetralogy-of-fallot": "Tetralogy of Fallot-IT",
   "thromboangiitis-obliterans": "55 year old female with advanced Buerger's disease",
+  "tourette-syndrome": "Tourette syndrome — motor and vocal tics with urge-suppression premonitory sensation",
   "transient-ischemic-attack": "Illustration of transient ischemic attack",
   "traumatic-brain-injury": "Noncontrast head CT — hemorrhagic contusion and traumatic brain injury",
   "trisomy-13": "Trisomy 13",

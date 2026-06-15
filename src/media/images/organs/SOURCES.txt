@@ -100,16 +100,7 @@ cauda-equina.png
   Description: Cauda equina — lumbosacral nerve roots below the conus medullaris (Gray's anatomy)
 
 cavotricuspid-isthmus.png
-  Source: Wikimedia Commons — Heart numlabels.svg
-  Page: https://commons.wikimedia.org/wiki/File:Heart_numlabels.svg
-  Description: Labeled heart anatomy showing right atrial structures including cavotricuspid isthmus region
+  Source: Wikimedia Commons — cavotricuspid-isthmus
+  Page: https://commons.wikimedia.org/wiki/File:Cavotricuspid_isthmus.png
+  Description: Cavotricuspid isthmus — low right atrial isthmus targeted in typical atrial flutter ablation
 
-av-node.jpg
-  Source: Wikimedia Commons — Triangle of Koch (large).jpg
-  Page: https://commons.wikimedia.org/wiki/File:Triangle_of_Koch_(large).jpg
-  Description: Triangle of Koch — anatomic boundaries of the atrioventricular node
-
-his-purkinje-system.png
-  Source: Wikimedia Commons — Electrical conduction system of the heart it.svg
-  Page: https://commons.wikimedia.org/wiki/File:Electrical_conduction_system_of_the_heart_it.svg
-  Description: Cardiac electrical conduction system including bundle of His and Purkinje fibers

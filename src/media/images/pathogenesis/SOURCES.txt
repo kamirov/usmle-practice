@@ -304,3 +304,8 @@ type-iv-hypersensitivity.jpg
   Page: https://commons.wikimedia.org/wiki/File:Mantoux_tuberculin_skin_test.jpg
   Download: https://commons.wikimedia.org/wiki/Special:FilePath/File:Mantoux_tuberculin_skin_test.jpg?width=1280
   Description: Positive PPD skin test with induration — classic delayed type IV hypersensitivity reaction
+
+antiemesis.jpg
+  Source: Wikimedia Commons — Area postrema micrograph.jpg
+  Page: https://commons.wikimedia.org/wiki/File:Area_postrema_micrograph.jpg
+  Description: Area postrema histology — chemoreceptor trigger zone outside blood–brain barrier targeted by antiemetics

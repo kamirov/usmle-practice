@@ -308,3 +308,17 @@ vertigo.svg
 https://commons.wikimedia.org/wiki/File:Semont_maneuver_hariadhi.svg
 Description: Semont maneuver hariadhi
 
+internuclear-ophthalmoplegia.jpg
+https://commons.wikimedia.org/wiki/File:Internuclear_ophthalmoplegia.jpg
+Description: Internuclear ophthalmoplegia — impaired adduction with contralateral abduction nystagmus (MLF lesion)
+
+extrapyramidal-symptoms.png
+  Source: Wikimedia Commons — Basal ganglia circuits.svg
+  Page: https://commons.wikimedia.org/wiki/File:Basal_ganglia_circuits.svg
+  Description: Basal ganglia direct and indirect pathways — nigrostriatal dopamine circuit underlying EPS
+
+acute-dystonic-reaction.jpg
+  Source: Wikimedia Commons — Traité des torticolis spasmodiques, spasmes, tics, rythmies du cou, torticolis mental, etc. (1907)
+  Page: https://commons.wikimedia.org/wiki/File:Trait%C3%A9_des_torticolis_spasmodiques,_spasmes,_tics,_rythmies_du_cou,_torticolis_mental,_etc._(1907).jpg
+  Description: Spasmodic torticollis posture in acute dystonic reaction
+

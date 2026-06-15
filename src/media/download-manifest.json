@@ -449,10 +449,20 @@
     "query": "atrial septal defect echocardiography",
     "title": "File:Echokardiogram von Atriumseptumdefekt (Ostium secundum).jpg"
   },
+  "conditions/atrial-tachycardia.png": {
+    "caption": "Multifocal atrial tachycardia on ECG",
+    "page": "https://commons.wikimedia.org/wiki/File:Multifocal_atrial_tachycardia_-_MAT.png",
+    "title": "File:Multifocal atrial tachycardia - MAT.png"
+  },
   "conditions/atrioventricular-block.png": {
     "page": "https://commons.wikimedia.org/wiki/File:3rd_degree_heart_block.PNG",
     "query": "third degree heart block ECG",
     "title": "File:3rd degree heart block.PNG"
+  },
+  "conditions/avascular-necrosis.jpg": {
+    "caption": "AP pelvis radiograph showing avascular necrosis of the femoral head",
+    "page": "https://commons.wikimedia.org/wiki/File:X-ray_of_idiopathic_avascular_necrosis_of_the_femoral_head_-_Anteroposterior.jpg",
+    "title": "File:X-ray of idiopathic avascular necrosis of the femoral head - Anteroposterior.jpg"
   },
   "conditions/basal-cell-carcinoma.jpg": {
     "page": "https://commons.wikimedia.org/wiki/File:Histopathology_of_micronodular_basal-cell_carcinoma_(original).jpg",
@@ -649,6 +659,11 @@
     "query": "RED-S athlete triad",
     "title": "File:RED-S DE.svg"
   },
+  "conditions/femoral-neck-fracture.jpg": {
+    "caption": "Hip fracture on radiograph (femoral neck region)",
+    "page": "https://commons.wikimedia.org/wiki/File:Cdm_hip_fracture_343.jpg",
+    "title": "File:Cdm hip fracture 343.jpg"
+  },
   "conditions/galactorrhea.jpg": {
     "page": "https://commons.wikimedia.org/wiki/File:Lactation.jpg",
     "query": "galactorrhea breast",
@@ -779,6 +794,11 @@
     "query": "keratoconjunctivitis sicca dry eye",
     "title": "File:Dry eyeKell.jpg"
   },
+  "conditions/l5-radiculopathy.jpg": {
+    "caption": "Lumbar disc herniation compressing the traversing nerve root (radiculopathy)",
+    "page": "https://commons.wikimedia.org/wiki/File:Spinal_disc_herniation_stage_3.jpg",
+    "title": "File:Spinal disc herniation stage 3.jpg"
+  },
   "conditions/lung-cancer.jpg": {
     "page": "https://commons.wikimedia.org/wiki/File:LungCancer-Xray-01.jpg",
     "query": "lung cancer chest xray",
@@ -898,6 +918,11 @@
     "page": "https://commons.wikimedia.org/wiki/File:The_Journal_of_nervous_and_mental_disease_(IA_journalofnervous49ameruoft).pdf",
     "query": "parkinson disease pill rolling tremor",
     "title": "File:The Journal of nervous and mental disease (IA journalofnervous49ameruoft).pdf"
+  },
+  "conditions/paroxysmal-supraventricular-tachycardia.jpg": {
+    "caption": "Supraventricular tachycardia on ECG (lead II)",
+    "page": "https://commons.wikimedia.org/wiki/File:SVT_Lead_II-2.JPG",
+    "title": "File:SVT Lead II-2.JPG"
   },
   "conditions/patent-ductus-arteriosus.jpg": {
     "page": "https://commons.wikimedia.org/wiki/File:Patent_Ductus_Arteriosus_(Device_Closure).png",
@@ -1359,6 +1384,11 @@
     "query": "metacarpophalangeal joint anatomy hand",
     "title": "File:DIP, PIP and MCP joints of hand.jpg"
   },
+  "musculoskeletal/peroneal-nerve-compression.jpg": {
+    "caption": "Sciatic nerve bifurcation into tibial and common peroneal nerves at the popliteal fossa",
+    "page": "https://commons.wikimedia.org/wiki/File:Tibial_nerve_and_common_peroneal_nerve.jpg",
+    "title": "File:Tibial nerve and common peroneal nerve.jpg"
+  },
   "musculoskeletal/rotator-cuff.svg": {
     "page": "https://commons.wikimedia.org/wiki/File:Rotator_cuff_injury.svg",
     "query": "rotator cuff muscles shoulder anatomy",
@@ -1384,6 +1414,11 @@
     "query": "supraspinatus muscle anatomy",
     "title": "File:Gray \u2014 musculus supraspinatus.png"
   },
+  "musculoskeletal/sympathetic-trunk.png": {
+    "caption": "Sympathetic trunk and splanchnic nerves (Gray's Anatomy)",
+    "page": "https://commons.wikimedia.org/wiki/File:Gray847.png",
+    "title": "File:Gray847.png"
+  },
   "musculoskeletal/teres-minor.png": {
     "page": "https://commons.wikimedia.org/wiki/File:Gray_\u2014_musculus_teres_minor.png",
     "query": "teres minor muscle anatomy",
@@ -1393,6 +1428,11 @@
     "page": "https://commons.wikimedia.org/wiki/File:Pacchionische_Granulation_mit_kleiner_Enzephalozele_60M_-_MR_-_001.jpg",
     "query": "arachnoid granulations superior sagittal sinus",
     "title": "File:Pacchionische Granulation mit kleiner Enzephalozele 60M - MR - 001.jpg"
+  },
+  "organs/cavotricuspid-isthmus.png": {
+    "caption": "Cavotricuspid isthmus \u2014 low right atrial isthmus targeted in typical atrial flutter ablation",
+    "page": "https://commons.wikimedia.org/wiki/File:Cavotricuspid_isthmus.png",
+    "title": "File:Cavotricuspid isthmus.png"
   },
   "organs/dermis.png": {
     "page": "https://commons.wikimedia.org/wiki/File:Epidermis,_papillary_dermis_and_reticular_dermis.png",

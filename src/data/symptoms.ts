@@ -9179,6 +9179,102 @@ export const SYMPTOMS: SymptomEntry[] = [
     pediatrics:
       "Congenital nasolacrimal duct obstruction causes chronic tearing in infants and often resolves with massage by 12 months. Neonatal conjunctivitis (ophthalmia neonatorum) requires urgent evaluation for gonorrhea and chlamydia exposure.",
   },
+  {
+    id: "extrapyramidal-symptoms",
+    name: "Extrapyramidal Symptoms",
+    etymology: "Latin extra = outside + Greek pyramis = pyramid (motor pathway) + symptoms",
+    aliases: [
+      "extrapyramidal symptoms",
+      "extrapyramidal symptom",
+      "extrapyramidal side effects",
+      "extrapyramidal side effect",
+      "eps",
+      "drug-induced movement disorder",
+      "drug-induced movement disorders",
+      "antipsychotic-induced movement disorder",
+      "antipsychotic-induced movement disorders",
+      "neuroleptic side effects",
+      "neuroleptic side effect",
+    ],
+    definition:
+      "Movement disorders caused by dopamine D₂ receptor blockade in the nigrostriatal pathway — includes acute dystonia, akathisia, parkinsonism, and tardive dyskinesia — classically from antipsychotics and antiemetics (metoclopramide, prochlorperazine).",
+    mechanism:
+      "D₂ antagonism in striatum disrupts direct/indirect basal ganglia pathways → impaired inhibitory motor control; acute reactions (hours–days) reflect sudden dopamine blockade; tardive dyskinesia emerges after chronic exposure with postsynaptic receptor upregulation.",
+    thinkOf: [
+      "Haloperidol, fluphenazine — high-potency typical antipsychotics → high EPS risk",
+      "Metoclopramide, prochlorperazine — antiemetic D₂ blockers",
+      "Risperidone, olanzapine — lower EPS than typicals but not zero",
+      "Clozapine — lowest EPS risk among antipsychotics",
+      "Young men — ↑ risk acute dystonia",
+    ],
+    pairWith: [
+      "EPS within days of antipsychotic → acute dystonia or akathisia",
+      "EPS weeks–months later → parkinsonism (bradykinesia, rigidity, masked face)",
+      "Chronic antipsychotic + lip-smacking chorea → tardive dyskinesia (not acute dystonia)",
+      "EPS after antiemetic → metoclopramide or prochlorperazine D₂ blockade",
+      "Acute dystonia → treat with benztropine or diphenhydramine (anticholinergic)",
+      "Akathisia → β-blocker (propranolol) or switch antipsychotic; not benztropine alone",
+    ],
+    distinguishFrom: [
+      "Primary Parkinson disease — progressive, resting tremor, no drug trigger",
+      "Serotonin syndrome — hyperreflexia, clonus, hyperthermia, serotonergic drugs",
+      "NMS — rigidity, fever, autonomic instability, elevated CK",
+      "Akathisia — restlessness without sustained dystonic posturing",
+      "Acute dystonia — sustained muscle spasm, oculogyric crisis",
+      "Tardive dyskinesia — choreiform orofacial movements after months-years of exposure",
+      "Anxiety agitation — psychiatric inner tension without drug timing or objective motor restlessness",
+    ],
+    pediatrics:
+      "Children and adolescents on antiemetics or antipsychotics are at risk for acute dystonic reactions — treat promptly with diphenhydramine; use lowest effective dose and shortest duration of dopamine-blocking agents.",
+  },
+  {
+    id: "acute-dystonic-reaction",
+    name: "Acute Dystonic Reaction",
+    etymology: "Latin acutus = sudden + Greek dys = abnormal + tonos = tension + Latin reactio = response",
+    aliases: [
+      "acute dystonic reaction",
+      "acute dystonic reactions",
+      "acute dystonia",
+      "acute dystonias",
+      "drug-induced acute dystonia",
+      "drug-induced acute dystonias",
+      "oculogyric crisis",
+      "oculogyric crises",
+      "acute extrapyramidal reaction",
+      "acute extrapyramidal reactions",
+      "acute eps dystonia",
+    ],
+    definition:
+      "Sudden onset of sustained involuntary muscle contractions — torticollis, opisthotonus, jaw trismus, oculogyric crisis (eyes rolled upward) — occurring hours to days after starting a dopamine D₂-blocking drug; a medical emergency if airway compromise from laryngeal dystonia.",
+    mechanism:
+      "Acute imbalance in striatal dopamine vs acetylcholine after D₂ blockade — relative cholinergic excess in nigrostriatal pathway → sustained co-contraction of agonist-antagonist muscle groups; young males at highest risk.",
+    thinkOf: [
+      "Metoclopramide — common antiemetic trigger",
+      "Haloperidol, fluphenazine — high-potency antipsychotics",
+      "Prochlorperazine, chlorpromazine — phenothiazine antiemetics",
+      "Risperidone — atypical antipsychotic with EPS risk",
+      "Postpartum antiemetic or psychiatric medication initiation",
+    ],
+    pairWith: [
+      "Torticollis or oculogyric crisis hours after metoclopramide → acute dystonic reaction",
+      "Treat with IM/IV benztropine or diphenhydramine — rapid resolution",
+      "Young male + new antipsychotic → highest risk group",
+      "vs tardive dyskinesia — chronic orofacial chorea months later, not acute spasm",
+      "vs NMS — fever, rigidity, autonomic instability, ↑ CK",
+      "Laryngeal dystonia → airway emergency",
+    ],
+    distinguishFrom: [
+      "Tardive dyskinesia — choreiform lip/tongue movements after chronic exposure",
+      "Akathisia — inner restlessness, pacing, not sustained posturing",
+      "Parkinsonism — bradykinesia and rigidity developing over weeks",
+      "Seizure — loss of consciousness, postictal state, EEG correlate",
+      "Tetanus — trismus with risus sardonicus, wound history, hyperreflexia",
+      "Primary dystonia — not temporally linked to dopamine blocker",
+      "NMS — systemic toxicity, not isolated focal spasm",
+    ],
+    pediatrics:
+      "Acute dystonic reactions occur in children given antiemetics or antipsychotics — diphenhydramine or benztropine provides rapid relief; avoid unnecessary prolongation of metoclopramide in pediatric nausea.",
+  },
 ];
 
 const symptomById = new Map(SYMPTOMS.map((s) => [s.id, s]));

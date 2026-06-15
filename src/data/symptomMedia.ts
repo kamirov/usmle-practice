@@ -2,6 +2,7 @@ import type { MediaAttribution } from "./media";
 import type { SymptomEntry } from "./symptoms";
 
 import acanthosisNigricans from "../media/images/symptoms/acanthosis-nigricans.jpg?url";
+import acuteDystonicReaction from "../media/images/symptoms/acute-dystonic-reaction.jpg?url";
 import afferentPupillaryDefect from "../media/images/symptoms/afferent-pupillary-defect.png?url";
 import agonalRespirations from "../media/images/symptoms/agonal-respirations.jpg?url";
 import akathisia from "../media/images/symptoms/akathisia.jpg?url";
@@ -57,6 +58,7 @@ import enuresis from "../media/images/symptoms/enuresis.jpg?url";
 import erythema from "../media/images/symptoms/erythema.jpg?url";
 import excoriated from "../media/images/symptoms/excoriated.jpg?url";
 import exertionalDyspnea from "../media/images/symptoms/exertional-dyspnea.jpg?url";
+import extrapyramidalSymptoms from "../media/images/symptoms/extrapyramidal-symptoms.png?url";
 import facialCleft from "../media/images/symptoms/facial-cleft.jpg?url";
 import facialPalsy from "../media/images/symptoms/facial-palsy.jpg?url";
 import fasciculation from "../media/images/symptoms/fasciculation.jpg?url";
@@ -82,7 +84,7 @@ import hypoxemia from "../media/images/symptoms/hypoxemia.jpg?url";
 import impairedWoundHealing from "../media/images/symptoms/impaired-wound-healing.png?url";
 import induratedPlaque from "../media/images/symptoms/indurated-plaque.jpg?url";
 import insomnia from "../media/images/symptoms/insomnia.jpg?url";
-import internuclearOphthalmoplegia from "../media/images/symptoms/internuclear-ophthalmoplegia.svg?url";
+import internuclearOphthalmoplegia from "../media/images/symptoms/internuclear-ophthalmoplegia.jpg?url";
 import jaundice from "../media/images/symptoms/jaundice.jpg?url";
 import kernigSign from "../media/images/symptoms/kernig-sign.jpg?url";
 import koplikSpots from "../media/images/symptoms/koplik-spots.jpg?url";
@@ -91,10 +93,8 @@ import lhermitteSign from "../media/images/symptoms/lhermitte-sign.jpg?url";
 import lichenification from "../media/images/symptoms/lichenification.jpg?url";
 import lymphadenopathy from "../media/images/symptoms/lymphadenopathy.jpg?url";
 import maculopapularRash from "../media/images/symptoms/maculopapular-rash.jpg?url";
-import mania from "../media/images/symptoms/mania.svg?url";
 import melena from "../media/images/symptoms/melena.jpg?url";
 import miotic from "../media/images/symptoms/miotic.jpg?url";
-import moonFacies from "../media/images/symptoms/moon-facies.svg?url";
 import morningStiffness from "../media/images/symptoms/morning-stiffness.jpg?url";
 import mydriasis from "../media/images/symptoms/mydriasis.jpg?url";
 import myelopathy from "../media/images/symptoms/myelopathy.jpg?url";
@@ -104,9 +104,7 @@ import neuropathicPain from "../media/images/symptoms/neuropathic-pain.jpg?url";
 import neutropenia from "../media/images/symptoms/neutropenia.jpg?url";
 import nodularLymphangitis from "../media/images/symptoms/nodular-lymphangitis.jpg?url";
 import nuchalRigidity from "../media/images/symptoms/nuchal-rigidity.jpg?url";
-import nystagmus from "../media/images/symptoms/nystagmus.svg?url";
 import oligomenorrhea from "../media/images/symptoms/oligomenorrhea.png?url";
-import ophthalmoplegia from "../media/images/symptoms/ophthalmoplegia.svg?url";
 import orthopnea from "../media/images/symptoms/orthopnea.jpg?url";
 import orthostaticHypotension from "../media/images/symptoms/orthostatic-hypotension.jpg?url";
 import otorrhea from "../media/images/symptoms/otorrhea.jpg?url";
@@ -164,6 +162,7 @@ import xerostomia from "../media/images/symptoms/xerostomia.jpg?url";
 export type SymptomImageId = Extract<
   SymptomEntry["id"],
   | "acanthosis-nigricans"
+  | "acute-dystonic-reaction"
   | "afferent-pupillary-defect"
   | "agonal-respirations"
   | "akathisia"
@@ -219,6 +218,7 @@ export type SymptomImageId = Extract<
   | "erythema"
   | "excoriated"
   | "exertional-dyspnea"
+  | "extrapyramidal-symptoms"
   | "facial-cleft"
   | "facial-palsy"
   | "fasciculation"
@@ -253,10 +253,8 @@ export type SymptomImageId = Extract<
   | "lichenification"
   | "lymphadenopathy"
   | "maculopapular-rash"
-  | "mania"
   | "melena"
   | "miotic"
-  | "moon-facies"
   | "morning-stiffness"
   | "mydriasis"
   | "myelopathy"
@@ -266,9 +264,7 @@ export type SymptomImageId = Extract<
   | "neutropenia"
   | "nodular-lymphangitis"
   | "nuchal-rigidity"
-  | "nystagmus"
   | "oligomenorrhea"
-  | "ophthalmoplegia"
   | "orthopnea"
   | "orthostatic-hypotension"
   | "otorrhea"
@@ -332,6 +328,7 @@ function extensionAssetUrl(path: string): string {
 /** See src/media/images/symptoms/SOURCES.txt */
 export const SYMPTOM_IMAGES: Partial<Record<SymptomImageId, string>> = {
   "acanthosis-nigricans": extensionAssetUrl(acanthosisNigricans),
+  "acute-dystonic-reaction": extensionAssetUrl(acuteDystonicReaction),
   "afferent-pupillary-defect": extensionAssetUrl(afferentPupillaryDefect),
   "agonal-respirations": extensionAssetUrl(agonalRespirations),
   "akathisia": extensionAssetUrl(akathisia),
@@ -387,6 +384,7 @@ export const SYMPTOM_IMAGES: Partial<Record<SymptomImageId, string>> = {
   "erythema": extensionAssetUrl(erythema),
   "excoriated": extensionAssetUrl(excoriated),
   "exertional-dyspnea": extensionAssetUrl(exertionalDyspnea),
+  "extrapyramidal-symptoms": extensionAssetUrl(extrapyramidalSymptoms),
   "facial-cleft": extensionAssetUrl(facialCleft),
   "facial-palsy": extensionAssetUrl(facialPalsy),
   "fasciculation": extensionAssetUrl(fasciculation),
@@ -421,10 +419,8 @@ export const SYMPTOM_IMAGES: Partial<Record<SymptomImageId, string>> = {
   "lichenification": extensionAssetUrl(lichenification),
   "lymphadenopathy": extensionAssetUrl(lymphadenopathy),
   "maculopapular-rash": extensionAssetUrl(maculopapularRash),
-  "mania": extensionAssetUrl(mania),
   "melena": extensionAssetUrl(melena),
   "miotic": extensionAssetUrl(miotic),
-  "moon-facies": extensionAssetUrl(moonFacies),
   "morning-stiffness": extensionAssetUrl(morningStiffness),
   "mydriasis": extensionAssetUrl(mydriasis),
   "myelopathy": extensionAssetUrl(myelopathy),
@@ -434,9 +430,7 @@ export const SYMPTOM_IMAGES: Partial<Record<SymptomImageId, string>> = {
   "neutropenia": extensionAssetUrl(neutropenia),
   "nodular-lymphangitis": extensionAssetUrl(nodularLymphangitis),
   "nuchal-rigidity": extensionAssetUrl(nuchalRigidity),
-  "nystagmus": extensionAssetUrl(nystagmus),
   "oligomenorrhea": extensionAssetUrl(oligomenorrhea),
-  "ophthalmoplegia": extensionAssetUrl(ophthalmoplegia),
   "orthopnea": extensionAssetUrl(orthopnea),
   "orthostatic-hypotension": extensionAssetUrl(orthostaticHypotension),
   "otorrhea": extensionAssetUrl(otorrhea),
@@ -497,6 +491,7 @@ export const SYMPTOM_IMAGE_ATTRIBUTIONS: Partial<
   Record<SymptomImageId, MediaAttribution>
 > = {
   "acanthosis-nigricans": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:acanthosis-nigricans.jpg" },
+  "acute-dystonic-reaction": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:acute-dystonic-reaction.jpg" },
   "afferent-pupillary-defect": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:afferent-pupillary-defect.png" },
   "agonal-respirations": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:agonal-respirations.jpg" },
   "akathisia": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:akathisia.jpg" },
@@ -552,6 +547,7 @@ export const SYMPTOM_IMAGE_ATTRIBUTIONS: Partial<
   "erythema": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:erythema.jpg" },
   "excoriated": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:excoriated.jpg" },
   "exertional-dyspnea": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:exertional-dyspnea.jpg" },
+  "extrapyramidal-symptoms": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:extrapyramidal-symptoms.png" },
   "facial-cleft": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:facial-cleft.jpg" },
   "facial-palsy": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:facial-palsy.jpg" },
   "fasciculation": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:fasciculation.jpg" },
@@ -577,7 +573,7 @@ export const SYMPTOM_IMAGE_ATTRIBUTIONS: Partial<
   "impaired-wound-healing": { label: "Wikimedia Commons (WIRA-Wiki-GH-011-de-Ulkus-Thermografie-Verlauf-unter-wIRA.png)", url: "https://commons.wikimedia.org/wiki/File:WIRA-Wiki-GH-011-de-Ulkus-Thermografie-Verlauf-unter-wIRA.png" },
   "indurated-plaque": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:indurated-plaque.jpg" },
   "insomnia": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:insomnia.jpg" },
-  "internuclear-ophthalmoplegia": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:internuclear-ophthalmoplegia.svg" },
+  "internuclear-ophthalmoplegia": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:internuclear-ophthalmoplegia.jpg" },
   "jaundice": { label: "Wikimedia Commons (Troupial (Icterus icterus).jpg)", url: "https://commons.wikimedia.org/wiki/File:Troupial_(Icterus_icterus).jpg" },
   "kernig-sign": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:kernig-sign.jpg" },
   "koplik-spots": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:koplik-spots.jpg" },
@@ -586,10 +582,8 @@ export const SYMPTOM_IMAGE_ATTRIBUTIONS: Partial<
   "lichenification": { label: "Wikimedia Commons (Clinical features of atopic dermatitis in English.png)", url: "https://commons.wikimedia.org/wiki/File:Clinical_features_of_atopic_dermatitis_in_English.png" },
   "lymphadenopathy": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:lymphadenopathy.jpg" },
   "maculopapular-rash": { label: "Wikimedia Commons (Generalized ACLE.jpg)", url: "https://commons.wikimedia.org/wiki/File:Generalized_ACLE.jpg" },
-  "mania": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:mania.svg" },
   "melena": { label: "Wikimedia Commons (Melena Bleeding DU.jpg)", url: "https://commons.wikimedia.org/wiki/File:Melena_Bleeding_DU.jpg" },
   "miotic": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:miotic.jpg" },
-  "moon-facies": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:moon-facies.svg" },
   "morning-stiffness": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:morning-stiffness.jpg" },
   "mydriasis": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:mydriasis.jpg" },
   "myelopathy": { label: "Wikimedia Commons (Cervical Spine MRI (T2W).jpg)", url: "https://commons.wikimedia.org/wiki/File:Cervical_Spine_MRI_(T2W).jpg" },
@@ -599,9 +593,7 @@ export const SYMPTOM_IMAGE_ATTRIBUTIONS: Partial<
   "neutropenia": { label: "Wikimedia Commons (A blood smear with neutropenia in United States.jpg)", url: "https://commons.wikimedia.org/wiki/File:A_blood_smear_with_neutropenia_in_United_States.jpg" },
   "nodular-lymphangitis": { label: "Wikimedia Commons (Sporotrichosis by the fungus Sporothrix schenckii PHIL 3940 lores.jpg)", url: "https://commons.wikimedia.org/wiki/File:Sporotrichosis_by_the_fungus_Sporothrix_schenckii_PHIL_3940_lores.jpg" },
   "nuchal-rigidity": { label: "Wikimedia Commons (Neck stiffness.jpg)", url: "https://commons.wikimedia.org/wiki/File:Neck_stiffness.jpg" },
-  "nystagmus": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:nystagmus.svg" },
   "oligomenorrhea": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:oligomenorrhea.png" },
-  "ophthalmoplegia": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:ophthalmoplegia.svg" },
   "orthopnea": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:orthopnea.jpg" },
   "orthostatic-hypotension": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:orthostatic-hypotension.jpg" },
   "otorrhea": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:otorrhea.jpg" },
@@ -660,6 +652,7 @@ export const SYMPTOM_IMAGE_ATTRIBUTIONS: Partial<
 
 export const SYMPTOM_IMAGE_CAPTIONS: Partial<Record<SymptomImageId, string>> = {
   "acanthosis-nigricans": "Velvety hyperpigmented plaques in the axilla — cutaneous marker of insulin resistance",
+  "acute-dystonic-reaction": "Acute dystonic reaction — sustained muscle spasms (often neck/eyes) from dopamine blockade",
   "afferent-pupillary-defect": "The left optic nerve and the optic tracts.",
   "agonal-respirations": "My Heartbeat and Peripheral Oxygen Saturation (SpO2)",
   "akathisia": "Overview of reward structures in the human brain. Dopaminergic neurons are located in the midbrain structures substantia nigra (SNc) and the ventral tegmental area (VTA). Their axons project to the striatum (caudate nucleus, putamen and ventral striatum including nucleus accumbens), the dorsal and v",
@@ -715,6 +708,7 @@ export const SYMPTOM_IMAGE_CAPTIONS: Partial<Record<SymptomImageId, string>> = {
   "erythema": "Sharply demarcated erythema of recurrent erysipelas (vasodilation with infection)",
   "excoriated": "Inflamed atopic dermatitis on infant ankle with excoriations from scratching",
   "exertional-dyspnea": "Exertional Dyspnea",
+  "extrapyramidal-symptoms": "Basal ganglia direct and indirect pathways — dopaminergic nigrostriatal circuit underlying extrapyramidal motor symptoms",
   "facial-cleft": "Holoprosencephaly",
   "facial-palsy": "Bells Palsy CDC",
   "fasciculation": "Visible muscle fasciculation in neuromuscular disease",
@@ -740,7 +734,7 @@ export const SYMPTOM_IMAGE_CAPTIONS: Partial<Record<SymptomImageId, string>> = {
   "impaired-wound-healing": "Example of the healing process of a chronic venous stasis ulcer of the lower leg under therapy with wIRA (Study Tromsø/Hillerød). (28 times 30 minutes irradiation with water-filtered infrared-A (wIRA) and visible light (VIS) within 52 days = approximately 7 weeks) with normal view, thermographic ima",
   "indurated-plaque": "Indurated Plaque",
   "insomnia": "Depiction of a person suffering from Insomnia (sleeplessness)",
-  "internuclear-ophthalmoplegia": "Clinical or pathologic image illustrating internuclear ophthalmoplegia",
+  "internuclear-ophthalmoplegia": "Internuclear ophthalmoplegia — impaired adduction with contralateral abduction nystagmus (MLF lesion)",
   "jaundice": "Scleral icterus — yellow discoloration of the conjunctiva from hyperbilirubinemia",
   "kernig-sign": "Kernig sign — resistance to knee extension with hip flexed suggests meningeal irritation",
   "koplik-spots": "Koplik spots, measles 6111 lores",
@@ -749,10 +743,8 @@ export const SYMPTOM_IMAGE_CAPTIONS: Partial<Record<SymptomImageId, string>> = {
   "lichenification": "Clinical features of atopic dermatitis in English",
   "lymphadenopathy": "Cervical lymphadenopathy — enlarged palpable anterior cervical lymph nodes",
   "maculopapular-rash": "Maculopapular eruption — coalescent erythematous macules and papules",
-  "mania": "Clinical or pathologic image illustrating mania",
   "melena": "Melena Bleeding DU",
   "miotic": "Example of Horner's syndrome in a cat",
-  "moon-facies": "Clinical or pathologic image illustrating moon facies",
   "morning-stiffness": "Morning Stiffness",
   "mydriasis": "Mydriasis due to LSD usage",
   "myelopathy": "Cervical Spine MRI",
@@ -762,9 +754,7 @@ export const SYMPTOM_IMAGE_CAPTIONS: Partial<Record<SymptomImageId, string>> = {
   "neutropenia": "A blood smear with neutropenia in United States",
   "nodular-lymphangitis": "Sporotrichosis by the fungus Sporothrix schenckii",
   "nuchal-rigidity": "Nuchal rigidity — resistance to passive neck flexion in meningeal irritation",
-  "nystagmus": "Clinical or pathologic image illustrating nystagmus",
   "oligomenorrhea": "Estradiol, progesterone, LH, and FSH across the normal menstrual cycle — disrupted in anovulatory oligomenorrhea",
-  "ophthalmoplegia": "Clinical or pathologic image illustrating ophthalmoplegia",
   "orthopnea": "Orthopnea",
   "orthostatic-hypotension": "The Faint label QS:Lde,\"Die Ohnmacht\"label QS:Len,\"The Faint\"",
   "otorrhea": "Battle sign — retroauricular ecchymosis associated with basilar skull fracture and possible CSF otorrhea",
