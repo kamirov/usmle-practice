@@ -7155,12 +7155,84 @@ export const CONDITIONS: ConditionEntry[] = [
       "Pediatric Cushing disease is uncommon; children may present with growth arrest and weight gain. Pituitary microadenomas predominate; transsphenoidal surgery is preferred when feasible.",
   },
   {
+    id: "adrenal-insufficiency",
+    name: "Adrenal Insufficiency",
+    etymology: "Latin ad- = toward + ren = kidney (adrenal gland) + Latin insufficiens = not sufficient",
+    aliases: [
+      "adrenal insufficiency",
+      "adrenal insufficiencies",
+      "adrenal failure",
+      "adrenal gland insufficiency",
+      "hypoadrenalism",
+      "cortisol deficiency",
+      "glucocorticoid deficiency",
+      "adrenal crisis predisposition",
+    ],
+    definition:
+      "Inadequate adrenal cortisol production (± aldosterone in primary disease) from adrenal gland destruction (primary) or deficient ACTH stimulation from the pituitary/hypothalamus (secondary/tertiary) — predisposes to hypotension, hypoglycemia, and life-threatening adrenal crisis.",
+    pathophysiology:
+      "Primary — adrenal cortex destruction → ↓ cortisol and aldosterone → hyponatremia, hyperkalemia, volume depletion; ↑ ACTH → hyperpigmentation. Secondary/tertiary — ↓ ACTH (pituitary) or CRH (hypothalamic) → ↓ cortisol only; aldosterone preserved (renin-angiotensin intact); no hyperpigmentation. Chronic exogenous glucocorticoids suppress HPA axis → iatrogenic secondary insufficiency on withdrawal.",
+    classicPresentation: [
+      "Fatigue, weakness, weight loss, anorexia",
+      "Postural hypotension, dizziness, salt craving (primary)",
+      "Hyperpigmentation of skin and buccal mucosa (primary only)",
+      "Nausea, vomiting, abdominal pain",
+      "Hypoglycemia (especially children)",
+      "Adrenal crisis — shock, fever, confusion, severe hypotension",
+    ],
+    keyFindings: [
+      "Hyperpigmentation — palms, scars, buccal mucosa (primary)",
+      "Hypotension without tachycardia compensation in severe cases",
+      "No hyperpigmentation in secondary insufficiency",
+    ],
+    keyLabs: [
+      "↓ morning cortisol; ↑ ACTH (primary); low/normal ACTH (secondary)",
+      "Hyponatremia; hyperkalemia (primary); normal K⁺ (secondary)",
+      "Cosyntropin (ACTH stimulation) test — blunted cortisol rise",
+      "↑ eosinophils (relative)",
+    ],
+    associations: [
+      "Addison disease — autoimmune adrenalitis (most common primary cause in US)",
+      "Pituitary adenoma, apoplexy, Sheehan syndrome — secondary",
+      "Chronic glucocorticoid therapy — HPA suppression",
+      "TB, adrenal metastases, Waterhouse-Friderichsen hemorrhage",
+      "Autoimmune polyglandular syndromes",
+    ],
+    complications: [
+      "Adrenal crisis — cardiovascular collapse, hypoglycemia, death",
+      "Delayed diagnosis mimicking chronic fatigue or GI illness",
+    ],
+    distinguishFrom: [
+      "Addison disease — primary adrenal insufficiency subset with hyperkalemia and hyperpigmentation",
+      "Chronic fatigue syndrome — normal cortisol and electrolytes",
+      "Hypothyroidism — cold intolerance, ↑ TSH; may coexist in panhypopituitarism",
+      "Cushing syndrome — cortisol excess, not deficiency",
+    ],
+    treatment: [
+      "Primary: hydrocortisone + fludrocortisone lifelong replacement",
+      "Secondary: glucocorticoid replacement (usually no fludrocortisone)",
+      "Adrenal crisis: IV hydrocortisone + isotonic fluids immediately",
+      "Stress-dose steroids during illness, surgery, or labor if adrenal insufficient",
+      "Taper exogenous steroids slowly after chronic use to allow HPA recovery",
+    ],
+    boardsPearls: [
+      "Primary vs secondary: hyperkalemia + hyperpigmentation = primary (Addison)",
+      "Secondary: ↓ cortisol, low/normal ACTH, no hyperpigmentation, K⁺ normal",
+      "Adrenal crisis — give hydrocortisone before labs if suspected",
+      "Never start levothyroxine before glucocorticoids in panhypopituitarism",
+      "Iatrogenic insufficiency from chronic steroids — taper and stress-dose coverage",
+    ],
+    pediatrics:
+      "Congenital adrenal hyperplasia causes primary insufficiency/hyperandrogenism in neonates. Children with adrenal insufficiency need stress-dose steroid plans for illness and surgery; hypoglycemia and failure to thrive may be presenting signs.",
+  },
+  {
     id: "addison-disease",
     name: "Addison Disease",
     etymology: "eponym: Thomas Addison + disease = disordered function",
     aliases: [
       "addison disease",
       "addison's disease",
+      "addisons disease",
       "primary adrenal insufficiency",
     ],
     definition:

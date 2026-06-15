@@ -8319,6 +8319,93 @@ export const SYMPTOMS: SymptomEntry[] = [
       "Iatrogenic Cushing from chronic asthma steroids can cause moon facies in children; monitor growth velocity and bone density.",
   },
   {
+    id: "buffalo-hump",
+    name: "Buffalo Hump",
+    etymology: "buffalo = bison dorsal fat pad + hump = rounded elevation",
+    aliases: [
+      "buffalo hump",
+      "buffalo humps",
+      "buffalo hump fat pad",
+      "dorsocervical fat pad",
+      "dorsocervical hump",
+      "dorsal cervical fat pad",
+      "dorsal fat pad",
+      "cervicodorsal fat pad",
+      "cushing buffalo hump",
+    ],
+    definition:
+      "Prominent accumulation of fat over the posterior neck and upper back (dorsocervical region) — classic cushingoid fat redistribution from chronic glucocorticoid excess (endogenous Cushing syndrome or exogenous steroids).",
+    mechanism:
+      "Excess cortisol promotes lipogenesis and redistribution of adipose tissue to dorsocervical, supraclavicular, and truncal depots while limbs may remain relatively thin (centripetal obesity pattern).",
+    thinkOf: [
+      "Cushing syndrome — endogenous cortisol excess",
+      "Chronic prednisone or other systemic glucocorticoids",
+      "High-dose inhaled corticosteroids (less common than oral)",
+      "Cushing disease — ACTH-secreting pituitary adenoma",
+      "Ectopic ACTH production (small cell lung cancer)",
+    ],
+    pairWith: [
+      "Buffalo hump + moon facies + purple striae → Cushing syndrome",
+      "Buffalo hump + supraclavicular fat pads + central obesity → glucocorticoid excess",
+      "Exogenous steroids = most common cause of Cushingoid features overall",
+      "Buffalo hump without striae or metabolic features → consider familial fat distribution",
+    ],
+    distinguishFrom: [
+      "Central adiposity alone — visceral abdominal fat without dorsocervical pad",
+      "Lipoma — focal subcutaneous mass, not symmetric fat redistribution",
+      "Dowager hump (kyphosis) — bony thoracic deformity from osteoporosis/aging",
+      "HIV lipodystrophy — dorsocervical fat accumulation with antiretroviral-associated redistribution",
+    ],
+    pediatrics:
+      "Iatrogenic Cushing from asthma controller steroids can cause dorsocervical fat pad and growth suppression in children; distinguish from physiologic variant fat distribution.",
+  },
+  {
+    id: "striae",
+    name: "Striae",
+    etymology: "Latin stria = groove, line, or streak",
+    aliases: [
+      "striae",
+      "stria",
+      "stretch marks",
+      "stretch mark",
+      "striae distensae",
+      "skin striae",
+      "cutaneous striae",
+      "purple striae",
+      "purple stria",
+      "purple striae distensae",
+      "violaceous striae",
+      "abdominal striae",
+      "wide striae",
+    ],
+    definition:
+      "Linear dermal scars from rapid skin stretching or corticosteroid-induced collagen fragility — appear as pink, red, or purple early (striae rubra) and white later (striae alba); wide purple abdominal striae are classic for Cushing syndrome.",
+    mechanism:
+      "Mechanical overstretch (growth, pregnancy, obesity) or excess glucocorticoids weaken dermal collagen and elastic fibers → dermal tearing with overlying epidermis intact → vascular striae early, fibrous pale lines later.",
+    thinkOf: [
+      "Cushing syndrome — wide (>1 cm) purple striae on abdomen, thighs, breasts",
+      "Chronic exogenous glucocorticoids",
+      "Pregnancy — striae gravidarum on abdomen",
+      "Rapid adolescent growth or weight gain",
+      "Marfan and Ehlers-Danlos syndromes — connective tissue fragility",
+      "Topical or inhaled steroids (less dramatic than systemic Cushing)",
+    ],
+    pairWith: [
+      "Purple striae >1 cm + moon facies + buffalo hump → Cushing syndrome",
+      "Striae + proximal muscle weakness + hyperglycemia → glucocorticoid excess",
+      "Striae in pregnancy without cushingoid features → physiologic stretch marks",
+      "Flat-topped papules + oral Wickham striae → lichen planus (different entity)",
+    ],
+    distinguishFrom: [
+      "Wickham striae — fine white lacy lines on lichen planus papules, not dermal stretch marks",
+      "Petechiae/purpura — vascular hemorrhage, not linear collagen disruption",
+      "Scars — from trauma or surgery, not symmetric stretch distribution",
+      "Normal thin stretch marks from growth — narrow, not wide purple Cushing striae",
+    ],
+    pediatrics:
+      "Adolescent growth spurts cause physiologic striae; wide purple striae with weight gain and growth failure suggest iatrogenic or endogenous Cushing. Monitor children on chronic steroids for cushingoid striae and growth velocity.",
+  },
+  {
     id: "impaired-wound-healing",
     name: "Impaired wound healing",
     etymology: "im- = not + Latin parare = prepare + heal = restore + -ing",

@@ -1309,6 +1309,47 @@ export const PROTEINS: ProteinEntry[] = [
     ],
   },
   {
+    id: "lipoxygenase",
+    name: "Lipoxygenase (5-LOX)",
+    etymology: "Latin lipos = fat + oxygen + -ase enzyme; 5-LOX = 5-lipoxygenase isoform",
+    aliases: [
+      "lipoxygenase",
+      "lipooxygenase",
+      "lipoxygenases",
+      "lipooxygenases",
+      "5-lipoxygenase",
+      "5 lipoxygenase",
+      "5-lox",
+      "5 lox",
+      "5-lo",
+      "arachidonate 5-lipoxygenase",
+      "alox5",
+      "leukotriene synthase pathway",
+    ],
+    gene: "ALOX5",
+    location:
+      "Mast cells, eosinophils, basophils, macrophages, and neutrophils; converts arachidonic acid to leukotrienes (parallel branch to COX pathway)",
+    function:
+      "Oxygenates arachidonic acid at the 5-position → 5-HPETE → leukotriene A₄ (LTA₄) → LTB₄ (via LTA₄ hydrolase) or cysteinyl leukotrienes LTC₄/D₄/E₄ (via LTC₄ synthase on glutathione conjugation) — mediators of bronchoconstriction, chemotaxis, and vascular permeability.",
+    mutationCauses: [
+      "Pharmacologic inhibition by zileuton — ↓ leukotriene synthesis (used in asthma, especially aspirin-exacerbated respiratory disease)",
+    ],
+    boardsPearls: [
+      "Arachidonic acid → COX (prostaglandins) OR 5-LOX (leukotrienes) — parallel pathways after PLA₂",
+      "Cysteinyl leukotrienes (LTC₄, LTD₄, LTE₄) = SRS-A; potent bronchoconstrictors in asthma",
+      "LTB₄ — neutrophil chemoattractant",
+      "Zileuton inhibits 5-LOX; montelukast blocks CysLT1 receptor downstream",
+      "Aspirin blocks COX → shunts arachidonic acid to lipoxygenase → ↑ leukotrienes in aspirin-exacerbated respiratory disease",
+      "Corticosteroids ↓ PLA₂ upstream — reduce substrate for both COX and lipoxygenase",
+    ],
+    distinguishFrom: [
+      "Cyclooxygenase (COX) — prostaglandin and thromboxane pathway from arachidonic acid",
+      "Phospholipase A₂ — releases arachidonic acid upstream of both COX and LOX",
+      "Montelukast — leukotriene receptor antagonist, not enzyme inhibitor",
+      "Phospholipase C — IP₃/DAG signaling, unrelated to eicosanoid synthesis",
+    ],
+  },
+  {
     id: "aromatase",
     name: "Aromatase",
     etymology: "aromatic ring-forming + -ase enzyme",
