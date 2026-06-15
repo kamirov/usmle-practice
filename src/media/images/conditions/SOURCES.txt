@@ -834,3 +834,18 @@ subclavian-steal.jpg
   Source: Wikimedia Commons — The promixal part of left subclavian is blocked on left side so no flow in vertebral and to left arm-blood from right vertebral enters left vertebral and flows back to supply left arm 2013-07-05 17-11.jpg
   Page: https://commons.wikimedia.org/wiki/File:The_promixal_part_of_left_subclavian_is_blocked_on_left_side_so_no_flow_in_vertebral_and_to_left_arm-blood_from_right_vertebral_enters_left_vertebral_and_flows_back_to_supply_left_arm_2013-07-05_17-11.jpg
   Description: Hemodynamic diagram of left subclavian steal with retrograde vertebral flow
+
+carcinoid-syndrome.jpg
+  Source: Wikimedia Commons — Well-differentiated neuroendocrine tumor of the duodenum (3048456334).jpg
+  Page: https://commons.wikimedia.org/wiki/File:Well-differentiated_neuroendocrine_tumor_of_the_duodenum_(3048456334).jpg
+  Description: Duodenal neuroendocrine tumor — midgut NET source of carcinoid syndrome
+
+pellagra.jpg
+  Source: Wikimedia Commons — Pellagra-butterfly.jpg
+  Page: https://commons.wikimedia.org/wiki/File:Pellagra-butterfly.jpg
+  Description: Casal necklace photosensitive dermatitis in pellagra
+
+narcolepsy.jpg
+  Source: Wikimedia Commons — Even at work someone with narcolepsy falls asleep in the middle of a shift 2013-11-13 16-35.jpg
+  Page: https://commons.wikimedia.org/wiki/File:Even_at_work_someone_with_narcolepsy_falls_asleep_in_the_middle_of_a_shift_2013-11-13_16-35.jpg
+  Description: Excessive daytime sleepiness in narcolepsy

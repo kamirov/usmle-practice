@@ -18,6 +18,7 @@ export interface MicrobiologyEntry {
   aliases: string[];
   type: MicrobeType;
   definition: string;
+  mnemonic?: string;
   morphology?: string[];
   virulenceFactors?: string[];
   transmission?: string[];
@@ -938,6 +939,8 @@ export const MICROBIOLOGY: MicrobiologyEntry[] = [
     type: "virus",
     definition:
       "Retrovirus (ssRNA) that infects CD4+ T cells and macrophages via CD4 and CCR5/CXCR4 co-receptors. Progressive immunodeficiency leads to AIDS and opportunistic infections.",
+    mnemonic:
+      "RNA · ss · enveloped · (+) sense — Retrovirus: (+) ssRNA genome reverse-transcribed to DNA provirus",
     morphology: [
       "Enveloped retrovirus; cone-shaped capsid",
       "Reverse transcriptase — RNA → DNA provirus",
@@ -1554,6 +1557,8 @@ export const MICROBIOLOGY: MicrobiologyEntry[] = [
     type: "virus",
     definition:
       "Herpesvirus (HHV-4) infecting B cells via CD21. Causes infectious mononucleosis in adolescents; associated with Burkitt lymphoma, nasopharyngeal carcinoma, and lymphoproliferative disorders.",
+    mnemonic:
+      "DNA · ds · enveloped — Herpesviridae: all HHV are dsDNA enveloped (sense N/A for DNA)",
     morphology: [
       "Enveloped dsDNA herpesvirus",
       "Infects B lymphocytes via CD21 (CR2)",
@@ -1615,6 +1620,8 @@ export const MICROBIOLOGY: MicrobiologyEntry[] = [
     type: "virus",
     definition:
       "Herpesvirus (HHV-5) causing congenital infection, mono-like illness in immunocompetent adults, and severe disease in transplant/AIDS patients. Characteristic owl's eye intranuclear inclusions.",
+    mnemonic:
+      "DNA · ds · enveloped — Herpesviridae: all HHV are dsDNA enveloped (sense N/A for DNA)",
     morphology: [
       "Enveloped dsDNA herpesvirus",
       "Owl's eye intranuclear inclusions on histology",
@@ -1682,6 +1689,8 @@ export const MICROBIOLOGY: MicrobiologyEntry[] = [
     type: "virus",
     definition:
       "Enveloped positive-sense ssRNA flavivirus with four antigenically distinct serotypes (DENV-1–4); transmitted by Aedes mosquito bite, causing dengue fever and, on secondary heterotypic infection, severe dengue through antibody-dependent enhancement.",
+    mnemonic:
+      "RNA · ss · enveloped · (+) sense — FADE: Flaviviruses Are RNA (+) sense Enveloped",
     morphology: [
       "Flavivirus — enveloped icosahedral virion (~50 nm)",
       "Positive-sense ssRNA genome; single serotype exposure does not protect against others",
@@ -1756,6 +1765,8 @@ export const MICROBIOLOGY: MicrobiologyEntry[] = [
     type: "virus",
     definition:
       "Enveloped positive-sense ssRNA alphavirus (genus Alphavirus, family Togaviridae) transmitted by Aedes mosquito bite, causing an acute febrile illness with debilitating bilateral symmetric polyarthralgia and a maculopapular rash; mild thrombocytopenia and petechiae may occur but hemorrhagic complications are uncommon compared with dengue.",
+    mnemonic:
+      "RNA · ss · enveloped · (+) sense — Alphavirus (Togaviridae), not flavivirus despite shared Aedes vector",
     morphology: [
       "Alphavirus — enveloped icosahedral virion (~60–70 nm)",
       "Positive-sense ssRNA genome with two open reading frames",
@@ -2133,6 +2144,8 @@ export const MICROBIOLOGY: MicrobiologyEntry[] = [
     type: "virus",
     definition:
       "Enveloped dsDNA herpesvirus. HSV-1 classically oral (cold sores); HSV-2 genital — overlap increasing. Establishes latency in sensory ganglia.",
+    mnemonic:
+      "DNA · ds · enveloped — Herpesviridae: all HHV are dsDNA enveloped (sense N/A for DNA)",
     morphology: [
       "Enveloped icosahedral virion with dsDNA core",
       "Intranuclear Cowdry type A inclusions on histology",
@@ -2206,6 +2219,8 @@ export const MICROBIOLOGY: MicrobiologyEntry[] = [
     type: "virus",
     definition:
       "Herpesvirus causing primary varicella (chickenpox) and reactivation as herpes zoster (shingles). Latency in dorsal root/trigeminal ganglia.",
+    mnemonic:
+      "DNA · ds · enveloped — Herpesviridae: HHV-3 is dsDNA enveloped (sense N/A for DNA)",
     morphology: [
       "Enveloped dsDNA herpesvirus",
       "Multinucleated giant cells with intranuclear inclusions",
@@ -2273,6 +2288,8 @@ export const MICROBIOLOGY: MicrobiologyEntry[] = [
     type: "virus",
     definition:
       "Enveloped negative-sense ssRNA paramyxovirus (genus Morbillivirus) causing a highly contagious systemic exanthem with prodromal cough, coryza, and conjunctivitis; Koplik spots on buccal mucosa precede the cephalocaudal maculopapular rash.",
+    mnemonic:
+      "RNA · ss · enveloped · (−) sense — NEP: Negative-sense Enveloped Paramyxoviridae",
     morphology: [
       "Paramyxovirus — helical nucleocapsid, lipid envelope with H (hemagglutinin) and F (fusion) glycoproteins",
       "100–200 nm virion; single serotype (one antigenic type)",
@@ -2355,6 +2372,8 @@ export const MICROBIOLOGY: MicrobiologyEntry[] = [
     type: "virus",
     definition:
       "Enveloped negative-sense ssRNA paramyxovirus (genus Rubulavirus) causing an acute febrile illness with painful bilateral parotid swelling; may cause orchitis, aseptic meningitis, and pancreatitis.",
+    mnemonic:
+      "RNA · ss · enveloped · (−) sense — NEP: Negative-sense Enveloped Paramyxoviridae",
     morphology: [
       "Paramyxovirus — helical nucleocapsid, lipid envelope",
       "Negative-sense ssRNA genome",
@@ -2431,6 +2450,8 @@ export const MICROBIOLOGY: MicrobiologyEntry[] = [
     type: "virus",
     definition:
       "Enveloped positive-sense ssRNA virus (genus Rubivirus, family Matonaviridae) causing a mild exanthem with postauricular lymphadenopathy; teratogenic if acquired in early pregnancy → congenital rubella syndrome.",
+    mnemonic:
+      "RNA · ss · enveloped · (+) sense — NOT paramyxovirus; German measles is (+) RNA enveloped rubivirus",
     morphology: [
       "Spherical enveloped virion ~50–70 nm",
       "Positive-sense ssRNA with icosahedral capsid",
@@ -2507,6 +2528,8 @@ export const MICROBIOLOGY: MicrobiologyEntry[] = [
     type: "virus",
     definition:
       "Enveloped negative-sense ssRNA pneumovirus (family Paramyxoviridae) and the leading cause of bronchiolitis and viral pneumonia in infants; also causes URI in older children and adults and can trigger asthma exacerbations.",
+    mnemonic:
+      "RNA · ss · enveloped · (−) sense — NEP: Negative-sense Enveloped Paramyxoviridae (Pneumovirus)",
     morphology: [
       "Variable pleomorphic virions (~120–300 nm)",
       "Negative-sense ssRNA with helical nucleocapsid",
@@ -2574,6 +2597,8 @@ export const MICROBIOLOGY: MicrobiologyEntry[] = [
     type: "virus",
     definition:
       "Non-enveloped positive-sense ssRNA picornavirus with >100 serotypes; the most common cause of the common cold (viral URI) in all age groups.",
+    mnemonic:
+      "RNA · ss · naked · (+) sense — Picornavirus: (+) ssRNA, no envelope; acid-labile (destroyed in stomach)",
     morphology: [
       "Icosahedral non-enveloped virion (~30 nm)",
       "Positive-sense ssRNA picornavirus",
@@ -2649,6 +2674,8 @@ export const MICROBIOLOGY: MicrobiologyEntry[] = [
     type: "virus",
     definition:
       "Non-enveloped positive-sense ssRNA picornavirus genus (family Picornaviridae) including poliovirus, coxsackieviruses, echoviruses, and numbered enteroviruses (e.g., EV-A71, EV-D68). Acid-stable — survives gastric acid — enabling prominent fecal-oral transmission in addition to respiratory spread.",
+    mnemonic:
+      "RNA · ss · naked · (+) sense — Picornavirus: (+) ssRNA, no envelope; acid-stable (survives gut)",
     morphology: [
       "Icosahedral non-enveloped virion (~30 nm)",
       "Positive-sense ssRNA picornavirus",
@@ -2729,6 +2756,8 @@ export const MICROBIOLOGY: MicrobiologyEntry[] = [
     type: "virus",
     definition:
       "Non-enveloped positive-sense ssRNA calicivirus (formerly Norwalk virus) and the leading cause of epidemic viral gastroenteritis worldwide — notorious for cruise ship, hospital, and foodborne outbreaks with very low infectious dose.",
+    mnemonic:
+      "RNA · ss · naked · (+) sense — Calicivirus: (+) ssRNA, no envelope (Norwalk = naked calicivirus)",
     morphology: [
       "Non-enveloped icosahedral virion (~27–32 nm)",
       "Positive-sense ssRNA calicivirus",
@@ -2801,6 +2830,8 @@ export const MICROBIOLOGY: MicrobiologyEntry[] = [
     type: "virus",
     definition:
       "Enveloped negative-sense segmented ssRNA orthomyxovirus (family Orthomyxoviridae, genus Influenzavirus A) — the only influenza type with avian and swine reservoirs that undergoes both antigenic drift and antigenic shift, causing seasonal epidemics and pandemics (e.g., H1N1, H3N2, H5N1).",
+    mnemonic:
+      "RNA · ss · enveloped · (−) sense — Orthomyxovirus: segmented (−) ssRNA with lipid envelope",
     morphology: [
       "Enveloped pleomorphic virion (~80–120 nm)",
       "Segmented negative-sense ssRNA genome — 8 segments",
@@ -2879,6 +2910,8 @@ export const MICROBIOLOGY: MicrobiologyEntry[] = [
     type: "virus",
     definition:
       "Enveloped negative-sense ssRNA orthomyxovirus (types A and B) causing seasonal epidemic influenza — abrupt febrile systemic illness with myalgias and respiratory symptoms; type A undergoes antigenic drift and shift driving pandemics.",
+    mnemonic:
+      "RNA · ss · enveloped · (−) sense — Orthomyxovirus: segmented (−) ssRNA with lipid envelope",
     morphology: [
       "Enveloped pleomorphic virion (~80–120 nm)",
       "Segmented negative-sense ssRNA genome (8 segments in influenza A)",
@@ -2949,6 +2982,8 @@ export const MICROBIOLOGY: MicrobiologyEntry[] = [
     type: "virus",
     definition:
       "Non-enveloped double-stranded DNA virus with >50 serotypes causing pharyngitis, conjunctivitis, gastroenteritis, and pneumonia — especially in military recruits, daycare, and immunocompromised hosts.",
+    mnemonic:
+      "DNA · ds · naked — PaP-CrAP family: Parvovirus, Adenovirus, Papilloma, Polyoma are naked DNA viruses",
     morphology: [
       "Non-enveloped icosahedral virion (~70–90 nm)",
       "Linear dsDNA genome",
@@ -3019,6 +3054,8 @@ export const MICROBIOLOGY: MicrobiologyEntry[] = [
     type: "virus",
     definition:
       "Large enveloped dsDNA orthopoxvirus (eradicated 1980) — historically caused smallpox, a highly contagious febrile illness with centrifugal vesiculopustular rash; remains a bioterrorism concern and boards reference for poxvirus biology and vaccination.",
+    mnemonic:
+      "DNA · ds · enveloped — Poxvirus: large enveloped dsDNA (sense N/A for DNA)",
     morphology: [
       "Large brick-shaped enveloped dsDNA poxvirus (~200 × 300 nm)",
       "Replicates in cytoplasm (unlike most DNA viruses)",
@@ -3088,6 +3125,8 @@ export const MICROBIOLOGY: MicrobiologyEntry[] = [
     type: "virus",
     definition:
       "Enveloped positive-sense ssRNA flavivirus (genus Flavivirus, family Flaviviridae) transmitted primarily by Aedes mosquitoes; causes mild febrile illness in most adults but teratogenic congenital infection with microcephaly and neurologic sequelae.",
+    mnemonic:
+      "RNA · ss · enveloped · (+) sense — FADE: Flaviviruses Are RNA (+) sense Enveloped",
     morphology: [
       "Enveloped icosahedral virion ~40 nm",
       "Positive-sense ssRNA flavivirus",
@@ -3165,6 +3204,8 @@ export const MICROBIOLOGY: MicrobiologyEntry[] = [
     type: "virus",
     definition:
       "Enveloped positive-sense ssRNA flavivirus transmitted by Aedes mosquitoes (urban cycle) or Haemagogus spp. (jungle/sylvatic cycle); causes hepatitis, hemorrhage, and shock in severe disease — prevented by live attenuated 17D vaccine.",
+    mnemonic:
+      "RNA · ss · enveloped · (+) sense — FADE: Flaviviruses Are RNA (+) sense Enveloped",
     morphology: [
       "Enveloped icosahedral flavivirus ~40–50 nm",
       "Positive-sense ssRNA genome",
@@ -3304,6 +3345,8 @@ export const MICROBIOLOGY: MicrobiologyEntry[] = [
     type: "virus",
     definition:
       "Family of enveloped negative-sense ssRNA viruses with helical nucleocapsids and fusion (F) and hemagglutinin-neuraminidase (HN/H) surface glycoproteins — includes measles (Morbillivirus), mumps (Rubulavirus), RSV, parainfluenza, and Nipah viruses.",
+    mnemonic:
+      "RNA · ss · enveloped · (−) sense — NEP: Negative-sense Enveloped Paramyxoviridae (family pattern)",
     morphology: [
       "Enveloped, helical nucleocapsid, negative-sense ssRNA",
       "100–300 nm virions; F protein mediates cell fusion and syncytia",
@@ -3374,6 +3417,8 @@ export const MICROBIOLOGY: MicrobiologyEntry[] = [
     type: "virus",
     definition:
       "Small non-enveloped ssDNA virus (Erythrovirus) causing erythema infectiosum (fifth disease) in children and aplastic crisis in patients with chronic hemolytic anemias; teratogenic risk includes hydrops fetalis.",
+    mnemonic:
+      "DNA · ss · naked — B19 exception: single-stranded DNA, no envelope (most DNA viruses are ds)",
     morphology: [
       "Non-enveloped, icosahedral, ssDNA virus (~25 nm)",
       "Single serotype; tropism for erythroid precursors (P antigen receptor)",
@@ -4851,6 +4896,8 @@ export const MICROBIOLOGY: MicrobiologyEntry[] = [
     type: "virus",
     definition:
       "Non-enveloped positive-sense ssRNA picornavirus (enterovirus genus) transmitted primarily by fecal-oral route; replicates in oropharynx and GI tract, then spreads hematogenously to anterior horn motor neurons, causing asymmetric flaccid paralysis in paralytic disease — prevented by IPV (Salk, inactivated) and OPV (Sabin, live attenuated).",
+    mnemonic:
+      "RNA · ss · naked · (+) sense — Picornavirus enterovirus: (+) ssRNA, no envelope; acid-stable",
     morphology: [
       "Icosahedral non-enveloped picornavirus (~30 nm)",
       "Positive-sense ssRNA genome",
@@ -4932,6 +4979,8 @@ export const MICROBIOLOGY: MicrobiologyEntry[] = [
     type: "virus",
     definition:
       "Enveloped positive-sense ssRNA flavivirus maintained in an enzootic bird–mosquito cycle (primarily Culex spp.); humans are dead-end hosts infected by mosquito bite, with most infections asymptomatic but neuroinvasive disease (meningitis, encephalitis, acute flaccid paralysis) in elderly and immunocompromised patients.",
+    mnemonic:
+      "RNA · ss · enveloped · (+) sense — FADE: Flaviviruses Are RNA (+) sense Enveloped",
     morphology: [
       "Enveloped icosahedral flavivirus (~40–50 nm)",
       "Positive-sense ssRNA genome",

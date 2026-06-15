@@ -559,6 +559,47 @@ export const METABOLISM: MetabolismEntry[] = [
       "Neonatal shock and inborn errors affecting mitochondria (e.g., pyruvate dehydrogenase deficiency) shift metabolism toward lactate production; neonatal lactic acidosis warrants sepsis workup and metabolic evaluation.",
   },
   {
+    id: "lipolysis",
+    name: "Lipolysis",
+    etymology: "Greek lipos = fat + Greek lysis = loosening/breakdown",
+    aliases: [
+      "lipolysis",
+      "adipose lipolysis",
+      "triglyceride lipolysis",
+      "fat breakdown",
+      "fatty acid mobilization",
+      "hormone-sensitive lipolysis",
+      "hsl-mediated lipolysis",
+    ],
+    definition:
+      "Hydrolysis of stored adipose triglycerides into free fatty acids and glycerol for energy production — regulated by insulin (inhibits) and counter-regulatory hormones (stimulate).",
+    pathway: [
+      "Adipose stores triglycerides in lipid droplets coated with perilipin",
+      "Hormone-sensitive lipase (HSL) and adipose triglyceride lipase (ATGL) hydrolyze triglycerides → diacylglycerol → monoacylglycerol → free fatty acids + glycerol",
+      "Catecholamines (epinephrine/norepinephrine) and glucagon → ↑ cAMP → PKA phosphorylates HSL and perilipin → active lipolysis",
+      "Insulin → dephosphorylation/inhibition of HSL → suppresses lipolysis and promotes storage",
+      "Free fatty acids bind albumin → liver for β-oxidation and ketogenesis; glycerol → gluconeogenesis",
+    ],
+    boardsPearls: [
+      "Insulin inhibits lipolysis; glucagon and epinephrine stimulate lipolysis",
+      "HSL phosphorylation by PKA is the key regulatory step",
+      "Unrestrained lipolysis in insulin deficiency (DKA) → ↑ FFA → hepatic ketogenesis",
+      "Catecholamine surge (stress, pheochromocytoma) → lipolysis → ↑ FFA",
+      "Niacin inhibits adipocyte lipolysis (anti-lipolytic) — can worsen hyperglycemia but lowers FFA",
+      "vs lipogenesis — fatty acid synthesis (insulin-stimulated, fed state)",
+      "vs beta-oxidation — mitochondrial oxidation of fatty acids after lipolysis releases them from adipose",
+    ],
+    distinguishFrom: [
+      "Lipogenesis — de novo fatty acid synthesis in fed/insulin-high state",
+      "Beta-oxidation — mitochondrial oxidation of fatty acids, not triglyceride hydrolysis in adipose",
+      "Ketogenesis — hepatic production of ketone bodies from acetyl-CoA derived from FFA",
+      "Lysis — general term; lipolysis specifically refers to lipid breakdown",
+      "Lipoprotein lipase (LPL) — endothelial hydrolysis of circulating triglycerides in chylomicrons/VLDL, not adipocyte storage mobilization",
+    ],
+    pediatrics:
+      "Infants have limited adipose reserves; prolonged fasting or insulin deficiency can rapidly mobilize fat and produce ketosis. Congenital hyperinsulinism suppresses lipolysis and ketogenesis, increasing hypoglycemia risk during fasting.",
+  },
+  {
     id: "lactic-acid",
     name: "Lactic Acid",
     etymology: "Latin lac = milk + Latin acidus = sour",

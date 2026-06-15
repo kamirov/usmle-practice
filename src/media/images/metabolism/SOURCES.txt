@@ -37,3 +37,8 @@ nadph.png
 d-lactate.png
   Source: Local copy from metabolism/nadph.png
   Reference: https://commons.wikimedia.org/wiki/File:Pentosephosphatweg_NADPH.png
+
+lipolysis.png
+  Source: Wikimedia Commons — Lipolysis Mechanism.png
+  Page: https://commons.wikimedia.org/wiki/File:Lipolysis_Mechanism.png
+  Description: Hormone-sensitive lipase pathway in adipose triglyceride breakdown

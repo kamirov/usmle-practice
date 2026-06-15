@@ -3106,6 +3106,80 @@ export const CONDITIONS: ConditionEntry[] = [
     ],
   },
   {
+    id: "narcolepsy",
+    name: "Narcolepsy",
+    etymology: "Greek narke = numbness/stupor + lepsis = attack/seizure",
+    aliases: [
+      "narcolepsy",
+      "narcolepsies",
+      "narcolepsy type 1",
+      "narcolepsy type 2",
+      "narcolepsy with cataplexy",
+      "narcolepsy without cataplexy",
+      "hypocretin deficiency narcolepsy",
+      "orexin deficiency narcolepsy",
+      "ghrb",
+    ],
+    definition:
+      "Chronic neurologic sleep disorder characterized by excessive daytime sleepiness and abnormal REM sleep phenomena — type 1 (with cataplexy) reflects autoimmune loss of lateral hypothalamic hypocretin (orexin) neurons.",
+    pathophysiology:
+      "Loss of hypocretin-1/2–secreting neurons in lateral hypothalamus (autoimmune basis in type 1, often HLA-DQB1*06:02 associated) → unstable wakefulness and intrusion of REM phenomena into wakefulness → excessive daytime sleepiness, decreased REM sleep latency, cataplexy, sleep paralysis, and hypnagogic/hypnopompic hallucinations.",
+    classicPresentation: [
+      "Irresistible daytime sleep attacks despite adequate nocturnal sleep",
+      "Cataplexy — sudden loss of muscle tone triggered by laughter or strong emotion (type 1)",
+      "Sleep paralysis upon falling asleep or waking",
+      "Vivid hypnagogic or hypnopompic hallucinations",
+      "Often begins in adolescence or young adulthood",
+    ],
+    keyFindings: [
+      "Multiple sleep latency test (MSLT) — mean sleep latency ≤8 minutes with ≥2 sleep-onset REM periods",
+      "Polysomnography — shortened REM latency, may show sleep fragmentation",
+      "Low CSF hypocretin-1 — diagnostic for narcolepsy type 1",
+      "Cataplexy history — highly specific for type 1",
+    ],
+    keyLabs: [
+      "Polysomnography followed by MSLT (after adequate sleep, off sedating meds)",
+      "CSF hypocretin-1 (orexin A) — low in type 1",
+      "HLA-DQB1*06:02 — supportive, not diagnostic alone",
+    ],
+    associations: [
+      "Autoimmune destruction of orexin neurons (type 1)",
+      "HLA-DQB1*06:02",
+      "Post-infectious onset (e.g., after H1N1 or streptococcal illness — epidemiologic association)",
+      "Obesity (orexin regulates appetite and metabolism)",
+    ],
+    complications: [
+      "Motor vehicle accidents from sleep attacks",
+      "Academic and occupational impairment",
+      "Depression and social isolation",
+      "Injury during cataplexy episodes",
+    ],
+    distinguishFrom: [
+      "Obstructive sleep apnea — fragmented sleep, snoring; treat OSA before diagnosing narcolepsy",
+      "Idiopathic hypersomnia — long sleep time, unrefreshing naps, no REM intrusion phenomena",
+      "Narcolepsy type 2 — EDS without cataplexy; CSF hypocretin may be normal",
+      "Depression or chronic sleep deprivation — insufficient sleep history",
+      "Seizure with postictal sleepiness — witnessed convulsion, EEG abnormalities",
+    ],
+    treatment: [
+      "Modafinil or armodafinil for daytime sleepiness",
+      "Sodium oxybate for cataplexy and sleep consolidation",
+      "Scheduled naps and sleep hygiene",
+      "Avoid sedating medications and alcohol",
+      "Driving restrictions counseling",
+    ],
+    boardsPearls: [
+      "Classic tetrad: EDS, cataplexy, sleep paralysis, hypnagogic hallucinations",
+      "Type 1 = cataplexy + low CSF hypocretin-1",
+      "MSLT: ≤8 min mean latency + ≥2 SOREMPs",
+      "↓ REM latency on polysomnography",
+      "vs OSA — rule out and treat sleep apnea first",
+      "Modafinil promotes wakefulness; sodium oxybate treats cataplexy",
+    ],
+    pediatrics:
+      "Narcolepsy often presents in adolescence with school failure mistaken for laziness; cataplexy may manifest as knee buckling during laughter. Pediatric MSLT criteria similar; low CSF hypocretin-1 confirms type 1.",
+  },
+  {
     id: "multiple-myeloma",
     name: "Multiple Myeloma",
     etymology:
@@ -4271,6 +4345,78 @@ export const CONDITIONS: ConditionEntry[] = [
     ],
     pediatrics:
       "Pheochromocytoma occurs in children with NF1, VHL, and MEN2; genetic testing and bilateral adrenal disease are more common in hereditary cases.",
+  },
+  {
+    id: "carcinoid-syndrome",
+    name: "Carcinoid Syndrome",
+    etymology: "Greek karkinos = crab (cancer) + -oid = like + Greek syndromē = running together",
+    aliases: [
+      "carcinoid syndrome",
+      "carcinoid syndromes",
+      "metastatic carcinoid syndrome",
+      "serotonin syndrome from carcinoid tumor",
+      "neuroendocrine tumor syndrome",
+    ],
+    definition:
+      "Paraneoplastic syndrome from metastatic serotonin- and peptide-secreting neuroendocrine tumors (classically ileal appendiceal or midgut primary with liver metastases) causing flushing, secretory diarrhea, bronchospasm, and right-sided valvular heart disease.",
+    pathophysiology:
+      "Neuroendocrine tumor (enterochromaffin/Kulchitsky cells) secretes serotonin, histamine, bradykinin, prostaglandins, and tachykinins → normally hepatic first-pass metabolism inactivates mediators; liver metastases bypass this → systemic mediator release → episodic vasodilatory flushing, ↑ intestinal motility and secretory diarrhea, bronchospasm; chronic serotonin exposure → fibrous plaques on right heart valves (tricuspid/pulmonic regurgitation/stenosis).",
+    classicPresentation: [
+      "Episodic facial and upper-body flushing (may be provoked by alcohol, stress, exercise, or certain foods)",
+      "Secretory watery diarrhea and abdominal cramping",
+      "Wheezing or bronchospasm",
+      "Right-sided heart murmur — tricuspid regurgitation from carcinoid heart disease",
+      "Often known metastatic midgut neuroendocrine tumor; primary may be small or resected",
+    ],
+    keyFindings: [
+      "Intermittent flushing with diarrhea",
+      "Right-sided valvular disease on echo (tricuspid/pulmonic)",
+      "Hepatic metastases on imaging",
+      "↑ 24-hour urinary 5-HIAA (serotonin metabolite)",
+      "Chromogranin A elevation (nonspecific NET marker)",
+    ],
+    keyLabs: [
+      "24-hour urine 5-hydroxyindoleacetic acid (5-HIAA) — classic screening/monitoring marker",
+      "Serum chromogranin A",
+      "Octreotide scan or somatostatin receptor PET for localization",
+      "Avoid serotonin-rich foods before 5-HIAA collection (bananas, avocados, walnuts)",
+    ],
+    associations: [
+      "Midgut neuroendocrine tumor — appendix, terminal ileum, cecum",
+      "Liver metastases required for classic systemic syndrome (primary alone usually asymptomatic)",
+      "Carcinoid heart disease — right-sided valves",
+      "Niacin deficiency risk — tumor diverts tryptophan to serotonin synthesis",
+    ],
+    complications: [
+      "Carcinoid heart disease — right-sided valvular fibrosis",
+      "Severe diarrhea and malnutrition",
+      "Carcinoid crisis during anesthesia or tumor manipulation",
+      "Hepatic failure from tumor burden",
+    ],
+    distinguishFrom: [
+      "Pheochromocytoma — paroxysmal hypertension, ↑ metanephrines, not ↑ 5-HIAA",
+      "VIPoma — profuse watery diarrhea (WDHA), ↑ VIP, not classic flushing pattern",
+      "Systemic mastocytosis — flushing with tryptase elevation",
+      "Menopausal flushing — hot flashes without ↑ 5-HIAA or NET",
+      "Serotonin syndrome (drug-induced) — hyperreflexia, clonus, agitation after serotonergic drugs — not carcinoid tumor",
+    ],
+    treatment: [
+      "Somatostatin analogs — octreotide or lanreotide for symptom control",
+      "Surgical debulking of liver metastases when feasible",
+      "Hepatic artery embolization or peptide receptor radionuclide therapy in selected cases",
+      "Avoid triggers (alcohol, stress); perioperative octreotide to prevent carcinoid crisis",
+      "Valve surgery for severe carcinoid heart disease (often after tumor control)",
+    ],
+    boardsPearls: [
+      "Flushing + diarrhea + ↑ urine 5-HIAA → carcinoid syndrome",
+      "Syndrome usually requires liver metastases (bypass hepatic degradation of serotonin)",
+      "Right-sided heart disease — tricuspid/pulmonic fibrosis from serotonin",
+      "Octreotide inhibits mediator release — treats flush and diarrhea",
+      "vs pheochromocytoma — ↑ 5-HIAA not metanephrines",
+      "Tryptophan diverted to serotonin → can contribute to pellagra-like niacin deficiency",
+    ],
+    pediatrics:
+      "Carcinoid tumors occur in children (appendix is common site); systemic carcinoid syndrome is rare without liver metastases. Pediatric flushing and diarrhea have much broader differentials than adult metastatic NET.",
   },
   {
     id: "hyperparathyroidism",
@@ -26814,6 +26960,79 @@ export const CONDITIONS: ConditionEntry[] = [
     ],
     pediatrics:
       "Infantile beriberi from thiamine-deficient breast milk — aphonia, poor feeding, tachycardia, and acute heart failure in first months of life; maternal thiamine supplementation treats mother and infant.",
+  },
+  {
+    id: "pellagra",
+    name: "Pellagra",
+    etymology: "Italian pelle = skin + agra = sour/rough — rough skin disease",
+    aliases: [
+      "pellagra",
+      "pellagras",
+      "niacin deficiency",
+      "nicotinic acid deficiency",
+      "vitamin b3 deficiency",
+      "vitamin b3 deficiency pellagra",
+      "3 d's of pellagra",
+    ],
+    definition:
+      "Clinical syndrome of severe niacin (vitamin B₃) deficiency — classically the 3 D's: dermatitis, diarrhea, and dementia — from inadequate intake, malabsorption, or diversion of tryptophan away from NAD synthesis.",
+    pathophysiology:
+      "Niacin depletion → impaired NAD⁺/NADP⁺ cofactors for redox reactions and ADP-ribosylation → energy failure in high-turnover tissues → photosensitive dermatitis (casal necklace/collar distribution), GI mucosal inflammation with diarrhea, and neuropsychiatric dysfunction; Hartnup disease impairs tryptophan absorption; carcinoid tumors divert tryptophan to serotonin; isoniazid depletes B₆ needed for niacin synthesis from tryptophan.",
+    classicPresentation: [
+      "Photosensitive rash in broad collar distribution on neck and chest (casal necklace)",
+      "Hyperpigmented, scaly dermatitis in sun-exposed areas",
+      "Chronic watery diarrhea and malnutrition",
+      "Confusion, depression, or dementia",
+      "History of corn-based diet, alcoholism, malabsorption, Hartnup disease, or carcinoid syndrome",
+    ],
+    keyFindings: [
+      "Symmetric photosensitive dermatitis — neck, hands, forearms",
+      "Glossitis and stomatitis",
+      "Cognitive impairment or psychosis in advanced disease",
+      "Rapid response to niacin supplementation",
+    ],
+    keyLabs: [
+      "Low urinary N-methylnicotinamide or niacin metabolites (when available)",
+      "Clinical diagnosis often from rash + GI + neuro symptoms with dietary history",
+      "Evaluate for Hartnup disease (neutral aminoaciduria) if recurrent without clear nutritional cause",
+    ],
+    associations: [
+      "Maize-based diet without niacin or tryptophan supplementation",
+      "Chronic alcohol use disorder",
+      "Hartnup disease — impaired neutral amino acid (tryptophan) transport",
+      "Carcinoid syndrome — tryptophan shunted to serotonin",
+      "Isoniazid therapy — depletes vitamin B₆, blocking niacin synthesis from tryptophan",
+      "Malabsorption, anorexia nervosa, carcinoid, chronic diarrhea",
+    ],
+    complications: [
+      "Severe encephalopathy and death if untreated",
+      "Secondary bacterial infection of denuded skin",
+      "Chronic malnutrition and cachexia",
+    ],
+    distinguishFrom: [
+      "Beriberi — thiamine deficiency; peripheral neuropathy or wet heart failure, not photosensitive dermatitis",
+      "Scurvy — vitamin C deficiency; perifollicular hemorrhage, gingival bleeding, not classic casal necklace",
+      "Kwashiorkor — protein malnutrition with edema; may coexist but pellagra emphasizes niacin deficit",
+      "Photodermatitis from porphyria or drugs — different labs and history",
+      "Celiac or tropical sprue — malabsorption may cause deficiency but primary is mucosal disease",
+    ],
+    treatment: [
+      "Niacin (nicotinic acid) or nicotinamide replacement — oral; severe cases may need IV",
+      "Treat underlying cause (diet, alcohol use, Hartnup, carcinoid, stop isoniazid if possible)",
+      "High-protein diet with tryptophan",
+      "Supplement vitamin B₆ if on isoniazid",
+    ],
+    boardsPearls: [
+      "3 D's: Dermatitis, Diarrhea, Dementia",
+      "Casal necklace — broad collar photosensitive rash on neck",
+      "Niacin = vitamin B₃ → NAD⁺/NADP⁺ cofactors",
+      "Hartnup disease — neutral aminoaciduria → pellagra-like rash without dietary deficiency",
+      "Carcinoid uses tryptophan for serotonin → niacin deficiency risk",
+      "Isoniazid + B₆ deficiency → impaired tryptophan → niacin pathway",
+      "vs beriberi — B₁ not B₃",
+    ],
+    pediatrics:
+      "Pellagra is rare in children but can occur with severe malnutrition, Hartnup disease (presents in infancy with ataxia and rash), or isoniazid without B₆ prophylaxis; casal necklace rash and diarrhea in a malnourished child warrants niacin repletion.",
   },
   {
     id: "berylliosis",

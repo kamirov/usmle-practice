@@ -37,6 +37,7 @@ import bacterialMeningitis from "../media/images/conditions/bacterial-meningitis
 import basalCellCarcinoma from "../media/images/conditions/basal-cell-carcinoma.jpg?url";
 import basilarSkullFracture from "../media/images/conditions/basilar-skull-fracture.jpg?url";
 import beriberi from "../media/images/conditions/beriberi.jpg?url";
+import pellagra from "../media/images/conditions/pellagra.jpg?url";
 import berylliosis from "../media/images/conditions/berylliosis.jpg?url";
 import bicuspidAorticValve from "../media/images/conditions/bicuspid-aortic-valve.jpg?url";
 import biliaryAtresia from "../media/images/conditions/biliary-atresia.jpg?url";
@@ -50,6 +51,7 @@ import carbonMonoxidePoisoning from "../media/images/conditions/carbon-monoxide-
 import cardiacTamponade from "../media/images/conditions/cardiac-tamponade.jpg?url";
 import cardiogenicShock from "../media/images/conditions/cardiogenic-shock.jpg?url";
 import carotidStenosis from "../media/images/conditions/carotid-stenosis.jpg?url";
+import carcinoidSyndrome from "../media/images/conditions/carcinoid-syndrome.jpg?url";
 import carpalTunnelSyndrome from "../media/images/conditions/carpal-tunnel-syndrome.png?url";
 import catScratchDisease from "../media/images/conditions/cat-scratch-disease.jpg?url";
 import cataracts from "../media/images/conditions/cataracts.jpg?url";
@@ -185,6 +187,7 @@ import molarPregnancyUltrasound from "../media/images/conditions/molar-pregnancy
 import multipleEndocrineNeoplasia from "../media/images/conditions/multiple-endocrine-neoplasia.svg?url";
 import multipleSclerosis from "../media/images/conditions/multiple-sclerosis.jpg?url";
 import multipleMyeloma from "../media/images/conditions/multiple-myeloma.png?url";
+import narcolepsy from "../media/images/conditions/narcolepsy.jpg?url";
 import myocardialInfarction from "../media/images/conditions/myocardial-infarction.jpg?url";
 import neonatalRespiratoryDistressSyndrome from "../media/images/conditions/neonatal-respiratory-distress-syndrome.jpg?url";
 import nephriticSyndrome from "../media/images/conditions/nephritic-syndrome.jpg?url";
@@ -338,6 +341,7 @@ export type ConditionImageId = Extract<
   | "basal-cell-carcinoma"
   | "basilar-skull-fracture"
   | "beriberi"
+  | "pellagra"
   | "berylliosis"
   | "bicuspid-aortic-valve"
   | "biliary-atresia"
@@ -351,6 +355,7 @@ export type ConditionImageId = Extract<
   | "cardiac-tamponade"
   | "cardiogenic-shock"
   | "carotid-stenosis"
+  | "carcinoid-syndrome"
   | "carpal-tunnel-syndrome"
   | "cat-scratch-disease"
   | "cataracts"
@@ -486,6 +491,7 @@ export type ConditionImageId = Extract<
   | "multiple-endocrine-neoplasia"
   | "multiple-myeloma"
   | "multiple-sclerosis"
+  | "narcolepsy"
   | "myocardial-infarction"
   | "neonatal-respiratory-distress-syndrome"
   | "nephritic-syndrome"
@@ -644,6 +650,7 @@ export const CONDITION_IMAGES: Partial<Record<ConditionImageId, string>> = {
   "basal-cell-carcinoma": extensionAssetUrl(basalCellCarcinoma),
   "basilar-skull-fracture": extensionAssetUrl(basilarSkullFracture),
   "beriberi": extensionAssetUrl(beriberi),
+  "pellagra": extensionAssetUrl(pellagra),
   "berylliosis": extensionAssetUrl(berylliosis),
   "bicuspid-aortic-valve": extensionAssetUrl(bicuspidAorticValve),
   "biliary-atresia": extensionAssetUrl(biliaryAtresia),
@@ -657,6 +664,7 @@ export const CONDITION_IMAGES: Partial<Record<ConditionImageId, string>> = {
   "cardiac-tamponade": extensionAssetUrl(cardiacTamponade),
   "cardiogenic-shock": extensionAssetUrl(cardiogenicShock),
   "carotid-stenosis": extensionAssetUrl(carotidStenosis),
+  "carcinoid-syndrome": extensionAssetUrl(carcinoidSyndrome),
   "carpal-tunnel-syndrome": extensionAssetUrl(carpalTunnelSyndrome),
   "cat-scratch-disease": extensionAssetUrl(catScratchDisease),
   "cataracts": extensionAssetUrl(cataracts),
@@ -792,6 +800,7 @@ export const CONDITION_IMAGES: Partial<Record<ConditionImageId, string>> = {
   "multiple-endocrine-neoplasia": extensionAssetUrl(multipleEndocrineNeoplasia),
   "multiple-myeloma": extensionAssetUrl(multipleMyeloma),
   "multiple-sclerosis": extensionAssetUrl(multipleSclerosis),
+  narcolepsy: extensionAssetUrl(narcolepsy),
   "myocardial-infarction": extensionAssetUrl(myocardialInfarction),
   "neonatal-respiratory-distress-syndrome": extensionAssetUrl(neonatalRespiratoryDistressSyndrome),
   "nephritic-syndrome": extensionAssetUrl(nephriticSyndrome),
@@ -953,6 +962,10 @@ export const CONDITION_IMAGE_ATTRIBUTIONS: Partial<
   "basal-cell-carcinoma": { label: "Wikimedia Commons (Histopathology of micronodular basal-cell carcinoma (original).jpg)", url: "https://commons.wikimedia.org/wiki/File:Histopathology_of_micronodular_basal-cell_carcinoma_(original).jpg" },
   "basilar-skull-fracture": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:basilar-skull-fracture.jpg" },
   "beriberi": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:beriberi.jpg" },
+  "pellagra": {
+    label: "Wikimedia Commons (Pellagra-butterfly.jpg), CC BY-SA 3.0",
+    url: "https://commons.wikimedia.org/wiki/File:Pellagra-butterfly.jpg",
+  },
   "berylliosis": { label: "Wikimedia Commons (Chronic berylliosis (8054314225).jpg)", url: "https://commons.wikimedia.org/wiki/File:Chronic_berylliosis_(8054314225).jpg" },
   "bicuspid-aortic-valve": { label: "Wikimedia Commons (Heart bicuspid aortic valve.svg)", url: "https://commons.wikimedia.org/wiki/File:Heart_bicuspid_aortic_valve.svg" },
   "biliary-atresia": { label: "Wikimedia Commons (Bilatresia.jpg)", url: "https://commons.wikimedia.org/wiki/File:Bilatresia.jpg" },
@@ -969,6 +982,10 @@ export const CONDITION_IMAGE_ATTRIBUTIONS: Partial<
   "cardiac-tamponade": { label: "Wikimedia Commons (Electrical Alternans.JPG)", url: "https://commons.wikimedia.org/wiki/File:Electrical_Alternans.JPG" },
   "cardiogenic-shock": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:cardiogenic-shock.jpg" },
   "carotid-stenosis": { label: "Wikimedia Commons (Internal carotid artery stenosis in ultrasound near occlusion.jpg)", url: "https://commons.wikimedia.org/wiki/File:Internal_carotid_artery_stenosis_in_ultrasound_near_occlusion.jpg" },
+  "carcinoid-syndrome": {
+    label: "Wikimedia Commons (Well-differentiated neuroendocrine tumor of the duodenum (3048456334).jpg), Nephron, CC BY-SA 3.0",
+    url: "https://commons.wikimedia.org/wiki/File:Well-differentiated_neuroendocrine_tumor_of_the_duodenum_(3048456334).jpg",
+  },
   "carpal-tunnel-syndrome": { label: "Wikimedia Commons (Local copy conditions/c6-radiculopathy.png)", url: "https://commons.wikimedia.org/" },
   "cat-scratch-disease": { label: "Wikimedia Commons (ICD-10-CM (2010).djvu)", url: "https://commons.wikimedia.org/wiki/File:ICD-10-CM_(2010).djvu" },
   "cataracts": { label: "Wikimedia Commons (Airbus A380 - 9H-MIP parked at LFBT airport.jpg)", url: "https://commons.wikimedia.org/wiki/File:Airbus_A380_-_9H-MIP_parked_at_LFBT_airport.jpg" },
@@ -1128,6 +1145,10 @@ export const CONDITION_IMAGE_ATTRIBUTIONS: Partial<
     url: "https://commons.wikimedia.org/wiki/File:MMPlainSkull.png",
   },
   "multiple-sclerosis": { label: "Wikimedia Commons (Disseminated sclerosis (IA b2810349x).pdf)", url: "https://commons.wikimedia.org/wiki/File:Disseminated_sclerosis_(IA_b2810349x).pdf" },
+  narcolepsy: {
+    label: "Wikimedia Commons (Even at work someone with narcolepsy falls asleep in the middle of a shift 2013-11-13 16-35.jpg), CC BY-SA 3.0",
+    url: "https://commons.wikimedia.org/wiki/File:Even_at_work_someone_with_narcolepsy_falls_asleep_in_the_middle_of_a_shift_2013-11-13_16-35.jpg",
+  },
   "myocardial-infarction": { label: "Wikimedia Commons (ST elevation myocardial infarction ECG (cropped).jpg)", url: "https://commons.wikimedia.org/wiki/File:ST_elevation_myocardial_infarction_ECG_(cropped).jpg" },
   "neonatal-respiratory-distress-syndrome": { label: "Wikimedia Commons (Annual report - National Institutes of Health. National Heart, Lung, and Blood Advisory Council (IA annualreportnatio1985nati).pdf)", url: "https://commons.wikimedia.org/wiki/File:Annual_report_-_National_Institutes_of_Health._National_Heart,_Lung,_and_Blood_Advisory_Council_(IA_annualreportnatio1985nati).pdf" },
   "nephritic-syndrome": { label: "Wikimedia Commons (MicroHematuria.JPG)", url: "https://commons.wikimedia.org/wiki/File:MicroHematuria.JPG" },
@@ -1306,6 +1327,7 @@ export const CONDITION_IMAGE_CAPTIONS: Partial<
   "basal-cell-carcinoma": "Clinical or pathologic image illustrating basal cell carcinoma",
   "basilar-skull-fracture": "Clinical or pathologic image illustrating basilar skull fracture",
   "beriberi": "Clinical or pathologic image illustrating beriberi",
+  "pellagra": "Casal necklace — broad collar photosensitive dermatitis in niacin (vitamin B₃) deficiency",
   "berylliosis": "Clinical or pathologic image illustrating berylliosis",
   "bicuspid-aortic-valve": "Clinical or pathologic image illustrating bicuspid aortic valve",
   "biliary-atresia": "Clinical or pathologic image illustrating biliary atresia",
@@ -1320,6 +1342,8 @@ export const CONDITION_IMAGE_CAPTIONS: Partial<
   "cardiac-tamponade": "Clinical or pathologic image illustrating cardiac tamponade",
   "cardiogenic-shock": "Clinical or pathologic image illustrating cardiogenic shock",
   "carotid-stenosis": "Carotid duplex ultrasound showing near-occlusive internal carotid artery stenosis",
+  "carcinoid-syndrome":
+    "Well-differentiated duodenal neuroendocrine tumor — midgut NET source of serotonin causing carcinoid syndrome when metastatic to liver",
   "carpal-tunnel-syndrome": "Carpal tunnel anatomy — median nerve compression beneath flexor retinaculum at wrist",
   "cat-scratch-disease": "Clinical or pathologic image illustrating cat scratch disease",
   "cataracts": "Clinical or pathologic image illustrating cataracts",
@@ -1463,6 +1487,7 @@ export const CONDITION_IMAGE_CAPTIONS: Partial<
   "multiple-myeloma":
     "Skull radiograph showing punched-out lytic lesions characteristic of multiple myeloma",
   "multiple-sclerosis": "Clinical or pathologic image illustrating multiple sclerosis",
+  narcolepsy: "Excessive daytime sleepiness — irresistible sleep attacks characteristic of narcolepsy",
   "myocardial-infarction": "Clinical or pathologic image illustrating myocardial infarction",
   "neonatal-respiratory-distress-syndrome": "Clinical or pathologic image illustrating neonatal respiratory distress syndrome",
   "nephritic-syndrome": "Clinical or pathologic image illustrating nephritic syndrome",

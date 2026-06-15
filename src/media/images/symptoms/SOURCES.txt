@@ -473,6 +473,16 @@ amnesia.jpg
   Description: Brain regions involved in long-term memory formation including hippocampus
   Page: https://commons.wikimedia.org/wiki/File:Brain_regions_in_memory_formation_updated.jpg
 
+brain-fog.jpg
+  Source: Wikimedia Commons — Hypothyroidism.jpg
+  Page: https://commons.wikimedia.org/wiki/File:Hypothyroidism.jpg
+  Description: Hypothyroid myxedema — metabolic cause of cognitive slowing and brain fog
+
+confusion.jpg
+  Source: Wikimedia Commons — Delirium tremens Skalarjevo brezno Peter Gedei 2020-8-8.jpg
+  Page: https://commons.wikimedia.org/wiki/File:Delirium_tremens_Skalarjevo_brezno_Peter_Gedei_2020-8-8.jpg
+  Description: Delirium tremens — acute confusion in severe alcohol withdrawal
+
 decorticate-posturing.jpg
   Source: Wikimedia Commons — Decorticate.PNG (pending); interim local copy from Decerebrate.jpg
   Page: https://commons.wikimedia.org/wiki/File:Decorticate.PNG
@@ -504,3 +514,13 @@ central-nervous-system-depression.png
   Source: Wikimedia Commons — Escala de Coma de Glasgow - ECG.png
   Page: https://commons.wikimedia.org/wiki/File:Escala_de_Coma_de_Glasgow_-_ECG.png
   Description: Glasgow Coma Scale scoring eye, verbal, and motor responses
+
+cataplexy.png
+  Source: Wikimedia Commons — Adapted narcolepsy relations venn diagram.png
+  Page: https://commons.wikimedia.org/wiki/File:Adapted_narcolepsy_relations_venn_diagram.png
+  Description: Narcolepsy symptom relationships including cataplexy
+
+sleep-paralysis.jpg
+  Source: Wikimedia Commons — John Henry Fuseli - The NightmareFXD.jpg
+  Page: https://commons.wikimedia.org/wiki/File:John_Henry_Fuseli_-_The_NightmareFXD.jpg
+  Description: Classic artistic depiction of sleep paralysis

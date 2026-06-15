@@ -7,6 +7,7 @@ import fibrinogen from "../media/images/lab-values/fibrinogen.png?url";
 import gramStain from "../media/images/lab-values/gram-stain.jpg?url";
 import indiaInkStain from "../media/images/lab-values/india-ink-stain.jpg?url";
 import lymphocyticPleocytosis from "../media/images/lab-values/lymphocytic-pleocytosis.jpg?url";
+import pleocytosis from "../media/images/lab-values/pleocytosis.jpg?url";
 import traumaticLumbarPuncture from "../media/images/lab-values/traumatic-lumbar-puncture.jpg?url";
 import supernatant from "../media/images/lab-values/supernatant.jpg?url";
 import xanthochromia from "../media/images/lab-values/xanthochromia.jpg?url";
@@ -28,6 +29,7 @@ export type LabValueImageId = Extract<
   | "gram-stain"
   | "india-ink-stain"
   | "lymphocytic-pleocytosis"
+  | "pleocytosis"
   | "traumatic-lumbar-puncture"
   | "supernatant"
   | "xanthochromia"
@@ -54,6 +56,7 @@ export const LAB_VALUE_IMAGES: Partial<Record<LabValueImageId, string>> = {
   "gram-stain": extensionAssetUrl(gramStain),
   "india-ink-stain": extensionAssetUrl(indiaInkStain),
   "lymphocytic-pleocytosis": extensionAssetUrl(lymphocyticPleocytosis),
+  pleocytosis: extensionAssetUrl(pleocytosis),
   "traumatic-lumbar-puncture": extensionAssetUrl(traumaticLumbarPuncture),
   supernatant: extensionAssetUrl(supernatant),
   xanthochromia: extensionAssetUrl(xanthochromia),
@@ -93,6 +96,11 @@ export const LAB_VALUE_IMAGE_ATTRIBUTIONS: Partial<
     label:
       "Wikimedia Commons (HSV1 encephalitis CSF specimen.jpg), Jensflorian, CC BY-SA 4.0",
     url: "https://commons.wikimedia.org/wiki/File:HSV1_encephalitis_CSF_specimen.jpg",
+  },
+  pleocytosis: {
+    label:
+      "Wikimedia Commons (Neisseria meningitidis CSF Gram 1000.jpg)",
+    url: "https://commons.wikimedia.org/wiki/File:Neisseria_meningitidis_CSF_Gram_1000.jpg",
   },
   "traumatic-lumbar-puncture": {
     label:
@@ -166,6 +174,8 @@ export const LAB_VALUE_IMAGE_CAPTIONS: Partial<
     "India ink (nigrosin) negative stain: encapsulated Cryptococcus with clear halo against dark background in CSF",
   "lymphocytic-pleocytosis":
     "CSF cytology with lymphocytic pleocytosis and activated lymphocytes — viral meningitis/encephalitis pattern (Pappenheim stain)",
+  pleocytosis:
+    "Gram stain of CSF showing Neisseria meningitidis diplococci — neutrophilic pleocytosis in acute bacterial meningitis",
   "traumatic-lumbar-puncture":
     "Lumbar puncture with CSF collection — procedural venous plexus injury can contaminate CSF with blood (traumatic tap)",
   supernatant:

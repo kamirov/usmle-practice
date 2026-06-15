@@ -3431,6 +3431,47 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
     pediatrics:
       "Narcolepsy often begins in adolescence; excessive daytime sleepiness mistaken for laziness or depression — low CSF hypocretin-1 confirms type 1.",
   },
+  {
+    id: "hypocretin-2",
+    name: "Hypocretin-2",
+    etymology: "hypo- = under + Latin creare = to create + -in = peptide suffix (orexin B)",
+    aliases: [
+      "hypocretin-2",
+      "hypocretin 2",
+      "hypocretin-2 orexin b",
+      "orexin b",
+      "orexin-b",
+      "orexin b",
+      "hcrt-2",
+      "hcrt2",
+    ],
+    type: "Neurotransmitter",
+    source: "Lateral hypothalamic orexin/hypocretin neurons (cleaved from prepro-orexin with hypocretin-1)",
+    receptor: "Orexin-2 receptor (OX2R) preferentially; also orexin-1 receptor (OX1R) at higher concentrations",
+    function:
+      "Stabilizes wakefulness and regulates REM sleep architecture — orexin B binds preferentially OX2R to promote arousal and inhibit inappropriate REM intrusion; works with hypocretin-1 (orexin A) from the same neurons to maintain consolidated wakefulness and metabolic homeostasis.",
+    clinicalRelevance: [
+      "Narcolepsy type 1 — autoimmune destruction of neurons producing both hypocretin-1 and hypocretin-2",
+      "Cataplexy and sleep paralysis — REM intrusion phenomena linked to orexin deficiency",
+      "Suvorexant/daridorexant/lemborexant — dual orexin receptor antagonists (OX1R/OX2R) for insomnia",
+    ],
+    boardsPearls: [
+      "Hypocretin-2 = orexin B; hypocretin-1 = orexin A — same precursor prepro-orexin",
+      "Orexin B preferentially activates OX2R; orexin A preferentially OX1R",
+      "Narcolepsy type 1 — loss of both peptides; low CSF hypocretin-1 measured clinically",
+      "Dual orexin receptor antagonists (DORAs) promote sleep by blocking orexin wake signal",
+      "vs hypocretin-1 — sibling peptide; CSF hypocretin-1 is standard clinical assay",
+    ],
+    distinguishFrom: [
+      "Hypocretin-1 (orexin A) — sibling neuropeptide; CSF assay targets hypocretin-1",
+      "Melatonin — pineal circadian hormone, not lateral hypothalamic orexin",
+      "Histamine (H1) — tuberomammillary wake pathway",
+      "Modafinil — wake-promoting drug, does not replace orexin peptides",
+      "Serotonin — separate biogenic amine; carcinoid secretes serotonin not orexin",
+    ],
+    pediatrics:
+      "Narcolepsy type 1 from orexin neuron loss often begins in adolescence; CSF hypocretin-1 (reflecting loss of neurons producing both peptides) confirms diagnosis.",
+  },
 ];
 
 const signalingById = new Map(

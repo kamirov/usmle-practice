@@ -45,3 +45,9 @@ insulin-like-growth-factor-1.jpg
 
 hypocretin-1.png
   Source: Local copy from pathogenesis/neurotrophic.png
+
+hypocretin-2.jpg
+  Source: Wikimedia Commons — Fendo-04-00018-g001.jpg
+  Page: https://commons.wikimedia.org/wiki/File:Fendo-04-00018-g001.jpg
+  Description: Orexin/hypocretin signaling in appetite and sleep regulation
+

@@ -4790,6 +4790,53 @@ export const LAB_VALUES: LabValueEntry[] = [
     ],
   },
   {
+    id: "pleocytosis",
+    name: "Pleocytosis",
+    etymology: "Greek pleion = more + kytos = cell + -osis = condition",
+    aliases: [
+      "pleocytosis",
+      "csf pleocytosis",
+      "cerebrospinal fluid pleocytosis",
+      "elevated csf wbc",
+      "elevated csf white blood cells",
+      "csf leukocytosis",
+      "increased csf cell count",
+    ],
+    measures:
+      "Elevated cerebrospinal fluid white blood cell count above normal — indicates meningeal or CNS inflammation; cell differential (neutrophilic vs lymphocytic) narrows the infectious and inflammatory differential.",
+    normalRange:
+      "Adults: <5 WBC/µL (predominantly lymphocytes and monocytes); neonates may have slightly higher baseline counts",
+    increasedCauses: [
+      "Bacterial meningitis — neutrophilic pleocytosis, turbid CSF, low glucose, high protein",
+      "Viral meningitis/encephalitis — lymphocytic pleocytosis, normal glucose, mildly ↑ protein",
+      "Tuberculous meningitis — lymphocytic pleocytosis, very low glucose, very high protein",
+      "Fungal meningitis (Cryptococcus) — lymphocytic pleocytosis, ↑ opening pressure",
+      "Partially treated bacterial meningitis — may shift toward lymphocytes",
+      "Neurosarcoidosis, carcinomatous meningitis, autoimmune CNS vasculitis",
+      "Multiple sclerosis — mild lymphocytic pleocytosis with oligoclonal bands",
+      "Traumatic lumbar puncture — RBCs and WBCs from blood contamination (interpret with caution)",
+    ],
+    decreasedCauses: [
+      "Normal CSF cell count",
+    ],
+    boardsPearls: [
+      "Pleocytosis = pathologically elevated CSF WBC count (normal has ≤5 WBC/µL)",
+      "Neutrophil predominance → bacterial meningitis until proven otherwise",
+      "Lymphocyte predominance → viral, TB, fungal, partially treated bacterial, inflammatory",
+      "Always interpret with CSF glucose, protein, Gram stain, culture, and PCR",
+      "Traumatic LP: RBC count falls in successive tubes; true meningitis has uniform RBCs/WBCs",
+      "vs lymphocytic pleocytosis — specific pattern when lymphocytes predominate",
+    ],
+    pairWith: [
+      "Neutrophilic pleocytosis + low glucose + fever + meningismus → bacterial meningitis",
+      "Lymphocytic pleocytosis + normal glucose + fever → viral meningitis",
+      "Lymphocytic pleocytosis + very low glucose + very ↑ protein → TB or fungal meningitis",
+      "Pleocytosis + India ink positive → Cryptococcus in immunocompromised host",
+      "Mild pleocytosis + oligoclonal bands + demyelinating MRI → MS",
+      "Pleocytosis + falling RBCs in tube 4 vs tube 1 → consider traumatic tap",
+    ],
+  },
+  {
     id: "lymphocytic-pleocytosis",
     name: "Lymphocytic Pleocytosis",
     etymology:

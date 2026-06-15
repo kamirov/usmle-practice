@@ -1903,5 +1903,20 @@
     "title": "File:Pneumothorax hemothorax pneumomediastinum contusion.JPG",
     "page": "https://commons.wikimedia.org/wiki/File:Pneumothorax_hemothorax_pneumomediastinum_contusion.JPG",
     "query": "retry"
+  },
+  "symptoms/brudzinski-sign.jpg": {
+    "title": "File:Brud I.png",
+    "page": "https://commons.wikimedia.org/wiki/File:Brud_I.png",
+    "query": "brudzinski sign"
+  },
+  "conditions/tetralogy-of-fallot.svg": {
+    "title": "File:Tetralogy of Fallot-IT.png",
+    "page": "https://commons.wikimedia.org/wiki/File:Tetralogy_of_Fallot-IT.png",
+    "query": "tetralogy of fallot diagram"
+  },
+  "cells/kupffer-cell.jpg": {
+    "title": "File:Kupffer cells high mag cropped.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Kupffer_cells_high_mag_cropped.jpg",
+    "query": "kupffer cell liver"
   }
 }

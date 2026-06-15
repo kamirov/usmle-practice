@@ -75,6 +75,11 @@ lymphocytic-pleocytosis.jpg
   Page: https://commons.wikimedia.org/wiki/File:HSV1_encephalitis_CSF_specimen.jpg
   Description: CSF with lymphocytic pleocytosis and activated lymphocytes (Pappenheim stain)
 
+pleocytosis.jpg
+  Source: Wikimedia Commons — Neisseria meningitidis CSF Gram 1000.jpg
+  Page: https://commons.wikimedia.org/wiki/File:Neisseria_meningitidis_CSF_Gram_1000.jpg
+  Description: Gram stain of CSF showing N. meningitidis diplococci in neutrophilic pleocytosis
+
 traumatic-lumbar-puncture.jpg
   Source: Wikimedia Commons — Wikipedian getting a lumbar puncture (2006).jpg
   Page: https://commons.wikimedia.org/wiki/File:Wikipedian_getting_a_lumbar_puncture_(2006).jpg

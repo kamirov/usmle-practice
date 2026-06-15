@@ -17,11 +17,13 @@ import ataxia from "../media/images/symptoms/ataxia.jpg?url";
 import autonomicDysfunction from "../media/images/symptoms/autonomic-dysfunction.jpg?url";
 import babinskiReflex from "../media/images/symptoms/babinski-reflex.png?url";
 import blueberryMuffinRash from "../media/images/symptoms/blueberry-muffin-rash.jpg?url";
+import brainFog from "../media/images/symptoms/brain-fog.jpg?url";
 import bradykinesia from "../media/images/symptoms/bradykinesia.jpg?url";
 import brudzinskiSign from "../media/images/symptoms/brudzinski-sign.png?url";
 import bullae from "../media/images/symptoms/bullae.jpg?url";
 import calcinosis from "../media/images/symptoms/calcinosis.jpg?url";
 import cannonAWaves from "../media/images/symptoms/cannon-a-waves.jpg?url";
+import cataplexy from "../media/images/symptoms/cataplexy.png?url";
 import chestPain from "../media/images/symptoms/chest-pain.jpg?url";
 import cheyneStokesRespiration from "../media/images/symptoms/cheyne-stokes-respiration.svg?url";
 import chorea from "../media/images/symptoms/chorea.jpg?url";
@@ -30,6 +32,7 @@ import clubbing from "../media/images/symptoms/clubbing.jpg?url";
 import coldIntolerance from "../media/images/symptoms/cold-intolerance.jpg?url";
 import centralAdiposity from "../media/images/symptoms/central-adiposity.svg?url";
 import centralNervousSystemDepression from "../media/images/symptoms/central-nervous-system-depression.png?url";
+import confusion from "../media/images/symptoms/confusion.jpg?url";
 import confluentRash from "../media/images/symptoms/confluent-rash.jpg?url";
 import cottonWoolSpots from "../media/images/symptoms/cotton-wool-spots.png?url";
 import cough from "../media/images/symptoms/cough.jpg?url";
@@ -132,6 +135,7 @@ import raynaudPhenomenon from "../media/images/symptoms/raynaud-phenomenon.jpg?u
 import sciatica from "../media/images/symptoms/sciatica.jpg?url";
 import sclerodactyly from "../media/images/symptoms/sclerodactyly.jpg?url";
 import shortnessOfBreath from "../media/images/symptoms/shortness-of-breath.jpg?url";
+import sleepParalysis from "../media/images/symptoms/sleep-paralysis.jpg?url";
 import skinThickening from "../media/images/symptoms/skin-thickening.jpg?url";
 import slurredSpeech from "../media/images/symptoms/slurred-speech.jpg?url";
 import spasticParesis from "../media/images/symptoms/spastic-paresis.png?url";
@@ -170,11 +174,13 @@ export type SymptomImageId = Extract<
   | "autonomic-dysfunction"
   | "babinski-reflex"
   | "blueberry-muffin-rash"
+  | "brain-fog"
   | "bradykinesia"
   | "brudzinski-sign"
   | "bullae"
   | "calcinosis"
   | "cannon-a-waves"
+  | "cataplexy"
   | "chest-pain"
   | "cheyne-stokes-respiration"
   | "chorea"
@@ -183,6 +189,7 @@ export type SymptomImageId = Extract<
   | "cold-intolerance"
   | "central-adiposity"
   | "central-nervous-system-depression"
+  | "confusion"
   | "confluent-rash"
   | "cotton-wool-spots"
   | "cough"
@@ -285,6 +292,7 @@ export type SymptomImageId = Extract<
   | "sciatica"
   | "sclerodactyly"
   | "shortness-of-breath"
+  | "sleep-paralysis"
   | "skin-thickening"
   | "slurred-speech"
   | "spastic-paresis"
@@ -329,11 +337,13 @@ export const SYMPTOM_IMAGES: Partial<Record<SymptomImageId, string>> = {
   "autonomic-dysfunction": extensionAssetUrl(autonomicDysfunction),
   "babinski-reflex": extensionAssetUrl(babinskiReflex),
   "blueberry-muffin-rash": extensionAssetUrl(blueberryMuffinRash),
+  "brain-fog": extensionAssetUrl(brainFog),
   "bradykinesia": extensionAssetUrl(bradykinesia),
   "brudzinski-sign": extensionAssetUrl(brudzinskiSign),
   "bullae": extensionAssetUrl(bullae),
   "calcinosis": extensionAssetUrl(calcinosis),
   "cannon-a-waves": extensionAssetUrl(cannonAWaves),
+  cataplexy: extensionAssetUrl(cataplexy),
   "chest-pain": extensionAssetUrl(chestPain),
   "cheyne-stokes-respiration": extensionAssetUrl(cheyneStokesRespiration),
   "chorea": extensionAssetUrl(chorea),
@@ -342,6 +352,7 @@ export const SYMPTOM_IMAGES: Partial<Record<SymptomImageId, string>> = {
   "cold-intolerance": extensionAssetUrl(coldIntolerance),
   "central-adiposity": extensionAssetUrl(centralAdiposity),
   "central-nervous-system-depression": extensionAssetUrl(centralNervousSystemDepression),
+  "confusion": extensionAssetUrl(confusion),
   "confluent-rash": extensionAssetUrl(confluentRash),
   "cotton-wool-spots": extensionAssetUrl(cottonWoolSpots),
   "cough": extensionAssetUrl(cough),
@@ -444,6 +455,7 @@ export const SYMPTOM_IMAGES: Partial<Record<SymptomImageId, string>> = {
   "sciatica": extensionAssetUrl(sciatica),
   "sclerodactyly": extensionAssetUrl(sclerodactyly),
   "shortness-of-breath": extensionAssetUrl(shortnessOfBreath),
+  "sleep-paralysis": extensionAssetUrl(sleepParalysis),
   "skin-thickening": extensionAssetUrl(skinThickening),
   "slurred-speech": extensionAssetUrl(slurredSpeech),
   "spastic-paresis": extensionAssetUrl(spasticParesis),
@@ -491,6 +503,10 @@ export const SYMPTOM_IMAGE_ATTRIBUTIONS: Partial<
   "autonomic-dysfunction": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:autonomic-dysfunction.jpg" },
   "babinski-reflex": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:babinski-reflex.png" },
   "blueberry-muffin-rash": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:blueberry-muffin-rash.jpg" },
+  "brain-fog": {
+    label: "Wikimedia Commons (Hypothyroidism.jpg)",
+    url: "https://commons.wikimedia.org/wiki/File:Hypothyroidism.jpg",
+  },
   "bradykinesia": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:bradykinesia.jpg" },
   "brudzinski-sign": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:brudzinski-sign.png" },
   "bullae": { label: "Wikimedia Commons (Bullous pemphigoid new image.jpg)", url: "https://commons.wikimedia.org/wiki/File:Bullous_pemphigoid_new_image.jpg" },
@@ -498,6 +514,10 @@ export const SYMPTOM_IMAGE_ATTRIBUTIONS: Partial<
   "cannon-a-waves": {
     label: "Wikimedia Commons (Elevated Jugular Venous Pressure.jpg)",
     url: "https://commons.wikimedia.org/wiki/File:Elevated_Jugular_Venous_Pressure.jpg",
+  },
+  cataplexy: {
+    label: "Wikimedia Commons (Adapted narcolepsy relations venn diagram.png), CC BY-SA 4.0",
+    url: "https://commons.wikimedia.org/wiki/File:Adapted_narcolepsy_relations_venn_diagram.png",
   },
   "chest-pain": { label: "Wikimedia Commons (Depiction of a person suffering from chest pain.png)", url: "https://commons.wikimedia.org/wiki/File:Depiction_of_a_person_suffering_from_chest_pain.png" },
   "cheyne-stokes-respiration": {
@@ -512,6 +532,10 @@ export const SYMPTOM_IMAGE_ATTRIBUTIONS: Partial<
   "central-nervous-system-depression": {
     label: "Wikimedia Commons (Escala de Coma de Glasgow - ECG.png), CC BY-SA 4.0",
     url: "https://commons.wikimedia.org/wiki/File:Escala_de_Coma_de_Glasgow_-_ECG.png",
+  },
+  "confusion": {
+    label: "Wikimedia Commons (Delirium tremens Skalarjevo brezno Peter Gedei 2020-8-8.jpg)",
+    url: "https://commons.wikimedia.org/wiki/File:Delirium_tremens_Skalarjevo_brezno_Peter_Gedei_2020-8-8.jpg",
   },
   "confluent-rash": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:confluent-rash.jpg" },
   "cotton-wool-spots": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:cotton-wool-spots.png" },
@@ -633,6 +657,10 @@ export const SYMPTOM_IMAGE_ATTRIBUTIONS: Partial<
   "sciatica": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:sciatica.jpg" },
   "sclerodactyly": { label: "Wikimedia Commons (Calcinosis of CREST syndrome.jpg)", url: "https://commons.wikimedia.org/wiki/File:Calcinosis_of_CREST_syndrome.jpg" },
   "shortness-of-breath": { label: "Wikimedia Commons (SymptomsFeverCoughSOB (cropped).jpg)", url: "https://commons.wikimedia.org/wiki/File:SymptomsFeverCoughSOB_(cropped).jpg" },
+  "sleep-paralysis": {
+    label: "Wikimedia Commons (John Henry Fuseli - The NightmareFXD.jpg), Public domain",
+    url: "https://commons.wikimedia.org/wiki/File:John_Henry_Fuseli_-_The_NightmareFXD.jpg",
+  },
   "skin-thickening": { label: "Wikimedia Commons (On scleroderma (IA 101695003.nlm.nih.gov).pdf)", url: "https://commons.wikimedia.org/wiki/File:On_scleroderma_(IA_101695003.nlm.nih.gov).pdf" },
   "slurred-speech": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:slurred-speech.jpg" },
   "spastic-paresis": { label: "Wikimedia Commons (ALS subtypes UMN LMN distribution.png)", url: "https://commons.wikimedia.org/wiki/File:ALS_subtypes_UMN_LMN_distribution.png" },
@@ -672,12 +700,15 @@ export const SYMPTOM_IMAGE_CAPTIONS: Partial<Record<SymptomImageId, string>> = {
   "autonomic-dysfunction": "Clinical or pathologic image illustrating autonomic dysfunction",
   "babinski-reflex": "Clinical or pathologic image illustrating babinski reflex",
   "blueberry-muffin-rash": "Clinical or pathologic image illustrating blueberry muffin rash",
+  "brain-fog": "Hypothyroid myxedema — metabolic endocrine cause of slowed mentation and subjective cognitive clouding",
   "bradykinesia": "Clinical or pathologic image illustrating bradykinesia",
   "brudzinski-sign": "Brudziński sign — passive neck flexion causes involuntary hip/knee flexion in meningitis",
   "bullae": "Bullous pemphigoid — tense subepidermal bullae",
   "calcinosis": "Calcinosis cutis — subcutaneous calcium deposits in systemic sclerosis",
   "cannon-a-waves":
     "Elevated jugular venous pressure — prominent neck vein pulsations seen with AV dissociation and cannon A waves",
+  cataplexy:
+    "Narcolepsy symptom relationships — cataplexy is sudden emotion-triggered muscle atonia with preserved consciousness",
   "chest-pain": "Clinical or pathologic image illustrating chest pain",
   "cheyne-stokes-respiration":
     "Cheyne-Stokes respiration — cyclic crescendo-decrescendo breathing with central apneic pauses",
@@ -688,6 +719,8 @@ export const SYMPTOM_IMAGE_CAPTIONS: Partial<Record<SymptomImageId, string>> = {
   "central-adiposity": "Waist-to-hip ratio silhouettes — apple (central) vs pear (gynoid) body fat distribution",
   "central-nervous-system-depression":
     "Glasgow Coma Scale — eye, verbal, and motor scoring to quantify depressed level of consciousness",
+  "confusion":
+    "Delirium tremens — severe alcohol withdrawal with acute confusion, autonomic hyperactivity, and tremor",
   "confluent-rash": "Clinical or pathologic image illustrating confluent rash",
   "cotton-wool-spots": "Clinical or pathologic image illustrating cotton wool spots",
   "cough": "Clinical or pathologic image illustrating cough",
@@ -796,6 +829,8 @@ export const SYMPTOM_IMAGE_CAPTIONS: Partial<Record<SymptomImageId, string>> = {
   "sciatica": "Clinical or pathologic image illustrating sciatica",
   "sclerodactyly": "Clinical or pathologic image illustrating sclerodactyly",
   "shortness-of-breath": "Clinical or pathologic image illustrating shortness of breath",
+  "sleep-paralysis":
+    "Fuseli's The Nightmare — classic artistic depiction of sleep paralysis with hypnagogic hallucination",
   "skin-thickening": "Clinical or pathologic image illustrating skin thickening",
   "slurred-speech": "Clinical or pathologic image illustrating slurred speech",
   "spastic-paresis": "Clinical or pathologic image illustrating spastic paresis",

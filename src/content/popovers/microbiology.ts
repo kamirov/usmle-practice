@@ -35,6 +35,7 @@ export function renderMicrobiologyPopover(
     ${renderPopoverTitle(entry.name, "microbiology", entry.etymology)}
     <div class="usmle-organ-popover__layer"><strong>Type:</strong> ${formatMicrobeType(entry.type)}</div>
     <div class="usmle-organ-popover__meaning">${entry.definition}</div>
+    ${entry.mnemonic ? `<div class="usmle-organ-popover__section-label">Mnemonic</div><div class="usmle-organ-popover__mechanism">${entry.mnemonic}</div>` : ""}
   `,
     `
     ${renderListSection("Morphology", entry.morphology ?? [])}
