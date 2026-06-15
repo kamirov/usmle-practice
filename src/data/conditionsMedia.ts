@@ -139,6 +139,7 @@ import hypertensiveNephrosclerosis from "../media/images/conditions/hypertensive
 import hypertensiveRetinopathy from "../media/images/conditions/hypertensive-retinopathy.jpg?url";
 import hyperthyroidism from "../media/images/conditions/hyperthyroidism.jpg?url";
 import hypertrophicCardiomyopathy from "../media/images/conditions/hypertrophic-cardiomyopathy.jpg?url";
+import hypertrophicOsteoarthropathy from "../media/images/conditions/hypertrophic-osteaoarthropathy.jpg?url";
 import hypogonadism from "../media/images/conditions/hypogonadism.jpg?url";
 import hypopituitarism from "../media/images/conditions/hypopituitarism.svg?url";
 import hypothyroidism from "../media/images/conditions/hypothyroidism.jpg?url";
@@ -159,6 +160,7 @@ import korsakoffSyndrome from "../media/images/conditions/korsakoff-syndrome.jpg
 import l4Radiculopathy from "../media/images/conditions/l4-radiculopathy.png?url";
 import l5Radiculopathy from "../media/images/conditions/l5-radiculopathy.png?url";
 import lacunarStroke from "../media/images/conditions/lacunar-stroke.jpg?url";
+import lambertEatonMyasthenicSyndrome from "../media/images/conditions/lambert-eaton-myasthenic-syndrome.png?url";
 import lichenPlanus from "../media/images/conditions/lichen-planus.jpg?url";
 import lungCancer from "../media/images/conditions/lung-cancer.jpg?url";
 import lymeDisease from "../media/images/conditions/lyme-disease.jpg?url";
@@ -167,6 +169,7 @@ import lymphogranulomaVenereum from "../media/images/conditions/lymphogranuloma-
 import lymphoma from "../media/images/conditions/lymphoma.jpg?url";
 import majorDepressiveDisorder from "../media/images/conditions/major-depressive-disorder.jpg?url";
 import malaria from "../media/images/conditions/malaria.jpg?url";
+import myastheniaGravis from "../media/images/conditions/myasthenia-gravis.jpg?url";
 import malrotation from "../media/images/conditions/malrotation.jpg?url";
 import marfanSyndrome from "../media/images/conditions/marfan-syndrome.jpg?url";
 import mastocytosis from "../media/images/conditions/mastocytosis.jpg?url";
@@ -267,6 +270,7 @@ import smallCellLungCancer from "../media/images/conditions/small-cell-lung-canc
 import spherocytosis from "../media/images/conditions/spherocytosis.jpg?url";
 import sporotrichosis from "../media/images/conditions/sporotrichosis.jpg?url";
 import stableAngina from "../media/images/conditions/stable-angina.jpg?url";
+import staufferSyndrome from "../media/images/conditions/stauffer-syndrome.jpg?url";
 import statusEpilepticus from "../media/images/conditions/status-epilepticus.jpg?url";
 import subarachnoidHemorrhage from "../media/images/conditions/subarachnoid-hemorrhage.jpg?url";
 import subclavianSteal from "../media/images/conditions/subclavian-steal.jpg?url";
@@ -443,6 +447,7 @@ export type ConditionImageId = Extract<
   | "hypertensive-retinopathy"
   | "hyperthyroidism"
   | "hypertrophic-cardiomyopathy"
+  | "hypertrophic-osteaoarthropathy"
   | "hypogonadism"
   | "hypopituitarism"
   | "hypothyroidism"
@@ -463,6 +468,7 @@ export type ConditionImageId = Extract<
   | "l4-radiculopathy"
   | "l5-radiculopathy"
   | "lacunar-stroke"
+  | "lambert-eaton-myasthenic-syndrome"
   | "lichen-planus"
   | "lung-cancer"
   | "lyme-disease"
@@ -471,6 +477,7 @@ export type ConditionImageId = Extract<
   | "lymphoma"
   | "major-depressive-disorder"
   | "malaria"
+  | "myasthenia-gravis"
   | "malrotation"
   | "marfan-syndrome"
   | "mastocytosis"
@@ -571,6 +578,7 @@ export type ConditionImageId = Extract<
   | "spherocytosis"
   | "sporotrichosis"
   | "stable-angina"
+  | "stauffer-syndrome"
   | "status-epilepticus"
   | "subarachnoid-hemorrhage"
   | "subclavian-steal"
@@ -752,6 +760,7 @@ export const CONDITION_IMAGES: Partial<Record<ConditionImageId, string>> = {
   "hypertensive-retinopathy": extensionAssetUrl(hypertensiveRetinopathy),
   "hyperthyroidism": extensionAssetUrl(hyperthyroidism),
   "hypertrophic-cardiomyopathy": extensionAssetUrl(hypertrophicCardiomyopathy),
+  "hypertrophic-osteaoarthropathy": extensionAssetUrl(hypertrophicOsteoarthropathy),
   "hypogonadism": extensionAssetUrl(hypogonadism),
   "hypopituitarism": extensionAssetUrl(hypopituitarism),
   "hypothyroidism": extensionAssetUrl(hypothyroidism),
@@ -772,6 +781,7 @@ export const CONDITION_IMAGES: Partial<Record<ConditionImageId, string>> = {
   "l4-radiculopathy": extensionAssetUrl(l4Radiculopathy),
   "l5-radiculopathy": extensionAssetUrl(l5Radiculopathy),
   "lacunar-stroke": extensionAssetUrl(lacunarStroke),
+  "lambert-eaton-myasthenic-syndrome": extensionAssetUrl(lambertEatonMyasthenicSyndrome),
   "lichen-planus": extensionAssetUrl(lichenPlanus),
   "lung-cancer": extensionAssetUrl(lungCancer),
   "lyme-disease": extensionAssetUrl(lymeDisease),
@@ -780,6 +790,7 @@ export const CONDITION_IMAGES: Partial<Record<ConditionImageId, string>> = {
   "lymphoma": extensionAssetUrl(lymphoma),
   "major-depressive-disorder": extensionAssetUrl(majorDepressiveDisorder),
   "malaria": extensionAssetUrl(malaria),
+  "myasthenia-gravis": extensionAssetUrl(myastheniaGravis),
   "malrotation": extensionAssetUrl(malrotation),
   "marfan-syndrome": extensionAssetUrl(marfanSyndrome),
   "mastocytosis": extensionAssetUrl(mastocytosis),
@@ -880,6 +891,7 @@ export const CONDITION_IMAGES: Partial<Record<ConditionImageId, string>> = {
   "spherocytosis": extensionAssetUrl(spherocytosis),
   "sporotrichosis": extensionAssetUrl(sporotrichosis),
   "stable-angina": extensionAssetUrl(stableAngina),
+  "stauffer-syndrome": extensionAssetUrl(staufferSyndrome),
   "status-epilepticus": extensionAssetUrl(statusEpilepticus),
   "subarachnoid-hemorrhage": extensionAssetUrl(subarachnoidHemorrhage),
   "subclavian-steal": extensionAssetUrl(subclavianSteal),
@@ -938,7 +950,10 @@ export const CONDITION_IMAGE_ATTRIBUTIONS: Partial<
     label: "Wikimedia Commons (Histopathology of Alzheimer's disease.jpg)",
     url: "https://commons.wikimedia.org/wiki/File:Histopathology_of_Alzheimer%27s_disease.jpg",
   },
-  "amenorrhea": { label: "Wikimedia Commons (Lactational-amenorrhea-method-This-method-of-family-planning-evolved-from (1).jpg)", url: "https://commons.wikimedia.org/wiki/File:Lactational-amenorrhea-method-This-method-of-family-planning-evolved-from_(1).jpg" },
+  "amenorrhea": {
+    label: "Wikimedia Commons (HPO axis - follicular phase.png)",
+    url: "https://commons.wikimedia.org/wiki/File:HPO_axis_-_follicular_phase.png",
+  },
   "aml": { label: "Wikimedia Commons (Acute Myeloid Leukemia (M2 type).jpg)", url: "https://commons.wikimedia.org/wiki/File:Acute_Myeloid_Leukemia_(M2_type).jpg" },
   "anaphylaxis": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:anaphylaxis.svg" },
   "anemia": { label: "Wikimedia Commons (Anemia.JPG)", url: "https://commons.wikimedia.org/wiki/File:Anemia.JPG" },
@@ -1088,6 +1103,10 @@ export const CONDITION_IMAGE_ATTRIBUTIONS: Partial<
   "hypertensive-retinopathy": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:hypertensive-retinopathy.jpg" },
   "hyperthyroidism": { label: "Wikimedia Commons (Histopathology of Graves' disease - medium mag.jpg)", url: "https://commons.wikimedia.org/wiki/File:Histopathology_of_Graves'_disease_-_medium_mag.jpg" },
   "hypertrophic-cardiomyopathy": { label: "Wikimedia Commons (Hypertrophic obstructive cardiomyopathy.png)", url: "https://commons.wikimedia.org/wiki/File:Hypertrophic_obstructive_cardiomyopathy.png" },
+  "hypertrophic-osteaoarthropathy": {
+    label: "Wellcome Collection (Man with hypertrophic pulmonary osteo-arthropathy Wellcome L0062531.jpg)",
+    url: "https://commons.wikimedia.org/wiki/File:Man_with_hypertrophic_pulmonary_osteo-arthropathy_Wellcome_L0062531.jpg",
+  },
   "hypogonadism": { label: "Wikimedia Commons (The genetic and molecular basis of idiopathic hypogonadotropic hypogonadism.jpg)", url: "https://commons.wikimedia.org/wiki/File:The_genetic_and_molecular_basis_of_idiopathic_hypogonadotropic_hypogonadism.jpg" },
   "hypopituitarism": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:hypopituitarism.svg" },
   "hypothyroidism": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:hypothyroidism.jpg" },
@@ -1108,6 +1127,10 @@ export const CONDITION_IMAGE_ATTRIBUTIONS: Partial<
   "l4-radiculopathy": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:l4-radiculopathy.png" },
   "l5-radiculopathy": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:l5-radiculopathy.png" },
   "lacunar-stroke": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:lacunar-stroke.jpg" },
+  "lambert-eaton-myasthenic-syndrome": {
+    label: "Wikimedia Commons (Synapse diag3.png)",
+    url: "https://commons.wikimedia.org/wiki/File:Synapse_diag3.png",
+  },
   "lichen-planus": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:lichen-planus.jpg" },
   "lung-cancer": { label: "Wikimedia Commons (LungCancer-Xray-01.jpg)", url: "https://commons.wikimedia.org/wiki/File:LungCancer-Xray-01.jpg" },
   "lyme-disease": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:lyme-disease.jpg" },
@@ -1116,6 +1139,10 @@ export const CONDITION_IMAGE_ATTRIBUTIONS: Partial<
   "lymphoma": { label: "Wikimedia Commons (Progressive transformation of germinal centres -1- very low mag.jpg)", url: "https://commons.wikimedia.org/wiki/File:Progressive_transformation_of_germinal_centres_-1-_very_low_mag.jpg" },
   "major-depressive-disorder": { label: "Wikimedia Commons (A woman suffering from Clinical Depression.png)", url: "https://commons.wikimedia.org/wiki/File:A_woman_suffering_from_Clinical_Depression.png" },
   "malaria": { label: "Wikimedia Commons (Ring Forms of Plasmodium falciparum.jpg)", url: "https://commons.wikimedia.org/wiki/File:Ring_Forms_of_Plasmodium_falciparum.jpg" },
+  "myasthenia-gravis": {
+    label: "Wikimedia Commons (Myasthenia gravis ptosis reversal.jpg)",
+    url: "https://commons.wikimedia.org/wiki/File:Myasthenia_gravis_ptosis_reversal.jpg",
+  },
   "malrotation": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:malrotation.jpg" },
   "marfan-syndrome": {
     label: "Wikimedia Commons (Arachnodactyly.jpg)",
@@ -1243,6 +1270,10 @@ export const CONDITION_IMAGE_ATTRIBUTIONS: Partial<
   "spherocytosis": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:spherocytosis.jpg" },
   "sporotrichosis": { label: "Wikimedia Commons (Feline sporotrichosis 4.jpg)", url: "https://commons.wikimedia.org/wiki/File:Feline_sporotrichosis_4.jpg" },
   "stable-angina": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:stable-angina.jpg" },
+  "stauffer-syndrome": {
+    label: "Wikimedia Commons (Histopathology of clear cell renal cell carcinoma, grade 1, high magnification.jpg)",
+    url: "https://commons.wikimedia.org/wiki/File:Histopathology_of_clear_cell_renal_cell_carcinoma,_grade_1,_high_magnification.jpg",
+  },
   "status-epilepticus": { label: "Wikimedia Commons (MRIinFIRES.jpg)", url: "https://commons.wikimedia.org/wiki/File:MRIinFIRES.jpg" },
   "subarachnoid-hemorrhage": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:subarachnoid-hemorrhage.jpg" },
   "subclavian-steal": {
@@ -1305,7 +1336,8 @@ export const CONDITION_IMAGE_CAPTIONS: Partial<
   "alpha-1-antitrypsin-deficiency": "Clinical or pathologic image illustrating alpha 1 antitrypsin deficiency",
   "alzheimer-disease":
     "Neurofibrillary tangles and senile plaques — hallmark Alzheimer disease histopathology",
-  "amenorrhea": "Clinical or pathologic image illustrating amenorrhea",
+  "amenorrhea":
+    "HPO axis during follicular phase — hypothalamic GnRH, pituitary LH/FSH, and ovarian steroidogenesis disrupted in amenorrhea",
   "aml": "Clinical or pathologic image illustrating aml",
   "anaphylaxis": "Clinical or pathologic image illustrating anaphylaxis",
   "anemia": "Clinical or pathologic image illustrating anemia",
@@ -1436,6 +1468,8 @@ export const CONDITION_IMAGE_CAPTIONS: Partial<
   "hypertensive-retinopathy": "Clinical or pathologic image illustrating hypertensive retinopathy",
   "hyperthyroidism": "Clinical or pathologic image illustrating hyperthyroidism",
   "hypertrophic-cardiomyopathy": "Clinical or pathologic image illustrating hypertrophic cardiomyopathy",
+  "hypertrophic-osteaoarthropathy":
+    "Hypertrophic pulmonary osteoarthropathy — clubbing and periostitis classically associated with lung malignancy",
   "hypogonadism": "Clinical or pathologic image illustrating hypogonadism",
   "hypopituitarism": "Clinical or pathologic image illustrating hypopituitarism",
   "hypothyroidism": "Clinical or pathologic image illustrating hypothyroidism",
@@ -1456,6 +1490,8 @@ export const CONDITION_IMAGE_CAPTIONS: Partial<
   "l4-radiculopathy": "Clinical or pathologic image illustrating l4 radiculopathy",
   "l5-radiculopathy": "Clinical or pathologic image illustrating l5 radiculopathy",
   "lacunar-stroke": "Clinical or pathologic image illustrating lacunar stroke",
+  "lambert-eaton-myasthenic-syndrome":
+    "Neuromuscular junction synapse — presynaptic VGCC antibodies in Lambert-Eaton reduce acetylcholine release",
   "lichen-planus": "Clinical or pathologic image illustrating lichen planus",
   "lung-cancer": "Clinical or pathologic image illustrating lung cancer",
   "lyme-disease": "Erythema migrans bull's-eye rash of early localized Lyme disease",
@@ -1464,6 +1500,8 @@ export const CONDITION_IMAGE_CAPTIONS: Partial<
   "lymphoma": "Clinical or pathologic image illustrating lymphoma",
   "major-depressive-disorder": "Clinical or pathologic image illustrating major depressive disorder",
   "malaria": "Clinical or pathologic image illustrating malaria",
+  "myasthenia-gravis":
+    "Myasthenia gravis ptosis before and after edrophonium — fatigable ocular weakness improves transiently",
   "malrotation": "Ladd bands from intestinal malrotation — peritoneal bands crossing and compressing the duodenum",
   "marfan-syndrome":
     "Arachnodactyly — long slender fingers characteristic of Marfan syndrome",
@@ -1571,6 +1609,8 @@ export const CONDITION_IMAGE_CAPTIONS: Partial<
   "spherocytosis": "Clinical or pathologic image illustrating spherocytosis",
   "sporotrichosis": "Clinical or pathologic image illustrating sporotrichosis",
   "stable-angina": "Clinical or pathologic image illustrating stable angina",
+  "stauffer-syndrome":
+    "Clear cell renal cell carcinoma histology — primary tumor associated with paraneoplastic Stauffer hepatic dysfunction",
   "status-epilepticus": "Prolonged seizure activity — neurologic emergency requiring urgent benzodiazepines",
   "subarachnoid-hemorrhage": "Clinical or pathologic image illustrating subarachnoid hemorrhage",
   "subclavian-steal":

@@ -1615,6 +1615,71 @@ export const CONDITIONS: ConditionEntry[] = [
       "May present in adolescence during sports screening; family screening recommended for first-degree relatives.",
   },
   {
+    id: "hypertrophic-osteaoarthropathy",
+    name: "Hypertrophic Osteoarthropathy",
+    etymology:
+      "Greek hyper = excess + trophe = nourishment + osteon = bone + arthron = joint + -pathy = disease",
+    aliases: [
+      "hypertrophic osteoarthropathy",
+      "hypertrophic osteoarthropathies",
+      "hoa",
+      "pulmonary hypertrophic osteoarthropathy",
+      "hypertrophic pulmonary osteoarthropathy",
+      "marie-bamberger syndrome",
+      "marie bamberger syndrome",
+      "pachydermoperiostosis",
+      "secondary hypertrophic osteoarthropathy",
+    ],
+    definition:
+      "Syndrome of digital clubbing, painful periostitis of long bones, and arthralgias — classically a paraneoplastic manifestation of lung cancer but also seen with other pulmonary, cardiac, and inflammatory conditions.",
+    pathophysiology:
+      "Circulating factors (often from lung tumor or chronic hypoxia) stimulate fibrovascular proliferation at nail beds and periosteal new bone formation along long bones → clubbing, joint pain, and soft-tissue swelling; exact mediator debated (VEGF, PDGF, GHRH).",
+    classicPresentation: [
+      "Painful swelling of wrists, ankles, knees, or elbows",
+      "Digital clubbing — increased convexity of nail bed, loss of Lovibond angle",
+      "Arthralgias without destructive arthritis on exam",
+      "Underlying lung mass, chronic lung disease, or cyanotic heart disease",
+    ],
+    keyFindings: [
+      "Clubbing on physical exam",
+      "Periosteal new bone formation on X-ray (layered periostitis of tibia/fibula, radius/ulna)",
+      "Joint pain with relatively preserved range of motion early",
+      "Associated primary lung adenocarcinoma in paraneoplastic cases",
+    ],
+    associations: [
+      "Lung adenocarcinoma — classic paraneoplastic association",
+      "Other lung malignancies and chronic suppurative lung disease",
+      "Cyanotic congenital heart disease",
+      "Inflammatory bowel disease (ulcerative colitis > Crohn)",
+      "Primary (hereditary) form — pachydermoperiostosis (Touraine-Solente-Golé syndrome)",
+    ],
+    complications: [
+      "Debilitating bone and joint pain",
+      "Delayed diagnosis of underlying malignancy if clubbing overlooked",
+    ],
+    distinguishFrom: [
+      "Clubbing alone — HOA adds periostitis and arthralgia",
+      "Rheumatoid arthritis — synovitis, erosions, RF/anti-CCP positivity",
+      "Osteomyelitis — focal infection, fever, elevated inflammatory markers",
+      "Primary osteoarthritis — older patient, joint space narrowing without periostitis",
+      "Thyroid acropachy — associated with Graves ophthalmopathy",
+    ],
+    treatment: [
+      "Treat underlying cause (resect lung cancer, manage lung disease or IBD)",
+      "Analgesia for bone pain",
+      "Primary hereditary forms — symptomatic management",
+    ],
+    boardsPearls: [
+      "HOA triad: clubbing + periostitis + arthralgias",
+      "Lung adenocarcinoma + painful wrists/ankles + clubbing → hypertrophic osteoarthropathy",
+      "vs clubbing alone — HOA has periosteal reaction and joint pain",
+      "Marie-Bamberger syndrome = hypertrophic osteoarthropathy (often pulmonary)",
+      "X-ray: periosteal new bone along long bones",
+    ],
+    pediatrics:
+      "Primary pachydermoperiostosis presents in adolescence with clubbing and periostitis without malignancy. Clubbing in cyanotic congenital heart disease is common; painful periostitis should prompt evaluation for HOA pattern.",
+  },
+  {
     id: "dilated-cardiomyopathy",
     name: "Dilated Cardiomyopathy",
     etymology: "Latin dilatare = widen + Greek kardia = heart + mys = muscle + -pathy = disease",
@@ -8640,6 +8705,74 @@ export const CONDITIONS: ConditionEntry[] = [
       "Primary lung cancer is extremely rare in children; pulmonary neuroendocrine tumors in pediatrics are usually carcinoids, not classic SCLC. Paraneoplastic SIADH in children more often reflects CNS or pulmonary infection than malignancy.",
   },
   {
+    id: "lambert-eaton-myasthenic-syndrome",
+    name: "Lambert-Eaton Myasthenic Syndrome",
+    etymology:
+      "Lambert + Eaton = discoverers + Greek mys = muscle + asthenes = weak + -ic = pertaining to",
+    aliases: [
+      "lambert-eaton myasthenic syndrome",
+      "lambert eaton myasthenic syndrome",
+      "lambert-eaton syndrome",
+      "lambert eaton syndrome",
+      "lems",
+      "lems syndrome",
+      "myasthenic syndrome of lambert-eaton",
+      "eaton-lambert syndrome",
+    ],
+    definition:
+      "Autoimmune disorder of the neuromuscular junction caused by antibodies to presynaptic voltage-gated calcium channels — classically associated with small cell lung cancer — producing proximal weakness that improves with repeated muscle use.",
+    pathophysiology:
+      "Anti-VGCC (P/Q-type) antibodies → ↓ Ca²⁺ influx at presynaptic terminal → reduced acetylcholine quantal release → impaired neuromuscular transmission; compensatory presynaptic changes may improve transmission with repeated stimulation.",
+    classicPresentation: [
+      "Proximal leg weakness — difficulty rising from chair, climbing stairs",
+      "Weakness improves with sustained or repeated effort (vs myasthenia gravis)",
+      "Dry mouth, constipation, erectile dysfunction (autonomic involvement)",
+      "Hyporeflexia or areflexia that may increase after brief exercise",
+      "Smoker with lung mass and paraneoplastic symptoms",
+    ],
+    keyFindings: [
+      "Proximal weakness with relative sparing of ocular/bulbar muscles early",
+      "Diminished deep tendon reflexes",
+      "Incremental response on low-frequency repetitive nerve stimulation (presynaptic defect)",
+      "Anti-VGCC (P/Q-type) antibodies",
+    ],
+    keyLabs: [
+      "Anti-voltage-gated calcium channel antibodies",
+      "EMG/NCS — incremental response to repetitive stimulation",
+      "CT chest for small cell lung cancer in paraneoplastic cases",
+    ],
+    associations: [
+      "Small cell lung cancer — most important paraneoplastic association (~50% of LEMS)",
+      "Other malignancies (less common)",
+      "Autoimmune LEMS without cancer in younger patients",
+    ],
+    complications: [
+      "Respiratory muscle weakness in severe disease",
+      "Delayed cancer diagnosis if LEMS precedes tumor detection",
+    ],
+    distinguishFrom: [
+      "Myasthenia gravis — fatigable weakness worsens with use; postsynaptic AChR antibodies; ocular/bulbar early",
+      "Guillain-Barré syndrome — ascending areflexic weakness; CSF albuminocytologic dissociation",
+      "Botulism — descending flaccid paralysis; foodborne/infant exposure history",
+      "Polymyositis — proximal weakness without NMJ increment; ↑ CK",
+    ],
+    treatment: [
+      "3,4-diaminopyridine (3,4-DAP) — increases ACh release by blocking presynaptic K⁺ channels",
+      "Treat underlying malignancy (SCLC chemotherapy/radiation)",
+      "Immunosuppression (steroids, azathioprine) in autoimmune LEMS",
+      "Avoid aminoglycosides and magnesium — worsen NMJ transmission",
+    ],
+    boardsPearls: [
+      "LEMS = proximal weakness IMPROVES with repeated use (vs MG worsens)",
+      "Anti-presynaptic VGCC antibodies; associated with small cell lung cancer",
+      "Hyporeflexia + autonomic symptoms + incremental EMG response → LEMS",
+      "vs myasthenia gravis — MG: fatigable, postsynaptic AChR, ocular/bulbar, thymoma",
+      "3,4-DAP increases ACh release — symptomatic treatment",
+    ],
+    pediatrics:
+      "Paraneoplastic LEMS is rare in children; juvenile autoimmune LEMS occurs without malignancy. Weakness pattern and EMG increment distinguish from congenital myasthenic syndromes.",
+  },
+  {
     id: "breast-cancer",
     name: "Breast Cancer",
     etymology: "Old English breost = breast/chest + Greek karkinos = crab/cancer",
@@ -11201,6 +11334,65 @@ export const CONDITIONS: ConditionEntry[] = [
     ],
     pediatrics:
       "RCC is primarily an adult malignancy; pediatric renal mass is Wilms tumor until proven otherwise. RCC in children/adolescents is rare and often associated with VHL or other syndromes.",
+  },
+  {
+    id: "stauffer-syndrome",
+    name: "Stauffer Syndrome",
+    etymology: "Stauffer = eponym (hepatologist) + syndrome = group of concurrent signs",
+    aliases: [
+      "stauffer syndrome",
+      "stauffer syndome",
+      "stauffer syndromes",
+      "nonmetastatic hepatic dysfunction in rcc",
+      "paraneoplastic hepatic dysfunction",
+      "renal cell carcinoma associated hepatopathy",
+    ],
+    definition:
+      "Paraneoplastic nonmetastatic hepatic dysfunction associated with renal cell carcinoma — elevated liver enzymes and hepatomegaly without identifiable liver metastases, resolving after tumor resection.",
+    pathophysiology:
+      "Humoral factors secreted by RCC (cytokines, growth factors) cause hepatic dysfunction and periportal inflammation without tumor spread to liver → ↑ alkaline phosphatase, transaminases, and hypoalbuminemia; reverses when primary tumor is treated.",
+    classicPresentation: [
+      "Renal mass with painless hematuria or incidental finding",
+      "Hepatomegaly and abnormal liver function tests",
+      "No evidence of hepatic metastases on imaging",
+      "Constitutional symptoms from RCC (weight loss, fever)",
+    ],
+    keyFindings: [
+      "↑ Alkaline phosphatase and transaminases",
+      "Hepatomegaly on exam or imaging",
+      "Renal mass consistent with RCC",
+      "Liver biopsy shows nonspecific changes without metastatic carcinoma",
+    ],
+    keyLabs: [
+      "↑ ALP, AST, ALT",
+      "Hypoalbuminemia possible",
+      "Normal or elevated EPO (separate RCC paraneoplastic feature)",
+    ],
+    associations: [
+      "Renal cell carcinoma — classic association",
+      "Other paraneoplastic RCC features — polycythemia (EPO), hypercalcemia",
+    ],
+    complications: [
+      "Coagulopathy or synthetic liver dysfunction in severe cases",
+      "Misattribution of liver disease to primary hepatic pathology",
+    ],
+    distinguishFrom: [
+      "Hepatic metastases from RCC — imaging shows focal liver lesions",
+      "Primary liver disease — no renal mass; different etiology",
+      "Budd-Chiari or congestive hepatopathy — vascular mechanism",
+      "Drug-induced hepatotoxicity — medication history",
+    ],
+    treatment: [
+      "Nephrectomy or systemic therapy for RCC — hepatic abnormalities often resolve",
+      "Supportive care for liver dysfunction while treating primary tumor",
+    ],
+    boardsPearls: [
+      "Stauffer syndrome = RCC with hepatic dysfunction WITHOUT liver mets",
+      "↑ ALP + hepatomegaly + renal mass → think Stauffer, not metastasis",
+      "Resolves after nephrectomy — supports paraneoplastic mechanism",
+      "RCC paraneoplastic triad to know: polycythemia (EPO), hypercalcemia, Stauffer syndrome",
+      "vs liver metastasis — no focal hepatic lesions on CT",
+    ],
   },
   {
     id: "autosomal-dominant-polycystic-kidney-disease",
@@ -18726,6 +18918,79 @@ export const CONDITIONS: ConditionEntry[] = [
     ],
     pediatrics:
       "Infant botulism is the classic pediatric form — do not give honey before age 1. Human botulism immune globulin (BIG-IV) is specific treatment for infants.",
+  },
+  {
+    id: "myasthenia-gravis",
+    name: "Myasthenia Gravis",
+    etymology: "Greek mys = muscle + asthenes = weak + Latin gravis = heavy/severe",
+    aliases: [
+      "myasthenia gravis",
+      "myasthenia gravises",
+      "mysasthenia gravis",
+      "mg",
+      "autoimmune myasthenia gravis",
+      "acquired myasthenia gravis",
+      "generalized myasthenia gravis",
+      "ocular myasthenia gravis",
+    ],
+    definition:
+      "Autoimmune disorder of the neuromuscular junction from antibodies against postsynaptic nicotinic acetylcholine receptors (or MuSK) — causes fatigable skeletal muscle weakness that worsens with repeated use.",
+    pathophysiology:
+      "IgG autoantibodies (anti-AChR or anti-MuSK) → complement-mediated destruction and internalization of postsynaptic ACh receptors → ↓ endplate potentials → fatigable weakness; thymic abnormalities (hyperplasia or thymoma) drive autoimmunity in many cases.",
+    classicPresentation: [
+      "Fatigable ptosis and diplopia — worse at end of day",
+      "Bulbar weakness — dysarthria, dysphagia, chewing fatigue",
+      "Proximal limb weakness worsening with sustained activity",
+      "Symptoms improve with rest; normal pupillary reflexes",
+      "Respiratory crisis in severe exacerbation (myasthenic crisis)",
+    ],
+    keyFindings: [
+      "Fatigable weakness on repetitive testing",
+      "Ice pack test — improved ptosis after cold application to eyelid",
+      "Normal sensation; reflexes preserved unless severe weakness",
+      "Thymic mass on CT (thymoma or hyperplasia)",
+    ],
+    keyLabs: [
+      "Anti-acetylcholine receptor antibodies (majority of generalized MG)",
+      "Anti-MuSK antibodies (seronegative MG subset)",
+      "Edrophonium/Tensilon test — transient improvement (historical; not first-line)",
+      "Repetitive nerve stimulation — decremental response",
+    ],
+    associations: [
+      "Thymoma — ~15% of MG patients",
+      "Thymic hyperplasia — more common than thymoma",
+      "Other autoimmune diseases — thyroiditis, rheumatoid arthritis",
+      "Neonatal myasthenia — transplacental anti-AChR antibodies",
+    ],
+    complications: [
+      "Myasthenic crisis — respiratory failure requiring intubation",
+      "Cholinergic crisis from excessive pyridostigmine (SLUDGE + miosis)",
+      "Thymoma-associated complications if unresected",
+    ],
+    distinguishFrom: [
+      "Lambert-Eaton myasthenic syndrome — weakness improves with use; anti-VGCC; SCLC association",
+      "Botulism — descending paralysis; presynaptic toxin",
+      "Guillain-Barré syndrome — ascending areflexia; CSF protein elevated",
+      "Cranial nerve palsy from structural lesion — not fatigable; imaging abnormality",
+      "Graves ophthalmopathy — proptosis, lid retraction; not fatigable ptosis pattern",
+    ],
+    treatment: [
+      "Acetylcholinesterase inhibitors — pyridostigmine for symptomatic relief",
+      "Thymectomy for thymoma and selected thymic hyperplasia cases",
+      "Immunosuppression — corticosteroids, azathioprine, mycophenolate",
+      "Plasmapheresis or IVIG for myasthenic crisis",
+      "Avoid aminoglycosides, β-blockers, and magnesium — exacerbate weakness",
+    ],
+    boardsPearls: [
+      "MG = fatigable weakness WORSENS with repeated use (vs LEMS improves)",
+      "Postsynaptic anti-AChR antibodies; decrement on repetitive stimulation",
+      "Thymoma association — CT chest in new MG diagnosis",
+      "Pyridostigmine treats MG; edrophonium historically diagnostic",
+      "Cholinergic crisis vs myasthenic crisis — too much vs too little ACh effect",
+      "Neonatal MG from maternal antibodies — transient hypotonia and poor feeding",
+    ],
+    pediatrics:
+      "Juvenile MG presents with ptosis and fatigable weakness; thymectomy benefits similar to adults. Neonatal myasthenia is transient from transplacental anti-AChR antibodies — support ventilation and feeding until antibody clears. Congenital myasthenic syndromes are genetic, not autoimmune.",
   },
   {
     id: "meningitis",

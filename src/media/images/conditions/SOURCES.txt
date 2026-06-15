@@ -849,3 +849,30 @@ narcolepsy.jpg
   Source: Wikimedia Commons — Even at work someone with narcolepsy falls asleep in the middle of a shift 2013-11-13 16-35.jpg
   Page: https://commons.wikimedia.org/wiki/File:Even_at_work_someone_with_narcolepsy_falls_asleep_in_the_middle_of_a_shift_2013-11-13_16-35.jpg
   Description: Excessive daytime sleepiness in narcolepsy
+
+amenorrhea.jpg
+  Source: Wikimedia Commons — HPO axis - follicular phase.png
+  Page: https://commons.wikimedia.org/wiki/File:HPO_axis_-_follicular_phase.png
+  License: CC BY-SA 3.0 (Procedureready)
+  Download: https://commons.wikimedia.org/wiki/Special:FilePath/File:HPO_axis_-_follicular_phase.png?width=1280
+  Description: HPO axis during follicular phase — hypothalamic GnRH, pituitary LH/FSH, and ovarian steroidogenesis disrupted in amenorrhea
+
+hypertrophic-osteaoarthropathy.jpg
+  Source: Wellcome Collection — Man with hypertrophic pulmonary osteo-arthropathy Wellcome L0062531.jpg
+  Page: https://commons.wikimedia.org/wiki/File:Man_with_hypertrophic_pulmonary_osteo-arthropathy_Wellcome_L0062531.jpg
+  Description: Clubbing and hypertrophic pulmonary osteoarthropathy
+
+lambert-eaton-myasthenic-syndrome.png
+  Source: Wikimedia Commons — Synapse diag3.png
+  Page: https://commons.wikimedia.org/wiki/File:Synapse_diag3.png
+  Description: Neuromuscular junction diagram illustrating presynaptic acetylcholine release
+
+myasthenia-gravis.jpg
+  Source: Wikimedia Commons — Myasthenia gravis ptosis reversal.jpg
+  Page: https://commons.wikimedia.org/wiki/File:Myasthenia_gravis_ptosis_reversal.jpg
+  Description: Ptosis before and after edrophonium in myasthenia gravis
+
+stauffer-syndrome.jpg
+  Source: Wikimedia Commons — Histopathology of clear cell renal cell carcinoma, grade 1, high magnification.jpg
+  Page: https://commons.wikimedia.org/wiki/File:Histopathology_of_clear_cell_renal_cell_carcinoma,_grade_1,_high_magnification.jpg
+  Description: Clear cell RCC histology — tumor associated with paraneoplastic Stauffer hepatic dysfunction
