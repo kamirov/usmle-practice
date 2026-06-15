@@ -263,3 +263,44 @@ bronchodilation.png
   Source: Wikimedia Commons — Beta-2 adrenergic receptor.png
   Description: β₂-adrenergic receptor Gs signaling pathway in bronchial smooth muscle relaxation
   Page: https://commons.wikimedia.org/wiki/File:Beta-2_adrenergic_receptor.png
+
+autocrine.png
+  Source: Wikimedia Commons — Autocrine and Paracrine.png
+  Page: https://commons.wikimedia.org/wiki/File:Autocrine_and_Paracrine.png
+  Description: Diagram comparing autocrine, paracrine, and endocrine signaling modes
+
+paracrine.png
+  Source: Wikimedia Commons — Autocrine and Paracrine.png
+  Page: https://commons.wikimedia.org/wiki/File:Autocrine_and_Paracrine.png
+  Description: Diagram comparing autocrine, paracrine, and endocrine signaling modes
+
+humoral-immunity.jpg
+  Source: Wikimedia Commons — Plasma cells.jpg
+  Page: https://commons.wikimedia.org/wiki/File:Plasma_cells.jpg
+  Download: https://commons.wikimedia.org/wiki/Special:FilePath/File:Plasma_cells.jpg?width=1280
+  Description: Plasma cells with clockface nuclei — effectors of antibody-mediated humoral immunity
+
+hypersensitivity.png
+  Source: Wikimedia Commons — 1. Types of hypersensitivity.tif
+  Author: Cvallesv, CC BY-SA 4.0
+  Page: https://commons.wikimedia.org/wiki/File:1._Types_of_hypersensitivity.tif
+  Download: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/1._Types_of_hypersensitivity.tif/lossless-page1-1280px-1._Types_of_hypersensitivity.tif.png
+  Description: Gell and Coombs classification diagram of hypersensitivity types I–IV
+
+type-i-hypersensitivity.jpg
+  Source: Wikimedia Commons — Mast cell.jpg
+  Page: https://commons.wikimedia.org/wiki/File:Mast_cell.jpg
+  Download: https://commons.wikimedia.org/wiki/Special:FilePath/File:Mast_cell.jpg?width=1280
+  Description: Toluidine blue–stained mast cell — central effector in IgE-mediated immediate hypersensitivity
+
+type-iii-hypersensitivity.jpg
+  Source: Wikimedia Commons — Purpura2.JPG
+  Page: https://commons.wikimedia.org/wiki/File:Purpura2.JPG
+  Download: https://commons.wikimedia.org/wiki/Special:FilePath/File:Purpura2.JPG?width=1280
+  Description: Palpable purpura in IgA vasculitis — clinical manifestation of immune complex (type III) deposition
+
+type-iv-hypersensitivity.jpg
+  Source: Wikimedia Commons — Mantoux tuberculin skin test.jpg
+  Page: https://commons.wikimedia.org/wiki/File:Mantoux_tuberculin_skin_test.jpg
+  Download: https://commons.wikimedia.org/wiki/Special:FilePath/File:Mantoux_tuberculin_skin_test.jpg?width=1280
+  Description: Positive PPD skin test with induration — classic delayed type IV hypersensitivity reaction

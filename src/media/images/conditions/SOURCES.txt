@@ -276,11 +276,13 @@ alcohol-use-disorder.jpg
   Source: Wikimedia Commons — Cirrhosis of Alcoholic Liver Disease (5517625829).jpg
   Page: https://commons.wikimedia.org/wiki/File:Cirrhosis_of_Alcoholic_Liver_Disease_(5517625829).jpg
   Download: https://commons.wikimedia.org/wiki/Special:FilePath/File:Cirrhosis_of_Alcoholic_Liver_Disease_(5517625829).jpg?width=1280
+Description: Reticulin stain Pathological and histological images courtesy of Ed Uthman at flickr.
 
 basal-cell-carcinoma.jpg
   Source: Wikimedia Commons — Histopathology of micronodular basal-cell carcinoma (original).jpg
   Page: https://commons.wikimedia.org/wiki/File:Histopathology_of_micronodular_basal-cell_carcinoma_(original).jpg
   Download: https://commons.wikimedia.org/wiki/Special:FilePath/File:Histopathology_of_micronodular_basal-cell_carcinoma_(original).jpg?width=1280
+Description: Histopathology of micronodular basal-cell carcinoma
 
 melanoma.jpg
   Source: Wikimedia Commons — Dysplastic nevi (1).jpg
@@ -316,6 +318,7 @@ trisomy-13.jpg
 
 cleft-lip.jpg
   Source: Local copy from cleft-palate.jpg
+Description: Cleft Lip & Cleft Palate Repair
 
 cleft-palate.jpg
   Source: Wikimedia Commons — Cleft Lip & Cleft Palate Repair.png
@@ -324,6 +327,7 @@ cleft-palate.jpg
 congenital-rubella-syndrome.jpg
   Source: Wikimedia Commons — Cataracts due to Congenital Rubella Syndrome (CRS) PHIL 4284 lores.jpg
   Page: https://commons.wikimedia.org/wiki/File:Cataracts_due_to_Congenital_Rubella_Syndrome_(CRS)_PHIL_4284_lores.jpg
+Description: Cataracts due to Congenital Rubella Syndrome (CRS) PHIL 4284 lores
 
 scarlet-fever.jpg
   Source: Wikimedia Commons — Scarlet fever rash.jpg
@@ -337,11 +341,13 @@ brief-psychotic-disorder.jpg
   Source: Wikimedia Commons — Climacteric psychosis.jpg
   Page: https://commons.wikimedia.org/wiki/File:Climacteric_psychosis.jpg
   Download: https://commons.wikimedia.org/wiki/Special:FilePath/File:Climacteric_psychosis.jpg?width=1280
+Description: Climacteric psychosis
 
 cataracts.jpg
   Source: Wikimedia Commons — Airbus A380 - 9H-MIP parked at LFBT airport.jpg
   Page: https://commons.wikimedia.org/wiki/File:Airbus_A380_-_9H-MIP_parked_at_LFBT_airport.jpg
   Download: https://commons.wikimedia.org/wiki/Special:FilePath/File:Airbus_A380_-_9H-MIP_parked_at_LFBT_airport.jpg?width=1280
+Description: Airbus A380 - 9H-MIP parked at LFBT airport
 
 copper-deficiency.jpg
   Source: Wikimedia Commons — Swayback (4479932160).jpg
@@ -352,6 +358,7 @@ dementia.jpg
   Source: Wikimedia Commons — Histopathology of Alzheimer's disease.jpg
   Page: https://commons.wikimedia.org/wiki/File:Histopathology_of_Alzheimer's_disease.jpg
   Download: https://commons.wikimedia.org/wiki/Special:FilePath/File:Histopathology_of_Alzheimer's_disease.jpg?width=1280
+Description: Histopathology of Alzheimer's disease, in the CA3 area of the hippocampus (here showing a normal histology image to describe the location - it is usually atrophied in Alzheimer's disease): Amyloid plaque (top right), neurofibrillary tangles (bottom left) and granulovacuolar degeneration (bottom cent
 
 schizoid-personality-disorder.png
   Source: Wikimedia Commons — Word Cloud SzPD.png
@@ -366,10 +373,12 @@ schizotypal-personality-disorder.png
 basilar-skull-fracture.jpg
   Source: Wikimedia Commons — Battles-sign.jpg
   Page: https://commons.wikimedia.org/wiki/File:Battles-sign.jpg
+Description: Battles-sign
 
 cerebral-contusion.jpg
   Source: Wikimedia Commons — Brain trauma CT.jpg
   Page: https://commons.wikimedia.org/wiki/File:Brain_trauma_CT.jpg
+Description: Brain trauma CT
 
 traumatic-brain-injury.jpg
   Source: Wikimedia Commons — Brain trauma CT.jpg
@@ -394,6 +403,7 @@ atrial-tachycardia.svg
   Source: Wikimedia Commons — Multifocal Atrial Tachycardia.svg
   Page: https://commons.wikimedia.org/wiki/File:Multifocal_Atrial_Tachycardia.svg
   Download: https://commons.wikimedia.org/wiki/Special:FilePath/File:Multifocal_Atrial_Tachycardia.svg?width=1280
+Description: Multifocal Atrial Tachycardia
 
 paroxysmal-supraventricular-tachycardia.svg
   Source: Wikimedia Commons — Supraventricular Tachycardia.svg
@@ -488,6 +498,7 @@ hypothyroidism.jpg
 hirschsprung-disease.jpg
   Source: Local copy from conditions/biliary-atresia.jpg
   Reference: https://commons.wikimedia.org/wiki/File:Biliary_atresia.jpg
+Description: Bilatresia
 
 irritable-bowel-syndrome.jpg
   Source: Local copy from conditions/celiac-disease.jpg
@@ -586,6 +597,7 @@ ptsd.png
 premenstrual-dysphoric-disorder.jpg
   Source: Local copy from conditions/dysmenorrhea.jpg
   Reference: https://commons.wikimedia.org/wiki/File:Period_pain_menstrual_cramps_uterus.jpg
+Description: period pain menstrual cramps uterus
 
 tuberculoma.jpg
   Source: Local copy from microbiology/mycobacterium-tuberculosis.jpg
@@ -673,10 +685,12 @@ spherocytosis.jpg
 cardiogenic-shock.jpg
   Source: Local copy from conditions/heart-failure.jpg
   Reference: https://commons.wikimedia.org/wiki/File:Depiction_of_a_person_suffering_from_heart_failure.png
+Description: Depiction of a person suffering from heart failure
 
 carbon-monoxide-poisoning.jpg
   Source: Local copy from symptoms/cyanosis.jpg
   Reference: https://commons.wikimedia.org/wiki/File:Peripheral_Cyanosis_due_to_Ischemia.jpg
+Description: Peripheral Cyanosis due to Ischemia
 
 korsakoff-syndrome.jpg
   Source: Local copy from conditions/alcohol-use-disorder.jpg
@@ -685,10 +699,12 @@ korsakoff-syndrome.jpg
 beriberi.jpg
   Source: Local copy from conditions/heart-failure.jpg
   Reference: https://commons.wikimedia.org/wiki/File:Depiction_of_a_person_suffering_from_heart_failure.png
+Description: Depiction of a person suffering from heart failure
 
 bronchiectasis.jpg
   Source: Local copy from conditions/cystic-fibrosis.jpg
   Reference: https://commons.wikimedia.org/wiki/File:Blausen_0286_CysticFibrosis.png
+Description: Cystic Fibrosis. See a full animation of this medical topic
 
 pulmonary-embolism.jpg
   Source: Local copy from conditions/pulmonary-hypertension.jpg
@@ -876,3 +892,8 @@ stauffer-syndrome.jpg
   Source: Wikimedia Commons — Histopathology of clear cell renal cell carcinoma, grade 1, high magnification.jpg
   Page: https://commons.wikimedia.org/wiki/File:Histopathology_of_clear_cell_renal_cell_carcinoma,_grade_1,_high_magnification.jpg
   Description: Clear cell RCC histology — tumor associated with paraneoplastic Stauffer hepatic dysfunction
+
+cushing-disease.jpg
+  Source: Wikimedia Commons — Straie with cushing syndrome new photo.jpg
+  Page: https://commons.wikimedia.org/wiki/File:Straie_with_cushing_syndrome_new_photo.jpg
+  Description: Wide purple striae in hypercortisolism from Cushing disease

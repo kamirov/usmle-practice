@@ -8960,6 +8960,225 @@ export const SYMPTOMS: SymptomEntry[] = [
     pediatrics:
       "In children, raccoon eyes after minor trauma raises concern for non-accidental trauma or occult basilar skull fracture. Bilateral periorbital ecchymosis with an abdominal mass suggests neuroblastoma.",
   },
+  {
+    id: "periorbital-pain",
+    name: "Periorbital Pain",
+    etymology: "Greek peri = around + Latin orbita = circular path + Latin poena = penalty/pain",
+    aliases: [
+      "periorbital pain",
+      "periorbital pains",
+      "pain around the eye",
+      "pain around eye",
+      "orbital pain",
+      "orbital pains",
+      "retro-orbital pain",
+      "retroorbital pain",
+      "eye socket pain",
+    ],
+    definition:
+      "Pain localized to the tissues surrounding the orbit — eyelids, medial canthus, brow, or deep retro-orbital structures — often unilateral and severe in primary headache and ocular emergencies.",
+    mechanism:
+      "Nociceptor activation in trigeminal V1 branches (ophthalmic division), orbital periosteum, or extraocular muscles from inflammation, vascular distension, elevated intraocular pressure, or primary neurovascular headache syndromes.",
+    thinkOf: [
+      "Cluster headache — excruciating unilateral periorbital pain with autonomic symptoms",
+      "Migraine — often periorbital or hemicranial with nausea and photophobia",
+      "Acute angle-closure glaucoma — severe eye pain, halos, fixed mid-dilated pupil",
+      "Optic neuritis — pain with eye movement, ↓ vision, RAPD",
+      "Orbital cellulitis — painful proptosis, fever, ↓ EOM",
+      "Sinusitis — facial pressure worsened by bending forward",
+      "Cavernous sinus thrombosis — headache, proptosis, ophthalmoplegia, fever",
+    ],
+    pairWith: [
+      "Periorbital pain + lacrimation + rhinorrhea + ptosis → cluster headache",
+      "Periorbital pain + halos + cloudy cornea + mid-dilated pupil → acute angle-closure glaucoma",
+      "Periorbital pain worse with eye movement + ↓ color vision → optic neuritis",
+      "Periorbital pain + proptosis + fever + restricted EOM → orbital cellulitis",
+      "Periorbital pain + purulent nasal discharge + maxillary tenderness → sinusitis",
+      "Sudden periorbital pain + ophthalmoplegia + CN V1/V2 loss → cavernous sinus thrombosis",
+    ],
+    distinguishFrom: [
+      "Temporal headache — pain over temple without deep orbital component",
+      "Cervicogenic headache — occipital/neck origin with referred periorbital pain",
+      "Dental pain — referred to maxilla, not true retro-orbital pain",
+      "Tension headache — bilateral pressing pain without autonomic or ocular signs",
+    ],
+    pediatrics:
+      "Orbital cellulitis and sinusitis are important pediatric causes of periorbital pain. Cluster headache is rare in children — evaluate for structural orbital or intracranial pathology if presentation is atypical.",
+  },
+  {
+    id: "autonomic-symptoms",
+    name: "Autonomic Symptoms",
+    etymology: "Greek autos = self + nomos = law — reflex signs from autonomic nervous system activation",
+    aliases: [
+      "autonomic symptoms",
+      "autonomic symptom",
+      "cranial autonomic symptoms",
+      "cranial autonomic symptom",
+      "ipsilateral autonomic symptoms",
+      "ipsilateral autonomic symptom",
+      "parasympathetic symptoms",
+      "trigeminal autonomic symptoms",
+    ],
+    definition:
+      "Ipsilateral cranial signs of parasympathetic hyperactivity and/or sympathetic disruption — lacrimation, rhinorrhea, nasal congestion, ptosis, miosis, conjunctival injection, eyelid edema, or facial sweating — classically accompanying trigeminal autonomic cephalalgias.",
+    mechanism:
+      "Trigeminal-autonomic reflex: trigeminal nociceptive input activates superior salivatory nucleus (parasympathetic) → lacrimation and rhinorrhea; concurrent sympathetic pathway dysfunction → ptosis and miosis (partial Horner syndrome). Seen in cluster headache, paroxysmal hemicrania, and SUNCT/SUNA.",
+    thinkOf: [
+      "Cluster headache — lacrimation, rhinorrhea, ptosis, miosis on painful side",
+      "Paroxysmal hemicrania — similar autonomic package; indomethacin-responsive",
+      "SUNCT/SUNA — short attacks with prominent conjunctival injection and tearing",
+      "Horner syndrome — ptosis + miosis ± anhidrosis (not necessarily painful)",
+      "Migraine — may have mild autonomic features but less prominent than cluster",
+    ],
+    pairWith: [
+      "Autonomic symptoms + severe unilateral periorbital pain + restlessness → cluster headache",
+      "Autonomic symptoms + brief frequent attacks → paroxysmal hemicrania or SUNCT",
+      "Ptosis + miosis + anhidrosis without headache → Horner syndrome — localize lesion",
+      "Unilateral autonomic symptoms always ipsilateral to headache in TACs",
+      "vs bilateral autonomic signs — consider systemic autonomic neuropathy, not cranial TAC",
+    ],
+    distinguishFrom: [
+      "Autonomic dysfunction — chronic orthostatic hypotension, gastroparesis, neurogenic bladder (dysautonomia)",
+      "Allergic rhinitis — bilateral rhinorrhea and conjunctival injection without severe orbital pain",
+      "Conjunctivitis — injection and discharge without trigeminal distribution headache",
+      "Horner syndrome alone — ptosis/miosis without episodic headache",
+    ],
+    pediatrics:
+      "Cranial autonomic symptoms with headache are uncommon in children; cluster headache is rare. Unilateral ptosis and miosis in a child warrants evaluation for Horner syndrome (neuroblastoma, birth trauma, carotid pathology).",
+  },
+  {
+    id: "rhinorrhea",
+    name: "Rhinorrhea",
+    etymology: "Greek rhis = nose + rhoia = flow",
+    aliases: [
+      "rhinorrhea",
+      "rhinorrhoea",
+      "runny nose",
+      "runny noses",
+      "nasal discharge",
+      "nasal discharges",
+      "clear nasal discharge",
+      "watery nasal discharge",
+      "nasal secretions",
+    ],
+    definition:
+      "Clear or mucoid discharge from the nasal passages — from increased mucosal secretion, vascular engorgement, or cerebrospinal fluid leak.",
+    mechanism:
+      "Parasympathetic stimulation (via greater petrosal and nasal glands) increases serous/mucoid output; allergic or viral inflammation causes glandular hypersecretion and vascular leak; CSF rhinorrhea results from dural defect (skull base fracture, postsurgical) with CSF tracking through cribriform plate or sphenoid.",
+    thinkOf: [
+      "Viral upper respiratory infection (common cold)",
+      "Allergic rhinitis — bilateral, seasonal, with sneezing and pruritus",
+      "Cluster headache — ipsilateral rhinorrhea during attack",
+      "CSF rhinorrhea — clear unilateral drip after head trauma or sinus surgery",
+      "Vasomotor rhinitis — irritant-triggered rhinorrhea without allergy",
+      "Nasal foreign body (unilateral in child)",
+    ],
+    pairWith: [
+      "Rhinorrhea + ipsilateral periorbital pain + lacrimation → cluster headache",
+      "Bilateral rhinorrhea + sneezing + itchy eyes → allergic rhinitis",
+      "Rhinorrhea + fever + sore throat → viral URI",
+      "Unilateral clear rhinorrhea + head trauma → CSF leak; β2-transferrin testing",
+      "Rhinorrhea + raccoon eyes + Battle sign → basilar skull fracture",
+      "Unilateral foul discharge in child → nasal foreign body",
+    ],
+    distinguishFrom: [
+      "Nasal congestion without discharge — obstruction, adenoid hypertrophy",
+      "Epistaxis — blood, not serous discharge",
+      "Purulent nasal discharge — bacterial sinusitis (thick, colored)",
+      "Rhinorrhea from crying — bilateral, situational, resolves quickly",
+      "Otorrhea — ear drainage, not nasal",
+    ],
+    pediatrics:
+      "Unilateral rhinorrhea in a young child suggests nasal foreign body until proven otherwise. CSF rhinorrhea after trauma requires urgent evaluation. Allergic rhinitis commonly presents in school-age children.",
+  },
+  {
+    id: "ptosis",
+    name: "Ptosis",
+    etymology: "Greek ptōsis = fall — drooping of the upper eyelid",
+    aliases: [
+      "ptosis",
+      "ptoses",
+      "drooping eyelid",
+      "drooping eyelids",
+      "eyelid ptosis",
+      "lid ptosis",
+      "blepharoptosis",
+      "blepharoptoses",
+    ],
+    definition:
+      "Abnormal lowering of the upper eyelid — from levator palpebrae superioris or Müller muscle dysfunction, CN III palsy, neuromuscular junction disease, or sympathetic disruption.",
+    mechanism:
+      "Levator palpebrae (CN III) elevates the lid; Müller muscle (sympathetic) provides subtle tonic elevation. Lesions anywhere along this pathway — CN III nucleus/fascicle, neuromuscular junction (myasthenia), sympathetic chain (Horner), or levator aponeurosis dehiscence — produce ptosis. Fatigable ptosis worsens with sustained upgaze (myasthenia).",
+    thinkOf: [
+      "Myasthenia gravis — fatigable ptosis, worse with sustained upgaze",
+      "Horner syndrome — mild ptosis + miosis + anhidrosis",
+      "CN III palsy — ptosis + 'down and out' eye + dilated pupil if parasympathetic involved",
+      "Cluster headache — ipsilateral mild ptosis during attack",
+      "Congenital ptosis — levator dysgenesis from birth",
+      "Diabetic CN III palsy — pupil often spared",
+    ],
+    pairWith: [
+      "Ptosis + fatigability + diplopia → myasthenia gravis; edrophonium/neostigmine test",
+      "Ptosis + miosis + anhidrosis → Horner syndrome",
+      "Ptosis + dilated pupil + 'down and out' eye → CN III palsy — posterior communicating artery aneurysm until excluded",
+      "Ptosis + ipsilateral periorbital pain + lacrimation → cluster headache",
+      "Pupil-sparing ptosis + CN III palsy in diabetic → microvascular ischemia",
+      "Bilateral ptosis + proximal weakness → myasthenia or myopathy",
+    ],
+    distinguishFrom: [
+      "Dermatochalasis — excess eyelid skin mimicking ptosis; lid margin position normal",
+      "Contralateral lid retraction — pseudo-ptosis from Graves eye disease on opposite side",
+      "Enophthalmos — sunken eye giving appearance of ptosis",
+      "Normal anatomic variant — mild asymmetric lid crease without pathology",
+    ],
+    pediatrics:
+      "Congenital ptosis may threaten amblyopia if the visual axis is blocked — early ophthalmology referral. Neonatal Horner from birth trauma or neuroblastoma presents with mild ptosis and miosis. Myasthenia gravis is less common in children but juvenile MG occurs.",
+  },
+  {
+    id: "lacrimation",
+    name: "Lacrimation",
+    etymology: "Latin lacrima = tear",
+    aliases: [
+      "lacrimation",
+      "lacrimations",
+      "tearing",
+      "excessive tearing",
+      "watery eye",
+      "watery eyes",
+      "epiphora",
+      "epiphoras",
+      "lacrimal discharge",
+      "eye watering",
+    ],
+    definition:
+      "Excessive tear production or impaired tear drainage causing watery overflow from the eye — physiologic (reflex tearing) or pathologic (inflammation, obstruction, cranial autonomic activation).",
+    mechanism:
+      "Reflex tearing via trigeminal-parasympathetic arc (lacrimal gland secretion via CN VII parasympathetics); in cluster headache, trigeminal-autonomic reflex drives ipsilateral hyperlacrimation. Obstructive epiphora results from nasolacrimal duct blockage; inflammatory tearing from conjunctival irritation.",
+    thinkOf: [
+      "Cluster headache — ipsilateral lacrimation during attack",
+      "Allergic conjunctivitis — bilateral itching, redness, tearing",
+      "Viral conjunctivitis — watery discharge, follicular conjunctiva",
+      "Nasolacrimal duct obstruction — chronic epiphora, more common in infants",
+      "Dry eye with reflex tearing — paradoxical watering from corneal irritation",
+      "Foreign body or corneal abrasion — acute unilateral tearing and pain",
+    ],
+    pairWith: [
+      "Lacrimation + ipsilateral periorbital pain + rhinorrhea → cluster headache",
+      "Lacrimation + conjunctival injection + itching → allergic conjunctivitis",
+      "Lacrimation + foreign body sensation + photophobia → corneal abrasion",
+      "Chronic unilateral epiphora in infant → nasolacrimal duct obstruction",
+      "Lacrimation + conjunctival injection without pain → conjunctivitis",
+      "vs crocodile tears — gustatory lacrimation after CN VII injury",
+    ],
+    distinguishFrom: [
+      "Rhinorrhea — nasal not ocular discharge",
+      "Conjunctival discharge without overflow — mucopurulent discharge stays in conjunctival sac",
+      "Crying — emotional tearing, bilateral, situational",
+      "Blepharitis — crusting and irritation, not primarily watery overflow",
+    ],
+    pediatrics:
+      "Congenital nasolacrimal duct obstruction causes chronic tearing in infants and often resolves with massage by 12 months. Neonatal conjunctivitis (ophthalmia neonatorum) requires urgent evaluation for gonorrhea and chlamydia exposure.",
+  },
 ];
 
 const symptomById = new Map(SYMPTOMS.map((s) => [s.id, s]));

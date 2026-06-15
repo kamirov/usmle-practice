@@ -33,6 +33,11 @@ import analgesia from "../media/images/pathogenesis/analgesia.png?url";
 import autocrine from "../media/images/pathogenesis/autocrine.png?url";
 import bronchodilation from "../media/images/pathogenesis/bronchodilation.png?url";
 import paracrine from "../media/images/pathogenesis/paracrine.png?url";
+import humoralImmunity from "../media/images/pathogenesis/humoral-immunity.jpg?url";
+import hypersensitivity from "../media/images/pathogenesis/hypersensitivity.png?url";
+import typeIHypersensitivity from "../media/images/pathogenesis/type-i-hypersensitivity.jpg?url";
+import typeIiiHypersensitivity from "../media/images/pathogenesis/type-iii-hypersensitivity.jpg?url";
+import typeIvHypersensitivity from "../media/images/pathogenesis/type-iv-hypersensitivity.jpg?url";
 
 export type PathogenesisImageId = Extract<
   PathogenesisEntry["id"],
@@ -68,6 +73,11 @@ export type PathogenesisImageId = Extract<
   | "autocrine"
   | "bronchodilation"
   | "paracrine"
+  | "humoral-immunity"
+  | "hypersensitivity"
+  | "type-i-hypersensitivity"
+  | "type-iii-hypersensitivity"
+  | "type-iv-hypersensitivity"
 >;
 
 function extensionAssetUrl(path: string): string {
@@ -110,6 +120,11 @@ export const PATHOGENESIS_IMAGES: Partial<
   autocrine: extensionAssetUrl(autocrine),
   bronchodilation: extensionAssetUrl(bronchodilation),
   paracrine: extensionAssetUrl(paracrine),
+  "humoral-immunity": extensionAssetUrl(humoralImmunity),
+  hypersensitivity: extensionAssetUrl(hypersensitivity),
+  "type-i-hypersensitivity": extensionAssetUrl(typeIHypersensitivity),
+  "type-iii-hypersensitivity": extensionAssetUrl(typeIiiHypersensitivity),
+  "type-iv-hypersensitivity": extensionAssetUrl(typeIvHypersensitivity),
 };
 
 export const PATHOGENESIS_IMAGE_ATTRIBUTIONS: Partial<
@@ -246,6 +261,27 @@ export const PATHOGENESIS_IMAGE_ATTRIBUTIONS: Partial<
     label: "Wikimedia Commons (Autocrine and Paracrine.png)",
     url: "https://commons.wikimedia.org/wiki/File:Autocrine_and_Paracrine.png",
   },
+  "humoral-immunity": {
+    label: "Wikimedia Commons (Plasma cells.jpg)",
+    url: "https://commons.wikimedia.org/wiki/File:Plasma_cells.jpg",
+  },
+  hypersensitivity: {
+    label:
+      "Wikimedia Commons (1. Types of hypersensitivity.tif), Cvallesv, CC BY-SA 4.0",
+    url: "https://commons.wikimedia.org/wiki/File:1._Types_of_hypersensitivity.tif",
+  },
+  "type-i-hypersensitivity": {
+    label: "Wikimedia Commons (Mast cell.jpg)",
+    url: "https://commons.wikimedia.org/wiki/File:Mast_cell.jpg",
+  },
+  "type-iii-hypersensitivity": {
+    label: "Wikimedia Commons (Purpura2.JPG)",
+    url: "https://commons.wikimedia.org/wiki/File:Purpura2.JPG",
+  },
+  "type-iv-hypersensitivity": {
+    label: "Wikimedia Commons (Mantoux tuberculin skin test.jpg)",
+    url: "https://commons.wikimedia.org/wiki/File:Mantoux_tuberculin_skin_test.jpg",
+  },
 };
 
 export const PATHOGENESIS_IMAGE_CAPTIONS: Partial<
@@ -315,6 +351,16 @@ export const PATHOGENESIS_IMAGE_CAPTIONS: Partial<
     "β₂-adrenergic receptor — Gs-coupled cAMP signaling relaxes bronchial smooth muscle; target of albuterol and epinephrine in reactive airway disease",
   paracrine:
     "Paracrine signaling — secreted factor acts on neighboring cells in the local microenvironment",
+  "humoral-immunity":
+    "Plasma cells with eccentric clockface nuclei and abundant basophilic cytoplasm — terminally differentiated B cells that secrete antibodies into body fluids",
+  hypersensitivity:
+    "Gell and Coombs classification — types I–III are antibody-mediated (IgE or IgG/IgM); type IV is T-cell–mediated delayed hypersensitivity",
+  "type-i-hypersensitivity":
+    "Toluidine blue–stained mast cell with metachromatic granules — IgE cross-linking on FcεRI triggers immediate degranulation and histamine release",
+  "type-iii-hypersensitivity":
+    "Palpable purpura on the lower extremity in IgA vasculitis — immune complex deposition in small vessels with leukocytoclastic inflammation",
+  "type-iv-hypersensitivity":
+    "Positive Mantoux tuberculin skin test with induration — delayed T-cell–mediated granulomatous reaction read 48–72 hours after PPD injection",
 };
 
 export function getPathogenesisImageForId(id: string): string | undefined {

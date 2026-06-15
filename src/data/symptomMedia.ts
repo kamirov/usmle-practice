@@ -15,6 +15,7 @@ import arthralgia from "../media/images/symptoms/arthralgia.jpg?url";
 import arthritis from "../media/images/symptoms/arthritis.jpg?url";
 import ataxia from "../media/images/symptoms/ataxia.jpg?url";
 import autonomicDysfunction from "../media/images/symptoms/autonomic-dysfunction.jpg?url";
+import autonomicSymptoms from "../media/images/symptoms/autonomic-symptoms.svg?url";
 import babinskiReflex from "../media/images/symptoms/babinski-reflex.png?url";
 import blueberryMuffinRash from "../media/images/symptoms/blueberry-muffin-rash.jpg?url";
 import brainFog from "../media/images/symptoms/brain-fog.jpg?url";
@@ -85,6 +86,7 @@ import internuclearOphthalmoplegia from "../media/images/symptoms/internuclear-o
 import jaundice from "../media/images/symptoms/jaundice.jpg?url";
 import kernigSign from "../media/images/symptoms/kernig-sign.jpg?url";
 import koplikSpots from "../media/images/symptoms/koplik-spots.jpg?url";
+import lacrimation from "../media/images/symptoms/lacrimation.jpg?url";
 import lhermitteSign from "../media/images/symptoms/lhermitte-sign.jpg?url";
 import lichenification from "../media/images/symptoms/lichenification.jpg?url";
 import lymphadenopathy from "../media/images/symptoms/lymphadenopathy.jpg?url";
@@ -114,6 +116,7 @@ import papilledema from "../media/images/symptoms/papilledema.jpg?url";
 import papule from "../media/images/symptoms/papule.jpg?url";
 import paresis from "../media/images/symptoms/paresis.jpg?url";
 import peripheralEdema from "../media/images/symptoms/peripheral-edema.jpg?url";
+import periorbitalPain from "../media/images/symptoms/periorbital-pain.svg?url";
 import photophobia from "../media/images/symptoms/photophobia.jpg?url";
 import pinpointPupils from "../media/images/symptoms/pinpoint-pupils.png?url";
 import plaque from "../media/images/symptoms/plaque.jpg?url";
@@ -126,11 +129,13 @@ import presyncope from "../media/images/symptoms/presyncope.jpg?url";
 import primitiveNose from "../media/images/symptoms/primitive-nose.jpg?url";
 import prodromal from "../media/images/symptoms/prodromal.jpg?url";
 import proptosis from "../media/images/symptoms/proptosis.jpg?url";
+import ptosis from "../media/images/symptoms/ptosis.jpg?url";
 import pruritus from "../media/images/symptoms/pruritus.jpg?url";
 import psychosis from "../media/images/symptoms/psychosis.jpg?url";
 import pulmonaryEdema from "../media/images/symptoms/pulmonary-edema.jpg?url";
 import purpura from "../media/images/symptoms/purpura.jpg?url";
 import raccoonEyes from "../media/images/symptoms/raccoon-eyes.jpg?url";
+import rhinorrhea from "../media/images/symptoms/rhinorrhea.svg?url";
 import raynaudPhenomenon from "../media/images/symptoms/raynaud-phenomenon.jpg?url";
 import sciatica from "../media/images/symptoms/sciatica.jpg?url";
 import sclerodactyly from "../media/images/symptoms/sclerodactyly.jpg?url";
@@ -172,6 +177,7 @@ export type SymptomImageId = Extract<
   | "arthritis"
   | "ataxia"
   | "autonomic-dysfunction"
+  | "autonomic-symptoms"
   | "babinski-reflex"
   | "blueberry-muffin-rash"
   | "brain-fog"
@@ -242,6 +248,7 @@ export type SymptomImageId = Extract<
   | "jaundice"
   | "kernig-sign"
   | "koplik-spots"
+  | "lacrimation"
   | "lhermitte-sign"
   | "lichenification"
   | "lymphadenopathy"
@@ -271,6 +278,7 @@ export type SymptomImageId = Extract<
   | "papule"
   | "paresis"
   | "peripheral-edema"
+  | "periorbital-pain"
   | "photophobia"
   | "pinpoint-pupils"
   | "plaque"
@@ -283,11 +291,13 @@ export type SymptomImageId = Extract<
   | "primitive-nose"
   | "prodromal"
   | "proptosis"
+  | "ptosis"
   | "pruritus"
   | "psychosis"
   | "pulmonary-edema"
   | "purpura"
   | "raccoon-eyes"
+  | "rhinorrhea"
   | "raynaud-phenomenon"
   | "sciatica"
   | "sclerodactyly"
@@ -335,6 +345,7 @@ export const SYMPTOM_IMAGES: Partial<Record<SymptomImageId, string>> = {
   "arthritis": extensionAssetUrl(arthritis),
   "ataxia": extensionAssetUrl(ataxia),
   "autonomic-dysfunction": extensionAssetUrl(autonomicDysfunction),
+  "autonomic-symptoms": extensionAssetUrl(autonomicSymptoms),
   "babinski-reflex": extensionAssetUrl(babinskiReflex),
   "blueberry-muffin-rash": extensionAssetUrl(blueberryMuffinRash),
   "brain-fog": extensionAssetUrl(brainFog),
@@ -405,6 +416,7 @@ export const SYMPTOM_IMAGES: Partial<Record<SymptomImageId, string>> = {
   "jaundice": extensionAssetUrl(jaundice),
   "kernig-sign": extensionAssetUrl(kernigSign),
   "koplik-spots": extensionAssetUrl(koplikSpots),
+  "lacrimation": extensionAssetUrl(lacrimation),
   "lhermitte-sign": extensionAssetUrl(lhermitteSign),
   "lichenification": extensionAssetUrl(lichenification),
   "lymphadenopathy": extensionAssetUrl(lymphadenopathy),
@@ -434,6 +446,7 @@ export const SYMPTOM_IMAGES: Partial<Record<SymptomImageId, string>> = {
   "papule": extensionAssetUrl(papule),
   "paresis": extensionAssetUrl(paresis),
   "peripheral-edema": extensionAssetUrl(peripheralEdema),
+  "periorbital-pain": extensionAssetUrl(periorbitalPain),
   "photophobia": extensionAssetUrl(photophobia),
   "pinpoint-pupils": extensionAssetUrl(pinpointPupils),
   "plaque": extensionAssetUrl(plaque),
@@ -446,11 +459,13 @@ export const SYMPTOM_IMAGES: Partial<Record<SymptomImageId, string>> = {
   "primitive-nose": extensionAssetUrl(primitiveNose),
   "prodromal": extensionAssetUrl(prodromal),
   "proptosis": extensionAssetUrl(proptosis),
+  "ptosis": extensionAssetUrl(ptosis),
   "pruritus": extensionAssetUrl(pruritus),
   "psychosis": extensionAssetUrl(psychosis),
   "pulmonary-edema": extensionAssetUrl(pulmonaryEdema),
   "purpura": extensionAssetUrl(purpura),
   "raccoon-eyes": extensionAssetUrl(raccoonEyes),
+  "rhinorrhea": extensionAssetUrl(rhinorrhea),
   "raynaud-phenomenon": extensionAssetUrl(raynaudPhenomenon),
   "sciatica": extensionAssetUrl(sciatica),
   "sclerodactyly": extensionAssetUrl(sclerodactyly),
@@ -501,6 +516,10 @@ export const SYMPTOM_IMAGE_ATTRIBUTIONS: Partial<
   "arthritis": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:arthritis.jpg" },
   "ataxia": { label: "Wikimedia Commons (Diseases of the nervous system - a text-book of neurology and psychiatry (1915) (14780493694).jpg)", url: "https://commons.wikimedia.org/wiki/File:Diseases_of_the_nervous_system_-_a_text-book_of_neurology_and_psychiatry_(1915)_(14780493694).jpg" },
   "autonomic-dysfunction": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:autonomic-dysfunction.jpg" },
+  "autonomic-symptoms": {
+    label: "Wikimedia Commons (Horner's Syndrome and Autonomic innervation of the eye.svg)",
+    url: "https://commons.wikimedia.org/wiki/File:Horner%27s_Syndrome_and_Autonomic_innervation_of_the_eye.svg",
+  },
   "babinski-reflex": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:babinski-reflex.png" },
   "blueberry-muffin-rash": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:blueberry-muffin-rash.jpg" },
   "brain-fog": {
@@ -598,6 +617,10 @@ export const SYMPTOM_IMAGE_ATTRIBUTIONS: Partial<
   "jaundice": { label: "Wikimedia Commons (Troupial (Icterus icterus).jpg)", url: "https://commons.wikimedia.org/wiki/File:Troupial_(Icterus_icterus).jpg" },
   "kernig-sign": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:kernig-sign.jpg" },
   "koplik-spots": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:koplik-spots.jpg" },
+  "lacrimation": {
+    label: "Wikimedia Commons (Conjunctivitis.jpg)",
+    url: "https://commons.wikimedia.org/wiki/File:Conjunctivitis.jpg",
+  },
   "lhermitte-sign": { label: "Wikimedia Commons (MULTIPLE SCLEROSIS.JPG)", url: "https://commons.wikimedia.org/wiki/File:MULTIPLE_SCLEROSIS.JPG" },
   "lichenification": { label: "Wikimedia Commons (Clinical features of atopic dermatitis in English.png)", url: "https://commons.wikimedia.org/wiki/File:Clinical_features_of_atopic_dermatitis_in_English.png" },
   "lymphadenopathy": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:lymphadenopathy.jpg" },
@@ -630,6 +653,10 @@ export const SYMPTOM_IMAGE_ATTRIBUTIONS: Partial<
   "papule": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:papule.jpg" },
   "paresis": { label: "Wikimedia Commons (Hemiatrophy and hemiplegia of the left side of the tongue Wellcome L0062734.jpg)", url: "https://commons.wikimedia.org/wiki/File:Hemiatrophy_and_hemiplegia_of_the_left_side_of_the_tongue_Wellcome_L0062734.jpg" },
   "peripheral-edema": { label: "Wikimedia Commons (Pitting Edema2008.jpg)", url: "https://commons.wikimedia.org/wiki/File:Pitting_Edema2008.jpg" },
+  "periorbital-pain": {
+    label: "Wikimedia Commons (Cluster headache svg hariadhi.svg)",
+    url: "https://commons.wikimedia.org/wiki/File:Cluster_headache_svg_hariadhi.svg",
+  },
   "photophobia": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:photophobia.jpg" },
   "pinpoint-pupils": {
     label: "Wikimedia Commons (Mydriasis and miosis.png), JohnPaulCook, CC0",
@@ -645,6 +672,10 @@ export const SYMPTOM_IMAGE_ATTRIBUTIONS: Partial<
   "primitive-nose": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:primitive-nose.jpg" },
   "prodromal": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:prodromal.jpg" },
   "proptosis": { label: "Wikimedia Commons (Proptosis and lid retraction from Graves' Disease.jpg)", url: "https://commons.wikimedia.org/wiki/File:Proptosis_and_lid_retraction_from_Graves'_Disease.jpg" },
+  "ptosis": {
+    label: "Wikimedia Commons (Myasthenia gravis ptosis reversal.jpg)",
+    url: "https://commons.wikimedia.org/wiki/File:Myasthenia_gravis_ptosis_reversal.jpg",
+  },
   "pruritus": { label: "Wikimedia Commons (Photographic atlas of the diseases of the skin; a series of ninety-six plates, comprising nearly two hundred illustrations, with descriptive text, and a treatise on cutaneous therapeutics (1905) (14783268942).jpg)", url: "https://commons.wikimedia.org/wiki/File:Photographic_atlas_of_the_diseases_of_the_skin;_a_series_of_ninety-six_plates,_comprising_nearly_two_hundred_illustrations,_with_descriptive_text,_and_a_treatise_on_cutaneous_therapeutics_(1905)_(14783268942).jpg" },
   "psychosis": { label: "Wikimedia Commons (Atypical Psychosis Genetic Map.jpg)", url: "https://commons.wikimedia.org/wiki/File:Atypical_Psychosis_Genetic_Map.jpg" },
   "pulmonary-edema": { label: "Wikimedia Commons (Respiratory system - Pulmonary edema -- Smart-Servier.png)", url: "https://commons.wikimedia.org/wiki/File:Respiratory_system_-_Pulmonary_edema_--_Smart-Servier.png" },
@@ -652,6 +683,10 @@ export const SYMPTOM_IMAGE_ATTRIBUTIONS: Partial<
   "raccoon-eyes": {
     label: "Wikimedia Commons (Bilateral periorbital ecchymosis (raccoon eyes).jpg)",
     url: "https://commons.wikimedia.org/wiki/File:Bilateral_periorbital_ecchymosis_(raccoon_eyes).jpg",
+  },
+  "rhinorrhea": {
+    label: "Wikimedia Commons (Symptoms of swine flu-numbered.svg)",
+    url: "https://commons.wikimedia.org/wiki/File:Symptoms_of_swine_flu-numbered.svg",
   },
   "raynaud-phenomenon": { label: "Wikimedia Commons (Raynaud syndrome on female airman's hand.jpg)", url: "https://commons.wikimedia.org/wiki/File:Raynaud_syndrome_on_female_airman's_hand.jpg" },
   "sciatica": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:sciatica.jpg" },
@@ -698,6 +733,8 @@ export const SYMPTOM_IMAGE_CAPTIONS: Partial<Record<SymptomImageId, string>> = {
   "arthritis": "Clinical or pathologic image illustrating arthritis",
   "ataxia": "Clinical or pathologic image illustrating ataxia",
   "autonomic-dysfunction": "Clinical or pathologic image illustrating autonomic dysfunction",
+  "autonomic-symptoms":
+    "Horner syndrome diagram — sympathetic and parasympathetic innervation of the eye illustrating cranial autonomic symptoms",
   "babinski-reflex": "Clinical or pathologic image illustrating babinski reflex",
   "blueberry-muffin-rash": "Clinical or pathologic image illustrating blueberry muffin rash",
   "brain-fog": "Hypothyroid myxedema — metabolic endocrine cause of slowed mentation and subjective cognitive clouding",
@@ -776,6 +813,7 @@ export const SYMPTOM_IMAGE_CAPTIONS: Partial<Record<SymptomImageId, string>> = {
   "jaundice": "Scleral icterus — yellow discoloration of the conjunctiva from hyperbilirubinemia",
   "kernig-sign": "Kernig sign — resistance to knee extension with hip flexed suggests meningeal irritation",
   "koplik-spots": "Clinical or pathologic image illustrating koplik spots",
+  "lacrimation": "Allergic conjunctivitis with conjunctival injection and tearing",
   "lhermitte-sign": "Clinical or pathologic image illustrating lhermitte sign",
   "lichenification": "Clinical or pathologic image illustrating lichenification",
   "lymphadenopathy": "Cervical lymphadenopathy — enlarged palpable anterior cervical lymph nodes",
@@ -806,6 +844,8 @@ export const SYMPTOM_IMAGE_CAPTIONS: Partial<Record<SymptomImageId, string>> = {
   "papule": "Violaceous flat-topped papules of lichen planus on the shins (solid, ≤1 cm)",
   "paresis": "Clinical or pathologic image illustrating paresis",
   "peripheral-edema": "Clinical or pathologic image illustrating peripheral edema",
+  "periorbital-pain":
+    "Cluster headache symptom diagram — unilateral periorbital pain distribution with autonomic features",
   "photophobia": "Clinical or pathologic image illustrating photophobia",
   "pinpoint-pupils":
     "Miosis (narrow pupil) vs mydriasis — pinpoint pupils are extreme miosis seen in opioid toxicity and pontine lesions",

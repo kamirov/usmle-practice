@@ -291,3 +291,8 @@ leydig-cell.png
   Source: Wikimedia Commons — Gray1149.png
   Page: https://commons.wikimedia.org/wiki/File:Gray1149.png
   Description: Testis cross-section showing seminiferous tubules and interstitial Leydig cells
+
+anterior-pituitary-histology.jpg
+  Source: Wikimedia Commons — Histology of pars distalis of the anterior pituitary with chromophobes, basophils, and acidophils, annotated.jpg
+  Page: https://commons.wikimedia.org/wiki/File:Histology_of_pars_distalis_of_the_anterior_pituitary_with_chromophobes,_basophils,_and_acidophils,_annotated.jpg
+  Description: Annotated anterior pituitary acidophils and basophils — lactotroph, somatotroph, corticotroph, thyrotroph, gonadotroph
