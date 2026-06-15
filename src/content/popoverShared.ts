@@ -1,4 +1,5 @@
 import type { MediaAttribution } from "../data/media";
+import type { NephronSegmentEntry } from "../data/nephron";
 import { IMAGE_FLAG_LEGEND } from "../shared/categoryLegend";
 import { createElement, ImageOff } from "lucide";
 import { renderPopoverTitle, type PopoverCategory } from "./popoverIcons";
@@ -89,6 +90,31 @@ export function renderPediatricsSection(note: string): string {
     <div class="usmle-organ-popover__section">
       <div class="usmle-organ-popover__section-label">Pediatrics</div>
       <div class="usmle-organ-popover__mechanism">${note}</div>
+    </div>
+  `;
+}
+
+export function renderNephronSectionNav(options: {
+  previous?: NephronSegmentEntry;
+  next?: NephronSegmentEntry;
+}): string {
+  const { previous, next } = options;
+  if (!previous && !next) return "";
+
+  const items = [
+    previous
+      ? `<div class="usmle-organ-popover__nav-item"><span class="usmle-organ-popover__nav-label">Previous</span> ${previous.name}</div>`
+      : "",
+    next
+      ? `<div class="usmle-organ-popover__nav-item"><span class="usmle-organ-popover__nav-label">Next</span> ${next.name}</div>`
+      : "",
+  ]
+    .filter(Boolean)
+    .join("");
+
+  return `
+    <div class="usmle-organ-popover__section usmle-organ-popover__section-nav">
+      <div class="usmle-organ-popover__nav">${items}</div>
     </div>
   `;
 }

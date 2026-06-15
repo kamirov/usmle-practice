@@ -260,6 +260,7 @@ export const NEPHRON_SEGMENTS: NephronSegmentEntry[] = [
     name: "Thin Descending Limb (Loop of Henle)",
     etymology: "thin = narrow wall + descending = moving down + limb = nephron segment + eponym: Friedrich Henle",
     aliases: [
+      "thin descending limb (loop of henle)",
       "thin descending limb of the loop of henle",
       "thin descending limb",
       "descending limb of the loop of henle",
@@ -281,6 +282,7 @@ export const NEPHRON_SEGMENTS: NephronSegmentEntry[] = [
     name: "Thick Ascending Limb (Loop of Henle)",
     etymology: "thick = wide wall + ascending = moving up + limb = nephron segment + eponym: Friedrich Henle",
     aliases: [
+      "thick ascending limb (loop of henle)",
       "thick ascending limb of the loop of henle",
       "thick ascending limb of loop of henle",
       "ascending limb of the loop of henle",
@@ -422,6 +424,22 @@ export function getNephronSegmentById(
   id: string,
 ): NephronSegmentEntry | undefined {
   return nephronSegmentById.get(id);
+}
+
+export function getAdjacentNephronSegments(id: string): {
+  previous?: NephronSegmentEntry;
+  next?: NephronSegmentEntry;
+} {
+  const index = NEPHRON_SEGMENTS.findIndex((segment) => segment.id === id);
+  if (index === -1) return {};
+
+  return {
+    previous: index > 0 ? NEPHRON_SEGMENTS[index - 1] : undefined,
+    next:
+      index < NEPHRON_SEGMENTS.length - 1
+        ? NEPHRON_SEGMENTS[index + 1]
+        : undefined,
+  };
 }
 
 export interface NephronAliasMatch {

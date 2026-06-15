@@ -656,6 +656,33 @@
   margin-bottom: 0;
 }
 
+.usmle-organ-popover__section-nav {
+  grid-column: 1 / -1;
+  margin-top: 2px;
+  padding-top: 8px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.usmle-organ-popover__nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  font-size: 12px;
+  color: #334155;
+}
+
+.usmle-organ-popover__nav-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.usmle-organ-popover__nav-label {
+  font-weight: 600;
+  color: #64748b;
+}
+
 .usmle-organ-popover__list,
 .usmle-organ-popover__derivatives {
   margin: 6px 0 0;

@@ -12095,7 +12095,14 @@ export const CONDITIONS: ConditionEntry[] = [
     aliases: [
       "neonatal respiratory distress syndrome",
       "nrds",
+      "rds",
+      "respiratory distress syndrome",
+      "respiratory distress syndrome of newborn",
+      "infant respiratory distress syndrome",
+      "irds",
       "hyaline membrane disease",
+      "hmd",
+      "surfactant deficiency syndrome",
     ],
     definition:
       "Respiratory failure in premature neonates from surfactant deficiency and immature lungs.",
@@ -12123,6 +12130,7 @@ export const CONDITIONS: ConditionEntry[] = [
       "Bronchopulmonary dysplasia",
     ],
     distinguishFrom: [
+      "ARDS — adult/acute inflammatory lung injury (sepsis, trauma); not surfactant deficiency of prematurity",
       "Transient tachypnea of newborn — term/near-term, fluid in lungs, resolves in 24–72 h",
       "Meconium aspiration — post-term, meconium-stained fluid",
     ],
@@ -12131,9 +12139,11 @@ export const CONDITIONS: ConditionEntry[] = [
       "Antenatal corticosteroids to accelerate fetal lung maturity",
     ],
     boardsPearls: [
-      "Surfactant deficiency in premature infants",
+      "RDS (neonatal) = surfactant deficiency in premature infants — hyaline membrane disease",
+      "vs ARDS — RDS is neonatal surfactant lack; ARDS is acute diffuse alveolar damage in older patients",
       "Lecithin/sphingomyelin ratio ≥2 indicates lung maturity",
-      "Treat with surfactant replacement and respiratory support",
+      "Treat with surfactant replacement and respiratory support; lung-protective ventilation to limit barotrauma",
+      "Grunting maintains end-expiratory pressure — classic neonatal sign",
     ],
     pediatrics:
       "Classic disease of prematurity; antenatal corticosteroids accelerate fetal surfactant production and reduce incidence.",
@@ -26352,7 +26362,6 @@ export const CONDITIONS: ConditionEntry[] = [
       "acute respiratory distress syndrome",
       "ards",
       "adult respiratory distress syndrome",
-      "respiratory distress syndrome",
       "noncardiogenic pulmonary edema",
       "diffuse alveolar damage",
       "dad",
@@ -26391,6 +26400,7 @@ export const CONDITIONS: ConditionEntry[] = [
       "Pulmonary fibrosis in prolonged ARDS",
     ],
     distinguishFrom: [
+      "Neonatal RDS — prematurity, surfactant deficiency, hyaline membranes; not acute inflammatory ARDS",
       "Cardiogenic pulmonary edema — JVD, S3, cardiomegaly, ↑ BNP, pulmonary capillary wedge pressure ↑",
       "Pneumonia alone — may cause ARDS but isolated lobar consolidation without diffuse injury is pneumonia",
       "Acute bronchitis — no bilateral infiltrates or severe hypoxemia",
@@ -26407,6 +26417,7 @@ export const CONDITIONS: ConditionEntry[] = [
       "PaO₂/FiO₂ <300 defines ARDS severity bands on boards",
       "Sepsis and pneumonia are top precipitants",
       "Low tidal volume ventilation improves mortality (ARDSNet paradigm)",
+      "vs neonatal RDS — ARDS is acute inflammatory permeability injury; RDS is neonatal surfactant deficiency",
     ],
     pediatrics:
       "Neonatal RDS is surfactant deficiency, not the same entity as adult ARDS; pediatric ARDS follows similar permeability injury from sepsis, pneumonia, or aspiration with lung-protective ventilation principles.",

@@ -4,7 +4,10 @@ import {
   getClinicalStrategyImageCaptionForId,
   getClinicalStrategyImageForId,
 } from "../../data/clinicalStrategyMedia";
-import { getNephronSegmentById } from "../../data/nephron";
+import {
+  getAdjacentNephronSegments,
+  getNephronSegmentById,
+} from "../../data/nephron";
 import { getProcedureById } from "../../data/procedures";
 import {
   getProcedureImageAttributionForId,
@@ -14,6 +17,7 @@ import {
 import { renderPopoverTitle } from "../popoverIcons";
 import {
   renderListSection,
+  renderNephronSectionNav,
   renderPediatricsSection,
   renderPopoverMediaBlock,
   renderRichPopoverContent,
@@ -26,6 +30,8 @@ export function renderNephronPopover(
   const segment = getNephronSegmentById(nephronSegmentId);
   if (!segment || !popover) return false;
 
+  const { previous, next } = getAdjacentNephronSegments(nephronSegmentId);
+
   popover.classList.add("usmle-organ-popover--rich");
   popover.innerHTML = renderRichPopoverContent(
     `
@@ -37,6 +43,7 @@ export function renderNephronPopover(
     ${renderListSection("Reabsorbs", segment.reabsorbs)}
     ${renderListSection("Secretes", segment.secretes)}
     ${renderListSection("Boards pearls", segment.boardsPearls)}
+    ${renderNephronSectionNav({ previous, next })}
   `,
   );
   return true;

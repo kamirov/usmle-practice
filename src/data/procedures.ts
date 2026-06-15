@@ -1699,6 +1699,57 @@ export const PROCEDURES: ProcedureEntry[] = [
       "Neonatal SpO₂ screening detects critical congenital heart disease; pre- and post-ductal saturations compare for ductal-dependent lesions. Foot probe preferred in infants.",
   },
   {
+    id: "body-plethysmography",
+    name: "Body Plethysmography",
+    etymology:
+      "Greek plēthysma = increase/fullness + graphē = writing/recording — measures volume changes of the body in a sealed chamber",
+    aliases: [
+      "body plethysmography",
+      "body plethysmographies",
+      "plethysmography",
+      "plethysmographies",
+      "body box plethysmography",
+      "body box",
+      "body box testing",
+      "plethysmographic lung volumes",
+      "lung plethysmography",
+      "whole body plethysmography",
+      "body plethysmograph",
+      "plethysmograph",
+    ],
+    definition:
+      "Pulmonary function test performed in a sealed booth (body box) — measures changes in box pressure and mouth pressure during breathing maneuvers (including panting against a closed shutter) to calculate lung volumes, especially residual volume (RV), total lung capacity (TLC), and functional residual capacity (FRC), using Boyle's law.",
+    indications: [
+      "Quantify lung volumes when spirometry alone is insufficient — RV, TLC, FRC not measurable by spirometry",
+      "Confirm obstructive air trapping (↑ RV, ↑ TLC) in COPD, asthma, bronchiectasis",
+      "Characterize restrictive physiology — ↓ TLC in ILD, chest wall disease, neuromuscular weakness",
+      "Evaluate hyperinflation and air trapping when FEV₁/FVC is obstructive but RV unknown",
+      "Preoperative assessment and disability evaluation when full lung volumes needed",
+    ],
+    keyMeasurements: [
+      "Total lung capacity (TLC)",
+      "Residual volume (RV) and RV/TLC ratio",
+      "Functional residual capacity (FRC)",
+      "Thoracic gas volume",
+      "Airway resistance (optional component in same session)",
+    ],
+    complications: [
+      "Claustrophobia or anxiety in sealed booth — may limit test quality",
+      "Fatigue or poor effort → unreliable volumes",
+      "Not performed during acute severe respiratory distress",
+    ],
+    boardsPearls: [
+      "Body plethysmography = gold-standard booth test for RV, TLC, FRC — spirometry alone cannot measure RV",
+      "Uses Boyle's law — pressure-volume relationship in sealed box during panting maneuver",
+      "Obstructive air trapping: ↑ RV and often ↑ TLC confirmed when spirometry shows ↓ FEV₁/FVC",
+      "vs spirometry — spirometry measures FEV₁ and FVC only; plethysmography measures static lung volumes",
+      "vs helium dilution / nitrogen washout — alternative lung volume methods; plethysmography includes trapped gas in noncommunicating spaces (more sensitive for air trapping)",
+      "Restrictive pattern: ↓ TLC on plethysmography with normal or ↑ FEV₁/FVC",
+    ],
+    pediatrics:
+      "Pediatric body plethysmography uses smaller booths and coached panting maneuvers; same principles for detecting air trapping in asthma and cystic fibrosis. Infants may use specialized infant plethysmography techniques.",
+  },
+  {
     id: "mechanical-ventilation",
     name: "Mechanical Ventilation",
     etymology:
