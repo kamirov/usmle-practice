@@ -3122,6 +3122,8 @@ export const SYMPTOMS: SymptomEntry[] = [
       "nuchal rigidity",
       "neck stiffness",
       "stiff neck",
+      "neck rigidity",
+      "neck rigidities",
       "meningeal neck stiffness",
       "cervical rigidity",
     ],
@@ -6356,6 +6358,133 @@ export const SYMPTOMS: SymptomEntry[] = [
     ],
     pediatrics:
       "Pediatric insomnia often behavioral (limit-setting, bedtime resistance) or linked to ADHD, anxiety, or autism; hyperthyroidism and OSA remain in differential for new-onset sleep difficulty in adolescents.",
+  },
+  {
+    id: "orthostatic-hypotension",
+    name: "Orthostatic Hypotension",
+    etymology: "Greek orthos = straight/upright + statikos = standing + hypo = under + tension = pressure",
+    aliases: [
+      "orthostatic hypotension",
+      "postural hypotension",
+      "orthostatic bp drop",
+      "orthostatic blood pressure drop",
+      "oh",
+    ],
+    definition:
+      "Drop in blood pressure upon standing — typically defined as ≥20 mmHg fall in systolic or ≥10 mmHg fall in diastolic within 3 minutes of upright posture, often causing presyncope or syncope.",
+    mechanism:
+      "Upright posture pools blood in lower extremities → transient ↓ venous return and cardiac output → BP falls unless baroreceptor reflex increases sympathetic tone and vasoconstriction; failure from autonomic neuropathy, volume depletion, medications, or adrenal insufficiency causes symptomatic hypotension.",
+    thinkOf: [
+      "Autonomic neuropathy (diabetes, Parkinson disease, pure autonomic failure)",
+      "Adrenal insufficiency (Addison disease)",
+      "Volume depletion / dehydration",
+      "Antihypertensives, diuretics, α-blockers, nitrates",
+      "Elderly with baroreflex impairment",
+    ],
+    pairWith: [
+      "Orthostatic hypotension + hyperpigmentation + fatigue → Addison disease",
+      "Orthostatic hypotension + resting tremor + rigidity → Parkinson autonomic dysfunction",
+      "Orthostatic hypotension + antihypertensive use → medication effect",
+      "Orthostatic hypotension + presyncope on standing → check supine vs standing BP",
+      "Orthostatic hypotension + diarrhea/vomiting → hypovolemia",
+    ],
+    distinguishFrom: [
+      "Vasovagal syncope — reflex bradycardia/hypotension with trigger, not sustained orthostatic drop",
+      "Cardiac syncope — arrhythmia or outflow obstruction; may not improve with lying flat alone",
+      "Postural orthostatic tachycardia syndrome (POTS) — ↑ HR ≥30 bpm without required BP drop",
+      "Hypotension at rest — not positional",
+    ],
+    pediatrics:
+      "Orthostatic hypotension in adolescents may present as dizziness on standing; POTS is more common in young women — distinguish sustained BP drop from tachycardia-predominant orthostatic intolerance.",
+  },
+  {
+    id: "papilledema",
+    name: "Papilledema",
+    etymology: "Greek papilla = nipple + oedema = swelling",
+    aliases: [
+      "papilledema",
+      "papilledemas",
+      "papilloedema",
+      "optic disc edema",
+      "optic disc swelling",
+      "bilateral disc edema",
+      "bilateral papilledema",
+    ],
+    definition:
+      "Bilateral swelling of the optic disc from elevated intracranial pressure transmitted along the optic nerve sheath — a fundoscopic sign of raised ICP, not primary optic nerve inflammation.",
+    mechanism:
+      "↑ ICP impedes axoplasmic flow in optic nerve fibers at the lamina cribrosa → optic disc edema with blurred margins, venous engorgement, and eventually cotton-wool spots or hemorrhages; chronic elevation causes optic atrophy.",
+    thinkOf: [
+      "Idiopathic intracranial hypertension (pseudotumor cerebri)",
+      "Brain tumor or mass lesion",
+      "Cerebral venous sinus thrombosis",
+      "Malignant hypertension",
+      "Hydrocephalus",
+      "Subarachnoid hemorrhage",
+    ],
+    pairWith: [
+      "Papilledema + headache + obese woman → IIH",
+      "Papilledema + thunderclap headache → subarachnoid hemorrhage",
+      "Papilledema + focal neuro signs → mass lesion; neuroimaging before LP",
+      "Papilledema + severe hypertension → hypertensive emergency",
+      "Papilledema + sixth nerve palsy → false localizing sign from ↑ ICP",
+    ],
+    distinguishFrom: [
+      "Optic neuritis — usually unilateral, painful eye movement, demyelinating (MS)",
+      "Ischemic optic neuropathy — sudden vision loss, altitudinal defect, pallid swelling",
+      "Hypertensive retinopathy — flame hemorrhages, cotton-wool spots; papilledema in malignant HTN",
+      "Optic disc drusen — can mimic disc elevation; autofluorescence helps",
+    ],
+    pediatrics:
+      "Papilledema in children warrants urgent neuroimaging; IIH occurs in adolescents especially with obesity; do not perform LP before CT/MRI if focal signs or papilledema present.",
+  },
+  {
+    id: "ankle-reflex",
+    name: "Ankle Reflex",
+    etymology: "Latin anculus = ring/hook + reflexus = bent back",
+    aliases: [
+      "ankle reflex",
+      "ankle reflexes",
+      "achilles reflex",
+      "achilles reflexes",
+      "achilles jerk",
+      "ankle jerk",
+      "ankle jerks",
+      "s1 reflex",
+      "s1 deep tendon reflex",
+      "plantar flexion reflex",
+    ],
+    definition:
+      "Deep tendon (stretch) reflex elicited by tapping the Achilles tendon, producing plantar flexion of the foot — primarily tests the S1 nerve root and tibial nerve arc.",
+    mechanism:
+      "Sudden stretch of the gastrocnemius–soleus muscle spindles → Ia afferents via the tibial nerve to S1 dorsal horn → monosynaptic activation of α-motor neurons → plantar flexion; UMN lesions exaggerate the reflex, LMN or peripheral nerve lesions diminish or abolish it.",
+    thinkOf: [
+      "Peripheral neuropathy (diabetes) — decreased or absent ankle reflexes early",
+      "Guillain-Barré syndrome — progressive areflexia including ankles",
+      "Hypothyroidism — delayed relaxation of deep tendon reflexes (Woltman sign)",
+      "Magnesium toxicity — loss of deep tendon reflexes (including ankle) before respiratory depression",
+      "Cauda equina / S1 radiculopathy — asymmetric or absent ankle reflex",
+      "UMN lesion — brisk ankle reflex with hyperreflexia elsewhere",
+      "Normal finding when symmetric and appropriate for age",
+    ],
+    pairWith: [
+      "Absent ankle reflexes + stocking-glove sensory loss → diabetic peripheral neuropathy",
+      "Ascending weakness + areflexia → Guillain-Barré",
+      "Delayed ankle jerk relaxation + bradycardia + weight gain → hypothyroidism",
+      "Preeclampsia on magnesium sulfate — monitor ankle reflexes; loss precedes respiratory depression",
+      "Absent ankle reflex + back pain + saddle anesthesia → cauda equina syndrome",
+      "Brisk ankle reflex + Babinski + spasticity → UMN syndrome",
+      "Asymmetric ankle reflex → focal S1 radiculopathy or sciatic nerve lesion",
+    ],
+    distinguishFrom: [
+      "Babinski sign — pathologic toe extension, not a deep tendon reflex",
+      "Plantar reflex (normal) — superficial flexor response, not Achilles stretch reflex",
+      "Clonus — sustained rhythmic oscillation after sudden stretch, not a single jerk",
+      "Hyperreflexia (general) — exaggerated reflexes at multiple levels, not ankle-specific finding",
+      "Knee jerk (patellar reflex) — L3–L4, not S1",
+    ],
+    pediatrics:
+      "Ankle reflexes may be difficult to elicit in infants; physiologic hyperreflexia is common early in life. Absent reflexes with hypotonia in infancy suggest peripheral neuropathy or spinal muscular atrophy; asymmetric reflexes warrant neurologic evaluation.",
   },
 ];
 

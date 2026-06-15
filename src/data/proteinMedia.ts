@@ -5,10 +5,11 @@ import adenosineDeaminase from "../media/images/proteins/adenosine-deaminase.jpg
 import ceruloplasmin from "../media/images/proteins/ceruloplasmin.jpg?url";
 import filaggrin from "../media/images/proteins/filaggrin.png?url";
 import intrinsicFactor from "../media/images/proteins/intrinsic-factor.png?url";
+import tyrosineHydroxylase from "../media/images/proteins/tyrosine-hydroxylase.png?url";
 
 export type ProteinImageId = Extract<
   ProteinEntry["id"],
-  "adenosine-deaminase" | "ceruloplasmin" | "filaggrin" | "intrinsic-factor"
+  "adenosine-deaminase" | "ceruloplasmin" | "filaggrin" | "intrinsic-factor" | "tyrosine-hydroxylase"
 >;
 
 function extensionAssetUrl(path: string): string {
@@ -21,6 +22,7 @@ export const PROTEIN_IMAGES: Partial<Record<ProteinImageId, string>> = {
   ceruloplasmin: extensionAssetUrl(ceruloplasmin),
   filaggrin: extensionAssetUrl(filaggrin),
   "intrinsic-factor": extensionAssetUrl(intrinsicFactor),
+  "tyrosine-hydroxylase": extensionAssetUrl(tyrosineHydroxylase),
 };
 
 export const PROTEIN_IMAGE_ATTRIBUTIONS: Partial<
@@ -42,6 +44,10 @@ export const PROTEIN_IMAGE_ATTRIBUTIONS: Partial<
     label: "Wikimedia Commons (Histology of gastric chief cell.png)",
     url: "https://commons.wikimedia.org/wiki/File:Histology_of_gastric_chief_cell.png",
   },
+  "tyrosine-hydroxylase": {
+    label: "Wikimedia Commons (Tyrosine hydroxylase showing all four subunits.png)",
+    url: "https://commons.wikimedia.org/wiki/File:Tyrosine_hydroxylase_showing_all_four_subunits.png",
+  },
 };
 
 export const PROTEIN_IMAGE_CAPTIONS: Partial<Record<ProteinImageId, string>> = {
@@ -53,6 +59,8 @@ export const PROTEIN_IMAGE_CAPTIONS: Partial<Record<ProteinImageId, string>> = {
     "Filaggrin aggregates keratin filaments in the stratum corneum — FLG loss-of-function increases atopic dermatitis and ichthyosis vulgaris risk",
   "intrinsic-factor":
     "Gastric parietal cell glycoprotein that binds B12 for ileal absorption — autoantibodies cause pernicious anemia",
+  "tyrosine-hydroxylase":
+    "Tyrosine hydroxylase tetramer — rate-limiting enzyme converting tyrosine to L-DOPA in catecholamine synthesis",
 };
 
 export function getProteinImageForId(id: string): string | undefined {

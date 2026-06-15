@@ -4523,6 +4523,87 @@ export const MICROBIOLOGY: MicrobiologyEntry[] = [
     pediatrics:
       "S. aureus (coagulase-positive) causes pediatric impetigo, abscess, and scalded skin syndrome; MRSA increasingly common in community.",
   },
+  {
+    id: "protozoan-parasite",
+    name: "Protozoan Parasite",
+    etymology: "Greek protos = first + Greek zoon = animal + Greek parasitos = one who eats at another's table",
+    aliases: [
+      "protozoan parasite",
+      "protozoan parasites",
+      "protozoan",
+      "protozoans",
+      "protozoa",
+      "protozoal parasite",
+      "protozoal parasites",
+      "protozoal infection",
+      "protozoal infections",
+    ],
+    type: "parasite",
+    definition:
+      "Unicellular eukaryotic parasites (Kingdom Protista) that cause human disease via trophozoite and/or cyst life-cycle stages — high-yield Step 1 organisms include Plasmodium, Giardia, Entamoeba, Toxoplasma, Cryptosporidium, and Trichomonas.",
+    morphology: [
+      "Unicellular eukaryotes — nucleus, organelles (often flagella, apical complex)",
+      "Trophozoite (motile feeding form) and cyst/oocyst (environmentally resistant)",
+      "Often diagnosed on stool O&P, blood smear, or wet mount",
+    ],
+    virulenceFactors: [
+      "Life-cycle stage switching (cyst vs trophozoite)",
+      "Invasion of intestinal mucosa (Entamoeba) or RBCs (Plasmodium)",
+      "Immune evasion — antigenic variation, intracellular survival (Toxoplasma)",
+      "Chlorine-resistant oocysts (Cryptosporidium)",
+    ],
+    transmission: [
+      "Fecal-oral — Giardia, Entamoeba, Cryptosporidium, Cyclospora",
+      "Vector-borne — Plasmodium (Anopheles mosquito)",
+      "Sexual — Trichomonas vaginalis",
+      "Tissue cyst ingestion / cat exposure — Toxoplasma gondii",
+    ],
+    diseases: [
+      "Malaria (Plasmodium spp.)",
+      "Giardiasis — fatty malodorous diarrhea",
+      "Amebic dysentery and liver abscess (Entamoeba histolytica)",
+      "Toxoplasmosis — congenital, chorioretinitis, encephalitis in AIDS",
+      "Cryptosporidiosis — watery diarrhea; AIDS chronic diarrhea",
+      "Trichomoniasis — frothy vaginitis, motile trophozoites on wet mount",
+    ],
+    classicPresentation: [
+      "Travel + cyclical fever + hemolysis → malaria",
+      "Camping/hiker watery fatty diarrhea → Giardia",
+      "Trophozoites with ingested RBCs → Entamoeba histolytica",
+      "Motile flagellated trophozoites on wet mount → Trichomonas",
+      "Acid-fast oocysts in stool + AIDS → Cryptosporidium",
+    ],
+    diagnosis: [
+      "Stool O&P — trophozoites and cysts",
+      "Blood smear — malaria rings/schizonts/gametocytes",
+      "Stool antigen/PCR for Giardia, Cryptosporidium",
+      "Serology (Toxoplasma IgM/IgG); wet mount (Trichomonas)",
+    ],
+    treatment: [
+      "Malaria — artemisinin-based combination therapy; primaquine for hypnozoites (P. vivax/ovale)",
+      "Giardia — metronidazole or tinidazole",
+      "Entamoeba — metronidazole + luminal agent (paromomycin/iodoquinol)",
+      "Toxoplasma — pyrimethamine + sulfadiazine + leucovorin",
+      "Cryptosporidium — nitazoxanide; immune reconstitution in AIDS",
+      "Trichomonas — metronidazole (treat partners)",
+    ],
+    distinguishFrom: [
+      "Helminth (worm) parasite — multicellular; eggs in stool (Ascaris, Schistosoma)",
+      "Bacteria — prokaryotic; no trophozoite/cyst life cycle",
+      "Fungi — chitin cell wall, hyphae/yeast forms",
+      "Viruses — obligate intracellular, acellular",
+    ],
+    boardsPearls: [
+      "Protozoa = unicellular eukaryotes; helminths = multicellular worms",
+      "Plasmodium only apicomplexan with intraerythrocytic rings on blood smear",
+      "Giardia — pear-shaped trophozoite with two nuclei (face-like)",
+      "Entamoeba histolytica trophozoites ingest RBCs — distinguishes from E. dispar",
+      "Cryptosporidium oocysts are acid-fast and chlorine-resistant",
+      "Toxoplasma — cat feces oocysts; congenital triad: chorioretinitis, hydrocephalus, intracranial calcifications",
+    ],
+    pediatrics:
+      "Congenital toxoplasmosis and malaria in children are high-yield; Giardia common in daycare and camping exposures; treat pregnant patients for toxoplasmosis and malaria per specialist guidelines.",
+  },
 ];
 
 const microbiologyById = new Map(

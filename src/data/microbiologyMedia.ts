@@ -67,6 +67,7 @@ import mssa from "../media/images/microbiology/mssa.jpg?url";
 import staphylococcusEpidermidis from "../media/images/microbiology/staphylococcus-epidermidis.jpg?url";
 import paramyxovirus from "../media/images/microbiology/paramyxovirus.jpg?url";
 import parvovirusB19 from "../media/images/microbiology/parvovirus-b19.jpg?url";
+import protozoanParasite from "../media/images/microbiology/protozoan-parasite.jpg?url";
 
 export type MicrobiologyImageId = MicrobiologyEntry["id"];
 
@@ -146,6 +147,7 @@ export const MICROBIOLOGY_IMAGES: Partial<Record<MicrobiologyImageId, string>> =
     "serratia-marcescens": extensionAssetUrl(serratiaMarcescens),
     paramyxovirus: extensionAssetUrl(paramyxovirus),
     "parvovirus-b19": extensionAssetUrl(parvovirusB19),
+    "protozoan-parasite": extensionAssetUrl(protozoanParasite),
   };
 
 export const MICROBIOLOGY_IMAGE_ATTRIBUTIONS: Partial<
@@ -427,6 +429,10 @@ export const MICROBIOLOGY_IMAGE_ATTRIBUTIONS: Partial<
     label: "Wikimedia Commons (Tube coagulase test of Staphylococcus aureus -Positive and negative Demonstration.jpg)",
     url: "https://commons.wikimedia.org/wiki/File:Tube_coagulase_test_of_Staphylococcus_aureus_-Positive_and_negative_Demonstration.jpg",
   },
+  "protozoan-parasite": {
+    label: "Wikimedia Commons (Giardia-spp.--infected--gerbil-intestine.jpg)",
+    url: "https://commons.wikimedia.org/wiki/File:Giardia-spp.--infected--gerbil-intestine.jpg",
+  },
 };
 
 export const MICROBIOLOGY_IMAGE_CAPTIONS: Partial<
@@ -545,6 +551,8 @@ export const MICROBIOLOGY_IMAGE_CAPTIONS: Partial<
     "Lugol-stained intracytoplasmic inclusion bodies (glycogen) in host cells — classic chlamydial morphology",
   "serratia-marcescens":
     "Serratia marcescens colonies with red prodigiosin pigment on agar",
+  "protozoan-parasite":
+    "Giardia trophozoites in infected intestinal mucosa — representative unicellular protozoan parasite",
 };
 
 export function getMicrobiologyImageForId(

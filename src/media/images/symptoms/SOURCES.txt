@@ -182,6 +182,17 @@ insomnia.jpg
   Source: Wikimedia Commons — Depiction of a person suffering from Insomnia (sleeplessness) (cropped).png
   Page: https://commons.wikimedia.org/wiki/File:Depiction_of_a_person_suffering_from_Insomnia_(sleeplessness)_(cropped).png
 
+orthostatic-hypotension.jpg
+  Source: Local copy from presyncope.jpg
+
+papilledema.jpg
+  Source: Wikimedia Commons — Papilledema.jpg
+  Page: https://commons.wikimedia.org/wiki/File:Papilledema.jpg
+
+ankle-reflex.jpg
+  Source: Wikimedia Commons — Medical diagnosis for the student and practitioner (1922) (14598069420).jpg
+  Page: https://commons.wikimedia.org/wiki/File:Medical_diagnosis_for_the_student_and_practitioner_(1922)_(14598069420).jpg
+
 koplik-spots.jpg
   Source: Wikimedia Commons — Koplik spots, measles 6111 lores.jpg
   Page: https://commons.wikimedia.org/wiki/File:Koplik_spots,_measles_6111_lores.jpg

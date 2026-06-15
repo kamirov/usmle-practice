@@ -52,3 +52,19 @@ tea-and-toast-diet.jpg
 torch-infections.jpg
   Source: Wikimedia Commons — ToRCH IgG Combo Rapid Test-Negative.jpg
   Page: https://commons.wikimedia.org/wiki/File:ToRCH_IgG_Combo_Rapid_Test-Negative.jpg
+
+postsynaptic-dopamine.png
+  Source: Wikimedia Commons — TAAR1 Dopamine.svg
+  Page: https://commons.wikimedia.org/wiki/File:TAAR1_Dopamine.svg
+
+presynaptic-dopamine-reuptake.png
+  Source: Wikimedia Commons — TAAR1 Dopamine.svg
+  Page: https://commons.wikimedia.org/wiki/File:TAAR1_Dopamine.svg
+
+nigrostriatal-pathway.png
+  Source: Wikimedia Commons — Nigrostriatal pathway.svg
+  Page: https://commons.wikimedia.org/wiki/File:Nigrostriatal_pathway.svg
+
+neurotrophic.png
+  Source: Wikimedia Commons — Satellite glial cells invaricella zoster virus infection.png
+  Page: https://commons.wikimedia.org/wiki/File:Satellite_glial_cells_invaricella_zoster_virus_infection.png

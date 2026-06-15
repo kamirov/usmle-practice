@@ -4918,6 +4918,196 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
     pediatrics:
       "TORCH workup in neonates with hepatosplenomegaly, thrombocytopenia, IUGR, or congenital cataracts; CMV saliva PCR and rubella/toxoplasma IgM are key tests. MMR prevents congenital rubella.",
   },
+  {
+    id: "postsynaptic-dopamine",
+    name: "Postsynaptic Dopamine",
+    etymology: "Latin post = after + Greek syn = together + haptien = to fasten + dopamine = catecholamine neurotransmitter",
+    aliases: [
+      "postsynaptic dopamine",
+      "postsynaptic dopamine signaling",
+      "postsynaptic dopamine receptors",
+      "post-synaptic dopamine",
+    ],
+    definition:
+      "Dopamine acting on receptors located on the postsynaptic (target) neuron or effector cell after release into the synaptic cleft — mediates excitatory or inhibitory responses depending on receptor subtype and second-messenger coupling.",
+    examples: [
+      "D₁ receptors (Gs) in striatum — ↑ cAMP; facilitate direct pathway motor output",
+      "D₂ receptors (Gi) — ↓ cAMP; inhibit indirect pathway; predominant target of antipsychotics",
+      "Mesolimbic D₂ blockade — ↓ positive psychotic symptoms (hallucinations, delusions)",
+      "Nigrostriatal D₂ blockade — parkinsonism and EPS from antipsychotics",
+      "Renal D₁ receptors — natriuresis and vasodilation at low dopamine doses",
+    ],
+    boardsPearls: [
+      "Postsynaptic D₁ = Gs (↑ cAMP); D₂ = Gi (↓ cAMP) — know coupling for boards",
+      "Antipsychotics block postsynaptic D₂ — therapeutic in psychosis but cause EPS via nigrostriatal pathway",
+      "Parkinson disease = ↓ dopaminergic input to striatum — L-DOPA restores postsynaptic stimulation",
+      "Cocaine/amphetamines ↑ synaptic dopamine → enhanced postsynaptic receptor activation",
+      "vs presynaptic D₂ autoreceptors — inhibit dopamine release when stimulated",
+    ],
+    distinguishFrom: [
+      "Presynaptic dopamine — synthesis, packaging, and release from dopaminergic terminal",
+      "Presynaptic dopamine reuptake — termination via DAT, not receptor signaling",
+      "Norepinephrine postsynaptic signaling — adrenergic α/β receptors on target cells",
+      "Dopamine precursor L-DOPA — crosses BBB; not the postsynaptic ligand itself",
+    ],
+    pediatrics:
+      "Tourette syndrome and ADHD involve dopaminergic pathway modulation; antipsychotic-induced EPS in adolescents reflects postsynaptic D₂ blockade in nigrostriatal pathway.",
+  },
+  {
+    id: "presynaptic-dopamine-reuptake",
+    name: "Presynaptic Dopamine Reuptake",
+    etymology: "Latin pre- = before + Greek syn = together + haptien = to fasten + re- = again + uptake = absorption",
+    aliases: [
+      "presynaptic dopamine reuptake",
+      "dopamine reuptake",
+      "dopamine reuptake transporter",
+      "dat reuptake",
+      "dopamine transporter reuptake",
+      "presynaptic dat",
+    ],
+    definition:
+      "Active transport of dopamine from the synaptic cleft back into the presynaptic terminal via the dopamine transporter (DAT, SLC6A3) — primary mechanism terminating synaptic dopamine signaling and recycling transmitter for repackaging into vesicles.",
+    examples: [
+      "Cocaine — blocks DAT → ↑ synaptic dopamine → euphoria, sympathomimetic toxicity",
+      "Amphetamines — reverse DAT, release dopamine into synapse and block reuptake",
+      "Methylphenidate — DAT inhibitor used in ADHD",
+      "Reserpine (historical) — depletes vesicular monoamine stores, ↓ releasable dopamine",
+      "Parkinson disease — L-DOPA increases dopamine available for release; reuptake still occurs",
+    ],
+    boardsPearls: [
+      "DAT (SLC6A3) = presynaptic dopamine reuptake transporter — cocaine/amphetamine target",
+      "Cocaine blocks reuptake of dopamine, NE, and serotonin — mixed stimulant toxidrome",
+      "Amphetamines cause reverse transport via DAT/NET — release + reuptake block",
+      "TCAs and SNRIs primarily block NE/5-HT reuptake; bupropion blocks DA reuptake",
+      "vs COMT/MAO — intracellular/extracellular metabolism, not synaptic reuptake",
+      "DAT imaging used in research; not routine clinical test on Step 1",
+    ],
+    distinguishFrom: [
+      "Synaptic dopamine concentration — result of release minus reuptake/degradation",
+      "Postsynaptic dopamine — receptor-mediated signaling on target cell",
+      "Serotonin reuptake (SERT) — separate transporter; SSRIs target SERT not DAT",
+      "Norepinephrine reuptake (NET) — distinct transporter; SNRIs inhibit NET",
+      "MAO — degrades cytosolic dopamine in presynaptic terminal, not cleft clearance",
+    ],
+    pediatrics:
+      "Stimulant medications for ADHD (methylphenidate, amphetamines) modulate presynaptic dopamine reuptake/release; cocaine toxicity in adolescents presents with agitation, tachycardia, and hypertension from DAT blockade.",
+  },
+  {
+    id: "synaptic-dopamine-concentration",
+    name: "Synaptic Dopamine Concentration",
+    etymology: "Greek syn = together + haptien = to fasten + dopamine + Latin concentrare = to bring together",
+    aliases: [
+      "synaptic dopamine concentration",
+      "synaptic dopamine levels",
+      "synaptic cleft dopamine",
+      "extracellular dopamine",
+      "synaptic dopamine",
+      "dopamine synaptic concentration",
+    ],
+    definition:
+      "Concentration of dopamine in the synaptic cleft between presynaptic dopaminergic and postsynaptic target cells — determined by the balance of vesicular release, presynaptic reuptake (DAT), enzymatic degradation (MAO/COMT), and diffusion away from the synapse.",
+    examples: [
+      "Cocaine/amphetamines — ↑ synaptic dopamine → enhanced reward, psychosis risk at high levels",
+      "Parkinson disease — ↓ dopamine release from substantia nigra → ↓ striatal dopamine signaling",
+      "Antipsychotic D₂ blockade — does not change cleft concentration but reduces postsynaptic effect",
+      "L-DOPA therapy — ↑ dopamine synthesis → ↑ releasable pool and synaptic availability",
+      "Reserpine — ↓ vesicular stores → ↓ dopamine release despite normal reuptake machinery",
+    ],
+    boardsPearls: [
+      "Synaptic DA ↑ = cocaine (DAT block), amphetamines (release + block)",
+      "Synaptic DA ↓ = Parkinson (neuronal loss), reserpine (depletion)",
+      "Concentration ≠ receptor occupancy alone — antipsychotics block receptors without raising DA",
+      "MAO inhibitors ↑ cytosolic DA available for release; COMT metabolizes extracellular DA to HVA",
+      "Dopamine at low renal dose acts on D₁ receptors; loses selectivity at higher concentrations",
+    ],
+    distinguishFrom: [
+      "Presynaptic dopamine reuptake — mechanism lowering cleft concentration",
+      "Postsynaptic dopamine — signaling after binding receptors, not concentration per se",
+      "Plasma catecholamines — systemic/endocrine measurement, not synaptic cleft",
+      "Urinary HVA/VMA — dopamine metabolites, indirect marker not live synaptic level",
+      "Tyrosine hydroxylase activity — biosynthetic capacity upstream of release",
+    ],
+    pediatrics:
+      "Neonatal abstinence syndrome from maternal opioids/stimulants may involve dysregulated catecholamine systems; ADHD stimulants modulate synaptic dopamine in developing brain under specialist guidance.",
+  },
+  {
+    id: "nigrostriatal-pathway",
+    name: "Nigrostriatal Pathway",
+    etymology: "Latin niger = black + striatum = striped + Latin via = way",
+    aliases: [
+      "nigrostriatal",
+      "nigrostriatal pathway",
+      "nigrostriatal tract",
+      "nigrostriatal dopaminergic pathway",
+      "nigro-striatal pathway",
+      "substantia nigra to striatum pathway",
+    ],
+    definition:
+      "Dopaminergic projection from substantia nigra pars compacta in the midbrain to the dorsal striatum (caudate and putamen) — critical for initiation and modulation of voluntary movement; degeneration causes Parkinson disease motor features.",
+    examples: [
+      "Parkinson disease — loss of pigmented dopaminergic neurons in substantia nigra → ↓ striatal dopamine → bradykinesia, rigidity, resting tremor",
+      "Antipsychotic D₂ blockade in striatum — drug-induced parkinsonism (EPS)",
+      "Levodopa/carbidopa — restores dopamine signaling in depleted nigrostriatal pathway",
+      "MPTP toxicity — selective nigrostriatal neuron destruction (parkinsonism model)",
+      "Huntington disease — indirect pathway imbalance in striatum downstream of nigrostriatal input",
+    ],
+    boardsPearls: [
+      "Nigrostriatal = substantia nigra → striatum (motor dopamine pathway)",
+      "vs mesolimbic pathway — VTA to nucleus accumbens; reward/psychosis; antipsychotics target both",
+      "vs tuberoinfundibular — hypothalamic dopamine inhibiting prolactin",
+      "Parkinson = nigrostriatal dopamine loss; L-DOPA replaces precursor",
+      "Typical antipsychotics → nigrostriatal D₂ blockade → parkinsonism",
+      "Substantia nigra degeneration visible as depigmentation on midbrain cross-section",
+    ],
+    distinguishFrom: [
+      "Mesolimbic dopamine pathway — psychosis and reward; also blocked by antipsychotics",
+      "Mesocortical pathway — prefrontal cognition; D₂ blockade may worsen negative symptoms",
+      "Tuberoinfundibular pathway — prolactin inhibition; D₂ block → hyperprolactinemia",
+      "Corticospinal tract — upper motor neuron; spasticity not bradykinesia",
+      "Rubrospinal tract — flexor tone facilitation",
+    ],
+    pediatrics:
+      "Juvenile parkinsonism is rare; nigrostriatal pathway physiology explains why antipsychotics cause EPS in children and why L-DOPA treats motor symptoms in genetic dopamine deficiency disorders.",
+  },
+  {
+    id: "neurotrophic",
+    name: "Neurotrophic",
+    etymology: "Greek neuron = nerve + Greek trophikos = nourishing",
+    aliases: [
+      "neurotrophic",
+      "neurotrophic factor",
+      "neurotrophic factors",
+      "neurotrophin",
+      "neurotrophins",
+      "neurotrophic signaling",
+      "neurotrophic support",
+    ],
+    definition:
+      "Describes signaling molecules and pathways that nourish neurons — promoting survival, growth, differentiation, and synaptic maintenance; neurotrophins (NGF, BDNF, NT-3, NT-4) bind Trk receptors and the p75 neurotrophin receptor to regulate neuronal development and plasticity.",
+    examples: [
+      "NGF (nerve growth factor) — TrkA signaling; sympathetic and sensory neuron survival",
+      "BDNF — TrkB; hippocampal plasticity, learning, and mood regulation",
+      "NT-3 — TrkC; proprioceptive neuron development",
+      "HSV latency — retrograde axonal transport along sensory neurons to dorsal root ganglia",
+      "Peripheral neuropathy — impaired neurotrophic support in diabetes and toxic injury",
+    ],
+    boardsPearls: [
+      "Neurotrophins = NGF, BDNF, NT-3, NT-4; receptors = TrkA/B/C and p75NTR",
+      "Retrograde axonal transport delivers neurotrophin-receptor complexes to nucleus — HSV exploits this route to ganglia",
+      "p75NTR can promote apoptosis when neurotrophin unavailable — unbound receptor signals cell death",
+      "vs neurotropic — virus tropism for nervous tissue (e.g., rabies), not growth-factor nourishment",
+      "vs trophic hormone — pituitary hormones acting on end organs (TSH, ACTH), not neuron growth factors",
+    ],
+    distinguishFrom: [
+      "Neurotropic — pathogen affinity for neural tissue (rabies, HSV neurotropism)",
+      "Trophic hormone — hypothalamic-pituitary endocrine signals (TSH, FSH, GH)",
+      "Neurotransmitter — fast synaptic signaling (ACh, dopamine), not trophic survival support",
+      "Cytokine — immune intercellular signaling, not primary neuronal growth factor class",
+      "Amyotrophic — muscle wasting (ALS), not neuron-nourishing factor",
+    ],
+    pediatrics:
+      "Congenital insensitivity to pain with anhidrosis (HSAN IV) and some neurodevelopmental disorders involve impaired neurotrophin/Trk signaling; neonatal HSV establishes latency in sensory ganglia via retrograde transport.",
+  },
 ];
 
 const pathogenesisById = new Map(

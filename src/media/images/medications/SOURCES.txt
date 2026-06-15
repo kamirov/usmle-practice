@@ -92,3 +92,51 @@ hydrocortisone.svg
   Source: Wikimedia Commons — Hydrocortisone hemisuccinate.svg
   Page: https://commons.wikimedia.org/wiki/File:Hydrocortisone_hemisuccinate.svg
   Download: https://commons.wikimedia.org/wiki/Special:FilePath/File:Hydrocortisone_hemisuccinate.svg?width=1280
+
+alprazolam.svg
+  Source: Wikimedia Commons — Alprazolam structure.svg
+  Page: https://commons.wikimedia.org/wiki/File:Alprazolam_structure.svg
+
+amitriptyline.png
+  Source: Wikimedia Commons — Amitriptyline-from-picrate-xtal-3D-balls.png
+  Page: https://commons.wikimedia.org/wiki/File:Amitriptyline-from-picrate-xtal-3D-balls.png
+
+clonazepam.svg
+  Source: Wikimedia Commons — Clonazepam 200.svg
+  Page: https://commons.wikimedia.org/wiki/File:Clonazepam_200.svg
+
+diazepam.svg
+  Source: Wikimedia Commons — Diazepam structure 2.svg
+  Page: https://commons.wikimedia.org/wiki/File:Diazepam_structure_2.svg
+
+diphenhydramine.svg
+  Source: Wikimedia Commons — Diphenhydramine.svg
+  Page: https://commons.wikimedia.org/wiki/File:Diphenhydramine.svg
+
+quetiapine.svg
+  Source: Wikimedia Commons — Quetiapine2DACS.svg
+  Page: https://commons.wikimedia.org/wiki/File:Quetiapine2DACS.svg
+
+ramelteon.svg
+  Source: Wikimedia Commons — Ramelteon structure.svg
+  Page: https://commons.wikimedia.org/wiki/File:Ramelteon_structure.svg
+
+fluoxetine.svg
+  Source: Wikimedia Commons — (R)-Fluoxetine structure.svg
+  Page: https://commons.wikimedia.org/wiki/File:(R)-Fluoxetine_structure.svg
+
+naproxen.svg
+  Source: Wikimedia Commons — Naproxen structure.svg
+  Page: https://commons.wikimedia.org/wiki/File:Naproxen_structure.svg
+
+duloxetine.svg
+  Source: Wikimedia Commons — Duloxetine-structure.svg
+  Page: https://commons.wikimedia.org/wiki/File:Duloxetine-structure.svg
+
+oxycodone.png
+  Source: Wikimedia Commons — Oxycodone structure.png
+  Page: https://commons.wikimedia.org/wiki/File:Oxycodone_structure.png
+
+pyridoxine.svg
+  Source: Wikimedia Commons — Pyridoxine structure ver2.svg
+  Page: https://commons.wikimedia.org/wiki/File:Pyridoxine_structure_ver2.svg

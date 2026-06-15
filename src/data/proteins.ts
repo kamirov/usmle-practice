@@ -2624,6 +2624,40 @@ export const PROTEINS: ProteinEntry[] = [
       "Folate — absorbed proximally in jejunum; different mechanism from B12/IF",
     ],
   },
+  {
+    id: "tyrosine-hydroxylase",
+    name: "Tyrosine Hydroxylase",
+    etymology: "Greek tyros = cheese + -ine = amino acid + hydroxyl = OH group + -ase = enzyme",
+    aliases: [
+      "tyrosine hydroxylase",
+      "tyrosine hydroxylases",
+      "th",
+      "tyrosine 3-monooxygenase",
+      "rate-limiting enzyme dopamine synthesis",
+    ],
+    gene: "TH",
+    location:
+      "Cytosol of catecholaminergic neurons (substantia nigra, ventral tegmental area, locus coeruleus) and adrenal medullary chromaffin cells",
+    function:
+      "Rate-limiting enzyme converting tyrosine to L-DOPA (3,4-dihydroxyphenylalanine) — first committed step in dopamine, norepinephrine, and epinephrine biosynthesis; requires tetrahydrobiopterin (BH4) cofactor.",
+    mutationCauses: [
+      "Tyrosine hydroxylase deficiency — DOPA-responsive dystonia, parkinsonism, autonomic dysfunction in infancy/childhood",
+      "Segawa disease (GTP cyclohydrolase deficiency) — ↓ BH4 cofactor impairs TH activity",
+    ],
+    boardsPearls: [
+      "TH = rate-limiting step: tyrosine → L-DOPA → dopamine (AADC) → NE (DBH) → Epi (PNMT)",
+      "Parkinson disease treated with L-DOPA/carbidopa — bypasses TH deficiency in substantia nigra",
+      "Carbidopa inhibits peripheral AADC — increases CNS L-DOPA availability",
+      "BH4 cofactor required — links to phenylketonuria pathway (phenylalanine hydroxylase uses BH4)",
+      "vs dopamine β-hydroxylase — converts dopamine to NE, not rate-limiting for catecholamine synthesis overall",
+    ],
+    distinguishFrom: [
+      "Dopa decarboxylase (AADC) — converts L-DOPA to dopamine; inhibited by carbidopa peripherally",
+      "Dopamine β-hydroxylase — dopamine → norepinephrine in vesicles",
+      "Phenylalanine hydroxylase — converts Phe → Tyr; PKU enzyme, not catecholamine synthesis",
+      "Tyrosinase — melanin synthesis in melanocytes, not neurotransmitter pathway",
+    ],
+  },
 ];
 
 const proteinById = new Map(PROTEINS.map((p) => [p.id, p]));

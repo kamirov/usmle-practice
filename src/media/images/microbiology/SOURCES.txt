@@ -466,3 +466,7 @@ parvovirus-b19.jpg
 toxoplasmosis.jpg
   Source: Wikimedia Commons — Toxoplasma gondii Tachyzoite (NIH BioArt 683).svg
   Page: https://commons.wikimedia.org/wiki/File:Toxoplasma_gondii_Tachyzoite_(NIH_BioArt_683).svg
+
+protozoan-parasite.jpg
+  Source: Wikimedia Commons — Giardia-spp.--infected--gerbil-intestine.jpg
+  Page: https://commons.wikimedia.org/wiki/File:Giardia-spp.--infected--gerbil-intestine.jpg

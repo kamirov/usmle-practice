@@ -2,6 +2,7 @@ import type { MediaAttribution } from "./media";
 import type { SymptomEntry } from "./symptoms";
 
 import agonalRespirations from "../media/images/symptoms/agonal-respirations.jpg?url";
+import ankleReflex from "../media/images/symptoms/ankle-reflex.jpg?url";
 import arthralgia from "../media/images/symptoms/arthralgia.jpg?url";
 import arthritis from "../media/images/symptoms/arthritis.jpg?url";
 import ataxia from "../media/images/symptoms/ataxia.jpg?url";
@@ -60,7 +61,9 @@ import nodularLymphangitis from "../media/images/symptoms/nodular-lymphangitis.j
 import nuchalRigidity from "../media/images/symptoms/nuchal-rigidity.jpg?url";
 import nystagmus from "../media/images/symptoms/nystagmus.svg?url";
 import orthopnea from "../media/images/symptoms/orthopnea.jpg?url";
+import orthostaticHypotension from "../media/images/symptoms/orthostatic-hypotension.jpg?url";
 import palpitations from "../media/images/symptoms/palpitations.jpg?url";
+import papilledema from "../media/images/symptoms/papilledema.jpg?url";
 import papule from "../media/images/symptoms/papule.jpg?url";
 import paresis from "../media/images/symptoms/paresis.jpg?url";
 import peripheralEdema from "../media/images/symptoms/peripheral-edema.jpg?url";
@@ -96,6 +99,7 @@ import xerostomia from "../media/images/symptoms/xerostomia.jpg?url";
 export type SymptomImageId = Extract<
   SymptomEntry["id"],
   | "agonal-respirations"
+  | "ankle-reflex"
   | "arthralgia"
   | "arthritis"
   | "ataxia"
@@ -154,7 +158,9 @@ export type SymptomImageId = Extract<
   | "nuchal-rigidity"
   | "nystagmus"
   | "orthopnea"
+  | "orthostatic-hypotension"
   | "palpitations"
+  | "papilledema"
   | "papule"
   | "paresis"
   | "peripheral-edema"
@@ -196,6 +202,7 @@ function extensionAssetUrl(path: string): string {
 /** See src/media/images/symptoms/SOURCES.txt */
 export const SYMPTOM_IMAGES: Partial<Record<SymptomImageId, string>> = {
   "agonal-respirations": extensionAssetUrl(agonalRespirations),
+  "ankle-reflex": extensionAssetUrl(ankleReflex),
   "arthralgia": extensionAssetUrl(arthralgia),
   "arthritis": extensionAssetUrl(arthritis),
   "ataxia": extensionAssetUrl(ataxia),
@@ -254,7 +261,9 @@ export const SYMPTOM_IMAGES: Partial<Record<SymptomImageId, string>> = {
   "nuchal-rigidity": extensionAssetUrl(nuchalRigidity),
   "nystagmus": extensionAssetUrl(nystagmus),
   "orthopnea": extensionAssetUrl(orthopnea),
+  "orthostatic-hypotension": extensionAssetUrl(orthostaticHypotension),
   "palpitations": extensionAssetUrl(palpitations),
+  "papilledema": extensionAssetUrl(papilledema),
   "papule": extensionAssetUrl(papule),
   "paresis": extensionAssetUrl(paresis),
   "peripheral-edema": extensionAssetUrl(peripheralEdema),
@@ -292,9 +301,10 @@ export const SYMPTOM_IMAGES: Partial<Record<SymptomImageId, string>> = {
 export const SYMPTOM_IMAGE_ATTRIBUTIONS: Partial<
   Record<SymptomImageId, MediaAttribution>
 > = {
-  "agonal-respirations": {
-    label: "Wikimedia Commons (hypoxemia reference image)",
-    url: "https://commons.wikimedia.org/wiki/File:Cyanosis_extremity.jpg",
+  "agonal-respirations": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:agonal-respirations.jpg" },
+  "ankle-reflex": {
+    label: "Wikimedia Commons (Medical diagnosis for the student and practitioner, 1922)",
+    url: "https://commons.wikimedia.org/wiki/File:Medical_diagnosis_for_the_student_and_practitioner_(1922)_(14598069420).jpg",
   },
   "arthralgia": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:arthralgia.jpg" },
   "arthritis": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:arthritis.jpg" },
@@ -334,11 +344,7 @@ export const SYMPTOM_IMAGE_ATTRIBUTIONS: Partial<
   "hypoxemia": { label: "Wikimedia Commons (My Heartbeat and Peripheral Oxygen Saturation (SpO2) (29609885543).jpg)", url: "https://commons.wikimedia.org/wiki/File:My_Heartbeat_and_Peripheral_Oxygen_Saturation_(SpO2)_(29609885543).jpg" },
   "impaired-wound-healing": { label: "Wikimedia Commons (WIRA-Wiki-GH-011-de-Ulkus-Thermografie-Verlauf-unter-wIRA.png)", url: "https://commons.wikimedia.org/wiki/File:WIRA-Wiki-GH-011-de-Ulkus-Thermografie-Verlauf-unter-wIRA.png" },
   "indurated-plaque": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:indurated-plaque.jpg" },
-  "insomnia": {
-    label:
-      "Wikimedia Commons (Depiction of a person suffering from Insomnia (sleeplessness) (cropped).png)",
-    url: "https://commons.wikimedia.org/wiki/File:Depiction_of_a_person_suffering_from_Insomnia_(sleeplessness)_(cropped).png",
-  },
+  "insomnia": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:insomnia.jpg" },
   "internuclear-ophthalmoplegia": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:internuclear-ophthalmoplegia.svg" },
   "jaundice": { label: "Wikimedia Commons (Troupial (Icterus icterus).jpg)", url: "https://commons.wikimedia.org/wiki/File:Troupial_(Icterus_icterus).jpg" },
   "kernig-sign": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:kernig-sign.jpg" },
@@ -358,7 +364,9 @@ export const SYMPTOM_IMAGE_ATTRIBUTIONS: Partial<
   "nuchal-rigidity": { label: "Wikimedia Commons (Books from the Library of Congress (IA moderndiagnosi00shef).pdf)", url: "https://commons.wikimedia.org/wiki/File:Books_from_the_Library_of_Congress_(IA_moderndiagnosi00shef).pdf" },
   "nystagmus": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:nystagmus.svg" },
   "orthopnea": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:orthopnea.jpg" },
+  "orthostatic-hypotension": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:orthostatic-hypotension.jpg" },
   "palpitations": { label: "Wikimedia Commons (ECG Atrial Fibrillation 98 bpm.jpg)", url: "https://commons.wikimedia.org/wiki/File:ECG_Atrial_Fibrillation_98_bpm.jpg" },
+  "papilledema": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:papilledema.jpg" },
   "papule": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:papule.jpg" },
   "paresis": { label: "Wikimedia Commons (Hemiatrophy and hemiplegia of the left side of the tongue Wellcome L0062734.jpg)", url: "https://commons.wikimedia.org/wiki/File:Hemiatrophy_and_hemiplegia_of_the_left_side_of_the_tongue_Wellcome_L0062734.jpg" },
   "peripheral-edema": { label: "Wikimedia Commons (Pitting Edema2008.jpg)", url: "https://commons.wikimedia.org/wiki/File:Pitting_Edema2008.jpg" },
@@ -385,10 +393,7 @@ export const SYMPTOM_IMAGE_ATTRIBUTIONS: Partial<
   "thrombocytopenia": { label: "Wikimedia Commons (Oral petechiae.JPG)", url: "https://commons.wikimedia.org/wiki/File:Oral_petechiae.JPG" },
   "vesicle": { label: "Wikimedia Commons (Diseases of the mouth; for physicians, dentists, medical and dental students (1912) (14772644622).jpg)", url: "https://commons.wikimedia.org/wiki/File:Diseases_of_the_mouth;_for_physicians,_dentists,_medical_and_dental_students_(1912)_(14772644622).jpg" },
   "vomiting": { label: "Wikimedia Commons (Emesis (Emesis Cerea).JPG)", url: "https://commons.wikimedia.org/wiki/File:Emesis_(Emesis_Cerea).JPG" },
-  "vomitus": {
-    label: "Wikimedia Commons (vomiting.jpg reference)",
-    url: "https://commons.wikimedia.org/wiki/File:vomiting.jpg",
-  },
+  "vomitus": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:vomitus.jpg" },
   "watery-diarrhea": { label: "Wikimedia Commons (Cholera patient stool.jpg)", url: "https://commons.wikimedia.org/wiki/File:Cholera_patient_stool.jpg" },
   "wheezing": { label: "Wikimedia Commons (UOTW 48 - Ultrasound of the Week 5.jpg)", url: "https://commons.wikimedia.org/wiki/File:UOTW_48_-_Ultrasound_of_the_Week_5.jpg" },
   "xerosis": { label: "Wikimedia Commons (Xeroderma knuckles.jpg)", url: "https://commons.wikimedia.org/wiki/File:Xeroderma_knuckles.jpg" },
@@ -397,12 +402,9 @@ export const SYMPTOM_IMAGE_ATTRIBUTIONS: Partial<
 };
 
 export const SYMPTOM_IMAGE_CAPTIONS: Partial<Record<SymptomImageId, string>> = {
-  "agonal-respirations":
-    "Cyanosis from severe hypoxia — agonal respirations are ineffective gasping breaths in impending arrest",
-  "insomnia":
-    "Person unable to sleep — insomnia with daytime impairment; evaluate hyperthyroidism, depression, mania, OSA",
-  "vomitus":
-    "Forceful expulsion of gastric contents — bilious vomitus in neonate is surgical emergency",
+  "agonal-respirations": "Clinical or pathologic image illustrating agonal respirations",
+  "ankle-reflex":
+    "Achilles (ankle) deep tendon reflex — plantar flexion after tendon tap; primarily S1",
   "arthralgia": "Clinical or pathologic image illustrating arthralgia",
   "arthritis": "Clinical or pathologic image illustrating arthritis",
   "ataxia": "Clinical or pathologic image illustrating ataxia",
@@ -441,6 +443,7 @@ export const SYMPTOM_IMAGE_CAPTIONS: Partial<Record<SymptomImageId, string>> = {
   "hypoxemia": "Clinical or pathologic image illustrating hypoxemia",
   "impaired-wound-healing": "Clinical or pathologic image illustrating impaired wound healing",
   "indurated-plaque": "Clinical or pathologic image illustrating indurated plaque",
+  "insomnia": "Clinical or pathologic image illustrating insomnia",
   "internuclear-ophthalmoplegia": "Clinical or pathologic image illustrating internuclear ophthalmoplegia",
   "jaundice": "Scleral icterus — yellow discoloration of the conjunctiva from hyperbilirubinemia",
   "kernig-sign": "Kernig sign — resistance to knee extension with hip flexed suggests meningeal irritation",
@@ -460,7 +463,9 @@ export const SYMPTOM_IMAGE_CAPTIONS: Partial<Record<SymptomImageId, string>> = {
   "nuchal-rigidity": "Nuchal rigidity — resistance to passive neck flexion in meningeal irritation",
   "nystagmus": "Clinical or pathologic image illustrating nystagmus",
   "orthopnea": "Clinical or pathologic image illustrating orthopnea",
+  "orthostatic-hypotension": "Clinical or pathologic image illustrating orthostatic hypotension",
   "palpitations": "Clinical or pathologic image illustrating palpitations",
+  "papilledema": "Clinical or pathologic image illustrating papilledema",
   "papule": "Violaceous flat-topped papules of lichen planus on the shins (solid, ≤1 cm)",
   "paresis": "Clinical or pathologic image illustrating paresis",
   "peripheral-edema": "Clinical or pathologic image illustrating peripheral edema",
@@ -487,6 +492,7 @@ export const SYMPTOM_IMAGE_CAPTIONS: Partial<Record<SymptomImageId, string>> = {
   "thrombocytopenia": "Clinical or pathologic image illustrating thrombocytopenia",
   "vesicle": "Herpes labialis vesicles — fluid-filled epidermal lesions <1 cm",
   "vomiting": "Clinical or pathologic image illustrating vomiting",
+  "vomitus": "Clinical or pathologic image illustrating vomitus",
   "watery-diarrhea": "Clinical or pathologic image illustrating watery diarrhea",
   "wheezing": "Clinical or pathologic image illustrating wheezing",
   "xerosis": "Dry, scaling skin over the knuckles consistent with xerosis",

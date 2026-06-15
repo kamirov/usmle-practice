@@ -20,3 +20,7 @@ adenosine-deaminase.jpg
   Source: Wikimedia Commons — Ada Lovelace portrait.jpg
   Page: https://commons.wikimedia.org/wiki/File:Ada_Lovelace_portrait.jpg
   Download: https://commons.wikimedia.org/wiki/Special:FilePath/File:Ada_Lovelace_portrait.jpg?width=1280
+
+tyrosine-hydroxylase.png
+  Source: Wikimedia Commons — Tyrosine hydroxylase showing all four subunits.png
+  Page: https://commons.wikimedia.org/wiki/File:Tyrosine_hydroxylase_showing_all_four_subunits.png

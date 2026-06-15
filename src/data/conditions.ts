@@ -2465,7 +2465,7 @@ export const CONDITIONS: ConditionEntry[] = [
     id: "parkinson-disease",
     name: "Parkinson Disease",
     etymology: "eponym: James Parkinson + disease = disordered function",
-    aliases: ["parkinson disease", "parkinson's disease", "parkinsonism"],
+    aliases: ["parkinson disease", "parkinson's disease", "parkinson", "parkinsons", "parkinsonism"],
     definition:
       "Neurodegenerative disorder with loss of dopaminergic neurons in the substantia nigra pars compacta, causing bradykinesia, rigidity, and tremor.",
     pathophysiology:

@@ -867,6 +867,45 @@ export const METABOLISM: MetabolismEntry[] = [
     pediatrics:
       "Mitochondrial disorders impair NADH oxidation via ETC → lactic acidosis in infants; pyruvate and lactate elevation with normal perfusion suggests mitochondrial or PDH defect.",
   },
+  {
+    id: "mycolic-acid",
+    name: "Mycolic Acid",
+    etymology: "Greek mykes = fungus + Latin acidus = sour",
+    aliases: [
+      "mycolic acid",
+      "mycolic acids",
+      "alpha mycolic acid",
+      "α-mycolic acid",
+      "mycobacterial mycolic acid",
+      "mycolic acid cell wall",
+    ],
+    definition:
+      "Long-chain α-branched β-hydroxy fatty acids that form the waxy outer envelope of mycobacteria and related acid-fast organisms — confer acid-fast staining, slow growth, and resistance to many antibiotics; target of isoniazid.",
+    pathway: [
+      "Synthesized by fatty acid synthase II (FAS-II) in mycobacterial cytoplasm — distinct from mammalian FAS-I",
+      "KasA/KasB β-ketoacyl-ACP synthases elongate acyl chains to very long mycolic acids",
+      "Enoyl-ACP reductase (InhA) — rate-limiting step inhibited by isoniazid (after activation by catalase-peroxidase KatG)",
+      "Mycolic acids covalently linked to arabinogalactan-peptidoglycan → impermeable cell wall",
+      "Cord factor (trehalose dimycolate) — surface glycolipid with mycolate residues; virulence factor",
+    ],
+    boardsPearls: [
+      "Mycolic acid = acid-fastness (Ziehl-Neelsen red rods) and poor Gram stain penetration",
+      "Isoniazid inhibits mycolic acid synthesis via InhA after KatG activation — resistance from katG or inhA mutations",
+      "Mycobacterium tuberculosis, M. leprae, Nocardia — acid-fast organisms with mycolic acids",
+      "vs peptidoglycan — all bacteria; mycolic acid layer is additional waxy envelope in mycobacteria",
+      "Ethambutol disrupts arabinogalactan (wall assembly), not mycolic acid synthesis directly",
+      "Rifampin inhibits RNA polymerase — different TB drug target",
+    ],
+    distinguishFrom: [
+      "Peptidoglycan — universal bacterial cell wall; vancomycin/β-lactam targets",
+      "Lipoteichoic acid — Gram-positive cell envelope component, not mycobacterial",
+      "Cord factor — trehalose dimycolate virulence glycolipid; contains mycolate but is not free mycolic acid",
+      "Fatty acid β-oxidation — mammalian energy metabolism, not mycobacterial wall synthesis",
+      "Mycophenolic acid — immunosuppressant drug, unrelated to mycobacterial wall",
+    ],
+    pediatrics:
+      "Neonatal TB and disseminated mycobacterial disease require multi-drug therapy including isoniazid; BCG vaccination does not prevent all TB but protects against severe miliary/meningeal disease in infants.",
+  },
 ];
 
 const metabolismById = new Map(METABOLISM.map((entry) => [entry.id, entry]));

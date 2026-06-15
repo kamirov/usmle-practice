@@ -20,3 +20,7 @@ thymidine.jpg
 nadh.png
   Source: Local copy from metabolism/cofactor.png
   Reference: https://en.wikipedia.org/wiki/Nicotinamide_adenine_dinucleotide
+
+mycolic-acid.jpg
+  Source: Wikimedia Commons — Acid-Fast Bacilli (Mycobacterium tuberculosis) under microscope after Ziehl Neelsen staining.jpg
+  Page: https://commons.wikimedia.org/wiki/File:Acid-Fast_Bacilli_(Mycobacterium_tuberculosis)_under_microscope_after_Ziehl_Neelsen_staining.jpg
