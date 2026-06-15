@@ -104,3 +104,8 @@ cavotricuspid-isthmus.png
   Page: https://commons.wikimedia.org/wiki/File:Cavotricuspid_isthmus.png
   Description: Cavotricuspid isthmus — low right atrial isthmus targeted in typical atrial flutter ablation
 
+pulmonary-vein-ostia.png
+  Source: Wikimedia Commons — Blausen 0456 Heart Posterior.png
+  Page: https://commons.wikimedia.org/wiki/File:Blausen_0456_Heart_Posterior.png
+  Description: Posterior heart anatomy — pulmonary veins entering the left atrium at the venoatrial junction
+

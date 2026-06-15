@@ -133,6 +133,11 @@ low-fiber-diet.jpg
   Source: Local copy from pathogenesis/tea-and-toast-diet.jpg
   Reference: https://commons.wikimedia.org/wiki/File:Inflammed_mucous_layer_of_the_intestinal_villi_depicting_Celiac_disease.jpg
 
+lumen.svg
+  Source: Wikimedia Commons — Microscopic anatomy of an artery en.svg
+  Page: https://commons.wikimedia.org/wiki/File:Microscopic_anatomy_of_an_artery_en.svg
+  Description: Arterial cross-section labeling the endothelial-lined lumen and vessel wall layers
+
 meconium.jpg
   Source: Local copy from conditions/hirschsprung-disease.jpg
   Reference: https://commons.wikimedia.org/wiki/File:Biliary_atresia.jpg

@@ -511,3 +511,17 @@ psychotic-mood-disorder.jpg
 https://commons.wikimedia.org/wiki/File:Atypical_Psychosis_Genetic_Map.jpg
 Description: Psychotic mood disorder — overlap of mood and psychotic disorders (schizoaffective spectrum)
 
+myocarditis.jpg
+https://commons.wikimedia.org/wiki/File:Histopathology_of_myocarditis_with_myocyte_necrosis.jpg
+Description: Lymphocytic myocarditis with myocyte necrosis — hypereosinophilic cytoplasm and loss of striations (H&E)
+
+wolff-parkinson-white-syndrome.png
+https://commons.wikimedia.org/wiki/File:Wolff-Parkinson-White_syndrome_12_lead_EKG.png
+Ksheka / Magnus Manske (Wikimedia Commons)
+Description: 12-lead ECG demonstrating Wolff-Parkinson-White syndrome with characteristic delta waves
+
+prinzmetal-angina.png
+https://commons.wikimedia.org/wiki/File:Prinzmetal_angina.png
+Gogradgme (Wikimedia Commons)
+Description: ECG of a patient with Prinzmetal angina showing ST-segment elevation during coronary vasospasm
+

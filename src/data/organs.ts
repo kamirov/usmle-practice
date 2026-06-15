@@ -53,6 +53,31 @@ export const ORGANS: OrganEntry[] = [
       "Pulmonary veins incorporate into the left atrium; their smooth muscle from splanchnic mesoderm, endothelium from angiogenic mesoderm.",
   },
   {
+    id: "pulmonary-vein-ostia",
+    name: "Pulmonary Vein Ostia",
+    etymology: "Latin pulmo = lung + Latin vena = vein + Latin ostium = mouth/opening",
+    aliases: [
+      "pulmonary vein ostia",
+      "pulmonary vein ostium",
+      "pulmonary venous ostia",
+      "pulmonary venous ostium",
+      "openings of pulmonary veins",
+      "opening of pulmonary veins",
+      "pv ostia",
+      "pv ostium",
+      "pulmonary vein openings",
+      "pulmonary vein opening",
+      "left atrial pulmonary vein openings",
+    ],
+    germLayer: "Endoderm / Mesoderm",
+    origin:
+      "Form as the venoatrial junction where incorporated pulmonary veins open into the posterior wall of the left atrium during cardiac development; myocardial sleeves extend from the LA onto the proximal pulmonary veins.",
+    derivatives: [
+      "Four classic ostia — left superior, left inferior, right superior, right inferior pulmonary veins",
+      "Pulmonary vein myocardial sleeves — substrate for atrial fibrillation triggers",
+    ],
+  },
+  {
     id: "common-cardinal-veins",
     name: "Common Cardinal Veins",
     etymology: "Latin communis = shared + cardinalis = principal + vena = vein",
@@ -2169,6 +2194,22 @@ const ORGAN_DETAILS: Record<
     commonPathologies: ["Atherosclerosis", "Aortic aneurysm", "Aortic dissection", "Coarctation of the aorta", "Aortic regurgitation/stenosis"],
     step1Pearls: ["Cystic medial degeneration predisposes to dissection in Marfan syndrome", "Coarctation causes upper-extremity hypertension and rib notching", "AAA classically occurs below renal arteries"],
   },
+  "common-cardinal-veins": {
+    functionSummary:
+      "Embryonic paired venous channels (ducts of Cuvier) draining body into sinus venosus — right common cardinal vein forms the SVC; left contributes to coronary sinus.",
+    commonPathologies: [
+      "Abnormal venous return development",
+      "Total anomalous pulmonary venous return (distinct pathway)",
+    ],
+    step1Pearls: [
+      "Right common cardinal + right anterior cardinal vein → SVC",
+      "Left horn of sinus venosus → coronary sinus",
+      "Anterior and posterior cardinal veins unite to form common cardinal veins",
+      "Failure of left cardinal system regression contributes to venous anatomy variants",
+    ],
+    pediatrics:
+      "Congenital venous anomalies (persistent left SVC, TAPVR) trace to abnormal cardinal vein development.",
+  },
   "pulmonary-artery": {
     functionSummary: "Carries deoxygenated blood from right ventricle to lungs for gas exchange.",
     commonPathologies: ["Pulmonary embolism", "Pulmonary hypertension", "Pulmonic stenosis", "Patent ductus arteriosus shunts"],
@@ -2179,6 +2220,24 @@ const ORGAN_DETAILS: Record<
     commonPathologies: ["Pulmonary venous congestion", "Atrial fibrillation trigger foci", "Total anomalous pulmonary venous return"],
     step1Pearls: ["Pulmonary veins are the usual ablation target in atrial fibrillation", "Left heart failure raises pulmonary venous pressure -> pulmonary edema"],
     pediatrics: "Total anomalous pulmonary venous return is a cyanotic congenital lesion that requires mixing through ASD/PFO/PDA.",
+  },
+  "pulmonary-vein-ostia": {
+    functionSummary:
+      "Posterior left atrial openings where pulmonary veins drain oxygenated blood into the LA; venoatrial junction surrounded by myocardial sleeves.",
+    commonPathologies: [
+      "Atrial fibrillation (ectopic foci near ostia)",
+      "Anomalous pulmonary venous connection variants",
+      "Pulmonary venous congestion in left heart failure",
+    ],
+    step1Pearls: [
+      "Classic pattern — four separate ostia on posterior LA wall (LSPV, LIPV, RSPV, RIPV)",
+      "Common variant — left common pulmonary vein (single left ostium)",
+      "Myocardial sleeves extend 1–3 cm into proximal PVs — AF ablation targets PV antrum/ostia",
+      "vs TAPVR — pulmonary veins drain abnormally to systemic veins, not LA ostia",
+      "Ostial anatomy variable — CT/MRI mapping before AF ablation",
+    ],
+    pediatrics:
+      "TAPVR involves abnormal drainage of pulmonary veins to systemic venous circulation rather than normal LA ostia; obstructed TAPVR presents critically in neonates.",
   },
   svc: {
     functionSummary: "Returns venous blood from head, neck, upper limbs, and upper thorax to right atrium.",
@@ -3066,6 +3125,10 @@ const ORGAN_METASTASIS: Record<string, string[]> = {
   "pulmonary-vein": [
     "Not a typical primary malignancy site",
     "Atrial myxoma can involve pulmonary venous inflow; lung cancer invades locally",
+  ],
+  "pulmonary-vein-ostia": [
+    "Not a primary malignancy site",
+    "Atrial fibrillation ablation targets tissue at PV-LA junction rather than metastatic disease",
   ],
   svc: [
     "Not a typical primary malignancy site",

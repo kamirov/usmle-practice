@@ -193,6 +193,7 @@ import multipleMyeloma from "../media/images/conditions/multiple-myeloma.png?url
 import multipleSclerosis from "../media/images/conditions/multiple-sclerosis.jpg?url";
 import myastheniaGravis from "../media/images/conditions/myasthenia-gravis.jpg?url";
 import myocardialInfarction from "../media/images/conditions/myocardial-infarction.jpg?url";
+import myocarditis from "../media/images/conditions/myocarditis.jpg?url";
 import narcolepsy from "../media/images/conditions/narcolepsy.jpg?url";
 import neonatalRespiratoryDistressSyndrome from "../media/images/conditions/neonatal-respiratory-distress-syndrome.jpg?url";
 import nephriticSyndrome from "../media/images/conditions/nephritic-syndrome.jpg?url";
@@ -235,6 +236,7 @@ import primaryBiliaryCholangitis from "../media/images/conditions/primary-biliar
 import primaryBrainTumor from "../media/images/conditions/primary-brain-tumor.png?url";
 import primaryHyperparathyroidism from "../media/images/conditions/primary-hyperparathyroidism.png?url";
 import primarySclerosingCholangitis from "../media/images/conditions/primary-sclerosing-cholangitis.jpg?url";
+import prinzmetalAngina from "../media/images/conditions/prinzmetal-angina.png?url";
 import prolactinoma from "../media/images/conditions/prolactinoma.jpg?url";
 import pseudodementia from "../media/images/conditions/pseudodementia.jpg?url";
 import psoriasis from "../media/images/conditions/psoriasis.jpg?url";
@@ -310,6 +312,7 @@ import vitaminB12DeficiencyAnemia from "../media/images/conditions/vitamin-b12-d
 import vitaminDToxicity from "../media/images/conditions/vitamin-d-toxicity.svg?url";
 import volvulus from "../media/images/conditions/volvulus.jpg?url";
 import wilsonDisease from "../media/images/conditions/wilson-disease.jpg?url";
+import wolffParkinsonWhiteSyndrome from "../media/images/conditions/wolff-parkinson-white-syndrome.png?url";
 import xLinkedAgammaglobulinemia from "../media/images/conditions/x-linked-agammaglobulinemia.png?url";
 import yellowFever from "../media/images/conditions/yellow-fever.jpg?url";
 import zikaVirusInfection from "../media/images/conditions/zika-virus-infection.jpg?url";
@@ -509,6 +512,7 @@ export type ConditionImageId = Extract<
   | "multiple-sclerosis"
   | "myasthenia-gravis"
   | "myocardial-infarction"
+  | "myocarditis"
   | "narcolepsy"
   | "neonatal-respiratory-distress-syndrome"
   | "nephritic-syndrome"
@@ -551,6 +555,7 @@ export type ConditionImageId = Extract<
   | "primary-brain-tumor"
   | "primary-hyperparathyroidism"
   | "primary-sclerosing-cholangitis"
+  | "prinzmetal-angina"
   | "prolactinoma"
   | "pseudodementia"
   | "psoriasis"
@@ -626,6 +631,7 @@ export type ConditionImageId = Extract<
   | "vitamin-d-toxicity"
   | "volvulus"
   | "wilson-disease"
+  | "wolff-parkinson-white-syndrome"
   | "x-linked-agammaglobulinemia"
   | "yellow-fever"
   | "zika-virus-infection"
@@ -830,6 +836,7 @@ export const CONDITION_IMAGES: Partial<Record<ConditionImageId, string>> = {
   "multiple-sclerosis": extensionAssetUrl(multipleSclerosis),
   "myasthenia-gravis": extensionAssetUrl(myastheniaGravis),
   "myocardial-infarction": extensionAssetUrl(myocardialInfarction),
+  "myocarditis": extensionAssetUrl(myocarditis),
   "narcolepsy": extensionAssetUrl(narcolepsy),
   "neonatal-respiratory-distress-syndrome": extensionAssetUrl(neonatalRespiratoryDistressSyndrome),
   "nephritic-syndrome": extensionAssetUrl(nephriticSyndrome),
@@ -872,6 +879,7 @@ export const CONDITION_IMAGES: Partial<Record<ConditionImageId, string>> = {
   "primary-brain-tumor": extensionAssetUrl(primaryBrainTumor),
   "primary-hyperparathyroidism": extensionAssetUrl(primaryHyperparathyroidism),
   "primary-sclerosing-cholangitis": extensionAssetUrl(primarySclerosingCholangitis),
+  "prinzmetal-angina": extensionAssetUrl(prinzmetalAngina),
   "prolactinoma": extensionAssetUrl(prolactinoma),
   "pseudodementia": extensionAssetUrl(pseudodementia),
   "psoriasis": extensionAssetUrl(psoriasis),
@@ -947,6 +955,7 @@ export const CONDITION_IMAGES: Partial<Record<ConditionImageId, string>> = {
   "vitamin-d-toxicity": extensionAssetUrl(vitaminDToxicity),
   "volvulus": extensionAssetUrl(volvulus),
   "wilson-disease": extensionAssetUrl(wilsonDisease),
+  "wolff-parkinson-white-syndrome": extensionAssetUrl(wolffParkinsonWhiteSyndrome),
   "x-linked-agammaglobulinemia": extensionAssetUrl(xLinkedAgammaglobulinemia),
   "yellow-fever": extensionAssetUrl(yellowFever),
   "zika-virus-infection": extensionAssetUrl(zikaVirusInfection),
@@ -1148,6 +1157,7 @@ export const CONDITION_IMAGE_ATTRIBUTIONS: Partial<
   "multiple-sclerosis": { label: "Wikimedia Commons (Disseminated sclerosis (IA b2810349x).pdf)", url: "https://commons.wikimedia.org/wiki/File:Disseminated_sclerosis_(IA_b2810349x).pdf" },
   "myasthenia-gravis": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:myasthenia-gravis.jpg" },
   "myocardial-infarction": { label: "Wikimedia Commons (ST elevation myocardial infarction ECG (cropped).jpg)", url: "https://commons.wikimedia.org/wiki/File:ST_elevation_myocardial_infarction_ECG_(cropped).jpg" },
+  "myocarditis": { label: "Wikimedia Commons (Histopathology of myocarditis with myocyte necrosis.jpg)", url: "https://commons.wikimedia.org/wiki/File:Histopathology_of_myocarditis_with_myocyte_necrosis.jpg" },
   "narcolepsy": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:narcolepsy.jpg" },
   "neonatal-respiratory-distress-syndrome": { label: "Wikimedia Commons (Annual report - National Institutes of Health. National Heart, Lung, and Blood Advisory Council (IA annualreportnatio1985nati).pdf)", url: "https://commons.wikimedia.org/wiki/File:Annual_report_-_National_Institutes_of_Health._National_Heart,_Lung,_and_Blood_Advisory_Council_(IA_annualreportnatio1985nati).pdf" },
   "nephritic-syndrome": { label: "Wikimedia Commons (MicroHematuria.JPG)", url: "https://commons.wikimedia.org/wiki/File:MicroHematuria.JPG" },
@@ -1190,6 +1200,7 @@ export const CONDITION_IMAGE_ATTRIBUTIONS: Partial<
   "primary-brain-tumor": { label: "Wikimedia Commons (Studierfenster Brain Tumor Segmentation.png)", url: "https://commons.wikimedia.org/wiki/File:Studierfenster_Brain_Tumor_Segmentation.png" },
   "primary-hyperparathyroidism": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:primary-hyperparathyroidism.png" },
   "primary-sclerosing-cholangitis": { label: "Wikimedia Commons (CT of primary sclerosing cholangitis (hy).png)", url: "https://commons.wikimedia.org/wiki/File:CT_of_primary_sclerosing_cholangitis_(hy).png" },
+  "prinzmetal-angina": { label: "Wikimedia Commons (Prinzmetal angina.png)", url: "https://commons.wikimedia.org/wiki/File:Prinzmetal_angina.png" },
   "prolactinoma": { label: "Wikimedia Commons (ProlactinomaMRI.jpg)", url: "https://commons.wikimedia.org/wiki/File:ProlactinomaMRI.jpg" },
   "pseudodementia": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:pseudodementia.jpg" },
   "psoriasis": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:psoriasis.jpg" },
@@ -1265,6 +1276,7 @@ export const CONDITION_IMAGE_ATTRIBUTIONS: Partial<
   "vitamin-d-toxicity": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:vitamin-d-toxicity.svg" },
   "volvulus": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:volvulus.jpg" },
   "wilson-disease": { label: "Wikimedia Commons (Kayser-Fleischer ringArrow.jpg)", url: "https://commons.wikimedia.org/wiki/File:Kayser-Fleischer_ringArrow.jpg" },
+  "wolff-parkinson-white-syndrome": { label: "Wikimedia Commons (Wolff-Parkinson-White syndrome 12 lead EKG.png)", url: "https://commons.wikimedia.org/wiki/File:Wolff-Parkinson-White_syndrome_12_lead_EKG.png" },
   "x-linked-agammaglobulinemia": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:x-linked-agammaglobulinemia.png" },
   "yellow-fever": { label: "Wikimedia Commons (John Horsey sept 24 1821 yellow fever, Allegator.jpg)", url: "https://commons.wikimedia.org/wiki/File:John_Horsey_sept_24_1821_yellow_fever,_Allegator.jpg" },
   "zika-virus-infection": { label: "Wikimedia Commons (Alexius Salvador Zika-Virus.jpg)", url: "https://commons.wikimedia.org/wiki/File:Alexius_Salvador_Zika-Virus.jpg" },
@@ -1466,6 +1478,7 @@ export const CONDITION_IMAGE_CAPTIONS: Partial<
   "multiple-sclerosis": "Multiple sclerosis — demyelinating plaques in CNS white matter on MRI",
   "myasthenia-gravis": "Myasthenia gravis ptosis before and after edrophonium — fatigable ocular weakness improves transiently",
   "myocardial-infarction": "ST elevation myocardial infarction ECG",
+  "myocarditis": "Lymphocytic myocarditis with myocyte necrosis — hypereosinophilic cytoplasm and loss of striations on H&E",
   "narcolepsy": "Even at work someone with narcolepsy falls asleep in the middle of a shift 2013-11-13 16-35",
   "neonatal-respiratory-distress-syndrome": "Neonatal respiratory distress syndrome — hyaline membranes and atelectasis in preterm lung",
   "nephritic-syndrome": "MicroHematuria",
@@ -1508,6 +1521,7 @@ export const CONDITION_IMAGE_CAPTIONS: Partial<
   "primary-brain-tumor": "Studierfenster Brain Tumor Segmentation",
   "primary-hyperparathyroidism": "Parathyroid adenoma illustration, relevant to primary hyperparathyroidism",
   "primary-sclerosing-cholangitis": "CT of primary sclerosing cholangitis",
+  "prinzmetal-angina": "ECG of a patient with Prinzmetal angina showing transient ST-segment elevation during coronary vasospasm",
   "prolactinoma": "ProlactinomaMRI",
   "pseudodementia": "Historical portrait of a patient with acute melancholia, illustrating depressive cognitive impairment",
   "psoriasis": "Psoriasis",
@@ -1583,6 +1597,7 @@ export const CONDITION_IMAGE_CAPTIONS: Partial<
   "vitamin-d-toxicity": "Vitamin D toxicity lab pattern with high 25-OH vitamin D, high calcium, suppressed PTH, and renal calcium complications",
   "volvulus": "Mesenteric volvulus — twisted bowel on mesenteric axis with risk of ischemia",
   "wilson-disease": "Kayser-Fleischer ringArrow",
+  "wolff-parkinson-white-syndrome": "12-lead ECG demonstrating Wolff-Parkinson-White syndrome with characteristic delta waves",
   "x-linked-agammaglobulinemia": "B-cell activation pathway — relevant to BTK-dependent B-cell maturation in X-linked agammaglobulinemia",
   "yellow-fever": "John Horsey sept 24 1821 yellow fever, Allegator",
   "zika-virus-infection": "Alexius Salvador Zika-Virus",

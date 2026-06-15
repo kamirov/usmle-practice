@@ -4,6 +4,7 @@ import type { PathogenesisEntry } from "./pathogenesis";
 import bloodBrainBarrier from "../media/images/pathogenesis/blood-brain-barrier.svg?url";
 import hepatotoxicity from "../media/images/pathogenesis/hepatotoxicity.jpg?url";
 import lowFiberDiet from "../media/images/pathogenesis/low-fiber-diet.jpg?url";
+import lumen from "../media/images/pathogenesis/lumen.svg?url";
 import malnutrition from "../media/images/pathogenesis/malnutrition.jpg?url";
 import meconium from "../media/images/pathogenesis/meconium.jpg?url";
 import oxidativeStress from "../media/images/pathogenesis/oxidative-stress.png?url";
@@ -45,6 +46,7 @@ export type PathogenesisImageId = Extract<
   | "blood-brain-barrier"
   | "hepatotoxicity"
   | "low-fiber-diet"
+  | "lumen"
   | "malnutrition"
   | "meconium"
   | "oxidative-stress"
@@ -93,6 +95,7 @@ export const PATHOGENESIS_IMAGES: Partial<
   "blood-brain-barrier": extensionAssetUrl(bloodBrainBarrier),
   hepatotoxicity: extensionAssetUrl(hepatotoxicity),
   "low-fiber-diet": extensionAssetUrl(lowFiberDiet),
+  lumen: extensionAssetUrl(lumen),
   malnutrition: extensionAssetUrl(malnutrition),
   meconium: extensionAssetUrl(meconium),
   "oxidative-stress": extensionAssetUrl(oxidativeStress),
@@ -144,6 +147,10 @@ export const PATHOGENESIS_IMAGE_ATTRIBUTIONS: Partial<
   "low-fiber-diet": {
     label: "Wikimedia Commons (Inflammed mucous layer of the intestinal villi depicting Celiac disease.jpg)",
     url: "https://commons.wikimedia.org/wiki/File:Inflammed_mucous_layer_of_the_intestinal_villi_depicting_Celiac_disease.jpg",
+  },
+  lumen: {
+    label: "Wikimedia Commons (Microscopic anatomy of an artery en.svg)",
+    url: "https://commons.wikimedia.org/wiki/File:Microscopic_anatomy_of_an_artery_en.svg",
   },
   malnutrition: {
     label: "Wikimedia Commons (Anemia.JPG)",
@@ -300,6 +307,8 @@ export const PATHOGENESIS_IMAGE_CAPTIONS: Partial<
     "Alcoholic cirrhosis — chronic hepatotoxic injury with nodular regeneration and portal hypertension",
   "low-fiber-diet":
     "Low dietary fiber reduces stool bulk and slows transit — predisposes to constipation and diverticulosis",
+  lumen:
+    "Arterial cross-section — endothelial-lined lumen is the hollow cavity through which blood flows, surrounded by tunica intima, media, and adventitia",
   malnutrition:
     "Severe anemia and pallor — protein-calorie malnutrition with wasting and micronutrient deficits",
   meconium:

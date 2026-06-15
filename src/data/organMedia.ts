@@ -20,6 +20,7 @@ import caudate from "../media/images/organs/caudate.png?url";
 import caudaEquina from "../media/images/organs/cauda-equina.png?url";
 import mammillaryBodies from "../media/images/organs/mammillary-bodies.jpg?url";
 import papillaryMuscle from "../media/images/organs/papillary-muscle.png?url";
+import pulmonaryVeinOstia from "../media/images/organs/pulmonary-vein-ostia.png?url";
 import putamen from "../media/images/organs/putamen.png?url";
 import medianSulcusOfTheTongue from "../media/images/organs/median-sulcus-of-the-tongue.jpg?url";
 import foramenCecum from "../media/images/organs/foramen-cecum.jpg?url";
@@ -47,6 +48,7 @@ export type OrganImageId = Extract<
   | "cauda-equina"
   | "mammillary-bodies"
   | "papillary-muscle"
+  | "pulmonary-vein-ostia"
   | "putamen"
   | "median-sulcus-of-the-tongue"
   | "foramen-cecum"
@@ -79,6 +81,7 @@ export const ORGAN_IMAGES: Partial<Record<OrganImageId, string>> = {
   "cauda-equina": extensionAssetUrl(caudaEquina),
   "mammillary-bodies": extensionAssetUrl(mammillaryBodies),
   "papillary-muscle": extensionAssetUrl(papillaryMuscle),
+  "pulmonary-vein-ostia": extensionAssetUrl(pulmonaryVeinOstia),
   putamen: extensionAssetUrl(putamen),
   "median-sulcus-of-the-tongue": extensionAssetUrl(medianSulcusOfTheTongue),
   "foramen-cecum": extensionAssetUrl(foramenCecum),
@@ -166,6 +169,10 @@ export const ORGAN_IMAGE_ATTRIBUTIONS: Partial<
     label: "Wikimedia Commons (Chordae tendineae spuriae of left ventricle.png)",
     url: "https://commons.wikimedia.org/wiki/File:Chordae_tendineae_spuriae_of_left_ventricle.png",
   },
+  "pulmonary-vein-ostia": {
+    label: "Wikimedia Commons (Blausen 0456 Heart Posterior.png)",
+    url: "https://commons.wikimedia.org/wiki/File:Blausen_0456_Heart_Posterior.png",
+  },
   putamen: {
     label: "Wikimedia Commons (Overview of reward structures in the human brain.jpg)",
     url: "https://commons.wikimedia.org/wiki/File:Overview_of_reward_structures_in_the_human_brain.jpg",
@@ -228,6 +235,8 @@ export const ORGAN_IMAGE_CAPTIONS: Partial<Record<OrganImageId, string>> = {
     "Midsagittal brain — mammillary bodies on the ventral hypothalamus; injured in Wernicke-Korsakoff syndrome",
   "papillary-muscle":
     "Papillary muscles and chordae tendineae anchoring atrioventricular valve leaflets in the left ventricle",
+  "pulmonary-vein-ostia":
+    "Posterior heart anatomy — pulmonary veins entering the left atrium at the venoatrial junction",
   putamen:
     "Putamen — outer lentiform nucleus component of dorsal striatum; target of nigrostriatal dopamine",
   "median-sulcus-of-the-tongue":
