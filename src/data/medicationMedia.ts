@@ -1,16 +1,16 @@
 import type { MedicationEntry } from "./medications";
 import type { MediaAttribution } from "./media";
 
-import antipsychotics from "../media/images/medications/antipsychotics.svg?url";
+import antipsychotics from "../media/images/medications/antipsychotics.jpg?url";
 import calcineurinInhibitors from "../media/images/medications/calcineurin-inhibitors.svg?url";
 import dexamethasone from "../media/images/medications/dexamethasone.svg?url";
-import glatiramer from "../media/images/medications/glatiramer.svg?url";
+import glatiramer from "../media/images/medications/glatiramer.webp?url";
 import hydrocortisone from "../media/images/medications/hydrocortisone.svg?url";
 import interferonBeta from "../media/images/medications/interferon-beta.svg?url";
 import polyclonalFabAntivenom from "../media/images/medications/polyclonal-fab-antivenom.png?url";
 import riboflavin from "../media/images/medications/riboflavin.png?url";
 import vasopressors from "../media/images/medications/vasopressors.png?url";
-import antiTnfTherapy from "../media/images/medications/anti-tnf-therapy.svg?url";
+import antiTnfTherapy from "../media/images/medications/anti-tnf-therapy.png?url";
 import daptomycin from "../media/images/medications/daptomycin.svg?url";
 import linezolid from "../media/images/medications/linezolid.svg?url";
 import nafcillin from "../media/images/medications/nafcillin.svg?url";
@@ -60,48 +60,48 @@ export const MEDICATION_IMAGE_ATTRIBUTIONS: Partial<
   Record<MedicationImageId, MediaAttribution>
 > = {
   antipsychotics: {
-    label: "Created locally; reference: Dopaminergic pathways",
-    url: "https://en.wikipedia.org/wiki/Dopaminergic_pathways",
+    label: "Wikimedia Commons (Overview of reward structures in the human brain.jpg)",
+    url: "https://commons.wikimedia.org/wiki/File:Overview_of_reward_structures_in_the_human_brain.jpg",
   },
   "anti-tnf-therapy": {
-    label: "Created locally; reference: Tumor necrosis factor alpha",
-    url: "https://en.wikipedia.org/wiki/Tumor_necrosis_factor_alpha",
+    label: "Wikimedia Commons (Human tumor necrosis factor alpha PDB 1TNF.png)",
+    url: "https://commons.wikimedia.org/wiki/File:Human_tumor_necrosis_factor_alpha_PDB_1TNF.png",
   },
   "calcineurin-inhibitors": {
-    label: "Created locally; reference: Calcineurin",
-    url: "https://en.wikipedia.org/wiki/Calcineurin",
+    label: "Wikimedia Commons (Cyclosporine prescriptions (DrugStats).svg)",
+    url: "https://commons.wikimedia.org/wiki/File:Cyclosporine_prescriptions_(DrugStats).svg",
   },
   dexamethasone: {
-    label: "Created locally; reference: Dexamethasone",
-    url: "https://en.wikipedia.org/wiki/Dexamethasone",
+    label: "Wikimedia Commons (Dexamethasone structure.svg)",
+    url: "https://commons.wikimedia.org/wiki/File:Dexamethasone_structure.svg",
   },
   daptomycin: {
-    label: "Created locally; reference: Daptomycin",
-    url: "https://en.wikipedia.org/wiki/Daptomycin",
+    label: "Wikimedia Commons (Daptomycin.svg)",
+    url: "https://commons.wikimedia.org/wiki/File:Daptomycin.svg",
   },
   linezolid: {
-    label: "Created locally; reference: Linezolid",
-    url: "https://en.wikipedia.org/wiki/Linezolid",
+    label: "Wikimedia Commons (Struktur Linezolid.svg)",
+    url: "https://commons.wikimedia.org/wiki/File:Struktur_Linezolid.svg",
   },
   nafcillin: {
-    label: "Created locally; reference: Nafcillin",
-    url: "https://en.wikipedia.org/wiki/Nafcillin",
+    label: "Wikimedia Commons (Nafcillin.svg)",
+    url: "https://commons.wikimedia.org/wiki/File:Nafcillin.svg",
   },
   oxacillin: {
-    label: "Created locally; reference: Oxacillin",
-    url: "https://en.wikipedia.org/wiki/Oxacillin",
+    label: "Wikimedia Commons (Struktur Oxacillin.svg)",
+    url: "https://commons.wikimedia.org/wiki/File:Struktur_Oxacillin.svg",
   },
   glatiramer: {
-    label: "Created locally; reference: Glatiramer acetate",
-    url: "https://en.wikipedia.org/wiki/Glatiramer_acetate",
+    label: "Wikimedia Commons (Some of the pharmacological modes-of-action (PMA) of GA-treatment of MS patients.webp)",
+    url: "https://commons.wikimedia.org/wiki/File:Some_of_the_pharmacological_modes-of-action_(PMA)_of_GA-treatment_of_MS_patients.webp",
   },
   "interferon-beta": {
     label: "Created locally; reference: Interferon beta",
     url: "https://en.wikipedia.org/wiki/Interferon_beta",
   },
   hydrocortisone: {
-    label: "Created locally; reference: Hydrocortisone",
-    url: "https://en.wikipedia.org/wiki/Hydrocortisone",
+    label: "Wikimedia Commons (Hydrocortisone hemisuccinate.svg)",
+    url: "https://commons.wikimedia.org/wiki/File:Hydrocortisone_hemisuccinate.svg",
   },
   "polyclonal-fab-antivenom": {
     label: "Wikimedia Commons (Antibody.svg)",

@@ -1037,6 +1037,178 @@ export const ORGANS: OrganEntry[] = [
     derivatives: ["Telencephalon", "Diencephalon", "Mesencephalon", "Metencephalon", "Myelencephalon"],
   },
   {
+    id: "forebrain",
+    name: "Forebrain",
+    etymology: "Old English fore = front + brain = enkephalos",
+    aliases: [
+      "forebrain",
+      "fore brain",
+      "prosencephalon",
+      "anterior brain",
+    ],
+    origin:
+      "Most rostral portion of the neural tube; the prosencephalon differentiates into telencephalon (cerebral hemispheres, basal ganglia, lateral ventricles) and diencephalon (thalamus, hypothalamus, third ventricle).",
+    germLayer: "Ectoderm",
+    derivatives: [
+      "Telencephalon — cerebral cortex, basal ganglia, lateral ventricles",
+      "Diencephalon — thalamus, hypothalamus, epithalamus, third ventricle",
+    ],
+    functionSummary:
+      "Processes sensory integration, cognition, emotion, voluntary motor planning, and endocrine/autonomic regulation via cerebral cortex and diencephalon.",
+    commonPathologies: [
+      "Holoprosencephaly",
+      "Anencephaly",
+      "Stroke (MCA territory)",
+      "Alzheimer disease",
+      "Hydrocephalus affecting lateral ventricles",
+    ],
+    step1Pearls: [
+      "Prosencephalon = forebrain embryologic term",
+      "Failed prosencephalon cleavage → holoprosencephaly",
+      "Anencephaly = absent forebrain with open cranial NTD",
+      "Lateral ventricles lie within telencephalon",
+    ],
+    pediatrics:
+      "Forebrain malformations (holoprosencephaly, anencephaly) present prenatally or at birth; SHH pathway mutations and trisomy 13 are high-yield associations.",
+  },
+  {
+    id: "prosencephalon",
+    name: "Prosencephalon",
+    etymology: "Greek pros = forward + enkephalos = brain",
+    aliases: [
+      "prosencephalon",
+      "prosencephalons",
+      "forebrain vesicle",
+      "anterior neural tube vesicle",
+    ],
+    origin:
+      "Rostral primary brain vesicle formed from the cranial neural tube at ~4 weeks gestation; divides into telencephalon and diencephalon to form the forebrain.",
+    germLayer: "Ectoderm",
+    derivatives: ["Telencephalon", "Diencephalon"],
+    functionSummary:
+      "Embryologic precursor to all forebrain structures; its cleavage and patterning (SHH, BMP, FGF signaling) determine cerebral hemispheric separation.",
+    commonPathologies: [
+      "Holoprosencephaly — failed cleavage",
+      "Anencephaly — failed anterior neuropore closure",
+    ],
+    step1Pearls: [
+      "Prosencephalon → telencephalon + diencephalon",
+      "Holoprosencephaly = failed prosencephalon cleavage",
+      "SHH (sonic hedgehog) morphogen critical for ventral forebrain patterning",
+      "Synonym for forebrain at the primary vesicle stage",
+    ],
+    pediatrics:
+      "Prosencephalon maldevelopment causes holoprosencephaly with midline facial defects; trisomy 13 and fetal alcohol are common associations in pediatrics.",
+  },
+  {
+    id: "midbrain",
+    name: "Midbrain",
+    etymology: "Old English mid + brain; Greek mesencephalon = middle brain",
+    aliases: [
+      "midbrain",
+      "mid brain",
+      "mesencephalon",
+      "mesencephalons",
+    ],
+    origin:
+      "Middle primary brain vesicle; remains largely undivided and forms the tectum (superior/inferior colliculi), tegmentum (substantia nigra, red nucleus, cranial nerve III/IV nuclei), and cerebral aqueduct.",
+    germLayer: "Ectoderm",
+    derivatives: [
+      "Tectum — visual/auditory reflexes (superior/inferior colliculi)",
+      "Tegmentum — substantia nigra, red nucleus, reticular formation",
+      "Cerebral aqueduct (connects 3rd to 4th ventricle)",
+    ],
+    functionSummary:
+      "Relays visual and auditory reflexes, modulates motor control (substantia nigra → basal ganglia circuit), and houses CN III/IV nuclei.",
+    commonPathologies: [
+      "Parkinson disease (substantia nigra degeneration)",
+      "Aqueductal stenosis → obstructive hydrocephalus",
+      "Midbrain stroke (Weber/Raymond/Benedikt syndromes)",
+      "Parinaud syndrome (pineal compression of tectum)",
+    ],
+    step1Pearls: [
+      "Mesencephalon = midbrain",
+      "Substantia nigra in midbrain — dopaminergic neurons lost in Parkinson",
+      "Parinaud syndrome — dorsal midbrain, vertical gaze palsy, pineal mass",
+      "Cerebral aqueduct obstruction → non-communicating hydrocephalus",
+    ],
+    pediatrics:
+      "Congenital aqueductal stenosis causes pediatric hydrocephalus; pineal region tumors may compress dorsal midbrain causing Parinaud syndrome in children/adolescents.",
+  },
+  {
+    id: "hindbrain",
+    name: "Hindbrain",
+    etymology: "Old English hind = back + brain; Greek rhombencephalon = rhombus brain",
+    aliases: [
+      "hindbrain",
+      "hind brain",
+      "rhombencephalon",
+      "rhombencephalons",
+      "posterior brain",
+    ],
+    origin:
+      "Caudal primary brain vesicle; divides into metencephalon (pons, cerebellum) and myelencephalon (medulla oblongata), forming the fourth ventricle.",
+    germLayer: "Ectoderm",
+    derivatives: [
+      "Metencephalon — pons, cerebellum",
+      "Myelencephalon — medulla oblongata",
+      "Fourth ventricle",
+    ],
+    functionSummary:
+      "Coordinates balance and motor learning (cerebellum), regulates vital autonomic functions (medullary respiratory/cardiovascular centers), and relays signals between cerebrum and spinal cord (pons).",
+    commonPathologies: [
+      "Medulloblastoma (cerebellar, pediatric)",
+      "Chiari malformation (cerebellar tonsil herniation)",
+      "Lateral medullary (Wallenberg) syndrome",
+      "Cerebellar stroke or ataxia",
+    ],
+    step1Pearls: [
+      "Rhombencephalon = hindbrain",
+      "Metencephalon → pons + cerebellum; myelencephalon → medulla",
+      "Medulla houses vital centers — respiration, cardiovascular control",
+      "Medulloblastoma — most common malignant pediatric brain tumor (cerebellum)",
+    ],
+    pediatrics:
+      "Medulloblastoma and Chiari II (with spina bifida) are classic pediatric hindbrain pathologies; Dandy-Walker malformation involves cerebellar vermis and fourth ventricle.",
+  },
+  {
+    id: "lateral-ventricles",
+    name: "Lateral Ventricles",
+    etymology: "Latin lateralis = side + ventriculus = little belly/cavity",
+    aliases: [
+      "lateral ventricles",
+      "lateral ventricle",
+      "lv",
+      "lateral cerebral ventricles",
+    ],
+    origin:
+      "Form within the telencephalon as the forebrain vesicles expand; lined by ependyma and filled with CSF produced mainly by choroid plexus in the temporal horns.",
+    germLayer: "Ectoderm",
+    derivatives: [
+      "Frontal (anterior) horn",
+      "Body",
+      "Temporal (inferior) horn with choroid plexus",
+      "Occipital (posterior) horn",
+      "Atrium (trigone)",
+    ],
+    functionSummary:
+      "CSF-filled cavities within cerebral hemispheres; communicate with third ventricle via interventricular foramina of Monro; enlargement indicates hydrocephalus or atrophy.",
+    commonPathologies: [
+      "Non-communicating hydrocephalus",
+      "Normal pressure hydrocephalus",
+      "Holoprosencephaly (fused monoventricle)",
+      "Colloid cyst at foramen of Monro",
+    ],
+    step1Pearls: [
+      "Choroid plexus in lateral ventricles produces CSF",
+      "Foramen of Monro connects lateral to third ventricle",
+      "Enlarged lateral ventricles + tight high convexity sulci → NPH (boards)",
+      "Alobar holoprosencephaly — single fused lateral ventricle",
+    ],
+    pediatrics:
+      "Neonatal hydrocephalus often presents with enlarging head circumference and bulging fontanelle; congenital aqueductal stenosis dilates lateral and third ventricles.",
+  },
+  {
     id: "spinal-cord",
     name: "Spinal Cord",
     etymology: "Latin spina = thorn/spine + Latin chorda = string",

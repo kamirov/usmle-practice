@@ -14,3 +14,22 @@ epidermis.png
   Source: Wikimedia Commons — 502 Layers of epidermis (no labels).png
   Page: https://commons.wikimedia.org/wiki/File:502_Layers_of_epidermis_(no_labels).png
   Download: https://commons.wikimedia.org/wiki/Special:FilePath/File:502_Layers_of_epidermis_(no_labels).png?width=1280
+
+forebrain.svg
+  Source: Wikimedia Commons — Brain diagram fr.svg
+  Page: https://commons.wikimedia.org/wiki/File:Brain_diagram_fr.svg
+
+prosencephalon.jpg
+  Source: Wikimedia Commons — Brain-embr.jpg
+  Page: https://commons.wikimedia.org/wiki/File:Brain-embr.jpg
+
+midbrain.jpg
+  Source: Wikimedia Commons — Midbrain-axial-showing-tectum-and-tegmentum.jpg
+  Page: https://commons.wikimedia.org/wiki/File:Midbrain-axial-showing-tectum-and-tegmentum.jpg
+
+hindbrain.jpg
+  Source: Local copy from lateral-ventricles.svg (brain anatomy reference)
+
+lateral-ventricles.svg
+  Source: Wikimedia Commons — Lateral Ventricles - DK ATLAS.png
+  Page: https://commons.wikimedia.org/wiki/File:Lateral_Ventricles_-_DK_ATLAS.png

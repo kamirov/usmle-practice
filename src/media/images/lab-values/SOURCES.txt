@@ -13,3 +13,15 @@ zinc.jpg
   Source: Wikimedia Commons — Rogatywka.jpg
   Page: https://commons.wikimedia.org/wiki/File:Rogatywka.jpg
   Download: https://commons.wikimedia.org/wiki/Special:FilePath/File:Rogatywka.jpg?width=1280
+
+methylmalonic-acid.png
+  Source: Wikimedia Commons — Hypersegmented neutrophil.png
+  Page: https://commons.wikimedia.org/wiki/File:Hypersegmented_neutrophil.png
+
+erythrocyte-transketolase.png
+  Source: Local copy from metabolism/cofactor.png
+  Reference: https://en.wikipedia.org/wiki/Transketolase
+
+erythrocyte-glucose-6-phosphate-dehydrogenase.jpg
+  Source: Wikimedia Commons — Some erythrocytic morphologies and intraerythrocytic inclusions found in peripheral blood smears of quokkas on Rottnest Island (also found in quokkas on mainland Western Australia).png
+  Page: https://commons.wikimedia.org/wiki/File:Some_erythrocytic_morphologies_and_intraerythrocytic_inclusions_found_in_peripheral_blood_smears_of_quokkas_on_Rottnest_Island_(also_found_in_quokkas_on_mainland_Western_Australia).png

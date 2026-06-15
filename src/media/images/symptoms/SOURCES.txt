@@ -171,3 +171,62 @@ spastic-paresis.png
   Source: Wikimedia Commons — ALS subtypes UMN LMN distribution.png
   Page: https://commons.wikimedia.org/wiki/File:ALS_subtypes_UMN_LMN_distribution.png
   Download: https://commons.wikimedia.org/wiki/Special:FilePath/File:ALS_subtypes_UMN_LMN_distribution.png?width=1280
+
+vomitus.jpg
+  Source: Local copy from vomiting.jpg
+
+agonal-respirations.jpg
+  Source: Local copy from hypoxemia.jpg
+
+insomnia.jpg
+  Source: Wikimedia Commons — Depiction of a person suffering from Insomnia (sleeplessness) (cropped).png
+  Page: https://commons.wikimedia.org/wiki/File:Depiction_of_a_person_suffering_from_Insomnia_(sleeplessness)_(cropped).png
+
+koplik-spots.jpg
+  Source: Wikimedia Commons — Koplik spots, measles 6111 lores.jpg
+  Page: https://commons.wikimedia.org/wiki/File:Koplik_spots,_measles_6111_lores.jpg
+
+confluent-rash.jpg
+  Source: Local copy from maculopapular-rash.jpg (confluent exanthem pattern)
+
+hypotelorism.jpg
+  Source: Wikimedia Commons — Holoprosencephaly.jpg
+  Page: https://commons.wikimedia.org/wiki/File:Holoprosencephaly.jpg
+
+cyclopia.jpg
+  Source: Wikimedia Commons — Otocephaly and cyclopia.png
+  Page: https://commons.wikimedia.org/wiki/File:Otocephaly_and_cyclopia.png
+
+blueberry-muffin-rash.jpg
+  Source: Local copy from purpura.jpg (purpuric papules in TORCH)
+
+arthralgia.jpg
+  Source: Wikimedia Commons — Arthritic hands in pain.jpg
+  Page: https://commons.wikimedia.org/wiki/File:Arthritic_hands_in_pain.jpg
+
+arthritis.jpg
+  Source: Wikimedia Commons — Rheumatoid Arthritis (Swan Neck Deformity) esp.png
+  Page: https://commons.wikimedia.org/wiki/File:Rheumatoid_Arthritis_(Swan_Neck_Deformity)_esp.png
+
+primitive-nose.jpg
+  Source: Wikimedia Commons — Congenital absence of nose.jpg
+  Page: https://commons.wikimedia.org/wiki/File:Congenital_absence_of_nose.jpg
+
+facial-cleft.jpg
+  Source: Wikimedia Commons — Holoprosencephaly.jpg
+  Page: https://commons.wikimedia.org/wiki/File:Holoprosencephaly.jpg
+
+impaired-wound-healing.png
+  Source: Wikimedia Commons — WIRA-Wiki-GH-011-de-Ulkus-Thermografie-Verlauf-unter-wIRA.png
+  Page: https://commons.wikimedia.org/wiki/File:WIRA-Wiki-GH-011-de-Ulkus-Thermografie-Verlauf-unter-wIRA.png
+  Download: https://commons.wikimedia.org/wiki/Special:FilePath/File:WIRA-Wiki-GH-011-de-Ulkus-Thermografie-Verlauf-unter-wIRA.png?width=1280
+
+lhermitte-sign.jpg
+  Source: Wikimedia Commons — MULTIPLE SCLEROSIS.JPG
+  Page: https://commons.wikimedia.org/wiki/File:MULTIPLE_SCLEROSIS.JPG
+  Download: https://commons.wikimedia.org/wiki/Special:FilePath/File:MULTIPLE_SCLEROSIS.JPG?width=1280
+
+psychosis.jpg
+  Source: Wikimedia Commons — Atypical Psychosis Genetic Map.jpg
+  Page: https://commons.wikimedia.org/wiki/File:Atypical_Psychosis_Genetic_Map.jpg
+  Download: https://commons.wikimedia.org/wiki/Special:FilePath/File:Atypical_Psychosis_Genetic_Map.jpg?width=1280

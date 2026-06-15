@@ -302,3 +302,59 @@ vitamin-b12-deficiency-anemia.png
   Source: Wikimedia Commons — Hypersegmented neutrophil.png
   Page: https://commons.wikimedia.org/wiki/File:Hypersegmented_neutrophil.png
   Download: https://commons.wikimedia.org/wiki/Special:FilePath/File:Hypersegmented_neutrophil.png?width=1280
+
+holoprosencephaly.jpg
+  Source: Wikimedia Commons — Holoprosencephaly.jpg
+  Page: https://commons.wikimedia.org/wiki/File:Holoprosencephaly.jpg
+
+trisomy-13.jpg
+  Source: Local copy from holoprosencephaly.jpg (trisomy 13 association)
+
+cleft-lip.jpg
+  Source: Local copy from cleft-palate.jpg
+
+cleft-palate.jpg
+  Source: Wikimedia Commons — Cleft Lip & Cleft Palate Repair.png
+  Page: https://commons.wikimedia.org/wiki/File:Cleft_Lip_%26_Cleft_Palate_Repair.png
+
+congenital-rubella-syndrome.jpg
+  Source: Wikimedia Commons — Cataracts due to Congenital Rubella Syndrome (CRS) PHIL 4284 lores.jpg
+  Page: https://commons.wikimedia.org/wiki/File:Cataracts_due_to_Congenital_Rubella_Syndrome_(CRS)_PHIL_4284_lores.jpg
+
+scarlet-fever.jpg
+  Source: Wikimedia Commons — Scarlet fever rash.jpg
+  Page: https://commons.wikimedia.org/wiki/File:Scarlet_fever_rash.jpg
+
+roseola.jpg
+  Source: Wikimedia Commons — Sestamalattia (2).JPG
+  Page: https://commons.wikimedia.org/wiki/File:Sestamalattia_(2).JPG
+
+brief-psychotic-disorder.jpg
+  Source: Wikimedia Commons — Climacteric psychosis.jpg
+  Page: https://commons.wikimedia.org/wiki/File:Climacteric_psychosis.jpg
+  Download: https://commons.wikimedia.org/wiki/Special:FilePath/File:Climacteric_psychosis.jpg?width=1280
+
+cataracts.jpg
+  Source: Wikimedia Commons — Airbus A380 - 9H-MIP parked at LFBT airport.jpg
+  Page: https://commons.wikimedia.org/wiki/File:Airbus_A380_-_9H-MIP_parked_at_LFBT_airport.jpg
+  Download: https://commons.wikimedia.org/wiki/Special:FilePath/File:Airbus_A380_-_9H-MIP_parked_at_LFBT_airport.jpg?width=1280
+
+copper-deficiency.jpg
+  Source: Wikimedia Commons — Swayback (4479932160).jpg
+  Page: https://commons.wikimedia.org/wiki/File:Swayback_(4479932160).jpg
+  Download: https://commons.wikimedia.org/wiki/Special:FilePath/File:Swayback_(4479932160).jpg?width=1280
+
+dementia.jpg
+  Source: Wikimedia Commons — Histopathology of Alzheimer's disease.jpg
+  Page: https://commons.wikimedia.org/wiki/File:Histopathology_of_Alzheimer's_disease.jpg
+  Download: https://commons.wikimedia.org/wiki/Special:FilePath/File:Histopathology_of_Alzheimer's_disease.jpg?width=1280
+
+schizoid-personality-disorder.png
+  Source: Wikimedia Commons — Word Cloud SzPD.png
+  Page: https://commons.wikimedia.org/wiki/File:Word_Cloud_SzPD.png
+  Download: https://commons.wikimedia.org/wiki/Special:FilePath/File:Word_Cloud_SzPD.png?width=1280
+
+schizotypal-personality-disorder.png
+  Source: Wikimedia Commons — Signs of StPD 1.png
+  Page: https://commons.wikimedia.org/wiki/File:Signs_of_StPD_1.png
+  Download: https://commons.wikimedia.org/wiki/Special:FilePath/File:Signs_of_StPD_1.png?width=1280

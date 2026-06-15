@@ -386,7 +386,7 @@ export const PROTEINS: ProteinEntry[] = [
     id: "g6pd",
     name: "G6PD",
     etymology: "G6PD = glucose-6-phosphate dehydrogenase",
-    aliases: ["g6pd", "glucose-6-phosphate dehydrogenase"],
+    aliases: ["g6pd", "glucose-6-phosphate dehydrogenase", "glucose 6 phosphate dehydrogenase", "erythrocyte glucose-6-phosphate dehydrogenase", "erythrocyte g6pd", "rbc g6pd"],
     gene: "G6PD",
     location: "Red blood cell cytoplasm (pentose phosphate pathway)",
     function:

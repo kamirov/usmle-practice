@@ -15,3 +15,8 @@ intrinsic-factor.png
   Source: Wikimedia Commons — Histology of gastric chief cell.png
   Page: https://commons.wikimedia.org/wiki/File:Histology_of_gastric_chief_cell.png
   Download: https://commons.wikimedia.org/wiki/Special:FilePath/File:Histology_of_gastric_chief_cell.png?width=1280
+
+adenosine-deaminase.jpg
+  Source: Wikimedia Commons — Ada Lovelace portrait.jpg
+  Page: https://commons.wikimedia.org/wiki/File:Ada_Lovelace_portrait.jpg
+  Download: https://commons.wikimedia.org/wiki/Special:FilePath/File:Ada_Lovelace_portrait.jpg?width=1280

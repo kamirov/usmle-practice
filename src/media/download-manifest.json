@@ -1468,5 +1468,150 @@
     "title": "File:Symptoms of coronavirus disease 2019 2.0.svg",
     "page": "https://commons.wikimedia.org/wiki/File:Symptoms_of_coronavirus_disease_2019_2.0.svg",
     "query": "exact"
+  },
+  "cells/dorsal-columns.jpg": {
+    "title": "File:Gray675.png",
+    "page": "https://commons.wikimedia.org/wiki/File:Gray675.png",
+    "query": "exact"
+  },
+  "conditions/berylliosis.jpg": {
+    "title": "File:Chronic berylliosis (8054314225).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Chronic_berylliosis_(8054314225).jpg",
+    "query": "exact"
+  },
+  "conditions/gastric-adenocarcinoma.jpg": {
+    "title": "File:Gastric signet ring cell carcinoma histopatholgy (3).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Gastric_signet_ring_cell_carcinoma_histopatholgy_(3).jpg",
+    "query": "exact"
+  },
+  "conditions/hyperthyroidism.jpg": {
+    "title": "File:Histopathology of Graves' disease - medium mag.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Histopathology_of_Graves'_disease_-_medium_mag.jpg",
+    "query": "exact"
+  },
+  "conditions/tropical-sprue.jpg": {
+    "title": "File:Tropical Diseases - Plate 9.png",
+    "page": "https://commons.wikimedia.org/wiki/File:Tropical_Diseases_-_Plate_9.png",
+    "query": "exact"
+  },
+  "proteins/filaggrin.png": {
+    "title": "File:502 Layers of epidermis (no labels).png",
+    "page": "https://commons.wikimedia.org/wiki/File:502_Layers_of_epidermis_(no_labels).png",
+    "query": "exact"
+  },
+  "pathogenesis/macrocytosis.png": {
+    "title": "File:Hypersegmented neutrophil.png",
+    "page": "https://commons.wikimedia.org/wiki/File:Hypersegmented_neutrophil.png",
+    "query": "exact"
+  },
+  "procedures/bariatric-surgery.svg": {
+    "title": "File:Gastric bypass icon.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Gastric_bypass_icon.svg",
+    "query": "exact"
+  },
+  "symptoms/paresis.jpg": {
+    "title": "File:Hemiatrophy and hemiplegia of the left side of the tongue Wellcome L0062734.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Hemiatrophy_and_hemiplegia_of_the_left_side_of_the_tongue_Wellcome_L0062734.jpg",
+    "query": "exact"
+  },
+  "symptoms/polyuria.jpg": {
+    "title": "File:Medical communications of the Massachusetts Medical Society (1913) (14781096501).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Medical_communications_of_the_Massachusetts_Medical_Society_(1913)_(14781096501).jpg",
+    "query": "exact"
+  },
+  "cells/gray-matter.jpg": {
+    "title": "File:Grey matter and white matter - high mag.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Grey_matter_and_white_matter_-_high_mag.jpg",
+    "query": "gray matter brain histology"
+  },
+  "cells/medial-longitudinal-fasciculus.png": {
+    "title": "File:Population-averaged human tractography atlas - Brainstem.png",
+    "page": "https://commons.wikimedia.org/wiki/File:Population-averaged_human_tractography_atlas_-_Brainstem.png",
+    "query": "medial longitudinal fasciculus brainstem"
+  },
+  "cells/preterm-lung-maturity.jpg": {
+    "title": "File:Hyaline membranes - very high mag.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Hyaline_membranes_-_very_high_mag.jpg",
+    "query": "respiratory distress syndrome hyaline membrane"
+  },
+  "cells/white-matter.jpg": {
+    "title": "File:Grey matter and white matter - high mag.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Grey_matter_and_white_matter_-_high_mag.jpg",
+    "query": "white matter brain histology"
+  },
+  "conditions/brief-psychotic-disorder.jpg": {
+    "title": "File:Climacteric psychosis.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Climacteric_psychosis.jpg",
+    "query": "psychosis patient"
+  },
+  "conditions/cataracts.jpg": {
+    "title": "File:Airbus A380 - 9H-MIP parked at LFBT airport.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Airbus_A380_-_9H-MIP_parked_at_LFBT_airport.jpg",
+    "query": "cataract eye lens opacity"
+  },
+  "conditions/copper-deficiency.jpg": {
+    "title": "File:Swayback (4479932160).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Swayback_(4479932160).jpg",
+    "query": "copper deficiency myelopathy"
+  },
+  "conditions/dementia.jpg": {
+    "title": "File:Histopathology of Alzheimer's disease.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Histopathology_of_Alzheimer's_disease.jpg",
+    "query": "alzheimer disease brain histology amyloid"
+  },
+  "conditions/schizoid-personality-disorder.png": {
+    "title": "File:Word Cloud SzPD.png",
+    "page": "https://commons.wikimedia.org/wiki/File:Word_Cloud_SzPD.png",
+    "query": "schizoid personality disorder"
+  },
+  "conditions/schizotypal-personality-disorder.png": {
+    "title": "File:Signs of StPD 1.png",
+    "page": "https://commons.wikimedia.org/wiki/File:Signs_of_StPD_1.png",
+    "query": "schizotypal personality"
+  },
+  "medications/antipsychotics.jpg": {
+    "title": "File:Overview of reward structures in the human brain.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Overview_of_reward_structures_in_the_human_brain.jpg",
+    "query": "dopaminergic pathways brain diagram"
+  },
+  "medications/calcineurin-inhibitors.svg": {
+    "title": "File:Cyclosporine prescriptions (DrugStats).svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Cyclosporine_prescriptions_(DrugStats).svg",
+    "query": "calcineurin inhibitor cyclosporine"
+  },
+  "medications/dexamethasone.svg": {
+    "title": "File:Dexamethasone structure.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Dexamethasone_structure.svg",
+    "query": "dexamethasone chemical structure"
+  },
+  "medications/glatiramer.webp": {
+    "title": "File:Some of the pharmacological modes-of-action (PMA) of GA-treatment of MS patients.webp",
+    "page": "https://commons.wikimedia.org/wiki/File:Some_of_the_pharmacological_modes-of-action_(PMA)_of_GA-treatment_of_MS_patients.webp",
+    "query": "glatiramer acetate multiple sclerosis"
+  },
+  "medications/hydrocortisone.svg": {
+    "title": "File:Hydrocortisone hemisuccinate.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Hydrocortisone_hemisuccinate.svg",
+    "query": "hydrocortisone chemical structure"
+  },
+  "proteins/adenosine-deaminase.jpg": {
+    "title": "File:Ada Lovelace portrait.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Ada_Lovelace_portrait.jpg",
+    "query": "adenosine deaminase SCID"
+  },
+  "symptoms/impaired-wound-healing.png": {
+    "title": "File:WIRA-Wiki-GH-011-de-Ulkus-Thermografie-Verlauf-unter-wIRA.png",
+    "page": "https://commons.wikimedia.org/wiki/File:WIRA-Wiki-GH-011-de-Ulkus-Thermografie-Verlauf-unter-wIRA.png",
+    "query": "chronic wound healing leg ulcer"
+  },
+  "symptoms/lhermitte-sign.jpg": {
+    "title": "File:MULTIPLE SCLEROSIS.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File:MULTIPLE_SCLEROSIS.JPG",
+    "query": "multiple sclerosis cervical cord"
+  },
+  "symptoms/psychosis.jpg": {
+    "title": "File:Atypical Psychosis Genetic Map.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Atypical_Psychosis_Genetic_Map.jpg",
+    "query": "schizophrenia psychosis"
   }
 }

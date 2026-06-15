@@ -14,7 +14,7 @@ BASE = os.path.join(ROOT, "..", "src", "media", "images")
 MANIFEST_PATH = os.path.join(ROOT, "..", "src", "media", "download-manifest.json")
 FAKE_MARKER = "Created locally for USMLE Step 1 study"
 UA = "usmle-practice-media/2.0 (educational; replace-fake-media)"
-DELAY = 8
+DELAY = 20
 BAD_EXT = (".pdf", ".djvu", ".ogv", ".webm", ".gif", ".tif", ".tiff")
 
 # category/filename-stem -> Wikimedia search query
@@ -79,6 +79,48 @@ QUERIES: dict[str, str] = {
     "signaling/ifn-alpha": "interferon alpha structure",
     "signaling/ifn-beta": "interferon beta structure",
     "procedures/bariatric-surgery": "bariatric surgery gastric bypass diagram",
+    "cells/immunosuppression": "immunosuppression transplant rejection histology",
+    "conditions/psychotic-mood-disorder": "schizoaffective disorder psychosis",
+    "conditions/dementia": "alzheimer disease brain histology amyloid",
+    "conditions/adjustment-disorder": "stress related disorder",
+    "conditions/brief-psychotic-disorder": "psychosis patient",
+    "conditions/schizotypal-personality-disorder": "schizotypal personality",
+    "conditions/schizoid-personality-disorder": "schizoid personality disorder",
+    "conditions/cataracts": "cataract eye lens opacity",
+    "conditions/glaucoma": "glaucoma optic disc cupping",
+    "conditions/copper-deficiency": "copper deficiency myelopathy",
+    "conditions/avascular-necrosis": "avascular necrosis femoral head xray",
+    "conditions/neuromyelitis-optica": "neuromyelitis optica spinal cord MRI",
+    "conditions/hypopituitarism": "empty sella pituitary MRI",
+    "conditions/sheehan-syndrome": "sheehan syndrome pituitary infarction",
+    "conditions/vitamin-d-toxicity": "hypercalcemia vitamin D toxicity",
+    "conditions/multiple-endocrine-neoplasia": "multiple endocrine neoplasia",
+    "conditions/men-type-1": "MEN1 pituitary parathyroid pancreas",
+    "conditions/men-type-2": "medullary thyroid carcinoma MEN2",
+    "conditions/men2a": "medullary thyroid carcinoma histology",
+    "conditions/men2b": "mucosal neuroma MEN2B",
+    "symptoms/mania": "mania bipolar elevated mood",
+    "symptoms/impaired-wound-healing": "chronic wound healing leg ulcer",
+    "symptoms/psychosis": "schizophrenia psychosis",
+    "symptoms/moon-facies": "cushing syndrome moon facies",
+    "symptoms/nystagmus": "nystagmus eye oscillation",
+    "symptoms/lhermitte-sign": "multiple sclerosis cervical cord",
+    "symptoms/internuclear-ophthalmoplegia": "internuclear ophthalmoplegia MLF",
+    "medications/antipsychotics": "dopaminergic pathways brain diagram",
+    "medications/dexamethasone": "dexamethasone chemical structure",
+    "medications/hydrocortisone": "hydrocortisone chemical structure",
+    "medications/calcineurin-inhibitors": "calcineurin inhibitor cyclosporine",
+    "medications/glatiramer": "glatiramer acetate multiple sclerosis",
+    "medications/interferon-beta": "interferon beta multiple sclerosis",
+    "proteins/adenosine-deaminase": "adenosine deaminase SCID",
+    "lab-values/dihydrorhodamine-flow-cytometry": "flow cytometry chronic granulomatous disease",
+    "lab-values/oligoclonal-bands": "oligoclonal bands CSF multiple sclerosis",
+    "cells/clear-cytoplasm": "clear cell renal carcinoma histology",
+    "cells/metanephric-blastema": "kidney development metanephros",
+    "cells/preterm-lung-maturity": "respiratory distress syndrome hyaline membrane",
+    "cells/gray-matter": "gray matter brain histology",
+    "cells/white-matter": "white matter brain histology",
+    "cells/medial-longitudinal-fasciculus": "medial longitudinal fasciculus brainstem",
 }
 
 
@@ -91,9 +133,16 @@ def api_get(url: str) -> dict:
 def is_fake(path: str) -> bool:
     try:
         with open(path, encoding="utf-8", errors="ignore") as f:
-            return FAKE_MARKER in f.read()
+            text = f.read()
     except OSError:
         return False
+    if FAKE_MARKER in text:
+        return True
+    if 'viewBox="0 0 480 ' in text and "system-ui" in text:
+        return True
+    if 'viewBox="0 0 900 520"' in text and "Arial" in text:
+        return True
+    return False
 
 
 def find_fake_svgs() -> list[str]:

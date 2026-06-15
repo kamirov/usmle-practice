@@ -1,0 +1,66 @@
+{
+  "conditions/cleft-palate.jpg": {
+    "title": "File:Cleft Lip & Cleft Palate Repair.png",
+    "page": "https://commons.wikimedia.org/wiki/File:Cleft_Lip_&_Cleft_Palate_Repair.png"
+  },
+  "conditions/congenital-rubella-syndrome.jpg": {
+    "title": "File:Cataracts due to Congenital Rubella Syndrome (CRS) PHIL 4284 lores.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Cataracts_due_to_Congenital_Rubella_Syndrome_(CRS)_PHIL_4284_lores.jpg"
+  },
+  "conditions/roseola.jpg": {
+    "title": "File:Sestamalattia (2).JPG",
+    "page": "https://commons.wikimedia.org/wiki/File:Sestamalattia_(2).JPG"
+  },
+  "organs/prosencephalon.svg": {
+    "title": "File:Brain-embr.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Brain-embr.jpg"
+  },
+  "organs/midbrain.svg": {
+    "title": "File:Midbrain-axial-showing-tectum-and-tegmentum.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Midbrain-axial-showing-tectum-and-tegmentum.jpg"
+  },
+  "organs/lateral-ventricles.svg": {
+    "title": "File:Lateral Ventricles - DK ATLAS.png",
+    "page": "https://commons.wikimedia.org/wiki/File:Lateral_Ventricles_-_DK_ATLAS.png"
+  },
+  "symptoms/koplik-spots.jpg": {
+    "title": "File:Koplik spots, measles 6111 lores.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Koplik_spots,_measles_6111_lores.jpg"
+  },
+  "symptoms/hypotelorism.jpg": {
+    "title": "File:Brss spoon in 2019.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Brss_spoon_in_2019.jpg"
+  },
+  "symptoms/cyclopia.jpg": {
+    "title": "File:Otocephaly and cyclopia.png",
+    "page": "https://commons.wikimedia.org/wiki/File:Otocephaly_and_cyclopia.png"
+  },
+  "symptoms/arthralgia.jpg": {
+    "title": "File:Arthritic hands in pain.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Arthritic_hands_in_pain.jpg"
+  },
+  "symptoms/arthritis.jpg": {
+    "title": "File:Rheumatoid Arthritis (Swan Neck Deformity) esp.png",
+    "page": "https://commons.wikimedia.org/wiki/File:Rheumatoid_Arthritis_(Swan_Neck_Deformity)_esp.png"
+  },
+  "symptoms/primitive-nose.jpg": {
+    "title": "File:Congenital absence of nose.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Congenital_absence_of_nose.jpg"
+  },
+  "symptoms/facial-cleft.jpg": {
+    "title": "File:Logo ACLH.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Logo_ACLH.jpg"
+  },
+  "microbiology/paramyxovirus.jpg": {
+    "title": "File:Measles virus.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File:Measles_virus.JPG"
+  },
+  "microbiology/toxoplasmosis.jpg": {
+    "title": "File:Toxoplasma gondii Tachyzoite (NIH BioArt 683).svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Toxoplasma_gondii_Tachyzoite_(NIH_BioArt_683).svg"
+  },
+  "pathogenesis/torch-infections.jpg": {
+    "title": "File:ToRCH IgG Combo Rapid Test-Negative.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:ToRCH_IgG_Combo_Rapid_Test-Negative.jpg"
+  }
+}

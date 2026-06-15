@@ -16,3 +16,7 @@ thymidine.jpg
   Source: Wikimedia Commons — PDB 1p73 EBI.jpg
   Page: https://commons.wikimedia.org/wiki/File:PDB_1p73_EBI.jpg
   Download: https://commons.wikimedia.org/wiki/Special:FilePath/File:PDB_1p73_EBI.jpg?width=1280
+
+nadh.png
+  Source: Local copy from metabolism/cofactor.png
+  Reference: https://en.wikipedia.org/wiki/Nicotinamide_adenine_dinucleotide

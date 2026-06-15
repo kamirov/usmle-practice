@@ -61,10 +61,12 @@ import enterovirus from "../media/images/microbiology/enterovirus.jpg?url";
 import rhinovirus from "../media/images/microbiology/rhinovirus.png?url";
 import rickettsiaRickettsii from "../media/images/microbiology/rickettsia-rickettsii.jpg?url";
 import chlamydiaTrachomatis from "../media/images/microbiology/chlamydia-trachomatis.jpg?url";
-import coagulasePositive from "../media/images/microbiology/coagulase-positive.svg?url";
-import mrsa from "../media/images/microbiology/mrsa.svg?url";
-import mssa from "../media/images/microbiology/mssa.svg?url";
-import staphylococcusEpidermidis from "../media/images/microbiology/staphylococcus-epidermidis.svg?url";
+import coagulasePositive from "../media/images/microbiology/coagulase-positive.jpg?url";
+import mrsa from "../media/images/microbiology/mrsa.jpg?url";
+import mssa from "../media/images/microbiology/mssa.jpg?url";
+import staphylococcusEpidermidis from "../media/images/microbiology/staphylococcus-epidermidis.jpg?url";
+import paramyxovirus from "../media/images/microbiology/paramyxovirus.jpg?url";
+import parvovirusB19 from "../media/images/microbiology/parvovirus-b19.jpg?url";
 
 export type MicrobiologyImageId = MicrobiologyEntry["id"];
 
@@ -142,6 +144,8 @@ export const MICROBIOLOGY_IMAGES: Partial<Record<MicrobiologyImageId, string>> =
     "rickettsia-rickettsii": extensionAssetUrl(rickettsiaRickettsii),
     "chlamydia-trachomatis": extensionAssetUrl(chlamydiaTrachomatis),
     "serratia-marcescens": extensionAssetUrl(serratiaMarcescens),
+    paramyxovirus: extensionAssetUrl(paramyxovirus),
+    "parvovirus-b19": extensionAssetUrl(parvovirusB19),
   };
 
 export const MICROBIOLOGY_IMAGE_ATTRIBUTIONS: Partial<
@@ -279,6 +283,14 @@ export const MICROBIOLOGY_IMAGE_ATTRIBUTIONS: Partial<
     label: "CDC PHIL #8758",
     url: "https://phil.cdc.gov/Details.aspx?pid=8758",
   },
+  paramyxovirus: {
+    label: "Wikimedia Commons (Measles virus.JPG)",
+    url: "https://commons.wikimedia.org/wiki/File:Measles_virus.JPG",
+  },
+  "parvovirus-b19": {
+    label: "Wikimedia Commons (Erythema infectiosum.jpg)",
+    url: "https://commons.wikimedia.org/wiki/File:Erythema_infectiosum.jpg",
+  },
   "rubella-virus": {
     label: "CDC PHIL #10221",
     url: "https://phil.cdc.gov/Details.aspx?pid=10221",
@@ -399,6 +411,22 @@ export const MICROBIOLOGY_IMAGE_ATTRIBUTIONS: Partial<
     label: "Wikimedia Commons (CC BY-SA 3.0)",
     url: "https://commons.wikimedia.org/wiki/File:ChlamydiaTrachomatisEinschlussk%C3%B6rperchen.jpg",
   },
+  mssa: {
+    label: "Wikimedia Commons (Staphylococcus aureus Gram stain.jpg)",
+    url: "https://commons.wikimedia.org/wiki/File:Staphylococcus_aureus_Gram_stain.jpg",
+  },
+  mrsa: {
+    label: "Wikimedia Commons (Staphylococcus aureus, 50,000x, USDA, ARS, EMU.jpg)",
+    url: "https://commons.wikimedia.org/wiki/File:Staphylococcus_aureus,_50,000x,_USDA,_ARS,_EMU.jpg",
+  },
+  "staphylococcus-epidermidis": {
+    label: "Wikimedia Commons (Gram stain of Staphylococcus epidermidis.jpg)",
+    url: "https://commons.wikimedia.org/wiki/File:Gram_stain_of_Staphylococcus_epidermidis.jpg",
+  },
+  "coagulase-positive": {
+    label: "Wikimedia Commons (Tube coagulase test of Staphylococcus aureus -Positive and negative Demonstration.jpg)",
+    url: "https://commons.wikimedia.org/wiki/File:Tube_coagulase_test_of_Staphylococcus_aureus_-Positive_and_negative_Demonstration.jpg",
+  },
 };
 
 export const MICROBIOLOGY_IMAGE_CAPTIONS: Partial<
@@ -452,6 +480,10 @@ export const MICROBIOLOGY_IMAGE_CAPTIONS: Partial<
     "TEM thin section of a single measles morbillivirus virion (paramyxovirus)",
   "mumps-virus":
     "Negative-stain TEM of mumps rubulavirus (paramyxovirus)",
+  paramyxovirus:
+    "TEM of measles morbillivirus virion — representative paramyxovirus morphology",
+  "parvovirus-b19":
+    "Slapped-cheek facial erythema of erythema infectiosum (fifth disease) from parvovirus B19",
   "rubella-virus":
     "Negative-stain TEM of rubella virions budding from host cell surface",
   "zika-virus":

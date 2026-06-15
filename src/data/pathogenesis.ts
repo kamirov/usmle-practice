@@ -4879,6 +4879,45 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
     pediatrics:
       "Hemolytic disease of newborn and hereditary spherocytosis cause pediatric reticulocytosis; parvovirus B19 aplastic crisis causes reticulocytopenia in sickle cell disease.",
   },
+  {
+    id: "torch-infections",
+    name: "TORCH Infections",
+    etymology: "acronym: Toxoplasmosis, Other (syphilis, VZV, parvovirus), Rubella, CMV, Herpes simplex",
+    aliases: [
+      "torch",
+      "torch infections",
+      "torch infection",
+      "torch screen",
+      "torch workup",
+      "torch panel",
+      "congenital torch infections",
+    ],
+    definition:
+      "Mnemonic for congenital infections acquired transplacentally or perinatally that cause similar neonatal findings — growth restriction, hepatosplenomegaly, jaundice, thrombocytopenia, and CNS/ocular sequelae.",
+    examples: [
+      "Toxoplasmosis — chorioretinitis, hydrocephalus, diffuse intracranial calcifications",
+      "Rubella — cataracts, PDA, sensorineural deafness, blueberry muffin rash",
+      "CMV — most common congenital infection; periventricular calcifications, hearing loss",
+      "HSV — vesicles, encephalitis, acquired at delivery (often not transplacental)",
+      "Syphilis — saddle nose, saber shins, Hutchinson teeth (Other category)",
+      "Parvovirus B19 — hydrops fetalis, not classic TORCH neonatal triad",
+    ],
+    boardsPearls: [
+      "TORCH = congenital infection workup mnemonic",
+      "CMV most common congenital infection in U.S.",
+      "Rubella triad: cataracts + deafness + PDA",
+      "Toxoplasmosis triad: chorioretinitis + hydrocephalus + diffuse calcifications",
+      "CMV calcifications periventricular; toxoplasmosis diffuse",
+      "Blueberry muffin rash — extramedullary hematopoiesis in TORCH infections",
+    ],
+    distinguishFrom: [
+      "Neonatal sepsis — bacterial, acute, no teratogenic stigmata",
+      "Hemolytic disease of newborn — Rh/ABO alloimmunization, Coombs positive",
+      "Inborn errors of metabolism — no infectious IgM, different metabolic labs",
+    ],
+    pediatrics:
+      "TORCH workup in neonates with hepatosplenomegaly, thrombocytopenia, IUGR, or congenital cataracts; CMV saliva PCR and rubella/toxoplasma IgM are key tests. MMR prevents congenital rubella.",
+  },
 ];
 
 const pathogenesisById = new Map(

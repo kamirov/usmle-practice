@@ -7,6 +7,7 @@ import {
   enqueueHighlightRoot,
   enqueueHighlightRoots,
   getIsApplyingHighlights,
+  setOnHighlightIdle,
 } from "./scanScheduler";
 import {
   buildTermTrie,
@@ -129,6 +130,7 @@ const QUESTION_HEADER_RE =
 
 const SCAN_DEBOUNCE_MS = 400;
 const SCAN_IDLE_TIMEOUT_MS = 800;
+const SETTLE_SCAN_DELAYS_MS = [1500, 4000] as const;
 
 interface ScanArea {
   element: Element;
@@ -657,24 +659,50 @@ function compareNodeDocumentOrder(a: Node, b: Node): number {
 }
 
 function collectHighlightableTextNodes(root: Node): Text[] {
-  const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
-    acceptNode(node) {
-      if (!allowPopoverScan && isInsidePopover(node)) {
-        return NodeFilter.FILTER_REJECT;
-      }
-      if (shouldSkipNode(node)) return NodeFilter.FILTER_REJECT;
-      const text = node.textContent ?? "";
-      if (!text.trim()) return NodeFilter.FILTER_REJECT;
-      return NodeFilter.FILTER_ACCEPT;
-    },
-  });
-
   const textNodes: Text[] = [];
-  let current = walker.nextNode();
-  while (current) {
-    textNodes.push(current as Text);
-    current = walker.nextNode();
-  }
+  const seen = new Set<Text>();
+
+  const acceptNode = (node: Node): NodeFilter => {
+    if (!allowPopoverScan && isInsidePopover(node)) {
+      return NodeFilter.FILTER_REJECT;
+    }
+    if (shouldSkipNode(node)) return NodeFilter.FILTER_REJECT;
+    const text = node.textContent ?? "";
+    if (!text.trim()) return NodeFilter.FILTER_REJECT;
+    return NodeFilter.FILTER_ACCEPT;
+  };
+
+  const collectFrom = (scanRoot: Node): void => {
+    const walker = scanRoot.ownerDocument.createTreeWalker(
+      scanRoot,
+      NodeFilter.SHOW_TEXT,
+      { acceptNode },
+    );
+
+    let current = walker.nextNode();
+    while (current) {
+      const textNode = current as Text;
+      if (!seen.has(textNode)) {
+        seen.add(textNode);
+        textNodes.push(textNode);
+      }
+      current = walker.nextNode();
+    }
+
+    const elementWalker = scanRoot.ownerDocument.createTreeWalker(
+      scanRoot,
+      NodeFilter.SHOW_ELEMENT,
+    );
+    let element = elementWalker.nextNode();
+    while (element) {
+      if (element instanceof Element && element.shadowRoot) {
+        collectFrom(element.shadowRoot);
+      }
+      element = elementWalker.nextNode();
+    }
+  };
+
+  collectFrom(root);
 
   return textNodes.sort((a, b) => {
     const zoneDiff = getScanZone(a) - getScanZone(b);
@@ -830,9 +858,46 @@ export function startOrganScanner(): void {
 
   let debounceTimer: ReturnType<typeof setTimeout> | null = null;
   let scanScheduled = false;
+  let deferredScanNeeded = false;
+
+  const requestIdleScan = (run: () => void): void => {
+    const idle =
+      window.requestIdleCallback ??
+      ((cb: IdleRequestCallback) =>
+        window.setTimeout(
+          () => cb({ didTimeout: false, timeRemaining: () => 50 }),
+          0,
+        ));
+    idle(run, { timeout: SCAN_IDLE_TIMEOUT_MS });
+  };
+
+  const runDebouncedScan = (): void => {
+    if (debounceTimer) clearTimeout(debounceTimer);
+    debounceTimer = setTimeout(() => {
+      requestIdleScan(() => {
+        runScanWork();
+        scanScheduled = false;
+        debounceTimer = null;
+      });
+    }, SCAN_DEBOUNCE_MS);
+  };
+
+  const scheduleScan = (): void => {
+    scanScheduled = true;
+    runDebouncedScan();
+  };
+
+  setOnHighlightIdle(() => {
+    if (!deferredScanNeeded) return;
+    deferredScanNeeded = false;
+    scheduleScan();
+  });
 
   const observer = new MutationObserver((mutations) => {
-    if (getIsApplyingHighlights()) return;
+    if (getIsApplyingHighlights()) {
+      deferredScanNeeded = true;
+      return;
+    }
 
     if (
       siteScanConfig.fingerprintMode === "url" &&
@@ -879,24 +944,7 @@ export function startOrganScanner(): void {
     }
 
     if (!scanScheduled) return;
-    if (debounceTimer) clearTimeout(debounceTimer);
-    debounceTimer = setTimeout(() => {
-      const idle =
-        window.requestIdleCallback ??
-        ((cb: IdleRequestCallback) =>
-          window.setTimeout(
-            () => cb({ didTimeout: false, timeRemaining: () => 50 }),
-            0,
-          ));
-      idle(
-        () => {
-          runScanWork();
-          scanScheduled = false;
-          debounceTimer = null;
-        },
-        { timeout: SCAN_IDLE_TIMEOUT_MS },
-      );
-    }, SCAN_DEBOUNCE_MS);
+    runDebouncedScan();
   });
 
   observer.observe(document.body, {
@@ -904,4 +952,36 @@ export function startOrganScanner(): void {
     subtree: true,
     characterData: true,
   });
+
+  const onNavigation = (): void => {
+    scheduleScan();
+  };
+
+  window.addEventListener("popstate", onNavigation);
+  window.addEventListener("hashchange", onNavigation);
+
+  const { pushState, replaceState } = history;
+  history.pushState = function pushStatePatched(
+    this: History,
+    ...args: Parameters<History["pushState"]>
+  ) {
+    const result = pushState.apply(this, args);
+    onNavigation();
+    return result;
+  };
+  history.replaceState = function replaceStatePatched(
+    this: History,
+    ...args: Parameters<History["replaceState"]>
+  ) {
+    const result = replaceState.apply(this, args);
+    onNavigation();
+    return result;
+  };
+
+  for (const delayMs of SETTLE_SCAN_DELAYS_MS) {
+    window.setTimeout(() => {
+      if (!document.body) return;
+      scheduleScan();
+    }, delayMs);
+  }
 }

@@ -1,10 +1,10 @@
 import type { MediaAttribution } from "./media";
 import type { ProteinEntry } from "./proteins";
 
-import adenosineDeaminase from "../media/images/proteins/adenosine-deaminase.svg?url";
-import ceruloplasmin from "../media/images/proteins/ceruloplasmin.svg?url";
-import filaggrin from "../media/images/proteins/filaggrin.svg?url";
-import intrinsicFactor from "../media/images/proteins/intrinsic-factor.svg?url";
+import adenosineDeaminase from "../media/images/proteins/adenosine-deaminase.jpg?url";
+import ceruloplasmin from "../media/images/proteins/ceruloplasmin.jpg?url";
+import filaggrin from "../media/images/proteins/filaggrin.png?url";
+import intrinsicFactor from "../media/images/proteins/intrinsic-factor.png?url";
 
 export type ProteinImageId = Extract<
   ProteinEntry["id"],
@@ -27,20 +27,20 @@ export const PROTEIN_IMAGE_ATTRIBUTIONS: Partial<
   Record<ProteinImageId, MediaAttribution>
 > = {
   "adenosine-deaminase": {
-    label: "Created locally; reference: Adenosine deaminase",
-    url: "https://en.wikipedia.org/wiki/Adenosine_deaminase",
+    label: "Wikimedia Commons (Person with Job's syndrome.jpg)",
+    url: "https://commons.wikimedia.org/wiki/File:Person_with_Job%27s_syndrome.jpg",
   },
   ceruloplasmin: {
-    label: "Created locally; reference: Ceruloplasmin",
-    url: "https://en.wikipedia.org/wiki/Ceruloplasmin",
+    label: "Wikimedia Commons (Kayser-Fleischer ring.jpg)",
+    url: "https://commons.wikimedia.org/wiki/File:Kayser-Fleischer_ring.jpg",
   },
   filaggrin: {
-    label: "Created locally; reference: Filaggrin",
-    url: "https://en.wikipedia.org/wiki/Filaggrin",
+    label: "Wikimedia Commons (502 Layers of epidermis (no labels).png)",
+    url: "https://commons.wikimedia.org/wiki/File:502_Layers_of_epidermis_(no_labels).png",
   },
   "intrinsic-factor": {
-    label: "Created locally; reference: Intrinsic factor",
-    url: "https://en.wikipedia.org/wiki/Intrinsic_factor",
+    label: "Wikimedia Commons (Histology of gastric chief cell.png)",
+    url: "https://commons.wikimedia.org/wiki/File:Histology_of_gastric_chief_cell.png",
   },
 };
 

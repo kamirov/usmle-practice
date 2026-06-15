@@ -201,3 +201,23 @@ multinucleated-giant-cell.jpg
   Source: Wikimedia Commons — Langhans Giant Cell (10189844503).jpg
   Page: https://commons.wikimedia.org/wiki/File:Langhans_Giant_Cell_(10189844503).jpg
   Download: https://commons.wikimedia.org/wiki/Special:FilePath/File:Langhans_Giant_Cell_(10189844503).jpg?width=1280
+
+gray-matter.jpg
+  Source: Wikimedia Commons — Grey matter and white matter - high mag.jpg
+  Page: https://commons.wikimedia.org/wiki/File:Grey_matter_and_white_matter_-_high_mag.jpg
+  Download: https://commons.wikimedia.org/wiki/Special:FilePath/File:Grey_matter_and_white_matter_-_high_mag.jpg?width=1280
+
+medial-longitudinal-fasciculus.png
+  Source: Wikimedia Commons — Population-averaged human tractography atlas - Brainstem.png
+  Page: https://commons.wikimedia.org/wiki/File:Population-averaged_human_tractography_atlas_-_Brainstem.png
+  Download: https://commons.wikimedia.org/wiki/Special:FilePath/File:Population-averaged_human_tractography_atlas_-_Brainstem.png?width=1280
+
+preterm-lung-maturity.jpg
+  Source: Wikimedia Commons — Hyaline membranes - very high mag.jpg
+  Page: https://commons.wikimedia.org/wiki/File:Hyaline_membranes_-_very_high_mag.jpg
+  Download: https://commons.wikimedia.org/wiki/Special:FilePath/File:Hyaline_membranes_-_very_high_mag.jpg?width=1280
+
+white-matter.jpg
+  Source: Wikimedia Commons — Grey matter and white matter - high mag.jpg
+  Page: https://commons.wikimedia.org/wiki/File:Grey_matter_and_white_matter_-_high_mag.jpg
+  Download: https://commons.wikimedia.org/wiki/Special:FilePath/File:Grey_matter_and_white_matter_-_high_mag.jpg?width=1280

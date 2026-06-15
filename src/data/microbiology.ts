@@ -3089,6 +3089,8 @@ export const MICROBIOLOGY: MicrobiologyEntry[] = [
       "toxoplasma gondii",
       "toxoplasma",
       "t. gondii",
+      "toxoplasmosis",
+      "toxoplasmoses",
     ],
     type: "parasite",
     definition:
@@ -3142,6 +3144,143 @@ export const MICROBIOLOGY: MicrobiologyEntry[] = [
     ],
     pediatrics:
       "Congenital toxoplasmosis — treat mother in pregnancy when acquired; neonatal pyrimethamine-sulfadiazine; chorioretinitis may present later in childhood.",
+  },
+  {
+    id: "paramyxovirus",
+    name: "Paramyxovirus",
+    etymology: "Greek para = beside + myxa = mucus + Latin virus = poison",
+    aliases: [
+      "paramyxovirus",
+      "paramyxoviruses",
+      "paramyxoviridae",
+      "paramyxovirus family",
+    ],
+    type: "virus",
+    definition:
+      "Family of enveloped negative-sense ssRNA viruses with helical nucleocapsids and fusion (F) and hemagglutinin-neuraminidase (HN/H) surface glycoproteins — includes measles (Morbillivirus), mumps (Rubulavirus), RSV, parainfluenza, and Nipah viruses.",
+    morphology: [
+      "Enveloped, helical nucleocapsid, negative-sense ssRNA",
+      "100–300 nm virions; F protein mediates cell fusion and syncytia",
+      "Non-segmented genome; replicate in cytoplasm",
+    ],
+    virulenceFactors: [
+      "F (fusion) protein — syncytia formation, cell-to-cell spread",
+      "H/HN protein — attachment to sialic acid or specific receptors (e.g., CD46/SLAM on measles)",
+      "V proteins — interferon antagonism (measles, mumps)",
+    ],
+    transmission: [
+      "Respiratory droplets and aerosol (measles, mumps, parainfluenza)",
+      "Direct contact with secretions",
+      "Highly contagious for measles (R₀ ~12–18)",
+    ],
+    diseases: [
+      "Measles (rubeola) — Morbillivirus",
+      "Mumps — Rubulavirus",
+      "Respiratory syncytial virus (RSV) — Pneumovirus subfamily",
+      "Parainfluenza — croup, bronchiolitis",
+      "Nipah/Hendra — zoonotic encephalitis",
+    ],
+    classicPresentation: [
+      "Measles — 3 C's prodrome, Koplik spots, cephalocaudal confluent rash",
+      "Mumps — parotid swelling, orchitis risk in post-pubertal males",
+      "RSV — wheezing bronchiolitis in infants",
+      "Parainfluenza — barking cough, stridor (croup)",
+    ],
+    diagnosis: [
+      "Clinical diagnosis for classic measles/mumps",
+      "PCR or serology (IgM) for specific paramyxovirus",
+      "RSV rapid antigen from nasopharyngeal swab",
+    ],
+    treatment: [
+      "Supportive care for most paramyxovirus infections",
+      "Vitamin A for measles in children",
+      "Ribavirin occasionally for severe RSV (controversial)",
+      "MMR vaccine prevents measles and mumps",
+    ],
+    distinguishFrom: [
+      "Rubella — NOT a paramyxovirus; Togaviridae/Matonaviridae family",
+      "Influenza — Orthomyxoviridae, segmented genome",
+      "Adenovirus — non-enveloped, DNA virus",
+      "HHV-6 (roseola) — DNA herpesvirus, rash after defervescence",
+    ],
+    boardsPearls: [
+      "Measles and mumps are paramyxoviruses; rubella is NOT",
+      "Negative-sense ssRNA, helical, enveloped — family pattern",
+      "F protein fusion → giant cells (Warthin-Finkeldey in measles)",
+      "MMR covers two paramyxoviruses (measles, mump) + rubella",
+    ],
+    pediatrics:
+      "RSV bronchiolitis and measles are major pediatric paramyxovirus diseases; MMR at 12–15 months prevents measles/mumps. Palivizumab prophylaxis for high-risk RSV infants.",
+  },
+  {
+    id: "parvovirus-b19",
+    name: "Parvovirus B19",
+    etymology: "Latin parvus = small + virus; B19 = original panel number",
+    aliases: [
+      "parvovirus b19",
+      "parvovirus b-19",
+      "b19 virus",
+      "b19 parvovirus",
+      "human parvovirus b19",
+      "erythema infectiosum virus",
+      "fifth disease virus",
+    ],
+    type: "virus",
+    definition:
+      "Small non-enveloped ssDNA virus (Erythrovirus) causing erythema infectiosum (fifth disease) in children and aplastic crisis in patients with chronic hemolytic anemias; teratogenic risk includes hydrops fetalis.",
+    morphology: [
+      "Non-enveloped, icosahedral, ssDNA virus (~25 nm)",
+      "Single serotype; tropism for erythroid precursors (P antigen receptor)",
+    ],
+    virulenceFactors: [
+      "Tropism for erythroid progenitor cells → transient arrest of erythropoiesis",
+      "Immune complex-mediated rash in erythema infectiosum",
+      "Direct cytopathic effect on fetal erythroid cells → hydrops fetalis",
+    ],
+    transmission: [
+      "Respiratory droplets",
+      "Vertical transmission (congenital infection, hydrops)",
+      "Blood products (rare)",
+    ],
+    diseases: [
+      "Erythema infectiosum (fifth disease) — slapped-cheek rash in children",
+      "Aplastic crisis — acute reticulocytopenia in sickle cell, spherocytosis, G6PD",
+      "Hydrops fetalis — maternal primary infection in pregnancy",
+      "Chronic pure red cell aplasia in immunocompromised hosts",
+      "Arthralgia/arthritis (especially adult women)",
+    ],
+    classicPresentation: [
+      "Child with 'slapped-cheek' facial erythema followed by lacy reticular body rash",
+      "Sickle cell patient with sudden anemia, reticulocytopenia, no rash (aplastic crisis)",
+      "Pregnant woman exposed → fetal hydrops on ultrasound",
+      "Mild prodrome then rash; child often well-appearing",
+    ],
+    diagnosis: [
+      "Clinical diagnosis for classic fifth disease",
+      "Parvovirus B19 IgM (acute infection)",
+      "PCR for aplastic crisis or fetal hydrops",
+      "Reticulocyte count ↓ in aplastic crisis",
+    ],
+    treatment: [
+      "Supportive care for erythema infectiosum",
+      "Transfusion for severe aplastic crisis",
+      "Intrauterine transfusion for hydrops fetalis (specialist)",
+      "IVIG for chronic red cell aplasia in immunocompromised",
+    ],
+    distinguishFrom: [
+      "Rubella — rash with fever, postauricular nodes; teratogenic but different pattern",
+      "Measles — Koplik spots, 3 C's, confluent rash",
+      "Roseola — rash after fever breaks, not slapped cheek",
+      "Scarlet fever — sandpaper rash, pharyngitis, GAS",
+    ],
+    boardsPearls: [
+      "Slapped cheek + lacy rash = parvovirus B19 (fifth disease)",
+      "Aplastic crisis in sickle cell — parvovirus B19 destroys erythroid precursors",
+      "Hydrops fetalis from maternal primary B19 infection",
+      "Non-enveloped ssDNA — unlike paramyxoviruses",
+    ],
+    pediatrics:
+      "Fifth disease is benign in immunocompetent children; keep away from sickle cell/CY patients during outbreak. Pregnant teachers/caregivers exposed to parvovirus need IgG avidity testing.",
   },
   {
     id: "borrelia-burgdorferi",

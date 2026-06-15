@@ -67,3 +67,28 @@ oxacillin.svg
   Source: Wikimedia Commons — Struktur Oxacillin.svg
   Page: https://commons.wikimedia.org/wiki/File:Struktur_Oxacillin.svg
   Download: https://commons.wikimedia.org/wiki/Special:FilePath/File:Struktur_Oxacillin.svg?width=1280
+
+antipsychotics.jpg
+  Source: Wikimedia Commons — Overview of reward structures in the human brain.jpg
+  Page: https://commons.wikimedia.org/wiki/File:Overview_of_reward_structures_in_the_human_brain.jpg
+  Download: https://commons.wikimedia.org/wiki/Special:FilePath/File:Overview_of_reward_structures_in_the_human_brain.jpg?width=1280
+
+calcineurin-inhibitors.svg
+  Source: Wikimedia Commons — Cyclosporine prescriptions (DrugStats).svg
+  Page: https://commons.wikimedia.org/wiki/File:Cyclosporine_prescriptions_(DrugStats).svg
+  Download: https://commons.wikimedia.org/wiki/Special:FilePath/File:Cyclosporine_prescriptions_(DrugStats).svg?width=1280
+
+dexamethasone.svg
+  Source: Wikimedia Commons — Dexamethasone structure.svg
+  Page: https://commons.wikimedia.org/wiki/File:Dexamethasone_structure.svg
+  Download: https://commons.wikimedia.org/wiki/Special:FilePath/File:Dexamethasone_structure.svg?width=1280
+
+glatiramer.webp
+  Source: Wikimedia Commons — Some of the pharmacological modes-of-action (PMA) of GA-treatment of MS patients.webp
+  Page: https://commons.wikimedia.org/wiki/File:Some_of_the_pharmacological_modes-of-action_(PMA)_of_GA-treatment_of_MS_patients.webp
+  Download: https://commons.wikimedia.org/wiki/Special:FilePath/File:Some_of_the_pharmacological_modes-of-action_(PMA)_of_GA-treatment_of_MS_patients.webp?width=1280
+
+hydrocortisone.svg
+  Source: Wikimedia Commons — Hydrocortisone hemisuccinate.svg
+  Page: https://commons.wikimedia.org/wiki/File:Hydrocortisone_hemisuccinate.svg
+  Download: https://commons.wikimedia.org/wiki/Special:FilePath/File:Hydrocortisone_hemisuccinate.svg?width=1280

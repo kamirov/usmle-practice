@@ -48,3 +48,7 @@ tea-and-toast-diet.jpg
   Source: Wikimedia Commons — Paul Lepper editor of the Young Socialist speaking at the 44th Anniversary of the News Line (10927112626).jpg
   Page: https://commons.wikimedia.org/wiki/File:Paul_Lepper_editor_of_the_Young_Socialist_speaking_at_the_44th_Anniversary_of_the_News_Line_(10927112626).jpg
   Download: https://commons.wikimedia.org/wiki/Special:FilePath/File:Paul_Lepper_editor_of_the_Young_Socialist_speaking_at_the_44th_Anniversary_of_the_News_Line_(10927112626).jpg?width=1280
+
+torch-infections.jpg
+  Source: Wikimedia Commons — ToRCH IgG Combo Rapid Test-Negative.jpg
+  Page: https://commons.wikimedia.org/wiki/File:ToRCH_IgG_Combo_Rapid_Test-Negative.jpg

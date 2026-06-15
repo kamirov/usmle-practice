@@ -454,3 +454,15 @@ staphylococcus-epidermidis.jpg
   Source: Wikimedia Commons — Gram stain of Staphylococcus epidermidis.jpg
   Page: https://commons.wikimedia.org/wiki/File:Gram_stain_of_Staphylococcus_epidermidis.jpg
   Download: https://commons.wikimedia.org/wiki/Special:FilePath/File:Gram_stain_of_Staphylococcus_epidermidis.jpg?width=1280
+
+paramyxovirus.jpg
+  Source: Wikimedia Commons — Measles virus.JPG
+  Page: https://commons.wikimedia.org/wiki/File:Measles_virus.JPG
+
+parvovirus-b19.jpg
+  Source: Wikimedia Commons — Erythema infectiosum.jpg
+  Page: https://commons.wikimedia.org/wiki/File:Erythema_infectiosum.jpg
+
+toxoplasmosis.jpg
+  Source: Wikimedia Commons — Toxoplasma gondii Tachyzoite (NIH BioArt 683).svg
+  Page: https://commons.wikimedia.org/wiki/File:Toxoplasma_gondii_Tachyzoite_(NIH_BioArt_683).svg

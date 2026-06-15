@@ -5928,6 +5928,435 @@ export const SYMPTOMS: SymptomEntry[] = [
     pediatrics:
       "Spastic cerebral palsy from perinatal corticospinal injury is the classic pediatric spastic paresis; B12 deficiency in infants can cause spasticity with developmental regression.",
   },
+  {
+    id: "hypotelorism",
+    name: "Hypotelorism",
+    etymology: "Greek hypo = under + telos = distance + -ism = condition",
+    aliases: [
+      "hypotelorism",
+      "hypotelorisms",
+      "decreased interocular distance",
+      "decreased interpupillary distance",
+      "closely spaced eyes",
+    ],
+    definition:
+      "Abnormally decreased distance between the medial orbital walls or pupils — a midline facial sign associated with holoprosencephaly, trisomy 13, and fetal alcohol syndrome.",
+    mechanism:
+      "Failed lateral expansion of the forebrain and frontonasal prominence during embryogenesis → midline structures remain close together; severity correlates with degree of holoprosencephaly.",
+    thinkOf: [
+      "Holoprosencephaly",
+      "Trisomy 13 (Patau syndrome)",
+      "Fetal alcohol syndrome",
+      "SHH pathway mutations",
+      "Midline cleft lip",
+    ],
+    pairWith: [
+      "Hypotelorism + cleft lip + polydactyly → trisomy 13",
+      "Hypotelorism + single nostril/proboscis → alobar holoprosencephaly",
+      "Hypotelorism + microcephaly → syndromic HPE workup",
+    ],
+    distinguishFrom: [
+      "Hypertelorism — increased interocular distance (e.g., fetal hydantoin, craniosynostosis)",
+      "Telecanthus — increased inner canthal distance with normal interpupillary distance (e.g., Down syndrome)",
+      "Epicanthal folds — skin fold, not true hypotelorism",
+    ],
+    pediatrics:
+      "Hypotelorism in a neonate warrants brain MRI and karyotype; it is a marker of forebrain malformation severity in holoprosencephaly spectrum disorders.",
+  },
+  {
+    id: "cyclopia",
+    name: "Cyclopia",
+    etymology: "Greek kyklos = circle + ops = eye",
+    aliases: [
+      "cyclopia",
+      "cyclops",
+      "cyclopean eye",
+      "single eye",
+    ],
+    definition:
+      "Severe midline facial malformation with fusion of the orbits into a single central eye or eye-like structure — the most extreme facial manifestation of alobar holoprosencephaly.",
+    mechanism:
+      "Complete failure of forebrain and facial midline cleavage → single optic vesicle and proboscis-like structure above the mono-orbital field; reflects alobar holoprosencephaly.",
+    thinkOf: [
+      "Alobar holoprosencephaly",
+      "Trisomy 13",
+      "SHH mutations",
+      "Fetal alcohol syndrome",
+      "Severe midline facial cleft",
+    ],
+    pairWith: [
+      "Cyclopia + proboscis → alobar HPE",
+      "Cyclopia + polydactyly → trisomy 13",
+      "Monoventricle on MRI → confirms holoprosencephaly",
+    ],
+    distinguishFrom: [
+      "Synophthalmia — partial fusion of eyes (less severe spectrum)",
+      "Anophthalmia — absent eye without midline fusion",
+      "Hypertelorism — widely spaced eyes, opposite finding",
+    ],
+    pediatrics:
+      "Cyclopia is incompatible with long-term survival; prenatal ultrasound may detect alobar holoprosencephaly with severe facial anomalies prompting genetic counseling.",
+  },
+  {
+    id: "koplik-spots",
+    name: "Koplik Spots",
+    etymology: "eponym: Henry Koplik + spots = visible lesions",
+    aliases: [
+      "koplik spots",
+      "koplik's spots",
+      "koplik spot",
+      "buccal koplik spots",
+    ],
+    definition:
+      "Pathognomonic enanthem of measles (rubeola) — bluish-white specks on an erythematous buccal mucosa background, typically opposite the molars, appearing 1–2 days before the exanthem.",
+    mechanism:
+      "Measles virus infects oral epithelium and underlying capillaries → focal necrosis with surrounding erythema creates the characteristic 'grains of salt on a red sea' appearance; fade as rash develops.",
+    thinkOf: [
+      "Measles (rubeola)",
+      "Measles virus (paramyxovirus)",
+      "Unvaccinated child with fever and coryza",
+    ],
+    pairWith: [
+      "Koplik spots + 3 C's (cough, coryza, conjunctivitis) → measles",
+      "Koplik spots → rash cephalocaudal within 1–2 days",
+      "Koplik spots absent → consider rubella, scarlet fever, drug rash",
+    ],
+    distinguishFrom: [
+      "Fordyce spots — ectopic sebaceous glands, not enanthem",
+      "Aphthous ulcers — painful, not bluish-white specks",
+      "Rubella — no Koplik spots; postauricular lymphadenopathy",
+      "Scarlet fever — strawberry tongue, sandpaper rash, pharyngitis",
+    ],
+    pediatrics:
+      "Koplik spots appear during measles prodrome in children; they fade quickly so may be missed if exam delayed until rash phase. MMR vaccination prevents measles.",
+  },
+  {
+    id: "confluent-rash",
+    name: "Confluent Rash",
+    etymology: "Latin confluere = flow together + Old French rasche = eruption",
+    aliases: [
+      "confluent rash",
+      "confluent rashes",
+      "confluent maculopapular rash",
+      "coalescent rash",
+    ],
+    definition:
+      "Exanthem in which individual macules and papules merge into large continuous erythematous areas — classic in measles at rash peak and in severe drug eruptions.",
+    mechanism:
+      "Widespread dermal/perivascular inflammation with increasing lesion density → adjacent lesions coalesce; in measles, immune response to paramyxovirus viremia produces cephalocaudal confluent maculopapular eruption.",
+    thinkOf: [
+      "Measles (rubeola) — rash peaks confluent at trunk",
+      "Scarlet fever — sandpaper texture, may coalesce",
+      "Drug hypersensitivity (DRESS, SJS/TEN spectrum)",
+      "Viral exanthems at peak intensity",
+    ],
+    pairWith: [
+      "Confluent rash + Koplik spots + 3 C's → measles",
+      "Confluent rash after fever breaks → not roseola (roseola rash as afebrile)",
+      "Confluent rash + pharyngitis + sandpaper feel → scarlet fever",
+    ],
+    distinguishFrom: [
+      "Discrete maculopapular rash — lesions remain separate (early measles, rubella)",
+      "Roseola — rash appears after defervescence, usually non-confluent",
+      "Morbilliform drug eruption — temporal relation to new drug",
+    ],
+    pediatrics:
+      "Measles produces the classic confluent cephalocaudal rash in unvaccinated children; vitamin A supplementation reduces morbidity. Confluent rash with mucosal involvement raises concern for SJS/TEN.",
+  },
+  {
+    id: "arthralgia",
+    name: "Arthralgia",
+    etymology: "Greek arthron = joint + algos = pain",
+    aliases: [
+      "arthralgia",
+      "arthralgias",
+      "joint pain",
+      "joint pains",
+      "joint ache",
+    ],
+    definition:
+      "Pain originating from a joint without objective signs of inflammation (swelling, warmth, erythema) on examination — distinguished from arthritis which includes inflammatory findings.",
+    mechanism:
+      "Nociceptive signaling from joint capsule, synovium, periosteum, or adjacent structures; causes include viral infection, serum sickness, degenerative change, and referred pain without synovitis.",
+    thinkOf: [
+      "Viral infections (rubella, parvovirus B19, dengue, chikungunya)",
+      "Congenital rubella syndrome",
+      "Serum sickness",
+      "Lyme disease (early)",
+      "Osteoarthritis",
+    ],
+    pairWith: [
+      "Arthralgia + rash + postauricular nodes → rubella",
+      "Arthralgia + slapped cheek → parvovirus B19",
+      "Arthralgia + arthritis (swollen joints) → inflammatory arthritis",
+      "Arthralgia + migratory polyarthralgia → rheumatic fever",
+    ],
+    distinguishFrom: [
+      "Arthritis — joint swelling, warmth, effusion, synovitis",
+      "Myalgia — muscle pain without joint tenderness",
+      "Bone pain — deeper, localized to bone not joint line",
+    ],
+    pediatrics:
+      "Parvovirus B19 and rubella cause arthralgia in children; congenital rubella may cause chronic joint symptoms. Reactive arthritis is less common in young children than adolescents.",
+  },
+  {
+    id: "arthritis",
+    name: "Arthritis",
+    etymology: "Greek arthron = joint + -itis = inflammation",
+    aliases: [
+      "arthritis",
+      "arthritis joint inflammation",
+      "inflammatory arthritis",
+      "joint inflammation",
+    ],
+    definition:
+      "Inflammation of one or more joints characterized by pain, swelling, warmth, erythema, and/or reduced range of motion — may be infectious, autoimmune, crystal-induced, or degenerative.",
+    mechanism:
+      "Synovial inflammation from immune complex deposition, autoantibodies, crystal phagocytosis, or direct bacterial invasion → cytokine release, effusion, cartilage/bone damage if chronic.",
+    thinkOf: [
+      "Rheumatoid arthritis",
+      "Septic arthritis",
+      "Reactive arthritis (post-GI/GU infection)",
+      "Gout (monosodium urate crystals)",
+      "Lyme arthritis",
+      "Juvenile idiopathic arthritis",
+    ],
+    pairWith: [
+      "Arthritis + urethritis + conjunctivitis → reactive arthritis",
+      "Hot swollen monoarticular joint + fever → septic arthritis until proven otherwise",
+      "Arthritis + MCP/PIP involvement + morning stiffness → rheumatoid arthritis",
+      "Migratory polyarthritis + carditis → rheumatic fever",
+    ],
+    distinguishFrom: [
+      "Arthralgia — joint pain without inflammatory signs",
+      "Periarthritis — inflammation around joint (e.g., bursitis)",
+      "Osteoarthritis — pain with use, minimal swelling, osteophytes",
+    ],
+    pediatrics:
+      "Septic arthritis in children requires urgent joint aspiration — most commonly S. aureus; juvenile idiopathic arthritis presents with morning stiffness and joint swelling without infection.",
+  },
+  {
+    id: "blueberry-muffin-rash",
+    name: "Blueberry Muffin Rash",
+    etymology: "descriptive: blueberry = purplish color + muffin = raised nodule morphology",
+    aliases: [
+      "blueberry muffin rash",
+      "blueberry muffin rashes",
+      "blueberry muffin spots",
+      "blueberry muffin baby",
+      "extramedullary hematopoiesis rash",
+    ],
+    definition:
+      "Purpuric papular rash resembling blueberry muffins caused by extramedullary hematopoiesis in the dermis — classic in congenital rubella syndrome and other TORCH infections.",
+    mechanism:
+      "Fetal bone marrow suppression or increased hematopoietic demand → hematopoiesis in skin and other organs → dermal erythroid/myeloid precursors create non-blanching purpuric nodules; also seen with hemolytic disease and some malignancies.",
+    thinkOf: [
+      "Congenital rubella syndrome",
+      "Congenital CMV",
+      "Congenital toxoplasmosis",
+      "TORCH infections",
+      "Hemolytic disease of the newborn",
+    ],
+    pairWith: [
+      "Blueberry muffin + cataracts + deafness + PDA → congenital rubella",
+      "Blueberry muffin + hepatosplenomegaly + thrombocytopenia → TORCH workup",
+      "Blueberry muffin + hydrops → parvovirus B19 (different mechanism — anemia)",
+    ],
+    distinguishFrom: [
+      "Petechiae — smaller, flat; thrombocytopenia without nodules",
+      "Purpura fulminans — DIC, meningococcemia — toxic, acute",
+      "Slapped-cheek rash — parvovirus B19, lacy body rash, not purpuric nodules",
+    ],
+    pediatrics:
+      "Blueberry muffin rash in a neonate prompts TORCH serologies, CBC, and ophthalmologic/hearing evaluation; congenital rubella triad (cataracts, deafness, PDA) is boards classic.",
+  },
+  {
+    id: "primitive-nose",
+    name: "Primitive Nose",
+    etymology: "Latin primitivus = first/original + Latin nasus = nose",
+    aliases: [
+      "primitive nose",
+      "proboscis",
+      "proboscis-like nose",
+      "single nostril",
+      "nasal proboscis",
+    ],
+    definition:
+      "Midline nasal malformation in holoprosencephaly spectrum — a single nostril, rudimentary proboscis above a single orbit, or absent/severe hypoplasia of the nose reflecting failed frontonasal prominence development.",
+    mechanism:
+      "Failed cleavage of the forebrain and frontonasal process → midline structures remain undifferentiated; proboscis-like appendage may contain rudimentary olfactory tissue; severity parallels alobar holoprosencephaly.",
+    thinkOf: [
+      "Alobar holoprosencephaly",
+      "Trisomy 13",
+      "SHH mutations",
+      "Cyclopia",
+      "Midline facial cleft",
+    ],
+    pairWith: [
+      "Primitive nose + cyclopia → alobar HPE",
+      "Primitive nose + hypotelorism → holoprosencephaly workup",
+      "Proboscis + polydactyly → trisomy 13",
+    ],
+    distinguishFrom: [
+      "Normal nasal development — bilateral nares",
+      "Choanal atresia — posterior nasal obstruction, normal external nose",
+      "Cleft lip — lateral lip defect, not midline proboscis",
+    ],
+    pediatrics:
+      "Primitive nose/proboscis in a neonate indicates severe holoprosencephaly; brain MRI and karyotype are indicated. Airway management may be required if bilateral choanal atresia coexists.",
+  },
+  {
+    id: "facial-cleft",
+    name: "Facial Cleft",
+    etymology: "Latin facies = face + clift = split",
+    aliases: [
+      "facial cleft",
+      "facial clefts",
+      "craniofacial cleft",
+      "craniofacial clefts",
+      "midline facial cleft",
+    ],
+    definition:
+      "Congenital defect from failed fusion of facial prominences — ranges from cleft lip/palate to midline craniofacial clefts associated with holoprosencephaly and Tessier classification of orbital/maxillary defects.",
+    mechanism:
+      "Disrupted migration/fusion of frontonasal, maxillary, and mandibular processes during weeks 4–8 → cleft through lip, alveolus, palate, or broader craniofacial skeleton; midline clefts suggest holoprosencephaly.",
+    thinkOf: [
+      "Holoprosencephaly",
+      "Trisomy 13",
+      "Cleft lip and palate",
+      "Fetal alcohol syndrome",
+      "Frontonasal dysplasia",
+    ],
+    pairWith: [
+      "Midline facial cleft + hypotelorism → holoprosencephaly",
+      "Facial cleft + polydactyly → trisomy 13",
+      "Lateral cleft lip → often isolated multifactorial",
+    ],
+    distinguishFrom: [
+      "Cleft lip alone — specific subtype of facial cleft",
+      "Facial trauma — acquired, not congenital",
+      "Amniotic band sequence — asymmetric constriction defects",
+    ],
+    pediatrics:
+      "Midline facial clefts in neonates require brain imaging for holoprosencephaly and genetic evaluation; lateral clefts are more often isolated and managed by cleft team surgery and speech support.",
+  },
+  {
+    id: "vomitus",
+    name: "Vomitus",
+    etymology: "Latin vomitus = that which is vomited",
+    aliases: [
+      "vomitus",
+      "emesis",
+      "emesis material",
+      "vomited material",
+      "gastric vomitus",
+    ],
+    definition:
+      "Material expelled from the stomach (and sometimes proximal duodenum) during vomiting — its character (bilious, bloody, feculent, undigested food) localizes pathology along the GI tract.",
+    mechanism:
+      "Forceful emesis propels gastric contents through the esophagus; composition reflects source: gastric acid and food (stomach), bile (duodenum/proximal small bowel), blood (Mallory-Weiss tear, variceal bleed, peptic ulcer), or feculent odor (distal obstruction).",
+    thinkOf: [
+      "Gastroenteritis — food particles, no bile if gastric only",
+      "Small bowel obstruction — bilious vomitus",
+      "Duodenal atresia / malrotation — bilious vomiting in neonate (surgical emergency)",
+      "Upper GI bleed — coffee-ground or frank blood in vomitus",
+      "Pyloric stenosis — non-bilious projectile vomitus in infant",
+    ],
+    pairWith: [
+      "Bilious vomitus in neonate → malrotation/volvulus until proven otherwise",
+      "Non-bilious projectile vomitus + olive mass → pyloric stenosis",
+      "Coffee-ground vomitus → upper GI bleed (blood altered by acid)",
+      "Feculent vomitus → distal bowel obstruction",
+      "Hematemesis vs hemoptysis — acidic pH and food particles favor vomitus source",
+    ],
+    distinguishFrom: [
+      "Vomiting — the act/reflex, not the material",
+      "Regurgitate — effortless reflux of gastric contents",
+      "Hemoptysis — blood from respiratory tract, not vomitus",
+    ],
+    pediatrics:
+      "Bilious vomitus in any infant is a surgical red flag (malrotation); non-bilious projectile emesis in 2–8 week old suggests pyloric stenosis (hypochloremic metabolic alkalosis).",
+  },
+  {
+    id: "agonal-respirations",
+    name: "Agonal Respirations",
+    etymology: "Greek agon = struggle/contest + -al = pertaining to + Latin respirare = breathe again",
+    aliases: [
+      "agonal respirations",
+      "agonal respiration",
+      "agonal breathing",
+      "agonal breaths",
+      "gasping respirations",
+      "agonal gasps",
+    ],
+    definition:
+      "Abnormal, irregular, gasping breaths occurring in the setting of severe brain hypoxia or ischemia — often precedes cardiac arrest and is not effective ventilation.",
+    mechanism:
+      "Brainstem hypoperfusion or severe hypoxia triggers primitive medullary gasping reflexes — slow, deep, irregular inspiratory efforts with poor tidal volume; indicates impending cardiorespiratory arrest rather than adequate breathing.",
+    thinkOf: [
+      "Cardiac arrest / post-arrest state",
+      "Severe stroke with brainstem compromise",
+      "Terminal hypoxia",
+      "Massive opioid overdose (late, with apnea)",
+      "Imminent death — not a sign to withhold CPR",
+    ],
+    pairWith: [
+      "Agonal respirations + unresponsive + no pulse → CPR immediately",
+      "Agonal gasps are NOT normal breathing — start compressions",
+      "Post-rosc — may persist briefly; support airway",
+      "Agonal breathing vs obstructive snoring — both need airway assessment",
+    ],
+    distinguishFrom: [
+      "Kussmaul respirations — deep regular hyperpnea in metabolic acidosis; patient alert",
+      "Cheyne-Stokes — cyclic apnea and hyperpnea in CHF/stroke",
+      "Normal sleep apnea — periodic breathing without cardiovascular collapse",
+      "Dyspnea — conscious respiratory distress with effective ventilation",
+    ],
+    pediatrics:
+      "Agonal respirations in children during cardiac arrest are common; bystander CPR should not be delayed because gasping is mistaken for breathing. Pediatric advanced life support treats agonal gasps as arrest.",
+  },
+  {
+    id: "insomnia",
+    name: "Insomnia",
+    etymology: "Latin in- = not + somnus = sleep",
+    aliases: [
+      "insomnia",
+      "insomnias",
+      "difficulty sleeping",
+      "difficulty falling asleep",
+      "difficulty staying asleep",
+      "sleep difficulty",
+      "poor sleep",
+    ],
+    definition:
+      "Subjective difficulty initiating or maintaining sleep, or non-restorative sleep, with daytime impairment — may be primary or secondary to medical, psychiatric, or substance causes.",
+    mechanism:
+      "Hyperarousal (cortical or autonomic), circadian misalignment, conditioned sleep avoidance, or discomfort/pain disrupt sleep architecture; psychiatric and endocrine disorders (hyperthyroidism, depression, mania) and stimulants commonly reduce sleep drive or increase wakefulness.",
+    thinkOf: [
+      "Hyperthyroidism / thyrotoxicosis",
+      "Major depressive disorder (early morning awakening)",
+      "Generalized anxiety disorder",
+      "Bipolar mania — decreased need for sleep",
+      "Caffeine, stimulants, alcohol withdrawal",
+      "Obstructive sleep apnea (fragmented sleep)",
+      "Chronic pain, GERD, nocturia",
+    ],
+    pairWith: [
+      "Insomnia + tremor + weight loss + heat intolerance → hyperthyroidism",
+      "Insomnia + early morning awakening + anhedonia → depression",
+      "Insomnia + decreased need for sleep + grandiosity → mania",
+      "Insomnia + snoring + daytime somnolence → OSA",
+      "Insomnia + night sweats + weight loss → consider malignancy, TB, HIV",
+    ],
+    distinguishFrom: [
+      "Hypersomnia — excessive sleepiness despite adequate sleep time",
+      "Fatigue — low energy without primary sleep initiation problem",
+      "Delayed sleep phase — circadian rhythm disorder, not inability to sleep",
+      "Normal short sleepers — no daytime impairment",
+    ],
+    pediatrics:
+      "Pediatric insomnia often behavioral (limit-setting, bedtime resistance) or linked to ADHD, anxiety, or autism; hyperthyroidism and OSA remain in differential for new-onset sleep difficulty in adolescents.",
+  },
 ];
 
 const symptomById = new Map(SYMPTOMS.map((s) => [s.id, s]));

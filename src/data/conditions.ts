@@ -23341,6 +23341,431 @@ export const CONDITIONS: ConditionEntry[] = [
     pediatrics:
       "Myelomeningocele requires neonatal neurosurgical closure, hydrocephalus management, and lifelong urologic/orthopedic care; prenatal folate prevents majority of NTDs.",
   },
+  {
+    id: "trisomy-13",
+    name: "Trisomy 13",
+    etymology: "Greek tri = three + soma = body + 13 = chromosome number",
+    aliases: [
+      "trisomy 13",
+      "trisomy-13",
+      "t13",
+      "patau syndrome",
+      "patau's syndrome",
+      "patau",
+    ],
+    definition:
+      "Lethal chromosomal disorder from trisomy 13 causing severe central nervous system malformations, midline facial defects, polydactyly, and multiple congenital anomalies — median survival days to months.",
+    pathophysiology:
+      "Extra copy of chromosome 13 (free trisomy, translocation, or mosaicism) → gene dosage imbalance → failed forebrain cleavage (holoprosencephaly spectrum), midline facial clefting, cardiac and renal malformations, and severe neurodevelopmental impairment.",
+    classicPresentation: [
+      "Holoprosencephaly with midline facial defects (cleft lip/palate, cyclopia, hypotelorism, proboscis)",
+      "Polydactyly (often postaxial hexadactyly)",
+      "Cutis aplasia, rocker-bottom feet, overlapping fingers",
+      "Congenital heart defects (VSD, PDA, dextrocardia)",
+      "Severe intellectual disability and hypotonia",
+    ],
+    keyFindings: [
+      "Midline facial anomalies and holoprosencephaly on imaging",
+      "Polydactyly and characteristic hand/foot positioning",
+      "Cutis aplasia (scalp defect)",
+      "Karyotype: 47,XX,+13 or 47,XY,+13",
+    ],
+    keyLabs: [
+      "Karyotype confirms trisomy 13",
+      "Prenatal screening: ↑ nuchal translucency, abnormal ultrasound (holoprosencephaly, polydactyly)",
+      "FISH or microarray for rapid prenatal diagnosis",
+    ],
+    associations: [
+      "Holoprosencephaly — failed cleavage of prosencephalon",
+      "Advanced maternal age (free trisomy)",
+      "Robertsonian translocation involving chromosome 13",
+    ],
+    complications: [
+      "Early neonatal death (most common)",
+      "Apnea, feeding difficulty, seizures",
+      "Congenital heart failure",
+    ],
+    distinguishFrom: [
+      "Down syndrome (trisomy 21) — milder, better survival, single palmar crease not holoprosencephaly",
+      "Edwards syndrome (trisomy 18) — rocker-bottom feet overlap but less midline CNS/facial severity",
+      "Holoprosencephaly alone — may be isolated or syndromic without full trisomy 13",
+    ],
+    treatment: [
+      "Supportive care; genetic counseling for recurrence risk",
+      "Surgical repair of clefts or cardiac defects if pursued per family goals",
+    ],
+    boardsPearls: [
+      "Patau syndrome = trisomy 13",
+      "Holoprosencephaly + polydactyly + midline facial defects = classic boards vignette",
+      "Median survival <1 year; most die in infancy",
+      "vs trisomy 18 — Edwards has rocker-bottom feet and clenched fists; trisomy 13 emphasizes holoprosencephaly",
+    ],
+    pediatrics:
+      "Trisomy 13 is a neonatal/pediatric diagnosis; most infants require palliative support. Prenatal ultrasound may show holoprosencephaly and polydactyly prompting karyotype.",
+  },
+  {
+    id: "holoprosencephaly",
+    name: "Holoprosencephaly",
+    etymology: "Greek holos = whole + pros = forward + enkephalos = brain",
+    aliases: [
+      "holoprosencephaly",
+      "holoprosencephalies",
+      "hpe",
+    ],
+    definition:
+      "Forebrain malformation from failed cleavage of the prosencephalon into paired cerebral hemispheres and lateral ventricles — ranges from alobar (most severe) to lobar (mildest) forms with characteristic midline facial anomalies.",
+    pathophysiology:
+      "Disrupted SHH signaling pathway (or trisomy 13, fetal alcohol, maternal diabetes) → incomplete separation of telencephalon → fused ventricles and thalami; severity correlates with degree of midline facial dysmorphism (facial cleft, cyclopia, hypotelorism, single nostril/proboscis).",
+    classicPresentation: [
+      "Midline facial defects: hypotelorism, cleft lip/palate, single maxillary central incisor, cyclopia, proboscis (primitive nose)",
+      "Seizures, hypotonia, developmental delay",
+      "Endocrine dysfunction (diabetes insipidus from absent posterior pituitary)",
+      "Alobar — single ventricle, fused thalami; semilobar/lobar — partial cleavage",
+    ],
+    keyFindings: [
+      "Fused lateral ventricles on MRI (monoventricle in alobar form)",
+      "Absent septum pellucidum",
+      "Midline facial anomalies mirror CNS severity",
+      "Associated with trisomy 13, fetal alcohol syndrome, SHH mutations",
+    ],
+    keyLabs: [
+      "Brain MRI — defines alobar vs semilobar vs lobar HPE",
+      "Karyotype — trisomy 13 common association",
+      "Genetic testing — SHH, ZIC2, SIX3, TGIF1 in non-syndromic cases",
+    ],
+    associations: [
+      "Trisomy 13 (Patau syndrome)",
+      "Fetal alcohol syndrome",
+      "Maternal diabetes",
+      "SHH pathway mutations (autosomal dominant, variable penetrance)",
+    ],
+    complications: [
+      "Intractable seizures",
+      "Feeding and respiratory failure in severe forms",
+      "Pituitary/endocrine deficiency",
+    ],
+    distinguishFrom: [
+      "Anencephaly — absent forebrain and calvarium; incompatible with prolonged survival",
+      "Hydranencephaly — destroyed hemispheres with intact skull and brainstem",
+      "Septo-optic dysplasia — absent septum pellucidum but separated hemispheres",
+    ],
+    treatment: [
+      "Supportive care; treat seizures and endocrine deficiencies",
+      "Multidisciplinary management of clefts and feeding",
+    ],
+    boardsPearls: [
+      "Failed prosencephalon cleavage → holoprosencephaly",
+      "Midline face predicts brain severity: cyclopia = alobar HPE",
+      "SHH gene — sonic hedgehog; key morphogen for forebrain patterning",
+      "Trisomy 13 is most common chromosomal cause on boards",
+    ],
+    pediatrics:
+      "Holoprosencephaly presents in infancy with seizures, hypotonia, and dysmorphic facies; alobar forms rarely survive beyond early childhood. Prenatal MRI can detect monoventricle and facial anomalies.",
+  },
+  {
+    id: "congenital-rubella-syndrome",
+    name: "Congenital Rubella Syndrome",
+    etymology: "Latin congenitus = born with + Latin ruber = red + syndrome = grouped findings",
+    aliases: [
+      "congenital rubella syndrome",
+      "congenital rubella",
+      "crs",
+      "rubella embryopathy",
+    ],
+    definition:
+      "Teratogenic syndrome from maternal rubella infection in the first trimester causing sensorineural deafness, congenital cataracts, patent ductus arteriosus, and other multisystem congenital defects.",
+    pathophysiology:
+      "Rubella virus crosses placenta during organogenesis → direct cytopathic effect and vascular/endothelial injury → cataracts (lens damage), PDA (ductal tissue injury), cochlear damage (deafness), thrombocytopenia with extramedullary hematopoiesis (blueberry muffin rash).",
+    classicPresentation: [
+      "Congenital cataracts (often bilateral)",
+      "Sensorineural hearing loss",
+      "Patent ductus arteriosus (or pulmonary artery stenosis)",
+      "Blueberry muffin rash — purpuric papules from extramedullary hematopoiesis",
+      "Intrauterine growth restriction, hepatosplenomegaly",
+    ],
+    keyFindings: [
+      "Cataracts + deafness + PDA triad (classic boards)",
+      "Purpuric 'blueberry muffin' skin lesions",
+      "Thrombocytopenia",
+      "Rubella IgM in infant (persists >6 months unlike transient maternal IgG)",
+    ],
+    keyLabs: [
+      "Rubella IgM in neonate (congenital infection)",
+      "Rubella PCR from throat, urine, or CSF",
+      "Thrombocytopenia on CBC",
+      "Hearing screen and ophthalmologic exam",
+    ],
+    associations: [
+      "Maternal rubella in first trimester (most teratogenic)",
+      "Unvaccinated or non-immune mother",
+      "Blueberry muffin rash — also seen in CMV, toxoplasmosis (TORCH overlap)",
+    ],
+    complications: [
+      "Permanent deafness and blindness if cataracts not cleared early",
+      "Congenital heart failure from PDA",
+      "Developmental delay",
+      "Late-onset panencephalitis (rare)",
+    ],
+    distinguishFrom: [
+      "Congenital CMV — periventricular calcifications, hearing loss, no classic PDA triad",
+      "Congenital toxoplasmosis — chorioretinitis, diffuse calcifications, hydrocephalus",
+      "Congenital syphilis — saddle nose, saber shins, Hutchinson teeth",
+    ],
+    treatment: [
+      "Prevention via MMR vaccination before pregnancy",
+      "Cataract extraction early to prevent amblyopia",
+      "Hearing aids/cochlear implants; PDA closure if hemodynamically significant",
+      "No specific antiviral for established congenital infection",
+    ],
+    boardsPearls: [
+      "CRS triad: cataracts + PDA + sensorineural deafness",
+      "Blueberry muffin rash = extramedullary hematopoiesis in TORCH infections",
+      "MMR prevents CRS — vaccinate women of childbearing age",
+      "Infant rubella IgM positive = congenital infection (not just maternal antibody)",
+    ],
+    pediatrics:
+      "Congenital rubella requires urgent ophthalmologic and audiologic evaluation in the neonatal period; cataract surgery timing is critical to prevent amblyopia. MMR live vaccine is contraindicated in pregnancy.",
+  },
+  {
+    id: "cleft-lip",
+    name: "Cleft Lip",
+    etymology: "Old English clift = split + lip = labium",
+    aliases: [
+      "cleft lip",
+      "cleft lips",
+      "cheiloschisis",
+      "unilateral cleft lip",
+      "bilateral cleft lip",
+    ],
+    definition:
+      "Congenital failure of fusion of the maxillary and medial nasal processes forming a gap in the upper lip — may occur alone or with cleft palate; associated with holoprosencephaly, trisomy 13, and fetal alcohol syndrome.",
+    pathophysiology:
+      "Incomplete fusion of facial prominences by ~6–8 weeks gestation → defect in lip and often alveolus; midline clefts suggest holoprosencephaly spectrum; lateral clefts more often isolated multifactorial or syndromic.",
+    classicPresentation: [
+      "Visible notch or complete gap in upper lip at birth",
+      "Unilateral or bilateral; may extend through alveolus",
+      "Feeding difficulty in neonates (especially if palate also involved)",
+      "Midline cleft with hypotelorism → evaluate for holoprosencephaly",
+    ],
+    keyFindings: [
+      "Physical exam — cleft location and palate involvement",
+      "Syndromic facies (hypotelorism, polydactyly) if associated anomaly",
+      "Brain MRI if midline cleft or holoprosencephaly suspected",
+    ],
+    keyLabs: [
+      "Karyotype if syndromic features (trisomy 13, 18)",
+      "Genetic evaluation for holoprosencephaly pathway mutations",
+    ],
+    associations: [
+      "Cleft palate (often combined)",
+      "Holoprosencephaly and trisomy 13",
+      "Fetal alcohol syndrome",
+      "Van der Woude syndrome (lip pits)",
+    ],
+    complications: [
+      "Feeding and speech difficulties",
+      "Dental malocclusion",
+      "Psychosocial impact",
+    ],
+    distinguishFrom: [
+      "Cleft palate — palatal defect; lip may be intact",
+      "Facial cleft (Tessier) — broader craniofacial clefting classification",
+      "Commissural lip pits — Van der Woude, not true cleft",
+    ],
+    treatment: [
+      "Surgical lip repair typically at 3–6 months",
+      "Feeding support (specialized bottles) before repair",
+      "Multidisciplinary cleft team (surgery, speech, orthodontics)",
+    ],
+    boardsPearls: [
+      "Midline cleft lip + hypotelorism → holoprosencephaly / trisomy 13",
+      "Most cleft lips are lateral and multifactorial",
+      "Cleft lip and palate together common; isolated cleft palate more often syndromic",
+    ],
+    pediatrics:
+      "Neonates with cleft lip need feeding evaluation; syndromic workup if midline defect, polydactyly, or CNS signs. Early surgical repair improves cosmesis and speech development.",
+  },
+  {
+    id: "cleft-palate",
+    name: "Cleft Palate",
+    etymology: "Old English clift = split + Latin palatum = roof of mouth",
+    aliases: [
+      "cleft palate",
+      "cleft palates",
+      "palatoschisis",
+      "isolated cleft palate",
+    ],
+    definition:
+      "Congenital failure of fusion of the palatal shelves creating an opening between the oral and nasal cavities — may be isolated or combined with cleft lip; associated with Pierre Robin sequence, 22q11 deletion, and holoprosencephaly.",
+    pathophysiology:
+      "Failure of palatal shelf elevation and fusion by ~9–12 weeks → persistent oronasal communication; interferes with suckling, speech, and Eustachian tube function → recurrent otitis media.",
+    classicPresentation: [
+      "Oro-nasal regurgitation during feeding in neonate",
+      "Visible defect of hard and/or soft palate",
+      "Hypernasal speech when older if unrepaired",
+      "Recurrent otitis media from eustachian tube dysfunction",
+    ],
+    keyFindings: [
+      "Palatal defect on oral exam",
+      "Submucous cleft — bifid uvula, palpable bony notch, hypernasality",
+      "Associated micrognathia/glossoptosis in Pierre Robin sequence",
+    ],
+    keyLabs: [
+      "22q11.2 FISH/microarray if cardiac defect, hypocalcemia, or dysmorphic features",
+      "Karyotype if multiple anomalies",
+      "Brain MRI if holoprosencephaly suspected",
+    ],
+    associations: [
+      "Pierre Robin sequence (micrognathia, glossoptosis, airway obstruction)",
+      "22q11 deletion (DiGeorge) syndrome",
+      "Holoprosencephaly, trisomy 13",
+      "Fetal alcohol syndrome",
+    ],
+    complications: [
+      "Aspiration and failure to thrive in neonates",
+      "Chronic otitis media and hearing loss",
+      "Velopharyngeal insufficiency after repair",
+    ],
+    distinguishFrom: [
+      "Cleft lip — anterior lip defect; palate may be intact",
+      "High-arched palate — not a true cleft",
+      "Submucous cleft — mucosa intact over bony defect",
+    ],
+    treatment: [
+      "Palate repair typically at 9–18 months",
+      "Tympanostomy tubes for recurrent otitis",
+      "Speech therapy; orthodontic and dental follow-up",
+    ],
+    boardsPearls: [
+      "Isolated cleft palate more often syndromic than isolated cleft lip",
+      "Pierre Robin = micrognathia + cleft palate + glossoptosis → airway risk",
+      "22q11 deletion — cleft palate + cardiac defect + hypocalcemia",
+    ],
+    pediatrics:
+      "Neonates with cleft palate require specialized feeding and airway assessment; Pierre Robin may need prone positioning or nasopharyngeal airway. Hearing surveillance is essential due to otitis media risk.",
+  },
+  {
+    id: "scarlet-fever",
+    name: "Scarlet Fever",
+    etymology: "Latin scarlatum = scarlet cloth + fever = elevated temperature",
+    aliases: [
+      "scarlet fever",
+      "scarlatina",
+      "scarlet fever rash",
+    ],
+    definition:
+      "Exotoxin-mediated illness caused by Streptococcus pyogenes (group A strep) pharyngitis producing a diffuse sandpaper-like erythematous rash, strawberry tongue, and circumoral pallor.",
+    pathophysiology:
+      "Group A strep pharyngeal infection → erythrogenic toxin (SpeA, SpeC) as superantigen → widespread capillary dilation and rash; toxin spares perioral area → circumoral pallor; desquamation follows rash resolution.",
+    classicPresentation: [
+      "Sore throat, fever, pharyngeal erythema/exudates",
+      "Sandpaper rash beginning on trunk, spreading to extremities (spares palms/soles)",
+      "Circumoral pallor — rash spares area around mouth",
+      "Strawberry tongue — enlarged red papillae",
+      "Pastia lines — linear petechiae in skin folds",
+    ],
+    keyFindings: [
+      "Sandpaper texture on palpation",
+      "Pharyngeal strep culture or rapid antigen test positive",
+      "Circumoral pallor with diffuse erythema",
+    ],
+    keyLabs: [
+      "Rapid strep test or throat culture — GAS positive",
+      "Elevated ASO titers (support recent strep, not acute diagnosis)",
+    ],
+    associations: [
+      "Streptococcus pyogenes (group A β-hemolytic strep)",
+      "Post-streptococcal complications if untreated — rheumatic fever, PSGN",
+    ],
+    complications: [
+      "Rheumatic fever (if untreated)",
+      "Post-streptococcal glomerulonephritis",
+      "Peritonsillar abscess",
+      "Desquamation of hands/feet during recovery",
+    ],
+    distinguishFrom: [
+      "Measles — Koplik spots, 3 C's prodrome, cephalocaudal confluent rash",
+      "Kawasaki disease — conjunctivitis, mucositis, lymphadenopathy, coronary aneurysm risk",
+      "Drug eruption — temporal relation to medication",
+      "Rubella — milder, postauricular nodes, no sandpaper texture",
+    ],
+    treatment: [
+      "Penicillin or amoxicillin (first-line)",
+      "Azithromycin if penicillin allergy (check local resistance)",
+      "Supportive care — antipyretics (avoid aspirin in children)",
+    ],
+    boardsPearls: [
+      "Scarlet fever = strep pharyngitis + erythrogenic toxin rash",
+      "Sandpaper rash + circumoral pallor + strawberry tongue",
+      "Treat to prevent rheumatic fever — penicillin within 9 days of symptom onset",
+      "vs measles — no Koplik spots; responds to antibiotics",
+    ],
+    pediatrics:
+      "Scarlet fever peaks in school-age children; treat GAS pharyngitis promptly to prevent rheumatic fever. Avoid aspirin (Reye syndrome risk with viral illnesses; less issue here but general pediatric principle).",
+  },
+  {
+    id: "roseola",
+    name: "Roseola",
+    etymology: "Latin roseus = rose-colored + -ola = diminutive",
+    aliases: [
+      "roseola",
+      "roseola infantum",
+      "exanthem subitum",
+      "sixth disease",
+      "6th disease",
+      "hhv-6 rash",
+      "hhv-7 rash",
+    ],
+    definition:
+      "Common benign childhood exanthem caused primarily by human herpesvirus 6 (HHV-6) characterized by high fever followed by a maculopapular rash appearing as fever resolves (defervescence).",
+    pathophysiology:
+      "Primary HHV-6 (or HHV-7) infection in infants → viremia with high fever → immune response controls virus → rash erupts during defervescence as immune complexes/vascular response; virus persists latently in T cells.",
+    classicPresentation: [
+      "3–5 days of high fever (often >40°C) in infant 6–15 months — child may appear well",
+      "Rash appears as fever breaks — rose-pink macules on trunk, neck, spreads to face/extremities",
+      "Febrile seizures may occur during fever phase",
+      "Mild rhinorrhea, irritability; no toxic appearance",
+    ],
+    keyFindings: [
+      "Rash after fever resolves — pathognomonic timing",
+      "Non-toxic, well-appearing infant despite high fever",
+      "Maculopapular rash blanches, fades within 1–2 days",
+    ],
+    keyLabs: [
+      "Clinical diagnosis — PCR or serology rarely needed",
+      "HHV-6 PCR in blood if immunocompromised host with severe disease",
+      "Normal WBC or mild lymphocytosis",
+    ],
+    associations: [
+      "HHV-6 (primary cause) and HHV-7",
+      "Febrile seizures in ~10–15% during fever phase",
+      "HHV-6 reactivation in transplant recipients",
+    ],
+    complications: [
+      "Febrile seizures (usually benign)",
+      "Dehydration from prolonged fever",
+      "Encephalitis (rare, immunocompromised)",
+    ],
+    distinguishFrom: [
+      "Measles — rash with fever peak, Koplik spots, 3 C's prodrome",
+      "Rubella — mild fever with concurrent rash, postauricular nodes",
+      "Scarlet fever — sandpaper rash, pharyngitis, GAS positive",
+      "Drug eruption — temporal relation to new medication",
+    ],
+    treatment: [
+      "Supportive care — antipyretics, hydration",
+      "Reassurance — self-limited illness",
+      "Treat febrile seizures per standard protocol if they occur",
+    ],
+    boardsPearls: [
+      "Roseola = rash AFTER fever breaks (defervescence) — classic boards timing",
+      "HHV-6, sixth disease, exanthem subitum — same entity",
+      "High fever + well-appearing infant + rash when afebrile = roseola",
+      "vs measles — measles rash peaks with fever, not after",
+    ],
+    pediatrics:
+      "Roseola is a classic infant exanthem; parents often bring child during high fever when rash is absent — rash appearing as fever resolves confirms diagnosis. Febrile seizures during illness are common and usually benign.",
+  },
 ];
 
 const conditionById = new Map(CONDITIONS.map((c) => [c.id, c]));

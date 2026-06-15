@@ -828,6 +828,45 @@ export const METABOLISM: MetabolismEntry[] = [
     pediatrics:
       "Folate deficiency in pregnancy impairs thymidine (and purine) synthesis → neural tube defects; folic acid supplementation prevents NTDs.",
   },
+  {
+    id: "nadh",
+    name: "NADH",
+    etymology: "nicotinamide adenine dinucleotide + H = reduced (hydride-bearing) form",
+    aliases: [
+      "nadh",
+      "reduced nadh",
+      "reduced nad",
+      "nadh+h",
+      "nadh + h",
+      "dihydronicotinamide adenine dinucleotide",
+    ],
+    definition:
+      "Reduced form of NAD⁺ carrying a hydride equivalent — primary electron donor to the mitochondrial electron transport chain and product of glycolysis, β-oxidation, and the TCA cycle.",
+    pathway: [
+      "Glycolysis: glyceraldehyde-3-phosphate dehydrogenase → NADH (cytosolic)",
+      "TCA cycle: isocitrate dehydrogenase, α-ketoglutarate dehydrogenase, malate dehydrogenase → NADH (mitochondrial matrix)",
+      "β-oxidation: acyl-CoA dehydrogenase steps → FADH₂ and NADH",
+      "NADH donates electrons to Complex I → ubiquinone → Complex III → cytochrome c → Complex IV → O₂",
+      "Malate-aspartate shuttle and glycerol-3-phosphate shuttle transfer cytosolic NADH into mitochondria",
+      "Alcohol metabolism: alcohol dehydrogenase and aldehyde dehydrogenase generate NADH → ↑ NADH/NAD⁺ ratio",
+    ],
+    boardsPearls: [
+      "NADH → Complex I of ETC; FADH₂ → Complex II (skips Complex I)",
+      "~2.5 ATP per NADH via oxidative phosphorylation (boards may round to 3)",
+      "High NADH/NAD⁺ ratio (alcohol, fasting) favors lactic acidosis and hepatic steatosis",
+      "NADH is oxidized back to NAD⁺ by ETC — O₂ required as terminal electron acceptor",
+      "vs NADPH — NADPH used in anabolic/reductive reactions (HMP shunt, fatty acid synthesis), not primary ETC fuel",
+      "Cyanide blocks Complex IV → cannot regenerate NAD⁺ → anaerobic metabolism → lactic acidosis",
+    ],
+    distinguishFrom: [
+      "NAD⁺ — oxidized form accepting electrons; substrate for dehydrogenases",
+      "NADPH — pentose phosphate pathway product; glutathione reduction, steroid synthesis",
+      "FADH₂ — enters ETC at Complex II; succinate dehydrogenase, fatty acyl-CoA dehydrogenase",
+      "Lactate — end product when NADH reoxidized via lactate dehydrogenase in anaerobic glycolysis",
+    ],
+    pediatrics:
+      "Mitochondrial disorders impair NADH oxidation via ETC → lactic acidosis in infants; pyruvate and lactate elevation with normal perfusion suggests mitochondrial or PDH defect.",
+  },
 ];
 
 const metabolismById = new Map(METABOLISM.map((entry) => [entry.id, entry]));
