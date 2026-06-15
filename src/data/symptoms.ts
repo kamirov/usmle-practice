@@ -183,6 +183,55 @@ export const SYMPTOMS: SymptomEntry[] = [
       "Hoarseness with barking cough suggests croup; hoarseness with drooling, tripod posture, or stridor at rest suggests dangerous upper-airway obstruction such as epiglottitis or bacterial tracheitis.",
   },
   {
+    id: "hepatomegaly",
+    name: "Hepatomegaly",
+    etymology:
+      "Greek hepar = liver + Greek megas = large + -y = condition",
+    aliases: [
+      "hepatomegaly",
+      "hepatomegalies",
+      "enlarged liver",
+      "enlarged livers",
+      "liver enlargement",
+      "liver enlargements",
+      "hepatic enlargement",
+      "hepatic enlargements",
+      "big liver",
+      "palpable liver enlargement",
+    ],
+    definition:
+      "Abnormal enlargement of the liver beyond normal size — detected by percussion and palpation below the right costal margin or confirmed on imaging; reflects congestion, inflammation, infiltration, storage, or regenerative processes.",
+    mechanism:
+      "Hepatocyte swelling (hepatitis, steatosis), sinusoidal congestion (right heart failure, Budd-Chiari), extramedullary hematopoiesis, glycogen/lipid or lysosomal storage, neoplastic infiltration, or regenerative hyperplasia increase liver volume and extend the inferior hepatic border.",
+    thinkOf: [
+      "Right heart failure / congestive hepatopathy — passive congestion, tender or pulsatile liver",
+      "Viral or alcoholic hepatitis — tender hepatomegaly with transaminase elevation",
+      "Cirrhosis — may have firm nodular liver early; shrunken liver late",
+      "Metastatic liver disease or primary hepatocellular carcinoma",
+      "Hemochromatosis, Wilson disease, α₁-antitrypsin deficiency",
+      "Lysosomal storage disease — Gaucher, Niemann-Pick (often with splenomegaly)",
+      "Budd-Chiari syndrome — painful hepatomegaly, ascites, hepatic vein thrombosis",
+      "Leukemia, lymphoma, amyloidosis",
+    ],
+    pairWith: [
+      "JVP elevation + hepatomegaly → right heart failure, tamponade, constrictive pericarditis",
+      "Jaundice + hepatomegaly → hepatitis, biliary obstruction, cirrhosis",
+      "Painful hepatomegaly → acute hepatitis, liver abscess, Budd-Chiari",
+      "Hepatomegaly + splenomegaly → portal hypertension, storage disease, TORCH, leukemia",
+      "RUQ tenderness + fever → cholecystitis (gallbladder, not primary hepatomegaly) or liver abscess",
+      "Ascites + spider angiomata + hepatomegaly → chronic liver disease",
+    ],
+    distinguishFrom: [
+      "Splenomegaly — left upper quadrant organ; palpated along left costal margin",
+      "Hepatosplenomegaly — concurrent enlargement of both organs (separate combined finding)",
+      "Downward liver displacement (COPD, hyperinflated lungs) — palpable but not truly enlarged on imaging",
+      "RUQ renal mass — kidney moves with respiration, ballotable, not hepatomegaly",
+      "Rebound tenderness over gallbladder — cholecystitis without diffuse liver enlargement",
+    ],
+    pediatrics:
+      "Neonatal hepatomegaly suggests biliary atresia, metabolic liver disease, heart failure, or TORCH infection. Storage diseases (Gaucher, glycogen storage disease) and hemolytic anemia with extramedullary hematopoiesis present with hepatomegaly ± splenomegaly.",
+  },
+  {
     id: "cough",
     name: "Cough",
     etymology: "Middle English coughen = expel air",
@@ -6073,6 +6122,57 @@ export const SYMPTOMS: SymptomEntry[] = [
     ],
     pediatrics:
       "Nephrotic syndrome is a common pediatric cause of ascites from hypoalbuminemia; neonatal urinary ascites from bladder rupture is a rare surgical emergency. Jaundice + ascites in infant suggests biliary atresia or metabolic liver disease.",
+  },
+  {
+    id: "splenomegaly",
+    name: "Splenomegaly",
+    etymology:
+      "Greek splen = spleen + Greek megas = large + -y = condition",
+    aliases: [
+      "splenomegaly",
+      "splenomegalies",
+      "enlarged spleen",
+      "enlarged spleens",
+      "spleen enlargement",
+      "spleen enlargements",
+      "splenic enlargement",
+      "splenic enlargements",
+      "big spleen",
+      "palpable spleen",
+    ],
+    definition:
+      "Abnormal enlargement of the spleen — typically palpable below the left costal margin on exam or confirmed on imaging; reflects immune hyperplasia, congestion, infiltration, or increased red cell sequestration.",
+    mechanism:
+      "Lymphoid hyperplasia (infection, immune response), portal venous congestion (splenic vein hypertension), infiltration by malignant or storage cells, or increased phagocytic workload (extravascular hemolysis, malaria) expand splenic red pulp and white pulp → splenomegaly and often hypersplenism (cytopenias).",
+    thinkOf: [
+      "Portal hypertension / cirrhosis — congestive splenomegaly, thrombocytopenia",
+      "Infectious mononucleosis (EBV) — posterior cervical LAD, atypical lymphocytes, avoid contact sports",
+      "CML — basophilia, left shift, massive splenomegaly",
+      "Myelofibrosis, polycythemia vera — myeloproliferative splenomegaly",
+      "Extravascular hemolysis — hereditary spherocytosis, autoimmune hemolytic anemia",
+      "Malaria, visceral leishmaniasis — tropical infections with splenomegaly",
+      "Gaucher disease, Niemann-Pick — storage disease with hepatosplenomegaly",
+      "Felty syndrome — RA + splenomegaly + neutropenia",
+      "Hairy cell leukemia — pancytopenia, TRAP-positive cells",
+    ],
+    pairWith: [
+      "Thrombocytopenia + splenomegaly → hypersplenism / portal hypertension",
+      "Basophilia + left shift + splenomegaly → CML",
+      "Fatigue + atypical lymphocytes + splenomegaly → infectious mononucleosis",
+      "Anemia + jaundice + splenomegaly → extravascular hemolysis",
+      "Splenomegaly + hepatomegaly → portal HTN, storage disease, leukemia, TORCH",
+      "Early satiety + left upper quadrant fullness → massive splenomegaly",
+      "Aquagenic pruritus + plethoric face + splenomegaly → polycythemia vera",
+    ],
+    distinguishFrom: [
+      "Hepatomegaly — right upper quadrant liver enlargement",
+      "Left upper quadrant renal mass — ballotable kidney, not splenic notch",
+      "Splenic rupture — acute tenderness, Kehr sign (referred left shoulder pain), trauma history",
+      "Functional asplenia / autosplenectomy — sickle cell disease with small fibrotic spleen, not enlargement",
+      "Hepatosplenomegaly — both organs enlarged; broader differential than isolated splenomegaly",
+    ],
+    pediatrics:
+      "EBV mononucleosis is common in adolescents — splenomegaly risks rupture with contact sports. TORCH infections, storage diseases, and hemolytic anemias cause pediatric splenomegaly; ITP usually has normal spleen size unless secondary hypersplenism.",
   },
   {
     id: "spasm",

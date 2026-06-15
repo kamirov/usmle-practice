@@ -844,6 +844,93 @@ export const METABOLISM: MetabolismEntry[] = [
       "Infantile beriberi from thiamine-deficient breast milk (maternal deficiency); MSUD neonates may respond to thiamine in thiamine-responsive BCKDH subtypes.",
   },
   {
+    id: "ascorbic-acid",
+    name: "Ascorbic Acid",
+    etymology:
+      "Latin a- = without + scorbutus = scurvy + acidus = sour (vitamin that prevents scurvy)",
+    aliases: [
+      "ascorbic acid",
+      "ascorbic acids",
+      "ascorbate",
+      "ascorbates",
+      "l-ascorbic acid",
+      "l ascorbic acid",
+      "vitamin c",
+      "vitamin-c",
+    ],
+    definition:
+      "Water-soluble vitamin C — essential dietary antioxidant and enzymatic cofactor for collagen hydroxylation and several biosynthetic reactions; humans cannot synthesize it (lost gulonolactone oxidase) and must obtain it from fruits and vegetables.",
+    pathway: [
+      "Dietary ascorbate absorbed in small intestine → distributed to tissues; renal excretion when replete",
+      "Cofactor for prolyl hydroxylase and lysyl hydroxylase — hydroxylation of collagen α-chains → stable triple helix",
+      "Cofactor for dopamine β-hydroxylase — dopamine → norepinephrine",
+      "Reduces ferric (Fe³⁺) to ferrous (Fe²⁺) iron — enhances intestinal iron absorption",
+      "Antioxidant — regenerates oxidized vitamin E; scavenges reactive oxygen species",
+      "Carnitine and bile acid synthesis require ascorbate-dependent enzymes",
+    ],
+    boardsPearls: [
+      "Vitamin C (ascorbic acid) = cofactor for prolyl/lysyl hydroxylase → collagen synthesis",
+      "Deficiency → scurvy: bleeding gums, perifollicular hemorrhages, corkscrew hairs, poor wound healing",
+      "Humans cannot synthesize vitamin C — dietary requirement",
+      "Infantile scurvy (Barlow disease) — subperiosteal hemorrhage, pseudo-paralysis",
+      "Enhances iron absorption — give with oral iron therapy",
+      "Excess → calcium oxalate nephrolithiasis; may cause false-negative guaiac fecal occult blood tests",
+      "vs rickets — vitamin D deficiency affects bone mineralization, not collagen cross-linking",
+      "vs thiamine — B₁ is TPP for PDH; vitamin C is collagen hydroxylation",
+    ],
+    distinguishFrom: [
+      "Scurvy — clinical deficiency syndrome from inadequate ascorbate, not the vitamin molecule itself",
+      "Citric acid — TCA cycle intermediate, not a vitamin",
+      "Ascorbate oxidase — plant enzyme; humans lack endogenous vitamin C synthesis pathway",
+      "Dehydroascorbic acid — oxidized form transported by GLUT transporters; reduced back to ascorbate intracellularly",
+    ],
+    pediatrics:
+      "Infants on heat-treated formula without vitamin C supplementation are at risk for Barlow disease; measles and malnutrition increase requirement. Rapid clinical response to ascorbate replacement supports diagnosis.",
+  },
+  {
+    id: "retinol",
+    name: "Retinol",
+    etymology:
+      "Latin retina = net (anatomical layer of the eye) + -ol = alcohol (vitamin A alcohol form)",
+    aliases: [
+      "retinol",
+      "retinols",
+      "vitamin a",
+      "vitamin-a",
+      "vitamin a alcohol",
+      "all-trans-retinol",
+      "preformed vitamin a",
+    ],
+    definition:
+      "Fat-soluble vitamin A alcohol — essential for vision (rhodopsin), epithelial differentiation, immune function, and gene regulation via retinoic acid; obtained preformed from animal sources or synthesized from dietary provitamin A carotenoids (β-carotene).",
+    pathway: [
+      "Diet: retinol (animal) or β-carotene (plants) → intestinal absorption with bile micelles → chylomicrons → liver storage as retinyl esters in hepatic stellate (Ito) cells",
+      "Oxidation: retinol → retinal (aldehyde) → retinoic acid (RA) in target tissues",
+      "Vision: 11-cis-retinal binds opsin in rod photoreceptors → rhodopsin; light isomerization → signal transduction → night vision",
+      "Retinoic acid binds nuclear receptors (RAR/RXR) → transcription of genes for epithelial differentiation, growth, and immunity",
+      "Mobilized from liver bound to retinol-binding protein (RBP) and transthyretin for delivery to tissues",
+    ],
+    boardsPearls: [
+      "Retinol → retinal (vision) and retinoic acid (gene transcription)",
+      "Deficiency → night blindness, xerophthalmia, Bitot spots, keratomalacia, follicular hyperkeratosis",
+      "Measles in children — vitamin A supplementation ↓ morbidity/mortality (especially in deficiency)",
+      "Excess/isotretinoin teratogenicity — neural crest and pharyngeal arch defects (craniofacial, cardiac, thymic)",
+      "Vitamin A excess → pseudotumor cerebri, hepatotoxicity, desquamation",
+      "Hepatic stellate cells store vitamin A — activated in cirrhosis (fibrosis)",
+      "vs β-carotene — provitamin A carotenoid cleaved to retinal; excess carotenemia causes orange skin without toxicity",
+      "vs vitamin D — steroid hormone precursor for calcium/phosphate; separate deficiency (rickets)",
+    ],
+    distinguishFrom: [
+      "Retinoic acid (tretinoin, isotretinoin) — pharmacologic vitamin A derivatives; teratogenic at therapeutic doses",
+      "β-carotene — provitamin A from plants; converted to retinal, not preformed retinol",
+      "Vitamin D (cholecalciferol) — separate fat-soluble vitamin for bone mineralization",
+      "Xerophthalmia — clinical ocular syndrome of vitamin A deficiency, not the vitamin itself",
+      "Rhodopsin — opsin + 11-cis-retinal photopigment complex in rods",
+    ],
+    pediatrics:
+      "Vitamin A deficiency is a leading preventable cause of childhood blindness globally; WHO recommends vitamin A with measles. Isotretinoin is absolutely contraindicated in pregnancy — teratogenic via excess retinoic acid signaling.",
+  },
+  {
     id: "cofactor",
     name: "Cofactor",
     etymology: "Latin co- = together + Latin factor = maker/agent",

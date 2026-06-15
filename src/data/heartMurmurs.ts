@@ -30,6 +30,42 @@ export const HEART_MURMURS: HeartMurmurEntry[] = [
       "Pulmonic stenosis/ToF common congenital cause; calcific AS murmur usually presents later in life.",
   },
   {
+    id: "ejection-type-systolic-murmur",
+    name: "Ejection-Type Systolic Murmur",
+    etymology:
+      "Latin eicere = to throw out + Greek systole = contraction + Latin murmur = hum",
+    aliases: [
+      "ejection-type systolic murmur",
+      "ejection-type systolic murmurs",
+      "ejection type systolic murmur",
+      "ejection type systolic murmurs",
+      "ejection-type systolic murmor",
+      "ejection-type systolic murmors",
+      "ejection type systolic murmor",
+      "ejection systolic murmur",
+      "ejection systolic murmurs",
+      "ejection murmur",
+      "ejection murmurs",
+      "systolic ejection murmur",
+      "systolic ejection murmurs",
+      "systolic outflow murmur",
+      "systolic outflow murmurs",
+      "outflow tract murmur",
+      "outflow tract murmurs",
+    ],
+    meaning:
+      "Systolic murmur from turbulent forward flow during ventricular ejection across a stenotic semilunar valve or narrowed ventricular outflow tract — typically crescendo-decrescendo (diamond-shaped), begins shortly after S1, and ends before S2; distinguished from holosystolic regurgitant murmurs that span all of systole.",
+    conditions: [
+      "Aortic stenosis — harsh crescendo-decrescendo at RUSB, radiates to carotids; may have ejection click; ↓ with Valsalva",
+      "Pulmonic stenosis — LUSB; ejection click; congenital (ToF, isolated PS)",
+      "Hypertrophic cardiomyopathy — harsh murmur from dynamic LVOT obstruction; ↑ with Valsalva/standing, ↓ with squatting/handgrip",
+      "Physiologic / flow murmurs — soft ejection murmur at LUSB or RUSB (pregnancy, anemia, hyperthyroidism, ASD ↑ pulmonary flow)",
+      "Tetralogy of Fallot — harsh ejection murmur at LLSB from RVOT obstruction (VSD often silent)",
+    ],
+    pediatrics:
+      "Innocent Still murmur and pulmonary flow murmurs are soft ejection-type murmurs in children. ToF and PS are classic congenital harsh ejection murmurs; small VSD causes holosystolic murmur, not ejection-type.",
+  },
+  {
     id: "diastolic-rumble",
     name: "Diastolic Rumble",
     etymology: "Greek diastole = dilation/filling + rumble = low rolling sound",
@@ -76,9 +112,8 @@ export const HEART_MURMURS: HeartMurmurEntry[] = [
     aliases: [
       "harsh systolic ejection murmur",
       "harsh systolic murmur",
-      "systolic ejection murmur",
-      "ejection murmur",
       "harsh crescendo-decrescendo murmur",
+      "harsh ejection murmur",
     ],
     meaning:
       "Rough, loud systolic murmur from turbulent flow across a narrowed right or left ventricular outflow tract or stenotic semilunar valve; best heard at LLSB in RVOT obstruction.",

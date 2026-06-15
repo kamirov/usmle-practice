@@ -92,6 +92,33 @@ export const HEMODYNAMICS: HemodynamicEntry[] = [
     ],
   },
   {
+    id: "cardiac-index",
+    name: "Cardiac Index",
+    etymology:
+      "Greek kardia = heart + Latin index = pointer/indicator",
+    aliases: [
+      "cardiac index",
+      "cardiac indices",
+      "ci",
+      "cardiac index measurement",
+      "indexed cardiac output",
+      "body surface area normalized cardiac output",
+    ],
+    definition:
+      "Cardiac output normalized to body surface area (BSA): CI = CO / BSA — allows comparison of pump function across patients of different size; measured invasively (thermodilution via Swan-Ganz) or estimated noninvasively (echocardiography, bioimpedance).",
+    factors: [
+      "Formula: cardiac index = cardiac output ÷ body surface area (L/min/m²)",
+      "Normal CI ~2.5–4.0 L/min/m² (adults); normal CO ~4–8 L/min at rest",
+      "↓ CI: cardiogenic shock, hypovolemic shock (late), obstructive shock, severe heart failure, post-MI low output",
+      "↑ CI: early septic shock (hyperdynamic), anemia, beriberi (wet), hyperthyroidism, pregnancy, exercise",
+      "CI integrates stroke volume, heart rate, and body size — low CI with adequate volume suggests pump failure or obstruction",
+      "Shock profiling: cardiogenic/obstructive typically ↓ CI; early distributive may have ↑ or normal CI with ↓ SVR",
+      "Stroke volume index (SVI) = SV / BSA — component of CI (CI = SVI × HR)",
+      "Swan-Ganz thermodilution measures CO; dividing by BSA yields CI",
+      "Peds: normal pediatric CI overlaps adult range but infants have higher resting heart rate with smaller stroke volume",
+    ],
+  },
+  {
     id: "hypovolemia",
     name: "Hypovolemia",
     etymology: "Greek hypo = low + volume = amount + -emia = blood condition",
@@ -125,6 +152,36 @@ export const HEMODYNAMICS: HemodynamicEntry[] = [
       "↓ PCWP: hypovolemia, hemorrhage",
       "Measured during right heart catheterization",
       "PCWP ≈ LAP (except mitral stenosis — gradient between wedge and LV)",
+    ],
+  },
+  {
+    id: "central-venous-pressure",
+    name: "Central Venous Pressure",
+    etymology:
+      "Latin centralis = in the middle + vena = vein + pressura = pressing force",
+    aliases: [
+      "central venous pressure",
+      "central venous pressures",
+      "cvp",
+      "cvps",
+      "central venous pressure measurement",
+      "right atrial filling pressure",
+      "right-sided filling pressure",
+      "right heart filling pressure",
+    ],
+    definition:
+      "Pressure in the thoracic vena cava and right atrium — reflects right-sided ventricular preload, venous return backpressure, and intravascular volume status; approximates right atrial pressure (RAP).",
+    factors: [
+      "Normal CVP ~2–8 mmHg (0–8 mmHg in some references)",
+      "CVP ≈ RAP — measured invasively via central venous catheter tip at SVC–RA junction or Swan-Ganz RA port",
+      "Bedside surrogate: jugular venous pressure (JVP) estimates CVP from neck vein height",
+      "↑ CVP: volume overload, right heart failure, tricuspid regurgitation, tamponade, constrictive pericarditis, pulmonary hypertension, SVC obstruction",
+      "↓ CVP: hypovolemia, hemorrhage, dehydration, vasodilatory shock (early)",
+      "↑ CVP opposes venous return — backpressure that ↓ VR when RA pressure rises (tamponade, RV failure)",
+      "Shock hemodynamics: cardiogenic/obstructive often ↑ CVP; hypovolemic ↓ CVP; distributive variable (warm early ↓, cold late ↑ with fluids)",
+      "SVR calculation uses CVP: SVR ∝ (MAP − CVP) / CO",
+      "PCWP estimates left-sided filling; CVP estimates right-sided filling — compare in tamponade vs LV failure",
+      "Peds: elevated CVP in neonatal heart failure and congenital lesions with RV volume/pressure overload; JVP hard to assess in infants",
     ],
   },
   {
@@ -528,6 +585,35 @@ export const HEMODYNAMICS: HemodynamicEntry[] = [
     ],
   },
   {
+    id: "coronary-perfusion-pressure",
+    name: "Coronary Perfusion Pressure",
+    etymology:
+      "Latin corona = crown/wreath + perfundere = to pour through + pressura = pressing force",
+    aliases: [
+      "coronary perfusion pressure",
+      "coronary perfusion pressures",
+      "myocardial perfusion pressure",
+      "myocardial perfusion pressures",
+      "coronary perfusion gradient",
+      "diastolic coronary perfusion pressure",
+      "coronary diastolic perfusion pressure",
+    ],
+    definition:
+      "Effective diastolic pressure gradient driving blood flow through the coronary arteries into the myocardium — primarily aortic diastolic pressure minus left ventricular end-diastolic pressure (LVEDP) for the left coronary circulation; myocardial oxygen delivery depends on coronary blood flow during diastole when the myocardium is relaxed.",
+    factors: [
+      "Approximation: coronary perfusion pressure ≈ diastolic BP − LVEDP (left coronary artery perfuses mainly in diastole)",
+      "Right coronary artery can receive flow in systole and diastole (especially with RV dominance)",
+      "↑ Heart rate shortens diastole → ↓ coronary filling time → ↓ perfusion despite stable BP",
+      "↓ Coronary perfusion pressure: hypotension, tachycardia, severe aortic stenosis (↓ diastolic pressure), ↑ LVEDP in acute/severe heart failure",
+      "Subendocardium most vulnerable — highest wall tension and last region perfused during diastole",
+      "Coronary autoregulation (adenosine, metabolic vasodilation) matches flow to myocardial O₂ demand during exercise",
+      "ACS management: maintain adequate diastolic BP and avoid excessive tachycardia; β-blockers ↓ demand and prolong diastole after hemodynamic stabilization",
+      "Nitrates ↓ LVEDP (improve gradient) but may ↓ systemic BP — balance preload reduction vs perfusion pressure",
+      "Aortic diastolic pressure must be preserved in cardiogenic shock — excessive vasodilation worsens myocardial ischemia",
+      "vs cerebral perfusion pressure (CPP = MAP − ICP) — different organ, different formula and clinical context",
+    ],
+  },
+  {
     id: "perfusion-pressure",
     name: "Perfusion Pressure",
     etymology: "Latin perfundere = pour through + pressura = pressing force",
@@ -542,6 +628,7 @@ export const HEMODYNAMICS: HemodynamicEntry[] = [
       "Effective pressure gradient driving blood flow into and through tissues — the upstream arterial pressure minus downstream venous or interstitial pressure across the vascular bed.",
     factors: [
       "General relationship: organ blood flow ∝ perfusion pressure / vascular resistance (analogous to Ohm's law: Q = ΔP/R)",
+      "Coronary perfusion pressure ≈ diastolic BP − LVEDP — see dedicated entry for myocardial ischemia physiology",
       "Systemic perfusion pressure approximated by MAP — time-averaged arterial pressure over the cardiac cycle",
       "Cerebral perfusion pressure (CPP) = MAP − ICP — brain perfusion fails when ICP approaches MAP",
       "Renal perfusion pressure = renal artery pressure − renal venous/interstitial pressure; ↓ afferent pressure or ↑ efferent resistance alters GFR",
