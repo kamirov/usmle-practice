@@ -117,10 +117,65 @@ export const ORGANS: OrganEntry[] = [
     id: "ductus-arteriosus",
     name: "Ductus Arteriosus",
     etymology: "Latin ductus = channel + Latin arteriosus = arterial",
-    aliases: ["ductus arteriosus"],
+    aliases: [
+      "ductus arteriosus",
+      "ductus arteriosus shunt",
+      "fetal ductus arteriosus",
+      "da shunt",
+      "ligamentum arteriosum precursor",
+    ],
     germLayer: "Mesoderm",
     origin:
-      "Embryonic shunt connecting pulmonary artery to aorta; derived from the distal sixth aortic arch.",
+      "Embryonic shunt connecting pulmonary artery to descending aorta (distal to left subclavian); derived from the distal sixth aortic arch. Normally closes after birth to become the ligamentum arteriosum.",
+    derivatives: ["Ligamentum arteriosum (postnatal remnant)"],
+    functionSummary:
+      "Fetal shunt from pulmonary artery to aorta that bypasses fluid-filled, high-resistance fetal lungs — most pulmonary output crosses the ductus to systemic circulation.",
+    commonPathologies: [
+      "Patent ductus arteriosus (failure to close)",
+      "Ductal-dependent congenital heart disease",
+      "Premature ductal closure",
+    ],
+    step1Pearls: [
+      "Fetal: RV → PA → ductus arteriosus → descending aorta (lungs bypassed)",
+      "Closes after birth with ↑ O₂ and ↓ prostaglandins → ligamentum arteriosum",
+      "PGE₁ (alprostadil) keeps ductus open; indomethacin/NSAIDs close PDA in prematurity",
+      "vs ductus venosus — umbilical vein to IVC, bypasses liver",
+    ],
+    pediatrics:
+      "Patent ductus arteriosus is common in premature infants; prostaglandin E1 maintains ductal patency in ductal-dependent cyanotic lesions (TGA, pulmonary atresia, critical coarctation) until definitive repair.",
+  },
+  {
+    id: "ductus-venosus",
+    name: "Ductus Venosus",
+    etymology: "Latin ductus = channel + Latin venosus = venous",
+    aliases: [
+      "ductus venosus",
+      "ductus venosus shunt",
+      "fetal ductus venosus",
+      "dv shunt",
+      "ligamentum venosum precursor",
+      "ductus venosus fetal shunt",
+    ],
+    germLayer: "Mesoderm",
+    origin:
+      "Embryonic venous shunt connecting the umbilical vein to the inferior vena cava, allowing oxygenated placental blood to bypass the hepatic sinusoids and reach the fetal heart and brain.",
+    derivatives: ["Ligamentum venosum (postnatal remnant on visceral liver surface)"],
+    functionSummary:
+      "Conducts the most oxygenated fetal blood from the umbilical vein directly into the IVC — a major component of preferential streaming to the foramen ovale, left heart, and cerebral circulation.",
+    commonPathologies: [
+      "Ductus venosus agenesis (rare — fetal hydrops, liver congestion)",
+      "Persistent ductus venosus (rare postnatal shunt)",
+      "Abnormal umbilical venous flow on fetal Doppler",
+    ],
+    step1Pearls: [
+      "Umbilical vein → ductus venosus → IVC → RA → foramen ovale → LA → brain (most oxygenated fetal stream)",
+      "Closes within days after birth when umbilical flow ceases → ligamentum venosum",
+      "vs ductus arteriosus — PA to aorta, bypasses lungs not liver",
+      "Umbilical vein remnant = ligamentum teres (round ligament of liver); ductus venosus remnant = ligamentum venosum",
+      "Portion of umbilical venous blood perfuses liver before entering IVC",
+    ],
+    pediatrics:
+      "Normal fetal structure; obliteration expected after birth. Ductus venosus agenesis is rare but can cause fetal hydrops and requires specialized prenatal management. Do not confuse with patent ductus arteriosus — different vessel, different postnatal pathology.",
   },
   {
     id: "lungs",
@@ -1420,6 +1475,53 @@ export const ORGANS: OrganEntry[] = [
       "Congenital aqueductal stenosis causes pediatric hydrocephalus; pineal region tumors may compress dorsal midbrain causing Parinaud syndrome in children/adolescents.",
   },
   {
+    id: "substantia-nigra",
+    name: "Substantia Nigra",
+    etymology:
+      "Latin substantia = substance + nigra = black — neuromelanin pigment in dopaminergic neurons darkens the midbrain on gross section",
+    aliases: [
+      "substantia nigra",
+      "substantia nigras",
+      "substantia nigra pars compacta",
+      "substantia nigra pars reticulata",
+      "sn",
+      "snc",
+      "snr",
+      "black substance",
+      "nigra",
+      "pigmented midbrain nucleus",
+      "midbrain substantia nigra",
+    ],
+    origin:
+      "Develops from the basal plate of the midbrain tegmentum (mesencephalon). Contains two parts: pars compacta — densely packed neuromelanin-pigmented dopaminergic neurons projecting to dorsal striatum; pars reticulata — GABAergic neurons projecting to thalamus, part of basal ganglia output.",
+    germLayer: "Ectoderm (neural tube)",
+    derivatives: [
+      "Nigrostriatal dopaminergic neurons (pars compacta → caudate and putamen)",
+      "Neuromelanin pigment in catecholaminergic neurons",
+    ],
+    functionSummary:
+      "Primary source of striatal dopamine through the nigrostriatal pathway — facilitates initiation and modulation of voluntary movement; pars reticulata participates in basal ganglia inhibitory output to thalamus.",
+    commonPathologies: [
+      "Parkinson disease — selective loss of pars compacta dopaminergic neurons",
+      "Lewy body disease — α-synuclein inclusions in remaining neurons",
+      "MPTP toxicity — selective nigral neuron destruction (parkinsonism model)",
+      "Drug-induced parkinsonism — downstream striatal D₂ blockade mimics dopamine loss",
+      "Iron accumulation in nigra with aging and neurodegeneration",
+    ],
+    step1Pearls: [
+      "Substantia nigra = black midbrain band on cross-section from neuromelanin in dopamine neurons",
+      "Parkinson disease — degeneration of pars compacta → ↓ striatal dopamine → bradykinesia, rigidity, resting tremor",
+      "Depigmentation of substantia nigra on autopsy in Parkinson disease",
+      "Nigrostriatal pathway: substantia nigra (pars compacta) → caudate/putamen — motor dopamine",
+      "vs ventral tegmental area (VTA) — mesolimbic/mesocortical reward and cognition pathways",
+      "Levodopa/carbidopa replaces dopamine precursor after nigral neuron loss",
+      "Lewy bodies (α-synuclein) found in surviving nigral neurons in Parkinson disease",
+      "Typical antipsychotics block striatal D₂ — drug-induced parkinsonism without primary nigral loss",
+    ],
+    pediatrics:
+      "Primary Parkinson disease is adult-onset; juvenile parkinsonism is rare and may involve genetic causes. Antipsychotics and antiemetics (metoclopramide) can cause extrapyramidal parkinsonism in children via striatal D₂ blockade — nigrostriatal physiology explains the mechanism.",
+  },
+  {
     id: "hindbrain",
     name: "Hindbrain",
     etymology: "Old English hind = back + brain; Greek rhombencephalon = rhombus brain",
@@ -2352,8 +2454,18 @@ const ORGAN_DETAILS: Record<
   "ductus-arteriosus": {
     functionSummary: "Fetal shunt from pulmonary artery to aorta that bypasses high-resistance fetal lungs.",
     commonPathologies: ["Patent ductus arteriosus", "Ductal-dependent congenital heart disease", "Premature closure"],
-    step1Pearls: ["PGE1 keeps ductus open; indomethacin/NSAIDs close it", "PDA causes continuous machine-like murmur and left-to-right shunt"],
+    step1Pearls: ["PGE1 keeps ductus open; indomethacin/NSAIDs close it", "PDA causes continuous machine-like murmur and left-to-right shunt", "Postnatal remnant = ligamentum arteriosum"],
     pediatrics: "Premature infants have higher PDA risk; some cyanotic lesions require prostaglandin to maintain ductal flow until repair.",
+  },
+  "ductus-venosus": {
+    functionSummary: "Fetal shunt from umbilical vein to IVC that bypasses the liver and delivers oxygenated placental blood to the heart and brain.",
+    commonPathologies: ["Ductus venosus agenesis", "Persistent ductus venosus", "Abnormal fetal umbilical venous Doppler"],
+    step1Pearls: [
+      "Most oxygenated fetal blood: umbilical vein → ductus venosus → IVC → foramen ovale → left heart → brain",
+      "Closes after birth → ligamentum venosum on visceral surface of liver",
+      "vs ductus arteriosus (PA → aorta) and vs umbilical vein → ligamentum teres",
+    ],
+    pediatrics: "Normal in fetus; obliterates postnatally. Agenesis is rare and associated with fetal hydrops — not the same as patent ductus arteriosus.",
   },
   lungs: {
     functionSummary: "Perform gas exchange, acid-base regulation via CO2 elimination, and pulmonary vascular filtering/metabolism.",
@@ -3241,7 +3353,7 @@ const ORGAN_DETAILS: Record<
   "umbilical-cord": {
     functionSummary: "Connects fetus to placenta and contains two arteries plus one vein in Wharton jelly.",
     commonPathologies: ["Single umbilical artery", "Nuchal cord", "Cord prolapse", "Omphalitis"],
-    step1Pearls: ["Umbilical vein carries oxygenated blood to fetus", "Umbilical arteries carry deoxygenated blood to placenta", "Ductus venosus shunts umbilical venous blood toward IVC"],
+    step1Pearls: ["Umbilical vein carries oxygenated blood to fetus", "Umbilical arteries carry deoxygenated blood to placenta", "Ductus venosus shunts umbilical venous blood from umbilical vein to IVC, bypassing liver"],
     pediatrics: "Single umbilical artery is associated with renal/cardiac anomalies and warrants careful newborn evaluation.",
   },
   "gingiva-oral": {
@@ -3283,6 +3395,9 @@ const ORGAN_METASTASIS: Record<string, string[]> = {
   ],
   "ductus-arteriosus": [
     "Not a primary malignancy site (embryologic fetal shunt)",
+  ],
+  "ductus-venosus": [
+    "Not a primary malignancy site (embryologic fetal venous shunt)",
   ],
   lungs: [
     "Non–small cell lung cancer — brain, bone, liver, adrenal glands",
