@@ -201,3 +201,8 @@ cn-xii.png
   License: Public domain
   Description: Hypoglossal nerve and tongue muscles
   Page: https://commons.wikimedia.org/wiki/File:Gray795.png
+
+piriformis.png
+  Source: Wikimedia Commons — Gluteus maximus.png
+  Page: https://commons.wikimedia.org/wiki/File:Gluteus_maximus.png
+  Description: Posterior gluteal region — gluteus maximus overlies deep piriformis at greater sciatic foramen

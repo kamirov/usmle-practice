@@ -1311,6 +1311,65 @@ export const PROCEDURES: ProcedureEntry[] = [
     pediatrics:
       "Pediatric SVT often treated first with adenosine; catheter ablation is considered for recurrent or drug-refractory accessory pathway tachycardia in older children and adolescents at experienced centers.",
   },
+  {
+    id: "arthroplasty",
+    name: "Arthroplasty",
+    etymology: "Greek arthron = joint + plassein = to form/shape",
+    aliases: [
+      "arthroplasty",
+      "arthroplasties",
+      "joint replacement",
+      "joint replacements",
+      "joint replacement surgery",
+      "total joint arthroplasty",
+      "total joint arthroplasties",
+      "tja",
+      "total hip arthroplasty",
+      "total hip arthroplasties",
+      "tha",
+      "total knee arthroplasty",
+      "total knee arthroplasties",
+      "tka",
+      "hip replacement",
+      "hip replacements",
+      "knee replacement",
+      "knee replacements",
+      "hemiarthroplasty",
+      "hemiarthroplasties",
+    ],
+    definition:
+      "Surgical reconstruction or replacement of a diseased joint — most commonly total hip or knee arthroplasty for end-stage osteoarthritis or displaced femoral neck fracture in elderly patients.",
+    indications: [
+      "End-stage osteoarthritis with refractory pain and functional limitation",
+      "Displaced femoral neck fracture (Garden III–IV) in elderly — hemiarthroplasty or total hip arthroplasty",
+      "Avascular necrosis of femoral head with collapse",
+      "Inflammatory arthropathy (rheumatoid arthritis) with destroyed joint surfaces",
+      "Selected unreconstructable distal humerus or proximal humerus fractures in elderly",
+    ],
+    keyMeasurements: [
+      "Preoperative templating for implant size and leg-length restoration",
+      "Postoperative leg-length equality and hip/knee range of motion",
+      "Infection markers if prosthetic joint infection suspected (ESR, CRP, synovial WBC)",
+    ],
+    complications: [
+      "Periprosthetic joint infection — painful, erythematous, elevated ESR/CRP",
+      "Venous thromboembolism — DVT/PE after hip and knee arthroplasty",
+      "Dislocation (especially posterior hip dislocation after THA)",
+      "Aseptic loosening and implant wear over years",
+      "Nerve injury — sciatic nerve with posterior hip approaches",
+      "Fat embolism syndrome after long bone or joint surgery",
+    ],
+    boardsPearls: [
+      "Elderly displaced femoral neck fracture → arthroplasty (hemi- or total hip) often preferred over internal fixation",
+      "THA vs hemiarthroplasty — total hip if active patient with pre-existing hip arthritis",
+      "DVT prophylaxis after hip/knee arthroplasty — LMWH, fondaparinux, or aspirin per protocol",
+      "Prosthetic joint infection — fever, wound drainage, ↑ ESR/CRP; aspiration with synovial WBC count",
+      "Posterior hip precautions after THA — avoid hip flexion + adduction + internal rotation",
+      "vs ORIF — young patients with nondisplaced or anatomically reducible femoral neck fractures may get fixation",
+    ],
+    pediatrics:
+      "Primary osteoarthritis arthroplasty is rare in children; joint replacement may be considered in severe juvenile idiopathic arthritis or post-traumatic destruction in adolescents at specialized centers.",
+  },
 ];
 
 const procedureById = new Map(PROCEDURES.map((entry) => [entry.id, entry]));

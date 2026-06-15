@@ -28,6 +28,7 @@ import ophthalmicDivision from "../media/images/musculoskeletal/ophthalmic-divis
 import pelvicFloor from "../media/images/musculoskeletal/pelvic-floor.png?url";
 import peronealNerveCompression from "../media/images/musculoskeletal/peroneal-nerve-compression.jpg?url";
 import phrenicNerve from "../media/images/musculoskeletal/phrenic-nerve.png?url";
+import piriformis from "../media/images/musculoskeletal/piriformis.png?url";
 import recurrentLaryngealNerve from "../media/images/musculoskeletal/recurrent-laryngeal-nerve.png?url";
 import rotatorCuff from "../media/images/musculoskeletal/rotator-cuff.svg?url";
 import s2S4SacralSegments from "../media/images/musculoskeletal/s2-s4-sacral-segments.png?url";
@@ -71,6 +72,7 @@ export type MUSCULOSKELETALImageId = Extract<
   | "pelvic-floor"
   | "peroneal-nerve-compression"
   | "phrenic-nerve"
+  | "piriformis"
   | "recurrent-laryngeal-nerve"
   | "rotator-cuff"
   | "s2-s4-sacral-segments"
@@ -119,6 +121,7 @@ export const MUSCULOSKELETAL_IMAGES: Partial<Record<MUSCULOSKELETALImageId, stri
   "pelvic-floor": extensionAssetUrl(pelvicFloor),
   "peroneal-nerve-compression": extensionAssetUrl(peronealNerveCompression),
   "phrenic-nerve": extensionAssetUrl(phrenicNerve),
+  "piriformis": extensionAssetUrl(piriformis),
   "recurrent-laryngeal-nerve": extensionAssetUrl(recurrentLaryngealNerve),
   "rotator-cuff": extensionAssetUrl(rotatorCuff),
   "s2-s4-sacral-segments": extensionAssetUrl(s2S4SacralSegments),
@@ -164,6 +167,10 @@ export const MUSCULOSKELETAL_IMAGE_ATTRIBUTIONS: Partial<
   "pelvic-floor": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:pelvic-floor.png" },
   "peroneal-nerve-compression": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:peroneal-nerve-compression.jpg" },
   "phrenic-nerve": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:phrenic-nerve.png" },
+  "piriformis": {
+    label: "Wikimedia Commons (Gluteus maximus.png)",
+    url: "https://commons.wikimedia.org/wiki/File:Gluteus_maximus.png",
+  },
   "recurrent-laryngeal-nerve": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:recurrent-laryngeal-nerve.png" },
   "rotator-cuff": { label: "Wikimedia Commons (Rotator cuff injury.svg)", url: "https://commons.wikimedia.org/wiki/File:Rotator_cuff_injury.svg" },
   "s2-s4-sacral-segments": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:s2-s4-sacral-segments.png" },
@@ -180,46 +187,48 @@ export const MUSCULOSKELETAL_IMAGE_ATTRIBUTIONS: Partial<
 };
 
 export const MUSCULOSKELETAL_IMAGE_CAPTIONS: Partial<Record<MUSCULOSKELETALImageId, string>> = {
-  "accessory-nerve": "Clinical or pathologic image illustrating accessory nerve",
-  "acromion": "Clinical or pathologic image illustrating acromion",
-  "atlantoaxial": "Clinical or pathologic image illustrating atlantoaxial",
-  "axillary-nerve": "Clinical or pathologic image illustrating axillary nerve",
-  "chorda-tympani": "Clinical or pathologic image illustrating chorda tympani",
-  "cn-i": "Clinical or pathologic image illustrating cn i",
-  "cn-ii": "Clinical or pathologic image illustrating cn ii",
-  "cn-iii": "Clinical or pathologic image illustrating cn iii",
-  "cn-iv": "Clinical or pathologic image illustrating cn iv",
-  "cn-vi": "Clinical or pathologic image illustrating cn vi",
-  "cn-vii": "Clinical or pathologic image illustrating cn vii",
-  "cn-viii": "Clinical or pathologic image illustrating cn viii",
-  "cn-xii": "Clinical or pathologic image illustrating cn xii",
-  "fontanelle": "Clinical or pathologic image illustrating fontanelle",
-  "glossopharyngeal-nerve": "Clinical or pathologic image illustrating glossopharyngeal nerve",
-  "humerus": "Clinical or pathologic image illustrating humerus",
-  "infraspinatus": "Clinical or pathologic image illustrating infraspinatus",
-  "interphalangeal-joint": "Clinical or pathologic image illustrating interphalangeal joint",
-  "l1-l2-spinal-level": "Clinical or pathologic image illustrating l1 l2 spinal level",
-  "long-thoracic-nerve": "Clinical or pathologic image illustrating long thoracic nerve",
-  "mandibular-division": "Clinical or pathologic image illustrating mandibular division",
-  "maxillary-division": "Clinical or pathologic image illustrating maxillary division",
-  "metacarpophalangeal-joint": "Clinical or pathologic image illustrating metacarpophalangeal joint",
-  "ophthalmic-division": "Clinical or pathologic image illustrating ophthalmic division",
-  "pelvic-floor": "Clinical or pathologic image illustrating pelvic floor",
-  "peroneal-nerve-compression": "Clinical or pathologic image illustrating peroneal nerve compression",
-  "phrenic-nerve": "Clinical or pathologic image illustrating phrenic nerve",
-  "recurrent-laryngeal-nerve": "Clinical or pathologic image illustrating recurrent laryngeal nerve",
-  "rotator-cuff": "Clinical or pathologic image illustrating rotator cuff",
-  "s2-s4-sacral-segments": "Clinical or pathologic image illustrating s2 s4 sacral segments",
+  "accessory-nerve": "Spinal accessory nerve course",
+  "acromion": "Acromion of scapula02",
+  "atlantoaxial": "Abyssuridae (10.3390-d17120827) Figure 3",
+  "axillary-nerve": "Anatomy of the cat",
+  "chorda-tympani": "Tympanic cavity showing chorda tympani course",
+  "cn-i": "Olfactory nerve and bulb",
+  "cn-ii": "Optic nerve and visual pathway",
+  "cn-iii": "Oculomotor nerve and extraocular muscles",
+  "cn-iv": "Trochlear nerve and superior oblique",
+  "cn-vi": "Abducens nerve and lateral rectus",
+  "cn-vii": "Facial nerve course and branches",
+  "cn-viii": "Vestibulocochlear nerve",
+  "cn-xii": "Hypoglossal nerve and tongue muscles",
+  "fontanelle": "Newborn skull showing anterior and posterior fontanelles",
+  "glossopharyngeal-nerve": "Glossopharyngeal, vagus, and accessory nerves",
+  "humerus": "Right humerus, anterior aspect",
+  "infraspinatus": "Gray — musculus infraspinatus",
+  "interphalangeal-joint": "DIP, PIP and MCP joints of hand",
+  "l1-l2-spinal-level": "Cauda equina and conus medullaris diagram supporting the adult L1-L2 spinal cord termination level",
+  "long-thoracic-nerve": "Medial scapular winging from long thoracic nerve palsy",
+  "mandibular-division": "Distribution of mandibular division (V3) of trigeminal nerve",
+  "maxillary-division": "Distribution of maxillary division (V2) of trigeminal nerve",
+  "metacarpophalangeal-joint": "DIP, PIP and MCP joints of hand",
+  "ophthalmic-division": "Ophthalmic division (V1) sensory distribution",
+  "pelvic-floor": "Internal view of left levator ani, a major pelvic floor muscle",
+  "peroneal-nerve-compression": "Foot drop from common peroneal nerve palsy",
+  "phrenic-nerve": "Position of esophagus, trachea, heart, and phrenic nerves",
+  "piriformis":
+    "Posterior gluteal region — gluteus maximus overlies deep external rotators including piriformis at the greater sciatic foramen",
+  "recurrent-laryngeal-nerve": "Laryngeal muscles and nerves",
+  "rotator-cuff": "Rotator cuff injury",
+  "s2-s4-sacral-segments": "Plan of sacral and pudendal plexuses showing S2, S3, and S4 branches",
   "sarcomere": "Sarcomere bands: Z line (boundaries), M line (center), A band (myosin length), I band (actin only), H zone (thick filaments only)",
-  "sciatic-nerve-injury": "Clinical or pathologic image illustrating sciatic nerve injury",
-  "subluxation": "Clinical or pathologic image illustrating subluxation",
-  "subscapularis": "Clinical or pathologic image illustrating subscapularis",
-  "suprascapular-nerve": "Clinical or pathologic image illustrating suprascapular nerve",
-  "supraspinatus": "Clinical or pathologic image illustrating supraspinatus",
-  "sympathetic-trunk": "Clinical or pathologic image illustrating sympathetic trunk",
-  "teres-minor": "Clinical or pathologic image illustrating teres minor",
-  "trigeminal-nerve": "Clinical or pathologic image illustrating trigeminal nerve",
-  "vagus-nerve": "Clinical or pathologic image illustrating vagus nerve",
+  "sciatic-nerve-injury": "Anatomy of sciatic nerve and tibial nerve",
+  "subluxation": "SubluxationLeftShoulder XRay Ax",
+  "subscapularis": "Insertion-of-subscapularis-muscle",
+  "suprascapular-nerve": "The anatomy of the horse - a dissection guide",
+  "supraspinatus": "Gray — musculus supraspinatus",
+  "sympathetic-trunk": "Sympathetic trunk and splanchnic nerves",
+  "teres-minor": "Gray — musculus teres minor",
+  "trigeminal-nerve": "Trigeminal nerve and divisions",
+  "vagus-nerve": "Vagus nerve course in neck and thorax",
 };
 
 export function getMusculoskeletalImageForId(id: string): string | undefined {

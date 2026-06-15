@@ -29221,6 +29221,75 @@ export const CONDITIONS: ConditionEntry[] = [
       "L5 radiculopathy from disc herniation is rare in children; apophyseal avulsion or isthmic spondylolisthesis are more likely causes of radicular symptoms in adolescents.",
   },
   {
+    id: "piriformis-syndrome",
+    name: "Piriformis Syndrome",
+    etymology: "Latin pirum = pear + forma = shape + Greek syndromos = running together",
+    aliases: [
+      "piriformis syndrome",
+      "piriformis syndromes",
+      "deep gluteal syndrome",
+      "deep gluteal syndromes",
+      "piriformis sciatica",
+      "piriformis muscle syndrome",
+    ],
+    definition:
+      "Non-discogenic sciatica from compression or irritation of the sciatic nerve by the piriformis muscle — buttock pain radiating down the posterior thigh, worsened by prolonged sitting or hip internal rotation.",
+    pathophysiology:
+      "Piriformis spasm, hypertrophy, or anatomic variant (sciatic nerve piercing the muscle) → sciatic nerve compression at greater sciatic foramen → neuropathic pain and paresthesia along sciatic distribution without L5/S1 root compression; inflammation and ischemia of nerve contribute.",
+    classicPresentation: [
+      "Unilateral buttock pain with radiation down posterior thigh (sciatica-like)",
+      "Worsened by prolonged sitting, climbing stairs, or hip internal rotation",
+      "Tenderness over piriformis in gluteal region",
+      "Positive FAIR test (flexion, adduction, internal rotation reproduces pain)",
+      "No true dermatomal sensory loss or reflex change (vs radiculopathy)",
+    ],
+    keyFindings: [
+      "Pain with resisted hip external rotation or piriformis stretch",
+      "FAIR or Pace test positive",
+      "Normal neurologic exam or mild nonspecific sensory symptoms",
+      "MRI usually normal for disc herniation; may show piriformis edema",
+      "Electrodiagnostics often normal or nonspecific",
+    ],
+    keyLabs: [
+      "Clinical diagnosis after excluding lumbar radiculopathy",
+      "MRI lumbar spine if red flags or motor deficit to exclude disc herniation",
+    ],
+    associations: [
+      "Prolonged sitting (office workers, drivers)",
+      "Overuse in runners and cyclists",
+      "Anatomic variant — sciatic nerve through piriformis",
+      "Prior gluteal trauma or IM injection",
+      "Sacroiliac joint dysfunction",
+    ],
+    complications: [
+      "Chronic neuropathic pain and functional limitation",
+      "Misdiagnosis as lumbar disc disease leading to unnecessary surgery",
+    ],
+    distinguishFrom: [
+      "L5 or S1 radiculopathy — dermatomal sensory loss, reflex changes, positive SLR, disc on MRI",
+      "Sciatic nerve injury — acute trauma, motor deficit (foot drop)",
+      "Sacroiliitis — sacroiliac joint tenderness, inflammatory back pain",
+      "Hip osteoarthritis — groin pain, ↓ internal rotation, joint space narrowing",
+      "Hamstring strain — posterior thigh pain without sciatic nerve distribution numbness",
+    ],
+    treatment: [
+      "Activity modification — avoid prolonged sitting",
+      "NSAIDs and physical therapy — piriformis stretching, hip strengthening",
+      "Local corticosteroid injection into piriformis region",
+      "Botulinum toxin injection for refractory cases",
+      "Surgical decompression rarely indicated",
+    ],
+    boardsPearls: [
+      "Piriformis syndrome — buttock sciatica without disc herniation; pain with hip internal rotation",
+      "Sciatic nerve usually passes inferior to piriformis; variant through muscle ↑ risk",
+      "vs L5 radiculopathy — radiculopathy has dermatomal signs, SLR, MRI disc",
+      "FAIR test — flexion, adduction, internal rotation reproduces sciatic pain",
+      "Deep gluteal syndrome is broader term including piriformis entrapment",
+    ],
+    pediatrics:
+      "Piriformis syndrome is uncommon in children; pediatric sciatica-like pain warrants MRI to exclude disc, tumor, or spondylolysis before attributing to piriformis.",
+  },
+  {
     id: "s1-radiculopathy",
     name: "S1 Radiculopathy",
     etymology: "S = sacral 1st segment + Latin radix = root + Greek -pathy = disease",

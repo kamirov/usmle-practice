@@ -32,3 +32,8 @@ percutaneous-coronary-intervention.png
   Page: https://commons.wikimedia.org/wiki/File:Blausen_0034_Angioplasty_Stent_01.png
   Description: Coronary balloon angioplasty with stent deployment
 
+arthroplasty.jpg
+  Source: Wikimedia Commons — Hip prosthesis.jpg
+  Page: https://commons.wikimedia.org/wiki/File:Hip_prosthesis.jpg
+  Description: Total hip prosthesis — femoral stem and acetabular cup used in joint arthroplasty
+

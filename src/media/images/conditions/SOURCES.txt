@@ -944,3 +944,10 @@ cluster-headache.svg
   Page: https://commons.wikimedia.org/wiki/File:Cluster_headache_svg_hariadhi.svg
   License: CC BY-SA 4.0 (Hariadhi)
   Description: Cluster headache symptoms — unilateral periorbital pain with autonomic features
+
+piriformis-syndrome.png
+  Source: Wikimedia Commons — Gray1243.png
+  Page: https://commons.wikimedia.org/wiki/File:Gray1243.png
+  Author: Henry Vandyke Carter / Gray's Anatomy
+  License: Public domain
+  Description: Greater trochanter and hip landmarks — piriformis inserts near sciatic nerve course

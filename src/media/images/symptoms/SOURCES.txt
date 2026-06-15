@@ -158,37 +158,45 @@ ataxia.jpg
   Source: Wikimedia Commons — Diseases of the nervous system - a text-book of neurology and psychiatry (1915) (14780493694).jpg
   Page: https://commons.wikimedia.org/wiki/File:Diseases_of_the_nervous_system_-_a_text-book_of_neurology_and_psychiatry_(1915)_(14780493694).jpg
   Download: https://commons.wikimedia.org/wiki/Special:FilePath/File:Diseases_of_the_nervous_system_-_a_text-book_of_neurology_and_psychiatry_(1915)_(14780493694).jpg?width=1280
+Description: Diseases of the nervous system - a text-book of neurology and psychiatry (1915)
 
 hyperpigmentation.jpg
   Source: Wikimedia Commons — T. Addison; On...supra-renal capsules Wellcome L0018484.jpg
   Page: https://commons.wikimedia.org/wiki/File:T._Addison;_On...supra-renal_capsules_Wellcome_L0018484.jpg
   Download: https://commons.wikimedia.org/wiki/Special:FilePath/File:T._Addison;_On...supra-renal_capsules_Wellcome_L0018484.jpg?width=1280
+Description: Head of James Wooten, both capsules diseased. Image shows characteristic skin hyperpigmentation in Addison's disease General Collections Keywords: Thomas Addison
 
 myelopathy.jpg
   Source: Wikimedia Commons — Cervical Spine MRI (T2W).jpg
   Page: https://commons.wikimedia.org/wiki/File:Cervical_Spine_MRI_(T2W).jpg
   Download: https://commons.wikimedia.org/wiki/Special:FilePath/File:Cervical_Spine_MRI_(T2W).jpg?width=1280
+Description: Cervical Spine MRI
 
 neutropenia.jpg
   Source: Wikimedia Commons — A blood smear with neutropenia in United States.jpg
   Page: https://commons.wikimedia.org/wiki/File:A_blood_smear_with_neutropenia_in_United_States.jpg
   Download: https://commons.wikimedia.org/wiki/Special:FilePath/File:A_blood_smear_with_neutropenia_in_United_States.jpg?width=1280
+Description: A blood smear with neutropenia in United States
 
 polydipsia.jpg
   Source: Wikimedia Commons — Glass of water with ice cubes.JPG
   Page: https://commons.wikimedia.org/wiki/File:Glass_of_water_with_ice_cubes.JPG
   Download: https://commons.wikimedia.org/wiki/Special:FilePath/File:Glass_of_water_with_ice_cubes.JPG?width=1280
+Description: Glass of water with ice cubes
 
 spastic-paresis.png
   Source: Wikimedia Commons — ALS subtypes UMN LMN distribution.png
   Page: https://commons.wikimedia.org/wiki/File:ALS_subtypes_UMN_LMN_distribution.png
   Download: https://commons.wikimedia.org/wiki/Special:FilePath/File:ALS_subtypes_UMN_LMN_distribution.png?width=1280
+Description: Illustration showing the most common types of ALS and how the upper and lower motor neurons may be affected in each area. On the top row, most classical ALS is either "spinal onset" in which case the arms or legs are affected first, or "bulbar onset" in which case the mouth and throat region is affe
 
 vomitus.jpg
   Source: Local copy from vomiting.jpg
+Description: Emesis (Emesis Cerea), the Pantanal, Brazil
 
 agonal-respirations.jpg
   Source: Local copy from hypoxemia.jpg
+Description: My Heartbeat and Peripheral Oxygen Saturation (SpO2)
 
 insomnia.jpg
   Source: Wikimedia Commons — Depiction of a person suffering from Insomnia (sleeplessness) (cropped).png
@@ -196,10 +204,12 @@ insomnia.jpg
 
 orthostatic-hypotension.jpg
   Source: Local copy from presyncope.jpg
+Description: The Faint label QS:Lde,"Die Ohnmacht"label QS:Len,"The Faint"
 
 papilledema.jpg
   Source: Wikimedia Commons — Papilledema.jpg
   Page: https://commons.wikimedia.org/wiki/File:Papilledema.jpg
+Description: Papilledema
 
 ankle-reflex.jpg
   Source: Wikimedia Commons — Medical diagnosis for the student and practitioner (1922) (14598069420).jpg
@@ -209,18 +219,22 @@ Description: Medical diagnosis for the student and practitioner (1922)
 generalized-tonic-clonic-seizure.jpg
   Source: Wikimedia Commons — Spike-waves.png
   Page: https://commons.wikimedia.org/wiki/File:Spike-waves.png
+Description: Spike-waves
 
 miotic.jpg
   Source: Wikimedia Commons — Example of Horner's syndrome in a cat.jpg
   Page: https://commons.wikimedia.org/wiki/File:Example_of_Horner%27s_syndrome_in_a_cat.jpg
+Description: Example of Horner's syndrome in a cat
 
 mydriasis.jpg
   Source: Wikimedia Commons — Mydriasis due to LSD usage.jpg
   Page: https://commons.wikimedia.org/wiki/File:Mydriasis_due_to_LSD_usage.jpg
+Description: Mydriasis due to LSD usage
 
 koplik-spots.jpg
   Source: Wikimedia Commons — Koplik spots, measles 6111 lores.jpg
   Page: https://commons.wikimedia.org/wiki/File:Koplik_spots,_measles_6111_lores.jpg
+Description: Koplik spots, measles 6111 lores
 
 confluent-rash.jpg
   Source: Local copy from maculopapular-rash.jpg (confluent exanthem pattern)
@@ -228,10 +242,12 @@ confluent-rash.jpg
 hypotelorism.jpg
   Source: Wikimedia Commons — Holoprosencephaly.jpg
   Page: https://commons.wikimedia.org/wiki/File:Holoprosencephaly.jpg
+Description: Sonography of holoprosencephaly in an 8 month old
 
 cyclopia.jpg
   Source: Wikimedia Commons — Otocephaly and cyclopia.png
   Page: https://commons.wikimedia.org/wiki/File:Otocephaly_and_cyclopia.png
+Description: Otocephaly and cyclopia
 
 blueberry-muffin-rash.jpg
   Source: Local copy from purpura.jpg (purpuric papules in TORCH)
@@ -249,25 +265,30 @@ Description: Rheumatoid Arthritis (Swan Neck Deformity) esp
 primitive-nose.jpg
   Source: Wikimedia Commons — Congenital absence of nose.jpg
   Page: https://commons.wikimedia.org/wiki/File:Congenital_absence_of_nose.jpg
+Description: Congenital absence of nose
 
 facial-cleft.jpg
   Source: Wikimedia Commons — Holoprosencephaly.jpg
   Page: https://commons.wikimedia.org/wiki/File:Holoprosencephaly.jpg
+Description: Holoprosencephaly
 
 impaired-wound-healing.png
   Source: Wikimedia Commons — WIRA-Wiki-GH-011-de-Ulkus-Thermografie-Verlauf-unter-wIRA.png
   Page: https://commons.wikimedia.org/wiki/File:WIRA-Wiki-GH-011-de-Ulkus-Thermografie-Verlauf-unter-wIRA.png
   Download: https://commons.wikimedia.org/wiki/Special:FilePath/File:WIRA-Wiki-GH-011-de-Ulkus-Thermografie-Verlauf-unter-wIRA.png?width=1280
+Description: Example of the healing process of a chronic venous stasis ulcer of the lower leg under therapy with wIRA (Study Tromsø/Hillerød). (28 times 30 minutes irradiation with water-filtered infrared-A (wIRA) and visible light (VIS) within 52 days = approximately 7 weeks) with normal view, thermographic ima
 
 lhermitte-sign.jpg
   Source: Wikimedia Commons — MULTIPLE SCLEROSIS.JPG
   Page: https://commons.wikimedia.org/wiki/File:MULTIPLE_SCLEROSIS.JPG
   Download: https://commons.wikimedia.org/wiki/Special:FilePath/File:MULTIPLE_SCLEROSIS.JPG?width=1280
+Description: MULTIPLE SCLEROSIS
 
 psychosis.jpg
   Source: Wikimedia Commons — Atypical Psychosis Genetic Map.jpg
   Page: https://commons.wikimedia.org/wiki/File:Atypical_Psychosis_Genetic_Map.jpg
   Download: https://commons.wikimedia.org/wiki/Special:FilePath/File:Atypical_Psychosis_Genetic_Map.jpg?width=1280
+Description: Atypical Psychosis Genetic Map
 
 afferent-pupillary-defect.png
   Source: Wikimedia Commons — Gray773.png
@@ -281,277 +302,9 @@ diplopia.jpg
 slurred-speech.jpg
   Source: Local copy from symptoms/hemiplegia.jpg
   Page: https://commons.wikimedia.org/wiki/File:Hemiatrophy_and_hemiplegia_of_the_left_side_of_the_tongue_Wellcome_L0062734.jpg
+Description: Watercolour drawing showing hemiatrophy and hemiplegia of the left side of the tongue of a man, aged fifty, an out-patient at the Hospital, caused by a malignant tumour situated deeply in the neck (left side). The sense of taste was not affected on either side, nor was there any other paralysis.
 
 vertigo.svg
-  Source: Local copy from symptoms/nystagmus.svg
-  Page: https://commons.wikimedia.org/wiki/File:Nystagmus_recording.svg
+https://commons.wikimedia.org/wiki/File:Semont_maneuver_hariadhi.svg
+Description: Semont maneuver hariadhi
 
-sciatica.jpg
-  Source: Wikimedia Commons — The Tallerman treatment by superheated dry air in rheumatism gout rheumatic arthritis stiff and painful joints sprains sciatica (IA 39002086176915.med.yale.edu).pdf
-  License: Public domain
-  Description: Historical illustration of sciatica treatment
-  Page: https://commons.wikimedia.org/wiki/File:The_Tallerman_treatment_by_superheated_dry_air_in_rheumatism_gout_rheumatic_arthritis_stiff_and_painful_joints_sprains_sciatica_(IA_39002086176915.med.yale.edu).pdf
-
-facial-palsy.jpg
-  Source: Wikimedia Commons — Bells Palsy CDC.jpg
-  Page: https://commons.wikimedia.org/wiki/File:Bells_Palsy_CDC.jpg
-
-upward-gaze-palsy.png
-  Source: Wikimedia Commons — Gray719.png
-  Author: Henry Vandyke Carter / Gray's Anatomy
-  License: Public domain
-  Description: Dorsal midbrain and vertical gaze centers
-  Page: https://commons.wikimedia.org/wiki/File:Gray719.png
-
-fasciculation.jpg
-  Source: CDC PHIL #8171
-  Description: Visible muscle fasciculation in neuromuscular disease
-  Page: https://phil.cdc.gov/Details.aspx?pid=8171
-
-photophobia.jpg
-  Source: Wikimedia Commons — Iritis.jpg
-  Page: https://commons.wikimedia.org/wiki/File:Iritis.jpg
-  Download: https://upload.wikimedia.org/wikipedia/commons/e/ec/Iritis.jpg
-
-pinpoint-pupils.png
-  Source: Wikimedia Commons — Mydriasis and miosis.png
-  Page: https://commons.wikimedia.org/wiki/File:Mydriasis_and_miosis.png
-  Download: https://commons.wikimedia.org/wiki/Special:FilePath/Mydriasis_and_miosis.png?width=960
-  Attribution: JohnPaulCook, CC0
-
-hypotonia.jpg
-  Source: Wikimedia Commons — Nervous and mental diseases (1911) (14591720128).jpg
-  Page: https://commons.wikimedia.org/wiki/File:Nervous_and_mental_diseases_(1911)_(14591720128).jpg
-
-anxiety.png
-  Source: Wikimedia Commons — GAD At-A-Glance.png
-  Page: https://commons.wikimedia.org/wiki/File:GAD_At-A-Glance.png
-
-enuresis.jpg
-  Source: Wikimedia Commons — Plastic Pants suitable for nocturnal enuresis in larger child or small adult.JPG
-  Page: https://commons.wikimedia.org/wiki/File:Plastic_Pants_suitable_for_nocturnal_enuresis_in_larger_child_or_small_adult.JPG
-
-dystonia.jpg
-  Source: Wikimedia Commons — Traité des torticolis spasmodiques, spasmes, tics, rythmies du cou, torticolis mental, etc. (1907) (14778054521).jpg
-  Page: https://commons.wikimedia.org/wiki/File:Trait%C3%A9_des_torticolis_spasmodiques,_spasmes,_tics,_rythmies_du_cou,_torticolis_mental,_etc._(1907)_(14778054521).jpg
-  Download: https://commons.wikimedia.org/wiki/Special:FilePath/Traite%CC%81%20des%20torticolis%20spasmodiques,%20spasmes,%20tics,%20rythmies%20du%20cou,%20torticolis%20mental,%20etc.%20(1907)%20(14778054521).jpg?width=1280
-
-autonomic-dysfunction.jpg
-  Source: Wikimedia Commons — Orthostatic hypotension.jpg
-  Page: https://commons.wikimedia.org/wiki/File:Orthostatic_hypotension.jpg
-  Download: https://commons.wikimedia.org/wiki/Special:FilePath/Orthostatic%20hypotension.jpg?width=1280
-
-cold-intolerance.jpg
-  Source: Local copy from conditions/hypothyroidism.jpg
-  Reference: https://commons.wikimedia.org/wiki/File:Histopathology_of_Graves'_disease_-_medium_mag.jpg
-
-fecal-impaction.jpg
-  Source: Local copy from pathogenesis/malabsorption.jpg
-  Reference: https://commons.wikimedia.org/wiki/File:Inflammed_mucous_layer_of_the_intestinal_villi_depicting_Celiac_disease.jpg
-
-fecaloma.jpg
-  Source: Local copy from pathogenesis/malabsorption.jpg
-  Reference: https://commons.wikimedia.org/wiki/File:Inflammed_mucous_layer_of_the_intestinal_villi_depicting_Celiac_disease.jpg
-
-cotton-wool-spots.png
-  Source: Wikimedia Commons — A sample retinal image with cotton wool spots and hemorrhages.png
-  Page: https://commons.wikimedia.org/wiki/File:A_sample_retinal_image_with_cotton_wool_spots_and_hemorrhages.png
-
-drusen.jpg
-  Source: Wikimedia Commons — Peripheral Drusen.jpg
-  Page: https://commons.wikimedia.org/wiki/File:Peripheral_Drusen.jpg
-
-chorea.jpg
-  Source: Wikimedia Commons — Traité des torticolis spasmodiques, spasmes, tics, rythmies du cou, torticolis mental, etc. (1907) (14778054521).jpg
-  Page: https://commons.wikimedia.org/wiki/File:Trait%C3%A9_des_torticolis_spasmodiques,_spasmes,_tics,_rythmies_du_cou,_torticolis_mental,_etc._(1907)_(14778054521).jpg
-  Download: https://commons.wikimedia.org/wiki/Special:FilePath/Traite%CC%81%20des%20torticolis%20spasmodiques,%20spasmes,%20tics,%20rythmies%20du%20cou,%20torticolis%20mental,%20etc.%20(1907)%20(14778054521).jpg?width=1280
-
-bradykinesia.jpg
-  Source: Wikimedia Commons — The Journal of nervous and mental disease (IA journalofnervous49ameruoft).pdf
-  Page: https://commons.wikimedia.org/wiki/File:The_Journal_of_nervous_and_mental_disease_(IA_journalofnervous49ameruoft).pdf
-
-prodromal.jpg
-  Source: Wikimedia Commons — Koplik spots, measles 6111 lores.jpg
-  Page: https://commons.wikimedia.org/wiki/File:Koplik_spots,_measles_6111_lores.jpg
-
-akathisia.jpg
-  Source: Wikimedia Commons — Overview of reward structures in the human brain.jpg
-  Page: https://commons.wikimedia.org/wiki/File:Overview_of_reward_structures_in_the_human_brain.jpg
-  Download: https://commons.wikimedia.org/wiki/Special:FilePath/File:Overview_of_reward_structures_in_the_human_brain.jpg?width=1280
-Description: Overview of reward structures in the human brain. Dopaminergic neurons are located in the midbrain structures substantia nigra (SNc) and the ventral tegmental area (VTA). Their axons project to the striatum (caudate nucleus, putamen and ventral striatum including nucleus accumbens), the dorsal and v
-
-babinski-reflex.png
-  Source: Wikimedia Commons — PlantarReflex.png
-  Page: https://commons.wikimedia.org/wiki/File:PlantarReflex.png
-
-neuropathic-pain.jpg
-  Source: Wikimedia Commons — Diabetic Neuropathy Device pic.jpg
-  Page: https://commons.wikimedia.org/wiki/File:Diabetic_Neuropathy_Device_pic.jpg
-
-goiter.jpg
-  Source: Wikimedia Commons — Thyroid, Diffuse Hyperplasia.jpg
-  Page: https://commons.wikimedia.org/wiki/File:Thyroid,_Diffuse_Hyperplasia.jpg
-  Description: Diffuse thyroid hyperplasia gross pathology, relevant to goiter
-
-pallor.jpg
-  Source: Wikimedia Commons — Anemia.JPG
-  Page: https://commons.wikimedia.org/wiki/File:Anemia.JPG
-  Description: Hand pallor comparison in severe anemia
-
-proptosis.jpg
-  Source: Wikimedia Commons — Proptosis and lid retraction from Graves' Disease.jpg
-  Page: https://commons.wikimedia.org/wiki/File:Proptosis_and_lid_retraction_from_Graves'_Disease.jpg
-  Description: Proptosis and lid retraction in Graves disease
-
-trousseau-sign.jpg
-  Source: Wikimedia Commons — Trousseau's Sign of Latent Tetany.jpg
-  Page: https://commons.wikimedia.org/wiki/File:Trousseau's_Sign_of_Latent_Tetany.jpg
-  Description: Carpopedal spasm pattern of Trousseau sign of latent tetany
-
-myoclonus.jpg
-  Source: Local copy from symptoms/generalized-tonic-clonic-seizure.jpg
-  Reference: https://commons.wikimedia.org/wiki/File:Grand-mal_Epilepsy_A.jpg
-
-tonic-phase.jpg
-  Source: Wikimedia Commons — Grand-mal Epilepsy A.jpg
-  Page: https://commons.wikimedia.org/wiki/File:Grand-mal_Epilepsy_A.jpg
-
-clonic-phase.jpg
-  Source: Wikimedia Commons — Grand-mal Epilepsy A.jpg
-  Page: https://commons.wikimedia.org/wiki/File:Grand-mal_Epilepsy_A.jpg
-
-dysesthesia.jpg
-  Source: Wikimedia Commons — Diabetic Neuropathy Device pic.jpg
-  Page: https://commons.wikimedia.org/wiki/File:Diabetic_Neuropathy_Device_pic.jpg
-
-allodynia.png
-  Source: Local copy from conditions/postherpetic-neuralgia.png
-  Reference: https://commons.wikimedia.org/wiki/File:Herpes_zoster_chest.png
-
-formication.svg
-  Source: Wikimedia Commons — Kokain - Cocaine.svg
-  Page: https://commons.wikimedia.org/wiki/File:Kokain_-_Cocaine.svg
-
-cheyne-stokes-respiration.svg
-  Source: Wikimedia Commons — Cheyne-Stokes cs.svg
-  Page: https://commons.wikimedia.org/wiki/File:Cheyne-Stokes_cs.svg
-  Description: Waveform of Cheyne-Stokes respiration showing crescendo-decrescendo cycles with apneic pauses
-
-hypercapnia.svg
-  Source: Wikimedia Commons — Blood gas test hariadhi.svg
-  Page: https://commons.wikimedia.org/wiki/File:Blood_gas_test_hariadhi.svg
-  Description: Arterial blood gas sampling and analysis for PaCO₂ measurement
-
-cannon-a-waves.jpg
-  Source: Wikimedia Commons — Elevated Jugular Venous Pressure.jpg
-  Page: https://commons.wikimedia.org/wiki/File:Elevated_Jugular_Venous_Pressure.jpg
-  Description: Elevated jugular venous pressure with prominent neck vein pulsations
-
-oligomenorrhea.png
-  Source: Wikimedia Commons — Hormones estradiol, progesterone, LH and FSH during menstrual cycle.png
-  Page: https://commons.wikimedia.org/wiki/File:Hormones_estradiol,_progesterone,_LH_and_FSH_during_menstrual_cycle.png
-  Description: Hormone levels across the normal menstrual cycle — relevant to anovulatory oligomenorrhea
-
-hirsutism.png
-  Source: Wikimedia Commons — PMC4103002 ircmj-16-9410-g001.png
-  Page: https://commons.wikimedia.org/wiki/File:PMC4103002_ircmj-16-9410-g001.png
-  Description: Severe hirsutism in a 17-year-old female with polycystic ovary syndrome
-
-androgenic-alopecia.png
-  Source: Wikimedia Commons — Ludwid scale for female pattern baldness.png
-  Page: https://commons.wikimedia.org/wiki/File:Ludwid_scale_for_female_pattern_baldness.png
-  Description: Ludwig classification grades of female pattern androgenetic alopecia
-
-central-adiposity.svg
-  Source: Wikimedia Commons — Waist to hip ratio-en.svg
-  Page: https://commons.wikimedia.org/wiki/File:Waist_to_hip_ratio-en.svg
-  Description: Waist-to-hip ratio silhouettes comparing apple (central) and pear (gynoid) fat distribution
-
-anosmia.png
-  Source: Wikimedia Commons — Gray771.png
-  Page: https://commons.wikimedia.org/wiki/File:Gray771.png
-  Description: Olfactory nerve (CN I) anatomy
-
-amnesia.jpg
-  Source: Wikimedia Commons — Brain regions in memory formation updated.jpg
-  Author: Bernstein0275
-  Description: Brain regions involved in long-term memory formation including hippocampus
-  Page: https://commons.wikimedia.org/wiki/File:Brain_regions_in_memory_formation_updated.jpg
-
-brain-fog.jpg
-  Source: Wikimedia Commons — Hypothyroidism.jpg
-  Page: https://commons.wikimedia.org/wiki/File:Hypothyroidism.jpg
-  Description: Hypothyroid myxedema — metabolic cause of cognitive slowing and brain fog
-
-confusion.jpg
-  Source: Wikimedia Commons — Delirium tremens Skalarjevo brezno Peter Gedei 2020-8-8.jpg
-  Page: https://commons.wikimedia.org/wiki/File:Delirium_tremens_Skalarjevo_brezno_Peter_Gedei_2020-8-8.jpg
-  Description: Delirium tremens — acute confusion in severe alcohol withdrawal
-
-decorticate-posturing.jpg
-  Source: Wikimedia Commons — Decorticate.PNG (pending); interim local copy from Decerebrate.jpg
-  Page: https://commons.wikimedia.org/wiki/File:Decorticate.PNG
-  Reference: https://commons.wikimedia.org/wiki/File:Decerebrate.jpg
-
-decerebrate-posturing.jpg
-  Source: Wikimedia Commons — Decerebrate.jpg
-  Page: https://commons.wikimedia.org/wiki/File:Decerebrate.jpg
-
-otorrhea.jpg
-  Source: Local copy from conditions/basilar-skull-fracture.jpg
-  Reference: https://commons.wikimedia.org/wiki/File:Battles-sign.jpg
-
-raccoon-eyes.jpg
-  Source: Wikimedia Commons — Bilateral periorbital ecchymosis (raccoon eyes).jpg
-  Page: https://commons.wikimedia.org/wiki/File:Bilateral_periorbital_ecchymosis_(raccoon_eyes).jpg
-
-acanthosis-nigricans.jpg
-  Source: Wikimedia Commons — Acanthosis-nigricans4.jpg
-  Page: https://commons.wikimedia.org/wiki/File:Acanthosis-nigricans4.jpg
-  Description: Velvety hyperpigmented plaques in the axilla — insulin resistance skin marker
-
-virilization.jpg
-  Source: Wikimedia Commons — ClitoromegalyCAH.jpg
-  Page: https://commons.wikimedia.org/wiki/File:ClitoromegalyCAH.jpg
-  Description: Clitoromegaly in congenital adrenal hyperplasia — virilization from androgen excess
-
-central-nervous-system-depression.png
-  Source: Wikimedia Commons — Escala de Coma de Glasgow - ECG.png
-  Page: https://commons.wikimedia.org/wiki/File:Escala_de_Coma_de_Glasgow_-_ECG.png
-  Description: Glasgow Coma Scale scoring eye, verbal, and motor responses
-
-cataplexy.png
-  Source: Wikimedia Commons — Adapted narcolepsy relations venn diagram.png
-  Page: https://commons.wikimedia.org/wiki/File:Adapted_narcolepsy_relations_venn_diagram.png
-  Description: Narcolepsy symptom relationships including cataplexy
-
-sleep-paralysis.jpg
-  Source: Wikimedia Commons — John Henry Fuseli - The NightmareFXD.jpg
-  Page: https://commons.wikimedia.org/wiki/File:John_Henry_Fuseli_-_The_NightmareFXD.jpg
-  Description: Classic artistic depiction of sleep paralysis
-
-autonomic-symptoms.svg
-  Source: Wikimedia Commons — Horner's Syndrome and Autonomic innervation of the eye.svg
-  Page: https://commons.wikimedia.org/wiki/File:Horner%27s_Syndrome_and_Autonomic_innervation_of_the_eye.svg
-  Description: Sympathetic and parasympathetic innervation of the eye in Horner syndrome
-
-lacrimation.jpg
-  Source: Wikimedia Commons — Conjunctivitis.jpg
-  Page: https://commons.wikimedia.org/wiki/File:Conjunctivitis.jpg
-  Description: Allergic conjunctivitis with conjunctival injection and tearing
-
-periorbital-pain.svg
-  Source: Wikimedia Commons — Cluster headache svg hariadhi.svg
-  Page: https://commons.wikimedia.org/wiki/File:Cluster_headache_svg_hariadhi.svg
-  License: CC BY-SA 4.0 (Hariadhi)
-  Description: Unilateral periorbital pain distribution in cluster headache
-
-ptosis.jpg
-  Source: Wikimedia Commons — Myasthenia gravis ptosis reversal.jpg
-  Page: https://commons.wikimedia.org/wiki/File:Myasthenia_gravis_ptosis_reversal.jpg
-  Description: Partial ptosis before and after edrophonium in myasthenia gravis
-
-rhinorrhea.svg
-  Source: Wikimedia Commons — Symptoms of swine flu-numbered.svg
-  Page: https://commons.wikimedia.org/wiki/File:Symptoms_of_swine_flu-numbered.svg
-  Description: Runny nose (rhinorrhea) illustrated as a respiratory symptom

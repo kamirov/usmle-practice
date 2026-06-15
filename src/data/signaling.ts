@@ -2714,6 +2714,7 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
     aliases: [
       "muscarinic m1 receptor",
       "muscarinic m1 receptors",
+      "muscarinic m1",
       "m1 receptor",
       "m1 receptors",
       "m1 muscarinic receptor",
@@ -2807,6 +2808,9 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
     aliases: [
       "alpha-1 adrenergic receptor",
       "alpha-1 adrenergic receptors",
+      "alpha-1 adrenergic",
+      "alpha-1 adrenergics",
+      "α1 adrenergic",
       "α1 adrenergic receptor",
       "α1 adrenergic receptors",
       "alpha-1 receptor",
@@ -2902,7 +2906,8 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
     aliases: [
       "gaba-a receptor",
       "gaba-a receptors",
-      "gabaa receptor",
+      "gaba-a",
+      "gabaa",
       "gabaa receptors",
       "gaba a receptor",
       "gaba a receptors",

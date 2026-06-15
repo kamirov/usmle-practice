@@ -1,0 +1,80 @@
+[
+  {
+    "category": "conditions",
+    "entry_id": "adjustment-disorder",
+    "filename": "adjustment-disorder.svg",
+    "query": "stress adjustment disorder patient"
+  },
+  {
+    "category": "conditions",
+    "entry_id": "avascular-necrosis",
+    "filename": "avascular-necrosis.svg",
+    "query": "avascular necrosis femoral head xray"
+  },
+  {
+    "category": "conditions",
+    "entry_id": "glaucoma",
+    "filename": "glaucoma.svg",
+    "query": "glaucoma optic disc cupping"
+  },
+  {
+    "category": "conditions",
+    "entry_id": "neuromyelitis-optica",
+    "filename": "neuromyelitis-optica.svg",
+    "query": "neuromyelitis optica spinal cord MRI"
+  },
+  {
+    "category": "conditions",
+    "entry_id": "psychotic-mood-disorder",
+    "filename": "psychotic-mood-disorder.svg",
+    "query": "schizoaffective disorder psychosis"
+  },
+  {
+    "category": "cells",
+    "entry_id": "immunosuppression",
+    "filename": "immunosuppression.svg",
+    "query": "immunosuppression transplant rejection histology"
+  },
+  {
+    "category": "symptoms",
+    "entry_id": "insomnia",
+    "filename": "insomnia.svg",
+    "query": "insomnia sleeplessness"
+  },
+  {
+    "category": "symptoms",
+    "entry_id": "internuclear-ophthalmoplegia",
+    "filename": "internuclear-ophthalmoplegia.svg",
+    "query": "internuclear ophthalmoplegia MLF"
+  },
+  {
+    "category": "symptoms",
+    "entry_id": "mania",
+    "filename": "mania.svg",
+    "query": "mania bipolar elevated mood"
+  },
+  {
+    "category": "symptoms",
+    "entry_id": "moon-facies",
+    "filename": "moon-facies.svg",
+    "query": "cushing syndrome moon facies"
+  },
+  {
+    "category": "symptoms",
+    "entry_id": "nystagmus",
+    "filename": "nystagmus.svg",
+    "query": "nystagmus eye oscillation"
+  },
+  {
+    "category": "symptoms",
+    "entry_id": "ophthalmoplegia",
+    "filename": "ophthalmoplegia.svg",
+    "query": "ophthalmoplegia cranial nerve palsy"
+  },
+  {
+    "category": "symptoms",
+    "entry_id": "vertigo",
+    "filename": "vertigo.svg",
+    "query": "benign paroxysmal positional vertigo"
+  }
+]

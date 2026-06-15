@@ -1756,6 +1756,48 @@ export const MUSCULOSKELETAL: MusculoskeletalEntry[] = [
       "Conus medullaris may terminate slightly lower (L2–L3) in neonates before ascending with growth; LP level selection still uses palpable iliac crest (L4) landmarks.",
   },
   {
+    id: "piriformis",
+    name: "Piriformis",
+    etymology: "Latin pirum = pear + forma = shape — pear-shaped muscle",
+    aliases: [
+      "piriformis",
+      "piriformis muscle",
+      "piriformis muscles",
+      "musculus piriformis",
+    ],
+    definition:
+      "Pear-shaped external rotator of the hip originating on the anterior sacrum, exiting the pelvis through the greater sciatic foramen, and inserting on the greater trochanter of the femur — the sciatic nerve usually passes inferior to it.",
+    anatomy:
+      "Origin: pelvic surface of sacrum (S2–S4), sacrotuberous ligament. Insertion: superior aspect of greater trochanter. Exits pelvis via greater sciatic foramen; in ~10–20% of individuals the sciatic nerve pierces the muscle (variant associated with piriformis syndrome).",
+    action: [
+      "External (lateral) rotation of the thigh at the hip",
+      "Abduction of the hip when hip is flexed",
+      "Stabilizes femoral head in acetabulum during gait",
+    ],
+    innervation: "Nerve to piriformis (S1–S2) — branch of sacral plexus",
+    clinicalRelevance: [
+      "Piriformis syndrome — muscle spasm or hypertrophy compresses sciatic nerve → buttock pain radiating down leg mimicking radiculopathy",
+      "Landmark for sciatic nerve course — nerve typically exits inferior to piriformis",
+      "Sciatic nerve variant through piriformis increases entrapment risk",
+      "Deep gluteal injection approaches must avoid sciatic nerve inferior to piriformis",
+    ],
+    boardsPearls: [
+      "Piriformis — external rotator; sciatic nerve passes inferior to muscle (usual anatomy)",
+      "Piriformis syndrome mimics sciatica but pain reproduced with hip internal rotation/stretch",
+      "FA favorite — sciatic nerve relationship to piriformis at greater sciatic foramen",
+      "vs gluteus medius/minimus — abductors, not primary external rotators in boards vignettes",
+      "Sacrospinous and sacrotuberous ligaments border greater sciatic foramen with piriformis",
+    ],
+    distinguishFrom: [
+      "Gluteus maximus — superficial; extends and externally rotates hip but does not entrap sciatic nerve at foramen",
+      "Obturator internus — also external rotator exiting lesser sciatic foramen",
+      "Quadratus femoris — external rotator inferior to sciatic nerve in gluteal region",
+      "Sciatic nerve — neural structure passing near piriformis, not a muscle",
+    ],
+    pediatrics:
+      "Piriformis syndrome is uncommon in children; pediatric sciatica-like leg pain warrants evaluation for disc herniation, spondylolysis, or hip pathology.",
+  },
+  {
     id: "sciatic-nerve-injury",
     name: "Sciatic Nerve Injury",
     etymology: "Greek ischion = hip + Latin -aticus = pertaining to + Greek neuron = nerve + Latin injuria = wrong/harm",

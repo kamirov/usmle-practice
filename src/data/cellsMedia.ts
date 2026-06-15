@@ -6,8 +6,8 @@ import acetylation from "../media/images/cells/acetylation.jpg?url";
 import actin from "../media/images/cells/actin.svg?url";
 import adherensJunction from "../media/images/cells/adherens-junction.svg?url";
 import adventitia from "../media/images/cells/adventitia.svg?url";
-import antigenPresentingCell from "../media/images/cells/antigen-presenting-cell.png?url";
 import anteriorPituitaryHistology from "../media/images/cells/anterior-pituitary-histology.jpg?url";
+import antigenPresentingCell from "../media/images/cells/antigen-presenting-cell.png?url";
 import astrocyte from "../media/images/cells/astrocyte.jpg?url";
 import bLymphocyteBlausen from "../media/images/cells/b-lymphocyte-blausen.png?url";
 import bLymphocyte from "../media/images/cells/b-lymphocyte.png?url";
@@ -54,12 +54,14 @@ import immunosuppression from "../media/images/cells/immunosuppression.svg?url";
 import intermediateFilament from "../media/images/cells/intermediate-filament.jpg?url";
 import intestinalLCell from "../media/images/cells/intestinal-l-cell.png?url";
 import keratinocyte from "../media/images/cells/keratinocyte.png?url";
+import kupfferCell from "../media/images/cells/kupffer-cell.jpg?url";
 import kupfferCell from "../media/images/cells/kupffer-cell.png?url";
 import laminaPropria from "../media/images/cells/lamina-propria.jpg?url";
 import langerhansCell from "../media/images/cells/langerhans-cell.jpg?url";
 import langhansGiantCell from "../media/images/cells/langhans-giant-cell.jpg?url";
 import leukocyte from "../media/images/cells/leukocyte.jpg?url";
 import leydigCell from "../media/images/cells/leydig-cell.png?url";
+import lymphocyte from "../media/images/cells/lymphocyte.jpg?url";
 import lymphocyte from "../media/images/cells/lymphocyte.png?url";
 import macrophage from "../media/images/cells/macrophage.png?url";
 import mastCell from "../media/images/cells/mast-cell.jpg?url";
@@ -103,8 +105,8 @@ import stemCell from "../media/images/cells/stem-cell.png?url";
 import stroma from "../media/images/cells/stroma.jpg?url";
 import tCellSignaling from "../media/images/cells/t-cell-signaling.svg?url";
 import tLymphocyte from "../media/images/cells/t-lymphocyte.jpg?url";
-import th17 from "../media/images/cells/th17.png?url";
 import th1 from "../media/images/cells/th1.png?url";
+import th17 from "../media/images/cells/th17.png?url";
 import th2 from "../media/images/cells/th2.png?url";
 import tightJunction from "../media/images/cells/tight-junction.png?url";
 import type1Pneumocyte from "../media/images/cells/type-1-pneumocyte.jpg?url";
@@ -118,6 +120,7 @@ export type CELLImageId = Extract<
   | "actin"
   | "adherens-junction"
   | "adventitia"
+  | "anterior-pituitary-histology"
   | "antigen-presenting-cell"
   | "astrocyte"
   | "naive-b-lymphocyte"
@@ -128,7 +131,6 @@ export type CELLImageId = Extract<
   | "cd8-t-lymphocyte"
   | "cervical-os"
   | "chromaffin-cell"
-  | "corticotroph"
   | "clear-cytoplasm"
   | "core-promoter-elements"
   | "corticospinal-tract"
@@ -152,7 +154,6 @@ export type CELLImageId = Extract<
   | "fenestrae"
   | "fibroblast"
   | "gap-junction"
-  | "gonadotroph"
   | "golgi-tendon-organ"
   | "gray-matter"
   | "helper-t-cell-differentiation"
@@ -168,12 +169,13 @@ export type CELLImageId = Extract<
   | "intestinal-l-cell"
   | "keratinocyte"
   | "kupffer-cell"
+  | "kupffer-cell"
   | "lamina-propria"
   | "langerhans-cell"
   | "langhans-giant-cell"
-  | "lactotroph"
   | "leukocyte"
   | "leydig-cell"
+  | "lymphocyte"
   | "lymphocyte"
   | "macrophage"
   | "mast-cell"
@@ -213,15 +215,13 @@ export type CELLImageId = Extract<
   | "serosa"
   | "siderophage"
   | "signet-ring-cells"
-  | "somatotroph"
   | "stem-cell"
   | "stroma"
   | "t-cell-signaling"
   | "t-lymphocyte"
-  | "th17"
   | "th1"
+  | "th17"
   | "th2"
-  | "thyrotroph"
   | "tight-junction"
   | "type-1-pneumocyte"
   | "type-2-pneumocyte"
@@ -239,6 +239,7 @@ export const CELL_IMAGES: Partial<Record<CELLImageId, string>> = {
   "actin": extensionAssetUrl(actin),
   "adherens-junction": extensionAssetUrl(adherensJunction),
   "adventitia": extensionAssetUrl(adventitia),
+  "anterior-pituitary-histology": extensionAssetUrl(anteriorPituitaryHistology),
   "antigen-presenting-cell": extensionAssetUrl(antigenPresentingCell),
   "astrocyte": extensionAssetUrl(astrocyte),
   "naive-b-lymphocyte": extensionAssetUrl(bLymphocyteBlausen),
@@ -249,7 +250,6 @@ export const CELL_IMAGES: Partial<Record<CELLImageId, string>> = {
   "cd8-t-lymphocyte": extensionAssetUrl(cd8TLymphocyte),
   "cervical-os": extensionAssetUrl(cervicalOs),
   "chromaffin-cell": extensionAssetUrl(chromaffinCell),
-  corticotroph: extensionAssetUrl(anteriorPituitaryHistology),
   "clear-cytoplasm": extensionAssetUrl(clearCytoplasm),
   "core-promoter-elements": extensionAssetUrl(corePromoterElements),
   "corticospinal-tract": extensionAssetUrl(corticospinalTract),
@@ -273,7 +273,6 @@ export const CELL_IMAGES: Partial<Record<CELLImageId, string>> = {
   "fenestrae": extensionAssetUrl(fenestrae),
   "fibroblast": extensionAssetUrl(fibroblast),
   "gap-junction": extensionAssetUrl(gapJunction),
-  gonadotroph: extensionAssetUrl(anteriorPituitaryHistology),
   "golgi-tendon-organ": extensionAssetUrl(golgiTendonOrgan),
   "gray-matter": extensionAssetUrl(grayMatter),
   "helper-t-cell-differentiation": extensionAssetUrl(helperTCellDifferentiation),
@@ -289,12 +288,13 @@ export const CELL_IMAGES: Partial<Record<CELLImageId, string>> = {
   "intestinal-l-cell": extensionAssetUrl(intestinalLCell),
   "keratinocyte": extensionAssetUrl(keratinocyte),
   "kupffer-cell": extensionAssetUrl(kupfferCell),
+  "kupffer-cell": extensionAssetUrl(kupfferCell),
   "lamina-propria": extensionAssetUrl(laminaPropria),
   "langerhans-cell": extensionAssetUrl(langerhansCell),
   "langhans-giant-cell": extensionAssetUrl(langhansGiantCell),
-  lactotroph: extensionAssetUrl(anteriorPituitaryHistology),
   "leukocyte": extensionAssetUrl(leukocyte),
   "leydig-cell": extensionAssetUrl(leydigCell),
+  "lymphocyte": extensionAssetUrl(lymphocyte),
   "lymphocyte": extensionAssetUrl(lymphocyte),
   "macrophage": extensionAssetUrl(macrophage),
   "mast-cell": extensionAssetUrl(mastCell),
@@ -334,15 +334,13 @@ export const CELL_IMAGES: Partial<Record<CELLImageId, string>> = {
   "serosa": extensionAssetUrl(serosa),
   "siderophage": extensionAssetUrl(siderophage),
   "signet-ring-cells": extensionAssetUrl(signetRingCells),
-  somatotroph: extensionAssetUrl(anteriorPituitaryHistology),
   "stem-cell": extensionAssetUrl(stemCell),
   "stroma": extensionAssetUrl(stroma),
   "t-cell-signaling": extensionAssetUrl(tCellSignaling),
   "t-lymphocyte": extensionAssetUrl(tLymphocyte),
-  "th17": extensionAssetUrl(th17),
   "th1": extensionAssetUrl(th1),
+  "th17": extensionAssetUrl(th17),
   "th2": extensionAssetUrl(th2),
-  thyrotroph: extensionAssetUrl(anteriorPituitaryHistology),
   "tight-junction": extensionAssetUrl(tightJunction),
   "type-1-pneumocyte": extensionAssetUrl(type1Pneumocyte),
   "type-2-pneumocyte": extensionAssetUrl(type2Pneumocyte),
@@ -357,6 +355,7 @@ export const CELL_IMAGE_ATTRIBUTIONS: Partial<
   "actin": { label: "Wikimedia Commons (Microfilament Structure.svg)", url: "https://commons.wikimedia.org/wiki/File:Microfilament_Structure.svg" },
   "adherens-junction": { label: "Wikimedia Commons (Adherens Junctions structural proteins-LangNeutral.svg)", url: "https://commons.wikimedia.org/wiki/File:Adherens_Junctions_structural_proteins-LangNeutral.svg" },
   "adventitia": { label: "Wikimedia Commons (Microscopic anatomy of an artery de.svg)", url: "https://commons.wikimedia.org/wiki/File:Microscopic_anatomy_of_an_artery_de.svg" },
+  "anterior-pituitary-histology": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:anterior-pituitary-histology.jpg" },
   "antigen-presenting-cell": { label: "Wikimedia Commons (An MHC tetramer binding to T-cell receptors (left), and an MHC molecule on the surface of an antigen presenting cell binding to T-cell receptors (right).png)", url: "https://commons.wikimedia.org/wiki/File:An_MHC_tetramer_binding_to_T-cell_receptors_(left),_and_an_MHC_molecule_on_the_surface_of_an_antigen_presenting_cell_binding_to_T-cell_receptors_(right).png" },
   "astrocyte": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:astrocyte.jpg" },
   "naive-b-lymphocyte": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:b-lymphocyte-blausen.png" },
@@ -367,10 +366,6 @@ export const CELL_IMAGE_ATTRIBUTIONS: Partial<
   "cd8-t-lymphocyte": { label: "Wikimedia Commons (Killer T cells surround a cancer cell.png)", url: "https://commons.wikimedia.org/wiki/File:Killer_T_cells_surround_a_cancer_cell.png" },
   "cervical-os": { label: "Wikimedia Commons (Macro Os, vertèbres cervicales - Métastases 55-o.apatho-219d-os.jpg)", url: "https://commons.wikimedia.org/wiki/File:Macro_Os,_vertèbres_cervicales_-_Métastases_55-o.apatho-219d-os.jpg" },
   "chromaffin-cell": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:chromaffin-cell.jpg" },
-  corticotroph: {
-    label: "Wikimedia Commons (Histology of pars distalis of the anterior pituitary with chromophobes, basophils, and acidophils, annotated.jpg)",
-    url: "https://commons.wikimedia.org/wiki/File:Histology_of_pars_distalis_of_the_anterior_pituitary_with_chromophobes,_basophils,_and_acidophils,_annotated.jpg",
-  },
   "clear-cytoplasm": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:clear-cytoplasm.svg" },
   "core-promoter-elements": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:core-promoter-elements.svg" },
   "corticospinal-tract": { label: "Wikimedia Commons (Gray688.png)", url: "https://commons.wikimedia.org/wiki/File:Gray688.png" },
@@ -394,10 +389,6 @@ export const CELL_IMAGE_ATTRIBUTIONS: Partial<
   "fenestrae": { label: "Wikimedia Commons (Glandula parathyroidea – overview (HE stain).jpg)", url: "https://commons.wikimedia.org/wiki/File:Glandula_parathyroidea_–_overview_(HE_stain).jpg" },
   "fibroblast": { label: "Wikimedia Commons (Cell culture (fibroblasts) (261 20) Fibroblasts (metaphase, anaphase).jpg)", url: "https://commons.wikimedia.org/wiki/File:Cell_culture_(fibroblasts)_(261_20)_Fibroblasts_(metaphase,_anaphase).jpg" },
   "gap-junction": { label: "Wikimedia Commons (Gap cell junction-uk.svg)", url: "https://commons.wikimedia.org/wiki/File:Gap_cell_junction-uk.svg" },
-  gonadotroph: {
-    label: "Wikimedia Commons (Histology of pars distalis of the anterior pituitary with chromophobes, basophils, and acidophils, annotated.jpg)",
-    url: "https://commons.wikimedia.org/wiki/File:Histology_of_pars_distalis_of_the_anterior_pituitary_with_chromophobes,_basophils,_and_acidophils,_annotated.jpg",
-  },
   "golgi-tendon-organ": { label: "Wikimedia Commons (Gray938.png)", url: "https://commons.wikimedia.org/wiki/File:Gray938.png" },
   "gray-matter": { label: "Wikimedia Commons (Grey matter and white matter - high mag.jpg)", url: "https://commons.wikimedia.org/wiki/File:Grey_matter_and_white_matter_-_high_mag.jpg" },
   "helper-t-cell-differentiation": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:helper-t-cell-differentiation.png" },
@@ -412,16 +403,14 @@ export const CELL_IMAGE_ATTRIBUTIONS: Partial<
   "intermediate-filament": { label: "Wikimedia Commons (Cytoskeleton - Intermediate filament -- Smart-Servier.png)", url: "https://commons.wikimedia.org/wiki/File:Cytoskeleton_-_Intermediate_filament_--_Smart-Servier.png" },
   "intestinal-l-cell": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:intestinal-l-cell.png" },
   "keratinocyte": { label: "Wikimedia Commons (Épiderme - FR.png)", url: "https://commons.wikimedia.org/wiki/File:Épiderme_-_FR.png" },
+  "kupffer-cell": { label: "Wikimedia Commons (Kupffer cells high mag cropped.jpg)", url: "https://commons.wikimedia.org/wiki/File:Kupffer_cells_high_mag_cropped.jpg" },
   "kupffer-cell": { label: "Wikimedia Commons (Hepatic circulation and microcirculation.png)", url: "https://commons.wikimedia.org/wiki/File:Hepatic_circulation_and_microcirculation.png" },
   "lamina-propria": { label: "Wikimedia Commons (Stomach - Iron Crystals In Gastric Lamina Propria And Epithelium (49270585877).jpg)", url: "https://commons.wikimedia.org/wiki/File:Stomach_-_Iron_Crystals_In_Gastric_Lamina_Propria_And_Epithelium_(49270585877).jpg" },
   "langerhans-cell": { label: "Wikimedia Commons (Langerhans Cells in Normal Epidermis, CD1a Immunostain (4435883030).jpg)", url: "https://commons.wikimedia.org/wiki/File:Langerhans_Cells_in_Normal_Epidermis,_CD1a_Immunostain_(4435883030).jpg" },
   "langhans-giant-cell": { label: "Wikimedia Commons (Langhans Giant Cell (10189844503).jpg)", url: "https://commons.wikimedia.org/wiki/File:Langhans_Giant_Cell_(10189844503).jpg" },
-  lactotroph: {
-    label: "Wikimedia Commons (Histology of pars distalis of the anterior pituitary with chromophobes, basophils, and acidophils, annotated.jpg)",
-    url: "https://commons.wikimedia.org/wiki/File:Histology_of_pars_distalis_of_the_anterior_pituitary_with_chromophobes,_basophils,_and_acidophils,_annotated.jpg",
-  },
   "leukocyte": { label: "Wikimedia Commons (WBC (neutrophil) at centre, numerous erythrocytes and platelets (dot like bodies) in Wright's stained peripheral blood smear (PBS) microscopy.jpg)", url: "https://commons.wikimedia.org/wiki/File:WBC_(neutrophil)_at_centre,_numerous_erythrocytes_and_platelets_(dot_like_bodies)_in_Wright's_stained_peripheral_blood_smear_(PBS)_microscopy.jpg" },
-  "leydig-cell": { label: "Wikimedia Commons (Gray1149.png)", url: "https://commons.wikimedia.org/wiki/File:Gray1149.png" },
+  "leydig-cell": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:leydig-cell.png" },
+  "lymphocyte": { label: "Wikimedia Commons (A blood smear of rainbow trout.jpg)", url: "https://commons.wikimedia.org/wiki/File:A_blood_smear_of_rainbow_trout.jpg" },
   "lymphocyte": { label: "Wikimedia Commons (Microphotographs of atypical lymphocytes observed in peripheral blood smears of quokkas on Rottnest Island.png)", url: "https://commons.wikimedia.org/wiki/File:Microphotographs_of_atypical_lymphocytes_observed_in_peripheral_blood_smears_of_quokkas_on_Rottnest_Island.png" },
   "macrophage": { label: "Wikimedia Commons (Infiltration of CD68+ tumor-associated macrophages (TAMs) in distinct histologic location.png)", url: "https://commons.wikimedia.org/wiki/File:Infiltration_of_CD68+_tumor-associated_macrophages_(TAMs)_in_distinct_histologic_location.png" },
   "mast-cell": { label: "Wikimedia Commons (Mast cell.jpg)", url: "https://commons.wikimedia.org/wiki/File:Mast_cell.jpg" },
@@ -446,7 +435,7 @@ export const CELL_IMAGE_ATTRIBUTIONS: Partial<
   "oligodendrocyte": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:oligodendrocyte.svg" },
   "osteoblast": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:osteoblast.jpg" },
   "osteoclast": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:osteoclast.jpg" },
-  "ovarian-theca-cell": { label: "Wellcome Collection (Granulosa and theca cells. Wellcome L0002177EC.jpg)", url: "https://commons.wikimedia.org/wiki/File:Granulosa_and_theca_cells._Wellcome_L0002177EC.jpg" },
+  "ovarian-theca-cell": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:ovarian-theca-cell.jpg" },
   "pancreatic-beta-cell": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:pancreatic-beta-cell.jpg" },
   "periventricular-white-matter": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:periventricular-white-matter.jpg" },
   "pneumocyte": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:pneumocyte.jpg" },
@@ -461,21 +450,13 @@ export const CELL_IMAGE_ATTRIBUTIONS: Partial<
   "serosa": { label: "Wikimedia Commons (Chicken embryo at the stage of formation of trunk and amniotic folds.jpg)", url: "https://commons.wikimedia.org/wiki/File:Chicken_embryo_at_the_stage_of_formation_of_trunk_and_amniotic_folds.jpg" },
   "siderophage": { label: "Wikimedia Commons (Siderophage CSF cytology.jpg)", url: "https://commons.wikimedia.org/wiki/File:Siderophage_CSF_cytology.jpg" },
   "signet-ring-cells": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:signet-ring-cells.jpg" },
-  somatotroph: {
-    label: "Wikimedia Commons (Histology of pars distalis of the anterior pituitary with chromophobes, basophils, and acidophils, annotated.jpg)",
-    url: "https://commons.wikimedia.org/wiki/File:Histology_of_pars_distalis_of_the_anterior_pituitary_with_chromophobes,_basophils,_and_acidophils,_annotated.jpg",
-  },
   "stem-cell": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:stem-cell.png" },
   "stroma": { label: "Wikimedia Commons (Spiral arteries in endometrial stroma.jpg)", url: "https://commons.wikimedia.org/wiki/File:Spiral_arteries_in_endometrial_stroma.jpg" },
   "t-cell-signaling": { label: "Wikimedia Commons (063-T-CellReceptor-MHC-ru.svg)", url: "https://commons.wikimedia.org/wiki/File:063-T-CellReceptor-MHC-ru.svg" },
   "t-lymphocyte": { label: "Wikimedia Commons (HIV-infected T cell (6813384933).jpg)", url: "https://commons.wikimedia.org/wiki/File:HIV-infected_T_cell_(6813384933).jpg" },
+  "th1": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:th1.png" },
   "th17": { label: "Wikimedia Commons (Helper T Cell Differentiation.png)", url: "https://commons.wikimedia.org/wiki/File:Helper_T_Cell_Differentiation.png" },
-  "th1": { label: "Wikimedia Commons (Helper T Cell Differentiation.png)", url: "https://commons.wikimedia.org/wiki/File:Helper_T_Cell_Differentiation.png" },
   "th2": { label: "Wikimedia Commons (M2 macrophages. Sézary cells produce the Th2 cytokines IL-4 and IL-13.png)", url: "https://commons.wikimedia.org/wiki/File:M2_macrophages._Sézary_cells_produce_the_Th2_cytokines_IL-4_and_IL-13.png" },
-  thyrotroph: {
-    label: "Wikimedia Commons (Histology of pars distalis of the anterior pituitary with chromophobes, basophils, and acidophils, annotated.jpg)",
-    url: "https://commons.wikimedia.org/wiki/File:Histology_of_pars_distalis_of_the_anterior_pituitary_with_chromophobes,_basophils,_and_acidophils,_annotated.jpg",
-  },
   "tight-junction": { label: "Wikimedia Commons (Morphological modifications during EMT.png)", url: "https://commons.wikimedia.org/wiki/File:Morphological_modifications_during_EMT.png" },
   "type-1-pneumocyte": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:type-1-pneumocyte.jpg" },
   "type-2-pneumocyte": { label: "Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:type-2-pneumocyte.jpg" },
@@ -483,124 +464,117 @@ export const CELL_IMAGE_ATTRIBUTIONS: Partial<
 };
 
 export const CELL_IMAGE_CAPTIONS: Partial<Record<CELLImageId, string>> = {
-  "a-delta-fiber": "Clinical or pathologic image illustrating a delta fiber",
-  "acetylation": "Clinical or pathologic image illustrating acetylation",
-  "actin": "Clinical or pathologic image illustrating actin",
-  "adherens-junction": "Clinical or pathologic image illustrating adherens junction",
-  "adventitia": "Clinical or pathologic image illustrating adventitia",
-  "antigen-presenting-cell": "Clinical or pathologic image illustrating antigen presenting cell",
-  "astrocyte": "Clinical or pathologic image illustrating astrocyte",
+  "a-delta-fiber": "Propagation of action potential along myelinated nerve fiber en",
+  "acetylation": "Histone acetylation in regulating glial response after CNS injury",
+  "actin": "Microfilament Structure",
+  "adherens-junction": "Adherens Junctions structural proteins-LangNeutral",
+  "adventitia": "Microscopic anatomy of an artery de",
+  "anterior-pituitary-histology": "Annotated anterior pituitary acidophils and basophils — lactotroph, somatotroph, corticotroph, thyrotroph, gonadotroph",
+  "antigen-presenting-cell": "An MHC tetramer binding to T-cell receptors (left), and an MHC molecule on the surface of an antigen presenting cell binding to T-cell receptors",
+  "astrocyte": "Astrocyte stained for GFAP and vimentin in tissue culture",
   "naive-b-lymphocyte": "B lymphocyte with surface immunoglobulin (BCR) — naïve B cells express IgM and IgD awaiting first antigen encounter",
-  "b-lymphocyte": "Clinical or pathologic image illustrating b lymphocyte",
-  "basophil": "Clinical or pathologic image illustrating basophil",
-  "birbeck-granules": "Clinical or pathologic image illustrating birbeck granules",
-  "cd4-t-lymphocyte": "Clinical or pathologic image illustrating cd4 t lymphocyte",
-  "cd8-t-lymphocyte": "Clinical or pathologic image illustrating cd8 t lymphocyte",
-  "cervical-os": "Clinical or pathologic image illustrating cervical os",
-  "chromaffin-cell": "Clinical or pathologic image illustrating chromaffin cell",
-  corticotroph:
-    "Anterior pituitary pars distalis — basophils include corticotrophs secreting ACTH (FLAT mnemonic: FSH/LH, ACTH, TSH)",
-  "clear-cytoplasm": "Clinical or pathologic image illustrating clear cytoplasm",
-  "core-promoter-elements": "Clinical or pathologic image illustrating core promoter elements",
-  "corticospinal-tract": "Clinical or pathologic image illustrating corticospinal tract",
-  "cytoskeleton": "Clinical or pathologic image illustrating cytoskeleton",
-  "decussate": "Clinical or pathologic image illustrating decussate",
-  "dendritic-cell": "Clinical or pathologic image illustrating dendritic cell",
-  "dermal-appendage": "Clinical or pathologic image illustrating dermal appendage",
-  "desmosome": "Clinical or pathologic image illustrating desmosome",
-  "detrusor-muscle": "Clinical or pathologic image illustrating detrusor muscle",
-  "dna-methylation": "Clinical or pathologic image illustrating dna methylation",
-  "dna-transcription": "Clinical or pathologic image illustrating dna transcription",
-  "dorsal-columns": "Clinical or pathologic image illustrating dorsal columns",
-  "endometrium": "Clinical or pathologic image illustrating endometrium",
-  "endothelial-cell": "Clinical or pathologic image illustrating endothelial cell",
-  "eosinophil": "Clinical or pathologic image illustrating eosinophil",
-  "ependymal-cell": "Clinical or pathologic image illustrating ependymal cell",
-  "epigenetics": "Clinical or pathologic image illustrating epigenetics",
-  "epithelial-polarity": "Clinical or pathologic image illustrating epithelial polarity",
-  "epithelioid-cell": "Clinical or pathologic image illustrating epithelioid cell",
-  "extracellular-matrix-labeled": "Clinical or pathologic image illustrating extracellular matrix labeled",
-  "fenestrae": "Clinical or pathologic image illustrating fenestrae",
-  "fibroblast": "Clinical or pathologic image illustrating fibroblast",
+  "b-lymphocyte": "Plasma B cell with abundant rough endoplasmic reticulum for antibody secretion",
+  "basophil": "Peripheral blood smear basophil with coarse basophilic granules",
+  "birbeck-granules": "Langerhans cell histiocytosis - Birbeck granules",
+  "cd4-t-lymphocyte": "Differentiation of helper T cell subsets is determined by cytokines",
+  "cd8-t-lymphocyte": "Killer T cells surround a cancer cell",
+  "cervical-os": "Cervical os — external opening of the uterine cervix into the vagina",
+  "chromaffin-cell": "Human adrenal medulla micrograph showing chromaffin-cell-rich medullary tissue",
+  "clear-cytoplasm": "Schematic clear cell morphology showing optically clear cytoplasm after lipid/glycogen processing",
+  "core-promoter-elements": "Core promoter elements showing BRE, TATA box, initiator, and downstream promoter element",
+  "corticospinal-tract": "Medullary cross-section showing pyramidal (corticospinal) decussation — motor fibers crossing to contralateral side",
+  "cytoskeleton": "Cytoskeletal components showing microtubules, actin microfilaments, and intermediate filaments",
+  "decussate": "Neural fiber decussation — pyramidal decussation and related crossing pathways",
+  "dendritic-cell": "Antigen presentation by dendritic cell",
+  "dermal-appendage": "Skin hair follicle — dermal appendage structure in epidermis and dermis",
+  "desmosome": "Transmission electron micrograph of a normal apical junctional complex (AJC), the structure between two adjacent enterocytes from the ileal epithelium region of a 21 d old chick",
+  "detrusor-muscle": "Urinary bladder diagram labeling detrusor muscle in the bladder wall",
+  "dna-methylation": "Methylation levels during mouse very early embryonic development",
+  "dna-transcription": "Regulatory sequence in a promoter at a transcription start site with a paused RNA polymerase and a TOP2B-induced DNA double-strand break",
+  "dorsal-columns": "Spinal cord cross-section labeling posterior (dorsal) columns, anterior/posterior roots, and spinal ganglion",
+  "endometrium": "Diseases of women and abdominal surgery",
+  "endothelial-cell": "Interaction between Kupffer cells, Stellate cells and endothelial cells",
+  "eosinophil": "Eosinophil blood smear",
+  "ependymal-cell": "H&E photomicrograph of normal ependymal cells at 400× magnification",
+  "epigenetics": "Nematode C. elegans germline chromatin Epigenetic imprint on the paternal X chromosome",
+  "epithelial-polarity": "Polarized epithelial cell diagram showing apical and basolateral membrane domains",
+  "epithelioid-cell": "Sarcoidosis - Apoptotic bodies",
+  "extracellular-matrix-labeled": "Loose connective tissue diagram labeling fibroblasts in extracellular matrix",
+  "fenestrae": "Glandula parathyroidea – overview",
+  "fibroblast": "Fibroblast in connective tissue — synthesizes collagen and extracellular matrix",
   "gap-junction": "Gap junction (connexon) channels connecting adjacent cells for direct cytoplasmic communication",
-  gonadotroph:
-    "Anterior pituitary pars distalis — basophils include gonadotrophs secreting LH and FSH in response to pulsatile GnRH",
-  "golgi-tendon-organ": "Clinical or pathologic image illustrating golgi tendon organ",
-  "gray-matter": "Clinical or pathologic image illustrating gray matter",
-  "helper-t-cell-differentiation": "Clinical or pathologic image illustrating helper t cell differentiation",
-  "hemidesmosome": "Clinical or pathologic image illustrating hemidesmosome",
-  "hepatic-sinusoids": "Clinical or pathologic image illustrating hepatic sinusoids",
-  "hepatic-structure": "Clinical or pathologic image illustrating hepatic structure",
-  "hepatocyte": "Clinical or pathologic image illustrating hepatocyte",
-  "hypersegmented-neutrophil": "Clinical or pathologic image illustrating hypersegmented neutrophil",
-  "hypothalamus": "Clinical or pathologic image illustrating hypothalamus",
+  "golgi-tendon-organ": "Golgi tendon organ at muscle–tendon junction — detects increased muscle tension via Ib afferents",
+  "gray-matter": "High magnification micrograph of brain, showing normal white matter and normal grey matter. HPS stain. Brain biopsy. Related images Intermed. mag. High mag. Very high mag.",
+  "helper-t-cell-differentiation": "CD4+ T-helper differentiation pathways used for activated macrophage and naive Th0 cell entries",
+  "hemidesmosome": "Schematic illustration of the basement membrane zones of epithelium",
+  "hepatic-sinusoids": "Hepatic circulation and microcirculation",
+  "hepatic-structure": "Liver lobule diagram showing hepatocytes as organ parenchyma arranged around sinusoids",
+  "hepatocyte": "Human liver H&E section showing hepatocytes organized into plates and lobules",
+  "hypersegmented-neutrophil": "This is a peripheral blood smear of a patient with megaloblastic anemia. The red arrow points out a hypersegmented neutrophil. The image was found on a telepathvision site of the US VA: http://www.va.gov/telepathvisn6/megalops.GIF The home page of this collection of images is http://www.va.gov/telep",
+  "hypothalamus": "1806 The Hypothalamus-Pituitary Complex",
   "memory-t-lymphocyte": "Immunological memory: long-lived memory B and T lymphocytes enable rapid secondary responses on re-exposure",
   "immunosuppression": "Clinical or pathologic image illustrating immunosuppression",
-  "intermediate-filament": "Clinical or pathologic image illustrating intermediate filament",
-  "intestinal-l-cell": "Clinical or pathologic image illustrating intestinal l cell",
-  "keratinocyte": "Clinical or pathologic image illustrating keratinocyte",
-  "kupffer-cell": "Clinical or pathologic image illustrating kupffer cell",
-  "lamina-propria": "Clinical or pathologic image illustrating lamina propria",
-  "langerhans-cell": "Clinical or pathologic image illustrating langerhans cell",
+  "intermediate-filament": "Cytoskeleton - Intermediate filament -- Smart-Servier",
+  "intestinal-l-cell": "Confocal ileum image showing PYY-GFP enteroendocrine L cells in green",
+  "keratinocyte": "Epidermal keratinocytes in stratified squamous epithelium",
+  "kupffer-cell": "Kupffer cells high mag cropped",
+  "kupffer-cell": "Kupffer cells high mag cropped",
+  "lamina-propria": "Stomach - Iron Crystals In Gastric Lamina Propria And Epithelium",
+  "langerhans-cell": "Langerhans Cells in Normal Epidermis, CD1a Immunostain",
   "langhans-giant-cell": "Langhans giant cell with horseshoe-arranged nuclei at the periphery — seen in granulomatous inflammation",
-  lactotroph:
-    "Anterior pituitary pars distalis — acidophils include lactotrophs secreting prolactin under tonic dopamine inhibition",
-  "leukocyte": "Clinical or pathologic image illustrating leukocyte",
+  "leukocyte": "WBC (neutrophil) at centre, numerous erythrocytes and platelets (dot like bodies) in Wright's stained peripheral blood smear (PBS) microscopy",
   "leydig-cell": "Testis cross-section — seminiferous tubules surrounded by interstitial Leydig cells (Gray's anatomy)",
-  "lymphocyte": "Clinical or pathologic image illustrating lymphocyte",
-  "macrophage": "Clinical or pathologic image illustrating macrophage",
+  "lymphocyte": "Microphotographs of atypical lymphocytes observed in peripheral blood smears of quokkas on Rottnest Island",
+  "lymphocyte": "Microphotographs of atypical lymphocytes observed in peripheral blood smears of quokkas on Rottnest Island",
+  "macrophage": "Infiltration of CD68+ tumor-associated macrophages (TAMs) in distinct histologic location",
   "mast-cell": "Mast cell with granules containing histamine and heparin — key effector in type I hypersensitivity",
-  "medial-longitudinal-fasciculus": "Clinical or pathologic image illustrating medial longitudinal fasciculus",
+  "medial-longitudinal-fasciculus": "Population-averaged human tractography atlas - Brainstem",
   "melanocyte": "Melanocyte dendritic processes transferring melanin to surrounding keratinocytes",
-  "melanosome": "Clinical or pathologic image illustrating melanosome",
-  "merkel-cell": "Clinical or pathologic image illustrating merkel cell",
-  "metanephric-blastema": "Clinical or pathologic image illustrating metanephric blastema",
-  "microglial-cell": "Clinical or pathologic image illustrating microglial cell",
-  "microtubule": "Clinical or pathologic image illustrating microtubule",
+  "melanosome": "Anuran melanosoms3 - Falk etal 2025",
+  "merkel-cell": "Merkel cell in epidermis — mechanoreceptor associated with light touch",
+  "metanephric-blastema": "Kidney development schematic showing metanephric blastema and ureteric bud derivatives",
+  "microglial-cell": "Microglia (coronin 1a, green) and neuronal processes (alpha-internexin, red) in rat brain culture",
+  "microtubule": "Chlorophyte-cell-diagram",
   "oxidative-phosphorylation": "Inner mitochondrial membrane respiratory chain: complexes I–IV pass electrons to O₂; proton pumping drives ATP synthase (Complex V)",
-  "monocyte": "Clinical or pathologic image illustrating monocyte",
-  "mrna-translation": "Clinical or pathologic image illustrating mrna translation",
-  "mtdna": "Clinical or pathologic image illustrating mtdna",
-  "mucosa": "Clinical or pathologic image illustrating mucosa",
-  "multinucleated-giant-cell": "Clinical or pathologic image illustrating multinucleated giant cell",
-  "myeloid-surface-markers": "Clinical or pathologic image illustrating myeloid surface markers",
-  "myometrium": "Clinical or pathologic image illustrating myometrium",
-  "natural-killer-cell": "Clinical or pathologic image illustrating natural killer cell",
-  "neural-crest": "Clinical or pathologic image illustrating neural crest",
-  "neutrophil": "Clinical or pathologic image illustrating neutrophil",
-  "oligodendrocyte": "Clinical or pathologic image illustrating oligodendrocyte",
-  "osteoblast": "Clinical or pathologic image illustrating osteoblast",
-  "osteoclast": "Clinical or pathologic image illustrating osteoclast",
+  "monocyte": "Peripheral blood monocyte — largest leukocyte with kidney-shaped nucleus",
+  "mrna-translation": "Ribosome mRNA translation en",
+  "mtdna": "Mitochondrial DNA lg",
+  "mucosa": "Histology of transformation zone mucosa",
+  "multinucleated-giant-cell": "Langhans giant cell with horseshoe-arranged nuclei at the periphery in granulomatous inflammation",
+  "myeloid-surface-markers": "Myeloid Surface Markers",
+  "myometrium": "Uterine myometrium — smooth muscle layer of the uterine wall",
+  "natural-killer-cell": "Colorized scanning electron micrograph of a human natural killer cell",
+  "neural-crest": "Neural.crest.cells.migration",
+  "neutrophil": "Segmented neutrophil on peripheral blood smear — primary phagocyte in acute inflammation",
+  "oligodendrocyte": "Oligodendrocyte forming myelin sheath around a CNS axon",
+  "osteoblast": "High-magnification H&E bone micrograph showing osteoblasts lining osteoid/bone surface",
+  "osteoclast": "Light micrograph of a multinucleated osteoclast with foamy cytoplasm",
   "ovarian-theca-cell": "Ovarian follicle histology showing granulosa and theca cell layers surrounding the oocyte",
-  "pancreatic-beta-cell": "Clinical or pathologic image illustrating pancreatic beta cell",
-  "periventricular-white-matter": "Clinical or pathologic image illustrating periventricular white matter",
-  "pneumocyte": "Clinical or pathologic image illustrating pneumocyte",
-  "polymerization": "Clinical or pathologic image illustrating polymerization",
-  "pre-mrna": "Clinical or pathologic image illustrating pre mrna",
-  "preganglionic-neuron": "Clinical or pathologic image illustrating preganglionic neuron",
-  "preterm-lung-maturity": "Clinical or pathologic image illustrating preterm lung maturity",
-  "protein-kinase-phosphoryl-transfer": "Clinical or pathologic image illustrating protein kinase phosphoryl transfer",
-  "renal-corpuscle": "Clinical or pathologic image illustrating renal corpuscle",
-  "saltatory-conduction": "Clinical or pathologic image illustrating saltatory conduction",
-  "schwann-cell": "Clinical or pathologic image illustrating schwann cell",
-  "serosa": "Clinical or pathologic image illustrating serosa",
-  "siderophage": "Clinical or pathologic image illustrating siderophage",
-  "signet-ring-cells": "Clinical or pathologic image illustrating signet ring cells",
-  somatotroph:
-    "Anterior pituitary pars distalis — acidophils include somatotrophs secreting growth hormone (GH → IGF-1)",
-  "stem-cell": "Clinical or pathologic image illustrating stem cell",
-  "stroma": "Clinical or pathologic image illustrating stroma",
-  "t-cell-signaling": "Clinical or pathologic image illustrating t cell signaling",
-  "t-lymphocyte": "Clinical or pathologic image illustrating t lymphocyte",
-  "th17": "CD4⁺ T-helper subset differentiation pathways — IL-23 sustains Th17 lineage",
+  "pancreatic-beta-cell": "Scanning electron micrograph of glomerulus with podocyte foot processes",
+  "periventricular-white-matter": "Periventricular white matter — myelinated tracts adjacent to lateral ventricles",
+  "pneumocyte": "Hyaline membranes - very high mag",
+  "polymerization": "CSIRO ScienceImage 3020 Starch to Polymer",
+  "pre-mrna": "Gene with introns and exons",
+  "preganglionic-neuron": "Efferent sympathetic and parasympathetic autonomic pathways showing preganglionic projections",
+  "preterm-lung-maturity": "Hyaline membranes - very high mag",
+  "protein-kinase-phosphoryl-transfer": "General protein kinase phosphoryl transfer from ATP to substrate",
+  "renal-corpuscle": "Renal corpuscle diagram used for juxtaglomerular and intraglomerular mesangial cell entries",
+  "saltatory-conduction": "Saltatory conduction along myelinated axon at nodes of Ranvier",
+  "schwann-cell": "Diagram of Schwann cells myelinating peripheral nerve axons",
+  "serosa": "Chicken embryo at the stage of formation of trunk and amniotic folds",
+  "siderophage": "Siderophage CSF cytology",
+  "signet-ring-cells": "Gastric adenocarcinoma signet-ring cell variant on H&E stain",
+  "stem-cell": "Stem cell potency diagram showing totipotent, pluripotent, and differentiated derivatives",
+  "stroma": "Spiral arteries in endometrial stroma",
+  "t-cell-signaling": "063-T-CellReceptor-MHC-ru",
+  "t-lymphocyte": "HIV-infected T lymphocyte — CD4+ T cell as primary target of HIV",
   "th1": "CD4⁺ T-helper subset differentiation — IL-12/IFN-γ drives Th1 macrophage-activating immunity",
-  "th2": "Clinical or pathologic image illustrating th2",
-  thyrotroph:
-    "Anterior pituitary pars distalis — basophils include thyrotrophs secreting TSH under TRH stimulation",
-  "tight-junction": "Clinical or pathologic image illustrating tight junction",
-  "type-1-pneumocyte": "Clinical or pathologic image illustrating type 1 pneumocyte",
-  "type-2-pneumocyte": "Clinical or pathologic image illustrating type 2 pneumocyte",
-  "white-matter": "Clinical or pathologic image illustrating white matter",
+  "th17": "CD4⁺ T-helper subset differentiation pathways — IL-23 sustains Th17 lineage",
+  "th2": "M2 macrophages. Sézary cells produce the Th2 cytokines IL-4 and IL-13",
+  "tight-junction": "Morphological modifications during EMT",
+  "type-1-pneumocyte": "Type I pneumocyte — thin squamous alveolar epithelial cell for gas exchange",
+  "type-2-pneumocyte": "Type II pneumocyte with lamellar bodies — produces pulmonary surfactant",
+  "white-matter": "Grey matter and white matter",
 };
 
 export function getCellImageForId(id: string): string | undefined {
