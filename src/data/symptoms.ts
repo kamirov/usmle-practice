@@ -143,6 +143,51 @@ export const SYMPTOMS: SymptomEntry[] = [
       "Stridor in a child is an airway warning sign. Croup is most common and has barking cough; drooling/toxic appearance suggests epiglottitis and requires controlled airway management without aggressive throat exam.",
   },
   {
+    id: "rhonchi",
+    name: "Rhonchi",
+    etymology:
+      "Greek rheon = flow + -chi (adventitious breath sound suffix)",
+    aliases: [
+      "rhonchi",
+      "rhonchus",
+      "rhonchi breath sounds",
+      "rhonchi breath sound",
+      "low-pitched rhonchi",
+      "sonorous rhonchi",
+      "sonorous breath sounds",
+      "airway secretions on auscultation",
+    ],
+    definition:
+      "Low-pitched, continuous adventitious lung sounds from turbulent airflow through tracheobronchial secretions in larger airways — often heard in both inspiration and expiration and may change or clear after coughing.",
+    mechanism:
+      "Mucus or purulent secretions in bronchi and larger airways narrow the lumen → low-frequency snoring or rattling sounds during airflow; unlike high-pitched wheezes from small-airway bronchospasm, rhonchi reflect secretions and may diminish when the patient coughs or after bronchial hygiene.",
+    thinkOf: [
+      "COPD / chronic bronchitis — mucus hypersecretion",
+      "Acute bronchitis and pneumonia",
+      "Bronchiectasis — copious airway secretions",
+      "Cystic fibrosis — thick mucus in airways",
+      "Aspiration or post-obstructive pneumonia",
+      "Decompensated heart failure with pulmonary edema and airway secretions",
+    ],
+    pairWith: [
+      "Rhonchi that clear with cough → mucus in larger airways (not fixed bronchospasm alone)",
+      "Rhonchi + productive cough/phlegm → bronchitis or pneumonia",
+      "Rhonchi + wheeze → COPD exacerbation or asthma with mucus plugging",
+      "Rhonchi + fever + consolidation → bacterial pneumonia",
+      "Persistent rhonchi + daily sputum → chronic bronchitis or bronchiectasis",
+      "Rhonchi + hemoptysis → bronchiectasis, TB, or malignancy",
+    ],
+    distinguishFrom: [
+      "Wheezes — high-pitched musical sounds from small-airway narrowing; bronchospasm predominant",
+      "Crackles (rales) — discontinuous popping sounds from opening alveoli or fluid; not low continuous rattling",
+      "Stridor — harsh inspiratory upper-airway sound (larynx/trachea)",
+      "Stertor — low snoring from pharyngeal obstruction during sleep",
+      "Normal vesicular breath sounds — no adventitious added sounds",
+    ],
+    pediatrics:
+      "Rhonchi with productive cough in children suggests bacterial bronchitis or pneumonia; CF and bronchiectasis cause chronic secretions. Bronchiolitis more often presents with wheeze than rhonchi.",
+  },
+  {
     id: "hoarseness",
     name: "Hoarseness",
     etymology: "Old English has = rough/harsh voice",
@@ -181,6 +226,51 @@ export const SYMPTOMS: SymptomEntry[] = [
     ],
     pediatrics:
       "Hoarseness with barking cough suggests croup; hoarseness with drooling, tripod posture, or stridor at rest suggests dangerous upper-airway obstruction such as epiglottitis or bacterial tracheitis.",
+  },
+  {
+    id: "suprasternal-retraction",
+    name: "Suprasternal Retraction",
+    etymology:
+      "Latin supra = above + sternum = breastbone + retractio = drawn back",
+    aliases: [
+      "suprasternal retraction",
+      "suprasternal retractions",
+      "suprasternal notch retraction",
+      "suprasternal notch retractions",
+      "sternal retraction",
+      "sternal retractions",
+      "jugular notch retraction",
+      "jugular notch retractions",
+      "inspiratory suprasternal retraction",
+    ],
+    definition:
+      "Visible inward pulling of the soft tissues at or just above the suprasternal notch during inspiration — a sign of increased work of breathing and extrathoracic (upper) airway obstruction or severe lower airway disease.",
+    mechanism:
+      "Inspiratory negative intrathoracic pressure pulls compliant supraclavicular and suprasternal tissues inward when airway resistance is high or lung compliance is poor; prominent in infants with soft chest walls and in extrathoracic upper-airway narrowing (croup, epiglottitis, foreign body).",
+    thinkOf: [
+      "Croup — barky cough with inspiratory stridor and retractions",
+      "Epiglottitis — toxic child with drooling, tripod posture, severe retractions",
+      "Foreign body aspiration — acute onset after choking",
+      "Tracheomalacia — expiratory or biphasic airway collapse in infant",
+      "Severe asthma or bronchiolitis — diffuse increased work of breathing with intercostal retractions",
+      "Anaphylaxis with laryngeal edema",
+    ],
+    pairWith: [
+      "Suprasternal retractions + barking cough + low fever → croup",
+      "Suprasternal retractions + drooling + toxic appearance → epiglottitis emergency",
+      "Suprasternal retractions + sudden choking → foreign body aspiration",
+      "Suprasternal + intercostal + subcostal retractions in infant → severe respiratory distress",
+      "Suprasternal retractions + wheeze in toddler after meal → aspirated foreign body",
+    ],
+    distinguishFrom: [
+      "Intercostal retractions — inward pulling between ribs; lower airway or generalized distress",
+      "Subcostal retractions — below rib margin; common in infants with bronchiolitis",
+      "Stridor — audible sound; retractions are visible sign of increased work of breathing",
+      "Tracheal tug — downward movement of trachea on inspiration in upper obstruction",
+      "Normal quiet breathing — no inspiratory indrawing at rest",
+    ],
+    pediatrics:
+      "Infants and young children have compliant chest walls — suprasternal, intercostal, and subcostal retractions appear early with airway obstruction or bronchiolitis. Nasal flaring and grunting may accompany retractions in neonatal respiratory distress.",
   },
   {
     id: "hepatomegaly",
@@ -269,6 +359,99 @@ export const SYMPTOMS: SymptomEntry[] = [
       "Dyspnea without cough — PE, anemia, metabolic acidosis",
       "Chronic cough >8 weeks — think GERD, postnasal drip, asthma, ACE-I",
     ],
+  },
+  {
+    id: "phlegm",
+    name: "Phlegm",
+    etymology:
+      "Greek phlegma = inflammation/humor; historically one of the four humors — now refers to thick respiratory mucus",
+    aliases: [
+      "phlegm",
+      "phlegms",
+      "thick sputum",
+      "thick sputums",
+      "mucous sputum",
+      "expectorated phlegm",
+      "purulent sputum",
+      "mucopurulent sputum",
+    ],
+    definition:
+      "Thick, viscous mucus expectorated from the lower respiratory tract with cough — indicates productive airway secretion and mucociliary or inflammatory mucus hypersecretion.",
+    mechanism:
+      "Goblet cell and submucosal gland hypersecretion plus impaired mucociliary clearance → mucus accumulates in bronchi → expectoration with cough; purulence reflects neutrophilic infection; color alone is not reliably diagnostic.",
+    thinkOf: [
+      "Chronic bronchitis / COPD — daily sputum production",
+      "Bronchiectasis — copious purulent phlegm",
+      "Cystic fibrosis — thick tenacious secretions",
+      "Bacterial pneumonia — purulent or rust-colored sputum",
+      "Klebsiella pneumonia in alcoholics — currant jelly sputum",
+      "Tuberculosis — chronic cough with hemoptysis possible",
+      "Asthma — mucoid plugs during exacerbation",
+    ],
+    pairWith: [
+      "Daily phlegm ≥3 months × 2 years → chronic bronchitis (COPD phenotype)",
+      "Copious purulent phlegm + recurrent infections → bronchiectasis",
+      "Rust-colored sputum + lobar consolidation → Streptococcus pneumoniae",
+      "Currant jelly sputum + alcoholic → Klebsiella",
+      "Blood-streaked phlegm → hemoptysis workup (TB, cancer, bronchiectasis)",
+      "Thick tenacious phlegm from infancy → cystic fibrosis",
+      "Fever + purulent phlegm → bacterial pneumonia",
+    ],
+    distinguishFrom: [
+      "Productive cough — the reflex act; phlegm is the expectorated secretion",
+      "Hemoptysis — blood or blood-streaked sputum, not mucus alone",
+      "Postnasal drip — mucus from upper airway cleared by throat clearing, not deep expectoration",
+      "Saliva — oral secretions, not lower respiratory mucus",
+      "Sputum — clinical/laboratory term; phlegm is lay/clinical synonym for expectorated mucus",
+    ],
+    pediatrics:
+      "Cystic fibrosis presents with thick phlegm and recurrent respiratory infections from infancy. Bronchiectasis after severe pneumonia or aspiration should be considered with chronic purulent expectoration in children.",
+  },
+  {
+    id: "mucus",
+    name: "Mucus",
+    etymology: "Latin mucus = slime",
+    aliases: [
+      "mucus",
+      "mucous",
+      "mucous secretion",
+      "mucous secretions",
+      "mucous layer",
+      "mucous layers",
+      "mucin secretion",
+      "mucin secretions",
+      "airway mucus",
+      "gastrointestinal mucus",
+      "respiratory mucus secretion",
+    ],
+    definition:
+      "Viscous secretion composed primarily of mucin glycoproteins, water, electrolytes, and immunoglobulins (especially IgA) that coats mucosal epithelial surfaces — lubricates, hydrates, traps pathogens, and forms the gel layer of mucociliary clearance.",
+    mechanism:
+      "Goblet cells and submucosal glands secrete mucin granules that hydrate into gel; periciliary sol layer allows cilia to beat mucus toward pharynx; inflammation (IL-13, histamine, neutrophil proteases) increases production and alters viscosity; CFTR dysfunction dehydrates airway mucus despite normal secretion.",
+    thinkOf: [
+      "Chronic bronchitis / COPD — mucus hypersecretion and impaired clearance",
+      "Asthma — mucus plugs during exacerbation",
+      "Cystic fibrosis — thick dehydrated mucus (ΔF508 CFTR)",
+      "GERD and Barrett esophagus — mucus barrier disruption; goblet cell metaplasia",
+      "H. pylori — mucus layer penetration in stomach",
+      "Conjunctival mucus — tear film mucin from goblet cells",
+    ],
+    pairWith: [
+      "Thick airway mucus + recurrent infections + pancreatic insufficiency → cystic fibrosis",
+      "Mucus hypersecretion + Reid index >0.5 → chronic bronchitis",
+      "IL-13–driven inflammation + eosinophils + mucus plugging → asthma",
+      "Goblet cells in esophageal biopsy + GERD → Barrett esophagus",
+      "Mucus + ciliary dysfunction → primary ciliary dyskinesia (situs inversus in Kartagener)",
+    ],
+    distinguishFrom: [
+      "Phlegm — expectorated lower respiratory mucus with cough; mucus is the general secretion",
+      "Pus — neutrophil-rich purulent exudate from infection, not normal mucus",
+      "Saliva — oral fluid from salivary glands; different composition and location",
+      "Sputum — clinical specimen of expectorated airway secretions (may include mucus, pus, cells)",
+      "Mucosa — tissue layer lined by epithelium; mucus is the secreted product on its surface",
+    ],
+    pediatrics:
+      "Infants with CF have thick tenacious mucus from birth; ciliary dyskinesia causes neonatal respiratory distress and chronic otitis/sinusitis. Breast milk IgA supports mucosal immunity but does not correct CF mucus viscosity.",
   },
   {
     id: "easy-fatigability",
@@ -3419,6 +3602,96 @@ export const SYMPTOMS: SymptomEntry[] = [
       "Matted nodes fixed to tissue — higher suspicion for malignancy or TB",
       "Generalized lymphadenopathy — ≥2 noncontiguous regions; broader workup (HIV, lymphoma, SLE)",
     ],
+  },
+  {
+    id: "bilateral-hilar-adenopathy",
+    name: "Bilateral Hilar Adenopathy",
+    etymology:
+      "Latin bi = two + latus = side + Latin hilum = tracheobronchial root + Greek aden = gland + -pathy = disease",
+    aliases: [
+      "bilateral hilar adenopathy",
+      "bilateral hilar adenopathies",
+      "bilateral hilar lymphadenopathy",
+      "bilateral hilar lymphadenopathies",
+      "bhl",
+      "bilateral hilar lymph node enlargement",
+      "bilateral hilar node enlargement",
+      "symmetric hilar adenopathy",
+    ],
+    definition:
+      "Enlargement of lymph nodes at both pulmonary hila on chest imaging — a classic radiographic pattern reflecting bilateral mediastinal-hilar lymphoid activation or infiltration.",
+    mechanism:
+      "Granulomatous inflammation (sarcoidosis, TB, berylliosis), lymphoproliferative disease, or reactive lymphoid hyperplasia enlarges hilar nodes symmetrically; visible as widened hila or lobulated mediastinal contours on chest X-ray and confirmed on CT.",
+    thinkOf: [
+      "Sarcoidosis — most classic boards association; often young African American woman",
+      "Löfgren syndrome — BHL + erythema nodosum + arthritis",
+      "Tuberculosis — primary TB with hilar nodes (especially children); may be unilateral early",
+      "Lymphoma — Hodgkin disease with mediastinal-hilar bulk",
+      "Berylliosis — occupational sarcoidosis mimic",
+      "Silicosis — upper lobe fibrosis with hilar nodes (often with eggshell calcification)",
+    ],
+    pairWith: [
+      "BHL + erythema nodosum + ankle arthritis → Löfgren syndrome (sarcoidosis)",
+      "BHL + noncaseating granulomas + ↑ ACE → sarcoidosis",
+      "BHL + caseating granulomas + AFB⁺ → tuberculosis",
+      "BHL + occupational beryllium exposure → berylliosis (BeLPT)",
+      "BHL + B symptoms + Reed-Sternberg cells → Hodgkin lymphoma",
+    ],
+    distinguishFrom: [
+      "Unilateral hilar adenopathy — lung cancer, regional infection, asymmetric lymphoma",
+      "Mediastinal mass without clear hilar nodes — thymoma, germ cell tumor, aneurysm",
+      "Cardiomegaly mimicking enlarged hila — compare serial films and CT",
+      "Lymphadenopathy — general term; bilateral hilar specifies anatomic location on chest imaging",
+    ],
+    pediatrics:
+      "Primary TB in children often presents with hilar/mediastinal lymphadenopathy without cavitation; sarcoidosis is less common in young children but occurs in adolescents.",
+  },
+  {
+    id: "reticular-pulmonary-infiltrates",
+    name: "Reticular Pulmonary Infiltrates",
+    etymology:
+      "Latin rete = net + -cular = small + Latin pulmo = lung + Latin infiltrare = to penetrate",
+    aliases: [
+      "reticular pulmonary infiltrates",
+      "reticular pulmonary infiltrate",
+      "reticular pulmonary infultrates",
+      "reticular pulmonary infultrate",
+      "reticular infiltrates",
+      "reticular infiltrate",
+      "reticular opacities",
+      "reticular opacity",
+      "reticular pattern on chest x-ray",
+      "reticular interstitial pattern",
+      "interstitial reticular infiltrates",
+      "netlike pulmonary infiltrates",
+    ],
+    definition:
+      "Fine netlike linear opacities on chest imaging reflecting thickening of interlobular septa and interstitial connective tissue — an interstitial (not purely alveolar airspace) pulmonary pattern.",
+    mechanism:
+      "Inflammation, fibrosis, edema, or cellular infiltration of the pulmonary interstitium and septa produces intersecting linear densities; may coexist with ground-glass opacity or honeycombing as disease progresses to established fibrosis.",
+    thinkOf: [
+      "Sarcoidosis — upper/mid-lung interstitial involvement with BHL",
+      "Idiopathic pulmonary fibrosis — basilar reticular opacities progressing to honeycombing",
+      "Pneumoconioses — silicosis, asbestosis with interstitial fibrosis",
+      "Connective tissue disease ILD — RA, scleroderma",
+      "Atypical pneumonia — Mycoplasma, viral, PCP (may add ground-glass)",
+      "Pulmonary edema — Kerley B lines (short septal lines) in cardiogenic edema",
+    ],
+    pairWith: [
+      "Reticular infiltrates + BHL + ↑ ACE → sarcoidosis",
+      "Basilar reticular opacities + honeycombing + ↓ DLCO → idiopathic pulmonary fibrosis (UIP)",
+      "Reticular + eggshell hilar calcifications → silicosis",
+      "Reticular + pleural plaques → asbestosis",
+      "Diffuse reticular + ground-glass in AIDS → PCP",
+    ],
+    distinguishFrom: [
+      "Alveolar (airspace) infiltrates — fluffy consolidation, air bronchograms (pneumonia, edema)",
+      "Nodular pattern — discrete nodules (miliary TB, metastases, sarcoid nodules)",
+      "Ground-glass opacity — hazy increased attenuation without obscuring vessels; may coexist",
+      "Honeycombing — end-stage cystic fibrosis pattern with stacked cystic airspaces",
+    ],
+    pediatrics:
+      "Mycoplasma pneumonia and viral pneumonitis can show interstitial/reticular infiltrates in children; cystic fibrosis and surfactant disorders produce chronic interstitial changes in infants.",
   },
   {
     id: "macule",

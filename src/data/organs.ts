@@ -133,6 +133,25 @@ export const ORGANS: OrganEntry[] = [
     derivatives: ["Bronchi", "Bronchioles", "Alveoli"],
   },
   {
+    id: "lingula",
+    name: "Lingula",
+    etymology: "Latin lingula = little tongue",
+    aliases: [
+      "lingula",
+      "lingulas",
+      "lingula of the lung",
+      "lingula of left lung",
+      "lingula of the left lung",
+      "pulmonary lingula",
+      "lung lingula",
+      "left lung lingula",
+    ],
+    germLayer: "Endoderm",
+    origin:
+      "Develops with the left upper lobe from the respiratory diverticulum of foregut endoderm; inferior tongue-like projection of the left superior lobe draped over the cardiac notch, separated from the rest of the upper lobe by the lingular fissure.",
+    derivatives: ["Left upper lobe bronchopulmonary segments (lingular segments)"],
+  },
+  {
     id: "larynx",
     name: "Larynx",
     etymology: "Greek larynx = upper windpipe",
@@ -2315,6 +2334,25 @@ const ORGAN_DETAILS: Record<
     step1Pearls: ["Type II pneumocytes make surfactant and regenerate alveolar epithelium", "V/Q mismatch is commonest hypoxemia mechanism", "Low DLCO suggests diffusion barrier or emphysema"],
     pediatrics: "Neonatal respiratory distress syndrome reflects surfactant deficiency; bronchiolitis from RSV is common in infants.",
   },
+  lingula: {
+    functionSummary:
+      "Inferior projection of the left upper lobe — functionally analogous to the right middle lobe — containing lingular bronchi and segments that participate in gas exchange and mucociliary clearance.",
+    commonPathologies: [
+      "Lingular pneumonia",
+      "Aspiration to dependent lingular segment",
+      "Bronchiectasis involving lingula",
+      "Tuberculosis or malignancy localizing to left upper lobe/lingula",
+    ],
+    step1Pearls: [
+      "Left lung has 2 lobes (upper + lower) but lingula is tongue-like projection of upper lobe — analogous to right middle lobe",
+      "Separated from rest of left upper lobe by lingular fissure; overlies cardiac notch",
+      "Pneumonia may localize to lingula on chest X-ray as retrocardiac opacity",
+      "Right main bronchus is more vertical — aspiration favors right lower lobe; lingula is left-sided dependent segment in some positions",
+      "vs cerebellar lingula — midline cerebellar vermis structure, not pulmonary anatomy",
+    ],
+    pediatrics:
+      "Same bronchopulmonary segment anatomy in children; lingular consolidation can appear on pediatric pneumonia films as left retrocardiac opacity.",
+  },
   larynx: {
     functionSummary: "Protects airway during swallowing and produces voice through vocal fold vibration.",
     commonPathologies: ["Croup", "Epiglottitis", "Vocal cord paralysis", "Laryngeal cancer"],
@@ -3199,6 +3237,10 @@ const ORGAN_METASTASIS: Record<string, string[]> = {
     "Non–small cell lung cancer — brain, bone, liver, adrenal glands",
     "Small cell lung cancer — early widespread hematogenous spread to liver, brain, adrenals, bone",
     "Bronchogenic carcinoma also spreads to contralateral lung and regional mediastinal/hilar nodes",
+  ],
+  lingula: [
+    "Shares bronchogenic carcinoma metastatic patterns — brain, bone, liver, adrenal glands",
+    "Regional hilar and mediastinal lymph nodes",
   ],
   larynx: [
     "Cervical lymph nodes (levels II–IV)",

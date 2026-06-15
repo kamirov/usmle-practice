@@ -337,6 +337,63 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
       "X-linked hypophosphatemic rickets presents in childhood with bowing legs, short stature, and renal phosphate wasting with inappropriately normal/low calcitriol.",
   },
   {
+    id: "fibroblast-growth-factor",
+    name: "Fibroblast Growth Factor",
+    etymology:
+      "Latin fibra = fiber + Greek blastos = germ/sprout + facere = make + factor = agent",
+    aliases: [
+      "fibroblast growth factor",
+      "fibroblast growth factors",
+      "fibroblast growth factor family",
+      "fgf",
+      "fgfs",
+      "fgf family",
+      "fibroglast growth factor",
+      "fibroglast growth factors",
+      "basic fibroblast growth factor",
+      "fgf2",
+      "fgf-2",
+      "acidic fibroblast growth factor",
+      "fgf1",
+      "fgf-1",
+      "keratinocyte growth factor",
+      "fgf7",
+      "fgf-7",
+      "kgf",
+    ],
+    type: "Growth factor",
+    source:
+      "Fibroblasts, epithelial cells, osteoblasts, osteocytes, and many mesenchymal tissues secrete FGF ligands; embryonic signaling centers (apical ectodermal ridge, forebrain patterning centers) release morphogenic FGF gradients",
+    receptor:
+      "Fibroblast growth factor receptors (FGFR1–4) — receptor tyrosine kinases requiring heparan sulfate proteoglycan co-receptors for signaling",
+    function:
+      "Large family of mitogenic and morphogenic peptides regulating angiogenesis, wound healing, limb bud outgrowth, forebrain patterning, alveolar repair, and phosphate homeostasis (FGF23 subset); paracrine and endocrine signaling through FGFR activation and downstream MAPK/PI3K pathways.",
+    clinicalRelevance: [
+      "Achondroplasia — constitutive activation of FGFR3 inhibits chondrocyte proliferation → short limbs",
+      "Thanatophoric dysplasia — severe FGFR3 gain-of-function skeletal dysplasia",
+      "Tumor-induced osteomalacia — mesenchymal tumors secrete FGF23 → renal phosphate wasting",
+      "Pulmonary fibrosis and bronchial repair — FGF signaling in epithelial/mesenchymal crosstalk",
+      "Cancer — aberrant FGF/FGFR signaling promotes angiogenesis and growth in some tumors",
+    ],
+    boardsPearls: [
+      "FGF family — binds FGFR tyrosine kinase receptors with heparan sulfate cofactor",
+      "Limb development — FGF gradient from apical ectodermal ridge drives proximodistal outgrowth",
+      "Achondroplasia — FGFR3 gain-of-function (most common dwarfism); thanatophoric dysplasia more severe",
+      "FGF23 — phosphatonin; tumor-induced osteomalacia and XLH rickets (separate FGF23 entry)",
+      "vs EGF — EGF family uses EGFR; FGF uses FGFR",
+      "Forebrain development — FGF signaling from anterior neural ridge patterning centers",
+    ],
+    distinguishFrom: [
+      "FGF23 — specific phosphatonin hormone regulating phosphate and vitamin D; subset of FGF family with endocrine function",
+      "EGF — epidermal growth factor family signaling through EGFR/ErbB",
+      "VEGF — vascular endothelial growth factor; angiogenesis specialist",
+      "TGF-β — growth factor superfamily with distinct receptors and Smad signaling",
+      "PDGF — platelet-derived growth factor for mesenchymal proliferation and wound repair",
+    ],
+    pediatrics:
+      "Achondroplasia presents at birth with rhizomelic shortening and macrocephaly; FGFR3 testing confirms. XLH rickets from excess FGF23 activity causes childhood bowing and phosphate wasting.",
+  },
+  {
     id: "gaba",
     name: "Gamma-aminobutyric acid (GABA)",
     etymology: "gamma = third carbon position + amino = nitrogen group + butyric = butter acid + acid = proton donor",
@@ -2212,7 +2269,7 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
     id: "gm-csf",
     name: "GM-CSF",
     etymology: "GM = granulocyte-macrophage + CSF = colony-stimulating factor",
-    aliases: ["gm-csf", "gm csf", "granulocyte macrophage colony stimulating factor", "sargramostim"],
+    aliases: ["gm-csf", "gm csf", "granulocyte macrophage colony stimulating factor", "granulocyte-macrophage colony-stimulating factor", "granulocyte macrophage colony stimulator factor", "granulocyte-macrophage colony stimulator factor", "granulocyte macrophage colony stimulating factors", "gm colony stimulating factor", "csf2", "sargramostim"],
     type: "Growth factor",
     source: "T cells, macrophages, endothelial cells, fibroblasts",
     receptor: "GM-CSF receptor (JAK2-STAT5)",
@@ -2225,6 +2282,8 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
     boardsPearls: [
       "GM-CSF grows granulocyte/macrophage colonies",
       "G-CSF is neutrophil-focused; GM-CSF broader myeloid stimulation",
+      "Autoantibodies to GM-CSF → pulmonary alveolar proteinosis (surfactant accumulation)",
+      "Sargramostim — recombinant GM-CSF for marrow recovery",
     ],
   },
   {
@@ -2280,6 +2339,58 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
     ],
     pediatrics:
       "McCune-Albright can present in childhood with café-au-lait macules, precocious puberty, and polyostotic fibrous dysplasia from mosaic Gαs activation. Cholera physiology is the same across ages; dehydration risk is higher in infants.",
+  },
+  {
+    id: "cyclic-amp",
+    name: "Cyclic AMP (cAMP)",
+    etymology:
+      "cyclic = ring-shaped + AMP = adenosine monophosphate",
+    aliases: [
+      "cyclic amp",
+      "cyclic amps",
+      "camp",
+      "c amp",
+      "c-amp",
+      "cyclic adenosine monophosphate",
+      "cyclic adenosine monophosphates",
+      "3'5'-cyclic amp",
+      "3',5'-cyclic amp",
+      "3'5'-cyclic adenosine monophosphate",
+      "3',5'-cyclic adenosine monophosphate",
+      "adenosine 3'5'-cyclic monophosphate",
+      "adenosine 3',5'-cyclic monophosphate",
+    ],
+    type: "Second messenger",
+    source:
+      "Synthesized from ATP by adenylyl cyclase (membrane-bound enzyme) when stimulated by active Gαs; production ↓ when Gi inhibits adenylyl cyclase",
+    receptor:
+      "Primarily protein kinase A (PKA); also exchange protein activated by cAMP (EPAC) and cyclic nucleotide–gated ion channels (olfactory signaling)",
+    function:
+      "Intracellular second messenger that amplifies extracellular GPCR signals — cAMP activates PKA to phosphorylate enzymes, ion channels, and transcription factors (e.g., CREB), mediating glycogenolysis, lipolysis, hormone secretion, water reabsorption (V2/ADH), and gene transcription.",
+    clinicalRelevance: [
+      "Gs-coupled hormones raise cAMP — glucagon, β-adrenergic agonists, PTH, TSH, LH/FSH, CRH, ADH (V2)",
+      "Cholera toxin locks Gαs ON → constitutive adenylyl cyclase → ↑ cAMP in enterocytes → Cl⁻ and water secretion",
+      "Pertussis toxin inactivates Gi → loss of adenylyl cyclase inhibition → ↑ cAMP in respiratory epithelium",
+      "Phosphodiesterase inhibitors (caffeine, theophylline, milrinone) ↑ cAMP by blocking degradation",
+      "McCune-Albright syndrome — mosaic Gαs activation → autonomous cAMP signaling",
+    ],
+    boardsPearls: [
+      "ATP → adenylyl cyclase → cAMP → PKA (classic second messenger)",
+      "Gs ↑ cAMP; Gi ↓ cAMP — opposite effects on same adenylyl cyclase",
+      "Cholera = ↑ cAMP → secretory diarrhea; pertussis = ↑ cAMP via Gi blockade",
+      "vs cGMP — cAMP from adenylyl cyclase; cGMP from guanylyl cyclase (NO, ANP)",
+      "PDE breaks down cAMP — milrinone (PDE-3) ↑ cAMP in heart (inotropy)",
+      "Full cascade = cyclic AMP–PKA pathway entry; cAMP is the second messenger molecule",
+    ],
+    distinguishFrom: [
+      "cyclic AMP–PKA pathway — full Gs → adenylyl cyclase → cAMP → PKA signaling cascade",
+      "cGMP — guanylyl cyclase second messenger (NO, natriuretic peptides)",
+      "ATP — substrate for cAMP synthesis, not the active second messenger",
+      "AMP — non-cyclic breakdown product; not the signaling molecule",
+      "Gs protein — upstream G protein that activates adenylyl cyclase; not cAMP itself",
+    ],
+    pediatrics:
+      "Same Gs–adenylyl cyclase–cAMP logic in children; β-agonists for asthma and cholera dehydration risk are especially critical in infants.",
   },
   {
     id: "camp-pka-pathway",
