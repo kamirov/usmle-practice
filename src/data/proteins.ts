@@ -2241,7 +2241,13 @@ export const PROTEINS: ProteinEntry[] = [
     id: "collagenase",
     name: "Collagenase",
     etymology: "collagen = glue-producing structural protein + -ase = enzyme",
-    aliases: ["collagenase", "matrix metalloproteinase", "mmp", "mmp collagenase"],
+    aliases: [
+      "collagenase",
+      "matrix metalloproteinase",
+      "matrix metalloproteinases",
+      "mmp",
+      "mmp collagenase",
+    ],
     gene: "MMP1/MMP8/MMP13 family",
     location: "Extracellular matrix and inflammatory cell secretions",
     function:
@@ -3237,6 +3243,271 @@ export const PROTEINS: ProteinEntry[] = [
       "Amyloid precursor protein — membrane precursor cleaved to form beta-amyloid",
       "Tau — intracellular paired helical filaments in neurofibrillary tangles",
       "AL amyloid — immunoglobulin light chains in systemic amyloidosis",
+    ],
+  },
+  {
+    id: "hmg-coa-reductase",
+    name: "Hydroxymethylglutaryl-CoA Reductase",
+    etymology:
+      "hydroxymethylglutaryl-CoA = substrate name + reductase = enzyme reducing it",
+    aliases: [
+      "hydroxymethylglutaryl-coa reductase",
+      "hydroxymethylglutaryl coa reductase",
+      "hydroxymethylglutaryl coa reductases",
+      "hmg-coa reductase",
+      "hmg coa reductase",
+      "HMG-CoA reductase",
+      "HMGCR",
+      "3-hydroxy-3-methylglutaryl-coa reductase",
+      "3-hydroxy-3-methylglutaryl coa reductase",
+    ],
+    gene: "HMGCR",
+    location: "Smooth endoplasmic reticulum (liver primary; also other tissues)",
+    function:
+      "Rate-limiting enzyme in the mevalonate pathway converting HMG-CoA to mevalonate — the committed step toward cholesterol and downstream isoprenoid synthesis.",
+    mutationCauses: [
+      "Statin inhibition (functional loss) -> ↓ HMG-CoA reductase activity -> ↓ cholesterol (intended effect) and ↑ risk of statin myopathy in susceptible patients.",
+    ],
+    boardsPearls: [
+      "Rate-limiting step: HMG-CoA reductase -> mevalonate -> cholesterol",
+      "Statins: competitive inhibition of HMG-CoA reductase -> ↓ LDL-C via ↑ LDL receptor expression",
+      "Adverse effect concept: statins can cause myopathy/rare rhabdomyolysis; immune-mediated necrotizing myopathy can be driven by anti-HMGCR antibodies (clinical association)",
+      "vs HMG-CoA synthase: produces HMG-CoA; reductase reduces HMG-CoA -> mevalonate (later step)",
+    ],
+    distinguishFrom: [
+      "HMG-CoA synthase — makes HMG-CoA",
+      "Statins — drugs that inhibit HMG-CoA reductase (not the enzyme itself)",
+    ],
+  },
+  {
+    id: "lysyl-oxidase",
+    name: "Lysyl Oxidase",
+    etymology: "lysyl = derived from lysine + oxidase = enzyme adding oxygen/redox step",
+    aliases: [
+      "lysyl oxidase",
+      "lysyl oxidases",
+      "lox",
+      "LOX",
+      "lysyl-oxidase",
+      "lysyl oxidase enzyme",
+    ],
+    gene: "LOX",
+    location:
+      "Extracellular matrix (secreted by fibroblasts/ECM-associated sites); requires copper for catalytic activity",
+    function:
+      "Copper-dependent enzyme oxidizing lysine residues to allysine during collagen/elastin maturation, enabling covalent cross-link formation that increases tensile strength and elastic recoil.",
+    mutationCauses: [
+      "Copper deficiency / Menkes disease (ATP7A) -> ↓ cuproenzyme LOX activity -> impaired collagen/elastin cross-linking.",
+      "Lysyl oxidase deficiency (rare; copper/LOX dysfunction) -> vascular fragility with arterial tortuosity and connective tissue abnormalities.",
+    ],
+    boardsPearls: [
+      "LOX cross-links collagen and elastin (tensile strength + elasticity)",
+      "Copper is required cofactor for LOX; Menkes disease -> defective cross-linking",
+      "Impaired cross-linking -> vascular tortuosity, bladder diverticula/connective tissue fragility (boards associations)",
+    ],
+    distinguishFrom: [
+      "Prolyl hydroxylase — hydroxylates proline to stabilize triple helix (step before cross-linking)",
+      "Collagenase (MMP) — degrades collagen (lysis/remodeling), not cross-link formation",
+    ],
+    pediatrics:
+      "Menkes disease presents in infancy; defective copper-dependent enzymes (including LOX) contribute to connective tissue fragility and neurodevelopmental decline.",
+  },
+  {
+    id: "procollagen-peptidases",
+    name: "Procollagen Peptidases",
+    etymology: "procollagen + peptidase = enzyme cleaving peptide propeptides from procollagen",
+    aliases: [
+      "procollagen peptidase",
+      "procollagen peptidases",
+      "procollagen proteinases",
+      "procollagen n- and c-proteinases",
+      "N-procollagen peptidase",
+      "C-procollagen peptidase",
+      "bmp1",
+      "adamts2",
+    ],
+    location:
+      "Secreted into extracellular matrix by fibroblasts; acts on extracellular procollagen",
+    function:
+      "Cleaves N- and C-terminal propeptides of procollagen to convert it into mature tropocollagen, which then self-assembles into collagen fibrils.",
+    mutationCauses: [
+      "ADAMTS2 (C-procollagen peptidase) deficiency -> EDS musculocontractural type via impaired C-propeptide removal.",
+      "BMP1 (N-procollagen peptidase) dysfunction -> impaired N-propeptide removal and defective collagen maturation.",
+    ],
+    boardsPearls: [
+      "Procollagen -> tropocollagen after N- and C-propeptide removal",
+      "This maturation step is distinct from hydroxylation (prolyl/lysyl hydroxylases) and distinct from cross-linking (lysyl oxidase)",
+      "Defects -> EDS-like connective tissue fragility (collagen maturation failure theme)",
+    ],
+    distinguishFrom: [
+      "Prolyl hydroxylase — hydroxylates proline residues to stabilize triple helix",
+      "Lysyl oxidase — oxidizes lysine to allysine to create cross-links",
+      "Collagenase (MMP) — degrades mature collagen rather than processing procollagen",
+    ],
+    pediatrics:
+      "EDS musculocontractural type due to ADAMTS2 defects typically presents in childhood with congenital contractures and skin/connective tissue abnormalities.",
+  },
+  {
+    id: "prolyl-hydroxylase",
+    name: "Prolyl Hydroxylase (PHD)",
+    etymology: "prolyl = proline residue + hydroxylase = enzyme adding an -OH group",
+    aliases: [
+      "prolyl hydroxylase",
+      "prolyl hydroxylases",
+      "phd",
+      "PHD",
+      "phd (prolyl hydroxylase)",
+      "prolyl hydroxylase (phd)",
+      "phd1",
+      "PHD1",
+      "phd2",
+      "PHD2",
+      "phd3",
+      "PHD3",
+      "eglN1",
+      "EGLN1",
+      "eglN2",
+      "EGLN2",
+      "eglN3",
+      "EGLN3",
+      "prolyl hydroxylase domain",
+      "prolyl hydroxylase domain enzymes",
+      "prolyl hydroxylase domain protein",
+    ],
+    gene: "EGLN1/EGLN2/EGLN3 (PHD1/2/3 family)",
+    location:
+      "Cytosol and other cellular compartments; hydroxylates collagen prolines in procollagen and hydroxylates HIF-alpha for oxygen sensing",
+    function:
+      "O2- and Fe2+-dependent enzyme adding hydroxyl groups to proline residues on procollagen, promoting stable collagen triple-helix formation; also hydroxylates HIF-alpha leading to VHL-mediated ubiquitination and degradation under normal oxygen.",
+    mutationCauses: [
+      "Vitamin C deficiency (scurvy) -> impaired activity of hydroxylases -> defective procollagen maturation with weak/unmineralized collagen.",
+      "Impaired PHD function (e.g., severe hypoxia or rare PHD dysfunction) -> reduced HIF-alpha degradation -> ↑ HIF signaling.",
+    ],
+    boardsPearls: [
+      "Vitamin C is required for hydroxylation steps (including prolyl hydroxylase) -> defective collagen -> bleeding gums, poor wound healing (scurvy pattern)",
+      "PHD (prolyl hydroxylase) links oxygen to HIF: normoxia -> HIF degradation; hypoxia -> ↑ HIF -> angiogenesis and erythropoiesis",
+      "This step stabilizes triple helix; it is not the cross-linking step (lysyl oxidase) and not the propeptide cleavage step (procollagen peptidases).",
+    ],
+    distinguishFrom: [
+      "Lysyl hydroxylase — hydroxylates lysine (also vitamin C-dependent collagen maturation step)",
+      "Lysyl oxidase — oxidizes lysine to allysine for cross-linking (copper-dependent)",
+      "Collagenase (MMP) — degrades collagen (ECM breakdown), not procollagen stabilization",
+    ],
+    pediatrics:
+      "Pediatric scurvy can occur with inadequate dietary vitamin C; presentation includes irritability, gingival bleeding, and poor wound healing.",
+  },
+  {
+    id: "metalloproteinases",
+    name: "Metalloproteinases",
+    etymology: "metallo = metal (zinc) + protease = protein-degrading enzyme + -ase = enzyme",
+    aliases: [
+      "metalloproteinase",
+      "metalloproteinases",
+      "matrix metalloproteinases",
+      "matrix metalloproteinase",
+      "mmp",
+      "mmps",
+      "mmp family",
+      "mpps",
+    ],
+    location:
+      "Extracellular matrix and secretions from inflammatory cells/fibroblasts (zinc-dependent proteases)",
+    function:
+      "Zinc-dependent proteases that degrade extracellular matrix proteins, enabling tissue remodeling and permitting inflammatory destruction and tumor invasion.",
+    mutationCauses: [
+      "Excess MMP (metalloproteinase) activity in inflammatory states -> ECM/basement membrane destruction (rheumatoid erosions, invasion/metastasis).",
+    ],
+    boardsPearls: [
+      "MMPs = zinc-dependent protease family that cleaves ECM proteins (including collagen and other basement membrane components)",
+      "Tumor invasion requires ECM/basement membrane degradation by proteases",
+      "Rheumatoid arthritis joint destruction involves excess MMP activity",
+    ],
+    distinguishFrom: [
+      "Collagenase — a specific collagen-degrading member within the MMP family",
+      "Serine proteases — different protease class (not zinc-dependent)",
+      "Lysyl oxidase — cross-linking enzyme (not matrix degradation)",
+    ],
+  },
+  {
+    id: "fibronectin",
+    name: "Fibronectin",
+    etymology: "Latin fibra = fiber + Greek nectos = bound/connected + -in protein suffix",
+    aliases: [
+      "fibronectin",
+      "fibronectins",
+      "fn",
+      "FN1",
+      "plasma fibronectin",
+      "cellular fibronectin",
+    ],
+    gene: "FN1",
+    location:
+      "Extracellular matrix (insoluble form) and plasma (soluble form); secreted by fibroblasts, endothelial cells, macrophages, and platelets",
+    function:
+      "Large ECM glycoprotein that mediates cell adhesion, migration, and wound matrix organization by binding integrins (via RGD motif), collagen, fibrin, and heparan sulfate — bridges cells to the extracellular matrix during repair and development.",
+    mutationCauses: [
+      "Fibronectin glomerulopathy (rare autosomal dominant) — glomerular fibronectin deposits with proteinuria/nephrotic syndrome",
+      "Not a common boards mutation gene; more often tested as ECM adhesion molecule in wound healing and fibrosis",
+    ],
+    boardsPearls: [
+      "Fibronectin = major ECM adhesion glycoprotein linking cells to matrix",
+      "Contains RGD sequence that binds integrins on cell surface",
+      "Fibroblasts secrete fibronectin during wound healing and tissue remodeling",
+      "Plasma fibronectin participates in clot stabilization and opsonic activity",
+      "vs laminin — basement membrane glycoprotein; fibronectin is broader ECM/connective tissue scaffold",
+    ],
+    distinguishFrom: [
+      "Laminin — basement membrane glycoprotein, not general interstitial ECM adhesion scaffold",
+      "Collagen — structural fibrillar protein providing tensile strength, not primary cell-adhesion bridge",
+      "Fibrin — clot polymer from fibrinogen, acute hemostasis not chronic ECM scaffold",
+      "Vitronectin — ECM glycoprotein with different adhesion/inhibitory roles",
+    ],
+  },
+  {
+    id: "extracellular-matrix-proteins",
+    name: "Extracellular Matrix Proteins",
+    etymology:
+      "Latin extra = outside + cellularis = of cells + matrix = structure + Latin proteinum = primary substance",
+    aliases: [
+      "extracellular matrix proteins",
+      "extracellular matrix protein",
+      "ecm proteins",
+      "ecm protein",
+      "matrix proteins",
+      "matrix protein",
+      "structural ecm proteins",
+      "connective tissue matrix proteins",
+      "ecm structural proteins",
+    ],
+    location:
+      "Secreted into extracellular space — interstitial stroma, basement membrane, cartilage matrix, and vessel walls",
+    function:
+      "Structural and adhesive proteins that assemble the extracellular matrix — fibrillar collagens (tensile strength), elastin (elastic recoil), fibronectin and laminin (cell adhesion via integrins/RGD), proteoglycans (hydration/compression), and associated glycoproteins — synthesized mainly by fibroblasts, chondrocytes, and endothelial cells and remodeled by MMPs and lysyl oxidase–mediated cross-linking.",
+    mutationCauses: [
+      "Osteogenesis imperfecta — type I collagen defects",
+      "Alport syndrome / Goodpasture — type IV collagen (GBM, alveolar basement membrane)",
+      "Ehlers-Danlos syndromes — various collagen processing and structure defects",
+      "Marfan syndrome — fibrillin-1 microfibril defect (elastin-associated scaffold)",
+      "Epidermolysis bullosa — laminin/collagen VII hemidesmosome–anchoring fibril defects",
+      "Fibronectin glomerulopathy — rare FN1-related glomerular deposits",
+      "Scurvy — vitamin C deficiency impairs collagen hydroxylation (not a gene mutation)",
+    ],
+    boardsPearls: [
+      "Major ECM protein classes: collagens, elastin, fibronectin, laminin, proteoglycans",
+      "Collagen types: I (bone/skin), II (cartilage), III (reticulin/vessels), IV (basement membrane)",
+      "Vitamin C required for prolyl/lysyl hydroxylation; lysyl oxidase (copper) cross-links collagen/elastin",
+      "MMPs degrade ECM; imbalance → fibrosis (excess deposition) or invasion (excess breakdown)",
+      "Fibronectin bridges cells to matrix via RGD–integrin binding during wound healing",
+      "Basement membrane ECM proteins include type IV collagen, laminin, nidogen, heparan sulfate proteoglycans",
+      "vs intracellular cytoskeletal proteins — actin, tubulin, intermediate filaments inside cells",
+    ],
+    distinguishFrom: [
+      "Extracellular matrix — entire non-cellular scaffold including ground substance and bound factors, not proteins alone",
+      "Collagen — single major ECM protein family; ECM proteins is the broader category",
+      "Fibronectin — one ECM adhesion glycoprotein within the group",
+      "Proteoglycans — GAG-rich matrix components; often grouped with but distinct from fibrillar structural proteins",
+      "Cytoskeleton — intracellular structural network (actin, tubulin), not secreted ECM",
+      "Fibrin — acute clot polymer, not chronic structural ECM protein",
     ],
   },
 ];

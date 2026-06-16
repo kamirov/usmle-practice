@@ -12,6 +12,39 @@ export interface PathogenesisEntry {
 
 export const PATHOGENESIS: PathogenesisEntry[] = [
   {
+    id: "atresia",
+    name: "Atresia",
+    etymology: "Greek a- = without + tresis = perforation/opening",
+    aliases: [
+      "atresia",
+      "atresias",
+      "congenital atresia",
+      "luminal atresia",
+      "failed recanalization atresia",
+    ],
+    definition:
+      "Congenital absence or complete closure of a normal tubular lumen or orifice, producing mechanical obstruction of flow through the affected structure.",
+    examples: [
+      "Duodenal atresia — failure of duodenal recanalization causing bilious vomiting and double-bubble sign",
+      "Biliary atresia — progressive fibro-obliterative destruction of extrahepatic bile ducts causing neonatal cholestasis",
+      "Pulmonary atresia — absent/imperforate pulmonary valve with ductal-dependent pulmonary blood flow",
+      "Tricuspid atresia — absent tricuspid valve orifice with obligatory interatrial shunting",
+      "Esophageal atresia (often with TEF) — feeding difficulty, drooling, aspiration risk",
+    ],
+    boardsPearls: [
+      "Atresia = complete luminal absence/occlusion; stenosis = narrowed but patent lumen",
+      "Neonatal bilious vomiting strongly suggests obstructive lesion including intestinal atresia",
+      "Many critical cardiac atresias are ductal-dependent and require PGE1 infusion until surgery",
+      "Failure of embryonic recanalization is classic mechanism for some GI atresias",
+    ],
+    distinguishFrom: [
+      "Stenosis — partial narrowing with preserved continuity of lumen",
+      "Agenesis — complete absence of an organ/structure, not just luminal closure",
+    ],
+    pediatrics:
+      "Most clinically relevant atresias present in the neonatal period with obstruction, cyanosis, or cholestasis and require urgent pediatric/surgical evaluation.",
+  },
+  {
     id: "bacterial-translocation",
     name: "Bacterial Translocation",
     etymology: "Greek bakterion = small rod + Latin trans = across + locus = place",
@@ -700,6 +733,185 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
     ],
     pediatrics:
       "Homozygous familial hypercholesterolemia causes premature atherosclerotic CAD in adolescence; atherosclerotic disease is otherwise rare in children.",
+  },
+  {
+    id: "fibrous-cap",
+    name: "Fibrous Cap",
+    etymology:
+      "Latin fibra = fiber + Latin caput = head — fibrous covering layer over plaque core",
+    aliases: [
+      "fibrous cap",
+      "fibrous caps",
+      "plaque fibrous cap",
+      "atherosclerotic fibrous cap",
+      "fibrous plaque cap",
+      "fibrous cap of atherosclerotic plaque",
+      "thin fibrous cap",
+      "thick fibrous cap",
+    ],
+    definition:
+      "Collagen-rich layer of smooth muscle cells and extracellular matrix that covers the necrotic lipid core of an atherosclerotic plaque, separating the thrombogenic core from circulating blood and determining plaque stability.",
+    examples: [
+      "Stable coronary plaque — thick fibrous cap with small lipid core and ↓ inflammatory cells",
+      "Vulnerable (unstable) plaque — thin fibrous cap, large necrotic lipid core, ↑ macrophages and MMP activity",
+      "Plaque rupture — thin cap disruption exposes lipid core and tissue factor → platelet thrombosis → ACS or stroke",
+      "Carotid plaque — cap thickness correlates with stroke risk on imaging/histology",
+    ],
+    boardsPearls: [
+      "Fibrous cap = collagen/SMC layer over lipid necrotic core in atherosclerotic intimal plaque",
+      "Thin cap + ↑ macrophages = unstable/vulnerable plaque → rupture → thrombotic occlusion",
+      "Thick cap + small core = stable plaque — luminal stenosis without acute rupture risk",
+      "MMPs (matrix metalloproteinases) degrade cap collagen and weaken plaque",
+      "Statins stabilize plaques partly by ↓ inflammation and promoting cap thickening",
+      "vs fatty streak — early lesion without mature fibrous cap over necrotic core",
+      "vs fibrous capsule — organ connective tissue envelope (liver, kidney), not arterial plaque layer",
+    ],
+    distinguishFrom: [
+      "Necrotic lipid core — central cholesterol-rich debris beneath the fibrous cap",
+      "Fatty streak — early intimal lipid accumulation without mature fibrous cap",
+      "Intimal hyperplasia — smooth muscle proliferation after endothelial injury (e.g., post-angioplasty), not classic atherosclerotic cap over lipid core",
+      "Fibrous capsule — organ stromal envelope; unrelated to arterial plaque architecture",
+      "Thrombus — superimposed clot after cap rupture, not the pre-existing plaque covering",
+    ],
+    pediatrics:
+      "Premature atherosclerosis in homozygous familial hypercholesterolemia can produce vulnerable thin-capped plaques in adolescence; otherwise clinically significant fibrous-cap plaque disease is uncommon in childhood.",
+  },
+  {
+    id: "atheroma",
+    name: "Atheroma",
+    etymology:
+      "Greek athere = gruel/porridge — soft lipid-rich material resembling gruel",
+    aliases: [
+      "atheroma",
+      "atheromas",
+      "atheromatous core",
+      "atheromatous cores",
+      "lipid necrotic core",
+      "lipid necrotic cores",
+      "necrotic lipid core",
+      "necrotic lipid cores",
+      "lipid-rich plaque core",
+      "plaque lipid core",
+    ],
+    definition:
+      "Lipid-rich, cholesterol- and debris-filled necrotic core of an advanced atherosclerotic plaque — the gruel-like atheromatous material beneath the fibrous cap that becomes thrombogenic when exposed to blood.",
+    examples: [
+      "Necrotic lipid core of coronary fibroatheroma — cholesterol clefts, foam cell debris, calcification on histology",
+      "Large atheroma burden with thin fibrous cap — vulnerable plaque prone to rupture",
+      "Carotid plaque atheroma — embolic cholesterol debris when cap disrupts",
+      "Microatheroma — small atheromatous lipid change in penetrating cerebral arterioles (lacunar stroke)",
+    ],
+    boardsPearls: [
+      "Atheroma = lipid-rich necrotic core (Greek athere = gruel), not the fibrous cap",
+      "Fibroatheroma = fibrous cap overlying central atheroma",
+      "Exposed atheroma after cap rupture releases tissue factor and cholesterol → thrombosis",
+      "Foam cells and oxidized LDL contribute to atheroma formation and expansion",
+      "Clinically, atheroma is sometimes used loosely for atherosclerotic plaque — precise histology = lipid core",
+      "vs fatty streak — early intimal lipid without necrotic core architecture",
+      "vs xanthoma — extracellular lipid deposit in skin/tendon, not arterial intimal core",
+    ],
+    distinguishFrom: [
+      "Fibroatheroma — entire mature plaque (fibrous cap + atheroma core)",
+      "Fibrous cap — collagenous covering over the atheroma, not the lipid core itself",
+      "Atherosclerosis — chronic arterial disease process; atheroma is a plaque component",
+      "Fatty streak — earliest intimal lipid accumulation without mature necrotic core",
+      "Microatheroma — small-vessel atheromatous change, not large-artery necrotic core",
+      "Xanthoma — subcutaneous/tendon lipid in hyperlipidemia",
+    ],
+    pediatrics:
+      "Atheroma formation in arterial intima is rare in childhood except with severe genetic dyslipidemia (e.g., homozygous familial hypercholesterolemia).",
+  },
+  {
+    id: "fibroatheroma",
+    name: "Fibroatheroma",
+    etymology:
+      "Latin fibra = fiber + Greek athere = gruel — fibrous tissue over lipid-rich gruel-like core",
+    aliases: [
+      "fibroatheroma",
+      "fibroatheromas",
+      "fibro-atheroma",
+      "fibro atheroma",
+      "fibrous atheroma",
+      "fibrous atheromas",
+      "atheromatous plaque",
+      "atheromatous plaques",
+      "mature atherosclerotic plaque",
+      "advanced atherosclerotic plaque",
+      "fibrous plaque",
+      "fibrous plaques",
+    ],
+    definition:
+      "Mature atherosclerotic intimal lesion with a fibrous cap and smooth muscle–rich stroma overlying a central necrotic lipid-rich core (atheroma) — the classic advanced plaque stage after fatty streak progression.",
+    examples: [
+      "Coronary fibroatheroma — luminal narrowing causing stable angina; thin-capped variants predispose to plaque rupture and ACS",
+      "Carotid fibroatheroma — source of artery-to-artery emboli and hemodynamic stenosis",
+      "Peripheral arterial fibroatheroma — claudication from flow-limiting plaque",
+      "Histology — foam cells at margins, necrotic lipid core, collagenous fibrous cap on luminal surface",
+    ],
+    boardsPearls: [
+      "Fibroatheroma = fibrous cap + necrotic lipid core — mature atherosclerotic plaque",
+      "Progression: endothelial injury → fatty streak → fibroatheroma (advanced plaque)",
+      "Large lipid core with thin fibrous cap = vulnerable/unstable fibroatheroma → rupture risk",
+      "Thick cap and small core = stable fibroatheroma — chronic stenosis without acute rupture",
+      "vs fatty streak — early lesion without necrotic core and mature fibrous cap",
+      "vs xanthoma — subcutaneous/tendon lipid deposit, not arterial intimal plaque",
+      "Atheroma (lipid gruel) names the core; fibro- names the overlying fibrous component",
+    ],
+    distinguishFrom: [
+      "Fatty streak — earliest visible intimal lipid lesion without mature fibroatheroma architecture",
+      "Fibrous cap — luminal covering layer of the fibroatheroma, not the whole plaque",
+      "Microatheroma — small-vessel atheromatous change in penetrating arteries (lacunar stroke), not classic large-artery fibroatheroma",
+      "Xanthoma — extracellular lipid in skin/tendon in hyperlipidemia",
+      "Thrombus — superimposed clot after plaque rupture, not the underlying fibroatheroma",
+      "Atherosclerosis — disease process; fibroatheroma is the characteristic mature plaque morphology",
+    ],
+    pediatrics:
+      "Homozygous familial hypercholesterolemia can produce premature coronary fibroatheromas in adolescence; otherwise advanced fibroatheroma is uncommon in childhood.",
+  },
+  {
+    id: "plaque-rupture",
+    name: "Plaque Rupture",
+    etymology:
+      "French plaque = plate + Latin ruptura = breaking apart",
+    aliases: [
+      "plaque rupture",
+      "plaque ruptures",
+      "atherosclerotic plaque rupture",
+      "ruptured atherosclerotic plaque",
+      "ruptured plaque",
+      "ruptured plaques",
+      "vulnerable plaque rupture",
+      "unstable plaque rupture",
+      "fibrous cap rupture",
+      "cap rupture",
+    ],
+    definition:
+      "Acute disruption of an atherosclerotic plaque's fibrous cap that exposes the thrombogenic necrotic lipid core and subendothelial collagen to blood, triggering platelet activation, coagulation, and often acute thrombotic arterial occlusion.",
+    examples: [
+      "STEMI — coronary plaque rupture → occlusive thrombus → transmural infarction",
+      "NSTEMI / unstable angina — plaque rupture with subocclusive or transient thrombus and ischemia",
+      "Ischemic stroke — carotid or intracranial plaque rupture with artery-to-artery thromboembolism or in-situ occlusion",
+      "Acute limb ischemia — rupture of peripheral arterial plaque with superimposed thrombosis",
+    ],
+    boardsPearls: [
+      "Plaque rupture = thin fibrous cap tears → lipid core + tissue factor exposed → thrombosis",
+      "Major trigger of acute coronary syndrome (STEMI, NSTEMI, unstable angina)",
+      "Vulnerable plaque features: thin cap, large lipid core, ↑ macrophages, MMP-mediated collagen breakdown",
+      "Statins and antiplatelet therapy reduce rupture-related events by stabilizing plaques and inhibiting thrombosis",
+      "vs stable angina — fixed stenosis with demand ischemia, no acute cap disruption",
+      "vs plaque erosion — endothelial denudation over plaque without full fibrous-cap rupture; also causes ACS",
+      "vs demand ischemia — troponin leak from supply-demand mismatch without acute plaque rupture",
+    ],
+    distinguishFrom: [
+      "Plaque erosion — superficial endothelial injury exposing intima; cap may remain intact",
+      "Fibrous cap — structural covering layer; rupture is the disruptive event",
+      "Thrombotic occlusion — downstream luminal blockage that often follows rupture",
+      "Stable angina — chronic fixed coronary stenosis without acute plaque disruption",
+      "Vasospastic angina — coronary spasm on normal or mildly diseased vessels",
+      "Embolic stroke from AF — cardioembolic source, not artery plaque rupture at carotid",
+    ],
+    pediatrics:
+      "Acute plaque rupture is rare in childhood; homozygous familial hypercholesterolemia is the classic exception with premature vulnerable plaques and early MI in adolescence.",
   },
   {
     id: "arteriolosclerosis",
@@ -9191,6 +9403,203 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
     ],
     pediatrics:
       "Metoclopramide prokinetic use in children carries EPS/dystonia risk — lowest dose and shortest duration; erythromycin prokinetic dosing used cautiously in pediatric gastroparesis under specialist guidance.",
+  },
+  {
+    id: "basement-membrane",
+    name: "Basement Membrane",
+    etymology:
+      "Latin basis = base + Latin membrana = thin skin/layer",
+    aliases: [
+      "basement membrane",
+      "basement membranes",
+      "basal lamina",
+      "basal laminae",
+      "bm",
+    ],
+    definition:
+      "Specialized sheet-like extracellular matrix layer between epithelial/endothelial cells and underlying connective tissue, providing structural support, polarity cues, and selective filtration barrier function.",
+    examples: [
+      "Type IV collagen network with laminin, nidogen/entactin, and heparan sulfate proteoglycans",
+      "Glomerular basement membrane — central renal filtration barrier layer",
+      "Alveolar and dermal basement membranes — sites of injury in Goodpasture and bullous pemphigoid",
+      "Epithelial basement membrane zone — hemidesmosome anchorage in skin",
+    ],
+    boardsPearls: [
+      "Basement membrane = specialized ECM scaffold beneath epithelium/endothelium",
+      "Type IV collagen is the major structural collagen of basement membranes",
+      "Invasive carcinoma must breach basement membrane (carcinoma in situ does not)",
+      "MMPs and other proteases degrade basement membrane during inflammation, wound remodeling, and metastasis",
+    ],
+    distinguishFrom: [
+      "Extracellular matrix — broader interstitial scaffold beyond basement membrane",
+      "Glomerular basement membrane — kidney-specific basement membrane subset",
+      "Interstitial stroma — fibroblast-rich connective tissue matrix, not epithelial basal lamina",
+    ],
+    pediatrics:
+      "Epidermolysis bullosa and junctional blistering diseases often reflect basement membrane or hemidesmosome defects in infants and children.",
+  },
+  {
+    id: "extracellular-matrix",
+    name: "Extracellular Matrix",
+    etymology:
+      "Latin extra = outside + cellularis = of cells + matrix = womb/structure",
+    aliases: [
+      "extracellular matrix",
+      "extracellular matrices",
+      "ecm",
+      "interstitial matrix",
+      "connective tissue matrix",
+    ],
+    definition:
+      "Non-cellular structural network surrounding cells composed of collagens, elastin, proteoglycans, glycoproteins, and bound growth factors — provides tissue architecture, mechanical strength, and signaling scaffold.",
+    examples: [
+      "Fibrillar collagens (types I and III) in skin, tendon, and stroma",
+      "Elastin fibers in arteries and lungs",
+      "Proteoglycans (e.g., aggrecan) retaining water in cartilage",
+      "Matrix metalloproteinase-mediated ECM remodeling in wound healing, RA, and tumor invasion",
+    ],
+    boardsPearls: [
+      "ECM provides structural support and biochemical signaling for cells",
+      "Fibroblasts synthesize and remodel ECM; MMPs degrade ECM components",
+      "Excess ECM deposition → fibrosis/sclerosis; excess ECM breakdown → tissue destruction/invasion",
+      "Basement membrane is a specialized ECM layer beneath epithelium/endothelium",
+    ],
+    distinguishFrom: [
+      "Basement membrane — specialized thin ECM layer at cell–stroma interface",
+      "Cytoskeleton — intracellular structural network, not extracellular",
+      "Ground substance alone — proteoglycan-rich gel component of ECM, not full matrix",
+    ],
+    pediatrics:
+      "Connective tissue disorders and scarring responses in children reflect altered ECM synthesis or degradation (e.g., keloids, osteogenesis imperfecta collagen defects).",
+  },
+  {
+    id: "wound-healing",
+    name: "Wound Healing",
+    etymology:
+      "Old English wund = injury + heal = make whole/restoration",
+    aliases: [
+      "wound healing",
+      "wound healings",
+      "tissue repair",
+      "tissue healing",
+      "cutaneous wound healing",
+      "wound repair",
+    ],
+    definition:
+      "Coordinated physiologic response to tissue injury that restores barrier integrity through hemostasis, inflammation, proliferation, and remodeling phases.",
+    examples: [
+      "Hemostasis — platelet plug, fibrin clot, vasoconstriction then vasodilation",
+      "Inflammation — neutrophils then macrophages clear debris and secrete cytokines (TNF-α, IL-1, PDGF, TGF-β)",
+      "Proliferation — fibroblasts deposit collagen/fibronectin, angiogenesis, granulation tissue, re-epithelialization by keratinocyte migration",
+      "Remodeling — collagen cross-linking (lysyl oxidase), wound contraction by myofibroblasts, scar maturation over months",
+    ],
+    boardsPearls: [
+      "Classic phases: hemostasis -> inflammation -> proliferation -> remodeling",
+      "PDGF and TGF-β from macrophages stimulate fibroblast migration and collagen synthesis",
+      "Vitamin C and zinc are required for effective collagen synthesis and repair",
+      "Glucocorticoids, diabetes, malnutrition, and immunosuppression impair wound healing",
+      "First intention (clean incision) heals with minimal scar; second intention (ulcer/dehiscence) heals by granulation",
+      "Excess TGF-β/fibrosis can cause hypertrophic scar or keloid",
+    ],
+    distinguishFrom: [
+      "Impaired wound healing — pathologic delay/failure of normal repair process",
+      "Acute inflammation alone — early phase component, not complete healing arc",
+      "Fibrosis — pathologic ECM deposition that can follow or distort repair",
+    ],
+    pediatrics:
+      "Fetal wound healing can produce less scarring; children may form hypertrophic scars/keloids more readily in some settings. Premature infants and malnourished children have slower repair.",
+  },
+  {
+    id: "thrombotic-occlusion",
+    name: "Thrombotic Occlusion",
+    etymology:
+      "Greek thrombos = clot + Latin occlusio = shutting up/blocking",
+    aliases: [
+      "thrombotic occlusion",
+      "thrombotic occlusions",
+      "thrombotic vascular occlusion",
+      "in situ thrombosis",
+      "in-situ thrombosis",
+      "thrombotic arterial occlusion",
+      "thrombotic venous occlusion",
+      "occlusion by thrombus",
+      "thrombus occlusion",
+    ],
+    definition:
+      "Complete or near-complete blockage of a blood vessel lumen by a thrombus formed at the site of occlusion (in situ), reducing or abolishing distal perfusion and causing ischemia or venous outflow obstruction.",
+    examples: [
+      "STEMI — atherosclerotic plaque rupture → platelet-rich thrombotic coronary occlusion",
+      "Ischemic stroke — thrombosis on carotid atherosclerosis or intracranial small-vessel disease",
+      "Deep vein thrombosis — fibrin-rich venous thrombotic occlusion (Virchow triad)",
+      "Acute limb ischemia on chronic PAD — thrombotic occlusion of diseased artery",
+      "Mesenteric arterial thrombosis — SMA thrombosis on atherosclerosis; pain out of proportion to exam",
+      "Hepatic vein thrombosis (Budd-Chiari) — venous outflow occlusion",
+      "Atrial fibrillation — LA appendage thrombus can propagate and embolize (thrombus source, not purely in-situ at destination)",
+    ],
+    boardsPearls: [
+      "Thrombotic occlusion = clot forms at/near site of blockage; embolic occlusion = clot travels from distant source",
+      "Arterial thrombotic occlusion is often platelet-rich on disrupted atherosclerotic plaque (ACS, stroke)",
+      "Venous thrombotic occlusion is fibrin-rich; Virchow triad (stasis, endothelial injury, hypercoagulability)",
+      "Thrombotic occlusion → ischemia downstream (arterial) or venous congestion/edema (venous)",
+      "Antiplatelets/PCI for acute coronary thrombotic occlusion; anticoagulation for most venous thrombotic occlusion",
+      "vs stenosis — partial narrowing with some residual flow; occlusion is luminal blockage",
+      "vs embolus — detached thrombus from AF, DVT, endocarditis, or plaque embolization",
+    ],
+    distinguishFrom: [
+      "Embolic occlusion — thrombus or debris travels from a proximal source (AF, DVT, endocarditis)",
+      "Stenosis — narrowed but patent lumen; occlusion is complete or functionally complete blockage",
+      "Ischemia — tissue consequence of ↓ perfusion; thrombotic occlusion is a common cause",
+      "Vasospasm — reversible functional luminal narrowing without fixed thrombus",
+      "Virchow triad — risk framework for thrombosis; thrombotic occlusion is the resulting event",
+    ],
+    pediatrics:
+      "Neonatal renal vein thrombosis and umbilical catheter–associated arterial/venous thrombotic occlusion occur with dehydration, sepsis, or indwelling lines. Kawasaki disease can predispose to coronary thrombotic occlusion at aneurysm sites.",
+  },
+  {
+    id: "third-spacing",
+    name: "Third-Spacing",
+    etymology:
+      "English third space = physiologic fluid compartment beyond plasma and interstitial fluid where sequestered fluid is not immediately available for circulation",
+    aliases: [
+      "third spacing",
+      "third-spacing",
+      "third space",
+      "third-space fluid",
+      "third space fluid loss",
+      "third-space fluid loss",
+      "fluid third spacing",
+      "sequestered fluid",
+      "sequestered interstitial fluid",
+      "effective hypovolemia from fluid shift",
+    ],
+    definition:
+      "Pathologic shift of fluid from the intravascular compartment into interstitial or transcellular spaces (e.g., bowel lumen, peritoneum, burned tissue, inflamed retroperitoneum) such that circulating plasma volume falls despite total body water that may be normal or increased — producing effective hypovolemia.",
+    examples: [
+      "Acute pancreatitis — peripancreatic and retroperitoneal fluid sequestration → hypovolemia, hemoconcentration",
+      "Burns — capillary leak and inflammatory third-spacing in first 24–48 hours",
+      "Sepsis/SIRS — endothelial leak → interstitial edema with intravascular depletion",
+      "Bowel obstruction/ileus — luminal and wall fluid sequestration",
+      "Ascites in cirrhosis — large-volume third-space fluid with low effective circulating volume",
+      "Anaphylaxis and capillary leak syndromes — rapid plasma extravasation",
+    ],
+    boardsPearls: [
+      "Third-spacing = fluid leaves usable intravascular pool → effective hypovolemia",
+      "↑ hematocrit (hemoconcentration) despite edema/ascites can clue third-spacing",
+      "Treat with isotonic crystalloid (NS or LR); D5W alone does not restore intravascular volume",
+      "Pancreatitis, burns, sepsis, obstruction — classic board vignettes",
+      "vs dehydration — net whole-body water loss; third-spacing redistributes existing/extravasated fluid",
+      "vs simple peripheral edema — third-spacing emphasizes hemodynamically unavailable volume",
+      "Monitor for volume overload once capillary leak resolves and fluid re-enters circulation",
+    ],
+    distinguishFrom: [
+      "Dehydration — net water/salt loss from GI, renal, or insensible routes",
+      "Hemorrhage — intravascular volume loss from bleeding, not interstitial sequestration",
+      "Edema — interstitial fluid accumulation; third-spacing is the functional consequence for perfusion",
+      "Ascites — one manifestation of third-spacing in cirrhosis, not the mechanism itself",
+      "Distributive shock — vasodilation and maldistribution; may coexist with third-spacing in sepsis",
+    ],
+    pediatrics:
+      "Necrotizing enterocolitis and severe gastroenteritis in infants cause third-spacing with hypovolemia; aggressive isotonic fluid resuscitation is critical. Burns in children have high surface-area–to–mass ratio and rapid capillary leak.",
   },
 ];
 

@@ -131,6 +131,8 @@ export const HEMODYNAMICS: HemodynamicEntry[] = [
       "venous compliances",
       "venous capacitance",
       "venous capacitances",
+      "capacitance vein",
+      "capacitance veins",
       "vascular compliance venous",
       "high venous compliance",
       "venous reservoir",
@@ -224,6 +226,36 @@ export const HEMODYNAMICS: HemodynamicEntry[] = [
       "Clinical: inotropes (dobutamine, milrinone, digoxin) support cardiac output in cardiogenic shock or acute decompensated HFrEF; negative inotropes avoided in systolic HF",
       "Inodilators (milrinone) combine positive inotropy with vasodilation (↓ afterload)",
       "Peds: neonatal myocardium has less contractile reserve; inotropes (dopamine, dobutamine, epinephrine) used in neonatal shock and post-cardiac surgery low output",
+    ],
+  },
+  {
+    id: "pressure-volume-loop",
+    name: "Pressure-Volume Loop",
+    etymology:
+      "pressure = force per unit area + volume = space occupied + loop = closed curve tracing ventricular cycle",
+    aliases: [
+      "pressure-volume loop",
+      "pressure volume loop",
+      "pressure-volume loops",
+      "pressure volume loops",
+      "pv loop",
+      "pv loops",
+      "ventricular pressure-volume loop",
+      "left ventricular pressure-volume loop",
+      "lv pressure-volume loop",
+    ],
+    definition:
+      "Graphical plot of ventricular pressure versus volume over a single cardiac cycle — typically left ventricle — summarizing systolic and diastolic function, preload, afterload, and contractility in one diagram.",
+    factors: [
+      "Axes: x-axis = volume (mL), y-axis = pressure (mmHg); loop proceeds counterclockwise: diastolic filling → isovolumetric contraction → ejection → isovolumetric relaxation",
+      "Key points: end-diastolic volume (EDV, rightmost point), end-systolic volume (ESV, leftmost point), stroke volume = width (EDV − ESV), arterial (aortic) pressure approximates upper boundary during ejection",
+      "End-systolic pressure-volume relationship (ESPVR) line slope reflects contractility — steeper slope = ↑ inotropy (↑ EF, ↓ ESV); flatter slope = ↓ inotropy",
+      "End-diastolic pressure-volume relationship (EDPVR) curve reflects diastolic compliance — shifted up/left in restrictive cardiomyopathy or LVH (stiffer ventricle) with higher filling pressures at given volume",
+      "↑ Preload (↑ EDV): loop widens to right with larger stroke volume, same afterload/contractility (Frank-Starling); ↓ preload narrows loop with smaller SV",
+      "↑ Afterload (↑ aortic pressure): loop taller and narrower with higher systolic pressure, ↑ ESV, ↓ SV (e.g., acute hypertension, aortic stenosis); ↓ afterload does opposite (vasodilators, chronic AR)",
+      "Valvular lesions: aortic stenosis → tall, narrow loop (↑ afterload, ↓ SV); aortic regurgitation → wide loop with no true isovolumetric phases (backflow in diastole); mitral regurgitation → right-shifted, \"bizarre\" loop with ↑ EDV and no true isovolumetric contraction",
+      "Heart failure with reduced EF: loop shifted right with ↑ EDV, ↑ ESV, ↓ height and width (↓ SV and EF); inotropes shift ESPVR up/left → improved SV at lower ESV",
+      "Clinical: boards use PV loops to compare effects of preload/afterload/inotropy changes and to distinguish valvular pathologies, systolic vs diastolic dysfunction, and effects of drugs (vasodilators, inotropes, diuretics)",
     ],
   },
   {
@@ -711,6 +743,58 @@ export const HEMODYNAMICS: HemodynamicEntry[] = [
     ],
   },
   {
+    id: "systolic-blood-pressure",
+    name: "Systolic Blood Pressure",
+    etymology:
+      "Greek systole = contraction + Latin sanguis = blood + pressura = pressing force",
+    aliases: [
+      "systolic blood pressure",
+      "systolic blood pressures",
+      "systolic pressure",
+      "systolic pressures",
+      "sbp",
+      "systolic bp",
+      "peak arterial pressure",
+    ],
+    definition:
+      "Maximum arterial pressure during ventricular systole when blood is ejected into the aorta — the upper number in a blood pressure reading (e.g., 120/80 mmHg).",
+    factors: [
+      "Normal adult SBP ~90–120 mmHg (context-dependent; hypertension thresholds vary by guideline)",
+      "Determinants: stroke volume, aortic compliance/elasticity, heart rate, and systemic vascular resistance",
+      "↑ SBP: ↑ stroke volume (volume overload, hyperdynamic states), decreased aortic compliance (aging, atherosclerosis), sympathomimetic drugs, aortic stenosis (late systolic gradient)",
+      "↓ SBP: hemorrhage, cardiogenic shock, vasodilation, severe aortic regurgitation (wide pulse pressure with low diastolic)",
+      "MAP ≈ DBP + ⅓(SBP − DBP) — systole contributes disproportionately to time-averaged perfusion pressure",
+      "Clinical: isolated systolic hypertension common in elderly (stiff arteries); pulse pressure = SBP − DBP",
+      "Pulsus paradoxus — exaggerated inspiratory drop in SBP (>10 mmHg) in tamponade, severe asthma/COPD",
+    ],
+  },
+  {
+    id: "diastolic-blood-pressure",
+    name: "Diastolic Blood Pressure",
+    etymology:
+      "Greek diastole = dilation/relaxation + Latin sanguis = blood + pressura = pressing force",
+    aliases: [
+      "diastolic blood pressure",
+      "diastolic blood pressures",
+      "diastolic pressure",
+      "diastolic pressures",
+      "dbp",
+      "diastolic bp",
+      "minimum arterial pressure",
+    ],
+    definition:
+      "Minimum arterial pressure during ventricular diastole when the aortic valve is closed — the lower number in a blood pressure reading (e.g., 120/80 mmHg).",
+    factors: [
+      "Normal adult DBP ~60–80 mmHg",
+      "Determinants: systemic vascular resistance (arteriolar tone), heart rate (diastolic filling time), and aortic compliance",
+      "↑ DBP: ↑ SVR (vasoconstriction, essential hypertension in younger patients), tachycardia (shortened diastole with maintained peripheral resistance)",
+      "↓ DBP: vasodilators, sepsis (distributive shock), aortic regurgitation (rapid runoff into LV), patent ductus arteriosus (wide pulse pressure)",
+      "Coronary perfusion occurs predominantly in diastole — diastolic pressure gradient (aortic diastolic − LVEDP) drives myocardial blood flow",
+      "MAP ≈ DBP + ⅓(SBP − DBP) — diastole is longer than systole, so DBP heavily influences MAP",
+      "Isolated diastolic hypertension less common with aging; diastolic hypotension can impair coronary perfusion in CAD",
+    ],
+  },
+  {
     id: "mean-arterial-pressure",
     name: "Mean Arterial Pressure",
     etymology: "Latin medius = middle + arteria = artery + pressura = pressing force",
@@ -1031,6 +1115,29 @@ export const HEMODYNAMICS: HemodynamicEntry[] = [
       "Complications: arrhythmias (especially during RV passage), pulmonary artery rupture (rare, catastrophic), infection, thrombosis, balloon rupture",
       "Declining routine use — echocardiography and less invasive monitors often substitute; still boards-relevant for PCWP and CO concepts",
       "PCWP ≈ LAP except mitral stenosis (gradient between LA and LV wedge pressure)",
+    ],
+  },
+  {
+    id: "reflex-tachycardia",
+    name: "Reflex Tachycardia",
+    etymology:
+      "Latin reflexus = bent back/response + Greek tachys = fast + kardia = heart",
+    aliases: [
+      "reflex tachycardia",
+      "baroreflex tachycardia",
+      "compensatory tachycardia",
+      "reflex sinus tachycardia",
+      "drug-induced reflex tachycardia",
+    ],
+    definition:
+      "Increase in heart rate triggered by baroreceptor-mediated sympathetic activation after a sudden fall in blood pressure or systemic vascular resistance, commonly seen with vasodilator therapy.",
+    factors: [
+      "Mechanism: ↓ arterial pressure/stretch at carotid sinus and aortic arch -> ↓ baroreceptor firing -> ↑ sympathetic and ↓ vagal tone -> ↑ SA node rate and contractility",
+      "Typical triggers: arteriolar vasodilators (hydralazine, dihydropyridine CCBs), nitrates, acute hemorrhage, dehydration, distributive vasodilation",
+      "Clinical pattern: hypotension + palpitations + tachycardia shortly after vasodilator exposure",
+      "Prevention/management: combine vasodilator with beta-blocker when appropriate (e.g., hydralazine in selected patients)",
+      "Distinguish from primary arrhythmia: reflex tachycardia is usually sinus rhythm and stimulus-dependent",
+      "Peds: children often show marked early tachycardic compensation for hypovolemia before hypotension develops",
     ],
   },
 ];

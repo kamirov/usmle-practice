@@ -35,6 +35,38 @@ export const ORGANS: OrganEntry[] = [
     derivatives: ["Ascending aorta", "Aortic arch", "Descending aorta"],
   },
   {
+    id: "overriding-aorta",
+    name: "Overriding Aorta",
+    etymology: "over = above/straddling + ride = sit across + Greek aorte = great artery",
+    aliases: [
+      "overriding aorta",
+      "over-riding aorta",
+      "aortic override",
+      "overriding of aorta",
+      "overriding root",
+    ],
+    germLayer: "Mesoderm",
+    origin:
+      "Conotruncal malalignment during septation causes the aortic root to shift rightward and sit above the ventricular septal defect, receiving blood from both ventricles rather than exclusively from the left ventricle.",
+    derivatives: [
+      "Component lesion of tetralogy of Fallot",
+      "Variable biventricular outflow into the aorta",
+    ],
+    functionSummary:
+      "Represents malposition of the aortic root over the interventricular septum/VSD, contributing to mixed ventricular ejection into systemic circulation in conotruncal defects.",
+    commonPathologies: [
+      "Tetralogy of Fallot (classic feature)",
+      "Double outlet right ventricle spectrum",
+    ],
+    step1Pearls: [
+      "Overriding aorta is one of the four lesions in tetralogy of Fallot",
+      "Allows aortic blood flow from both ventricles across malalignment VSD",
+      "Cyanosis severity in ToF mainly tracks RVOT obstruction, not override degree alone",
+    ],
+    pediatrics:
+      "Detected on pediatric echocardiography in conotruncal congenital heart disease; management is tied to the full lesion set (especially RVOT obstruction and VSD size).",
+  },
+  {
     id: "pulmonary-artery",
     name: "Pulmonary Artery",
     etymology: "Latin pulmo = lung + Greek arteria = air-holder/artery",
@@ -42,6 +74,151 @@ export const ORGANS: OrganEntry[] = [
     germLayer: "Mesoderm",
     origin:
       "Derived from the truncus arteriosus via spiral septation, separating pulmonary and aortic outflow tracts.",
+  },
+  {
+    id: "interatrial-septum",
+    name: "Interatrial Septum",
+    etymology: "Latin inter = between + atrium = entry hall/chamber + septum = partition",
+    aliases: [
+      "interatrial septum",
+      "interatrial septa",
+      "atrial septum",
+      "atrial septa",
+      "ias",
+      "inter-atrial septum",
+      "interatrial cardiac septum",
+    ],
+    germLayer: "Mesoderm (endocardial cushion contribution)",
+    origin:
+      "Forms from septum primum and septum secundum growing from the atrial roof toward endocardial cushions; overlapping flaps leave a foramen ovale in fetal life that normally functionally closes at birth as left atrial pressure exceeds right atrial pressure.",
+    derivatives: ["Fossa ovalis (remnant of foramen ovale)", "Limbus of fossa ovalis"],
+    functionSummary:
+      "Separates right and left atria, ensuring systemic venous blood flows into the right heart and pulmonary venous blood into the left heart; fetal foramen ovale within the septum allows right-to-left shunting before birth.",
+    commonPathologies: [
+      "Ostium secundum atrial septal defect (ASD)",
+      "Ostium primum ASD (atrioventricular septal defect spectrum)",
+      "Patent foramen ovale (PFO)",
+      "Sinus venosus ASD",
+    ],
+    step1Pearls: [
+      "Left atrial pressure > right atrial pressure after birth → functionally closes foramen ovale; anatomic closure over time → fossa ovalis",
+      "Fixed, widely split S₂ with systolic ejection murmur at upper left sternal border → secundum ASD",
+      "Paradoxical embolus (DVT → stroke) suggests PFO or ASD with transient right-to-left shunt",
+      "Endocardial cushion defects (Down syndrome) involve the atrial and ventricular septa plus AV valves",
+    ],
+    pediatrics:
+      "Secundum ASDs and PFOs are common in children and may be asymptomatic; large ASDs cause failure to thrive, recurrent respiratory infections, and eventually pulmonary overcirculation and Eisenmenger physiology if unrepaired.",
+  },
+  {
+    id: "interventricular-septum",
+    name: "Interventricular Septum",
+    etymology: "Latin inter = between + ventriculus = little belly/ventricle + septum = partition",
+    aliases: [
+      "interventricular septum",
+      "interventricular septa",
+      "ventricular septum",
+      "ventricular septa",
+      "ivs",
+      "iv septum",
+      "inter-ventricular septum",
+    ],
+    germLayer: "Mesoderm (muscular and membranous components)",
+    origin:
+      "Muscular interventricular ridge grows upward from the ventricular floor; membranous portion forms from endocardial cushion tissue and conotruncal ridges closing the interventricular foramen.",
+    derivatives: [
+      "Muscular interventricular septum",
+      "Membranous interventricular septum (thin superior portion)",
+    ],
+    functionSummary:
+      "Electrically and mechanically separates right and left ventricles, allowing pressure differences between pulmonary and systemic circulations while supporting His-Purkinje conduction in the subendocardial tissue.",
+    commonPathologies: [
+      "Ventricular septal defect (VSD) — especially membranous type",
+      "Perimembranous vs muscular VSDs",
+      "Hypertrophic cardiomyopathy with asymmetric septal hypertrophy",
+      "Infarction of septal branches of LAD → VSD rupture",
+    ],
+    step1Pearls: [
+      "Membranous septum is most common site of VSDs (endocardial cushion/conotruncal fusion)",
+      "Harsh holosystolic murmur at left lower sternal border → VSD",
+      "Small VSDs may close spontaneously; large defects cause early heart failure and pulmonary overcirculation",
+      "Hypertrophic obstructive cardiomyopathy — septal hypertrophy + systolic anterior motion of mitral valve → dynamic LVOT obstruction",
+    ],
+    pediatrics:
+      "VSD is the most common congenital heart defect; large unrepaired defects in childhood can progress to Eisenmenger syndrome with cyanosis, polycythemia, and differential clubbing.",
+  },
+  {
+    id: "pulmonic-valve",
+    name: "Pulmonic Valve",
+    etymology: "Latin pulmo = lung + valva = folding door/valve",
+    aliases: [
+      "pulmonic valve",
+      "pulmonic valves",
+      "pulmonary valve",
+      "pulmonary valves",
+      "pulmonic semilunar valve",
+      "pulmonary semilunar valve",
+      "pv valve",
+      "pulmonic cusp",
+      "pulmonic cusps",
+    ],
+    germLayer: "Mesoderm (endocardial cushions and truncal ridges)",
+    origin:
+      "Develops from endocardial cushions and conotruncal (neural crest–derived) ridges of the truncus arteriosus that spiral and separate the right ventricular outflow tract from the aorta, forming three semilunar cusps at the pulmonary root.",
+    derivatives: ["Three pulmonic semilunar cusps", "Pulmonary valve annulus", "Pulmonary sinuses"],
+    functionSummary:
+      "Semilunar valve between right ventricle and main pulmonary artery that opens during systole to eject blood into pulmonary circulation and closes in early diastole to prevent pulmonary regurgitation.",
+    commonPathologies: [
+      "Pulmonic stenosis (valvar or sub/supravalvar)",
+      "Pulmonic regurgitation (post-repair of tetralogy of Fallot, pulmonary hypertension)",
+      "Congenital absence or dysplasia of pulmonic valve",
+      "Carcinoid heart disease predominantly affecting right-sided valves (including pulmonic)",
+    ],
+    step1Pearls: [
+      "Pulmonic stenosis murmur — crescendo-decrescendo systolic ejection murmur at left upper sternal border, ↑ with inspiration",
+      "Severe pulmonic stenosis → poststenotic dilation of pulmonary artery and right ventricular hypertrophy",
+      "Chronic pulmonic regurgitation after repaired tetralogy of Fallot → RV dilation and arrhythmias",
+      "Carcinoid syndrome → fibrous plaques on tricuspid and pulmonic valves (serotonin inactivated in lungs, so left heart spared unless PFO or lung carcinoid)",
+    ],
+    pediatrics:
+      "Congenital pulmonic stenosis is a common isolated pediatric valve lesion; balloon valvuloplasty often curative and prevents progressive right ventricular hypertrophy and failure.",
+  },
+  {
+    id: "tricuspid-valve",
+    name: "Tricuspid Valve",
+    etymology: "Latin tri = three + cuspis = point/cusp + valva = folding door/valve",
+    aliases: [
+      "tricuspid valve",
+      "tricuspid valves",
+      "right atrioventricular valve",
+      "right av valve",
+      "tv valve",
+      "tricuspid leaflet",
+      "tricuspid leaflets",
+    ],
+    germLayer: "Mesoderm (endocardial cushions and ventricular myocardium)",
+    origin:
+      "Forms from atrioventricular endocardial cushions and delamination of ventricular myocardium, producing three leaflets (anterior, posterior, septal) anchored by chordae tendineae and papillary muscles at the right atrioventricular junction.",
+    derivatives: [
+      "Tricuspid valve annulus",
+      "Anterior, posterior, and septal tricuspid valve leaflets",
+      "Chordae tendineae and papillary muscle attachments",
+    ],
+    functionSummary:
+      "Right atrioventricular valve that opens in diastole to allow systemic venous blood to fill the right ventricle and closes in systole to prevent regurgitation into the right atrium.",
+    commonPathologies: [
+      "Tricuspid regurgitation (functional from RV dilation, endocarditis, carcinoid heart disease)",
+      "Tricuspid stenosis (rheumatic, carcinoid)",
+      "Ebstein anomaly (apical displacement of septal leaflet, often with ASD and WPW)",
+      "Right-sided infective endocarditis in IV drug use",
+    ],
+    step1Pearls: [
+      "Holosystolic murmur of tricuspid regurgitation ↑ with inspiration at left lower sternal border (Carvallo sign)",
+      "Carcinoid heart disease causes fibrous plaques on tricuspid and pulmonic valves → regurgitation and stenosis",
+      "Ebstein anomaly — \"atrialized\" right ventricle, severe TR, cyanosis; associated with maternal lithium exposure",
+      "vs mitral valve — left-sided AV valve with two leaflets; regurgitation murmurs maximal at apex and radiate to axilla",
+    ],
+    pediatrics:
+      "Ebstein anomaly and severe congenital tricuspid regurgitation present in neonates with cyanosis and heart failure; pediatric tricuspid valve disease often accompanies complex congenital heart lesions rather than isolated rheumatic involvement.",
   },
   {
     id: "pulmonary-vein",

@@ -2028,6 +2028,57 @@ export const CELLS: CellEntry[] = [
       "Same anatomic layers in children; appendicitis perforation → serosal breach and peritonitis; NEC can progress to full-thickness necrosis and perforation.",
   },
   {
+    id: "intima",
+    name: "Intima",
+    etymology:
+      "Latin intimus = innermost — inner layer of the blood vessel wall",
+    aliases: [
+      "intima",
+      "intimas",
+      "tunica intima",
+      "vascular intima",
+      "arterial intima",
+      "inner tunic",
+      "innermost tunic",
+      "inner arterial layer",
+      "intimal layer",
+      "intimal",
+    ],
+    definition:
+      "Innermost layer of the blood vessel wall (tunica intima) — composed of a single layer of endothelial cells overlying a subendothelial connective tissue layer and the internal elastic lamina — forming the luminal surface and primary site of atherosclerotic plaque formation.",
+    characteristics: [
+      "Endothelium — single squamous cell layer regulating permeability, vasomotor tone, and leukocyte adhesion",
+      "Subendothelial connective tissue — matrix where oxidized LDL accumulates in early atherosclerosis",
+      "Internal elastic lamina — fenestrated elastic sheet separating intima from media",
+      "In veins, intima is thinner with less prominent internal elastic lamina than arteries",
+    ],
+    clinicalRelevance: [
+      "Atherosclerosis — fatty streaks, foam cells, and fibroatheromas develop in arterial intima",
+      "Endothelial dysfunction — smoking, HTN, diabetes → ↑ intimal LDL entry and monocyte adhesion",
+      "Intimal hyperplasia — smooth muscle migration/proliferation into intima after endothelial injury (post-angioplasty restenosis)",
+      "Aortic dissection — intimal tear allows blood into media; acute tearing chest/back pain",
+      "Syphilitic aortitis — tree-bark (wrinkled) gross appearance of aortic intima from tertiary syphilis",
+      "Plaque rupture exposes thrombogenic intimal/subendothelial contents → ACS",
+    ],
+    boardsPearls: [
+      "Vessel wall layers: intima (inner) → media (smooth muscle) → adventitia/externa (outer)",
+      "Intima = endothelium + subendothelial matrix + internal elastic lamina",
+      "Atherosclerosis begins in intima — endothelial injury → LDL oxidation → foam cells",
+      "Internal elastic lamina marks intima–media boundary on histology",
+      "vs media — muscular middle layer; intimal tear in dissection, not primary atherosclerotic lipid depot",
+      "vs adventitia — outer connective tissue with vasa vasorum",
+    ],
+    distinguishFrom: [
+      "Media (tunica media) — middle smooth muscle and elastic layer; site of dissection propagation",
+      "Adventitia (tunica externa) — outermost connective tissue anchoring vessel",
+      "Endothelium — cellular lining of intima, not the full intimal layer",
+      "Lumen — blood-filled channel bounded by intimal endothelium",
+      "Mucosa — inner lining of hollow viscera (GI, airway), not vascular wall intima",
+    ],
+    pediatrics:
+      "Arterial intimal anatomy is present from birth; premature intimal atherosclerosis occurs in homozygous familial hypercholesterolemia. Kawasaki disease can injure coronary intima/media with aneurysm formation.",
+  },
+  {
     id: "adventitia",
     name: "Adventitia",
     etymology: "Latin adventicius = coming from outside",
@@ -3284,6 +3335,51 @@ export const CELLS: CellEntry[] = [
     ],
     pediatrics:
       "Bone marrow stroma supports pediatric hematopoiesis; stromal damage from chemotherapy or radiation contributes to cytopenias.",
+  },
+  {
+    id: "mesenchymal",
+    name: "Mesenchymal Tissue",
+    etymology:
+      "Greek mesos = middle + enkyma = infusion/what is poured in",
+    aliases: [
+      "mesenchymal",
+      "mesenchyme",
+      "mesenchymal tissue",
+      "mesenchymal tissues",
+      "mesenchymal cell",
+      "mesenchymal cells",
+      "mesenchymal lineage",
+    ],
+    definition:
+      "Embryonic and adult connective-tissue lineage derived largely from mesoderm, composed of loosely arranged cells in extracellular matrix — gives rise to fibroblasts, osteoblasts, chondroblasts, adipocytes, smooth muscle, and other stromal cell types.",
+    characteristics: [
+      "Mesoderm-derived loose connective tissue in development and organ stroma",
+      "Mesenchymal cells are typically vimentin-positive and mobile during morphogenesis",
+      "Differentiates into bone, cartilage, fat, muscle, and fibrous connective tissue",
+      "Reciprocal signaling with epithelium drives organogenesis (e.g., ureteric bud and metanephric mesenchyme)",
+      "Epithelial-mesenchymal transition (EMT) — epithelial cells acquire mesenchymal phenotype in development, wound repair, fibrosis, and metastasis",
+    ],
+    clinicalRelevance: [
+      "Sarcomas arise from malignant mesenchymal cells (bone, fat, muscle, fibrous tissue)",
+      "Fibrosis and desmoplastic tumor stroma involve activated mesenchymal/fibroblast lineages",
+      "Mesenchymal stem cells in bone marrow stroma support hematopoiesis and repair",
+      "EMT contributes to cancer invasion and metastasis",
+    ],
+    boardsPearls: [
+      "Mesenchymal = connective tissue lineage (vs epithelial parenchyma)",
+      "Carcinoma = epithelial origin; sarcoma = mesenchymal origin",
+      "Vimentin is a classic mesenchymal intermediate filament marker",
+      "Loss of E-cadherin promotes EMT toward mesenchymal phenotype",
+      "Metanephric mesenchyme induces nephron formation via mesenchymal-to-epithelial transition",
+    ],
+    distinguishFrom: [
+      "Stroma — supportive tissue framework of an organ (often mesenchymal in composition)",
+      "Mesoderm — embryonic germ layer giving rise to mesenchyme among other derivatives",
+      "Epithelium — cellular lining/parenchymal tissue, not connective mesenchymal lineage",
+      "Hematopoietic cell — blood lineage from marrow, distinct from stromal mesenchymal support cells",
+    ],
+    pediatrics:
+      "Embryonic mesenchymal development underlies congenital connective tissue and renal anomalies; pediatric sarcomas (e.g., rhabdomyosarcoma, Ewing sarcoma) are mesenchymal malignancies.",
   },
   {
     id: "interstitium",
@@ -5089,6 +5185,50 @@ export const CELLS: CellEntry[] = [
       "Hypertrophic scars more common in children; fetal wound healing has less scarring due to distinct fibroblast/ECM milieu.",
   },
   {
+    id: "myofibroblast",
+    name: "Myofibroblast",
+    etymology:
+      "Greek mys = muscle + Latin fibra = fiber + Greek blastos = germ/bud",
+    aliases: [
+      "myofibroblast",
+      "myofibroblasts",
+      "myo-fibroblast",
+      "myo fibroblast",
+      "alpha-sma fibroblast",
+      "activated fibroblast",
+    ],
+    definition:
+      "Contractile, ECM-producing stromal cell phenotype arising from fibroblast (or other mesenchymal) activation — expresses alpha-smooth muscle actin (α-SMA) and drives wound contraction and fibrotic matrix deposition.",
+    characteristics: [
+      "Activated fibroblast phenotype with stress fibers and α-SMA expression",
+      "Secretes collagen, fibronectin, and matrix metalloproteinases during remodeling",
+      "Generates contractile force that closes wound gaps and distorts tissue architecture in fibrosis",
+      "Can arise from resident fibroblasts, pericytes, or epithelial/endothelial-to-mesenchymal transition in disease",
+    ],
+    clinicalRelevance: [
+      "Wound healing remodeling phase — wound contraction and scar formation",
+      "Hypertrophic scar and keloid — excessive myofibroblast activity",
+      "Pulmonary fibrosis — alveolar/interstitial myofibroblast expansion",
+      "Liver cirrhosis — hepatic stellate cell activation to myofibroblast-like phenotype",
+      "Systemic sclerosis and organ fibrosis pathways",
+    ],
+    boardsPearls: [
+      "Myofibroblast = activated contractile fibroblast (α-SMA positive)",
+      "Central to wound contraction during remodeling phase",
+      "Persistent myofibroblast activity contributes to pathologic fibrosis",
+      "Hepatic stellate cells activate to myofibroblast-like cells in cirrhosis",
+      "vs smooth muscle cell — vessel wall contractile cell, not wound/fibrosis effector phenotype",
+    ],
+    distinguishFrom: [
+      "Fibroblast — quiescent ECM-producing stromal cell before α-SMA activation",
+      "Smooth muscle cell — vascular/visceral contractile cell, not primary wound-healing phenotype",
+      "Keratinocyte — epithelial barrier cell, not mesenchymal contractile stromal cell",
+      "Hepatic stellate cell — liver-specific perisinusoidal cell that can activate into myofibroblast-like state",
+    ],
+    pediatrics:
+      "Children can develop hypertrophic scars from exaggerated myofibroblast-mediated contraction; fetal wounds often heal with less myofibroblast-driven scarring.",
+  },
+  {
     id: "endothelial-cell",
     name: "Endothelial Cell",
     etymology: "Greek endon = within + thele = nipple/breast (historical vessel lining term) + cell",
@@ -5447,6 +5587,48 @@ export const CELLS: CellEntry[] = [
     ],
     pediatrics:
       "Fetal Leydig cells produce testosterone for male external genital differentiation (DHT-dependent); deficiency of LH/hCG signaling or Leydig function causes undervirilization in 46,XY infants. Leydig cell tumors may cause isosexual precocious puberty in boys.",
+  },
+  {
+    id: "cytosol",
+    name: "Cytosol",
+    etymology: "Greek kytos = cell + Latin solvere = to loosen/dissolve",
+    aliases: [
+      "cytosol",
+      "cytosolic",
+      "cytosolic compartment",
+      "aqueous cytoplasm",
+      "intracellular fluid compartment",
+    ],
+    definition:
+      "Aqueous intracellular compartment of the cytoplasm excluding membrane-bound organelles — contains dissolved ions, metabolites, enzymes, and cytoskeletal proteins where many metabolic and signaling reactions occur.",
+    characteristics: [
+      "Major site of glycolysis, pentose phosphate pathway, fatty acid synthesis, and parts of amino acid metabolism",
+      "Free ribosomes synthesize cytosolic and nuclear proteins in cytosol",
+      "Cytosolic Ca²⁺ acts as second messenger after IP3-mediated ER release",
+      "Cytosolic NADH from glycolysis enters mitochondria via malate-aspartate or glycerol-3-phosphate shuttles",
+      "Proteasome-mediated protein degradation and many kinase/phosphatase signaling cascades occur in cytosol",
+    ],
+    clinicalRelevance: [
+      "MHC class I presents peptides from cytosolic protein degradation to CD8⁺ T cells",
+      "Cytosolic viral RNA sensors (RIG-I, MDA5) initiate antiviral interferon responses",
+      "Cytosolic enzyme deficiencies (e.g., some glycolytic defects) cause hemolytic anemia or myopathy",
+      "Drugs/toxins affecting cytosolic signaling (e.g., calcineurin inhibitors) alter immune and metabolic pathways",
+    ],
+    boardsPearls: [
+      "Cytosol = soluble cytoplasmic compartment; cytoplasm includes organelles too",
+      "Glycolysis occurs in cytosol; pyruvate then enters mitochondria for TCA/ETC",
+      "Fatty acid synthesis is cytosolic; beta-oxidation is mitochondrial",
+      "Cytosolic Ca²⁺ rise activates calmodulin, MLCK, and many enzymes",
+      "Endogenous antigen processing for MHC I begins with cytosolic proteins",
+    ],
+    distinguishFrom: [
+      "Cytoplasm — entire cell interior excluding nucleus (includes cytosol + organelles)",
+      "Mitochondrial matrix — separate compartment for TCA cycle and beta-oxidation",
+      "Nucleoplasm — nuclear interior compartment, not cytosol",
+      "Interstitial fluid — extracellular fluid between cells, not intracellular",
+    ],
+    pediatrics:
+      "Inherited defects in cytosolic metabolic enzymes (e.g., pyruvate kinase deficiency) can present in infancy/childhood with hemolytic anemia or exercise intolerance.",
   },
 ];
 

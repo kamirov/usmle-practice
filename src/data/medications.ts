@@ -2322,6 +2322,40 @@ export const MEDICATIONS: MedicationEntry[] = [
     ],
   },
   {
+    id: "alprostadil",
+    name: "Alprostadil (Prostaglandin E1, PGE1)",
+    etymology:
+      "alprostadil = prostaglandin analog naming + prostaglandin E1 = endogenous eicosanoid mediator",
+    aliases: [
+      "alprostadil",
+      "prostaglandin e1",
+      "pge1",
+      "prostaglandin e-1",
+      "prostin vr pediatric",
+      "ductal patency infusion",
+    ],
+    drugClass: "Prostaglandin E1 analog",
+    mechanism:
+      "Activates prostaglandin E receptors in ductal smooth muscle -> vasodilation and maintained patency of the ductus arteriosus; also relaxes vascular and cavernosal smooth muscle.",
+    indications: [
+      "Maintain ductus arteriosus patency in ductal-dependent congenital heart disease (bridge to definitive repair)",
+      "Critical cyanotic CHD physiology such as pulmonary atresia or transposition while awaiting intervention",
+      "Erectile dysfunction (intracavernosal/intraurethral formulations in adult practice)",
+    ],
+    adverseEffects: [
+      "Apnea (especially neonates) requiring airway monitoring",
+      "Hypotension, flushing, fever",
+      "Bradycardia or tachycardia",
+      "Long infusion: cortical hyperostosis and edema (rare in prolonged neonatal use)",
+    ],
+    boardsPearls: [
+      "PGE1 keeps ductus arteriosus open in ductal-dependent lesions",
+      "Use in neonatal cyanotic CHD until surgical/catheter correction",
+      "Opposite board pair: indomethacin/ibuprofen close PDA by lowering prostaglandin signaling",
+      "If a cyanotic neonate worsens as PDA closes, start PGE1 promptly",
+    ],
+  },
+  {
     id: "haloperidol",
     name: "Haloperidol",
     etymology: "halo- = halogenated + peri- = piperidine-related naming element + -dol = butyrophenone antipsychotic suffix",
@@ -2661,6 +2695,42 @@ export const MEDICATIONS: MedicationEntry[] = [
       "vs lorazepam — clonazepam longer acting, more maintenance anticonvulsant use",
       "Avoid combining with other CNS depressants",
       "Peds: used in pediatric epilepsy syndromes; monitor behavior and drooling",
+    ],
+  },
+  {
+    id: "tricyclic-antidepressants",
+    name: "Tricyclic Antidepressants",
+    etymology:
+      "tri = three + cyclic = ringed structure + anti = against + depressant/depression",
+    aliases: [
+      "tricyclic antidepressant",
+      "tricyclic antidepressants",
+      "tca",
+      "tcas",
+      "tricyclics",
+      "tca class",
+    ],
+    drugClass: "Antidepressant class (tricyclics)",
+    mechanism:
+      "Inhibit presynaptic norepinephrine and serotonin reuptake (NET/SERT blockade) and also antagonize muscarinic, histamine H1, and alpha-1 receptors; at toxic levels block fast cardiac sodium channels causing QRS widening and malignant arrhythmias.",
+    indications: [
+      "Major depressive disorder (less first-line than SSRIs/SNRIs due to toxicity profile)",
+      "Neuropathic pain and chronic pain syndromes",
+      "Migraine prophylaxis",
+      "Selected uses such as nocturnal enuresis (imipramine, selected cases)",
+    ],
+    adverseEffects: [
+      "Anticholinergic effects: dry mouth, constipation, urinary retention, blurred vision, confusion",
+      "Sedation and orthostatic hypotension",
+      "Weight gain and sexual dysfunction",
+      "Cardiotoxicity/seizures in overdose (sodium channel blockade, QRS prolongation)",
+    ],
+    boardsPearls: [
+      "TCA overdose with wide QRS -> treat with sodium bicarbonate",
+      "Classic toxicity triad: coma, convulsions, cardiotoxicity",
+      "TCAs are more lethal in overdose than SSRIs",
+      "Examples: amitriptyline, nortriptyline, imipramine, desipramine, clomipramine",
+      "Avoid combining with MAOIs due to serotonin toxicity/hypertensive interaction risk",
     ],
   },
   {
@@ -3742,6 +3812,75 @@ export const MEDICATIONS: MedicationEntry[] = [
       "Absolute contraindication with PDE-5 inhibitors (sildenafil) → life-threatening hypotension",
       "Tolerance develops — nitrate-free interval (e.g., remove patch overnight)",
       "Peds: same NO/cGMP mechanism; used rarely in pediatric pulmonary hypertension under specialist care",
+    ],
+  },
+  {
+    id: "isosorbide-dinitrate",
+    name: "Isosorbide Dinitrate",
+    etymology:
+      "iso = equal/isomeric + sorbide = sugar alcohol derivative + di = two + nitrate = nitrate ester",
+    aliases: [
+      "isosorbide dinitrate",
+      "isosorbide dinitrates",
+      "isdn",
+      "isordil",
+      "isosorbide",
+      "long-acting nitrate",
+    ],
+    drugClass: "Nitrate vasodilator",
+    mechanism:
+      "Donates nitric oxide (NO) in vascular smooth muscle -> activates guanylate cyclase -> ↑ cGMP -> predominant venodilation with some arteriolar dilation -> ↓ preload and myocardial oxygen demand.",
+    indications: [
+      "Chronic angina prophylaxis",
+      "Heart failure with reduced ejection fraction in combination with hydralazine (especially when RAAS blockade not tolerated or as BiDil strategy)",
+      "Symptomatic preload reduction in selected volume-overload states",
+    ],
+    adverseEffects: [
+      "Headache, flushing, hypotension",
+      "Reflex tachycardia",
+      "Dizziness/syncope",
+      "Tolerance with continuous exposure (requires nitrate-free interval)",
+    ],
+    boardsPearls: [
+      "Nitrates are primarily venodilators -> ↓ preload and ↓ myocardial O2 demand",
+      "Hydralazine + isosorbide dinitrate improves outcomes in selected HFrEF populations",
+      "Absolute contraindication with PDE-5 inhibitors due to severe hypotension risk",
+      "Nitrate tolerance occurs with continuous dosing; schedule nitrate-free period",
+    ],
+  },
+  {
+    id: "phenylephrine",
+    name: "Phenylephrine",
+    etymology: "phenyl = benzene ring + ephedrine-related naming root",
+    aliases: [
+      "phenylephrine",
+      "neo-synephrine",
+      "neosynephrine",
+      "alpha-1 agonist",
+      "a1 agonist",
+      "alpha agonist vasopressor",
+    ],
+    drugClass: "Selective alpha-1 adrenergic agonist",
+    mechanism:
+      "Selective alpha-1 receptor activation -> peripheral vasoconstriction -> ↑ systemic vascular resistance and blood pressure; no direct beta-1 stimulation, so heart rate may decrease via baroreflex.",
+    indications: [
+      "Hypotension and distributive shock requiring pure vasoconstrictor support",
+      "Nasal decongestant (topical/systemic formulations)",
+      "Mydriasis for ophthalmic exam (without cycloplegia)",
+      "Support of blood pressure in anesthesia-related vasodilation",
+    ],
+    adverseEffects: [
+      "Hypertension and reflex bradycardia",
+      "Peripheral/mesenteric ischemia with excessive vasoconstriction",
+      "Urinary retention (alpha-1 effect at bladder neck/prostate)",
+      "Rebound congestion with prolonged topical nasal use (rhinitis medicamentosa)",
+    ],
+    boardsPearls: [
+      "Phenylephrine is pure alpha-1 agonism: ↑ SVR/MAP with reflex slowing of heart rate",
+      "Unlike epinephrine/norepinephrine, it has no direct beta-1 inotropic effect",
+      "Can worsen afterload-sensitive low-output states if used inappropriately",
+      "Topical overuse causes rebound nasal congestion",
+      "Peds: decongestant formulations can cause toxicity in young children; dosing and use are limited by age-specific guidance",
     ],
   },
   {
@@ -6652,6 +6791,41 @@ export const MEDICATIONS: MedicationEntry[] = [
     ],
   },
   {
+    id: "phosphodiesterase-inhibitors",
+    name: "Phosphodiesterase Inhibitors",
+    etymology:
+      "phospho = phosphate + diesterase = enzyme that cleaves phosphodiester bonds + inhibitor = blocker",
+    aliases: [
+      "phosphodiesterase inhibitor",
+      "phosphodiesterase inhibitors",
+      "pde inhibitor",
+      "pde inhibitors",
+      "pde inhibition",
+    ],
+    drugClass: "Mechanistic drug class (PDE enzyme inhibitors)",
+    mechanism:
+      "Inhibit phosphodiesterase enzymes that degrade cyclic nucleotides (cAMP/cGMP), increasing intracellular second-messenger signaling; clinical effect depends on PDE isoenzyme targeted (e.g., PDE3, PDE5, nonselective).",
+    indications: [
+      "PDE5 inhibitors (sildenafil/tadalafil/vardenafil): erectile dysfunction, pulmonary arterial hypertension",
+      "PDE3 inhibitor (milrinone): short-term inotropic support in acute decompensated heart failure",
+      "PDE3 inhibitor (cilostazol): intermittent claudication",
+      "Nonselective methylxanthines (theophylline/caffeine): bronchodilation and CNS stimulation contexts",
+    ],
+    adverseEffects: [
+      "Hypotension, headache, flushing (especially PDE5-mediated vasodilation)",
+      "Reflex tachycardia and arrhythmia risk (agent-dependent)",
+      "Drug-specific toxicities (e.g., visual effects with PDE5, narrow therapeutic index with theophylline)",
+      "Class interaction: nitrates + PDE5 inhibitors -> severe hypotension",
+    ],
+    boardsPearls: [
+      "Core concept: PDE inhibition -> increased cyclic nucleotides (cAMP or cGMP) depending on subtype",
+      "PDE5 inhibitors + nitrates are absolutely contraindicated",
+      "Milrinone (PDE3 inhibitor) is an inodilator for acute use, not chronic oral HF therapy",
+      "Cilostazol is PDE3 inhibitor for claudication but contraindicated in heart failure",
+      "Theophylline is nonselective PDE inhibitor and adenosine antagonist",
+    ],
+  },
+  {
     id: "normal-saline",
     name: "Normal Saline",
     etymology: "Latin normalis = standard + sal = salt + aqua = water solution",
@@ -6692,6 +6866,89 @@ export const MEDICATIONS: MedicationEntry[] = [
       "vs hypotonic fluids (D5W after glucose metabolized) — NS stays intravascular better for volume",
       "Hypercalcemia treatment includes IV NS hydration",
       "Third-spacing (pancreatitis, sepsis) may need aggressive crystalloid but monitor overload",
+    ],
+  },
+  {
+    id: "lactated-ringer",
+    name: "Lactated Ringer",
+    etymology:
+      "eponym: Sydney Ringer (physiologist) + lactate anion buffer + solution",
+    aliases: [
+      "lactated ringer",
+      "lactated ringers",
+      "lactated ringer's",
+      "lactated ringers solution",
+      "lactated ringer solution",
+      "lr",
+      "lrs",
+      "ringers lactate",
+      "ringer lactate",
+      "ringer's lactate",
+      "ringers lactate solution",
+      "hartmann solution",
+      "hartmann's solution",
+      "hartmanns solution",
+    ],
+    drugClass: "Crystalloid intravenous fluid",
+    mechanism:
+      "Balanced isotonic crystalloid with Na⁺, K⁺, Ca²⁺, and Cl⁻ approximating extracellular fluid, plus lactate (28 mEq/L) metabolized by the liver to bicarbonate — expands intravascular and interstitial volume with less hyperchloremic acidosis than normal saline.",
+    indications: [
+      "Volume resuscitation in hypovolemia, hemorrhage, sepsis, burns, and surgical losses",
+      "Acute pancreatitis and other third-spacing states requiring crystalloid replacement",
+      "Maintenance and perioperative IV fluid when balanced electrolyte solution preferred",
+      "Alternative to normal saline for large-volume resuscitation",
+    ],
+    adverseEffects: [
+      "Hyperkalemia risk in renal failure or when combined with other potassium sources",
+      "Volume overload — pulmonary edema",
+      "Do not mix in same line with citrated blood products — calcium can overwhelm citrate anticoagulation",
+      "Less effective free-water provision than D5W for pure water deficit",
+    ],
+    boardsPearls: [
+      "LR = balanced crystalloid; lactate → bicarbonate after hepatic metabolism",
+      "vs NS — LR has lower chloride; less hyperchloremic metabolic acidosis with massive resuscitation",
+      "Contains K⁺ and Ca²⁺ — caution in hyperkalemia; avoid same-line infusion with packed RBCs",
+      "vs D5W — LR provides effective isotonic volume; D5W becomes free water after glucose metabolized",
+      "Common resuscitation fluid in burns, sepsis, pancreatitis, and trauma",
+    ],
+  },
+  {
+    id: "d5w",
+    name: "D5W",
+    etymology:
+      "D = dextrose (glucose) + 5 = 5% concentration + W = water",
+    aliases: [
+      "d5w",
+      "d5 w",
+      "5% dextrose in water",
+      "5 percent dextrose in water",
+      "dextrose 5% in water",
+      "dextrose five percent water",
+      "5% dextrose water",
+      "dextrose water",
+      "glucose 5% water",
+    ],
+    drugClass: "Crystalloid intravenous fluid (dextrose solution)",
+    mechanism:
+      "5% dextrose in water is initially isotonic in the bag; after glucose is metabolized, only free water remains — distributing throughout total body water (intracellular and extracellular) and lowering serum sodium concentration.",
+    indications: [
+      "Maintenance IV fluids after initial volume resuscitation",
+      "Hypernatremia with water deficit (after intravascular volume restored)",
+      "SIADH/hyponatremia management in selected settings (careful rate correction)",
+      "Drug diluent and calorie supplementation in NPO patients (limited)",
+    ],
+    adverseEffects: [
+      "Hyponatremia with excessive or rapid infusion — especially if ADH elevated",
+      "Inadequate volume resuscitation for acute hypovolemia once glucose metabolized",
+      "Hyperglycemia in diabetic or stressed patients",
+      "Does not replace sodium, potassium, or chloride losses alone",
+    ],
+    boardsPearls: [
+      "D5W is isotonic in bag but hypotonic after glucose metabolized → free water",
+      "Poor choice alone for acute hemorrhagic or third-spacing hypovolemia — use isotonic crystalloid (NS/LR) first",
+      "Hypernatremia: restore volume then give free water (D5W or enteral water)",
+      "vs NS/LR — isotonic crystalloids expand intravascular volume; D5W distributes as water",
+      "Excess D5W + SIADH/heart failure → dilutional hyponatremia",
     ],
   },
 ];

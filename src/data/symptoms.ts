@@ -10711,6 +10711,44 @@ export const SYMPTOMS: SymptomEntry[] = [
       "Congenital syphilis and adolescent neurosyphilis are uncommon but ARP may appear in tertiary disease; pediatric light-near dissociation more often Adie's tonic pupil — review sexual history and syphilis serology when ARP suspected.",
   },
   {
+    id: "tonic-pupil",
+    name: "Tonic Pupil (Adie Pupil)",
+    etymology:
+      "Greek tonos = tension/tone + Latin pupilla = little doll; eponym Adie",
+    aliases: [
+      "tonic pupil",
+      "tonic pupils",
+      "adie pupil",
+      "adie's pupil",
+      "adie tonic pupil",
+      "atonic pupil",
+      "atonic pupils",
+      "light-near dissociation pupil",
+    ],
+    definition:
+      "Usually unilateral dilated pupil with poor or absent light reaction but preserved slow constriction to near effort (light-near dissociation), classically due to postganglionic parasympathetic denervation of the iris sphincter.",
+    mechanism:
+      "Damage to ciliary ganglion or short ciliary nerves reduces parasympathetic input to the sphincter pupillae -> denervation supersensitivity and sluggish 'tonic' near response; deep tendon reflexes may be reduced in Adie syndrome.",
+    thinkOf: [
+      "Adie syndrome (tonic pupil +/- diminished Achilles/deep tendon reflexes)",
+      "Benign unilateral anisocoria in young adults, especially women",
+      "Post-viral or idiopathic ciliary ganglion neuropathy",
+    ],
+    pairWith: [
+      "Anisocoria greater in bright light -> parasympathetic defect pattern",
+      "Sluggish redilation after near response (tonic behavior)",
+      "Low-dose pilocarpine constriction due to denervation supersensitivity",
+    ],
+    distinguishFrom: [
+      "Argyll Robertson pupil — classically small irregular pupils in neurosyphilis",
+      "CN III palsy — mydriasis with ptosis and ophthalmoplegia",
+      "Pharmacologic mydriasis — typically no constriction with dilute pilocarpine",
+      "Physiologic anisocoria — both pupils still react normally to light",
+    ],
+    pediatrics:
+      "Adie tonic pupil is less common in children; anisocoria in pediatric patients warrants evaluation for third-nerve palsy, trauma, pharmacologic exposure, or congenital iris abnormalities before labeling benign tonic pupil.",
+  },
+  {
     id: "pinpoint-pupils",
     name: "Pinpoint Pupils",
     etymology:

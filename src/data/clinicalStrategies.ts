@@ -275,6 +275,38 @@ export const CLINICAL_STRATEGIES: ClinicalStrategyEntry[] = [
       "APGAR is a neonatal assessment tool; premature infants may score lower on Activity and Respiration without necessarily indicating poor long-term outcome. Resuscitation follows NRP algorithms independent of waiting for 1-minute score.",
   },
   {
+    id: "neonate",
+    name: "Neonate",
+    etymology: "Greek neo = new + Latin natus = born",
+    aliases: [
+      "neonate",
+      "neonates",
+      "neonatal",
+      "newborn",
+      "newborn infant",
+      "newborn period",
+    ],
+    definition:
+      "Infant in the first 28 days of life, a developmental window with distinct physiology, pathology, and emergency priorities on Step 1.",
+    details: [
+      "Age range: birth through day 28 (first month of life)",
+      "Transitional physiology: closure of fetal shunts (foramen ovale, ductus arteriosus, ductus venosus) and fall in pulmonary vascular resistance after birth",
+      "Neonates have immature hepatic conjugation and renal clearance, affecting bilirubin metabolism and drug handling",
+      "Sepsis and HSV infection can present nonspecifically (poor feeding, lethargy, temperature instability) and require urgent evaluation",
+      "Common board priorities: neonatal jaundice timing, congenital heart disease screening, inborn errors, neonatal respiratory distress syndromes",
+      "APGAR is an immediate transition score, not a standalone long-term neurologic predictor",
+    ],
+    boardsPearls: [
+      "Neonate = first 28 days; infant = first year",
+      "Persistent ductus arteriosus and persistent pulmonary hypertension are neonatal cardiopulmonary board themes",
+      "Unconjugated hyperbilirubinemia in neonates risks kernicterus; assess age in hours and risk factors",
+      "Any febrile neonate is high risk for serious bacterial infection and typically needs full sepsis workup",
+      "vs preterm infant classification: gestational age category is separate from neonatal chronological age",
+    ],
+    pediatrics:
+      "This term is intrinsically pediatric: neonatal physiology differs from older infants/children in airway, circulation, thermoregulation, bilirubin handling, and infection risk, which drives distinct management pathways.",
+  },
+  {
     id: "reflex",
     name: "Reflex",
     etymology:
@@ -742,6 +774,37 @@ export const CLINICAL_STRATEGIES: ClinicalStrategyEntry[] = [
     ],
     pediatrics:
       "Pregnancy affects the fetus — teratogenic drug exposure, TORCH infections, and Rh alloimmunization are classic Step 1 fetal complications. Neonatal outcomes (RDS, prematurity) follow maternal and delivery factors.",
+  },
+  {
+    id: "synergism",
+    name: "Synergism",
+    etymology:
+      "Greek syn = together + ergon = work -> combined action greater than sum",
+    aliases: [
+      "synergism",
+      "synergy",
+      "synergistic effect",
+      "synergistic interaction",
+      "drug synergy",
+      "pharmacologic synergism",
+    ],
+    definition:
+      "Interaction where two agents used together produce a greater effect than the sum of their individual effects.",
+    details: [
+      "Distinct from additive effect: additive means 1 + 1 = 2, synergism means 1 + 1 > 2",
+      "Clinical pharmacology examples: trimethoprim + sulfamethoxazole sequential folate blockade; beta-lactam + aminoglycoside in select severe infections",
+      "Toxic synergy also important: aminoglycosides + loop diuretics increase ototoxicity/nephrotoxicity risk",
+      "Hemodynamic synergy can be therapeutic (e.g., hydralazine + nitrate in HFrEF) or harmful if excessive hypotension occurs",
+      "Evaluate both efficacy synergy and adverse-effect synergy when combining agents",
+    ],
+    boardsPearls: [
+      "Synergism = combined effect exceeds arithmetic sum of single-agent effects",
+      "TMP-SMX is classic sequential pathway synergy",
+      "Aminoglycoside + loop diuretic is classic synergistic toxicity",
+      "Do not confuse synergism with potentiation (one agent with little effect alone boosts another)",
+    ],
+    pediatrics:
+      "Pediatric combination therapy follows same synergy principles, but toxicity synergy (renal/ototoxic/neurotoxic) is often more clinically limiting because of narrower dosing margins.",
   },
 ];
 

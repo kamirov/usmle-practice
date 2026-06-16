@@ -1857,6 +1857,7 @@ export const LAB_VALUES: LabValueEntry[] = [
       "Acrodermatitis enteropathica — periorificial/ acral dermatitis in infants; lifelong zinc",
       "Wilson disease treated with zinc acetate to block copper absorption",
       "vs copper — excess zinc causes copper deficiency myelopathy/sideroblasts",
+      "Zinc is catalytic cofactor in matrix metalloproteinases (MMPs) that degrade ECM and basement membrane",
     ],
     pairWith: [
       "Periorificial rash + diarrhea + alopecia in infant → acrodermatitis enteropathica",

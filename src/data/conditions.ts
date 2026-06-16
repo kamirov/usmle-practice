@@ -23,6 +23,8 @@ export const CONDITIONS: ConditionEntry[] = [
     etymology: "Greek myo- = muscle + kardia = heart + Latin infarctus = stuffed/blocked tissue",
     aliases: [
       "myocardial infarction",
+      "infarction",
+      "infarctions",
       "mi",
       "heart attack",
       "acute mi",
@@ -74,6 +76,68 @@ export const CONDITIONS: ConditionEntry[] = [
     ],
     pediatrics:
       "MI rare in children; consider Kawasaki disease (coronary aneurysm/thrombosis), anomalous coronary origin, or hypercoagulability. Chest pain in adolescents still warrants ECG and troponin when ischemia is suspected.",
+  },
+  {
+    id: "right-ventricular-infarction",
+    name: "Right Ventricular Infarction",
+    etymology:
+      "Latin dexter/right ventricular chamber + Latin infarctus = stuffed/blocked tissue",
+    aliases: [
+      "right ventricular infarction",
+      "right ventricle infarction",
+      "rv infarction",
+      "right ventricular mi",
+      "rv mi",
+      "inferior mi with rv involvement",
+      "right-sided mi",
+    ],
+    definition:
+      "Myocardial necrosis of the right ventricle, usually from proximal right coronary artery occlusion and commonly accompanying inferior wall MI.",
+    pathophysiology:
+      "Proximal RCA occlusion compromises right ventricular free-wall perfusion -> RV systolic failure and reduced forward flow to the left ventricle -> low LV preload and hypotension despite clear lungs; RV ischemia may also injure AV nodal blood supply causing bradyarrhythmias/heart block.",
+    classicPresentation: [
+      "Inferior MI symptoms with hypotension, elevated JVP, and clear lung fields",
+      "ST elevation in right-sided leads (especially V4R) in setting of inferior STEMI",
+      "Preload dependence with hypotension worsened by nitrates or diuretics",
+    ],
+    keyFindings: [
+      "Inferior STEMI pattern (II, III, aVF) plus right-sided lead ST elevation (V4R)",
+      "JVD with hypotension and relatively clear lungs (vs LV failure pulmonary edema)",
+      "Possible AV block or bradycardia from RCA/AV nodal ischemia",
+    ],
+    keyLabs: [
+      "Cardiac troponin elevation consistent with acute MI",
+      "Hemodynamic profile may show elevated right-sided filling pressures with low cardiac output",
+    ],
+    associations: [
+      "Proximal right coronary artery occlusion",
+      "Inferior STEMI",
+      "AV nodal ischemia and bradyarrhythmias",
+    ],
+    complications: [
+      "Cardiogenic shock (preload-dependent RV failure)",
+      "High-grade AV block/bradyarrhythmia",
+      "Systemic hypoperfusion and renal injury from low output",
+    ],
+    distinguishFrom: [
+      "Left ventricular cardiogenic shock — often has pulmonary edema/crackles",
+      "Massive pulmonary embolism — RV strain with different ECG/imaging context",
+      "Cardiac tamponade — hypotension + JVD with muffled heart sounds and pulsus paradoxus",
+    ],
+    treatment: [
+      "Urgent reperfusion (PCI preferred) for culprit coronary occlusion",
+      "Careful IV fluid loading to maintain RV preload when hypotensive",
+      "Avoid preload-reducing agents (nitrates, aggressive diuretics) in unstable RV infarct",
+      "Vasopressor/inotropic support if persistent shock; treat bradyarrhythmias as needed",
+    ],
+    boardsPearls: [
+      "Inferior MI + hypotension + JVD + clear lungs -> think RV infarction",
+      "Check right-sided ECG lead V4R for ST elevation",
+      "Give fluids; avoid nitrates/diuretics early because RV infarct is preload dependent",
+      "RCA infarcts can produce AV block/bradycardia from nodal ischemia",
+    ],
+    pediatrics:
+      "True atherosclerotic RV infarction is rare in children; similar hemodynamic principle applies in pediatric RV failure states where preload dependence and hypotension may worsen with aggressive preload reduction.",
   },
   {
     id: "stable-angina",
@@ -2961,7 +3025,6 @@ export const CONDITIONS: ConditionEntry[] = [
       "atherosclerosis",
       "coronary artery disease",
       "cad",
-      "atheroma",
       "atherosclerotic plaque",
       "coronary atherosclerosis",
       "arterial plaque",
@@ -4235,6 +4298,9 @@ export const CONDITIONS: ConditionEntry[] = [
     aliases: [
       "atrioventricular heart block",
       "av block",
+      "atrioventricular conduction delay",
+      "av conduction delay",
+      "av nodal conduction delay",
       "heart block",
       "third degree heart block",
       "complete heart block",
@@ -12889,6 +12955,68 @@ export const CONDITIONS: ConditionEntry[] = [
     ],
     pediatrics:
       "Classic nursery emergency — cyanotic newborn with saturations often in 40s–70s. Start prostaglandin E1 immediately if ductal-dependent mixing; urgent cardiology and balloon septostomy or arterial switch. Always distinguish d-TGA from L-TGA on echo.",
+  },
+  {
+    id: "pulmonary-atresia",
+    name: "Pulmonary Atresia",
+    etymology:
+      "Latin pulmo = lung + Greek a- = without + tresis = perforation/opening",
+    aliases: [
+      "pulmonary atresia",
+      "pulmonic atresia",
+      "pulmonary valve atresia",
+      "pulmonary atresias",
+      "ductal-dependent pulmonary blood flow lesion",
+    ],
+    definition:
+      "Critical cyanotic congenital heart defect with absent or imperforate pulmonary valve opening and no effective antegrade flow from right ventricle to pulmonary artery.",
+    pathophysiology:
+      "Pulmonary outflow tract/valve fails to form a patent channel, preventing RV-to-PA forward flow. Pulmonary circulation becomes ductal-dependent via PDA or collateral vessels. Main forms are pulmonary atresia with intact ventricular septum (often hypoplastic RV) and pulmonary atresia with VSD (conotruncal spectrum).",
+    classicPresentation: [
+      "Severe neonatal cyanosis in the first hours to days of life",
+      "Rapid desaturation as ductus arteriosus constricts",
+      "Tachypnea and poor perfusion in severe ductal closure",
+    ],
+    keyFindings: [
+      "Hypoxemia with limited response to supplemental oxygen",
+      "No antegrade flow across pulmonary valve on echocardiography",
+      "Associated VSD or hypoplastic RV depending on subtype",
+      "Need for PDA flow to sustain pulmonary perfusion",
+    ],
+    keyLabs: [
+      "Pulse oximetry showing persistent low saturations",
+      "Echocardiography confirming absent pulmonary valve outflow and defining anatomy",
+      "Blood gas may show hypoxemia and metabolic acidosis when ductus closes",
+    ],
+    associations: [
+      "Ductal-dependent pulmonary circulation",
+      "Tetralogy-like conotruncal anatomy when VSD present",
+      "Right ventricular hypoplasia in intact septum subtype",
+      "Neonatal cyanotic CHD emergency physiology",
+    ],
+    complications: [
+      "Hypoxemic shock when PDA closes",
+      "Severe metabolic acidosis and end-organ ischemia",
+      "Death without urgent stabilization and intervention",
+    ],
+    distinguishFrom: [
+      "Severe pulmonary stenosis — still has some antegrade pulmonary flow",
+      "Tricuspid atresia — absent RA-to-RV inflow with obligatory atrial-level shunt",
+      "Transposition of the great arteries — parallel circulations with ventriculoarterial discordance",
+    ],
+    treatment: [
+      "Immediate prostaglandin E1 infusion to maintain ductal patency",
+      "Neonatal stabilization with oxygenation/ventilatory and hemodynamic support",
+      "Definitive staged catheter or surgical repair based on subtype anatomy",
+    ],
+    boardsPearls: [
+      "Pulmonary atresia is a ductal-dependent cyanotic lesion",
+      "Cyanotic neonate worsening as PDA closes -> start PGE1 promptly",
+      "Differentiate from severe pulmonic stenosis by absent antegrade valve flow",
+      "Can occur with VSD (conotruncal) or intact septum (often hypoplastic RV)",
+    ],
+    pediatrics:
+      "This is a neonatal emergency requiring immediate PGE1 and urgent congenital cardiology/surgical evaluation.",
   },
   {
     id: "rvot-obstruction",
