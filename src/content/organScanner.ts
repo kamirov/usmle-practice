@@ -133,10 +133,14 @@ interface CoalescedTextView {
 
 type TermTrie = ReturnType<typeof buildTermTrie>;
 
+interface HighlightedAliasRecord {
+  term: TermMatch;
+  zone: number;
+}
+
 let termTrie: TermTrie | null = null;
-let highlightedOnQuestion = new Set<string>();
-let highlightedWordsOnQuestion = new Set<string>();
-let highlightedTermZone = new Map<string, number>();
+let highlightedAliasesOnQuestion = new Map<string, HighlightedAliasRecord>();
+let suppressedPopoverTermKeys = new Set<string>();
 let questionFingerprint = "";
 let allowPopoverScan = false;
 const pendingScanRoots = new Set<Element>();
@@ -167,19 +171,8 @@ function getTermTrie(): TermTrie {
   return termTrie;
 }
 
-function getAliasesForTerm(term: TermMatch): Set<string> {
-  const aliases = ALIASES_BY_TERM_KEY[termKey(term)];
-  return new Set(aliases ?? [normalizedWordKey(term.alias)]);
-}
-
-function isSynonymAlreadyHighlighted(term: TermMatch): boolean {
-  if (highlightedOnQuestion.has(termKey(term))) return true;
-
-  for (const alias of getAliasesForTerm(term)) {
-    if (highlightedWordsOnQuestion.has(alias)) return true;
-  }
-
-  return false;
+function aliasKeyFromMatch(matchText: string): string {
+  return normalizedWordKey(matchText);
 }
 
 function unwrapAllChips(): void {
@@ -281,42 +274,41 @@ function unwrapChip(chip: Element): void {
   parent.normalize();
 }
 
-function evictTermHighlight(term: TermMatch): void {
-  const key = termKey(term);
-  highlightedOnQuestion.delete(key);
-  highlightedTermZone.delete(key);
+function evictAliasHighlight(aliasKey: string): void {
+  const record = highlightedAliasesOnQuestion.get(aliasKey);
+  highlightedAliasesOnQuestion.delete(aliasKey);
+  if (!record) return;
 
-  for (const alias of getAliasesForTerm(term)) {
-    highlightedWordsOnQuestion.delete(alias);
-  }
-
-  for (const chip of document.querySelectorAll(chipSelectorForTerm(term))) {
-    unwrapChip(chip);
+  for (const chip of document.querySelectorAll(
+    chipSelectorForTerm(record.term),
+  )) {
+    if (aliasKeyFromMatch(chip.textContent ?? "") === aliasKey) {
+      unwrapChip(chip);
+    }
   }
 }
 
 function isAlreadyHighlighted(
   term: TermMatch,
-  _matchText: string,
+  matchText: string,
   zone: number,
 ): boolean {
-  const key = termKey(term);
-  const existingZone = highlightedTermZone.get(key);
-  if (existingZone !== undefined && zone < existingZone) {
-    evictTermHighlight(term);
+  if (suppressedPopoverTermKeys.has(termKey(term))) return true;
+
+  const aliasKey = aliasKeyFromMatch(matchText);
+  const existing = highlightedAliasesOnQuestion.get(aliasKey);
+  if (existing && zone < existing.zone) {
+    evictAliasHighlight(aliasKey);
     return false;
   }
 
-  return isSynonymAlreadyHighlighted(term);
+  return existing !== undefined;
 }
 
-function recordHighlight(term: TermMatch, _matchText: string, zone: number): void {
-  const key = termKey(term);
-  highlightedOnQuestion.add(key);
-  highlightedTermZone.set(key, zone);
-  for (const alias of getAliasesForTerm(term)) {
-    highlightedWordsOnQuestion.add(alias);
-  }
+function recordHighlight(term: TermMatch, matchText: string, zone: number): void {
+  const aliasKey = aliasKeyFromMatch(matchText);
+  if (!aliasKey) return;
+  highlightedAliasesOnQuestion.set(aliasKey, { term, zone });
 }
 
 function termMatchFromPopoverTarget(target: ChipPopoverTarget): TermMatch {
@@ -329,8 +321,8 @@ function termMatchFromPopoverTarget(target: ChipPopoverTarget): TermMatch {
   };
 }
 
-function excludePopoverOwnTerm(target: ChipPopoverTarget, zone: number): void {
-  recordHighlight(termMatchFromPopoverTarget(target), "", zone);
+function excludePopoverOwnTerm(target: ChipPopoverTarget): void {
+  suppressedPopoverTermKeys.add(termKey(termMatchFromPopoverTarget(target)));
 }
 
 function collectAreasForGroup(
@@ -403,9 +395,8 @@ function getQuestionFingerprint(): string {
 }
 
 function resetQuestionHighlights(): void {
-  highlightedOnQuestion.clear();
-  highlightedWordsOnQuestion.clear();
-  highlightedTermZone.clear();
+  highlightedAliasesOnQuestion.clear();
+  suppressedPopoverTermKeys.clear();
   questionFingerprint = "";
 }
 
@@ -414,9 +405,8 @@ function syncQuestionContext(): boolean {
   const changed = questionFingerprint !== "" && next !== questionFingerprint;
   if (changed) {
     unwrapAllChips();
-    highlightedOnQuestion.clear();
-    highlightedWordsOnQuestion.clear();
-    highlightedTermZone.clear();
+    highlightedAliasesOnQuestion.clear();
+    suppressedPopoverTermKeys.clear();
     pendingScanRoots.clear();
     clearHighlightQueue();
   }
@@ -912,22 +902,19 @@ export function scanPopoverRoot(
 ): void {
   if (!popover.isConnected) return;
 
-  const previousHighlightedOnQuestion = highlightedOnQuestion;
-  const previousHighlightedWordsOnQuestion = highlightedWordsOnQuestion;
-  const previousHighlightedTermZone = highlightedTermZone;
+  const previousHighlightedAliasesOnQuestion = highlightedAliasesOnQuestion;
+  const previousSuppressedPopoverTermKeys = suppressedPopoverTermKeys;
   const previousAllowPopoverScan = allowPopoverScan;
 
-  highlightedOnQuestion = new Set();
-  highlightedWordsOnQuestion = new Set();
-  highlightedTermZone = new Map();
+  highlightedAliasesOnQuestion = new Map();
+  suppressedPopoverTermKeys = new Set();
   allowPopoverScan = true;
-  excludePopoverOwnTerm(target, SCAN_ZONE.OTHER);
+  excludePopoverOwnTerm(target);
   for (const coalesceRoot of collectCoalesceRoots(popover)) {
     highlightCoalescedRoot(coalesceRoot, SCAN_ZONE.OTHER);
   }
-  highlightedOnQuestion = previousHighlightedOnQuestion;
-  highlightedWordsOnQuestion = previousHighlightedWordsOnQuestion;
-  highlightedTermZone = previousHighlightedTermZone;
+  highlightedAliasesOnQuestion = previousHighlightedAliasesOnQuestion;
+  suppressedPopoverTermKeys = previousSuppressedPopoverTermKeys;
   allowPopoverScan = previousAllowPopoverScan;
 }
 

@@ -2005,6 +2005,55 @@ export const LAB_VALUES: LabValueEntry[] = [
     ],
   },
   {
+    id: "procalcitonin",
+    name: "Procalcitonin",
+    etymology:
+      "Latin pro = before + calcitonin = calcium-lowering hormone — precursor peptide of calcitonin",
+    aliases: [
+      "procalcitonin",
+      "procalcitonins",
+      "pro calcitonin",
+      "pct",
+      "serum procalcitonin",
+      "plasma procalcitonin",
+      "procalcitonin level",
+      "procalcitonin levels",
+      "procalcitonin assay",
+    ],
+    measures:
+      "Precursor peptide of calcitonin (116 amino acids) released into blood during bacterial infection and systemic inflammation — used as an adjunct biomarker to support bacterial etiology and guide antibiotic duration in sepsis and respiratory infections.",
+    normalRange:
+      "<0.1 ng/mL (assay-dependent) in healthy adults; values >0.25–0.5 ng/mL suggest possible bacterial infection; >2 ng/mL strongly associated with sepsis/bacteremia in appropriate clinical context",
+    increasedCauses: [
+      "Bacterial infection and sepsis (most boards-relevant)",
+      "Severe bacterial pneumonia, meningitis, pyelonephritis",
+      "Postoperative and post-cardiac surgery inflammation (can rise without infection — interpret with context)",
+      "Severe trauma, burns, or major tissue injury (moderate nonspecific rise possible)",
+      "Prolonged cardiogenic shock or severe organ failure (nonspecific elevation)",
+    ],
+    decreasedCauses: [
+      "Typically low in uncomplicated viral upper respiratory infection",
+      "Often lower than in bacterial infection during viral pneumonia (adjunct distinction, not absolute)",
+      "Not clinically useful when decreased — interpret elevated values in context",
+    ],
+    boardsPearls: [
+      "Precursor of calcitonin — but medullary thyroid carcinoma is tracked with calcitonin, not procalcitonin",
+      "↑ Procalcitonin favors bacterial infection; more specific than CRP for bacterial sepsis on boards",
+      "Low/normal procalcitonin with fever — consider viral illness or noninfectious inflammation (adjunct only)",
+      "Sepsis workup still requires cultures, lactate, and clinical criteria — procalcitonin is supportive, not definitive alone",
+      "Antibiotic stewardship: falling procalcitonin may support stopping antibiotics in selected patients",
+      "vs CRP — both rise with inflammation; procalcitonin relatively more bacterial-weighted",
+      "vs calcitonin tumor marker — MTC uses calcitonin; do not confuse the two tests",
+    ],
+    pairWith: [
+      "Fever + hypotension + ↑ procalcitonin + positive blood cultures → bacterial sepsis",
+      "↑ procalcitonin + leukocytosis + focal infiltrate → bacterial pneumonia",
+      "↑ CRP with normal/low procalcitonin → viral URI or autoimmune flare (clinical correlation)",
+      "Suspected meningitis + ↑ procalcitonin → favors bacterial etiology; LP still required",
+      "Antibiotic course + falling procalcitonin → stewardship signal to de-escalate when clinically appropriate",
+    ],
+  },
+  {
     id: "prolactin",
     name: "Prolactin",
     etymology: "Latin pro = forward + lac = milk + -in protein suffix",

@@ -734,6 +734,59 @@ export const SYMPTOMS: SymptomEntry[] = [
       "Infants and young children have compliant chest walls — suprasternal, intercostal, and subcostal retractions appear early with airway obstruction or bronchiolitis. Nasal flaring and grunting may accompany retractions in neonatal respiratory distress.",
   },
   {
+    id: "suprapubic-pain",
+    name: "Suprapubic Pain",
+    etymology:
+      "Latin supra = above + pubis = pubic bone + Latin poena/pain = suffering — discomfort in the lower mid-abdomen over the bladder",
+    aliases: [
+      "suprapubic pain",
+      "suprapubic pains",
+      "suprapubic discomfort",
+      "suprapubic tenderness",
+      "suprapubic cramping",
+      "suprapubic pressure",
+      "suprapubic ache",
+      "pain above the pubis",
+      "pain above pubic bone",
+      "bladder pain",
+      "bladder pains",
+      "lower midline abdominal pain",
+      "suprapubic abdominal pain",
+    ],
+    definition:
+      "Pain or tenderness localized to the lower mid-abdomen just above the pubic symphysis — anatomically over the urinary bladder and adjacent pelvic structures.",
+    mechanism:
+      "Bladder wall inflammation (cystitis), distention (acute urinary retention), or mucosal irritation (stones, interstitial cystitis) activates visceral afferents in the bladder and pelvis → dull midline lower abdominal pain; referred or adjacent pelvic pathology (prostatitis, PID, endometriosis) can produce similar localization.",
+    thinkOf: [
+      "Acute cystitis / uncomplicated UTI — dysuria, frequency, urgency",
+      "Acute urinary retention — distended bladder, inability to void",
+      "Pyelonephritis — may have fever and flank/CVA tenderness in addition",
+      "Acute bacterial prostatitis — fever, perineal/suprapubic pain, tender boggy prostate",
+      "Interstitial cystitis — chronic bladder pain and urgency",
+      "Bladder stone or catheter-associated UTI",
+      "Primary dysmenorrhea or endometriosis — cyclic suprapubic/pelvic cramping with menses",
+    ],
+    pairWith: [
+      "Suprapubic pain + dysuria + frequency → acute cystitis",
+      "Suprapubic pain + fever + flank/CVA tenderness → pyelonephritis",
+      "Suprapubic fullness + inability to void → acute urinary retention (BPH, anticholinergics, spinal cord lesion)",
+      "Suprapubic pain + fever + tender prostate → acute prostatitis",
+      "Suprapubic pain + vaginal discharge + cervical motion tenderness → PID",
+      "Suprapubic pain without dysuria + painless hematuria → consider bladder cancer workup",
+      "Suprapubic cramping with menses onset → primary dysmenorrhea",
+    ],
+    distinguishFrom: [
+      "Flank pain — costovertebral angle tenderness suggests pyelonephritis or nephrolithiasis",
+      "Dysuria alone — burning with voiding without localized suprapubic tenderness",
+      "RLQ pain — appendicitis, ovarian torsion, ectopic pregnancy",
+      "Pelvic pain lateralized — ovarian pathology, mittelschmerz, adnexal mass",
+      "Periumbilical pain migrating to RLQ — appendicitis pattern, not bladder-centered",
+      "Chronic pelvic pain syndrome — broader pelvic floor pain without isolated suprapubic focus",
+    ],
+    pediatrics:
+      "Young children with UTI may have fever, vomiting, or irritability without pointing to suprapubic pain; school-age girls and boys can report suprapubic discomfort with cystitis. Palpable suprapubic mass in infant → consider neurogenic bladder or obstructive uropathy.",
+  },
+  {
     id: "hepatomegaly",
     name: "Hepatomegaly",
     etymology:
