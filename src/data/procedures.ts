@@ -2208,6 +2208,64 @@ export const PROCEDURES: ProcedureEntry[] = [
     pediatrics:
       "Primary osteoarthritis arthroplasty is rare in children; joint replacement may be considered in severe juvenile idiopathic arthritis or post-traumatic destruction in adolescents at specialized centers.",
   },
+  {
+    id: "ultrasonography",
+    name: "Ultrasonography",
+    etymology:
+      "Latin ultra = beyond + sonus = sound + Greek graphein = to write/record — imaging with high-frequency sound waves",
+    aliases: [
+      "ultrasonography",
+      "ultrasonographies",
+      "ultrasound",
+      "ultrasounds",
+      "sonography",
+      "sonographies",
+      "diagnostic ultrasound",
+      "medical ultrasound",
+      "ultrasound imaging",
+      "ultrasound study",
+      "ultrasound studies",
+      "us imaging",
+      "b-mode ultrasound",
+      "duplex ultrasound",
+      "doppler ultrasound",
+    ],
+    definition:
+      "Noninvasive imaging modality that uses reflected high-frequency sound waves to generate real-time anatomic images and, with Doppler, assess blood flow — without ionizing radiation.",
+    indications: [
+      "Obstetric and gynecologic imaging — pregnancy dating, ectopic pregnancy, ovarian masses, placenta previa",
+      "Abdominal — gallstones/cholecystitis, hydronephrosis, ascites, appendicitis (especially pregnancy/pediatrics)",
+      "Vascular — DVT compression ultrasound, carotid stenosis duplex, AAA screening",
+      "Cardiac — echocardiography for structure and function",
+      "Thyroid and soft-tissue neck masses — nodule characterization and FNA guidance",
+      "FAST exam — trauma hemoperitoneum/pericardial effusion at bedside",
+      "Musculoskeletal — rotator cuff tears, hip effusion, guided joint aspiration",
+    ],
+    keyMeasurements: [
+      "Doppler peak systolic velocity — carotid stenosis severity",
+      "Venous compressibility — diagnostic for DVT",
+      "Amniotic fluid index (AFI) — oligohydramnios/polyhydramnios",
+      "Ejection fraction and valve gradients on echocardiography",
+      "Gallstone acoustic shadowing and gallbladder wall thickening",
+      "Gestational sac location and discriminatory β-hCG zone on transvaginal scan",
+    ],
+    complications: [
+      "Generally no direct biologic harm (no radiation); limitations are diagnostic not toxic",
+      "False negatives from operator dependence, bowel gas, or obesity",
+      "Thermal/mechanical bioeffects theoretical at diagnostic outputs — not clinically significant at standard settings",
+    ],
+    boardsPearls: [
+      "Ultrasound = sound waves, real-time, no ionizing radiation — preferred in pregnancy",
+      "DVT diagnosis — noncompressible venous segment on compression ultrasound",
+      "Gallstones — echogenic focus with posterior acoustic shadowing",
+      "Ectopic pregnancy — empty uterus + adnexal mass; transvaginal US more sensitive early",
+      "Appendicitis — ultrasound first-line in children and pregnancy; noncompressible appendix >6 mm",
+      "vs CT — CT better for many acute abdomens in adults but uses radiation; US preferred when radiation must be avoided",
+      "Echocardiography is cardiac ultrasonography",
+    ],
+    pediatrics:
+      "First-line imaging for pediatric appendicitis, pyloric stenosis (elongated pylorus, wall thickness), developmental hip dysplasia, and NEC (pneumatosis intestinalis). Febrile UTI workup often includes renal ultrasound.",
+  },
 ];
 
 const procedureById = new Map(PROCEDURES.map((entry) => [entry.id, entry]));

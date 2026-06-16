@@ -96,6 +96,55 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
       "Congenital heart disease with atrial volume overload can elevate ANP; neonatal fluid shifts may transiently affect natriuretic peptide levels.",
   },
   {
+    id: "natriuretic-peptide",
+    name: "Natriuretic Peptide",
+    etymology:
+      "Latin natrium = sodium + Greek ouretikos = promoting urine + peptos = digested (peptide)",
+    aliases: [
+      "natriuretic",
+      "natriuretic peptide",
+      "natriuretic peptides",
+      "natriuretic hormone",
+      "natriuretic hormones",
+      "natriuretic factor",
+      "natriuretic factors",
+      "natriuretic peptide system",
+      "cardiac natriuretic peptides",
+      "cardiac natriuretic peptide",
+    ],
+    type: "Peptide hormone",
+    source:
+      "Cardiac and vascular endocrine peptides — ANP from atrial myocytes (stretch), BNP from ventricular myocytes (stretch), CNP from endothelium (vasodilation, less renal emphasis on boards)",
+    receptor:
+      "Natriuretic peptide receptor A (NPR-A; guanylyl cyclase–linked) for ANP/BNP; NPR-B for CNP; NPR-C mediates clearance without guanylyl cyclase activity",
+    function:
+      "Counter-regulatory hormones to RAAS and ADH that promote natriuresis, diuresis, and vasodilation via guanylyl cyclase → ↑ cGMP → ↓ renin, ↓ aldosterone, and reduced preload/afterload in volume overload.",
+    clinicalRelevance: [
+      "Elevated BNP/NT-proBNP in heart failure — diagnostic and prognostic",
+      "ANP/BNP rise with atrial/ventricular stretch (HF, hypervolemia, mitral regurgitation)",
+      "Sacubitril (neprilysin inhibitor) + valsartan (ARNI) — ↑ circulating natriuretic peptides in HFrEF",
+      "Neutral endopeptidase (neprilysin) degrades ANP/BNP",
+    ],
+    boardsPearls: [
+      "Natriuretic peptides oppose RAAS — promote Na⁺/water excretion and vasodilation",
+      "ANP = atria; BNP = ventricles (despite 'brain' in name)",
+      "Receptor → guanylyl cyclase → cGMP → natriuresis (vs aldosterone retaining Na⁺)",
+      "HF vignette: dyspnea + pulmonary edema + ↑ BNP/NT-proBNP",
+      "vs natriuresis — physiologic process of ↑ urinary Na⁺ excretion; natriuretic peptides are hormones causing it",
+      "vs ADH — retains water; natriuretic peptides promote diuresis/natriuresis",
+    ],
+    distinguishFrom: [
+      "ANP — specific atrial natriuretic peptide; natriuretic peptide is the family",
+      "BNP — specific ventricular natriuretic peptide; measured in HF workup",
+      "Natriuresis — process of sodium excretion (also caused by diuretics), not the hormone",
+      "Aldosterone — mineralocorticoid retaining Na⁺; opposed by natriuretic peptides",
+      "Renin–angiotensin system — volume-retaining axis countered by natriuretic peptides",
+      "Guanylyl cyclase — downstream enzyme activated by natriuretic peptide receptors",
+    ],
+    pediatrics:
+      "Congenital heart disease with chronic volume overload can elevate natriuretic peptides; interpret BNP against age-specific norms when available.",
+  },
+  {
     id: "vitamin-d",
     name: "Vitamin D (25-hydroxycholecalciferol)",
     etymology: "vitamin = vital amine historical term + chole = bile + calciferol = calcium-carrying sterol",
@@ -4103,6 +4152,52 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
     ],
     pediatrics:
       "Narcolepsy type 1 from orexin neuron loss often begins in adolescence; CSF hypocretin-1 (reflecting loss of neurons producing both peptides) confirms diagnosis.",
+  },
+  {
+    id: "peptide-hormone",
+    name: "Peptide Hormone",
+    etymology:
+      "Greek peptos = digested + hormaein = to excite/set in motion — protein-based signaling molecules",
+    aliases: [
+      "peptide hormone",
+      "peptide hormones",
+      "peptide-hormone",
+      "protein hormone",
+      "protein hormones",
+      "polypeptide hormone",
+      "polypeptide hormones",
+      "amino acid-derived peptide hormone",
+      "water-soluble hormone",
+      "water soluble hormone",
+    ],
+    type: "Hormone",
+    function:
+      "Hormones synthesized as peptide/protein chains that are water-soluble, stored in secretory granules, and act on cell-surface receptors (GPCRs, receptor tyrosine kinases, or guanylyl cyclase–linked receptors) because they cannot cross the lipid bilayer — triggering second-messenger cascades or receptor phosphorylation rather than direct gene activation.",
+    clinicalRelevance: [
+      "Insulin and glucagon — pancreatic islet peptide hormones regulating glucose",
+      "Anterior pituitary hormones — GH, ACTH, TSH, LH, FSH, prolactin (all peptides)",
+      "PTH and calcitonin — calcium homeostasis via membrane receptors",
+      "ADH and ANP/BNP — volume/osmolality regulation",
+      "GI regulatory peptides — gastrin, secretin, CCK, motilin",
+      "Peptide hormone excess/deficiency syndromes — insulinoma, glucagonoma, SIADH, acromegaly (GH)",
+    ],
+    boardsPearls: [
+      "Peptide hormones = water-soluble → cell-surface receptors → second messengers (cAMP, IP3/DAG, Ca²⁺, tyrosine kinase)",
+      "Classic examples: insulin, glucagon, GH, ACTH, TSH, LH/FSH, PTH, ADH, calcitonin, gastrin",
+      "vs steroid hormones — lipid-soluble, intracellular/nuclear receptors, slower genomic effects",
+      "vs thyroid hormone (T3/T4) — amine-derived but behaves like steroid (intracellular receptor)",
+      "vs catecholamines — amine neurohormones (epinephrine) with membrane receptors but not peptide chains",
+      "Prohormone processing common — proinsulin → insulin + C-peptide; proopiomelanocortin → ACTH/MSH/endorphins",
+    ],
+    distinguishFrom: [
+      "Steroid hormone — cholesterol-derived, nuclear receptor, examples cortisol/aldosterone/sex steroids",
+      "Thyroid hormone (T3/T4) — tyrosine-derived amines with intracellular nuclear receptors",
+      "Catecholamine — biogenic amine (dopamine, epinephrine, norepinephrine), not polypeptide",
+      "Steroidogenic enzyme — intracellular catalyst, not secreted endocrine signal",
+      "Neurotransmitter — synaptic signaling molecule; overlap exists (e.g., ACh) but endocrine peptides act hormonally",
+    ],
+    pediatrics:
+      "Congenital peptide hormone deficiencies include GH deficiency (short stature), ACTH deficiency (adrenal crisis), and diabetes from insulin deficiency (type 1). Neonatal hypoglycemia workup includes insulin, GH, and cortisol levels.",
   },
 ];
 

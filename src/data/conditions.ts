@@ -6835,6 +6835,80 @@ export const CONDITIONS: ConditionEntry[] = [
       "MEN2B medullary thyroid carcinoma can metastasize in infancy; prophylactic thyroidectomy is recommended within the first year of life for classic RET mutations.",
   },
   {
+    id: "fanconi-syndrome",
+    name: "Fanconi Syndrome",
+    etymology:
+      "eponym: Guido Fanconi (Swiss pediatrician) + syndrome = grouped findings — renal proximal tubulopathy (distinct from Fanconi anemia)",
+    aliases: [
+      "fanconi syndrome",
+      "fanconi syndromes",
+      "fanconi's syndrome",
+      "fanconis syndrome",
+      "renal fanconi syndrome",
+      "proximal renal tubular syndrome",
+      "generalized proximal tubulopathy",
+      "proximal tubule dysfunction syndrome",
+      "fanconi renotubular syndrome",
+    ],
+    definition:
+      "Generalized dysfunction of the renal proximal tubule causing impaired reabsorption of filtered glucose, amino acids, phosphate, bicarbonate, uric acid, potassium, and low-molecular-weight proteins into peritubular capillaries.",
+    pathophysiology:
+      "Injury or inherited defect of proximal tubular transport → solute wasting into urine despite normal or low serum levels → metabolic acidosis (proximal RTA, type 2), hypophosphatemia with rickets/osteomalacia, hypokalemia, glucosuria with normoglycemia, aminoaciduria, and growth failure.",
+    classicPresentation: [
+      "Polyuria, polydipsia, failure to thrive in children",
+      "Normoglycemic glucosuria and generalized aminoaciduria on urinalysis",
+      "Rickets or osteomalacia from phosphaturia",
+      "Non-anion-gap or mixed metabolic acidosis from bicarbonate wasting",
+    ],
+    keyFindings: [
+      "Glucosuria with normal blood glucose",
+      "Phosphaturia, aminoaciduria, low-molecular-weight proteinuria",
+      "Hypokalemia, hypophosphatemia, metabolic acidosis",
+      "Growth retardation and rickets in children",
+    ],
+    keyLabs: [
+      "Urinalysis — glucosuria, aminoaciduria, phosphaturia despite low/normal serum levels",
+      "↓ serum phosphate, ↓ bicarbonate, ↓ potassium (often)",
+      "↑ urinary β2-microglobulin or retinol-binding protein",
+      "Workup for underlying cause: cystine crystals (cystinosis), copper studies (Wilson), light chains (myeloma)",
+    ],
+    associations: [
+      "Cystinosis — most common inherited cause in children",
+      "Wilson disease, tyrosinemia, galactosemia, Lowe syndrome, Dent disease",
+      "Multiple myeloma (light chain proximal toxicity)",
+      "Nephrotoxic drugs — ifosfamide, tenofovir, expired tetracyclines, aminoglycosides, cisplatin",
+      "Heavy metals — lead, cadmium, mercury",
+    ],
+    complications: [
+      "Rickets, osteomalacia, and short stature",
+      "Progressive CKD if underlying disease untreated",
+      "Severe electrolyte disturbances and dehydration",
+    ],
+    distinguishFrom: [
+      "Fanconi anemia — inherited bone marrow failure with pancytopenia and congenital anomalies; unrelated renal tubulopathy eponym",
+      "Diabetes mellitus — hyperglycemia drives glucosuria",
+      "Distal renal tubular acidosis (type 1) — isolated distal H⁺ secretion defect, not global proximal wasting",
+      "Nephrotic syndrome — heavy proteinuria with hypoalbuminemia and edema, not proximal solute wasting pattern",
+      "Isolated glucosuria (renal glucosuria) — only glucose wasting without phosphate/amino acid losses",
+    ],
+    treatment: [
+      "Treat underlying cause (chelators in Wilson, cysteamine in cystinosis, stop offending drug)",
+      "Oral bicarbonate or citrate for proximal RTA",
+      "Phosphate and vitamin D supplementation for rickets/osteomalacia",
+      "Potassium repletion as needed",
+    ],
+    boardsPearls: [
+      "Fanconi syndrome = generalized proximal tubule wasting — glucosuria + phosphaturia + aminoaciduria + bicarbonaturia",
+      "Normoglycemic glucosuria is hallmark clue on boards",
+      "Proximal RTA (type 2) — bicarbonate wasting; urine pH can acidify once filtered HCO₃⁻ falls below threshold",
+      "Cystinosis is classic pediatric cause — corneal cystine crystals, failure to thrive",
+      "Myeloma + RTA + glucosuria → think light chain Fanconi syndrome",
+      "vs Fanconi anemia — completely different disease (bone marrow failure)",
+    ],
+    pediatrics:
+      "Cystinosis presents in infancy with Fanconi syndrome, photophobia, and corneal cystine crystals; early cysteamine therapy slows progression. Inherited metabolic diseases (Wilson, tyrosinemia, Lowe) and toxic exposures must be excluded.",
+  },
+  {
     id: "familial-medullary-thyroid-carcinoma",
     name: "Familial Medullary Thyroid Carcinoma",
     etymology: "Latin familia = household + medulla + thyroid + carcinoma",

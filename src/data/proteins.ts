@@ -3510,6 +3510,96 @@ export const PROTEINS: ProteinEntry[] = [
       "Fibrin — acute clot polymer, not chronic structural ECM protein",
     ],
   },
+  {
+    id: "carbonic-anhydrase",
+    name: "Carbonic Anhydrase",
+    etymology:
+      "Latin carbo = coal/char + anhydr = without water + -ase = enzyme — catalyzes reversible hydration of CO₂",
+    aliases: [
+      "carbonic anhydrase",
+      "carbonic anhydrases",
+      "carbonic anhydrase enzyme",
+      "carbonic anhydrase enzymes",
+      "ca",
+      "carbonic anhydrase ii",
+      "carbonic anhydrase 2",
+      "ca ii",
+      "ca2",
+      "carbonic anhydrase iv",
+      "ca iv",
+      "carbonic anhydrase i",
+      "ca i",
+    ],
+    location:
+      "Widely distributed — proximal tubule and collecting duct intercalated cells (renal acid–base), red blood cells (CO₂ transport), gastric parietal cells (acid secretion), osteoclast ruffled border (bone resorption), ciliary body epithelium (aqueous humor)",
+    function:
+      "Zinc-dependent metalloenzyme catalyzing CO₂ + H₂O ⇌ H₂CO₃ ⇌ H⁺ + HCO₃⁻ — essential for renal bicarbonate reclamation and H⁺ secretion, pulmonary CO₂ elimination via RBC chloride shift, gastric HCl generation, and osteoclast-mediated bone resorption by acidifying the resorption lacuna.",
+    mutationCauses: [
+      "Carbonic anhydrase II deficiency — autosomal recessive osteopetrosis with renal tubular acidosis (bone resorption and proximal tubular acid handling impaired)",
+      "Carbonic anhydrase I/II variants — rare red cell or renal acid–base phenotypes",
+    ],
+    boardsPearls: [
+      "CA: CO₂ + H₂O ⇌ H₂CO₃ ⇌ H⁺ + HCO₃⁻; zinc is required cofactor",
+      "Proximal tubule CA II — intracellular generation of H⁺ for Na⁺/H⁺ exchange and HCO₃⁻ reabsorption",
+      "RBC carbonic anhydrase — Bohr effect and chloride shift (HCO₃⁻ out, Cl⁻ in) for CO₂ transport",
+      "Acetazolamide/dorzolamide inhibit CA → ↓ aqueous humor (glaucoma), ↓ CSF (IIH), bicarbonaturia + metabolic acidosis (diuretic)",
+      "Osteoclast CA II acidifies bone surface — deficiency → osteopetrosis + RTA",
+      "vs carbonic anhydrase inhibitor — drug class blocking enzyme; not the enzyme itself",
+    ],
+    distinguishFrom: [
+      "Carbonic anhydrase inhibitor — pharmacologic blockers (acetazolamide, dorzolamide, brinzolamide)",
+      "Carbonic acid (H₂CO₃) — transient product of the reaction, not the enzyme",
+      "Adenylyl cyclase — different enzyme generating cAMP, not CO₂ hydration",
+      "Pepsin — gastric protease; parietal cells use CA for acid but pepsin digests protein",
+      "Osteopetrosis from CLCN7 defect — different gene; CA II deficiency is classic combined osteopetrosis + RTA",
+    ],
+    pediatrics:
+      "Carbonic anhydrase II deficiency causes infantile malignant osteopetrosis with renal tubular acidosis, anemia, and cranial nerve compression from dense bone.",
+  },
+  {
+    id: "guanylyl-cyclase",
+    name: "Guanylyl Cyclase",
+    etymology:
+      "Latin guanina = guanine + Greek kyklo = circle + -ase = enzyme — cyclizes GTP to cGMP",
+    aliases: [
+      "guanylyl cyclase",
+      "guanylyl cyclases",
+      "guanylate cyclase",
+      "guanylate cyclases",
+      "gc",
+      "membrane guanylyl cyclase",
+      "membrane guanylate cyclase",
+      "soluble guanylyl cyclase",
+      "soluble guanylate cyclase",
+      "sgc",
+      "particulate guanylyl cyclase",
+      "natriuretic peptide receptor guanylyl cyclase",
+    ],
+    location:
+      "Membrane-bound catalytic domain of natriuretic peptide receptors (NPR-A/NPR-B) in kidney, vasculature, and heart; soluble isoform (sGC) in vascular smooth muscle cytosol activated by nitric oxide",
+    function:
+      "Enzyme that converts GTP to cyclic GMP (cGMP) — activated by natriuretic peptides binding NPR-A/NPR-B (membrane form) or by nitric oxide binding the heme group of soluble guanylyl cyclase — leading to protein kinase G (PKG) activation, smooth muscle relaxation, natriuresis, and vasodilation.",
+    mutationCauses: [
+      "No common boards genetic disease; impaired NO–sGC–cGMP signaling contributes to pulmonary hypertension and erectile dysfunction pathophysiology",
+      "Natriuretic peptide resistance or excessive degradation (neprilysin) alters downstream guanylyl cyclase signaling in heart failure",
+    ],
+    boardsPearls: [
+      "Guanylyl cyclase: GTP → cGMP (counterpart to adenylyl cyclase → cAMP)",
+      "Two forms: membrane (ANP/BNP via NPR-A) and soluble (NO from eNOS/nitrates)",
+      "NO → sGC → cGMP → PKG → vasodilation; nitrates and PDE-5 inhibitors act on this axis",
+      "ANP/BNP → NPR-A guanylyl cyclase → cGMP → natriuresis + ↓ renin/aldosterone",
+      "PDE-5 degrades cGMP — sildenafil blocks PDE-5; nitrates + PDE-5 inhibitors contraindicated",
+      "vs adenylyl cyclase — makes cAMP from ATP (β-receptors, glucagon, cholera toxin pathway)",
+    ],
+    distinguishFrom: [
+      "Adenylyl cyclase — synthesizes cAMP from ATP; Gs/Gi GPCR pathway",
+      "cGMP — second messenger product of guanylyl cyclase, not the enzyme",
+      "Protein kinase G (PKG) — kinase activated by cGMP downstream of guanylyl cyclase",
+      "PDE-5 — phosphodiesterase degrading cGMP, not synthesizing it",
+      "Natriuretic peptide receptor C (NPR-C) — clearance receptor without guanylyl cyclase activity",
+      "Nitric oxide synthase — produces NO that activates soluble guanylyl cyclase",
+    ],
+  },
 ];
 
 const proteinById = new Map(PROTEINS.map((p) => [p.id, p]));
