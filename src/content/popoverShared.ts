@@ -1,5 +1,8 @@
 import type { MediaAttribution } from "../data/media";
-import type { NephronSegmentEntry } from "../data/nephron";
+import {
+  getNephronNavLabel,
+  type NephronSegmentEntry,
+} from "../data/nephron";
 import { IMAGE_FLAG_LEGEND } from "../shared/categoryLegend";
 import { createElement, ImageOff } from "lucide";
 import { renderPopoverTitle, type PopoverCategory } from "./popoverIcons";
@@ -94,6 +97,11 @@ export function renderPediatricsSection(note: string): string {
   `;
 }
 
+function renderNephronNavChip(segment: NephronSegmentEntry): string {
+  const label = getNephronNavLabel(segment);
+  return `<button type="button" class="usmle-nephron-chip" data-nephron-segment-id="${segment.id}">${label}</button>`;
+}
+
 export function renderNephronSectionNav(options: {
   previous?: NephronSegmentEntry;
   next?: NephronSegmentEntry;
@@ -103,10 +111,10 @@ export function renderNephronSectionNav(options: {
 
   const items = [
     previous
-      ? `<div class="usmle-organ-popover__nav-item"><span class="usmle-organ-popover__nav-label">Previous</span> ${previous.name}</div>`
+      ? `<div class="usmle-organ-popover__nav-item"><span class="usmle-organ-popover__nav-label">Previous</span> ${renderNephronNavChip(previous)}</div>`
       : "",
     next
-      ? `<div class="usmle-organ-popover__nav-item"><span class="usmle-organ-popover__nav-label">Next</span> ${next.name}</div>`
+      ? `<div class="usmle-organ-popover__nav-item"><span class="usmle-organ-popover__nav-label">Next</span> ${renderNephronNavChip(next)}</div>`
       : "",
   ]
     .filter(Boolean)

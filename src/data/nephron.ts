@@ -3,6 +3,8 @@ export interface NephronSegmentEntry {
   name: string;
   etymology: string;
   aliases: string[];
+  /** Preferred label for prev/next nav; must match an alias for term linking. */
+  navLabel?: string;
   function: string;
   reabsorbs: string[];
   secretes: string[];
@@ -271,6 +273,7 @@ export const NEPHRON_SEGMENTS: NephronSegmentEntry[] = [
     id: "thin-descending-limb",
     name: "Thin Descending Limb (Loop of Henle)",
     etymology: "thin = narrow wall + descending = moving down + limb = nephron segment + eponym: Friedrich Henle",
+    navLabel: "thin descending limb (loop of henle)",
     aliases: [
       "thin descending limb (loop of henle)",
       "thin descending limb of the loop of henle",
@@ -293,6 +296,7 @@ export const NEPHRON_SEGMENTS: NephronSegmentEntry[] = [
     id: "thick-ascending-limb",
     name: "Thick Ascending Limb (Loop of Henle)",
     etymology: "thick = wide wall + ascending = moving up + limb = nephron segment + eponym: Friedrich Henle",
+    navLabel: "thick ascending limb (loop of henle)",
     aliases: [
       "thick ascending limb (loop of henle)",
       "thick ascending limb of the loop of henle",
@@ -454,6 +458,19 @@ export function getAdjacentNephronSegments(id: string): {
   };
 }
 
+/** Label for prev/next nav — must be an alias so popover cross-links resolve. */
+export function getNephronNavLabel(segment: NephronSegmentEntry): string {
+  if (segment.navLabel) return segment.navLabel;
+
+  const normalizedName = segment.name.toLowerCase();
+  const nameAlias = segment.aliases.find(
+    (alias) => alias.toLowerCase() === normalizedName,
+  );
+  if (nameAlias) return nameAlias;
+
+  return segment.aliases[0] ?? segment.name;
+}
+
 export interface NephronAliasMatch {
   alias: string;
   nephronSegmentId: string;
@@ -462,11 +479,18 @@ export interface NephronAliasMatch {
 export function buildNephronAliasIndex(): NephronAliasMatch[] {
   const matches: NephronAliasMatch[] = [];
   for (const segment of NEPHRON_SEGMENTS) {
+    const seen = new Set<string>();
+    const register = (alias: string) => {
+      const key = alias.toLowerCase();
+      if (seen.has(key)) return;
+      seen.add(key);
+      matches.push({ alias: key, nephronSegmentId: segment.id });
+    };
+
+    register(segment.name);
+    if (segment.navLabel) register(segment.navLabel);
     for (const alias of segment.aliases) {
-      matches.push({
-        alias: alias.toLowerCase(),
-        nephronSegmentId: segment.id,
-      });
+      register(alias);
     }
   }
   return matches.sort((a, b) => b.alias.length - a.alias.length);

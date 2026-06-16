@@ -9871,6 +9871,81 @@ export const CONDITIONS: ConditionEntry[] = [
       "Barrett esophagus is rare in children but can occur with severe chronic GERD; endoscopic biopsy confirms intestinal metaplasia.",
   },
   {
+    id: "bartter-syndrome",
+    name: "Bartter Syndrome",
+    etymology:
+      "eponym: Frederic Bartter + syndrome = grouped findings — inherited thick ascending limb tubulopathy",
+    aliases: [
+      "bartter syndrome",
+      "bartter syndromes",
+      "bartter's syndrome",
+      "bartters syndrome",
+      "bartter disease",
+      "bartter salt-losing tubulopathy",
+      "salt-losing tubulopathy",
+      "antenatal bartter syndrome",
+      "neonatal bartter syndrome",
+    ],
+    definition:
+      "Inherited renal salt-wasting disorder from defective Na⁺/K⁺/2Cl⁻ reabsorption in the thick ascending limb of the loop of Henle — physiologically mimicking chronic loop diuretic use with hypokalemic metabolic alkalosis and hyperreninemic hyperaldosteronism without hypertension.",
+    pathophysiology:
+      "Loss-of-function mutations in NKCC2 (SLC12A1), ROMK (KCNJ1), ClC-Kb (CLCNKB), barttin (BSND), or CaSR (CASR) → impaired thick ascending limb salt reabsorption → renal NaCl wasting, volume depletion, ↑ renin and aldosterone, ↑ K⁺ and H⁺ secretion distally → hypokalemia and metabolic alkalosis; prostaglandin E₂-mediated vasodilation prevents hypertension despite secondary hyperaldosteronism.",
+    classicPresentation: [
+      "Polyuria, polydipsia, salt craving",
+      "Muscle weakness or cramps from hypokalemia",
+      "Growth retardation in children",
+      "Antenatal/severe forms — polyhydramnios, premature birth, nephrocalcinosis",
+    ],
+    keyFindings: [
+      "Hypokalemia and metabolic alkalosis",
+      "Normal or low blood pressure despite ↑ renin and aldosterone",
+      "Hypercalciuria and risk of nephrocalcinosis (vs Gitelman)",
+      "↑ urinary chloride and prostaglandin E₂",
+    ],
+    keyLabs: [
+      "Hypokalemia, metabolic alkalosis",
+      "↑ plasma renin and aldosterone with normotension",
+      "↑ urinary calcium excretion (hypercalciuria)",
+      "↑ urinary prostaglandin E₂",
+    ],
+    associations: [
+      "NKCC2, ROMK, ClC-Kb, barttin, or CaSR mutations by type",
+      "NSAID responsiveness (indomethacin) from high PGE₂",
+      "Nephrocalcinosis from hypercalciuria",
+      "Loop diuretic physiology mimic",
+    ],
+    complications: [
+      "Chronic hypokalemia — weakness, arrhythmias",
+      "Nephrocalcinosis and impaired renal function",
+      "Failure to thrive in children",
+      "Dehydration during intercurrent illness",
+    ],
+    distinguishFrom: [
+      "Gitelman syndrome — distal convoluted tubule NCC defect; hypocalciuria; milder, later onset",
+      "Chronic loop diuretic use — drug history; same electrolyte pattern",
+      "Vomiting/NG suction — chloride-deficient alkalosis with low urine Cl⁻",
+      "Primary hyperaldosteronism — hypertension with hypokalemia and metabolic alkalosis",
+      "Liddle syndrome — ENaC gain-of-function; hypertension with low renin and low aldosterone",
+      "Cystic fibrosis — chloride wasting alkalosis but multisystem pulmonary/GI disease",
+    ],
+    treatment: [
+      "Aggressive K⁺ and Mg²⁺ repletion; NaCl supplementation",
+      "NSAIDs (indomethacin) to reduce PGE₂-mediated salt wasting",
+      "Aldosterone antagonists (spironolactone) or ENaC blockers (amiloride) in some forms",
+      "Avoid loop diuretics",
+    ],
+    boardsPearls: [
+      "Bartter = thick ascending limb defect → mimics loop diuretic",
+      "Hypokalemic metabolic alkalosis + ↑ renin/aldosterone + NO hypertension",
+      "Hypercalciuria distinguishes from Gitelman (hypocalciuria)",
+      "NSAIDs improve salt wasting by blocking prostaglandin E₂",
+      "Macula densa senses ↓ NaCl delivery → ↑ renin (same as loop diuretics)",
+      "Antenatal Bartter — polyhydramnios, premature delivery, severe salt loss",
+    ],
+    pediatrics:
+      "Antenatal/neonatal Bartter presents with polyhydramnios, prematurity, failure to thrive, and electrolyte crises; indomethacin and electrolyte replacement are mainstays. Distinguish from Gitelman, which usually presents later and is milder.",
+  },
+  {
     id: "achalasia",
     name: "Achalasia",
     etymology: "Greek a = without + chalasis = relaxation",
