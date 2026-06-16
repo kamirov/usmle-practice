@@ -1489,6 +1489,49 @@ export const METABOLISM: MetabolismEntry[] = [
     pediatrics:
       "Neonatal hyperphenylalaninemia on screening may reflect PAH or BH₄ defects — pterin studies and neurotransmitter metabolites distinguish; untreated BH₄ deficiency causes progressive dystonia, seizures, and developmental regression beyond diet alone.",
   },
+  {
+    id: "sphingolipid",
+    name: "Sphingolipid",
+    etymology:
+      "Greek sphingo = sphinx (mysterious lipid) + lipid = fat — ceramide-based membrane lipids with variable head groups",
+    aliases: [
+      "sphingolipid",
+      "sphingolipids",
+      "sphingolipid class",
+      "sphingolipid molecule",
+      "sphingolipid molecules",
+      "glycosphingolipid",
+      "glycosphingolipids",
+    ],
+    definition:
+      "Class of lipids built on a ceramide backbone (sphingosine + fatty acid) with phosphate or sugar head groups — major structural components of neuronal and myelin membranes and substrates for lysosomal degradation; accumulation causes sphingolipidoses.",
+    pathway: [
+      "Ceramide core — sphingosine + fatty acid; central hub of sphingolipid metabolism",
+      "Sphingomyelin — ceramide + phosphorylcholine; abundant in myelin; degraded by lysosomal sphingomyelinase",
+      "Glycosphingolipids — ceramide + oligosaccharide: cerebrosides, globosides, gangliosides (e.g., GM2 in Tay-Sachs)",
+      "Sphingolipid synthesis in ER/Golgi; turnover requires lysosomal hydrolases and activator proteins",
+      "Sphingosine-1-phosphate (S1P) — signaling lipid from ceramide catabolism; immune trafficking and vascular tone",
+    ],
+    boardsPearls: [
+      "Sphingolipidoses = lysosomal storage from deficient degradation → lipid accumulation",
+      "Tay-Sachs — HEXA deficiency → GM2 ganglioside accumulation; cherry-red spot, NO hepatosplenomegaly",
+      "Niemann-Pick A/B — sphingomyelinase deficiency → sphingomyelin; type A has cherry-red spot + neurodegeneration",
+      "Gaucher — glucocerebrosidase → glucocerebroside; Gaucher cells, hepatosplenomegaly, often NO cherry-red spot",
+      "Fabry — alpha-galactosidase A → globotriaosylceramide; angiokeratomas, X-linked",
+      "Krabbe — galactocerebrosidase; globoid cells, peripheral neuropathy, very early infantile form",
+      "Metachromatic leukodystrophy — arylsulfatase A → sulfatide accumulation in white matter",
+      "Cherry-red spot: Tay-Sachs and Niemann-Pick A — sphingolipid/ganglioside storage in retina with pale fovea",
+    ],
+    distinguishFrom: [
+      "Phospholipid — glycerol backbone (lecithin/phosphatidylcholine), not ceramide-based sphingolipid",
+      "Cholesterol — sterol ring structure; often packaged with sphingolipids in rafts but distinct class",
+      "Mucopolysaccharidosis — glycosaminoglycan accumulation (e.g., Hurler), not sphingolipid storage",
+      "Fatty acid oxidation defect — acyl-CoA mitochondrial disorders, not lysosomal sphingolipid catabolism",
+      "Ceramide alone — signaling/metabolic intermediate; sphingolipid refers to full lipid class with head groups",
+    ],
+    pediatrics:
+      "Classic sphingolipidoses present in infancy or early childhood — hypotonia, developmental regression, hepatosplenomegaly (except Tay-Sachs), cherry-red macula (Tay-Sachs, Niemann-Pick A). Krabbe and metachromatic leukodystrophy cause demyelinating neurodegeneration in infants; enzyme replacement or substrate reduction available for select disorders (Fabry, Gaucher type 1).",
+  },
 ];
 
 const metabolismById = new Map(METABOLISM.map((entry) => [entry.id, entry]));
