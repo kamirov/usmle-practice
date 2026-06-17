@@ -3018,6 +3018,59 @@ export const CONDITIONS: ConditionEntry[] = [
     ],
   },
   {
+    id: "athletes-heart",
+    name: "Athlete's Heart",
+    etymology: "Greek athlētēs = contestant + Old English heorte = heart",
+    aliases: [
+      "athlete's heart",
+      "athletes heart",
+      "athlete heart",
+      "athletic heart",
+      "athletic heart syndrome",
+      "physiologic cardiac hypertrophy",
+    ],
+    definition:
+      "Benign cardiac adaptation to sustained endurance training — eccentric LV hypertrophy with preserved diastolic function and increased stroke volume, without pathologic remodeling.",
+    pathophysiology:
+      "Chronic volume overload during aerobic exercise → eccentric LV hypertrophy (cavity dilation + mild wall thickening) → ↑ stroke volume and cardiac output at rest → increased vagal tone → resting sinus bradycardia; normal systolic and diastolic function throughout.",
+    classicPresentation: [
+      "Young endurance athlete (runner, cyclist, swimmer) — asymptomatic",
+      "Resting sinus bradycardia on routine sports screening ECG",
+      "Mild LV hypertrophy on echo during pre-participation evaluation",
+      "No syncope, chest pain with exertion, or family history of sudden cardiac death",
+    ],
+    keyFindings: [
+      "Resting HR 40–60 bpm; sinus bradycardia with physiologic first-degree AV block or junctional escape beats",
+      "ECG: LVH voltage criteria, early repolarization (concave ST elevation, tall T waves)",
+      "Echo: LV cavity dilation with proportional mild wall thickening; normal diastolic function; no SAM or LVOT obstruction",
+      "Soft systolic flow murmur that does not intensify with Valsalva",
+    ],
+    associations: [
+      "Endurance sports (marathon, cycling, rowing, swimming)",
+      "Increased vagal tone",
+      "Deconditioning reverses changes over weeks to months",
+    ],
+    distinguishFrom: [
+      "Hypertrophic cardiomyopathy — asymmetric septal hypertrophy, SAM, murmur ↑ with Valsalva, family history of SCD",
+      "Hypertensive heart disease — concentric hypertrophy without cavity dilation",
+      "Aortic stenosis — harsh murmur radiating to carotids, does not ↓ with Valsalva",
+    ],
+    treatment: [
+      "Reassurance — no restriction from training if asymptomatic and workup negative for pathology",
+      "Further evaluation (echo, stress test, Holter) if red flags: syncope, exertional chest pain, family history of SCD",
+      "Deconditioning trial — physiologic hypertrophy regresses with detraining; pathologic hypertrophy persists",
+    ],
+    boardsPearls: [
+      "Physiologic eccentric hypertrophy — cavity dilation + mild wall thickening + normal diastolic function",
+      "HCM murmur ↑ with Valsalva (↓ preload); athlete's heart murmur unchanged or ↓",
+      "Deconditioning for 3 months — athlete's heart regresses; HCM does not",
+      "Red flags mandating workup: syncope, exertional symptoms, family history of sudden cardiac death",
+      "ECG overlap is common — echo diastolic function and septal symmetry help distinguish from HCM",
+    ],
+    pediatrics:
+      "Adolescent endurance athletes commonly show bradycardia and voltage criteria for LVH on screening ECG; distinguish from HCM before clearing for competitive sports — syncope, murmur that changes with maneuvers, or asymmetric septal hypertrophy warrant cardiology referral.",
+  },
+  {
     id: "atherosclerosis",
     name: "Atherosclerosis",
     etymology: "Greek athere = gruel + skleros = hard; lipid gruel hardening arteries",
