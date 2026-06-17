@@ -1075,6 +1075,51 @@ export const ORGANS: OrganEntry[] = [
       "Gonadal ridge (intermediate mesoderm); primordial germ cells migrate from yolk sac endoderm.",
   },
   {
+    id: "seminiferous-tubules",
+    name: "Seminiferous Tubules",
+    etymology: "Latin semen = seed + ferre = to bear + Latin tubulus = small tube",
+    aliases: [
+      "seminiferous tubule",
+      "seminiferous tubules",
+      "seminiferous tubule of testis",
+      "seminiferous tubules of testis",
+      "seminiferous tubule epithelium",
+      "convoluted seminiferous tubules",
+      "seminiferous cords",
+      "spermatogenic tubules",
+      "spermatogenic tubule",
+    ],
+    germLayer: "Mesoderm (gonadal ridge) with germ cells from yolk sac endoderm",
+    origin:
+      "Develop from primitive sex cords of the indifferent gonad that differentiate into seminiferous cords under SRY/testis-determining pathways; become convoluted seminiferous tubules at puberty when spermatogenesis begins.",
+    derivatives: [
+      "Spermatozoa (from germ cells undergoing meiosis and spermiogenesis)",
+      "Sertoli cell–supported spermatogenic lineage (spermatogonia → spermatocytes → spermatids → sperm)",
+      "Efferent ductule connection to rete testis and epididymis",
+    ],
+    functionSummary:
+      "Highly coiled tubules within the testis where spermatogenesis occurs — Sertoli cells line the tubule, nourish germ cells, form the blood-testis barrier, and secrete inhibin B and AMH; Leydig cells in the interstitium between tubules provide testosterone for local and systemic androgen support.",
+    commonPathologies: [
+      "Klinefelter syndrome — seminiferous tubule hyalinization and germ cell loss",
+      "Mumps orchitis (post-pubertal) — inflammatory damage to tubules → atrophy and infertility",
+      "Cryptorchidism — heat injury to tubules → impaired spermatogenesis",
+      "Sertoli cell-only syndrome — tubules lack germ cells (azoospermia)",
+      "Radiation and chemotherapy gonadotoxicity",
+      "Varicocele-related tubular dysfunction and oligospermia",
+    ],
+    step1Pearls: [
+      "Seminiferous tubules = site of spermatogenesis inside the testis",
+      "Sertoli cells line tubules; Leydig cells lie in interstitium between tubules",
+      "Blood-testis barrier — Sertoli tight junctions protect meiotic/postmeiotic germ cells from immune attack",
+      "FSH acts on Sertoli cells → supports spermatogenesis + inhibin B secretion",
+      "LH acts on Leydig cells → testosterone → supports spermatogenesis within tubules",
+      "Klinefelter — seminiferous tubule hyalinization, ↑ FSH, ↓ inhibin B, infertility",
+      "Sperm leave tubules → rete testis → efferent ductules → epididymis for maturation/storage",
+    ],
+    pediatrics:
+      "Spermatogenesis does not begin until puberty; prepubertal seminiferous tubules contain spermatogonia and Sertoli cells without mature sperm. Cryptorchidism exposes tubules to higher abdominal temperature and impairs future spermatogenesis — orchiopexy by 6–18 months limits damage. Post-pubertal mumps orchitis is a major cause of bilateral tubular damage and infertility.",
+  },
+  {
     id: "epididymis",
     name: "Epididymis",
     etymology: "Greek epi = upon + didymos = twin/testis",

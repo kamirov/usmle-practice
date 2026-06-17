@@ -2005,6 +2005,58 @@ export const LAB_VALUES: LabValueEntry[] = [
     ],
   },
   {
+    id: "trabecular-bone-density",
+    name: "Trabecular Bone Density",
+    etymology: "Latin trabecula = small beam + bone + Latin densitas = thickness/compression",
+    aliases: [
+      "trabecular bone density",
+      "trabecular bone densities",
+      "cancellous bone density",
+      "cancellous bone densities",
+      "spongy bone density",
+      "spongy bone densities",
+      "trabecular bmd",
+      "trabecular bone mineral density",
+      "trabecular bone mineral densities",
+      "tbmd",
+    ],
+    measures:
+      "Mineral content and structural density of trabecular (cancellous/spongy) bone — the high–surface-area lattice inside vertebrae, metaphyses, epiphyses, and flat bones — reflecting osteoblast/osteoclast balance and microarchitectural integrity; assessed clinically via DEXA at trabecular-rich sites (especially lumbar spine) and reported as BMD with T-score or Z-score.",
+    normalRange:
+      "T-score ≥ −1.0 (normal BMD); T-score −1.0 to −2.5 (osteopenia); T-score ≤ −2.5 (osteoporosis) — WHO criteria applied to areal BMD at standard DEXA sites; lumbar spine is trabecular-rich; Z-score compares to age-matched peers (use in premenopausal women and men <50 years)",
+    increasedCauses: [
+      "Osteopetrosis — failed osteoclast resorption → abnormally dense brittle bone",
+      "Skeletal fluorosis — excess fluoride incorporation",
+      "Paget disease — focal coarsened trabeculae with mosaic remodeling (regional, not uniform ↑ density)",
+      "Osteoblastic bone metastases — focal radiodense lesions (e.g., prostate cancer)",
+    ],
+    decreasedCauses: [
+      "Postmenopausal estrogen deficiency — rapid trabecular loss (vertebral compression fractures)",
+      "Senile osteoporosis and advanced age",
+      "Prolonged glucocorticoid therapy",
+      "Hyperparathyroidism and hyperthyroidism",
+      "Hypogonadism, anorexia nervosa, female athlete triad (low energy availability + amenorrhea)",
+      "Immobilization, malabsorption, vitamin D deficiency (with osteomalacia component)",
+      "Rheumatoid arthritis and chronic inflammatory disease",
+    ],
+    boardsPearls: [
+      "Trabecular (cancellous/spongy) bone — lattice-like interior with high metabolic turnover; found in vertebrae, metaphyses, epiphyses",
+      "vs cortical (compact) bone — dense outer shell of long-bone shafts; slower turnover; fractures later in disease course",
+      "Trabecular bone loses density fastest after menopause — vertebral compression fractures often first",
+      "Lumbar spine DEXA is trabecular-rich; hip (femoral neck) has mixed cortical and trabecular bone",
+      "T-score = compare to young adult peak BMD (postmenopausal women, men ≥50); Z-score = age-matched (younger patients)",
+      "T-score ≤ −2.5 = osteoporosis; −1.0 to −2.5 = osteopenia",
+      "vs osteomalacia — low trabecular density with defective mineralization (↓ vitamin D); osteoporosis has normal mineralization of remaining matrix",
+      "Bisphosphonates, calcium, vitamin D, denosumab — antiresorptive therapy preserves trabecular and cortical BMD",
+    ],
+    pairWith: [
+      "Postmenopausal woman + height loss + T-score ≤ −2.5 lumbar spine → osteoporosis",
+      "Young woman + low Z-score + amenorrhea + low BMI → female athlete triad; evaluate energy availability",
+      "Chronic prednisone + ↓ trabecular BMD → glucocorticoid-induced osteoporosis; bisphosphonate prophylaxis",
+      "↑ PTH + subperiosteal resorption + low BMD → hyperparathyroidism bone loss",
+    ],
+  },
+  {
     id: "procalcitonin",
     name: "Procalcitonin",
     etymology:
