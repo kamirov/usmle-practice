@@ -82,7 +82,7 @@ export const HEART_SOUNDS: HeartSoundEntry[] = [
       "Physiologic pathophysiology — highly compliant ventricle in children and young adults accepts a large volume of early diastolic inflow at high velocity; when elastic recoil limits further expansion, inflow decelerates sharply → audible S3; often accentuated lying left lateral, in pregnancy, or in athletic conditioning (high stroke volume)",
       "Physiologic S3 — normal in children, adolescents, and young adults; becomes uncommon after ~40 y as ventricular compliance ↓ with age",
       "Pathologic pathophysiology — same deceleration mechanism but in a dilated, stiff, or pressure-overloaded ventricle with ↑ filling pressures; rapid high-volume inflow into a poorly compliant chamber → louder, persistent S3",
-      "Pathologic in adults >40: heart failure with systolic dysfunction (\"Kentucky\" gallop — S3 of failure)",
+      'Pathologic in adults >40: heart failure with systolic dysfunction ("Kentucky" gallop — S3 of failure)',
       "Volume overload: mitral regurgitation, aortic regurgitation (↑ rapid diastolic filling volume)",
       "LV dysfunction, dilated cardiomyopathy, post-MI remodeling",
       "Constrictive pericarditis, restrictive cardiomyopathy (rapid early filling then abrupt halt — related to pericardial knock physiology)",
@@ -132,8 +132,6 @@ export function buildHeartSoundAliasIndex(): HeartSoundAliasMatch[] {
 export function buildHeartSoundMatchPattern(
   index: HeartSoundAliasMatch[],
 ): RegExp {
-  const parts = index.map(
-    ({ alias }) => `\\b${escapeRegex(alias)}\\b`,
-  );
+  const parts = index.map(({ alias }) => `\\b${escapeRegex(alias)}\\b`);
   return new RegExp(`(${parts.join("|")})`, "gi");
 }
