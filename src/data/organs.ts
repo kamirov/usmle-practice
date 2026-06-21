@@ -1686,6 +1686,50 @@ export const ORGANS: OrganEntry[] = [
     ],
   },
   {
+    id: "communicating-arteries",
+    name: "Communicating Arteries",
+    etymology:
+      "Latin communicare = to share/connect + arteria = artery — anastomotic vessels linking major branches of the circle of Willis",
+    aliases: [
+      "communicating arteries",
+      "communicating artery",
+      "anterior communicating artery",
+      "anterior communicating arteries",
+      "acom",
+      "acom artery",
+      "posterior communicating artery",
+      "posterior communicating arteries",
+      "pcom",
+      "pcom artery",
+      "circle of willis communicating arteries",
+    ],
+    germLayer: "Mesoderm",
+    origin:
+      "Embryologic branches of the internal carotid and vertebrobasilar systems that anastomose to form the circle of Willis — anterior communicating artery (ACom) joins the paired anterior cerebral arteries; posterior communicating artery (PCom) connects the internal carotid to the posterior cerebral artery.",
+    derivatives: [
+      "Anterior communicating artery (ACom) — short bridge between A1 segments",
+      "Posterior communicating artery (PCom) — ICA to PCA connection within cavernous/suprasellar region",
+    ],
+    functionSummary:
+      "Collateral cerebral blood flow between carotid and vertebrobasilar territories; anatomic completion of the circle of Willis allows redistribution if a major vessel occludes.",
+    commonPathologies: [
+      "Saccular (berry) aneurysm — ACom most common overall site; PCom classic for CN III palsy",
+      "Subarachnoid hemorrhage from ruptured communicating artery aneurysm",
+      "ACom aneurysm compressing optic chiasm — bitemporal hemianopia",
+      "PCom aneurysm — painful oculomotor palsy (down-and-out eye, ptosis, dilated pupil)",
+    ],
+    step1Pearls: [
+      "Circle of Willis: ACom (anterior) + PCom (posterior) are the communicating arteries",
+      "ACom aneurysm — most common intracranial aneurysm location overall",
+      "PCom aneurysm — CN III palsy with pupil involvement (parasympathetic fibers on artery surface)",
+      "Incomplete circle of Willis is common — collateral flow may fail in stroke",
+      "SAH from ruptured berry aneurysm often at ACom or PCom junctions",
+      "vs MCA aneurysm — MCA bifurcation is common but not a communicating artery",
+    ],
+    pediatrics:
+      "Pediatric intracranial aneurysms are rare; when present they may occur at atypical locations. Moyamoya and sickle cell vasculopathy are more common pediatric stroke mimics than communicating artery aneurysms.",
+  },
+  {
     id: "meninges",
     name: "Meninges",
     etymology: "Greek meninx = membrane + plural -es",
@@ -1727,6 +1771,89 @@ export const ORGANS: OrganEntry[] = [
     ],
     pediatrics:
       "Neonatal meningitis inflames leptomeninges with subtle signs (bulging fontanelle); myelomeningocele exposes meninges and neural tissue through vertebral defect.",
+  },
+  {
+    id: "dural-septae",
+    name: "Dural Septae",
+    etymology:
+      "Latin durus = hard + septum = partition — infoldings of the dura mater that subdivide the cranial cavity",
+    aliases: [
+      "dural septae",
+      "dural septa",
+      "dural fold",
+      "dural folds",
+      "dural partitions",
+      "falx cerebri",
+      "tentorium cerebelli",
+      "falx cerebelli",
+      "diaphragma sellae",
+      "tentorium",
+      "falx",
+    ],
+    germLayer: "Mesoderm (dura mater)",
+    origin:
+      "Inward projections of the dura mater formed where dura reflects and adheres at cranial midlines and skull base — not separate membranes but continuous dural infoldings separating brain compartments.",
+    derivatives: [
+      "Falx cerebri — vertical sickle between cerebral hemispheres; attaches to crista galli and tentorium; grooves for superior and inferior sagittal sinuses",
+      "Tentorium cerebelli — horizontal shelf separating supratentorial cerebrum from infratentorial cerebellum/brainstem; tentorial notch (incisura) transmits midbrain",
+      "Falx cerebelli — small midline fold between cerebellar hemispheres below tentorium",
+      "Diaphragma sellae — dural roof over sella turcica pierced by pituitary stalk",
+    ],
+    functionSummary:
+      "Mechanically partition and anchor the brain; limit movement; define venous sinus locations; tentorium creates supratentorial vs infratentorial compartments critical in herniation syndromes.",
+    commonPathologies: [
+      "Uncal (transtentorial) herniation — medial temporal lobe compresses midbrain at tentorial notch",
+      "Subdural hematoma — blood strips dura from arachnoid; spreads along falx and tentorium",
+      "Subfalcine herniation — cingulate gyrus displaced under falx with cingulate artery compression",
+      "Tentorial meningioma — arises from dural septae attachments",
+    ],
+    step1Pearls: [
+      "Falx cerebri between hemispheres; tentorium cerebelli separates cerebrum from cerebellum",
+      "Tentorial notch = site of uncal herniation → ipsilateral CN III palsy, contralateral hemiparesis, ↓ consciousness",
+      "Superior sagittal sinus runs in attached margin of falx cerebri",
+      "Subdural blood tracks along falx/tentorium on imaging",
+      "Supratentorial vs infratentorial mass — tentorium defines compartment for herniation risk",
+      "vs arachnoid trabeculae — septae are dural folds; trabeculae are delicate subarachnoid strands",
+    ],
+    pediatrics:
+      "Elevated ICP in infants may cause splaying of cranial sutures before herniation; tentorial and subfalcine herniation still occur with mass lesions or hemorrhage.",
+  },
+  {
+    id: "emissary-veins",
+    name: "Emissary Veins",
+    etymology:
+      "Latin emissarius = sent out/messenger + vena = vein — valveless veins connecting extracranial venous networks to intracranial dural venous sinuses",
+    aliases: [
+      "emissary veins",
+      "emissary vein",
+      "cranial emissary veins",
+      "cranial emissary vein",
+      "emissary venous channels",
+    ],
+    germLayer: "Mesoderm",
+    origin:
+      "Valveless venous channels passing through skull foramina or diploë that link scalp/extracranial veins (facial, pterygoid plexus, mastoid) to dural venous sinuses — notably cavernous sinus and sigmoid/superior sagittal connections.",
+    derivatives: [
+      "Par mastoid emissary vein — sigmoid sinus connection",
+      "Connections via foramen ovale/foramen lacerum region to cavernous sinus/pterygoid plexus",
+      "Parietal emissary vein — scalp to superior sagittal sinus",
+    ],
+    functionSummary:
+      "Drain scalp and diploic bone; permit bidirectional venous flow because they lack valves — physiologic pressure equalization but pathologic route for infection spread.",
+    commonPathologies: [
+      "Cavernous sinus thrombosis from facial/scalp infection (danger triangle)",
+      "Spread of infection from otitis/mastoiditis to sigmoid sinus thrombosis",
+      "Retrograde septic emboli via emissary veins",
+    ],
+    step1Pearls: [
+      "Valveless emissary veins connect face/scalp veins to dural sinuses",
+      "Danger triangle of face — infection can spread to cavernous sinus → CN III/IV/V1/V2/V6 palsies, proptosis, fever",
+      "Classic boards link facial cellulitis/abscess → cavernous sinus thrombosis via emissary routes",
+      "vs diploic veins — diploic veins drain skull marrow; emissary veins traverse full skull to sinuses",
+      "Do not confuse with penile emissary veins (veno-occlusive erection mechanism)",
+    ],
+    pediatrics:
+      "Orbital/facial infections in children can seed cavernous sinus thrombosis through emissary pathways; treat aggressively and monitor cranial nerve function.",
   },
   {
     id: "pia-mater",
@@ -1781,6 +1908,8 @@ export const ORGANS: OrganEntry[] = [
       "arachnoid villus",
       "arachnoid granulations",
       "arachnoid granulation",
+      "arachnoid granulations csf",
+      "csf granulations",
       "pacchionian granulations",
       "pacchionian bodies",
       "csf reabsorption villi",
@@ -1809,6 +1938,82 @@ export const ORGANS: OrganEntry[] = [
     ],
     pediatrics:
       "Post-hemorrhagic or post-meningitic hydrocephalus in infants may reflect impaired CSF absorption at arachnoid villi; requires neurosurgical evaluation.",
+  },
+  {
+    id: "arachnoid-trabeculae",
+    name: "Arachnoid Trabeculae",
+    etymology:
+      "Greek arachne = spider + -oid = like + Latin trabecula = little beam — delicate collagenous strands spanning the subarachnoid space",
+    aliases: [
+      "arachnoid trabeculae",
+      "arachnoid trabecula",
+      "arachnoid trabecular",
+      "subarachnoid trabeculae",
+      "subarachnoid trabecula",
+      "arachnoid trabecular membrane",
+      "leptomeningeal trabeculae",
+    ],
+    germLayer: "Neural crest (arachnoid mater derivative)",
+    origin:
+      "Fine collagen and arachnoid cell processes extending from the arachnoid mater toward the pia mater — form a web-like mesh (trabecular membrane) across the subarachnoid space, creating intertrabecular channels for CSF and vessels.",
+    derivatives: [
+      "Subarachnoid cisterns — expansions of subarachnoid space where trabeculae are sparse (basilar, interpeduncular, chiasmatic)",
+      "Perivascular spaces (Virchow-Robin) at vessel entry — continuous with subarachnoid space",
+    ],
+    functionSummary:
+      "Suspend arachnoid relative to pia; partition subarachnoid space into CSF channels; anchor cerebral arteries and veins traversing to brain surface; maintain architecture of cisterns around brainstem and base of skull.",
+    commonPathologies: [
+      "Subarachnoid hemorrhage — blood disperses throughout subarachnoid space between trabeculae",
+      "Meningitis — inflammatory exudate in subarachnoid compartment",
+      "Arachnoiditis — scarring of trabecular mesh may impair CSF flow",
+    ],
+    step1Pearls: [
+      "Subarachnoid space lies between arachnoid (superior) and pia (inferior); trabeculae cross this space",
+      "CSF and major cerebral arteries course through subarachnoid space around trabeculae",
+      "Cisterns are widened subarachnoid spaces with fewer trabeculae — basilar cistern, lumbar puncture targets lower cisternal CSF",
+      "vs arachnoid granulations — trabeculae are intracranial mesh strands; granulations are dural sinus outpouchings for CSF reabsorption",
+      "vs dural septae — trabeculae are delicate leptomeningeal strands; septae are tough dural folds",
+    ],
+    pediatrics:
+      "Neonatal subarachnoid hemorrhage (prematurity) fills subarachnoid trabecular spaces; post-hemorrhagic hydrocephalus may follow impaired CSF circulation/reabsorption.",
+  },
+  {
+    id: "choroid-plexus",
+    name: "Choroid Plexus",
+    etymology:
+      "Greek chorion = membrane + eidos = form + Latin plexus = braid/network — vascular frond of ependyma producing CSF",
+    aliases: [
+      "choroid plexus",
+      "choroid plexuses",
+      "choroid plexi",
+      "choroid plexus epithelium",
+      "csf producing plexus",
+    ],
+    germLayer: "Ectoderm (ependyma from neural tube)",
+    origin:
+      "Invagination of ependymal lining with underlying fenestrated capillaries and connective tissue stroma into ventricular cavities — present in lateral ventricles (body/trigone/temporal horn), roof of third ventricle, and portions of fourth ventricle (roof and lateral recesses).",
+    derivatives: [
+      "Ependymal secretory epithelium — tight junctions form blood-CSF barrier",
+      "Fenestrated choroidal capillaries — plasma ultrafiltrate substrate for CSF",
+    ],
+    functionSummary:
+      "Primary CSF production (~500 mL/day; total CSF volume ~150 mL, turned over several times daily); secretes and modifies CSF composition via active transport; distinct from blood-brain barrier at capillary endothelium elsewhere.",
+    commonPathologies: [
+      "Choroid plexus papilloma — oversecretes CSF → hydrocephalus (pediatric)",
+      "Choroid plexus carcinoma — malignant pediatric tumor",
+      "Choroid plexus cyst — common fetal ultrasound finding, usually resolves",
+      "Inflammation/infection — ventriculitis affects choroid plexus epithelium",
+    ],
+    step1Pearls: [
+      "Choroid plexus produces most CSF — active secretion, not simple ultrafiltration alone",
+      "Blood-CSF barrier = choroid plexus ependymal tight junctions (vs BBB at cerebral capillary endothelium)",
+      "Located in lateral ventricles, third ventricle roof, fourth ventricle",
+      "Choroid plexus papilloma — pediatric hydrocephalus from CSF overproduction",
+      "vs arachnoid granulations — plexus produces CSF; granulations reabsorb CSF into venous sinuses",
+      "Ependymal cells line ventricles; choroid plexus is specialized ependyma + capillaries",
+    ],
+    pediatrics:
+      "Choroid plexus papilloma is a classic cause of pediatric communicating/non-obstructive hydrocephalus from CSF overproduction; fetal choroid plexus cysts are common incidental findings on ultrasound.",
   },
   {
     id: "forebrain",
@@ -1949,6 +2154,142 @@ export const ORGANS: OrganEntry[] = [
     ],
     pediatrics:
       "Wernicke encephalopathy occurs in adolescents with eating disorders, malignancy, or hyperemesis gravidarum — mammillary body injury is not limited to adult alcoholism; thiamine repletion is urgent.",
+  },
+  {
+    id: "nucleus-basalis",
+    name: "Nucleus Basalis of Meynert",
+    etymology:
+      "Latin nucleus = kernel/collection of cells + basalis = basal + named for German neurologist Theodor Meynert — cholinergic cell group in the basal forebrain",
+    aliases: [
+      "nucleus basalis",
+      "nucleus basalis of meynert",
+      "nucleus basalis meynert",
+      "basalis of meynert",
+      "meynert nucleus",
+      "meynert nuclei",
+      "nbm",
+      "basal forebrain cholinergic nucleus",
+      "basal nucleus of meynert",
+      "substantia innominata cholinergic neurons",
+      "nucleud basalis",
+    ],
+    germLayer: "Ectoderm (telencephalic basal forebrain)",
+    origin:
+      "Develops from ventral telencephalon/basal forebrain neuroepithelium; clusters of large cholinergic (ChAT-positive) neurons in the substantia innominata region anterior and lateral to the hypothalamus, beneath the anterior commissure and basal surface of the cerebral hemispheres.",
+    derivatives: [
+      "Basal forebrain cholinergic projection neurons to cerebral cortex",
+      "Projections to hippocampus, amygdala, and other limbic structures",
+      "Major cortical acetylcholine source via diffuse modulatory pathways",
+    ],
+    functionSummary:
+      "Primary source of cortical acetylcholine — wide ascending cholinergic projections modulate attention, arousal, learning, and memory; enhances cortical signal-to-noise and synaptic plasticity via muscarinic and nicotinic receptors.",
+    commonPathologies: [
+      "Alzheimer disease — early and marked loss of nucleus basalis cholinergic neurons",
+      "Lewy body dementia — cholinergic deficit with cortical Lewy bodies",
+      "Vascular lesions of basal forebrain — impaired attention and memory",
+      "Down syndrome — early Alzheimer-type pathology including cholinergic neuron loss",
+    ],
+    step1Pearls: [
+      "Nucleus basalis of Meynert = main cortical ACh source — ChAT-positive neurons in basal forebrain",
+      "Degeneration in Alzheimer disease → ↓ cortical acetylcholine → cognitive decline",
+      "Cholinesterase inhibitors (donepezil, rivastigmine, galantamine) compensate by ↑ synaptic ACh",
+      "vs nucleus accumbens — ventral striatum reward/motor; not primary cholinergic cortical source",
+      "vs dorsal motor nucleus of vagus — brainstem parasympathetic; not cortical projection nucleus",
+      "Basal forebrain cholinergic system is a boards link between anatomy and Alzheimer pharmacology",
+    ],
+    pediatrics:
+      "Classic Alzheimer cortical cholinergic loss is adult disease; adolescents with Down syndrome develop early Alzheimer pathology with basal forebrain cholinergic neuron vulnerability.",
+  },
+  {
+    id: "locus-ceruleus",
+    name: "Locus Ceruleus",
+    etymology:
+      "Latin locus = place + caeruleus/ceruleus = blue — brainstem nucleus with blue appearance from neuromelanin in norepinephrine neurons",
+    aliases: [
+      "locus ceruleus",
+      "locus ceruleus nucleus",
+      "locus coeruleus",
+      "locus coeruleus nucleus",
+      "lc",
+      "locus ceruleus lc",
+      "blue spot",
+      "blue nucleus",
+      "cerulean nucleus",
+      "noradrenergic nucleus",
+    ],
+    germLayer: "Ectoderm (rhombencephalon — dorsal pontine tegmentum)",
+    origin:
+      "Develops in the dorsal pons (floor of the fourth ventricle) as the brain's principal noradrenergic nucleus — small paired nucleus with melanin-containing norepinephrine (NE) neurons that project diffusely throughout the neuraxis.",
+    derivatives: [
+      "Ascending noradrenergic projections to cerebral cortex, hippocampus, amygdala, thalamus, and cerebellum",
+      "Descending projections to brainstem, cerebellum, and spinal cord dorsal horn",
+      "Norepinephrine synthesis via tyrosine hydroxylase and dopamine β-hydroxylase in LC neurons",
+    ],
+    functionSummary:
+      "Major CNS source of norepinephrine — modulates arousal, alertness, attention, stress responses, sleep-wake transitions, and pain processing; activated in fight-or-flight and REM sleep regulation; widely innervates cortex to tune signal-to-noise ratio.",
+    commonPathologies: [
+      "Opioid withdrawal — disinhibited hyperactivity of locus ceruleus → autonomic hyperactivity (tachycardia, hypertension, diarrhea, mydriasis)",
+      "Alzheimer and Parkinson disease — LC neuron loss contributes to cognitive and autonomic dysfunction",
+      "Chronic stress and PTSD — altered LC-NE tone",
+      "REM sleep behavior disorder — brainstem REM circuitry includes LC modulation",
+    ],
+    step1Pearls: [
+      "Locus ceruleus (coeruleus) = main brain norepinephrine source — dorsal pons, blue on gross section",
+      "Opioid tolerance/withdrawal — opioids inhibit LC; withdrawal → LC hyperactivity → adrenergic withdrawal symptoms",
+      "Clonidine treats opioid withdrawal partly by ↓ LC noradrenergic outflow (α₂ agonist)",
+      "NE from LC modulates arousal, attention, and stress — diffuse cortical projections",
+      "vs ventral tegmental area — VTA is mesolimbic/mesocortical dopamine (reward), not NE",
+      "vs substantia nigra — dopamine for motor striatum, not LC norepinephrine",
+      "Tyrosine hydroxylase in LC neurons — rate-limiting step in NE synthesis",
+    ],
+    pediatrics:
+      "Neonatal opioid withdrawal (NAS) involves autonomic hyperactivity from catecholamine surges including LC-NE pathways; clonidine is used adjunctively in some protocols. LC anatomy is the same across ages.",
+  },
+  {
+    id: "raphe-nuclei",
+    name: "Raphe Nuclei",
+    etymology:
+      "Greek rhaphe = seam/suture — midline cluster of brainstem nuclei along the seam between left and right tegmentum",
+    aliases: [
+      "raphe nuclei",
+      "raphe nucleus",
+      "raphe nuclear complex",
+      "dorsal raphe nucleus",
+      "dorsal raphe nuclei",
+      "drn",
+      "median raphe nucleus",
+      "serotonergic raphe nuclei",
+      "raphe serotonergic system",
+      "brainstem raphe nuclei",
+    ],
+    germLayer: "Ectoderm (rhombencephalon — midline pontine and medullary tegmentum)",
+    origin:
+      "Develop as paired midline and paramedian nuclei along the brainstem raphe from rhombencephalon neuroepithelium; contain serotonergic (5-HT) neurons with tryptophan hydroxylase 2 (TPH2) that project widely to forebrain and spinal cord.",
+    derivatives: [
+      "Dorsal raphe nucleus — major ascending serotonergic projections to cortex, hippocampus, hypothalamus, and limbic structures",
+      "Median and other raphe subnuclei — additional 5-HT projections to brainstem and spinal cord",
+      "Rostral raphe groups — mood, sleep, and appetite modulation",
+      "Caudal raphe groups — pain and motor modulation in spinal cord",
+    ],
+    functionSummary:
+      "Principal CNS source of serotonin — diffuse modulatory projections regulate mood, anxiety, sleep-wake cycles, appetite, thermoregulation, and nociception; rostral groups target forebrain; caudal groups influence spinal pain pathways.",
+    commonPathologies: [
+      "Depression and anxiety disorders — altered serotonergic tone (SSRIs ↑ synaptic 5-HT downstream of raphe projections)",
+      "Serotonin syndrome — excess serotonergic activity (SSRI + MAOI, MDMA, linezolid)",
+      "Migraine prophylaxis — serotonergic modulation (boards context for 5-HT pathways)",
+      "Obstructive sleep apnea and depression overlap — serotonergic respiratory/mood circuits",
+    ],
+    step1Pearls: [
+      "Raphe nuclei = main brain serotonin source — midline brainstem (pons/medulla)",
+      "Synthesis: tryptophan → 5-HTP (tryptophan hydroxylase/TPH2) → serotonin (AADC) in raphe neurons",
+      "SSRIs block serotonin reuptake (SERT) at raphe terminal fields — ↑ synaptic 5-HT",
+      "MDMA and amphetamines ↑ serotonin release from raphe terminals — serotonin syndrome risk with SSRIs",
+      "vs enterochromaffin cells — peripheral/GI serotonin (TPH1), not CNS raphe",
+      "vs locus ceruleus — LC is noradrenergic; raphe is serotonergic",
+      "Platelets store serotonin taken from plasma — do not synthesize it in raphe",
+    ],
+    pediatrics:
+      "Pediatric depression and anxiety may be treated with SSRIs targeting serotonergic raphe projections; serotonin syndrome risk with drug interactions is the same mechanism as in adults. Neonatal abstinence and some neurodevelopmental disorders involve altered monoamine tone but raphe anatomy is unchanged.",
   },
   {
     id: "putamen",
@@ -2225,6 +2566,55 @@ export const ORGANS: OrganEntry[] = [
     ],
     pediatrics:
       "Medulloblastoma and Chiari II (with spina bifida) are classic pediatric hindbrain pathologies; Dandy-Walker malformation involves cerebellar vermis and fourth ventricle.",
+  },
+  {
+    id: "lateral-pons",
+    name: "Lateral Pons",
+    etymology:
+      "Latin lateralis = side + Latin pons = bridge — lateral tegmental and peduncular region of the pontine brainstem",
+    aliases: [
+      "lateral pons",
+      "lateral pontine",
+      "lateral pontine region",
+      "lateral pontine tegmentum",
+      "lateral pontine tegment",
+      "pontine tegmentum lateral",
+      "lateral pons brainstem",
+    ],
+    germLayer: "Ectoderm (neural tube — alar and basal plates of metencephalon)",
+    origin:
+      "Develops from the metencephalon (hindbrain vesicle) as the pons expands between midbrain and medulla; lateral pons comprises the tegmentum (CN nuclei, MLF, spinothalamic tract, medial lemniscus) and the middle cerebellar peduncle (brachium pontis) connecting pontine nuclei to the cerebellum.",
+    derivatives: [
+      "Middle cerebellar peduncle — largest cerebellar peduncle; pontocerebellar fibers",
+      "Pontine nuclei — relay cortex → cerebellum via MCP",
+      "CN V motor and principal sensory nuclei; spinal trigeminal tract",
+      "CN VI nucleus (abducens) and CN VII nucleus/fascicles (facial colliculus)",
+      "CN VIII cochlear and vestibular nuclei (cerebellopontine angle region)",
+      "Medial longitudinal fasciculus (MLF) — internuclear ophthalmoplegia when lesioned",
+      "Paramedian pontine reticular formation (PPRF) — horizontal conjugate gaze",
+    ],
+    functionSummary:
+      "Relay station between cerebrum and cerebellum via pontine nuclei and middle cerebellar peduncle; houses CN V–VIII nuclei and tracts; integrates horizontal eye movements (PPRF, MLF, CN VI); transmits spinothalamic and lemniscal sensory pathways through the tegmentum.",
+    commonPathologies: [
+      "Lateral pontine syndrome — anterior inferior cerebellar artery (AICA) infarction",
+      "Internuclear ophthalmoplegia — MLF lesion (MS plaque or pontine lacunar stroke)",
+      "Cerebellopontine angle mass — vestibular schwannoma compresses CN VII/VIII",
+      "Pontine hemorrhage or demyelination affecting lateral tegmentum",
+      "Horizontal gaze palsy from PPRF or CN VI nucleus injury",
+    ],
+    step1Pearls: [
+      "Lateral pontine syndrome (AICA) — ipsilateral ataxia, Horner, facial weakness (CN VII), deafness/vertigo (CN VIII), facial pain/temp loss (CN V); contralateral body pain/temp loss",
+      "vs lateral medullary (PICA/Wallenberg) — medullary has CN IX/X/XI findings; pontine has CN VII/VIII",
+      "MLF in lateral pontine tegmentum — INO: impaired adduction ipsilateral eye, abducting nystagmus contralateral",
+      "Middle cerebellar peduncle = brachium pontis — largest cerebellar peduncle",
+      "Facial colliculus (floor of 4th ventricle) — CN VI nucleus with CN VII fibers looping around it",
+      "Cerebellopontine angle — lateral pons meets cerebellum; acoustic neuroma classic location",
+      "vs medial pons — basilar artery occlusion → locked-in syndrome",
+      "vs lateral medulla (PICA) — CN IX/X/XI, not VII/VIII",
+      "vs central pons — osmotic demyelination (central pontine myelinolysis)",
+    ],
+    pediatrics:
+      "Brainstem gliomas may involve the lateral pons in children; CPA tumors and congenital hearing loss workup evaluate CN VIII at the lateral pontine angle. INO in adolescents suggests MS.",
   },
   {
     id: "lateral-ventricles",

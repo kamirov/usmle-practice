@@ -3211,6 +3211,48 @@ export const PROTEINS: ProteinEntry[] = [
     ],
   },
   {
+    id: "choline-acetyltransferase",
+    name: "Choline Acetyltransferase",
+    etymology:
+      "Greek chole = bile (historical root for choline) + acetyl = CH₃CO group + transferase = enzyme transferring acyl groups",
+    aliases: [
+      "choline acetyltransferase",
+      "choline acetyl transferase",
+      "choline o-acetyltransferase",
+      "choline o acetyltransferase",
+      "chat",
+      "chat enzyme",
+      "choline acetyltransferase enzyme",
+      "acetylcholine synthase",
+      "ach synthesis enzyme",
+    ],
+    gene: "CHAT",
+    location:
+      "Cytoplasm of cholinergic neurons — cell body, axon, and especially presynaptic nerve terminals at neuromuscular junction, autonomic ganglia, and CNS cholinergic synapses",
+    function:
+      "Synthesizes acetylcholine by transferring an acetyl group from acetyl-CoA to choline (acetyl-CoA + choline → ACh + CoA) — the committed biosynthetic enzyme for ACh before vesicular packaging by the vesicular acetylcholine transporter (VAChT).",
+    mutationCauses: [
+      "CHAT deficiency — rare congenital myasthenic syndrome with episodic apnea and fatigable weakness",
+      "Reduced ChAT activity in some neurodegenerative diseases (research context; not primary Step 1 disease gene)",
+    ],
+    boardsPearls: [
+      "ChAT = ACh synthesis: acetyl-CoA + choline → acetylcholine",
+      "Occurs in cholinergic neuron cytoplasm before ACh is loaded into synaptic vesicles (VAChT)",
+      "Hemicholinium blocks high-affinity choline uptake → ↓ choline substrate → ↓ ACh synthesis",
+      "vs acetylcholinesterase (AChE) — AChE degrades ACh in synaptic cleft; ChAT synthesizes it",
+      "Botulinum toxin blocks ACh release (SNARE cleavage), not ChAT activity",
+      "Organophosphates inhibit AChE → ↑ synaptic ACh after normal ChAT-mediated synthesis",
+      "ChAT immunostaining marks cholinergic neurons histologically",
+    ],
+    distinguishFrom: [
+      "Acetylcholinesterase (AChE) — terminates synaptic ACh; target of organophosphates and donepezil",
+      "Vesicular acetylcholine transporter (VAChT) — loads ACh into synaptic vesicles after ChAT synthesis",
+      "Choline kinase — phosphorylates choline to phosphocholine in phospholipid synthesis, not neurotransmitter pathway",
+      "Acetyl-CoA carboxylase — fatty acid synthesis enzyme, not cholinergic",
+      "Acetylcholine — neurotransmitter product, not the synthetic enzyme",
+    ],
+  },
+  {
     id: "intrinsic-factor",
     name: "Intrinsic Factor",
     etymology: "Latin intrinsecus = inward + Latin factor = maker/agent",
@@ -3276,6 +3318,126 @@ export const PROTEINS: ProteinEntry[] = [
       "Dopamine β-hydroxylase — dopamine → norepinephrine in vesicles",
       "Phenylalanine hydroxylase — converts Phe → Tyr; PKU enzyme, not catecholamine synthesis",
       "Tyrosinase — melanin synthesis in melanocytes, not neurotransmitter pathway",
+    ],
+  },
+  {
+    id: "dopa-decarboxylase",
+    name: "Dopa Decarboxylase",
+    etymology:
+      "L-DOPA = dihydroxyphenylalanine substrate + decarboxylase = enzyme removing carboxyl (CO₂) group",
+    aliases: [
+      "dopa decarboxylase",
+      "dopa decarboxylases",
+      "aromatic l-amino acid decarboxylase",
+      "aromatic l amino acid decarboxylase",
+      "aadc",
+      "ddc",
+      "dopa decarboxylase enzyme",
+      "l-dopa decarboxylase",
+      "5-htp decarboxylase",
+    ],
+    gene: "DDC",
+    location:
+      "Cytosol of catecholaminergic and serotonergic neurons, enterochromaffin cells, and broadly in tissues converting aromatic amino acid precursors to biogenic amines",
+    function:
+      "Aromatic L-amino acid decarboxylase (AADC) — pyridoxal phosphate (vitamin B6)–dependent enzyme converting L-DOPA to dopamine, 5-hydroxytryptophan (5-HTP) to serotonin, and L-histidine to histamine; shared decarboxylation step in multiple neurotransmitter biosynthetic pathways.",
+    mutationCauses: [
+      "AADC deficiency — severe neonatal encephalopathy, hypotonia, oculogyric crises, dystonia, autonomic dysfunction; ↓ CSF dopamine and serotonin metabolites",
+      "Milder DDC variants — dopamine-responsive dystonia and developmental delay",
+    ],
+    boardsPearls: [
+      "AADC = dopa decarboxylase: L-DOPA → dopamine; also 5-HTP → serotonin and histidine → histamine",
+      "Carbidopa/benserazide inhibit peripheral AADC — paired with L-DOPA in Parkinson disease to ↑ CNS L-DOPA and ↓ peripheral dopamine side effects",
+      "Pathway: tyrosine → L-DOPA (TH) → dopamine (AADC) → NE (DBH) → Epi (PNMT)",
+      "Serotonin synthesis also uses AADC: tryptophan → 5-HTP (tryptophan hydroxylase) → serotonin (AADC)",
+      "Requires pyridoxine (B6) cofactor — deficiency impairs AADC activity",
+      "vs tyrosine hydroxylase — TH is rate-limiting for catecholamines; AADC is shared decarboxylase step",
+    ],
+    distinguishFrom: [
+      "Tyrosine hydroxylase — converts tyrosine to L-DOPA; rate-limiting for catecholamine synthesis",
+      "Tryptophan hydroxylase — converts tryptophan to 5-HTP; rate-limiting for serotonin synthesis",
+      "Dopamine beta-hydroxylase — dopamine → norepinephrine inside vesicles",
+      "Carbidopa — drug inhibitor of AADC, not the enzyme itself",
+      "Histidine decarboxylase — some texts group histamine synthesis under AADC activity; same enzyme family functionally on boards",
+    ],
+  },
+  {
+    id: "dopamine-beta-hydroxylase",
+    name: "Dopamine Beta-Hydroxylase",
+    etymology:
+      "dopamine = catecholamine neurotransmitter + Greek beta = second letter + hydroxyl = OH group + -ase = enzyme",
+    aliases: [
+      "dopamine beta-hydroxylase",
+      "dopamine beta hydroxylase",
+      "dopamine β-hydroxylase",
+      "dopamine β hydroxylase",
+      "dbh",
+      "dopamine beta hydroxylase enzyme",
+      "dopamine to norepinephrine enzyme",
+    ],
+    gene: "DBH",
+    location:
+      "Synaptic vesicles of noradrenergic neurons (locus ceruleus, postganglionic sympathetic neurons) and chromaffin granules of adrenal medulla — acts after dopamine is transported into vesicles",
+    function:
+      "Converts dopamine to norepinephrine (dopamine + O₂ + ascorbate → norepinephrine + H₂O) — essential step linking dopaminergic and noradrenergic catecholamine synthesis; requires copper and vitamin C (ascorbic acid) cofactors within vesicles.",
+    mutationCauses: [
+      "Dopamine β-hydroxylase deficiency — autosomal recessive; ↓ NE and epinephrine, ↑ dopamine; severe orthostatic hypotension, ptosis, hypothermia, hypoglycemia, and delayed development",
+    ],
+    boardsPearls: [
+      "Catecholamine pathway: tyrosine → L-DOPA (TH) → dopamine (AADC) → NE (DBH) → Epi (PNMT in adrenal medulla)",
+      "DBH converts dopamine → norepinephrine inside vesicles — not the rate-limiting step (TH is rate-limiting)",
+      "DBH deficiency → ↓ NE/Epi, ↑ dopamine, orthostatic hypotension from childhood",
+      "Disulfiram inhibits DBH → ↑ dopamine, ↓ NE synthesis",
+      "vs PNMT — converts NE to epinephrine only in adrenal medulla chromaffin cells",
+      "vs tyrosine hydroxylase — first/rate-limiting step; DBH is downstream conversion within vesicles",
+    ],
+    distinguishFrom: [
+      "Tyrosine hydroxylase — rate-limiting tyrosine → L-DOPA step",
+      "Dopa decarboxylase (AADC) — L-DOPA → dopamine; inhibited by carbidopa peripherally",
+      "Phenylethanolamine N-methyltransferase (PNMT) — NE → epinephrine in adrenal medulla only",
+      "Monoamine oxidase (MAO) — degrades catecholamines intracellularly, not biosynthetic enzyme",
+      "Dopamine — substrate/product of pathway, not the enzyme",
+    ],
+  },
+  {
+    id: "tryptophan-hydroxylase",
+    name: "Tryptophan Hydroxylase",
+    etymology:
+      "Greek tryptophan = tryptophan amino acid + hydroxyl = OH group + -ase = enzyme",
+    aliases: [
+      "tryptophan hydroxylase",
+      "tryptophan hydroxylases",
+      "tph",
+      "tph1",
+      "tph2",
+      "tryptophan 5-monooxygenase",
+      "rate-limiting enzyme serotonin synthesis",
+      "tryptophan hydroxylase enzyme",
+    ],
+    gene: "TPH1 (peripheral/GI) and TPH2 (CNS raphe nuclei)",
+    location:
+      "TPH2 in brainstem raphe nuclei (CNS serotonin synthesis); TPH1 in enterochromaffin cells of GI mucosa (peripheral serotonin production)",
+    function:
+      "Rate-limiting enzyme converting tryptophan to 5-hydroxytryptophan (5-HTP) — first committed step in serotonin (5-HT) biosynthesis; requires tetrahydrobiopterin (BH4) cofactor, analogous to tyrosine hydroxylase in catecholamine synthesis.",
+    mutationCauses: [
+      "TPH2 variants — altered serotonin tone linked to mood and behavioral phenotypes (research; not classic Step 1 inborn error)",
+      "Indirect impairment when BH4 cofactor deficient (shared with phenylketonuria/tyrosine hydroxylase pathways)",
+    ],
+    boardsPearls: [
+      "Serotonin synthesis: tryptophan → 5-HTP (tryptophan hydroxylase, rate-limiting) → serotonin (AADC/dopa decarboxylase)",
+      "TPH2 = CNS raphe nuclei; TPH1 = GI enterochromaffin cells (major peripheral serotonin source)",
+      "BH4 cofactor required — same biopterin pathway as tyrosine hydroxylase and phenylalanine hydroxylase",
+      "Platelets take up serotonin from plasma — they do not synthesize it via TPH",
+      "Carcinoid tumors (enterochromaffin) secrete serotonin → flushing, diarrhea; ↑ urinary 5-HIAA",
+      "vs tyrosine hydroxylase — parallel rate-limiting hydroxylation step but for tryptophan → 5-HTP, not catecholamines",
+      "SSRIs ↑ synaptic serotonin by blocking reuptake (SERT), not by changing TPH activity",
+    ],
+    distinguishFrom: [
+      "Dopa decarboxylase (AADC) — converts 5-HTP → serotonin; downstream of TPH",
+      "Tyrosine hydroxylase — catecholamine pathway rate-limiting enzyme from tyrosine",
+      "Phenylalanine hydroxylase — Phe → Tyr; PKU enzyme, not serotonin synthesis",
+      "Serotonin — neurotransmitter product, not the synthetic enzyme",
+      "Monoamine oxidase — degrades serotonin, not biosynthesis",
     ],
   },
   {

@@ -1465,6 +1465,227 @@ export const MUSCULOSKELETAL: MusculoskeletalEntry[] = [
       "V2 anesthesia after midface trauma or dental procedures follows same foramen rotundum anatomy in all ages.",
   },
   {
+    id: "infraorbital-foramen",
+    name: "Infraorbital foramen",
+    etymology: "Latin infra = below + orbita = eye socket + foramen = opening",
+    aliases: [
+      "infraorbital foramen",
+      "infraorbital foramina",
+      "infra-orbital foramen",
+      "infra orbital foramen",
+      "io foramen",
+    ],
+    definition:
+      "Facial opening in the maxillary bone on the anterior surface below the orbit — exit point of the infraorbital nerve (terminal branch of CN V2) from the infraorbital groove/canal.",
+    anatomy:
+      "Located ~1 cm below the orbital rim on the maxilla, usually in line with the supraorbital notch/foramen. Infraorbital nerve (from maxillary nerve V2 via pterygopalatine fossa and infraorbital canal) exits here with infraorbital artery and vein.",
+    action: [
+      "Facial exit for infraorbital nerve sensory branches",
+      "Sensory supply to lower eyelid, cheek, lateral nose, upper lip, and maxillary gingiva",
+      "Landmark for infraorbital nerve block in midface anesthesia",
+    ],
+    innervation: "Infraorbital nerve — branch of CN V2 (maxillary division of trigeminal)",
+    clinicalRelevance: [
+      "Infraorbital nerve block — upper lip, cheek, and maxillary teeth anesthesia",
+      "Midface trauma or Le Fort fractures involving infraorbital canal",
+      "Trigeminal neuralgia or neuropathy in V2 distribution",
+      "Orbital floor blowout fracture — infraorbital nerve paresthesia of cheek/upper lip",
+    ],
+    boardsPearls: [
+      "Infraorbital foramen = V2 (infraorbital nerve) facial exit",
+      "Sensory: lower eyelid, cheek, upper lip, maxillary teeth",
+      "Foramen rotundum → pterygopalatine fossa → infraorbital canal → infraorbital foramen",
+      "Blowout fracture → infraorbital nerve numbness + enophthalmos risk",
+      "vs supraorbital foramen — V1 supraorbital nerve, forehead/scalp",
+    ],
+    distinguishFrom: [
+      "Foramen rotundum — skull base exit of V2 into pterygopalatine fossa, not facial foramen",
+      "Supraorbital foramen/notch — V1 frontal nerve exit, forehead sensation",
+      "Inferior orbital fissure — gap between maxilla and sphenoid; conduit to orbit, not infraorbital nerve exit",
+      "Mental foramen — V3 mental nerve exit on mandible, lower lip/chin",
+      "Infraorbital canal — intramaxillary course before exiting at foramen",
+    ],
+    pediatrics:
+      "Infraorbital nerve block used for pediatric midface laceration repair and dental procedures; same landmark anatomy as adults.",
+  },
+  {
+    id: "mandibular-foramen",
+    name: "Mandibular foramen",
+    etymology: "Latin mandibula = jaw + foramen = opening",
+    aliases: [
+      "mandibular foramen",
+      "mandibular foramina",
+      "mandible foramen",
+      "inferior alveolar foramen",
+    ],
+    definition:
+      "Opening on the medial surface of the mandibular ramus — entry point for the inferior alveolar nerve (branch of CN V3), inferior alveolar artery, and vein into the mandibular canal.",
+    anatomy:
+      "Located on the medial ramus of the mandible, opposite the lingula (small bony projection). Inferior alveolar nerve enters mandibular canal here, runs within the mandible supplying mandibular teeth, then exits anteriorly as the mental nerve through the mental foramen.",
+    action: [
+      "Mandibular entry for inferior alveolar neurovascular bundle",
+      "Target landmark for inferior alveolar nerve block — anesthetizes lower teeth, lower lip, and chin (via mental nerve)",
+      "Conduit for sensory innervation of mandibular teeth and gingiva",
+    ],
+    innervation: "Inferior alveolar nerve — branch of CN V3 (mandibular division of trigeminal)",
+    clinicalRelevance: [
+      "Inferior alveolar nerve block — main technique for mandibular dental anesthesia",
+      "Mandibular fracture involving ramus may injure inferior alveolar nerve",
+      "Numbness of lower lip/chin after mandibular surgery or trauma",
+      "Odontogenic infection spread along mandibular canal (rare)",
+    ],
+    boardsPearls: [
+      "Mandibular foramen = entry of inferior alveolar nerve (V3) into mandible",
+      "Inferior alveolar nerve block anesthetizes ipsilateral lower teeth + lower lip/chin",
+      "Mental nerve exits mental foramen anteriorly — terminal branch of inferior alveolar nerve",
+      "vs foramen ovale — skull base V3 exit, not mandibular bone opening",
+      "Lingula marks medial ramus near mandibular foramen",
+    ],
+    distinguishFrom: [
+      "Mental foramen — anterior mandible exit of mental nerve, not ramus entry",
+      "Foramen ovale — skull sphenoid opening for CN V3 trunk, not mandible",
+      "Mandibular canal — bony tunnel within mandible, not the foramen itself",
+      "Incisive foramen — maxillary midline, nasopalatine nerve (V2), not mandible",
+      "Carotid canal — internal carotid artery, unrelated jaw foramen",
+    ],
+    pediatrics:
+      "Inferior alveolar nerve block dosing and technique adjusted for pediatric mandible size; same mandibular foramen anatomy.",
+  },
+  {
+    id: "mental-foramen",
+    name: "Mental foramen",
+    etymology: "Latin mentum = chin + foramen = opening",
+    aliases: [
+      "mental foramen",
+      "mental foramina",
+      "mental nerve foramen",
+    ],
+    definition:
+      "Opening on the lateral surface of the mandible, usually between the first and second premolars — exit point of the mental nerve (terminal branch of the inferior alveolar nerve, CN V3).",
+    anatomy:
+      "Mental nerve exits here with mental artery and vein after traversing the mandibular canal from the mandibular foramen. Provides sensory innervation to the lower lip, chin, and gingiva of the mandibular anterior teeth.",
+    action: [
+      "Facial exit for mental nerve — terminal branch of inferior alveolar nerve (V3)",
+      "Sensory supply to lower lip, chin, and anterior mandibular gingiva",
+      "Landmark for mental nerve block (local anesthesia of chin/lower lip)",
+    ],
+    innervation: "Mental nerve — terminal branch of inferior alveolar nerve (CN V3)",
+    clinicalRelevance: [
+      "Mental nerve block — anesthesia of lower lip and chin",
+      "Lower lip/chin numbness after mandibular fracture or dental implant surgery",
+      "Perineural spread of oral squamous cell carcinoma along mental nerve",
+      "Palpable landmark on mandible in clinical exam",
+    ],
+    boardsPearls: [
+      "Mental foramen = exit of mental nerve (V3 branch)",
+      "Lower lip + chin sensation — mental nerve",
+      "Inferior alveolar nerve enters mandibular foramen → mandibular canal → exits mental foramen",
+      "vs infraorbital foramen — V2 upper lip/cheek, maxilla",
+      "Bilateral mental nerve injury → numb chin syndrome",
+    ],
+    distinguishFrom: [
+      "Mandibular foramen — medial ramus entry of inferior alveolar nerve, not facial exit",
+      "Infraorbital foramen — V2 upper lip and cheek exit on maxilla",
+      "Incisive foramen — maxillary midline, nasopalatine nerve",
+      "Foramen ovale — skull V3 trunk exit, not mandibular surface opening",
+      "Submandibular duct opening — Wharton duct at floor of mouth, not mental foramen",
+    ],
+    pediatrics:
+      "Mental foramen position relative to tooth buds shifts with mandibular growth; pediatric dental nerve blocks account for smaller mandible and variable foramen position.",
+  },
+  {
+    id: "stylomastoid-foramen",
+    name: "Stylomastoid foramen",
+    etymology: "Greek stylos = pillar + mastos = breast (mastoid) + Latin foramen = opening — between styloid and mastoid processes",
+    aliases: [
+      "stylomastoid foramen",
+      "stylomastoid foramina",
+      "stylomastoid opening",
+      "facial nerve foramen",
+      "cn vii foramen",
+    ],
+    definition:
+      "Opening between the styloid and mastoid processes of the temporal bone — exit point of cranial nerve VII (facial nerve) from the facial canal to the parotid region and face.",
+    anatomy:
+      "CN VII completes its course through the facial canal (with chorda tympani, nerve to stapedius, and greater petrosal branching earlier), then exits stylomastoid foramen. Immediately gives posterior auricular branch, then enters parotid gland to form the pes anserinus (temporal, zygomatic, buccal, mandibular, cervical branches) for muscles of facial expression.",
+    action: [
+      "Skull exit for CN VII motor fibers to muscles of facial expression",
+      "Posterior auricular branch to occipitalis and auricular muscles",
+      "Nerve to posterior belly of digastric and stylohyoid exits nearby",
+      "Chorda tympani and greater petrosal branch off before stylomastoid exit",
+    ],
+    innervation: "CN VII (facial nerve) — motor to facial expression muscles; chorda tympani (taste anterior 2/3 tongue) and greater petrosal (lacrimation) branch earlier",
+    clinicalRelevance: [
+      "Bell palsy — acute peripheral CN VII palsy distal to nucleus (including stylomastoid region)",
+      "Parotidectomy or mastoid surgery — risk of CN VII injury at stylomastoid foramen",
+      "Facial nerve laceration in temporal bone fracture",
+      "Post-auricular pain before Bell palsy (nerve swelling in canal/foramen region)",
+    ],
+    boardsPearls: [
+      "Stylomastoid foramen = CN VII exit to face",
+      "Peripheral VII palsy — entire ipsilateral face including forehead (vs UMN spares forehead)",
+      "Chorda tympani joins lingual nerve (V3) in infratemporal fossa — taste + submandibular/sublingular salivation",
+      "Greater petrosal nerve — parasympathetic lacrimation (before exit)",
+      "vs internal auditory meatus — CN VII/VIII enter temporal bone, not exit to face",
+      "LMN VII lesion at stylomastoid foramen — loss of taste anterior 2/3 tongue if chorda tympani involved proximally",
+    ],
+    distinguishFrom: [
+      "Internal auditory meatus — CN VII and VIII enter temporal bone from posterior fossa",
+      "Jugular foramen — CN IX, X, XI exit, not CN VII",
+      "Foramen ovale — V3 mandibular nerve, not facial nerve",
+      "Parotid duct — Stensen duct opens in buccal mucosa, not stylomastoid foramen",
+      "Chorda tympani — branches in middle ear before VII exits stylomastoid foramen",
+    ],
+    pediatrics:
+      "Bell palsy occurs in children; peripheral facial weakness with forehead involvement distinguishes from central stroke. Congenital facial palsy from forceps or Möbius syndrome presents at birth — distinguish from acquired Bell palsy.",
+  },
+  {
+    id: "superior-orbital-fissure",
+    name: "Superior orbital fissure",
+    etymology: "Latin superior = above + orbita = eye socket + fissura = cleft — gap between sphenoid wings leading to orbit",
+    aliases: [
+      "superior orbital fissure",
+      "superior orbital fissures",
+      "superior orbital fissure of sphenoid",
+      "so fissure",
+      "orbital fissure superior",
+    ],
+    definition:
+      "Cleft between the greater and lesser wings of the sphenoid bone connecting the middle cranial fossa to the orbit — major conduit for oculomotor (III), trochlear (IV), abducens (VI), and ophthalmic (V1) nerves plus ophthalmic veins and sympathetic fibers.",
+    anatomy:
+      "Lateral to the optic canal and superomedial to the inferior orbital fissure. CN III, IV, V1, and VI pass from cavernous sinus region into orbit (VI runs through cavernous sinus lumen; III/IV/V1 in lateral wall). Ophthalmic veins drain to cavernous sinus through this fissure. Sympathetic fibers from internal carotid plexus accompany nerves to orbit.",
+    action: [
+      "Orbital entry for CN III, IV, VI, and V1 after exiting cavernous sinus region",
+      "Passage for ophthalmic veins connecting orbit to cavernous sinus",
+      "Sympathetic innervation to dilator pupillae and orbital vessels",
+      "Site of communication between middle cranial fossa and orbit",
+    ],
+    innervation: "CN III (oculomotor), CN IV (trochlear), CN VI (abducens), CN V1 (ophthalmic), sympathetic fibers — not a nerve itself",
+    clinicalRelevance: [
+      "Superior orbital fissure syndrome — ophthalmoplegia (III/IV/VI), V1 sensory loss, proptosis; vision may be spared if optic canal uninvolved",
+      "Orbital apex syndrome — combines superior orbital fissure and optic canal involvement → vision loss",
+      "Cavernous sinus thrombosis spreads via ophthalmic veins through fissure",
+      "Skull base fracture, sphenoid wing tumor, or carotid-cavernous fistula",
+    ],
+    boardsPearls: [
+      "Superior orbital fissure = CN III, IV, V1, VI + ophthalmic veins + sympathetic fibers",
+      "Trigeminal foramina: V1 = superior orbital fissure; V2 = rotundum; V3 = ovale",
+      "Superior orbital fissure syndrome — ophthalmoplegia + V1 loss; vision spared",
+      "Orbital apex syndrome — above plus CN II optic nerve involvement → ↓ vision",
+      "vs inferior orbital fissure — V2 (infraorbital), zygomatic branches; not III/IV/VI",
+      "vs optic canal — CN II and ophthalmic artery only",
+    ],
+    distinguishFrom: [
+      "Inferior orbital fissure — maxilla-sphenoid gap; V2 maxillary branches and infraorbital canal access, not primary CN III/IV/VI passage",
+      "Optic canal — CN II and ophthalmic artery within lesser wing of sphenoid",
+      "Foramen rotundum — V2 skull exit to pterygopalatine fossa, not direct orbital entry",
+      "Supraorbital notch/foramen — V1 branch exit on forehead, distal to fissure",
+      "Cavernous sinus — venous sinus lateral to sella; nerves course here before entering superior orbital fissure",
+    ],
+    pediatrics:
+      "Superior orbital fissure and orbital apex syndromes are rare in children but may follow skull base trauma, orbital cellulitis with cavernous sinus spread, or sphenoid wing meningioma; same cranial nerve anatomy applies.",
+  },
+  {
     id: "cavernous-sinus",
     name: "Cavernous Sinus",
     etymology: "Latin cavernosus = full of hollows/caves + Latin sinus = bay/channel",
@@ -1513,6 +1734,61 @@ export const MUSCULOSKELETAL: MusculoskeletalEntry[] = [
     ],
     pediatrics:
       "Cavernous sinus thrombosis occurs in children from complicated sinusitis or orbital cellulitis — same cranial nerve findings as adults; urgent antibiotics and evaluation for septic thrombosis.",
+  },
+  {
+    id: "sagittal-sinus",
+    name: "Sagittal Sinus",
+    etymology:
+      "Latin sagitta = arrow + sinus = bay/channel — midline dural venous channels running along the falx cerebri in the sagittal plane",
+    aliases: [
+      "sagittal sinus",
+      "sagittal sinuses",
+      "superior sagittal sinus",
+      "superior sagittal sinuses",
+      "sss",
+      "inferior sagittal sinus",
+      "inferior sagittal sinuses",
+      "dural sagittal sinus",
+      "sagittal venous sinus",
+      "sagittal venous sinuses",
+    ],
+    definition:
+      "Midline dural venous sinuses coursing within the falx cerebri — the superior sagittal sinus along the attached convex margin and the inferior sagittal sinus along the free edge — draining cerebral cortex and receiving CSF from arachnoid granulations before converging toward the confluence of sinuses and straight sinus.",
+    anatomy:
+      "Superior sagittal sinus (SSS) runs in the attached margin of the falx cerebri from the crista galli anteriorly to the confluence of sinuses (torcula Herophili) posteriorly; receives superior cerebral veins and arachnoid granulations (Pacchionian bodies) for CSF reabsorption. Inferior sagittal sinus runs in the free edge of the falx and drains posteriorly to the straight sinus, which joins the confluence with the great cerebral vein (vein of Galen). Both lie between periosteal and meningeal layers of dura.",
+    action: [
+      "Venous drainage of cerebral cortex and superior midline falx",
+      "CSF reabsorption — arachnoid granulations protrude into superior sagittal sinus",
+      "Confluence of sinuses directs venous blood toward transverse/sigmoid sinuses and internal jugular vein",
+      "Midline anatomic landmark for falx cerebri and parasagittal meningiomas",
+    ],
+    innervation:
+      "Not innervated — venous structure; pain from thrombosis or meningitis reflects meningeal irritation and ↑ ICP rather than sinus innervation",
+    clinicalRelevance: [
+      "Superior sagittal sinus thrombosis — headache, papilledema, seizures, focal deficits; risk with hypercoagulability, OCP, pregnancy, dehydration, infection",
+      "Arachnoid granulation dysfunction → impaired CSF absorption and communicating hydrocephalus",
+      "Parasagittal/falcine meningioma may invade or compress superior sagittal sinus",
+      "Vertex epidural hematoma or skull fracture can injure adjacent sinus",
+      "Post-meningitic or post-SAH scarring at granulations impairs CSF drainage",
+    ],
+    boardsPearls: [
+      "Superior sagittal sinus runs in attached margin of falx cerebri — midline on vertex",
+      "Arachnoid granulations drain CSF into superior sagittal sinus",
+      "Inferior sagittal sinus → straight sinus → confluence of sinuses",
+      "Cerebral venous sinus thrombosis can affect superior sagittal sinus → ↑ ICP, headache, papilledema, seizures",
+      "vs cavernous sinus — lateral to sella; CN III/IV/V1/V2/V6 palsies with thrombosis, not midline vertex drainage",
+      "Confluence of sinuses (torcula) = SSS + straight sinus + transverse sinuses meet posteriorly",
+    ],
+    distinguishFrom: [
+      "Cavernous sinus — paired lateral sinuses at sella with CN III/IV/V1/V2/V6 and ICA",
+      "Straight sinus — single midline channel at tentorial apex receiving inferior sagittal sinus and vein of Galen",
+      "Transverse/sigmoid sinuses — lateral posterior drainage toward jugular bulb",
+      "Sphenoid sinus — paranasal air cavity, not dural venous channel",
+      "Emissary veins — extracranial connections to sinuses, not the sinuses themselves",
+      "Arachnoid granulations — CSF reabsorption structures protruding into superior sagittal sinus",
+    ],
+    pediatrics:
+      "Superior sagittal sinus thrombosis is rare in children but reported with dehydration, sepsis, and congenital thrombophilia; neonatal meningitis can impair arachnoid granulation function at the superior sagittal sinus.",
   },
   {
     id: "hypoglossal-canal",
@@ -2549,6 +2825,327 @@ export const MUSCULOSKELETAL: MusculoskeletalEntry[] = [
     ],
     pediatrics:
       "Conus medullaris may terminate slightly lower (L2–L3) in neonates before ascending with growth; LP level selection still uses palpable iliac crest (L4) landmarks.",
+  },
+  {
+    id: "lumbosacral-spinal-nerve-roots",
+    name: "Lumbosacral Spinal Nerve Roots",
+    etymology:
+      "Latin lumbus = loin + sacrum = sacred bone + Latin radix = root — ventral and dorsal nerve rootlets forming lumbar and sacral spinal nerves",
+    aliases: [
+      "lumbosacral spinal nerve roots",
+      "lumbosacral nerve root",
+      "lumbar and sacral nerve roots",
+      "lumbar sacral nerve roots",
+      "l2-s3 nerve roots",
+      "l4-s3 nerve roots",
+      "lumbosacral roots",
+      "cauda equina roots",
+    ],
+    definition:
+      "Individual motor (ventral) and sensory (dorsal) nerve roots arising from the conus medullaris and cauda equina (L1–S5) that merge to form lumbosacral spinal nerves — the anatomic substrate for lumbar and sacral plexuses and lower extremity radiculopathy.",
+    anatomy:
+      "Below conus medullaris (~L1–L2), roots descend in thecal sac as cauda equina; each segment has dorsal (sensory) and ventral (motor) roots uniting at the intervertebral foramen to form mixed spinal nerves. Lumbar roots (L1–L5) contribute to lumbar plexus and lumbosacral trunk; sacral roots (S1–S5) form sacral plexus. Sciatic nerve derives from L4–S3 roots; femoral from L2–L4.",
+    action: [
+      "Motor — ventral root fibers to lower extremity, pelvic floor, and perineal muscles via plexus branches",
+      "Sensory — dorsal root ganglia and fibers carry dermatomal sensation from legs, perineum, and saddle area",
+      "Reflex arcs — patellar (L3–L4), Achilles (S1), anal wink (S2–S4)",
+      "Autonomic — preganglionic sympathetic exit T1–L2; parasympathetic pelvic outflow S2–S4",
+    ],
+    innervation:
+      "Not a single nerve — segmental roots L1–S5; clinically high-yield levels L4, L5, S1 for sciatica and foot weakness patterns",
+    clinicalRelevance: [
+      "Lumbar disc herniation compresses single or adjacent roots → radiculopathy (L5 foot drop pattern, S1 absent ankle reflex)",
+      "Cauda equina syndrome — multilevel root compression → bilateral leg symptoms, saddle anesthesia, urinary retention",
+      "Conus medullaris syndrome — cord termination injury at L1–L2 with early bladder dysfunction",
+      "SLR stretches L5/S1 roots in radiculopathy",
+    ],
+    boardsPearls: [
+      "L4 — knee extension (quads); L5 — dorsiflexion/hip abduction; S1 — plantarflexion/ankle reflex",
+      "Sciatic nerve = L4–S3 roots; femoral nerve = L2–L4",
+      "Cauda equina = bundle of lumbosacral roots below conus — not the cord itself",
+      "Radiculopathy = root lesion; plexopathy = multiple nerves; mononeuropathy = single peripheral nerve",
+      "Saddle anesthesia + urinary retention → cauda equina until proven otherwise",
+    ],
+    distinguishFrom: [
+      "Cauda equina (organ) — anatomic horse-tail bundle of roots within thecal sac",
+      "Sciatic nerve — peripheral nerve formed from L4–S3 roots after plexus convergence",
+      "Lumbosacral plexus — nerve network formed by root rami, not roots themselves",
+      "Conus medullaris — terminal spinal cord segment, not individual nerve roots",
+      "Filum terminale — fibrous anchor of cord, not functional nerve roots",
+    ],
+    pediatrics:
+      "Tethered cord traction on lumbosacral roots causes progressive leg weakness and bladder dysfunction; conus lies lower in infants (L2–L3) before ascending with growth.",
+  },
+  {
+    id: "femoral-nerve",
+    name: "Femoral Nerve",
+    etymology: "Latin femur = thigh + Greek neuron = sinew/nerve",
+    aliases: [
+      "femoral nerve",
+      "femoral nerves",
+      "nervus femoralis",
+      "femoral n",
+    ],
+    definition:
+      "Major branch of the lumbar plexus (L2–L4) that innervates the anterior thigh muscles and provides sensation to the anterior thigh and medial leg via the saphenous nerve.",
+    anatomy:
+      "Formed from posterior divisions of L2–L4 ventral rami in psoas major; descends lateral to psoas, passes deep to inguinal ligament lateral to femoral artery in femoral triangle; divides into motor branches to iliacus (separate branch), pectineus, sartorius, and quadriceps femoris, and sensory saphenous nerve continuing medially with great saphenous vein.",
+    action: [
+      "Motor — knee extension (quadriceps femoris), hip flexion (iliacus, sartorius, partial pectineus)",
+      "Sensory — anterior and medial thigh (femoral cutaneous branches); medial leg and foot via saphenous nerve",
+      "Reflex — patellar (knee-jerk) reflex via L3–L4 arc through femoral nerve to quadriceps",
+    ],
+    innervation: "L2–L4 spinal nerve fibers from lumbar plexus",
+    clinicalRelevance: [
+      "Femoral nerve injury — inability to extend knee, weak hip flexion, numbness anterior thigh/medial leg",
+      "Retroperitoneal hematoma, psoas abscess, pelvic surgery, or hip arthroplasty can injure nerve in psoas or under inguinal ligament",
+      "Diabetic amyotrophy (proximal neuropathy) can affect femoral distribution",
+      "Loss of patellar reflex localizes to L3–L4 root or femoral nerve",
+    ],
+    boardsPearls: [
+      "Femoral nerve = L2–L4 — quads (knee extension) + anterior thigh sensation",
+      "Saphenous nerve = sensory branch — medial leg/foot (only femoral territory below knee)",
+      "Patellar reflex tests L3–L4 via femoral nerve",
+      "vs obturator nerve — hip adduction and medial thigh sensation, not knee extension",
+      "vs L3/L4 radiculopathy — back pain and SLR; femoral neuropathy is peripheral pattern without root tension signs",
+    ],
+    distinguishFrom: [
+      "Obturator nerve (L2–L4) — hip adduction, medial thigh sensation",
+      "Genitofemoral nerve (L1–L2) — cremaster reflex, scrotal/labial sensation",
+      "Lateral femoral cutaneous nerve (L2–L3) — meralgia paresthetica, lateral thigh numbness only",
+      "Sciatic nerve — posterior thigh/leg; knee flexors and foot, not knee extension",
+      "Femoral artery — vascular structure in femoral triangle, not nerve",
+    ],
+    pediatrics:
+      "Femoral nerve injury is rare in children; consider iatrogenic injury after hip surgery or compartment syndrome. Patellar reflex is obtainable in older children for L3–L4 testing.",
+  },
+  {
+    id: "sciatic-nerve",
+    name: "Sciatic Nerve",
+    etymology: "Greek ischion = hip + Latin -aticus = pertaining to + Greek neuron = nerve",
+    aliases: [
+      "sciatic nerve",
+      "sciatic nerves",
+      "nervus ischiadicus",
+      "ischiadic nerve",
+    ],
+    definition:
+      "Largest peripheral nerve in the body — formed from L4–S3 lumbosacral plexus roots — supplying the posterior thigh and, via its tibial and common fibular divisions, the entire leg and foot below the knee.",
+    anatomy:
+      "Exits pelvis through greater sciatic foramen, usually inferior to piriformis; descends posterior thigh between long head of biceps femoris and semimembranosus/semitendinosus; at superior popliteal fossa bifurcates into tibial nerve (medial) and common fibular nerve (lateral). Hamstring muscles (except short head biceps) receive branches from tibial division.",
+    action: [
+      "Motor — hamstrings (semitendinosus, semimembranosus, long head biceps femoris); all distal leg/foot muscles via tibial (plantarflexion, inversion, toe flexion) and common fibular (dorsiflexion, eversion, toe extension) branches",
+      "Sensory — posterior thigh; all leg/foot except medial strip (saphenous) and isolated territories of cutaneous branches",
+      "Reflex — ankle jerk (S1) via tibial component",
+    ],
+    innervation: "L4–S3 spinal nerve roots converging in sacral plexus",
+    clinicalRelevance: [
+      "Landmark for gluteal IM injection — superolateral quadrant avoids nerve",
+      "Posterior hip dislocation stretches/compresses sciatic nerve",
+      "Piriformis syndrome — entrapment near greater sciatic foramen",
+      "Bifurcation at popliteal fossa explains tibial vs common fibular injury patterns",
+    ],
+    boardsPearls: [
+      "Sciatic nerve = tibial nerve + common fibular (peroneal) nerve",
+      "L4–S3 roots; exits inferior to piriformis (usual anatomy)",
+      "Foot drop reflects common fibular component; weak plantarflexion reflects tibial component",
+      "vs L5/S1 radiculopathy — root compression has back pain/SLR; sciatic neuropathy follows nerve distribution",
+      "See sciatic nerve injury entry for traumatic palsy patterns",
+    ],
+    distinguishFrom: [
+      "Sciatic nerve injury — pathologic damage to the nerve, not normal anatomy",
+      "Lumbosacral radiculopathy — single root dermatomal pattern with spinal level signs",
+      "Femoral nerve — anterior thigh, knee extension",
+      "Common fibular nerve — lateral division only; foot drop without hamstring weakness",
+      "Tibial nerve — medial division only; plantarflexion weakness and sole sensory loss",
+    ],
+    pediatrics:
+      "Sciatic nerve anatomy is the same in children; posterior hip dislocation after trauma warrants sciatic function testing (dorsiflexion, plantar sensation).",
+  },
+  {
+    id: "common-fibular-nerve",
+    name: "Common Fibular Nerve",
+    etymology:
+      "Latin fibula = clasp/brooch (the bone) + Greek koinos = common + Greek neuron = nerve — lateral terminal branch of the sciatic nerve",
+    aliases: [
+      "common fibular nerve",
+      "common fibular nerves",
+      "common peroneal nerve",
+      "common peroneal nerves",
+      "common fibular n",
+      "common peroneal n",
+      "lateral popliteal nerve",
+      "external popliteal nerve",
+    ],
+    definition:
+      "Lateral terminal branch of the sciatic nerve (L4–S5, predominantly L5) that wraps around the fibular neck and divides into superficial and deep fibular nerves — controlling dorsiflexion and eversion of the foot.",
+    anatomy:
+      "Arises at superior popliteal fossa as lateral division of sciatic nerve; courses along lateral leg, wraps superficially around fibular neck/neck of fibula just below knee (vulnerable to compression); divides into superficial fibular nerve (lateral compartment muscles, dorsum of foot sensation) and deep fibular nerve (anterior compartment, first web space sensation). Gives lateral sural cutaneous nerve before bifurcation.",
+    action: [
+      "Superficial fibular branch — eversion of foot; sensation to anterolateral leg and dorsum of foot (except first web space)",
+      "Deep fibular branch — dorsiflexion of ankle and extension of toes; sensation to first dorsal web space",
+      "Combined common fibular lesion → foot drop with steppage gait",
+    ],
+    innervation: "L4–S5 fibers (predominantly L5) from sciatic nerve",
+    clinicalRelevance: [
+      "Most common compressive neuropathy of lower limb at fibular neck",
+      "Fibular fracture, leg crossing, cast pressure, weight loss",
+      "Foot drop — inability to dorsiflex; steppage gait",
+      "See peroneal nerve compression entry for clinical palsy vignettes",
+    ],
+    boardsPearls: [
+      "Common fibular = common peroneal — same nerve, two names",
+      "Wraps fibular neck — superficial and vulnerable",
+      "Foot drop + preserved ankle inversion (tibial) → common fibular palsy",
+      "vs L5 radiculopathy — weak hip abduction, back pain, positive SLR",
+      "Bifurcates into superficial and deep fibular nerves",
+    ],
+    distinguishFrom: [
+      "Peroneal nerve compression — clinical syndrome of common fibular injury",
+      "Deep fibular nerve — anterior compartment branch only",
+      "Superficial fibular nerve — lateral compartment branch only",
+      "Tibial nerve — medial sciatic division; plantarflexion and sole sensation",
+      "Lateral sural cutaneous nerve — sensory branch given off before bifurcation",
+    ],
+    pediatrics:
+      "Common fibular compression uncommon in children; consider cast pressure or fibular fracture after trauma; bilateral foot drop suggests hereditary neuropathy (CMT).",
+  },
+  {
+    id: "deep-fibular-nerve",
+    name: "Deep Fibular Nerve",
+    etymology:
+      "Latin fibula + Latin profundus = deep + Greek neuron = nerve — anterior compartment branch of the common fibular nerve",
+    aliases: [
+      "deep fibular nerve",
+      "deep fibular nerves",
+      "deep peroneal nerve",
+      "deep peroneal nerves",
+      "anterior tibial nerve",
+      "deep fibular n",
+      "deep peroneal n",
+    ],
+    definition:
+      "Motor branch of the common fibular nerve supplying the anterior compartment of the leg — primary dorsiflexor of the ankle and extensor of the toes — with sensory innervation to the first dorsal web space.",
+    anatomy:
+      "Continues from common fibular nerve after it pierces the anterior intermuscular septum; descends on anterior surface of interosseous membrane with anterior tibial artery; innervates tibialis anterior, extensor hallucis longus, extensor digitorum longus, and peroneus tertius; becomes cutaneous at ankle as medial and intermediate dorsal cutaneous nerves supplying first web space.",
+    action: [
+      "Motor — dorsiflexion of ankle (tibialis anterior); extension of great toe (EHL) and lesser toes (EDL); weak foot inversion (tibialis anterior)",
+      "Sensory — first dorsal web space between great toe and second toe (only cutaneous territory of deep fibular)",
+      "Isolated deep fibular injury → foot drop with preserved eversion (superficial fibular) and normal dorsum of foot sensation except first web space",
+    ],
+    innervation: "L4–L5 fibers via common fibular nerve",
+    clinicalRelevance: [
+      "Anterior compartment syndrome — deep fibular nerve dysfunction with anterior leg pain and foot drop",
+      "Tight lateral leg cast or anterior tibial artery injury in fracture settings",
+      "Isolated first web space numbness localizes to deep fibular sensory territory",
+      "Foot drop from common fibular compression affects both deep and superficial branches",
+    ],
+    boardsPearls: [
+      "Deep fibular = deep peroneal — dorsiflexion + toe extension",
+      "First dorsal web space sensation = deep fibular nerve (high-yield localization)",
+      "Tibialis anterior is primary dorsiflexor — deep fibular innervation",
+      "vs superficial fibular — eversion and dorsum of foot sensation (except first web space)",
+      "Anterior compartment muscles = dorsiflexors; lateral compartment = evertors (superficial fibular)",
+    ],
+    distinguishFrom: [
+      "Superficial fibular nerve — peroneus longus/brevis (eversion); dorsum of foot sensation",
+      "Common fibular nerve — parent nerve before bifurcation; both deep and superficial deficits",
+      "Tibial nerve — plantarflexion and sole sensation, opposite compartment",
+      "Saphenous nerve — medial leg/foot sensation from femoral nerve",
+    ],
+    pediatrics:
+      "Anterior compartment syndrome can occur after pediatric tibial fractures or reperfusion injury; foot drop and anterior leg pain warrant urgent fasciotomy evaluation.",
+  },
+  {
+    id: "tibial-nerve",
+    name: "Tibial Nerve",
+    etymology: "Latin tibia = shin/flute bone + Greek neuron = nerve — medial terminal branch of the sciatic nerve",
+    aliases: [
+      "tibial nerve",
+      "tibial nerves",
+      "nervus tibialis",
+      "medial popliteal nerve",
+      "posterior tibial nerve",
+    ],
+    definition:
+      "Medial terminal branch of the sciatic nerve (L4–S3, predominantly S1–S2) supplying the posterior compartment of the leg and all intrinsic foot muscles — controlling plantarflexion, inversion, and toe flexion.",
+    anatomy:
+      "Continues through popliteal fossa as medial division of sciatic nerve; descends in deep posterior compartment with posterior tibial artery; gives medial sural cutaneous nerve in popliteal fossa; passes posterior to medial malleolus in tarsal tunnel; divides into medial and lateral plantar nerves in sole of foot (equivalent to ulnar/median hand pattern).",
+    action: [
+      "Motor — gastrocnemius, soleus (plantarflexion); tibialis posterior (inversion); toe flexors; all intrinsic foot muscles via medial/lateral plantar nerves",
+      "Sensory — sole of foot (medial and lateral plantar nerves); medial sural cutaneous branch contributes to sural nerve (lateral calf)",
+      "Reflex — ankle jerk (Achilles reflex, S1) via gastrocnemius–soleus arc",
+    ],
+    innervation: "L4–S3 fibers (predominantly S1–S2) from sciatic nerve",
+    clinicalRelevance: [
+      "Tarsal tunnel syndrome — compression behind medial malleolus → plantar pain/numbness",
+      "Knee dislocation or popliteal fossa trauma can injure tibial nerve",
+      "Isolated tibial injury — inability to plantarflex, sole sensory loss, dorsiflexion preserved",
+      "Achilles reflex tests S1 via tibial nerve",
+    ],
+    boardsPearls: [
+      "Tibial nerve = medial sciatic division — plantarflexion + sole sensation",
+      "Ankle reflex (S1) travels via tibial nerve to gastrocnemius–soleus",
+      "Tarsal tunnel = carpal tunnel of the foot — tibial nerve under flexor retinaculum",
+      "Medial + lateral plantar nerves = sole innervation (like ulnar/median in hand)",
+      "vs common fibular — dorsiflexion/eversion vs plantarflexion/inversion",
+      "Medial sural cutaneous nerve from tibial joins lateral sural cutaneous to form sural nerve",
+    ],
+    distinguishFrom: [
+      "Common fibular nerve — dorsiflexion, eversion, dorsum of foot",
+      "Sural nerve — formed from sural cutaneous branches; lateral foot/ankle sensation",
+      "Saphenous nerve — medial leg from femoral nerve",
+      "Posterior femoral cutaneous nerve — posterior thigh skin only",
+    ],
+    pediatrics:
+      "Tarsal tunnel syndrome is uncommon in children; absent ankle reflex in pediatric exam may reflect S1 radiculopathy or tibial neuropathy — interpret with growth and exam cooperation in mind.",
+  },
+  {
+    id: "lateral-sural-cutaneous-nerve",
+    name: "Lateral Sural Cutaneous Nerve",
+    etymology:
+      "Latin lateralis = side + sura = calf + Latin cutis = skin + Greek neuron = nerve — sensory branch from the common fibular nerve",
+    aliases: [
+      "lateral sural cutaneous nerve",
+      "lateral sural cutaneous nerves",
+      "lateral cutaneous nerve of calf",
+      "lateral cutaneous nerves of calf",
+      "sural communicating branch",
+      "peroneal communicating branch",
+      "lateral sural nerve",
+    ],
+    definition:
+      "Purely sensory branch arising from the common fibular nerve in the popliteal fossa — supplying skin over the upper lateral calf and joining the medial sural cutaneous nerve (from tibial nerve) to form the sural nerve.",
+    anatomy:
+      "Arises from common fibular nerve before its bifurcation into superficial and deep fibular nerves; descends between the two heads of gastrocnemius; joins medial sural cutaneous branch of tibial nerve (variable anatomy — sural nerve may form from lateral only, medial only, or both) to become sural nerve, which runs subcutaneously along lateral malleolus to supply lateral foot and fifth toe.",
+    action: [
+      "Sensory — skin of upper lateral calf via lateral sural cutaneous branch",
+      "Contributes to sural nerve — lateral ankle, lateral foot, and fifth toe sensation after joining medial sural cutaneous branch",
+      "No motor function — pure cutaneous nerve",
+    ],
+    innervation: "Sensory only — L5–S1 fibers via common fibular nerve origin",
+    clinicalRelevance: [
+      "Sural nerve graft harvest — uses sural nerve (formed partly from lateral sural cutaneous)",
+      "Popliteal fossa surgery or varicose vein procedures can injure sural nerve complex",
+      "Lateral calf/ankle numbness after knee surgery suggests sural nerve branch injury",
+      "Sural nerve block — ankle/foot procedures along lateral malleolus",
+    ],
+    boardsPearls: [
+      "Lateral sural cutaneous = from common fibular; medial sural cutaneous = from tibial",
+      "Together (usually) form sural nerve — lateral foot sensation",
+      "Pure sensory — no motor deficit with isolated injury",
+      "vs superficial fibular nerve — motor to evertors plus broader dorsum of foot sensation",
+      "Sural nerve runs subcutaneously behind lateral malleolus — vulnerable in lateral ankle surgery",
+    ],
+    distinguishFrom: [
+      "Medial sural cutaneous nerve — tibial nerve branch from popliteal fossa",
+      "Sural nerve — distal continuation along lateral ankle to foot",
+      "Superficial fibular nerve — motor + sensory to anterolateral leg and dorsum of foot",
+      "Lateral femoral cutaneous nerve — lateral thigh (meralgia paresthetica), not calf",
+      "Saphenous nerve — medial leg from femoral nerve",
+    ],
+    pediatrics:
+      "Sural nerve anatomy is consistent in children; sural nerve graft harvest is occasionally used in pediatric nerve reconstruction procedures.",
   },
   {
     id: "piriformis",
