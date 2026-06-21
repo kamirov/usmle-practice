@@ -223,6 +223,54 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
       "Neonatal hypocalcemia with 22q11.2 deletion (DiGeorge) reflects hypoplastic parathyroids and ↓ PTH. Rickets drives secondary ↑ PTH from vitamin D deficiency. Familial hypocalciuric hypercalcemia mimics hyperparathyroidism with inappropriately normal/high PTH but benign course.",
   },
   {
+    id: "thyrotropin",
+    name: "Thyrotropin",
+    etymology:
+      "Greek thyreos = shield (thyroid) + tropos = turning + -in = protein — pituitary hormone that stimulates thyroid hormone synthesis and release",
+    aliases: [
+      "thyrotropin",
+      "thyrotropins",
+      "tsh",
+      "thyroid-stimulating hormone",
+      "thyroid stimulating hormone",
+      "thyrotropic hormone",
+      "thyrotropic hormones",
+      "pituitary thyrotropin",
+    ],
+    type: "Peptide hormone",
+    source:
+      "Anterior pituitary thyrotroph cells — secreted in pulsatile fashion; synthesis increased by TRH (hypothalamus) and decreased by negative feedback from T3/T4",
+    receptor:
+      "TSH receptor (TSHR) on thyroid follicular cells — Gs-coupled GPCR stimulating cAMP → iodide uptake, thyroglobulin synthesis, and T4/T3 release",
+    function:
+      "Stimulates thyroid follicular cells to take up iodide, synthesize and release thyroxine (T4) and triiodothyronine (T3); promotes thyroid growth (goiter when chronically elevated); primary regulator of thyroid axis under hypothalamic TRH control.",
+    clinicalRelevance: [
+      "Primary hypothyroidism — ↑ thyrotropin with ↓ free T4 (loss of negative feedback)",
+      "Graves disease — ↓ thyrotropin with ↑ T4/T3 (unless TSH-secreting adenoma)",
+      "TSH-secreting pituitary adenoma — inappropriately ↑ thyrotropin with ↑ thyroid hormones",
+      "Thyrotropin (TSH) receptor–stimulating antibodies (TSI) mimic thyrotropin in Graves → hyperthyroidism",
+      "Levothyroxine therapy — normalizes ↑ thyrotropin in hypothyroidism",
+      "Neonatal thyrotropin screening — detects congenital hypothyroidism",
+    ],
+    boardsPearls: [
+      "Thyrotropin = TSH — pituitary hormone acting on thyroid via TSH receptor",
+      "Primary thyroid disease: thyrotropin and free T4 move inversely",
+      "Subclinical hypothyroidism — ↑ thyrotropin, normal free T4",
+      "Graves: ↓ thyrotropin + ↑ T4/T3; TSI stimulates TSH receptor (thyrotropin effect without pituitary TSH)",
+      "TRH ↑ thyrotropin; T3/T4 negative feedback ↓ thyrotropin",
+      "vs TRH — hypothalamic releasing hormone; thyrotropin is pituitary tropic hormone",
+    ],
+    distinguishFrom: [
+      "TSH (lab measurement) — serum assay of thyrotropin concentration, not the hormone mechanism entry alone",
+      "TRH — thyrotropin-releasing hormone from hypothalamus; stimulates thyrotropin release",
+      "TSI (thyroid-stimulating immunoglobulin) — Graves autoantibody mimicking thyrotropin at TSH receptor",
+      "Thyroid hormones (T4/T3) — products of thyroid gland stimulated by thyrotropin",
+      "Thyroglobulin — storage protein in follicle lumen; tumor marker, not thyrotropin",
+    ],
+    pediatrics:
+      "Neonatal thyrotropin screening detects congenital hypothyroidism — treat levothyroxine promptly to prevent intellectual disability. Central hypothyroidism shows low thyrotropin with low T4 — pituitary/hypothalamic disease.",
+  },
+  {
     id: "vitamin-k",
     name: "Vitamin K",
     etymology: "vitamin = vital amine historical term + K = Koagulation German spelling",
@@ -1296,6 +1344,58 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
       "Food-induced anaphylaxis — histamine and other mediators from mast cell degranulation; epinephrine IM is first-line in children.",
   },
   {
+    id: "serotonergic",
+    name: "Serotonergic",
+    etymology:
+      "Serotonin + Greek -ergon = work — producing, releasing, reuptaking, or acting via serotonin (5-HT) signaling",
+    aliases: [
+      "serotonergic",
+      "serotonergic system",
+      "serotonergic systems",
+      "serotonergic pathway",
+      "serotonergic pathways",
+      "serotonergic neuron",
+      "serotonergic neurons",
+      "serotonergic drug",
+      "serotonergic drugs",
+      "serotonergic agent",
+      "serotonergic agents",
+      "serotonergic signaling",
+      "5-htergic",
+    ],
+    type: "Signaling pathway",
+    source:
+      "Raphe nuclei brainstem neurons (major CNS source); enterochromaffin cells (peripheral serotonin synthesis); serotonergic drugs include SSRIs, SNRIs, TCAs, MAOIs, triptans, and linezolid",
+    receptor:
+      "Postsynaptic and presynaptic 5-HT receptors (5-HT1–7 subtypes); SERT mediates presynaptic reuptake termination",
+    function:
+      "Descriptor for neurons, synapses, and drugs that increase, mimic, or prolong serotonin neurotransmission — regulating mood, sleep, thermoregulation, GI motility, and platelet function.",
+    clinicalRelevance: [
+      "SSRIs and SNRIs — block serotonin reuptake → ↑ synaptic 5-HT (serotonergic antidepressants)",
+      "Serotonin syndrome — excess serotonergic activity from drug combinations (SSRI + MAOI, SSRI + linezolid, SSRI + tramadol)",
+      "TCAs (especially clomipramine) — potent serotonergic reuptake inhibition",
+      "Triptans — serotonergic 5-HT1B/1D agonists for acute migraine",
+      "MDMA and amphetamines — increase serotonin release → serotonergic toxicity risk with SSRIs",
+    ],
+    boardsPearls: [
+      "Serotonergic = serotonin-related; raphe nuclei are primary CNS serotonergic cell bodies",
+      "SSRIs, SNRIs, MAOIs, TCAs, linezolid, tramadol, triptans — serotonergic drugs (serotonin syndrome risk when combined)",
+      "Serotonin syndrome triad: mental status change, autonomic instability, neuromuscular hyperactivity (clonus, hyperreflexia)",
+      "vs noradrenergic — NE/dopamine pathways from locus ceruleus and substantia nigra, not raphe serotonin",
+      "Bupropion is NOT primarily serotonergic — NDRI (dopamine/NE reuptake)",
+      "MAOI + SSRI = classic serotonergic drug interaction — washout periods required",
+    ],
+    distinguishFrom: [
+      "Serotonin — the neurotransmitter molecule itself, not the adjective for pathways/drugs",
+      "Serotonin syndrome — clinical toxicity from excess serotonergic signaling, not the descriptor",
+      "Noradrenergic — catecholamine (NE) signaling from locus ceruleus; separate monoamine system",
+      "Cholinergic — acetylcholine signaling; muscarinic/nicotinic receptors",
+      "Dopaminergic — dopamine signaling; Parkinson, psychosis, reward pathways",
+    ],
+    pediatrics:
+      "Pediatric depression treated with SSRIs (serotonergic agents) — monitor for activation and suicidality. Serotonin syndrome risk with drug interactions is the same mechanism at any age; linezolid + SSRI is a classic boards trap.",
+  },
+  {
     id: "serotonin",
     name: "Serotonin",
     etymology: "Latin serum = whey + Greek tonos = tension; 5-hydroxytryptamine (5-HT) from tryptophan",
@@ -2284,7 +2384,8 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
   {
     id: "tgf-beta",
     name: "TGF-β",
-    etymology: "TGF = transforming growth factor + Greek beta = second letter (isoform family)",
+    etymology:
+      "Transforming growth factor + Greek beta = second letter — cytokine/growth factor family originally named for transforming fibroblasts in culture",
     aliases: [
       "tgf-β",
       "tgf-beta",
@@ -2295,9 +2396,12 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
       "tgfb1",
       "tgfβ",
       "transforming growth factor beta",
+      "transforming growth factor-beta",
       "transforming growth factor β",
       "transforming growth factor-b",
       "transforming growth factor b",
+      "transforming growth factor-beta 1",
+      "transforming growth factor beta 1",
     ],
     type: "Cytokine",
     source:
@@ -2389,6 +2493,60 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
     ],
     pediatrics:
       "X-linked agammaglobulinemia (BTK deficiency) presents after maternal IgG wanes with recurrent encapsulated bacterial infections. Philadelphia-positive ALL in children may require TKI plus chemotherapy.",
+  },
+  {
+    id: "cytoplasmic-kinase",
+    name: "Cytoplasmic Kinase",
+    etymology:
+      "Greek kytos = hollow vessel/cell + plasmos = formed/molded + Greek kinein = to move + -ase = enzyme — intracellular protein kinase not anchored as a transmembrane receptor",
+    aliases: [
+      "cytoplasmic kinase",
+      "cytoplasmic kinases",
+      "cytoplasmic protein kinase",
+      "cytoplasmic protein kinases",
+      "intracellular kinase",
+      "intracellular kinases",
+      "non-receptor kinase",
+      "non-receptor kinases",
+      "non-receptor protein kinase",
+      "non-receptor protein kinases",
+      "cytosolic kinase",
+      "cytosolic kinases",
+    ],
+    type: "Signaling pathway",
+    source:
+      "Soluble or cytosolic kinase domains released or resident in cytoplasm after second-messenger or adaptor activation — includes cAMP-dependent PKA, DAG/Ca²⁺-activated PKC, Ca²⁺/calmodulin-dependent kinases, MAP kinases (ERK, JNK, p38), Akt downstream of PI3K, and non-receptor tyrosine kinases (Src, Abl, BTK, Syk)",
+    receptor:
+      "Not membrane receptors themselves — activated by second messengers (cAMP, DAG, Ca²⁺), docking to phosphorylated receptor tails, or upstream kinase cascades rather than direct ligand binding at cell surface",
+    function:
+      "Phosphorylate serine/threonine or tyrosine residues on cytoplasmic and nuclear substrate proteins to propagate hormone, growth factor, and immune-receptor signals — regulate metabolism, gene transcription, cytoskeletal dynamics, cell cycle, and survival without requiring integral membrane kinase domains.",
+    clinicalRelevance: [
+      "PKA — cAMP pathway; glycogenolysis, lipolysis, ADH V2 aquaporin trafficking; amplified by cholera/pertussis toxin effects",
+      "PKC — Gq/PLC → DAG + Ca²⁺; smooth muscle contraction, platelet activation, T-cell activation",
+      "MAP kinase (ERK) — Ras → Raf → MEK → ERK; cell proliferation; hyperactive in many cancers",
+      "Akt — PI3K pathway; growth and survival; PTEN loss → constitutive Akt signaling in cancer",
+      "BCR-ABL — cytoplasmic fusion tyrosine kinase in CML; imatinib target",
+      "BTK — cytoplasmic tyrosine kinase in B-cell receptor signaling; XLA when deficient; ibrutinib inhibitor",
+    ],
+    boardsPearls: [
+      "Cytoplasmic kinases relay signals from membrane receptors via second messengers or phosphorylation cascades",
+      "PKA = cAMP-dependent serine/threonine kinase (Gs → adenylyl cyclase pathway)",
+      "PKC = DAG + Ca²⁺-activated (Gq → PLC pathway)",
+      "MAPK/ERK cascade: Ras → Raf → MEK → ERK — downstream of many RTKs",
+      "vs receptor tyrosine kinase — RTKs span membrane; cytoplasmic kinases act in cytosol/nucleus",
+      "vs tyrosine hydroxylase — catecholamine synthesis enzyme, not signal transduction kinase",
+      "BCR-ABL and BTK are cytoplasmic tyrosine kinases with defined drug targets (imatinib, ibrutinib)",
+    ],
+    distinguishFrom: [
+      "Receptor tyrosine kinase — transmembrane kinase (EGFR, insulin receptor) autophosphorylates on ligand binding",
+      "JAK — receptor-associated tyrosine kinase at cytokine receptor cytoplasmic tail; signals via STATs",
+      "G protein — GTPase switch, not a kinase; activates adenylyl cyclase or PLC upstream of kinases",
+      "Phosphatase — removes phosphate groups; kinases add phosphates (opposite enzymatic activity)",
+      "Tyrosine hydroxylase — rate-limiting step in dopamine/norepinephrine synthesis",
+      "Protein Kinase A (PKA) — specific cAMP-activated cytoplasmic kinase subclass",
+    ],
+    pediatrics:
+      "BTK deficiency causes X-linked agammaglobulinemia after maternal IgG wanes. Cholera toxin permanently activates Gs → ↑ cAMP → PKA → secretory diarrhea — critical pediatric dehydration pathophysiology.",
   },
   {
     id: "il-11",
@@ -2763,6 +2921,58 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
       "Autoantibodies to GM-CSF → pulmonary alveolar proteinosis (surfactant accumulation)",
       "Sargramostim — recombinant GM-CSF for marrow recovery",
     ],
+  },
+  {
+    id: "g-protein",
+    name: "G Protein",
+    etymology:
+      "G = GTP-binding + protein — heterotrimeric guanine nucleotide–binding regulatory protein (Gα, Gβ, Gγ) that transduces activated GPCR signals to intracellular effectors",
+    aliases: [
+      "g protein",
+      "g proteins",
+      "g-protein",
+      "g-proteins",
+      "heterotrimeric g protein",
+      "heterotrimeric g proteins",
+      "guanine nucleotide binding protein",
+      "guanine nucleotide-binding protein",
+      "guanine nucleotide binding proteins",
+      "g protein alpha subunit",
+      "gα subunit",
+      "g alpha subunit",
+      "gtp-binding protein",
+      "gtp-binding proteins",
+    ],
+    type: "Signaling pathway",
+    source:
+      "Inner leaflet of plasma membrane — heterotrimeric complex (Gα, Gβ, Gγ) pre-associated with inactive GPCRs; Gα binds GDP when inactive, GTP when active",
+    receptor:
+      "Coupled to seven-transmembrane GPCRs — ligand binding catalyzes GDP→GTP exchange on Gα subunit",
+    function:
+      "Signal transduction switch: inactive Gα-GDP–Gβγ at rest → activated GPCR promotes GTP loading on Gα → Gα-GTP and Gβγ dissociate → each activates effectors (adenylyl cyclase, phospholipase C, ion channels, Rho GEFs) → second-messenger cascades; Gα intrinsic GTPase hydrolyzes GTP to GDP to terminate signal.",
+    clinicalRelevance: [
+      "Cholera toxin — ADP-ribosylates Gαs → constitutive adenylyl cyclase → secretory diarrhea",
+      "Pertussis toxin — ADP-ribosylates Gαi → impaired Gi inhibition → lymphocytosis",
+      "McCune-Albright — activating GNAS (Gαs) mutations → autonomous cAMP signaling",
+      "Most neurotransmitter and hormone GPCRs signal through Gs, Gi, Gq, or G12/13 G proteins",
+    ],
+    boardsPearls: [
+      "G protein = Gαβγ heterotrimer; GTP on Gα = ON, GDP = OFF",
+      "Gs → ↑ adenylyl cyclase → ↑ cAMP; Gi → ↓ cAMP; Gq → PLC → IP3/DAG/Ca²⁺",
+      "Gβγ can independently modulate ion channels and other effectors after dissociation",
+      "Cholera toxin locks Gαs ON; pertussis toxin locks Gαi OFF (cannot inhibit adenylyl cyclase)",
+      "vs GPCR — receptor is 7-TM membrane protein; G protein is transducer",
+      "vs small GTPases (Ras, Rho) — monomeric, not heterotrimeric Gαβγ",
+    ],
+    distinguishFrom: [
+      "GPCR — seven-transmembrane receptor that activates G protein; not the G protein itself",
+      "Gs / Gi / Gq proteins — specific Gα subunit classes with distinct effector coupling",
+      "cAMP — second messenger downstream of Gs, not the G protein",
+      "Receptor tyrosine kinase — uses autophosphorylation/MAPK, not heterotrimeric G proteins",
+      "Small GTPase (Ras, Rho, Rab) — monomeric switch proteins in kinase and cytoskeletal pathways",
+    ],
+    pediatrics:
+      "Same G protein toxin mechanisms in children — cholera causes severe dehydration in infants; pertussis lymphocytosis reflects Gi blockade. McCune-Albright may present with precocious puberty from mosaic Gαs activation.",
   },
   {
     id: "gpcr",
@@ -3806,6 +4016,57 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
       "Antipsychotic-induced hyperprolactinemia can cause galactorrhea and menstrual irregularity in adolescents; tardive dyskinesia risk with prolonged D2 blockade.",
   },
   {
+    id: "gaba-receptor",
+    name: "GABA Receptor",
+    etymology:
+      "Gamma-aminobutyric acid + receptor = receiver — membrane proteins binding the inhibitory neurotransmitter GABA to mediate fast (GABA-A) or slow (GABA-B) CNS inhibition",
+    aliases: [
+      "gaba receptor",
+      "gaba receptors",
+      "gabaergic receptor",
+      "gabaergic receptors",
+      "gaba receptor family",
+      "gamma-aminobutyric acid receptor",
+      "gamma-aminobutyric acid receptors",
+      "gaba receptor subtypes",
+      "inhibitory gaba receptor",
+      "inhibitory gaba receptors",
+    ],
+    type: "Signaling pathway",
+    source:
+      "Postsynaptic and presynaptic membranes at GABAergic synapses throughout CNS — cortex, thalamus, basal ganglia, cerebellum, spinal cord",
+    receptor:
+      "Two major classes: GABA-A — pentameric ligand-gated Cl⁻ channel (ionotropic); GABA-B — Gi/o-coupled metabotropic GPCR heterodimer (GABA-B1/GABA-B2)",
+    function:
+      "GABA binding inhibits neuronal excitability — GABA-A mediates fast phasic inhibition via Cl⁻ influx (hyperpolarization); GABA-B mediates slow tonic inhibition via Gi → ↓ cAMP, opens K⁺ channels, inhibits Ca²⁺ channels; together balance cortical and spinal excitability.",
+    clinicalRelevance: [
+      "Benzodiazepines and barbiturates — positive allosteric modulators of GABA-A → sedation, anxiolysis, anticonvulsant effect",
+      "Baclofen — GABA-B agonist for spasticity",
+      "Flumazenil — reverses benzodiazepine binding at GABA-A benzodiazepine site",
+      "Vigabatrin inhibits GABA breakdown; tiagabine blocks GABA reuptake — ↑ synaptic GABA available for receptors",
+      "Gabapentin/pregabalin — bind α2δ subunits; structurally GABA-related but do not bind GABA receptors",
+      "Alcohol and neurosteroids — allosteric GABA-A modulators",
+    ],
+    boardsPearls: [
+      "GABA receptors = GABA-A (ionotropic Cl⁻ channel) + GABA-B (metabotropic Gi)",
+      "GABA-A: benzos ↑ opening frequency; barbiturates ↑ opening duration",
+      "GABA-B: baclofen agonist; Gi-coupled slow inhibition",
+      "vs gabapentin — does NOT bind GABA receptors despite name similarity",
+      "vs glycine receptor — separate inhibitory Cl⁻ channel in spinal cord",
+      "See GABA-A receptor entry for detailed benzodiazepine/barbiturate pharmacology",
+    ],
+    distinguishFrom: [
+      "GABA-A receptor — ionotropic Cl⁻ channel subtype; benzodiazepine and barbiturate target",
+      "GABA-B receptor — metabotropic Gi-coupled receptor; baclofen target",
+      "GABA — neurotransmitter ligand synthesized from glutamate via GAD, not the receptor",
+      "Glycine receptor — inhibitory Cl⁻ channel in spinal cord, not GABAergic",
+      "Gabapentin — α2δ calcium channel ligand, not GABA receptor agonist",
+      "Glutamate receptor — excitatory (NMDA, AMPA), opposite primary CNS role",
+    ],
+    pediatrics:
+      "Neonatal GABA signaling is developmentally regulated (GABA can be depolarizing early); phenobarbital enhances GABA-A for neonatal seizures. Benzodiazepines cause pediatric respiratory depression via GABA-A potentiation.",
+  },
+  {
     id: "gaba-a-receptor",
     name: "GABA-A Receptor",
     etymology:
@@ -3825,6 +4086,8 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
       "gaba-a receptor channel",
       "type a gaba receptor",
       "type a gaba receptors",
+      "gaba receptor",
+      "gaba receptors",
     ],
     type: "Signaling pathway",
     source:

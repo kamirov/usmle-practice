@@ -788,6 +788,498 @@ export const CLINICAL_STRATEGIES: ClinicalStrategyEntry[] = [
       "Evidence-supported for pediatric anxiety, OCD, and depression; parental involvement and school coordination improve outcomes.",
   },
   {
+    id: "psychodynamic-psychotherapy",
+    name: "Psychodynamic Psychotherapy",
+    etymology:
+      "Greek psyche = soul/mind + dynamis = force + Greek therapeia = healing — insight-oriented therapy exploring unconscious conflicts, defense mechanisms, and past relationships affecting present symptoms",
+    aliases: [
+      "psychodynamic psychotherapy",
+      "psychodynamic psychotherapies",
+      "psychodynamic therapy",
+      "psychodynamic therapies",
+      "psychodynamic approach",
+      "psychodynamic approaches",
+      "insight-oriented psychotherapy",
+      "insight oriented psychotherapy",
+      "dynamic psychotherapy",
+      "dynamic therapy",
+      "psychoanalytic psychotherapy",
+      "psychoanalytic therapy",
+    ],
+    definition:
+      "Psychotherapy model derived from psychoanalytic theory that uses exploration of unconscious processes, transference, defense mechanisms, and developmental history to reduce symptoms and improve self-understanding — typically less intensive and more flexible than classical psychoanalysis.",
+    details: [
+      "Focus on unconscious conflicts, repression, and relational patterns (object relations, attachment themes)",
+      "Techniques: free association, interpretation of resistance and transference, clarification, confrontation",
+      "Defense mechanisms explored — projection, denial, displacement, reaction formation, sublimation",
+      "Transference — patient re-enacts past relationships with therapist; used therapeutically for insight",
+      "Longer-term, open-ended or time-limited formats; face-to-face rather than classic couch-only analysis",
+      "Useful when symptoms have symbolic or relational meaning (personality disorders, chronic interpersonal patterns)",
+    ],
+    boardsPearls: [
+      "Psychodynamic = insight therapy exploring unconscious conflict and defense mechanisms",
+      "Transference and countertransference are core concepts",
+      "vs CBT — psychodynamic emphasizes past/unconscious; CBT emphasizes present thoughts/behaviors",
+      "vs supportive psychotherapy — psychodynamic interprets defenses; supportive strengthens coping without deep interpretation",
+      "Cluster B personality disorders — psychodynamic frameworks often applied (borderline, narcissistic)",
+      "Not first-line for acute psychosis — antipsychotics primary; psychotherapy adjunct when stable",
+    ],
+    pediatrics:
+      "Play therapy and psychodynamic approaches used in children to express conflicts symbolically; family dynamics often included. Less common as sole treatment for pediatric ADHD — stimulants and behavioral therapy are first-line.",
+  },
+  {
+    id: "displacement",
+    name: "Displacement",
+    etymology:
+      "Latin dis- = apart + locare = to place — redirecting an emotion or impulse from its original target to a safer, less threatening substitute",
+    aliases: [
+      "displacement",
+      "displacements",
+      "displacement defense mechanism",
+      "displacement defense mechanisms",
+      "defense mechanism displacement",
+      "psychological displacement",
+      "emotional displacement",
+    ],
+    definition:
+      "Immature ego defense mechanism in which unacceptable feelings (especially anger or hostility) toward one person or object are unconsciously redirected toward a safer substitute target that cannot retaliate — relieving anxiety without confronting the original conflict.",
+    details: [
+      "Unconscious — patient does not recognize the redirected anger as related to the original source",
+      "Classic vignette: frustration with boss → yelling at spouse or kicking the dog",
+      "Also: displaced anxiety about illness → irritability with family; anger at physician → hostility toward nursing staff",
+      "Provides temporary emotional release but does not resolve underlying conflict",
+      "Common in personality disorders and under acute stress",
+    ],
+    boardsPearls: [
+      "Displacement = redirect emotion to safer target (mad at boss → yells at spouse)",
+      "Unconscious — not deliberate scapegoating with insight",
+      "vs projection — attributes own unacceptable impulse to someone else ('you're angry')",
+      "vs sublimation — channels impulse into socially acceptable activity (sport, art)",
+      "vs reaction formation — opposite behavior (hate → excessive kindness)",
+      "Immature defense — cluster B and stress vignettes",
+    ],
+    pediatrics:
+      "Children displace anger from school or home stress onto siblings, pets, or toys; distinguish from normal sibling rivalry and from conduct disorder with intentional aggression.",
+  },
+  {
+    id: "intellectualization",
+    name: "Intellectualization",
+    etymology:
+      "Latin intellectus = understanding + -ization = process — using abstract, analytical thinking to avoid experiencing associated emotional distress",
+    aliases: [
+      "intellectualization",
+      "intellectualizations",
+      "intellectualisation",
+      "intellectualisation defense mechanism",
+      "intellectualization defense mechanism",
+      "intellectualization defense",
+      "defense mechanism intellectualization",
+    ],
+    definition:
+      "Neurotic ego defense mechanism in which a person copes with anxiety-provoking or emotionally painful situations by focusing on excessive abstract, intellectual, or technical details — stripping the event of its emotional meaning rather than processing the feelings.",
+    details: [
+      "Unconscious — patient believes they are being 'rational' or 'objective'",
+      "Classic vignette: newly diagnosed cancer patient discusses tumor staging, histology, and statistics without any visible emotion",
+      "Medical students and physicians may intellectualize patient suffering as a coping strategy",
+      "Differs from healthy problem-solving because emotional processing is actively avoided",
+      "Often seen with obsessive traits and in healthcare settings on boards",
+    ],
+    boardsPearls: [
+      "Intellectualization = talk about facts/pathophysiology to avoid feeling emotion",
+      "Cancer patient recites staging data without crying — classic vignette",
+      "Neurotic (not immature) defense — OCD/OCPD-adjacent vignettes",
+      "vs isolation of affect — separates idea from feeling; intellectualization adds excessive abstract analysis",
+      "vs rationalization — creates logical excuses to justify behavior, not just analyze without emotion",
+      "vs suppression — conscious decision to postpone feelings; intellectualization is unconscious avoidance via thinking",
+    ],
+    pediatrics:
+      "Adolescents may intellectualize grief or abuse ('it's just neurotransmitters') — assess for underlying depression or trauma needing direct support, not only psychoeducation.",
+  },
+  {
+    id: "isolation-of-affect",
+    name: "Isolation of Affect",
+    etymology:
+      "Latin isolare = to make into an island + affect = emotional state — unconscious separation of an idea or memory from its associated feeling",
+    aliases: [
+      "isolation of affect",
+      "isolation of affects",
+      "affect isolation",
+      "isolated affect",
+      "isolation-of-affect",
+      "isolation of affect defense mechanism",
+      "isolation of affect defense",
+      "defense mechanism isolation of affect",
+    ],
+    definition:
+      "Neurotic ego defense mechanism in which a person discusses emotionally charged thoughts or events in flat, detached language — cognitively aware of the content but without experiencing the expected emotional response — unconsciously isolating the idea from its affect.",
+    details: [
+      "Patient knows what happened but feels numb, blank, or clinically detached when describing it",
+      "Classic vignette: describes brutal assault or child's death in monotone without tears",
+      "Content of memory intact — unlike repression, which blocks awareness of the memory itself",
+      "Common in PTSD, after trauma, and in OCPD presentations",
+      "Therapist may note 'affect incongruent with content'",
+    ],
+    boardsPearls: [
+      "Isolation of affect = talk about trauma without feeling it ('flat affect' with known painful content)",
+      "Memory intact — vs repression, which removes memory from awareness",
+      "vs depersonalization — feels unreal; isolation of affect knows event is real but feels nothing",
+      "vs intellectualization — adds excessive technical/analytic focus, not just emotional detachment",
+      "vs flat affect of schizophrenia — isolation of affect is defense in response to stress; psychosis has broader negative symptoms",
+      "Neurotic defense — trauma and OCPD vignettes",
+    ],
+    pediatrics:
+      "Abused children may describe events matter-of-factly without crying — raises concern for chronic trauma and dissociation; requires gentle, non-leading evaluation.",
+  },
+  {
+    id: "rationalization",
+    name: "Rationalization",
+    etymology:
+      "Latin ratio = reason/account + -ization = process — unconscious construction of plausible logical explanations to justify unacceptable feelings, motives, or behaviors",
+    aliases: [
+      "rationalization",
+      "rationalizations",
+      "rationalisation",
+      "rationalisations",
+      "rationalization defense mechanism",
+      "rationalization defense",
+      "defense mechanism rationalization",
+      "psychological rationalization",
+    ],
+    definition:
+      "Neurotic ego defense mechanism in which unacceptable behaviors or painful outcomes are unconsciously explained away with seemingly logical, self-serving reasons — reducing guilt and anxiety without acknowledging the true motivation.",
+    details: [
+      "Unconscious — patient believes the excuse is the real reason",
+      "Classic vignette: rejected from medical school → 'I didn't really want to be a doctor anyway'",
+      "Sour grapes / fox and grapes fable — devalues unattainable goal to reduce disappointment",
+      "Also: cheating spouse claims 'my partner doesn't understand me' to justify affair",
+      "Differs from conscious lying because the rationalization is believed by the ego",
+    ],
+    boardsPearls: [
+      "Rationalization = logical-sounding excuse for unacceptable behavior or failure",
+      "Rejected from school → 'didn't want it anyway' — boards classic",
+      "Sour grapes = rationalization subtype",
+      "vs intellectualization — avoids emotion via analysis; rationalization justifies with excuses",
+      "vs denial — refuses to acknowledge reality; rationalization accepts outcome but reinterprets motive",
+      "Neurotic defense — not the same as mature conscious reframing (which has insight)",
+    ],
+    pediatrics:
+      "Teens rationalize poor grades or rule-breaking ('teacher hates me,' 'that rule is stupid') — common; distinguish from persistent antisocial rationalizations in conduct disorder.",
+  },
+  {
+    id: "repression",
+    name: "Repression",
+    etymology:
+      "Latin re- = back + premere = to press — unconscious exclusion of unacceptable thoughts, memories, or impulses from conscious awareness (Freudian primary defense)",
+    aliases: [
+      "repression",
+      "repressions",
+      "psychological repression",
+      "psychologic repression",
+      "repression defense mechanism",
+      "repression defense",
+      "defense mechanism repression",
+      "unconscious repression",
+    ],
+    definition:
+      "Primary neurotic ego defense mechanism in which anxiety-provoking memories, desires, or impulses are unconsciously blocked from conscious awareness — the individual genuinely cannot recall or acknowledge the repressed material without psychotherapy or triggering events.",
+    details: [
+      "Unconscious — patient does not know the memory/feeling is being kept out of awareness",
+      "Classic concept: forgotten childhood trauma surfacing in therapy; repressed Oedipal wishes in psychoanalytic theory",
+      "Differs from forgetting — repression is motivated, dynamic, and often returns under stress or in dreams/slips",
+      "Foundation of psychodynamic theory — symptoms may symbolize repressed conflict",
+      "Can contribute to dissociative amnesia spectrum when severe, but repression is a defense, not a diagnosis alone",
+    ],
+    boardsPearls: [
+      "Repression = unconscious blocking of unacceptable memory/feeling from awareness",
+      "Patient truly doesn't remember — vs suppression, which is conscious",
+      "Primary Freudian defense — psychodynamic vignettes",
+      "vs suppression — conscious voluntary avoidance ('I won't think about it')",
+      "vs denial — refuses to accept current reality; repression removes content from memory",
+      "vs dissociative amnesia — clinical disorder with functional memory gap; repression is defense mechanism term",
+    ],
+    pediatrics:
+      "Children may repress abuse memories; careful evaluation required — do not assume all memory gaps are repression vs neurologic or dissociative amnesia.",
+  },
+  {
+    id: "suppression",
+    name: "Suppression",
+    etymology:
+      "Latin supprimere = to press down from above — conscious, voluntary postponement of unwanted thoughts, feelings, or impulses from immediate awareness",
+    aliases: [
+      "suppression",
+      "suppressions",
+      "conscious suppression",
+      "voluntary suppression",
+      "suppression defense mechanism",
+      "suppression defense",
+      "defense mechanism suppression",
+      "psychological suppression",
+    ],
+    definition:
+      "Mature ego defense mechanism in which a person consciously and deliberately chooses to set aside upsetting thoughts or emotions until a more appropriate time — maintaining function and reality testing while temporarily deferring distress.",
+    details: [
+      "Conscious and intentional — patient knows they are avoiding the thought for now",
+      "Classic vignette: physician postpones grief over patient death to finish emergency shift, processes feelings later",
+      "Adaptive in acute crises — allows task completion before emotional processing",
+      "Differs from repression because insight is preserved ('I'll deal with this after the exam')",
+      "Excessive use without eventual processing can lead to burnout or somatic symptoms",
+    ],
+    boardsPearls: [
+      "Suppression = conscious decision to put off painful thoughts until later",
+      "Mature defense — vs repression (unconscious)",
+      "Doctor finishes surgery before grieving — adaptive suppression vignette",
+      "vs denial — denial rejects reality; suppression acknowledges but defers",
+      "vs isolation of affect — unconscious numbness; suppression is deliberate postponement with insight",
+      "Healthy coping when followed by later processing — not pathologic avoidance",
+    ],
+    pediatrics:
+      "Older children and teens consciously suppress exam anxiety or family conflict to function at school — adaptive when temporary; monitor if emotions never get processed.",
+  },
+  {
+    id: "transference",
+    name: "Transference",
+    etymology:
+      "Latin trans- = across + ferre = to carry — unconscious redirection of feelings, expectations, and relationship patterns from significant past figures onto the therapist (or another current figure)",
+    aliases: [
+      "transference",
+      "transferences",
+      "positive transference",
+      "negative transference",
+      "psychodynamic transference",
+      "therapeutic transference",
+      "patient transference",
+    ],
+    definition:
+      "Psychodynamic phenomenon in which a patient unconsciously displaces emotions and relational templates from past important relationships (parents, authority figures, partners) onto the therapist — shaping the therapeutic alliance and providing material for interpretation.",
+    details: [
+      "Unconscious — patient may not recognize the therapist is being cast in an old role",
+      "Positive transference — idealization, affection, trust beyond what the relationship warrants",
+      "Negative transference — hostility, suspicion, or disappointment toward therapist mirroring past figures",
+      "Central to psychodynamic psychotherapy — interpreted to gain insight into conflict patterns",
+      "Distinct from realistic reactions to therapist behavior — transference is disproportionate and repetitive",
+    ],
+    boardsPearls: [
+      "Transference = patient redirects past feelings onto therapist",
+      "Psychodynamic concept — not a defense mechanism per se, but core to insight therapy",
+      "vs countertransference — therapist's feelings toward patient, not patient's toward therapist",
+      "vs displacement — general redirect to any substitute; transference is specific to therapy relationship",
+      "vs borderline splitting — all-good/all-bad oscillation; transference is broader psychodynamic term",
+      "Recognizing transference helps interpret resistance and relationship patterns",
+    ],
+    pediatrics:
+      "Children in play therapy may transfer parental roles onto the therapist symbolically; interpret within developmental context rather than adult psychoanalytic frame alone.",
+  },
+  {
+    id: "countertransference",
+    name: "Countertransference",
+    etymology:
+      "Counter- = reciprocal/opposite + transference — therapist's conscious or unconscious emotional reactions to the patient, shaped by the patient's transference and/or the therapist's own unresolved conflicts",
+    aliases: [
+      "countertransference",
+      "countertransferences",
+      "counter transference",
+      "therapist countertransference",
+      "psychodynamic countertransference",
+    ],
+    definition:
+      "Therapist's emotional response to a patient — ranging from empathic understanding to irritation, boredom, or over-involvement — which may reflect the patient's projected dynamics (complementary countertransference) or the therapist's personal history when unrecognized.",
+    details: [
+      "Can be therapeutic tool when monitored — signals what patient is communicating indirectly",
+      "Problematic when unexamined — leads to boundary violations, over-identification, or punitive responses",
+      "Classic vignette: therapist feels unusually irritated with passive patient → may mirror how others react to patient's hostility",
+      "Supervision and self-reflection are standard management in psychodynamic training",
+      "Differs from appropriate empathic concern, which is proportional and patient-centered",
+    ],
+    boardsPearls: [
+      "Countertransference = therapist's feelings toward patient (mirror of transference)",
+      "Can be informative if recognized — not always pathologic",
+      "Unmanaged countertransference → boundary violations, burnout, poor care",
+      "vs transference — patient → therapist direction",
+      "vs burnout — global exhaustion; countertransference is patient-specific reaction",
+      "Psychodynamic supervision addresses countertransference",
+    ],
+    pediatrics:
+      "Pediatric clinicians may feel frustrated with noncompliant adolescent 'acting out' — reflect on countertransference before labeling patient 'difficult'; involve multidisciplinary team.",
+  },
+  {
+    id: "projection",
+    name: "Projection",
+    etymology:
+      "Latin pro- = forward + jacere = to throw — unconscious attribution of one's own unacceptable thoughts, feelings, or impulses to another person",
+    aliases: [
+      "projection",
+      "projections",
+      "projection defense mechanism",
+      "projection defense",
+      "projection defense mechanisms",
+      "defense mechanism projection",
+      "psychological projection",
+    ],
+    definition:
+      "Immature ego defense mechanism in which an individual denies their own unacceptable internal experience and instead perceives it as originating from someone else — classic form: 'I'm not angry; you're angry at me.'",
+    details: [
+      "Unconscious — patient experiences the attributed quality as belonging to the other person",
+      "Classic vignette: unfaithful spouse accuses partner of cheating without evidence",
+      "Also: prejudiced person assumes others are hostile; alcoholic criticizes others' drinking",
+      "Related concept: projective identification (borderline) — patient induces the projected feeling in others",
+      "Paranoia may involve extensive projection of hostility",
+    ],
+    boardsPearls: [
+      "Projection = 'I don't have this feeling — YOU do'",
+      "Cheating spouse accuses partner of infidelity — classic boards vignette",
+      "Immature defense — paranoid and personality disorder contexts",
+      "vs displacement — redirects behavior to safer target; projection attributes internal state externally",
+      "vs reaction formation — opposite outward behavior; projection assigns impulse to others",
+      "Projective identification — induces feeling in others (borderline vignettes)",
+    ],
+    pediatrics:
+      "Children may project guilt or anger ('You hate me!') when they feel ashamed; distinguish from realistic perception of abusive caregiver hostility.",
+  },
+  {
+    id: "reaction-formation",
+    name: "Reaction Formation",
+    etymology:
+      "Reaction + formation — unconscious adoption of behavior and attitudes opposite to one's true unacceptable impulses, converting them into their contrary expression",
+    aliases: [
+      "reaction formation",
+      "reaction formations",
+      "reaction-formation",
+      "reaction formation defense mechanism",
+      "reaction formation defense",
+      "defense mechanism reaction formation",
+    ],
+    definition:
+      "Immature ego defense mechanism in which a person unconsciously converts an unacceptable impulse into its exaggerated opposite — behaving in an overly positive, moralistic, or affectionate way toward someone or something they actually resent, fear, or desire.",
+    details: [
+      "Unconscious — patient believes the opposite behavior reflects genuine feeling",
+      "Classic vignette: man with unconscious homosexual anxiety becomes virulently homophobic crusader",
+      "Also: excessive affection toward person you hate; hyper-moralism masking shameful urges",
+      "Behavior often rigid, exaggerated, and inconsistent with other actions",
+      "Differs from genuine values-based stance — reaction formation feels compulsive and brittle",
+    ],
+    boardsPearls: [
+      "Reaction formation = behave opposite of true unacceptable impulse",
+      "Homophobic crusader with unconscious same-sex attraction — boards classic (stereotyped vignette)",
+      "Excessive niceness to someone you secretly despise",
+      "vs suppression — consciously sets aside impulse; reaction formation flips it unconsciously",
+      "vs sublimation — channels impulse into acceptable outlet; reaction formation inverts it",
+      "Immature defense — rigid, over-the-top opposite behavior",
+    ],
+    pediatrics:
+      "Teens may react-form against feared impulses (e.g., aggressive posturing masking fear); assess for bullying victims who become bullies.",
+  },
+  {
+    id: "regression",
+    name: "Regression",
+    etymology:
+      "Latin re- = back + gradi = to step — reverting to behaviors, coping styles, or developmental stages from an earlier period of life under stress or illness",
+    aliases: [
+      "regression",
+      "regressions",
+      "psychological regression",
+      "psychologic regression",
+      "regression defense mechanism",
+      "regression defense",
+      "defense mechanism regression",
+      "behavioral regression",
+    ],
+    definition:
+      "Immature ego defense mechanism in which stress, trauma, or illness causes a person to unconsciously retreat to earlier developmental behaviors — such as thumb-sucking, bedwetting, clinging, or tantrums — that were characteristic of a younger age.",
+    details: [
+      "Unconscious — not malingering; reflects reduced coping capacity under overwhelm",
+      "Classic vignette: toilet-trained child resumes bedwetting after birth of sibling or parental divorce",
+      "Hospitalized adults may become dependent, demanding, or childlike (sick-role regression)",
+      "Also seen in dementia, delirium, and severe psychiatric decompensation",
+      "Temporary regression can be adaptive if it mobilizes care — problematic if persistent",
+    ],
+    boardsPearls: [
+      "Regression = stress → earlier developmental behavior (bedwetting, thumb-sucking)",
+      "New sibling → enuresis in previously toilet-trained child — classic vignette",
+      "Immature defense — pediatric and stress vignettes",
+      "vs developmental regression (pathology) — Rett, Krabbe, autism loss of skills = neurologic/metabolic, not defense",
+      "vs dissociation — detachment/unreality; regression is childlike behavior return",
+      "Hospitalized adult acting childlike — sick-role regression",
+    ],
+    pediatrics:
+      "Benign stress-related regression (bedwetting, clinginess) after moves, divorce, or new sibling is common — reassure if brief; evaluate abuse or psych pathology if severe or persistent. Distinguish from neurodegenerative developmental regression (Rett, leukodystrophy).",
+  },
+  {
+    id: "passive-aggression",
+    name: "Passive Aggression",
+    etymology:
+      "Latin passivus = capable of suffering + Latin aggressio = attack — indirect, disguised expression of hostility or resentment rather than open confrontation",
+    aliases: [
+      "passive aggression",
+      "passive-aggression",
+      "passive aggressive",
+      "passive-aggressive",
+      "passive aggressive behavior",
+      "passive-aggressive behavior",
+      "passive aggressive behaviors",
+      "passive-aggressive behaviors",
+      "passive aggressiveness",
+      "passive-aggressive personality",
+      "passive aggressive personality",
+    ],
+    definition:
+      "Immature pattern of expressing hostility indirectly — through procrastination, intentional inefficiency, sarcasm, 'forgetting,' chronic lateness, or stubborn noncompliance — when direct assertive expression of anger feels unsafe or unacceptable.",
+    details: [
+      "Often unconscious or partially conscious — person may deny angry intent ('I'm not mad')",
+      "Classic vignette: employee angry at boss repeatedly 'forgets' deadlines or arrives late after criticism",
+      "Historically passive-aggressive personality disorder (DSM-IV); DSM-5 folded traits into other personality categories but boards still test the behavior",
+      "Common in oppositional dynamics, workplace conflict, and some personality presentations",
+      "Differs from assertive communication, which expresses needs directly and respectfully",
+    ],
+    boardsPearls: [
+      "Passive aggression = indirect hostility (lateness, forgetting, sarcasm, procrastination)",
+      "Angry at boss → chronic tardiness and 'forgetting' tasks — classic vignette",
+      "Immature defense/interpersonal pattern — not frank physical aggression",
+      "vs assertiveness — direct, respectful expression of anger",
+      "vs antisocial behavior — deliberate harm with intent; passive aggression is covert resistance",
+      "vs displacement — redirects to substitute target; passive aggression is indirect expression toward actual target",
+      "DSM-IV passive-aggressive PD removed in DSM-5 — concept still tested",
+    ],
+    pediatrics:
+      "Adolescents may show passive resistance (not doing chores, silent treatment) instead of verbal conflict; distinguish from oppositional defiant disorder, which includes active defiance and argumentativeness.",
+  },
+  {
+    id: "supportive-psychotherapy",
+    name: "Supportive Psychotherapy",
+    etymology:
+      "Latin supportare = to carry from below + Greek therapeia = healing — relationship-based therapy strengthening adaptive coping, self-esteem, and reality testing without deep interpretive work",
+    aliases: [
+      "supportive psychotherapy",
+      "supportive psychotherapies",
+      "supportive therapy",
+      "supportive therapies",
+      "supportive counseling",
+      "supportive counseling therapy",
+      "supportive psychotherapeutic approach",
+      "supportive treatment",
+      "supportive psychiatric therapy",
+    ],
+    definition:
+      "Broad psychotherapy modality emphasizing a therapeutic alliance, validation, psychoeducation, encouragement of adaptive defenses, and practical problem-solving — aims to reduce distress and maintain function rather than uncover unconscious conflict.",
+    details: [
+      "Strengthen existing coping skills; avoid premature interpretation of defenses",
+      "Psychoeducation about illness, stressors, and treatment expectations",
+      "Reassurance, normalization, and encouragement within realistic limits",
+      "Problem-solving and crisis support for acute stressors",
+      "Used across settings — inpatient psychiatry, oncology, grief, adjustment disorders, severe mental illness adjunct",
+      "Can be combined with pharmacotherapy (e.g., depression, schizophrenia stable on antipsychotics)",
+    ],
+    boardsPearls: [
+      "Supportive psychotherapy = alliance + coping + psychoeducation; not deep interpretation",
+      "First-line for adjustment disorder with depressed mood (often before medication)",
+      "Useful when patient is acutely decompensated, psychotic, or cognitively impaired — CBT/psychodynamic less feasible",
+      "vs psychodynamic — supportive avoids deep transference interpretation",
+      "vs CBT — supportive less structured homework/exposure; more stabilizing and affirming",
+      "Schizophrenia — supportive therapy adjunct to antipsychotics improves adherence and function",
+    ],
+    pediatrics:
+      "Supportive counseling common for children facing medical illness, parental divorce, or bereavement. Adjustment disorder in adolescents often managed with supportive therapy ± short-term SSRI if severe.",
+  },
+  {
     id: "glasgow-coma-scale",
     name: "Glasgow Coma Scale",
     etymology: "eponym: Graham Teasdale and Bryan Jennett (Glasgow, Scotland) + coma = deep sleep + Latin scala = ladder",
@@ -938,6 +1430,52 @@ export const CLINICAL_STRATEGIES: ClinicalStrategyEntry[] = [
     ],
     pediatrics:
       "ADT is an adult prostate cancer strategy. The same GnRH agonist drug class is used in central precocious puberty — but there the goal is temporary pubertal suppression, not cancer castration.",
+  },
+  {
+    id: "leuprolide-therapy",
+    name: "Leuprolide Therapy",
+    etymology:
+      "Named for leuprorelin/leuprolide synthetic GnRH analog + Greek therapeia = healing — continuous GnRH-receptor agonist therapy that paradoxically suppresses pituitary gonadotropin secretion",
+    aliases: [
+      "leuprolide therapy",
+      "leuprolide therapies",
+      "leuprolide treatment",
+      "leuprolide treatments",
+      "leuprolide",
+      "leuprolide acetate",
+      "lupron therapy",
+      "lupron",
+      "gnrh agonist therapy",
+      "gnrh agonist treatment",
+      "gnrh agonist leuprolide",
+      "continuous gnrh agonist therapy",
+      "leuprolide depot",
+    ],
+    definition:
+      "Therapeutic use of the GnRH agonist leuprolide via continuous (non-pulsatile) administration — initially stimulating then downregulating pituitary GnRH receptors → ↓ LH and FSH → ↓ gonadal sex-steroid production — for androgen deprivation in prostate cancer, estrogen suppression in endometriosis/uterine fibroids, and temporary pubertal arrest in central precocious puberty.",
+    details: [
+      "Mechanism: continuous GnRH agonist exposure desensitizes pituitary gonadotrophs — opposite of physiologic pulsatile GnRH which maintains LH/FSH",
+      "Initial flare (1–2 weeks): transient ↑ LH/FSH → ↑ testosterone or estradiol — add antiandrogen (e.g., bicalutamide) before/during start when bulky metastatic prostate disease or spinal cord compression risk",
+      "Prostate cancer — medical castration alternative to orchiectomy; cornerstone of androgen deprivation therapy (ADT); see androgen-deprivation strategy",
+      "Endometriosis and uterine leiomyomas — ↓ estrogen shrinks ectopic endometrium and fibroids; amenorrhea common",
+      "Central precocious puberty — reversible pubertal pause until appropriate age; resume normal development when therapy stopped",
+      "Routes: depot IM or SC injections (monthly, 3-month, or longer formulations)",
+      "Monitoring: PSA in prostate cancer; bone density during prolonged use; symptom relief in endometriosis",
+      "Adverse effects: hot flashes, vaginal dryness, erectile dysfunction, loss of libido, mood changes, trabecular bone loss, metabolic changes",
+      "vs GnRH antagonist (degarelix) — antagonist causes immediate suppression without initial flare",
+    ],
+    boardsPearls: [
+      "Leuprolide = GnRH agonist — continuous dosing suppresses LH/FSH (paradoxical downregulation)",
+      "Pulsatile GnRH stimulates gonadotropins; continuous GnRH agonist suppresses — boards classic",
+      "Prostate cancer ADT: leuprolide ↓ testosterone; initial tumor flare possible — antiandrogen cover if high-risk",
+      "Endometriosis/fibroids — leuprolide induces hypoestrogenic state; limit duration due to bone loss",
+      "Central precocious puberty — GnRH agonist until age-appropriate puberty timing",
+      "Hot flashes + ↓ libido on leuprolide → expected androgen/estrogen deprivation effects",
+      "vs leuprolide flare — GnRH antagonist avoids initial testosterone surge",
+      "vs orchiectomy — both achieve androgen deprivation; leuprolide is reversible medical castration",
+    ],
+    pediatrics:
+      "Central precocious puberty treated with GnRH agonists (leuprolide) to halt premature secondary sexual characteristics and preserve adult height potential — therapy stopped at appropriate pubertal age for normal progression. Initial gonadotropin flare is less clinically concerning than in metastatic prostate cancer but monitoring is required.",
   },
   {
     id: "recumbent",
@@ -1167,6 +1705,48 @@ export const CLINICAL_STRATEGIES: ClinicalStrategyEntry[] = [
     ],
     pediatrics:
       "Pediatric combination therapy follows same synergy principles, but toxicity synergy (renal/ototoxic/neurotoxic) is often more clinically limiting because of narrower dosing margins.",
+  },
+  {
+    id: "monotherapy",
+    name: "Monotherapy",
+    etymology:
+      "Greek monos = single + therapeia = healing — treatment of a condition with one pharmacologic agent rather than multiple concurrent drugs",
+    aliases: [
+      "monotherapy",
+      "monotherapies",
+      "single-drug therapy",
+      "single drug therapy",
+      "single-agent therapy",
+      "single agent therapy",
+      "single-drug treatment",
+      "single drug treatment",
+      "sole therapy",
+      "one-drug therapy",
+    ],
+    definition:
+      "Therapeutic strategy using a single drug as the primary or sole pharmacologic intervention — preferred when one agent achieves adequate efficacy with acceptable toxicity, or as first-line before escalating to combination therapy.",
+    details: [
+      "Hypertension — lifestyle plus one antihypertensive class (e.g., thiazide, ACE inhibitor, CCB) before adding second agent",
+      "Type 2 diabetes — metformin monotherapy first-line when tolerated; add second agent if A1c goal not met",
+      "Unipolar major depression — SSRI or SNRI monotherapy is standard initial pharmacotherapy",
+      "Bipolar depression — avoid antidepressant monotherapy without mood stabilizer (risk of manic switch)",
+      "Infectious disease — narrow-spectrum monotherapy when pathogen and susceptibility known; broad combination when empiric or severe",
+      "Epilepsy — many patients controlled on single antiepileptic drug (monotherapy goal)",
+      "Prostate cancer — androgen deprivation monotherapy with GnRH agonist or orchiectomy in advanced disease",
+      "When monotherapy fails or toxicity limits dose escalation → combination or adjunct therapy",
+    ],
+    boardsPearls: [
+      "Monotherapy = one drug alone — vs combination/polypharmacy",
+      "Do not use SSRI monotherapy in bipolar disorder — manic switch risk; add mood stabilizer",
+      "Pheochromocytoma — never β-blocker monotherapy before α-blockade (unopposed α → hypertensive crisis)",
+      "Metformin monotherapy first-line in type 2 DM when no contraindication",
+      "HTN stepped care — monotherapy first in many guidelines before dual therapy",
+      "H. pylori requires combination therapy (PPI + antibiotics) — monotherapy inadequate",
+      "TB and HIV — combination regimens prevent resistance; monotherapy inappropriate",
+      "vs synergism/combination — monotherapy avoids drug interaction and additive toxicity when single agent suffices",
+    ],
+    pediatrics:
+      "Pediatric hypertension and type 2 diabetes often start with lifestyle intervention plus monotherapy when drug indicated. Antidepressant monotherapy in adolescents requires careful bipolar screening. Single antiepileptic drug is preferred when seizure control achieved — polytherapy increases sedation and cognitive side effects.",
   },
   {
     id: "dietary-salt-restriction",

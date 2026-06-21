@@ -689,6 +689,54 @@ export const SYMPTOMS: SymptomEntry[] = [
       "Infant feeding difficulty may reflect neurologic impairment, congenital heart disease, vascular ring, or eosinophilic esophagitis in older children. Epiglottitis presents with inability to handle secretions (drooling), not simple food refusal. Foreign body esophageal impaction causes acute dysphagia or drooling after ingestion.",
   },
   {
+    id: "esophageal-dysmotility",
+    name: "Esophageal Dysmotility",
+    etymology:
+      "Greek oisophagos = gullet + dys = abnormal + Latin motus = movement — disordered peristalsis and sphincter function in the esophagus",
+    aliases: [
+      "esophageal dysmotility",
+      "esophageal dysmotilities",
+      "esophageal motility disorder",
+      "esophageal motility disorders",
+      "esophageal motility dysfunction",
+      "esophageal motility dysfunctions",
+      "disordered esophageal motility",
+      "impaired esophageal motility",
+      "esophageal peristaltic dysfunction",
+      "esophageal hypomotility",
+      "esophageal aperistalsis",
+    ],
+    definition:
+      "Abnormal esophageal smooth muscle contraction, peristalsis, or lower esophageal sphincter (LES) function that impairs bolus transit — causing dysphagia, regurgitation, chest pain, and often severe GERD when LES tone is reduced.",
+    mechanism:
+      "Smooth muscle fibrosis and atrophy (systemic sclerosis) → ineffective peristalsis and LES hypotension → stasis and reflux. Loss of inhibitory myenteric neurons (NO/VIP) with unopposed cholinergic tone → LES failure to relax and aperistalsis in achalasia. Neurologic disease, diabetes, and scleroderma spectrum are common causes.",
+    thinkOf: [
+      "Systemic sclerosis (scleroderma) — distal esophageal hypomotility + LES hypotension + severe GERD (most common visceral GI involvement)",
+      "CREST syndrome — same esophageal pattern in limited cutaneous disease",
+      "Achalasia — aperistalsis + failed LES relaxation (bird-beak on barium swallow)",
+      "Scleroderma esophagus — wide patulous esophagus with air-fluid level on CXR",
+      "Diabetes mellitus — autonomic neuropathy with esophageal dysmotility",
+      "Eosinophilic esophagitis — can coexist with dysmotility and food impaction",
+    ],
+    pairWith: [
+      "Dysphagia + severe GERD + Raynaud + skin tightening → scleroderma esophageal dysmotility",
+      "Dysphagia to solids and liquids + regurgitation + bird-beak LES → achalasia (motility disorder)",
+      "Barium swallow air-fluid level + CREST features → scleroderma esophagus",
+      "Manometry: low-amplitude peristalsis + hypotensive LES → scleroderma pattern",
+      "Manometry: aperistalsis + incomplete LES relaxation → achalasia",
+      "Anti-centromere or anti–Scl-70 antibodies → systemic sclerosis workup",
+    ],
+    distinguishFrom: [
+      "Mechanical dysphagia — stricture, ring, or cancer with progressive solid food obstruction",
+      "Oropharyngeal dysphagia — bolus transfer problem with coughing/aspiration, not esophageal transit",
+      "GERD alone — reflux without primary motility disorder (though dysmotility worsens reflux)",
+      "Esophageal spasm — hypercontractile or nutcracker esophagus, not hypomotility",
+      "Zenker diverticulum — oropharyngeal outpouching, not smooth muscle dysmotility",
+    ],
+    pediatrics:
+      "Achalasia can present in adolescents with dysphagia and weight loss; manometry confirms. Eosinophilic esophagitis is a common pediatric cause of food impaction with secondary dysmotility-like symptoms. Systemic sclerosis esophageal involvement is rare in childhood but may occur in juvenile scleroderma.",
+  },
+  {
     id: "suprasternal-retraction",
     name: "Suprasternal Retraction",
     etymology:
@@ -2754,6 +2802,59 @@ export const SYMPTOMS: SymptomEntry[] = [
       "Neonates and infants have lower baseline PaCO₂; congenital central hypoventilation (Ondine curse) and neuromuscular disorders cause hypercapnia early. Cystic fibrosis and bronchiolitis can progress to CO₂ retention — monitor capnography and ABG in severe respiratory distress.",
   },
   {
+    id: "respiratory-depression",
+    name: "Respiratory Depression",
+    etymology:
+      "Latin re- = again + spirare = to breathe + Latin depressio = pressing down — reduced central drive or neuromuscular capacity to maintain adequate alveolar ventilation",
+    aliases: [
+      "respiratory depression",
+      "respiratory depressions",
+      "respiratory depressant effect",
+      "depressed respirations",
+      "decreased respirations",
+      "decreased respiratory rate",
+      "decreased respiratory drive",
+      "reduced respiratory drive",
+      "hypoventilation from cns depression",
+      "central respiratory depression",
+      "respiratory rate depression",
+      "bradypnea from drug toxicity",
+      "opioid-induced respiratory depression",
+    ],
+    definition:
+      "Clinically significant reduction in respiratory rate, tidal volume, or ventilatory response — leading to hypoventilation, hypercapnia, and hypoxemia — most classically from suppression of medullary respiratory centers by CNS depressants but also from neuromuscular weakness or airway obstruction.",
+    mechanism:
+      "μ-Opioid receptor activation in brainstem respiratory nuclei ↓ CO₂ chemoreceptor sensitivity and ventilatory drive; GABA-A potentiation (benzodiazepines, barbiturates, alcohol) further suppresses arousal and automatic breathing; neuromuscular blockade or fatigue prevents effective chest wall movement → ↓ minute ventilation → ↑ PaCO₂ and ↓ PaO₂.",
+    thinkOf: [
+      "Opioid overdose — miosis, somnolence, ↓ respiratory rate; naloxone reversal",
+      "Benzodiazepine or barbiturate toxicity — especially with opioids or alcohol",
+      "General anesthesia or procedural sedation overdose",
+      "Neonatal opioid exposure — maternal or postnatal",
+      "Brainstem stroke or hemorrhage — central drive loss",
+      "Neuromuscular disease — myasthenia gravis, Guillain-Barré, botulism, succinylcholine apnea (pseudocholinesterase deficiency)",
+      "Obstructive sleep apnea with sedatives — additive risk",
+      "Prematurity — apnea of prematurity with immature respiratory control",
+    ],
+    pairWith: [
+      "Respiratory depression + pinpoint pupils + somnolence → opioid toxicity → naloxone",
+      "Respiratory depression + hypercapnia + acidosis → acute respiratory acidosis",
+      "Respiratory depression + benzodiazepine ingestion → flumazenil if no chronic dependence (caution)",
+      "Respiratory depression + muscle weakness + ↓ FVC → neuromuscular hypoventilation",
+      "Respiratory depression after succinylcholine → pseudocholinesterase deficiency",
+      "CNS depression + respiratory depression → toxic-metabolic emergency; secure airway",
+    ],
+    distinguishFrom: [
+      "Hypercapnia — lab finding (↑ PaCO₂); respiratory depression is the clinical/mechanistic cause of hypoventilation",
+      "Apnea — complete cessation of breathing; respiratory depression is reduced but may not absent ventilation",
+      "Dyspnea — subjective air hunger; respiratory depression often presents with somnolence without dyspneic sensation",
+      "Obstructive lung disease — V/Q mismatch with wheeze/COPD; respiratory drive may be preserved until late fatigue",
+      "Central sleep apnea — episodic central apneas during sleep, not necessarily acute drug-induced depression",
+      "Metabolic acidosis with Kussmaul breathing — compensatory hyperventilation, opposite pattern",
+    ],
+    pediatrics:
+      "Children have higher baseline respiratory rates and are more susceptible to opioid and benzodiazepine respiratory depression from accidental ingestion. Neonatal abstinence and maternal opioid use cause neonatal respiratory depression. Apnea of prematurity reflects immature central drive — caffeine citrate stimulates respiration.",
+  },
+  {
     id: "clubbing",
     name: "Clubbing",
     etymology: "club = rounded enlargement",
@@ -4679,6 +4780,52 @@ export const SYMPTOMS: SymptomEntry[] = [
       "HOCM may present in adolescents with exertional syncope and bifid carotid pulse on exam; family screening indicated. Distinguish from physiologic vigorous pulses in athletic teens without murmur or hypertrophy.",
   },
   {
+    id: "bifid-uvula",
+    name: "Bifid Uvula",
+    etymology:
+      "Latin bis = twice + findere = to split + Latin uvula = little grape — forked midline soft-palate projection",
+    aliases: [
+      "bifid uvula",
+      "bifid uvulas",
+      "bifid uvulae",
+      "split uvula",
+      "split uvulas",
+      "forked uvula",
+      "forked uvulas",
+      "cleft uvula",
+      "cleft uvulas",
+      "bifurcated uvula",
+      "bifurcated uvulas",
+    ],
+    definition:
+      "Uvula divided into two lobes by a midline cleft — a soft marker of incomplete palatal fusion that may indicate submucous cleft palate or 22q11.2 deletion even when overt cleft palate is absent.",
+    mechanism:
+      "Incomplete fusion of palatal shelves or defective migration of neural crest–derived mesenchyme leaves a midline defect in the uvula musculature (musculus uvulae); may be isolated or part of submucous cleft palate spectrum and velocardiofacial/DiGeorge syndrome.",
+    thinkOf: [
+      "Submucous cleft palate — bifid uvula with palpable bony notch or zona pellucida",
+      "DiGeorge syndrome (22q11.2 deletion) — bifid uvula with conotruncal defects, hypocalcemia",
+      "Velocardiofacial syndrome — same 22q11 deletion spectrum",
+      "Isolated normal variant — no speech or feeding issues",
+      "Occult cleft palate — hypernasal speech despite intact mucosa",
+    ],
+    pairWith: [
+      "Bifid uvula + conotruncal heart defect + hypocalcemia → 22q11.2 deletion",
+      "Bifid uvula + hypernasal speech + VPI → submucous cleft palate workup",
+      "Bifid uvula + bulbous nose + learning disability → velocardiofacial syndrome",
+      "Examine palate by palpation for posterior bony notch when bifid uvula seen",
+      "Nasopharyngoscopy if VPI suspected with normal-appearing mucosa",
+    ],
+    distinguishFrom: [
+      "Bifid carotid pulse — cardiovascular bisferiens upstroke, not oral finding",
+      "Uvular deviation — CN X palsy or peritonsillar abscess, not congenital split",
+      "Overt cleft palate — visible midline mucosal defect, not uvula alone",
+      "Bifid scrotum — external genital midline cleft in DSD, unrelated structure",
+      "Normal elongated uvula — single lobe without midline cleft",
+    ],
+    pediatrics:
+      "Neonates with bifid uvula and cardiac murmur warrant 22q11 FISH/microarray and calcium monitoring. Submucous cleft may present with feeding difficulty or hypernasal speech after palate function is stressed — surgical repair when velopharyngeal insufficiency documented.",
+  },
+  {
     id: "carotid-upstroke",
     name: "Carotid Upstroke",
     etymology:
@@ -6065,6 +6212,53 @@ export const SYMPTOMS: SymptomEntry[] = [
     ],
   },
   {
+    id: "sacroiliitis",
+    name: "Sacroiliitis",
+    etymology:
+      "Latin sacrum = sacred bone + Greek ilion = flank/hip + -itis = inflammation — inflammation of the sacroiliac joint",
+    aliases: [
+      "sacroiliitis",
+      "sacroiliitides",
+      "sacroiliac joint inflammation",
+      "sacroiliac inflammation",
+      "sacroiliac jointitis",
+      "si joint inflammation",
+      "si jointitis",
+      "inflamed sacroiliac joint",
+      "inflamed sacroiliac joints",
+      "bilateral sacroiliitis",
+    ],
+    definition:
+      "Inflammation of one or both sacroiliac joints — a hallmark of spondyloarthritis that causes inflammatory low back/buttock pain, often worse with rest and improved with activity, and visible on MRI or X-ray as erosions, sclerosis, or joint space changes.",
+    mechanism:
+      "Immune-mediated synovitis and enthesitis at the sacroiliac joint (HLA-B27–associated in many cases) → subchondral bone edema, erosions, and eventual ankylosis in chronic disease; IL-17 and TNF-driven inflammation link gut/skin/psoriatic triggers to axial joint involvement.",
+    thinkOf: [
+      "Ankylosing spondylitis — bilateral sacroiliitis + inflammatory back pain in young male",
+      "Reactive arthritis (Reiter syndrome) — post-infectious sacroiliitis with urethritis/conjunctivitis",
+      "Psoriatic arthritis — sacroiliitis with psoriasis and dactylitis",
+      "Inflammatory bowel disease–associated spondyloarthritis — sacroiliitis with Crohn/UC",
+      "Enteropathic arthritis — GI disease + axial joint inflammation",
+      "Juvenile idiopathic arthritis — enthesitis-related arthritis with sacroiliitis in adolescents",
+    ],
+    pairWith: [
+      "Bilateral sacroiliitis + morning stiffness improving with exercise + age <40 → ankylosing spondylitis",
+      "Sacroiliitis + HLA-B27 positive + RF/anti-CCP negative → spondyloarthritis",
+      "Sacroiliitis + psoriasis + nail pitting → psoriatic spondyloarthritis",
+      "Sacroiliitis + bloody diarrhea → IBD-associated spondyloarthritis",
+      "MRI sacroiliac joint marrow edema — early sacroiliitis before X-ray changes",
+      "Bamboo spine on X-ray — chronic ankylosing spondylitis with fused vertebrae",
+    ],
+    distinguishFrom: [
+      "Mechanical low back pain — no morning stiffness >30 min, no sacroiliac inflammation on imaging",
+      "Degenerative disc disease — older age, no inflammatory pattern or HLA-B27 association",
+      "Rheumatoid arthritis — symmetric small-joint polyarthritis; sacroiliitis not typical",
+      "Pyogenic sacroiliac joint infection — fever, unilateral severe pain, bacteremia risk",
+      "Sacroiliac joint dysfunction — mechanical pain without true inflammatory sacroiliitis",
+    ],
+    pediatrics:
+      "Enthesitis-related juvenile idiopathic arthritis and juvenile ankylosing spondylitis present with sacroiliitis in adolescents; MRI detects early disease before radiographic sacroiliac changes. Screen for IBD when pediatric sacroiliitis accompanies abdominal symptoms.",
+  },
+  {
     id: "hemianopsia",
     name: "Hemianopsia",
     etymology: "Greek hemi = half + an- = without + opsis = vision",
@@ -6926,6 +7120,52 @@ export const SYMPTOMS: SymptomEntry[] = [
     ],
     pediatrics:
       "Common normal finding in infants of Asian descent; in non-Asian infants, pair with other dysmorphic features to screen for trisomy 21 and teratogenic syndromes.",
+  },
+  {
+    id: "low-set-ears",
+    name: "Low-Set Ears",
+    etymology:
+      "Old English lāh = low + settan = placed + Old English ēare = ear — auricles positioned below the normal horizontal plane of the medial canthi",
+    aliases: [
+      "low-set ears",
+      "low set ears",
+      "low-set ear",
+      "low set ear",
+      "low set auricles",
+      "low-set auricles",
+      "posteriorly rotated ears",
+      "posteriorly rotated ear",
+      "abnormally positioned ears",
+      "dysplastic low-set ears",
+    ],
+    definition:
+      "Auricles (pinnae) situated below the normal level — typically with the superior helix at or below a horizontal line through the inner canthi — a common dysmorphic sign of chromosomal and syndromic disorders.",
+    mechanism:
+      "Abnormal auricular development and positioning during first and second pharyngeal arch morphogenesis; often accompanies generalized craniofacial dysmorphism from aneuploidy, gene mutation, or teratogen exposure rather than isolated pinna malformation.",
+    thinkOf: [
+      "Turner syndrome (45,X) — low-set ears with webbed neck, short stature",
+      "Noonan syndrome — low-set ears, hypertelorism, pulmonary stenosis",
+      "Down syndrome (trisomy 21) — may have small, low-set ears with dysmorphic facies",
+      "Edwards syndrome (trisomy 18) — low-set ears with micrognathia, clenched fists",
+      "Potter sequence — flattened facies, low-set ears from oligohydramnios compression",
+      "Renal anomalies — ear malposition may accompany urinary tract malformations in some syndromes",
+    ],
+    pairWith: [
+      "Low-set ears + webbed neck + short stature → Turner or Noonan syndrome",
+      "Low-set ears + micrognathia + rocker-bottom feet → trisomy 18",
+      "Low-set ears + upslanting fissures + hypotonia → trisomy 21",
+      "Low-set ears + pulmonary stenosis + normal ovaries → Noonan syndrome",
+      "Low-set ears + oligohydramnios facies → Potter sequence / renal agenesis workup",
+    ],
+    distinguishFrom: [
+      "Posteriorly rotated ears alone — rotation without low position; may overlap but distinct measurement",
+      "Preauricular pits/tags — accessory auricular tissue, not necessarily low-set position",
+      "Normal familial ear position — no syndromic features or congenital anomalies",
+      "Macrotia — large ears without abnormal vertical position",
+      "Dysmorphic facies — broader category; low-set ears are one component feature",
+    ],
+    pediatrics:
+      "Assess ear position on every newborn dysmorphology exam; pair with cardiac auscultation, renal ultrasound when Potter facies suspected, and karyotype when multiple dysmorphic features present.",
   },
   {
     id: "single-palmar-crease",
@@ -8900,6 +9140,62 @@ export const SYMPTOMS: SymptomEntry[] = [
       "Bronchospasm is the main airway emergency in pediatric asthma and anaphylaxis. Hypercyanotic spells in ToF reflect infundibular spasm. Infantile spasms (West syndrome) are epileptic — not the same as muscle spasm.",
   },
   {
+    id: "tremulousness",
+    name: "Tremulousness",
+    etymology:
+      "Latin tremulus = trembling + -ness state — subjective or observed fine-to-coarse involuntary oscillatory movement of limbs, hands, or whole body",
+    aliases: [
+      "tremulousness",
+      "tremulous",
+      "tremulous state",
+      "trembling",
+      "shakiness",
+      "shaking",
+      "fine tremor",
+      "fine tremors",
+      "hand tremor",
+      "hand tremors",
+      "tremulous hands",
+      "tremulous hand",
+      "body tremor",
+      "body tremors",
+    ],
+    definition:
+      "Perceived or visible involuntary rhythmic oscillation of a body part — most often hands or fingers — reflecting abnormal neuromuscular or autonomic activation; severity ranges from fine postural shakiness to coarse resting tremor depending on underlying cause.",
+    mechanism:
+      "Oscillatory alternating contraction of agonist-antagonist muscle groups from ↑ sympathetic tone (catecholamines), cerebellar or extrapyramidal circuit dysfunction, or peripheral receptor hypersensitivity — fine high-frequency tremor with hyperthyroidism, hypoglycemia, anxiety, or β-agonists; pill-rolling resting tremor with nigrostriatal dopamine loss in Parkinson disease; intention tremor with cerebellar lesions.",
+    thinkOf: [
+      "Hyperthyroidism — fine rapid postural tremor with heat intolerance and weight loss",
+      "Hypoglycemia — adrenergic tremor with diaphoresis and confusion in diabetes",
+      "Alcohol or benzodiazepine withdrawal — tremulousness, anxiety, autonomic hyperactivity",
+      "Essential tremor — bilateral action/postural tremor, often familial, improves with alcohol",
+      "Parkinson disease — resting pill-rolling tremor with bradykinesia and rigidity",
+      "Anxiety or panic — fine tremor with palpitations and hyperventilation",
+      "Caffeine, amphetamines, lithium toxicity, valproate",
+      "Wilson disease — wing-beating tremor with hepatolenticular degeneration",
+      "Delirium tremens — severe alcohol withdrawal with tremor, hallucinations, autonomic instability",
+    ],
+    pairWith: [
+      "Tremulousness + heat intolerance + weight loss → hyperthyroidism",
+      "Tremulousness + diaphoresis + confusion + diabetes → hypoglycemia (check fingerstick)",
+      "Tremulousness + insomnia + agitation after stopping alcohol → withdrawal",
+      "Resting pill-rolling tremor + bradykinesia + cogwheel rigidity → Parkinson disease",
+      "Bilateral hand tremor worsened by action + family history → essential tremor",
+      "Tremulousness + ↓ libido + hot flashes on leuprolide → androgen/estrogen deprivation",
+      "Fine tremor + exophthalmos + pretibial myxedema → Graves disease",
+    ],
+    distinguishFrom: [
+      "Tetany — sustained muscle spasm from hypocalcemia, not rhythmic oscillation",
+      "Myoclonus — sudden brief jerks, not rhythmic tremor",
+      "Chorea — irregular flowing dance-like movements, not rhythmic tremor",
+      "Fasciculations — brief muscle twitches (lower motor neuron), not sustained oscillation",
+      "Seizure — cortical discharge with loss of awareness or tonic-clonic activity",
+      "Intention tremor alone — cerebellar dysmetria on targeted movement; distinguish cause from general tremulousness descriptor",
+    ],
+    pediatrics:
+      "Hypoglycemia in diabetic children or inborn errors of metabolism causes adrenergic tremulousness with irritability — check glucose urgently. Hyperthyroidism in adolescents presents with fine tremor, weight loss, and menstrual irregularity. Benign enhanced physiologic tremor is common in anxious adolescents; Wilson disease should be considered with tremor plus liver disease or psychiatric symptoms.",
+  },
+  {
     id: "trismus",
     name: "Trismus",
     etymology:
@@ -10106,6 +10402,55 @@ export const SYMPTOMS: SymptomEntry[] = [
       "Hypomanic symptoms in adolescents are difficult to distinguish from normal mood lability and ADHD; family history of bipolar disorder and antidepressant activation increase suspicion. Specialist evaluation before antidepressant monotherapy in teens with depression.",
   },
   {
+    id: "hypoplastic-mandible",
+    name: "Hypoplastic Mandible",
+    etymology:
+      "Greek hypo = under + plassein = to form + Latin mandibula = jaw — underdeveloped lower jaw",
+    aliases: [
+      "hypoplastic mandible",
+      "hypoplastic mandibles",
+      "micrognathia",
+      "micrognathias",
+      "small mandible",
+      "small mandibles",
+      "small jaw",
+      "small jaws",
+      "mandibular hypoplasia",
+      "underdeveloped mandible",
+      "underdeveloped mandibles",
+      "receding jaw",
+      "receding jaws",
+    ],
+    definition:
+      "Congenitally small, underdeveloped mandible (micrognathia) — may cause retrognathia, glossoptosis (posterior tongue displacement), airway obstruction, and feeding difficulty, and is a hallmark of several chromosomal and craniofacial syndromes.",
+    mechanism:
+      "Defective first pharyngeal arch (Meckel cartilage) and mandibular process development from neural crest–derived mesenchyme → reduced mandibular growth; small jaw allows tongue to fall posteriorly (glossoptosis), obstructing airway and interfering with palatal shelf elevation → Pierre Robin sequence when cleft palate coexists.",
+    thinkOf: [
+      "Pierre Robin sequence — micrognathia, glossoptosis, cleft palate (airway emergency in neonate)",
+      "Edwards syndrome (trisomy 18) — micrognathia with low-set ears, clenched fists",
+      "Treacher Collins syndrome — 1st/2nd arch neural crest defect; malar hypoplasia, micrognathia",
+      "Nager syndrome — micrognathia with preaxial limb defects",
+      "Fetal alcohol syndrome — micrognathia with smooth philtrum, short palpebral fissures",
+      "Trisomy 13 — micrognathia with holoprosencephaly spectrum",
+    ],
+    pairWith: [
+      "Micrognathia + cleft palate + airway obstruction → Pierre Robin sequence",
+      "Micrognathia + malar hypoplasia + downward palpebral slant → Treacher Collins",
+      "Micrognathia + low-set ears + rocker-bottom feet → trisomy 18",
+      "Micrognathia + smooth philtrum + growth restriction → fetal alcohol syndrome",
+      "Prone positioning or nasopharyngeal airway for neonatal glossoptosis; tracheostomy if severe",
+    ],
+    distinguishFrom: [
+      "Retrognathia — posteriorly positioned mandible on profile; may be acquired or positional",
+      "Prognathia — prominent forward mandible (e.g., acromegaly), opposite finding",
+      "Macroglossia — large tongue (e.g., Beckwith-Wiedemann), not small jaw",
+      "High-arched palate — palatal vault anomaly, separate from mandibular size",
+      "Acquired mandibular deficiency — trauma or TMJ ankylosis, not congenital hypoplasia",
+    ],
+    pediatrics:
+      "Neonatal Pierre Robin sequence requires airway monitoring for obstructive apnea and feeding support; prone positioning relieves glossoptosis. Mandibular distraction osteogenesis or tracheostomy for refractory obstruction. Screen for syndromic associations when micrognathia is not isolated.",
+  },
+  {
     id: "psychosis",
     name: "Psychosis",
     etymology: "Greek psyche = mind + -osis = abnormal condition",
@@ -10367,6 +10712,51 @@ export const SYMPTOMS: SymptomEntry[] = [
     ],
     pediatrics:
       "Febrile neutropenia in children on chemotherapy requires urgent cultures and empiric antibiotics. Severe congenital neutropenia and cyclic neutropenia present in infancy/childhood; G-CSF may be used in selected congenital neutropenia syndromes.",
+  },
+  {
+    id: "agranulocytosis",
+    name: "Agranulocytosis",
+    etymology:
+      "Greek a- = without + Latin granulum = small grain + Greek kytos = cell + -osis = condition — severe absence of circulating neutrophils",
+    aliases: [
+      "agranulocytosis",
+      "agranulocytoses",
+      "agranulocytic",
+      "severe neutropenia",
+      "severe neutropenias",
+      "drug-induced agranulocytosis",
+      "drug induced agranulocytosis",
+      "clozapine agranulocytosis",
+      "anc near zero",
+    ],
+    definition:
+      "Severe neutropenia with ANC typically <500/µL (often near zero) from abrupt loss or failed production of neutrophils — most commonly idiosyncratic drug reaction — causing extreme susceptibility to bacterial and fungal sepsis.",
+    mechanism:
+      "Immune-mediated or direct toxic marrow suppression destroys or prevents neutrophil precursors — clozapine, carbimazole/methimazole, sulfonamides, dapsone, and other drugs are classic triggers; without neutrophils, mucosal and skin barriers fail against pyogenic organisms.",
+    thinkOf: [
+      "Clozapine — mandatory ANC monitoring; treatment-resistant schizophrenia drug",
+      "Antithyroid drugs (methimazole, propylthiouracil) — agranulocytosis in Graves disease treatment",
+      "Sulfonamide antibiotics (TMP-SMX)",
+      "Chemotherapy — expected severe neutropenia vs idiosyncratic drug agranulocytosis",
+      "Felty syndrome — RA with splenomegaly and neutropenia (usually not absolute zero)",
+      "Aplastic anemia — pancytopenia including severe neutropenia",
+    ],
+    pairWith: [
+      "New drug + fever + sore throat + ANC <500 → agranulocytosis; stop drug, cultures, empiric antibiotics",
+      "Clozapine + falling ANC → hold drug per monitoring protocol",
+      "Methimazole + oral ulcers + fever → antithyroid agranulocytosis",
+      "Agranulocytosis vs neutropenia — agranulocytosis is severe/end-stage ANC collapse, often drug-induced",
+      "G-CSF may accelerate recovery in drug-induced agranulocytosis (selected cases)",
+    ],
+    distinguishFrom: [
+      "Neutropenia — broader term; ANC <1,500; agranulocytosis is severe subset (ANC <500, often ~0)",
+      "Leukopenia — low total WBC from any lineage, not neutrophil-specific",
+      "Lymphopenia — low lymphocytes; different infection pattern (viral, opportunistic)",
+      "Neutrophilia — elevated neutrophils; left shift in acute bacterial infection",
+      "Cyclic neutropenia — periodic milder neutropenia every ~21 days, not persistent zero ANC",
+    ],
+    pediatrics:
+      "Clozapine agranulocytosis occurs in adolescents on antipsychotics — same ANC monitoring required. Febrile child with ANC near zero after new medication is a medical emergency regardless of age.",
   },
   {
     id: "ataxia",
@@ -13714,6 +14104,54 @@ export const SYMPTOMS: SymptomEntry[] = [
     ],
     pediatrics:
       "Acute dystonic reactions occur in children given antiemetics or antipsychotics — diphenhydramine or benztropine provides rapid relief; avoid unnecessary prolongation of metoclopramide in pediatric nausea.",
+  },
+  {
+    id: "hyperresonance",
+    name: "Hyperresonance",
+    etymology:
+      "Greek hyper = over + Latin resonare = to resound — percussion note louder and more hollow than normal due to increased air in the thorax",
+    aliases: [
+      "hyperresonance",
+      "hyperresonances",
+      "hyper-resonance",
+      "hyper-resonances",
+      "hyperresonant",
+      "hyperresonant percussion",
+      "increased resonance",
+      "increased resonance on percussion",
+      "tympanitic percussion",
+      "tympanitic resonance",
+      "hollow percussion note",
+    ],
+    definition:
+      "Abnormally loud, low-pitched, hollow percussion note over the chest — indicating excess air in the underlying lung or pleural space compared with normal resonant lung — a key physical exam finding in obstructive air trapping and pneumothorax.",
+    mechanism:
+      "Increased air content (emphysematous overdistension, asthma/COPD air trapping, or free air in pleural space) transmits percussion vibrations more efficiently → louder, more tympanic note than normal resonant lung; opposite of dullness from fluid or consolidation.",
+    thinkOf: [
+      "Tension pneumothorax — hyperresonance, absent breath sounds, tracheal/mediastinal shift away, hypotension",
+      "Simple pneumothorax — hyperresonance or tympany on affected side",
+      "COPD/emphysema — diffuse hyperresonance with barrel chest and ↓ breath sounds",
+      "Acute asthma exacerbation — hyperinflation with hyperresonance and wheeze",
+      "Large bullae — localized hyperresonance over air-filled bulla",
+      "Foreign body aspiration — unilateral hyperresonance with ball-valve air trapping",
+    ],
+    pairWith: [
+      "Hyperresonance + absent breath sounds + tracheal deviation + hypotension → tension pneumothorax (needle decompression)",
+      "Hyperresonance + wheeze + prolonged expiration → asthma/COPD obstructive disease",
+      "Hyperresonance + flattened diaphragms on CXR + smoker → emphysema",
+      "Unilateral hyperresonance + decreased breath sounds in toddler → foreign body aspiration",
+      "vs dullness + bronchial breath sounds → lobar consolidation (pneumonia)",
+      "vs dullness + ↓ breath sounds → pleural effusion",
+    ],
+    distinguishFrom: [
+      "Dullness to percussion — fluid, consolidation, or collapse (pneumonia, effusion, atelectasis)",
+      "Normal resonance — healthy aerated lung percussion note",
+      "Tympany — very hollow note over gas-filled viscus (gastric bubble); extreme form of hyperresonance",
+      "Hyperinflated lungs — radiographic/clinical overdistension; hyperresonance is the percussion correlate",
+      "Stony dullness — pleural effusion with very little air; opposite of hyperresonance",
+    ],
+    pediatrics:
+      "Tension pneumothorax is rare but life-threatening in children — hyperresonance with hemodynamic compromise requires immediate decompression. Bronchiolitis and asthma cause diffuse hyperresonance from air trapping; foreign body aspiration causes unilateral findings.",
   },
   {
     id: "hyperinflated-lungs",

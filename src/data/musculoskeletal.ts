@@ -195,6 +195,203 @@ export const MUSCULOSKELETAL: MusculoskeletalEntry[] = [
       "Subscapularis tears rare in children; anterior instability more often labral (Bankart) injury than cuff tear.",
   },
   {
+    id: "biceps-brachii",
+    name: "Biceps Brachii",
+    etymology:
+      "Latin biceps = two-headed + brachium = arm — two-headed muscle of the upper arm",
+    aliases: [
+      "biceps brachii",
+      "biceps brachii muscle",
+      "biceps brachii muscles",
+      "biceps",
+      "biceps muscle",
+      "biceps muscles",
+      "biceps brachialis",
+      "biceps of arm",
+      "bb muscle",
+    ],
+    definition:
+      "Two-headed muscle of the anterior upper arm — long head from the supraglenoid tubercle (intracapsular) and short head from the coracoid process — flexing the elbow and supinating the forearm (especially when elbow is flexed).",
+    anatomy:
+      "Long head: supraglenoid tubercle of scapula → passes through bicipital groove → joins short head. Short head: coracoid process. Common insertion: radial tuberosity and bicipital aponeurosis into deep forearm fascia.",
+    action: [
+      "Primary elbow flexor (with brachialis and brachioradialis)",
+      "Supinates the forearm when elbow is flexed (works with supinator muscle)",
+      "Long head assists shoulder flexion and stabilizes humeral head in glenoid",
+      "Short head assists shoulder flexion and horizontal adduction",
+    ],
+    innervation: "Musculocutaneous nerve (C5–C6)",
+    clinicalRelevance: [
+      "Proximal biceps tendon rupture — Popeye deformity (bulging distal muscle belly)",
+      "Bicipital tendinopathy — anterior shoulder pain in bicipital groove",
+      "Speed test and Yergason test assess long head of biceps",
+      "Musculocutaneous nerve injury → weak elbow flexion and ↓ biceps reflex (C5–C6)",
+    ],
+    boardsPearls: [
+      "Two heads — long (supraglenoid, intracapsular) and short (coracoid)",
+      "Musculocutaneous nerve (C5–C6) — also supplies brachialis and lateral forearm sensation",
+      "Biceps reflex tests C5–C6 (musculocutaneous)",
+      "Popeye sign — proximal long head rupture → retracted tendon, bunched muscle belly",
+      "vs brachialis — deeper pure elbow flexor; also musculocutaneous nerve",
+      "vs triceps — posterior arm, elbow extension, radial nerve (C7–C8)",
+    ],
+    distinguishFrom: [
+      "Brachialis — deep elbow flexor; primary flexor at all elbow angles",
+      "Brachioradialis — forearm flexor at mid-pronation; radial nerve",
+      "Triceps brachii — posterior arm; elbow extension; radial nerve",
+      "Coracobrachialis — medial arm; musculocutaneous nerve; shoulder flexion/adduction",
+      "Biceps femoris — posterior thigh hamstring; sciatic nerve; not arm muscle",
+    ],
+    pediatrics:
+      "Isolated biceps rupture uncommon in children; shoulder pain in throwers more often Little League shoulder (proximal humeral physeal injury) than biceps tendon tear.",
+  },
+  {
+    id: "deltoid",
+    name: "Deltoid",
+    etymology:
+      "Greek delta = triangular (Δ shape) + Latin -oid = resembling — triangular shoulder muscle",
+    aliases: [
+      "deltoid",
+      "deltoid muscle",
+      "deltoid muscles",
+      "deltoids",
+      "deltoideus",
+      "shoulder deltoid",
+    ],
+    definition:
+      "Large triangular muscle covering the shoulder joint — with anterior, middle, and posterior fibers — serving as the primary abductor of the arm and contributing to flexion, extension, and rotation depending on fiber region.",
+    anatomy:
+      "Origin: lateral third of clavicle (anterior), acromion (middle), spine of scapula (posterior). Insertion: deltoid tuberosity of humerus. Overlies surgical neck of humerus where axillary nerve wraps.",
+    action: [
+      "Middle fibers — primary abductor of arm (15°–90°; supraspinatus initiates first 15°)",
+      "Anterior fibers — shoulder flexion and internal rotation",
+      "Posterior fibers — shoulder extension and external rotation",
+      "Dynamic stabilizer during arm elevation",
+    ],
+    innervation: "Axillary nerve (C5–C6)",
+    clinicalRelevance: [
+      "Axillary nerve injury (anterior shoulder dislocation, surgical neck humerus fracture) → flat deltoid, weak abduction",
+      "Regimental badge area — axillary nerve sensory loss over lateral shoulder",
+      "Deltoid atrophy with chronic axillary neuropathy",
+      "Massive rotator cuff tear — deltoid may compensate partially for abduction",
+    ],
+    boardsPearls: [
+      "Axillary nerve (C5–C6) — motor to deltoid and teres minor; sensation lateral shoulder",
+      "Anterior shoulder dislocation → axillary nerve injury — check abduction and lateral sensation",
+      "Middle deltoid = main abductor after supraspinatus initiates",
+      "Surgical neck of humerus fracture — axillary nerve at risk",
+      "vs supraspinatus — initiates abduction; deltoid continues to 90°",
+      "vs rotator cuff — deltoid is prime mover; cuff stabilizes glenohumeral joint",
+    ],
+    distinguishFrom: [
+      "Supraspinatus — initiates abduction; suprascapular nerve; rotator cuff",
+      "Teres minor — external rotation; axillary nerve; not primary abductor",
+      "Pectoralis major — anterior chest; flexion/adduction/internal rotation",
+      "Trapezius — scapular elevation and rotation; accessory nerve (CN XI)",
+      "Axillary nerve — innervates deltoid; nerve vs muscle distinction",
+    ],
+    pediatrics:
+      "Anterior shoulder dislocation in adolescents can injure axillary nerve — assess deltoid contour, abduction strength, and lateral shoulder sensation after reduction.",
+  },
+  {
+    id: "levator-scapulae",
+    name: "Levator Scapulae",
+    etymology:
+      "Latin levare = to lift + scapula = shoulder blade — muscle elevating the scapula",
+    aliases: [
+      "levator scapulae",
+      "levator scapulae muscle",
+      "levator scapulae muscles",
+      "levator scapula",
+      "levator scapula muscle",
+      "levator scapula muscles",
+      "levator scapulae muscle group",
+    ],
+    definition:
+      "Posterior neck muscle originating from the transverse processes of C1–C4 vertebrae and inserting on the superior angle and medial border of the scapula — elevating the scapula and assisting downward rotation and neck extension/lateral flexion.",
+    anatomy:
+      "Origin: transverse processes of C1–C4. Insertion: superior angle and medial border of scapula (between superior angle and spine). Deep to trapezius and sternocleidomastoid; overlies scalene muscles.",
+    action: [
+      "Elevates the scapula (shoulder shrug component with trapezius upper fibers)",
+      "Downwardly rotates scapula (with rhomboids)",
+      "Assists ipsilateral neck extension and lateral flexion when scapula is fixed",
+      "Stabilizes scapula during arm movement",
+    ],
+    innervation: "Dorsal scapular nerve (C4–C5; sometimes C3 contribution)",
+    clinicalRelevance: [
+      "Chronic neck stiffness and pain — levator scapulae trigger point common in desk workers",
+      "Dorsal scapular nerve entrapment — weakness elevating scapula, scapula slightly displaced inferiorly/laterally",
+      "Scalene syndrome — compression of brachial plexus and dorsal scapular nerve between scalene muscles",
+      "Whiplash and cervical strain — levator scapulae spasm and tenderness",
+    ],
+    boardsPearls: [
+      "Dorsal scapular nerve (C4–C5) — also innervates rhomboid major and minor",
+      "Elevates scapula with upper trapezius; downward rotation with rhomboids",
+      "vs trapezius — accessory nerve (CN XI); broader scapular and neck actions",
+      "vs serratus anterior — protraction and upward rotation; long thoracic nerve",
+      "Scalene triangle — brachial plexus and subclavian artery pass between anterior and middle scalenes",
+    ],
+    distinguishFrom: [
+      "Trapezius — CN XI; upper/middle/lower fibers; broader scapular motion",
+      "Rhomboid major/minor — retract scapula; same dorsal scapular nerve",
+      "Serratus anterior — protracts scapula; long thoracic nerve; winged scapula if injured",
+      "Scalene muscles — neck flexion/lateral flexion; not primary scapular elevator",
+      "Sternocleidomastoid — CN XI; head rotation; anterior neck",
+    ],
+    pediatrics:
+      "Congenital muscular torticollis involves SCM, not levator scapulae — but chronic neck posture in adolescents can cause levator scapulae strain mimicking cervical radiculopathy.",
+  },
+  {
+    id: "serratus-anterior",
+    name: "Serratus Anterior",
+    etymology:
+      "Latin serratus = saw-toothed + anterior = front — saw-edged muscle on the anterior chest wall",
+    aliases: [
+      "serratus anterior",
+      "serratus anterior muscle",
+      "serratus anterior muscles",
+      "serratus anterior muscle group",
+      "serratus",
+      "boxer's muscle",
+      "boxers muscle",
+      "big swing muscle",
+    ],
+    definition:
+      "Broad, saw-toothed muscle on the lateral chest wall arising from the upper eight or nine ribs and inserting on the medial border of the scapula — protracting and upwardly rotating the scapula and holding it against the thoracic wall during arm elevation.",
+    anatomy:
+      "Origin: external surfaces of ribs 1–8 (or 9). Insertion: anterior/medial border of scapula (costal surface). Courses deep to pectoralis major along mid-axillary line; innervated superficially by long thoracic nerve along its length.",
+    action: [
+      "Protracts scapula (pulls scapula around rib cage anteriorly)",
+      "Upwardly rotates scapula for full overhead arm elevation",
+      "Holds medial scapular border firmly against thoracic wall",
+      "Assists forced inspiration when scapula is fixed (accessory respiratory muscle)",
+    ],
+    innervation: "Long thoracic nerve (C5–C7 roots)",
+    clinicalRelevance: [
+      "Long thoracic nerve injury → serratus anterior paralysis → medial winged scapula",
+      "Classic after axillary lymph node dissection (mastectomy)",
+      "Wall push-up test — medial border of scapula lifts off chest (winging)",
+      "Viral neuritis (Parsonage-Turner), heavy backpacks, repetitive overhead sports",
+    ],
+    boardsPearls: [
+      "Long thoracic nerve (C5–C7) → serratus anterior — winged scapula if injured",
+      "Medial winging on wall push-up — vs lateral winging from trapezius/accessory nerve injury",
+      "Required for full overhead elevation — without it scapula cannot upwardly rotate",
+      "Axillary node dissection classic iatrogenic cause",
+      "vs rhomboids — retract scapula; dorsal scapular nerve",
+      "vs pectoralis minor — protraction from coracoid; medial pectoral nerve",
+    ],
+    distinguishFrom: [
+      "Long thoracic nerve — innervates serratus anterior; nerve vs muscle",
+      "Trapezius — accessory nerve; elevation/retraction; lateral winging if paralyzed",
+      "Rhomboid major/minor — retraction; dorsal scapular nerve",
+      "Pectoralis minor — coracoid attachment; protraction assist; medial pectoral nerve",
+      "Latissimus dorsi — humeral adduction/extension; thoracodorsal nerve",
+    ],
+    pediatrics:
+      "Winged scapula from long thoracic nerve injury is rare in children; consider Parsonage-Turner syndrome after viral illness if acute painful medial winging. Facioscapulohumeral dystrophy causes bilateral scapular winging with facial weakness.",
+  },
+  {
     id: "axillary-nerve",
     name: "Axillary Nerve",
     etymology: "Latin axilla = armpit + Greek neuron = sinew/nerve",
@@ -1953,6 +2150,286 @@ export const MUSCULOSKELETAL: MusculoskeletalEntry[] = [
       "Supracondylar humerus fracture — most common pediatric elbow fracture; vascular and nerve exam mandatory. Little League shoulder = proximal humeral physeal widening in throwers.",
   },
   {
+    id: "brachial-artery",
+    name: "Brachial Artery",
+    etymology:
+      "Latin brachium = arm + Greek arteria = artery — major arterial supply of the upper arm",
+    aliases: [
+      "brachial artery",
+      "brachial arteries",
+      "brachial trunk",
+      "brachial trunks",
+      "arm brachial artery",
+    ],
+    definition:
+      "Continuation of the axillary artery beyond the lower border of teres major — the sole major artery of the arm — coursing medially with the median nerve and bifurcating into the radial and ulnar arteries at the cubital fossa.",
+    anatomy:
+      "Begins at lower border of teres major (axillary → brachial transition). Descends medial to humerus in anterior compartment with median nerve (crosses from lateral to medial side in arm). Gives deep brachial (profunda brachii) branch. Terminates in cubital fossa at neck of radius by dividing into radial and ulnar arteries. Collateral circulation via nutrient and muscular branches.",
+    action: [
+      "Supplies arm flexor compartment muscles and humerus via direct and deep brachial branches",
+      "Provides collateral anastomoses around elbow via deep brachial and terminal branches",
+      "Bifurcates into radial and ulnar arteries for forearm and hand perfusion",
+      "Clinical pulse palpation site in antecubital fossa",
+    ],
+    clinicalRelevance: [
+      "Supracondylar humerus fracture (children) — brachial artery compression or injury → absent radial pulse, hand ischemia",
+      "Brachial artery laceration or compartment syndrome in trauma",
+      "Blood pressure measurement and arterial blood gas sampling (radial/brachial access)",
+      "Median nerve relationship — supracondylar fracture can injure both vessel and nerve",
+      "Tourniquet and IV drug use complications in antecubital region",
+    ],
+    boardsPearls: [
+      "Axillary becomes brachial at lower border of teres major",
+      "Bifurcates into radial + ulnar at cubital fossa (neck of radius level)",
+      "Supracondylar fracture → check radial pulse and hand perfusion",
+      "Deep brachial artery = profunda brachii — largest branch in arm",
+      "Median nerve crosses brachial artery from lateral to medial in arm",
+      "vs axillary artery — proximal in axilla before teres major",
+    ],
+    distinguishFrom: [
+      "Axillary artery — proximal continuation before teres major; becomes brachial distally",
+      "Deep brachial artery — major branch in arm; not the main trunk",
+      "Radial artery — terminal branch for lateral forearm/hand; not whole arm supply",
+      "Ulnar artery — terminal branch for medial forearm/hand",
+      "Subclavian artery — proximal upper limb supply before axilla",
+    ],
+    pediatrics:
+      "Supracondylar humerus fracture is the classic pediatric brachial artery injury — absent radial pulse, pale/cool hand, urgent reduction and vascular assessment; compartment syndrome if missed.",
+  },
+  {
+    id: "deep-brachial-artery",
+    name: "Deep Brachial Artery",
+    etymology:
+      "Latin profundus = deep + brachium = arm + arteria = artery — also called profunda brachii",
+    aliases: [
+      "deep brachial artery",
+      "deep brachial arteries",
+      "profunda brachii",
+      "profunda brachii artery",
+      "profunda brachii arteries",
+      "deep brachial",
+      "profunda brachial artery",
+      "profunda brachial arteries",
+    ],
+    definition:
+      "Largest branch of the brachial artery — arising proximally in the arm and accompanying the radial nerve in the radial (spiral) groove — supplying posterior arm muscles and forming collateral anastomoses around the elbow.",
+    anatomy:
+      "Arises from brachial artery in proximal arm; courses posteriorly with radial nerve through radial/spiral groove of humerus. Divides into radial collateral, middle collateral, and ascending/recurrent branches that anastomose with radial recurrent and interosseous recurrent arteries around the elbow.",
+    action: [
+      "Perfusion of triceps brachii and posterior arm muscles",
+      "Nutrient supply to humerus via nutrient branch",
+      "Collateral circulation around elbow joint via collateral branches",
+      "Anastomosis with radial recurrent artery at lateral epicondylar region",
+    ],
+    clinicalRelevance: [
+      "Mid-shaft humerus fracture — radial nerve and deep brachial artery course in spiral groove",
+      "Elbow collateral circulation maintains hand perfusion if brachial injury is distal to deep brachial origin",
+      "Posterior compartment bleeding in arm trauma",
+    ],
+    boardsPearls: [
+      "Profunda brachii = deep brachial artery — largest brachial branch",
+      "Travels with radial nerve in spiral groove of humerus",
+      "Mid-shaft humerus fracture → radial nerve palsy (wrist drop) + posterior arm vessel injury risk",
+      "Radial collateral + radial recurrent = lateral elbow anastomosis",
+      "vs brachial artery — main trunk; deep brachial is branch in posterior arm",
+      "vs anterior/posterior interosseous — forearm branches of ulnar/common interosseous, not arm",
+    ],
+    distinguishFrom: [
+      "Brachial artery — main arm trunk bifurcating at elbow",
+      "Radial artery — terminal forearm branch of brachial",
+      "Anterior interosseous artery — forearm branch on interosseous membrane",
+      "Radial nerve — companion in spiral groove; nerve not artery",
+      "Posterior circumflex humeral artery — axillary branch in quadrangular space",
+    ],
+    pediatrics:
+      "Same spiral groove relationships in children — mid-shaft humeral fractures less common than supracondylar but radial nerve injury remains classic association.",
+  },
+  {
+    id: "radial-artery",
+    name: "Radial Artery",
+    etymology:
+      "Latin radius = spoke/ray + arteria = artery — lateral forearm artery toward the radius side of the wrist",
+    aliases: [
+      "radial artery",
+      "radial arteries",
+      "radial trunk",
+      "radial trunks",
+      "arteria radialis",
+    ],
+    definition:
+      "Terminal branch of the brachial artery (usually the smaller terminal branch) — descending along the lateral forearm with the superficial branch of the radial nerve and passing superficial to the flexor retinaculum at the wrist to form the deep palmar arch and supply the lateral hand.",
+    anatomy:
+      "Originates in cubital fossa at bifurcation of brachial artery. Descends lateral forearm deep to brachioradialis, medial to radial styloid. Gives radial recurrent branch near elbow. Passes through anatomical snuff box (between extensor pollicis longus and brevis tendons) to enter palm. Forms deep palmar arch (usually) with deep branch of ulnar artery.",
+    action: [
+      "Perfusion of lateral forearm muscles and radial side of hand",
+      "Radial recurrent artery anastomoses with radial collateral around elbow",
+      "Forms deep palmar arch — perfusion of palm and digits",
+      "Accessible superficial pulse at wrist (anatomical snuff box)",
+    ],
+    clinicalRelevance: [
+      "Arterial blood gas sampling and cardiac catheterization access (after Allen test)",
+      "Coronary artery bypass graft conduit (radial artery harvest)",
+      "Radial pulse palpation — vital sign and supracondylar fracture perfusion check",
+      "Allen test — ulnar collateral perfusion before radial artery cannulation",
+      "Anatomical snuff box tenderness — scaphoid fracture",
+    ],
+    boardsPearls: [
+      "Terminal branch of brachial (with ulnar) at cubital fossa",
+      "Pulse palpated at wrist lateral to flexor carpi radialis tendon",
+      "Allen test — compress both arteries, release ulnar only; hand should reperfuse from ulnar collateral",
+      "Radial recurrent + radial collateral = elbow anastomosis",
+      "Deep palmar arch — radial artery contribution (dominant pattern variable)",
+      "vs ulnar artery — medial forearm; superficial palmar arch contributor",
+    ],
+    distinguishFrom: [
+      "Ulnar artery — medial forearm terminal branch; superficial palmar arch",
+      "Brachial artery — proximal trunk before bifurcation",
+      "Radial nerve — lateral forearm nerve; not the pulse at wrist",
+      "Radial recurrent artery — branch ascending to elbow anastomosis",
+      "Deep palmar arch — formed in palm; not forearm artery itself",
+    ],
+    pediatrics:
+      "Supracondylar fracture perfusion checked via radial pulse at wrist. Allen test principles apply if arterial access needed in older children.",
+  },
+  {
+    id: "ulnar-artery",
+    name: "Ulnar Artery",
+    etymology:
+      "Latin ulna = elbow bone + arteria = artery — medial forearm artery toward the ulna side of the wrist",
+    aliases: [
+      "ulnar artery",
+      "ulnar arteries",
+      "ulnar trunk",
+      "ulnar trunks",
+      "arteria ulnaris",
+    ],
+    definition:
+      "Terminal branch of the brachial artery (usually the larger terminal branch) — descending along the medial forearm with the ulnar nerve and passing into the hand superficial to the flexor retinaculum to form the superficial palmar arch and contribute to the deep palmar arch.",
+    anatomy:
+      "Originates at brachial bifurcation in cubital fossa. Descends medial forearm with ulnar nerve (initially lateral, then medial to nerve). Gives common interosseous branch proximally. Enters hand via Guyon canal (superficial to flexor retinaculum, ulnar to pisiform). Forms superficial palmar arch and deep branch for deep palmar arch.",
+    action: [
+      "Perfusion of medial forearm flexor muscles via muscular branches",
+      "Common interosseous branch supplies anterior and posterior interosseous arteries",
+      "Superficial palmar arch — perfusion of palm and fingers (dominant pattern variable)",
+      "Deep branch contributes to deep palmar arch and thumb/index perfusion",
+    ],
+    clinicalRelevance: [
+      "Guyon canal compression — ulnar artery and nerve at wrist (cycling, ganglion)",
+      "Hypothenar hammer syndrome — ulnar artery thrombosis from repetitive palm trauma",
+      "Allen test — assess ulnar collateral flow before radial artery cannulation",
+      "Hand lacerations at wrist — ulnar artery bleeding in hypothenar region",
+    ],
+    boardsPearls: [
+      "Larger terminal branch of brachial at cubital fossa (usual pattern)",
+      "Common interosseous artery from ulnar → anterior + posterior interosseous",
+      "Superficial palmar arch — mainly ulnar; anastomoses with radial branches",
+      "Guyon canal — ulnar artery + nerve superficial to flexor retinaculum",
+      "Allen test confirms ulnar collateral adequacy before radial A-line",
+      "vs radial artery — lateral forearm; deep palmar arch contributor",
+    ],
+    distinguishFrom: [
+      "Radial artery — lateral forearm terminal branch; snuff box pulse",
+      "Anterior interosseous artery — branch via common interosseous; deep forearm flexors",
+      "Ulnar nerve — runs with artery in forearm; motor/sensory nerve not vessel",
+      "Common interosseous artery — proximal ulnar branch dividing into interosseous pair",
+      "Superficial palmar arch — formed in palm; not forearm artery trunk",
+    ],
+    pediatrics:
+      "Same forearm/hand vascular anatomy; hypothenar hammer syndrome rare in children. Ulnar collateral perfusion critical if radial artery injured after supracondylar fracture.",
+  },
+  {
+    id: "anterior-interosseous-artery",
+    name: "Anterior Interosseous Artery",
+    etymology:
+      "Latin anterior = front + inter = between + os = bone + arteria = artery — artery on anterior surface of interosseous membrane",
+    aliases: [
+      "anterior interosseous artery",
+      "anterior interosseous arteries",
+      "aia",
+      "anterior interosseous",
+      "anterior interosseous branch",
+      "anterior interosseous branches",
+    ],
+    definition:
+      "Artery descending on the anterior interosseous membrane of the forearm — typically a branch of the common interosseous artery from the ulnar artery — accompanying the anterior interosseous nerve and supplying deep flexor compartment muscles and the carpal arch.",
+    anatomy:
+      "Usually arises from common interosseous branch of ulnar artery in proximal forearm; common interosseous also gives posterior interosseous artery. AIA descends with anterior interosseous nerve (motor branch of median nerve) between flexor digitorum profundus and flexor pollicis longus on anterior interosseous membrane. Contributes palmar interosseous branch to carpal anastomoses.",
+    action: [
+      "Perfusion of deep flexor compartment (FDP, FPL, pronator quadratus)",
+      "Anastomoses with posterior interosseous and palmar carpal arches",
+      "Companion vessel to anterior interosseous nerve in forearm",
+      "Contributes to wrist collateral circulation",
+    ],
+    clinicalRelevance: [
+      "Anterior interosseous nerve syndrome — nerve palsy (OK sign) with same anatomic compartment as AIA",
+      "Forearm compartment syndrome — deep flexor compartment ischemia",
+      "Supracondylar fracture can injure proximal brachial vasculature affecting downstream forearm perfusion",
+    ],
+    boardsPearls: [
+      "Branch of common interosseous (from ulnar artery) — not direct brachial branch",
+      "Runs with anterior interosseous nerve (median nerve motor branch) on interosseous membrane",
+      "Supplies FPL, FDP (index/middle), pronator quadratus",
+      "Anterior interosseous nerve palsy — cannot make OK sign; artery in same compartment",
+      "vs posterior interosseous artery — dorsal forearm/extensor compartment supply",
+      "vs radial artery — main lateral forearm trunk; AIA is deep on membrane",
+    ],
+    distinguishFrom: [
+      "Anterior interosseous nerve — motor branch of median; OK sign test; not the artery",
+      "Posterior interosseous artery — dorsal forearm; extensor compartment",
+      "Common interosseous artery — proximal ulnar branch giving both interosseous arteries",
+      "Ulnar artery — main medial forearm trunk; AIA is branch",
+      "Radial recurrent artery — elbow anastomosis from radial artery",
+    ],
+    pediatrics:
+      "Supracondylar fracture may compromise brachial inflow to forearm interosseous branches — check radial/ulnar pulses and deep flexor function (anterior interosseous nerve).",
+  },
+  {
+    id: "radial-recurrent-artery",
+    name: "Radial Recurrent Artery",
+    etymology:
+      "Latin recurrere = to run back + radius = ray + arteria = artery — ascending branch of radial artery near elbow",
+    aliases: [
+      "radial recurrent artery",
+      "radial recurrent arteries",
+      "radial recurrent",
+      "radial recurrent branch",
+      "radial recurrent branches",
+      "recurrent radial artery",
+      "recurrent radial arteries",
+    ],
+    definition:
+      "Ascending branch of the radial artery near the elbow that anastomoses with the radial collateral artery from the deep brachial (profunda brachii) — forming an important collateral pathway around the lateral elbow.",
+    anatomy:
+      "Arises from radial artery shortly after brachial bifurcation in cubital fossa/proximal forearm. Ascends between brachialis and brachioradialis toward lateral epicondyle. Anastomoses with radial collateral branch of deep brachial artery and other elbow collaterals (middle collateral, interosseous recurrent).",
+    action: [
+      "Collateral perfusion around elbow when distal brachial or proximal radial flow is compromised",
+      "Anastomosis with deep brachial collateral system",
+      "Maintains forearm/hand perfusion via elbow vascular arcade",
+    ],
+    clinicalRelevance: [
+      "Elbow collateral circulation after brachial artery injury distal to deep brachial origin",
+      "Supracondylar fracture — distal brachial injury may still preserve some flow via collaterals if proximal brachial intact",
+      "Surgical approaches to elbow must respect recurrent vascular anastomoses",
+    ],
+    boardsPearls: [
+      "Branch of radial artery ascending to elbow — anastomoses with radial collateral (from profunda brachii)",
+      "Key part of elbow collateral arcade with middle collateral and interosseous recurrent arteries",
+      "Deep brachial + radial recurrent = lateral elbow anastomosis (boards classic pair)",
+      "vs radial artery — main forearm trunk; recurrent is ascending elbow branch",
+      "vs anterior interosseous artery — deep forearm on membrane; not elbow collateral",
+      "Profunda brachii collateral + radial recurrent — know paired anastomosis",
+    ],
+    distinguishFrom: [
+      "Radial collateral artery — branch of deep brachial; descends to meet radial recurrent",
+      "Deep brachial artery — proximal arm branch in spiral groove",
+      "Radial artery — main lateral forearm artery; parent of recurrent branch",
+      "Interosseous recurrent artery — part of elbow collateral from posterior interosseous system",
+      "Ulnar recurrent arteries — medial elbow collateral branches from ulnar artery",
+    ],
+    pediatrics:
+      "Collateral elbow circulation may preserve hand perfusion in some supracondylar fractures — still treat absent pulse as emergency; collaterals are variable.",
+  },
+  {
     id: "subluxation",
     name: "Subluxation",
     etymology: "Latin sub = partial + luxare = dislocate",
@@ -2087,6 +2564,525 @@ export const MUSCULOSKELETAL: MusculoskeletalEntry[] = [
     ],
     pediatrics:
       "Same sarcomere band anatomy in pediatric skeletal and cardiac muscle. Sarcomere gene mutations (e.g., MYH7, MYBPC3) cause familial hypertrophic cardiomyopathy that may present in adolescents with syncope or sudden death.",
+  },
+  {
+    id: "trabeculae",
+    name: "Trabeculae",
+    etymology:
+      "Latin trabecula = small beam — lattice-like bony struts in cancellous bone",
+    aliases: [
+      "trabeculae",
+      "trabecula",
+      "trabecular bone",
+      "trabecular bones",
+      "trabecular structure",
+      "trabecular structures",
+      "bone trabeculae",
+      "bone trabecula",
+      "trabecular lattice",
+      "trabecular lattices",
+      "cancellous trabeculae",
+    ],
+    definition:
+      "Thin interconnecting plates and struts of bone that form the porous lattice of cancellous (spongy) bone — providing high surface area for metabolic turnover while maintaining structural support in vertebrae, epiphyses, and metaphyses.",
+    anatomy:
+      "Trabeculae align along lines of mechanical stress (Wolff law); enclose marrow spaces filled with hematopoietic or fatty marrow. Found in vertebral bodies, metaphyses, epiphyses, and flat bones; absent from dense cortical shell of diaphysis.",
+    action: [
+      "Distribute mechanical load within cancellous bone regions",
+      "Provide high surface area for osteoblast/osteoclast remodeling",
+      "Support overlying articular cartilage in epiphyses",
+      "Surround and protect marrow cavities",
+    ],
+    clinicalRelevance: [
+      "Osteoporosis — trabecular bone lost first (vertebral compression fractures)",
+      "DEXA lumbar spine — trabecular-rich site for BMD measurement",
+      "Multiple myeloma — punched-out lytic lesions in trabecular bone of vertebrae/skull",
+      "Paget disease — thickened disorganized trabeculae (mosaic pattern)",
+      "Stress fractures in trabecular-rich metaphyses in athletes",
+    ],
+    boardsPearls: [
+      "Trabecular (cancellous/spongy) bone — high turnover; lost first in osteoporosis",
+      "Vertebrae and femoral neck metaphysis are trabecular-rich — common fracture sites",
+      "vs cortical (compact) bone — dense outer shell of long bone diaphysis; lower turnover",
+      "Wolff law — trabeculae orient along stress lines",
+      "Trabecular bone mineral density measured at lumbar spine on DEXA",
+    ],
+    distinguishFrom: [
+      "Spongiosa — cancellous bone region containing trabeculae and marrow; trabeculae are the structural struts",
+      "Cortical bone — compact lamellar bone of diaphysis; not trabecular lattice",
+      "Arachnoid trabeculae — delicate strands in subarachnoid space; not skeletal",
+      "Periosteum — fibrous membrane covering bone surface; not internal lattice",
+      "Osteoid — unmineralized matrix layer; trabeculae are mineralized bone structure",
+    ],
+    pediatrics:
+      "Pediatric bone has higher trabecular turnover than adult cortical bone — metaphyseal fractures common. Osteogenesis imperfecta and rickets affect trabecular architecture and mineralization at growth plates.",
+  },
+  {
+    id: "spongiosa",
+    name: "Spongiosa",
+    etymology:
+      "Latin spongia = sponge — porous interior bone resembling a sponge",
+    aliases: [
+      "spongiosa",
+      "spongiosa bone",
+      "spongiosa bones",
+      "spongy bone",
+      "spongy bones",
+      "cancellous bone",
+      "cancellous bones",
+      "trabecular bone",
+      "trabecular bones",
+      "os spongiosum",
+      "spongiosa osseous tissue",
+    ],
+    definition:
+      "Cancellous (trabecular) bone — the porous, metabolically active interior of bones composed of trabecular struts surrounding marrow spaces — found in vertebral bodies, epiphyses, metaphyses, and flat bones, enclosed by a cortical shell.",
+    anatomy:
+      "Lies internal to cortical (compact) bone; trabeculae form lattice enclosing red or yellow marrow. Vertebral bodies are predominantly spongiosa; long bone diaphysis is mostly cortical with spongiosa at metaphyses.",
+    action: [
+      "High-surface-area site for bone remodeling and calcium exchange",
+      "Houses hematopoietic marrow (red marrow) in axial skeleton and proximal long bones",
+      "Distributes load from articular surfaces through trabecular network",
+      "Provides structural support with less mass than equivalent solid cortical bone",
+    ],
+    clinicalRelevance: [
+      "Osteoporosis — preferential loss of spongiosa (vertebral crush fractures)",
+      "Metastatic disease — breast, lung, myeloma often affect spongiosa-rich vertebrae",
+      "Red marrow conversion to yellow marrow with age — spongiosa in distal limbs becomes fatty",
+      "Renal osteodystrophy — affects spongiosa and growth plates in children",
+    ],
+    boardsPearls: [
+      "Spongy = cancellous = trabecular bone — porous interior with marrow spaces",
+      "High metabolic turnover — affected first in osteoporosis and hyperparathyroidism",
+      "vs cortical (compact) bone — dense outer layer of long bone shaft",
+      "Red marrow in spongiosa of vertebrae, pelvis, sternum, proximal humerus/femur in adults",
+      "DEXA spine reflects spongiosa-rich trabecular bone density",
+    ],
+    distinguishFrom: [
+      "Trabeculae — individual bony struts forming spongiosa lattice; spongiosa is the whole region",
+      "Cortical bone — compact lamellar bone forming diaphyseal shell",
+      "Corpus spongiosum — erectile spongy tissue of penile urethra; not skeletal bone",
+      "Bone marrow — soft tissue within spongiosa spaces; not the bony lattice itself",
+      "Periosteum — outer fibrous membrane on bone surface",
+    ],
+    pediatrics:
+      "Pediatric spongiosa contains more red marrow than adults; marrow converts to yellow fat distally with age. Rickets widens metaphyseal spongiosa at growth plates; leukemia and metastatic neuroblastoma infiltrate spongiosa-rich marrow.",
+  },
+  {
+    id: "periosteum",
+    name: "Periosteum",
+    etymology:
+      "Greek peri = around + osteon = bone — fibrous membrane enveloping bone",
+    aliases: [
+      "periosteum",
+      "periostea",
+      "periosteal membrane",
+      "periosteal membranes",
+      "periosteal layer",
+      "periosteal layers",
+      "bone periosteum",
+      "periosteal covering",
+    ],
+    definition:
+      "Dual-layered fibrous membrane covering the outer surface of bones (except at articular cartilage and sesamoid surfaces) — providing blood supply, nociception, attachment for tendons/ligaments via Sharpey fibers, and osteoprogenitor cells in its inner cambium layer for fracture healing and appositional growth.",
+    anatomy:
+      "Outer fibrous layer — dense collagen with blood vessels and nerves. Inner cambium layer — osteogenic cells (osteoprogenitors, osteoblasts). Continuous with joint capsule at metaphyses; absent over articular cartilage. Sharpey fibers anchor periosteum and tendons into underlying bone.",
+    action: [
+      "Supplies blood and sensory innervation to outer cortex",
+      "Provides osteoprogenitor cells for fracture callus and appositional bone growth",
+      "Anchors tendons and ligaments via Sharpey fiber insertions",
+      "Participates in circumferential (appositional) growth of long bones in children",
+    ],
+    clinicalRelevance: [
+      "Fracture healing — periosteal callus formation is key to bone repair",
+      "Osteomyelitis — subperiosteal abscess elevates periosteum (pain, periosteal reaction on X-ray)",
+      "Ewing sarcoma — layered \"onion-skin\" periosteal reaction on imaging",
+      "Osteosarcoma — aggressive sunburst/spiculated periosteal reaction",
+      "Periostitis — inflammation of periosteum (shin splints, hypertrophic pulmonary osteoarthropathy)",
+      "Hyperparathyroidism — subperiosteal bone resorption (especially radial aspect of middle phalanges)",
+    ],
+    boardsPearls: [
+      "Periosteum absent on articular cartilage surfaces",
+      "Inner cambium layer — osteoprogenitor source for fracture healing",
+      "Subperiosteal abscess — classic for osteomyelitis in children",
+      "Onion-skin periosteal reaction — Ewing sarcoma; sunburst — osteosarcoma",
+      "Subperiosteal resorption — hyperparathyroidism (salt-and-pepper skull, phalangeal tufts)",
+      "vs endosteum — lines internal marrow cavity; periosteum covers external surface",
+    ],
+    distinguishFrom: [
+      "Endosteum — thin cellular lining of medullary cavity and Haversian canals",
+      "Articular cartilage — avascular hyaline cartilage; no periosteum over joint surfaces",
+      "Synovium — joint lining membrane; not the same as periosteum",
+      "Periostitis — inflammation of periosteum; clinical condition not the membrane itself",
+      "Cortical bone — mineralized bone tissue beneath periosteum",
+    ],
+    pediatrics:
+      "Acute hematogenous osteomyelitis in children often produces subperiosteal abscess before cortical breakthrough — fever, localized bone pain, and periosteal elevation on imaging. Periosteum contributes to fracture callus in pediatric greenstick and buckle fractures.",
+  },
+  {
+    id: "synovium",
+    name: "Synovium",
+    etymology:
+      "Greek syn = together + ovum = egg (synovial fluid) + -ium = membrane — inner lining of synovial joints",
+    aliases: [
+      "synovium",
+      "synovia",
+      "synovial membrane",
+      "synovial membranes",
+      "synovial lining",
+      "synovial linings",
+      "joint synovium",
+      "synovial tissue",
+      "synovial tissues",
+    ],
+    definition:
+      "Specialized connective tissue membrane lining the inner surface of the joint capsule (except where articular cartilage covers bone) — secreting viscous synovial fluid rich in hyaluronan and lubricating diarthrodial joints while providing nourishment to avascular articular cartilage.",
+    anatomy:
+      "Intima — type A (macrophage-like) and type B (fibroblast-like) synoviocytes. Subintima — vascularized connective tissue. Does not cover articular cartilage surfaces. Continuous with joint capsule; reflects onto intra-articular ligaments and menisci (synovial coverage varies).",
+    action: [
+      "Produces synovial fluid (hyaluronan, lubricin) for joint lubrication and shock absorption",
+      "Nutrifies avascular articular cartilage via diffusion from synovial fluid",
+      "Phagocytosis of debris and immune surveillance within joint cavity",
+      "Inflammatory response in synovitis — effusion, cytokines, pannus formation in RA",
+    ],
+    clinicalRelevance: [
+      "Rheumatoid arthritis — hypertrophic synovium (pannus) erodes cartilage and bone",
+      "Septic arthritis — bacterial invasion of synovium and joint space",
+      "Synovial fluid analysis — cell count, crystals, culture for diagnosis",
+      "Pigmented villonodular synovitis (PVNS) — proliferative synovial lesion",
+      "Synovectomy in refractory inflammatory arthropathy",
+    ],
+    boardsPearls: [
+      "Synovium lines joint capsule; articular cartilage has no synovial cover",
+      "Synovitis = inflamed synovium → effusion, warmth, swelling (RA, gout, septic)",
+      "Pannus — invasive RA synovium destroying cartilage",
+      "Synovial fluid is ultrafiltrate + hyaluronan from type B cells",
+      "vs synovitis — synovium is normal tissue; synovitis is inflammation",
+      "vs periosteum — outer bone membrane; synovium is intra-articular lining",
+    ],
+    distinguishFrom: [
+      "Synovitis — inflammation of synovium; pathologic state not the membrane itself",
+      "Articular cartilage — avascular joint surface; not synovial lining",
+      "Periosteum — covers bone exterior outside joint cavity",
+      "Bursa — separate synovial-lined sac outside joint; bursitis not synovitis",
+      "Tendon sheath (tenosynovium) — synovial lining around tendons, not joint synovium",
+    ],
+    pediatrics:
+      "Transient synovitis of the hip — self-limited synovial inflammation after viral illness. Septic arthritis requires urgent synovial fluid aspiration — synovial WBC often >50,000/µL with positive Gram stain/culture.",
+  },
+  {
+    id: "cartilage",
+    name: "Cartilage",
+    etymology:
+      "Latin cartilago = gristle — avascular connective tissue with chondrocytes in extracellular matrix rich in collagen and proteoglycans",
+    aliases: [
+      "cartilage",
+      "cartilages",
+      "cartilaginous tissue",
+      "cartilaginous tissues",
+      "cartilaginous matrix",
+    ],
+    definition:
+      "Flexible avascular connective tissue composed of chondrocytes embedded in extracellular matrix — classified as hyaline, elastic, or fibrocartilage — serving structural, shock-absorbing, and developmental roles in the skeleton and airways.",
+    anatomy:
+      "Chondrocytes in lacunae produce matrix. Hyaline — type II collagen + aggrecan (articular surfaces, costal cartilages, growth plate, tracheal rings). Elastic — elastin fibers (pinna, epiglottis). Fibrocartilage — type I + II collagen (menisci, intervertebral discs, pubic symphysis). No nerves or blood vessels in mature matrix.",
+    action: [
+      "Provides smooth low-friction surfaces (hyaline articular cartilage)",
+      "Shock absorption and tensile strength (fibrocartilage discs and menisci)",
+      "Maintains airway patency (tracheal/bronchial rings)",
+      "Growth plate cartilage template for endochondral ossification",
+      "Elastic recoil in external ear and epiglottis",
+    ],
+    clinicalRelevance: [
+      "Osteoarthritis — hyaline articular cartilage degeneration",
+      "Achondroplasia — FGFR3 mutation impairs endochondral ossification at growth plate cartilage",
+      "Rickets — defective mineralization at growth plate hypertrophic cartilage",
+      "Meniscal tear — fibrocartilage injury in knee",
+      "Relapsing polychondritis — autoimmune inflammation of cartilaginous structures (ear, nose, trachea)",
+      "RA synovial pannus — erodes articular cartilage at joint margins",
+    ],
+    boardsPearls: [
+      "Three types: hyaline, elastic, fibrocartilage",
+      "Hyaline articular cartilage — type II collagen; avascular, limited repair",
+      "Fibrocartilage — meniscus, IVD, pubic symphysis; tougher than hyaline",
+      "Growth plate = hyaline cartilage undergoing endochondral ossification",
+      "vs bone — cartilage unmineralized (except calcified zone); bone has osteocytes and vessels",
+      "Achondroplasia — cartilage matrix OK but ossification impaired → short limbs, normal-sized head",
+    ],
+    distinguishFrom: [
+      "Joint cartilage — hyaline articular cartilage subset on joint surfaces",
+      "Bone — mineralized tissue with osteocytes, Haversian systems, marrow",
+      "Epiphyseal plate — specialized growth plate cartilage, not general cartilage type",
+      "Synovium — joint lining membrane; not cartilaginous tissue",
+      "Osteoid — unmineralized bone matrix, not cartilage",
+    ],
+    pediatrics:
+      "Growth plate cartilage drives pediatric height via endochondral ossification. Achondroplasia and rickets are classic pediatric cartilage/growth plate disorders. Costochondral junction swelling (rachitic rosary) in rickets.",
+  },
+  {
+    id: "joint-cartilage",
+    name: "Joint Cartilage",
+    etymology:
+      "Latin junctura = joint + Latin cartilago = gristle — articular hyaline cartilage covering bone ends in synovial joints",
+    aliases: [
+      "joint cartilage",
+      "joint cartilages",
+      "articular cartilage",
+      "articular cartilages",
+      "hyaline joint cartilage",
+      "cartilage of joint",
+      "cartilage of joints",
+      "articular hyaline cartilage",
+      "joint surface cartilage",
+    ],
+    definition:
+      "Avascular hyaline cartilage covering the articulating surfaces of bones in diarthrodial joints — composed primarily of type II collagen and proteoglycans — providing low-friction load-bearing and shock absorption, nourished by synovial fluid diffusion.",
+    anatomy:
+      "Superficial tangential zone (collagen parallel to surface), middle transitional zone, deep radial zone, calcified zone anchored to subchondral bone via tidemark. No blood vessels or nerves in cartilage matrix — chondrocytes in lacunae. Thickest at weight-bearing regions (knee, hip).",
+    action: [
+      "Provides smooth, low-friction articulation (coefficient of friction lower than ice on ice)",
+      "Distributes compressive loads across joint surfaces",
+      "Shock absorption via proteoglycan water content (aggrecan)",
+      "Slow turnover — limited intrinsic repair capacity after injury",
+    ],
+    clinicalRelevance: [
+      "Osteoarthritis — progressive cartilage loss, subchondral sclerosis, osteophytes",
+      "Traumatic chondral/osteochondral injury — joint pain, locking, early OA risk",
+      "Osteochondritis dissecans — subchondral bone and overlying cartilage fragment (knee, elbow in adolescents)",
+      "RA pannus — synovial invasion destroys articular cartilage",
+      "Autologous chondrocyte implantation / microfracture for focal defects",
+    ],
+    boardsPearls: [
+      "Articular cartilage = hyaline cartilage with type II collagen (not type I)",
+      "Avascular — nutrition from synovial fluid; poor intrinsic healing",
+      "OA = cartilage degeneration; RA destroys cartilage via pannus",
+      "vs meniscus — fibrocartilage in knee; not hyaline articular cartilage",
+      "vs growth plate cartilage — hypertrophic zone for endochondral ossification, not joint surface",
+      "Periosteum and synovium do not cover articular cartilage",
+    ],
+    distinguishFrom: [
+      "Meniscus — fibrocartilage shock absorber within knee; not articular surface cartilage",
+      "Fibrocartilage — intervertebral disc, pubic symphysis; type I and II collagen mix",
+      "Synovium — joint lining membrane; produces fluid nourishing cartilage",
+      "Growth plate (physis) — epiphyseal cartilage for bone lengthening, not articular surface",
+      "Costal cartilage — hyaline but not articular; rib attachments",
+    ],
+    pediatrics:
+      "Osteochondritis dissecans affects adolescents with repetitive joint loading (knee, capitellum). Slipped capital femoral epiphysis involves physeal failure, not primary articular cartilage disease, but secondary hip cartilage damage can follow.",
+  },
+  {
+    id: "femoral-epiphysis",
+    name: "Femoral Epiphysis",
+    etymology:
+      "Latin femur = thigh + Greek epi = upon + physis = growth — ossified end of the femur separated from the shaft by the growth plate",
+    aliases: [
+      "femoral epiphysis",
+      "femoral epiphyses",
+      "capital femoral epiphysis",
+      "capital femoral epiphyses",
+      "cfe",
+      "proximal femoral epiphysis",
+      "proximal femoral epiphyses",
+      "femoral head epiphysis",
+      "femoral head epiphyses",
+      "head of femur epiphysis",
+    ],
+    definition:
+      "Secondary ossification center at the proximal (capital) or distal end of the femur — the femoral head epiphysis articulates with the acetabulum and is separated from the femoral neck (metaphysis) by the physeal growth plate during skeletal growth.",
+    anatomy:
+      "Capital (proximal) femoral epiphysis forms the femoral head; physis (growth plate) lies between epiphysis and metaphysis (femoral neck). Blood supply primarily via lateral epiphyseal artery (branch of medial circumflex femoral artery) — watershed vulnerability in Legg-Calvé-Perthes. Distal femoral epiphysis at knee contributes to longitudinal growth of femur.",
+    action: [
+      "Capital epiphysis — hip joint articulation and acetabular development in childhood",
+      "Physeal endochondral ossification — longitudinal bone growth at femoral growth plate",
+      "Distal femoral epiphysis — knee articulation and femoral length contribution",
+      "Appositional growth at metaphysis contributes to neck/shaft remodeling",
+    ],
+    clinicalRelevance: [
+      "Slipped capital femoral epiphysis (SCFE) — displacement of capital epiphysis on femoral neck in obese adolescent",
+      "Legg-Calvé-Perthes disease — idiopathic avascular necrosis of capital femoral epiphysis in children 4–10",
+      "Salter-Harris fractures through proximal femoral physis — orthopedic emergency",
+      "Developmental dysplasia of the hip — abnormal acetabular coverage of femoral head epiphysis",
+      "Distal femoral physeal fractures — growth plate injury risk in adolescents",
+    ],
+    boardsPearls: [
+      "SCFE — obese adolescent, hip/knee pain, Klein line on X-ray; orthopedic emergency",
+      "Perthes — capital femoral epiphysis AVN; boys 4–10; insidious limp",
+      "Lateral epiphyseal artery supplies femoral head — vulnerable in trauma and Perthes",
+      "Physis = growth plate between epiphysis and metaphysis",
+      "Salter-Harris classification for physeal fractures — type II most common",
+      "vs femoral head — epiphysis is the ossification center; head is anatomic structure including cartilage",
+    ],
+    distinguishFrom: [
+      "Femoral metaphysis — bone shaft region adjacent to physis; site of SCFE slip plane",
+      "Femoral head — includes articular cartilage and epiphyseal bone; epiphysis is ossification center",
+      "Growth plate (physis) — cartilaginous layer between epiphysis and metaphysis",
+      "Acetabulum — pelvic socket; not femoral epiphysis",
+      "Greater trochanter apophysis — separate secondary ossification center for abductor attachment",
+    ],
+    pediatrics:
+      "SCFE peak in obese adolescents during growth spurt — avoid weight-bearing until surgically stabilized. Perthes presents with painless or mildly painful limp. DDH screening (Ortolani/Barlow) evaluates femoral head coverage in infancy.",
+  },
+  {
+    id: "epiphyseal-plate",
+    name: "Epiphyseal Plate",
+    etymology:
+      "Greek epi = upon + physis = growth + Latin plate = flat layer — cartilaginous growth plate (physis) between epiphysis and metaphysis",
+    aliases: [
+      "epiphyseal plate",
+      "epiphyseal plates",
+      "epiphysial plate",
+      "epiphysial plates",
+      "epiphesial plate",
+      "epiphesial plates",
+      "growth plate",
+      "growth plates",
+      "physis",
+      "physes",
+      "physeal plate",
+      "physeal plates",
+      "epiphyseal growth plate",
+      "epiphyseal growth plates",
+      "cartilaginous growth plate",
+    ],
+    definition:
+      "Cartilaginous plate (physis) between the epiphysis and metaphysis in growing long bones — site of endochondral ossification and longitudinal bone growth until fusion (physeal closure) at skeletal maturity.",
+    anatomy:
+      "Zones from epiphysis to metaphysis: resting (reserve) → proliferative (chondrocyte columns) → hypertrophic (matrix calcification, vascular invasion) → zone of ossification (primary spongiosa). Separated from epiphysis by epiphyseal side of plate; metaphysis forms trabecular bone distally. Weakest zone in trauma often hypertrophic/metaphyseal junction.",
+    action: [
+      "Longitudinal bone growth via chondrocyte proliferation and hypertrophy followed by ossification",
+      "Epiphyseal side contributes to articular shape; metaphyseal side adds trabecular bone",
+      "Physeal closure (fusion) when growth completes — epiphyseal line remains on radiograph",
+      "Injury disrupts growth → limb length discrepancy or angular deformity if partial arrest",
+    ],
+    clinicalRelevance: [
+      "Salter-Harris fractures — physeal fracture classification (I–V); type II most common",
+      "Rickets — widened, irregular epiphyseal plate from failed mineralization",
+      "Achondroplasia — impaired proliferative/hypertrophic zone function",
+      "SCFE — slip through proximal femoral growth plate in adolescent",
+      "Growth plate injuries in pediatric sports — distal radius, phalanges, tibia",
+      "Precocious puberty — early physeal closure → reduced adult height",
+    ],
+    boardsPearls: [
+      "Epiphyseal plate = physis = growth plate — cartilage undergoing endochondral ossification",
+      "Salter-Harris: I slip, II metaphysis fragment (common), III intra-articular epiphysis, IV both, V crush",
+      "Rickets — widened growth plate on X-ray; rachitic rosary at costochondral plates",
+      "Weakest link in pediatric bone is physis, not ligament — fractures often physeal",
+      "vs epiphysis — epiphysis is ossification center; plate is cartilaginous growth layer between epiphysis and metaphysis",
+      "Physeal arrest bar — bridge after injury → angular deformity or shortening",
+    ],
+    distinguishFrom: [
+      "Epiphysis — bony ossification center at bone end; plate lies between epiphysis and metaphysis",
+      "Metaphysis — trabecular bone region adjacent to physis toward diaphysis",
+      "Articular cartilage — joint surface hyaline cartilage; not the growth plate",
+      "Apophysis — traction epiphysis at tendon insertion (e.g., tibial tubercle), not length-growth physis",
+      "Epiphyseal line — remnant after physeal fusion; no longer growth plate",
+    ],
+    pediatrics:
+      "Salter-Harris fractures are the pediatric long-bone injury pattern — open physes through adolescence. SCFE occurs at proximal femoral physis. Vitamin D prevents rachitic widening of epiphyseal plates. Growth hormone deficiency causes delayed physeal closure and short stature.",
+  },
+  {
+    id: "cortical-bone",
+    name: "Cortical Bone",
+    etymology:
+      "Latin cortex = bark/shell + Old English ban = bone — dense compact bone forming the outer shell of most bones",
+    aliases: [
+      "cortical bone",
+      "cortical bones",
+      "compact bone",
+      "compact bones",
+      "cortical bone tissue",
+      "cortical osseous tissue",
+      "compact osseous tissue",
+      "cortical shell",
+      "cortical layer",
+    ],
+    definition:
+      "Dense lamellar bone forming the thick outer shell (cortex) of long bones and the surface of flat bones — organized into osteons (Haversian systems) with central canals containing blood vessels and nerves — providing mechanical strength with lower metabolic turnover than trabecular bone.",
+    anatomy:
+      "Osteons (Haversian systems) — concentric lamellae around central (Haversian) canal with osteocytes in lacunae connected by canaliculi. Volkmann canals connect Haversian systems. Periosteum covers outer surface; endosteum lines inner boundary with marrow cavity. Predominates in diaphysis of long bones.",
+    action: [
+      "Provides torsional and bending strength to long bone shafts",
+      "Protects marrow cavity and supports trabecular bone at metaphyses/epiphyses",
+      "Appositional growth via periosteal osteoblasts in children",
+      "Remodeling via osteoclast cutting cones and osteoblast refilling (coupled turnover)",
+    ],
+    clinicalRelevance: [
+      "Diaphyseal fractures — cortical bone failure (humerus, femur, tibia shaft)",
+      "Osteopetrosis — defective osteoclast resorption → excessively dense brittle cortical bone",
+      "Osteomyelitis — subperiosteal abscess elevates periosteum from cortex",
+      "Stress fractures — repetitive loading of cortical bone (metatarsal, tibia in runners)",
+      "DEXA femoral neck — mixed cortical and trabecular site for BMD",
+    ],
+    boardsPearls: [
+      "Cortical (compact) vs trabecular (cancellous/spongy) bone — cortex is dense outer shell",
+      "Osteons = Haversian systems with central artery/nerve",
+      "Lower turnover than trabecular bone — osteoporosis affects trabeculae first",
+      "Osteopetrosis — too much dense cortical bone, brittle, marrow failure",
+      "vs spongiosa — trabecular interior; cortical is compact exterior",
+      "Mid-shaft humerus fracture — radial nerve in spiral groove of cortical shaft",
+    ],
+    distinguishFrom: [
+      "Spongiosa (cancellous bone) — trabecular lattice inside epiphyses/metaphyses",
+      "Trabeculae — individual struts within spongiosa, not compact cortex",
+      "Periosteum — fibrous membrane covering cortical surface",
+      "Osteoid — unmineralized matrix before mineralization",
+      "Woven bone — immature disorganized bone in fracture callus, not mature lamellar cortex",
+    ],
+    pediatrics:
+      "Pediatric cortical bone is more porous and resilient — greenstick and buckle fractures occur instead of complete transverse breaks. Osteopetrosis presents in infancy with dense bones, anemia, and cranial nerve compression.",
+  },
+  {
+    id: "tendinopathy",
+    name: "Tendinopathy",
+    etymology:
+      "Greek tenon = tendon + pathos = suffering — chronic tendon disorder from overuse and degenerative change",
+    aliases: [
+      "tendinopathy",
+      "tendinopathies",
+      "tendinitis",
+      "tendinitides",
+      "tendonitis",
+      "tendonitides",
+      "tendinosis",
+      "tendinoses",
+      "chronic tendon injury",
+      "chronic tendon injuries",
+      "overuse tendinopathy",
+    ],
+    definition:
+      "Chronic tendon disorder — often from repetitive overload — characterized by collagen disorganization, neovascularization, and pain without acute inflammatory infiltrate (tendinosis) or with overlapping tendinitis; distinct from acute tendon rupture though chronic degeneration predisposes to tear.",
+    anatomy:
+      "Affected tendon shows mucoid degeneration, collagen fiber disarray, and angiofibroblastic hyperplasia (common at enthesis or hypovascular watershed zones — supraspinatus, Achilles, patellar, lateral epicondyle). Enthesis = tendon–bone insertion site.",
+    action: [
+      "Pain with loading and resisted movement of attached muscle",
+      "Reduced tendon stiffness and load tolerance with chronic degeneration",
+      "May progress to partial-thickness or full-thickness tear if overloaded",
+      "Healing via fibroblastic remodeling (eccentric loading protocols in rehab)",
+    ],
+    clinicalRelevance: [
+      "Rotator cuff tendinopathy — supraspinatus most common; painful arc 60–120°",
+      "Lateral epicondylitis (tennis elbow) — extensor carpi radialis brevis origin tendinopathy",
+      "Achilles tendinopathy — midportion or insertional; fluoroquinolone and steroid injection increase rupture risk",
+      "Patellar tendinopathy (jumper's knee) — inferior pole of patella in athletes",
+      "De Quervain tenosynovitis — first dorsal compartment tendinopathy/tenosynovitis",
+    ],
+    boardsPearls: [
+      "Tendinopathy = chronic degenerative tendon disorder; acute inflammation is tendinitis (terms often overlap clinically)",
+      "Supraspinatus tendinopathy — empty can test, painful arc, subacromial impingement",
+      "Achilles tendinopathy — avoid corticosteroid injection (rupture risk); fluoroquinolones also ↑ rupture risk",
+      "Lateral epicondylitis — resisted wrist extension with elbow extended",
+      "vs tendon rupture — acute loss of function, gap/positive special test (e.g., drop arm for cuff tear)",
+      "Eccentric exercise — mainstay rehab for Achilles and patellar tendinopathy",
+    ],
+    distinguishFrom: [
+      "Tendon rupture — acute complete or high-grade tear; surgical repair often needed",
+      "Tenosynovitis — inflammation of tendon sheath (De Quervain, infectious flexor tenosynovitis)",
+      "Bursitis — inflammation of bursa adjacent to tendon (subacromial bursitis with cuff disease)",
+      "Enthesitis — inflammation at tendon/bone insertion (spondyloarthropathy), not purely tendinopathy",
+      "Myopathy — muscle disease; weakness without focal tendon pain on loading",
+    ],
+    pediatrics:
+      "Osgood-Schlatter and Sever disease are apophysitis (traction at growth centers), not classic tendinopathy. Adolescent athletes develop patellar tendinopathy (jumper's knee). Little League elbow involves physeal injury more than adult-style tendinopathy.",
   },
   {
     id: "metacarpophalangeal-joint",

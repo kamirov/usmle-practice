@@ -542,6 +542,88 @@ export const ORGANS: OrganEntry[] = [
     ],
   },
   {
+    id: "third-pharyngeal-pouch",
+    name: "Third Pharyngeal Pouch",
+    etymology:
+      "Latin tertius = third + Greek pharynx = throat + Old English poca = bag — third endodermal outpocketing of the embryonic pharynx",
+    aliases: [
+      "third pharyngeal pouch",
+      "third pharyngeal pouches",
+      "3rd pharyngeal pouch",
+      "3rd pharyngeal pouches",
+      "pouch 3",
+      "pharyngeal pouch 3",
+      "third branchial pouch",
+      "third branchial pouches",
+    ],
+    germLayer: "Endoderm (ventral and dorsal wings with surrounding mesenchyme)",
+    origin:
+      "Third of four paired endodermal pharyngeal outpocketings during weeks 4–5; ventral wing forms thymus (descends to anterior mediastinum); dorsal wing forms inferior parathyroid glands — failure of development causes DiGeorge syndrome (22q11 deletion).",
+    derivatives: [
+      "Ventral wing — thymus (T-cell maturation in cortex/medulla)",
+      "Dorsal wing — inferior parathyroid glands (chief cells, PTH)",
+      "Thymic epithelium seeds bone marrow–derived lymphocytes",
+    ],
+    functionSummary:
+      "Source of thymic epithelial microenvironment for T-lymphocyte education and inferior parathyroid glands for calcium homeostasis — critical for adaptive immunity and PTH secretion.",
+    commonPathologies: [
+      "DiGeorge syndrome (22q11.2 deletion) — thymic aplasia/hypoplasia + hypocalcemia from parathyroid hypoplasia",
+      "Neonatal tetany from hypocalcemia — absent thymic shadow on CXR",
+      "Recurrent infections from T-cell deficiency in complete DiGeorge",
+    ],
+    step1Pearls: [
+      "3rd pouch: ventral = thymus; dorsal = inferior parathyroids",
+      "4th pouch dorsal wing = superior parathyroids — boards favorite pairing",
+      "DiGeorge = 3rd and 4th pouch problem — hypocalcemia + T-cell defect + cardiac defects (truncus, tetralogy)",
+      "Absent thymic shadow + neonatal seizures → check calcium, consider 22q11",
+      "vs 2nd pouch — palatine tonsil epithelium, not thymus/parathyroids",
+      "Ultimobranchial body (4th pouch related) — parafollicular C cells of thyroid",
+    ],
+    pediatrics:
+      "Neonatal DiGeorge presents with hypocalcemic seizures, congenital heart disease, and immunodeficiency; partial forms may have mild hypocalcemia only. Thymic transplant considered in complete DiGeorge with profound T-cell deficiency.",
+  },
+  {
+    id: "second-pharyngeal-cleft",
+    name: "Second Pharyngeal Cleft",
+    etymology:
+      "Latin secundus = second + Greek pharynx = throat + Latin clivus = slope/groove — ectodermal groove between second and third pharyngeal arches",
+    aliases: [
+      "second pharyngeal cleft",
+      "second pharyngeal clefts",
+      "2nd pharyngeal cleft",
+      "2nd pharyngeal clefts",
+      "second branchial cleft",
+      "second branchial clefts",
+      "second branchial groove",
+      "second pharyngeal groove",
+      "cervical sinus of His",
+    ],
+    germLayer: "Surface ectoderm (ectodermal cleft between mesodermal arches)",
+    origin:
+      "Ectodermal groove lateral to the second pharyngeal arch during branchial apparatus development; normally obliterated as the second arch (Reichert cartilage) grows caudally to cover deeper clefts — persistence forms branchial cleft cysts, sinuses, or fistulae in the lateral neck.",
+    derivatives: [
+      "Normally involutes — no adult structure when development is normal",
+      "Persistent remnant — branchial cleft cyst along anterior border of sternocleidomastoid",
+    ],
+    functionSummary:
+      "Transient embryologic groove whose normal obliteration prevents branchial anomalies; pathologic persistence creates the most common branchial cleft cyst location (second cleft).",
+    commonPathologies: [
+      "Branchial cleft cyst — painless lateral neck mass anterior to SCM, often after URI in young adult",
+      "Branchial sinus or fistula — external opening on neck with possible drainage",
+      "Second arch (CN VII) overlies cleft — surgical dissection risks facial nerve injury",
+    ],
+    step1Pearls: [
+      "2nd pharyngeal cleft = most common site of branchial cleft cyst",
+      "Location: lateral neck along anterior border of sternocleidomastoid",
+      "Pouches = endodermal (thymus, parathyroids); clefts = ectodermal grooves",
+      "2nd arch grows over 3rd/4th clefts — covered clefts normally disappear",
+      "vs thyroglossal duct cyst — midline, moves with tongue protrusion",
+      "vs 1st cleft — periauricular/preauricular region near ear",
+    ],
+    pediatrics:
+      "Branchial cleft anomalies present in childhood as lateral neck pits or cysts; excision after infection resolves; distinguish from thyroglossal duct cyst (midline) and lymphadenopathy.",
+  },
+  {
     id: "branchial-arch",
     name: "Branchial Arch",
     etymology:
@@ -1600,6 +1682,48 @@ export const ORGANS: OrganEntry[] = [
     germLayer: "Ectoderm / Neural crest",
     origin:
       "Neural crest cells (neuroectoderm) migrate from the neural tube alongside the developing sympathetic chain and penetrate the center of the mesoderm-derived adrenal cortex primordium, differentiating into chromaffin cells — functionally modified postganglionic sympathetic neurons that secrete catecholamines directly into blood.",
+  },
+  {
+    id: "rathke-pouch",
+    name: "Rathke Pouch",
+    etymology:
+      "Named for German embryologist Martin Heinrich Rathke + Old English poca = bag — oral ectoderm invagination forming anterior pituitary",
+    aliases: [
+      "rathke pouch",
+      "rathke pouches",
+      "rathke's pouch",
+      "rathkes pouch",
+      "rathke pouch ectoderm",
+      "oral ectoderm pituitary pouch",
+      "hypophyseal pouch",
+      "adenohypophyseal pouch",
+    ],
+    germLayer: "Surface ectoderm (oral ectoderm / stomodeum)",
+    origin:
+      "Ectodermal invagination from the roof of the stomodeum (primitive oral cavity) during week 4; grows superiorly toward the neurohypophyseal downgrowth from the diencephalon and differentiates into anterior pituitary (adenohypophysis) — remnant canal may persist as craniopharyngioma source.",
+    derivatives: [
+      "Anterior pituitary (adenohypophysis) — GH, ACTH, TSH, LH, FSH, prolactin from distinct cell types",
+      "Pars intermedia (remnant between anterior and posterior lobes)",
+      "Rathke cleft remnants — potential craniopharyngioma origin",
+    ],
+    functionSummary:
+      "Embryologic primordium of the hormone-secreting anterior pituitary; distinct from posterior pituitary (neuroectoderm from diencephalon) — together form the hypophysis.",
+    commonPathologies: [
+      "Craniopharyngioma — Rathke pouch remnant tumor (calcified suprasellar mass in children)",
+      "Septo-optic dysplasia — hypoplastic Rathke pouch/anterior pituitary with optic nerve hypoplasia",
+      "Anterior pituitary hypoplasia — multiple hormone deficiencies",
+      "Ectopic posterior pituitary bright spot on MRI if stalk abnormal",
+    ],
+    step1Pearls: [
+      "Rathke pouch = surface/oral ectoderm → anterior pituitary (adenohypophysis)",
+      "Posterior pituitary = neuroectoderm downgrowth from diencephalon — stores ADH/oxytocin",
+      "Craniopharyngioma — childhood suprasellar calcified mass from Rathke remnant",
+      "vs posterior pituitary — neural tissue, not Rathke pouch derivative",
+      "vs pharyngeal pouch (endoderm) — thymus/parathyroids; Rathke is ectoderm",
+      "Sheehan syndrome — postpartum infarction of anterior pituitary (formed from Rathke), not posterior",
+    ],
+    pediatrics:
+      "Craniopharyngioma is a classic pediatric suprasellar tumor causing bitemporal hemianopia, growth failure, and diabetes insipidus if posterior pituitary involved. Septo-optic dysplasia presents with hypopituitarism and blindness in infancy.",
   },
   {
     id: "pituitary",
