@@ -3069,6 +3069,38 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
     ],
   },
   {
+    id: "m-csf",
+    name: "M-CSF",
+    etymology: "M = macrophage + CSF = colony-stimulating factor",
+    aliases: [
+      "m-csf",
+      "m csf",
+      "mcsf",
+      "macrophage colony stimulating factor",
+      "macrophage colony-stimulating factor",
+      "macrophage colony stimulating factors",
+      "macrophage colony-stimulating factors",
+      "csf1",
+      "colony stimulating factor 1",
+      "colony-stimulating factor 1",
+    ],
+    type: "Growth factor",
+    source: "Osteoblasts, fibroblasts, endothelial cells, macrophages",
+    receptor: "CSF1R (c-Fms) — receptor tyrosine kinase",
+    function:
+      "Promotes monocyte/macrophage survival, proliferation, and differentiation; with RANKL drives osteoclast precursor fusion and osteoclastogenesis.",
+    clinicalRelevance: [
+      "Essential cofactor with RANKL for osteoclast formation and bone resorption",
+      "Elevated in some inflammatory and neoplastic states with macrophage expansion",
+    ],
+    boardsPearls: [
+      "M-CSF (CSF1) + RANKL → osteoclast differentiation from monocyte/macrophage lineage",
+      "CSF1R on osteoclast precursors; distinct from RANK on same pathway",
+      "vs GM-CSF — M-CSF macrophage-focused; GM-CSF stimulates granulocyte and macrophage progenitors",
+      "vs G-CSF — G-CSF is neutrophil-specific; M-CSF drives macrophage/osteoclast lineage",
+    ],
+  },
+  {
     id: "g-protein",
     name: "G Protein",
     etymology:

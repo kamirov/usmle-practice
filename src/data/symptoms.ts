@@ -6949,6 +6949,66 @@ export const SYMPTOMS: SymptomEntry[] = [
       "Neonatal meningitis and congenital glaucoma can present with photophobia; infantile glaucoma adds tearing and buphthalmos.",
   },
   {
+    id: "uveitis",
+    name: "Uveitis",
+    etymology:
+      "Latin uva = grape + -itis = inflammation — inflammation of the uveal tract (iris, ciliary body, choroid)",
+    aliases: [
+      "uveitis",
+      "uveitides",
+      "uveitic",
+      "intraocular inflammation",
+      "intraocular inflammations",
+      "iritis",
+      "iridocyclitis",
+      "iridocyclitides",
+      "anterior uveitis",
+      "anterior uveitides",
+      "posterior uveitis",
+      "posterior uveitides",
+      "panuveitis",
+      "panuveitides",
+    ],
+    definition:
+      "Inflammation of the uveal tract — iris and ciliary body (anterior uveitis/iritis) and/or choroid (posterior uveitis) — causing ocular pain, photophobia, redness, and vision changes depending on location and severity.",
+    mechanism:
+      "Immune-mediated or infectious inflammation of vascular uveal tissue → breakdown of blood–aqueous barrier → inflammatory cells and protein (flare) in anterior chamber; posterior involvement threatens retina and optic nerve.",
+    thinkOf: [
+      "HLA-B27 spondyloarthropathy — acute anterior uveitis (painful, unilateral, recurrent)",
+      "Juvenile idiopathic arthritis — chronic anterior uveitis (often painless, bilateral; screen regularly)",
+      "Sarcoidosis — granulomatous uveitis",
+      "Behçet disease — panuveitis with hypopyon",
+      "Tuberculosis and syphilis — infectious uveitis",
+      "Herpes (HSV/VZV) — keratouveitis",
+      "Sarcoid, VKH, sympathetic ophthalmia — posterior/panuveitis",
+    ],
+    pairWith: [
+      "Painful red eye + photophobia + ciliary flush + cell/flare on slit lamp → anterior uveitis",
+      "HLA-B27 + back pain + unilateral acute uveitis → ankylosing spondylitis spectrum",
+      "JIA + asymptomatic uveitis — mandatory ophthalmologic screening",
+      "Mutton-fat keratic precipitates + hilar lymphadenopathy → sarcoid uveitis",
+      "Oral/genital ulcers + uveitis → Behçet disease",
+      "Floaters + ↓ vision + choroidal lesions → posterior uveitis — urgent ophthalmology",
+    ],
+    distinguishFrom: [
+      "Conjunctivitis — chemosis, discharge; intraocular exam normal; not typically photophobic with cell/flare",
+      "Acute angle-closure glaucoma — mid-dilated fixed pupil, very high IOP, severe pain",
+      "Keratitis — corneal staining defect; may coexist with keratouveitis",
+      "Episcleritis — sectoral superficial injection, mild discomfort",
+      "Endophthalmitis — postoperative or post-traumatic fulminant intraocular infection",
+    ],
+    boardsPearls: [
+      "Anterior uveitis — painful red eye, photophobia, ciliary flush, cell and flare in anterior chamber",
+      "HLA-B27 uveitis — acute, painful, recurrent; vs JIA uveitis — chronic, often painless",
+      "Slit lamp required — cell/flare distinguishes uveitis from conjunctivitis",
+      "Topical glucocorticoids and cycloplegics for anterior uveitis; work up systemic associations",
+      "JIA screening — regular slit lamp even without symptoms",
+      "Posterior uveitis — vision-threatening; different infectious and autoimmune workup",
+    ],
+    pediatrics:
+      "JIA-associated uveitis is often asymptomatic early — ANA-positive oligoarticular JIA highest risk; screen with slit lamp every 3–12 months. HLA-B27 uveitis in older children/adolescents is typically acute and painful. Congenital infections (toxoplasmosis) cause posterior uveitis/chorioretinitis.",
+  },
+  {
     id: "maculopapular-rash",
     name: "Maculopapular Rash",
     etymology: "Latin macula = spot + papula = pimple + rash = skin eruption",
@@ -11212,6 +11272,62 @@ export const SYMPTOMS: SymptomEntry[] = [
       "Acute unsteady gait in a child warrants posterior fossa tumor, acute cerebellitis (post-viral), intoxication, and Miller Fisher variant GBS (ataxia + ophthalmoplegia + areflexia). Toddler in-toeing or mild waddling may be benign developmental variants — distinguish from true new-onset unsteadiness.",
   },
   {
+    id: "antalgic-gait",
+    name: "Antalgic Gait",
+    etymology:
+      "Greek anti = against + algos = pain + gait = way of walking — pain-avoiding limp",
+    aliases: [
+      "antalgic gait",
+      "antalgic gaits",
+      "antalgic",
+      "antalgic limp",
+      "antalgic limps",
+      "painful gait",
+      "pain-limited gait",
+      "limp from pain",
+      "limping gait",
+      "limping gaits",
+      "painful limp",
+      "painful limps",
+    ],
+    definition:
+      "Gait pattern adopted to minimize weight-bearing on a painful lower extremity — shortened stance phase on the affected side, reduced stride length, and often external rotation or guarding of the painful hip or leg.",
+    mechanism:
+      "Nociceptive input from bone, joint, or soft tissue injury triggers voluntary unloading of the painful limb during stance — patient quickly transfers weight to the contralateral leg, producing an asymmetric limp without primary neurologic incoordination.",
+    thinkOf: [
+      "Slipped capital femoral epiphysis (SCFE) — adolescent hip/knee pain with antalgic gait",
+      "Hip fracture or septic arthritis — acute painful limp",
+      "Osteomyelitis or cellulitis of lower extremity",
+      "Juvenile idiopathic arthritis — morning stiffness and guarded gait",
+      "Legg-Calvé-Perthes disease — insidious painless or mildly painful limp",
+      "Knee or ankle sprain, stress fracture",
+    ],
+    pairWith: [
+      "Obese adolescent + hip or knee pain + limited internal rotation → SCFE",
+      "Acute fever + refusal to bear weight → septic arthritis (hip until proven otherwise in child)",
+      "Antalgic gait + normal neuro exam → orthopedic not cerebellar cause",
+      "Bilateral antalgic gait in obese teen → bilateral SCFE — check both hips",
+      "Knee pain only in adolescent — still examine hip (SCFE referred pain)",
+    ],
+    distinguishFrom: [
+      "Ataxic gait — incoordination and wide base; pain not primary driver",
+      "Trendelenburg gait — pelvic drop from hip abductor weakness (gluteus medius), not pain avoidance",
+      "Steppage gait — foot drop with high step to clear toes; neuropathy not pain limp",
+      "Parkinsonian gait — shuffling, festination, reduced arm swing",
+      "Spastic gait — scissoring from UMN lesion",
+      "Unsteady gait — broad instability complaint; antalgic is specific pain-limited pattern",
+    ],
+    boardsPearls: [
+      "Antalgic gait — shortened stance on painful side; patient hurries off affected leg",
+      "SCFE classic in obese adolescent — may present with knee pain; check hip internal rotation",
+      "Septic hip in child — antalgic gait, fever, hip held flexed/abducted/externally rotated",
+      "vs Trendelenburg — weakness causes pelvic drop, not primary pain avoidance",
+      "vs ataxia — neurologic incoordination vs musculoskeletal pain",
+    ],
+    pediatrics:
+      "Any child with new limp warrants hip exam — SCFE, Perthes, transient synovitis, and septic arthritis are key differentials. SCFE is orthopedic emergency; avoid weight-bearing until stabilized. Bilateral SCFE occurs in obesity and endocrine disorders (hypothyroidism).",
+  },
+  {
     id: "paresis",
     name: "Paresis",
     etymology: "Greek parienai = to let go / relax + -sis = condition",
@@ -15149,6 +15265,96 @@ export const SYMPTOMS: SymptomEntry[] = [
     ],
     pediatrics:
       "Type I hyperlipoproteinemia in children can cause lipemia retinalis with eruptive xanthomas and recurrent pancreatitis — urgent lipid lowering and dietary fat restriction; distinguish from benign transient hypertriglyceridemia of infancy when severe.",
+  },
+  {
+    id: "gingival-hyperplasia",
+    name: "Gingival Hyperplasia",
+    etymology:
+      "Latin gingiva = gum + Greek hyper = excess + plasis = formation — overgrowth of gingival tissue",
+    aliases: [
+      "gingival hyperplasia",
+      "gingival hyperplasias",
+      "gingival hypertrophy",
+      "gingival hypertrophies",
+      "gingival overgrowth",
+      "gingival overgrowths",
+      "gum hyperplasia",
+      "gum hypertrophy",
+      "drug-induced gingival hyperplasia",
+      "drug-induced gingival overgrowth",
+    ],
+    definition:
+      "Noninflammatory enlargement of gingival tissue from increased collagen and fibroblast activity — classically drug-induced — producing swollen, lobulated gums that may bleed and obscure teeth.",
+    mechanism:
+      "Drug-stimulated fibroblast proliferation and reduced collagenase activity → excess extracellular matrix in gingiva; phenytoin, cyclosporine, and calcium channel blockers (especially nifedipine) are classic triggers; poor oral hygiene worsens severity.",
+    thinkOf: [
+      "Nifedipine and other dihydropyridine CCBs — classic boards association",
+      "Phenytoin — anticonvulsant gingival overgrowth",
+      "Cyclosporine — transplant immunosuppression; more hirsutism than tacrolimus",
+      "Verapamil — nondihydropyridine CCB; less common than nifedipine",
+      "Amlodipine — possible but less frequent than nifedipine",
+    ],
+    pairWith: [
+      "Swollen gums + nifedipine for hypertension → drug-induced gingival hyperplasia",
+      "Gingival overgrowth + phenytoin + hirsutism/coarse facies → chronic phenytoin toxicity",
+      "Gingival hyperplasia + transplant patient on cyclosporine → immunosuppressant adverse effect",
+      "vs gingivitis — inflammation and bleeding without massive drug-related overgrowth",
+    ],
+    distinguishFrom: [
+      "Gingivitis — inflammation from plaque; erythematous bleeding gums, not fibrous overgrowth",
+      "Periodontitis — attachment loss and pocketing",
+      "Leukemic infiltration — gingival bleeding and pallor with cytopenias",
+      "Hereditary gingival fibromatosis — genetic, not drug-induced",
+      "Angioedema — acute mucosal swelling, not chronic hyperplasia",
+    ],
+    pediatrics:
+      "Phenytoin and cyclosporine used in pediatric epilepsy and transplant can cause gingival hyperplasia — emphasize dental hygiene and drug review. Nifedipine tocolysis is obstetric, not typical pediatric gingival cause.",
+  },
+  {
+    id: "delirium",
+    name: "Delirium",
+    etymology: "Latin delirare = to deviate from a straight track — acute brain failure with disturbed attention and awareness",
+    aliases: [
+      "delirium",
+      "deliriums",
+      "delirious",
+      "acute delirium",
+      "acute confusional state",
+      "acute confusional states",
+      "hospital delirium",
+      "icu delirium",
+      "hyperactive delirium",
+      "hypoactive delirium",
+    ],
+    definition:
+      "Acute, fluctuating disturbance in attention and awareness with cognitive change — developing over hours to days — caused by underlying medical illness, substance, or drug effect; hyperactive (agitated) and hypoactive (quiet, lethargic) forms occur.",
+    mechanism:
+      "Diffuse cortical and subcortical dysfunction from metabolic insult, infection, hypoxia, drugs, withdrawal, intracranial disease, or sensory deprivation in vulnerable brain (elderly, dementia, post-op) → impaired reticular activating system and cholinergic deficiency relative to dopamine excess in many cases.",
+    thinkOf: [
+      "Hospitalized elderly post-op or with UTI/pneumonia",
+      "Anticholinergic drugs — diphenhydramine, oxybutynin, TCAs",
+      "Benzodiazepines and opioids — especially in elderly",
+      "Alcohol or benzodiazepine withdrawal — delirium tremens",
+      "Hypoglycemia, hyponatremia, hypercalcemia, hepatic/uremic encephalopathy",
+      "Hypoxia, hypercapnia, sepsis",
+      "Intracranial hemorrhage, meningitis, encephalitis",
+    ],
+    pairWith: [
+      "Fluctuating attention + new hospitalization + UTI → delirium",
+      "Delirium + mydriasis + dry skin + urinary retention → anticholinergic toxidrome",
+      "Delirium + tremor + autonomic instability after stopping alcohol → delirium tremens",
+      "Treat underlying cause; avoid unnecessary sedatives (worsen delirium except targeted alcohol/BZ withdrawal)",
+      "CAM criteria: acute onset, fluctuation, inattention + disorganized thinking or altered consciousness",
+    ],
+    distinguishFrom: [
+      "Dementia — chronic progressive decline; attention relatively preserved early",
+      "Psychosis — primary psychiatric disorder without fluctuating inattention and acute medical trigger",
+      "Confusion — overlapping symptom; delirium specifies acute fluctuating syndrome with inattention",
+      "Coma — unarousable; delirium patients are awake but inattentive",
+      "Depression (hypoactive) — psychomotor slowing without acute medical precipitant",
+    ],
+    pediatrics:
+      "Children with fever or metabolic derangement can develop delirium; evaluate infection and electrolytes. Anticholinergic delirium in toddlers from diphenhydramine ingestion — physostigmine only in selected pure anticholinergic cases without QRS widening.",
   },
 ];
 

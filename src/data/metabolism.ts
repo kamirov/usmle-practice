@@ -2010,6 +2010,94 @@ export const METABOLISM: MetabolismEntry[] = [
     pediatrics:
       "Niemann-Pick type A presents in infancy with hepatosplenomegaly, hypotonia, cherry-red spot, and progressive neurodegeneration. Type B children have organomegaly and pulmonary infiltrates with milder or absent neurologic disease. L/S ratio in amniotic fluid assesses fetal lung maturity — distinct clinical context from Niemann-Pick storage.",
   },
+  {
+    id: "glycemic-index",
+    name: "Glycemic Index",
+    etymology:
+      "Greek glykys = sweet + haima = blood + Latin index = pointer — ranking of carbohydrate foods by postprandial glycemic response relative to a reference",
+    aliases: [
+      "glycemic index",
+      "glycemic indices",
+      "glycaemic index",
+      "glycaemic indices",
+      "gi",
+      "food glycemic index",
+      "glycemic index value",
+      "glycemic index values",
+      "high glycemic index",
+      "low glycemic index",
+    ],
+    definition:
+      "Numeric score (0–100) comparing the incremental area under the blood glucose curve after consuming a fixed amount of carbohydrate in a food (often 50 g) versus a reference (glucose or white bread) — higher GI means faster and larger postprandial glucose rise.",
+    pathway: [
+      "High GI foods — rapidly digested/absorbed carbohydrates (glucose, white bread, baked potato, corn flakes) → sharp postprandial glucose and insulin spikes",
+      "Low GI foods — slowly digested carbs, fiber, fat, or protein slowing absorption (legumes, pasta al dente, dairy, non-starchy vegetables, fructose in whole fruit)",
+      "Processing, ripeness, cooking method, and fiber content alter GI of same food",
+      "GI does not account for typical serving carbohydrate amount — glycemic load addresses portion",
+      "Low-GI diet may improve glycemic control modestly in type 2 diabetes and reduce cardiovascular risk markers",
+    ],
+    boardsPearls: [
+      "GI = speed/magnitude of glucose rise per fixed carb amount vs reference",
+      "High GI → faster absorption → higher postprandial glucose and insulin",
+      "Low GI foods preferred for diabetes meal planning (with portion control)",
+      "vs glycemic load — GI ignores how much carb is in a real serving",
+      "Watermelon has high GI but low carb per serving → low glycemic load",
+      "Not the same as calories or total carbohydrate content alone",
+    ],
+    distinguishFrom: [
+      "Glycemic load — GI adjusted for carbohydrate quantity in a serving",
+      "Total carbohydrate — grams of carb regardless of absorption rate",
+      "Insulin index — insulin response to food, not glucose rise alone",
+      "HbA1c — 2–3 month average glycemia, not single-meal GI",
+      "Caloric density — energy per gram, independent of glycemic response",
+    ],
+    pediatrics:
+      "Low-GI dietary advice applies to adolescents with type 1 and type 2 diabetes; carbohydrate counting remains primary for insulin dosing. High-GI sports drinks raise glucose quickly during exercise-induced hypoglycemia.",
+  },
+  {
+    id: "glycemic-load",
+    name: "Glycemic Load",
+    etymology:
+      "Greek glykys = sweet + haima = blood + Old English lād = carrying — glycemic effect of a realistic food portion combining index and carbohydrate amount",
+    aliases: [
+      "glycemic load",
+      "glycemic loads",
+      "glycemic loading",
+      "glycaemic load",
+      "glycaemic loads",
+      "glycaemic loading",
+      "gl",
+      "food glycemic load",
+      "glycemic load value",
+      "glycemic load values",
+    ],
+    definition:
+      "Measure of expected glycemic impact of a typical serving of food — calculated as (glycemic index × grams of available carbohydrate per serving) ÷ 100 — better reflects real-world postprandial glucose than GI alone.",
+    pathway: [
+      "Formula: GL = (GI × g carbohydrate in serving) / 100",
+      "Low GL ≤10 per serving; medium 11–19; high ≥20 (common cutoffs)",
+      "Watermelon — high GI (~70+) but low GL per cup because few carbs per serving",
+      "Candy bar or large bagel — high GI and high carb → very high GL",
+      "Combining low-GI high-fiber foods with protein/fat lowers effective glycemic response of meal",
+      "Useful for diabetes meal planning alongside carbohydrate counting",
+    ],
+    boardsPearls: [
+      "GL = GI × portion carbohydrate — accounts for serving size",
+      "High GI food can have low GL if portion has little carb (watermelon classic boards contrast)",
+      "vs glycemic index alone — GL better predicts meal glycemic impact",
+      "Low-GI + high-carb portion can still have high GL",
+      "Dietary counseling in T2DM — consider GL/GI with total carbs and calories",
+    ],
+    distinguishFrom: [
+      "Glycemic index — rate of glucose rise per fixed carb dose, ignores serving size",
+      "Total carbohydrates — mass of carb without weighting by absorption speed",
+      "Calories — total energy; high GL foods are not always high calorie",
+      "Insulin-to-carb ratio — dosing strategy in T1DM, not food scoring metric",
+      "HbA1c — chronic glycemia marker, not per-meal load",
+    ],
+    pediatrics:
+      "Adolescents with obesity-related type 2 diabetes benefit from understanding GL/GI alongside portion control; juice and large refined-carb snacks deliver high glycemic load despite family meal context.",
+  },
 ];
 
 const metabolismById = new Map(METABOLISM.map((entry) => [entry.id, entry]));

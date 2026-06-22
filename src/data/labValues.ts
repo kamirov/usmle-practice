@@ -2303,6 +2303,59 @@ export const LAB_VALUES: LabValueEntry[] = [
     ],
   },
   {
+    id: "bone-mineral-density",
+    name: "Bone Mineral Density",
+    etymology:
+      "Old English ban = bone + Latin mineralis = pertaining to minerals + Latin densitas = thickness — mass of bone mineral per unit area or volume",
+    aliases: [
+      "bone mineral density",
+      "bone mineral densities",
+      "bmd",
+      "areal bone mineral density",
+      "bone density",
+      "bone densities",
+      "bone mass density",
+      "skeletal mineral density",
+      "mineral bone density",
+    ],
+    measures:
+      "Quantitative measure of hydroxyapatite mineral content in bone — clinically reported as areal BMD (g/cm²) on DEXA at lumbar spine and hip — used with T-score and Z-score to diagnose osteoporosis and osteopenia and monitor therapy.",
+    normalRange:
+      "T-score ≥ −1.0 (normal); T-score −1.0 to −2.5 (osteopenia); T-score ≤ −2.5 (osteoporosis) — WHO criteria on DEXA; Z-score compares to age-matched peers (premenopausal women, men <50)",
+    increasedCauses: [
+      "Osteopetrosis — failed resorption → abnormally dense brittle bone",
+      "Skeletal fluorosis",
+      "Focal osteoblastic metastases (e.g., prostate cancer)",
+      "Paget disease — regional mosaic remodeling",
+    ],
+    decreasedCauses: [
+      "Postmenopausal estrogen deficiency",
+      "Senile osteoporosis and advanced age",
+      "Glucocorticoid therapy",
+      "Hyperparathyroidism and hyperthyroidism",
+      "Hypogonadism, anorexia nervosa, female athlete triad",
+      "Immobilization, malnutrition, vitamin D deficiency",
+      "Androgen deprivation therapy or aromatase inhibitors",
+      "Chronic inflammatory disease",
+    ],
+    boardsPearls: [
+      "BMD measured by DEXA (DXA) — lumbar spine and hip standard sites",
+      "T-score = vs young adult peak bone mass (postmenopausal women, men ≥50)",
+      "Z-score = age-matched — use in younger patients; Z ≤ −2.0 suggests secondary cause",
+      "T-score ≤ −2.5 = osteoporosis; −1.0 to −2.5 = osteopenia",
+      "Trabecular bone (spine) loses BMD faster than cortical (hip shaft) after menopause",
+      "vs osteomalacia — low BMD with defective mineralization; osteoporosis has normal mineralization of remaining matrix",
+      "Bisphosphonates, denosumab, calcium/vitamin D preserve BMD",
+    ],
+    pairWith: [
+      "Postmenopausal woman + fragility fracture + T-score ≤ −2.5 → osteoporosis",
+      "Chronic prednisone + ↓ BMD → glucocorticoid-induced osteoporosis",
+      "Young athlete + low Z-score + amenorrhea → female athlete triad",
+      "Prostate cancer on ADT + ↓ BMD → monitor and treat bone loss",
+      "ER+ breast cancer on aromatase inhibitor → ↓ BMD from estrogen deprivation",
+    ],
+  },
+  {
     id: "procalcitonin",
     name: "Procalcitonin",
     etymology:

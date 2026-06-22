@@ -575,7 +575,7 @@ export const MEDICATIONS: MedicationEntry[] = [
     id: "nifedipine",
     name: "Nifedipine",
     etymology: "nife- = dihydropyridine naming element + -dipine = calcium-channel blocker suffix",
-    aliases: ["nifedipine", "procardia", "adalat"],
+    aliases: ["nifedipine", "procardia", "adalat", "nifedipine er", "nifedipine xl", "extended release nifedipine", "dihydropyridine ccb", "calcium channel blocker nifedipine"],
     drugClass: "Dihydropyridine calcium channel blocker",
     mechanism:
       "Blocks L-type Ca²⁺ channels in vascular smooth muscle → potent arteriolar vasodilation; immediate-release formulation causes rapid hypotension and reflex tachycardia.",
@@ -2734,6 +2734,36 @@ export const MEDICATIONS: MedicationEntry[] = [
     ],
   },
   {
+    id: "risperidone",
+    name: "Risperidone",
+    etymology:
+      "risper- from chemical scaffold + -idone = benzisoxazole atypical antipsychotic suffix",
+    aliases: ["risperidone", "risperidones", "risperdal", "risperdal consta"],
+    drugClass: "Atypical (second-generation) antipsychotic",
+    mechanism:
+      "Antagonizes dopamine D2 and serotonin 5-HT2A receptors; relatively high D2 affinity among atypicals → more extrapyramidal symptoms and hyperprolactinemia than olanzapine or quetiapine; also blocks α1 and H1 receptors.",
+    indications: [
+      "Schizophrenia and schizophreniform disorder",
+      "Acute manic or mixed episodes in bipolar I disorder",
+      "Irritability associated with autism spectrum disorder (pediatric)",
+    ],
+    adverseEffects: [
+      "Extrapyramidal symptoms — dose-related; higher EPS risk than many atypicals",
+      "Hyperprolactinemia — galactorrhea, amenorrhea, gynecomastia (strong tuberoinfundibular D2 blockade)",
+      "Orthostatic hypotension and sedation",
+      "Weight gain and metabolic effects (moderate vs olanzapine/clozapine)",
+      "QT prolongation at high doses; rare NMS",
+    ],
+    boardsPearls: [
+      "Risperidone — atypical with relatively high D2 potency → EPS and hyperprolactinemia more than olanzapine",
+      "5-HT2A blockade partially offsets D2 EPS in mesolimbic pathway",
+      "Long-acting injectable (Risperdal Consta) for adherence",
+      "vs haloperidol — risperidone less EPS at equipotent antipsychotic doses but still causes EPS",
+      "vs olanzapine — risperidone less metabolic toxicity, more prolactin elevation and EPS",
+      "Peds: FDA-approved for irritability in autism; monitor weight and prolactin",
+    ],
+  },
+  {
     id: "antipsychotics",
     name: "Antipsychotics",
     etymology: "Greek anti- = against + psyche = mind + -otic = condition-related",
@@ -4366,6 +4396,58 @@ export const MEDICATIONS: MedicationEntry[] = [
     ],
   },
   {
+    id: "biologics",
+    name: "Biologics",
+    etymology:
+      "Greek bios = life + Latin -logica + -ics = relating to — drugs produced from or derived via living organisms (recombinant proteins, antibodies)",
+    aliases: [
+      "biologics",
+      "biologic",
+      "biologic drug",
+      "biologic drugs",
+      "biologic agent",
+      "biologic agents",
+      "biologic therapy",
+      "biologic therapies",
+      "biological therapy",
+      "biological therapies",
+      "biopharmaceutical",
+      "biopharmaceuticals",
+      "biologic dmard",
+      "biologic dmards",
+      "b dmard",
+      "b dmards",
+    ],
+    drugClass: "Biologic immunomodulatory agents (large-molecule proteins)",
+    mechanism:
+      "Recombinant proteins or monoclonal antibodies targeting specific cytokines, receptors, or immune cells — examples include anti–TNF-α agents, IL inhibitors, B-cell depletion (rituximab), and integrin blockade — contrast with small-molecule conventional DMARDs and JAK inhibitors.",
+    indications: [
+      "Rheumatoid arthritis, psoriatic arthritis, ankylosing spondylitis",
+      "Inflammatory bowel disease (Crohn disease, ulcerative colitis)",
+      "Plaque psoriasis and atopic dermatitis",
+      "Juvenile idiopathic arthritis",
+      "Severe asthma (anti–IL-5, anti–IgE biologics)",
+      "Noninfectious uveitis, transplant rejection (selected agents)",
+    ],
+    adverseEffects: [
+      "Serious infections — reactivation of latent tuberculosis, invasive fungal infections",
+      "Live attenuated vaccines contraindicated during therapy",
+      "Injection/infusion reactions; anti-drug antibodies reducing efficacy",
+      "Malignancy risk (lymphoma debated; skin cancer)",
+      "Heart failure exacerbation (anti-TNF class)",
+      "Demyelination, drug-induced lupus (class-dependent)",
+    ],
+    boardsPearls: [
+      "Biologics = targeted large-molecule therapies; screen latent TB before anti-TNF",
+      "Naming: -mab = monoclonal antibody; -cept = receptor fusion decoy (etanercept)",
+      "Anti-TNF examples: infliximab, adalimumab, etanercept (decoy, not mAb)",
+      "vs conventional DMARDs (methotrexate) — small molecules; biologics are proteins requiring injection/infusion",
+      "vs JAK inhibitors (tofacitinib) — oral small molecules targeting intracellular signaling, not biologics",
+      "Live vaccines (MMR, varicella, BCG) contraindicated — use inactivated vaccines",
+      "Adalimumab approved for noninfectious uveitis; dupilumab blocks IL-4Rα (type 2 pathway)",
+    ],
+  },
+  {
     id: "etanercept",
     name: "Etanercept",
     etymology:
@@ -5766,6 +5848,40 @@ export const MEDICATIONS: MedicationEntry[] = [
       "Vitamin B6 reverses carbidopa effect — avoid supplementation",
       "Peds: rarely used; juvenile parkinsonism is uncommon — dopamine deficiency mechanism same",
     ],
+  },
+  {
+    id: "memantine",
+    name: "Memantine",
+    etymology: "Named from derivative of adamantane + amine group — adamantane-derived NMDA antagonist",
+    aliases: [
+      "memantine",
+      "namenda",
+      "namenda xr",
+      "nmda antagonist memantine",
+    ],
+    drugClass: "NMDA receptor antagonist (anti-Alzheimer agent)",
+    mechanism:
+      "Uncompetitive, open-channel blocker of NMDA glutamate receptors — reduces pathologic tonic NMDA activity and excitotoxic calcium influx in Alzheimer disease without blocking normal physiologic glutamatergic transmission.",
+    indications: [
+      "Moderate to severe Alzheimer disease",
+      "Often combined with acetylcholinesterase inhibitor (donepezil) in advanced disease",
+    ],
+    adverseEffects: [
+      "Dizziness, headache, confusion",
+      "Constipation, hypertension (usually mild)",
+      "Agitation or hallucinations (uncommon)",
+      "Generally better tolerated than cholinergic excess from AChE inhibitors alone",
+    ],
+    boardsPearls: [
+      "Memantine = NMDA receptor antagonist for Alzheimer disease",
+      "Uncompetitive open-channel block — allows normal synaptic glutamate but limits chronic excitotoxic signaling",
+      "Used in moderate–severe AD; often paired with donepezil",
+      "vs donepezil — AChE inhibitor (↑ ACh); memantine blocks NMDA",
+      "vs ketamine — nonselective NMDA anesthetic; memantine is low-affinity therapeutic AD drug",
+      "Glutamate excitotoxicity contributes to neuronal injury in AD",
+    ],
+    pediatrics:
+      "Not indicated in pediatric patients; NMDA antagonism in developing brain is avoided outside research contexts.",
   },
   {
     id: "lithium",
@@ -7728,6 +7844,36 @@ export const MEDICATIONS: MedicationEntry[] = [
       "vs native GLP-1 hormone — agonists are resistant to DPP-4 degradation with longer half-life",
       "Contraindicated in personal/family history of medullary thyroid carcinoma or MEN2",
       "Peds: selected use in adolescent T2DM; type 1 diabetes still requires insulin",
+    ],
+  },
+  {
+    id: "denosumab",
+    name: "Denosumab",
+    etymology:
+      "de- = down + -nosumab = human monoclonal antibody suffix (bone/nos = bone-related naming)",
+    aliases: ["denosumab", "denosumabs", "prolia", "xgeva"],
+    drugClass: "Monoclonal antibody (RANKL inhibitor)",
+    mechanism:
+      "Human IgG2 monoclonal antibody binds RANKL → prevents RANK activation on osteoclast precursors → ↓ osteoclast formation and bone resorption; pharmacologically mimics osteoprotegerin (OPG) decoy receptor.",
+    indications: [
+      "Postmenopausal osteoporosis (Prolia)",
+      "Bone loss in men on androgen-deprivation therapy or women on aromatase inhibitors",
+      "Prevention of skeletal-related events in bone metastases (Xgeva)",
+      "Giant cell tumor of bone (unresectable or surgical morbidity)",
+    ],
+    adverseEffects: [
+      "Hypocalcemia — ensure adequate calcium/vitamin D; worse with CKD",
+      "Increased risk of serious skin infections (cellulitis)",
+      "Osteonecrosis of the jaw (ONJ)",
+      "Atypical femoral fractures with prolonged use",
+      "Rebound ↑ bone turnover and vertebral fractures after discontinuation",
+    ],
+    boardsPearls: [
+      "Denosumab = anti-RANKL mAb → blocks osteoclastogenesis (same pathway as RANKL/OPG)",
+      "vs bisphosphonates — denosumab inhibits osteoclast formation; bisphosphonates poison mature osteoclasts",
+      "vs osteoprotegerin — denosumab mimics OPG by sequestering RANKL",
+      "Rebound vertebral fractures if stopped abruptly — may need follow-on antiresorptive",
+      "Monitor calcium; hypocalcemia especially with renal impairment",
     ],
   },
   {

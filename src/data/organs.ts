@@ -1019,6 +1019,51 @@ export const ORGANS: OrganEntry[] = [
     derivatives: ["Exocrine acini", "Endocrine islets", "Duct system"],
   },
   {
+    id: "pancreatic-duct",
+    name: "Pancreatic Duct",
+    etymology:
+      "Greek pankreas = all flesh + Latin ductus = channel — main drainage pathway for pancreatic exocrine secretions",
+    aliases: [
+      "pancreatic duct",
+      "pancreatic ducts",
+      "main pancreatic duct",
+      "main pancreatic ducts",
+      "duct of wirsung",
+      "wirsung duct",
+      "wirsung ducts",
+      "pancreatic ductal system",
+      "pancreatic drainage duct",
+      "mpd",
+    ],
+    germLayer: "Endoderm (ventral and dorsal pancreatic buds)",
+    origin:
+      "Formed from ductal epithelium of fused dorsal and ventral pancreatic buds; main duct (Wirsung) typically joins common bile duct at the ampulla of Vater; accessory duct of Santorini may drain separately in some individuals.",
+    derivatives: [
+      "Intercalated ducts from acini",
+      "Intralobular and interlobular ducts",
+      "Main pancreatic duct (duct of Wirsung)",
+      "Accessory pancreatic duct (duct of Santorini) when present",
+    ],
+    functionSummary:
+      "Conducts bicarbonate-rich fluid and digestive enzymes from acinar cells to duodenum — ductal epithelium secretes bicarbonate (especially after secretin) to neutralize gastric acid in duodenal chyme.",
+    commonPathologies: [
+      "Acute and chronic pancreatitis — duct obstruction, stone, or edema",
+      "Pancreatic ductal adenocarcinoma — head tumor obstructs duct → painless jaundice",
+      "Cystic fibrosis — inspissated mucus plugs ducts → exocrine insufficiency",
+      "Annular pancreas — aberrant ring encircling duodenum",
+      "Pancreas divisum — incomplete fusion; Santorini drainage predominates",
+    ],
+    step1Pearls: [
+      "Main pancreatic duct + common bile duct → ampulla of Vater (sphincter of Oddi)",
+      "Secretin stimulates ductal bicarbonate secretion (not enzyme-rich acinar output — CCK for enzymes)",
+      "CFTR on ductal epithelium — CF mutations clog ducts and pancreas",
+      "Head of pancreas cancer obstructs both bile and pancreatic ducts",
+      "vs bile duct — carries bile from liver/gallbladder; joins pancreatic duct at ampulla",
+    ],
+    pediatrics:
+      "Meconium ileus in CF reflects inspissated secretions from diseased pancreatic ducts in utero. Pancreas divisum may present with recurrent pancreatitis in children.",
+  },
+  {
     id: "ampulla-of-vater",
     name: "Ampulla of Vater",
     etymology:

@@ -2581,6 +2581,8 @@ export const PROCEDURES: ProcedureEntry[] = [
       "100-g oral glucose tolerance test",
       "100 g oral glucose tolerance test",
       "standard oral glucose tolerance test",
+      "oral glucose tolerance testing",
+      "glucose tolerance testing",
     ],
     definition:
       "Standardized diagnostic test measuring plasma glucose response after oral glucose load — diagnoses diabetes mellitus, gestational diabetes, and (in specialized use) failure of growth hormone suppression in acromegaly.",

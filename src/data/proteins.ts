@@ -2031,6 +2031,53 @@ export const PROTEINS: ProteinEntry[] = [
     ],
   },
   {
+    id: "hla-b27",
+    name: "HLA-B27",
+    etymology:
+      "HLA = human leukocyte antigen + B = class I locus B + 27 = allele designation — MHC class I molecule",
+    aliases: [
+      "hla-b27",
+      "hla b27",
+      "hla-b-27",
+      "hlab27",
+      "b27",
+      "hla b 27",
+      "human leukocyte antigen b27",
+      "human leukocyte antigen b-27",
+    ],
+    gene: "HLA-B*27 — class I MHC gene on chromosome 6p21",
+    location:
+      "Expressed on virtually all nucleated cells as part of MHC class I (with β2-microglobulin) — presents endogenous peptides to CD8⁺ T cells",
+    function:
+      "MHC class I allele presenting self and microbial peptides to CD8⁺ cytotoxic T lymphocytes; specific HLA-B27 allotypes strongly associated with seronegative spondyloarthropathies — exact pathogenic mechanism involves aberrant peptide presentation and IL-23/IL-17 axis (molecular mimicry debated).",
+    mutationCauses: [
+      "Not a mutation — inherited HLA allele; ~8% of population carries B27 but most never develop disease",
+      "Ankylosing spondylitis — >90% of patients HLA-B27 positive",
+      "Reactive arthritis (post-GI/GU infection)",
+      "Psoriatic arthritis and psoriasis-associated spondylitis",
+      "Inflammatory bowel disease–associated arthritis (enteropathic spondyloarthritis)",
+      "Acute anterior uveitis — often HLA-B27 associated",
+    ],
+    boardsPearls: [
+      "HLA-B27 — seronegative spondyloarthropathy marker; RF and anti-CCP negative",
+      "PAIR: Psoriatic arthritis, Ankylosing spondylitis, IBD-associated, Reactive arthritis",
+      "Ankylosing spondylitis — inflammatory back pain, sacroiliitis, bamboo spine; uveitis",
+      "Reactive arthritis — can't see, can't pee, can't climb a tree (conjunctivitis, urethritis, arthritis) — often B27+",
+      "Presence of B27 is not diagnostic alone — most B27+ individuals are healthy",
+      "vs RF/anti-CCP — rheumatoid arthritis markers; spondyloarthropathies are seronegative",
+      "vs HLA-DQ2/DQ8 — celiac disease association, not B27",
+    ],
+    distinguishFrom: [
+      "MHC class I — broader family (HLA-A/B/C); B27 is one B locus allele",
+      "Rheumatoid factor — IgM against Fc of IgG; positive in RA, not spondyloarthritis",
+      "Anti-CCP — rheumatoid arthritis-specific antibody",
+      "HLA-B51 — Behçet disease association, not spondyloarthritis",
+      "ANA — nonspecific autoantibody; not defining for B27 diseases",
+    ],
+    pediatrics:
+      "Juvenile idiopathic arthritis enthesitis-related subtype overlaps with HLA-B27 spondyloarthropathy — boys with asymmetric lower-extremity arthritis and enthesitis. Anterior uveitis in HLA-B27 disease can be acute and painful (vs JIA-associated chronic painless uveitis).",
+  },
+  {
     id: "b7-molecules",
     name: "B7 Molecules",
     etymology: "B7 = B-cell costimulatory family + molecule = small biological unit",
@@ -3382,6 +3429,143 @@ export const PROTEINS: ProteinEntry[] = [
       "APOE ε3 — most common isoform; reference baseline risk",
       "Clinical Alzheimer diagnosis — clinical + imaging + exclusion of mimics; ε4 testing not required for diagnosis",
     ],
+  },
+  {
+    id: "rankl",
+    name: "RANKL",
+    etymology:
+      "Receptor Activator of Nuclear Factor Kappa B Ligand — TNF superfamily cytokine (TNFSF11) that binds RANK on osteoclast precursors",
+    aliases: [
+      "rankl",
+      "rank-l",
+      "rank l",
+      "rank ligand",
+      "rank ligands",
+      "receptor activator of nf-kb ligand",
+      "receptor activator of nf-κb ligand",
+      "tnfsf11",
+      "tnf superfamily member 11",
+      "osteoprotegerin ligand",
+      "opgl",
+      "cd254",
+    ],
+    gene: "TNFSF11",
+    location:
+      "Membrane-bound or soluble form secreted by osteoblasts, osteocytes, stromal cells, synovial fibroblasts, and activated T cells",
+    function:
+      "Binds RANK on osteoclast precursors (with M-CSF) to drive osteoclast differentiation and bone resorption; also supports lymph node organogenesis and dendritic cell survival; balanced by osteoprotegerin (OPG) decoy receptor.",
+    mutationCauses: [
+      "Relative RANKL excess or low OPG — postmenopausal osteoporosis, inflammatory bone loss in RA",
+      "Therapeutic anti-RANKL (denosumab) — pharmacologic blockade of RANKL",
+    ],
+    boardsPearls: [
+      "RANKL = RANK-L = ligand for RANK on osteoclast precursors",
+      "Osteoblast/osteocyte-derived RANKL stimulates osteoclasts; PTH ↑ RANKL indirectly",
+      "OPG binds RANKL — decoy receptor preventing RANK activation",
+      "Denosumab — monoclonal antibody against RANKL (mimics OPG effect)",
+      "RANKL + RANK + M-CSF → osteoclast differentiation",
+      "vs RANK — receptor, not ligand",
+    ],
+    distinguishFrom: [
+      "RANK (TNFRSF11A) — receptor on osteoclast precursors",
+      "Osteoprotegerin (OPG) — soluble decoy that binds RANKL",
+      "Denosumab — drug targeting RANKL, not endogenous protein",
+      "M-CSF — required cofactor for osteoclastogenesis but distinct cytokine",
+      "TNF-α — separate TNF family cytokine; etanercept target, not RANKL",
+    ],
+    pediatrics:
+      "Juvenile Paget disease and osteoporosis in adolescents may involve dysregulated RANKL/OPG balance; denosumab blocks RANKL when bisphosphonates are insufficient.",
+  },
+  {
+    id: "rank",
+    name: "RANK (Receptor Activator of NF-κB)",
+    etymology:
+      "Receptor Activator of Nuclear Factor Kappa B — TNF receptor superfamily member on osteoclast precursors",
+    aliases: [
+      "rank",
+      "rank receptor",
+      "rank receptors",
+      "receptor activator",
+      "receptor activators",
+      "receptor activator of nf-kb",
+      "receptor activator of nf-κb",
+      "receptor activator of nuclear factor kappa b",
+      "tnfrsf11a",
+      "tnf receptor superfamily member 11a",
+      "cd265",
+    ],
+    gene: "TNFRSF11A",
+    location:
+      "Cell surface receptor on osteoclast precursors and mature osteoclasts; also on dendritic cells and some T cells",
+    function:
+      "Transmembrane receptor for RANKL (TNFSF11); RANKL–RANK binding with M-CSF drives osteoclast differentiation and bone resorption; also participates in immune dendritic cell and lymph node organogenesis signaling.",
+    mutationCauses: [
+      "Activating RANK mutations — familial expansile osteolysis / early-onset Paget-like bone disease with excessive resorption",
+      "Increased RANK signaling when RANKL is elevated or OPG is low — osteoporosis, inflammatory bone loss",
+    ],
+    boardsPearls: [
+      "RANK = receptor activator of NF-κB — binds RANKL on osteoclast precursors",
+      "RANKL (from osteoblast) + RANK + M-CSF → osteoclast differentiation",
+      "OPG decoys RANKL — prevents RANK activation",
+      "Denosumab — anti-RANKL antibody blocks RANK signaling",
+      "PTH ↑ bone resorption indirectly via osteoblast RANKL, not direct RANK mutation in common disease",
+      "vs RANKL — ligand; RANK is receptor",
+    ],
+    distinguishFrom: [
+      "RANKL (TNFSF11) — ligand secreted by osteoblasts and immune cells",
+      "Osteoprotegerin (OPG) — soluble decoy for RANKL, not signaling receptor",
+      "RANKL inhibitor (denosumab) — drug targeting ligand, not RANK protein itself",
+      "TNF receptor (TNFR1) — inflammatory cytokine receptor; different family member function",
+      "NF-κB — downstream transcription factor activated by many pathways including RANK",
+    ],
+    pediatrics:
+      "Familial expansile osteolysis and some juvenile Paget-like disorders involve dysregulated RANK signaling; denosumab cautiously used in adolescents with severe osteoporosis when other agents fail.",
+  },
+  {
+    id: "ikb",
+    name: "IκB (Inhibitor of NF-κB)",
+    etymology:
+      "Inhibitor of Nuclear Factor Kappa B — cytoplasmic protein sequestering NF-κB until phosphorylated and degraded",
+    aliases: [
+      "ikb",
+      "iκb",
+      "ikappa b",
+      "iκbα",
+      "ikba",
+      "ikb alpha",
+      "iκb alpha",
+      "inhibitor of nf-kb",
+      "inhibitor of nf-κb",
+      "inhibitor of nuclear factor kappa b",
+      "nfkbia",
+      "nf-kb inhibitor protein",
+    ],
+    gene: "NFKBIA (IκBα most common isoform)",
+    location:
+      "Cytoplasm — bound to NF-κB (classically p50/p65 heterodimer) in resting cells; nuclear if mutated and unable to retain NF-κB",
+    function:
+      "Masks NF-κB nuclear localization sequence while bound in cytoplasm; stimulus activates IKK complex → IκBα phosphorylation (Ser32/36) → ubiquitination and proteasomal degradation → free NF-κB translocates to nucleus to transcribe inflammatory genes.",
+    mutationCauses: [
+      "IκBα loss-of-function or degradation-resistant mutations — ectodermal dysplasia with immunodeficiency and autoinflammation (overlap NEMO spectrum)",
+      "Proteasome inhibition (bortezomib) stabilizes IκB → traps NF-κB in cytoplasm → myeloma therapy",
+    ],
+    boardsPearls: [
+      "Resting: NF-κB bound to IκB in cytoplasm",
+      "IKK phosphorylates IκB → proteasomal degradation → NF-κB to nucleus",
+      "Bortezomib prevents IκB degradation → ↓ NF-κB in myeloma cells",
+      "LPS/TLR4 and TNF-α both signal through IκB degradation step",
+      "vs NF-κB — transcription factor; IκB is inhibitor",
+      "vs IKK — kinase that phosphorylates IκB; NEMO/IKKγ scaffold",
+    ],
+    distinguishFrom: [
+      "NF-κB (p65/RelA) — transcription factor released when IκB degraded",
+      "IKK complex — kinase (IKKα, IKKβ, NEMO) that phosphorylates IκB",
+      "NEMO (IKKγ) deficiency — X-linked immunodeficiency; upstream of IκB",
+      "Proteasome — degrades ubiquitinated IκB; target of bortezomib",
+      "JAK-STAT inhibitor proteins (SOCS) — different cytokine pathway",
+    ],
+    pediatrics:
+      "NEMO and IκB pathway mutations cause combined immunodeficiency with ectodermal dysplasia in boys; neonatal gram-negative sepsis can trigger excessive NF-κB signaling when regulatory degradation is overwhelmed.",
   },
   {
     id: "osteoprotegerin",

@@ -4852,6 +4852,66 @@ export const CELLS: CellEntry[] = [
       "Neonatal diabetes may reflect islet β-cell channel defects or autoimmune destruction; congenital hyperinsulinism from dysregulated islet β cells causes hypoglycemia. Maturity-onset diabetes of the young (MODY) involves monogenic islet dysfunction.",
   },
   {
+    id: "pancreatic-alpha-cell",
+    name: "Pancreatic Alpha Cell",
+    etymology:
+      "Greek pankreas = all flesh + alpha = first Greek letter (first islet cell type described historically) + cell",
+    aliases: [
+      "pancreatic alpha cell",
+      "pancreatic alpha cells",
+      "alpha cell",
+      "alpha cells",
+      "α cell",
+      "α cells",
+      "pancreatic α cell",
+      "pancreatic α cells",
+      "alpha islet cell",
+      "alpha islet cells",
+      "α islet cell",
+      "α islet cells",
+      "islet alpha cell",
+      "islet alpha cells",
+      "pancreatic a cell",
+      "pancreatic a cells",
+    ],
+    definition:
+      "Endocrine cell of pancreatic islets located peripherally that synthesizes and secretes glucagon — raising blood glucose via hepatic glycogenolysis and gluconeogenesis — counter-regulatory to insulin-secreting β cells.",
+    characteristics: [
+      "Peripheral distribution in islet mantle; β cells more central",
+      "Glucagon stored in secretory granules; released when blood glucose is low or during stress/exercise",
+      "Low glucose → α-cell KATP opens → Ca²⁺ influx → glucagon secretion; hyperglycemia and β-cell insulin suppress glucagon (paracrine)",
+      "Proglucagon processed to glucagon in α cells (vs GLP-1 in intestinal L cells from same gene)",
+      "Somatostatin from δ cells inhibits glucagon secretion",
+    ],
+    normalLabResults: [
+      "Fasting glucagon elevated relative to insulin in uncontrolled diabetes",
+      "Glucagon rises with hypoglycemia during insulin-induced glucose clamp",
+    ],
+    clinicalRelevance: [
+      "Type 1 diabetes — loss of β-cell insulin leads to unsuppressed α-cell glucagon → paradoxical hyperglucagonemia worsens fasting hyperglycemia",
+      "Glucagonoma — α-cell tumor; necrolytic migratory erythema, diabetes, weight loss, hyperglucagonemia",
+      "Glucagon emergency injection for severe hypoglycemia when oral glucose unavailable",
+      "Excessive endogenous glucagon (glucagonoma) or iatrogenic glucagon causes hyperglycemia and lipolysis",
+    ],
+    boardsPearls: [
+      "α cells = glucagon; β cells = insulin — opposite effects on blood glucose",
+      "Insulin from β cells inhibits glucagon release from neighboring α cells",
+      "Glucagon raises glucose via liver glycogenolysis and gluconeogenesis",
+      "Type 1 DM — hyperglucagonemia contributes to fasting hyperglycemia",
+      "Glucagonoma — rash (necrolytic migratory erythema) + diabetes + elevated glucagon",
+      "vs L cell — intestinal GLP-1 from proglucagon, not glucagon",
+    ],
+    distinguishFrom: [
+      "Pancreatic β cell — secretes insulin; lowers glucose",
+      "Intestinal L cell — produces GLP-1 (incretin), not glucagon",
+      "Pancreatic δ cell — somatostatin; inhibits both insulin and glucagon",
+      "Adrenal medulla — epinephrine raises glucose but is not islet α cell",
+      "Glucagon (hormone) — secretory product, not the cell type",
+    ],
+    pediatrics:
+      "Congenital hyperinsulinism suppresses glucagon need until hypoglycemia occurs — glucagon injection used in refractory neonatal hypoglycemia. Glucagonoma is rare in children.",
+  },
+  {
     id: "pancreatic-beta-cell",
     name: "Pancreatic beta cell",
     etymology: "Greek pankreas = all flesh + beta = second Greek letter (second islet cell type described) + cell",
@@ -7766,6 +7826,52 @@ export const CELLS: CellEntry[] = [
     ],
     pediatrics:
       "Type I glycogen storage disease (von Gierke) presents in infancy with severe fasting hypoglycemia and hepatomegaly — defective hepatic glucose-6-phosphatase on SER. Neonatal surfactant production in type II pneumocytes requires ER lipid synthesis pathways.",
+  },
+  {
+    id: "sarcoplasmic-reticulum",
+    name: "Sarcoplasmic Reticulum",
+    etymology:
+      "Greek sarx = flesh + Latin plasma = formed/molded + Latin reticulum = small net — muscle-cell specialized smooth ER for Ca²⁺ storage",
+    aliases: [
+      "sarcoplasmic reticulum",
+      "sarcoplasmic reticula",
+      "sr",
+      "muscle sarcoplasmic reticulum",
+      "sarcoplasmic reticulum ca2+ store",
+      "sarcoplasmic reticulum calcium store",
+    ],
+    definition:
+      "Specialized smooth endoplasmic reticulum in striated muscle that sequesters and releases Ca²⁺ to control contraction — terminal cisternae flank T-tubules at triads (skeletal) or dyads (cardiac).",
+    characteristics: [
+      "SERCA pumps cytosolic Ca²⁺ into SR lumen during relaxation (ATP-dependent)",
+      "Ryanodine receptors (RyR) on terminal cisternae release Ca²⁺ into cytosol after depolarization spreads via T-tubules",
+      "Skeletal muscle triad: two terminal cisternae + one T-tubule at A-I junction",
+      "Cardiac dyad: one T-tubule + one terminal cisterna at Z-disc; RyR2 Ca²⁺-induced Ca²⁺ release",
+      "Calsequestrin buffers high Ca²⁺ concentration in SR lumen",
+    ],
+    clinicalRelevance: [
+      "Malignant hyperthermia — RyR1 mutation → uncontrolled SR Ca²⁺ release with succinylcholine or volatile anesthetics",
+      "Central core disease — RyR1-related congenital myopathy with SR structural defect",
+      "Duchenne muscular dystrophy — altered SR Ca²⁺ handling contributes to muscle damage",
+      "Catecholaminergic polymorphic VT — RyR2 or calsequestrin mutations → arrhythmia with exercise/stress",
+    ],
+    boardsPearls: [
+      "Sarcoplasmic reticulum = muscle SER specialized for Ca²⁺ cycling in excitation–contraction coupling",
+      "Depolarization → T-tubule → RyR opens → Ca²⁺ release → troponin C binding → contraction",
+      "SERCA returns Ca²⁺ to SR → relaxation; requires ATP",
+      "Malignant hyperthermia = RyR1 leak; treat dantrolene (blocks RyR Ca²⁺ release)",
+      "vs smooth ER — general lipid/steroid/detox; SR is muscle-specific Ca²⁺ store",
+      "vs rough ER — no ribosomes; not secretory protein factory",
+    ],
+    distinguishFrom: [
+      "Smooth ER — general ER functions; sarcoplasmic reticulum is muscle-specialized SER",
+      "Rough ER — ribosome-studded protein synthesis",
+      "T-tubule — invagination of sarcolemma conducting action potential to SR",
+      "Mitochondria — ATP supply for SERCA and cross-bridge cycling",
+      "Terminal cisternae — expanded SR regions at triad/dyad, not the entire SR network",
+    ],
+    pediatrics:
+      "Congenital RyR1 disorders (central core disease, King-Denborough syndrome) present in childhood with hypotonia or MH susceptibility; dantrolene is critical if MH triggered perioperatively in any age group.",
   },
   {
     id: "secretory-granule",

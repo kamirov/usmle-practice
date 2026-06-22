@@ -2860,6 +2860,46 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
       "Familial hypercholesterolemia — defective LDL receptor endocytosis → ↑ serum LDL from birth.",
   },
   {
+    id: "transcytosis",
+    name: "Transcytosis",
+    etymology:
+      "Latin trans = across + Greek kytos = cell + -osis = process — vesicular transport from one side of a cell to the other",
+    aliases: [
+      "transcytosis",
+      "transcytic",
+      "transcytic transport",
+      "transcellular transport",
+      "vesicular transcytosis",
+      "receptor-mediated transcytosis",
+    ],
+    definition:
+      "Transcellular vesicle-mediated transport in which material is endocytosed on one surface of a polarized cell, trafficked through the cytoplasm in vesicles, and exocytosed on the opposite surface — bypassing tight junction paracellular barrier.",
+    examples: [
+      "IgA transcytosis — polymeric IgA binds secretory component on basolateral epithelial surface → vesicular transport → release into lumen (gut, breast, respiratory mucosa)",
+      "Albumin and large proteins — capillary endothelium transcytosis in continuous capillaries",
+      "Maternal IgG — FcRn-mediated transcytosis across placental syncytiotrophoblast to fetus",
+      "Chylomicron remnant uptake and transcytosis across capillary endothelium to hepatocytes (related lipoprotein trafficking)",
+      "Blood-brain barrier — limited transcytosis; tight junctions restrict most paracellular passage",
+    ],
+    boardsPearls: [
+      "Transcytosis = endocytosis on one side + exocytosis on other — crosses whole cell",
+      "IgA secretory pathway — J chain dimer + secretory component → mucosal immunity",
+      "FcRn recycles IgG across placenta and intestinal epithelium — explains neonatal passive immunity",
+      "vs paracellular transport — through tight junctions between cells, not through cytoplasm",
+      "vs endocytosis alone — transcytosis completes journey to opposite membrane",
+      "vs exocytosis alone — transcytosis requires prior uptake from opposite side",
+    ],
+    distinguishFrom: [
+      "Endocytosis — internalization only; transcytosis continues to opposite surface",
+      "Exocytosis — secretion outward; transcytosis includes uptake from opposite pole first",
+      "Paracellular diffusion — between cells through junctions; transcytosis is transcellular",
+      "Receptor-mediated endocytosis — uptake mechanism; transcytosis is the full transcellular route",
+      "Pinocytosis — fluid uptake; may participate in transcytosis but term describes full crossing",
+    ],
+    pediatrics:
+      "Neonatal immunity depends on FcRn-mediated IgG transcytosis across placenta (third trimester) and later gut — breast milk secretory IgA uses epithelial transcytosis for mucosal protection.",
+  },
+  {
     id: "selective-permeability",
     name: "Selective Permeability",
     etymology:
@@ -2912,6 +2952,46 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
     ],
     pediatrics:
       "Neonatal skin has higher permeability to topical agents and water loss (TEWL). Cystic fibrosis alters epithelial ion and water permeability from birth. Congenital nephrotic syndrome reflects loss of glomerular selective permeability to protein.",
+  },
+  {
+    id: "osmosis",
+    name: "Osmosis",
+    etymology: "Greek osmos = push/thrust + -osis = process — net movement of solvent across a membrane",
+    aliases: [
+      "osmosis",
+      "osmotic",
+      "osmotic movement",
+      "osmotic water movement",
+      "net osmosis",
+    ],
+    definition:
+      "Passive net movement of water across a selectively permeable membrane from a region of lower solute concentration (higher water concentration) to higher solute concentration (lower water concentration) until osmotic equilibrium.",
+    examples: [
+      "RBC in hypotonic saline — water influx → cell swelling and hemolysis",
+      "RBC in hypertonic saline — water efflux → crenation",
+      "Renal medullary hypertonicity — osmotic water reabsorption in collecting duct via aquaporins",
+      "SIADH — excess ADH → water retention → dilutional hyponatremia",
+      "Diabetes insipidus — impaired ADH effect → excessive free water loss → hypernatremia",
+      "IV hypotonic fluids in patient unable to excrete free water — cellular edema, cerebral swelling",
+    ],
+    boardsPearls: [
+      "Osmosis = water moves toward higher osmolarity (more solute, less free water)",
+      "Tonicity depends on nonpenetrating solutes — urea crosses membrane so does not contribute to tonicity",
+      "Hypotonic → cell swells; hypertonic → cell shrinks (for cells with intact membranes)",
+      "Osmotic diuretics (mannitol) — nonreabsorbed solute in tubule → ↑ tubular osmolarity → water diuresis",
+      "vs diffusion — osmosis is specifically water movement; solutes may diffuse separately",
+      "vs active transport — osmosis is passive, driven by water potential gradient",
+    ],
+    distinguishFrom: [
+      "Simple diffusion — solute movement down concentration gradient; osmosis is water-specific",
+      "Facilitated diffusion — carrier-mediated solute transport; not bulk water osmosis",
+      "Active transport — ATP-driven movement against gradient",
+      "Osmolarity — concentration measure; osmosis is the resulting water flux",
+      "Dialysis — diffusion and ultrafiltration across artificial membrane; related but not synonymous",
+      "Selective permeability — membrane property enabling osmosis; osmosis is the water flux process",
+    ],
+    pediatrics:
+      "Infants have higher total body water and lower renal concentrating ability — hypotonic dehydration and hyponatremia from inappropriate hypotonic IV fluids or water intoxication are pediatric risks. SIADH occurs in children with CNS infection or postoperative states.",
   },
   {
     id: "cotransporter",
@@ -3024,6 +3104,10 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
       "increased receptor expression",
       "receptor upregulation",
       "receptor up-regulation",
+      "upregulating",
+      "upregulating receptors",
+      "receptor upregulating",
+      "upregulating (receptors)",
     ],
     definition:
       "Regulatory increase in the amount or functional responsiveness of a protein, receptor, enzyme, or gene product — compensatory (replacing lost activity), sensitizing (amplifying weak signals), or adaptive (chronic stimulus response).",
@@ -3074,6 +3158,10 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
       "receptor downregulation",
       "receptor down-regulation",
       "receptor desensitization",
+      "downregulating",
+      "downregulating receptors",
+      "receptor downregulating",
+      "downregulating (receptors)",
     ],
     definition:
       "Regulatory decrease in receptor number, enzyme expression, or signaling responsiveness — commonly via receptor internalization, degradation, reduced transcription, or desensitization after chronic agonist exposure or negative feedback.",
@@ -4455,6 +4543,140 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
     ],
     pediatrics:
       "Achondroplasia presents at birth with rhizomelic shortening and macrocephaly. Thanatophoric dysplasia is a lethal neonatal FGFR3 GOF dysplasia. MEN2 RET GOF warrants early genetic testing and thyroidectomy in at-risk children. Liddle syndrome can present in childhood with hypertension and hypokalemia mimicking hyperaldosteronism.",
+  },
+  {
+    id: "receptor-overexpression",
+    name: "Receptor Overexpression",
+    etymology:
+      "Latin super = above + expressio = pressing out + receptor = that which receives — abnormally increased receptor protein abundance on the cell surface or in tissue",
+    aliases: [
+      "receptor overexpression",
+      "receptor overexpressions",
+      "overexpressed receptor",
+      "overexpressed receptors",
+      "receptor overexpression mutation",
+      "increased receptor density",
+      "increased receptor number",
+      "receptor amplification",
+      "her2 overexpression",
+      "egfr overexpression",
+    ],
+    definition:
+      "Pathologic or therapeutic-relevant increase in receptor quantity per cell or in tissue — from gene amplification, translocation-driven transcription, or chronic upregulation — amplifying ligand signaling without necessarily changing receptor intrinsic activity (distinct from gain-of-function point mutations).",
+    examples: [
+      "HER2 (ERBB2) amplification/overexpression in breast cancer — trastuzumab target",
+      "EGFR overexpression or activating mutations in lung adenocarcinoma — EGFR-TKI sensitivity context",
+      "t(14;18) IGH-BCL2 → BCL2 overexpression in follicular lymphoma (anti-apoptotic, not classic surface receptor but boards 'overexpression' vignette)",
+      "β-receptor upregulation after chronic β-blockade — functional sensitization overlap",
+      "LDL receptor upregulation with statins — therapeutic intentional overexpression on hepatocytes",
+      "Progesterone receptor overexpression guides endocrine therapy in breast cancer",
+    ],
+    boardsPearls: [
+      "Overexpression = more receptor protein; gain-of-function = altered receptor activity — can coexist (e.g., EGFR)",
+      "HER2+ breast cancer — gene amplification → overexpression → trastuzumab",
+      "vs upregulates — regulatory ↑ expression can be physiologic/compensatory; overexpression often oncogenic or drug-target context",
+      "vs loss-of-function — reduced activity; opposite therapeutic axis",
+      "FISH/immunohistochemistry detect HER2 overexpression/amplification",
+      "Chronic antagonist → receptor upregulation (tardive dyskinesia) is related but not same as oncogenic overexpression",
+    ],
+    distinguishFrom: [
+      "Gain-of-function mutation — constitutive or enhanced signaling with normal receptor number",
+      "Upregulates — broader regulatory increase in expression; may be compensatory not neoplastic",
+      "Receptor hypersensitivity — increased response without more receptors",
+      "Ligand overproduction — more ligand, not more receptor (e.g., ectopic ACTH)",
+      "Gene duplication vs amplification — both can raise dosage; boards often say 'overexpression' on IHC",
+    ],
+    pediatrics:
+      "Neuroblastoma MYCN amplification is oncogene dosage increase analogous to receptor/ligand pathway amplification. ALK overexpression/fusions occur in some pediatric lung and neural tumors — targeted therapy context.",
+  },
+  {
+    id: "heterodimer",
+    name: "Heterodimer",
+    etymology: "Greek heteros = different + dimer = two units — functional complex of two nonidentical subunits",
+    aliases: [
+      "heterodimer",
+      "heterodimers",
+      "heterodimeric",
+      "heterodimeric complex",
+      "heterodimeric complexes",
+      "heterodimeric protein",
+      "heterodimeric proteins",
+      "heterodimeric receptor",
+      "heterodimeric receptors",
+    ],
+    definition:
+      "Molecular complex composed of two different polypeptide subunits that assemble to form an active receptor, transcription factor, or structural protein — distinct from homodimers of identical subunits.",
+    examples: [
+      "NF-κB p50/p65 (RelA) heterodimer — classic inflammatory transcription factor released from IκB",
+      "MHC class II — α and β chain heterodimer presents exogenous peptide to CD4⁺ T cells",
+      "MHC class I — heavy chain + β2-microglobulin heterodimer presents endogenous peptide to CD8⁺ T cells",
+      "Integrins — α and β subunit heterodimers mediate cell–matrix adhesion",
+      "GABA-B receptor — GABA-B1/GABA-B2 heterodimeric Gi-coupled receptor",
+      "IFN-γ receptor — IFNGR1/IFNGR2 heterodimer signals via JAK1/JAK2 → STAT1",
+      "Hemoglobin — αβ heterodimers assemble into α2β2 tetramer",
+      "Activin/inhibin — inhibin β subunits form homo- or heterodimers with distinct activities",
+    ],
+    boardsPearls: [
+      "Heterodimer = two different subunits; homodimer = two identical subunits",
+      "NF-κB resting complex uses p50/p65 heterodimer bound to IκB",
+      "MHC II α/β heterodimer — CD4 T-cell recognition",
+      "β2-microglobulin pairs with MHC I heavy chain — not a homodimer",
+      "Some receptors require heterodimerization for signaling (GABA-B, IFN-γR)",
+      "vs monomer — single chain active alone (some GPCRs)",
+    ],
+    distinguishFrom: [
+      "Homodimer — two identical subunits (e.g., STAT homodimers, growth hormone receptor signaling pairs)",
+      "Tetramer — four subunits (hemoglobin α2β2 built from heterodimer pairs)",
+      "Monomer — single polypeptide functional unit",
+      "Multimer — general term; heterodimer specifies two different chains",
+      "Dimerization domain — structural motif enabling dimer formation, not the dimer itself",
+    ],
+    pediatrics:
+      "MHC class I and II heterodimers are central to thymic selection and adaptive immunity tested from infancy; bare lymphocyte syndrome (MHC II deficiency) causes severe combined immunodeficiency from failed α/β heterodimer expression.",
+  },
+  {
+    id: "decoy-receptor",
+    name: "Decoy Receptor",
+    etymology:
+      "Latin decipere = to deceive + receptor = that which receives — soluble or membrane protein that binds ligand without productive signaling, competitively inhibiting pathway",
+    aliases: [
+      "decoy receptor",
+      "decoy receptors",
+      "decoy receptor protein",
+      "decoy receptor proteins",
+      "soluble decoy receptor",
+      "soluble decoy receptors",
+      "pseudo receptor",
+      "pseudo receptors",
+      "ligand trap",
+      "ligand traps",
+    ],
+    definition:
+      "Receptor or receptor-like molecule that sequesters extracellular ligand and prevents it from engaging functional signaling receptors — endogenous regulatory mechanism or therapeutic strategy to dampen cytokine/growth factor activity.",
+    examples: [
+      "Osteoprotegerin (OPG) — soluble decoy for RANKL; prevents RANK activation on osteoclast precursors",
+      "Etanercept — TNF receptor extracellular domain–IgG Fc fusion; binds TNF-α and lymphotoxin as pharmacologic decoy (-cept suffix)",
+      "VEGF trap (aflibercept) — decoy receptor for VEGF in neovascular AMD",
+      "Relative OPG deficiency or ↑ RANKL — loss of decoy balance → bone resorption",
+      "Some viruses encode decoy receptors for cytokines to evade host immunity",
+    ],
+    boardsPearls: [
+      "Decoy receptor binds ligand but does not signal — competitive inhibition",
+      "OPG decoys RANKL; denosumab mimics by blocking RANKL directly",
+      "Etanercept = decoy receptor fusion protein; infliximab = anti-TNF mAb (not decoy)",
+      "-cept suffix often marks receptor fusion decoy biologics (etanercept, aflibercept)",
+      "vs neutralizing antibody — mAb binds ligand; decoy is receptor ectodomain trap",
+      "vs antagonist — blocks receptor without being soluble ligand sink (e.g., competitive antagonist at same receptor)",
+    ],
+    distinguishFrom: [
+      "Neutralizing monoclonal antibody — binds ligand directly; not receptor ectodomain",
+      "Receptor antagonist — occupies active receptor site without activation",
+      "Osteoprotegerin — specific decoy for RANKL; example of decoy receptor class",
+      "Soluble receptor without signaling — functional decoy; distinguish from shed signaling receptor",
+      "Competitive inhibitor — small molecule at enzyme/receptor, not decoy trap paradigm",
+    ],
+    pediatrics:
+      "Juvenile Paget disease from OPG (decoy receptor) mutations shows unchecked RANKL signaling. Etanercept and other biologics require TB screening before use in children with JIA — decoy/TNF blockade increases infection risk.",
   },
   {
     id: "class-switching",
@@ -7957,6 +8179,49 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
       "At birth, aeration of alveoli and fall in pulmonary vascular resistance establish pulmonary V/Q matching; persistent fetal circulation (PPHN) is failed transition with continued shunting and severe hypoxemia. Neonatal RDS and atelectasis impair matching until surfactant and recruitment restore ventilation to perfused units.",
   },
   {
+    id: "aeration",
+    name: "Aeration",
+    etymology: "Latin aer = air + -atio = process — filling of lung alveoli with air and establishment of gas exchange surface",
+    aliases: [
+      "aeration",
+      "aerations",
+      "pulmonary aeration",
+      "alveolar aeration",
+      "lung aeration",
+      "aerated lung",
+      "aerated lungs",
+      "alveolar recruitment",
+      "lung recruitment",
+    ],
+    definition:
+      "Process by which alveoli become filled with air rather than fluid or collapsed tissue — establishing ventilated lung units for gas exchange — critically occurring at birth and maintained by surfactant, patency of airways, and adequate transpulmonary pressure.",
+    examples: [
+      "First breath at birth — aeration expands fluid-filled fetal alveoli; surfactant reduces surface tension",
+      "Loss of aeration — atelectasis from mucus plugging, airway obstruction, or compression",
+      "Pneumonia — consolidated alveoli are not aerated despite perfusion (low V/Q)",
+      "CF — thick mucus impairs aeration of peripheral airways → hypoxemia and infection",
+      "PEEP and recruitment maneuvers in ARDS — reopen collapsed alveoli to restore aeration",
+      "Chest physiotherapy and bronchodilators improve aeration in obstructive lung disease",
+    ],
+    boardsPearls: [
+      "Aeration = alveoli filled with air; atelectasis = loss of aeration",
+      "Birth transition — first breaths aerate lungs and ↓ PVR",
+      "Surfactant deficiency in RDS prevents stable aeration → atelectasis",
+      "Consolidation (pneumonia) — alveoli filled with exudate, not air",
+      "vs perfusion — aeration is ventilation side; V/Q matching needs both",
+      "Neonatal resuscitation — positive-pressure ventilation promotes aeration",
+    ],
+    distinguishFrom: [
+      "Ventilation — mechanical movement of gas; aeration specifically alveolar gas filling",
+      "Perfusion — blood flow to alveoli; separate from whether alveolus is air-filled",
+      "Oxygenation — depends on aeration and perfusion together (V/Q)",
+      "Pulmonary edema — alveoli filled with fluid, not air",
+      "Consolidation — solid tissue/fluid replacing aerated alveolar space",
+    ],
+    pediatrics:
+      "Neonatal RDS reflects failed stable aeration without adequate surfactant; CPAP and surfactant therapy promote alveolar recruitment. CF infants and children lose peripheral aeration from mucus plugging — hypoxemia and recurrent infection follow.",
+  },
+  {
     id: "v-q-mismatch",
     name: "V/Q Mismatch",
     etymology: "V = ventilation + / + Q = perfusion (blood flow) + English mismatch = improper pairing",
@@ -9532,6 +9797,8 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
       "reward pathway",
       "reward pathways",
       "mesolimbic system",
+      "mesolimbic",
+      "mesolimbics",
     ],
     definition:
       "Dopaminergic projection from the ventral tegmental area (VTA) in the midbrain to limbic targets — especially the nucleus accumbens (ventral striatum), amygdala, and hippocampus — mediating reward, motivation, reinforcement, and positive symptoms of psychosis when dysregulated.",
@@ -9560,6 +9827,50 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
     ],
     pediatrics:
       "Adolescent substance use strongly activates mesolimbic reward pathways; antipsychotics used in early-onset psychosis block mesolimbic D₂ with same EPS and metabolic risks as in adults.",
+  },
+  {
+    id: "mesocortical-pathway",
+    name: "Mesocortical Pathway",
+    etymology:
+      "Greek mesos = middle + Latin cortex = bark/rind + Latin via = way — midbrain dopamine projection to prefrontal cortex",
+    aliases: [
+      "mesocortical pathway",
+      "mesocortical pathways",
+      "mesocortical tract",
+      "mesocortical tracts",
+      "mesocortical dopamine pathway",
+      "mesocortical dopaminergic pathway",
+      "vta to prefrontal cortex pathway",
+      "vta-prefrontal cortex pathway",
+      "mesocortical system",
+      "mesocortical",
+      "mesocorticals",
+    ],
+    definition:
+      "Dopaminergic projection from the ventral tegmental area (VTA) to prefrontal and cingulate cortical regions — modulates executive function, working memory, motivation, and affect; hypoactivity implicated in negative and cognitive symptoms of schizophrenia.",
+    examples: [
+      "Schizophrenia negative symptoms — ↓ mesocortical dopamine → flat affect, avolition, cognitive deficits",
+      "Antipsychotic D₂ blockade in mesocortical pathway may worsen negative/cognitive symptoms",
+      "ADHD and prefrontal dysfunction — mesocortical dopamine supports attention and executive control",
+      "Chronic stress and glucocorticoids — can reduce prefrontal dopamine signaling",
+    ],
+    boardsPearls: [
+      "Mesocortical = VTA → prefrontal cortex (cognition/negative symptoms pathway)",
+      "↓ mesocortical dopamine → negative symptoms of schizophrenia (avolition, flat affect, alogia)",
+      "Antipsychotic D₂ blockade here may worsen negative symptoms (unlike mesolimbic blockade helping psychosis)",
+      "vs mesolimbic — nucleus accumbens target; reward and positive psychotic symptoms",
+      "vs nigrostriatal — dorsal striatum; motor; D₂ block → EPS",
+      "vs tuberoinfundibular — prolactin inhibition; D₂ block → hyperprolactinemia",
+    ],
+    distinguishFrom: [
+      "Mesolimbic pathway — VTA → nucleus accumbens; reward and positive psychosis",
+      "Nigrostriatal pathway — substantia nigra → striatum; motor dopamine",
+      "Tuberoinfundibular pathway — hypothalamic dopamine inhibiting prolactin",
+      "Prefrontal cortex — cortical target region, not the dopamine tract itself",
+      "Locus coeruleus–prefrontal norepinephrine — arousal/attention; not mesocortical dopamine",
+    ],
+    pediatrics:
+      "Early-onset schizophrenia shows negative and cognitive symptoms that correlate with prefrontal/mesocortical dysfunction; stimulants in ADHD augment mesocortical dopamine indirectly — distinct mechanism from antipsychotic D₂ blockade.",
   },
   {
     id: "tuberoinfundibular-pathway",
@@ -11770,6 +12081,51 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
     ],
     pediatrics:
       "Rising type 2 diabetes in obese adolescents reflects early insulin resistance and β-cell stress — screen with fasting glucose or HbA1c when BMI ≥85th percentile plus risk factors. Acanthosis nigricans in children is an early cutaneous clue. Maturity-onset diabetes of the young (MODY) is monogenic, not classic obesity-related insulin resistance.",
+  },
+  {
+    id: "aromatization",
+    name: "Aromatization",
+    etymology:
+      "Latin aroma = spice/sweet odor + -ization = process — enzymatic conversion of androgenic C19 steroids to aromatic-ring C18 estrogens",
+    aliases: [
+      "aromatization",
+      "aromatizations",
+      "aromatized",
+      "aromatized androgen",
+      "aromatized androgens",
+      "aromatized testosterone",
+      "androgen aromatization",
+      "androgen aromatizations",
+      "peripheral aromatization",
+      "estrogen aromatization",
+    ],
+    definition:
+      "Cytochrome P450 aromatase (CYP19A1)–catalyzed conversion of C19 androgens (testosterone, androstenedione) to C18 estrogens (estradiol, estrone) — essential for ovarian estrogen synthesis, postmenopausal adipose estrogen, and peripheral estrogen in males.",
+    examples: [
+      "Ovarian two-cell model — theca (LH) produces androgens → granulosa (FSH) aromatizes to estradiol",
+      "Adipose tissue aromatization — main estrogen source after menopause; ↑ in obesity",
+      "Complete androgen insensitivity — testicular testosterone aromatized to estrogen → breast development despite AR resistance",
+      "Aromatase inhibitors (anastrozole, letrozole) block aromatization in ER+ breast cancer",
+      "Placental aromatization — protects female fetus from maternal androgens; deficiency causes virilization",
+      "Gynecomastia — peripheral aromatization of testosterone to estradiol (liver disease, drugs, obesity)",
+    ],
+    boardsPearls: [
+      "Aromatase (CYP19A1) converts androgens → estrogens",
+      "Aromatized = androgen converted to estrogen via aromatase",
+      "Postmenopausal estrogen from adipose aromatization",
+      "Aromatase inhibitors ↓ estrogen synthesis; tamoxifen blocks estrogen receptor (different target)",
+      "vs 5α-reductase — makes DHT (more androgenic), not estrogen",
+      "Exemestane — steroidal suicide aromatase inhibitor",
+    ],
+    distinguishFrom: [
+      "Aromatase — enzyme catalyzing aromatization; aromatized describes product state",
+      "5α-reductase pathway — testosterone → DHT, androgenic not estrogenic",
+      "Estrogen receptor modulation — tamoxifen/SERMs; downstream of synthesis",
+      "Sulfatase/conjugation — estrogen activation/inactivation steps, not aromatization",
+      "Hydroxylation — steroidogenic steps in adrenal/ovarian pathways before aromatization",
+    ],
+    pediatrics:
+      "Aromatase excess syndrome causes precocious puberty from peripheral estrogen overproduction. Aromatase deficiency can virilize 46,XX infants and cause maternal virilization during pregnancy.",
   },
   {
     id: "hyperandrogenism",

@@ -295,6 +295,8 @@ export const CONDITIONS: ConditionEntry[] = [
       "coronary artery spasm",
       "coronary artery spasms",
       "coronary spasm angina",
+      "vasospastic prinzmetal angina",
+      "prinzmetal vasospastic angina",
     ],
     definition:
       "Chest pain from episodic coronary artery vasospasm causing transient myocardial ischemia — typically at rest with transient ST-segment elevation that resolves when spasm subsides; coronary angiography often shows normal or nonobstructive arteries.",
@@ -13534,6 +13536,79 @@ export const CONDITIONS: ConditionEntry[] = [
       "Meconium ileus in newborn is virtually pathognomonic; newborn screen increasingly detects CF before symptoms.",
   },
   {
+    id: "cystic-fibrosis-related-diabetes",
+    name: "Cystic Fibrosis-Related Diabetes",
+    etymology:
+      "Greek kystis = bladder/sac + Latin fibra = fiber + Latin re = again + Greek diabainein = to pass through — diabetes mellitus complicating cystic fibrosis from progressive pancreatic endocrine failure",
+    aliases: [
+      "cystic fibrosis-related diabetes",
+      "cystic fibrosis related diabetes",
+      "cf-related diabetes",
+      "cf related diabetes",
+      "cfrd",
+      "cystic fibrosis diabetes",
+      "cystic fibrosis diabetes mellitus",
+      "diabetes in cystic fibrosis",
+      "cf diabetes",
+    ],
+    definition:
+      "Diabetes mellitus arising in patients with cystic fibrosis — from progressive fibrosis and destruction of pancreatic islets on a background of exocrine insufficiency and insulin resistance — distinct from type 1 and type 2 diabetes in pathophysiology and management.",
+    pathophysiology:
+      "Chronic CFTR dysfunction → inspissated secretions and inflammation → pancreatic fibrosis destroys β-cell mass; concurrent insulin resistance from inflammation, glucocorticoids, and chronic infection → progressive hyperglycemia; may present with modest fasting glucose but abnormal OGTT.",
+    classicPresentation: [
+      "Adolescent or adult with known CF developing polyuria, weight loss, or poor growth",
+      "Declining pulmonary function or during corticosteroid bursts",
+      "Often detected on annual OGTT screening before symptomatic",
+      "May lack classic type 1 autoimmunity or type 2 obesity phenotype",
+    ],
+    keyFindings: [
+      "Hyperglycemia with prior CF diagnosis and pancreatic insufficiency",
+      "Low or declining fecal elastase; history of steatorrhea",
+      "No anti-GAD/IA-2 pattern typical of type 1 (usually)",
+    ],
+    keyLabs: [
+      "Annual OGTT recommended in CF patients ≥10 years — 2-hour glucose ≥200 mg/dL diagnostic",
+      "HbA1c may underestimate hyperglycemia in CF (falsely low with anemia, inflammation)",
+      "Fasting glucose ≥126 mg/dL also diagnostic but OGTT more sensitive early CFRD",
+      "C-peptide variable — reflects residual endogenous insulin, often insufficient",
+    ],
+    associations: [
+      "CFTR mutations with severe pancreatic insufficiency",
+      "Chronic glucocorticoid use for lung disease",
+      "Worsening nutritional status and pulmonary decline",
+      "Liver disease and portopulmonary hypertension in advanced CF",
+    ],
+    complications: [
+      "Accelerated decline in lung function and survival",
+      "Poor weight gain and increased infection risk",
+      "Microvascular complications if untreated (retinopathy, neuropathy)",
+      "Perioperative hyperglycemia with transplant or surgery",
+    ],
+    distinguishFrom: [
+      "Type 1 diabetes — autoimmune β-cell destruction without CF; anti-islet antibodies",
+      "Type 2 diabetes — obesity/metabolic syndrome without CF pancreatic fibrosis",
+      "Steroid-induced hyperglycemia alone — may be transient; CFRD is persistent",
+      "Pancreatitis-related diabetes without CF — no CFTR disease",
+    ],
+    treatment: [
+      "Insulin is mainstay when CFRD diagnosed — improves nutrition and lung outcomes",
+      "Continue pancreatic enzyme replacement for exocrine insufficiency",
+      "CFTR modulators may slow but not eliminate CFRD risk",
+      "Monitor with annual OGTT; do not rely on A1c alone",
+      "Coordinate with CF team — insulin dosing during illness and steroids",
+    ],
+    boardsPearls: [
+      "CFRD = diabetes from pancreatic fibrosis + insulin resistance in CF",
+      "Screen with annual OGTT from age ≥10 — A1c can be misleading",
+      "Insulin therapy improves pulmonary and nutritional outcomes",
+      "Not classic type 1 or 2 — think CF pancreas destruction",
+      "Prevalence ↑ with age — common in adults with CF",
+      "vs transient steroid hyperglycemia — CFRD persists",
+    ],
+    pediatrics:
+      "Screen annually with OGTT starting at age 10 in CF patients; early CFRD may present only on postload glucose. Insulin initiation supports growth and lung function — coordinate with CF center. MODY and type 1 must be excluded if atypical.",
+  },
+  {
     id: "primary-ciliary-dyskinesia",
     name: "Primary Ciliary Dyskinesia",
     etymology:
@@ -19319,6 +19394,120 @@ export const CONDITIONS: ConditionEntry[] = [
       "Diagnosis requires ≥6 months of symptoms including ≥1 month active phase",
       "Positive symptoms respond better to antipsychotics than negative",
       "Typical antipsychotics: D2 blockade → extrapyramidal symptoms",
+    ],
+  },
+  {
+    id: "schizophreniform-disorder",
+    name: "Schizophreniform Disorder",
+    etymology:
+      "schizo- = split + -form = form/shape — psychotic syndrome resembling schizophrenia but time-limited",
+    aliases: [
+      "schizophreniform",
+      "schizophreniform disorder",
+      "schizophreniform disorders",
+      "schizophreniform psychosis",
+    ],
+    definition:
+      "Psychotic disorder meeting schizophrenia symptom criteria (delusions, hallucinations, disorganized speech/behavior, negative symptoms) with total duration ≥1 month but <6 months, including prodromal, active, and residual phases.",
+    pathophysiology:
+      "Same dopaminergic and glutamatergic dysregulation proposed for schizophrenia; may represent prodrome or time-limited variant that resolves or progresses to chronic schizophrenia.",
+    classicPresentation: [
+      "Young adult with acute psychosis identical to schizophrenia",
+      "Functional decline during active phase",
+      "Symptoms resolve within 6 months or evolve into schizophrenia",
+    ],
+    keyFindings: [
+      "Psychotic symptoms ≥1 month and <6 months total duration",
+      "Meets Criterion A symptom cluster for schizophrenia during active phase",
+      "Significant social/occupational dysfunction during episode",
+    ],
+    associations: [
+      "Family history of schizophrenia spectrum disorders",
+      "Cannabis and other substance use",
+      "Stressful precipitants",
+    ],
+    complications: [
+      "Progression to schizophrenia or schizoaffective disorder (~⅔)",
+      "Suicide during acute psychosis",
+      "Substance abuse",
+    ],
+    distinguishFrom: [
+      "Schizophrenia — total duration ≥6 months",
+      "Brief psychotic disorder — <1 month with full return to baseline",
+      "Schizoaffective disorder — concurrent major mood episode with psychosis",
+      "Substance-induced psychotic disorder — temporal link to intoxication/withdrawal",
+    ],
+    treatment: [
+      "Antipsychotics (e.g., risperidone, olanzapine) during active phase",
+      "Psychoeducation and relapse monitoring if symptoms remit",
+    ],
+    boardsPearls: [
+      "Schizophreniform = schizophrenia criteria but 1–6 months total duration",
+      "If symptoms persist ≥6 months → reclassify as schizophrenia",
+      "Good prognostic sign if full remission within 6 months",
+      "vs brief psychotic disorder — schizophreniform lasts 1–6 months; brief <1 month",
+      "vs schizoaffective — no independent major mood episode concurrent with psychosis",
+    ],
+  },
+  {
+    id: "schizoaffective-disorder",
+    name: "Schizoaffective Disorder",
+    etymology:
+      "schizo- = split + affective = mood-related — psychotic disorder with concurrent and independent mood episodes",
+    aliases: [
+      "schizoaffective",
+      "schizoaffective disorder",
+      "schizoaffective disorders",
+      "schizoaffective psychosis",
+      "schizoaffective disorder bipolar type",
+      "schizoaffective disorder depressive type",
+      "schizoaffective bipolar type",
+      "schizoaffective depressive type",
+    ],
+    definition:
+      "Psychotic disorder with uninterrupted illness featuring schizophrenia-level psychosis plus a major mood episode (manic or depressive) present for the majority of total illness duration, with psychotic symptoms for ≥2 weeks in the absence of a major mood episode.",
+    pathophysiology:
+      "Overlap of schizophrenia spectrum dopaminergic/glutamatergic dysregulation (mesolimbic ↑, mesocortical ↓) with mood disorder circuitry (limbic–prefrontal, monoaminergic); exact boundary with schizophrenia and bipolar disorder with psychotic features remains debated.",
+    classicPresentation: [
+      "Young adult with hallucinations, delusions, and concurrent manic or depressive episodes",
+      "Periods of psychosis lasting ≥2 weeks without prominent mood symptoms",
+      "Mood symptoms present for most of the illness course",
+    ],
+    keyFindings: [
+      "Criterion A schizophrenia symptoms during active phase",
+      "Major depressive or manic episode concurrent with psychotic illness",
+      "Psychosis ≥2 weeks without major mood episode",
+      "Mood symptoms for majority of active + residual illness duration",
+    ],
+    associations: [
+      "Family history of schizophrenia or mood disorders",
+      "Substance use",
+      "Suicide risk elevated vs schizophrenia alone",
+    ],
+    complications: [
+      "Suicide",
+      "Substance abuse",
+      "Functional impairment",
+      "Treatment nonadherence",
+    ],
+    distinguishFrom: [
+      "Schizophrenia — psychosis without mood episode for majority of illness; mood episodes brief if present",
+      "Bipolar disorder with psychotic features — psychosis only during mood episodes",
+      "Major depressive disorder with psychotic features — psychosis only during depression",
+      "Schizophreniform disorder — duration <6 months without schizoaffective mood criteria",
+      "Substance-induced psychotic disorder",
+    ],
+    treatment: [
+      "Antipsychotics for psychosis",
+      "Mood stabilizers (lithium, valproate) or antidepressants depending on bipolar vs depressive type",
+      "Combined pharmacotherapy often required",
+    ],
+    boardsPearls: [
+      "Schizoaffective = psychosis + mood episode for most of illness + psychosis ≥2 weeks without mood symptoms",
+      "Bipolar type — manic episode (± depression); depressive type — major depressive episodes only",
+      "vs schizophrenia — mood symptoms dominate most of course in schizoaffective",
+      "vs bipolar with psychosis — schizoaffective requires psychosis independent of mood for ≥2 weeks",
+      "Treatment: antipsychotic + mood stabilizer (bipolar type) or antipsychotic + antidepressant (depressive type, cautiously)",
     ],
   },
   {
@@ -40156,6 +40345,76 @@ export const CONDITIONS: ConditionEntry[] = [
     ],
     pediatrics:
       "Present at birth; evaluate foramen magnum stenosis and hydrocephalus in infancy — apnea and motor delay warrant urgent neuroimaging. De novo mutations common — parents often unaffected. Homozygous achondroplasia is lethal; genetic counseling essential.",
+  },
+  {
+    id: "slipped-capital-femoral-epiphysis",
+    name: "Slipped Capital Femoral Epiphysis",
+    etymology:
+      "English slipped = displaced + Latin capital = head + femoral + Greek epi = upon + physis = growth — posterior-inferior slip of femoral head epiphysis on femoral neck through growth plate",
+    aliases: [
+      "slipped capital femoral epiphysis",
+      "slipped capital femoral epiphyses",
+      "scfe",
+      "scfes",
+      "slipped upper femoral epiphysis",
+      "slipped upper femoral epiphyses",
+      "sufe",
+      "sufes",
+      "femoral epiphysis slip",
+      "femoral epiphysis slips",
+      "coxa vara adolescentum",
+    ],
+    definition:
+      "Adolescent orthopedic disorder in which the capital femoral epiphysis displaces posteriorly and inferiorly relative to the femoral neck through the proximal femoral growth plate (physis) — most common hip disorder in adolescence.",
+    pathophysiology:
+      "Weakened perichondral ring and increased shear forces during growth spurt (often with obesity) → epiphysis slips on metaphysis at physeal plane; displacement risks femoral head avascular necrosis and chondrolysis if untreated or unstable.",
+    classicPresentation: [
+      "Overweight adolescent (often 10–16 years) with hip, groin, thigh, or knee pain and limp",
+      "Antalgic gait; limited internal rotation, abduction, and flexion of affected hip",
+      "Hip held in external rotation when flexed",
+      "Insidious (chronic) or acute-on-chronic presentation after minor trauma",
+    ],
+    keyFindings: [
+      "AP and frog-leg lateral hip radiographs — widened/physis irregularity; Klein line does not intersect femoral head (AP view)",
+      "Posterior-inferior displacement of epiphysis on lateral view",
+      "Stable vs unstable slip (unable to bear weight) — unstable carries higher AVN risk",
+      "Bilateral in ~20–40% — always examine and image both hips",
+    ],
+    associations: [
+      "Obesity — strongest risk factor",
+      "Male sex (though increasing in females)",
+      "Growth spurt during puberty",
+      "Hypothyroidism, panhypopituitarism, renal osteodystrophy, radiation therapy",
+    ],
+    complications: [
+      "Avascular necrosis of femoral head (especially unstable slips)",
+      "Chondrolysis — rapid cartilage loss",
+      "Femoroacetabular impingement and early osteoarthritis",
+      "Bilateral disease if contralateral hip not prophylactically stabilized when high risk",
+    ],
+    distinguishFrom: [
+      "Legg-Calvé-Perthes disease — younger child (4–10), AVN of epiphysis not physeal slip",
+      "Transient synovitis — younger, afebrile, self-limited; no slip on X-ray",
+      "Septic arthritis — fever, toxic, joint aspirate with pus",
+      "Hip fracture — trauma in osteoporotic or pathologic bone",
+      "Femoral neck stress fracture — different radiographic pattern",
+    ],
+    treatment: [
+      "Non-weight-bearing immediately; urgent orthopedic referral",
+      "In situ percutaneous pinning (single or double screw) for most stable slips",
+      "Prophylactic pinning of contralateral hip in high-risk patients (obesity, endocrine disease)",
+      "Open reduction for severe/unstable slips in specialized centers",
+    ],
+    boardsPearls: [
+      "SCFE — obese adolescent, hip/knee pain, limited internal rotation; Klein line sign on AP X-ray",
+      "Orthopedic emergency — pin in situ before further slip",
+      "Unstable slip (cannot bear weight) — high AVN risk",
+      "Always check contralateral hip — bilateral SCFE common",
+      "Knee pain may be only complaint — always examine hip",
+      "vs Perthes — younger age, different mechanism (AVN vs physeal slip)",
+    ],
+    pediatrics:
+      "Peak incidence during adolescent growth spurt; obesity epidemic has lowered average age. Endocrine workup (TSH, growth axis) if atypical age or bilateral disease. Avoid diagnostic delay — chronic slip still requires urgent stabilization.",
   },
   {
     id: "marfan-syndrome",

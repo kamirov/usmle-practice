@@ -3077,6 +3077,154 @@ export const MUSCULOSKELETAL: MusculoskeletalEntry[] = [
       "SCFE peak in obese adolescents during growth spurt — avoid weight-bearing until surgically stabilized. Perthes presents with painless or mildly painful limp. DDH screening (Ortolani/Barlow) evaluates femoral head coverage in infancy.",
   },
   {
+    id: "epiphysis",
+    name: "Epiphysis",
+    etymology: "Greek epi = upon + physis = growth — ossification center at the end of a long bone",
+    aliases: [
+      "epiphysis",
+      "epiphyses",
+      "epiphysial",
+      "epiphyseal bone",
+      "epiphyseal bones",
+      "secondary ossification center",
+      "secondary ossification centers",
+      "bone epiphysis",
+      "bone epiphyses",
+    ],
+    definition:
+      "Secondary ossification center of cancellous (trabecular) bone at the end of a growing long bone — separated from the metaphysis by the cartilaginous epiphyseal plate (physis) until skeletal maturity, when fusion leaves an epiphyseal line.",
+    anatomy:
+      "Articular cartilage covers the joint surface of the epiphysis; subchondral trabecular bone lies beneath. Proximal and distal epiphyses contribute to joint shape and longitudinal growth indirectly via the adjacent physis. Apophyses are traction epiphyses at tendon insertions (e.g., tibial tubercle, greater trochanter) — not primary length-growth centers.",
+    action: [
+      "Forms joint articulating surface with adjacent bone after endochondral ossification",
+      "Contributes to bone length indirectly through growth at adjacent physis",
+      "Trabecular architecture dissipates joint forces to metaphysis and diaphysis",
+      "Fuses with metaphysis at physeal closure — epiphyseal line remains radiographically",
+    ],
+    clinicalRelevance: [
+      "Legg-Calvé-Perthes — AVN of capital femoral epiphysis in child",
+      "SCFE — slip of capital femoral epiphysis on femoral neck",
+      "Salter-Harris type III and IV fractures involve epiphysis and joint",
+      "Osteochondritis dissecans — osteochondral fragment from epiphyseal subchondral bone",
+      "Epiphyseal dysplasias and rickets affect epiphyseal shape and mineralization",
+    ],
+    boardsPearls: [
+      "Epiphysis = secondary ossification center at bone end; growth plate (physis) lies between epiphysis and metaphysis",
+      "Salter-Harris III/IV — fracture through epiphysis into joint (intra-articular risk)",
+      "vs metaphysis — metaphysis is trabecular bone adjacent to physis toward shaft",
+      "vs apophysis — traction epiphysis at tendon insertion, not length-growth center",
+      "vs articular cartilage — hyaline cartilage on joint surface; epiphysis is underlying bone",
+    ],
+    distinguishFrom: [
+      "Metaphysis — trabecular bone between physis and diaphysis",
+      "Epiphyseal plate (physis) — cartilaginous growth plate between epiphysis and metaphysis",
+      "Diaphysis — shaft; primarily cortical bone",
+      "Apophysis — secondary center at tendon insertion (Osgood-Schlatter tibial tubercle)",
+      "Femoral head — anatomic structure including cartilage; epiphysis is ossification center within",
+    ],
+    pediatrics:
+      "Open epiphyses through adolescence — physeal injuries (Salter-Harris) more common than ligament tears in children. SCFE and Perthes both involve proximal femoral epiphysis. Premature physeal fusion after injury causes limb length discrepancy.",
+  },
+  {
+    id: "metaphysis",
+    name: "Metaphysis",
+    etymology:
+      "Greek meta = after/beyond + physis = growth — transitional trabecular bone region between physis and diaphysis",
+    aliases: [
+      "metaphysis",
+      "metaphyses",
+      "metaphyseal",
+      "metaphyseal bone",
+      "metaphyseal bones",
+      "metaphyseal region",
+      "metaphyseal regions",
+    ],
+    definition:
+      "Flared trabecular bone region between the epiphyseal growth plate (physis) and the cortical diaphysis (shaft) — site of active remodeling, vascular invasion from growth plate, and common location for pediatric bone pathology.",
+    anatomy:
+      "Primary spongiosa forms as hypertrophic chondrocyte matrix is invaded by metaphyseal capillaries and osteoblasts. Trabeculae oriented to transmit joint forces to diaphyseal cortex. Weakest junction in pediatric bone trauma often at physis or metaphyseal side of plate. Rich vascular supply — portal for hematogenous osteomyelitis in children.",
+    action: [
+      "Converts calcified cartilage columns from physis into trabecular bone (primary spongiosa)",
+      "Transmits epiphyseal joint forces to diaphyseal cortex",
+      "Active bone remodeling and modeling during growth",
+      "Appositional growth contributes to bone width at metaphyseal flares",
+    ],
+    clinicalRelevance: [
+      "Acute hematogenous osteomyelitis — metaphysis of long bones in children (slow-flow vessels)",
+      "Osteosarcoma — metaphysis of distal femur, proximal tibia, proximal humerus in adolescents",
+      "Rickets — widened, frayed metaphysis with cupping (rachitic rosary at costochondral metaphyses)",
+      "Salter-Harris type II — fracture through physis with metaphyseal triangular fragment (most common)",
+      "SCFE — slip plane at proximal femoral metaphysis/physis junction",
+      "Metaphyseal dysplasia and corner fractures in child abuse (metaphyseal corner/bucket-handle)",
+    ],
+    boardsPearls: [
+      "Metaphysis = trabecular bone between physis and diaphysis",
+      "Pediatric osteomyelitis localizes to metaphysis (end-arterial loops in growing bone)",
+      "Osteosarcoma — metaphyseal \"sunburst\" and Codman triangle on X-ray",
+      "Salter-Harris II — through physis + metaphyseal fragment (most common type)",
+      "vs epiphysis — epiphysis is ossification center on articular side of physis",
+      "vs diaphysis — shaft with thick cortical bone",
+    ],
+    distinguishFrom: [
+      "Epiphysis — secondary ossification center on joint side of physis",
+      "Epiphyseal plate (physis) — cartilaginous growth plate, not trabecular bone",
+      "Diaphysis — cortical bone shaft",
+      "Metaphyseal dysplasia — genetic category; metaphysis is anatomic region",
+      "Primary spongiosa — newly formed trabecular bone within metaphysis, not synonymous with whole metaphysis",
+    ],
+    pediatrics:
+      "Metaphysis is the weak link and infection portal in growing bone — always consider osteomyelitis with fever and focal bone tenderness in a child. Metaphyseal corner fractures suggest nonaccidental trauma. Osteosarcoma peak in adolescent growth spurt at metaphyseal sites.",
+  },
+  {
+    id: "apophysis",
+    name: "Apophysis",
+    etymology:
+      "Greek apo = away/from + physis = growth — secondary ossification center at tendon or ligament insertion site",
+    aliases: [
+      "apophysis",
+      "apophyses",
+      "apophyseal",
+      "traction epiphysis",
+      "traction epiphyses",
+      "apophyseal ossification center",
+      "apophyseal ossification centers",
+    ],
+    definition:
+      "Secondary ossification center that forms at a site of tendon or ligament attachment on a bone — undergoes endochondral ossification under traction stress but does not contribute to longitudinal limb length like the epiphyseal growth plate.",
+    anatomy:
+      "Separated from parent bone by a cartilaginous apophyseal physis until fusion in late adolescence. Examples: tibial tubercle (patellar tendon), calcaneal apophysis (Achilles), greater trochanter (gluteus medius/minimus), medial epicondyle (common flexor origin), iliac crest (abdominal muscles).",
+    action: [
+      "Provides osseous anchor for muscle and tendon attachment during growth",
+      "Apophyseal cartilage absorbs traction forces — weaker than tendon in adolescents",
+      "Fuses with parent bone at skeletal maturity",
+      "Does not primarily drive bone length — unlike epiphyseal physis",
+    ],
+    clinicalRelevance: [
+      "Osgood-Schlatter disease — tibial tubercle apophysitis in active adolescents",
+      "Sever disease — calcaneal apophysis traction injury",
+      "Little League elbow/shoulder — medial epicondyle or proximal humeral apophysis stress",
+      "Apophyseal avulsion fractures — sudden force exceeds apophyseal cartilage strength",
+      "Iselin disease — fifth metatarsal apophysis (peroneus brevis)",
+    ],
+    boardsPearls: [
+      "Apophysis = traction ossification center at tendon insertion; not length-growth epiphysis",
+      "Osgood-Schlatter — tibial tubercle apophysitis; painful bump below patella in teen athlete",
+      "Apophyseal injuries common in adolescents — cartilage fails before tendon",
+      "vs epiphysis — epiphysis at joint end drives length via growth plate",
+      "vs epiphyseal plate — length-growth physis between epiphysis and metaphysis",
+      "Avulsion fracture — fragment of apophysis pulled off by tendon force",
+    ],
+    distinguishFrom: [
+      "Epiphysis — articular-end ossification center with length-growth physis",
+      "Epiphyseal plate (physis) — longitudinal growth plate, not tendon insertion site",
+      "Enthesis — tendon/bone insertion interface; apophysis is the bony ossification center there",
+      "Apophysitis — inflammation of apophysis (clinical syndrome), not the anatomic structure itself",
+      "Sesamoid bone — embedded in tendon (patella, metatarsal), not traction apophysis off parent bone",
+    ],
+    pediatrics:
+      "Apophyseal disorders peak during growth spurts and repetitive sports loading. Osgood-Schlatter and Sever disease are self-limited with activity modification. Apophyseal avulsions may need fixation if significantly displaced.",
+  },
+  {
     id: "epiphyseal-plate",
     name: "Epiphyseal Plate",
     etymology:
@@ -3133,6 +3281,61 @@ export const MUSCULOSKELETAL: MusculoskeletalEntry[] = [
     ],
     pediatrics:
       "Salter-Harris fractures are the pediatric long-bone injury pattern — open physes through adolescence. SCFE occurs at proximal femoral physis. Vitamin D prevents rachitic widening of epiphyseal plates. Growth hormone deficiency causes delayed physeal closure and short stature.",
+  },
+  {
+    id: "salter-harris-classification",
+    name: "Salter-Harris Classification",
+    etymology:
+      "Named for Robert Salter and W. Robert Harris + Greek haris = grace/form — physeal fracture classification system",
+    aliases: [
+      "salter-harris",
+      "salter harris",
+      "salter-harris classification",
+      "salter-harris classifications",
+      "salter-harris fracture",
+      "salter-harris fractures",
+      "salter harris fracture",
+      "salter harris fractures",
+      "salter-harris types",
+      "salter harris types",
+      "physeal fracture classification",
+      "growth plate fracture classification",
+      "salter classification",
+    ],
+    definition:
+      "Radiographic classification (types I–V) of fractures involving the epiphyseal growth plate (physis) in immature skeleton — predicts growth disturbance risk and guides orthopedic management.",
+    anatomy:
+      "Type I — fracture plane through physis only. Type II — through physis exiting into metaphysis (Thurston-Holland metaphyseal fragment). Type III — through physis into epiphysis (intra-articular). Type IV — through metaphysis, physis, and epiphysis into joint. Type V — crush/compression injury to physis (growth arrest risk highest). Mnemonic: SALTER — Slip, Above, Lower, Through, Rammed (or Roman numerals I–V).",
+    action: [
+      "Guides prognosis for physeal growth arrest and angular deformity",
+      "Type II most common; type V most likely to cause growth disturbance",
+      "Intra-articular types (III, IV) require anatomic reduction to preserve joint surface",
+      "Orthopedic referral for most Salter-Harris fractures beyond minimal type I",
+    ],
+    clinicalRelevance: [
+      "Pediatric long-bone trauma — physis weaker than ligaments in growing skeleton",
+      "Distal radius, phalanges, distal tibia, proximal humerus — common sites",
+      "Type V often diagnosed retrospectively when growth arrest develops",
+      "Physeal bar after injury — limb length discrepancy or angular deformity",
+      "Open reduction/internal fixation for displaced types III and IV",
+    ],
+    boardsPearls: [
+      "Salter-Harris I — slip through physis; type II most common (physis + metaphysis)",
+      "Type III — intra-articular through epiphysis; type IV — metaphysis + physis + epiphysis",
+      "Type V — crush injury; highest growth arrest risk; may look normal initially",
+      "Mnemonic SALTER: Slip (I), Above metaphysis (II), Lower epiphysis (III), Through both (IV), Rammed/crush (V)",
+      "Pediatric bone fails at physis before ligament — opposite of adult pattern",
+      "vs greenstick/torus — cortical buckle without physeal classification",
+    ],
+    distinguishFrom: [
+      "SCFE — physeal slip from shear, not acute Salter-Harris trauma classification",
+      "Epiphyseal plate — anatomic structure; Salter-Harris classifies fractures through it",
+      "Greenstick fracture — incomplete cortical fracture in child; may not involve physis",
+      "Galeazzi/Monteggia — specific forearm fracture patterns, not physeal classification",
+      "Stress fracture — repetitive loading; usually diaphyseal/metaphyseal without physeal slip pattern",
+    ],
+    pediatrics:
+      "Salter-Harris fractures are defining pediatric orthopedic injuries — always compare bilateral growth plates on X-ray. Monitor for physeal arrest after types III–V. Type II fragment is metaphyseal (Thurston-Holland sign), not epiphyseal.",
   },
   {
     id: "cortical-bone",
