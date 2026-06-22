@@ -351,6 +351,63 @@ export const PROCEDURES: ProcedureEntry[] = [
       "Pertussis nasopharyngeal PCR preferred in infants (culture less sensitive). Congenital CMV diagnosed by urine or saliva PCR within first 3 weeks of life — after that, positive PCR may reflect acquired rather than congenital infection.",
   },
   {
+    id: "immunoassay",
+    name: "Immunoassay",
+    etymology:
+      "Latin immunis = exempt + Old French aaisier = to try/test — laboratory test detecting analyte via antigen-antibody binding",
+    aliases: [
+      "immunoassay",
+      "immunoassays",
+      "immunologic assay",
+      "immunologic assays",
+      "immunological assay",
+      "immunological assays",
+      "antibody-based assay",
+      "antibody based assay",
+      "antigen-antibody assay",
+      "immunoassay test",
+      "immunoassay testing",
+    ],
+    definition:
+      "Laboratory method that quantifies or detects an analyte (antigen, antibody, hormone, drug, or toxin) using specific antigen-antibody binding — formats include ELISA, chemiluminescent immunoassay (CLIA), radioimmunoassay (RIA), lateral flow, and immunochromatographic rapid tests.",
+    indications: [
+      "Serologic diagnosis — HIV ELISA/Western blot, hepatitis B surface antigen, Lyme IgM/IgG",
+      "Hormone quantification — TSH, β-hCG, cortisol, insulin",
+      "Therapeutic drug monitoring and toxicology screens",
+      "Allergen-specific IgE (RAST/immunoassay)",
+      "Pathogen antigen detection — C. difficile toxin immunoassay, cryptococcal antigen, influenza rapid antigen",
+      "Tumor markers — PSA, CA-125, AFP",
+      "Pregnancy tests — urine β-hCG lateral flow immunoassay",
+    ],
+    keyMeasurements: [
+      "ELISA — enzyme-linked antibody with colorimetric substrate readout",
+      "CLIA/ECLIA — chemiluminescent signal; high sensitivity (used in many modern clinical analyzers)",
+      "Sandwich immunoassay — capture antibody + labeled detection antibody sandwich antigen",
+      "Competitive immunoassay — labeled analyte competes with sample analyte for limited antibody",
+      "Lateral flow — capillary migration with visible line (pregnancy test, rapid strep, COVID antigen)",
+      "Western blot — immunoassay after gel electrophoresis for confirmatory HIV testing",
+    ],
+    complications: [
+      "False positives — heterophile antibodies, rheumatoid factor, cross-reacting antigens",
+      "False negatives — hook effect at very high analyte (sandwich assays), prozone phenomenon",
+      "Interference — biotin supplements can falsely alter streptavidin-based immunoassays",
+      "Does not distinguish active from past infection without IgM vs IgG interpretation",
+      "Antigen tests generally less sensitive than PCR for low-level pathogen",
+    ],
+    boardsPearls: [
+      "Immunoassay = antigen-antibody binding used for detection/quantification",
+      "ELISA — enzyme-linked; screening HIV, many serologies",
+      "Sandwich ELISA — two antibodies capture antigen between them (many hormone tests)",
+      "C. difficile stool toxin detected by immunoassay (often with GDH screen)",
+      "Pregnancy test — lateral flow immunoassay for urinary β-hCG",
+      "vs PCR — immunoassay detects protein/antigen or antibody; PCR amplifies nucleic acid",
+      "vs agglutination — immunoassay often uses labeled secondary antibody; agglutination is visible clumping",
+      "Western blot confirms HIV after positive ELISA screen",
+    ],
+    pediatrics:
+      "Neonatal screening uses immunoassays (TSH, 17-OHP, etc.). Congenital infection serology must interpret maternal IgG transfer vs infant IgM production timing.",
+  },
+  {
     id: "trichrome-stain",
     name: "Trichrome Stain",
     etymology:

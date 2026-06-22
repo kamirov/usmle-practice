@@ -1225,6 +1225,54 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
       "Neonatal myasthenia gravis from transplacental anti-AChR antibodies — hypotonia, poor feeding, respiratory weakness.",
   },
   {
+    id: "biogenic-amines",
+    name: "Biogenic Amines",
+    etymology:
+      "Greek bios = life + -genic = producing + amine = nitrogen-containing — neurotransmitters and hormones derived from amino acid precursors",
+    aliases: [
+      "biogenic amines",
+      "biogenic amine",
+      "biogenic",
+      "biogenics",
+      "biogenic amine neurotransmitters",
+      "biogenic amine transmitters",
+      "monoamine neurotransmitters",
+      "monoamine transmitters",
+      "monoamines",
+    ],
+    type: "Neurotransmitter",
+    source:
+      "Synthesized in neurons and endocrine cells from aromatic amino acids — tyrosine (catecholamines), tryptophan (serotonin), histidine (histamine); packaged in synaptic vesicles or secretory granules",
+    receptor:
+      "GPCRs (most biogenic amines) or ligand-gated ion channels (nicotinic ACh is not biogenic amine — separate class); MAO and COMT terminate signaling",
+    function:
+      "Small-molecule neurotransmitters and hormones mediating mood, arousal, autonomic output, motor control, allergic responses, and GI motility — released by exocytosis and cleared by reuptake and enzymatic degradation.",
+    clinicalRelevance: [
+      "Catecholamines (dopamine, NE, Epi) — sympathetic fight-or-flight; Parkinson (↓ DA); pheochromocytoma",
+      "Serotonin — mood, GI motility, platelet aggregation; SSRIs block reuptake; carcinoid ↑ 5-HIAA",
+      "Histamine — allergy (H1), gastric acid (H2); antihistamines and H2 blockers",
+      "MAO inhibitors and COMT inhibitors prolong biogenic amine signaling",
+      "Reserpine depletes vesicular monoamine stores",
+    ],
+    boardsPearls: [
+      "Biogenic amines = amino acid–derived monoamines: catecholamines, serotonin, histamine",
+      "Catecholamines from tyrosine; serotonin from tryptophan; histamine from histidine",
+      "vs amino acid neurotransmitters — glutamate/GABA made directly from amino acids without decarboxylation/hydroxylation cascade",
+      "vs neuropeptides — peptide chains stored in dense-core granules, not small monoamines",
+      "MAO degrades intracellular monoamines; reuptake transporters (DAT, NET, SERT) primary synaptic clearance",
+      "Carcinoid secretes serotonin (biogenic amine) → flushing, ↑ 5-HIAA",
+    ],
+    distinguishFrom: [
+      "Catecholamines — dopamine, NE, Epi subset with catechol ring",
+      "Acetylcholine — choline-derived; not aromatic amino acid biogenic amine",
+      "Amino acid neurotransmitters — glutamate, GABA, glycine",
+      "Neuropeptides — substance P, endorphins; larger peptide messengers",
+      "Biogenic amines vs biologics — unrelated; biologics are therapeutic proteins",
+    ],
+    pediatrics:
+      "Neuroblastoma secretes catecholamine biogenic amines → ↑ urine VMA/HVA. AADC deficiency impairs synthesis of dopamine and serotonin biogenic amines in infancy.",
+  },
+  {
     id: "catecholamines",
     name: "Catecholamines",
     etymology: "catechol = benzene ring with two adjacent hydroxyl groups + amine = nitrogen-containing group",
@@ -4094,6 +4142,59 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
     ],
     pediatrics:
       "SSRIs used cautiously in pediatric depression; serotonergic drug combinations increase serotonin syndrome risk at any age.",
+  },
+  {
+    id: "adrenergic-receptors",
+    name: "Adrenergic Receptors",
+    etymology:
+      "Latin ad = toward + Greek ergon = work + receptor = receiver — GPCRs for epinephrine, norepinephrine, and dopamine (at higher doses)",
+    aliases: [
+      "adrenergic receptors",
+      "adrenergic receptor",
+      "adrenergic",
+      "adrenergics",
+      "adrenoceptors",
+      "adrenoceptor",
+      "adrenergic gpcrs",
+      "catecholamine receptors",
+      "catecholamine receptor",
+      "alpha and beta receptors",
+      "α and β receptors",
+    ],
+    type: "Signaling pathway",
+    source:
+      "Sympathetic target tissues — vascular smooth muscle, heart, bronchi, uterus, liver, kidney juxtaglomerular cells, and presynaptic nerve terminals",
+    receptor:
+      "GPCR family: α1 (Gq → IP3/Ca²⁺), α2 (Gi → ↓ cAMP), β1/β2/β3 (Gs → ↑ cAMP)",
+    function:
+      "Mediate sympathetic fight-or-flight effects — vascular tone, heart rate/contractility, bronchomotor tone, glycogenolysis, renin release, and presynaptic feedback inhibition of norepinephrine release.",
+    clinicalRelevance: [
+      "Epinephrine — low dose β effects (β2 bronchodilation); high dose α1 vasoconstriction predominates",
+      "Dopamine infusion — dose-dependent: D1 renal vasodilation → β1 inotropy → α vasoconstriction at high dose",
+      "Beta-blockers (propranolol nonselective, metoprolol β1-selective) — ↓ HR, contractility; asthma risk if β2 blocked",
+      "Alpha-blockers (prazosin α1, phenoxybenzamine irreversible) — hypertension, BPH; α before β in pheochromocytoma",
+      "Clonidine — central α2 agonist ↓ sympathetic outflow",
+    ],
+    boardsPearls: [
+      "α1 = Gq → vasoconstriction, mydriasis; α2 = Gi → ↓ NE release (presynaptic autoreceptor)",
+      "β1 = Gs → heart (↑ HR, contractility, renin); β2 = Gs → bronchodilation, uterine relaxation, vasodilation",
+      "β3 = Gs → lipolysis in adipose (less emphasized on boards)",
+      "Epinephrine: β at low dose, α1 at high dose — anaphylaxis uses IM epi (α + β)",
+      "Dopamine dose: D1 → β1 → α (remember renal dose dopamine)",
+      "Nonselective β-blocker contraindicated in asthma — blocks β2 bronchodilation",
+      "α-block before β-block in pheochromocytoma — unopposed α1 vasoconstriction",
+      "Isoproterenol — pure β agonist (β1 + β2); no α activity",
+    ],
+    distinguishFrom: [
+      "Alpha-1 adrenergic receptor — specific Gq postsynaptic subtype",
+      "Alpha-2 adrenergic receptor — Gi presynaptic autoreceptor and central sympatholytic target",
+      "Beta-1 adrenergic receptor — cardiac Gs subtype",
+      "Beta-2 adrenergic receptor — bronchial/uterine Gs subtype",
+      "Dopamine receptors (D1/D2) — separate GPCR family; dopamine binds at low renal dose",
+      "Muscarinic receptors — cholinergic ACh receptors, not adrenergic",
+    ],
+    pediatrics:
+      "Albuterol (β2 agonist) first-line in pediatric asthma; β-blocker ingestion can cause severe bronchospasm in children. Same α-before-β rule applies if pheochromocytoma suspected.",
   },
   {
     id: "alpha-1-adrenergic-receptor",

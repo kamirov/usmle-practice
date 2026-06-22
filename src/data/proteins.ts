@@ -1136,6 +1136,50 @@ export const PROTEINS: ProteinEntry[] = [
     ],
   },
   {
+    id: "ferroportin",
+    name: "Ferroportin",
+    etymology:
+      "Latin ferrum = iron + portare = to carry + -in = protein suffix (iron-export channel)",
+    aliases: [
+      "ferroportin",
+      "ferroportins",
+      "slc40a1",
+      "slc40a1 protein",
+      "iron export protein",
+      "iron exporter",
+      "ferroportin 1",
+      "fpn1",
+      "ireg1",
+    ],
+    gene: "SLC40A1 (solute carrier family 40 member 1)",
+    location:
+      "Basolateral membrane of duodenal enterocytes and plasma membrane of macrophages (especially splenic) and hepatocytes — sole known cellular iron exporter to plasma",
+    function:
+      "Exports ferrous iron from enterocytes into blood after intestinal absorption and releases recycled iron from macrophages after erythrophagocytosis; hepcidin binding triggers ferroportin internalization and degradation, shutting iron export.",
+    mutationCauses: [
+      "Ferroportin disease (hemochromatosis type 4) — SLC40A1 mutations",
+      "Loss-of-function ferroportin disease — iron trapped in macrophages, low transferrin saturation, elevated ferritin",
+      "Gain-of-function (hepcidin-resistant) ferroportin — iron overload with high transferrin saturation",
+    ],
+    boardsPearls: [
+      "Ferroportin = only iron exporter on enterocytes and macrophages",
+      "Hepcidin binds ferroportin → internalization/degradation → ↓ iron absorption and ↓ macrophage iron release",
+      "Anemia of chronic disease: ↑ hepcidin → ↓ ferroportin → iron sequestered (high ferritin, low serum iron)",
+      "Iron deficiency: ↓ hepcidin → ↑ ferroportin activity → compensatory ↑ absorption",
+      "Ferroportin disease (type 4 hemochromatosis) — macrophage iron loading pattern differs from classic HFE disease",
+      "Mnemonic: Ferroportin ferries iron out; hepcidin closes the ferry gate",
+    ],
+    distinguishFrom: [
+      "Hepcidin — liver hormone that degrades ferroportin, not the export channel itself",
+      "Transferrin — plasma iron carrier after export, not cellular exporter",
+      "DMT1 — apical intestinal iron importer (duodenal), opposite direction from ferroportin",
+      "Ferritin — intracellular iron storage protein, not export channel",
+      "HFE — hemochromatosis gene regulating hepcidin expression, not the exporter",
+    ],
+    pediatrics:
+      "Juvenile hemochromatosis from HAMP or HJV affects hepcidin upstream of ferroportin; ferroportin disease presents with iron overload but macrophage-predominant pattern and variable transferrin saturation depending on mutation type.",
+  },
+  {
     id: "protein-s",
     name: "Protein S",
     etymology: "Greek proteios = primary + -in = protein + S = Seattle-named anticoagulant protein",
@@ -3908,6 +3952,87 @@ export const PROTEINS: ProteinEntry[] = [
       "Phenylethanolamine N-methyltransferase (PNMT) — NE → epinephrine in adrenal medulla only",
       "Monoamine oxidase (MAO) — degrades catecholamines intracellularly, not biosynthetic enzyme",
       "Dopamine — substrate/product of pathway, not the enzyme",
+    ],
+  },
+  {
+    id: "mao",
+    name: "MAO",
+    etymology:
+      "M = monoamine + A = amine + O = oxidase — mitochondrial enzyme oxidatively deaminating monoamine neurotransmitters",
+    aliases: [
+      "mao",
+      "maos",
+      "monoamine oxidase",
+      "monoamine oxidases",
+      "monoamine oxidase enzyme",
+      "monoamine oxidase enzymes",
+      "mao-a",
+      "mao-b",
+      "mao a",
+      "mao b",
+    ],
+    gene: "MAOA and MAOB — X-linked MAOA; MAOB on chromosome 17",
+    location:
+      "Outer mitochondrial membrane in presynaptic terminals and hepatointestinal tissues — MAO-A prominent in placenta, gut, and brain; MAO-B prominent in brain glia and platelets",
+    function:
+      "Oxidative deamination of monoamine neurotransmitters (dopamine, norepinephrine, serotonin) after reuptake into cytosol — inactivates catecholamines and indoleamines; metabolites further processed to VMA, HVA, and 5-HIAA.",
+    mutationCauses: [
+      "MAOA deficiency (rare) — Brunner syndrome with impulsive aggression (X-linked)",
+      "Pharmacologic MAO inhibition — hypertensive crisis with tyramine ingestion; serotonin syndrome with serotonergic drugs",
+    ],
+    boardsPearls: [
+      "MAO degrades cytosolic monoamines after reuptake — not primary synaptic clearance (that's reuptake transporters)",
+      "MAO-A — NE, 5-HT, tyramine; MAO-B — dopamine, phenylethylamine (selegiline selective at low dose)",
+      "MAO inhibitors + tyramine-rich foods → hypertensive crisis (wine, aged cheese)",
+      "MAOI + SSRI/SNRI/triptans → serotonin syndrome",
+      "vs COMT — MAO intracellular mitochondrial; COMT extracellular/peripheral methylation",
+      "Parkinson: selegiline/rasagiline inhibit MAO-B → ↓ dopamine breakdown",
+    ],
+    distinguishFrom: [
+      "COMT — O-methylation of catechols extracellularly and peripherally; entacapone target",
+      "MAO inhibitors — drug class blocking enzyme, not the enzyme itself",
+      "CYP450 — hepatic drug metabolism, not neurotransmitter deamination",
+      "VMAT — vesicular packaging, not degradation",
+      "DAT/NET/SERT — reuptake transporters returning transmitter to presynaptic terminal",
+    ],
+  },
+  {
+    id: "comt",
+    name: "COMT",
+    etymology:
+      "C = catechol + O = oxygen + M = methyl + T = transferase — enzyme transferring methyl group to catechol substrates",
+    aliases: [
+      "comt",
+      "comts",
+      "catechol-o-methyltransferase",
+      "catechol o methyltransferase",
+      "catechol-o-methyl transferase",
+      "catechol methyltransferase",
+      "catechol methyltransferases",
+    ],
+    gene: "COMT — soluble (S-COMT) and membrane-bound (MB-COMT) isoforms",
+    location:
+      "Cytosol and postsynaptic membranes — high activity in liver, kidney, and brain; metabolizes extracellular catecholamines and peripheral L-DOPA",
+    function:
+      "O-methylates catechol compounds — converts dopamine and L-DOPA to methoxy derivatives; with MAO completes catecholamine degradation to HVA; converts NE/Epi to normetanephrine/metanephrine (pheochromocytoma markers).",
+    mutationCauses: [
+      "COMT Val158Met polymorphism — ↓ enzyme activity (Met allele) associated with higher prefrontal dopamine and pain sensitivity",
+      "COMT inhibitors (entacapone, tolcapone) — ↑ L-DOPA bioavailability in Parkinson disease",
+    ],
+    boardsPearls: [
+      "COMT methylates extracellular/peripheral catechols; MAO degrades intracellular monoamines",
+      "Entacapone/tolcapone — COMT inhibitors paired with L-DOPA/carbidopa → ↓ peripheral L-DOPA methylation",
+      "Metanephrines = COMT metabolites of Epi/NE — preferred pheochromocytoma screen",
+      "HVA = terminal dopamine metabolite (MAO + COMT pathways)",
+      "vs MAO — mitochondrial deamination vs cytosolic O-methylation",
+      "Tolcapone — hepatotoxicity risk; entacapone more peripheral",
+    ],
+    distinguishFrom: [
+      "MAO — mitochondrial oxidative deamination of monoamines",
+      "Dopa decarboxylase — L-DOPA → dopamine; inhibited by carbidopa",
+      "PNMT — NE → epinephrine methylation in adrenal medulla (different methyltransferase)",
+      "COMT inhibitors — drugs, not the enzyme",
+      "Catechol-O-methyltransferase vs catecholamines — enzyme vs substrate class",
     ],
   },
   {

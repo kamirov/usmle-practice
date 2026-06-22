@@ -7874,6 +7874,54 @@ export const CELLS: CellEntry[] = [
       "Congenital RyR1 disorders (central core disease, King-Denborough syndrome) present in childhood with hypotonia or MH susceptibility; dantrolene is critical if MH triggered perioperatively in any age group.",
   },
   {
+    id: "exocrine-glands",
+    name: "Exocrine Glands",
+    etymology:
+      "Greek exo = outside + krinein = to secrete + Latin glans = acorn/gland — glands delivering secretions via ducts",
+    aliases: [
+      "exocrine glands",
+      "exocrine gland",
+      "exocrine glandular tissue",
+      "ductal exocrine glands",
+      "exocrine gland system",
+    ],
+    definition:
+      "Glands that secrete products through ductal systems onto body surfaces or into internal lumens — composed of secretory units (acini or tubules) connected to ducts — as opposed to endocrine glands that release hormones directly into blood.",
+    characteristics: [
+      "Acinar (alveolar) architecture — pyramidal secretory cells surrounding lumen (pancreas, salivary)",
+      "Tubular glands — gastric, intestinal, sweat duct structures",
+      "Merocrine secretion — exocytosis without cell loss (most salivary, pancreatic enzymes)",
+      "Apocrine secretion — membrane-bound portion released with secretory product (mammary, some sweat)",
+      "Holocrine secretion — entire cell disintegrates (sebaceous glands)",
+      "Myoepithelial cells contract to expel secretions (salivary, lacrimal, mammary)",
+    ],
+    clinicalRelevance: [
+      "Cystic fibrosis — CFTR mutation → thick exocrine secretions in pancreas, lungs, sweat (high chloride)",
+      "Sjögren syndrome — autoimmune destruction of lacrimal and salivary exocrine glands → dry eyes/mouth",
+      "Chronic pancreatitis — loss of exocrine acinar mass → steatorrhea and malabsorption",
+      "Mumps — parotid exocrine gland inflammation",
+      "Pancreatic adenocarcinoma arises from ductal/epithelial exocrine lineage (not islets)",
+      "Cystic fibrosis-related diabetes — endocrine islets damaged after exocrine pancreatic destruction",
+    ],
+    boardsPearls: [
+      "Exocrine glands = ducts → lumen/surface; endocrine glands = no ducts → blood",
+      "Pancreas: acini/ducts (exocrine) vs islets (endocrine)",
+      "Salivary (parotid, submandibular, sublingual), sweat, lacrimal, mammary — exocrine",
+      "CFTR on exocrine ductal epithelium — CF pancreatic insufficiency",
+      "Zymogen granules in pancreatic acinar cells — regulated exocrine secretion",
+      "vs endocrine glands — thyroid, adrenal cortex, islets lack product-delivering ducts",
+    ],
+    distinguishFrom: [
+      "Endocrine glands — ductless; hormones enter circulation (thyroid, adrenal, islets)",
+      "Exocrine — secretion mode; exocrine glands are anatomic structures using that mode",
+      "Liver — mixed functions; bile excretion via ducts (exocrine-like) plus metabolic/endocrine roles",
+      "Goblet cells — single mucus-secreting cells, not multicellular exocrine glands",
+      "Endocrine pancreas — islets of Langerhans within organ with exocrine majority",
+    ],
+    pediatrics:
+      "CF newborn screen (immunoreactive trypsinogen) reflects exocrine pancreatic injury. Mumps parotitis and congenital absence of salivary glands illustrate pediatric exocrine gland pathology.",
+  },
+  {
     id: "secretory-granule",
     name: "Secretory Granule",
     etymology: "Latin secretus = set apart + Latin granulum = small grain",

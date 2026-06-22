@@ -1712,6 +1712,60 @@ export const SYMPTOMS: SymptomEntry[] = [
     ],
   },
   {
+    id: "paroxysmal-hypertension",
+    name: "Paroxysmal Hypertension",
+    etymology:
+      "Greek paroxysmos = sudden attack + Latin hyper = over + tension = pressure — episodic severe blood pressure elevation",
+    aliases: [
+      "paroxysmal hypertension",
+      "paroxysmal hypertensions",
+      "episodic hypertension",
+      "episodic hypertensions",
+      "hypertensive paroxysm",
+      "hypertensive paroxysms",
+      "intermittent hypertension",
+      "labile hypertension",
+      "catecholamine hypertension",
+    ],
+    definition:
+      "Sudden transient episodes of markedly elevated blood pressure often accompanied by sympathetic symptoms — distinct from sustained essential hypertension.",
+    mechanism:
+      "Surges in catecholamines (pheochromocytoma, panic), volume shifts, or autonomic dysreflexia cause abrupt vasoconstriction and tachycardia; between episodes BP may be normal or mildly elevated.",
+    thinkOf: [
+      "Pheochromocytoma / paraganglioma — classic triad with headache and diaphoresis",
+      "Panic disorder or anxiety attacks",
+      "Obstructive sleep apnea",
+      "Withdrawal from clonidine or β-blockers",
+      "Autonomic dysreflexia in spinal cord injury above T6",
+      "Renovascular hypertension (less classic paroxysm)",
+      "Tyramine ingestion with MAO inhibitors",
+    ],
+    pairWith: [
+      "Episodic headache + sweating + palpitations + ↑ metanephrines → pheochromocytoma",
+      "Spells triggered by surgery, anesthesia, or β-blocker alone → catecholamine tumor",
+      "Spinal cord injury + bladder distension + headache → autonomic dysreflexia",
+      "Normal baseline BP between spells → think episodic catecholamine or panic cause",
+      "α-blockade before β-blockade if pheochromocytoma suspected",
+    ],
+    distinguishFrom: [
+      "Sustained essential hypertension — chronically elevated BP without episodic sympathetic storms",
+      "Hypertensive emergency — persistently severe BP with acute end-organ damage",
+      "White coat hypertension — elevation only in clinical setting without sympathetic triad",
+      "Hyperthyroidism — sustained tachycardia and weight loss; less classic paroxysmal spells",
+      "Carcinoid syndrome — flushing and diarrhea; 5-HIAA not catecholamines",
+    ],
+    boardsPearls: [
+      "Paroxysmal hypertension — episodic severe BP spikes; pheochromocytoma is classic board association",
+      "Triad: headache, sweating, tachycardia/palpitations during spell",
+      "Screen with plasma or urine metanephrines/normetanephrines",
+      "α-blockade (phenoxybenzamine) before β-blocker — unopposed α if β blocked first",
+      "vs sustained HTN — paroxysmal has normal/near-normal BP between attacks",
+      "MEN2, NF1, VHL — hereditary pheochromocytoma associations",
+    ],
+    pediatrics:
+      "Pheochromocytoma rare in children but occurs in MEN2 and NF1 kindreds — screen before thyroid surgery in RET carriers. Neuroblastoma can secrete catecholamines with hypertension in infants.",
+  },
+  {
     id: "pleuritic-chest-pain",
     name: "Pleuritic Chest Pain",
     etymology: "Greek pleura = side/rib + -itic = inflammatory + Old English cest = box/thorax + Latin poena = penalty/suffering",
@@ -2505,6 +2559,50 @@ export const SYMPTOMS: SymptomEntry[] = [
     ],
     pediatrics:
       "In children, weight loss or poor weight gain suggests failure to thrive, malabsorption (celiac/CF), chronic infection, malignancy, or new-onset type 1 diabetes when paired with polyuria/polydipsia.",
+  },
+  {
+    id: "weight-gain",
+    name: "Weight Gain",
+    etymology: "Old English gewiht = heaviness + gain = acquisition/increase",
+    aliases: [
+      "weight gain",
+      "weight gains",
+      "unintentional weight gain",
+      "unexplained weight gain",
+      "gain in weight",
+      "increased body weight",
+      "obesity",
+    ],
+    definition:
+      "Increase in body weight from positive energy balance — clinically notable when rapid, disproportionate to intake, or accompanied by endocrine or medication clues.",
+    mechanism:
+      "↑ caloric intake, ↓ expenditure, fluid retention, adipocyte hypertrophy/hyperplasia, or catabolic-to-anabolic shift from hormones (insulin, cortisol, thyroid deficiency) and drugs that ↑ appetite or ↓ metabolism.",
+    thinkOf: [
+      "Hypothyroidism — cold intolerance, fatigue, bradycardia, constipation",
+      "Cushing syndrome — central obesity, moon facies, striae, hypertension",
+      "Insulin therapy or sulfonylureas — anabolic/storage effect",
+      "Atypical antipsychotics (olanzapine, clozapine) — appetite and metabolic effects",
+      "Pregnancy",
+      "Polycystic ovary syndrome (PCOS) — insulin resistance, androgen excess",
+      "Heart failure or nephrotic syndrome — fluid retention mimicking weight gain",
+      "Leptin deficiency (rare) — severe early obesity with hyperphagia",
+    ],
+    pairWith: [
+      "Moon facies + striae + hypertension → Cushing syndrome",
+      "Cold intolerance + dry skin + ↑ TSH → hypothyroidism",
+      "Polyuria after starting insulin → glycemic control with weight gain expected",
+      "Amenorrhea + hirsutism + acanthosis nigricans → PCOS",
+      "Peripheral edema + dyspnea → heart failure fluid overload",
+      "Risperidone/olanzapine + new metabolic syndrome → drug effect",
+    ],
+    distinguishFrom: [
+      "Edema/fluid retention — pitting edema, weight fluctuates with diuretics; not true adipose gain",
+      "Muscle hypertrophy — strength training or anabolic steroids",
+      "Ascites — abdominal distension with shifting dullness, not generalized adiposity",
+      "Weight loss — opposite energy balance; malignancy, hyperthyroidism, malabsorption",
+    ],
+    pediatrics:
+      "Rapid weight gain in infancy may reflect overfeeding or formula concentration errors; pathologic causes include hypothyroidism (prolonged jaundice, poor tone), Cushing (exogenous steroids), and genetic obesity syndromes (leptin deficiency). Antipsychotics used for behavioral disorders commonly cause pediatric weight gain — monitor BMI and metabolic labs.",
   },
   {
     id: "headache",
@@ -4740,6 +4838,103 @@ export const SYMPTOMS: SymptomEntry[] = [
       "Atopic dermatitis often begins in infancy; contact dermatitis to nickel or irritants occurs in children. Acrodermatitis enteropathica presents with periorificial dermatitis, diarrhea, and alopecia.",
   },
   {
+    id: "keratoderma-blennorrhagica",
+    name: "Keratoderma Blennorrhagica",
+    etymology:
+      "Greek keras = horn + derma = skin + Greek blennos = mucus + rhagia = flow — hyperkeratotic pustular eruption of palms and soles in reactive arthritis",
+    aliases: [
+      "keratoderma blennorrhagica",
+      "keratoderma blennorrhagicum",
+      "keratoderma blennorrhagica of palms and soles",
+      "palmar plantar pustulosis reactive arthritis",
+      "palmar pustulosis reactive arthritis",
+      "plantar pustulosis reactive arthritis",
+      "reactive arthritis keratoderma",
+      "blennorrhagic keratoderma",
+    ],
+    definition:
+      "Hyperkeratotic, vesiculopustular eruption on palms and soles — mucocutaneous manifestation of reactive arthritis (formerly Reiter syndrome) indistinguishable clinically from pustular psoriasis at involved sites.",
+    mechanism:
+      "Post-infectious immune dysregulation (often HLA-B27–associated) → sterile pustular inflammation of palmar/plantar skin with keratinocyte hyperproliferation and neutrophilic microabscesses — parallels synovial inflammation in reactive arthritis.",
+    thinkOf: [
+      "Reactive arthritis — post-chlamydia or post-enteric",
+      "Reiter syndrome mucocutaneous triad with circinate balanitis and conjunctivitis",
+      "Psoriatic arthritis — palmar/plantar pustulosis overlap",
+      "Pustular psoriasis — primary dermatosis without arthritis history",
+    ],
+    pairWith: [
+      "Palmar pustules + urethritis + knee arthritis → reactive arthritis",
+      "Keratoderma blennorrhagica + circinate balanitis → reactive arthritis",
+      "Post-dysentery arthritis + plantar pustules → enteropathic reactive arthritis",
+      "HLA-B27 + enthesitis + keratoderma → spondyloarthritis spectrum",
+    ],
+    distinguishFrom: [
+      "Palmar/plantar psoriasis — may coexist; reactive keratoderma often follows infection",
+      "Dyshidrotic eczema — pruritic vesicles on hands/feet; not pustular keratoderma",
+      "Tinea manuum/pedis — KOH-positive fungal hyphae",
+      "Secondary syphilis — palmar/plantar maculopapular rash, not pustular keratoderma",
+      "Circinate balanitis — glans penis lesion; distinct site from keratoderma",
+    ],
+    boardsPearls: [
+      "Keratoderma blennorrhagica — pustular hyperkeratosis of palms/soles in reactive arthritis",
+      "Part of Reiter/reactive arthritis mucocutaneous findings",
+      "Sterile pustules — not infectious culture from skin",
+      "vs circinate balanitis — penile annular lesions; keratoderma is palmar/plantar",
+      "Treat underlying reactive arthritis; topical steroids for skin",
+    ],
+    pediatrics:
+      "Rare in young children; adolescents with post-chlamydia reactive arthritis may develop keratoderma blennorrhagica alongside arthritis and urethritis.",
+  },
+  {
+    id: "circinate-balanitis",
+    name: "Circinate Balanitis",
+    etymology:
+      "Latin circinatus = ring-shaped + Greek balanos = acorn/glans penis + -itis = inflammation — annular erosive lesions of the glans in reactive arthritis",
+    aliases: [
+      "circinate balanitis",
+      "circinate balanitides",
+      "circinate balanitis of reactive arthritis",
+      "reactive arthritis balanitis",
+      "reiter balanitis",
+      "reiter's balanitis",
+      "annular balanitis",
+      "serpiginous balanitis",
+    ],
+    definition:
+      "Moist, gray-white annular or serpiginous erosive lesions on the glans penis (or vulva in women) — characteristic mucocutaneous finding of reactive arthritis, often painless and associated with post-GU infection.",
+    mechanism:
+      "Immune-mediated mucosal inflammation after Chlamydia trachomatis or other triggering infection — sterile lesion without primary HSV or candidal invasion; part of HLA-B27–associated mucocutaneous spectrum with conjunctivitis and arthritis.",
+    thinkOf: [
+      "Reactive arthritis — post-chlamydial urethritis",
+      "Reiter syndrome — triad with arthritis and conjunctivitis",
+      "Keratoderma blennorrhagica — coexisting palmar/plantar pustules",
+      "Seronegative spondyloarthropathy",
+    ],
+    pairWith: [
+      "Annular glans lesions + asymmetric arthritis + urethritis → reactive arthritis",
+      "Circinate balanitis + keratoderma blennorrhagica → reactive arthritis",
+      "Post-chlamydia + conjunctivitis + circinate balanitis → classic Reiter picture",
+      "HLA-B27 positive + enthesitis + balanitis → spondyloarthritis",
+    ],
+    distinguishFrom: [
+      "Candidal balanitis — white curd, KOH yeast; pruritus common",
+      "Herpes simplex — painful grouped vesicles and ulcers",
+      "Lichen planus — violaceous flat-topped papules on glans",
+      "Fixed drug eruption — medication-related dusky plaque",
+      "Balanitis xerotica obliterans (lichen sclerosus) — white sclerotic atrophic plaque",
+      "Keratoderma blennorrhagica — palmar/plantar, not glans",
+    ],
+    boardsPearls: [
+      "Circinate balanitis — annular gray-white glans erosions in reactive arthritis",
+      "Often painless; may occur without overt urethritis symptoms",
+      "Part of reactive arthritis mucocutaneous triad with keratoderma blennorrhagica",
+      "vs candida — not curd-like; sterile immune-mediated",
+      "Treat reactive arthritis; topical care for balanitis",
+    ],
+    pediatrics:
+      "Uncommon in prepubertal children; consider sexual abuse if STI-associated urethritis in child. Adolescent post-chlamydia reactive arthritis may show circinate balanitis.",
+  },
+  {
     id: "skin-thickening",
     name: "Skin Thickening",
     etymology: "Old Norse skinn = hide + Old English thicce = thick + -ening = process",
@@ -6433,6 +6628,58 @@ export const SYMPTOMS: SymptomEntry[] = [
     ],
     pediatrics:
       "Enthesitis-related juvenile idiopathic arthritis and juvenile ankylosing spondylitis present with sacroiliitis in adolescents; MRI detects early disease before radiographic sacroiliac changes. Screen for IBD when pediatric sacroiliitis accompanies abdominal symptoms.",
+  },
+  {
+    id: "enthesitis",
+    name: "Enthesitis",
+    etymology:
+      "Greek enthesis = insertion + -itis = inflammation — inflammation at tendon or ligament attachment to bone",
+    aliases: [
+      "enthesitis",
+      "enthesitides",
+      "entheseal inflammation",
+      "entheseal inflammations",
+      "insertional tendinitis",
+      "insertional tendinitides",
+      "enthesopathy",
+      "enthesopathies",
+      "inflamed enthesis",
+      "inflamed entheses",
+    ],
+    definition:
+      "Inflammation at the enthesis — site where tendon, ligament, or joint capsule attaches to bone — hallmark of spondyloarthritis causing localized pain, swelling, and tenderness often at the heel, patella, or iliac crest.",
+    mechanism:
+      "IL-23/IL-17 and TNF-driven inflammation at fibrocartilaginous entheses (stress-concentration points) → microdamage, edema, and erosive change; distinct from intra-articular synovitis alone — explains heel and axial symptoms in HLA-B27–associated disease.",
+    thinkOf: [
+      "Reactive arthritis — Achilles enthesitis after chlamydia/enteric infection",
+      "Ankylosing spondylitis — spinal and peripheral enthesitis",
+      "Psoriatic arthritis — plantar fascia, Achilles, patellar tendon",
+      "Juvenile idiopathic arthritis — enthesitis-related arthritis subtype",
+      "Diffuse idiopathic skeletal hyperostosis (DISH) — osteophytes at entheses (noninflammatory)",
+    ],
+    pairWith: [
+      "Heel pain + Achilles tenderness + HLA-B27 → spondyloarthritis enthesitis",
+      "Enthesitis + psoriasis + nail pitting → psoriatic arthritis",
+      "Enthesitis + urethritis + conjunctivitis → reactive arthritis",
+      "Enthesitis + inflammatory back pain + sacroiliitis → ankylosing spondylitis",
+      "Enthesitis + diarrhea + sacroiliitis → IBD-associated spondyloarthritis",
+    ],
+    distinguishFrom: [
+      "Tendinitis (mid-substance) — inflammation along tendon body, not bony insertion",
+      "Plantar fasciitis (mechanical) — often noninflammatory overuse; overlaps anatomically with plantar enthesitis",
+      "Septic arthritis — joint space infection, not isolated entheseal inflammation",
+      "Apophysitis — traction injury at apophysis in adolescents (Osgood-Schlatter)",
+      "Calcaneal stress fracture — trauma/overuse bone injury",
+    ],
+    boardsPearls: [
+      "Enthesitis = inflammation at tendon/ligament bone insertion — key spondyloarthritis feature",
+      "Classic sites: Achilles tendon, plantar fascia, patellar tendon, iliac crest",
+      "Reactive arthritis and psoriatic arthritis — peripheral enthesitis common",
+      "vs synovitis — enthesitis is extra-articular at insertion site",
+      "Enthesitis-related JIA — HLA-B27–associated adolescent subtype",
+    ],
+    pediatrics:
+      "Enthesitis-related arthritis is a JIA category — often boys with lower-extremity enthesitis and sacroiliitis. Differentiate from apophysitis (Osgood-Schlatter, Sever) which is traction overuse not autoimmune enthesitis.",
   },
   {
     id: "hemianopsia",
@@ -11663,6 +11910,59 @@ export const SYMPTOMS: SymptomEntry[] = [
       "Septic arthritis in children requires urgent joint aspiration — most commonly S. aureus; juvenile idiopathic arthritis presents with morning stiffness and joint swelling without infection.",
   },
   {
+    id: "oligoarthritis",
+    name: "Oligoarthritis",
+    etymology:
+      "Greek oligos = few + arthron = joint + -itis = inflammation — arthritis affecting a small number of joints",
+    aliases: [
+      "oligoarthritis",
+      "oligoarthritides",
+      "oligoarticular arthritis",
+      "oligoarticular arthritides",
+      "pauciarticular arthritis",
+      "pauciarticular arthritides",
+      "few joint arthritis",
+      "arthritis of few joints",
+      "2-4 joint arthritis",
+    ],
+    definition:
+      "Inflammatory arthritis involving a limited number of joints — typically two to four (definitions vary up to five) — pattern distinguishing monoarthritis, oligoarthritis, and polyarthritis on boards and in juvenile arthritis classification.",
+    mechanism:
+      "Focal immune or infectious synovitis in selected joints — asymmetric lower-extremity pattern in reactive and psoriatic arthritis; oligoarticular JIA often involves large joints (knees, ankles) with fewer than five joints in first 6 months.",
+    thinkOf: [
+      "Reactive arthritis — asymmetric lower-extremity oligoarthritis post-GI/GU infection",
+      "Psoriatic arthritis — asymmetric oligoarthritis with DIP and dactylitis",
+      "Gonococcal arthritis — migratory oligoarthralgia/arthritis",
+      "Juvenile idiopathic arthritis — oligoarticular subtype (≤4 joints)",
+      "Lyme arthritis — often single knee but can be oligoarticular",
+      "Gout — classically monoarticular but may be oligoarticular",
+    ],
+    pairWith: [
+      "Asymmetric knee/ankle arthritis + urethritis → reactive oligoarthritis",
+      "Oligoarthritis + psoriasis + nail changes → psoriatic arthritis",
+      "Migratory oligoarthritis + pustular skin lesions → disseminated gonococcal infection",
+      "Child ≤4 joints + ANA positive → oligoarticular JIA (uveitis risk)",
+      "Mono/oligoarthritis + fever + hot joint → septic arthritis until proven otherwise",
+    ],
+    distinguishFrom: [
+      "Monoarthritis — single joint (gout, septic, Lyme knee)",
+      "Polyarthritis — many joints (RA ≥4 small and large; rheumatic fever migratory poly)",
+      "Polyarthralgia — joint pain without inflammatory arthritis",
+      "Rheumatoid arthritis — symmetric polyarthritis of small joints",
+      "Osteoarthritis — usually fewer joints but degenerative not inflammatory pattern",
+    ],
+    boardsPearls: [
+      "Oligoarthritis = few joints (typically 2–4) — pattern not single disease",
+      "Reactive arthritis — classic asymmetric lower-extremity oligoarthritis",
+      "JIA oligoarticular — ≤4 joints in first 6 months; screen for uveitis if ANA+",
+      "vs polyarthritis — RA and rheumatic fever involve more joints",
+      "vs monoarthritis — septic joint and gout classic monoarticular presentations",
+      "Gonococcal arthritis may migrate between few joints",
+    ],
+    pediatrics:
+      "Oligoarticular JIA is most common JIA subtype in young girls — knee/ankle involvement; ANA positivity mandates regular slit-lamp screening for chronic uveitis.",
+  },
+  {
     id: "blueberry-muffin-rash",
     name: "Blueberry Muffin Rash",
     etymology: "descriptive: blueberry = purplish color + muffin = raised nodule morphology",
@@ -12996,6 +13296,7 @@ export const SYMPTOMS: SymptomEntry[] = [
       "pupillary light-near dissociation",
       "accommodating but not reactive pupil",
       "prostitute pupil",
+      "argyll robertson",
     ],
     definition:
       "Small, irregular pupils that constrict during accommodation (near effort) but fail to constrict to direct light — classic light-near dissociation associated with neurosyphilis (tabes dorsalis).",
@@ -13075,6 +13376,8 @@ export const SYMPTOMS: SymptomEntry[] = [
       "pin point pupil",
       "pin-point pupils",
       "pin-point pupil",
+      "miotic pupils",
+      "severely miotic pupils",
     ],
     definition:
       "Extremely small pupils (often <1–2 mm), typically bilateral and poorly reactive to light — a high-yield toxicologic and neurologic exam finding.",

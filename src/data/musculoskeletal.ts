@@ -4758,6 +4758,59 @@ export const MUSCULOSKELETAL: MusculoskeletalEntry[] = [
     pediatrics:
       "Duchenne muscular dystrophy causes proximal (hip girdle) weakness with Gowers sign (using hands to climb up legs when rising). Developmental dysplasia of the hip affects the acetabulum within the pelvic girdle — Ortolani/Barlow maneuvers in infants.",
   },
+  {
+    id: "acetabulum",
+    name: "Acetabulum",
+    etymology:
+      "Latin acetabulum = vinegar cup — cup-shaped socket of the hip bone receiving the femoral head",
+    aliases: [
+      "acetabulum",
+      "acetabula",
+      "acetabular",
+      "hip acetabulum",
+      "hip acetabula",
+      "acetabular socket",
+      "acetabular sockets",
+      "hip socket",
+      "hip sockets",
+      "cotyloid cavity",
+    ],
+    definition:
+      "Cup-shaped articular socket on the lateral pelvis formed by the ilium, ischium, and pubis — articulates with the femoral head to form the synovial hip joint.",
+    anatomy:
+      "Lunate (articular) surface covered by hyaline cartilage; acetabular labrum (fibrocartilage rim) deepens socket and seals synovial fluid. Acetabular fossa (nonarticular floor) contains ligamentum teres and fat. Y-shaped triradiate cartilage fuses during adolescence. Center-edge angle and acetabular depth determine femoral head coverage.",
+    action: [
+      "Provides stable articulation for femoral head during weight-bearing and gait",
+      "Labrum increases joint congruity and distributes load",
+      "Triradiate cartilage growth contributes to acetabular development in childhood",
+      "Normal coverage prevents hip subluxation/dislocation",
+    ],
+    clinicalRelevance: [
+      "Developmental dysplasia of the hip (DDH) — shallow acetabulum with inadequate femoral head coverage",
+      "Ortolani/Barlow maneuvers assess femoral head reducibility in infancy",
+      "Perthes disease and SCFE — secondary acetabular remodeling from femoral head pathology",
+      "Acetabular fractures — high-energy trauma; associated with hip dislocation",
+      "Hip osteoarthritis — joint space narrowing at acetabulum and femoral head",
+      "Total hip arthroplasty — reaming acetabulum for prosthetic cup",
+    ],
+    boardsPearls: [
+      "Acetabulum = ilium + ischium + pubis forming hip socket",
+      "DDH — shallow acetabulum; ultrasound in infants <6 months",
+      "Labrum deepens socket — tear causes hip pain and mechanical symptoms",
+      "vs femoral head — ball of ball-and-socket joint; acetabulum is socket",
+      "Ortolani reduces dislocated hip; Barlow provokes subluxation in exam",
+      "Triradiate cartilage — growth center; injury affects acetabular development",
+    ],
+    distinguishFrom: [
+      "Femoral head — proximal epiphysis articulating with acetabulum",
+      "Glenoid fossa — shoulder socket analogue on scapula",
+      "Acetabular labrum — fibrocartilaginous rim; not the bony socket itself",
+      "Pelvis — entire bony ring; acetabulum is lateral socket on each hip bone",
+      "Hip joint — includes acetabulum, femoral head, capsule, and labrum",
+    ],
+    pediatrics:
+      "DDH screening with Ortolani/Barlow in newborns; shallow acetabulum on ultrasound warrants Pavlik harness. Late-presenting DDH may need closed or open reduction. Acetabular dysplasia persists into adulthood if untreated — early osteoarthritis risk.",
+  },
 ];
 
 const musculoskeletalById = new Map(

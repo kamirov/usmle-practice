@@ -4413,6 +4413,60 @@ export const LAB_VALUES: LabValueEntry[] = [
     ],
   },
   {
+    id: "interferon-gamma-release-assay",
+    name: "Interferon-Gamma Release Assay",
+    etymology:
+      "interferon = cytokine that interferes with viral replication + gamma = third letter + release = secretion + assay = test — blood test measuring IFN-γ from sensitized T cells",
+    aliases: [
+      "interferon-gamma release assay",
+      "interferon gamma release assay",
+      "interferon-gamma release assays",
+      "interferon gamma release assays",
+      "igra",
+      "igras",
+      "quantiferon",
+      "quantiferon-tb gold",
+      "quantiferon tb gold",
+      "t-spot",
+      "t-spot.tb",
+      "t spot tb",
+      "tb igra",
+      "tb igras",
+      "interferon γ release assay",
+    ],
+    measures:
+      "In vitro release of IFN-γ from patient T lymphocytes after stimulation with Mycobacterium tuberculosis–specific antigens (ESAT-6, CFP-10) — detects cell-mediated immune sensitization to TB without cross-reacting to BCG vaccine strains lacking these antigens.",
+    normalRange: "Negative per manufacturer cutoff (QuantiFERON or T-SPOT platform)",
+    increasedCauses: [
+      "Latent tuberculosis infection (LTBI)",
+      "Active tuberculosis disease (cannot distinguish from latent alone)",
+      "Prior TB infection with retained T-cell memory",
+      "Occasionally positive after BCG in young children (less than PPD)",
+    ],
+    decreasedCauses: [
+      "No TB sensitization",
+      "Immunosuppression may cause false-negative (HIV, steroids, anti-TNF)",
+      "Very early infection before T-cell sensitization develops",
+    ],
+    boardsPearls: [
+      "IGRA = TB screening blood test — alternative to PPD/Mantoux",
+      "Mechanism: sensitized Th1 cells release IFN-γ when exposed to TB-specific antigens",
+      "More specific than PPD after BCG vaccination — antigens not in BCG",
+      "Positive IGRA does not distinguish latent vs active TB — needs clinical correlation + CXR",
+      "Screen IGRA/PPD before starting anti-TNF biologics — treat latent TB first",
+      "vs PPD — type IV skin hypersensitivity; IGRA is ex vivo IFN-γ measurement",
+      "False negatives in severe immunosuppression",
+    ],
+    pairWith: [
+      "Positive IGRA + normal CXR + no symptoms → latent TB — consider isoniazid prophylaxis",
+      "Positive IGRA + abnormal CXR/cough/weight loss → active TB workup (sputum AFB, culture)",
+      "Starting infliximab/adalimumab → IGRA/PPD screen first",
+      "BCG-vaccinated patient needing TB screen → prefer IGRA over PPD",
+    ],
+    pediatrics:
+      "IGRA preferred over PPD in BCG-vaccinated children when indicated; interpret with age-specific guidelines. Primary TB in children may have positive IGRA with hilar lymphadenopathy on imaging.",
+  },
+  {
     id: "fecal-occult-blood-test",
     name: "Fecal Occult Blood Test",
     etymology:
@@ -6536,6 +6590,53 @@ export const LAB_VALUES: LabValueEntry[] = [
       "Hypertensive spells + ↑ VMA → pheochromocytoma workup",
       "↑ 5-HIAA + flushing → carcinoid (not HVA pathway)",
     ],
+  },
+  {
+    id: "vanillylmandelic-acid",
+    name: "Vanillylmandelic Acid",
+    etymology:
+      "Vanillyl = vanilla-like aromatic ring + mandelic = almond-related acid + acid — terminal catecholamine metabolite",
+    aliases: [
+      "vanillylmandelic acid",
+      "vanillylmandelic acids",
+      "vma",
+      "urine vma",
+      "24-hour urine vma",
+      "24 hour urine vma",
+      "urinary vma",
+      "vanilmandelic acid",
+      "vanilmandelic acids",
+    ],
+    measures:
+      "Major terminal metabolite of norepinephrine and epinephrine — formed via MAO deamination and COMT methylation pathways; measured in 24-hour urine (often with HVA) to detect catecholamine-secreting tumors.",
+    normalRange:
+      "Age-dependent in pediatrics; adult 24-h urine reference typically ~1–6 mg/24 h (lab-specific)",
+    increasedCauses: [
+      "Neuroblastoma — pediatric abdominal tumor; ↑ urine VMA and HVA classic pair",
+      "Pheochromocytoma / paraganglioma",
+      "Ganglioneuroblastoma",
+      "Severe stress, exercise (transient)",
+    ],
+    decreasedCauses: [
+      "Incomplete 24-hour urine collection",
+      "Not clinically emphasized for tumor diagnosis",
+    ],
+    boardsPearls: [
+      "VMA = NE/Epi terminal metabolite; HVA = dopamine metabolite — both ↑ in neuroblastoma",
+      "Child <5 + abdominal mass + ↑ VMA/HVA → neuroblastoma",
+      "Pheochromocytoma — metanephrines more sensitive; VMA may also be elevated",
+      "Catecholamine breakdown: MAO + COMT → VMA/HVA/metanephrines",
+      "vs 5-HIAA — serotonin metabolite in carcinoid, not catecholamine pathway",
+      "vs plasma metanephrines — often preferred screening for pheochromocytoma",
+    ],
+    pairWith: [
+      "Pediatric abdominal mass + ↑ VMA and HVA → neuroblastoma",
+      "Paroxysmal hypertension + ↑ VMA → pheochromocytoma workup",
+      "Opsoclonus-myoclonus + ↑ VMA/HVA → neuroblastoma association",
+      "↑ 5-HIAA + flushing → carcinoid (not VMA)",
+    ],
+    pediatrics:
+      "Neuroblastoma screening uses 24-hour urine VMA and HVA — most common extracranial solid tumor of childhood. Age-adjusted reference ranges required in infants.",
   },
   {
     id: "24-hour-urinary-metanephrines",

@@ -356,6 +356,48 @@ export const CLINICAL_STRATEGIES: ClinicalStrategyEntry[] = [
       "APGAR is a neonatal assessment tool; premature infants may score lower on Activity and Respiration without necessarily indicating poor long-term outcome. Resuscitation follows NRP algorithms independent of waiting for 1-minute score.",
   },
   {
+    id: "wells-criteria",
+    name: "Wells Criteria",
+    etymology:
+      "eponym: Philip Wells + Greek kriterion = standard of judgment — clinical prediction rules for DVT and PE probability",
+    aliases: [
+      "wells criteria",
+      "wells criterion",
+      "wells score",
+      "wells scores",
+      "wells scoring",
+      "wells rule",
+      "wells rules",
+      "wells criteria for dvt",
+      "wells criteria for pe",
+      "wells dvt criteria",
+      "wells pe criteria",
+      "modified wells score",
+      "modified wells criteria",
+      "wells clinical prediction rule",
+    ],
+    definition:
+      "Validated clinical scoring systems estimating pretest probability of deep venous thrombosis (DVT) and pulmonary embolism (PE) — guide use of D-dimer versus immediate imaging.",
+    details: [
+      "Wells DVT criteria (selected items): active cancer (+1), paralysis/immobilization/recent surgery (+1), localized deep vein tenderness (+1), entire leg swollen (+1), calf swelling >3 cm (+1), pitting edema confined to symptomatic leg (+1), collateral superficial veins (+1), previous DVT (+1), alternative diagnosis likely (−2)",
+      "DVT two-tier interpretation: ≥2 points = DVT likely → proceed to compression ultrasound; <2 = unlikely → high-sensitivity D-dimer (negative D-dimer rules out DVT in low-risk patients)",
+      "Modified Wells PE criteria: clinical signs/symptoms of DVT (+3), PE most likely diagnosis (+3), heart rate >100 (+1.5), immobilization or surgery in past 4 weeks (+1.5), previous PE/DVT (+1.5), hemoptysis (+1), malignancy (+1)",
+      "PE two-tier: ≥4 = PE likely → CT pulmonary angiography (or V/Q if contrast contraindicated); <4 = unlikely → D-dimer first",
+      "Negative D-dimer in low pretest probability effectively excludes VTE when using high-sensitivity assay",
+      "Pretest probability must be integrated — D-dimer not useful when Wells score high (order imaging)",
+    ],
+    boardsPearls: [
+      "Wells score stratifies VTE probability before D-dimer or imaging",
+      "Low Wells + negative D-dimer → DVT/PE excluded (high-sensitivity assay)",
+      "High Wells → skip D-dimer; go to ultrasound (DVT) or CTPA/VQ (PE)",
+      "PE Wells: DVT signs (+3) and PE most likely diagnosis (+3) are highest-weight items",
+      "D-dimer false positives — pregnancy, inflammation, malignancy, recent surgery, age",
+      "vs PERC rule — PE rule-out criteria for very low risk; Wells assigns graded probability",
+    ],
+    pediatrics:
+      "Wells criteria validated in adults; pediatric VTE workup uses age-adjusted D-dimer and imaging when clinical suspicion is high — do not rely on adult Wells scores alone in children.",
+  },
+  {
     id: "tanner-stage",
     name: "Tanner Stage",
     etymology: "eponym: James Tanner + Old English stæg = step/degree of development",

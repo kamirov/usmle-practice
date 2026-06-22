@@ -391,6 +391,46 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
       "Juvenile idiopathic arthritis may have RF or anti-CCP; type 1 diabetes has anti-GAD/IA-2/islet cell antibodies — different pediatric autoimmune panels.",
   },
   {
+    id: "seronegative",
+    name: "Seronegative",
+    etymology:
+      "Latin sero = serum + negativus = denying — absence of a specific antibody in blood serology",
+    aliases: [
+      "seronegative",
+      "seronegatives",
+      "sero negative",
+      "sero-negative",
+      "antibody negative",
+      "serologically negative",
+    ],
+    definition:
+      "Laboratory descriptor meaning specific autoantibodies are absent in serum — in rheumatology most often rheumatoid factor (RF) and anti-cyclic citrullinated peptide (anti-CCP) negative — distinguishing seronegative spondyloarthropathies and a subset of rheumatoid arthritis from seropositive RA.",
+    examples: [
+      "Seronegative spondyloarthropathy — RF and anti-CCP negative; HLA-B27 often associated",
+      "Seronegative rheumatoid arthritis — ~20–30% of RA without RF or anti-CCP",
+      "Seronegative Lyme arthritis — negative serology early; clinical and synovial PCR may be needed",
+      "Seronegative celiac disease — rare; most have anti-tTG/EMA antibodies",
+      "HIV seronegative — no detectable anti-HIV antibodies (window period or true negative)",
+    ],
+    boardsPearls: [
+      "Seronegative in arthritis context = RF negative AND anti-CCP negative",
+      "Seronegative spondyloarthropathy — axial/peripheral inflammation without RF/anti-CCP",
+      "HLA-B27 associated with seronegative spondyloarthropathies, not RA markers",
+      "Seronegative RA exists — symmetric polyarthritis without RF/anti-CCP",
+      "vs seropositive RA — RF and/or anti-CCP positive",
+      "ANA negative does not define seronegative spondyloarthropathy — key is RF/anti-CCP",
+    ],
+    distinguishFrom: [
+      "Seropositive — detectable disease-associated autoantibody in serum",
+      "Seronegative spondyloarthropathy — specific disease family, not just lab descriptor",
+      "ANA negative — separate serology; SLE can be ANA-negative rarely",
+      "Normal serology — no autoantibodies because no autoimmune disease",
+      "False-negative serology — early disease or immunosuppression lowering antibody titers",
+    ],
+    pediatrics:
+      "Juvenile idiopathic arthritis can be RF-positive (polyarticular) or RF-negative (oligoarticular, systemic); enthesitis-related arthritis overlaps seronegative spondyloarthropathy with HLA-B27.",
+  },
+  {
     id: "leukocyte-migration",
     name: "Leukocyte Migration",
     etymology: "Greek leukos = white + kytos = cell + Latin migrare = move",
@@ -4959,6 +4999,53 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
       "Neonatal ABO hemolysis usually mild partly because IgM isoagglutinins (high valency agglutinins) do not cross placenta; maternal IgG (valency 2) dominates transplacental transfer.",
   },
   {
+    id: "agglutination",
+    name: "Agglutination",
+    etymology:
+      "Latin ad = to + gluten = glue + -ation = process — clumping of particles into visible aggregates",
+    aliases: [
+      "agglutination",
+      "agglutinations",
+      "agglutinate",
+      "agglutinated",
+      "agglutinating",
+      "particle agglutination",
+      "antibody-mediated agglutination",
+      "immune agglutination",
+      "hemagglutination",
+      "hemagglutinations",
+    ],
+    definition:
+      "Visible clumping of cells or particulate antigens when multivalent antibodies cross-link repeated surface epitopes — fundamental serologic phenomenon underlying blood typing, many rapid diagnostic tests, and some pathologic immune responses.",
+    examples: [
+      "ABO forward typing — anti-A or anti-B IgM agglutinates RBCs bearing corresponding antigen",
+      "Direct antiglobulin (Coombs) test — anti-human IgG agglutinates antibody-coated RBCs",
+      "Latex agglutination — antibody-coated latex beads clump when antigen present (Strep pneumo CSF, C. diff toxin, cryptococcal antigen)",
+      "Rheumatoid factor — IgM against IgG Fc agglutinates IgG-coated latex (nonspecific RF test principle)",
+      "Ristocetin cofactor assay — vWF-mediated platelet agglutination (absent in von Willebrand disease)",
+      "Viral hemagglutination inhibition — influenza typing",
+      "Cold agglutinin disease — IgM autoantibody agglutinates RBCs at low temperature",
+    ],
+    boardsPearls: [
+      "Agglutination = antibody cross-links multivalent antigen → visible clumps",
+      "IgM pentamer (high valency) excels at agglutination — ABO isoagglutinins, RF",
+      "Forward ABO typing uses known anti-A/anti-B to agglutinate patient RBCs",
+      "Latex agglutination — rapid antigen detection in CSF, urine, stool",
+      "vs precipitation — soluble antigen-antibody complexes form lattice in solution (not particulate clumping)",
+      "vs hemolysis — complement lysis after agglutination in ABO transfusion reaction",
+      "Coombs test detects antibody on RBC surface via agglutination with anti-human globulin",
+    ],
+    distinguishFrom: [
+      "Precipitation — soluble antigen-antibody lattice in gel or liquid; not particulate clumping",
+      "Hemolysis — RBC membrane rupture; may follow agglutination with complement",
+      "Avidity — binding strength measure; agglutination is visible macroscopic endpoint",
+      "Immunoglobulin valency — antibody property enabling agglutination, not the clumping itself",
+      "Flocculation — loose aggregation; agglutination implies tighter visible clumps in serology",
+    ],
+    pediatrics:
+      "Neonatal ABO incompatibility involves maternal IgG more than IgM agglutinins (IgM does not cross placenta). Latex agglutination for group B strep antigen used in neonatal sepsis workup.",
+  },
+  {
     id: "vaccination",
     name: "Vaccination",
     etymology: "Latin vacca = cow; named from cowpox vaccine",
@@ -6471,6 +6558,90 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
     ],
     pediatrics:
       "Neonatal islet paracrine immaturity contributes to dysregulated glucose homeostasis in prematurity; paracrine signaling is foundational in organogenesis across fetal development.",
+  },
+  {
+    id: "endocrine",
+    name: "Endocrine",
+    etymology:
+      "Greek endon = within + krinein = to separate/secrete — secretion of hormones directly into bloodstream",
+    aliases: [
+      "endocrine",
+      "endocrines",
+      "endocrine signaling",
+      "endocrine signalling",
+      "endocrine secretion",
+      "endocrine system signaling",
+      "hormonal endocrine",
+    ],
+    definition:
+      "Mode of glandular secretion in which hormones are released into the interstitial fluid and bloodstream to act on distant target cells — ductless glands (endocrine glands) use this systemic signaling pathway.",
+    examples: [
+      "Pancreatic islets — insulin, glucagon, somatostatin into portal/hepatic circulation",
+      "Adrenal cortex — cortisol, aldosterone; medulla — epinephrine",
+      "Thyroid — T3/T4; parathyroid — PTH",
+      "Anterior pituitary — TSH, ACTH, GH, prolactin, FSH, LH",
+      "Gonads — estrogen, testosterone",
+      "Renin-angiotensin, erythropoietin — kidney endocrine functions",
+    ],
+    boardsPearls: [
+      "Endocrine = ductless gland → hormone → blood → distant target",
+      "vs exocrine — exocrine uses ducts to body surface or lumen",
+      "vs paracrine — endocrine is systemic; paracrine is local",
+      "Pancreas has both endocrine (islets) and exocrine (acini) components",
+      "Feedback loops — hypothalamic-pituitary-target axis (e.g., HPA)",
+      "Endocrine disorders: hypo- vs hypersecretion (Addison vs Cushing, hypo- vs hyperthyroidism)",
+    ],
+    distinguishFrom: [
+      "Exocrine — secretion via ducts (saliva, pancreatic enzymes, sweat)",
+      "Paracrine — local action on neighboring cells without entering systemic circulation as primary route",
+      "Autocrine — action on same cell that secreted the signal",
+      "Neurocrine/neuroendocrine — neuron releases neurotransmitter or hormone (e.g., ADH from hypothalamus)",
+      "Endocrine gland — anatomic structure; endocrine is signaling mode",
+    ],
+    pediatrics:
+      "Congenital endocrine disorders include congenital hypothyroidism (screened neonatally), congenital adrenal hyperplasia, and growth hormone deficiency — contrast with exocrine CF pancreatic insufficiency.",
+  },
+  {
+    id: "exocrine",
+    name: "Exocrine",
+    etymology:
+      "Greek exo = outside + krinein = to separate/secrete — secretion delivered via ducts to external surface or internal body lumen",
+    aliases: [
+      "exocrine",
+      "exocrines",
+      "exocrine signaling",
+      "exocrine secretion",
+      "exocrine function",
+      "ductal secretion",
+    ],
+    definition:
+      "Mode of glandular secretion in which products (enzymes, mucus, sweat, milk, tears) are released through ducts onto epithelial surfaces or into hollow organs — contrasts with endocrine hormones entering blood directly.",
+    examples: [
+      "Pancreatic acini — digestive enzymes and bicarbonate into duodenum via pancreatic duct",
+      "Salivary glands — amylase and mucin into oral cavity",
+      "Sweat and sebaceous glands — thermoregulation and skin lubrication",
+      "Lacrimal glands — tears",
+      "Mammary glands — milk (apocrine/merocrine)",
+      "Gastric chief and parietal cells — pepsinogen and acid into stomach lumen",
+      "Brunner glands — alkaline mucus into duodenum",
+    ],
+    boardsPearls: [
+      "Exocrine = duct → lumen or body surface; endocrine = no duct → blood",
+      "Pancreas: exocrine (acini/duct) vs endocrine (islets) — same organ, two systems",
+      "Cystic fibrosis — CFTR on ductal epithelium → inspissated secretions, exocrine pancreatic insufficiency",
+      "Sjögren syndrome — autoimmune destruction of lacrimal/salivary exocrine glands",
+      "Zymogen activation in duodenum — trypsinogen → trypsin (pancreatic exocrine physiology)",
+      "vs endocrine — insulin is endocrine; amylase/lipase are exocrine",
+    ],
+    distinguishFrom: [
+      "Endocrine — ductless hormonal release into circulation",
+      "Paracrine — local signaling without ductal delivery to lumen",
+      "Exocrine gland — anatomic gland with ducts; exocrine is functional secretion mode",
+      "Merocrine vs holocrine vs apocrine — mechanisms of exocrine secretion, not the signaling category itself",
+      "Constitutive secretion — continuous protein export (e.g., albumin from liver); not classic ductal exocrine gland pattern",
+    ],
+    pediatrics:
+      "CF presents with exocrine pancreatic insufficiency (fatty stools, failure to thrive) and thick respiratory mucus. Cystic fibrosis-related diabetes involves endocrine islet damage after exocrine destruction.",
   },
   {
     id: "paraneoplastic-syndrome",
