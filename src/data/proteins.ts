@@ -1574,6 +1574,54 @@ export const PROTEINS: ProteinEntry[] = [
     ],
   },
   {
+    id: "dmpk",
+    name: "Dystrophia Myotonica Protein Kinase (DMPK)",
+    etymology:
+      "dystrophia = muscle disorder + myotonica = myotonic + kinase = phosphorylating enzyme (gene/protein implicated in myotonic dystrophy type 1)",
+    aliases: [
+      "dmpk",
+      "dmpk gene",
+      "dmpk protein",
+      "dystrophia myotonica protein kinase",
+      "dystrophia myotonica protein kinase gene",
+      "myotonin protein kinase",
+      "myotonin-protein kinase",
+      "myotonic dystrophy protein kinase",
+      "myotonic dystrophy protein kinase gene",
+      "dm protein kinase",
+      "dm1 gene",
+      "steinert disease gene",
+    ],
+    gene: "DMPK (chromosome 19q13.3)",
+    location:
+      "Serine/threonine kinase expressed in skeletal muscle, heart, and other tissues; gene 3′ UTR contains CTG trinucleotide repeat tract whose expansion causes myotonic dystrophy type 1",
+    function:
+      "Encodes a serine/threonine protein kinase proposed to regulate ion channel and signaling pathways in muscle; physiologic role incompletely defined. Pathogenic CTG expansion in the 3′ untranslated region produces toxic RNA gain-of-function — expanded DMPK transcripts sequester MBNL splicing factors → widespread abnormal alternative splicing (classic disease mechanism in DM1).",
+    mutationCauses: [
+      "Myotonic dystrophy type 1 (Steinert disease) — CTG trinucleotide repeat expansion in DMPK 3′ UTR (>50 repeats pathogenic; congenital form with >1000 maternal repeats)",
+      "Anticipation — increasing repeat size in successive generations, worse with maternal transmission",
+      "Toxic RNA mechanism — sequestration of MBNL proteins → mis-splicing of CLCN1, insulin receptor, cardiac genes → myotonia, insulin resistance, arrhythmias",
+      "Reduced DMPK protein expression may contribute but toxic RNA is primary pathogenic mechanism on boards",
+    ],
+    boardsPearls: [
+      "DM1 = CTG repeat expansion in DMPK gene (not in coding region)",
+      "Toxic RNA gain-of-function — expanded mRNA sequesters MBNL splicing factors",
+      "vs DM2 — CCTG repeat in CNBP (ZFN9) gene, not DMPK",
+      "vs Huntington — CAG in HTT coding region → polyglutamine protein toxicity",
+      "vs fragile X — CGG in FMR1 5′ UTR → gene silencing",
+      "Anticipation and congenital DM1 with large maternal CTG expansion",
+      "DMPK on chromosome 19 — autosomal dominant inheritance",
+    ],
+    distinguishFrom: [
+      "CNBP (ZFN9) — DM2 gene with CCTG expansion; proximal myotonic myopathy",
+      "HTT (huntingtin) — CAG repeat polyglutamine disease",
+      "FMR1 — CGG repeat fragile X syndrome",
+      "CLCN1 — myotonia congenita chloride channel gene; nonprogressive myotonia",
+      "Dystrophin (DMD) — Duchenne/Becker muscular dystrophy; X-linked; no myotonia",
+      "MBNL proteins — splicing factors sequestered by toxic DMPK RNA; not the mutant gene itself",
+    ],
+  },
+  {
     id: "sry-gene",
     name: "SRY Gene",
     etymology: "SRY = Sex-determining Region of the Y chromosome",
@@ -4064,6 +4112,45 @@ export const PROTEINS: ProteinEntry[] = [
     ],
     pediatrics:
       "Menkes disease presents in infancy; defective copper-dependent enzymes (including LOX) contribute to connective tissue fragility and neurodevelopmental decline.",
+  },
+  {
+    id: "proinsulin",
+    name: "Proinsulin",
+    etymology: "Latin pro = before + insula = island (pancreatic islets) + -in protein suffix",
+    aliases: [
+      "proinsulin",
+      "pro-insulin",
+      "insulin precursor",
+      "insulin precursors",
+      "86-amino acid insulin precursor",
+    ],
+    gene: "INS",
+    location:
+      "Synthesized in pancreatic β-cell RER → processed in Golgi/trans-Golgi → mature insulin stored in secretory granules; small amount of proinsulin circulates in serum",
+    function:
+      "Inactive single-chain precursor of insulin — contains B chain, connecting C-peptide, and A chain with intrachain disulfide bonds; cleaved by prohormone convertases (PC1/PC2) and carboxypeptidase E to release mature insulin and equimolar C-peptide before granule storage.",
+    mutationCauses: [
+      "Impaired proinsulin-to-insulin processing → hyperproinsulinemia with relative insulin deficiency",
+      "Rare INS gene mutations → permanent neonatal diabetes or MODY-like β-cell dysfunction",
+      "Chronic β-cell stress in type 2 diabetes → ↑ circulating proinsulin relative to insulin",
+    ],
+    boardsPearls: [
+      "Proinsulin → insulin + C-peptide (1:1 molar) in β-cell Golgi/granule maturation",
+      "C-peptide = connecting peptide — co-secreted with insulin; used to measure endogenous β-cell secretion",
+      "Type 1 DM — low insulin and low C-peptide (exogenous insulin lacks C-peptide)",
+      "Factitious hypoglycemia — high insulin but low C-peptide → exogenous insulin injection",
+      "Insulinoma — high insulin AND high C-peptide (endogenous hypersecretion)",
+      "vs preproinsulin — includes N-terminal signal peptide removed in RER before proinsulin forms",
+    ],
+    distinguishFrom: [
+      "Insulin — mature two-chain hormone (A + B) stored in granules; hypoglycemic effect",
+      "C-peptide — nonfunctional connecting segment; diagnostic marker only",
+      "Proinsulin-like peptide / amylin — separate β-cell product co-secreted with insulin",
+      "Glucagon — α-cell product; raises glucose",
+      "Sulfonylurea-stimulated insulin — endogenous; C-peptide present",
+    ],
+    pediatrics:
+      "Permanent neonatal diabetes from INS mutations can present in the first weeks of life with hyperglycemia before autoimmune type 1 is typical — check genetic panels. Low C-peptide with hyperglycemia in a child supports type 1 diabetes over type 2.",
   },
   {
     id: "procollagen-peptidases",

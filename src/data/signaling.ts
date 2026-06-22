@@ -1796,6 +1796,104 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
       "Central DI in children may follow head trauma or craniopharyngioma; desmopressin is main therapy. SIADH occurs with CNS infection, pulmonary disease, and postoperative states.",
   },
   {
+    id: "crh",
+    name: "CRH",
+    etymology: "CRH = corticotropin-releasing hormone (also called corticotropin-releasing factor, CRF)",
+    aliases: [
+      "crh",
+      "corticotropin-releasing hormone",
+      "corticotropin releasing hormone",
+      "corticotropin-releasing hormones",
+      "corticotropin releasing factor",
+      "crf",
+      "corticotropin releasing factor",
+      "hypothalamic crh",
+      "corticotrophin releasing hormone",
+    ],
+    type: "Peptide hormone",
+    source:
+      "Hypothalamic paraventricular nucleus (PVN) neurons → hypophyseal portal circulation → anterior pituitary corticotrophs; co-secreted vasopressin (ADH) from PVN synergizes with CRH to amplify ACTH release during stress",
+    receptor:
+      "CRH receptor (CRF1/CRF2; Gs-coupled GPCR) on anterior pituitary corticotrophs",
+    function:
+      "Primary hypothalamic stimulus for ACTH synthesis and release from anterior pituitary → drives adrenal cortisol secretion; central integrator of stress response (HPA axis); subject to strong negative feedback from cortisol.",
+    clinicalRelevance: [
+      "HPA axis — stress, illness, and hypoglycemia ↑ CRH/ACTH/cortisol",
+      "Cushing disease — ACTH-secreting pituitary adenoma with ↑ cortisol; CRH stimulation test may help localize source",
+      "Ectopic ACTH syndrome (e.g., small cell lung cancer) — high ACTH independent of pituitary CRH feedback patterns",
+      "Exogenous glucocorticoids — suppress CRH and ACTH (iatrogenic adrenal suppression)",
+      "Addison disease — loss of cortisol feedback → ↑ ACTH (not CRH measurement clinically)",
+      "CRH antagonists investigational for stress-related disorders",
+    ],
+    boardsPearls: [
+      "Hypothalamus (CRH) → anterior pituitary (ACTH) → adrenal cortex (cortisol)",
+      "Cortisol negative feedback ↓ CRH and ACTH — explains adrenal suppression with chronic steroids",
+      "Vasopressin synergizes with CRH to ↑ ACTH during severe stress",
+      "vs CRH — hypothalamic releasing hormone; ACTH is pituitary tropic hormone",
+      "Cushing disease = pituitary ACTH excess; Cushing syndrome = any hypercortisolism",
+      "Morning cortisol peak reflects circadian HPA drive superimposed on CRH/ACTH pulsatility",
+      "Dexamethasone suppression test — evaluates feedback on CRH/ACTH axis",
+    ],
+    distinguishFrom: [
+      "ACTH — anterior pituitary hormone acting on adrenal cortex; not hypothalamic",
+      "Cortisol — adrenal end product providing negative feedback, not releasing hormone",
+      "GHRH / TRH / GnRH — other hypothalamic releasing hormones with different pituitary targets",
+      "Vasopressin (ADH) — water balance hormone from PVN; synergizes with CRH for ACTH but distinct primary roles",
+      "Epinephrine — adrenal medullary catecholamine, not HPA peptide axis",
+    ],
+    pediatrics:
+      "Congenital adrenal hyperplasia and adrenal insufficiency alter cortisol feedback on CRH/ACTH — neonates may present with salt wasting or virilization. Chronic exogenous steroids suppress the HPA axis; stress-dose steroids needed if axis suppressed.",
+  },
+  {
+    id: "ghrh",
+    name: "GHRH",
+    etymology: "GHRH = growth hormone-releasing hormone",
+    aliases: [
+      "ghrh",
+      "growth hormone-releasing hormone",
+      "growth hormone releasing hormone",
+      "growth hormone-releasing hormones",
+      "growth hormone releasing factor",
+      "ghrf",
+      "somatocrinin",
+      "somatoliberin",
+      "hypothalamic ghrh",
+    ],
+    type: "Peptide hormone",
+    source:
+      "Hypothalamic arcuate nucleus neurons → hypophyseal portal circulation → anterior pituitary somatotrophs; secretion is pulsatile and opposed by hypothalamic somatostatin",
+    receptor:
+      "GHRH receptor (Gs-coupled GPCR) on anterior pituitary somatotrophs",
+    function:
+      "Stimulates synthesis and pulsatile release of growth hormone (GH) from anterior pituitary → hepatic IGF-1 production mediates linear growth and anabolic effects; balanced by somatostatin inhibition and IGF-1 negative feedback.",
+    clinicalRelevance: [
+      "Acromegaly — GH-secreting pituitary adenoma with ↑ IGF-1; oral glucose fails to suppress GH",
+      "Gigantism — GH excess before epiphyseal closure in children",
+      "Ectopic GHRH secretion — pancreatic islet tumors, bronchial carcinoids → pituitary hyperplasia and GH excess (rare)",
+      "GH deficiency — may reflect insufficient GHRH or somatotroph failure; low IGF-1 with failed GH stimulation test",
+      "Octreotide/lanreotide (somatostatin analogs) — suppress GH secretion in acromegaly",
+      "Pegvisomant — GH receptor antagonist lowers IGF-1",
+    ],
+    boardsPearls: [
+      "Hypothalamus (GHRH) → anterior pituitary (GH) → liver (IGF-1) → growth",
+      "GHRH stimulates GH; somatostatin inhibits GH — reciprocal hypothalamic control",
+      "Screen acromegaly with IGF-1, not random GH (GH is pulsatile)",
+      "Gigantism (child) vs acromegaly (adult) — same GH excess, epiphyseal status differs",
+      "vs GHRH — hypothalamic releasing hormone; GH is pituitary hormone; IGF-1 is hepatic effector",
+      "Laron syndrome — GH receptor defect → high GH, low IGF-1",
+      "Somatostatin analogs (octreotide) treat acromegaly by inhibiting GH release",
+    ],
+    distinguishFrom: [
+      "Growth hormone (GH) — anterior pituitary hormone; pulsatile secretion stimulated by GHRH",
+      "IGF-1 — hepatic growth mediator downstream of GH; used to screen acromegaly",
+      "Somatostatin — hypothalamic inhibitor of GH release; octreotide mimics this effect",
+      "Prolactin — separate anterior pituitary hormone; dopamine inhibits prolactin, not GHRH pathway",
+      "Thyrotropin-releasing hormone (TRH) — stimulates TSH, not GH",
+    ],
+    pediatrics:
+      "GH deficiency causes growth failure with low IGF-1; congenital GHRH or GH defects treated with recombinant GH before epiphyseal closure. GH excess in childhood causes gigantism; after closure causes acromegaly features.",
+  },
+  {
     id: "gnrh",
     name: "GnRH",
     etymology: "GnRH = gonadotropin-releasing hormone",
@@ -1840,6 +1938,54 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
     ],
     pediatrics:
       "Central precocious puberty — GnRH agonists suppress premature pubertal progression; Kallmann presents with delayed puberty and anosmia from failed GnRH neuron migration.",
+  },
+  {
+    id: "trh",
+    name: "TRH",
+    etymology: "TRH = thyrotropin-releasing hormone (tripeptide: pyroglutamyl-histidyl-prolineamide)",
+    aliases: [
+      "trh",
+      "thyrotropin-releasing hormone",
+      "thyrotropin releasing hormone",
+      "thyrotropin-releasing hormones",
+      "thyrotropin releasing factor",
+      "trf",
+      "protirelin",
+      "hypothalamic trh",
+    ],
+    type: "Peptide hormone",
+    source:
+      "Hypothalamic paraventricular and medial hypothalamic neurons → hypophyseal portal circulation → anterior pituitary thyrotrophs",
+    receptor:
+      "TRH receptor (Gq-coupled GPCR) on anterior pituitary thyrotrophs → ↑ TSH synthesis and release",
+    function:
+      "Primary hypothalamic stimulus for thyrotropin (TSH) release from anterior pituitary → stimulates thyroid follicular cells to synthesize and release T4/T3; also weakly stimulates prolactin release; inhibited by negative feedback from T3/T4.",
+    clinicalRelevance: [
+      "Primary hypothyroidism — ↑ TSH with ↓ free T4 (loss of thyroid hormone negative feedback)",
+      "Hyperthyroidism (Graves) — ↓ TSH with ↑ T4/T3",
+      "Secondary (central) hypothyroidism — ↓ TSH with ↓ T4 from pituitary/hypothalamic disease",
+      "TSH-secreting pituitary adenoma — rare; ↑ TSH with ↑ thyroid hormones",
+      "TRH stimulation test — historically distinguished pituitary vs hypothalamic causes (limited modern use)",
+      "Severe illness (euthyroid sick syndrome) — altered thyroid axis testing interpretation",
+    ],
+    boardsPearls: [
+      "Hypothalamus (TRH) → anterior pituitary (TSH) → thyroid (T4/T3)",
+      "T3/T4 negative feedback ↓ TRH and TSH — primary hypothyroidism shows ↑ TSH",
+      "vs TRH — hypothalamic releasing hormone; thyrotropin (TSH) is pituitary tropic hormone",
+      "Graves: ↑ T4/T3, ↓ TSH (unless TSHoma)",
+      "Hashimoto: ↑ TSH, ↓ T4 over time",
+      "TRH also stimulates prolactin — mild physiologic co-release",
+      "Neonatal TSH screening detects congenital hypothyroidism — not TRH level",
+    ],
+    distinguishFrom: [
+      "Thyrotropin (TSH) — anterior pituitary hormone acting on thyroid; primary lab measured clinically",
+      "T4/T3 — thyroid hormones providing negative feedback, not releasing hormones",
+      "CRH / GHRH / GnRH — other hypothalamic releasing hormones with distinct pituitary targets",
+      "Thyroid peroxidase antibodies — autoimmune marker in Hashimoto; not hypothalamic peptide",
+      "Dopamine — inhibits prolactin; does not stimulate TSH like TRH",
+    ],
+    pediatrics:
+      "Congenital hypothyroidism detected by neonatal TSH screening — treat levothyroxine promptly to prevent intellectual disability. Central hypothyroidism shows low TSH with low T4 — evaluate pituitary/hypothalamic disease.",
   },
   {
     id: "estrogen",

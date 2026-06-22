@@ -2823,6 +2823,108 @@ export const MUSCULOSKELETAL: MusculoskeletalEntry[] = [
       "Transient synovitis of the hip — self-limited synovial inflammation after viral illness. Septic arthritis requires urgent synovial fluid aspiration — synovial WBC often >50,000/µL with positive Gram stain/culture.",
   },
   {
+    id: "rice-bodies",
+    name: "Rice Bodies",
+    etymology:
+      "Named for resemblance to grains of rice — fibrin-coated synovial fragments shed into joint effusions",
+    aliases: [
+      "rice bodies",
+      "rice body",
+      "synovial rice bodies",
+      "synovial rice body",
+      "joint rice bodies",
+      "joint rice body",
+      "fibrin-coated synovial bodies",
+      "intra-articular rice bodies",
+    ],
+    definition:
+      "Multiple small, white, fibrin-coated fragments of proliferative synovium floating in chronic inflammatory joint effusions — macroscopically resembling rice grains — seen in tuberculosis, rheumatoid arthritis, and other chronic synovitides.",
+    anatomy:
+      "Derived from avascular synovial villi that undergo fibrin deposition and detachment into joint cavity; composed of collagen, fibrin, and synovial cells; not calcified osteochondral loose bodies.",
+    action: [
+      "Marker of chronic proliferative synovitis with ongoing fibrin formation",
+      "May contribute to mechanical symptoms when numerous in joint space",
+      "Removed during arthroscopy or open synovectomy in refractory disease",
+    ],
+    clinicalRelevance: [
+      "Tuberculous arthritis — classic association with chronic granulomatous synovitis",
+      "Rheumatoid arthritis — proliferative synovium with pannus and rice body formation",
+      "Fungal or chronic pyogenic synovitis (uncommon)",
+      "Arthroscopic finding — white floating bodies in viscous effusion",
+    ],
+    boardsPearls: [
+      "Rice bodies = fibrin-coated synovial fragments in chronic inflammatory effusion",
+      "Think TB arthritis or RA on boards",
+      "vs osteophyte — bone spur at joint margin in OA, not intra-articular fragment",
+      "vs loose body — osteochondral fragment from OA or osteochondritis dissecans",
+      "vs synovial chondromatosis — cartilaginous nodules that ossify",
+      "Not specific to one disease — chronic synovitis pattern",
+    ],
+    distinguishFrom: [
+      "Osteophyte — marginal bony outgrowth in osteoarthritis",
+      "Loose body (joint mouse) — osteochondral fragment, often calcified/ossified",
+      "Synovial chondromatosis — metaplastic cartilage nodules in synovium",
+      "Gout tophi — urate crystal deposits in soft tissue or synovium",
+      "Pannus — invasive synovial tissue attached to cartilage, not free-floating fragment",
+    ],
+    pediatrics:
+      "Tuberculous arthritis in children can present with chronic monoarticular swelling and rice bodies on arthroscopy — consider TB in endemic areas or exposure history; distinguish from transient synovitis and septic arthritis.",
+  },
+  {
+    id: "osteophyte",
+    name: "Osteophyte",
+    etymology:
+      "Greek osteon = bone + phyton = plant/outgrowth — bony spur projecting from joint margin",
+    aliases: [
+      "osteophyte",
+      "osteophytes",
+      "bone spur",
+      "bone spurs",
+      "bony spur",
+      "bony spurs",
+      "marginal osteophyte",
+      "marginal osteophytes",
+      "periarticular osteophyte",
+      "periarticular osteophytes",
+      "heberden node",
+      "heberden nodes",
+      "bouchard node",
+      "bouchard nodes",
+    ],
+    definition:
+      "Reactive bony outgrowth at the articular margin from endochondral ossification — hallmark radiographic and pathologic feature of osteoarthritis representing failed repair of stressed cartilage.",
+    anatomy:
+      "Forms at junction of cartilage, synovium, and subchondral bone; develops via chondrocyte metaplasia and ossification in response to mechanical stress; DIP osteophytes = Heberden nodes; PIP = Bouchard nodes.",
+    action: [
+      "Attempted reparative response to cartilage loss and joint instability",
+      "Contributes to bony enlargement and reduced range of motion",
+      "May impinge on adjacent soft tissues in spine (neuroforaminal narrowing)",
+    ],
+    clinicalRelevance: [
+      "Osteoarthritis — joint space narrowing, subchondral sclerosis, osteophytes on X-ray",
+      "Cervical/lumbar spondylosis — vertebral osteophytes compress nerves",
+      "Heberden and Bouchard nodes — palpable DIP/PIP osteophytes in hand OA",
+      "Diffuse idiopathic skeletal hyperostosis (DISH) — flowing osteophytes along spine",
+    ],
+    boardsPearls: [
+      "Osteophyte = bone spur in OA — reparative, not erosive",
+      "vs pannus — RA invasive synovium erodes bone; osteophyte builds bone",
+      "Heberden (DIP) and Bouchard (PIP) nodes are osteophytes",
+      "OA triad on X-ray: joint space narrowing, osteophytes, subchondral sclerosis",
+      "vs rice bodies — intra-articular fibrin synovial fragments in inflammatory arthritis",
+      "vs tophus — urate deposit in gout",
+    ],
+    distinguishFrom: [
+      "Synovial pannus — inflammatory erosive tissue in rheumatoid arthritis",
+      "Rice bodies — fibrin-coated synovial fragments in chronic effusion",
+      "Enthesophyte — bone spur at tendon/ligament insertion (spondyloarthropathy)",
+      "Loose body — intra-articular osteochondral fragment",
+      "Bone callus — fracture healing, not joint margin spur",
+    ],
+    pediatrics:
+      "Primary osteoarthritis osteophytes are uncommon in children; juvenile idiopathic arthritis causes erosions not osteophytes. Skeletal dysplasias and trauma may cause atypical bone excrescences — distinguish from OA pattern.",
+  },
+  {
     id: "cartilage",
     name: "Cartilage",
     etymology:
@@ -3875,6 +3977,70 @@ export const MUSCULOSKELETAL: MusculoskeletalEntry[] = [
       "Conus medullaris may terminate slightly lower (L2–L3) in neonates before ascending with growth; LP level selection still uses palpable iliac crest (L4) landmarks.",
   },
   {
+    id: "plexus",
+    name: "Plexus",
+    etymology: "Latin plexus = braid/network (intertwining nerve fibers forming a mesh)",
+    aliases: [
+      "plexus",
+      "plexuses",
+      "nerve plexus",
+      "nerve plexuses",
+      "neural plexus",
+      "neural plexuses",
+      "peripheral nerve plexus",
+      "peripheral nerve plexuses",
+      "brachial plexus",
+      "brachial plexuses",
+      "lumbosacral plexus",
+      "lumbosacral plexuses",
+      "lumbar plexus",
+      "lumbar plexuses",
+      "sacral plexus",
+      "sacral plexuses",
+      "cervical plexus",
+      "cervical plexuses",
+    ],
+    definition:
+      "Anatomic network formed by interweaving ventral rami of spinal nerves (without intervening trunks) — dividing and recombining into named peripheral nerve trunks and branches that supply a limb or body region; damage causes plexopathy affecting multiple nerves in a regional pattern.",
+    anatomy:
+      "Brachial plexus (C5–T1): roots → trunks (upper/middle/lower) → divisions (anterior/posterior) → cords (lateral/medial/posterior) → terminal branches (musculocutaneous, axillary, radial, median, ulnar). Lumbar plexus (L1–L4): within psoas major → femoral, obturator, lateral femoral cutaneous nerves. Sacral plexus (L4–S4): on pelvic surface → sciatic nerve (tibial + common fibular), pudendal, superior/inferior gluteal. Cervical plexus (C1–C4): ansa cervicalis, phrenic nerve (C3–C5).",
+    action: [
+      "Redistributes motor and sensory fibers from multiple spinal segments into named peripheral nerves",
+      "Enables coordinated limb innervation from overlapping segmental contributions",
+      "Provides anatomic corridors for regional anesthesia (interscalene, axillary, femoral, sciatic blocks)",
+      "Sites of compression in thoracic outlet, axilla, and pelvis",
+    ],
+    innervation:
+      "Brachial plexus — entire upper limb; lumbar plexus — anterior thigh and medial leg; sacral/lumbosacral plexus — posterior thigh, leg, foot, perineum; cervical plexus — neck skin, strap muscles, diaphragm (phrenic)",
+    clinicalRelevance: [
+      "Brachial plexus injury at birth — Erb-Duchenne (C5–C6, waiter's tip) vs Klumpke (C8–T1, claw hand + Horner)",
+      "Thoracic outlet syndrome — lower trunk or entire plexus compression",
+      "Supraclavicular/infraclavicular trauma — traction or penetrating injury",
+      "Lumbosacral plexopathy — diabetic, malignant, or post-radiation; asymmetric leg weakness",
+      "Regional nerve blocks target plexus or its branches",
+    ],
+    boardsPearls: [
+      "Plexus = interlacing ventral rami → peripheral nerves; radiculopathy = single root; mononeuropathy = one nerve",
+      "Brachial plexus: C5–T1; mnemonic for cords — posterior cord branches all start with R (radial, axillary)",
+      "Erb palsy — upper trunk C5–C6 → arm adducted, internally rotated, extended ('waiter's tip')",
+      "Klumpke palsy — lower trunk C8–T1 → claw hand, intrinsic hand weakness ± Horner (T1)",
+      "Phrenic nerve = C3–C4–C5 — keeps the diaphragm alive",
+      "Sciatic nerve = L4–S3 from sacral/lumbosacral plexus",
+      "Femoral nerve = L2–L4 from lumbar plexus",
+      "Winged scapula — long thoracic nerve (C5–C7), not classic plexus division injury pattern",
+    ],
+    distinguishFrom: [
+      "Spinal nerve root — single segmental ventral/dorsal root before plexus interweaving; radiculopathy pattern",
+      "Peripheral mononeuropathy — one named nerve distal to plexus (e.g., median at wrist)",
+      "Peripheral neuropathy — diffuse symmetric polyneuropathy, not regional plexus pattern",
+      "Choroid plexus — CSF-producing ependymal tissue in ventricles, not peripheral nerve network",
+      "Pampiniform plexus — venous plexus in spermatic cord, not somatic nerve plexus",
+      "Autonomic plexus (celiac, mesenteric, hypogastric) — visceral sympathetic/parasympathetic fibers, not limb somatic innervation",
+    ],
+    pediatrics:
+      "Obstetric brachial plexus palsy from shoulder dystocia — Erb (upper trunk) most common; most recover with physical therapy. Klumpke injury is rare and may include Horner syndrome. Phrenic nerve (C3–C5) injury causes diaphragmatic paralysis in neonates — ipsilateral elevated hemidiaphragm on CXR.",
+  },
+  {
     id: "lumbosacral-spinal-nerve-roots",
     name: "Lumbosacral Spinal Nerve Roots",
     etymology:
@@ -4337,6 +4503,57 @@ export const MUSCULOSKELETAL: MusculoskeletalEntry[] = [
     ],
     pediatrics:
       "Peroneal nerve compression is uncommon in children; consider fibular fracture after trauma, cast immobilization pressure, or hereditary neuropathy (CMT) if bilateral or recurrent foot drop.",
+  },
+  {
+    id: "hip-girdle",
+    name: "Hip Girdle",
+    etymology:
+      "Old English hype = hip + Old French girdle = belt — pelvic ring and proximal hip musculature linking trunk to lower limbs",
+    aliases: [
+      "hip girdle",
+      "hip girdles",
+      "pelvic girdle",
+      "pelvic girdles",
+      "lower limb girdle",
+      "lower limb girdles",
+      "pelvic girdle muscles",
+      "hip girdle muscles",
+      "hip girdle musculature",
+      "pelvic girdle musculature",
+    ],
+    definition:
+      "The pelvic bony ring (hip bones, sacrum, coccyx) and the proximal muscles stabilizing the hip and transferring trunk forces to the lower extremity — clinically referenced in proximal weakness and inflammatory pain syndromes affecting iliopsoas, gluteal, and hip adductor groups.",
+    anatomy:
+      "Bony pelvis: ilium, ischium, pubis forming acetabulum; articulates with sacrum at sacroiliac joints. Girdle muscles: iliopsoas (hip flexion), gluteus medius/minimus (pelvic stability in gait), gluteus maximus (hip extension), hip adductors (pubic symphysis region). Opposite paired girdle = shoulder girdle (scapula/clavicle and rotator cuff/deltoid).",
+    action: [
+      "Transfers weight from axial skeleton to femora during standing and gait",
+      "Iliopsoas and gluteals produce proximal hip flexion/extension and pelvic stability",
+      "Hip abductors (gluteus medius) prevent Trendelenburg drop of pelvis in single-limb stance",
+      "Bilateral girdle involvement in PMR and inflammatory myopathies limits rising from chair and stair climbing",
+    ],
+    clinicalRelevance: [
+      "Polymyalgia rheumatica — bilateral shoulder and hip girdle pain/stiffness with very ↑ ESR",
+      "Inflammatory myopathies — proximal hip girdle weakness (difficulty climbing stairs)",
+      "Trendelenburg gait — gluteus medius (hip abductor) weakness or superior gluteal nerve injury",
+      "Hip fracture and osteoarthritis — groin/thigh pain localized to hip girdle region",
+      "Meralgia paresthetica — lateral thigh numbness from lateral femoral cutaneous nerve at inguinal ligament",
+    ],
+    boardsPearls: [
+      "Hip girdle = proximal hip/pelvic region — paired with shoulder girdle in PMR",
+      "PMR: bilateral shoulder + hip girdle stiffness >45 min, age >50, ↑↑ ESR — no true weakness",
+      "Proximal weakness (hip girdle) + rash → dermatomyositis; weakness without rash → polymyositis",
+      "Gluteus medius weakness → Trendelenburg sign (pelvis drops on unsupported side)",
+      "vs shoulder girdle — scapulothoracic and rotator cuff region; both affected in PMR",
+    ],
+    distinguishFrom: [
+      "Shoulder girdle — scapula, clavicle, rotator cuff; proximal upper extremity",
+      "Distal weakness — hands and feet; GBS, myasthenia pattern",
+      "Lumbar radiculopathy — dermatomal pain/weakness, not bilateral symmetric girdle stiffness",
+      "Hip joint (intra-articular) — groin pain with internal rotation limitation; may overlap anatomically",
+      "Sacrum/pelvis alone — bony ring without implying proximal muscle groups",
+    ],
+    pediatrics:
+      "Duchenne muscular dystrophy causes proximal (hip girdle) weakness with Gowers sign (using hands to climb up legs when rising). Developmental dysplasia of the hip affects the acetabulum within the pelvic girdle — Ortolani/Barlow maneuvers in infants.",
   },
 ];
 

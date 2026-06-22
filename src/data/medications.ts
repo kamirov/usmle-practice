@@ -1004,6 +1004,91 @@ export const MEDICATIONS: MedicationEntry[] = [
     ],
   },
   {
+    id: "bethanechol",
+    name: "Bethanechol",
+    etymology:
+      "Benzoic acid derivative + choline ester — synthetic muscarinic agonist named from chemical structure",
+    aliases: [
+      "bethanechol",
+      "bethanechol chloride",
+      "urecholine",
+      "bethanecholine",
+    ],
+    drugClass: "Direct muscarinic agonist (cholinomimetic)",
+    mechanism:
+      "Direct M3 muscarinic receptor agonist on smooth muscle → stimulates detrusor contraction and GI motility without requiring acetylcholine release; resistant to acetylcholinesterase hydrolysis (unlike acetylcholine).",
+    indications: [
+      "Postoperative or postpartum urinary retention (non-obstructive)",
+      "Neurogenic atonic bladder (selected cases)",
+      "Historically postoperative ileus (largely replaced by other agents)",
+    ],
+    adverseEffects: [
+      "Salivation, sweating, nausea, diarrhea (SLUDGE muscarinic effects)",
+      "Bronchospasm, bronchorrhea — caution in asthma/COPD",
+      "Bradycardia, hypotension",
+      "Abdominal cramping, urgency to defecate",
+    ],
+    boardsPearls: [
+      "Direct muscarinic agonist — SLUDGE: salivation, lacrimation, urination, defecation, GI upset, emesis",
+      "Used for urinary retention — stimulates detrusor via M3 receptors",
+      "vs atropine — opposite effects (bethanechol wet, atropine dry)",
+      "vs neostigmine — bethanechol agonizes receptor directly; neostigmine ↑ ACh via AChE inhibition",
+      "Contraindicated in asthma, COPD, bradycardia, peptic ulcer disease",
+      "Cholinergic toxidrome overlap if overdosed — miosis, bronchorrhea, diarrhea",
+    ],
+    distinguishFrom: [
+      "Pilocarpine — also direct muscarinic agonist; used for glaucoma and xerostomia, not primary urinary retention drug",
+      "Carbachol — muscarinic and nicotinic agonist; ophthalmic use",
+      "Neostigmine/pyridostigmine — indirect via AChE inhibition; used in myasthenia gravis",
+      "Atropine — muscarinic antagonist; antidote for cholinergic excess",
+    ],
+    pediatrics:
+      "Rarely used in pediatrics; cholinergic adverse effects (bronchorrhea, bradycardia) are dangerous in infants. Urinary retention in children warrants structural evaluation before cholinergic agonists.",
+  },
+  {
+    id: "pilocarpine",
+    name: "Pilocarpine",
+    etymology:
+      "Pilocarpus jaborandi plant alkaloid + -ine suffix — imidazole alkaloid muscarinic agonist",
+    aliases: [
+      "pilocarpine",
+      "pilocarpine hydrochloride",
+      "pilocarpine nitrate",
+      "salagen",
+      "isopto carpine",
+    ],
+    drugClass: "Direct muscarinic agonist (cholinomimetic)",
+    mechanism:
+      "Direct muscarinic receptor agonist — M3 on iris sphincter → miosis and ↑ trabecular meshwork outflow (↓ IOP in glaucoma); M3 on salivary glands → ↑ salivation; stimulates eccrine sweating when applied iontophoretically (CF sweat test).",
+    indications: [
+      "Open-angle glaucoma and ocular hypertension (topical drops)",
+      "Xerostomia from Sjögren syndrome or head/neck radiation (oral)",
+      "Diagnostic sweat stimulation — pilocarpine iontophoresis sweat chloride test for cystic fibrosis",
+    ],
+    adverseEffects: [
+      "Miosis, brow ache, blurred vision (night vision difficulty)",
+      "Salivation, sweating, nausea, diarrhea (systemic muscarinic effects)",
+      "Bronchospasm — avoid in uncontrolled asthma",
+      "Bradycardia, hypotension with systemic absorption",
+    ],
+    boardsPearls: [
+      "Muscarinic agonist → miosis (opposite of atropine mydriasis)",
+      "Glaucoma — contracts sphincter pupillae, opens trabecular outflow pathway",
+      "Sjögren xerostomia — oral pilocarpine ↑ salivation (opposite of anticholinergic dry mouth)",
+      "CF sweat test — pilocarpine iontophoresis stimulates localized sweating for chloride measurement",
+      "Cholinergic toxidrome features if systemic overdose — SLUDGE + miosis",
+      "vs bethanechol — pilocarpine ophthalmic/sialogogue; bethanechol for urinary retention",
+    ],
+    distinguishFrom: [
+      "Atropine — muscarinic antagonist; mydriasis, dry mouth (opposite toxidrome)",
+      "Bethanechol — direct muscarinic agonist for urinary retention, not first-line glaucoma",
+      "Latanoprost — prostaglandin analog for glaucoma; no miosis mechanism",
+      "Organophosphates — indirect cholinergic excess via AChE inhibition; treat with atropine + pralidoxime",
+    ],
+    pediatrics:
+      "Pilocarpine iontophoresis sweat test is standard CF confirmation in infants after positive newborn screen. Topical pilocarpine glaucoma use is uncommon in pediatrics; systemic cholinergic effects require caution.",
+  },
+  {
     id: "pralidoxime",
     name: "Pralidoxime",
     etymology:
@@ -2427,6 +2512,56 @@ export const MEDICATIONS: MedicationEntry[] = [
       "vs doxycycline — minocycline more vestibular toxicity and pigmentation; better MRSA skin coverage",
       "RA: used as DMARD when conventional agents contraindicated or as adjunct",
     ],
+  },
+  {
+    id: "abortifacient",
+    name: "Abortifacient",
+    etymology:
+      "Latin abortus = miscarriage + facere = to make — agent that terminates pregnancy",
+    aliases: [
+      "abortifacient",
+      "abortifacients",
+      "abortifacient drug",
+      "abortifacient drugs",
+      "abortifacient agent",
+      "abortifacient agents",
+      "pregnancy termination drug",
+      "pregnancy termination drugs",
+      "medical abortion drug",
+      "medical abortion drugs",
+    ],
+    drugClass: "Drug class (pregnancy termination)",
+    mechanism:
+      "Varies by agent — progesterone receptor antagonism (mifepristone) sensitizes uterus to prostaglandins; prostaglandin analogs (misoprostol) cause myometrial contractions and cervical ripening; antimetabolites (methotrexate) inhibit rapidly dividing trophoblast/fetal tissues in ectopic pregnancy protocols.",
+    indications: [
+      "Medical abortion — mifepristone + misoprostol in early intrauterine pregnancy (clinical context on boards as mechanism pairing)",
+      "Ectopic pregnancy — methotrexate IM when stable, unruptured, low β-hCG (often with misoprostol adjunct in some protocols)",
+      "Incomplete abortion or cervical ripening — misoprostol uterotonic effects (obstetric contexts)",
+    ],
+    adverseEffects: [
+      "Heavy vaginal bleeding and cramping",
+      "Incomplete abortion requiring surgical evacuation",
+      "Uterine rupture risk (especially with prior cesarean — misoprostol caution)",
+      "Methotrexate — hepatotoxicity, myelosuppression, teratogenicity if pregnancy continues",
+      "Mifepristone — bleeding, infection, retained products",
+    ],
+    boardsPearls: [
+      "Abortifacient = drug terminating pregnancy — know key examples and mechanisms",
+      "Mifepristone (progesterone antagonist) + misoprostol (PGE₁ analog) — medical abortion regimen",
+      "Methotrexate — antifolate abortifacient for ectopic pregnancy; teratogenic; monitor β-hCG fall",
+      "Misoprostol alone — uterotonic; contraindicated in wanted pregnancy except obstetric indications",
+      "vs contraceptive — prevents conception; abortifacient ends established pregnancy",
+      "Methotrexate is teratogenic — absolute contraindication in wanted intrauterine pregnancy",
+    ],
+    distinguishFrom: [
+      "Contraceptive — prevents ovulation/fertilization/implantation; does not terminate established pregnancy",
+      "Oxytocin — uterotonic for labor induction and postpartum hemorrhage, not primary medical abortion agent",
+      "Emergency contraception (levonorgestrel, ulipristal) — primarily pre-implantation; distinct from mifepristone abortion protocol",
+      "Mifepristone — specific progesterone receptor antagonist abortifacient example",
+      "Misoprostol — prostaglandin analog with abortifacient and ulcer-prophylaxis roles",
+    ],
+    pediatrics:
+      "Not a pediatric prescribing topic on Step 1; adolescent pregnancy management is clinical. Methotrexate teratogenicity and misoprostol Möbius sequence risk if pregnancy continues are high-yield embryology/toxicology links.",
   },
   {
     id: "misoprostol",
@@ -4742,6 +4877,48 @@ export const MEDICATIONS: MedicationEntry[] = [
       "Weak diuretic alone — usually paired with thiazide or loop diuretic",
       "Peds: same ENaC mechanism; hyperkalemia monitoring essential with RAAS blockade",
     ],
+  },
+  {
+    id: "triamterene",
+    name: "Triamterene",
+    etymology:
+      "tri- = three + amine = nitrogen-containing groups + -terene = pteridine-related diuretic scaffold",
+    aliases: [
+      "triamterene",
+      "dyrenium",
+      "triamterene hydrochloride",
+      "potassium-sparing diuretic triamterene",
+    ],
+    drugClass: "Potassium-sparing diuretic (ENaC blocker)",
+    mechanism:
+      "Directly blocks epithelial Na⁺ channels (ENaC) in the cortical collecting duct → ↓ Na⁺ reabsorption and ↓ K⁺/H⁺ secretion independent of aldosterone; weak diuretic alone — classically combined with hydrochlorothiazide (Dyazide, Maxzide) to offset thiazide-induced hypokalemia.",
+    indications: [
+      "Hypokalemia prevention when combined with thiazide diuretic",
+      "Hypertension or edema (combination with HCTZ more common than monotherapy)",
+      "Resistant hypertension with thiazide component",
+    ],
+    adverseEffects: [
+      "Hyperkalemia (especially with ACE inhibitors, ARBs, spironolactone, or renal insufficiency)",
+      "Metabolic acidosis (type 4 RTA pattern)",
+      "Nephrolithiasis — triamterene is poorly soluble; can precipitate in urine",
+      "Nausea, photosensitivity",
+    ],
+    boardsPearls: [
+      "K⁺-sparing diuretic — blocks ENaC like amiloride, not aldosterone receptor",
+      "Often combined with HCTZ — thiazide causes hypokalemia; triamterene offsets K⁺ loss",
+      "vs spironolactone — no gynecomastia; direct ENaC blockade not MRA",
+      "Trimethoprim also blocks ENaC → additive hyperkalemia risk with triamterene",
+      "Weak diuretic alone — combination with thiazide is classic boards pairing",
+      "Hyperkalemia caution with RAAS inhibitors and renal dysfunction",
+    ],
+    distinguishFrom: [
+      "Spironolactone — aldosterone receptor antagonist; gynecomastia risk",
+      "Amiloride — also ENaC blocker; used for Liddle syndrome and lithium-induced NDI",
+      "Hydrochlorothiazide — thiazide on NCC; causes hypokalemia triamterene counteracts",
+      "Eplerenone — selective MRA, not ENaC blocker",
+    ],
+    pediatrics:
+      "Potassium-sparing diuretics used cautiously in children; hyperkalemia risk with concurrent ACE inhibitors. Combination HCTZ-triamterene is uncommon in pediatrics compared with loop or thiazide monotherapy.",
   },
   {
     id: "hydrochlorothiazide",
@@ -7149,6 +7326,54 @@ export const MEDICATIONS: MedicationEntry[] = [
       "Neonatal prophylaxis IM vitamin K prevents hemorrhagic disease of newborn",
       "Peds: all newborns receive vitamin K at birth — prevents VKDB",
     ],
+  },
+  {
+    id: "prenatal-vitamins",
+    name: "Prenatal Vitamins",
+    etymology:
+      "Latin prae = before + natalis = of birth + vitamin = vital amine — multivitamin/mineral supplement for pregnancy",
+    aliases: [
+      "prenatal vitamins",
+      "prenatal vitamin",
+      "prenatal vits",
+      "prenatal multivitamin",
+      "prenatal multivitamins",
+      "prenatal supplement",
+      "prenatal supplements",
+      "prenatal folic acid",
+      "pregnancy vitamins",
+      "pregnancy vitamin",
+      "antenatal vitamins",
+    ],
+    drugClass: "Vitamin/mineral supplement (pregnancy)",
+    mechanism:
+      "Provides folic acid (and often iron, iodine, vitamin D, B12, and other micronutrients) to support maternal hematopoiesis and fetal development — folate is essential for DNA synthesis and neural tube closure in the first trimester.",
+    indications: [
+      "All women planning pregnancy or capable of becoming pregnant — folic acid supplementation",
+      "Pregnancy and lactation — prevent neural tube defects and support increased micronutrient demands",
+      "Prior neural tube defect pregnancy — higher-dose folic acid (4 mg daily) before subsequent conception",
+    ],
+    adverseEffects: [
+      "Nausea or constipation (often from iron component)",
+      "Masking of B12 deficiency if folate given alone without B12 in macrocytic anemia",
+      "Iron overdose risk if non-pregnant children ingest maternal supplements",
+    ],
+    boardsPearls: [
+      "Folic acid 400–800 µg daily starting before conception → ↓ neural tube defects (spina bifida, anencephaly)",
+      "Neural tube closure ~28 days post-conception — often before pregnancy recognized → start early",
+      "Prior NTD-affected pregnancy → 4 mg folic acid daily for next pregnancy",
+      "Valproate and maternal diabetes increase NTD risk — folate especially important",
+      "Iron in prenatals prevents/treats pregnancy anemia; B12 needed if vegan or malabsorption",
+      "vs routine multivitamin — prenatal formulations emphasize folate and iron doses for pregnancy",
+    ],
+    distinguishFrom: [
+      "Folic acid alone — core NTD prevention component; prenatal vitamins bundle folate with iron and other nutrients",
+      "Iron supplementation alone — treats anemia; does not replace folate for NTD prevention",
+      "Vitamin K neonatal injection — prevents hemorrhagic disease of newborn at birth, not prenatal vitamin",
+      "Methotrexate — folate antagonist; teratogenic; opposite of folate supplementation",
+    ],
+    pediatrics:
+      "Maternal folate deficiency before and during early pregnancy causes open neural tube defects in the fetus — spina bifida and anencephaly. Adolescents capable of pregnancy should receive folic acid counseling. Neonatal outcomes improve with adequate maternal iron and iodine; congenital hypothyroidism screening is separate from prenatal vitamin content.",
   },
   {
     id: "dmards",

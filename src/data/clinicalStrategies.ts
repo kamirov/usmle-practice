@@ -683,6 +683,54 @@ export const CLINICAL_STRATEGIES: ClinicalStrategyEntry[] = [
       "Pediatric solid tumor protocols often combine surgery with adjuvant chemotherapy or radiation, but Step 1 usually tests the timing concept rather than exact pediatric regimens.",
   },
   {
+    id: "induction-therapy",
+    name: "Induction Therapy",
+    etymology:
+      "Latin inducere = to lead into + Greek therapeia = healing — initial intensive treatment phase aimed at maximal disease reduction",
+    aliases: [
+      "induction",
+      "induction therapy",
+      "induction therapies",
+      "induction treatment",
+      "induction treatments",
+      "induction chemotherapy",
+      "induction regimen",
+      "induction regimens",
+      "induction phase",
+      "remission induction",
+      "remission induction therapy",
+    ],
+    definition:
+      "First intensive treatment phase designed to achieve rapid maximal cytoreduction or remission — highest drug intensity early in the course, followed when applicable by consolidation and maintenance phases (hematologic malignancies) or transition to less intensive long-term therapy (e.g., fungal meningitis, ANCA vasculitis).",
+    details: [
+      "Acute leukemia (AML, ALL) — induction chemotherapy (e.g., 7+3 for AML) aims for complete remission (marrow blasts <5%); consolidation intensifies remission; maintenance prolongs disease-free survival in ALL",
+      "Cryptococcal meningitis — amphotericin B ± flucytosine induction until CSF culture clearance, then fluconazole maintenance",
+      "ANCA-associated vasculitis — cyclophosphamide or rituximab plus glucocorticoids for remission induction",
+      "Contrast with neoadjuvant (pre-surgery tumor shrinkage) and adjuvant (post-resection microscopic disease eradication)",
+      "Higher acute toxicity expected during induction — tumor lysis syndrome prophylaxis in high-burden hematologic malignancy",
+      "Induction failure or refractory disease requires salvage regimens or transplant evaluation",
+    ],
+    boardsPearls: [
+      "Induction = first aggressive phase to achieve remission or major response",
+      "AML induction classic: cytarabine + anthracycline (7+3)",
+      "Cryptococcus: ampho B + flucytosine induction → fluconazole maintenance",
+      "vs consolidation — follows induction to deepen remission (especially leukemia)",
+      "vs maintenance — lower-intensity long-term therapy after remission (ALL maintenance methotrexate/6-MP)",
+      "vs adjuvant — after definitive local therapy (surgery), not initial leukemia course",
+      "Tumor lysis syndrome risk highest at induction when tumor burden is greatest",
+    ],
+    distinguishFrom: [
+      "Consolidation therapy — post-induction intensification to eliminate residual disease in leukemia",
+      "Maintenance therapy — prolonged lower-dose therapy after remission (classic in ALL)",
+      "Adjuvant therapy — after surgery/radiation for solid tumors with microscopic residual risk",
+      "Neoadjuvant therapy — before definitive surgery to shrink tumor",
+      "Salvage therapy — treatment after relapse or induction failure",
+      "Anesthesia induction — unrelated pharmacologic unconsciousness for intubation",
+    ],
+    pediatrics:
+      "Pediatric ALL induction achieves remission in most children but carries high TLS and infection risk — aggressive supportive care. Congenital/neonatal leukemia is rare; induction protocols differ from adult AML. Cryptococcal meningitis induction same drugs but weight-based dosing in immunocompromised children.",
+  },
+  {
     id: "palliative-care",
     name: "Palliative Care",
     etymology: "Latin pallium = cloak; palliare = to cloak/relieve",
@@ -1578,6 +1626,47 @@ export const CLINICAL_STRATEGIES: ClinicalStrategyEntry[] = [
     ],
     pediatrics:
       "Prone positioning in pediatric ARDS follows adult ICU principles under specialist care. Awake prone tummy time strengthens infants; sleep must be supine. Pierre Robin sequence may use prone positioning while awake to keep airway open.",
+  },
+  {
+    id: "right-lateral-decubitus-position",
+    name: "Right Lateral Decubitus Position",
+    etymology:
+      "Latin dexter = right + lateralis = side + decumbere = to lie down + positio = placement — patient lying on the right side",
+    aliases: [
+      "right lateral decubitus position",
+      "right lateral decubitus",
+      "right lateral decubitus positions",
+      "right side lying",
+      "lying on the right side",
+      "right lateral position",
+      "right lateral recumbent",
+      "right decubitus",
+      "rl decubitus",
+    ],
+    definition:
+      "Recumbent position with the patient lying on the right side — right flank dependent against the bed — altering which thoracic and abdominal structures are gravity-dependent and optimizing certain physical exam maneuvers.",
+    details: [
+      "Left hemithorax and left lung become dependent — affects aspiration distribution and auscultation of left basilar segments",
+      "Splenomegaly examination — gravity draws enlarged spleen medially and anteriorly, improving palpation and percussion in left upper quadrant",
+      "Barium swallow and some GI imaging protocols use lateral decubitus to demonstrate reflux or passage",
+      "Contrast with left lateral decubitus — left side down brings cardiac apex against chest wall for mitral murmurs/S3 and displaces gravid uterus off IVC",
+      "Used with patient rolled toward examiner for selected abdominal and neurologic exams",
+    ],
+    boardsPearls: [
+      "Right lateral decubitus = lying on right side (right side down)",
+      "vs left lateral decubitus — left side down for mitral valve auscultation (MS rumble, S3/S4 at apex) and pregnancy IVC decompression",
+      "Splenomegaly — right lateral decubitus can aid detection as spleen falls toward midline",
+      "Dependent lung changes with lateral positioning — relevant to aspiration segment anatomy",
+      "Recumbent positioning family: supine (face up), prone (face down), lateral decubitus (on side)",
+    ],
+    distinguishFrom: [
+      "Left lateral decubitus — left side dependent; classic for apical cardiac auscultation and third-trimester uterine displacement off IVC",
+      "Supine — face up; standard abdominal and cardiac exam position",
+      "Prone — face down; ARDS ventilation, MACE relief with left lateral",
+      "Trendelenburg — head down tilt, not pure lateral decubitus",
+    ],
+    pediatrics:
+      "Same lateral positioning principles apply in children; splenomegaly from infectious mononucleosis or storage disease may be easier to palpate with right lateral decubitus. Infant sleep position remains supine regardless of exam positioning.",
   },
   {
     id: "intubated",

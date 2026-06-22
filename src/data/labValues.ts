@@ -670,6 +670,54 @@ export const LAB_VALUES: LabValueEntry[] = [
     ],
   },
   {
+    id: "c-peptide",
+    name: "C-Peptide",
+    etymology:
+      "C = connecting peptide — the segment linking insulin A and B chains in proinsulin before cleavage",
+    aliases: [
+      "c-peptide",
+      "c peptide",
+      "connecting peptide",
+      "connecting peptides",
+      "insulin c-peptide",
+      "serum c-peptide",
+      "fasting c-peptide",
+      "plasma c-peptide",
+    ],
+    measures:
+      "Equimolar byproduct of endogenous proinsulin processing — co-secreted with insulin from pancreatic β cells; used to distinguish endogenous vs exogenous hyperinsulinism because therapeutic insulin lacks C-peptide.",
+    normalRange:
+      "Fasting ~0.8–3.1 ng/mL (assay-dependent); interpret with concurrent glucose and insulin",
+    increasedCauses: [
+      "Endogenous hyperinsulinism — insulinoma, nesidioblastosis, sulfonylurea use",
+      "Type 2 diabetes (relative ↑ vs type 1 — some residual β-cell function)",
+      "Obesity and insulin resistance (compensatory hyperinsulinemia)",
+      "Chronic kidney disease (↓ renal clearance)",
+      "Recent meal or glucose load (stimulated secretion)",
+    ],
+    decreasedCauses: [
+      "Type 1 diabetes mellitus — autoimmune β-cell destruction",
+      "Late-stage type 2 diabetes with β-cell failure",
+      "Post-pancreatectomy or islet destruction",
+      "Exogenous insulin administration (C-peptide absent in injected insulin)",
+    ],
+    boardsPearls: [
+      "Proinsulin → insulin + C-peptide (1:1 molar) in β cells",
+      "High insulin + low C-peptide → exogenous insulin (factitious or iatrogenic)",
+      "High insulin + high C-peptide + hypoglycemia → insulinoma (endogenous)",
+      "Type 1 DM: low C-peptide; type 2: normal or ↑ early, ↓ late",
+      "Sulfonylurea overdose → high insulin AND high C-peptide",
+      "Half-life longer than insulin (~30 min vs ~5 min) — reflects recent β-cell secretion",
+    ],
+    pairWith: [
+      "Hypoglycemia + high insulin + low C-peptide → exogenous insulin",
+      "Fasting hypoglycemia + high insulin + high C-peptide → insulinoma (Whipple triad)",
+      "Hyperglycemia + low C-peptide → type 1 diabetes",
+      "Hyperglycemia + normal/↑ C-peptide + obesity → type 2 diabetes",
+      "Hypoglycemia + high C-peptide + sulfonylurea on tox screen → secretagogue overdose",
+    ],
+  },
+  {
     id: "albumin",
     name: "Serum Albumin",
     etymology:
@@ -6065,6 +6113,7 @@ export const LAB_VALUES: LabValueEntry[] = [
       "India = historical source of carbon black pigment + Old English inca = colored fluid",
     aliases: [
       "india ink stain",
+      "india ink staining",
       "india ink prep",
       "india ink preparation",
       "india ink test",
@@ -6072,6 +6121,8 @@ export const LAB_VALUES: LabValueEntry[] = [
       "nigrosin preparation",
       "negative stain",
       "csf india ink",
+      "csf india ink stain",
+      "csf india ink staining",
     ],
     measures:
       "Negative stain: carbon particles (India ink/nigrosin) cannot penetrate encapsulated organisms — Cryptococcus neoformans appears as budding yeast with clear halo against dark background in CSF.",

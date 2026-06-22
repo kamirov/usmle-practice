@@ -1237,6 +1237,41 @@ export const HEMODYNAMICS: HemodynamicEntry[] = [
       "Peds: PFO is common in neonates but usually closes; persistent cyanosis with positional change warrants bubble study and CHD evaluation; hepatopulmonary syndrome occurs with advanced pediatric liver disease",
     ],
   },
+  {
+    id: "hemodynamic-instability",
+    name: "Hemodynamic Instability",
+    etymology:
+      "Greek haima = blood + dynamis = force + Latin instabilitas = lack of steadiness — cardiovascular parameters inadequate to maintain organ perfusion",
+    aliases: [
+      "hemodynamic instability",
+      "hemodynamic instabilities",
+      "hemodynamically unstable",
+      "hemodynamically instability",
+      "cardiovascular instability",
+      "cardiovascular instabilities",
+      "circulatory instability",
+      "circulatory collapse",
+      "unstable hemodynamics",
+      "unstable hemodynamic status",
+      "hemodynamic compromise",
+      "hemodynamic decompensation",
+    ],
+    definition:
+      "Acute failure of blood pressure, cardiac output, or vascular tone to sustain adequate tissue perfusion — manifesting as hypotension, tachycardia, oliguria, altered mentation, or rising lactate — often mandating urgent resuscitation, vasopressors, or definitive intervention.",
+    factors: [
+      "Common criteria: SBP <90 mmHg (or ↓ >40 from baseline), MAP <65 mmHg, need for vasopressors, or signs of end-organ hypoperfusion despite fluids",
+      "Hypovolemic: hemorrhage, dehydration, burns — ↓ preload → ↓ CO",
+      "Cardiogenic: acute MI, severe HF, arrhythmia — pump failure",
+      "Obstructive: massive PE, tamponade, tension pneumothorax — impaired filling/output",
+      "Distributive: septic shock, anaphylaxis, neurogenic shock — ↓ SVR with maldistribution",
+      "Clinical signs: tachycardia, hypotension, cool clammy skin, delayed capillary refill, oliguria, confusion, ↑ lactate",
+      "Massive pulmonary embolism with hemodynamic instability → systemic thrombolysis or embolectomy consideration",
+      "Unstable tachyarrhythmia (AF with RVR, VT) — instability triggers synchronized cardioversion",
+      "Treatment: treat cause + IV fluids/blood, vasopressors (norepinephrine first line in septic shock), inotropes if cardiogenic",
+      "vs stable hypotension — isolated low BP without perfusion failure or pressor need",
+      "Peds: children compensate with tachycardia before hypotension; delayed recognition worsens outcomes in septic shock and dehydration",
+    ],
+  },
 ];
 
 const hemodynamicById = new Map(HEMODYNAMICS.map((h) => [h.id, h]));
