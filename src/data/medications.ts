@@ -861,6 +861,44 @@ export const MEDICATIONS: MedicationEntry[] = [
     ],
   },
   {
+    id: "labetalol",
+    name: "Labetalol",
+    etymology:
+      "lab- = acetyl group naming element + -etalol = combined α/β-blocker suffix",
+    aliases: [
+      "labetalol",
+      "labetalol hydrochloride",
+      "labetalols",
+      "normodyne",
+      "trandate",
+    ],
+    drugClass: "α₁- and nonselective β-blocker",
+    mechanism:
+      "Competitive antagonism of α₁ receptors (vasodilation) and β₁/β₂ receptors (↓ heart rate and contractility) — ratio ~1:7 α:β blockade at lower doses with more α effect at higher doses; IV formulation provides rapid balanced afterload and heart rate reduction.",
+    indications: [
+      "Hypertensive emergency (especially pregnancy — preferred IV agent)",
+      "Chronic hypertension (oral)",
+      "Rate control with concurrent afterload reduction in selected acute settings",
+    ],
+    adverseEffects: [
+      "Orthostatic hypotension, dizziness",
+      "Bradycardia, heart block, heart failure exacerbation",
+      "Bronchospasm (β₂ blockade — less than propranolol at low doses but still caution in asthma)",
+      "Hepatotoxicity (rare — oral use)",
+      "Fatigue, scalp tingling (IV)",
+      "Masks hypoglycemia symptoms",
+    ],
+    boardsPearls: [
+      "α + β blocker — ↓ BP via vasodilation and ↓ cardiac output",
+      "First-line IV antihypertensive in pregnancy (preeclampsia/eclampsia)",
+      "vs pure β-blockers in cocaine toxicity — labetalol has α-blockade; still prefer benzodiazepines/nitrates/phentolamine on boards for cocaine",
+      "vs hydralazine in pregnancy — labetalol more predictable hemodynamics; hydralazine also used",
+      "IV onset minutes; oral for chronic HTN",
+      "Avoid in acute decompensated HF, severe bradycardia, asthma (relative)",
+      "Peds: used in pediatric hypertensive emergencies under specialist guidance; pregnancy pearl most high-yield",
+    ],
+  },
+  {
     id: "topiramate",
     name: "Topiramate",
     etymology: "topo- = structural/topological naming element + -iramate = sulfamate anticonvulsant suffix",
@@ -1085,6 +1123,42 @@ export const MEDICATIONS: MedicationEntry[] = [
       "Not effective for high-degree (type II second-degree or third-degree) AV block",
       "Organophosphate poisoning → atropine + pralidoxime (reactivates acetylcholinesterase)",
       "Pediatrics: bradycardia in infants often from hypoxia — address airway first",
+    ],
+  },
+  {
+    id: "atovaquone-proguanil",
+    name: "Atovaquone-Proguanil",
+    etymology:
+      "atovaquone = ato- + va- (valeric acid moiety) + quinone ring + proguanil = pro- + guanidine antifolate precursor",
+    aliases: [
+      "atovaquone-proguanil",
+      "atovaquone proguanil",
+      "atovaquone/proguanil",
+      "malarone",
+      "atovaquone and proguanil",
+    ],
+    drugClass: "Antimalarial combination",
+    mechanism:
+      "Atovaquone inhibits Plasmodium mitochondrial cytochrome bc1 complex → blocks electron transport and pyrimidine synthesis; proguanil is metabolized to cycloguanil, which inhibits plasmodial dihydrofolate reductase — dual blockade of parasite nucleotide metabolism.",
+    indications: [
+      "Malaria prophylaxis in travelers to chloroquine-resistant P. falciparum areas",
+      "Treatment of uncomplicated P. falciparum malaria (with artesunate in some regimens)",
+      "Alternative malaria prophylaxis when doxycycline or mefloquine unsuitable",
+    ],
+    adverseEffects: [
+      "Nausea, vomiting, abdominal pain, diarrhea",
+      "Headache, dizziness, insomnia",
+      "Rash, oral ulcers (uncommon)",
+      "Contraindicated or dose-adjust in severe renal impairment (proguanil/cycloguanil accumulation)",
+    ],
+    boardsPearls: [
+      "Malarone = atovaquone + proguanil — common Step 1 malaria prophylaxis for chloroquine-resistant regions",
+      "Take with fatty food — ↑ atovaquone absorption",
+      "Start 1–2 days before travel, continue 7 days after leaving endemic area",
+      "vs chloroquine — chloroquine only where P. falciparum remains sensitive; atovaquone-proguanil for resistance zones",
+      "vs doxycycline — doxycycline photosensitivity and GI upset; atovaquone-proguanil better tolerated but costlier",
+      "Proguanil component is a biguanide prodrug — not the same as pyrimethamine (used with sulfadiazine for toxoplasma)",
+      "Peds: weight-based dosing available for prophylaxis in children; tablets can be crushed and mixed with food",
     ],
   },
   {
@@ -5174,6 +5248,12 @@ export const MEDICATIONS: MedicationEntry[] = [
       "dyrenium",
       "triamterene hydrochloride",
       "potassium-sparing diuretic triamterene",
+      "hctz-triamterene",
+      "hctz triamterene",
+      "hydrochlorothiazide-triamterene",
+      "hydrochlorothiazide triamterene",
+      "dyazide",
+      "maxzide",
     ],
     drugClass: "Potassium-sparing diuretic (ENaC blocker)",
     mechanism:
@@ -5444,6 +5524,43 @@ export const MEDICATIONS: MedicationEntry[] = [
       "BPH and HTN — relaxes bladder outlet obstruction",
       "vs tamsulosin — doxazosin causes more systemic vasodilation and orthostasis",
       "Peds: not first-line pediatric antihypertensive; orthostatic risk same",
+    ],
+  },
+  {
+    id: "phentolamine",
+    name: "Phentolamine",
+    etymology:
+      "phen- = phenyl ring + -tol- = methyl substituent + -amine = amine — imidazoline-derived adrenergic antagonist",
+    aliases: [
+      "phentolamine",
+      "phentolamines",
+      "phentolamine mesylate",
+      "regitine",
+      "phentolamine mesilate",
+    ],
+    drugClass: "Nonselective α-adrenergic antagonist (competitive/reversible)",
+    mechanism:
+      "Reversible antagonism of α₁ and α₂ receptors → arteriolar and venous vasodilation; α₂ blockade also ↑ presynaptic NE release (can worsen tachycardia) — short-acting IV agent.",
+    indications: [
+      "Cocaine-associated hypertension/coronary vasospasm (with benzodiazepines/nitrates — avoids unopposed α stimulation)",
+      "Pheochromocytoma — adjunct to phenoxybenzamine or for acute hypertensive crisis (β-blockers only after α-blockade)",
+      "Extravasation of vasopressor infusions (norepinephrine, phenylephrine, dopamine) — local infiltration",
+      "Diagnostic provocation for pheochromocytoma (historical — superseded by biochemical testing)",
+    ],
+    adverseEffects: [
+      "Hypotension, reflex tachycardia, angina",
+      "Nasal congestion, flushing",
+      "Arrhythmias",
+      "Paradoxical ↑ BP if used alone in pheochromocytoma without adequate α-blockade (catecholamine surge)",
+    ],
+    boardsPearls: [
+      "Reversible nonselective α-blocker — short IV half-life",
+      "Cocaine toxicity: β-blockers alone → unopposed α → worse vasoconstriction; phentolamine (or nitrates/BZDs) preferred",
+      "Pheochromocytoma: α-blockade BEFORE β-blockade — β-blocker first can cause hypertensive crisis",
+      "vs phenoxybenzamine — irreversible α-blocker for chronic pheochromocytoma prep",
+      "vs prazosin/terazosin — selective α₁ oral agents for BPH/HTN; phentolamine is IV nonselective",
+      "Treat vasopressor extravasation with local phentolamine injection",
+      "Peds: same cocaine/pheochromocytoma physiology; phentolamine rarely used in children",
     ],
   },
   {
@@ -6938,6 +7055,42 @@ export const MEDICATIONS: MedicationEntry[] = [
     ],
   },
   {
+    id: "sulfadiazine-pyrimethamine",
+    name: "Sulfadiazine-Pyrimethamine",
+    etymology:
+      "sulfa = sulfonamide + diazine = pyrimidine ring + pyrimethamine = pyrimidine + eth- + amine antifolate",
+    aliases: [
+      "sulfadiazine-pyrimethamine",
+      "sulfadiazine pyrimethamine",
+      "sulfadiazine/pyrimethamine",
+      "pyrimethamine-sulfadiazine",
+      "pyrimethamine sulfadiazine",
+      "sulfadiazine and pyrimethamine",
+    ],
+    drugClass: "Antiprotozoal antifolate combination",
+    mechanism:
+      "Dual blockade of folate synthesis: sulfadiazine inhibits dihydropteroate synthase (upstream) and pyrimethamine inhibits dihydrofolate reductase (downstream) in Toxoplasma gondii — synergistic impairment of tetrahydrofolate–dependent purine and thymidylate synthesis.",
+    indications: [
+      "Toxoplasma gondii — cerebral toxoplasmosis in AIDS (with leucovorin)",
+      "Congenital toxoplasmosis (with leucovorin)",
+      "Empiric treatment of ring-enhancing CNS lesions in HIV while awaiting serology (with leucovorin)",
+    ],
+    adverseEffects: [
+      "Bone marrow suppression — megaloblastic anemia, leukopenia, thrombocytopenia (folate antagonism; mitigated by leucovorin)",
+      "Sulfa reactions — rash, Stevens-Johnson syndrome, hemolysis in G6PD deficiency",
+      "Crystalluria and nephrotoxicity (sulfadiazine — maintain hydration)",
+      "Teratogenic — folate antagonism; leucovorin used when treatment required in pregnancy",
+    ],
+    boardsPearls: [
+      "HIV + multiple ring-enhancing brain lesions → toxoplasmosis → sulfadiazine + pyrimethamine + leucovorin",
+      "Always add leucovorin (folinic acid) — rescues host marrow while combo blocks protozoal folate pathway",
+      "Sulfa allergy → clindamycin + pyrimethamine + leucovorin alternative",
+      "vs trimethoprim-sulfamethoxazole — TMP-SMX for PCP and UTI; pyrimethamine-sulfadiazine for toxoplasma",
+      "vs atovaquone-proguanil — both hit folate pathway but atovaquone-proguanil is for malaria, not toxoplasmosis",
+      "Peds: congenital toxoplasmosis standard regimen; monitor CBC, LFTs, and hydration closely",
+    ],
+  },
+  {
     id: "amphotericin-b",
     name: "Amphotericin B",
     etymology: "ampho- = both + -tericin = amphoteric antifungal polyene + B = compound variant",
@@ -7524,6 +7677,44 @@ export const MEDICATIONS: MedicationEntry[] = [
       "Slow acetylators (NAT2) at higher risk of lupus and toxicity",
       "Combine with β-blocker to blunt reflex tachycardia",
       "Peds: rarely used; same lupus risk in slow acetylators",
+    ],
+  },
+  {
+    id: "nitroprusside",
+    name: "Nitroprusside",
+    etymology:
+      "nitro = nitroso/nitric oxide–releasing moiety + pruss- = Prussian blue (ferricyanide) + -ide = chemical suffix — sodium nitroprusside contains Fe²⁺ coordinated to cyanide and nitric oxide ligands",
+    aliases: [
+      "nitroprusside",
+      "nitroprussides",
+      "sodium nitroprusside",
+      "snp",
+      "nipride",
+      "nitroprusside sodium",
+    ],
+    drugClass: "Balanced arteriolar and venous vasodilator (nitrovasodilator)",
+    mechanism:
+      "Releases nitric oxide (NO) nonenzymatically in vascular smooth muscle → activates guanylate cyclase → ↑ cGMP → simultaneous arteriolar and venous dilation → ↓ preload and afterload; metabolism releases cyanide (then thiocyanate via rhodanese in liver).",
+    indications: [
+      "Hypertensive emergency",
+      "Acute severe heart failure / afterload reduction (with careful monitoring)",
+      "Controlled hypotension during surgery (specialist use)",
+    ],
+    adverseEffects: [
+      "Profound hypotension with reflex tachycardia",
+      "Cyanide toxicity — metabolic acidosis, confusion, seizures (prolonged high-dose infusion)",
+      "Thiocyanate toxicity — especially in renal failure (psychosis, weakness)",
+      "Increased intracranial pressure (cerebral vasodilation)",
+      "Coronary steal phenomenon (theoretical concern)",
+    ],
+    boardsPearls: [
+      "Balanced vasodilator — ↓ preload AND afterload (vs nitroglycerin = mainly venodilator)",
+      "Short-acting IV infusion — titratable hypertensive emergency drug",
+      "Cyanide toxicity from nitroprusside metabolism — lactic acidosis + altered mental status",
+      "Antidote for cyanide: hydroxocobalamin, sodium thiosulfate, or amyl nitrite/sodium nitrite (forms cyanomethemoglobin)",
+      "Thiocyanate accumulates in renal failure — monitor prolonged infusions",
+      "vs nitroglycerin — nitroprusside dilates arteries and veins; nitroglycerin mainly veins",
+      "Peds: rarely used; same cyanide toxicity risk with prolonged infusion",
     ],
   },
   {

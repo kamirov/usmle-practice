@@ -380,6 +380,47 @@ export const ORGANS: OrganEntry[] = [
       "Forms from the right common cardinal vein and right anterior cardinal vein (anterior cardinal system).",
   },
   {
+    id: "azygos-vein",
+    name: "Azygos Vein",
+    etymology:
+      "Greek a- = without + zygos = yoke/pair — unpaired ascending vein on the right side of the vertebral column (no left counterpart at this level)",
+    aliases: [
+      "azygos vein",
+      "azygos veins",
+      "azygos",
+      "vena azygos",
+      "azygous vein",
+      "azygous veins",
+      "hemiazygos vein",
+      "accessory hemiazygos vein",
+    ],
+    germLayer: "Mesoderm",
+    origin:
+      "Forms from the right supracardinal vein (embryonic posterior cardinal system); hemi-azygos and accessory hemi-azygos veins develop from left supracardinal segments and drain across midline to join the azygos system.",
+    derivatives: [
+      "Azygos arch — arches over right main bronchus to drain into SVC",
+      "Hemiazygos vein — drains left lower posterior thorax into azygos at T8–T9",
+      "Accessory hemiazygos vein — drains left upper posterior thorax into azygos at T7–T8",
+    ],
+    functionSummary:
+      "Major venous collateral pathway draining posterior thoracic and abdominal walls, esophagus, mediastinum, and pericardium into the SVC — becomes critical when SVC flow is obstructed.",
+    commonPathologies: [
+      "Dilated azygos vein on CXR — SVC obstruction/syndrome, right heart failure, portal hypertension",
+      "Azygos continuation of IVC — congenital anomaly when IVC fails to form below renal veins",
+      "Collateral pathway in SVC syndrome from lung cancer or mediastinal fibrosis",
+    ],
+    step1Pearls: [
+      "Azygos vein arches over right main bronchus → drains into SVC",
+      "Receives hemiazygos (left lower thorax) and accessory hemiazygos (left upper thorax)",
+      "Enlarged azygos on CXR — SVC obstruction, heart failure, or azygos continuation of IVC",
+      "SVC syndrome — head/neck/arm swelling; azygos–IVC collaterals maintain some drainage",
+      "Posterior intercostal veins drain to azygos system on right, hemiazygos on left",
+      "vs portal vein — drains GI tract to liver, not posterior thoracic collateral system",
+    ],
+    pediatrics:
+      "Azygos continuation of IVC presents with absent infrahepatic IVC on imaging — azygos vein enlarges to return blood to SVC. Same collateral physiology in SVC obstruction regardless of age.",
+  },
+  {
     id: "ivc",
     name: "Inferior Vena Cava",
     etymology:
@@ -760,6 +801,50 @@ export const ORGANS: OrganEntry[] = [
     germLayer: "Mesoderm",
     origin:
       "Parietal and visceral pleura derive from splanchnic mesoderm lining the pleuroperitoneal canals.",
+  },
+  {
+    id: "mediastinum",
+    name: "Mediastinum",
+    etymology:
+      "Latin mediastinum = middle partition — central compartment of the thorax between the pleural cavities",
+    aliases: [
+      "mediastinum",
+      "mediastinal",
+      "mediastinal compartment",
+      "mediastinal space",
+      "thoracic mediastinum",
+      "mediastinal cavity",
+    ],
+    germLayer: "Mesoderm (connective tissue, vessels) + endoderm (trachea, esophagus) + ectoderm (nerves)",
+    origin:
+      "Develops as the central thoracic mesenchymal compartment between the pleuroperitoneal canals; thymus descends from third pharyngeal pouch into the anterior mediastinum; great vessels remodel from aortic arch derivatives and cardinal venous system.",
+    derivatives: [
+      "Heart and pericardium (middle mediastinum)",
+      "Thymus (anterior mediastinum)",
+      "Trachea and main bronchi (middle/superior)",
+      "Esophagus (posterior mediastinum)",
+      "Great vessels — aorta, SVC, pulmonary arteries/veins",
+      "Mediastinal lymph nodes",
+    ],
+    functionSummary:
+      "Houses and supports vital thoracic structures — heart, great vessels, airways, esophagus, thymus, lymphatics, and nerves — bounded by pleural membranes laterally, sternum anteriorly, and vertebral column posteriorly.",
+    commonPathologies: [
+      "Widened mediastinum on CXR — aortic dissection/aneurysm, lymphoma, thymoma, teratoma, esophageal rupture",
+      "Mediastinitis — esophageal perforation (Boerhaave), postoperative infection",
+      "Mediastinal shift — tension pneumothorax (away from lesion), atelectasis (toward lesion)",
+      "Anterior mediastinal masses — 4 T's: thymoma, teratoma, thyroid, terrible lymphoma",
+      "Pneumomediastinum — alveolar rupture with air tracking along bronchovascular sheaths",
+    ],
+    step1Pearls: [
+      "Superior mediastinum — above sternal angle (T4–T5): great vessels, trachea, esophagus, thymus, vagus/phrenic nerves",
+      "Inferior mediastinum — below sternal angle: anterior (thymus/remnant), middle (heart/pericardium), posterior (esophagus, descending aorta, azygos vein)",
+      "Widened mediastinum — think aortic catastrophe until proven otherwise",
+      "Anterior mediastinal mass — 4 T's mnemonic (thymoma, teratoma, thyroid, terrible lymphoma)",
+      "Mediastinal shift away from side of increased pressure (tension PTX); toward side of volume loss (atelectasis)",
+      "Thymus visible in children — normal anterior mediastinal fullness; involutes with age",
+    ],
+    pediatrics:
+      "Thymus occupies anterior mediastinum and may appear prominent on pediatric CXR — do not confuse with lymphoma. Congenital mediastinal cysts and vascular rings occur in children. Tension pneumothorax causes same mediastinal shift physiology as in adults.",
   },
   {
     id: "esophagus",

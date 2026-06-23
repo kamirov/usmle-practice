@@ -792,8 +792,12 @@ export const MICROBIOLOGY: MicrobiologyEntry[] = [
       "cdifficile",
       "clostridium difficile",
       "clostridium difficiles",
+      "clostridium difficile infection",
+      "clostridium difficile colitis",
       "clostridioides difficile infection",
       "clostridioides difficile colitis",
+      "cdi",
+      "c diff infection",
     ],
     type: "anaerobe",
     definition:

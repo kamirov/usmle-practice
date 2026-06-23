@@ -515,6 +515,7 @@ export const MUSCULOSKELETAL: MusculoskeletalEntry[] = [
     aliases: [
       "long thoracic nerve",
       "long thoracic nerves",
+      "long thoracic",
       "lateral thoracic nerve",
       "external respiratory nerve of bell",
       "nervus thoracicus longus",
@@ -559,6 +560,7 @@ export const MUSCULOSKELETAL: MusculoskeletalEntry[] = [
     aliases: [
       "phrenic nerve",
       "phrenic nerves",
+      "phrenic",
       "nervus phrenicus",
       "c3-c5 phrenic",
       "c3 c4 c5 keeps diaphragm alive",
@@ -594,6 +596,63 @@ export const MUSCULOSKELETAL: MusculoskeletalEntry[] = [
     ],
     pediatrics:
       "Congenital diaphragmatic hernia (Bochdalek) is a defect, not phrenic palsy — neonatal respiratory distress with scaphoid abdomen and bowel sounds in chest.",
+  },
+  {
+    id: "intercostal-nerve",
+    name: "Intercostal Nerve",
+    etymology:
+      "Latin inter = between + costa = rib + Greek neuron = sinew/nerve",
+    aliases: [
+      "intercostal nerve",
+      "intercostal nerves",
+      "intercostal",
+      "intercostals",
+      "thoracic intercostal nerve",
+      "thoracic intercostal nerves",
+      "anterior ramus intercostal",
+      "anterior rami intercostal",
+      "ventral ramus intercostal",
+      "ventral rami intercostal",
+      "intercostal neurovascular bundle",
+      "intercostal neurovascular bundles",
+    ],
+    definition:
+      "Segmental spinal nerves formed by the ventral rami of thoracic spinal roots T1–T12 — each courses in the costal groove beneath its rib to supply intercostal and some abdominal wall muscles, overlying skin, and parietal pleura/peritoneum in a dermatomal band around the chest and upper abdomen.",
+    anatomy:
+      "Typical intercostal nerve (T2–T11) runs in the costal groove inferior to the rib with intercostal vein superiorly and intercostal artery between them (VAN: vein, artery, nerve from superior to inferior). Gives lateral cutaneous branch, muscular branches to external/internal/innermost intercostals, collateral branch, and anterior cutaneous branch. T1 contributes to the brachial plexus; lower intercostals (T7–T11) continue anteriorly to supply rectus abdominis and anterior abdominal wall; T12 becomes the subcostal nerve.",
+    action: [
+      "Motor — external intercostals (inspiration, rib elevation), internal/innermost intercostals (forced expiration), transversus thoracis",
+      "Lower thoracic intercostals — motor to anterior abdominal wall (rectus abdominis, transversus abdominis)",
+      "Sensory — skin and parietal pleura/peritoneum in segmental dermatomal bands",
+      "Rami communicantes connect to sympathetic chain at each level",
+    ],
+    innervation:
+      "Ventral rami of thoracic spinal nerves T1–T12 (T1 partly to brachial plexus; T12 = subcostal nerve)",
+    clinicalRelevance: [
+      "Herpes zoster — painful vesicular rash in a single thoracic dermatome along intercostal distribution",
+      "Rib fracture pain — parietal pleura and intercostal muscle irritation",
+      "Intercostal nerve block — local anesthesia in costal groove for thoracic surgery or chest wall pain",
+      "Iatrogenic injury during thoracotomy, chest tube placement, or pericardiocentesis near costal margin",
+      "Coarctation of the aorta — enlarged intercostal artery collaterals → rib notching on CXR",
+    ],
+    boardsPearls: [
+      "Intercostal nerve = ventral ramus of thoracic spinal nerve in costal groove",
+      "VAN in costal groove — vein (superior), artery, nerve (inferior)",
+      "External intercostals = inspiration; internal intercostals = forced expiration",
+      "Shingles follows one dermatomal band — intercostal sensory distribution",
+      "T7–T11 intercostals supply anterior abdominal wall below the rib cage",
+      "vs phrenic nerve — diaphragm only; intercostals do not motor innervate hemidiaphragm",
+      "First intercostal nerve (T1) joins brachial plexus — not a typical intercostal pattern",
+    ],
+    distinguishFrom: [
+      "Phrenic nerve — C3–C5 motor to diaphragm, not segmental chest wall dermatomes",
+      "Long thoracic nerve — C5–C7 to serratus anterior along lateral chest, not in costal groove",
+      "Subcostal nerve — ventral ramus of T12 below last rib, continuation of intercostal pattern",
+      "Lateral cutaneous branches of intercostals — sensory only branches, not the full nerve trunk",
+      "Sympathetic chain — rami communicantes connect but chain is separate autonomic pathway",
+    ],
+    pediatrics:
+      "Infants with bronchiolitis show intercostal retractions from increased work of breathing — a clinical sign of chest wall recession, not nerve injury. Pediatric zoster is uncommon but follows the same dermatomal intercostal pattern when it occurs.",
   },
   {
     id: "recurrent-laryngeal-nerve",
@@ -2069,6 +2128,107 @@ export const MUSCULOSKELETAL: MusculoskeletalEntry[] = [
     ],
     pediatrics:
       "Same portal triad anatomy in children; biliary atresia and choledochal cyst surgery involve hepatoduodenal ligament region. Internal hernias through the omental foramen are rare in pediatrics.",
+  },
+  {
+    id: "coronary-arteries",
+    name: "Coronary Arteries",
+    etymology:
+      "Latin corona = crown/wreath + Greek arteria = artery — vessels encircling the heart like a crown at the atrioventricular groove",
+    aliases: [
+      "coronary arteries",
+      "coronary artery",
+      "coronary arterial circulation",
+      "coronary circulation",
+      "epicardial coronary arteries",
+      "coronary arterial supply",
+    ],
+    definition:
+      "Paired arterial system arising from the aortic sinuses just above the aortic valve cusps — supplying the myocardium, SA/AV nodes, and proximal conduction system; left coronary artery (LCA) and right coronary artery (RCA) with dominance determined by which artery gives rise to the posterior descending artery (PDA).",
+    anatomy:
+      "Left coronary artery arises from left aortic sinus; short left main (LM) bifurcates into left anterior descending (LAD — anterior wall, anterior septum, apex) and left circumflex (LCx — lateral wall, often SA node in left-dominant). Right coronary artery from right aortic sinus supplies RV, inferior wall, and in ~85% right-dominant circulation gives PDA (inferior septum, AV node). Venous drainage predominantly via coronary sinus into RA. Coronary perfusion occurs mainly during diastole when myocardium relaxes.",
+    action: [
+      "Deliver oxygenated blood to myocardium — ~5% of cardiac output at rest, ↑ with exercise",
+      "Diastolic perfusion — aortic diastolic pressure minus LVEDP drives left coronary flow",
+      "Collateral circulation develops with chronic ischemia (Rentrop collaterals)",
+      "Metabolic autoregulation — adenosine, NO, local factors match flow to demand",
+    ],
+    innervation:
+      "Sympathetic (T1–T5) — vasoconstriction and ↑ contractility; parasympathetic (vagus) — modest vasodilation; local metabolic factors dominate autoregulation",
+    clinicalRelevance: [
+      "Atherosclerotic coronary artery disease — angina, acute coronary syndromes, STEMI/NSTEMI",
+      "Coronary occlusion territory maps to ECG leads (LAD → anterior V1–V4; RCA → inferior II, III, aVF)",
+      "Kawasaki disease — coronary artery aneurysms in children",
+      "Anomalous coronary origin from pulmonary artery (ALCAPA) or wrong sinus — sudden death in youth",
+      "Coronary angiography, PCI, and CABG revascularization",
+    ],
+    boardsPearls: [
+      "LAD = widowmaker — anterior MI, largest territory",
+      "RCA in right-dominant circulation → inferior MI + AV node (heart block) + SA node",
+      "LCx → lateral wall; left-dominant if LCx gives PDA",
+      "Coronary perfusion mainly in diastole — tachycardia shortens diastole and ↓ myocardial blood flow",
+      "Most MI from plaque rupture and thrombosis in epicardial coronary arteries",
+      "vs coronary sinus — venous drainage channel, not arterial supply",
+    ],
+    distinguishFrom: [
+      "Coronary sinus — major venous drainage of myocardium into right atrium",
+      "Pulmonary arteries — carry deoxygenated blood to lungs, not myocardial supply",
+      "Internal thoracic artery — chest wall supply; used as CABG conduit to LAD",
+      "Coronary veins — venous counterparts draining to coronary sinus",
+    ],
+    pediatrics:
+      "Kawasaki disease can cause coronary artery aneurysms — largest cause of acquired heart disease in children in developed nations. ALCAPA presents with infant heart failure and mitral regurgitation. Anomalous coronary arteries from wrong sinus associated with sudden death in adolescent athletes.",
+  },
+  {
+    id: "internal-thoracic-artery",
+    name: "Internal Thoracic Artery",
+    etymology:
+      "Latin internus = within + Greek thorax = chest + Greek arteria = artery — also called internal mammary artery from Latin mamma = breast",
+    aliases: [
+      "internal thoracic artery",
+      "internal thoracic arteries",
+      "internal thoracic",
+      "internal mammary artery",
+      "internal mammary arteries",
+      "internal mammary",
+      "ita",
+      "itas",
+      "mammary artery",
+      "mammary arteries",
+    ],
+    definition:
+      "Paired artery arising from the subclavian artery (first part) that descends vertically behind the costal cartilages ~1–2 cm lateral to the sternum — supplying anterior chest wall, sternum, mediastinal pleura, pericardium, and upper abdominal wall via musculophrenic and superior epigastric terminal branches.",
+    anatomy:
+      "Origin: subclavian artery (usually first part). Descends behind first six costal cartilages in company with internal thoracic vein (medial) and phrenic nerve (lateral). Terminal bifurcation at sixth intercostal space into superior epigastric artery (anastomoses with inferior epigastric) and musculophrenic artery (lower intercostals, diaphragm). Anastomoses with intercostal arteries and contralateral internal thoracic circulation.",
+    action: [
+      "Supply anterior thoracic wall — intercostal perforators, sternum, pectoral region",
+      "Collateral pathway in aortic coarctation (via intercostal anastomoses → rib notching)",
+      "Preferred arterial conduit in coronary artery bypass grafting (ITA-to-LAD)",
+      "Contributes to abdominal wall perfusion via superior epigastric anastomosis",
+    ],
+    innervation:
+      "Vasomotor sympathetic fibers accompany arterial supply; phrenic nerve courses adjacent in chest but does not innervate the artery",
+    clinicalRelevance: [
+      "Left internal thoracic artery (LITA) to LAD — gold-standard CABG graft with excellent long-term patency",
+      "Injury during sternotomy or mediastinal surgery",
+      "Collateral source in chronic upper extremity ischemia or coarctation",
+      "Used in breast reconstruction (TRAM/DIEP flaps involve related perforators)",
+    ],
+    boardsPearls: [
+      "Internal thoracic artery = internal mammary artery (same vessel)",
+      "Arises from subclavian; descends parasternally behind costal cartilages",
+      "ITA-to-LAD graft — superior long-term patency vs saphenous vein graft",
+      "Coarctation collateral pathway — intercostal arteries from internal thoracic → rib notching on CXR",
+      "Terminal branches: superior epigastric + musculophrenic",
+      "vs external thoracic artery — lateral thoracic wall branch of axillary artery",
+    ],
+    distinguishFrom: [
+      "External thoracic (lateral thoracic) artery — axillary branch to lateral chest wall",
+      "Intercostal arteries — posterior aortic branches; anastomose with internal thoracic perforators",
+      "Coronary arteries — arise from aortic sinuses, not subclavian",
+      "Inferior epigastric artery — iliac branch anastomosing with superior epigastric at umbilicus",
+    ],
+    pediatrics:
+      "Same anatomy in children; coarctation of the aorta may enlarge intercostal collaterals from internal thoracic branches causing rib notching. ITA grafting used in pediatric congenital heart surgery when coronary revascularization needed.",
   },
   {
     id: "celiac-artery",

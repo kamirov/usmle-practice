@@ -5530,6 +5530,56 @@ export const SYMPTOMS: SymptomEntry[] = [
       "Atopic dermatitis often begins in infancy; contact dermatitis to nickel or irritants occurs in children. Acrodermatitis enteropathica presents with periorificial dermatitis, diarrhea, and alopecia.",
   },
   {
+    id: "keratitis",
+    name: "Keratitis",
+    etymology:
+      "Greek keras = horn (cornea) + -itis = inflammation",
+    aliases: [
+      "keratitis",
+      "keratitides",
+      "corneal inflammation",
+      "corneal inflammations",
+      "corneal infection",
+      "corneal infections",
+      "infectious keratitis",
+      "bacterial keratitis",
+      "viral keratitis",
+      "fungal keratitis",
+    ],
+    definition:
+      "Inflammation or infection of the cornea — presents with eye pain, photophobia, redness, tearing, and blurred vision; threatens vision if ulceration or scarring develops.",
+    mechanism:
+      "Microbial invasion (bacteria, virus, fungus, Acanthamoeba), trauma, contact lens wear, or immune-mediated inflammation damages corneal epithelium and stroma → inflammatory infiltrate, epithelial defect, and possible ulceration; HSV causes characteristic dendritic ulcers via viral cytopathic effect.",
+    thinkOf: [
+      "Herpes simplex keratitis — dendritic corneal ulcer; do NOT give topical steroids alone",
+      "Bacterial keratitis — contact lens wearer, Pseudomonas aeruginosa risk",
+      "Acanthamoeba keratitis — contact lens + freshwater exposure, severe pain",
+      "Fungal keratitis — agricultural trauma, vegetative matter",
+      "Vitamin A deficiency — xerophthalmia with corneal ulceration and Bitot spots",
+      "Neurotrophic keratitis — impaired corneal sensation (V1, diabetes, HSV)",
+      "Interstitial keratitis — congenital syphilis (Hutchinson triad)",
+      "Herpes zoster ophthalmicus — keratitis with vesicular rash in V1 distribution",
+    ],
+    pairWith: [
+      "Painful red eye + photophobia + fluorescein corneal defect → keratitis",
+      "Dendritic ulcer on fluorescein stain → HSV keratitis",
+      "Contact lens wearer + corneal infiltrate → bacterial (Pseudomonas) keratitis",
+      "Severe pain out of proportion + ring infiltrate → Acanthamoeba",
+      "Trauma with vegetative matter + slow-growing ulcer → fungal keratitis",
+      "Keratitis + Hutchinson teeth + deafness → congenital syphilis",
+      "Keratitis + vesicles on nose/forehead → zoster ophthalmicus",
+    ],
+    distinguishFrom: [
+      "Conjunctivitis — chemosis and discharge; cornea clear on fluorescein exam",
+      "Uveitis — anterior chamber cell and flare; cornea may be clear unless keratouveitis",
+      "Acute angle-closure glaucoma — mid-dilated fixed pupil, very high IOP",
+      "Episcleritis — superficial injection without corneal staining defect",
+      "Corneal abrasion — epithelial defect from trauma without infectious infiltrate initially",
+    ],
+    pediatrics:
+      "Neonatal HSV keratitis can threaten vision — urgent ophthalmology referral. Vitamin A deficiency keratitis remains important in malnourished children globally. Congenital syphilis interstitial keratitis may present in adolescence as part of Hutchinson triad.",
+  },
+  {
     id: "keratoderma-blennorrhagica",
     name: "Keratoderma Blennorrhagica",
     etymology:
@@ -8162,6 +8212,58 @@ export const SYMPTOMS: SymptomEntry[] = [
     ],
     pediatrics:
       "Erythema multiforme in children is often HSV- or Mycoplasma-associated; mucosal involvement and skin pain should raise SJS/TEN concern.",
+  },
+  {
+    id: "tick-bite",
+    name: "Tick Bite",
+    etymology:
+      "Middle English tik = small arachnid parasite + bite = puncture wound from mouthparts",
+    aliases: [
+      "tick bite",
+      "tick bites",
+      "tick attachment",
+      "tick attachments",
+      "tick exposure",
+      "tick exposures",
+      "ixodes tick bite",
+      "ixodes tick bites",
+      "deer tick bite",
+      "deer tick bites",
+      "dog tick bite",
+      "dog tick bites",
+      "lone star tick bite",
+      "lone star tick bites",
+    ],
+    definition:
+      "Attachment and feeding of a hard tick (Ixodidae) on skin — vector for multiple infectious diseases; the bite itself may be unnoticed, with illness manifesting days to weeks later.",
+    mechanism:
+      "Tick mouthparts pierce skin and secrete cement to anchor during blood meal — pathogens transmitted via saliva during prolonged feeding (hours); Ixodes spp. (deer tick) transmit Borrelia burgdorferi (Lyme), Babesia, Anaplasma; Dermacentor (dog tick) transmits Rickettsia rickettsii (RMSF) and Francisella tularensis; Amblyomma (lone star) transmits Ehrlichia chaffeensis and can cause alpha-gal syndrome.",
+    thinkOf: [
+      "Lyme disease — Ixodes tick in Northeast/Upper Midwest; erythema migrans",
+      "Rocky Mountain spotted fever — Dermacentor tick; fever + rash starting wrists/ankles centripetally",
+      "Ehrlichiosis/anaplasmosis — lone star or Ixodes tick; fever, leukopenia, thrombocytopenia",
+      "Babesiosis — Ixodes coinfection with Lyme; hemolytic anemia",
+      "Tularemia — Dermacentor; ulceroglandular disease",
+      "Tick paralysis — neurotoxin from prolonged attachment; resolves with tick removal",
+      "Alpha-gal syndrome — lone star tick → red meat allergy (IgE to galactose-α-1,3-galactose)",
+    ],
+    pairWith: [
+      "Tick bite + expanding annular erythema → erythema migrans (Lyme)",
+      "Tick exposure + fever + headache + centripetal rash → RMSF (do not wait for rash to treat)",
+      "Tick bite + fever + cytopenias → ehrlichiosis/anaplasmosis",
+      "Summer hiking in endemic area + facial nerve palsy → Lyme neuroborreliosis",
+      "Tick bite + hemolytic anemia in asplenic patient → babesiosis",
+      "Ascending paralysis after tick exposure → tick paralysis — remove tick",
+    ],
+    distinguishFrom: [
+      "Mosquito bite — pruritic wheal; transmits malaria, dengue, West Nile, not Lyme/RMSF",
+      "Spider bite — necrotic lesion (brown recluse) or neurotoxic (black widow); not vector for Lyme",
+      "Flea bite — clustered papules on ankles; transmits plague, murine typhus",
+      "Insect sting — immediate pain and swelling; hymenoptera venom allergy",
+      "Cellulitis at bite site — bacterial superinfection without systemic vector-borne illness",
+    ],
+    pediatrics:
+      "Children in Lyme-endemic areas need careful tick checks after outdoor play. Doxycycline is used for Lyme and RMSF in children per current guidelines. Tick paralysis presents with ascending weakness — search scalp and skin folds for attached tick.",
   },
   {
     id: "reticular-lesion",
@@ -12009,6 +12111,55 @@ export const SYMPTOMS: SymptomEntry[] = [
     ],
     pediatrics:
       "Rigors with fever in infants and young children warrant careful evaluation for bacteremia and UTI; neonates may not mount rigors and instead present with lethargy or hypothermia during serious infection.",
+  },
+  {
+    id: "hypothermia",
+    name: "Hypothermia",
+    etymology: "Greek hypo = under/below + Greek therme = heat",
+    aliases: [
+      "hypothermia",
+      "hypothermias",
+      "hypothermic",
+      "hypothermic state",
+      "low body temperature",
+      "decreased body temperature",
+      "core temperature below normal",
+      "accidental hypothermia",
+      "therapeutic hypothermia",
+    ],
+    definition:
+      "Core body temperature below normal (~<35°C / 95°F) from impaired thermogenesis, excessive heat loss, or hypothalamic dysfunction — distinct from fever (elevated set point) and hyperthermia (failed heat dissipation with normal/low set point).",
+    mechanism:
+      "Heat loss exceeds production: environmental exposure (cold water, inadequate clothing), peripheral vasodilation (sepsis late phase, ethanol), decreased thermogenesis (hypothyroidism, malnutrition, adrenal insufficiency), CNS depression (opioids, barbiturates, sedatives), or hypothalamic injury. Shivering and vasoconstriction initially compensate; severe hypothermia → ↓ metabolic rate, bradycardia, ↓ mental status, loss of shivering. Therapeutic hypothermia (32–34°C) reduces cerebral metabolic demand after cardiac arrest or perinatal HIE.",
+    thinkOf: [
+      "Environmental exposure — elderly, homeless, mountaineering, drowning",
+      "Sepsis — especially neonates and elderly may present with hypothermia instead of fever",
+      "Hypothyroidism / myxedema coma — cold intolerance, bradycardia, altered mental status",
+      "Malnutrition / anorexia nervosa — bradycardia, lanugo, electrolyte abnormalities",
+      "Alcohol or sedative intoxication — impaired behavioral thermoregulation + vasodilation",
+      "Hypoglycemia, adrenal crisis, pituitary failure",
+      "Stroke or hypothalamic lesion",
+      "Drug toxicity — opioids, barbiturates, phenothiazines",
+      "Post-cardiac arrest — therapeutic hypothermia protocol",
+      "Perinatal hypoxic-ischemic encephalopathy — therapeutic hypothermia in neonates",
+    ],
+    pairWith: [
+      "Hypothermia + bradycardia + altered mental status → severe exposure or myxedema coma",
+      "Hypothermia + hypotension + infection signs → sepsis (especially neonate/elderly)",
+      "Hypothermia + Osborn J waves on ECG → cold injury to myocardium",
+      "Hypothermia + lanugo + weight loss → anorexia nervosa with medical instability",
+      "Hypothermia + miosis + respiratory depression → opioid toxicity",
+      "Neonate with hypothermia + lethargy → sepsis workup even without fever",
+      "Post-arrest patient cooled to 32–34°C → therapeutic hypothermia for neuroprotection",
+    ],
+    distinguishFrom: [
+      "Fever — pyrogen-elevated hypothalamic set point; temperature is high, not low",
+      "Hyperthermia — heat stroke, malignant hyperthermia, serotonin syndrome; core temp elevated",
+      "Factitious hypothermia — thermometer manipulation (rare)",
+      "Normal low morning temperature — mild diurnal variation, not pathologic hypothermia",
+    ],
+    pediatrics:
+      "Neonates lose heat rapidly (high surface-area-to-mass ratio, limited shivering) — hypothermia in serious bacterial infection is a red flag. Therapeutic hypothermia (33–34°C for 72 h) reduces neurologic injury in moderate–severe perinatal hypoxic-ischemic encephalopathy. Febrile neonates get sepsis workup; hypothermic neonates warrant the same urgency.",
   },
   {
     id: "hyperthermia",
