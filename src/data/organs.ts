@@ -506,7 +506,7 @@ export const ORGANS: OrganEntry[] = [
     aliases: ["pharynx", "pharyngeal", "throat"],
     germLayer: "Endoderm / Mesoderm",
     origin:
-      "Develops from foregut endoderm and surrounding pharyngeal arch mesenchyme; divided into nasopharynx, oropharynx, and laryngopharynx.",
+      "Develops from foregut endoderm and surrounding pharyngeal arch mesenchyme; divided into nasopharynx, oropharynx (see dedicated entry), and laryngopharynx.",
     derivatives: [
       "Waldeyer ring lymphoid tissue",
       "Tonsils",
@@ -693,6 +693,48 @@ export const ORGANS: OrganEntry[] = [
     ],
   },
   {
+    id: "oropharynx",
+    name: "Oropharynx",
+    etymology:
+      "Greek stoma = mouth + pharynx = throat — middle pharyngeal segment from soft palate to epiglottis serving both respiratory and digestive passages",
+    aliases: [
+      "oropharynx",
+      "oropharyngeal",
+      "oral pharynx",
+      "middle pharynx",
+      "mesopharynx",
+      "throat oropharynx",
+    ],
+    germLayer: "Endoderm / Mesoderm",
+    origin:
+      "Middle pharyngeal segment from foregut endoderm and pharyngeal arch mesenchyme — bounded superiorly by soft palate, inferiorly by epiglottis; lined by stratified squamous epithelium.",
+    derivatives: [
+      "Palatine tonsils (Waldeyer ring)",
+      "Lingual tonsils (base of tongue)",
+      "Soft palate and uvula",
+      "Posterior pharyngeal wall",
+    ],
+    functionSummary:
+      "Shared airway and food passage — conducts air to larynx and food to hypopharynx; palatine tonsils and base-of-tongue lymphoid tissue provide mucosal immunity; site of group A strep pharyngitis.",
+    commonPathologies: [
+      "Streptococcal pharyngitis (GAS)",
+      "Peritonsillar abscess (quinsy)",
+      "Tonsillar hypertrophy and obstructive sleep apnea",
+      "Oropharyngeal squamous cell carcinoma (HPV-associated and tobacco-related)",
+      "Epiglottitis (extends from supraglottic/oropharyngeal region)",
+    ],
+    step1Pearls: [
+      "Oropharynx = soft palate to epiglottis; nasopharynx above soft palate; laryngopharynx below epiglottis",
+      "2nd pharyngeal pouch → palatine tonsil epithelium",
+      "Waldeyer ring — palatine, lingual, pharyngeal (adenoid), tubal tonsils",
+      "GAS pharyngitis — exudative tonsillitis, no cough, treat to prevent rheumatic fever",
+      "HPV-16 associated oropharyngeal SCC — rising incidence; base of tongue/tonsil",
+      "vs nasopharynx — adenoids and Eustachian tubes; EBV nasopharyngeal carcinoma",
+    ],
+    pediatrics:
+      "Strep pharyngitis common in school-age children; peritonsillar abscess presents with trismus and uvular deviation. Tonsillectomy for recurrent GAS or obstructive sleep apnea.",
+  },
+  {
     id: "trachea",
     name: "Trachea",
     etymology: "Greek trachys = rough",
@@ -729,6 +771,52 @@ export const ORGANS: OrganEntry[] = [
       "Forms from the foregut endoderm dorsal to the laryngotracheal diverticulum; muscular layers from surrounding mesoderm.",
   },
   {
+    id: "lower-esophageal-sphincter",
+    name: "Lower Esophageal Sphincter",
+    etymology:
+      "Old English lower = inferior + Greek oisophagos = food carrier + Latin sphincter = tight band — physiologic high-pressure zone at the gastroesophageal junction",
+    aliases: [
+      "lower esophageal sphincter",
+      "lower esophageal sphincters",
+      "les",
+      "gastroesophageal sphincter",
+      "gastroesophageal sphincters",
+      "ge junction sphincter",
+      "distal esophageal sphincter",
+      "cardiac sphincter",
+      "esophagogastric junction sphincter",
+      "lower oesophageal sphincter",
+    ],
+    germLayer: "Endoderm (mucosa) + mesoderm (circular smooth muscle) at gastroesophageal junction",
+    origin:
+      "Not a discrete anatomic sphincter — functional high-pressure zone from distal esophageal circular smooth muscle, diaphragmatic crural fibers, and acute angle of His; tonic contraction prevents reflux of gastric contents.",
+    derivatives: [
+      "Distal esophageal circular smooth muscle tone",
+      "Diaphragmatic crural contribution at hiatus",
+      "Angle of His — acute gastroesophageal junction angle",
+    ],
+    functionSummary:
+      "Maintains tonic contraction between swallows to prevent gastroesophageal reflux; relaxes transiently during primary peristalsis after swallowing to allow bolus passage into stomach; impaired tone or excessive transient relaxation → GERD.",
+    commonPathologies: [
+      "GERD — reduced basal LES tone and/or frequent transient LES relaxation",
+      "Hiatal hernia — LES displaced above diaphragm → incompetent barrier",
+      "Achalasia — failure of LES relaxation (loss of inhibitory NO/VIP myenteric neurons)",
+      "Scleroderma — smooth muscle fibrosis → LES hypotension and severe reflux",
+      "Esophagitis and Barrett esophagus — chronic reflux injury",
+    ],
+    step1Pearls: [
+      "LES = physiologic sphincter, not a distinct anatomic ring — tonic smooth muscle pressure zone",
+      "GERD — ↓ LES tone, transient LES relaxation, hiatal hernia",
+      "Achalasia — failed LES relaxation + aperistalsis; bird-beak on barium swallow; manometry diagnostic",
+      "Scleroderma — LES hypotension + distal esophageal hypomotility → severe GERD (most common GI visceral involvement)",
+      "CCK and gastrin modulate LES tone; metoclopramide ↑ LES tone (anti-reflux motility effect)",
+      "vs pyloric sphincter — gastric outlet to duodenum, not gastroesophageal junction",
+      "Manometry: achalasia = incomplete LES relaxation; scleroderma = hypotensive LES + low-amplitude peristalsis",
+    ],
+    pediatrics:
+      "Infant GER is common from immature LES tone and recumbent feeding — usually resolves by 12–18 months. Persistent reflux with failure to thrive, apnea, or esophagitis warrants workup. Achalasia is rare in children but presents with dysphagia and regurgitation.",
+  },
+  {
     id: "stomach",
     name: "Stomach",
     etymology: "Greek gaster + Latin stomachus = stomach",
@@ -736,7 +824,56 @@ export const ORGANS: OrganEntry[] = [
     germLayer: "Endoderm",
     origin:
       "Foregut endoderm dilates and rotates; greater and lesser curvatures form during 90° clockwise rotation.",
-    derivatives: ["Fundus", "Body", "Pylorus"],
+    derivatives: ["Fundus", "Body", "Antrum (see dedicated entry)", "Pylorus"],
+  },
+  {
+    id: "gastric-antrum",
+    name: "Gastric Antrum",
+    etymology:
+      "Latin antrum = cave + Greek gaster = stomach — distal gastric chamber before the pylorus, forming a cave-like reservoir",
+    aliases: [
+      "antrum",
+      "antra",
+      "gastric antrum",
+      "gastric antra",
+      "pyloric antrum",
+      "pyloric antra",
+      "stomach antrum",
+      "antrum of stomach",
+      "antrum of the stomach",
+      "antral mucosa",
+      "antral region",
+      "distal stomach",
+      "pyloric region",
+    ],
+    germLayer: "Endoderm",
+    origin:
+      "Foregut endoderm forming the distal portion of the stomach between the body and pylorus; mucosa contains abundant G cells and is common site of H. pylori colonization.",
+    derivatives: [
+      "G cells — gastrin-secreting enteroendocrine cells",
+      "Antral (pyloric) glands — mucus-secreting, fewer parietal cells than fundus",
+      "Pylorus — distal antral sphincter region leading to duodenum",
+    ],
+    functionSummary:
+      "Distal gastric reservoir that grinds food and regulates gastric emptying; G cells in antral mucosa release gastrin in response to distension, peptides, and vagal stimulation — suppressed by luminal acid.",
+    commonPathologies: [
+      "H. pylori antral gastritis — most common site of infection",
+      "Antral G-cell hyperplasia — non-neoplastic gastrin excess",
+      "Gastric antral vascular ectasia (GAVE/watermelon stomach)",
+      "Peptic ulcer disease — antral ulcers adjacent to pylorus",
+      "Retained antrum syndrome — post-gastrectomy G-cell hyperplasia",
+    ],
+    step1Pearls: [
+      "G cells live in gastric antrum (and duodenum) — secrete gastrin",
+      "Acid in stomach ↓ gastrin release — negative feedback from fundic/body acid",
+      "H. pylori antral gastritis — type B chronic gastritis; can progress to antral atrophy",
+      "vs fundus/body — parietal cells (acid) predominate in oxyntic mucosa; antrum has G cells",
+      "vs pulmonary vein antrum — cardiac ablation target at PV ostia; different anatomical antrum",
+      "Autoimmune gastritis affects fundus/body; H. pylori gastritis often antral first",
+      "Pylorus is distal antral outlet — not synonymous but anatomically continuous",
+    ],
+    pediatrics:
+      "H. pylori acquisition often in childhood; antral gastritis can present with dyspepsia or iron deficiency. Gastrin physiology is immature in neonates.",
   },
   {
     id: "omentum",
@@ -872,17 +1009,44 @@ export const ORGANS: OrganEntry[] = [
       "intestinal gland",
       "crypts of the small intestine",
       "small intestinal crypts",
+      "crypt",
+      "crypts",
+      "colonic crypt",
+      "colonic crypts",
+      "colon crypt",
+      "colon crypts",
+      "intestinal crypt cell niche",
     ],
     germLayer: "Endoderm",
     origin:
-      "Invaginations of small intestinal (and colonic) mucosa between villi formed from endodermal epithelium; base houses intestinal stem cells that regenerate the entire villus/crypt axis every ~3–5 days.",
+      "Invaginations of small intestinal (and colonic) mucosa between villi formed from endodermal epithelium; base houses intestinal stem cells that regenerate the entire villus/crypt axis every ~3–5 days (see crypt-villus axis entry).",
     derivatives: [
-      "Intestinal stem cells (crypt base columnar cells)",
+      "Intestinal stem cells (crypt base columnar cells / Lgr5⁺ cells)",
       "Paneth cells — defensins, lysozyme at crypt base",
       "Goblet cells — mucin secretion",
-      "Enterocytes — absorption on villus surface",
+      "Enterocytes — differentiate as progenitors migrate onto villus",
       "Enteroendocrine cells — secretin, CCK, GIP secreting cells",
     ],
+    functionSummary:
+      "Proliferative niche of intestinal mucosa — stem cells at the crypt base divide and supply differentiated epithelial cells to villi (small intestine) or surface epithelium (colon); Paneth cells defend crypt sterility with antimicrobial peptides.",
+    commonPathologies: [
+      "Celiac disease — crypt hyperplasia with villous atrophy",
+      "Colorectal cancer — APC/Wnt mutations dysregulate crypt proliferation",
+      "Necrotizing enterocolitis — immature crypt defenses in preterm gut",
+      "Radiation/chemotherapy mucositis — crypt stem cell injury",
+      "GVHD — crypt apoptosis and villous blunting",
+    ],
+    step1Pearls: [
+      "Crypt = intestinal gland invagination; stem cells at base (Lgr5⁺)",
+      "Paneth cells at crypt base secrete defensins and lysozyme",
+      "Celiac biopsy — villous atrophy + crypt hyperplasia + ↑ intraepithelial lymphocytes",
+      "vs villus — absorptive surface; crypt supplies renewing epithelium",
+      "Crypt-villus axis — see dedicated cell entry for renewal unit",
+      "Colonic crypts lack villi but same stem cell/proliferation concept",
+      "Crypt lumina — interior gland channel opening to bowel lumen; see dedicated entry",
+    ],
+    pediatrics:
+      "Crypt defenses and Paneth cell function are immature in preterm intestine — contributes to NEC risk. Celiac disease can present in toddlers with crypt hyperplasia on biopsy after gluten exposure.",
   },
   {
     id: "cecum",
@@ -1080,14 +1244,59 @@ export const ORGANS: OrganEntry[] = [
       "duodenal papillas",
       "papilla of vater",
       "papilla of Vater",
-      "sphincter of oddi region",
     ],
     germLayer: "Endoderm (foregut–midgut junction)",
     origin:
       "Common bile duct and main pancreatic duct converge at this papilla in the descending duodenum; bile and pancreatic enzymes enter the duodenal lumen through the sphincter of Oddi.",
     derivatives: [
-      "Sphincter of Oddi (smooth muscle complex at ampullary orifice)",
+      "Sphincter of Oddi (smooth muscle complex at ampullary orifice) — see dedicated entry",
     ],
+  },
+  {
+    id: "sphincter-of-oddi",
+    name: "Sphincter of Oddi",
+    etymology:
+      "Latin sphincter = tight band + eponym: Ruggero Oddi (Italian physiologist) — smooth muscle valve controlling flow of bile and pancreatic juice into the duodenum at the ampulla of Vater",
+    aliases: [
+      "sphincter of oddi",
+      "sphincter of Oddi",
+      "sphincters of oddi",
+      "oddi sphincter",
+      "hepatopancreatic sphincter",
+      "hepatopancreatic sphincters",
+      "ampullary sphincter",
+      "ampullary sphincters",
+      "choledochoduodenal sphincter",
+      "biliary sphincter",
+      "biliary sphincters",
+      "pancreatic sphincter",
+    ],
+    germLayer: "Mesoderm (smooth muscle) surrounding foregut-derived ampulla",
+    origin:
+      "Develops as smooth muscle surrounding the common channel where the common bile duct and main pancreatic duct enter the duodenum at the major duodenal papilla (ampulla of Vater).",
+    derivatives: [
+      "Biliary segment — regulates bile flow from common bile duct",
+      "Pancreatic segment — regulates pancreatic juice flow",
+      "Ampullary segment — common outlet into duodenal lumen",
+    ],
+    functionSummary:
+      "Coordinates release of bile and pancreatic enzymes into the duodenum — relaxes with cholecystokinin and secretin after meals; basal tone prevents reflux of duodenal contents into bile/pancreatic ducts.",
+    commonPathologies: [
+      "Sphincter of Oddi dysfunction (SOD) — post-cholecystectomy biliary-type pain, ↑ liver enzymes",
+      "Post-ERCP pancreatitis — papillary edema or sphincter manipulation",
+      "Gallstone lodged at ampulla — obstructs both bile and pancreatic ducts (gallstone pancreatitis)",
+      "Congenital choledochal cyst with anomalous pancreaticobiliary junction",
+    ],
+    step1Pearls: [
+      "Sphincter of Oddi surrounds ampulla of Vater — controls bile + pancreatic juice entry to duodenum",
+      "CCK → gallbladder contraction + sphincter of Oddi relaxation → bile and enzymes delivered for fat digestion",
+      "Gallstone at ampulla can obstruct both ducts → pancreatitis + jaundice",
+      "vs ileocecal valve — controls colonic entry; not biliary anatomy",
+      "ERCP with sphincterotomy treats selected SOD and ampullary stones",
+      "Located at major duodenal papilla in descending duodenum",
+    ],
+    pediatrics:
+      "Choledochal cysts and anomalous pancreaticobiliary junction present in childhood with jaundice and pancreatitis risk. SOD is primarily an adult post-cholecystectomy diagnosis.",
   },
   {
     id: "foregut",
@@ -2244,6 +2453,56 @@ export const ORGANS: OrganEntry[] = [
       "Prosencephalon maldevelopment causes holoprosencephaly with midline facial defects; trisomy 13 and fetal alcohol are common associations in pediatrics.",
   },
   {
+    id: "striatum",
+    name: "Striatum",
+    etymology:
+      "Latin striatum = striped — alternating myelinated fiber bundles and gray matter create a striped appearance on gross coronal section of basal ganglia",
+    aliases: [
+      "striatum",
+      "striatums",
+      "striata",
+      "corpus striatum",
+      "corpora striata",
+      "dorsal striatum",
+      "dorsal striatums",
+      "ventral striatum",
+      "ventral striatums",
+      "neostriatum",
+      "neostriatums",
+      "striate nucleus",
+      "striate nuclei",
+    ],
+    origin:
+      "Telencephalic basal ganglia derivative; dorsal striatum comprises caudate nucleus and putamen (see dedicated entries); ventral striatum includes nucleus accumbens and olfactory tubercle — principal input stage of basal ganglia motor and reward circuits.",
+    germLayer: "Ectoderm",
+    derivatives: [
+      "Medium spiny neurons (GABAergic projection neurons) — ~95% of striatal neurons",
+      "Caudate nucleus — dorsal striatum component",
+      "Putamen — dorsal striatum component",
+      "Nucleus accumbens — ventral striatum (reward/motivation)",
+      "Cholinergic interneurons — modulate striatal output",
+    ],
+    functionSummary:
+      "Principal input nucleus of the basal ganglia — receives glutamatergic cortical input and modulates thalamocortical motor output via direct (D1, facilitatory) and indirect (D2, inhibitory) pathways under dopaminergic tone from substantia nigra (dorsal) and VTA (ventral).",
+    commonPathologies: [
+      "Parkinson disease — ↓ nigrostriatal dopamine → hypokinesia, rigidity",
+      "Huntington disease — striatal medium spiny neuron loss → chorea",
+      "Drug-induced parkinsonism — D2 receptor blockade in striatum",
+      "Wilson disease and metabolic disorders — basal ganglia signal change",
+      "Hyperglycemic hemichorea-hemiballismus — striatal dysfunction",
+    ],
+    step1Pearls: [
+      "Dorsal striatum = caudate + putamen (motor); ventral striatum = nucleus accumbens (reward)",
+      "Direct pathway (D1) → ↑ movement; indirect pathway (D2) → ↓ movement",
+      "Parkinson = ↓ dopamine in striatum; Huntington loses indirect pathway MSNs early",
+      "Antipsychotic D2 blockade in striatum → extrapyramidal symptoms",
+      "vs lentiform nucleus — putamen + globus pallidus; striatum is caudate + putamen only",
+      "Nigrostriatal pathway — substantia nigra → dorsal striatum; mesolimbic — VTA → ventral striatum",
+    ],
+    pediatrics:
+      "Juvenile Huntington disease and inherited dystonias reflect striatal circuit dysfunction; Wilson disease may present in adolescence with psychiatric symptoms and basal ganglia MRI changes.",
+  },
+  {
     id: "caudate",
     name: "Caudate Nucleus",
     etymology:
@@ -2266,7 +2525,7 @@ export const ORGANS: OrganEntry[] = [
       "Tail — curves into temporal lobe toward amygdala",
     ],
     functionSummary:
-      "Principal input nucleus of the basal ganglia (dorsal striatum with putamen); receives glutamatergic input from cortex and modulates movement, cognition, and motivation via direct/indirect pathway medium spiny neurons.",
+      "Principal input nucleus of the basal ganglia dorsal striatum (with putamen; see striatum entry); receives glutamatergic input from cortex and modulates movement, cognition, and motivation via direct/indirect pathway medium spiny neurons.",
     commonPathologies: [
       "Huntington disease — caudate atrophy first on imaging",
       "Wilson disease — basal ganglia degeneration",
@@ -2274,7 +2533,7 @@ export const ORGANS: OrganEntry[] = [
       "Hyperglycemic hemichorea-hemiballismus — putamen/caudate involvement",
     ],
     step1Pearls: [
-      "Caudate + putamen = dorsal striatum (motor); nucleus accumbens = ventral striatum (reward)",
+      "Caudate + putamen = dorsal striatum (see striatum entry); nucleus accumbens = ventral striatum (reward)",
       "Huntington disease — caudate degeneration → enlarged lateral ventricles on CT/MRI",
       "Direct pathway (D1) promotes movement; indirect (D2) inhibits — Huntington loses indirect MSNs",
       "Caudate wraps around lateral ventricle — classic neuroanatomy landmark",
@@ -2478,7 +2737,7 @@ export const ORGANS: OrganEntry[] = [
       "Medium spiny neuron-rich motor circuit input zone",
     ],
     functionSummary:
-      "Motor component of dorsal striatum receiving cortical glutamatergic input; integrates with globus pallidus and substantia nigra for initiation and suppression of voluntary movement.",
+      "Motor component of dorsal striatum (see striatum entry) receiving cortical glutamatergic input; integrates with globus pallidus and substantia nigra for initiation and suppression of voluntary movement.",
     commonPathologies: [
       "Parkinson disease — dopamine depletion in putamen/caudate striatum",
       "Huntington disease — striatal neuron loss including putamen",
@@ -2486,7 +2745,7 @@ export const ORGANS: OrganEntry[] = [
       "Carbon monoxide poisoning — bilateral putamen necrosis",
     ],
     step1Pearls: [
-      "Putamen + globus pallidus = lentiform nucleus; caudate is separate but functionally striatum together",
+      "Putamen + globus pallidus = lentiform nucleus; caudate is separate but functionally striatum together (see striatum entry)",
       "Internal capsule separates caudate (medial) from lentiform nucleus (lateral) on axial MRI",
       "Putaminal hemorrhage — sudden hemiparesis, hypertension risk",
       "MPTP toxicity and Parkinson disease affect nigrostriatal input to putamen",
@@ -2715,16 +2974,16 @@ export const ORGANS: OrganEntry[] = [
       "Caudal primary brain vesicle; divides into metencephalon (pons, cerebellum) and myelencephalon (medulla oblongata), forming the fourth ventricle.",
     germLayer: "Ectoderm",
     derivatives: [
-      "Metencephalon — pons, cerebellum",
+      "Metencephalon — pons, cerebellum (see dedicated entry)",
       "Myelencephalon — medulla oblongata",
       "Fourth ventricle",
     ],
     functionSummary:
-      "Coordinates balance and motor learning (cerebellum), regulates vital autonomic functions (medullary respiratory/cardiovascular centers), and relays signals between cerebrum and spinal cord (pons).",
+      "Coordinates balance and motor learning (cerebellum — see dedicated entry), regulates vital autonomic functions (medullary respiratory/cardiovascular centers), and relays signals between cerebrum and spinal cord (pons).",
     commonPathologies: [
       "Medulloblastoma (cerebellar, pediatric)",
       "Chiari malformation (cerebellar tonsil herniation)",
-      "Lateral medullary (Wallenberg) syndrome",
+      "Lateral medullary (Wallenberg) syndrome — PICA infarct; see Wallenberg syndrome entry",
       "Cerebellar stroke or ataxia",
     ],
     step1Pearls: [
@@ -2735,6 +2994,58 @@ export const ORGANS: OrganEntry[] = [
     ],
     pediatrics:
       "Medulloblastoma and Chiari II (with spina bifida) are classic pediatric hindbrain pathologies; Dandy-Walker malformation involves cerebellar vermis and fourth ventricle.",
+  },
+  {
+    id: "cerebellum",
+    name: "Cerebellum",
+    etymology:
+      "Latin cerebellum = little brain — paired infratentorial structure posterior to pons and medulla, connected via cerebellar peduncles",
+    aliases: [
+      "cerebellum",
+      "cerebellums",
+      "cerebella",
+      "cerebellar",
+      "cerebellar cortex",
+      "cerebellar hemispheres",
+      "cerebellar hemisphere",
+      "cerebellar vermis",
+      "vermis cerebelli",
+      "flocculonodular lobe",
+      "flocculonodular lobes",
+      "little brain",
+    ],
+    origin:
+      "Develops from the alar plate of the metencephalon (hindbrain vesicle) — the cerebellar plate grows, folds into folia, and forms three-layer cortex (molecular, Purkinje cell, granule cell layers) with deep nuclei (fastigial, globose, emboliform, dentate); flocculonodular lobe is phylogenetically oldest (vestibulocerebellum).",
+    germLayer: "Ectoderm",
+    derivatives: [
+      "Cerebellar cortex — Purkinje cells, granule cells, parallel fibers",
+      "Deep cerebellar nuclei — dentate (lateral hemispheres), emboliform/globose/interposed (intermediate), fastigial (vermis/flocculonodular)",
+      "Cerebellar peduncles — superior (SCP to midbrain), middle (MCP from pons), inferior (ICP from medulla)",
+      "Flocculonodular lobe — vestibular balance and eye movement coordination",
+    ],
+    functionSummary:
+      "Compares intended movement (motor cortex/planning) with actual performance (proprioceptive and vestibular input) — coordinates smooth voluntary movement, maintains balance and posture, and supports motor learning; does not initiate movement but fine-tunes timing, force, and accuracy.",
+    commonPathologies: [
+      "Medulloblastoma — most common malignant pediatric brain tumor (cerebellar vermis/hemisphere)",
+      "Cerebellar stroke (SCA/PICA territory) — ipsilateral ataxia, dysmetria, nystagmus",
+      "Chronic alcoholism — anterior superior vermis degeneration → truncal ataxia",
+      "Friedreich ataxia — spinocerebellar degeneration",
+      "Multiple sclerosis — intention tremor, scanning speech, nystagmus",
+      "Chiari malformation — cerebellar tonsil herniation through foramen magnum",
+      "Dandy-Walker malformation — hypoplastic vermis, cystic fourth ventricle",
+      "Paraneoplastic cerebellar degeneration — anti-Yo/anti-Hu in adults",
+    ],
+    step1Pearls: [
+      "Cerebellar signs — ataxia, dysmetria (past-pointing), intention tremor, hypotonia, nystagmus, scanning/slurred dysarthria",
+      "Lateral hemisphere lesions → appendicular (limb) ataxia; vermis → truncal/gait ataxia",
+      "Flocculonodular lobe (vestibulocerebellum) — balance and vestibular eye movements",
+      "Output via deep cerebellar nuclei (especially dentate) → contralateral motor cortex via thalamus",
+      "vs basal ganglia — cerebellar = incoordination/hypotonia; basal ganglia = bradykinesia/rigidity or chorea",
+      "Medulloblastoma — primitive neuroectodermal tumor in children; vermis midline mass",
+      "Alcoholic cerebellar degeneration — superior vermis; truncal ataxia out of proportion to limb findings",
+    ],
+    pediatrics:
+      "Medulloblastoma peaks in early childhood; Dandy-Walker and Joubert syndromes involve cerebellar vermis hypoplasia. Acute cerebellar ataxia of childhood follows viral illness — usually self-limited.",
   },
   {
     id: "lateral-pons",
@@ -3716,6 +4027,28 @@ export const ORGANS: OrganEntry[] = [
       "Fetal component from trophoblast and extraembryonic mesoderm; maternal decidua from endometrium.",
   },
   {
+    id: "amnion",
+    name: "Amnion",
+    etymology:
+      "Greek amnion = lamb skin — inner membrane enclosing the amniotic cavity and fluid",
+    aliases: [
+      "amnion",
+      "amnions",
+      "amniotic",
+      "amniotic sac",
+      "amniotic sacs",
+      "amniotic membrane",
+      "amniotic membranes",
+      "amniotic cavity",
+      "amniotic fluid",
+      "amniotic fluids",
+      "amniotic sac membrane",
+    ],
+    germLayer: "Extraembryonic ectoderm (amniotic epithelium) + mesoderm",
+    origin:
+      "Amniotic cavity lined by amnion forms early in embryogenesis; amniotic fluid is initially transudate then predominantly fetal urine and lung liquid with fetal swallowing and intramembranous absorption maintaining volume.",
+  },
+  {
     id: "umbilical-cord",
     name: "Umbilical Cord",
     etymology: "Latin umbilicus = navel + Latin chorda = string",
@@ -4122,6 +4455,24 @@ const ORGAN_DETAILS: Record<
     ],
     pediatrics:
       "Adenoid hypertrophy causes mouth breathing, snoring, and otitis media with effusion; juvenile nasopharyngeal angiofibroma occurs in adolescent males.",
+  },
+  oropharynx: {
+    functionSummary:
+      "Middle pharyngeal segment from soft palate to epiglottis — shared food and air passage with palatine tonsils and base-of-tongue lymphoid tissue.",
+    commonPathologies: [
+      "Streptococcal pharyngitis",
+      "Peritonsillar abscess",
+      "Tonsillar hypertrophy / obstructive sleep apnea",
+      "HPV-associated oropharyngeal squamous cell carcinoma",
+    ],
+    step1Pearls: [
+      "Oropharynx bounded by soft palate (superior) and epiglottis (inferior)",
+      "2nd pharyngeal pouch → palatine tonsil epithelium",
+      "GAS pharyngitis — treat to prevent rheumatic fever",
+      "vs nasopharynx — superior segment with adenoids and Eustachian tubes",
+    ],
+    pediatrics:
+      "Recurrent strep pharyngitis and tonsillar hypertrophy common in children; peritonsillar abscess requires drainage.",
   },
   trachea: {
     functionSummary:
@@ -5785,6 +6136,27 @@ const ORGAN_DETAILS: Record<
     pediatrics:
       "Placental insufficiency can cause fetal growth restriction and neonatal hypoglycemia/polycythemia.",
   },
+  amnion: {
+    functionSummary:
+      "Amniotic sac protects the fetus from trauma and infection, permits fetal movement and lung development, and maintains temperature; amniotic fluid is swallowed (fetal urine production) and absorbed (intramembranous pathway) to regulate volume.",
+    commonPathologies: [
+      "Oligohydramnios — bilateral renal agenesis (Potter sequence), ROM, IUGR, post-term pregnancy",
+      "Polyhydramnios — duodenal atresia, anencephaly, diabetes, fetal anemia, multifetal gestation",
+      "Amniotic band sequence — fibrous bands cause constriction/amputation defects (see amniotic band constriction entry)",
+      "Chorioamnionitis — intra-amniotic infection with prolonged ROM",
+      "Meconium-stained amniotic fluid — fetal distress",
+    ],
+    step1Pearls: [
+      "Amniotic fluid — fetal urine + lung fluid; swallowed and recycled",
+      "Oligohydramnios → Potter sequence (pulmonary hypoplasia, limb/facial deformities)",
+      "Polyhydramnios → impaired fetal swallowing (duodenal atresia, anencephaly) or ↑ production",
+      "L/S ratio >2 in amniotic fluid suggests fetal lung maturity (lecithin/sphingomyelin)",
+      "Amniotic bands — sporadic constriction defects, not genetic syndrome",
+      "Prolonged ROM → chorioamnionitis risk",
+    ],
+    pediatrics:
+      "Neonatal outcomes depend on amniotic fluid volume and quality — oligohydramnios causes pulmonary hypoplasia; meconium aspiration follows in utero or intrapartum meconium exposure.",
+  },
   "umbilical-cord": {
     functionSummary:
       "Connects fetus to placenta and contains two arteries plus one vein in Wharton jelly.",
@@ -6270,6 +6642,7 @@ const ORGAN_METASTASIS: Record<string, string[]> = {
     "Choriocarcinoma — hematogenous spread to lung (most common), brain, vagina",
     "Invasive mole — local uterine extension; can embolize to lung",
   ],
+  amnion: ["Not a primary malignancy site (embryologic membrane)"],
   "umbilical-cord": ["Not a primary malignancy site"],
   allantois: [
     "Not a primary malignancy site (embryologic structure)",

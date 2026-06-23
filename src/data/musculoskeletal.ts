@@ -1883,6 +1883,245 @@ export const MUSCULOSKELETAL: MusculoskeletalEntry[] = [
       "Superior orbital fissure and orbital apex syndromes are rare in children but may follow skull base trauma, orbital cellulitis with cavernous sinus spread, or sphenoid wing meningioma; same cranial nerve anatomy applies.",
   },
   {
+    id: "falciform-ligament",
+    name: "Falciform Ligament",
+    etymology:
+      "Latin falciformis = sickle-shaped + ligamentum = band — sickle-shaped peritoneal fold attaching liver to anterior abdominal wall",
+    aliases: [
+      "falciform ligament",
+      "falciform ligaments",
+      "falciform ligament of liver",
+      "sickle-shaped ligament",
+      "anterior hepatic ligament",
+    ],
+    definition:
+      "Sickle-shaped peritoneal reflection extending from the anterior abdominal wall (umbilicus region) to the visceral surface of the liver — separates the anatomical left and right lobes of the liver on its anterior surface and contains the ligamentum teres (obliterated umbilical vein) in its free edge.",
+    anatomy:
+      "Attaches liver to anterior abdominal wall and inferior surface of diaphragm. Free edge contains ligamentum teres hepatis (round ligament of liver) — remnant of fetal umbilical vein. Adjacent to coronary ligament and left/right triangular ligaments at liver dome. Not part of lesser omentum.",
+    action: [
+      "Anatomic landmark dividing left and right hepatic lobes anteriorly",
+      "Contains ligamentum teres — fetal umbilical vein remnant; may recanalize in portal hypertension (caput medusae collateral pathway)",
+      "Peritoneal attachment stabilizing liver position",
+    ],
+    clinicalRelevance: [
+      "Ligamentum teres — patent in fetus; obliterates to fibrous cord after birth",
+      "Portal hypertension — recanalized paraumbilical veins along ligamentum teres → caput medusae",
+      "Surgical landmark in laparoscopic and open upper abdominal surgery",
+      "Liver lobe anatomy — falciform defines anterior separation of left/right lobes",
+    ],
+    boardsPearls: [
+      "Falciform ligament — liver to anterior abdominal wall; sickle-shaped peritoneal fold",
+      "Ligamentum teres (round ligament) in free edge = obliterated umbilical vein",
+      "vs hepatoduodenal ligament — lesser omentum free edge with portal triad, not anterior wall attachment",
+      "vs greater omentum — drapes over intestines; not falciform",
+      "Portal hypertension → recanalized umbilical vein in ligamentum teres → caput medusae",
+      "Fetal umbilical vein → ligamentum teres; ductus venosus → ligamentum venosum",
+    ],
+    distinguishFrom: [
+      "Hepatoduodenal ligament — lesser omentum; portal triad, not umbilical remnant",
+      "Ligamentum teres — structure within falciform free edge, not the whole ligament",
+      "Greater omentum — gastrocolic and gastroepiploic portions; not anterior hepatic attachment",
+      "Coronary ligament — peritoneal reflection at liver dome to diaphragm",
+      "Round ligament of liver — synonym for ligamentum teres within falciform ligament",
+    ],
+    pediatrics:
+      "Umbilical vein is patent in fetal circulation carrying oxygenated blood from placenta to liver (via ductus venosus to IVC); obliterates after birth forming ligamentum teres within falciform ligament.",
+  },
+  {
+    id: "gastrocolic-ligament",
+    name: "Gastrocolic Ligament",
+    etymology:
+      "Greek gaster = stomach + kolon = colon + Latin ligamentum = band — peritoneal fold connecting greater curvature of stomach to transverse colon",
+    aliases: [
+      "gastrocolic ligament",
+      "gastrocolic ligaments",
+      "gastrocolic omentum",
+      "gastrocolic portion of greater omentum",
+      "gastrocolic fold",
+      "gastrocolic folds",
+    ],
+    definition:
+      "Inferior portion of the greater omentum — peritoneal fold extending from the greater curvature of the stomach to the anterior surface of the transverse colon; part of the greater omentum along with the gastrophrenic and gastrosplenic components.",
+    anatomy:
+      "Forms the inferior layer of the greater omentum draped over transverse colon. Anterior sheet of greater omentum hangs from greater curvature; posterior sheet (gastrocolic) reflects onto transverse colon. Transverse colon is intraperitoneal, suspended within the greater omentum. Omental bursa (lesser sac) lies posterior to stomach and gastrocolic ligament.",
+    action: [
+      "Suspends transverse colon within greater omentum",
+      "Part of greater omentum immune and adipose apron over intestines",
+      "Anatomic boundary — anterior border of lesser sac (omental bursa) inferiorly",
+      "Gastrocolic reflex — postprandial increase in colonic motility (physiologic, not direct ligament mechanical action)",
+    ],
+    clinicalRelevance: [
+      "Omental cake — metastatic seeding of greater omentum (gastric, ovarian carcinoma)",
+      "Greater omentum can wall off perforated viscus (omental patching)",
+      "Transverse colon surgery — gastrocolic ligament must be divided to access lesser sac",
+      "Gastrocolic reflex clinically relevant in postprandial bowel movements",
+    ],
+    boardsPearls: [
+      "Gastrocolic ligament = part of greater omentum from stomach to transverse colon",
+      "Greater omentum — apron from greater curvature; contains gastrocolic, gastrosplenic portions",
+      "vs gastrohepatic/hepatogastric — lesser omentum to liver, not gastrocolic",
+      "vs mesocolon — peritoneal fold suspending colon; gastrocolic is omental attachment",
+      "Lesser sac lies posterior to stomach and gastrocolic ligament",
+      "Gastrocolic reflex — eating stimulates colonic motility (boards physiology association)",
+    ],
+    distinguishFrom: [
+      "Greater omentum — broader structure; gastrocolic ligament is its stomach-to-colon portion",
+      "Gastrosplenic ligament — greater omentum portion to spleen",
+      "Lesser omentum — hepatogastric and hepatoduodenal ligaments",
+      "Transverse mesocolon — suspends transverse colon; related but distinct peritoneal fold",
+      "Gastrophrenic ligament — stomach to diaphragm portion of greater omentum",
+    ],
+    pediatrics:
+      "Same peritoneal anatomy in children; greater omentum is less developed in neonates but can still wall off inflammation. Malrotation involves abnormal mesenteric attachments, not isolated gastrocolic ligament anomaly.",
+  },
+  {
+    id: "splenorenal-ligament",
+    name: "Splenorenal Ligament",
+    etymology:
+      "Latin splen = spleen + ren = kidney + ligamentum = band — peritoneal fold connecting spleen to left kidney",
+    aliases: [
+      "splenorenal ligament",
+      "splenorenal ligaments",
+      "lienorenal ligament",
+      "lienorenal ligaments",
+      "splenorenal ligament of peritoneum",
+      "phrenicosplenic ligament",
+      "splenorenal fold",
+    ],
+    definition:
+      "Peritoneal reflection from the hilum of the spleen to the anterior surface of the left kidney — posterior wall of the lesser sac containing the splenic vessels and tail of the pancreas; part of the left supramesocolic peritoneum.",
+    anatomy:
+      "Extends from splenic hilum to anterior left renal fascia/capsule. Contains splenic artery and vein, tail of pancreas, and short gastric vessels near superior aspect. Continuous with gastrosplenic ligament anteriorly (to greater curvature) and phrenicocolic ligament inferiorly. Forms posterior boundary of lesser sac on the left.",
+    action: [
+      "Anchors spleen to posterior abdominal wall via left kidney fascia",
+      "Conduit for splenic vessels and pancreatic tail within peritoneal fold",
+      "Defines posterior aspect of lesser sac (omental bursa) on the left",
+    ],
+    clinicalRelevance: [
+      "Splenectomy — ligation of splenic vessels in splenorenal ligament at hilum",
+      "Distal pancreatectomy — pancreatic tail lies in splenorenal ligament",
+      "Splenic rupture — blood tracks in splenorenal recess (left supramesocolic space)",
+      "Wandering spleen — abnormal laxity of splenorenal/gastrosplenic ligaments",
+    ],
+    boardsPearls: [
+      "Splenorenal (lienorenal) ligament — spleen to left kidney; contains splenic vessels + pancreatic tail",
+      "vs gastrosplenic ligament — spleen to greater gastric curvature; short gastrics",
+      "Lesser sac posterior wall includes splenorenal ligament region on left",
+      "Splenic artery is tortuous course along superior border of pancreas to hilum",
+      "Left supramesocolic recess — blood/ fluid from splenic injury collects here",
+      "vs phrenicocolic ligament — supports spleen inferiorly at splenic flexure",
+    ],
+    distinguishFrom: [
+      "Gastrosplenic ligament — anterior spleen attachment to stomach; short gastric vessels",
+      "Phrenicocolic ligament — diaphragm to splenic flexure; supports spleen inferiorly",
+      "Splenic hilum — vascular entry point; ligament is peritoneal fold containing hilum structures",
+      "Gerota fascia — renal fascia deep to peritoneum; not the splenorenal ligament itself",
+      "Gastrocolic ligament — stomach to transverse colon in greater omentum",
+    ],
+    pediatrics:
+      "Wandering spleen from congenital ligamentous laxity can cause torsion in children — episodic abdominal pain. Same splenorenal anatomy applies; pediatric splenic injury from trauma is managed with conservation when possible.",
+  },
+  {
+    id: "hepatoduodenal-ligament",
+    name: "Hepatoduodenal Ligament",
+    etymology:
+      "Greek hēpar = liver + Latin duodenum = twelve fingers (length) + Latin ligamentum = band — free edge of lesser omentum connecting liver to duodenum",
+    aliases: [
+      "hepatoduodenal ligament",
+      "hepatoduodenal ligaments",
+      "hepatoduodenal ligament of lesser omentum",
+      "free edge of lesser omentum",
+      "free edge lesser omentum",
+      "portal triad ligament",
+      "hepatoduodenal portion of lesser omentum",
+    ],
+    definition:
+      "Thickened free edge of the lesser omentum extending from the porta hepatis to the proximal duodenum — encloses the portal triad (proper hepatic artery, portal vein, common bile duct) within the hepatoduodenal portion of the lesser omentum.",
+    anatomy:
+      "Forms right border of the omental foramen (epiploic foramen of Winslow) — gateway between greater sac and lesser sac of peritoneal cavity. From anterior to posterior at porta hepatis: proper hepatic artery (left), common bile duct (right), portal vein (posterior). Covered by peritoneum; part of lesser omentum (hepatogastric ligament is left portion to lesser gastric curvature).",
+    action: [
+      "Anatomic conduit for portal triad structures between liver hilum and duodenum",
+      "Omental foramen boundary — allows communication between peritoneal compartments",
+      "Surgical access point — Pringle maneuver clamps hepatoduodenal ligament to control hepatic inflow bleeding",
+    ],
+    clinicalRelevance: [
+      "Pringle maneuver — clamp hepatoduodenal ligament during liver surgery or trauma to occlude hepatic artery and portal vein inflow",
+      "Portal triad orientation at porta hepatis — boards anatomy for hepatobiliary surgery",
+      "Omental foramen obstruction — internal hernia through epiploic foramen (rare)",
+      "Cholangiocarcinoma/Klatskin tumor — involves hilar structures within portal triad region",
+    ],
+    boardsPearls: [
+      "Hepatoduodenal ligament = free edge of lesser omentum containing portal triad",
+      "Portal triad: proper hepatic artery + portal vein + common bile duct",
+      "Porta hepatis order (anterior to posterior): artery (left), duct (right), vein (posterior)",
+      "Pringle maneuver — clamp hepatoduodenal ligament to control liver hemorrhage",
+      "Omental foramen (of Winslow) — bordered by hepatoduodenal ligament anteriorly",
+      "vs hepatogastric ligament — lesser omentum portion to lesser curvature of stomach, not duodenum",
+      "vs falciform ligament — peritoneal fold to anterior abdominal wall; not portal triad",
+    ],
+    distinguishFrom: [
+      "Hepatogastric ligament — lesser omentum between liver and stomach",
+      "Greater omentum — fatty apron draped over intestines; not portal triad",
+      "Hepatoduodenal ligament vs porta hepatis — ligament is peritoneal fold; porta is anatomic hilum",
+      "Gastrohepatic ligament — synonym for hepatogastric portion of lesser omentum",
+      "Falciform ligament — liver to anterior abdominal wall; contains ligamentum teres",
+    ],
+    pediatrics:
+      "Same portal triad anatomy in children; biliary atresia and choledochal cyst surgery involve hepatoduodenal ligament region. Internal hernias through the omental foramen are rare in pediatrics.",
+  },
+  {
+    id: "celiac-artery",
+    name: "Celiac Artery",
+    etymology:
+      "Greek koilia = belly + Latin arteria = artery — first major unpaired visceral branch of the abdominal aorta supplying the foregut",
+    aliases: [
+      "celiac artery",
+      "celiac arteries",
+      "celiac trunk",
+      "celiac trunks",
+      "celiac axis",
+      "celiac axes",
+      "truncus celiacus",
+      "celiac arterial trunk",
+    ],
+    definition:
+      "First unpaired anterior branch of the abdominal aorta (at ~T12/L1) supplying the foregut — distal esophagus through proximal duodenum (to ampulla of Vater), plus liver, gallbladder, spleen, and pancreas.",
+    anatomy:
+      "Arises from anterior aorta immediately below diaphragmatic hiatus. Classic trifurcation: left gastric artery (lesser curvature, esophagus), splenic artery (spleen, pancreas tail/body, short gastrics), common hepatic artery → gastroduodenal artery (pancreaticoduodenal arcades, stomach) and proper hepatic artery (liver, bile duct). Collateral pancreaticoduodenal arcades with SMA inferior pancreaticoduodenal branches.",
+    action: [
+      "Foregut arterial supply — stomach, proximal duodenum, liver, spleen, pancreas",
+      "Hepatic arterial supply (~25% of liver blood flow; portal vein provides ~75%)",
+      "Collateral pathway with SMA via pancreaticoduodenal arcades in chronic mesenteric ischemia",
+    ],
+    innervation:
+      "Sympathetic fibers from celiac ganglia (greater splanchnic nerves T5–T9) — vasoconstriction; parasympathetic via vagus to foregut organs",
+    clinicalRelevance: [
+      "Chronic mesenteric ischemia — celiac + SMA stenosis → postprandial pain, weight loss",
+      "Median arcuate ligament syndrome — celiac trunk compression by diaphragmatic crura → epigastric pain",
+      "Splenic artery aneurysm — third most common visceral aneurysm; rupture risk in pregnancy",
+      "Liver transplantation — hepatic arterial supply from celiac axis",
+      "Gastric surgery — left gastric artery ligation in bleeding ulcer management",
+    ],
+    boardsPearls: [
+      "Celiac trunk = foregut artery: esophagus → proximal duodenum (ampulla), liver, spleen, pancreas",
+      "Three branches: left gastric, splenic, common hepatic",
+      "Common hepatic → gastroduodenal + proper hepatic",
+      "vs SMA — midgut (distal duodenum → proximal 2/3 transverse colon)",
+      "vs IMA — hindgut (distal colon, rectum)",
+      "Pancreaticoduodenal arcades connect celiac (superior) and SMA (inferior) — collateral flow",
+      "Foregut embryology → celiac supply (mnemonic framework with SMA/IMA)",
+    ],
+    distinguishFrom: [
+      "Superior mesenteric artery — midgut supply; arises below celiac on aorta",
+      "Inferior mesenteric artery — hindgut supply; most distal unpaired visceral branch",
+      "Hepatic artery proper — branch of common hepatic; not the celiac trunk itself",
+      "Gastroduodenal artery — branch of common hepatic; supplies proximal duodenum and stomach",
+      "Renal arteries — lateral aortic branches; not foregut visceral supply",
+    ],
+    pediatrics:
+      "Foregut malformations (esophageal atresia, duodenal atresia, annular pancreas) occur in celiac-supplied territory. Same arterial anatomy applies; mesenteric ischemia from embolus is rare in children.",
+  },
+  {
     id: "superior-mesenteric-artery",
     name: "Superior Mesenteric Artery",
     etymology:
@@ -1922,6 +2161,7 @@ export const MUSCULOSKELETAL: MusculoskeletalEntry[] = [
       "SMA crosses anterior to third part of duodenum — SMA syndrome if aortomesenteric angle narrows",
       "SMV + splenic vein → portal vein — portal hypertension affects mesenteric venous drainage",
       "vs celiac trunk — celiac supplies foregut (stomach, proximal duodenum, liver, spleen, pancreas)",
+      "Hepatoduodenal ligament contains portal triad — venous drainage from gut via SMV to portal vein",
     ],
     distinguishFrom: [
       "Celiac trunk — foregut artery; first aortic branch above SMA",

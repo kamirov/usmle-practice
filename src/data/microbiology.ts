@@ -108,7 +108,7 @@ export const MICROBIOLOGY: MicrobiologyEntry[] = [
     virulenceFactors: [
       "Protein A — binds IgG Fc, inhibits opsonization",
       "Coagulase — converts fibrinogen to fibrin (wall off infection)",
-      "TSST-1 — toxic shock syndrome",
+      "TSST-1 — toxic shock syndrome (see dedicated condition entry)",
       "Enterotoxins — preformed; rapid food poisoning",
       "PVL — necrotizing skin/soft tissue infection",
     ],
@@ -117,7 +117,7 @@ export const MICROBIOLOGY: MicrobiologyEntry[] = [
       "Abscess, cellulitis, impetigo",
       "Endocarditis (especially IV drug use, prosthetic valves)",
       "Osteomyelitis and septic arthritis",
-      "Toxic shock syndrome",
+      "Toxic shock syndrome (see dedicated entry)",
       "Scalded skin syndrome (exfoliative toxin in infants)",
       "Food poisoning (preformed toxin, <6 h)",
     ],
@@ -1109,7 +1109,7 @@ export const MICROBIOLOGY: MicrobiologyEntry[] = [
     ],
     type: "spirochete",
     definition:
-      "Spirochete causative agent of syphilis; cannot be cultured on routine media. Diagnosed by dark-field microscopy (primary chancre), serology, or CSF studies.",
+      "Spirochete causative agent of syphilis (see spirochetal illness entry); cannot be cultured on routine media. Diagnosed by dark-field microscopy (primary chancre), serology, or CSF studies.",
     morphology: [
       "Spiral/spirochete — too thin for Gram stain",
       "Dark-field microscopy of chancre exudate",
@@ -3013,6 +3013,84 @@ export const MICROBIOLOGY: MicrobiologyEntry[] = [
       "RSV bronchiolitis peaks in infants 2–6 months; first infection most severe. Apnea without wheeze can be the presenting sign in young or ex-preterm infants. Palivizumab monthly during RSV season for qualifying high-risk infants (prematurity with chronic lung disease, hemodynamically significant congenital heart disease). Supportive care is mainstay — bronchodilators and steroids not routinely beneficial. Distinguish from croup (parainfluenza) and bacterial pneumonia before starting antibiotics.",
   },
   {
+    id: "picornavirus",
+    name: "Picornavirus",
+    etymology:
+      "Latin pico = small + RNA = ribonucleic acid + virus = viral agent — family of small RNA viruses",
+    aliases: [
+      "picornavirus",
+      "picornaviruses",
+      "picornaviridae",
+      "picornavirus family",
+      "picornavirus families",
+      "pico rna virus",
+      "pico rna viruses",
+    ],
+    type: "virus",
+    definition:
+      "Family of small, non-enveloped, positive-sense single-stranded RNA viruses (Picornaviridae) including rhinovirus (common cold), enteroviruses (polio, coxsackie, echovirus), and hepatitis A virus — icosahedral capsid ~30 nm.",
+    mnemonic:
+      "RNA · ss · naked · (+) sense — Picornavirus: small (+) ssRNA, no envelope; acid stability varies by genus (rhinovirus acid-labile; enterovirus/HAV acid-stable)",
+    morphology: [
+      "Icosahedral non-enveloped virion (~27–30 nm) — among smallest human viruses",
+      "Positive-sense ssRNA — genome serves directly as mRNA",
+      "No lipid envelope — resistant to ether/detergent; rhinovirus destroyed by gastric acid, enteroviruses/HAV survive gut",
+    ],
+    virulenceFactors: [
+      "Numerous serotypes within genera → repeat infections (especially rhinovirus)",
+      "Tissue tropism determined by receptor use and acid stability (respiratory vs enteric)",
+      "Enteroviruses acid-stable → fecal-oral transmission",
+      "Rhinovirus acid-labile → upper respiratory not enteric infection",
+    ],
+    transmission: [
+      "Respiratory droplets and fomites — rhinovirus, many enteroviruses",
+      "Fecal-oral — enteroviruses, hepatitis A virus",
+      "Direct contact — hand-foot-mouth, daycare outbreaks",
+    ],
+    diseases: [
+      "Common cold (rhinovirus)",
+      "Aseptic meningitis, hand-foot-mouth disease, myocarditis (enteroviruses/coxsackie)",
+      "Poliomyelitis (poliovirus — enterovirus genus)",
+      "Acute viral hepatitis (hepatitis A virus — hepatovirus genus)",
+      "Herpangina, pleurodynia (coxsackie)",
+    ],
+    classicPresentation: [
+      "Gradual rhinorrhea and sore throat — rhinovirus URI",
+      "Child in summer with aseptic meningitis CSF — enterovirus",
+      "Vesicles on hands, feet, mouth — coxsackie HFMD",
+      "Acute hepatitis with anti-HAV IgM — hepatitis A",
+      "Asymmetric flaccid paralysis in unvaccinated setting — poliovirus",
+    ],
+    diagnosis: [
+      "Mostly clinical for URI and HFMD",
+      "CSF PCR for enteroviral meningitis",
+      "Anti-HAV IgM for hepatitis A",
+      "Stool/throat PCR for enterovirus identification",
+    ],
+    treatment: [
+      "Supportive care for most infections",
+      "HAV and polio prevented by vaccination",
+      "No routine antivirals for rhinovirus or most enteroviruses",
+    ],
+    distinguishFrom: [
+      "Rhinovirus — dedicated entry; acid-labile, common cold",
+      "Enterovirus — dedicated entry; acid-stable, meningitis/HFMD/polio",
+      "Hepatitis A virus — dedicated entry; hepatovirus genus",
+      "Coronavirus — enveloped (+) ssRNA; COVID, MERS, SARS",
+      "Influenza — enveloped (−) ssRNA orthomyxovirus",
+    ],
+    boardsPearls: [
+      "Picornavirus = RNA, ss, naked (non-enveloped), (+) sense",
+      "Small icosahedral viruses — rhinovirus, enterovirus, poliovirus, HAV share family traits",
+      "Rhinovirus acid-labile (URT); enterovirus/HAV acid-stable (fecal-oral)",
+      "Most common cold = rhinovirus picornavirus; >100 serotypes → reinfection",
+      "Polio and HAV are picornaviruses — know genus differences on boards",
+      "vs reovirus — different family (Reoviridae); double-stranded RNA segmented",
+    ],
+    pediatrics:
+      "Children have frequent rhinovirus URIs and enterovirus outbreaks in daycare (HFMD, herpangina, aseptic meningitis). HAV and polio vaccines prevent major picornavirus morbidity; maintain immunization schedules.",
+  },
+  {
     id: "rhinovirus",
     name: "Rhinovirus",
     etymology: "Greek rhis = nose + virus = viral agent",
@@ -3071,7 +3149,7 @@ export const MICROBIOLOGY: MicrobiologyEntry[] = [
       "COVID-19/SARS-CoV-2 — test if epidemiologically indicated",
     ],
     boardsPearls: [
-      "Most common cause of common cold — picornavirus, acid-labile",
+      "Most common cause of common cold — picornavirus (see picornavirus family entry), acid-labile",
       "ICAM-1 receptor — rhinovirus attachment",
       ">100 serotypes → no durable immunity → frequent colds",
       "Antibiotics not indicated for uncomplicated viral URI",
@@ -3079,6 +3157,83 @@ export const MICROBIOLOGY: MicrobiologyEntry[] = [
     ],
     pediatrics:
       "Young children average 6–8 colds per year; daycare attendance increases frequency. Otitis media often follows URI due to Eustachian tube anatomy. Teach hand hygiene; no role for antibiotics without bacterial superinfection.",
+  },
+  {
+    id: "hepatitis-a-virus",
+    name: "Hepatitis A Virus",
+    etymology:
+      "Greek hepar = liver + -itis = inflammation + Latin virus = poison + A = first named hepatitis virus — hepatotropic picornavirus",
+    aliases: [
+      "hepatitis a virus",
+      "hepatitis a viruses",
+      "hepatitis a",
+      "hepatitis-a",
+      "hav",
+      "havs",
+      "hep a",
+      "hep a virus",
+      "enterovirus 72",
+    ],
+    type: "virus",
+    definition:
+      "Non-enveloped positive-sense ssRNA picornavirus (genus Hepatovirus) transmitted by fecal-oral route — causes acute self-limited hepatitis without chronic carrier state; prevented by inactivated vaccine.",
+    mnemonic:
+      "RNA · ss · naked · (+) sense — Picornavirus (Hepatovirus): (+) ssRNA, no envelope; acid-stable; fecal-oral",
+    morphology: [
+      "Icosahedral non-enveloped virion (~27 nm)",
+      "Positive-sense ssRNA picornavirus (family Picornaviridae)",
+      "Acid-stable — survives gastric acid; replicates in liver after enteric acquisition",
+    ],
+    virulenceFactors: [
+      "Fecal shedding before clinical illness — high transmission risk",
+      "No chronic persistence — cleared by immune response",
+      "Single serotype — lifelong immunity after infection or vaccination",
+    ],
+    transmission: [
+      "Fecal-oral — contaminated food/water, shellfish, poor sanitation",
+      "Person-to-person in daycare, institutions, travel to endemic areas",
+      "No bloodborne chronic carriage (unlike HBV/HCV)",
+    ],
+    diseases: [
+      "Acute viral hepatitis — transaminase elevation, jaundice, anorexia, malaise",
+      "Asymptomatic infection (especially children)",
+      "Rare fulminant hepatitis (elderly, underlying liver disease)",
+    ],
+    classicPresentation: [
+      "Traveler or daycare outbreak with jaundice and ↑ AST/ALT",
+      "Child with mild hepatitis — may lack jaundice",
+      "Anti-HAV IgM positive acute serology",
+      "Self-limited illness resolving in weeks to months",
+    ],
+    diagnosis: [
+      "Anti-HAV IgM — acute/recent infection (see dedicated lab entry)",
+      "Anti-HAV IgG — past infection or vaccine immunity",
+      "Markedly elevated ALT/AST; hyperbilirubinemia if icteric",
+      "No chronic phase — HAV RNA PCR rarely needed clinically",
+    ],
+    treatment: [
+      "Supportive care — rest, hydration, avoid hepatotoxins",
+      "No chronic antiviral therapy needed (no chronic infection)",
+      "Post-exposure prophylaxis — HAV vaccine or immune globulin per timing and risk",
+      "Prevention: inactivated HAV vaccine for travelers and routine childhood immunization",
+    ],
+    distinguishFrom: [
+      "Hepatitis B virus — bloodborne; HBsAg; chronic infection and HCC risk",
+      "Hepatitis C virus — RNA flavivirus; chronic infection common before DAAs",
+      "Hepatitis E virus — fecal-oral like HAV; severe in pregnancy",
+      "Other enteroviruses — meningitis, HFMD; not primary hepatitis",
+      "Yellow fever — flavivirus hemorrhagic hepatitis with shock in severe disease",
+    ],
+    boardsPearls: [
+      "HAV = picornavirus, fecal-oral, acute only — no chronic carrier state",
+      "Anti-HAV IgM = acute; anti-HAV IgG = immunity (infection or vaccine)",
+      "Shellfish/contaminated food outbreaks; daycare and travel classic settings",
+      "vs HBV/HCV — no chronic hepatitis or cirrhosis from HAV alone",
+      "Vaccine is inactivated — safe in immunocompromised (unlike live vaccines)",
+      "Fulminant hepatitis rare but more likely in elderly or pre-existing liver disease",
+    ],
+    pediatrics:
+      "HAV often milder in young children but still contagious; routine childhood vaccination prevents infection. Neonates are protected by maternal anti-HAV IgG if mother immune. Fulminant HAV is uncommon in healthy children.",
   },
   {
     id: "enterovirus",
@@ -3152,7 +3307,8 @@ export const MICROBIOLOGY: MicrobiologyEntry[] = [
       "Pleconaril (capsid inhibitor) — investigational; not routine clinical use",
     ],
     distinguishFrom: [
-      "Rhinovirus — acid-labile; URI only; no meningitis or HFMD",
+      "Rhinovirus — acid-labile; URI only; no hepatitis",
+      "Hepatitis A virus — hepatotropic picornavirus; acute hepatitis, not meningitis (see dedicated entry)",
       "HSV encephalitis — altered mental status, temporal lobe findings; acyclovir required",
       "Bacterial meningitis — neutrophilic CSF, ↓ glucose; empiric antibiotics",
       "Adenovirus — pharyngoconjunctival fever; dsDNA virus; different CSF epidemiology",
@@ -3679,7 +3835,7 @@ export const MICROBIOLOGY: MicrobiologyEntry[] = [
     ],
     distinguishFrom: [
       "Dengue — hemorrhagic fever without prominent jaundice; same Aedes vector",
-      "Hepatitis A/E — jaundice without hemorrhagic shock pattern",
+      "Hepatitis A/E — jaundice without hemorrhagic shock pattern (HAV — see dedicated entry)",
       "Malaria — cyclical fevers, parasitemia on smear",
       "Leptospirosis — conjunctival suffusion, renal involvement; different exposure",
       "Ebola/Marburg — viral hemorrhagic fever; different geography and transmission",
@@ -3915,7 +4071,7 @@ export const MICROBIOLOGY: MicrobiologyEntry[] = [
     ],
     type: "spirochete",
     definition:
-      "Spirochete transmitted by Ixodes tick bite (Northeast/Midwest US). Causes Lyme disease — erythema migrans, early disseminated and late manifestations.",
+      "Spirochete transmitted by Ixodes tick bite (Northeast/Midwest US; see spirochetal illness entry). Causes Lyme disease — erythema migrans, early disseminated and late manifestations.",
     morphology: [
       "Spirochete — too thin for Gram stain",
       "Dark-field or silver stain",
@@ -5607,7 +5763,7 @@ export const MICROBIOLOGY: MicrobiologyEntry[] = [
       "Trichomonas — metronidazole (treat partners)",
     ],
     distinguishFrom: [
-      "Helminth (worm) parasite — multicellular; eggs in stool (Ascaris, Schistosoma)",
+      "Helminth (worm) parasite — multicellular; eggs in stool (see dedicated entry)",
       "Bacteria — prokaryotic; no trophozoite/cyst life cycle",
       "Fungi — chitin cell wall, hyphae/yeast forms",
       "Viruses — obligate intracellular, acellular",
@@ -5622,6 +5778,96 @@ export const MICROBIOLOGY: MicrobiologyEntry[] = [
     ],
     pediatrics:
       "Congenital toxoplasmosis and malaria in children are high-yield; Giardia common in daycare and camping exposures; treat pregnant patients for toxoplasmosis and malaria per specialist guidelines.",
+  },
+  {
+    id: "helminth",
+    name: "Helminth",
+    etymology:
+      "Greek helmins = worm — multicellular parasitic worms (flatworms and roundworms) that infect humans via eggs, larvae, or skin penetration",
+    aliases: [
+      "helminth",
+      "helminths",
+      "helminthic",
+      "helminthic parasite",
+      "helminthic parasites",
+      "helminth infection",
+      "helminth infections",
+      "helminthic infection",
+      "helminthic infections",
+      "parasitic worm",
+      "parasitic worms",
+      "worm parasite",
+      "worm parasites",
+      "intestinal worm",
+      "intestinal worms",
+    ],
+    type: "parasite",
+    definition:
+      "Multicellular parasitic worms — nematodes (roundworms), cestodes (tapeworms), and trematodes (flukes) — diagnosed primarily by eggs or larvae in stool, urine, or tissue; provoke Th2/eosinophilic immunity unlike unicellular protozoa.",
+    morphology: [
+      "Macroscopic or microscopic multicellular worms with organ systems",
+      "Eggs and larvae in stool O&P — key diagnostic stage for many species",
+      "Some larvae penetrate skin (hookworm, Strongyloides) or migrate through tissues (Ascaris, Toxocara)",
+      "Not bacteria — eukaryotic; not cultured on routine bacterial media",
+    ],
+    virulenceFactors: [
+      "Tissue migration causing eosinophilia and organ injury (Ascaris, Schistosoma, Toxocara)",
+      "Chronic blood loss and iron deficiency (hookworm)",
+      "Granulomatous inflammation around trapped eggs (Schistosoma)",
+      "Immune evasion — long-lived adult worms in intestinal lumen or vasculature",
+    ],
+    transmission: [
+      "Fecal-oral — Ascaris, Enterobius (pinworm), Taenia (undercooked pork/beef)",
+      "Skin penetration — hookworm, Strongyloides (barefoot on contaminated soil)",
+      "Freshwater snail vector — Schistosoma (schistosomiasis)",
+      "Undercooked fish — Diphyllobothrium, Clonorchis, Opisthorchis",
+      "Dog/cat contact — Toxocara (visceral larva migrans), Echinococcus",
+    ],
+    diseases: [
+      "Ascariasis — intestinal obstruction, biliary/pancreatic migration",
+      "Hookworm — microcytic iron-deficiency anemia",
+      "Strongyloidiasis — autoinfection in immunosuppressed (hyperinfection)",
+      "Enterobiasis (pinworm) — perianal pruritus, scotch tape test",
+      "Schistosomiasis — hematuria (S. haematobium), portal hypertension (S. mansoni)",
+      "Taenia solium — neurocysticercosis if ingesting eggs (autoinfection/fecal-oral)",
+      "Echinococcosis — hydatid cyst in liver/lung",
+    ],
+    classicPresentation: [
+      "Eosinophilia + travel to endemic area → helminth",
+      "Perianal itching at night in child → pinworm (Enterobius)",
+      "Painless hematuria in Egypt/sub-Saharan Africa → Schistosoma haematobium",
+      "Iron deficiency anemia in barefoot rural child → hookworm",
+      "Seizures + cystic brain lesions + pork exposure → neurocysticercosis",
+    ],
+    diagnosis: [
+      "Stool ova and parasite (O&P) examination — eggs and larvae",
+      "Scotch tape test — Enterobius eggs on perianal skin",
+      "Serology and urine eggs — Schistosoma",
+      "Imaging — hydatid cyst, neurocysticercosis calcifications on CT/MRI",
+    ],
+    treatment: [
+      "Albendazole or mebendazole — many nematodes and some cestodes",
+      "Praziquantel — trematodes and cestodes (schistosomiasis, tapeworms)",
+      "Ivermectin — Strongyloides, Onchocerca",
+      "Treat hyperinfection in immunocompromised aggressively",
+    ],
+    distinguishFrom: [
+      "Protozoan parasite — unicellular; trophozoites/cysts on O&P (Giardia, Entamoeba, Plasmodium)",
+      "Bacteria — prokaryotic; Gram stain and culture",
+      "Fungi — chitin cell wall; hyphae or budding yeast",
+      "Viruses — obligate intracellular; acellular",
+    ],
+    boardsPearls: [
+      "Helminth = multicellular worm; protozoa = unicellular — both are parasites",
+      "Th2/IL-4/IL-5/IgE/eosinophil response — helminth defense (vs Th1 for intracellular bacteria)",
+      "Eosinophilia — hallmark lab clue for helminth (also atopy, drug reaction)",
+      "Pinworm — scotch tape test; treat household contacts",
+      "Schistosoma mansoni (Mesenteric) vs haematobium (bladder hematuria)",
+      "Neurocysticercosis from Taenia solium eggs — not from eating cysticerci in pork alone",
+      "Hookworm attaches to duodenal mucosa → chronic occult GI blood loss",
+    ],
+    pediatrics:
+      "Pinworm is extremely common in children — nocturnal perianal itch, treat index case and household. Ascaris mass in intestine can cause pediatric obstruction. Toxocara from pica/dog exposure causes visceral larva migrans with eosinophilia and hepatomegaly.",
   },
   {
     id: "yeast",

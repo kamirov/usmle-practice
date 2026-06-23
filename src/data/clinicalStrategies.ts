@@ -901,7 +901,7 @@ export const CLINICAL_STRATEGIES: ClinicalStrategyEntry[] = [
     details: [
       "Focus on unconscious conflicts, repression, and relational patterns (object relations, attachment themes)",
       "Techniques: free association, interpretation of resistance and transference, clarification, confrontation",
-      "Defense mechanisms explored — projection, denial, displacement, reaction formation, sublimation",
+      "Defense mechanisms explored — projection, denial, displacement, reaction formation, sublimation, splitting, acting out, altruism, humor",
       "Transference — patient re-enacts past relationships with therapist; used therapeutically for insight",
       "Longer-term, open-ended or time-limited formats; face-to-face rather than classic couch-only analysis",
       "Useful when symptoms have symbolic or relational meaning (personality disorders, chronic interpersonal patterns)",
@@ -1294,6 +1294,222 @@ export const CLINICAL_STRATEGIES: ClinicalStrategyEntry[] = [
       "Benign stress-related regression (bedwetting, clinginess) after moves, divorce, or new sibling is common — reassure if brief; evaluate abuse or psych pathology if severe or persistent. Distinguish from neurodegenerative developmental regression (Rett, leukodystrophy).",
   },
   {
+    id: "acting-out",
+    name: "Acting Out",
+    etymology:
+      "Latin actio = doing/deed + out = external expression — unconscious conversion of internal conflict into impulsive behavior rather than verbal or emotional processing",
+    aliases: [
+      "acting out",
+      "acting outs",
+      "acting-out",
+      "acting out defense mechanism",
+      "acting out defense mechanisms",
+      "defense mechanism acting out",
+      "psychological acting out",
+      "act out",
+      "acts out",
+    ],
+    definition:
+      "Immature ego defense mechanism in which unconscious emotional conflict, anxiety, or unacceptable impulses are expressed through impulsive actions — fighting, rule-breaking, substance use, self-harm, or reckless behavior — instead of being recognized, verbalized, or worked through.",
+    details: [
+      "Unconscious — patient often cannot link behavior to underlying feeling ('I don't know why I did that')",
+      "Classic vignette: adolescent starts fights and skips school after parents' divorce rather than discussing grief",
+      "Also: hospitalized patient refuses meds or lashes out when frightened; substance use to avoid painful affect",
+      "Behavior provides temporary discharge of tension but does not resolve conflict",
+      "Colloquial 'acting out' overlaps, but boards use the psychodynamic defense definition",
+    ],
+    boardsPearls: [
+      "Acting out = express conflict through action, not words or feelings",
+      "Teen delinquency after family stress — classic immature defense vignette",
+      "Immature defense — adolescent, personality disorder, and acute stress contexts",
+      "vs displacement — redirects feeling to another target; acting out is behavioral discharge of conflict",
+      "vs passive aggression — indirect hostility (procrastination, 'forgetting'); acting out is overt impulsive action",
+      "vs sublimation — channels impulse into constructive activity; acting out is maladaptive discharge",
+    ],
+    pediatrics:
+      "Oppositional or aggressive behavior after trauma, divorce, or abuse may represent acting out — evaluate safety and underlying distress rather than punishing alone. Distinguish from conduct disorder pattern of persistent antisocial behavior with intent.",
+  },
+  {
+    id: "denial",
+    name: "Denial",
+    etymology:
+      "Latin de- = away from + negare = to say no — unconscious refusal to acknowledge painful external reality or internal feeling",
+    aliases: [
+      "denial",
+      "denials",
+      "denial defense mechanism",
+      "denial defense mechanisms",
+      "defense mechanism denial",
+      "psychological denial",
+      "psychologic denial",
+      "in denial",
+    ],
+    definition:
+      "Immature ego defense mechanism in which a person unconsciously refuses to accept objective reality or the presence of an anxiety-provoking internal experience — behaving as though a painful diagnosis, loss, addiction, or feeling does not exist.",
+    details: [
+      "Unconscious — patient genuinely believes the avoided reality is not true or not serious",
+      "Classic vignette: alcoholic insists 'I can stop anytime' despite DUIs; terminal patient plans distant vacation",
+      "Also: chest pain patient refuses ER because 'it's just heartburn'; diabetic ignores glucose monitoring",
+      "First stage of grief (Kübler-Ross) overlaps conceptually but grief stages are broader than defense taxonomy",
+      "Can delay needed medical care — dangerous when reality requires action",
+    ],
+    boardsPearls: [
+      "Denial = refuse to acknowledge reality ('not me,' 'not serious')",
+      "Alcoholic 'I don't have a problem' — boards classic",
+      "Immature/primitive defense — addiction, terminal illness, and acute stress vignettes",
+      "vs repression — blocks memory/feeling from awareness; denial rejects current external facts",
+      "vs rationalization — accepts outcome but creates logical excuse; denial rejects the fact itself",
+      "vs suppression — conscious postponement; denial is unconscious rejection of reality",
+    ],
+    pediatrics:
+      "Children may deny abuse or bullying out of fear or shame; gentle, non-leading evaluation required. Parents may deny child disability severity — support while ensuring access to needed services.",
+  },
+  {
+    id: "splitting",
+    name: "Splitting",
+    etymology:
+      "Latin split = divide — unconscious separation of people or self into all-good or all-bad extremes without integrated middle ground",
+    aliases: [
+      "splitting",
+      "splittings",
+      "splitting defense mechanism",
+      "splitting defense mechanisms",
+      "defense mechanism splitting",
+      "psychological splitting",
+      "psychologic splitting",
+      "black and white thinking",
+      "black-and-white thinking",
+      "all good all bad",
+      "all-good all-bad",
+    ],
+    definition:
+      "Immature ego defense mechanism in which a person unconsciously views people, relationships, or situations in polarized extremes — entirely good/wonderful or entirely bad/hateful — unable to tolerate ambivalence or integrate positive and negative qualities in the same object.",
+    details: [
+      "Unconscious oscillation — idealization and devaluation can flip rapidly with perceived slights",
+      "Classic vignette: borderline patient praises therapist as 'only one who understands me,' then calls them 'cruel and useless' after a scheduling change",
+      "Also: nurse is 'angel,' doctor is 'incompetent monster' — same care team, split roles",
+      "Protects ego from anxiety of mixed feelings but destabilizes relationships",
+      "Hallmark defense in borderline personality disorder; also seen under severe stress",
+    ],
+    boardsPearls: [
+      "Splitting = all-good OR all-bad — no gray zone",
+      "Borderline personality disorder — idealize then devalue — classic boards link",
+      "Immature defense — cluster B vignettes",
+      "vs projection — assigns own impulse to others; splitting polarizes the other person",
+      "vs transference — redirects past feelings; splitting is black-white evaluation",
+      "vs paranoid ideation — suspiciousness; splitting is categorical good/bad without necessarily paranoid content",
+    ],
+    pediatrics:
+      "Normal toddlers show black-white thinking developmentally; pathologic splitting in adolescents suggests borderline traits or severe personality pathology — assess self-harm, unstable relationships, and identity disturbance.",
+  },
+  {
+    id: "altruism",
+    name: "Altruism",
+    etymology:
+      "Latin alter = other + -ism = doctrine — mature defense of channeling personal distress into devoted care for others",
+    aliases: [
+      "altruism",
+      "altruisms",
+      "altruism defense mechanism",
+      "altruism defense mechanisms",
+      "defense mechanism altruism",
+      "psychological altruism",
+      "psychologic altruism",
+      "defense altruism",
+    ],
+    definition:
+      "Mature ego defense mechanism in which a person copes with guilt, anxiety, loss, or unacceptable impulses by selflessly dedicating themselves to meeting others' needs — often through helping, caregiving, or service that is genuinely constructive but may unconsciously serve to manage inner conflict.",
+    details: [
+      "Can be adaptive and prosocial — differs from pathologic only when it avoids self-care or own emotional processing entirely",
+      "Classic vignette: physician whose child died of leukemia becomes devoted pediatric oncologist or hospice volunteer",
+      "Also: survivor of trauma dedicates career to advocacy; guilt-driven over-involvement in others' problems",
+      "Outward behavior appears generous; unconscious motive may include expiation, control of anxiety, or sublimated grief",
+      "Mature defense — associated with better long-term adjustment than immature defenses",
+    ],
+    boardsPearls: [
+      "Altruism (defense) = cope with inner pain by helping others",
+      "Personal loss → dedicated caregiving career — mature defense vignette",
+      "Mature defense — vs immature acting out, denial, splitting",
+      "vs reaction formation — exaggerated opposite behavior; altruism is genuine helpful action",
+      "vs sublimation — channels unacceptable impulse into neutral/constructive outlet; altruism focuses on others' welfare",
+      "Not the same as everyday kindness — psych term implies unconscious management of conflict",
+    ],
+    pediatrics:
+      "Parent who over-identifies with child's illness and becomes hyper-involved in patient advocacy may use altruistic defense — support while monitoring caregiver burnout and child's autonomy.",
+  },
+  {
+    id: "humor",
+    name: "Humor",
+    etymology:
+      "Latin humor = moisture/fluid; medieval temperament theory → modern sense of amusement used to soften distress",
+    aliases: [
+      "humor",
+      "humors",
+      "humor defense mechanism",
+      "humor defense mechanisms",
+      "defense mechanism humor",
+      "psychological humor",
+      "psychologic humor",
+      "defense humor",
+      "gallows humor",
+      "gallows humour",
+    ],
+    definition:
+      "Mature ego defense mechanism in which uncomfortable, frightening, or painful feelings are expressed indirectly through wit, irony, or comedy — allowing partial acknowledgment of distress while reducing its emotional intensity and maintaining social connection.",
+    details: [
+      "Can be adaptive — preserves morale in medicine, disaster, and chronic illness",
+      "Classic vignette: oncology patient jokes about baldness or 'free haircut' from chemo; surgical team uses gallows humor after difficult case",
+      "Differs from sarcastic cruelty — mature humor usually includes self-awareness and mutuality",
+      "Allows distance from pain without fully rejecting reality (unlike denial)",
+      "Excessive humor can become avoidance if feelings are never processed directly",
+    ],
+    boardsPearls: [
+      "Humor (defense) = joke about painful topic to cope without breaking down",
+      "Cancer patient makes light of diagnosis — mature defense vignette",
+      "Mature defense — healthcare and stress vignettes",
+      "vs denial — rejects reality; humor acknowledges situation but softens affect",
+      "vs intellectualization — analyzes facts without emotion; humor uses comedy to manage emotion",
+      "vs passive aggression — hostile jokes at someone's expense; mature humor is usually affiliative",
+    ],
+    pediatrics:
+      "Children use play and silly jokes to manage hospital fear — adaptive humor; assess when joking masks untreated anxiety or depression.",
+  },
+  {
+    id: "sublimation",
+    name: "Sublimation",
+    etymology:
+      "Latin sublimare = to raise to a higher level — unconscious redirection of unacceptable impulses into socially valued, constructive activities",
+    aliases: [
+      "sublimation",
+      "sublimations",
+      "sublimation defense mechanism",
+      "sublimation defense mechanisms",
+      "defense mechanism sublimation",
+      "psychological sublimation",
+      "psychologic sublimation",
+      "defense sublimation",
+    ],
+    definition:
+      "Mature ego defense mechanism in which primitive or socially unacceptable impulses (aggression, sexuality, ambition) are unconsciously transformed into culturally approved, productive pursuits — such as athletics, art, science, surgery, or advocacy — without direct expression of the raw impulse.",
+    details: [
+      "Considered one of the healthiest defenses — channel rather than suppress or act out",
+      "Classic vignette: person with aggressive urges becomes successful surgeon or competitive athlete; artistic expression of taboo themes",
+      "Freudian example: Leonardo da Vinci channeling impulses into creative/scientific work",
+      "Outcome is socially constructive — distinguishes from displacement (less adaptive target) and reaction formation (opposite behavior)",
+      "Common in high-achievement and healthcare vignettes on boards",
+    ],
+    boardsPearls: [
+      "Sublimation = unacceptable impulse → acceptable constructive outlet",
+      "Aggressive teen channels energy into football; sexual curiosity into art — classic vignettes",
+      "Mature defense — gold standard adaptive channeling",
+      "vs displacement — redirects to safer but not necessarily constructive target (kick the dog)",
+      "vs reaction formation — opposite exaggerated behavior; sublimation transforms impulse productively",
+      "vs acting out — behavioral discharge; sublimation is adaptive redirection",
+    ],
+    pediatrics:
+      "Adolescents with anger or risky impulses benefit from structured sports, art, or mentorship — constructive sublimation; still screen for conduct disorder if aggression is predatory or unprovoked.",
+  },
+  {
     id: "passive-aggression",
     name: "Passive Aggression",
     etymology:
@@ -1475,6 +1691,50 @@ export const CLINICAL_STRATEGIES: ClinicalStrategyEntry[] = [
     ],
     pediatrics:
       "Aspirin avoided for fever in children (Reye syndrome); aspirin used in Kawasaki disease with IVIG. Pediatric stroke secondary prevention is specialist-guided — antiplatelet therapy may be used but differs from adult DAPT protocols.",
+  },
+  {
+    id: "antiretroviral-therapy",
+    name: "Antiretroviral Therapy",
+    etymology:
+      "anti- = against + Latin retro = backward + virus + Greek therapeia = healing — combination drug regimen suppressing HIV replication",
+    aliases: [
+      "antiretroviral therapy",
+      "antiretroviral therapies",
+      "art",
+      "haart",
+      "highly active antiretroviral therapy",
+      "combination antiretroviral therapy",
+      "cart",
+      "hiv antiretroviral therapy",
+      "hiv art",
+      "antiretroviral treatment",
+      "hiv treatment",
+    ],
+    definition:
+      "Combination pharmacotherapy targeting multiple steps of the HIV life cycle to maximally suppress viral replication, restore immune function, prevent AIDS-defining illness, and reduce transmission — lifelong treatment for HIV infection.",
+    details: [
+      "Drug classes: NRTIs (e.g., tenofovir, emtricitabine) — chain termination; NNRTIs (efavirenz, rilpivirine) — reverse transcriptase inhibition; PIs (atazanavir, darunavir) — often ritonavir-boosted protease inhibition; INSTIs (dolutegravir, bictegravir) — integrase strand transfer inhibition; entry/fusion inhibitors (enfuvirtide, maraviroc) — less common first-line",
+      "Standard regimens combine ≥2 drug classes (often 2 NRTIs + INSTI or boosted PI) to prevent resistance",
+      "Goal: plasma HIV RNA undetectable and CD4 recovery; treat all persons with HIV regardless of CD4",
+      "Undetectable viral load → effectively no sexual transmission (U=U principle)",
+      "Baseline resistance testing (genotype) guides regimen selection",
+      "Adherence critical — intermittent therapy promotes resistance mutations",
+      "Opportunistic infection prophylaxis (PCP, MAC, toxoplasmosis) guided by CD4 count; often discontinued after immune reconstitution on ART",
+      "Immune reconstitution inflammatory syndrome (IRIS) — paradoxical worsening after ART start when restoring immunity unmasks subclinical infections (TB, MAC, cryptococcus)",
+    ],
+    boardsPearls: [
+      "ART = combination therapy — never monotherapy for HIV (resistance)",
+      "INSTI-based regimens (e.g., bictegravir/TAF/FTC) are common modern first-line",
+      "NRTIs — mitochondrial toxicity (zidovudine anemia/neuropathy); tenofovir renal/bone effects",
+      "PIs — hyperglycemia, lipodystrophy, CYP interactions (ritonavir boosting)",
+      "Efavirenz — CNS side effects, teratogenicity (avoid in pregnancy when alternatives exist)",
+      "Pregnant HIV+ → ART + zidovudine during labor + infant prophylaxis ↓ vertical transmission",
+      "CD4 <200 → PCP prophylaxis (TMP-SMX); discontinue when CD4 recovers on ART",
+      "vs post-exposure prophylaxis (PEP) — short course after exposure; ART is lifelong treatment",
+      "HIV cannot be cured with ART alone — latent reservoir persists in resting CD4 cells",
+    ],
+    pediatrics:
+      "All infants born to HIV-positive mothers need ART prophylaxis and HIV testing at birth and follow-up intervals. Perinatal transmission risk <1% with maternal viral suppression on ART. Weight-based pediatric ART formulations required; adherence support essential in adolescents.",
   },
   {
     id: "androgen-deprivation",
@@ -1962,6 +2222,52 @@ export const CLINICAL_STRATEGIES: ClinicalStrategyEntry[] = [
     ],
     pediatrics:
       "Type 1 diabetes in children requires family-centered carbohydrate counting with weight-based insulin dosing. Type 2 diabetes in adolescents emphasizes weight management and activity alongside metformin when needed. Avoid restrictive fad diets; growth and puberty alter caloric needs.",
+  },
+  {
+    id: "hla-antigen-match",
+    name: "HLA Antigen Match",
+    etymology:
+      "HLA = human leukocyte antigen + antigen = antibody generator + match = compatible pairing — degree of identity between donor and recipient MHC/HLA types for transplant compatibility",
+    aliases: [
+      "hla antigen match",
+      "hla antigen matching",
+      "hla match",
+      "hla matching",
+      "hla compatibility",
+      "histocompatibility match",
+      "histocompatibility matching",
+      "mhc match",
+      "mhc matching",
+      "6/6 match",
+      "6 of 6 match",
+      "8/8 match",
+      "8 of 8 match",
+      "10/10 match",
+      "10 of 10 match",
+      "hla-identical sibling",
+      "matched unrelated donor",
+    ],
+    definition:
+      "Quantification of shared HLA alleles/antigens between donor and recipient — critical for hematopoietic stem cell transplant and important for solid organ transplant — reported as matched loci out of total (e.g., 6/6, 8/8, 10/10).",
+    details: [
+      "Classic sibling match: 6/6 at HLA-A, HLA-B, and HLA-DR (two antigens per locus = 6 antigens)",
+      "Modern high-resolution typing: 8/8 at HLA-A, -B, -C, and -DRB1 alleles; 10/10 adds -DQB1 and -DPB1",
+      "Matched sibling donor — 25% probability per sibling for 6/6 (HLA-identical)",
+      "Mismatched unrelated donor (MMUD) — higher graft rejection and GVHD risk than matched donor",
+      "HLA matching reduces acute/chronic rejection and GVHD; does not apply to ABO matching (separate system)",
+      "Solid organ transplant — less stringent than BMT but HLA-DR matching still improves graft survival",
+    ],
+    boardsPearls: [
+      "6/6 HLA match = HLA-A + HLA-B + HLA-DR antigens matched (classic sibling BMT)",
+      "8/8 or 10/10 allele matching — modern molecular typing standard for unrelated donors",
+      "Better HLA match → ↓ acute rejection and ↓ GVHD in stem cell transplant",
+      "Each sibling has 25% chance of being 6/6 match with patient",
+      "GVHD still occurs with 6/6 match — donor T cells vs recipient tissues (see graft-versus-host disease entry)",
+      "vs ABO compatibility — blood group matching separate from HLA",
+      "Calcineurin inhibitors (tacrolimus) used regardless of match grade to prevent rejection",
+    ],
+    pediatrics:
+      "Pediatric BMT for leukemia, SCID, and metabolic disease requires HLA-matched donor when possible; haploidentical and mismatched strategies exist with intensified immunosuppression. Newborn screening SCID may need urgent transplant before infection.",
   },
   {
     id: "screening",

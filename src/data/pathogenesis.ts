@@ -26,6 +26,7 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
       "Congenital absence or complete closure of a normal tubular lumen or orifice, producing mechanical obstruction of flow through the affected structure.",
     examples: [
       "Duodenal atresia — failure of duodenal recanalization causing bilious vomiting and double-bubble sign",
+      "Small intestine (jejunal/ileal) atresia — in utero vascular accident; multiple dilated loops (see dedicated entry)",
       "Biliary atresia — progressive fibro-obliterative destruction of extrahepatic bile ducts causing neonatal cholestasis",
       "Pulmonary atresia — absent/imperforate pulmonary valve with ductal-dependent pulmonary blood flow",
       "Tricuspid atresia — absent tricuspid valve orifice with obligatory interatrial shunting",
@@ -121,7 +122,7 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
     ],
     distinguishFrom: [
       "Pyramidal system — corticospinal UMN; spastic weakness, Babinski, hyperreflexia",
-      "Cerebellum — ataxia, dysmetria, intention tremor; not rigidity or chorea",
+      "Cerebellum — ataxia, dysmetria, intention tremor (see dedicated entry); not rigidity or chorea",
       "Lower motor neuron — flaccid weakness, atrophy, fasciculations",
       "Extrapyramidal symptoms (EPS) — drug-induced movement disorders specifically from D₂ blockade",
       "Upper motor neuron spasticity — velocity-dependent increased tone; extrapyramidal rigidity is lead-pipe/cogwheel",
@@ -541,7 +542,7 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
       "white blood cell migration",
     ],
     definition:
-      "Directed movement of leukocytes from the bloodstream into tissues during inflammation, proceeding through margination, endothelial rolling, activation, firm adhesion, transmigration (diapedesis), and chemotaxis along a chemokine gradient.",
+      "Directed movement of leukocytes from the bloodstream into tissues during inflammation, proceeding through margination (see dedicated entry), endothelial rolling, activation, firm adhesion, transmigration (diapedesis), and chemotaxis along a chemokine gradient.",
     examples: [
       "Acute bacterial infection — neutrophil recruitment to site via IL-8/CXCL8 and complement C5a",
       "Atherosclerosis — monocyte adhesion to activated endothelium and migration into intima",
@@ -554,7 +555,7 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
       "Chemokines (e.g., IL-8) create gradient guiding leukocytes to infection site",
       "TNF-α and IL-1 ↑ endothelial adhesion molecules — key step upstream of migration",
       "LAD type 1 — CD18/β₂ integrin defect; delayed umbilical cord separation, poor wound healing, ↑ neutrophils but no pus",
-      "Corticosteroids and leukocyte demargination — steroids cause apparent leukocytosis by releasing marginated pool",
+      "Corticosteroids and leukocyte demargination — steroids cause apparent leukocytosis by releasing marginated pool (see neutrophil margination entry)",
     ],
     distinguishFrom: [
       "Hematogenous dissemination — organisms travel in blood to distant sites, not leukocyte egress into tissue",
@@ -585,7 +586,7 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
     ],
     boardsPearls: [
       "Chemoattractants: C5a, IL-8, LTB₄, bacterial N-formyl peptides (fMLP)",
-      "Final step of leukocyte recruitment after margination, rolling, adhesion, and diapedesis",
+      "Final step of leukocyte recruitment after margination (see dedicated entry), rolling, adhesion, and diapedesis",
       "Colchicine blocks chemotaxis in gout by disrupting microtubules in neutrophils",
       "Chemokines create tissue gradient — leukocytes migrate up concentration gradient",
     ],
@@ -596,6 +597,52 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
     ],
     pediatrics:
       "LAD type 1 — impaired adhesion prevents chemotaxis from translating into tissue infiltration; recurrent infections without pus.",
+  },
+  {
+    id: "neutrophil-margination",
+    name: "Neutrophil Margination",
+    etymology:
+      "Latin neutrophilus = neutral-loving + Latin margo = edge + -ation = process — neutrophils moving from axial blood flow to the endothelial surface along vessel walls",
+    aliases: [
+      "neutrophil margination",
+      "margination",
+      "margination of neutrophils",
+      "marginated neutrophils",
+      "marginated neutrophil pool",
+      "marginated neutrophil pools",
+      "neutrophil demargination",
+      "demargination",
+      "demargination of neutrophils",
+      "leukocyte margination",
+      "leukocyte demargination",
+      "wbc margination",
+      "wbc demargination",
+    ],
+    definition:
+      "Initial step of leukocyte extravasation in which neutrophils leave the central axial stream of blood and adhere loosely to the endothelial lining of postcapillary venules — creating a marginated pool along vessel walls that can rapidly enter tissues during inflammation or re-enter circulation with stress hormones.",
+    examples: [
+      "Resting state — ~half of neutrophils are marginated along venular endothelium rather than freely circulating",
+      "Acute inflammation — margination followed by rolling (selectins), firm adhesion (integrins), and diapedesis into tissue",
+      "Corticosteroids and epinephrine — demargination → ↑ peripheral blood neutrophil count without increased marrow production",
+      "Stress leukocytosis — demargination plus ↑ release from marrow",
+      "Leukocyte adhesion deficiency — impaired margination/adhesion despite chemotactic signals → recurrent infections without pus",
+    ],
+    boardsPearls: [
+      "Margination = first step of leukocyte recruitment before rolling, adhesion, and diapedesis (see leukocyte migration entry)",
+      "Steroid-induced neutrophilia — demargination, not primarily ↑ production; eosinophils and lymphocytes often ↓",
+      "Marginated pool explains rapid ↑ ANC after stress, exercise, or corticosteroids",
+      "vs leukemoid reaction — extreme neutrophilia with left shift from marrow overproduction (infection, leukemia)",
+      "vs neutropenia — ↓ circulating neutrophils from marrow failure, destruction, or sequestration",
+      "Postcapillary venules — primary site of margination and extravasation",
+    ],
+    distinguishFrom: [
+      "Leukocyte rolling — selectin-mediated slow rolling after margination, not initial endothelial contact alone",
+      "Chemotaxis — directed migration along gradient after extravasation",
+      "Neutrophilia from infection — marrow release and left shift in addition to margination/demargination dynamics",
+      "Neutrophil extravasation — full process including diapedesis, not just vessel wall positioning",
+    ],
+    pediatrics:
+      "LAD type 1 presents in infancy with neutrophilia but poor tissue infiltration and absent pus — defective β₂ integrins prevent effective margination and adhesion. Steroid demargination causes the same apparent neutrophilia pattern in children as in adults.",
   },
   {
     id: "phagocytosis",
@@ -657,12 +704,12 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
       "MHC class II pathway — exogenous antigen processed in endolysosomal compartments",
       "Tay-Sachs — GM2 ganglioside accumulates → onion-skin lysosomes on EM",
       "Gaucher disease — glucocerebroside accumulates in macrophage lysosomes",
-      "I-cell disease — failure to mannose-6-phosphate tag lysosomal enzymes → secretion outside cell",
+      "I-cell disease — failure to mannose-6-phosphate tag lysosomal enzymes → secretion outside cell; see lysosomal trafficking",
       "Chloroquine/hydroxychloroquine — raise lysosomal pH, impair antigen processing",
     ],
     boardsPearls: [
       "Lysosomes = acid hydrolases at pH ~4.5; require v-ATPase proton pumping",
-      "Mannose-6-phosphate receptor targets enzymes from Golgi to lysosome (defect → I-cell disease)",
+      "Mannose-6-phosphate receptor targets enzymes from Golgi to lysosome (defect → I-cell disease) — see lysosomal trafficking entry",
       "Phagosome–lysosome fusion kills most bacteria; TB blocks fusion (sulfatides, LAM)",
       "Lysosomal storage diseases — substrate accumulates (Tay-Sachs, Gaucher, Niemann-Pick, mucopolysaccharidoses)",
       "Onion-skin lysosomes on EM — Tay-Sachs pathognomonic",
@@ -677,6 +724,50 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
     ],
     pediatrics:
       "Lysosomal storage diseases present in infancy/childhood — Tay-Sachs (cherry-red spot, hypotonia), Gaucher (hepatosplenomegaly), Hurler/Hunter (coarse facies, developmental delay). I-cell disease causes severe pediatric dysostosis multiplex.",
+  },
+  {
+    id: "lysosomal-trafficking",
+    name: "Lysosomal Trafficking",
+    etymology:
+      "Greek lysis = loosening + soma = body + Latin trafficare = to trade/pass + -ing — directed vesicular transport delivering acid hydrolases and substrates to lysosomes",
+    aliases: [
+      "lysosomal trafficking",
+      "lysosomal enzyme trafficking",
+      "lysosomal targeting",
+      "lysosomal transport",
+      "mannose-6-phosphate pathway",
+      "mannose 6 phosphate pathway",
+      "m6p pathway",
+      "m6p tagging",
+      "lysosomal enzyme targeting",
+      "lysosomal enzyme sorting",
+    ],
+    definition:
+      "Post-translational routing of newly synthesized lysosomal hydrolases from the Golgi to lysosomes via mannose-6-phosphate (M6P) receptor recognition and clathrin-coated vesicle transport — failure causes extracellular enzyme loss (I-cell disease) despite normal enzyme synthesis in RER.",
+    examples: [
+      "Hydrolases synthesized in RER → glycosylated in Golgi → M6P tag added by phosphotransferase",
+      "M6P receptor in trans-Golgi network binds tagged enzymes → clathrin-coated vesicles → endosome → lysosome",
+      "I-cell disease (mucolipidosis II) — defective N-acetylglucosamine-1-phosphotransferase → no M6P tag → enzymes secreted extracellularly",
+      "M6P receptors also recycle to Golgi after delivering cargo",
+      "Endocytosis can retrieve secreted lysosomal enzymes if M6P receptor present on cell surface",
+    ],
+    boardsPearls: [
+      "Lysosomal enzymes made in RER, tagged with M6P in Golgi, sorted via M6P receptor",
+      "I-cell disease — trafficking defect, NOT enzyme synthesis defect; ↑ plasma lysosomal enzymes",
+      "M6P = mannose-6-phosphate tag on N-linked oligosaccharide of hydrolases",
+      "Clathrin-coated vesicles transport M6P receptor–enzyme complexes from Golgi to endosome/lysosome",
+      "vs lysosomal storage disease — storage diseases have enzyme deficiency inside lysosome; I-cell misroutes enzymes outside cell",
+      "Coarse facies, developmental delay, dysostosis multiplex in I-cell disease",
+    ],
+    distinguishFrom: [
+      "Lysosomes — organelle destination; lysosomal trafficking is the routing process",
+      "Lysosomal storage disease — substrate accumulates despite trafficking; enzyme may be present but deficient or inactive",
+      "Proteasome degradation — cytosolic ubiquitin pathway, not lysosomal vesicle routing",
+      "Glycosylation — broader carbohydrate modification; M6P tagging is specific lysosomal targeting step",
+      "Endocytosis — uptake mechanism; lysosomal trafficking includes Golgi-to-lysosome delivery",
+    ],
+    pediatrics:
+      "I-cell disease (mucolipidosis II) presents in infancy with coarse facies, gingival hyperplasia, developmental delay, and elevated lysosomal enzymes in plasma — enzymes are synthesized but not delivered to lysosomes.",
   },
   {
     id: "proteasomes",
@@ -1499,7 +1590,7 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
       "Tuberculosis → lymphocyte-predominant pleural exudate, often with ↑ ADA",
       "Pulmonary embolism → pleuritic exudative effusion",
       "Pancreatitis → inflammatory ascites or pleural effusion",
-      "Fibrinous pericarditis/pleuritis — fibrin-rich serosal exudate",
+      "Fibrinous pericarditis/pleuritis — fibrin-rich serosal exudate; see pleuritis entry",
     ],
     boardsPearls: [
       "Exudate = permeability/lymphatic problem: inflammation, infection, malignancy, PE, TB",
@@ -1516,6 +1607,53 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
     ],
     pediatrics:
       "Children with bacterial pneumonia can develop parapneumonic exudates or empyema; fever plus persistent respiratory distress after antibiotics should prompt effusion evaluation.",
+  },
+  {
+    id: "pleuritis",
+    name: "Pleuritis",
+    etymology:
+      "Greek pleura = side/rib + -itis = inflammation — inflammation of the pleura, especially the parietal layer whose irritation causes pleuritic chest pain",
+    aliases: [
+      "pleuritis",
+      "pleuritides",
+      "pleurisy",
+      "pleural inflammation",
+      "inflamed pleura",
+      "acute pleuritis",
+      "viral pleuritis",
+      "fibrinous pleuritis",
+      "serous pleuritis",
+    ],
+    definition:
+      "Inflammation of the pleural membranes — parietal pleura is richly innervated, so inflammation produces sharp pleuritic chest pain worsened by inspiration, cough, or movement; may accompany exudative pleural effusion.",
+    examples: [
+      "Viral pleurisy — self-limited pleuritic pain, often after URI",
+      "Parapneumonic effusion — bacterial pneumonia with pleural inflammation",
+      "Pulmonary embolism — pleuritic pain from infarcted lung and pleural irritation",
+      "Systemic lupus erythematosus — serositis with pleuritis and pericarditis",
+      "Rheumatoid arthritis — rheumatoid pleuritis with effusion",
+      "Uremic pleuritis — in advanced renal failure",
+      "Malignancy — pleural metastases with inflammatory effusion",
+    ],
+    boardsPearls: [
+      "Pleuritis = pleural inflammation → pleuritic chest pain (sharp, worse with inspiration)",
+      "Parietal pleura is innervated; visceral pleura is not — pain from parietal irritation",
+      "SLE serositis — pleuritis + pericarditis common",
+      "PE classic: sudden dyspnea + pleuritic pain + tachycardia + hypoxia",
+      "Pneumonia + pleuritic pain + effusion → parapneumonic pleuritis; drain if complicated",
+      "vs pleural effusion — effusion is fluid collection; pleuritis is inflammation (may coexist)",
+      "vs pericarditis — positional chest pain relieved sitting forward; friction rub on cardiac auscultation",
+    ],
+    distinguishFrom: [
+      "Pleuritic chest pain — symptom of pleuritis; not the pathologic process itself",
+      "Pleural effusion — fluid in pleural space; may cause pain if inflamed but can be painless",
+      "Pericarditis — pericardial inflammation; friction rub, positional pain",
+      "Pneumonia — parenchymal infection; may cause secondary pleuritis",
+      "Musculoskeletal chest wall pain — reproducible with palpation",
+      "Pneumothorax — sudden dyspnea with diminished breath sounds; not primary pleural inflammation",
+    ],
+    pediatrics:
+      "Parapneumonic effusion and empyema are common pediatric complications of bacterial pneumonia. Viral pleurisy occurs in children after respiratory infections.",
   },
   {
     id: "increased-capillary-permeability",
@@ -1624,7 +1762,7 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
       "Acantholysis = loss of desmosomal adhesion between keratinocytes",
       "Pemphigus — intraepidermal, acantholysis, flaccid bullae, positive Nikolsky sign",
       "Bullous pemphigoid — subepidermal split, tense bullae, no acantholysis (anti-hemidesmosome)",
-      "SSSS in children — superficial desquamation from desmoglein 1 toxin, not autoimmune",
+      "SSSS in children — superficial desquamation from desmoglein 1 toxin, not autoimmune (see desquamate entry)",
       "Oral mucosa often involved first in pemphigus vulgaris",
     ],
     distinguishFrom: [
@@ -1635,6 +1773,52 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
     ],
     pediatrics:
       "Staphylococcal scalded skin syndrome — exfoliative toxin causes acantholysis-like superficial split; pemphigus vulgaris rare in children but possible.",
+  },
+  {
+    id: "desquamate",
+    name: "Desquamate",
+    etymology:
+      "Latin de- = off + squama = scale + -ate = verb suffix — to shed or peel off surface epithelial layers",
+    aliases: [
+      "desquamate",
+      "desquamates",
+      "desquamating",
+      "desquamation",
+      "desquamations",
+      "epithelial desquamation",
+      "skin desquamation",
+      "desquamative",
+      "desquamative process",
+      "peeling skin",
+      "sheet desquamation",
+    ],
+    definition:
+      "Shedding or peeling of surface epithelial cells — from fine flaking of stratum corneum to sheet-like separation of superficial epidermis or mucosa — reflecting increased turnover, toxin-mediated cleavage, or inflammatory necrosis of epithelial layers.",
+    examples: [
+      "Toxic shock syndrome — diffuse erythroderma followed by palm and sole desquamation 1–2 weeks later",
+      "Staphylococcal scalded skin syndrome — superficial epidermal desquamation from exfoliative toxin (desmoglein 1 cleavage)",
+      "Scarlet fever — fine desquamation of trunk and extremities during recovery",
+      "Stevens-Johnson syndrome / toxic epidermal necrolysis — full-thickness epidermal necrosis and sheet desquamation",
+      "Vitamin A toxicity — generalized desquamation with hepatotoxicity and pseudotumor cerebri",
+      "Desquamative interstitial pneumonitis — alveolar macrophage and epithelial debris in lung (Step 1 histology association)",
+    ],
+    boardsPearls: [
+      "Desquamation = peeling/shedding of epithelium — broader than fine scale alone",
+      "TSS classic — erythroderma then palmar/plantar desquamation in convalescence",
+      "SSSS — toxin-mediated superficial split and desquamation in infants; Nikolsky positive",
+      "vs scale — fine keratin flakes on surface (see scale entry); desquamation implies larger peeling or sheet loss",
+      "vs acantholysis — mechanism of lost keratinocyte adhesion; desquamation describes the peeling outcome",
+      "Scarlet fever desquamation occurs during rash fade — not pathognomonic alone",
+    ],
+    distinguishFrom: [
+      "Scale — visible keratin flakes without full sheet peeling; psoriasis, tinea",
+      "Acantholysis — histologic loss of intercellular adhesion (pemphigus, SSSS mechanism)",
+      "Exfoliation — overlapping term; desquamation emphasizes epithelial shedding process",
+      "Crust — dried exudate on surface, not keratinocyte sheet loss",
+      "Erythema alone — redness without peeling",
+    ],
+    pediatrics:
+      "SSSS is the classic pediatric desquamating rash from S. aureus exfoliative toxin. Scarlet fever desquamation during convalescence is common in children. TEN/SJS with sheet desquamation requires burn-unit level care.",
   },
   {
     id: "fibrinoid-necrosis",
@@ -1777,7 +1961,7 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
     ],
     distinguishFrom: [
       "Type IV hypersensitivity — T-cell delayed; patch test positive in contact dermatitis",
-      "Nonallergic drug reaction — direct mast cell activation (e.g., vancomycin flushing), no IgE",
+      "Nonallergic drug reaction — direct mast cell activation (e.g., vancomycin infusion reaction), no IgE",
       "Type III hypersensitivity — immune complexes, not IgE/mast cell",
     ],
     pediatrics:
@@ -1805,7 +1989,7 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
       "Anaphylaxis — systemic degranulation (food, drug, insect venom, latex)",
       "Late-phase response — leukotriene and cytokine synthesis hours after initial degranulation",
       "Complement anaphylatoxins C3a and C5a — direct mast cell activation",
-      "Non-IgE triggers — vancomycin infusion reaction, opioids, radiocontrast, physical urticaria",
+      "Non-IgE triggers — vancomycin infusion reaction (see dedicated entry), opioids, radiocontrast, physical urticaria",
       "Cromolyn prevents degranulation; epinephrine treats downstream effects of degranulation",
     ],
     boardsPearls: [
@@ -1825,6 +2009,53 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
     ],
     pediatrics:
       "Food allergy anaphylaxis in children is mast cell/IgE mediated; weight-based IM epinephrine is first-line. Mastocytosis can cause pediatric flushing, GI symptoms, and anaphylaxis with lower allergen thresholds.",
+  },
+  {
+    id: "vancomycin-infusion-reaction",
+    name: "Vancomycin Infusion Reaction",
+    etymology:
+      "Van (vanquish) + -mycin antibiotic suffix + Latin infusio = pouring in + Latin reactio = response — adverse reaction during IV vancomycin administration",
+    aliases: [
+      "vancomycin infusion reaction",
+      "vancomycin infusion reactions",
+      "vancomycin infusion-related reaction",
+      "vancomycin infusion related reaction",
+      "vancomycin-related infusion reaction",
+      "red man syndrome",
+      "red-man syndrome",
+      "red man flushing",
+      "red neck syndrome",
+      "vancomycin flushing",
+      "vancomycin red man",
+      "vancomycin red neck",
+      "rapid vancomycin infusion reaction",
+    ],
+    definition:
+      "Non–IgE-mediated reaction to rapid IV vancomycin infusion caused by direct mast cell histamine release — flushing of face, neck, and upper trunk with pruritus and possible hypotension; historically called red man syndrome.",
+    examples: [
+      "Rapid IV vancomycin bolus → histamine release → erythema of face/neck/upper torso, pruritus, warmth",
+      "Hypotension and tachycardia with severe reactions — usually resolves when infusion slowed or stopped",
+      "Premedication with antihistamines and prolonged infusion rate ↓ incidence",
+      "Can recur with subsequent infusions if rate not controlled — not the same as true vancomycin allergy",
+      "Mast cell degranulation without prior IgE sensitization — similar mechanism to some opioid/radiocontrast reactions",
+    ],
+    boardsPearls: [
+      "Not true IgE-mediated allergy — slow infusion (≥60 min) and antihistamine premedication prevent most cases",
+      "Histamine release from direct mast cell activation — H1 blockers treat flushing/pruritus",
+      "vs anaphylaxis — infusion reaction usually lacks bronchospasm/wheezing and responds to slowing infusion; true allergy may need epinephrine and drug discontinuation",
+      "Oral vancomycin for C. difficile does not cause this syndrome — not absorbed systemically",
+      "Do not confuse with vancomycin nephrotoxicity or ototoxicity — separate dose-related toxicities",
+      "Red man syndrome = older name for vancomycin infusion reaction",
+    ],
+    distinguishFrom: [
+      "True vancomycin IgE allergy — rare; may require allergy evaluation before rechallenge",
+      "Type I anaphylaxis — IgE cross-linking on mast cells; epinephrine first-line",
+      "Septic shock during bacteremia treatment — fever/hypotension from infection, not infusion rate",
+      "Niacin flush — prostaglandin-mediated; different drug and mechanism",
+      "Carcinoid flush — serotonin/histamine from tumor, not drug infusion",
+    ],
+    pediatrics:
+      "Same prevention principles in children — extend infusion time and consider antihistamine premedication for high-dose IV vancomycin; weight-based dosing does not eliminate infusion reaction risk if infused too rapidly.",
   },
   {
     id: "anergy",
@@ -2584,7 +2815,7 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
       "Autoimmune hemolytic anemia — anti-RBC antibodies → hemolysis",
       "Goodpasture syndrome — anti-GBM (type IV collagen) → pulmonary hemorrhage + glomerulonephritis",
       "Myasthenia gravis — anti–acetylcholine receptor → neuromuscular blockade",
-      "Rh hemolytic disease of newborn — maternal anti-Rh IgG crosses placenta",
+      "Rh hemolytic disease of newborn — maternal anti-Rh IgG crosses placenta; see HDFN entry",
       "Hyperacute transplant rejection — preformed donor-specific antibodies",
     ],
     boardsPearls: [
@@ -2787,7 +3018,7 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
       "Allergic contact dermatitis — nickel, poison ivy (urushiol), topical medications",
       "PPD (Mantoux) skin test — granulomatous reaction to tuberculin",
       "Granulomatous diseases — sarcoidosis, TB (Th1/CD4⁺ macrophage activation)",
-      "Transplant rejection and graft-versus-host disease",
+      "Transplant rejection and graft-versus-host disease (see dedicated GVHD entry)",
       "Multiple sclerosis, type 1 diabetes (autoimmune type IV components)",
     ],
     boardsPearls: [
@@ -2973,6 +3204,53 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
       "Neonatal ABO incompatibility (e.g., type O mother, type A or B baby) can cause mild hyperbilirubinemia — usually less severe than Rh HDN because maternal anti-A/B are mainly IgM. Always type and crossmatch before pediatric transfusion.",
   },
   {
+    id: "rh-positive",
+    name: "Rh-Positive",
+    etymology:
+      "Rh = Rhesus (named from Rhesus macaque) + positive = presence of D antigen on red blood cell surface",
+    aliases: [
+      "rh-positive",
+      "rh positive",
+      "rh+",
+      "rh positive blood",
+      "rh positive blood type",
+      "rhesus positive",
+      "rhesus-positive",
+      "d positive",
+      "d-positive",
+      "d antigen positive",
+      "rh d positive",
+    ],
+    definition:
+      "Red blood cells that express the Rh (D) antigen on their surface — approximately 85% of people are Rh-positive (D+); individuals who lack the D antigen are Rh-negative (D−) and can form anti-D IgG alloantibodies after exposure to Rh+ blood.",
+    examples: [
+      "Rh+ individual — has D antigen on RBCs; no naturally occurring anti-D antibody",
+      "Rh− mother carrying Rh+ fetus — first pregnancy often uncomplicated; sensitization from fetal-maternal hemorrhage can produce maternal anti-D IgG",
+      "Sensitized Rh− mother with Rh+ fetus — anti-D IgG crosses placenta → hemolytic disease of newborn (HDN)",
+      "Rh+ transfusion to previously sensitized Rh− recipient — delayed hemolytic transfusion reaction",
+      "Rho(D) immune globulin (RhoGAM) — passive anti-D given to unsensitized Rh− mothers to prevent sensitization",
+    ],
+    boardsPearls: [
+      "Rh+ = D antigen present on RBCs; Rh− = D antigen absent",
+      "No natural anti-D — Rh− individuals form anti-D IgG only after sensitization (pregnancy, transfusion)",
+      "Rh hemolytic disease of newborn — type II hypersensitivity; maternal IgG anti-D crosses placenta",
+      "RhoGAM (anti-D IgG) to Rh− mother at ~28 weeks and within 72 h of Rh+ delivery/prevents sensitization",
+      "vs ABO — ABO isoagglutinins are preformed IgM; Rh anti-D is IgG from prior exposure",
+      "Direct Coombs positive on neonatal RBCs in Rh HDN — antibody-coated fetal erythrocytes",
+      "Hydrops fetalis — severe fetal anemia from Rh HDN before birth",
+      "ABO typing and Rh typing both required before transfusion",
+    ],
+    distinguishFrom: [
+      "Rh-negative — lacks D antigen; at risk for anti-D formation after Rh+ exposure",
+      "ABO blood group — separate carbohydrate antigen system; independent of Rh status",
+      "Anti-D antibody — IgG alloantibody in sensitized Rh− individual, not present in Rh+ person",
+      "ABO hemolytic disease of newborn — usually milder; IgM does not cross placenta",
+      "Warm autoimmune hemolytic anemia — autoantibody against own RBCs, not Rh alloantibody",
+    ],
+    pediatrics:
+      "Rh HDN causes neonatal jaundice, anemia, and kernicterus risk — phototherapy, exchange transfusion, or intrauterine transfusion in severe cases. RhoGAM prophylaxis to Rh− mothers has dramatically reduced Rh HDN incidence.",
+  },
+  {
     id: "anti-a-antibodies",
     name: "Anti-A Antibodies",
     etymology:
@@ -3044,10 +3322,58 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
       "Siderophage (heart failure cell) — macrophage laden with hemosiderin, not the pigment alone",
       "Ferritin — primary soluble intracellular iron storage; hemosiderin is degraded/aggregated form",
       "Bilirubin — heme breakdown product excreted in bile; not tissue iron storage",
-      "Melanin — cutaneous pigment; unrelated to hemorrhage",
+      "Melanin — cutaneous pigment; unrelated to hemorrhage (see melanin entry)",
+      "Lipofuscin — age-related lysosomal wear-and-tear pigment, not iron (see dedicated entry)",
     ],
     pediatrics:
       "Idiopathic pulmonary hemosiderosis in children — recurrent alveolar hemorrhage, iron-deficiency anemia, hemosiderin-laden macrophages in BAL; rule out mitral stenosis and coagulopathy.",
+  },
+  {
+    id: "lipofuscin",
+    name: "Lipofuscin",
+    etymology:
+      "Latin lipo = fat + Latin fuscus = dark brown + -in = substance — yellow-brown wear-and-tear pigment from undegraded lysosomal residues",
+    aliases: [
+      "lipofuscin",
+      "lipofuscins",
+      "lipofuscin pigment",
+      "lipofuscin pigments",
+      "lipofuscin granule",
+      "lipofuscin granules",
+      "age pigment",
+      "age pigments",
+      "wear and tear pigment",
+      "wear-and-tear pigment",
+      "ceroid lipofuscin",
+      "lipochrome",
+      "lipochromes",
+    ],
+    definition:
+      "Insoluble yellow-brown autofluorescent pigment composed of oxidized lipids and protein residues that accumulate in lysosome-derived residual bodies of long-lived postmitotic cells (cardiomyocytes, neurons, hepatocytes) with age — a marker of oxidative wear and lysosomal incomplete degradation, not a functional pigment.",
+    examples: [
+      "Brown atrophy of the heart — lipofuscin in aged cardiomyocytes",
+      "Hepatocyte lipofuscin in elderly liver — \"wear-and-tear\" granules",
+      "Neuronal lipofuscin in cerebral cortex with aging",
+      "Neuronal ceroid lipofuscinoses (Batten disease) — pathologic lysosomal storage of ceroid/lipofuscin-like material in children",
+      "Lipofuscin-like pigment in atrophic organs — not specific for one disease in adults",
+    ],
+    boardsPearls: [
+      "Lipofuscin = age-related lysosomal residual body pigment — benign in elderly tissues",
+      "Yellow-brown granules in postmitotic cells; autofluorescent on microscopy",
+      "vs melanin — tyrosine-derived functional pigment in melanocytes (see melanin entry)",
+      "vs hemosiderin — iron from hemorrhage; Prussian blue positive",
+      "vs lipochrome — overlapping term for yellow age pigments including lipofuscin",
+      "Neuronal ceroid lipofuscinosis — pathologic pediatric lysosomal storage, not normal aging",
+    ],
+    distinguishFrom: [
+      "Melanin — tyrosinase-synthesized pigment in melanocytes; determines skin/hair color",
+      "Hemosiderin — iron-storage pigment after RBC phagocytosis",
+      "Bilirubin — heme catabolite; causes jaundice when elevated in blood",
+      "Ceroid — lipid-rich pigment in atherosclerotic plaques and some storage diseases; overlaps with lipofuscin biochemically",
+      "Melanosome — specialized pigment organelle producing melanin, not wear-and-tear residue",
+    ],
+    pediatrics:
+      "Neuronal ceroid lipofuscinoses (Batten disease and related NCLs) cause childhood neurodegeneration with vision loss, seizures, and lysosomal ceroid accumulation — distinct from benign age lipofuscin in adults.",
   },
   {
     id: "endocytosis",
@@ -3122,6 +3448,48 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
     ],
     pediatrics:
       "Neonatal immunity depends on FcRn-mediated IgG transcytosis across placenta (third trimester) and later gut — breast milk secretory IgA uses epithelial transcytosis for mucosal protection.",
+  },
+  {
+    id: "colostrum",
+    name: "Colostrum",
+    etymology:
+      "Latin colostrum = first milk/beestings — thick yellowish breast secretion produced in the first days after delivery before mature milk, rich in immunoglobulins and antimicrobial factors",
+    aliases: [
+      "colostrum",
+      "colostrums",
+      "first milk",
+      "beestings",
+      "early breast milk",
+      "immature breast milk",
+      "pre-milk",
+      "premilk",
+    ],
+    definition:
+      "First form of breast milk secreted after parturition — low volume but high concentration of secretory IgA, lactoferrin, leukocytes, and growth factors — provides passive mucosal immunity and seeds the neonatal gut before mature milk production.",
+    examples: [
+      "Secretory IgA in colostrum — binds pathogens in GI and respiratory mucosa",
+      "Lactoferrin — iron-binding antimicrobial protein in colostrum",
+      "Low fat, high protein and immunoglobulin content vs mature breast milk",
+      "Colostrum laxative effect — helps pass meconium",
+      "Premature infants benefit from maternal colostrum even in small volumes (or donor milk)",
+    ],
+    boardsPearls: [
+      "Colostrum = first milk — high IgA, lactoferrin, leukocytes; low volume",
+      "Secretory IgA via transcytosis — protects neonatal gut before own IgA production",
+      "Breastfeeding colostrum ↓ NEC risk in preterm infants",
+      "vs mature breast milk — colostrum higher protein/IgA, lower fat/calorie density",
+      "Neonatal gut lacks mature flora — colostrum provides passive mucosal immunity",
+      "Vitamin K in breast milk is low — IM vitamin K still given at birth regardless of feeding plan",
+    ],
+    distinguishFrom: [
+      "Mature breast milk — higher lactose and fat; produced after ~2–5 days postpartum (lactogenesis II)",
+      "Formula — lacks live antibodies and variable prebiotic content of colostrum",
+      "Transcytosis — cellular mechanism delivering IgA into colostrum/milk",
+      "Secretory IgA — key immunoglobulin in colostrum, not the fluid itself",
+      "Meconium — neonatal first stool; colostrum helps its passage",
+    ],
+    pediatrics:
+      "Early colostrum feeding supports gut colonization and reduces NEC in preterm infants. Exclusive breastfeeding recommended from first hour when possible; small colostrum volumes are normal in first days.",
   },
   {
     id: "selective-permeability",
@@ -3849,6 +4217,49 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
       "Congenital or early-onset gastrinoma (MEN1) can present with severe PUD in adolescents. Chronic PPI use in pediatric GERD/EEo causes same hypergastrinemia and mucosal trophic changes as in adults — taper thoughtfully if discontinuing.",
   },
   {
+    id: "hypochlorhydria",
+    name: "Hypochlorhydria",
+    etymology:
+      "Greek hypo = under + chloros = green (chlorine) + hydor = water + -ia = condition — abnormally low gastric hydrochloric acid secretion",
+    aliases: [
+      "hypochlorhydria",
+      "low gastric acid",
+      "reduced gastric acid",
+      "decreased gastric acid secretion",
+      "low stomach acid",
+      "reduced hydrochloric acid secretion",
+      "gastric hypochlorhydria",
+      "impaired acid secretion",
+    ],
+    definition:
+      "Reduced gastric hydrochloric acid output from parietal cells — less severe than achlorhydria (near-absent acid) — impairing protein digestion, iron and B12 absorption, and gastric pathogen defense while often triggering compensatory hypergastrinemia.",
+    examples: [
+      "Chronic PPI or H2 blocker therapy — pharmacologic acid suppression",
+      "Early or partial atrophic gastritis — ↓ parietal cell function before complete gland loss",
+      "Aging — gradual decline in acid secretory capacity",
+      "H. pylori chronic gastritis — antral inflammation can reduce acid drive",
+      "Post-vagotomy or gastric surgery — reduced neural/hormonal stimulation of parietal cells",
+      "VIPoma (WDHA) — watery diarrhea, hypokalemia, achlorhydria/hypochlorhydria from inhibited acid secretion",
+    ],
+    boardsPearls: [
+      "Hypochlorhydria = ↓ acid; achlorhydria = near-absent acid — both ↑ gastrin via loss of acid negative feedback",
+      "↓ Acid → impaired iron and B12 absorption; predisposes to enteric infections",
+      "PPIs cause hypochlorhydria/achlorhydria → ↑ gastrin → trophic parietal cell changes",
+      "Atrophic gastritis progresses from hypochlorhydria to achlorhydria as parietal cells are destroyed",
+      "vs hyperchlorhydria — Zollinger-Ellison/gastrinoma causes excess acid, not deficiency",
+      "Gastrin level helps distinguish causes of low acid (feedback ↑ gastrin vs VIPoma achlorhydria)",
+    ],
+    distinguishFrom: [
+      "Achlorhydria — near-complete absence of gastric acid; severe end of same spectrum",
+      "Atrophic gastritis — mucosal disease causing hypochlorhydria/achlorhydria",
+      "Gastric parietal cell mass — structural cell population; hypochlorhydria is functional acid output",
+      "Alkaline reflux gastritis — duodenal contents in stomach; not primary parietal cell failure",
+      "Hypokalemia — electrolyte disturbance; VIPoma causes both hypokalemia and hypochlorhydria",
+    ],
+    pediatrics:
+      "Neonates have physiologic hypochlorhydria relative to adults — affects drug absorption and infection risk. Chronic PPI use in pediatric GERD causes same acid suppression and gastrin feedback as in adults.",
+  },
+  {
     id: "gastrointestinal-flora",
     name: "Gastrointestinal Flora",
     etymology: "Greek gaster = stomach + Latin intestinum = gut + Latin flora = plant life; microbial community",
@@ -4023,7 +4434,7 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
       "Antigen — adaptive immune recognition via BCR/TCR and MHC presentation; may be pathogen-specific",
       "Hapten — small molecule that becomes immunogenic only after binding host protein",
       "Opsonin — host complement/antibody coating for phagocytosis, not innate pattern motif",
-      "Exotoxin — secreted protein toxin with specific cellular target, not generic PAMP",
+      "Exotoxin — secreted protein toxin with specific cellular target, not generic PAMP (see dedicated entry)",
     ],
     pediatrics:
       "Neonates rely heavily on innate PAMP sensing — MyD88/IRAK-4 deficiency causes recurrent pyogenic bacterial infections in infancy. Live attenuated vaccines contraindicated when innate/adaptive immunity is severely impaired.",
@@ -4186,6 +4597,57 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
       "Neonatal G− sepsis (E. coli, Klebsiella) is endotoxin-driven and high mortality. Meningococcemia in adolescents — G− diplococci, purpura fulminans. Hib (encapsulated G− coccobacillus) invasive disease prevented by conjugate vaccine.",
   },
   {
+    id: "spirochetal-illness",
+    name: "Spirochetal Illness",
+    etymology:
+      "Greek speira = coil + Greek chaitē = hair + Latin ill = bad + -ness = state — disease caused by spirochete bacteria (helical, motile organisms too thin for routine Gram stain)",
+    aliases: [
+      "spirochetal illness",
+      "spirochetal illnesses",
+      "spirochetal disease",
+      "spirochetal diseases",
+      "spirochetal infection",
+      "spirochetal infections",
+      "spirochete illness",
+      "spirochete illnesses",
+      "spirochete disease",
+      "spirochete diseases",
+      "spirochete infection",
+      "spirochete infections",
+      "spirochete",
+      "spirochetes",
+      "spirochaete",
+      "spirochaetes",
+    ],
+    definition:
+      "Infections caused by spirochetes — long, helical, flagellated bacteria with endoflagella between outer membrane and protoplasmic cylinder; too thin to visualize on routine Gram stain, often diagnosed by dark-field microscopy, silver stain, culture (select species), or serology.",
+    examples: [
+      "Syphilis (Treponema pallidum) — painless chancre → diffuse rash → latent/tertiary (gummas, tabes dorsalis, aortitis, neurosyphilis); RPR/VDRL screen, FTA-ABS confirm; penicillin treatment",
+      "Lyme disease (Borrelia burgdorferi) — Ixodes tick bite → erythema migrans → Bell palsy, AV block, Lyme arthritis; two-tier serology; doxycycline early, ceftriaxone for neuro/cardiac",
+      "Acute necrotizing ulcerative gingivitis (ANUG) — mixed fusobacteria and oral spirochetes; painful bleeding gums",
+      "Jarisch-Herxheimer reaction — fever/rigors after penicillin in early syphilis or sometimes Lyme — spirochete lysis releases endotoxin-like mediators",
+      "Congenital syphilis — vertical transmission; saddle nose, saber shins, Hutchinson triad",
+    ],
+    boardsPearls: [
+      "Spirochete = corkscrew bacteria; too thin for Gram stain — use dark-field (primary syphilis chancre), silver stain, or serology",
+      "Treponema pallidum cannot be cultured on routine media — serology is mainstay after primary stage",
+      "Non-treponemal tests (RPR/VDRL) track disease activity; treponemal tests (FTA-ABS) confirm — false-positive RPR in pregnancy, SLE",
+      "Penicillin G is drug of choice for syphilis at all stages (desensitize if allergy; IV for neurosyphilis)",
+      "Lyme = different spirochete, different epidemiology (Ixodes tick, erythema migrans) — not VDRL positive",
+      "vs leptospirosis — also spirochete but animal urine exposure, Weil disease; less core Step 1 than syphilis/Lyme",
+      "Painless chancre + spirochetes on darkfield → primary syphilis until proven otherwise",
+    ],
+    distinguishFrom: [
+      "Gram-positive or gram-negative bacterial infection — visible on routine Gram stain; different morphology",
+      "Rickettsial disease — also difficult to Gram stain but obligate intracellular; different vectors and rash patterns",
+      "Viral exanthem — serology negative for treponemal tests; no spirochetes on dark-field",
+      "Chancroid (Haemophilus ducreyi) — painful ulcer, not spirochete",
+      "Syphilis vs Lyme — both spirochetes but different organisms, geography, and diagnostic tests",
+    ],
+    pediatrics:
+      "Congenital syphilis from untreated maternal infection — snuffles, rash, bone changes, CNS involvement; treat infant and mother with penicillin. Lyme arthritis in children often affects the knee; erythema migrans may be missed in hair-bearing sites.",
+  },
+  {
     id: "lipopolysaccharide",
     name: "Lipopolysaccharide (LPS / Endotoxin)",
     etymology: "Greek lipos = fat + poly = many + Latin saccharum = sugar + LPS = lipopolysaccharide + Greek endon = within + toxikon = poison",
@@ -4221,10 +4683,10 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
       "Endotoxin is heat-stable; cannot be converted to toxoid (vs heat-labile exotoxins: diphtheria, tetanus)",
       "O-antigen determines serotype; antibodies are serotype-specific — lipid A is conserved across gram-negatives",
       "LOS in Neisseria — shortened LPS without O-antigen repeats; still endotoxic",
-      "vs exotoxin — secreted protein toxin, often heat-labile, specific cellular targets, can be toxoided",
+      "vs exotoxin — secreted protein toxin, often heat-labile, specific cellular targets, can be toxoided (see dedicated entry)",
     ],
     distinguishFrom: [
-      "Exotoxin — secreted protein (e.g., diphtheria, tetanus, cholera); heat-labile; toxoid vaccines possible",
+      "Exotoxin — secreted protein (e.g., diphtheria, tetanus, cholera); heat-labile; toxoid vaccines possible (see dedicated entry)",
       "Lipoteichoic acid — gram-positive cell wall component; not in gram-negative LPS",
       "Capsule — external polysaccharide antiphagocytic layer; distinct from LPS in outer membrane",
       "Peptidoglycan — cell wall structural polymer; triggers different innate pathways (e.g., NOD)",
@@ -4232,6 +4694,52 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
     ],
     pediatrics:
       "Neonatal gram-negative sepsis (E. coli, Klebsiella) — endotoxin-driven shock with high mortality; early empiric antibiotics critical. Meningococcemia in adolescents/young adults — massive LOS release → purpura fulminans and adrenal hemorrhage (Waterhouse-Friderichsen). Asplenic children cannot clear encapsulated/gram-negative bacteremia efficiently — higher risk of fulminant sepsis.",
+  },
+  {
+    id: "exotoxin",
+    name: "Exotoxin",
+    etymology:
+      "Greek exo = outside + toxikon = poison — protein toxin actively secreted by living bacteria into the environment",
+    aliases: [
+      "exotoxin",
+      "exotoxins",
+      "bacterial exotoxin",
+      "bacterial exotoxins",
+      "secreted bacterial toxin",
+      "secreted bacterial toxins",
+      "extracellular bacterial toxin",
+      "extracellular bacterial toxins",
+    ],
+    definition:
+      "Heat-labile protein toxins secreted by certain bacteria during active growth — each exotoxin has a specific molecular target and mechanism (often enzymatic), causing localized or systemic disease distinct from the inflammatory effects of endotoxin (LPS).",
+    examples: [
+      "Diphtheria toxin (Corynebacterium diphtheriae) — AB toxin ADP-ribosylates EF-2 → blocks protein synthesis",
+      "Tetanus toxin (Clostridium tetani) — blocks inhibitory neurotransmitter release → spastic paralysis",
+      "Botulinum toxin (C. botulinum) — cleaves SNARE proteins → flaccid paralysis",
+      "Cholera toxin (Vibrio cholerae) — ADP-ribosylates Gαs → constitutive ↑ cAMP → secretory diarrhea",
+      "TSST-1 (S. aureus) — superantigen → toxic shock syndrome",
+      "E. coli heat-labile (LT) and heat-stable (ST) enterotoxins — traveler's diarrhea",
+      "Pseudomonas exotoxin A — ADP-ribosylates EF-2 (same target as diphtheria toxin)",
+      "C. difficile toxins A and B — glucosylate Rho GTPases → pseudomembranous colitis",
+    ],
+    boardsPearls: [
+      "Exotoxin = secreted protein; endotoxin = LPS in gram-negative outer membrane (heat-stable)",
+      "Heat-labile exotoxins can be inactivated for toxoid vaccines (diphtheria, tetanus in DTaP/Tdap)",
+      "Many exotoxins are AB toxins — B subunit binds host receptor; A subunit has enzymatic activity",
+      "Superantigens (TSST-1, streptococcal pyrogenic exotoxins) cross-link TCR and MHC II → cytokine storm",
+      "Toxigenic Corynebacterium requires β-prophage for diphtheria toxin gene — not all strains produce toxin",
+      "vs endotoxin — generic PAMP triggering TLR4; exotoxins have specific cellular targets",
+      "Antitoxin (passive) for diphtheria/tetanus; antibiotics alone do not neutralize preformed toxin",
+    ],
+    distinguishFrom: [
+      "Endotoxin (LPS) — gram-negative outer membrane lipid A; heat-stable; cannot toxoid; TLR4 mediated",
+      "Enterotoxin — exotoxin acting on GI tract (S. aureus preformed, C. difficile, E. coli LT/ST)",
+      "Cytotoxin — category of exotoxin damaging host cells (diphtheria, C. difficile)",
+      "Membrane-disrupting toxin — leukocidins, hemolysins; pore formation rather than enzymatic target",
+      "Lipoteichoic acid — gram-positive cell wall component; not a secreted exotoxin",
+    ],
+    pediatrics:
+      "DTaP immunization provides toxoid immunity against diphtheria and tetanus exotoxins. Infant botulism from ingested spores differs from foodborne preformed toxin. SSSS and TSS in children reflect staphylococcal exotoxins/superantigens.",
   },
   {
     id: "los-endotoxin",
@@ -4601,6 +5109,55 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
       "Mosaic trisomy 21 may present with milder developmental delay than full trisomy 21. Turner mosaic may escape diagnosis until pubertal failure. McCune-Albright precocious puberty and fibrous dysplasia warrant endocrine and skeletal evaluation.",
   },
   {
+    id: "polyploidy",
+    name: "Polyploidy",
+    etymology:
+      "Greek poly = many + ploidy = fold (chromosome sets) — possession of more than two complete haploid chromosome sets in a cell (e.g., triploid 3n, tetraploid 4n)",
+    aliases: [
+      "polyploidy",
+      "polyploid",
+      "polyploid cell",
+      "polyploid cells",
+      "polyploid nucleus",
+      "polyploid nuclei",
+      "tetraploidy",
+      "tetraploid",
+      "tetraploid cells",
+      "triploidy",
+      "triploid",
+      "triploid cells",
+      "endomitosis",
+      "endoreduplication",
+    ],
+    definition:
+      "State in which a cell contains multiples of the normal diploid chromosome complement — entire extra genomes (triploidy 3n, tetraploidy 4n) rather than gain or loss of individual chromosomes (aneuploidy) — may be physiologic in some differentiated cells or pathologic in development and cancer.",
+    examples: [
+      "Physiologic hepatocyte tetraploidy — common in adult liver after repeated cell cycles",
+      "Megakaryocyte polyploidy — endomitosis (DNA replication without division) → large platelet-producing cells",
+      "Cardiomyocyte polyploidy — increases with age and after injury",
+      "Triploid conceptus — often lethal early in pregnancy (partial molar pregnancy associations)",
+      "Tetraploid cancer cells — genomic instability and chemoresistance in some tumors",
+      "Plant polyploidy — common in agriculture; less central on Step 1 than human examples",
+    ],
+    boardsPearls: [
+      "Polyploidy = extra complete chromosome sets (3n, 4n); aneuploidy = wrong number of individual chromosomes (trisomy 21)",
+      "Hepatocytes and megakaryocytes — classic physiologic polyploidy on boards",
+      "Endomitosis in megakaryocytes — polyploid nucleus without cytokinesis",
+      "vs mosaicism — mixed cell lines with different karyotypes, not necessarily polyploid",
+      "vs trisomy 21 — one extra chromosome 21 (aneuploidy), not triploid whole genome",
+      "Triploidy often incompatible with life; detected in miscarriage workup",
+    ],
+    distinguishFrom: [
+      "Aneuploidy — monosomy or trisomy of individual chromosomes (Down syndrome, Turner syndrome)",
+      "Mosaicism — two or more karyotypically distinct cell lines in one individual",
+      "Hyperdiploid — more than 46 chromosomes but not necessarily exact multiples of haploid set",
+      "Tetrasomy — four copies of a chromosomal segment (e.g., isochromosome), not whole-genome tetraploidy",
+      "Endopolyploidy — polyploidy within a tissue-specific differentiation program (megakaryocyte)",
+    ],
+    pediatrics:
+      "Triploid pregnancies often miscarry early. Megakaryocyte polyploidy is required for normal platelet production from infancy onward.",
+  },
+  {
     id: "cgg-trinucleotide-repeat",
     name: "CGG Trinucleotide Repeat",
     etymology:
@@ -4622,7 +5179,7 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
     definition:
       "Expanded cytosine-guanine-guanine trinucleotide repeat in the 5′ untranslated region of FMR1 on the X chromosome — when expanded beyond ~200 repeats (full mutation), triggers hypermethylation and silencing of FMR1 → fragile X syndrome; premutation (55–200 repeats) causes anticipation and fragile X–associated disorders.",
     examples: [
-      "Fragile X syndrome — full CGG expansion (>200 repeats) → FMR1 silencing → intellectual disability, macroorchidism, long face, large ears, autism features",
+      "Fragile X syndrome — full CGG expansion (>200 repeats) → FMR1 silencing → intellectual disability, macroorchidism, long face, large ears, autism features (see dedicated condition entry)",
       "Fragile X premutation — 55–200 CGG repeats → FXTAS (tremor/ataxia) in aging carriers; FXPOI (primary ovarian insufficiency) in women",
       "Anticipation — increasing repeat size across generations, especially maternal transmission",
       "Normal — <45 repeats; gray zone 45–54; premutation 55–200; full mutation >200",
@@ -4645,7 +5202,7 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
       "Chromosomal aneuploidy — whole chromosome gain/loss, not trinucleotide expansion",
     ],
     pediatrics:
-      "Fragile X is a leading inherited cause of intellectual disability and autism spectrum features in boys. Prenatal or postnatal DNA testing measures CGG repeat size and methylation status. Early developmental intervention improves outcomes.",
+      "Fragile X is a leading inherited cause of intellectual disability and autism spectrum features in boys (see fragile X syndrome entry). Prenatal or postnatal DNA testing measures CGG repeat size and methylation status. Early developmental intervention improves outcomes.",
   },
   {
     id: "ctg-trinucleotide-repeat",
@@ -5380,6 +5937,11 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
       "immune agglutination",
       "hemagglutination",
       "hemagglutinations",
+      "latex agglutination",
+      "latex agglutinations",
+      "direct agglutination",
+      "direct agglutination test",
+      "direct agglutination tests",
     ],
     definition:
       "Visible clumping of cells or particulate antigens when multivalent antibodies cross-link repeated surface epitopes — fundamental serologic phenomenon underlying blood typing, many rapid diagnostic tests, and some pathologic immune responses.",
@@ -5400,6 +5962,8 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
       "vs precipitation — soluble antigen-antibody complexes form lattice in solution (not particulate clumping)",
       "vs hemolysis — complement lysis after agglutination in ABO transfusion reaction",
       "Coombs test detects antibody on RBC surface via agglutination with anti-human globulin",
+      "vs immunoassay — immunoassay uses labeled antibody for detection; agglutination endpoint is visible clumping without label",
+      "vs opsonization — C3b coating for phagocytosis; agglutination is macroscopic cross-linking",
     ],
     distinguishFrom: [
       "Precipitation — soluble antigen-antibody lattice in gel or liquid; not particulate clumping",
@@ -5987,7 +6551,7 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
     boardsPearls: [
       "Glycosylation occurs in ER/Golgi after translation — not encoded directly in DNA triplet code",
       "N-linked vs O-linked — N starts in ER; O mainly Golgi",
-      "I-cell disease (mucolipidosis II) — failed mannose-6-phosphate tagging → lysosomal enzymes secreted extracellularly",
+      "I-cell disease (mucolipidosis II) — failed mannose-6-phosphate tagging → lysosomal enzymes secreted extracellularly; see lysosomal trafficking",
       "HbA1c = glycosylated hemoglobin; reflects ~3-month average glucose",
       "vs phosphorylation — adds carbohydrate, not phosphate; vs ubiquitination — degradation tag, not sugar addition",
     ],
@@ -6094,7 +6658,7 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
       "Carotid stenosis — atherosclerotic luminal narrowing → embolic stroke risk",
     ],
     boardsPearls: [
-      "Stenosis = narrowing; regurgitation/insufficiency = backward leak — different hemodynamic consequences",
+      "Stenosis = narrowing; regurgitation/insufficiency/incompetence = backward leak — see valve incompetence entry",
       "Fixed high-gradient stenosis (e.g., severe AS) limits cardiac output during exertion → syncope or angina",
       "Renal artery stenosis: refractory HTN, abdominal bruit, ↑ renin/aldosterone; ACE inhibitors can precipitate AKI if bilateral",
       "Turbulent flow across stenosis → murmur (e.g., crescendo-decrescendo in AS)",
@@ -6108,6 +6672,58 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
     ],
     pediatrics:
       "Congenital stenoses include aortic/pulmonary valve stenosis, pyloric stenosis (2–8 weeks), and subglottic stenosis; hypertrophic pyloric stenosis shows palpable olive and hypochloremic metabolic alkalosis.",
+  },
+  {
+    id: "valve-incompetence",
+    name: "Valve Incompetence",
+    etymology:
+      "Latin valva = leaf of door + in- = not + competere = to be sufficient — valve leaflets fail to close completely, allowing regurgitant backward flow (synonymous with valvular insufficiency/regurgitation on boards)",
+    aliases: [
+      "valve incompetence",
+      "valve incompetences",
+      "valvular incompetence",
+      "valvular incompetences",
+      "incompetent valve",
+      "incompetent valves",
+      "incompetence of valve",
+      "incompetence of the valve",
+      "incompetence of valves",
+      "valve insufficiency",
+      "valve insufficiencies",
+      "valvular insufficiency",
+      "valvular insufficiencies",
+      "valvular regurgitation",
+      "valvular regurgitations",
+      "incompetance of valve",
+      "incompetance of the valve",
+      "valve incompetance",
+    ],
+    definition:
+      "Failure of a heart valve to close completely during the phase when it should be shut — blood regurgitates backward across the incompetent valve, causing volume overload in the chamber receiving the leak and altering murmurs, pressures, and cardiac workload.",
+    examples: [
+      "Mitral regurgitation — holosystolic murmur at apex radiating to axilla; LA and LV volume overload",
+      "Aortic regurgitation — early diastolic decrescendo murmur; wide pulse pressure; LV volume overload",
+      "Tricuspid regurgitation — holosystolic murmur ↑ with inspiration (Carvallo sign); prominent v wave in JVP",
+      "Pulmonic regurgitation — diastolic murmur at left upper sternal border; RV volume overload (post-ToF repair, pulmonary HTN)",
+      "Acute mitral regurgitation from papillary muscle rupture post-MI — pulmonary edema, new holosystolic murmur",
+    ],
+    boardsPearls: [
+      "Valve incompetence = regurgitation = insufficiency — backward leak through valve that fails to close",
+      "vs stenosis — stenosis narrows forward flow (pressure overload upstream); incompetence causes backward leak (volume overload in receiving chamber)",
+      "Mitral regurgitation — holosystolic; loudest at apex; ↑ with handgrip (afterload ↑)",
+      "Aortic regurgitation — early diastolic decrescendo; wide pulse pressure; bounding pulses",
+      "Tricuspid regurgitation — murmur ↑ with inspiration; prominent cv waves in JVP",
+      "Acute severe MR (papillary muscle rupture) → flash pulmonary edema; chronic MR → gradual LA/LV dilation",
+      "Functional regurgitation — annular dilation from LV or RV failure dilates valve ring without primary leaflet disease",
+    ],
+    distinguishFrom: [
+      "Stenosis — fixed narrowing obstructing forward flow; see stenosis entry",
+      "Physiologic murmur — innocent flow murmur without structural incompetence",
+      "Patent ductus arteriosus — continuous machinery murmur, not AV valve incompetence",
+      "VSD — holosystolic murmur at LLSB from interventricular shunt, not regurgitation across AV valve",
+    ],
+    pediatrics:
+      "Congenital tricuspid regurgitation (Ebstein anomaly) and post-repair pulmonic regurgitation after tetralogy of Fallot are common pediatric contexts. Rheumatic heart disease can cause mitral regurgitation in endemic areas. Papillary muscle rupture is primarily an adult post-MI complication.",
   },
   {
     id: "stricture",
@@ -6455,6 +7071,221 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
     ],
     pediatrics:
       "Primary hyperoxaluria types I–III cause nephrocalcinosis and renal failure in children; ethylene glycol ingestion is a pediatric emergency with oxalate crystaluria and AKI.",
+  },
+  {
+    id: "biliary-sludge",
+    name: "Biliary Sludge",
+    etymology:
+      "Latin bilis = bile + Old English sludg = muddy sediment — echogenic particulate material in gallbladder bile without formed calculi",
+    aliases: [
+      "biliary sludge",
+      "bile sludge",
+      "gallbladder sludge",
+      "gallbladder sludges",
+      "microlithiasis",
+      "biliary microlithiasis",
+      "biliary precipitate",
+      "biliary precipitates",
+      "sludge in gallbladder",
+    ],
+    definition:
+      "Suspension of cholesterol crystals, calcium bilirubinate granules, and mucin in gallbladder bile — a precursor to gallstone formation that can cause biliary symptoms and complications even without discrete calculi.",
+    examples: [
+      "Pregnancy and oral contraceptives — ↓ gallbladder motility → bile stasis and sludge",
+      "Prolonged fasting, TPN, or rapid weight loss — bile stasis and supersaturation",
+      "Critical illness — sludge common on ICU ultrasound",
+      "Sludge progressing to cholesterol or pigment gallstones",
+      "Biliary colic or gallstone pancreatitis from sludge/microliths passing into CBD",
+    ],
+    boardsPearls: [
+      "Biliary sludge = echogenic bile without discrete shadowing stone on ultrasound",
+      "Precursor to cholelithiasis — can crystallize into gallstones",
+      "Can cause biliary colic, cholecystitis, and pancreatitis like formed stones",
+      "Pregnancy, fasting, TPN, rapid weight loss — classic risk settings",
+      "vs cholelithiasis — sludge is mobile particulate; stones have posterior acoustic shadow",
+      "vs choledocholithiasis — sludge in gallbladder; CBD stone is in duct",
+      "May resolve with gallbladder motility restoration or progress to stones",
+    ],
+    distinguishFrom: [
+      "Cholelithiasis — discrete calculi with acoustic shadowing on ultrasound",
+      "Choledocholithiasis — stone in common bile duct, not gallbladder sludge",
+      "Gallbladder wall thickening alone — cholecystitis sign without sludge or stones",
+      "Biliary mud vs sludge — overlapping terms; both describe non-calculus bile precipitate",
+      "Cholesterol gallstone — matured concretion from sludge nucleation",
+    ],
+    pediatrics:
+      "Sludge occurs in neonates and infants with sepsis, TPN, or fasting; usually transient. Parenteral nutrition-associated sludge may need monitoring if symptomatic.",
+  },
+  {
+    id: "black-pigment-stones",
+    name: "Black Pigment Stones",
+    etymology:
+      "Old English blæc = dark + Latin pigmentum = paint/color + lithos = stone — radiopaque gallstones rich in polymerized calcium bilirubinate",
+    aliases: [
+      "black pigment stones",
+      "black pigment stone",
+      "black pigment gallstones",
+      "black pigment gallstone",
+      "black stones",
+      "black gallstones",
+      "calcium bilirubinate stones",
+      "hemolytic gallstones",
+    ],
+    definition:
+      "Hard, radiopaque gallbladder stones composed primarily of calcium bilirubinate polymers with phosphate and carbonate — associated with chronic hemolysis and cirrhosis from excess unconjugated bilirubin secretion into bile.",
+    examples: [
+      "Sickle cell disease — chronic hemolysis → ↑ bilirubin load → black pigment stones",
+      "Hereditary spherocytosis and thalassemia — hemolytic gallstone risk",
+      "Cirrhosis — impaired hepatic bilirubin conjugation and secretion",
+      "Chronic hemolysis in any cause — pigmented stone formation over years",
+      "Gallbladder location — typically in gallbladder, not primary bile duct stones",
+    ],
+    boardsPearls: [
+      "Black pigment stones — calcium bilirubinate; radiopaque on X-ray",
+      "Chronic hemolysis (sickle cell, spherocytosis) → ↑ unconjugated bilirubin → black stones",
+      "vs cholesterol stones — cholesterol radiolucent; most common in Western adults",
+      "vs brown pigment stones — brown stones in infected/stasis bile ducts; black in gallbladder with hemolysis",
+      "Cirrhosis increases black pigment stone risk",
+      "Cholecystectomy if symptomatic — same management as cholesterol stones",
+    ],
+    distinguishFrom: [
+      "Brown pigment stones — softer, ductal, infection-related β-glucuronidase activity",
+      "Cholesterol gallstones — cholesterol supersaturation; radiolucent; 4 F's risk factors",
+      "Biliary sludge — precursor particulate without formed calculus",
+      "Choledocholithiasis — stone location in CBD; black stones usually gallbladder",
+      "Calcium oxalate kidney stones — urinary tract, not biliary pigment",
+    ],
+    pediatrics:
+      "Children with chronic hemolytic anemias (sickle cell, spherocytosis) develop pigment gallstones — monitor for biliary colic and cholecystitis; cholecystectomy when symptomatic.",
+  },
+  {
+    id: "brown-pigment-stones",
+    name: "Brown Pigment Stones",
+    etymology:
+      "Old English brūn + Latin pigmentum = color + lithos = stone — soft cholesterol-poor stones formed in infected or stasis bile ducts",
+    aliases: [
+      "brown pigment stones",
+      "brown pigment stone",
+      "brown pigment gallstones",
+      "brown pigment gallstone",
+      "brown stones",
+      "brown gallstones",
+      "bile duct pigment stones",
+      "infected bile duct stones",
+    ],
+    definition:
+      "Soft, friable stones rich in calcium bilirubinate and cholesterol-lipid complexes — form in bile ducts (hepatic or common bile duct) in settings of biliary stasis and bacterial infection where β-glucuronidase deconjugates bilirubin glucuronides.",
+    examples: [
+      "Ascending cholangitis — bacterial β-glucuronidase → unconjugated bilirubin precipitation",
+      "Biliary stricture or post-cholecystectomy stasis",
+      "Asian liver fluke (Clonorchis sinensis) — biliary infection and brown stones",
+      "Advanced age and rural Asia — endemic brown stone disease",
+      "ERCP retrieval of multiple ductal brown stones",
+    ],
+    boardsPearls: [
+      "Brown pigment stones — infected/stasis bile ducts; bacterial β-glucuronidase deconjugates bilirubin",
+      "vs black pigment stones — black in gallbladder with hemolysis; brown in ducts with infection",
+      "Associated with cholangitis, liver flukes (Clonorchis), biliary strictures",
+      "Often radiolucent or faintly radiopaque — ultrasound/CT/ERCP for diagnosis",
+      "Cholesterol stones — gallbladder, Western obesity; brown stones — ductal, infection",
+      "Treatment — stone extraction (ERCP), antibiotics, treat underlying stasis/infection",
+    ],
+    distinguishFrom: [
+      "Black pigment stones — gallbladder, hemolysis/cirrhosis, hard and radiopaque",
+      "Cholesterol gallstones — gallbladder cholesterol supersaturation; 4 F's",
+      "Struvite kidney stones — urinary infection stones (Proteus), not biliary",
+      "Choledocholithiasis — clinical duct obstruction; brown stones are a composition subtype",
+      "Biliary sludge — unformed precipitate, not mature brown calculi",
+    ],
+    pediatrics:
+      "Brown ductal stones are uncommon in children; consider choledochal cyst, parasitic infection in endemic areas, or post-surgical biliary anatomy. ERCP with sphincterotomy may be needed.",
+  },
+  {
+    id: "cystine-stones",
+    name: "Cystine Stones",
+    etymology:
+      "Latin cystine (oxidized cysteine dimer) + lithos = stone — renal calculi formed from excess urinary cystine in cystinuria",
+    aliases: [
+      "cystine stones",
+      "cystine stone",
+      "cystine kidney stones",
+      "cystine kidney stone",
+      "cystine renal calculi",
+      "cystine calculi",
+      "cystine nephrolithiasis",
+    ],
+    definition:
+      "Renal or ureteral stones composed of cystine — the least soluble common amino acid — forming in patients with cystinuria from defective renal tubular reabsorption of cystine and other dibasic amino acids.",
+    examples: [
+      "Autosomal recessive cystinuria — SLC3A1/SLC7A9 (COLA transporter) defect → ↑ urinary cystine",
+      "Hexagonal cystine crystals on urinalysis — pathognomonic",
+      "Staghorn cystine calculi filling renal pelvis in severe disease",
+      "Recurrent nephrolithiasis beginning in childhood or adolescence",
+      "Prevention — high fluid intake, urine alkalinization, chelation (tiopronin, D-penicillamine)",
+    ],
+    boardsPearls: [
+      "Cystine stones — hexagonal crystals on urinalysis; autosomal recessive cystinuria",
+      "COLA transporter defect — cystine, ornithine, lysine, arginine poorly reabsorbed in proximal tubule",
+      "Radiolucent on plain X-ray — CT detects; do not miss on KUB alone",
+      "Staghorn calculi possible — chronic obstruction and infection risk",
+      "Treatment — ↑ urine volume (>3 L/day), alkalinize urine (pH >7.5), chelating agents if refractory",
+      "vs uric acid stones — uric acid radiolucent too; rhomboid/needle urate crystals, not hexagonal cystine",
+      "vs calcium oxalate — most common stones; envelope crystals, radiopaque",
+    ],
+    distinguishFrom: [
+      "Cystinuria — metabolic disorder causing stones; not the stone object itself",
+      "Uric acid stones — radiolucent; acidic urine, gout; different crystal shape",
+      "Calcium oxalate stones — radiopaque; envelope crystals; most common overall",
+      "Struvite stones — infection-related; coffin-lid crystals; urease-positive organisms",
+      "Homocystinuria — ↑ homocysteine, lens dislocation, thrombosis; different amino acid disorder",
+    ],
+    pediatrics:
+      "Cystinuria often presents with recurrent stones in childhood — hexagonal crystals on urinalysis; early high fluid intake and alkalinization prevent renal damage.",
+  },
+  {
+    id: "uric-acid-stones",
+    name: "Uric Acid Stones",
+    etymology:
+      "Latin uricum (from urine) + acidus = sour + lithos = stone — radiolucent renal calculi from precipitated uric acid in acidic urine",
+    aliases: [
+      "uric acid stones",
+      "uric acid stone",
+      "urate stones",
+      "urate stone",
+      "uric acid kidney stones",
+      "uric acid kidney stone",
+      "uric acid nephrolithiasis",
+      "urate nephrolithiasis",
+      "radiolucent kidney stones",
+    ],
+    definition:
+      "Kidney or ureteral stones formed from precipitated uric acid when urine is persistently acidic (pH <5.5) and uric acid supersaturation exceeds solubility — radiolucent on plain abdominal X-ray but visible on CT.",
+    examples: [
+      "Gout and hyperuricosuria — chronic urate stone risk",
+      "Tumor lysis syndrome — massive purine release → uric acid precipitation",
+      "Chronic diarrhea or ileostomy — bicarbonate loss → acidic urine",
+      "Diabetes mellitus and metabolic syndrome — low urine pH promotes urate stones",
+      "High purine diet, myeloproliferative disorders — ↑ uric acid excretion",
+    ],
+    boardsPearls: [
+      "Uric acid stones — radiolucent on plain film; visible on CT (do not rely on KUB alone)",
+      "Acidic urine (pH <5.5) promotes uric acid precipitation — alkalinize with potassium citrate",
+      "Gout, tumor lysis, chronic diarrhea → uric acid stone risk",
+      "Allopurinol or febuxostat ↓ uric acid production in hyperuricosuria",
+      "vs calcium oxalate — radiopaque; most common stones overall",
+      "vs cystine stones — also radiolucent; hexagonal cystine crystals, cystinuria",
+      "Uric acid can act as nidus for calcium oxalate stone formation (mixed stones)",
+      "Hydration + urine alkalinization (target pH ~6.5–7) — first-line prevention",
+    ],
+    distinguishFrom: [
+      "Calcium oxalate stones — radiopaque; envelope crystals; most common",
+      "Cystine stones — radiolucent; hexagonal crystals; cystinuria (COLA defect)",
+      "Struvite stones — infection-related staghorn; Proteus, urease; radiopaque",
+      "Xanthine stones — rare; xanthine oxidase deficiency (allopurinol complication in Lesch-Nyhan)",
+      "Gout tophi — soft tissue urate deposits, not renal calculi",
+    ],
+    pediatrics:
+      "Pediatric uric acid stones occur with metabolic acidosis, chronic diarrhea, or rare inborn errors; tumor lysis in leukemia/lymphoma treatment requires rasburicase/allopurinol prophylaxis.",
   },
   {
     id: "gonadotropin",
@@ -6989,7 +7820,7 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
       "Lacrimal glands — tears",
       "Mammary glands — milk (apocrine/merocrine)",
       "Gastric chief and parietal cells — pepsinogen and acid into stomach lumen",
-      "Brunner glands — alkaline mucus into duodenum",
+      "Brunner glands — alkaline mucus into duodenum; see dedicated cells entry",
     ],
     boardsPearls: [
       "Exocrine = duct → lumen or body surface; endocrine = no duct → blood",
@@ -8036,7 +8867,7 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
       "NSAIDs blunt loop diuretic response (↓ prostaglandin-mediated renal perfusion and natriuresis)",
       "Chronic HF may need combination diuretics when single-agent ceiling reached (Step 2 context)",
       "Partial agonist ceiling < full agonist maximum — important for opioid pharmacology",
-      "vs tachyphylaxis — ceiling is immediate max effect at a dose; tachyphylaxis is waning response over repeated exposure",
+      "vs tachyphylaxis — ceiling is immediate max effect at a dose; tachyphylaxis is waning response over repeated exposure — see dedicated entry",
     ],
     distinguishFrom: [
       "Tachyphylaxis — diminished drug effect over time despite same dose (e.g., nitrates, phenylephrine in ICU)",
@@ -8046,6 +8877,49 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
     ],
     pediatrics:
       "Same diuretic ceiling physiology in children; loop diuretics used for edema with careful electrolyte monitoring when escalating doses.",
+  },
+  {
+    id: "tachyphylaxis",
+    name: "Tachyphylaxis",
+    etymology:
+      "Greek tachys = rapid + phylaxis = guarding/protection — rapid decrease in drug response after repeated or continuous exposure despite unchanged dose",
+    aliases: [
+      "tachyphylaxis",
+      "acute tolerance",
+      "rapid tolerance",
+      "pharmacodynamic tolerance",
+      "desensitization",
+      "drug desensitization",
+      "receptor desensitization",
+      "downregulation response",
+    ],
+    definition:
+      "Rapid pharmacodynamic tolerance in which repeated drug exposure diminishes effect within hours to days at the same dose — distinct from gradual dose escalation tolerance and from single-dose ceiling effects.",
+    examples: [
+      "Nitroglycerin continuous infusion or frequent dosing — ↓ antianginal effect; requires nitrate-free interval",
+      "Phenylephrine repeated IV boluses in ICU — diminishing pressor response",
+      "Topical nasal decongestants (oxymetazoline) — rebound congestion after repeated use",
+      "Isoproterenol / β-agonist — receptor downregulation/desensitization with prolonged exposure",
+      "LSD — rapid serotonin receptor downregulation (pharmacology context)",
+      "Desmopressin in nephrogenic DI — attenuated antidiuretic response with chronic use",
+    ],
+    boardsPearls: [
+      "Tachyphylaxis = rapid loss of drug effect at same dose — pharmacodynamic desensitization",
+      "Nitrates classic example — need 8–12 h nitrate-free interval to restore efficacy",
+      "vs tolerance — tolerance usually requires ↑ dose over time to maintain effect",
+      "vs ceiling effect — ceiling is max effect at a single dose when receptors/transporters saturated",
+      "Mechanisms: receptor downregulation, depletion of neurotransmitter stores, counter-regulatory physiology",
+      "Phenylephrine tachyphylaxis — switch vasopressor strategy rather than endless dose escalation",
+    ],
+    distinguishFrom: [
+      "Ceiling effect — immediate plateau of effect at a dose; not time-dependent waning",
+      "Tolerance — gradual need for higher doses over weeks (e.g., opioids, benzodiazepines)",
+      "Rebound phenomenon — worsening symptoms when drug withdrawn (nasal decongestants, PPI acid rebound)",
+      "Resistance — microbial or tumor genetic resistance; not acute receptor desensitization",
+      "Pharmacokinetic tolerance — ↑ metabolism (enzyme induction), not receptor-level tachyphylaxis",
+    ],
+    pediatrics:
+      "Same tachyphylaxis principles apply; nitrate use in pediatric cardiology is uncommon but desensitization physiology is identical.",
   },
   {
     id: "saponification",
@@ -8232,7 +9106,7 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
       "Ischemic or toxin cardiomyopathy — non-alcohol etiologies of dilated cardiomyopathy",
     ],
     pediatrics:
-      "Fetal alcohol syndrome is the key pediatric alcohol-induced condition — smooth philtrum, short palpebral fissures, growth restriction, and neurodevelopmental deficits; no safe alcohol threshold in pregnancy.",
+      "Fetal alcohol syndrome is the key pediatric alcohol-induced condition — smooth philtrum (see dedicated entry), short palpebral fissures, growth restriction, and neurodevelopmental deficits; no safe alcohol threshold in pregnancy.",
   },
   {
     id: "mallory-denk-bodies",
@@ -8653,9 +9527,9 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
       "toxic hepatitis",
     ],
     definition:
-      "Drug- or toxin-mediated injury to hepatocytes or bile ducts causing elevated transaminases, jaundice, coagulopathy, or acute liver failure — may be dose-dependent (predictable) or idiosyncratic (immune-mediated or metabolic).",
+      "Drug- or toxin-mediated injury to hepatocytes or bile ducts causing elevated transaminases, jaundice, coagulopathy, or acute liver failure (see fulminant hepatic failure entry) — may be dose-dependent (predictable) or idiosyncratic (immune-mediated or metabolic).",
     examples: [
-      "Acetaminophen overdose — CYP-generated NAPQI depletes glutathione → centrilobular necrosis",
+      "Acetaminophen overdose — CYP-generated NAPQI depletes glutathione → centrilobular necrosis → fulminant hepatic failure",
       "Isoniazid — idiosyncratic hepatotoxicity; monitor LFTs",
       "Valproic acid — mitochondrial toxicity; highest risk in young children on polytherapy",
       "Halothane — immune-mediated hepatitis (repeated exposure)",
@@ -9423,12 +10297,186 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
     ],
     distinguishFrom: [
       "Maldigestion — inadequate luminal breakdown (pancreatic insufficiency) vs mucosal absorption defect",
-      "Secretory diarrhea — watery stools with normal absorption (cholera, VIPoma)",
-      "Osmotic diarrhea — lactose intolerance, laxatives; improves with fasting",
+      "Secretory diarrhea — watery stools with active ion secretion; persists with fasting (see secretory diarrhea entry)",
+      "Osmotic diarrhea — lactose intolerance, laxatives; improves with fasting (see osmotic diarrhea entry)",
+      "Inflammatory diarrhea — bloody/mucoid with mucosal injury (see inflammatory diarrhea entry)",
       "Increased GI motility — rapid transit without primary absorptive defect",
     ],
     pediatrics:
       "Celiac and CF are classic pediatric malabsorption causes — failure to thrive, steatorrhea, vitamin deficiencies. CF newborn screen positive → confirm with sweat chloride; pancreatic enzyme replacement for malabsorption.",
+  },
+  {
+    id: "disaccharidase-deficiency",
+    name: "Disaccharidase Deficiency",
+    etymology:
+      "Latin dis = two + saccharum = sugar + -ase = enzyme + Latin deficere = to fail — inadequate brush-border hydrolysis of dietary disaccharides",
+    aliases: [
+      "disaccharidase deficiency",
+      "disaccharidase deficiencies",
+      "brush border enzyme deficiency",
+      "brush border enzyme deficiencies",
+      "intestinal disaccharidase deficiency",
+      "intestinal disaccharidase deficiencies",
+      "disaccharidase defect",
+      "disaccharidase defects",
+      "sucrase-isomaltase deficiency",
+      "sucrase isomaltase deficiency",
+      "congenital sucrase-isomaltase deficiency",
+      "csid",
+    ],
+    definition:
+      "Reduced activity of one or more small intestinal brush-border disaccharidases (lactase, sucrase-isomaltase, maltase-glucoamylase) — undigested disaccharides remain in the lumen, exert osmotic effect, and are fermented by colonic bacteria → bloating, flatulence, and osmotic diarrhea after specific carbohydrate ingestion.",
+    examples: [
+      "Lactase deficiency — lactose intolerance; most common; primary (lactase non-persistence) or secondary after mucosal injury",
+      "Congenital sucrase-isomaltase deficiency (CSID) — autosomal recessive; diarrhea with sucrose and starch; improves on sucrose-free diet",
+      "Secondary disaccharidase loss — celiac disease villous atrophy, viral gastroenteritis, Crohn, radiation enteritis",
+      "Developmental lactase deficiency — premature infants with immature brush border",
+      "Rare congenital lactase deficiency — neonatal watery diarrhea on milk feeds",
+    ],
+    boardsPearls: [
+      "Disaccharidase deficiency → osmotic diarrhea — improves with fasting and avoidance of offending sugar",
+      "Lactase deficiency = lactose intolerance — most common form; not immune-mediated (vs milk allergy)",
+      "Undigested lactose → osmotic water retention + colonic bacterial fermentation → bloating, flatulence",
+      "Hydrogen breath test — ↑ H₂ after lactose or sucrose load confirms carbohydrate malabsorption",
+      "Sucrase-isomaltase deficiency — diarrhea with sucrose/starch but may tolerate lactose",
+      "vs secretory diarrhea — secretory persists with fasting; disaccharidase/osmotic improves",
+      "vs pancreatic insufficiency — steatorrhea (greasy stools), not carbohydrate osmotic diarrhea",
+      "Celiac disease can cause secondary lactase deficiency — treat gluten first",
+    ],
+    distinguishFrom: [
+      "Lactose intolerance — specific lactase deficiency subset; see dedicated condition entry",
+      "Milk allergy — IgE-mediated; urticaria, anaphylaxis; not disaccharidase defect",
+      "SGLT1 defect (glucose-galactose malabsorption) — monosaccharide transport defect, not disaccharidase",
+      "Pancreatic insufficiency — fat maldigestion and steatorrhea, not primary disaccharidase loss",
+      "Secretory diarrhea — toxin-mediated ion secretion; fasting does not stop diarrhea",
+      "IBS — functional diagnosis after organic causes excluded",
+    ],
+    pediatrics:
+      "Congenital sucrase-isomaltase deficiency presents in infancy with chronic diarrhea after introduction of sucrose-containing foods. Transient lactase deficiency after rotavirus is common. Congenital lactase deficiency is rare — watery neonatal diarrhea on breast milk or formula.",
+  },
+  {
+    id: "secretory-diarrhea",
+    name: "Secretory Diarrhea",
+    etymology:
+      "Latin secretio = separation/discharge + Greek dia = through + rhoia = flow — diarrhea from active electrolyte and water secretion into the intestinal lumen",
+    aliases: [
+      "secretory diarrhea",
+      "secretory diarrheas",
+      "secretory diarrhoea",
+      "secretory diarrhoeas",
+      "active secretion diarrhea",
+      "secretory type diarrhea",
+    ],
+    definition:
+      "Diarrhea caused by active ion and water secretion into the gut lumen independent of ingestible osmotic load — stool output remains high even during fasting because secretion is driven by enterocyte ion transport, not luminal solutes.",
+    examples: [
+      "Cholera — Vibrio cholerae toxin ADP-ribosylates Gαs → constitutive ↑ cAMP → CFTR-mediated Cl⁻ secretion",
+      "ETEC heat-labile toxin — same ↑ cAMP secretory pathway as cholera",
+      "VIPoma — ↑ VIP → cAMP-mediated secretory diarrhea with hypokalemia and flushing",
+      "Carcinoid syndrome — serotonin-related secretory diarrhea (often with flushing)",
+      "C. difficile toxin — disrupts tight junctions and promotes secretory component",
+      "Bile acid diarrhea after ileal resection (secondary secretory/osmotic overlap)",
+    ],
+    boardsPearls: [
+      "Secretory diarrhea persists with fasting — key vs osmotic diarrhea",
+      "Large-volume watery stools; cholera 'rice-water' stools are isotonic",
+      "Cholera toxin locks Gαs ON → ↑ cAMP → PKA → Cl⁻/H₂O secretion into lumen",
+      "Stool osmotic gap low (<50 mOsm/kg) — 290 − 2×(stool Na⁺ + K⁺)",
+      "Treatment = aggressive rehydration (oral rehydration salts); antibiotics for cholera in severe cases",
+      "vs osmotic — osmotic stops with fasting; secretory does not",
+      "vs inflammatory — inflammatory has blood, pus, fever; secretory is watery without invasive colitis",
+    ],
+    distinguishFrom: [
+      "Osmotic diarrhea — unabsorbed luminal solute pulls water; improves with fasting",
+      "Inflammatory diarrhea — mucosal injury with blood, leukocytes, fever (dysentery)",
+      "Motility diarrhea — rapid transit (hyperthyroidism, IBS-D) without primary secretory toxin",
+      "Malabsorption/steatorrhea — fatty foul stools from absorption defect, not pure water secretion",
+    ],
+    pediatrics:
+      "Cholera and ETEC cause life-threatening secretory diarrhea in children — ORS is first-line; rotavirus causes osmotic/secretory overlap but dehydration management is the same priority. VIPoma is rare in pediatrics but occurs in MEN1 kindreds.",
+  },
+  {
+    id: "osmotic-diarrhea",
+    name: "Osmotic Diarrhea",
+    etymology:
+      "Greek osmos = push/thrust + -tic + dia = through + rhoia = flow — diarrhea from non-absorbable luminal solutes drawing water osmotically into the bowel",
+    aliases: [
+      "osmotic diarrhea",
+      "osmotic diarrheas",
+      "osmotic diarrhoea",
+      "osmotic diarrhoeas",
+      "osmotic type diarrhea",
+      "osmotic laxative diarrhea",
+    ],
+    definition:
+      "Diarrhea caused by poorly absorbed osmotically active substances in the intestinal lumen that retain water — stool volume decreases when the patient fasts or stops ingesting the offending solute because luminal osmotic load falls.",
+    examples: [
+      "Lactose intolerance — undigested lactose in colon fermented with osmotic effect",
+      "Osmotic laxatives — magnesium citrate, lactulose, polyethylene glycol",
+      "Sugar alcohols — sorbitol, mannitol in diet products or chewing gum",
+      "Celiac disease / carbohydrate malabsorption — osmotic component with steatorrhea",
+      "Factitious diarrhea — laxative abuse (surreptitious)",
+    ],
+    boardsPearls: [
+      "Osmotic diarrhea improves with fasting — key vs secretory diarrhea",
+      "Stool osmotic gap high (>100 mOsm/kg) — 290 − 2×(stool Na⁺ + K⁺)",
+      "Lactose intolerance — bloating, flatulence, diarrhea after dairy; lactose hydrogen breath test",
+      "Lactulose used therapeutically in hepatic encephalopathy causes intentional osmotic diarrhea",
+      "vs secretory — secretory continues despite fasting (cholera, VIPoma)",
+      "vs inflammatory — osmotic is non-bloody without fever/leukocytes",
+    ],
+    distinguishFrom: [
+      "Secretory diarrhea — active ion secretion; persists with fasting",
+      "Inflammatory diarrhea — mucosal inflammation with blood and WBCs in stool",
+      "Malabsorption — broader syndrome; osmotic is one mechanism (unabsorbed carbs)",
+      "Motility diarrhea — rapid transit without high osmotic gap",
+    ],
+    pediatrics:
+      "Transient lactase deficiency after viral gastroenteritis causes temporary osmotic diarrhea with dairy — avoid lactose briefly. Congenital glucose-galactose malabsorption (SGLT1 defect) causes neonatal osmotic diarrhea — requires specialized formula.",
+  },
+  {
+    id: "inflammatory-diarrhea",
+    name: "Inflammatory Diarrhea",
+    etymology:
+      "Latin inflammare = to set on fire + dia = through + rhoia = flow — diarrhea from mucosal inflammation with exudation of blood, pus, and protein",
+    aliases: [
+      "inflammatory diarrhea",
+      "inflammatory diarrheas",
+      "inflammatory diarrhoea",
+      "inflammatory diarrhoeas",
+      "invasive diarrhea",
+      "invasive diarrheas",
+      "dysentery",
+      "dysenteries",
+      "bloody diarrhea mechanism",
+    ],
+    definition:
+      "Diarrhea from mucosal inflammation and injury — small-volume stools with blood, mucus, and leukocytes; often accompanied by fever, abdominal pain, and tenesmus as pathogens or IBD destroy the intestinal lining.",
+    examples: [
+      "Shigella, Salmonella, Campylobacter — invasive enterocolitis",
+      "Enterohemorrhagic E. coli (EHEC O157:H7) — bloody diarrhea, HUS risk (avoid antibiotics)",
+      "Clostridioides difficile colitis — pseudomembranes, post-antibiotic bloody/mucoid diarrhea",
+      "Ulcerative colitis and Crohn colitis — chronic inflammatory bloody diarrhea",
+      "Amebic dysentery — Entamoeba histolytica with flask-shaped ulcers",
+      "Yersinia enterocolitica — bloody diarrhea, pseudoappendicitis",
+    ],
+    boardsPearls: [
+      "Inflammatory diarrhea = small volume + blood/mucus + fever + tenesmus",
+      "Stool leukocytes, fecal lactoferrin, or calprotectin suggest inflammatory cause",
+      "EHEC bloody diarrhea → do NOT give antibiotics (↑ HUS risk)",
+      "C. diff after antibiotics — test toxin/PCR; oral vancomycin or fidaxomicin",
+      "vs secretory — secretory is large-volume watery without blood (cholera)",
+      "vs osmotic — inflammatory does not resolve with fasting alone; osmotic improves when solute removed",
+      "Dysentery = inflammatory diarrhea with visible blood and mucus",
+    ],
+    distinguishFrom: [
+      "Secretory diarrhea — watery, high volume, no blood; persists with fasting",
+      "Osmotic diarrhea — non-bloody; improves with fasting/removing osmotic agent",
+      "Melena — upper GI bleeding; black tarry stool, not colonic dysentery pattern",
+      "Hemorrhoids — bright red blood on toilet paper with formed stool, not inflammatory diarrhea syndrome",
+    ],
+    pediatrics:
+      "Bloody diarrhea in children: EHEC (HUS risk), Shigella, IBD, intussusception (currant jelly). Infectious dysentery causes dehydration and bacteremia risk — evaluate stool studies and volume status. IBD can present in adolescence with chronic bloody diarrhea.",
   },
   {
     id: "pyrogen",
@@ -9930,7 +10978,7 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
       "G6PD deficiency after oxidant stress — hemolysis with reticulocytosis",
       "Acute blood loss with adequate iron stores",
       "Recovery phase after chemotherapy or aplastic crisis",
-      "Hemolytic disease of the newborn",
+      "Hemolytic disease of the fetus and newborn — see dedicated condition entry",
       "Post-iron repletion in iron deficiency (late response)",
     ],
     boardsPearls: [
@@ -10471,7 +11519,7 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
     definition:
       "Dopaminergic projection from the ventral tegmental area (VTA) in the midbrain to limbic targets — especially the nucleus accumbens (ventral striatum), amygdala, and hippocampus — mediating reward, motivation, reinforcement, and positive symptoms of psychosis when dysregulated.",
     examples: [
-      "Schizophrenia positive symptoms — ↑ mesolimbic dopamine → hallucinations and delusions",
+      "Schizophrenia positive symptoms — ↑ mesolimbic dopamine → hallucinations and delusions (see dedicated entry)",
       "Antipsychotic D₂ blockade in mesolimbic pathway → ↓ psychotic symptoms",
       "Cocaine and amphetamines — ↑ synaptic dopamine in nucleus accumbens → euphoria and addiction",
       "Nicotine, opioids, alcohol — activate mesolimbic reward circuitry",
@@ -10837,6 +11885,54 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
     ],
     pediatrics:
       "Burkitt lymphoma endemic form presents as jaw/maxillary mass in African children; ALL (often B-cell precursor) is the most common childhood malignancy; post-transplant lymphoproliferative disorder from EBV-driven B-cell proliferation occurs in immunosuppressed children.",
+  },
+  {
+    id: "plasma-dyscrasia",
+    name: "Plasma Dyscrasia",
+    etymology:
+      "Greek plasma = something formed/molded + Greek dys = bad + krasis = mixture — abnormal proliferation or secretion of plasma cells producing monoclonal immunoglobulins or light chains",
+    aliases: [
+      "plasma dyscrasia",
+      "plasma dyscrasias",
+      "plasma cell dyscrasia",
+      "plasma cell dyscrasias",
+      "monoclonal gammopathy",
+      "monoclonal gammopathies",
+      "paraproteinemia",
+      "paraproteinemias",
+      "dysproteinemia",
+      "dysproteinemias",
+      "immunoglobulin dyscrasia",
+    ],
+    definition:
+      "Disordered proliferation or secretion of a clonal plasma cell population producing a monoclonal immunoglobulin (paraprotein/M protein) or free light chains — spectrum from benign MGUS to malignant multiple myeloma and related disorders.",
+    examples: [
+      "Monoclonal gammopathy of undetermined significance (MGUS) — M spike without end-organ damage",
+      "Multiple myeloma — CRAB features: hyperCalcemia, Renal failure, Anemia, Bone lesions",
+      "Waldenström macroglobulinemia — IgM paraprotein with lymphoplasmacytic lymphoma",
+      "AL amyloidosis — light chain deposition in organs",
+      "Heavy chain disease — abnormal truncated immunoglobulin chains",
+      "POEMS syndrome — polyneuropathy, organomegaly, endocrinopathy, M protein, skin changes",
+    ],
+    boardsPearls: [
+      "Plasma dyscrasia = clonal plasma cell disorder with monoclonal protein",
+      "SPEP shows M spike — narrow monoclonal band in γ region",
+      "Myeloma: CRAB + clonal plasma cells >10% in marrow + M protein",
+      "MGUS — M spike <3 g/dL, <10% plasma cells, no CRAB; ~1%/yr progression risk",
+      "Bence Jones proteinuria — free κ or λ light chains in urine (myeloma, amyloidosis)",
+      "Rouleaux on smear — high paraprotein (myeloma)",
+      "vs reactive polyclonal hypergammaglobulinemia — broad diffuse γ increase on SPEP",
+      "Waldenström — IgM spike, hyperviscosity, not lytic bone lesions like myeloma",
+    ],
+    distinguishFrom: [
+      "Reactive hypergammaglobulinemia — polyclonal ↑ immunoglobulins (infection, inflammation)",
+      "B-cell lymphoma without plasma cell differentiation — may lack M spike",
+      "Acute leukemia — blasts in blood/marrow, not mature plasma cell clone",
+      "Abnormal B-cell proliferation — broader lymphoproliferative mechanism",
+      "Hypergammaglobulinemia — nonspecific ↑ total Ig; may be polyclonal",
+    ],
+    pediatrics:
+      "Multiple myeloma is primarily a disease of older adults; pediatric plasma cell neoplasms are rare. MGUS in adolescents warrants specialist follow-up.",
   },
   {
     id: "thecal-sac",
@@ -12354,10 +13450,10 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
       "Hypercoagulability: factor V Leiden, malignancy, OCP, pregnancy, antiphospholipid syndrome",
       "Endothelial injury: trauma, catheter, orthopedic/ pelvic surgery",
       "Also applied to arterial graft thrombosis and prosthetic surface thrombosis on boards",
-      "vs Virchow node — left supraclavicular metastasis (Troisier sign), unrelated eponym",
+      "vs Virchow node — left supraclavicular metastasis (Troisier sign); see dedicated entry; unrelated eponym",
     ],
     distinguishFrom: [
-      "Virchow node — left supraclavicular lymph node metastasis from abdominal/thoracic cancer",
+      "Virchow node — left supraclavicular lymph node metastasis from abdominal/thoracic cancer (see dedicated entry)",
       "Trousseau syndrome — malignancy-associated migratory thrombophlebitis (hypercoagulability manifestation)",
       "Coagulation cascade — molecular enzymatic pathway; Virchow triad is clinical/pathophysiologic framework",
       "Arterial thrombosis — platelet-rich clots on atherosclerotic plaque; Virchow triad classically taught for venous thrombosis",
@@ -12796,6 +13892,51 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
       "Aromatase excess syndrome causes precocious puberty from peripheral estrogen overproduction. Aromatase deficiency can virilize 46,XX infants and cause maternal virilization during pregnancy.",
   },
   {
+    id: "antiestrogenic",
+    name: "Antiestrogenic",
+    etymology:
+      "Greek anti- = against + oistros = frenzy/estrus + -gen = producing + -ic = pertaining to — opposing estrogen action",
+    aliases: [
+      "antiestrogenic",
+      "anti-estrogenic",
+      "anti estrogenic",
+      "antiestrogenic effect",
+      "antiestrogenic effects",
+      "antiestrogenic activity",
+      "estrogen antagonism",
+      "estrogen antagonist effect",
+      "estrogen blockade",
+    ],
+    definition:
+      "Pharmacologic or physiologic reduction of estrogen signaling — by blocking estrogen synthesis, antagonizing estrogen receptors, or removing ovarian estrogen production — producing tissue-specific loss of estrogen-driven effects.",
+    examples: [
+      "Aromatase inhibitors (anastrozole, letrozole) — ↓ peripheral/tumor estrogen synthesis in ER+ breast cancer",
+      "Examples: tamoxifen, raloxifene — see SERMs class entry",
+      "Fulvestrant — pure ER antagonist with receptor degradation (not a SERM)",
+      "Menopause or oophorectomy — ↓ estradiol → antiestrogenic state → hot flashes, bone loss",
+      "GnRH agonists (leuprolide) — ↓ ovarian estrogen → medical castration",
+      "Clomiphene — antiestrogenic at hypothalamus → blocks estrogen negative feedback → ↑ GnRH/FSH/LH",
+    ],
+    boardsPearls: [
+      "Antiestrogenic ≠ antiestrogen drug class only — includes any mechanism that ↓ estrogen action",
+      "Aromatase inhibitors block synthesis; SERMs block receptor; GnRH agonists ↓ ovarian production",
+      "SERMs are tissue-selective — tamoxifen antiestrogenic in breast but partial agonist in endometrium/bone",
+      "Raloxifene — antiestrogenic in breast and uterus; agonist in bone (osteoporosis prevention)",
+      "Hot flashes common adverse effect of antiestrogenic therapy (tamoxifen, raloxifene, aromatase inhibitors, ADT)",
+      "vs progestogenic — progesterone/progestin effects oppose estrogen-driven endometrial proliferation",
+      "Clomiphene uses antiestrogenic hypothalamic blockade therapeutically to induce ovulation",
+    ],
+    distinguishFrom: [
+      "Antiestrogen (drug) — specific agent class; antiestrogenic describes the effect",
+      "Progestogenic — progesterone-mediated effects, not estrogen blockade",
+      "Androgenic — testosterone/DHT-driven effects, opposite sex steroid axis",
+      "Estrogenic — estrogen agonism or excess estrogen action",
+      "SERM — selective modulator; may be antiestrogenic in some tissues and estrogenic in others",
+    ],
+    pediatrics:
+      "Antiestrogenic states in children are uncommon outside oncology (GnRH agonists for precocious puberty) or ovarian failure (Turner syndrome); evaluate delayed puberty and bone age when estrogen deficiency is suspected.",
+  },
+  {
     id: "hyperandrogenism",
     name: "Hyperandrogenism",
     etymology: "Greek hyper = excess + andros = man/male + -gen = producing + -ism state",
@@ -12947,7 +14088,7 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
       "Hyperprolactinemia from prolactinoma or dopamine antagonist drugs",
       "Thyroid disease — hypo- or hyperthyroidism disrupts GnRH and gonadotropin pulsatility",
       "Primary ovarian insufficiency — diminished follicle reserve",
-      "Perimenopause — declining oocyte quality and irregular ovulation",
+      "Perimenopause — declining oocyte quality and irregular ovulation; estrogen withdrawal → hot flashes",
     ],
     boardsPearls: [
       "PCOS Rotterdam: oligo/anovulation = ovulatory dysfunction criterion",
@@ -13780,6 +14921,54 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
     ],
     pediatrics:
       "Crohn disease can present in childhood with transmural inflammation, fistulae, and growth failure. Necrotizing enterocolitis involves transmural intestinal injury in preterm neonates.",
+  },
+  {
+    id: "fistula",
+    name: "Fistula",
+    etymology:
+      "Latin fistula = pipe, tube, or flute — abnormal epithelialized tract connecting two hollow organs or a hollow organ to the skin",
+    aliases: [
+      "fistula",
+      "fistulas",
+      "fistulae",
+      "enteric fistula",
+      "enteric fistulas",
+      "intestinal fistula",
+      "intestinal fistulas",
+      "internal fistula",
+      "internal fistulas",
+      "external fistula",
+      "external fistulas",
+    ],
+    definition:
+      "Abnormal communication lined by epithelium (or granulation tissue maturing to epithelium) between two epithelial surfaces — two hollow viscera (internal fistula) or a viscus and skin/body surface (external fistula) — allowing passage of gas, fluid, or fecal material outside normal channels.",
+    examples: [
+      "Tracheoesophageal fistula — airway–esophagus connection; choking with feeds in neonates",
+      "Colovesical fistula — colon to bladder; pneumaturia, fecaluria, recurrent UTIs (Crohn disease)",
+      "Vesicovaginal fistula — bladder to vagina; continuous urinary leakage post-surgery/obstetric injury",
+      "Anal fistula — cryptoglandular abscess tract or Crohn perianal fistula",
+      "Bronchopleural fistula — lung to pleural space; persistent air leak after infection/surgery",
+      "Arteriovenous fistula — surgical dialysis access or congenital AV malformation (see dedicated procedure entry)",
+      "Enterocutaneous fistula — bowel to skin with high-output fluid/fecal loss",
+    ],
+    boardsPearls: [
+      "Fistula = abnormal epithelialized connection between two surfaces",
+      "Crohn disease — transmural inflammation → fistulae (perianal, enterovesical, enterocutaneous)",
+      "TE fistula + esophageal atresia — polyhydramnios, choking/cyanosis with first feed",
+      "Colovesical fistula — pneumaturia (air in urine) pathognomonic; think Crohn or diverticulitis",
+      "Vesicovaginal fistula — continuous leakage, not stress incontinence",
+      "vs sinus — blind-ending tract; fistula connects two epithelial surfaces",
+      "vs abscess — cavity without completed epithelialized tract to another surface",
+    ],
+    distinguishFrom: [
+      "Sinus — blind-ending tract opening to one surface only",
+      "Abscess cavity — walled-off pus without epithelialized connection to lumen",
+      "Anastomotic leak — acute postoperative defect, not chronic fistula",
+      "Stoma — surgically created intentional opening",
+      "Arteriovenous fistula — vascular connection; see dedicated dialysis access entry when procedural context",
+    ],
+    pediatrics:
+      "Neonatal TE fistula with esophageal atresia presents with drooling and respiratory distress during feeding — NPO and surgical repair. H-type TE fistula may present later with coughing with feeds. Branchial cleft fistula is congenital lateral neck tract. Crohn fistulae occur in older children/adolescents.",
   },
   {
     id: "third-spacing",

@@ -223,14 +223,14 @@ export const METABOLISM: MetabolismEntry[] = [
     pathway: [
       "From phenylalanine via PAH, or from diet",
       "Catabolism: tyrosine transaminase → p-hydroxyphenylpyruvate → homogentisic acid (homogentisate oxidase) → maleylacetoacetate → fumarate + acetoacetate",
-      "Anabolic branches: tyrosinase → melanin; thyroid peroxidase pathway → T3/T4; TH → DOPA → dopamine → NE → Epi",
+      "Anabolic branches: tyrosinase → melanin (see dedicated entry); thyroid peroxidase pathway → T3/T4; TH → DOPA → dopamine → NE → Epi",
       "Alkaptonuria: homogentisic acid accumulates when homogentisate oxidase is deficient",
     ],
     boardsPearls: [
       "Tyrosine catabolism blocked in alkaptonuria at homogentisate oxidase step",
       "Alkaptonuria involves phenylalanine AND tyrosine pathways (tyrosine is downstream of phe)",
       "Tyrosine is glucogenic and ketogenic (yields fumarate + acetoacetate)",
-      "Albinism: tyrosinase defect in melanin synthesis, not tyrosine catabolism",
+      "Albinism: tyrosinase defect in melanin synthesis (see melanin entry), not tyrosine catabolism",
     ],
     distinguishFrom: [
       "Phenylalanine — essential precursor; PKU is PAH deficiency at conversion step",
@@ -239,6 +239,49 @@ export const METABOLISM: MetabolismEntry[] = [
     ],
     pediatrics:
       "PKU patients require tyrosine supplementation because they cannot convert phenylalanine to tyrosine.",
+  },
+  {
+    id: "melanin",
+    name: "Melanin",
+    etymology:
+      "Greek melas = black + -in = substance — polymer pigment synthesized from tyrosine in melanosomes of melanocytes",
+    aliases: [
+      "melanin",
+      "melanins",
+      "melanin pigment",
+      "melanin pigments",
+      "skin melanin",
+      "cutaneous melanin",
+      "eumelanin",
+      "pheomelanin",
+      "melanin synthesis",
+      "melanin production",
+    ],
+    definition:
+      "Dark brown-to-black pigment polymer produced from tyrosine via tyrosinase in melanocyte melanosomes — transferred to keratinocytes to determine skin, hair, and iris color and provide UV photoprotection.",
+    pathway: [
+      "Tyrosine → DOPA (tyrosinase, rate-limiting) → dopaquinone → eumelanin (brown-black) or pheomelanin (red-yellow, requires cysteine)",
+      "Synthesis occurs in melanosomes; mature pigment granules transferred to adjacent keratinocytes",
+      "Melanocyte-stimulating hormone (MSH) and UV exposure ↑ melanogenesis",
+      "Catabolic tyrosine pathway (homogentisic acid route) is separate from melanin branch",
+    ],
+    boardsPearls: [
+      "Melanin from tyrosine via tyrosinase in melanosomes — see melanocyte/melanosome entries",
+      "Albinism — defective tyrosinase or melanosome transport → absent/reduced melanin",
+      "vs hemosiderin — iron pigment from hemorrhage, not tyrosine-derived",
+      "vs lipofuscin — age-related lysosomal wear-and-tear pigment, not melanogenesis",
+      "Melanoma — malignant melanocytic proliferation with abnormal melanin production",
+      "PKU does not block melanin directly — tyrosine deficiency can lighten pigmentation indirectly",
+    ],
+    distinguishFrom: [
+      "Melanosome — organelle that synthesizes and stores melanin, not the pigment polymer itself",
+      "Melanocyte — cell that produces melanin; keratinocytes mainly display transferred pigment",
+      "Hemosiderin — iron-storage pigment after RBC breakdown",
+      "Lipofuscin — yellow-brown age pigment from undegraded lysosomal material",
+      "Bilirubin — heme breakdown product; jaundice pigment, not cutaneous melanin",
+    ],
+    pediatrics:
+      "Oculocutaneous albinism presents at birth with hypopigmented skin, hair, and irides — ↑ skin cancer risk with sun exposure. Café-au-lait macules reflect localized melanin patterning (NF1, McCune-Albright).",
   },
   {
     id: "tryptophan",
@@ -309,6 +352,49 @@ export const METABOLISM: MetabolismEntry[] = [
       "Glycine — product of serine cleavage by SHMT",
       "Phenylalanine — aromatic catabolism, unrelated to serine pathway",
     ],
+  },
+  {
+    id: "homocysteine",
+    name: "Homocysteine",
+    etymology:
+      "Greek homo = same + cysteine-related sulfur amino acid — intermediate in methionine cycle and transsulfuration pathway linking one-carbon metabolism to cysteine synthesis",
+    aliases: [
+      "homocysteine",
+      "homocysteines",
+      "hcy",
+      "l-homocysteine",
+      "total homocysteine",
+      "plasma homocysteine",
+      "serum homocysteine",
+    ],
+    definition:
+      "Non-proteinogenic sulfur amino acid intermediate formed from S-adenosylhomocysteine after methylation reactions — remethylated to methionine (B₁₂/folate-dependent) or converted to cystathionine and cysteine via transsulfuration (B₆-dependent); accumulates in B₁₂/folate deficiency and homocystinuria.",
+    pathway: [
+      "Methionine → SAM (methyl donor) → SAH → homocysteine",
+      "Remethylation: homocysteine + methyl-THF → methionine (methionine synthase, B₁₂ cofactor)",
+      "Transsulfuration: homocysteine + serine → cystathionine (CBS, B₆) → cysteine",
+      "Homocysteine oxidized to homocystine (disulfide dimer) in plasma",
+      "Elevated plasma homocysteine = hyperhomocysteinemia (lab finding)",
+    ],
+    boardsPearls: [
+      "Homocysteine sits at branch: remethylation (needs B₁₂ + folate) vs transsulfuration (needs B₆)",
+      "↑ homocysteine + ↑ MMA → B₁₂ deficiency; ↑ homocysteine alone → folate deficiency or CBS defect",
+      "Homocystinuria (CBS deficiency) — marfanoid habitus, downward lens dislocation, thrombosis",
+      "Homocysteine damages vascular endothelium — independent CV/thrombosis risk when elevated",
+      "B₁₂ before folate when both deficient — folate can correct anemia but not neurologic injury",
+      "vs cysteine — homocysteine is upstream; cysteine is transsulfuration product",
+      "vs homocystine — oxidized disulfide-linked dimer of homocysteine in blood",
+    ],
+    distinguishFrom: [
+      "Hyperhomocysteinemia — elevated plasma homocysteine lab finding",
+      "Methionine — essential amino acid precursor of homocysteine via SAM cycle",
+      "Cysteine — transsulfuration product downstream of homocysteine",
+      "Cystathionine — intermediate between homocysteine and cysteine",
+      "Methylmalonic acid — B₁₂-specific marker; elevated with homocysteine in B₁₂ deficiency",
+      "Homocystinuria — genetic disorder with severe homocysteine accumulation (CBS deficiency)",
+    ],
+    pediatrics:
+      "Homocystinuria presents in childhood with intellectual disability, lens dislocation (downward), and thromboembolism; treat with B₆, folate, or betaine depending on CBS responsiveness. Elevated homocysteine from B₁₂/folate deficiency can affect infants on restrictive diets.",
   },
   {
     id: "cysteine",
@@ -1027,7 +1113,7 @@ export const METABOLISM: MetabolismEntry[] = [
       "H₂ — diatomic hydrogen gas, not acid-base proton",
       "HCO₃⁻ — bicarbonate buffer base, not free proton",
       "NH₃/NH₄⁺ — ammonia/ammonium buffer system in kidney, distinct from free H⁺ pool",
-      "Proton pump (H⁺/K⁺-ATPase) — transporter protein, not the ion itself",
+      "Proton pump (H⁺/K⁺-ATPase) — gastric parietal cell transporter protein; see dedicated entry",
     ],
     pediatrics:
       "Neonates have lower renal net acid excretion capacity — premature infants are prone to metabolic acidosis with protein-rich feeding; urea cycle and renal ammoniagenesis mature over weeks.",
@@ -1105,7 +1191,7 @@ export const METABOLISM: MetabolismEntry[] = [
       "Humans cannot synthesize vitamin C — dietary requirement",
       "Infantile scurvy (Barlow disease) — subperiosteal hemorrhage, pseudo-paralysis",
       "Enhances iron absorption — give with oral iron therapy",
-      "Excess → calcium oxalate nephrolithiasis; may cause false-negative guaiac fecal occult blood tests",
+      "Excess → calcium oxalate nephrolithiasis; may cause false-negative guaiac (gFOBT) fecal occult blood tests (see occult blood entry)",
       "vs rickets — vitamin D deficiency affects bone mineralization, not collagen cross-linking",
       "vs thiamine — B₁ is TPP for PDH; vitamin C is collagen hydroxylation",
     ],
@@ -1146,7 +1232,7 @@ export const METABOLISM: MetabolismEntry[] = [
       "Deficiency → night blindness, xerophthalmia, Bitot spots, keratomalacia, follicular hyperkeratosis",
       "Measles in children — vitamin A supplementation ↓ morbidity/mortality (especially in deficiency)",
       "Excess/isotretinoin teratogenicity — neural crest and pharyngeal arch defects (craniofacial, cardiac, thymic)",
-      "Vitamin A excess → pseudotumor cerebri, hepatotoxicity, desquamation",
+      "Vitamin A excess → pseudotumor cerebri, hepatotoxicity, desquamation (see desquamate entry)",
       "Hepatic stellate cells store vitamin A — activated in cirrhosis (fibrosis)",
       "vs β-carotene — provitamin A carotenoid cleaved to retinal; excess carotenemia causes orange skin without toxicity",
       "vs vitamin D — steroid hormone precursor for calcium/phosphate; separate deficiency (rickets)",
@@ -1233,6 +1319,49 @@ export const METABOLISM: MetabolismEntry[] = [
     ],
     pediatrics:
       "Lesch-Nyhan syndrome (HGPRT deficiency) presents in boys with self-injury, gout, and developmental delay; orotic aciduria distinguishes from ornithine transcarbamylase deficiency.",
+  },
+  {
+    id: "cytosine",
+    name: "Cytosine",
+    etymology:
+      "Greek kytos = cell + -ine = chemical suffix — pyrimidine nitrogenous base named for its discovery in hydrolyzed nucleic acids from cells",
+    aliases: [
+      "cytosine",
+      "c base",
+      "dna cytosine",
+      "rna cytosine",
+      "pyrimidine cytosine",
+      "5-methylcytosine",
+      "5 methylcytosine",
+    ],
+    definition:
+      "Pyrimidine nitrogenous base pairing with guanine in DNA and RNA (via three hydrogen bonds); in DNA, cytosine is methylated at the 5-position in CpG dinucleotides as a key epigenetic silencing mark and is synthesized de novo via the pyrimidine pathway.",
+    pathway: [
+      "De novo pyrimidine synthesis: glutamine + CO₂ (CPS II) → carbamoyl phosphate → aspartate (ATCase) → UMP → CTP (and dCTP for DNA)",
+      "DNA: cytosine pairs with guanine (C≡G); RNA uses cytosine with guanine (uracil replaces thymine)",
+      "5-methylcytosine — DNMTs add CH₃ to cytosine in CpG islands → transcriptional repression",
+      "Cytosine deamination (spontaneous or AID) → uracil — repaired by uracil-DNA glycosylase (UNG) to prevent C→T mutations",
+      "5-fluorouracil (5-FU) — pyrimidine antimetabolite; flucytosine is antifungal cytosine analog (distinct from native base)",
+    ],
+    boardsPearls: [
+      "Pyrimidines: cytosine, thymine (DNA), uracil (RNA) — purines: adenine, guanine",
+      "C≡G base pair — three hydrogen bonds (vs A=T two bonds)",
+      "DNA methylation = methyl group on cytosine (usually CpG) → gene silencing",
+      "5-azacytidine — cytosine analog inhibits DNMTs → demethylation (used in MDS; induces differentiation in erythroid models)",
+      "Cytosine deamination → uracil — UNG and BER prevent mutation",
+      "vs thymine — thymine is 5-methyluracil in DNA only; cytosine is in both DNA and RNA",
+      "vs flucytosine — antifungal prodrug converted to 5-FU in fungi, not the native nucleobase",
+    ],
+    distinguishFrom: [
+      "Thymine — DNA-only pyrimidine (5-methyluracil); pairs with adenine",
+      "Uracil — RNA pyrimidine replacing thymine; product of cytosine deamination",
+      "5-Fluorouracil — chemotherapeutic pyrimidine analog, not native cytosine",
+      "Flucytosine — antifungal cytosine analog prodrug",
+      "Guanine — purine base pairing partner of cytosine",
+      "DNA methylation — epigenetic modification of cytosine, not the base identity itself",
+    ],
+    pediatrics:
+      "Imprinting disorders (Prader-Willi, Angelman) involve abnormal CpG methylation patterns established in development. Rett syndrome affects reading of methylated cytosine via MeCP2 mutation.",
   },
   {
     id: "phosphoribosyl-pyrophosphate-amidotransferase",
@@ -2097,6 +2226,46 @@ export const METABOLISM: MetabolismEntry[] = [
     ],
     pediatrics:
       "Adolescents with obesity-related type 2 diabetes benefit from understanding GL/GI alongside portion control; juice and large refined-carb snacks deliver high glycemic load despite family meal context.",
+  },
+  {
+    id: "lactose",
+    name: "Lactose",
+    etymology: "Latin lac = milk + -ose = sugar suffix — milk disaccharide",
+    aliases: [
+      "lactose",
+      "milk sugar",
+      "milk sugars",
+      "lactose disaccharide",
+      "lactose sugar",
+    ],
+    definition:
+      "Disaccharide composed of glucose and galactose (β-1,4 glycosidic bond) — primary carbohydrate in mammalian milk; hydrolyzed to monosaccharides by intestinal brush-border lactase before absorption.",
+    pathway: [
+      "Dietary lactose → lactase (lactase-phlorizin hydrolase) on small intestinal enterocyte brush border → glucose + galactose",
+      "Monosaccharides absorbed via SGLT1 (glucose/galactose) and GLUT transporters",
+      "Unhydrolyzed lactose reaches colon → bacterial fermentation → gas, bloating, osmotic diarrhea (lactose intolerance)",
+      "Galactose metabolized via galactokinase → galactose-1-phosphate uridyltransferase (GALT) pathway; deficiency → galactosemia",
+      "Lactose fermentation on MacConkey/EMB agar — lactose-fermenting G− rods (E. coli) produce acid → pink colonies",
+    ],
+    boardsPearls: [
+      "Lactose = glucose + galactose — milk disaccharide",
+      "Lactase deficiency → osmotic diarrhea, bloating, flatulence after dairy — improves with fasting/lactose-free diet",
+      "Primary lactose intolerance — common in adults (↓ lactase with age); secondary after gastroenteritis (transient)",
+      "Galactosemia — cannot metabolize galactose from lactose; avoid milk; cataracts, liver disease, E. coli sepsis risk in neonates",
+      "E. coli — lactose-fermenting pink colonies on MacConkey; green metallic sheen on EMB",
+      "vs sucrose — table sugar (glucose + fructose); different disaccharide",
+      "vs lactulose — synthetic non-absorbable disaccharide used as laxative and in hepatic encephalopathy",
+      "Breast milk and standard formula contain lactose — specialized formula needed in galactosemia",
+    ],
+    distinguishFrom: [
+      "Lactase — enzyme that hydrolyzes lactose; deficiency causes intolerance, not lactose itself",
+      "Galactose — monosaccharide component; galactosemia is distinct from lactose intolerance",
+      "Sucrose — glucose + fructose disaccharide",
+      "Lactulose — synthetic galactose-fructose disaccharide; osmotic laxative, not dietary milk sugar",
+      "Lactate — metabolic end product of anaerobic glycolysis; unrelated to milk carbohydrate",
+    ],
+    pediatrics:
+      "Neonatal galactosemia presents with jaundice, vomiting, and E. coli sepsis after milk feeds — detect on newborn screening; requires lactose-free/galactose-free formula. Transient lactase deficiency after viral gastroenteritis causes temporary dairy intolerance in infants.",
   },
 ];
 

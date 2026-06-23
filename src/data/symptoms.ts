@@ -678,7 +678,7 @@ export const SYMPTOMS: SymptomEntry[] = [
       "Dysphagia + heartburn + Raynaud → scleroderma esophagus",
     ],
     distinguishFrom: [
-      "Odynophagia — pain on swallowing; may coexist (epiglottitis, esophagitis) but distinct symptom",
+      "Odynophagia — pain on swallowing; may coexist (epiglottitis, esophagitis) but distinct symptom — see dedicated entry",
       "Anorexia — loss of appetite/desire to eat, not mechanical swallowing difficulty",
       "Globus sensation — lump-in-throat feeling with normal swallowing",
       "Early satiety — fullness after small meals; gastric outlet obstruction more than esophageal transfer",
@@ -687,6 +687,53 @@ export const SYMPTOMS: SymptomEntry[] = [
     ],
     pediatrics:
       "Infant feeding difficulty may reflect neurologic impairment, congenital heart disease, vascular ring, or eosinophilic esophagitis in older children. Epiglottitis presents with inability to handle secretions (drooling), not simple food refusal. Foreign body esophageal impaction causes acute dysphagia or drooling after ingestion.",
+  },
+  {
+    id: "odynophagia",
+    name: "Odynophagia",
+    etymology:
+      "Greek odynē = pain + phagein = to eat/swallow — painful swallowing",
+    aliases: [
+      "odynophagia",
+      "odynophagias",
+      "painful swallowing",
+      "pain on swallowing",
+      "pain with swallowing",
+      "swallowing pain",
+      "swallow pain",
+      "hurts to swallow",
+      "sore throat on swallowing",
+    ],
+    definition:
+      "Pain triggered by swallowing — localizes to the pharynx, retropharynx, or retrosternum depending on cause; distinct from dysphagia (difficulty moving the bolus) though both may coexist.",
+    mechanism:
+      "Mucosal inflammation or ulceration (infectious esophagitis, pill-induced mucositis, caustic injury), severe pharyngeal infection (epiglottitis, peritonsillar abscess), or deep tissue inflammation transmits pain with bolus passage and peristalsis; retrosternal odynophagia suggests esophageal source.",
+    thinkOf: [
+      "Epiglottitis — odynophagia, drooling, muffled voice, tripod posture, cannot swallow secretions",
+      "Candida esophagitis — HIV/AIDS, odynophagia ± dysphagia, oral thrush",
+      "HSV esophagitis — immunocompromised, odynophagia, may have oral ulcers",
+      "Pill-induced esophagitis — bisphosphonates, doxycycline, KCl, NSAIDs; take upright with water",
+      "GERD/reflux esophagitis — burning retrosternal odynophagia",
+      "Pharyngitis or peritonsillar abscess — odynophagia with sore throat",
+      "Caustic ingestion — severe odynophagia after lye/acid",
+    ],
+    pairWith: [
+      "Odynophagia + drooling + stridor + toxic appearance → epiglottitis emergency",
+      "Odynophagia + dysphagia + oral thrush + HIV → Candida esophagitis",
+      "Odynophagia + immunosuppression + endoscopy ulcers → HSV or CMV esophagitis",
+      "Odynophagia after taking doxycycline lying down → pill esophagitis",
+      "Odynophagia + fever + unilateral tonsillar swelling → peritonsillar abscess",
+      "Retrosternal odynophagia + heartburn → reflux esophagitis",
+    ],
+    distinguishFrom: [
+      "Dysphagia — difficulty swallowing; bolus transit problem, pain not required",
+      "Globus sensation — lump in throat without pain on swallowing",
+      "Sore throat at rest — pharyngeal pain not necessarily tied to swallowing act",
+      "Retrosternal chest pain without swallowing trigger → angina, esophageal spasm, PUD",
+      "Anorexia — loss of appetite, not swallowing pain",
+    ],
+    pediatrics:
+      "Epiglottitis presents with odynophagia, drooling, and toxic appearance — do not examine throat aggressively; secure airway. Caustic ingestion in toddlers causes severe odynophagia and stricture risk. Candida esophagitis in immunocompromised children.",
   },
   {
     id: "esophageal-dysmotility",
@@ -954,7 +1001,7 @@ export const SYMPTOMS: SymptomEntry[] = [
       "Reduced neuronal proliferation, migration, or survival during embryogenesis → small cerebral hemispheres and calvarium. Causes include chromosomal anomalies (trisomy 13), forebrain malformations (holoprosencephaly), teratogens (alcohol, valproate, maternal PKU), congenital infections (Zika, CMV), and primary microcephaly gene mutations affecting centrosome/mitotic spindle function.",
     thinkOf: [
       "Congenital Zika virus infection — microcephaly, intracranial calcifications, ocular defects",
-      "Fetal alcohol syndrome — smooth philtrum, short palpebral fissures, intellectual disability",
+      "Fetal alcohol syndrome — smooth philtrum (see dedicated entry), short palpebral fissures, intellectual disability",
       "Maternal PKU (untreated) — microcephaly, cardiac defects, intellectual disability",
       "Congenital CMV — sensorineural hearing loss, periventricular calcifications",
       "Trisomy 13 (Patau) — holoprosencephaly, polydactyly, cleft lip/palate",
@@ -1207,6 +1254,166 @@ export const SYMPTOMS: SymptomEntry[] = [
     ],
     pediatrics:
       "Foul purulent sputum in a child with neurologic impairment (CP, seizure disorder) suggests recurrent aspiration. CF bronchiectasis produces thick purulent sputum that may smell foul with Pseudomonas colonization. Lung abscess is uncommon in children but occurs after aspiration or foreign body.",
+  },
+  {
+    id: "foul-smelling-stools",
+    name: "Foul-Smelling Stools",
+    etymology:
+      "Old English ful = rotten/offensive + Latin stilus = stalk/pole (historical stool) + Old English smellan = emit odor",
+    aliases: [
+      "foul-smelling stools",
+      "foul smelling stools",
+      "foul-smelling stool",
+      "foul smelling stool",
+      "foul stool",
+      "foul stools",
+      "malodorous stools",
+      "malodorous stool",
+      "offensive stools",
+      "offensive stool",
+      "bad smelling stools",
+      "bad smelling stool",
+      "putrid stools",
+      "putrid stool",
+    ],
+    definition:
+      "Bowel movements with offensive, often rancid or sulfurous odor — classically associated with fat malabsorption (steatorrhea), certain infections, and bacterial fermentation of unabsorbed nutrients.",
+    mechanism:
+      "Unabsorbed fat and protein reach colon → bacterial hydrolysis and fermentation → short-chain fatty acids, volatile sulfur compounds, and other malodorous gases → bulky, greasy, foul-smelling stools that may float and be difficult to flush.",
+    thinkOf: [
+      "Steatorrhea — pancreatic insufficiency (CF, chronic pancreatitis), celiac disease, bile acid deficiency",
+      "Giardia lamblia — foul-smelling, fatty, nonbloody diarrhea",
+      "Small intestinal bacterial overgrowth (SIBO) — bloating with malodorous stools",
+      "Short bowel syndrome — rapid transit with malabsorption",
+      "Cystic fibrosis — steatorrhea with recurrent pulmonary infections",
+      "Chronic mesenteric ischemia — food fear with malabsorptive stools (less classic odor pearl)",
+    ],
+    pairWith: [
+      "Greasy floating stools + foul odor + CF history → pancreatic insufficiency",
+      "Foul fatty diarrhea + camping/travel water → Giardia",
+      "Foul stools + weight loss + alcohol use → chronic pancreatitis",
+      "Foul stools + dermatitis herpetiformis + iron deficiency → celiac disease",
+      "Low fecal elastase + foul stools → exocrine pancreatic insufficiency",
+      "Foul stools + bloating after dairy → lactose intolerance (osmotic, less classic steatorrhea)",
+    ],
+    distinguishFrom: [
+      "Foul-smelling sputum — lower airway anaerobic infection; different organ system",
+      "Bloody diarrhea — invasive colitis; odor not primary distinguishing feature",
+      "Melena — black tarry upper GI blood; malodor differs from steatorrhea",
+      "Normal stool odor variation — diet (cruciferous vegetables) causes sulfur smell without malabsorption",
+      "Flatus alone — gas passage without necessarily foul bulky stools",
+    ],
+    pediatrics:
+      "CF presents with steatorrhea (bulky, foul, floating stools) and failure to thrive. Giardia is common in daycare and camping exposures. Celiac disease causes chronic foul stools with growth failure. Neonatal acholic pale stools suggest biliary atresia, not typically foul steatorrhea.",
+  },
+  {
+    id: "flatus",
+    name: "Flatus",
+    etymology:
+      "Latin flatus = blowing, a breaking wind — passage of intestinal gas through the rectum",
+    aliases: [
+      "flatus",
+      "intestinal gas",
+      "intestinal gases",
+      "passing gas",
+      "pass gas",
+      "gas passage",
+      "rectal gas",
+      "breaking wind",
+      "fart",
+      "farts",
+      "excessive flatus",
+    ],
+    definition:
+      "Passage of gas from the gastrointestinal tract through the anus — normal physiologic release of swallowed air and bacterial fermentation products; absence or excess can signal pathology.",
+    mechanism:
+      "Gas sources: swallowed air (aerophagia, rapid eating, carbonated beverages), intraluminal bacterial fermentation of undigested carbohydrates (lactose, fructose, fiber, sorbitol), and diffusion from blood. Composition mostly nitrogen, CO₂, hydrogen, methane; foul odor from trace sulfur gases (H₂S) when sulfur-containing amino acids are fermented.",
+    thinkOf: [
+      "Lactose intolerance — osmotic diarrhea, bloating, flatus after dairy",
+      "Irritable bowel syndrome — bloating and altered gas passage",
+      "Small intestinal bacterial overgrowth — excessive fermentation and flatus",
+      "High-fiber or FODMAP diet — increased colonic gas production",
+      "Absence of flatus with distension — bowel obstruction or ileus",
+      "Giardiasis — malodorous flatus with steatorrhea",
+    ],
+    pairWith: [
+      "Flatus + bloating after milk → lactose intolerance",
+      "No flatus + abdominal distension + vomiting → small bowel obstruction",
+      "Postoperative distension without flatus → postoperative ileus",
+      "Excessive flatus + steatorrhea → malabsorption or pancreatic insufficiency",
+      "Flatus + constipation + pelvic pain → irritable bowel syndrome",
+      "Absent flatus + obstipation + tympanic distension → mechanical obstruction",
+    ],
+    distinguishFrom: [
+      "Flatulence — common clinical term for excessive or symptomatic gas passage",
+      "Eructation (belching) — gas expelled from stomach through mouth, not rectal flatus",
+      "Borborygmi — audible intestinal rumbling, not gas passage itself",
+      "Foul-smelling stools — malabsorptive bowel movements; may coexist with flatus",
+      "Abdominal distension — physical swelling; may occur with or without ability to pass flatus",
+      "Tenesmus — rectal urgency without substantial stool or gas passage",
+    ],
+    boardsPearls: [
+      "Normal flatus ~10–20 episodes/day — excessive or absent both clinically meaningful",
+      "Absent flatus + distension → think obstruction or ileus (surgical emergency if complete)",
+      "Lactose intolerance — flatus, bloating, diarrhea after dairy; lactose hydrogen breath test",
+      "Methane producers may have constipation-predominant symptoms",
+      "Sulfur-rich diet (eggs, meat) → malodorous flatus without disease",
+      "vs eructation — upper GI gas release vs lower GI flatus",
+    ],
+    pediatrics:
+      "Infants pass flatus frequently; excessive crying with distension suggests colic, milk protein allergy, or lactose overload. Absent flatus with bilious vomiting in neonate suggests obstruction. Hirschsprung disease presents with failure to pass meconium and distension.",
+  },
+  {
+    id: "flatulence",
+    name: "Flatulence",
+    etymology:
+      "Latin flatus = blowing + -ence = state of — excessive or symptomatic passage of intestinal gas through the rectum",
+    aliases: [
+      "flatulence",
+      "excessive flatulence",
+      "passing too much gas",
+      "excessive gas",
+      "excessive intestinal gas",
+      "gas flatulence",
+      "rectal flatulence",
+    ],
+    definition:
+      "Excessive or bothersome passage of intestinal gas per rectum — from swallowed air, bacterial fermentation, or impaired gas absorption — often reported with bloating and dietary triggers.",
+    mechanism:
+      "Colonic bacterial fermentation of undigested carbohydrates (lactose, fructose, FODMAPs, fiber) produces hydrogen, CO₂, and methane; aerophagia and carbonated beverages add swallowed gas; impaired transit or SIBO increases fermentation and symptomatic gas passage.",
+    thinkOf: [
+      "Lactose intolerance — flatulence and bloating after dairy",
+      "Irritable bowel syndrome — altered gas sensation and passage",
+      "Small intestinal bacterial overgrowth (SIBO)",
+      "High-fiber, legume, or FODMAP diet",
+      "Giardiasis — malodorous flatulence with steatorrhea",
+      "Celiac disease and malabsorption",
+    ],
+    pairWith: [
+      "Flatulence + bloating after milk → lactose intolerance",
+      "Flatulence + steatorrhea → malabsorption or pancreatic insufficiency",
+      "Flatulence + constipation + abdominal pain → IBS",
+      "Malodorous flatulence + bulky foul stools → steatorrhea/malabsorption",
+      "Flatulence + diarrhea after antibiotics → C. difficile or SIBO",
+      "No flatulence + distension + vomiting → bowel obstruction",
+    ],
+    distinguishFrom: [
+      "Flatus — Latin/clinical term for normal gas passage; flatulence implies excess or symptoms",
+      "Bloating — subjective abdominal fullness; may occur without increased gas passage",
+      "Eructation (belching) — upper GI gas release through mouth",
+      "Abdominal distension — objective abdominal enlargement; may coexist",
+      "Foul-smelling stools — stool quality change; may accompany flatulence in malabsorption",
+    ],
+    boardsPearls: [
+      "Lactose intolerance — flatulence, bloating, osmotic diarrhea after dairy",
+      "Hydrogen breath test — lactose or glucose for SIBO",
+      "Methane on breath test associated with constipation-predominant IBS",
+      "Sulfur-containing foods → malodorous flatulence without disease",
+      "Absent flatus + distension → obstruction/ileus, not benign flatulence",
+      "vs bloating — flatulence is gas passage; bloating is fullness sensation",
+    ],
+    pediatrics:
+      "Excessive flatulence in infants may reflect lactose overload, cow's milk protein allergy, or normal immature digestion. Toddler with flatulence and poor growth → celiac disease or CF. Giardia common in daycare/camp exposures.",
   },
   {
     id: "mucus",
@@ -1584,13 +1791,14 @@ export const SYMPTOMS: SymptomEntry[] = [
     thinkOf: [
       "Iodine deficiency — endemic multinodular goiter",
       "Hashimoto thyroiditis — autoimmune hypothyroidism with goiter",
-      "Graves disease — diffuse toxic goiter with bruit",
+      "Graves disease — diffuse toxic goiter with bruit — see thyroid bruit entry",
       "Toxic multinodular goiter — hot nodules with hyperthyroidism",
       "Thyroid cancer — firm nodule within goiter",
       "Dyshormonogenesis — congenital hypothyroidism with goiter",
     ],
     pairWith: [
       "Diffuse goiter + bruit + hyperthyroid symptoms → Graves disease",
+      "Diffuse goiter + lid lag + proptosis → Graves ophthalmopathy",
       "Painless goiter + ↑ TSH + anti-TPO → Hashimoto thyroiditis",
       "Solitary cold nodule in adult → exclude thyroid cancer (FNA)",
       "Dysphagia, hoarseness, stridor → substernal goiter compressing airway/esophagus",
@@ -1604,6 +1812,104 @@ export const SYMPTOMS: SymptomEntry[] = [
     ],
     pediatrics:
       "Congenital hypothyroidism from dyshormonogenesis may present with goiter at birth; iodine deficiency goiter in endemic areas. Pediatric thyroid nodules have higher malignancy risk than adult nodules — evaluate promptly.",
+  },
+  {
+    id: "thyroid-bruit",
+    name: "Thyroid Bruit",
+    etymology:
+      "Greek thyreoeidēs = shield-shaped (thyroid) + French bruit = noise — audible vascular turbulence over an enlarged hypervascular thyroid gland",
+    aliases: [
+      "thyroid bruit",
+      "thyroid bruits",
+      "thyroid vascular bruit",
+      "thyroid vascular bruits",
+      "cervical thyroid bruit",
+      "cervical thyroid bruits",
+      "goiter bruit",
+      "goiter bruits",
+      "diffuse thyroid bruit",
+    ],
+    definition:
+      "Systolic or continuous harsh murmur auscultated over the thyroid gland — reflects markedly increased thyroid blood flow in diffuse toxic goiter, classically Graves disease.",
+    mechanism:
+      "TSH receptor stimulation (TSI in Graves) → thyroid hyperplasia and hyperfunction with dramatically increased intraglandular blood flow and arteriovenous shunting → turbulent flow audible as bruit over the gland.",
+    thinkOf: [
+      "Graves disease — diffuse toxic goiter with hyperthyroidism",
+      "Severe hyperthyroidism with diffuse vascular goiter",
+      "Less commonly — hypervascular thyroiditis or thyroid AV fistula",
+    ],
+    pairWith: [
+      "Thyroid bruit + diffuse goiter + hyperthyroid symptoms → Graves disease",
+      "Bruit + proptosis + pretibial myxedema → Graves ophthalmopathy spectrum",
+      "Bruit + suppressed TSH + ↑ T4/T3 + ↑ radioiodine uptake → Graves",
+      "Toxic multinodular goiter — usually nodular without classic diffuse bruit",
+    ],
+    distinguishFrom: [
+      "Abdominal bruit — epigastric/flank vascular stenosis (renal artery, AAA)",
+      "Carotid bruit — cervical turbulent flow at carotid bifurcation, not over thyroid",
+      "Thyroid thrill — palpable vibration without necessarily audible bruit",
+      "Venous hum — soft continuous sound in neck from high-flow states; not focal thyroid bruit",
+      "Thyroid nodule rub — focal friction rub, not diffuse vascular bruit",
+    ],
+    boardsPearls: [
+      "Thyroid bruit over diffuse goiter → think Graves disease",
+      "Graves: bruit + ↓ TSH + ↑ T4/T3 + TSI + diffuse ↑ RAI uptake",
+      "Hypervascularity from TSH receptor stimulation — not seen in typical Hashimoto hypothyroid goiter",
+      "vs toxic multinodular goiter — nodular hot areas, less classic diffuse bruit",
+      "Auscultate over thyroid cartilage/lobes with patient supine and neck slightly extended",
+    ],
+    pediatrics:
+      "Graves disease in adolescents may present with diffuse goiter and bruit; neonatal Graves from maternal TSI crosses placenta — tachycardia, goiter, but bruit less emphasized on exam.",
+  },
+  {
+    id: "lid-lag",
+    name: "Lid Lag",
+    etymology:
+      "Old English hlieg = eyelid + Old Norse lagga = to move slowly — delayed descent of the upper eyelid when the eye moves downward (von Graefe sign)",
+    aliases: [
+      "lid lag",
+      "lid-lag",
+      "lid lags",
+      "von graefe sign",
+      "von graefe's sign",
+      "von Graefe sign",
+      "graves lid lag",
+      "thyroid lid lag",
+      "upper lid lag",
+      "eyelid lag",
+      "eyelid lags",
+    ],
+    definition:
+      "Physical sign in which the upper eyelid lags behind the globe during downward gaze — visible white sclera between the iris and upper lid as the eye looks down — classic of thyroid-associated ophthalmopathy and hyperthyroid sympathetic overactivity.",
+    mechanism:
+      "Sympathetic hyperstimulation and orbital fibroblast inflammation in Graves disease increase levator palpebrae superioris tone and orbital tissue volume → upper lid fails to descend synchronously with globe depression on downgaze; may coexist with lid retraction (Dalrymple sign) at primary gaze.",
+    thinkOf: [
+      "Graves disease / thyroid-associated ophthalmopathy",
+      "Hyperthyroidism with orbital involvement",
+      "Unilateral lid lag — consider asymmetric Graves eye disease",
+    ],
+    pairWith: [
+      "Lid lag + proptosis + hyperthyroidism → Graves ophthalmopathy",
+      "Lid lag + lid retraction + stare → thyroid eye disease",
+      "Lid lag + diffuse goiter + thyroid bruit → Graves disease",
+      "Lid lag without proptosis — still supports thyroid eye disease (early or mild)",
+    ],
+    distinguishFrom: [
+      "Lid retraction (Dalrymple sign) — widened palpebral fissure at primary gaze, sclera visible above iris",
+      "Proptosis — globe protrusion; may accompany lid lag but is separate finding",
+      "Ptosis — drooping eyelid (levator weakness), opposite of lid retraction/lag pattern",
+      "Horner syndrome — ptosis + miosis + anhidrosis",
+      "CN III palsy — ptosis + down-and-out eye, not isolated lid lag on downgaze",
+    ],
+    boardsPearls: [
+      "Lid lag on downgaze = von Graefe sign — classic Graves ophthalmopathy",
+      "Dalrymple sign = lid retraction at primary gaze (different from lid lag)",
+      "Stellwag sign = infrequent blinking; Kocher sign = fixed stare — other Graves eye signs",
+      "Lid lag can occur with hyperthyroidism even before marked proptosis",
+      "vs ptosis — lid lag shows excessive sclera on downgaze, not drooping at rest",
+    ],
+    pediatrics:
+      "Graves ophthalmopathy is less common in children than adults but lid retraction and lid lag may appear in pediatric Graves hyperthyroidism. Neonatal Graves from maternal TSI may show stare and lid retraction.",
   },
   {
     id: "proptosis",
@@ -1634,13 +1940,15 @@ export const SYMPTOMS: SymptomEntry[] = [
     ],
     pairWith: [
       "Hyperthyroidism + lid retraction + proptosis → Graves ophthalmopathy",
+      "Lid lag on downgaze + hyperthyroidism → Graves eye disease",
       "Fever + painful eye movements + proptosis → orbital cellulitis (not preseptal)",
       "Acute vision loss + proptosis after trauma → retrobulbar hematoma → lateral canthotomy",
       "Cranial nerve III/IV/VI palsies + headache + proptosis → cavernous sinus thrombosis",
       "Unilateral proptosis in child → rhabdomyosarcoma until proven otherwise",
     ],
     distinguishFrom: [
-      "Lid retraction (Dalrymple sign) — lid position without true globe protrusion",
+      "Lid retraction (Dalrymple sign) — widened fissure at primary gaze; see lid lag for downgaze finding",
+      "Lid lag (von Graefe sign) — upper lid lags on downgaze; see dedicated entry",
       "Preseptal cellulitis — eyelid swelling without painful eye movements or proptosis",
       "Pseudoproptosis — contralateral enophthalmos or large myopic globe",
       "Horner syndrome — ptosis and miosis, not proptosis",
@@ -1769,7 +2077,7 @@ export const SYMPTOMS: SymptomEntry[] = [
     id: "pleuritic-chest-pain",
     name: "Pleuritic Chest Pain",
     etymology: "Greek pleura = side/rib + -itic = inflammatory + Old English cest = box/thorax + Latin poena = penalty/suffering",
-    aliases: ["pleuritic chest pain", "pleuritic pain"],
+    aliases: ["pleuritic chest pain", "pleuritic pain", "pleurisy pain"],
     definition:
       "Sharp chest pain that worsens with inspiration or coughing due to pleural irritation.",
     mechanism:
@@ -1777,6 +2085,7 @@ export const SYMPTOMS: SymptomEntry[] = [
     thinkOf: [
       "Pulmonary embolism",
       "Pneumonia / pleurisy",
+      "Pleuritis — pleural inflammation causing pleuritic pain",
       "Pneumothorax",
       "Pericarditis (can be pleuritic)",
       "Viral pleuritis",
@@ -2053,6 +2362,7 @@ export const SYMPTOMS: SymptomEntry[] = [
       "Presyncope — same mechanism, no complete LOC",
       "Seizure — postictal state, tongue biting, prolonged confusion",
       "Hypoglycemia — diaphoresis, responds to glucose",
+      "Vasovagal fainting — most common subtype; see dedicated entry for prodrome and triggers",
     ],
   },
   {
@@ -2460,7 +2770,7 @@ export const SYMPTOMS: SymptomEntry[] = [
       "Meningococcemia — rapid illness with petechiae or purpura",
       "Bacterial tracheitis — toxic stridor after viral URI",
       "Necrotizing fasciitis or severe cellulitis with systemic toxicity",
-      "Toxic shock syndrome (Staph or Strep)",
+      "Toxic shock syndrome (see dedicated entry; Staph or Strep)",
       "Occult bacteremia or serious bacterial infection in young infant",
       "Necrotizing enterocolitis or toxic megacolon in appropriate settings",
     ],
@@ -2559,6 +2869,54 @@ export const SYMPTOMS: SymptomEntry[] = [
     ],
     pediatrics:
       "In children, weight loss or poor weight gain suggests failure to thrive, malabsorption (celiac/CF), chronic infection, malignancy, or new-onset type 1 diabetes when paired with polyuria/polydipsia.",
+  },
+  {
+    id: "cachectic",
+    name: "Cachectic",
+    etymology: "Greek kakos = bad + hexis = condition/habit — severely wasted physical state from chronic catabolic illness",
+    aliases: [
+      "cachectic",
+      "cachexia",
+      "cachexias",
+      "cachectic appearance",
+      "cachectic appearances",
+      "wasting syndrome",
+      "wasting syndromes",
+      "catabolic wasting",
+      "severe wasting",
+      "emaciated",
+      "emaciation",
+    ],
+    definition:
+      "Marked loss of skeletal muscle and adipose tissue with systemic illness — a catabolic wasting syndrome driven by inflammatory cytokines and metabolic reprogramming, distinct from simple starvation or voluntary weight loss.",
+    mechanism:
+      "Chronic elevation of TNF-α, IL-1, IL-6, and other mediators → ↑ proteolysis, ↓ protein synthesis, anorexia, and insulin resistance → net negative nitrogen balance and visible muscle wasting (temporal wasting, prominent bones, loss of subcutaneous fat) despite variable caloric intake.",
+    thinkOf: [
+      "Advanced malignancy — most classic boards association",
+      "Congestive heart failure — cardiac cachexia",
+      "COPD — pulmonary cachexia",
+      "HIV/AIDS — chronic infection and cytokine-driven wasting",
+      "End-stage renal disease, liver cirrhosis",
+      "Tuberculosis and chronic inflammatory disease",
+    ],
+    pairWith: [
+      "Cachectic + night sweats + lymphadenopathy → lymphoma or TB",
+      "Cachectic + dyspnea + JVD → advanced CHF",
+      "Cachectic + chronic cough + hemoptysis → lung cancer",
+      "Cachectic + diarrhea + steatorrhea → malabsorption (also causes wasting but different mechanism)",
+      "↑ inflammatory markers + muscle wasting → cytokine-driven cachexia, not pure anorexia",
+      "vs starvation — cachexia is pathologic catabolism; may persist despite adequate intake",
+    ],
+    distinguishFrom: [
+      "Weight loss — broader term; cachexia implies severe catabolic wasting phenotype",
+      "Marasmus — pure caloric deprivation malnutrition; reversed by refeeding",
+      "Kwashiorkor — protein malnutrition with edema; different nutritional pattern",
+      "Anorexia nervosa — psychiatric restriction; muscle loss from starvation, not cytokine cachexia",
+      "Hyperthyroidism — weight loss with ↑ appetite and tachycardia, not classic cachectic malignancy picture",
+      "Malabsorption wasting — nutrient loss from GI disease; may overlap but distinct from TNF-driven cachexia",
+    ],
+    pediatrics:
+      "Severe cachexia is uncommon in children except advanced malignancy, HIV, or chronic organ failure. Failure to thrive requires malabsorption, chronic infection, and cardiac workup — distinguish nutritional deprivation from organic disease.",
   },
   {
     id: "weight-gain",
@@ -3404,29 +3762,94 @@ export const SYMPTOMS: SymptomEntry[] = [
   {
     id: "jaundice",
     name: "Jaundice",
-    etymology: "French jaune = yellow",
-    aliases: ["jaundice"],
+    etymology: "French jaune = yellow — clinical yellow discoloration from tissue bilirubin deposition",
+    aliases: [
+      "jaundice",
+      "jaundiced",
+      "icterus",
+      "hyperbilirubinemia",
+      "hyperbilirubinemias",
+      "yellow jaundice",
+      "clinical jaundice",
+    ],
     definition:
-      "Yellow discoloration of skin and sclera from accumulation of bilirubin.",
+      "Yellow discoloration of skin, mucous membranes, and sclera from elevated serum bilirubin — typically visible when total bilirubin exceeds ~2–3 mg/dL; reflects prehepatic (hemolysis), hepatic (hepatocellular injury), or posthepatic (cholestatic/obstructive) hyperbilirubinemia.",
     mechanism:
-      "Hyperbilirubinemia deposits in tissues; may arise from increased production, hepatocellular dysfunction, or biliary obstruction.",
+      "Heme from senescent RBCs → unconjugated bilirubin (albumin-bound) → hepatocyte uptake and UGT1A1 conjugation → conjugated bilirubin excreted in bile → urobilinogen/stercobilin in stool. Disruption at any step — overproduction, impaired conjugation, hepatocellular injury, or biliary obstruction — raises serum bilirubin and deposits in elastin-rich tissues (sclera first).",
     thinkOf: [
-      "Hemolysis (unconjugated)",
-      "Hepatitis, cirrhosis (mixed/hepatocellular)",
-      "Choledocholithiasis, pancreatic cancer (conjugated / obstructive)",
-      "Gilbert syndrome (mild unconjugated)",
+      "Hemolysis — unconjugated (indirect) hyperbilirubinemia; ↑ LDH, ↓ haptoglobin",
+      "Viral hepatitis, cirrhosis — hepatocellular pattern; ↑ AST/ALT",
+      "Choledocholithiasis, pancreatic head cancer — conjugated (direct) elevation; dark urine, pale stools",
+      "Gilbert syndrome — mild unconjugated jaundice with fasting/stress",
+      "Neonatal physiologic jaundice — immature conjugation + enterohepatic circulation",
+      "Rh/ABO hemolytic disease of newborn — early severe unconjugated jaundice",
     ],
     pairWith: [
-      "Dark urine, pale stools → obstructive pattern",
-      "Pruritus → cholestasis",
-      "RUQ pain, fever, hypotension → cholangitis",
-      "AST/ALT >> alk phos → hepatocellular",
-      "Alk phos ↑, GGT ↑ → cholestatic",
+      "Scleral icterus before skin changes → reliable early sign of true jaundice",
+      "Dark urine + pale stools → conjugated (obstructive/cholestatic) hyperbilirubinemia",
+      "Pruritus without rash → cholestasis from retained bile salts",
+      "RUQ pain + fever + jaundice → ascending cholangitis (Charcot triad)",
+      "AST/ALT >> alk phos → hepatocellular jaundice (hepatitis)",
+      "Alk phos ↑ + GGT ↑ + direct bilirubin ↑ → cholestatic jaundice",
+      "Fractionate bilirubin — indirect vs direct distinguishes hemolysis from obstruction",
+      "vs carotenemia — orange skin, sclera spared (high carrot intake)",
     ],
     distinguishFrom: [
-      "Carotenemia — orange skin, sclera spared",
-      "Prehepatic vs hepatic vs posthepatic — use fractionated bilirubin",
+      "Scleral icterus — conjunctival yellowing; first and most reliable sign of jaundice",
+      "Carotenemia — orange skin from β-carotene; sclera white",
+      "Prehepatic jaundice — hemolysis; ↑ indirect bilirubin, reticulocytosis",
+      "Hepatic jaundice — hepatocellular injury; mixed or conjugated pattern with ↑ transaminases",
+      "Posthepatic jaundice — biliary obstruction; ↑ direct bilirubin, ↑ ALP/GGT",
+      "Pseudojaundice — quinacrine, other drugs; not true bilirubin elevation",
     ],
+    pediatrics:
+      "Physiologic neonatal jaundice peaks days 2–5 from immature UGT1A1; phototherapy when bilirubin exceeds age-specific thresholds. Pathologic causes include hemolytic disease (Rh, ABO), biliary atresia (conjugated, persistent after 2 weeks), and breast milk jaundice. Kernicterus risk with high unconjugated bilirubin in neonates.",
+  },
+  {
+    id: "scleral-icterus",
+    name: "Scleral Icterus",
+    etymology:
+      "Greek skleros = hard + Latin icterus = jaundice — yellow discoloration of the sclera (white of the eye) from bilirubin deposition",
+    aliases: [
+      "scleral icterus",
+      "scleral icteruses",
+      "scleral jaundice",
+      "conjunctival icterus",
+      "conjunctival jaundice",
+      "ocular icterus",
+      "icteric sclera",
+      "yellow sclera",
+      "yellow scleras",
+      "icteric eyes",
+    ],
+    definition:
+      "Yellow discoloration of the bulbar conjunctiva and underlying sclera from elevated serum bilirubin — often the earliest and most reliable clinical sign of jaundice, typically appearing when total bilirubin exceeds ~2–3 mg/dL.",
+    mechanism:
+      "Bilirubin has high affinity for elastin in conjunctival tissue; scleral icterus reflects true hyperbilirubinemia rather than carotenoid skin deposition — visible before cutaneous jaundice in many patients because scleral elastin binds bilirubin readily.",
+    thinkOf: [
+      "Any cause of hyperbilirubinemia — hemolysis, hepatitis, biliary obstruction",
+      "Hemolytic anemia — unconjugated elevation; scleral icterus with pallor",
+      "Viral hepatitis — scleral icterus with RUQ tenderness, ↑ transaminases",
+      "Obstructive jaundice — scleral icterus with dark urine and pale stools",
+      "Neonatal jaundice — assess under natural light; scleral yellowing prompts bilirubin check",
+    ],
+    pairWith: [
+      "Scleral icterus + normal skin color early → check total and fractionated bilirubin",
+      "Scleral icterus + dark urine → conjugated hyperbilirubinemia (cholestasis/obstruction)",
+      "Scleral icterus + pallor + ↑ LDH → hemolytic jaundice",
+      "vs carotenemia — orange skin but white sclera rules out true jaundice",
+      "Scleral icterus in neonate → bilirubin level, blood type, Coombs, phototherapy threshold",
+      "Jaundice without scleral involvement → consider carotenemia, not hyperbilirubinemia",
+    ],
+    distinguishFrom: [
+      "Carotenemia — yellow-orange skin from dietary carotene; sclera remains white",
+      "Conjunctival injection — red eye from dilated vessels, not yellow bilirubin deposition",
+      "Pinguecula — yellowish conjunctival degeneration localized nasal/temporal, not diffuse scleral icterus",
+      "Scleral jaundice vs skin jaundice — sclera is more reliable indicator of true bilirubin elevation",
+      "Icterus gravis — historical term for severe jaundice, not a separate mechanism",
+    ],
+    pediatrics:
+      "Assess neonatal jaundice in daylight; scleral icterus in first 24 hours suggests hemolytic disease or sepsis rather than physiologic jaundice. Bilirubin nomograms guide phototherapy based on age in hours.",
   },
   {
     id: "pruritus",
@@ -3500,12 +3923,58 @@ export const SYMPTOMS: SymptomEntry[] = [
       "Foreign body aspiration, bronchiectasis (CF), and pneumonia are common causes in children. TB and malignancy less common but considered with systemic symptoms. Massive hemoptysis is rare in pediatrics; stabilize airway first.",
   },
   {
+    id: "black-colored-stools",
+    name: "Black-Colored Stools",
+    etymology:
+      "Old English blæc = dark + Latin color = hue + Old English stol = seat/chair (stool = feces) — feces appearing black on gross inspection",
+    aliases: [
+      "black-colored stools",
+      "black colored stools",
+      "black colored stool",
+      "black stool",
+      "black stools",
+      "black bowel movement",
+      "black bowel movements",
+      "dark stool",
+      "dark stools",
+      "black feces",
+      "black faeces",
+      "melanic stool",
+    ],
+    definition:
+      "Feces that appear black on visual inspection — a nonspecific finding that may reflect digested blood (melena), medications/supplements, or certain foods, distinguished by character (tarry vs formed) and associated symptoms.",
+    mechanism:
+      "Upper GI blood degraded by acid and bacteria → black tarry melena; non-bleeding causes include iron salts, bismuth subsalicylate, charcoal, and some foods/dyes causing dark but non-tarry stool without hematin odor.",
+    thinkOf: [
+      "Melena — black tarry malodorous stool from upper GI bleeding (see dedicated entry)",
+      "Iron supplements — black/green stool, not tarry",
+      "Bismuth (Pepto-Bismol) — black tongue and black stool",
+      "Activated charcoal — black stool after ingestion",
+      "Licorice, blueberries, beets — dark stool without systemic toxicity",
+    ],
+    pairWith: [
+      "Black tarry malodorous stool + hematemesis → upper GI bleed (melena)",
+      "Black stool + iron tablets → benign medication effect",
+      "Black stool + bismuth use → expected side effect",
+      "Black stool + lightheadedness/tachycardia → GI hemorrhage until proven otherwise",
+      "Positive occult blood + black stool → pathologic bleeding (see occult blood entry)",
+    ],
+    distinguishFrom: [
+      "Melena — specific black tarry stool from digested blood; subset of black-colored stools",
+      "Hematochezia — bright red blood per rectum, usually lower GI",
+      "Green stool — rapid transit or dietary; not black",
+      "Occult blood — microscopic blood without visible color change",
+    ],
+    pediatrics:
+      "Melena in neonate after first days of life warrants urgent evaluation — swallowed maternal blood, milk allergy, or necrotizing enterocolitis on differential. Iron drops commonly darken infant stool without illness.",
+  },
+  {
     id: "melena",
     name: "Melena",
     etymology: "Greek melas = black",
-    aliases: ["melena"],
+    aliases: ["melena", "melenas", "black tarry stool", "black tarry stools", "tarry stool", "tarry stools"],
     definition:
-      "Black, tarry stools from digested blood, typically indicating upper GI bleeding.",
+      "Black, tarry, malodorous stools from digested blood — the pathologic form of black-colored stool indicating upper GI bleeding (see black-colored stools entry for non-bleeding causes).",
     mechanism:
       "Hemoglobin is broken down by gastric acid and intestinal bacteria into hematin, producing dark, sticky, malodorous stool.",
     thinkOf: [
@@ -3523,7 +3992,8 @@ export const SYMPTOMS: SymptomEntry[] = [
     ],
     distinguishFrom: [
       "Hematochezia — bright red blood per rectum, often lower GI",
-      "Iron supplements or bismuth — black stool but not tarry / malodorous",
+      "Black-colored stools from iron or bismuth — black but not tarry/malodorous (see dedicated entry)",
+      "Occult blood — hidden blood without visible black color",
     ],
   },
   {
@@ -4236,6 +4706,53 @@ export const SYMPTOMS: SymptomEntry[] = [
       "Anorexia without nausea — systemic illness, depression",
       "Early satiety — gastric outlet obstruction or gastroparesis",
     ],
+  },
+  {
+    id: "heartburn",
+    name: "Heartburn",
+    etymology:
+      "Old English heorte = heart + bærnan = to burn — substernal burning sensation mislocalized to the chest/heart from esophageal acid exposure",
+    aliases: [
+      "heartburn",
+      "heart burn",
+      "pyrosis",
+      "acid indigestion",
+      "acid reflux symptom",
+      "gastric reflux symptom",
+      "substernal burning",
+      "retrosternal burning",
+      "esophageal burning",
+      "burning chest sensation",
+    ],
+    definition:
+      "Substernal or retrosternal burning discomfort rising toward the throat — classic symptom of gastroesophageal reflux (GERD) from esophageal mucosal exposure to gastric acid and pepsin.",
+    mechanism:
+      "Transient or sustained lower esophageal sphincter relaxation and/or hiatal hernia allows reflux of acidic gastric contents → esophageal mucosal irritation → burning substernal pain often postprandial or when supine.",
+    thinkOf: [
+      "GERD / erosive esophagitis",
+      "Hiatal hernia",
+      "Pregnancy (progesterone ↓ LES tone)",
+      "Obesity, large meals, alcohol, caffeine, chocolate",
+      "Scleroderma esophagus (severe reflux, dysphagia)",
+      "PUD — epigastric pain may coexist; heartburn is esophageal",
+    ],
+    pairWith: [
+      "Heartburn + regurgitation + worse supine → GERD",
+      "Heartburn + dysphagia + weight loss → esophageal stricture or adenocarcinoma",
+      "Heartburn + dysphagia + Raynaud → scleroderma esophagus",
+      "Heartburn relieved by antacids → acid-related esophagitis",
+      "Substernal burning + exertion + diaphoresis not relieved by antacids → angina/MI",
+      "Heartburn in pregnancy → physiologic LES relaxation; try lifestyle + antacids/H2RA",
+    ],
+    distinguishFrom: [
+      "Angina/MI — exertional substernal pain; not reliably relieved by antacids; may have diaphoresis, radiation to arm/jaw",
+      "Epigastric pain — gastric/duodenal PUD pain in upper abdomen; heartburn is substernal/esophageal",
+      "Globus sensation — throat lump without burning retrosternal pain",
+      "Esophageal spasm — sharp chest pain, may mimic angina",
+      "Dyspepsia — broader upper GI discomfort including bloating and early satiety",
+    ],
+    pediatrics:
+      "Infant GER is common and often physiologic; pathologic GERD presents with poor weight gain, irritability, arching, or respiratory symptoms. Avoid PPI overuse in uncomplicated infant reflux.",
   },
   {
     id: "loss-of-appetite",
@@ -5732,7 +6249,7 @@ export const SYMPTOMS: SymptomEntry[] = [
       "Viral infection — EBV (mono), CMV, HIV acute seroconversion",
       "Bacterial infection — strep pharyngitis, cat-scratch disease, TB",
       "Lymphoma — Hodgkin (mediastinal mass, Reed-Sternberg) or NHL",
-      "Metastatic cancer — supraclavicular (Virchow node) suggests GI or thoracic malignancy",
+      "Metastatic cancer — supraclavicular Virchow node (see dedicated entry) suggests GI or thoracic malignancy",
       "Sarcoidosis — bilateral hilar lymphadenopathy",
       "SLE, RA, and other autoimmune disease",
     ],
@@ -5740,7 +6257,7 @@ export const SYMPTOMS: SymptomEntry[] = [
       "Pharyngitis + atypical lymphocytes → infectious mononucleosis",
       "B symptoms (fever, night sweats, weight loss) → lymphoma or TB",
       "Bilateral hilar nodes + erythema nodosum → sarcoidosis (Löfgren)",
-      "Left supraclavicular node → gastric or thoracic malignancy (Virchow)",
+      "Left supraclavicular node → gastric or thoracic malignancy (Virchow node — see dedicated entry)",
       "Localized tender nodes → bacterial lymphadenitis",
     ],
     distinguishFrom: [
@@ -5749,6 +6266,55 @@ export const SYMPTOMS: SymptomEntry[] = [
       "Matted nodes fixed to tissue — higher suspicion for malignancy or TB",
       "Generalized lymphadenopathy — ≥2 noncontiguous regions; broader workup (HIV, lymphoma, SLE)",
     ],
+  },
+  {
+    id: "virchow-node",
+    name: "Virchow Node",
+    etymology:
+      "eponym: Rudolf Virchow (German pathologist) + Latin nodus = knot — enlarged left supraclavicular lymph node from metastatic abdominal or thoracic malignancy (Troisier sign when clinically evident)",
+    aliases: [
+      "virchow node",
+      "virchow nodes",
+      "virchow's node",
+      "virchows node",
+      "virchow lymph node",
+      "virchow lymph nodes",
+      "left supraclavicular lymph node",
+      "left supraclavicular lymph nodes",
+      "left supraclavicular node",
+      "left supraclavicular nodes",
+      "troisier sign",
+      "troisier's sign",
+      "troisiers sign",
+      "sentinel node left supraclavicular",
+    ],
+    definition:
+      "Metastatic enlargement of the left supraclavicular (infraclavicular) lymph node — classically from gastric adenocarcinoma but also thoracic, ovarian, pancreatic, and other intra-abdominal or thoracic malignancies draining via the thoracic duct to the left subclavian venous angle.",
+    mechanism:
+      "Malignant cells from abdominal or thoracic viscera spread via lymphatics into the thoracic duct → left subclavian lymphatic junction → left supraclavicular node enlargement; node often firm, fixed, and non-tender when metastatic.",
+    thinkOf: [
+      "Gastric adenocarcinoma — classic board association",
+      "Esophageal, pancreatic, ovarian, or testicular malignancy",
+      "Lung or breast cancer with thoracic duct drainage",
+      "Lymphoma — may involve supraclavicular nodes but not specific Virchow pattern",
+      "Tuberculosis or sarcoidosis — supraclavicular nodes from granulomatous disease",
+    ],
+    pairWith: [
+      "Left supraclavicular node + weight loss + early satiety → gastric cancer",
+      "Virchow node + iron deficiency anemia → occult GI malignancy",
+      "Painless fixed left supraclavicular node + smoker → lung cancer workup",
+      "Right supraclavicular node → lung/mediastinal drainage (not classic Virchow)",
+      "Virchow node + ascites → peritoneal carcinomatosis",
+    ],
+    distinguishFrom: [
+      "Virchow triad — stasis/endothelial injury/hypercoagulability for DVT; unrelated eponym (see dedicated entry)",
+      "Right supraclavicular node — drains lung/mediastinum primarily",
+      "Reactive cervical lymphadenopathy — tender, mobile nodes after URI or pharyngitis",
+      "Sentinel lymph node — first regional node in cancer staging (any basin), not specifically left supraclavicular",
+      "Lymphadenitis — painful acute bacterial node",
+    ],
+    pediatrics:
+      "Supraclavicular lymphadenopathy in children is uncommon and warrants malignancy workup when firm and persistent; gastric cancer is rare in pediatrics but Hodgkin lymphoma and metastatic neuroblastoma can enlarge cervical/supraclavicular nodes.",
   },
   {
     id: "cervical-lymphadenopathy",
@@ -5795,7 +6361,7 @@ export const SYMPTOMS: SymptomEntry[] = [
       "Painless rubbery cervical nodes + night sweats + weight loss → lymphoma",
       "Cervical node + cat scratch/bite history → Bartonella",
       "Chronic cervical node + caseating granulomas → TB lymphadenitis",
-      "Left supraclavicular node (Virchow) → gastric or thoracic malignancy",
+      "Left supraclavicular node (Virchow node — see dedicated entry) → gastric or thoracic malignancy",
       "Cervical nodes + thyroid nodule → thyroid cancer nodal metastasis",
       "Posterior cervical nodes + rubella rash → postauricular/posterior chain drainage",
       "Fixed matted cervical nodes → TB or metastatic carcinoma",
@@ -6569,7 +7135,7 @@ export const SYMPTOMS: SymptomEntry[] = [
     id: "scale",
     name: "Scale",
     etymology: "Old Norse skal = shell",
-    aliases: ["scale", "scales", "scaling", "scaly lesion", "desquamation", "flaking skin"],
+    aliases: ["scale", "scales", "scaling", "scaly lesion", "flaking skin"],
     definition:
       "Visible flakes or plates of stratum corneum from abnormal keratinization or increased epidermal turnover.",
     mechanism:
@@ -6589,6 +7155,7 @@ export const SYMPTOMS: SymptomEntry[] = [
     ],
     distinguishFrom: [
       "Crust — dried serum/blood/pus, not keratin flakes",
+      "Desquamation — sheet-like epithelial peeling (see desquamate entry); scale is finer keratin flaking",
       "Xerosis — dry skin; may produce fine scale",
       "Lichenification — thickened skin lines from scratching",
     ],
@@ -7832,6 +8399,48 @@ export const SYMPTOMS: SymptomEntry[] = [
       "Common normal finding in infants of Asian descent; in non-Asian infants, pair with other dysmorphic features to screen for trisomy 21 and teratogenic syndromes.",
   },
   {
+    id: "smooth-philtrum",
+    name: "Smooth Philtrum",
+    etymology:
+      "Greek philtron = love charm (vertical groove between nose and lip) + smooth = lacking the normal ridged contour of the central upper lip",
+    aliases: [
+      "smooth philtrum",
+      "smooth philtrums",
+      "flattened philtrum",
+      "flattened philtrums",
+      "effaced philtrum",
+      "effaced philtrums",
+      "indistinct philtrum",
+      "absent philtrum groove",
+      "flat philtrum",
+      "flat philtrums",
+    ],
+    definition:
+      "Effacement of the normal vertical groove (philtrum) between the nasal septum and upper lip vermillion — the central upper lip appears flat and smooth rather than grooved.",
+    mechanism:
+      "Teratogenic alcohol exposure during early craniofacial development disrupts midline facial patterning and lip formation — one of the cardinal dysmorphic features of fetal alcohol syndrome (FAS) on physical exam.",
+    thinkOf: [
+      "Fetal alcohol syndrome (FAS)",
+      "Partial FAS / alcohol-related neurodevelopmental disorder (ARND)",
+      "Prenatal alcohol exposure with growth restriction and neurodevelopmental delay",
+      "Holoprosencephaly and midline defects — different mechanism but also midline facial anomalies",
+    ],
+    pairWith: [
+      "Short palpebral fissures + thin upper lip vermillion → fetal alcohol syndrome",
+      "Smooth philtrum + microcephaly + growth restriction → FAS",
+      "Prenatal alcohol history + intellectual disability → FAS spectrum",
+      "Midline cleft + cyclopia → holoprosencephaly, not isolated smooth philtrum",
+    ],
+    distinguishFrom: [
+      "Normal philtrum — visible vertical groove with distinct lip pillars lateral to midline",
+      "Nasolabial fold — crease from lateral nose to mouth corner, not midline philtrum groove",
+      "Thin upper lip vermillion — separate FAS feature; often coexists with smooth philtrum",
+      "Edema or trauma — temporary lip swelling, not congenital effacement",
+    ],
+    pediatrics:
+      "Key component of the Hoyme diagnostic criteria for FAS in children — assess with standardized lip-philtrum guides; no safe alcohol threshold in pregnancy. Neurobehavioral deficits may occur even without full facial triad.",
+  },
+  {
     id: "low-set-ears",
     name: "Low-Set Ears",
     etymology:
@@ -8334,13 +8943,13 @@ export const SYMPTOMS: SymptomEntry[] = [
     thinkOf: [
       "Turner syndrome",
       "Marfan syndrome",
-      "Fragile X syndrome",
+      "Fragile X syndrome (see dedicated entry)",
       "Cleft palate spectrum / submucous cleft",
     ],
     pairWith: [
       "Webbed neck + short stature → Turner syndrome",
       "Arachnodactyly + lens dislocation → Marfan syndrome",
-      "Macroorchidism + developmental delay → Fragile X (males)",
+      "Macroorchidism + developmental delay → Fragile X syndrome (see dedicated entry; males)",
     ],
     distinguishFrom: [
       "Cleft palate — overt midline defect, not isolated high vault",
@@ -9002,6 +9611,63 @@ export const SYMPTOMS: SymptomEntry[] = [
       "Childhood central adiposity (elevated waist circumference for age/sex) predicts adult metabolic disease; screen for insulin resistance and fatty liver in obese adolescents.",
   },
   {
+    id: "bloating",
+    name: "Bloating",
+    etymology:
+      "Middle English blawan = to blow up + -ing — subjective sensation of abdominal fullness, tightness, or swelling from gas, fluid, or dysmotility",
+    aliases: [
+      "bloating",
+      "bloated",
+      "feeling bloated",
+      "abdominal bloating",
+      "stomach bloating",
+      "gastric bloating",
+      "intestinal bloating",
+      "bloating sensation",
+      "abdominal fullness",
+      "postprandial bloating",
+    ],
+    definition:
+      "Subjective feeling of abdominal fullness, pressure, or visible swelling — commonly from intestinal gas, dysmotility, or visceral hypersensitivity — distinct from objective measured distension though they often coexist.",
+    mechanism:
+      "Impaired gas handling (slow transit, constipation), luminal fermentation (lactose, FODMAPs, SIBO), visceral hypersensitivity (IBS), postprandial gastric accommodation failure, or ascites/fluid can produce bloating; psychosocial stress amplifies perception in functional disorders.",
+    thinkOf: [
+      "Irritable bowel syndrome — bloating with altered bowel habits",
+      "Lactose intolerance — bloating after dairy with flatulence",
+      "Small intestinal bacterial overgrowth",
+      "Constipation and slow transit",
+      "Celiac disease and non-celiac gluten sensitivity",
+      "Gastroparesis — early satiety and postprandial bloating",
+      "Ascites — objective distension with fluid, not just gas sensation",
+    ],
+    pairWith: [
+      "Bloating + flatulence after dairy → lactose intolerance",
+      "Bloating + alternating constipation/diarrhea → IBS",
+      "Bloating + weight loss + steatorrhea → malabsorption",
+      "Bloating + early satiety + vomiting → gastroparesis or outlet obstruction",
+      "Bloating + shifting dullness → ascites, not isolated gas",
+      "Bloating + postprandial pain → peptic disease or gallstones",
+    ],
+    distinguishFrom: [
+      "Abdominal distension — objective enlargement of abdominal girth on exam",
+      "Flatulence — rectal gas passage; can accompany bloating",
+      "Early satiety — feeling full quickly when eating; gastric rather than colonic",
+      "Dyspepsia — epigastric pain/burning with meals; overlaps but distinct dominant symptom",
+      "Ascites — fluid accumulation; bloating may be reported but exam shows shifting dullness",
+      "Central obesity — chronic adipose distribution, not acute postprandial bloating",
+    ],
+    boardsPearls: [
+      "Bloating = subjective fullness; distension = objective swelling — can diverge (especially IBS)",
+      "IBS — bloating ± pain relieved by defecation; Rome criteria functional diagnosis",
+      "Lactose intolerance — bloating + flatulence + osmotic diarrhea after dairy",
+      "Rifaximin approved for IBS-D bloating (SIBO-related mechanism on boards)",
+      "vs ascites — bloating from gas is tympanic; ascites has fluid wave/shifting dullness",
+      "Postprandial bloating in gastroparesis — delayed gastric emptying (diabetes, idiopathic)",
+    ],
+    pediatrics:
+      "Infant colic involves episodic crying with abdominal distension and gas; rule out cow's milk protein allergy. Toddler bloating with failure to thrive → celiac disease. Hirschsprung presents with distension and constipation from birth.",
+  },
+  {
     id: "abdominal-distension",
     name: "Abdominal distension",
     etymology: "Latin abdomen = belly + Latin distendere = to stretch apart",
@@ -9009,7 +9675,6 @@ export const SYMPTOMS: SymptomEntry[] = [
       "abdominal distension",
       "abdominal distention",
       "distended abdomen",
-      "abdominal bloating",
       "abdominal swelling",
       "swollen abdomen",
       "tympanic abdomen",
@@ -9042,6 +9707,7 @@ export const SYMPTOMS: SymptomEntry[] = [
       "Postoperative day 3–5 distension without flatus → postoperative ileus",
     ],
     distinguishFrom: [
+      "Bloating — subjective fullness sensation; distension is objective enlargement",
       "Central obesity — chronic adipose distribution without acute pathology",
       "Abdominal wall hematoma or rectus sheath hematoma — localized, often anticoagulant-related",
       "Normal postprandial fullness — transient, no systemic signs",
@@ -9805,13 +10471,148 @@ export const SYMPTOMS: SymptomEntry[] = [
       "Hand cramping with writing → writer's cramp (focal dystonia, not electrolyte)",
     ],
     distinguishFrom: [
-      "Colicky pain — waxing/waning smooth muscle pain; overlaps with cramping quality",
+      "Colicky pain — waxing/waning smooth muscle pain; see colicky pain entry",
       "Spasticity — velocity-dependent tone increase, not acute painful cramp",
       "Restless legs — urge to move, not sustained painful contraction",
       "Claudication — specific exertional ischemic cramping pattern with PAD",
     ],
     pediatrics:
       "Growing pains cause nocturnal aching without true cramping; abdominal cramps with vomiting in child may indicate intussusception or gastroenteritis depending on context.",
+  },
+  {
+    id: "colicky-pain",
+    name: "Colicky Pain",
+    etymology:
+      "Greek kolikos = pertaining to the colon + pain — waxing and waning visceral pain from smooth muscle spasm around a hollow organ",
+    aliases: [
+      "colicky pain",
+      "colicky pains",
+      "colicky",
+      "colic",
+      "colics",
+      "colicky abdominal pain",
+      "colicky abdominal pains",
+      "waxing and waning pain",
+      "waxing waning pain",
+      "visceral colic",
+      "biliary colic",
+      "renal colic",
+      "intestinal colic",
+    ],
+    definition:
+      "Intermittent, cramp-like visceral pain that builds to a peak and resolves — caused by smooth muscle spasm and distension of hollow organs (bile ducts, ureter, intestine) rather than sustained somatic inflammation.",
+    mechanism:
+      "Obstruction or irritation of a hollow viscus triggers coordinated smooth muscle contraction against a fixed point of blockage → intraluminal pressure rises → visceral afferents signal intense pain; relaxation between spasms causes the waxing-waning pattern; patient often moves restlessly (unlike peritonitis stillness).",
+    thinkOf: [
+      "Nephrolithiasis / ureteral colic — flank pain radiating to groin, hematuria",
+      "Biliary colic — postprandial RUQ pain after fatty meal, gallstones",
+      "Intestinal colic — gastroenteritis, partial obstruction, infantile colic",
+      "Small bowel obstruction — crampy periumbilical pain with distension",
+      "Lead colic — abdominal colic with wrist/foot drop (occupational exposure)",
+    ],
+    pairWith: [
+      "Colicky flank pain + hematuria + restlessness → ureteral stone",
+      "Colicky RUQ pain after fatty meal lasting <6 h → biliary colic",
+      "Colicky periumbilical pain + bilious vomiting → small bowel obstruction",
+      "Colicky pain that becomes constant + fever + rebound → complicated cholecystitis or peritonitis",
+      "Infant with episodic crying + distension in first 3 months → infantile colic (diagnosis of exclusion)",
+    ],
+    distinguishFrom: [
+      "Constant somatic pain — appendicitis, cholecystitis after sustained inflammation",
+      "Cramping — overlapping term; colicky emphasizes waxing-waning visceral quality",
+      "Neuropathic pain — burning/electric, not rhythmic spasm",
+      "Ischemic pain — mesenteric ischemia may start crampy but becomes severe and constant",
+      "Dysmenorrhea — uterine cramping with menses, not biliary/ureteral pattern",
+    ],
+    pediatrics:
+      "Infantile colic is episodic crying in otherwise healthy infants <3 months — diagnosis of exclusion after feeding issues and allergy ruled out. Intussusception causes colicky pain with vomiting and currant-jelly stool in toddlers.",
+  },
+  {
+    id: "guarding",
+    name: "Guarding",
+    etymology: "Old French garder = to keep/watch — involuntary or voluntary tensing of abdominal wall muscles during palpation",
+    aliases: [
+      "guarding",
+      "abdominal guarding",
+      "voluntary guarding",
+      "involuntary guarding",
+      "muscle guarding",
+      "abdominal muscle guarding",
+      "splinting",
+      "abdominal splinting",
+    ],
+    definition:
+      "Tensing of abdominal wall muscles during palpation — may be voluntary (splinting from anticipated pain) or involuntary (reflex response to peritoneal or parietal irritation); a key physical exam finding in acute abdomen evaluation.",
+    mechanism:
+      "Parietal peritoneum inflammation or deep visceral pain triggers somatic afferents → reflex contraction of overlying abdominal wall musculature to protect inflamed tissue; involuntary guarding suggests true peritoneal irritation, whereas voluntary guarding may reflect anxiety or moderate discomfort without frank peritonitis.",
+    thinkOf: [
+      "Appendicitis — involuntary guarding over McBurney point",
+      "Peritonitis — diffuse guarding with rigidity",
+      "Cholecystitis — RUQ guarding and Murphy sign",
+      "Pancreatitis — epigastric guarding",
+      "Voluntary guarding — anxious patient without peritoneal signs",
+    ],
+    pairWith: [
+      "RLQ guarding + rebound + fever → appendicitis until proven otherwise",
+      "Diffuse guarding + rigidity + absent bowel sounds → peritonitis",
+      "RUQ guarding + inspiratory arrest on palpation → Murphy sign (cholecystitis)",
+      "Guarding that relaxes when distracted → likely voluntary, not peritonitis",
+      "Guarding + rebound + rigidity → surgical abdomen; urgent evaluation",
+      "vs rigidity — board-spectrum involuntary wall tension that does not relax even when patient distracted",
+    ],
+    distinguishFrom: [
+      "Rigidity — involuntary sustained wall tension; board-like in peritonitis; does not relax with distraction",
+      "Voluntary guarding — patient anticipates pain and tenses; relaxes with reassurance or distraction",
+      "Rebound tenderness — pain on release of pressure; more specific for peritoneal inflammation",
+      "Abdominal distension — visible enlargement, not muscular tensing on palpation",
+      "Rectus sheath hematoma — focal mass with Cullen/Grey Turner if retroperitoneal bleed",
+    ],
+    pediatrics:
+      "Children with appendicitis may have less localized signs early; guarding and rebound remain important but exam can be subtle — observe for gait avoidance, hopping pain, and RLQ tenderness.",
+  },
+  {
+    id: "rebound-tenderness",
+    name: "Rebound Tenderness",
+    etymology: "Latin re = back + bound = limit + Latin tendere = to stretch — pain felt when palpation pressure is released",
+    aliases: [
+      "rebound tenderness",
+      "rebound",
+      "positive rebound",
+      "blumberg sign",
+      "blumberg's sign",
+      "blumbergs sign",
+      "release tenderness",
+      "rebound pain",
+      "peritoneal rebound",
+    ],
+    definition:
+      "Pain elicited when pressure on the abdomen is suddenly released — indicates irritation of the parietal peritoneum; classic sign of peritoneal inflammation (Blumberg sign when tested in RLQ for appendicitis).",
+    mechanism:
+      "Sustained palpation displaces inflamed parietal peritoneum; rapid release causes sudden movement/stretch of sensitized peritoneum → sharp somatic pain; reflects localized or generalized peritonitis rather than isolated visceral distension.",
+    thinkOf: [
+      "Acute appendicitis — RLQ rebound (Blumberg sign)",
+      "Perforated viscus — diffuse rebound and rigidity",
+      "Diverticulitis — LLQ rebound",
+      "Ruptured ectopic pregnancy — rebound with hemodynamic instability",
+      "Spontaneous bacterial peritonitis — ascites with peritoneal irritation",
+    ],
+    pairWith: [
+      "RLQ rebound + fever + anorexia → appendicitis",
+      "Rebound + rigidity + absent bowel sounds → surgical peritonitis",
+      "Rovsing sign — RLQ pain on LLQ palpation (peritoneal irritation)",
+      "Psoas sign — RLQ pain with hip extension (retrocecal appendix)",
+      "Obturator sign — RLQ pain with internal hip rotation (pelvic appendix)",
+      "Rebound without fever in young woman → ectopic pregnancy, ovarian torsion",
+    ],
+    distinguishFrom: [
+      "Direct tenderness only — pain on pressure without release pain; less specific for peritonitis",
+      "Guarding — muscle tensing; may coexist but distinct finding",
+      "Rigidity — involuntary sustained wall tension; board-like abdomen in severe peritonitis",
+      "Colicky pain — visceral waxing-waning without peritoneal rebound",
+      "Carnett sign — abdominal wall pain that worsens with tensed rectus muscles (not peritoneal)",
+    ],
+    pediatrics:
+      "Rebound can be difficult to assess in young children — observe facial grimace on release, hopping test, and RLQ tenderness; low threshold for imaging in equivocal pediatric appendicitis.",
   },
   {
     id: "ascites",
@@ -9836,7 +10637,7 @@ export const SYMPTOMS: SymptomEntry[] = [
       "Budd-Chiari syndrome",
     ],
     pairWith: [
-      "Shifting dullness or fluid wave on exam → ascites",
+      "Shifting dullness or fluid wave on exam → ascites (see shifting dullness entry)",
       "Jaundice + spider angiomata + splenomegaly → cirrhotic ascites",
       "Peripheral edema + hypoalbuminemia + foamy urine → nephrotic ascites",
       "JVD + peripheral edema + ascites → right heart failure / constrictive pericarditis",
@@ -9851,6 +10652,51 @@ export const SYMPTOMS: SymptomEntry[] = [
     ],
     pediatrics:
       "Nephrotic syndrome is a common pediatric cause of ascites from hypoalbuminemia; neonatal urinary ascites from bladder rupture is a rare surgical emergency. Jaundice + ascites in infant suggests biliary atresia or metabolic liver disease.",
+  },
+  {
+    id: "shifting-dullness",
+    name: "Shifting Dullness",
+    etymology:
+      "Old English sciftan = to divide/change + Latin dullness = muffled percussion note — change in percussion note when free peritoneal fluid redistributes with patient position",
+    aliases: [
+      "shifting dullness",
+      "shifting dullnesses",
+      "shifted dullness",
+      "shifted dullnesses",
+      "abdominal shifting dullness",
+      "ascitic shifting dullness",
+      "shifting dullness sign",
+      "shifting dullness test",
+    ],
+    definition:
+      "Physical exam sign of ascites — percussing from the umbilicus toward a flank is resonant (tympanitic gas-filled bowel) until reaching a fluid line (dullness); when the patient rolls to the opposite side, the dullness boundary shifts to the new dependent flank as free fluid moves with gravity.",
+    mechanism:
+      "Free intraperitoneal fluid (ascites) layers dependently in the supine patient → air-filled bowel floats centrally (tympanitic/resonant) while flanks are dull to percussion; repositioning redistributes fluid → percussion dullness 'shifts' to the dependent side; typically requires ≥~500 mL ascites to detect.",
+    thinkOf: [
+      "Cirrhotic ascites — portal hypertension with shifting dullness and fluid wave",
+      "Nephrotic syndrome — hypoalbuminemia with ascites and anasarca",
+      "Right heart failure — ascites with JVD and peripheral edema",
+      "Peritoneal carcinomatosis — malignant ascites (exudative SAAG <1.1)",
+      "Tuberculous peritonitis — ascites with fever and weight loss",
+      "Spontaneous bacterial peritonitis — complication in cirrhotic ascites",
+    ],
+    pairWith: [
+      "Shifting dullness + fluid wave + jaundice + spider angiomata → cirrhotic ascites",
+      "Shifting dullness + hypoalbuminemia + foamy urine → nephrotic ascites",
+      "Shifting dullness + JVD + peripheral edema → cardiac ascites",
+      "Shifting dullness + SAAG ≥1.1 → portal hypertension cause",
+      "Shifting dullness + SAAG <1.1 → peritoneal malignancy or TB peritonitis",
+      "Abdominal distension without shifting dullness → obesity, gas, or pregnancy more likely than significant ascites",
+    ],
+    distinguishFrom: [
+      "Fluid wave — separate ascites sign; transmitted impulse across abdomen",
+      "Generalized tympany — gas distension; no flank dullness shift",
+      "Localized dullness — solid organ (liver, spleen) or consolidation, does not shift with position",
+      "Abdominal distension alone — not specific; requires percussion maneuver",
+      "Stony dullness — pleural effusion on chest exam, not ascites",
+    ],
+    pediatrics:
+      "Nephrotic syndrome is a common pediatric cause of ascites with shifting dullness. Neonatal ascites warrants workup for urinary ascites, hydrops, or liver disease. Exam technique same as adults; large-volume ascites may be easier to detect in thin children.",
   },
   {
     id: "splenomegaly",
@@ -9994,7 +10840,7 @@ export const SYMPTOMS: SymptomEntry[] = [
       "Fasciculations — brief muscle twitches from lower motor neuron disease",
       "Tetany — sustained spasm from hypocalcemia with Chvostek/Trousseau signs",
       "Seizure — cortical discharge with impaired awareness or tonic-clonic activity",
-      "Asterixis — negative myoclonus (flapping) in metabolic encephalopathy, not sustained rhythm",
+      "Asterixis — negative myoclonus (flapping) in metabolic encephalopathy; see dedicated entry",
     ],
     pediatrics:
       "Essential tremor may present in adolescence with bilateral hand shakiness. Wilson disease should be considered with tremor plus liver disease or behavioral changes in teens. Hypoglycemia in diabetic children causes tremor with irritability — check glucose urgently.",
@@ -10421,7 +11267,7 @@ export const SYMPTOMS: SymptomEntry[] = [
       "bloody diarrhoea",
     ],
     definition:
-      "Passage of abnormally frequent, loose, or watery stools — classify as acute vs chronic (>4 weeks), osmotic vs secretory vs inflammatory, and assess volume/dehydration risk.",
+      "Passage of abnormally frequent, loose, or watery stools — classify as acute vs chronic (>4 weeks), osmotic vs secretory vs inflammatory (see dedicated entries), and assess volume/dehydration risk.",
     mechanism:
       "↑ luminal osmotic load (malabsorption, laxatives), active ion secretion (cholera toxin, VIP, carcinoid), inflammation with mucosal exudation (IBD, invasive bacteria), or accelerated motility (hyperthyroidism, IBS) overwhelms colonic water absorption → increased stool water and frequency.",
     thinkOf: [
@@ -10449,9 +11295,63 @@ export const SYMPTOMS: SymptomEntry[] = [
       "Steatorrhea — fatty, foul-smelling stools from malabsorption; may be chronic loose stools",
       "Melena — upper GI blood; black tarry stool, not watery diarrhea",
       "Normal stool variation — transient loose stool after dietary change",
+      "Secretory diarrhea — large volume, persists with fasting (see pathogenesis entry)",
+      "Osmotic diarrhea — improves with fasting; lactose, laxatives (see pathogenesis entry)",
+      "Inflammatory diarrhea — bloody/mucoid with fever; dysentery (see pathogenesis entry)",
     ],
     pediatrics:
       "Rotavirus vaccine has reduced severe pediatric gastroenteritis; dehydration is main acute risk — assess capillary refill and urine output. Bloody diarrhea in children: EHEC → HUS, Shigella, IBD; infectious diarrhea is common but intussusception and malrotation present with pain and vomiting.",
+  },
+  {
+    id: "greasy-stools",
+    name: "Greasy Stools",
+    etymology:
+      "Old English grēs = fat + stool = bowel movement — stools with visible fat or oil indicating steatorrhea",
+    aliases: [
+      "greasy stools",
+      "greasy stool",
+      "fatty stools",
+      "fatty stool",
+      "oily stools",
+      "oily stool",
+      "steatorrhea",
+      "steatorrheas",
+      "fat malabsorption stools",
+      "bulky foul stools",
+      "floating stools",
+      "floating stool",
+      "pale foul-smelling stools",
+    ],
+    definition:
+      "Bulky, pale, foul-smelling, greasy or oily stools that may float and stick to the toilet bowl — clinical manifestation of steatorrhea from inadequate digestion or absorption of dietary fat.",
+    mechanism:
+      "Insufficient luminal lipase/bile acids or impaired mucosal fat absorption → unabsorbed triglycerides reach colon → greasy, malodorous stools; fat content >6 g/day (quantitative fecal fat) defines steatorrhea.",
+    thinkOf: [
+      "Cystic fibrosis — pancreatic insufficiency, most common pediatric cause",
+      "Chronic pancreatitis — loss of lipase secretion",
+      "Celiac disease — mucosal villous atrophy",
+      "Abetalipoproteinemia — cannot form chylomicrons (MTP defect)",
+      "Bile acid deficiency — biliary atresia, ileal resection, cholestasis",
+      "Tropical sprue, Whipple disease, small bowel bacterial overgrowth",
+    ],
+    pairWith: [
+      "Greasy stools + failure to thrive in infant → CF, celiac, abetalipoproteinemia workup",
+      "Greasy stools + chronic alcohol use → chronic pancreatitis",
+      "Greasy stools + dermatitis herpetiformis → celiac disease",
+      "Greasy stools + acanthocytes + low cholesterol → abetalipoproteinemia",
+      "Sudan stain positive stool fat — qualitative steatorrhea",
+      "vs watery diarrhea — osmotic/secretory; not bulky and fatty",
+      "vs disaccharidase deficiency — bloating after dairy/sucrose; not greasy fat malabsorption",
+    ],
+    distinguishFrom: [
+      "Watery diarrhea — high water content; cholera, viral gastroenteritis, secretory states",
+      "Osmotic diarrhea from lactose — bloating and loose stools after dairy, not classic greasy steatorrhea",
+      "Melena — black tarry stool from upper GI blood, not fat malabsorption",
+      "Acholic stools — pale clay-colored from absent bile pigment (obstruction), may coexist with steatorrhea",
+      "Normal stool — occasional loose stool without chronic bulk, odor, or fat content",
+    ],
+    pediatrics:
+      "Greasy stools in infancy mandate CF (sweat chloride), celiac (tTG IgA), and nutritional evaluation. Abetalipoproteinemia presents with steatorrhea plus acanthocytes and very low ApoB. Pancreatic enzyme replacement treats CF-related steatorrhea.",
   },
   {
     id: "costovertebral-angle-tenderness",
@@ -10724,7 +11624,7 @@ export const SYMPTOMS: SymptomEntry[] = [
     mechanism:
       "Global cerebral dysfunction from impaired energy metabolism, neurotransmitter imbalance, toxin accumulation, edema, or seizures — without a focal structural lesion as the primary explanation; severity ranges from mild confusion to coma.",
     thinkOf: [
-      "Hepatic encephalopathy — cirrhosis, ↑ ammonia, asterixis",
+      "Hepatic encephalopathy — cirrhosis, ↑ ammonia, asterixis (see asterixis entry)",
       "Uremic encephalopathy — renal failure, dialysis indication",
       "Wernicke encephalopathy — thiamine deficiency, ophthalmoplegia, ataxia",
       "Hypertensive encephalopathy — severe BP elevation, papilledema",
@@ -10751,6 +11651,54 @@ export const SYMPTOMS: SymptomEntry[] = [
     ],
     pediatrics:
       "Neonatal encephalopathy often reflects hypoxic-ischemic injury at birth or inborn errors (hyperammonemia from urea cycle defects). Reye syndrome and metabolic crises present with acute encephalopathy in children — evaluate glucose, ammonia, and electrolytes urgently.",
+  },
+  {
+    id: "asterixis",
+    name: "Asterixis",
+    etymology:
+      "Greek a- = without + sterixis = fixed position — inability to maintain sustained posture; flapping 'negative myoclonus'",
+    aliases: [
+      "asterixis",
+      "asterixes",
+      "negative myoclonus",
+      "negative myoclonus sign",
+      "flapping tremor",
+      "flapping tremors",
+      "flapping hand tremor",
+      "liver flap",
+      "liver flaps",
+      "hepatic flap",
+      "hepatic flaps",
+      "flapping asterixis",
+    ],
+    definition:
+      "Brief, irregular loss of muscle tone causing sudden flapping/dropping of outstretched hands (and sometimes feet or tongue) when posture is held — a sign of metabolic encephalopathy, not a rhythmic tremor.",
+    mechanism:
+      "Diffuse brain dysfunction (especially diencephalic/metabolic pathways) disrupts sustained motor posturing → intermittent failure of extensor tone → hands flap downward at the wrist when arms are extended and dorsiflexed; associated with hyperammonemia, uremia, hypercapnia, and other encephalopathic states.",
+    thinkOf: [
+      "Hepatic encephalopathy — cirrhosis, jaundice, ↑ ammonia, confusion",
+      "Uremic encephalopathy — renal failure, dialysis indication",
+      "CO₂ narcosis — COPD exacerbation, somnolence, hypercapnia",
+      "Hypoglycemia or severe electrolyte disturbance with encephalopathy",
+      "Drug/toxin-induced metabolic encephalopathy (valproate, sedatives)",
+      "Wilson disease — hepatic and neurologic involvement",
+    ],
+    pairWith: [
+      "Asterixis + jaundice + confusion → hepatic encephalopathy (lactulose, rifaximin)",
+      "Asterixis + ↑ BUN/Cr → uremic encephalopathy (dialysis)",
+      "Asterixis + somnolence + COPD + ↑ PaCO₂ → CO₂ narcosis",
+      "Asterixis + altered mental status → metabolic encephalopathy workup (ammonia, glucose, electrolytes, ABG)",
+      "Test: patient extends arms with wrists dorsiflexed — observe irregular flapping",
+    ],
+    distinguishFrom: [
+      "Resting tremor — rhythmic pill-rolling oscillation (Parkinson disease)",
+      "Myoclonus — sudden jerks, not posture-dependent flapping",
+      "Seizure activity — sustained rhythmic or tonic-clonic movement",
+      "Intention tremor — worsens with target-directed movement (cerebellar)",
+      "Normal fatigue — brief hand drop without encephalopathy or metabolic trigger",
+    ],
+    pediatrics:
+      "Asterixis in children suggests metabolic encephalopathy — urea cycle defects (hyperammonemia), Reye syndrome, or hepatic failure. Neonatal hyperammonemia presents with lethargy and asterixis — treat ammonia urgently.",
   },
   {
     id: "leg-bowing",
@@ -10923,7 +11871,7 @@ export const SYMPTOMS: SymptomEntry[] = [
     distinguishFrom: [
       "Simple constipation — hard stools but no fixed obstructing rectal mass",
       "Fecaloma — larger chronic mass often in sigmoid/colon, may mimic tumor",
-      "Colorectal cancer — annular lesion, weight loss, anemia, occult blood",
+      "Colorectal cancer — annular lesion, weight loss, anemia, occult blood (see dedicated entry)",
       "Sigmoid volvulus — coffee-bean sign, acute distension",
       "Ileus — diffuse loss of motility, not localized hardened stool mass",
     ],
@@ -11132,6 +12080,186 @@ export const SYMPTOMS: SymptomEntry[] = [
     ],
     pediatrics:
       "Bilateral INO can occur in pediatric MS or brainstem glioma; unilateral INO after head trauma or pontine stroke — evaluate with MRI.",
+  },
+  {
+    id: "aphasia",
+    name: "Aphasia",
+    etymology:
+      "Greek a- = without + phasis = speech — acquired disorder of language processing (comprehension, production, repetition, or naming) from dominant hemisphere brain injury",
+    aliases: [
+      "aphasia",
+      "aphasias",
+      "language disorder",
+      "language disorders",
+      "acquired aphasia",
+      "acquired aphasias",
+      "cortical aphasia",
+      "cortical aphasias",
+    ],
+    definition:
+      "Acquired impairment of language function — affecting fluency, comprehension, repetition, naming, or reading/writing — with relatively preserved consciousness and non-language cognition; localizes to dominant (usually left) perisylvian cortex or connecting white matter.",
+    mechanism:
+      "Ischemia, hemorrhage, tumor, or degeneration of dominant hemisphere language networks (Broca area, Wernicke area, arcuate fasciculus, surrounding parietal/temporal cortex) disrupts encoding, decoding, or transmission of linguistic information while motor strength and primary sensation may be spared.",
+    thinkOf: [
+      "Left MCA stroke — most common acute cause in adults",
+      "Broca aphasia — nonfluent expressive deficit (inferior frontal gyrus)",
+      "Wernicke aphasia — fluent word salad with poor comprehension (posterior superior temporal gyrus)",
+      "Conduction aphasia — fluent, good comprehension, poor repetition (arcuate fasciculus)",
+      "Global aphasia — severe impairment of both expression and comprehension (large MCA territory)",
+      "Primary progressive aphasia — neurodegenerative (FTD spectrum)",
+    ],
+    pairWith: [
+      "Sudden aphasia + right hemiparesis → left MCA ischemic stroke",
+      "Nonfluent speech + intact comprehension → Broca aphasia",
+      "Fluent nonsense + poor comprehension → Wernicke aphasia",
+      "Fluent + comprehends + cannot repeat → conduction aphasia",
+      "Aphasia + right hemianopia + neglect → large left MCA cortical stroke",
+      "Gradual word-finding decline → primary progressive aphasia workup",
+    ],
+    distinguishFrom: [
+      "Dysarthria — slurred articulation; language content and comprehension intact",
+      "Aphonia — voice loss from laryngeal pathology; not cortical language deficit",
+      "Delirium — global confusion without isolated language network pattern",
+      "Developmental language disorder — childhood onset without acquired brain lesion",
+      "Apraxia of speech — motor speech planning disorder overlapping with Broca but distinct classification",
+    ],
+    pediatrics:
+      "Childhood arterial ischemic stroke can cause acquired aphasia — plasticity aids recovery. Dominant hemisphere may be right in some left-handers. Assess with age-appropriate language testing.",
+  },
+  {
+    id: "broca-aphasia",
+    name: "Broca Aphasia",
+    etymology:
+      "Eponym: Pierre Paul Broca + Greek aphasia = speechlessness — nonfluent expressive language disorder from dominant inferior frontal cortex lesion",
+    aliases: [
+      "broca aphasia",
+      "broca aphasias",
+      "broca's aphasia",
+      "broca's aphasias",
+      "broca",
+      "expressive aphasia",
+      "expressive aphasias",
+      "nonfluent aphasia",
+      "nonfluent aphasias",
+      "non-fluent aphasia",
+      "motor aphasia",
+      "motor aphasias",
+      "anterior aphasia",
+      "anterior aphasias",
+    ],
+    definition:
+      "Expressive (nonfluent) aphasia from lesion of Broca area in the dominant inferior frontal gyrus (Brodmann 44/45) — patient understands language but speaks in short, effortful, broken phrases with relatively preserved comprehension.",
+    mechanism:
+      "Ischemia or hemorrhage in dominant frontal language cortex (usually left MCA inferior division territory) disrupts motor speech planning and articulation → nonfluent, telegraphic output; comprehension and awareness of deficit often relatively spared compared with Wernicke aphasia.",
+    thinkOf: [
+      "MCA stroke — inferior division, dominant hemisphere",
+      "Left frontal tumor or hemorrhage",
+      "Patient frustrated, aware of difficulty, follows commands",
+      "Telegraphic speech — content words preserved, grammar reduced",
+      "Right face/arm weakness may accompany (frontal cortex proximity)",
+    ],
+    pairWith: [
+      "Nonfluent broken speech + intact comprehension + right face/arm weakness → Broca aphasia from left MCA stroke",
+      "Effortful speech + patient frustrated + follows commands → expressive aphasia",
+      "Left inferior frontal lesion on imaging → Broca area",
+      "vs Wernicke — Broca has good comprehension; Wernicke has fluent nonsense with poor comprehension",
+    ],
+    distinguishFrom: [
+      "Wernicke aphasia — fluent word salad with poor comprehension (posterior temporal lesion)",
+      "Conduction aphasia — fluent with good comprehension but poor repetition (arcuate fasciculus)",
+      "Dysarthria — slurred articulation from bulbar/ cerebellar disease; language content intact",
+      "Apraxia of speech — planning disorder overlapping with Broca but distinct motor speech pathway",
+      "Global aphasia — severe impairment of both expression and comprehension (large MCA territory)",
+    ],
+    pediatrics:
+      "Acquired Broca aphasia in children follows left hemispheric stroke or trauma; plasticity allows better recovery than adults. Distinguish from developmental language disorder — acquired aphasia has sudden onset after neurologic insult.",
+  },
+  {
+    id: "wernicke-aphasia",
+    name: "Wernicke Aphasia",
+    etymology:
+      "Eponym: Carl Wernicke + Greek aphasia = speechlessness — fluent receptive language disorder from dominant posterior temporal cortex lesion (distinct from Wernicke encephalopathy)",
+    aliases: [
+      "wernicke aphasia",
+      "wernicke aphasias",
+      "wernicke's aphasia",
+      "wernicke's aphasias",
+      "receptive aphasia",
+      "receptive aphasias",
+      "fluent aphasia",
+      "fluent aphasias",
+      "sensory aphasia",
+      "sensory aphasias",
+      "posterior aphasia",
+      "posterior aphasias",
+      "wernicke area aphasia",
+    ],
+    definition:
+      "Receptive (fluent) aphasia from lesion of Wernicke area in the dominant posterior superior temporal gyrus — speech is fluent but nonsensical ('word salad') with impaired comprehension and frequent paraphasic errors.",
+    mechanism:
+      "Dominant temporal language cortex lesion (usually left MCA superior temporal branch) disrupts semantic and phonologic decoding → fluent but meaningless output, poor comprehension, often unaware of deficit; may accompany superior quadrantanopia from Meyer loop involvement.",
+    thinkOf: [
+      "MCA stroke — superior temporal branch, dominant hemisphere",
+      "Fluent word salad with neologisms and paraphasias",
+      "Patient often unaware of language deficit",
+      "Poor comprehension of commands and conversation",
+      "Homonymous superior quadrantanopia possible (Meyer loop)",
+    ],
+    pairWith: [
+      "Fluent nonsense speech + poor comprehension + unaware patient → Wernicke aphasia",
+      "Left posterior temporal lesion → Wernicke area",
+      "vs Broca — Wernicke fluent with poor comprehension; Broca nonfluent with better comprehension",
+      "vs Wernicke encephalopathy — thiamine deficiency triad (ophthalmoplegia, ataxia, confusion), not primary language cortex lesion",
+    ],
+    distinguishFrom: [
+      "Broca aphasia — nonfluent, effortful speech with relatively preserved comprehension",
+      "Conduction aphasia — fluent, good comprehension, poor repetition (arcuate fasciculus)",
+      "Wernicke encephalopathy — acute thiamine deficiency syndrome; ophthalmoplegia and ataxia, not isolated fluent aphasia (see dedicated condition entry)",
+      "Schizophrenia — disorganized speech with psychiatric context, not focal vascular lesion",
+      "Global aphasia — both expression and comprehension severely impaired",
+    ],
+    pediatrics:
+      "Rare as isolated pediatric presentation except after left temporal stroke or trauma. Do not confuse with Wernicke encephalopathy in malnourished adolescents — that requires thiamine before glucose, not a language cortex stroke syndrome.",
+  },
+  {
+    id: "conduction-aphasia",
+    name: "Conduction Aphasia",
+    etymology:
+      "Latin conductio = connection + Greek aphasia = speechlessness — disconnection aphasia from impaired link between comprehension and speech production areas",
+    aliases: [
+      "conduction aphasia",
+      "conduction aphasias",
+      "associative aphasia",
+      "associative aphasias",
+      "disconnection aphasia",
+      "disconnection aphasias",
+    ],
+    definition:
+      "Disconnection aphasia from lesion of the arcuate fasciculus (perisylvian white matter) connecting Wernicke and Broca areas — fluent spontaneous speech and comprehension are relatively preserved, but repetition is markedly impaired with phonemic paraphasias.",
+    mechanism:
+      "Damage to the dorsal phonologic pathway (arcuate fasciculus) prevents auditory/phonologic information in Wernicke area from reaching Broca area for accurate repetition and articulation → fluent speech with poor repetition and frequent phonemic errors ('telephone game' effect).",
+    thinkOf: [
+      "Arcuate fasciculus lesion — perisylvian white matter stroke or demyelination",
+      "Fluent speech + good comprehension + cannot repeat phrases",
+      "Phonemic paraphasias — substituting similar sounds",
+      "MS plaque or tumor in inferior parietal white matter",
+      "Classic 'disconnection' syndrome on boards",
+    ],
+    pairWith: [
+      "Fluent + comprehends commands + cannot repeat 'no ifs, ands, or buts' → conduction aphasia",
+      "Arcuate fasciculus lesion on imaging → conduction aphasia pattern",
+      "vs Broca — conduction has fluent speech and good comprehension; Broca is nonfluent",
+      "vs Wernicke — conduction has good comprehension; Wernicke has fluent nonsense with poor comprehension",
+    ],
+    distinguishFrom: [
+      "Broca aphasia — nonfluent expressive deficit at frontal cortex; repetition also impaired but speech nonfluent",
+      "Wernicke aphasia — poor comprehension with fluent word salad; temporal cortex lesion",
+      "Transcortical sensory aphasia — fluent with poor comprehension but preserved repetition (isolated temporal disconnection)",
+      "Transcortical motor aphasia — nonfluent with preserved repetition (frontal disconnection)",
+      "Dysarthria — articulation problem without specific repetition dissociation",
+    ],
+    pediatrics:
+      "Conduction aphasia pattern is uncommon in children compared with adults; acquired cases follow perisylvian white matter injury from stroke, trauma, or demyelination. See arcuate fasciculus entry for developmental language pathway context.",
   },
   {
     id: "lhermitte-sign",
@@ -11407,11 +12535,11 @@ export const SYMPTOMS: SymptomEntry[] = [
     id: "psychosis",
     name: "Psychosis",
     etymology: "Greek psyche = mind + -osis = abnormal condition",
-    aliases: ["psychosis", "psychoses", "psychotic", "psychotic symptoms", "psychotic episode"],
+    aliases: ["psychosis", "psychoses", "psychotic", "psychotic episode"],
     definition:
-      "Loss of contact with reality characterized by hallucinations (perceptions without external stimulus), delusions (fixed false beliefs), and/or disorganized thought and behavior.",
+      "Loss of contact with reality characterized by hallucinations (perceptions without external stimulus), delusions (fixed false beliefs), and/or disorganized thought and behavior — encompasses positive psychotic symptoms (see dedicated entry) and may coexist with negative symptoms in schizophrenia.",
     mechanism:
-      "Dopaminergic hyperactivity in mesolimbic pathway (positive symptoms) with cortical-subcortical disconnectivity; NMDA hypofunction and glutamate dysregulation also implicated; can be primary (schizophrenia), mood-related, substance-induced, or organic.",
+      "Dopaminergic hyperactivity in mesolimbic pathway drives positive psychotic symptoms (see positive symptoms entry); cortical-subcortical disconnectivity, NMDA hypofunction, and glutamate dysregulation also implicated; can be primary (schizophrenia), mood-related, substance-induced, or organic.",
     thinkOf: [
       "Schizophrenia — chronic psychosis with negative symptoms",
       "Schizoaffective disorder — psychosis concurrent with mood episode",
@@ -11427,11 +12555,57 @@ export const SYMPTOMS: SymptomEntry[] = [
     ],
     distinguishFrom: [
       "Delirium — fluctuating consciousness, inattention, visual hallucinations common",
+      "Positive symptoms of schizophrenia — hallucinations/delusions subset of psychosis (see dedicated entry); psychosis is broader syndrome",
       "Obsessive intrusive thoughts — ego-dystonic, insight preserved",
       "Malingering — inconsistent, secondary gain",
     ],
     pediatrics:
       "Early-onset schizophrenia is rare; psychosis in adolescents warrants substance screening, autoimmune encephalitis, and mood disorder evaluation.",
+  },
+  {
+    id: "positive-symptoms",
+    name: "Positive Symptoms",
+    etymology:
+      "Latin positivus = placed/set + Greek symptōma = occurrence — added abnormal experiences or behaviors in schizophrenia (not electrical charge sense)",
+    aliases: [
+      "positive symptoms",
+      "positive symptom",
+      "schizophrenia positive symptoms",
+      "schizophrenia positive symptom",
+      "positive symptoms of schizophrenia",
+      "positive symptom of schizophrenia",
+      "psychotic positive symptoms",
+      "positive psychotic symptoms",
+      "positive schizophrenia symptoms",
+    ],
+    definition:
+      "Added abnormal mental experiences or behaviors in schizophrenia — hallucinations, delusions, disorganized speech (formal thought disorder), and grossly disorganized or catatonic behavior — reflecting excess or distorted normal functions rather than loss of function (negative symptoms).",
+    mechanism:
+      "↑ Dopaminergic activity in the mesolimbic pathway (VTA → nucleus accumbens) is the classic explanation for positive symptoms — D₂ receptor antagonism by antipsychotics reduces hallucinations and delusions; glutamate/NMDA hypofunction and cortical disinhibition also contribute.",
+    thinkOf: [
+      "Schizophrenia — auditory hallucinations, persecutory delusions",
+      "Schizophreniform and brief psychotic disorder — same symptom cluster, shorter duration",
+      "Schizoaffective disorder — positive symptoms with concurrent mood episode",
+      "Bipolar mania with psychotic features — mood-congruent delusions possible",
+      "Stimulant intoxication — paranoid delusions and tactile hallucinations",
+      "Glucocorticoid psychosis — steroid-induced delusions/hallucinations",
+    ],
+    pairWith: [
+      "Auditory hallucinations + persecutory delusions + ≥6 months → schizophrenia",
+      "Positive symptoms respond to antipsychotics; negative symptoms less responsive",
+      "↑ mesolimbic dopamine → positive symptoms; ↓ mesocortical dopamine → negative symptoms",
+      "Positive symptoms + mood episode → schizoaffective disorder",
+      "Command hallucinations → assess suicide/homicide risk",
+    ],
+    distinguishFrom: [
+      "Negative symptoms — flat affect, alogia, avolition, anhedonia; loss of normal function",
+      "Psychosis — broader syndrome including positive symptoms; not synonymous term",
+      "Delirium — fluctuating attention and consciousness with visual hallucinations",
+      "Obsessive-compulsive symptoms — ego-dystonic intrusive thoughts with insight",
+      "Cognitive symptoms of schizophrenia — working memory/executive dysfunction; distinct from positive cluster",
+    ],
+    pediatrics:
+      "Early-onset schizophrenia presents with positive symptoms similar to adults; rule out substance use, anti-NMDA encephalitis, and mood disorders. Antipsychotics treat positive symptoms but carry metabolic and EPS risks in adolescents.",
   },
   {
     id: "moon-facies",
@@ -12441,7 +13615,7 @@ export const SYMPTOMS: SymptomEntry[] = [
     distinguishFrom: [
       "Cleft lip alone — specific subtype of facial cleft",
       "Facial trauma — acquired, not congenital",
-      "Amniotic band sequence — asymmetric constriction defects",
+      "Amniotic band sequence — asymmetric constriction defects (see amniotic band constriction entry)",
     ],
     pediatrics:
       "Midline facial clefts in neonates require brain imaging for holoprosencephaly and genetic evaluation; lateral clefts are more often isolated and managed by cleft team surgery and speech support.",
@@ -13515,7 +14689,7 @@ export const SYMPTOMS: SymptomEntry[] = [
     ],
     pairWith: [
       "Dysphagia + hoarseness + uvula deviation → CN IX/X palsy or vagal lesion",
-      "Wallenberg syndrome — dysphagia, hoarseness, ↓ gag, ipsilateral face ↓ pain/temp",
+      "Wallenberg syndrome — dysphagia, hoarseness, ↓ gag, ipsilateral face ↓ pain/temp (see Wallenberg syndrome entry)",
       "Absent gag + decreased level of consciousness → aspiration risk with oral intake",
       "Unilateral palate weakness + absent gag on same side → CN X lesion",
       "Bulbar ALS — progressive dysphagia with abnormal gag and tongue fasciculations",
@@ -14428,7 +15602,7 @@ export const SYMPTOMS: SymptomEntry[] = [
     ],
     distinguishFrom: [
       "Marionette lines — creases extending downward from mouth corners, not nose to mouth",
-      "Philtrum — vertical groove between nasal septum and upper lip, not lateral cheek crease",
+      "Philtrum — vertical groove between nasal septum and upper lip; smooth philtrum is effaced groove in FAS (see dedicated entry)",
       "Rosacea — centrofacial erythema often involves nasolabial area (unlike SLE malar rash)",
       "Normal facial asymmetry — subtle contour difference without true weakness on smile test",
     ],
@@ -14650,6 +15824,52 @@ export const SYMPTOMS: SymptomEntry[] = [
     ],
     pediatrics:
       "Children and adolescents on antipsychotics or antiemetics can develop akathisia; may present as inability to sit in school — do not misattribute to ADHD exacerbation without reviewing medication timing.",
+  },
+  {
+    id: "tardive-dyskinesia",
+    name: "Tardive Dyskinesia",
+    etymology: "Latin tardus = late/slow + Greek dys = abnormal + kinesis = movement",
+    aliases: [
+      "tardive dyskinesia",
+      "tardive dyskinesias",
+      "td",
+      "tardive movement disorder",
+      "tardive movement disorders",
+      "antipsychotic-induced tardive dyskinesia",
+      "neuroleptic-induced tardive dyskinesia",
+      "orobuccolingual dyskinesia",
+      "orobuccolingual dyskinesias",
+      "lip-smacking dyskinesia",
+    ],
+    definition:
+      "Involuntary choreiform movements — classically repetitive lip smacking, tongue protrusion, and jaw movements — developing after months to years of dopamine D₂-blocking drug exposure (antipsychotics, metoclopramide); often persistent or irreversible even after drug withdrawal.",
+    mechanism:
+      "Chronic D₂ receptor blockade → postsynaptic dopamine receptor upregulation and supersensitivity in nigrostriatal pathways → disinhibited choreiform movements, especially orobuccolingual musculature; risk increases with duration and cumulative dose of dopamine blockade.",
+    thinkOf: [
+      "Chronic antipsychotic use — typicals > atypicals for EPS/tardive risk",
+      "Metoclopramide — antiemetic D₂ blocker; shorter exposure can still cause TD",
+      "Elderly women — highest risk demographic",
+      "Lip smacking, tongue thrusting, chewing motions — classic orofacial chorea",
+      "Months-years of drug exposure — not acute dystonia or akathisia timing",
+    ],
+    pairWith: [
+      "Lip-smacking chorea after years of haloperidol → tardive dyskinesia, not acute dystonia",
+      "TD persists or worsens briefly after stopping drug (withdrawal dyskinesia) — do not restart antipsychotic to suppress",
+      "Prevention — lowest effective dose, shortest duration, periodic drug holidays debated; clozapine lowest TD risk",
+      "Valbenazine or deutetrabenazine — VMAT2 inhibitors for established TD (boards recognition)",
+      "vs acute dystonia — sustained spasm hours-days after drug start; treat with anticholinergic",
+      "vs akathisia — inner restlessness days-weeks after start, not choreiform orofacial movements",
+    ],
+    distinguishFrom: [
+      "Acute dystonic reaction — sustained muscle spasm hours to days after drug initiation",
+      "Akathisia — subjective restlessness and pacing, not stereotyped orofacial chorea",
+      "Drug-induced parkinsonism — bradykinesia and rigidity, not flowing choreiform movements",
+      "Huntington disease — family history, caudate atrophy, progressive cognitive decline",
+      "Sydenham chorea — post-streptococcal, pediatric, rheumatic fever context",
+      "Tourette syndrome — childhood-onset motor/vocal tics, not drug exposure timing",
+    ],
+    pediatrics:
+      "Tardive dyskinesia is less common in children but reported with prolonged antipsychotic or metoclopramide exposure; acute dystonia is more frequent in pediatrics. Avoid unnecessary long-term dopamine blockers in children.",
   },
   {
     id: "autonomic-dysfunction",
@@ -16123,6 +17343,207 @@ export const SYMPTOMS: SymptomEntry[] = [
     ],
     pediatrics:
       "Children with fever or metabolic derangement can develop delirium; evaluate infection and electrolytes. Anticholinergic delirium in toddlers from diphenhydramine ingestion — physostigmine only in selected pure anticholinergic cases without QRS widening.",
+  },
+  {
+    id: "hot-flash",
+    name: "Hot Flash",
+    etymology:
+      "Old English hāt = heated + flash = sudden burst — abrupt sensation of heat and flushing",
+    aliases: [
+      "hot flash",
+      "hot flashes",
+      "hot flush",
+      "hot flushes",
+      "vasomotor flash",
+      "vasomotor hot flash",
+      "menopausal hot flash",
+      "menopausal hot flashes",
+    ],
+    definition:
+      "Sudden, brief episode of intense warmth, flushing (often face/neck/chest), and sometimes sweating or chills — a classic vasomotor symptom of estrogen withdrawal or antiestrogenic therapy.",
+    mechanism:
+      "Estrogen deficiency or ER antagonism narrows the hypothalamic thermoneutral zone → small core temperature fluctuations trigger heat-dissipation responses (peripheral vasodilation, sweating) perceived as hot flashes.",
+    thinkOf: [
+      "Perimenopause / menopause — estrogen decline with irregular or absent menses",
+      "Surgical menopause — bilateral oophorectomy",
+      "Tamoxifen or raloxifene — antiestrogenic SERMs",
+      "Leuprolide / GnRH agonists — medical castration (breast/prostate cancer)",
+      "Androgen deprivation therapy — hot flashes with ↓ libido",
+      "Primary ovarian insufficiency or Turner syndrome — premature estrogen deficiency",
+    ],
+    pairWith: [
+      "Hot flashes + amenorrhea + age >45 → natural menopause",
+      "Hot flashes after oophorectomy → surgical menopause",
+      "Hot flashes + ER+ breast cancer on tamoxifen → expected SERM adverse effect",
+      "Hot flashes + ↓ libido on leuprolide → androgen/estrogen deprivation",
+      "Hot flashes + vaginal dryness + osteoporosis risk → estrogen deficiency workup",
+    ],
+    distinguishFrom: [
+      "Night sweats — recurrent drenching sweats during sleep; may overlap but hot flash is brief vasomotor surge",
+      "Diaphoresis — profuse sweating from sympathetic activation (MI, hypoglycemia, pheochromocytoma)",
+      "Fever — sustained elevated temperature with infectious/inflammatory cause",
+      "Carcinoid flush — episodic flushing with diarrhea and wheezing (serotonin)",
+      "Heat intolerance — persistent inability to tolerate warmth (hyperthyroidism)",
+    ],
+    pediatrics:
+      "Hot flashes are uncommon in prepubertal children; premature ovarian insufficiency, Turner syndrome, or chemotherapy-induced ovarian failure can cause vasomotor symptoms in adolescents — evaluate estradiol, FSH, and karyotype when indicated.",
+  },
+  {
+    id: "anorgasmia",
+    name: "Anorgasmia",
+    etymology:
+      "Greek an- = without + orgasmos = swelling/excitement (sexual climax) + -ia = condition",
+    aliases: [
+      "anorgasmia",
+      "anorgasmias",
+      "orgasmic dysfunction",
+      "orgasmic dysfunctions",
+      "inability to orgasm",
+      "delayed orgasm",
+      "delayed orgasms",
+      "orgasm delay",
+      "orgasm delays",
+      "failure to orgasm",
+      "difficulty reaching orgasm",
+      "difficulty achieving orgasm",
+    ],
+    definition:
+      "Persistent or recurrent difficulty attaining orgasm despite adequate sexual stimulation and arousal — a sexual dysfunction that may occur with normal libido and erectile function.",
+    mechanism:
+      "Orgasm requires integrated spinal reflex arcs and supraspinal excitation (mesolimbic dopamine, oxytocin, autonomic surge). SSRIs ↑ synaptic serotonin and inhibit orgasm centrally and peripherally; antipsychotics and opioids suppress dopaminergic reward pathways; diabetic/autonomic neuropathy impairs genital sensation and reflexes; psychologic inhibition or relationship factors can block climax despite intact anatomy.",
+    thinkOf: [
+      "SSRI antidepressants — most common medication cause (delayed or absent orgasm)",
+      "SNRIs (venlafaxine, duloxetine) — similar serotonergic effect",
+      "Antipsychotics — dopamine blockade (especially typical antipsychotics)",
+      "Opioids — ↓ dopamine and autonomic responsiveness",
+      "Diabetes mellitus — autonomic and peripheral neuropathy",
+      "Spinal cord injury or multiple sclerosis — disrupted reflex pathways",
+      "Pelvic surgery or nerve injury",
+      "Depression or anxiety — psychogenic component",
+      "Alcohol use disorder",
+    ],
+    pairWith: [
+      "Anorgasmia after starting sertraline with preserved libido → SSRI sexual adverse effect",
+      "Anorgasmia + erectile dysfunction + peripheral neuropathy in diabetes → autonomic neuropathy",
+      "Anorgasmia + galactorrhea + ↓ libido + ↑ prolactin → hyperprolactinemia (dopamine suppression)",
+      "Anorgasmia + numbness in feet + diabetes → diabetic neuropathy",
+      "Anorgasmia with normal erections and desire → medication or neurologic vs psychogenic",
+    ],
+    distinguishFrom: [
+      "Low libido — ↓ sexual desire; orgasm may still occur if desire present",
+      "Erectile dysfunction — impaired erection; orgasmic function may be separate",
+      "Dyspareunia — pain with intercourse may prevent orgasm but primary problem is pain",
+      "Premature ejaculation — orgasm occurs too quickly, not absent or delayed",
+      "Anhedonia — broad loss of pleasure, not isolated orgasmic dysfunction",
+      "Vaginal dryness — lubrication/arousal problem, not orgasm reflex itself",
+    ],
+    pediatrics:
+      "Orgasmic dysfunction is a post-pubertal/adult symptom on Step 1; SSRIs are still relevant in adolescent depression. Delayed puberty or hypogonadism workup focuses on development and libido rather than isolated anorgasmia.",
+  },
+  {
+    id: "conjunctival-injection",
+    name: "Conjunctival Injection",
+    etymology:
+      "Latin conjunctiva = membrane joining eyelid to eyeball + injectio = a pouring in — visible dilation of conjunctival and episcleral vessels producing a red eye",
+    aliases: [
+      "conjunctival injection",
+      "conjunctival injections",
+      "conjunctival hyperemia",
+      "conjunctival hyperemias",
+      "injected conjunctiva",
+      "injected conjunctivas",
+      "red conjunctiva",
+      "conjunctival redness",
+      "bloodshot eye",
+      "bloodshot eyes",
+      "red eye",
+      "red eyes",
+    ],
+    definition:
+      "Visible erythema from dilated superficial conjunctival or episcleral blood vessels — a cardinal sign of ocular surface inflammation, irritation, or autonomic activation; pattern and associated findings distinguish benign conjunctivitis from vision-threatening uveitis or glaucoma.",
+    mechanism:
+      "Histamine, cytokines, or direct irritation dilate conjunctival capillaries (allergic/viral/bacterial conjunctivitis); trigeminal-autonomic activation in cluster headache causes ipsilateral conjunctival injection; perilimbal ciliary flush suggests deeper intraocular inflammation (iritis) rather than isolated conjunctival disease.",
+    thinkOf: [
+      "Viral or bacterial conjunctivitis — diffuse injection with discharge",
+      "Allergic conjunctivitis — bilateral injection with itching and chemosis",
+      "Cluster headache — ipsilateral injection with lacrimation and rhinorrhea",
+      "Iritis/uveitis — ciliary flush (limbal injection) with photophobia and pain",
+      "Subconjunctival hemorrhage — localized red patch, vessels intact",
+      "Kawasaki disease — bilateral conjunctival injection without exudate",
+      "Acute angle-closure glaucoma — injected eye with severe pain, fixed mid-dilated pupil",
+      "Scleritis/episcleritis — sectoral deep injection",
+    ],
+    pairWith: [
+      "Conjunctival injection + purulent discharge + eyelid matting → bacterial conjunctivitis",
+      "Conjunctival injection + watery discharge + preauricular LAD → viral conjunctivitis",
+      "Conjunctival injection + itching + bilateral chemosis → allergic conjunctivitis",
+      "Ipsilateral conjunctival injection + periorbital pain + rhinorrhea → cluster headache",
+      "Perilimbal ciliary flush + photophobia + small pupil → iritis",
+      "Conjunctival injection + fever + strawberry tongue + desquamation → Kawasaki disease",
+      "Painful red eye + halos around lights + mid-dilated pupil → acute angle-closure glaucoma",
+    ],
+    distinguishFrom: [
+      "Ciliary flush — perilimbal redness suggesting uveitis, not isolated conjunctivitis",
+      "Subconjunctival hemorrhage — flat hemorrhage patch, not diffuse vascular injection",
+      "Episcleritis/scleritis — deeper violaceous injection with tenderness (scleritis)",
+      "Blepharitis — eyelid margin inflammation; conjunctiva may be secondarily injected",
+      "Pallor — loss of color, opposite finding",
+    ],
+    pediatrics:
+      "Neonatal conjunctivitis (ophthalmia neonatorum) requires urgent gonorrhea/chlamydia coverage. Kawasaki disease shows bilateral non-exudative conjunctival injection with fever and mucocutaneous findings. Viral conjunctivitis spreads rapidly in daycare — hand hygiene and exclude until improving.",
+  },
+  {
+    id: "vasovagal-fainting",
+    name: "Vasovagal Fainting",
+    etymology:
+      "Latin vas = vessel + vagus = wandering (vagus nerve) + fainting = loss of consciousness — neurally mediated syncope from excessive parasympathetic/vagal reflex",
+    aliases: [
+      "vasovagal fainting",
+      "vasovagal faint",
+      "vasovagal faints",
+      "vasovagal syncope",
+      "vasovagal syncopes",
+      "vaso vagal syncope",
+      "vaso-vagal syncope",
+      "neurally mediated syncope",
+      "neurally mediated syncopes",
+      "reflex syncope",
+      "reflex syncopes",
+      "common faint",
+      "common faints",
+      "simple faint",
+      "simple faints",
+    ],
+    definition:
+      "Most common cause of syncope — a benign neurally mediated episode in which a trigger provokes excessive vagal tone and/or sympathetic withdrawal, causing bradycardia and vasodilation, transient hypotension, and brief loss of consciousness with rapid spontaneous recovery.",
+    mechanism:
+      "Emotional or orthostatic trigger (pain, fear, blood draw, prolonged standing) → ↑ parasympathetic (vagal) tone and/or ↓ sympathetic vasoconstriction → bradycardia + peripheral vasodilation → ↓ venous return and cardiac output → global cerebral hypoperfusion → syncope; baroreceptor reflex overshoot contributes.",
+    thinkOf: [
+      "Prolonged standing at ceremony or hot crowded room",
+      "Venipuncture, blood donation, or medical procedure",
+      "Emotional stress — bad news, pain, fear of needles",
+      "Dehydration or fasting amplifying orthostatic component",
+      "Prodrome before LOC — nausea, warmth, sweating, vision dimming, muffled hearing",
+      "Young otherwise healthy patient with recurrent faints and clear trigger",
+    ],
+    pairWith: [
+      "Fainting after standing 20 minutes at wedding with nausea beforehand → vasovagal",
+      "Syncope during blood draw with rapid recovery → vasovagal (needle phobia)",
+      "Pallor + diaphoresis + bradycardia + brief LOC → vasovagal prodrome and event",
+      "No chest pain, no exertional trigger, normal cardiac exam → benign vasovagal over arrhythmia",
+      "Orthostatic vitals normal between episodes → favors vasovagal over orthostatic hypotension",
+    ],
+    distinguishFrom: [
+      "Syncope (general) — broader category; vasovagal is most common subtype",
+      "Orthostatic hypotension — positional BP drop without classic emotional/standing prodrome",
+      "Cardiac arrhythmia — sudden syncope without prodrome, palpitations, structural heart disease",
+      "Aortic stenosis — exertional syncope, crescendo-decrescendo murmur",
+      "Seizure — tonic-clonic activity, postictal confusion, tongue biting",
+      "Hypoglycemia — diaphoresis and confusion; responds to glucose",
+      "Pulmonary embolism — dyspnea, tachycardia, hypoxia, not benign prodrome",
+    ],
+    pediatrics:
+      "Adolescents commonly have vasovagal syncope — reassure if typical prodrome and normal cardiac workup; teach recognition and supine positioning at onset. Brief convulsive movements can occur with cerebral hypoperfusion (convulsive syncope) — distinguish from epilepsy by brevity and trigger history.",
   },
 ];
 

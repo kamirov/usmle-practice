@@ -1375,7 +1375,7 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
       "H1 antihistamines (diphenhydramine, cetirizine) — allergy, pruritus, motion sickness",
       "H2 blockers (famotidine, ranitidine) — peptic ulcer disease, GERD",
       "Carcinoid syndrome — flushing from histamine/serotonin release (H1/H2 blockers help flushing)",
-      "Vancomycin red man syndrome — histamine release from rapid infusion (not true IgE allergy)",
+      "Vancomycin infusion reaction — histamine release from rapid infusion (see dedicated entry; not true IgE allergy)",
     ],
     boardsPearls: [
       "Histamine from mast cell degranulation — type I hypersensitivity effector molecule",
@@ -1934,6 +1934,8 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
       "Gastrinoma: ulcers in jejunum, diarrhea, hypergastrinemia, ↑ parietal cell mass",
       "Secretin test: gastrinoma → paradoxical ↑ gastrin (diagnostic pearl)",
       "Chronic PPI → elevated gastrin → trophic mucosal changes; rebound acid on withdrawal",
+      "Atrophic gastritis/achlorhydria → ↑ gastrin (loss of acid negative feedback)",
+      "Measure fasting serum gastrin when suspecting gastrinoma or achlorhydric states — see lab value entry",
       "vs CCK — CCK-B receptor shared but gastrin is primary acid secretagogue from G cells",
       "vs histamine — ECL-derived H2 signal potentiates gastrin on parietal cells",
     ],
@@ -1944,6 +1946,7 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
       "Somatostatin — inhibits gastrin release from G cells",
       "CCK — primarily stimulates pancreatic enzymes and gallbladder; overlaps CCK-B receptor",
       "GRP (bombesin-like) — vagal stimulus for G-cell gastrin release, not gastrin itself",
+      "Fasting serum gastrin concentration — laboratory measurement of circulating gastrin peptide",
     ],
     pediatrics:
       "Gastrinoma is rare in children but occurs in MEN1 kindreds — suspect with refractory PUD and diarrhea. Neonatal achlorhydria alters gastrin feedback physiology.",
@@ -2114,7 +2117,8 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
     clinicalRelevance: [
       "Estrogen deficiency — menopause, Turner syndrome, primary ovarian insufficiency → hot flashes, osteoporosis, ↑ CV risk",
       "Estrogen excess or unopposed estrogen — endometrial hyperplasia/cancer risk",
-      "Tamoxifen — SERM with antagonist effect in breast, partial agonist in endometrium",
+      "Tamoxifen — SERM with antagonist effect in breast, partial agonist in endometrium (see dedicated medication entry)",
+      "Raloxifene — SERM with antiestrogenic breast/uterus effects and bone agonism (see dedicated medication entry)",
       "Aromatase inhibitors (anastrozole) — block peripheral/ tumor estrogen synthesis in ER+ breast cancer",
       "OCPs — ethinyl estradiol + progestin for contraception and cycle regulation",
     ],
@@ -2165,7 +2169,8 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
       "Unopposed estradiol — endometrial hyperplasia and cancer risk without progesterone opposition",
       "Aromatase inhibitors (anastrozole, letrozole) — block peripheral and tumor estradiol synthesis in ER+ breast cancer",
       "OCPs — ethinyl estradiol (synthetic analog) for contraception and cycle regulation",
-      "Tamoxifen — SERM with antagonist effect on breast ER, partial agonist in endometrium",
+      "Tamoxifen — SERM with antagonist effect on breast ER, partial agonist in endometrium (see dedicated medication entry)",
+      "Raloxifene — SERM with antiestrogenic breast/uterus effects and bone agonism (see dedicated medication entry)",
       "Granulosa cell tumor — may secrete estradiol → precocious puberty or postmenopausal bleeding",
     ],
     boardsPearls: [
@@ -3997,8 +4002,8 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
     function:
       "Stimulates gastric acid secretion from parietal cells after histamine release from enterochromaffin-like cells; histamine acts with gastrin and acetylcholine (M3) to potentiate acid output.",
     clinicalRelevance: [
-      "H2 blockers: famotidine, ranitidine, cimetidine — ↓ gastric acid in PUD and GERD",
-      "Cimetidine inhibits CYP450 and has antiandrogenic side effects",
+      "H2 blockers: famotidine, ranitidine, cimetidine — ↓ gastric acid in PUD and GERD; see histamine-2 receptor antagonist class",
+      "Cimetidine — CYP450 inhibition and antiandrogenic gynecomastia; see dedicated entry",
       "Carcinoid flushing partially mediated by histamine — H2 blockers adjunctive",
       "Now largely supplanted by PPIs for acid suppression but remain boards-relevant",
     ],
@@ -4006,13 +4011,14 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
       "H2 on parietal cells = Gs → ↑ cAMP → ↑ acid secretion",
       "H1 vs H2: H1 allergy/itch (often Gq); H2 gastric acid (Gs)",
       "Triple acid stimulation: histamine (H2) + gastrin + ACh (M3) on parietal cell",
-      "Famotidine/ranitidine = H2 blockers; omeprazole = PPI (different target)",
-      "Cimetidine — CYP inhibition and gynecomastia",
+      "Famotidine — competitive H₂ blocker; see histamine-2 receptor antagonist class",
+      "Cimetidine — CYP inhibition and gynecomastia; see dedicated entry",
     ],
     distinguishFrom: [
       "Histamine H1 receptor — allergy, pruritus, bronchoconstriction; antihistamines (diphenhydramine)",
       "Muscarinic M3 receptor — also stimulates parietal acid via Gq, blocked by atropine",
       "Gastrin receptor — separate parietal cell secretagogue",
+      "H⁺/K⁺-ATPase — proton pump enzyme downstream of H₂ receptor signaling",
     ],
     pediatrics:
       "H2 blockers used in pediatric GERD/PUD when indicated; PPIs increasingly preferred for erosive disease.",
@@ -4714,14 +4720,14 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
     function:
       "Potent vasodilation; relaxes GI smooth muscle (including lower esophageal sphincter); stimulates intestinal and pancreatic bicarbonate-rich fluid secretion — major mediator of secretory diarrhea when pathologically elevated.",
     clinicalRelevance: [
-      "VIPoma — pancreatic NET secreting excess VIP → WDHA syndrome (Watery Diarrhea, Hypokalemia, Achlorhydria)",
+      "VIPoma — pancreatic NET secreting excess VIP → WDHA syndrome; see dedicated condition entries",
       "Achalasia — loss of inhibitory myenteric neurons (NO/VIP) → failed LES relaxation",
       "Octreotide/lanreotide suppress VIP secretion in VIPoma and secretory diarrhea",
       "Contributes to vasodilatory flushing in some neuroendocrine syndromes",
     ],
     boardsPearls: [
       "VIP = vasoactive intestinal peptide — secretory diarrhea + hypokalemia → think VIPoma",
-      "WDHA syndrome: Watery Diarrhea, Hypokalemia, Achlorhydria",
+      "WDHA syndrome: Watery Diarrhea, Hypokalemia, Achlorhydria — see dedicated condition entry",
       "VIP relaxes LES — achalasia involves loss of NO/VIP inhibitory neurons",
       "Octreotide = somatostatin analog treats VIPoma diarrhea",
       "Secretory diarrhea (VIP, cholera) — high-volume, persists with fasting; vs osmotic diarrhea",
@@ -4792,7 +4798,7 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
     ],
     type: "Peptide hormone",
     source:
-      "S cells in duodenal and proximal jejunal mucosa (enteroendocrine cells in crypts of Lieberkühn)",
+      "S cells in duodenal and proximal jejunal mucosa (enteroendocrine cells in crypts of Lieberkühn — see crypt entry)",
     receptor:
       "Secretin receptor (Gs-coupled GPCR on pancreatic ductal cells and biliary epithelium) → ↑ cAMP → bicarbonate-rich fluid secretion",
     function:
@@ -4847,6 +4853,7 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
     boardsPearls: [
       "CCK from I cells — fat and amino acids in duodenum trigger release",
       "CCK → pancreatic enzyme secretion + gallbladder contraction + sphincter of Oddi relaxation",
+      "Sphincter of Oddi — see dedicated anatomy entry",
       "Secretin (acid) → bicarbonate; CCK (fat/protein) → enzymes + bile delivery",
       "CCK-A on gallbladder and pancreas; CCK-B overlaps gastrin receptor",
       "Satiety hormone — slows gastric emptying and reduces food intake",
@@ -4856,10 +4863,107 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
       "Secretin — acid-triggered bicarbonate secretion; inhibits acid",
       "Gastrin — primary gastric acid secretagogue from G cells in antrum",
       "GIP — incretin from K cells; potentiates insulin release",
-      "Motilin — interdigestive motility between meals; not fat-triggered enzyme secretion",
+      "Sphincter of Oddi — smooth muscle valve at ampulla; see dedicated entry",
+      "Motilin — interdigestive motility between meals; see dedicated entry",
     ],
     pediatrics:
       "Neonates have immature CCK-mediated gallbladder and pancreatic responses; breast milk fat triggers physiologic CCK release promoting satiety after feeds.",
+  },
+  {
+    id: "ghrelin",
+    name: "Ghrelin",
+    etymology:
+      "Proto-Indo-European root *ghre- = to grow + -lin = peptide suffix — orexigenic gut hormone originally named for growth hormone secretagogue activity",
+    aliases: [
+      "ghrelin",
+      "ghrelins",
+      "growth hormone secretagogue",
+      "growth hormone secretagogues",
+      "ghs",
+      "hunger hormone",
+      "hunger hormones",
+      "stomach ghrelin",
+      "gastric ghrelin",
+    ],
+    type: "Peptide hormone",
+    source:
+      "Primarily P/D cells (X/A-like endocrine cells) in gastric fundus/body oxyntic mucosa; also duodenum, pancreas, and hypothalamus in smaller amounts — levels rise during fasting and fall after meals",
+    receptor:
+      "Growth hormone secretagogue receptor (GHSR) — Gq-coupled on arcuate nucleus neurons and pituitary somatotrophs; requires acylation (octanoylation) at serine-3 for activity",
+    function:
+      "Orexigenic (appetite-stimulating) hormone — activates NPY/AgRP neurons and inhibits POMC/CART neurons in hypothalamic arcuate nucleus; stimulates growth hormone release from anterior pituitary; promotes gastric motility and acid secretion.",
+    clinicalRelevance: [
+      "Prader-Willi syndrome — ↑ ghrelin contributes to hyperphagia and obesity",
+      "Gastric bypass surgery — ↓ circulating ghrelin and reduced hunger",
+      "Chronic starvation and anorexia — elevated ghrelin",
+      "Ghrelin mimetics investigated for GH deficiency and cachexia (boards concept)",
+      "Suppresses after nutrient intake — leptin and insulin provide opposing satiety signals",
+    ],
+    boardsPearls: [
+      "Ghrelin = hunger hormone from stomach — ↑ before meals, ↓ after eating",
+      "Stimulates NPY/AgRP (eat) and inhibits POMC (stop eating) in arcuate nucleus",
+      "Also stimulates GH release — growth hormone secretagogue receptor (GHSR)",
+      "vs leptin — leptin from adipose signals satiety (↓ with weight loss); ghrelin is orexigenic",
+      "vs CCK — CCK promotes satiety after fat; ghrelin stimulates hunger during fasting",
+      "Prader-Willi — hyperphagia with ↑ ghrelin and hypothalamic dysfunction",
+      "Acylated ghrelin is active form — serine octanoylation required",
+    ],
+    distinguishFrom: [
+      "Leptin — adipose-derived satiety hormone; opposes ghrelin",
+      "Cholecystokinin (CCK) — postprandial satiety and enzyme secretion",
+      "Peptide YY (PYY) — distal gut satiety signal released after meals",
+      "Gastrin — gastric acid secretagogue from G cells; distinct peptide",
+      "Growth hormone-releasing hormone (GHRH) — hypothalamic GH stimulus; separate from ghrelin pathway",
+      "Motilin — interdigestive motility hormone, not primary appetite signal",
+    ],
+    pediatrics:
+      "Prader-Willi syndrome presents in infancy with hypotonia and feeding difficulty, then hyperphagia and obesity in childhood with elevated ghrelin. Neonatal fasting ghrelin surges are part of normal hunger signaling.",
+  },
+  {
+    id: "motilin",
+    name: "Motilin",
+    etymology:
+      "Latin motus = motion + -ilin = peptide suffix — intestinal hormone stimulating gastrointestinal motility during the interdigestive (fasting) period",
+    aliases: [
+      "motilin",
+      "motilins",
+      "motilin hormone",
+      "motilin hormones",
+      "interdigestive hormone",
+      "mmc hormone",
+      "migrating motor complex hormone",
+    ],
+    type: "Peptide hormone",
+    source:
+      "M cells (mo cells) of duodenal and jejunal mucosa — secreted during fasting between meals; plasma motilin peaks cyclically to initiate phase III of the migrating motor complex (MMC)",
+    receptor:
+      "Motilin receptor (GPR38/MLNR) — Gq-coupled; erythromycin acts as motilin receptor agonist at sub-antibiotic doses",
+    function:
+      "Stimulates gastric and small intestinal smooth muscle contractions during interdigestive (fasting) motility — initiates phase III migrating motor complex (housekeeper waves) that sweep undigested residue toward colon; distinct from postprandial CCK-driven digestive motility.",
+    clinicalRelevance: [
+      "Diabetic gastroparesis — impaired motility; erythromycin used as motilin receptor agonist prokinetic",
+      "Post-vagotomy and postoperative ileus — disrupted MMC and motilin cycling",
+      "Erythromycin at low prokinetic doses mimics motilin — accelerates gastric emptying",
+      "Bloating and bacterial overgrowth — impaired MMC clearance contributes to SIBO (conceptual)",
+    ],
+    boardsPearls: [
+      "Motilin — fasting/interdigestive hormone; stimulates migrating motor complex (MMC)",
+      "Phase III MMC — powerful peristaltic contractions between meals; motilin initiates",
+      "Erythromycin = motilin receptor agonist at low doses → prokinetic for gastroparesis",
+      "vs CCK — CCK rises after meals with fat/protein; motilin peaks during fasting",
+      "vs gastrin — gastrin stimulates acid; motilin stimulates interdigestive motility",
+      "M cells in duodenum/jejunum secrete motilin — not the same as gastric M (μ) opioid receptors",
+    ],
+    distinguishFrom: [
+      "Cholecystokinin (CCK) — postprandial hormone for enzymes and gallbladder contraction",
+      "Gastrin — meal-related acid secretion from antral G cells",
+      "Secretin — acid-triggered bicarbonate secretion",
+      "Erythromycin — macrolide antibiotic that also agonizes motilin receptor prokinetically",
+      "Migrating motor complex (MMC) — motility pattern driven by motilin, not the hormone itself",
+      "G cells — gastrin-secreting cells; distinct from motilin-secreting M cells",
+    ],
+    pediatrics:
+      "Neonatal GI motility matures over weeks; erythromycin prokinetic use in pediatric gastroparesis follows same motilin-agonist mechanism as in adults with careful QT monitoring.",
   },
   {
     id: "chemokines",

@@ -2466,6 +2466,86 @@ export const CONDITIONS: ConditionEntry[] = [
       "Neonatal sepsis — GBS, E. coli, Listeria; nonspecific signs (lethargy, poor feeding, temperature instability). Infants compensate with tachycardia until late — hypotension is ominous. Febrile infant ≤60 days needs full sepsis workup and empiric antibiotics.",
   },
   {
+    id: "toxic-shock-syndrome",
+    name: "Toxic Shock Syndrome",
+    etymology:
+      "Greek toxikon = poison + shock (circulatory collapse) + Greek syn = together + dromos = course — systemic toxin-mediated illness with shock and multiorgan dysfunction",
+    aliases: [
+      "toxic shock syndrome",
+      "toxic shock syndromes",
+      "tss",
+      "staphylococcal toxic shock syndrome",
+      "staph toxic shock syndrome",
+      "streptococcal toxic shock syndrome",
+      "strep toxic shock syndrome",
+      "strep tss",
+      "staph tss",
+      "tampon-associated toxic shock",
+      "tsst-1 toxic shock",
+    ],
+    definition:
+      "Acute life-threatening systemic illness from superantigen toxins (classically S. aureus TSST-1 or streptococcal pyrogenic exotoxins) causing polyclonal T-cell activation, cytokine storm, capillary leak, and shock — often associated with tampon use, wound packing, or invasive group A strep infection.",
+    pathophysiology:
+      "Superantigen cross-links MHC class II on APCs with TCR β chain outside the antigen-binding groove → massive non-specific T-cell activation → overwhelming IL-1, TNF-α, and IL-6 release → vasodilation, capillary leak, hypotension, and multiorgan failure; diffuse erythroderma from cytokine-mediated skin injury; convalescent palm/sole desquamation 1–2 weeks later.",
+    classicPresentation: [
+      "High fever, hypotension, and tachycardia — toxic appearance",
+      "Diffuse sunburn-like erythroderma (≥90% body surface)",
+      "Multisystem involvement — vomiting, diarrhea, renal/hepatic dysfunction, confusion",
+      "Desquamation of palms and soles during recovery (1–2 weeks)",
+      "Menstruating woman with tampon use (staphylococcal) or postoperative/wound infection (staph or strep)",
+      "Streptococcal TSS — often with severe pain and necrotizing soft-tissue infection",
+    ],
+    keyFindings: [
+      "Hypotension despite aggressive fluid resuscitation",
+      "Diffuse macular erythroderma with conjunctival hyperemia",
+      "Multisystem organ dysfunction — creatinine, bilirubin, coagulopathy",
+      "Blood cultures may be positive (more common in streptococcal TSS)",
+      "Desquamation of palms/soles in convalescence",
+    ],
+    keyLabs: [
+      "No single diagnostic lab — clinical diagnosis with toxin mechanism",
+      "Blood cultures — especially in streptococcal TSS",
+      "CBC — leukocytosis with left shift or leukopenia; thrombocytopenia",
+      "Creatinine, liver enzymes, coagulation studies — organ injury",
+    ],
+    associations: [
+      "S. aureus TSST-1 — tampon-associated historically; prolonged tampon use",
+      "Streptococcus pyogenes — invasive GAS, necrotizing fasciitis, postpartum/endometritis",
+      "Superantigen mechanism — cross-links TCR and MHC II outside peptide groove",
+      "Desquamation during recovery — see desquamate entry",
+    ],
+    complications: [
+      "Refractory shock and death",
+      "Acute kidney injury and liver failure",
+      "Disseminated intravascular coagulation",
+      "Long-term desquamation and skin peeling",
+    ],
+    distinguishFrom: [
+      "Meningococcemia — non-blanching petechiae/purpura, not diffuse erythroderma",
+      "Sepsis without superantigen — may overlap; TSS has characteristic rash and toxin mechanism",
+      "Staphylococcal scalded skin syndrome — exfoliative toxin in infants; superficial split, usually less toxic",
+      "Kawasaki disease — children; conjunctivitis and mucositis but not shock; different treatment",
+      "Drug rash with eosinophilia — medication exposure, not tampon/wound association",
+    ],
+    treatment: [
+      "Remove inciting source — tampon, wound packing, debride infected tissue",
+      "Aggressive IV fluid resuscitation and vasopressors for shock",
+      "Anti-staphylococcal antibiotics — nafcillin/oxacillin or vancomycin if MRSA",
+      "Add clindamycin — ↓ toxin production (protein synthesis inhibitor)",
+      "Streptococcal TSS — penicillin + clindamycin; consider IVIG in severe GAS TSS",
+    ],
+    boardsPearls: [
+      "Superantigen (TSST-1) → polyclonal T-cell activation → cytokine storm — not classic septic shock pathophysiology alone",
+      "Triad: fever + hypotension + diffuse erythroderma; desquamation later",
+      "Tampon-associated staphylococcal TSS — remove tampon + clindamycin + antistaphylococcal β-lactam",
+      "Clindamycin ↓ toxin synthesis — add to β-lactam in severe staph/strep TSS",
+      "vs meningococcemia — petechiae not sunburn-like rash",
+      "Palm/sole desquamation in recovery — classic board clue",
+    ],
+    pediatrics:
+      "SSSS in infants is toxin-mediated skin disease but distinct from full TSS; older children can develop streptococcal TSS with varicella or invasive GAS. Kawasaki is an important differential in febrile rash syndromes — lacks shock and superantigen mechanism.",
+  },
+  {
     id: "shock",
     name: "Shock",
     etymology: "French choc = violent blow; circulatory collapse",
@@ -4254,6 +4334,82 @@ export const CONDITIONS: ConditionEntry[] = [
       "Classic presentation in male infant with petechiae, bloody diarrhea, and eczema. Small platelets on smear distinguish from immune thrombocytopenia. HSCT offers cure; without transplant, many die by adolescence from infection, bleeding, or lymphoma.",
   },
   {
+    id: "ataxia-telangiectasia",
+    name: "Ataxia Telangiectasia",
+    etymology:
+      "Greek a- = without + taxis = order + Latin telangiectasia = dilated small vessels — autosomal recessive disorder of cerebellar ataxia with oculocutaneous telangiectasias from defective DNA double-strand break repair",
+    aliases: [
+      "ataxia telangiectasia",
+      "ataxia-telangiectasia",
+      "ataxia telangiectasia syndrome",
+      "at syndrome",
+      "louis-bar syndrome",
+      "louis bar syndrome",
+      "atm deficiency",
+      "ataxia telangiectasia mutated deficiency",
+    ],
+    definition:
+      "Autosomal recessive DNA repair disorder (ATM gene mutation) causing progressive cerebellar ataxia, oculocutaneous telangiectasias, immunodeficiency (often IgA deficiency), elevated AFP, and increased malignancy risk — cells are hypersensitive to ionizing radiation.",
+    pathophysiology:
+      "ATM kinase normally detects and repairs DNA double-strand breaks and coordinates cell cycle checkpoints → loss of ATM → defective DSB repair, genomic instability, cerebellar Purkinje cell loss → ataxia; combined T- and B-cell dysfunction → sinopulmonary infections; ↑ lymphoma and leukemia risk.",
+    classicPresentation: [
+      "Progressive cerebellar ataxia beginning in toddlerhood (wide-based gait, falls)",
+      "Oculocutaneous telangiectasias — conjunctival and facial spider-like vessels by age 5–8",
+      "Recurrent sinopulmonary infections",
+      "Dysarthria and choreoathetoid movements",
+      "Premature graying of hair",
+    ],
+    keyFindings: [
+      "Cerebellar atrophy on MRI",
+      "Telangiectasias on conjunctiva, ears, antecubital fossae",
+      "Elevated serum AFP (α-fetoprotein)",
+      "Low or absent IgA (common)",
+      "Decreased IgG2 subclass possible",
+    ],
+    keyLabs: [
+      "↑ AFP — supportive finding (also elevated in HCC, yolk sac tumors)",
+      "↓ IgA common; variable other immunoglobulin abnormalities",
+      "↑ chromosomal breakage on cytogenetic testing (radiosensitivity)",
+      "ATM gene mutation confirms diagnosis",
+    ],
+    associations: [
+      "ATM gene — autosomal recessive; chromosome 11q22-q23",
+      "Increased risk of lymphoma and leukemia",
+      "Radiation hypersensitivity — avoid unnecessary CT/radiotherapy",
+      "Carriers may have modestly increased breast cancer risk (boards concept)",
+    ],
+    complications: [
+      "Wheelchair dependence by adolescence from progressive ataxia",
+      "Recurrent respiratory infections and bronchiectasis",
+      "Malignancy — NHL, ALL, Hodgkin lymphoma",
+      "Pulmonary failure from recurrent infection",
+    ],
+    distinguishFrom: [
+      "Friedreich ataxia — autosomal recessive, hypertrophic cardiomyopathy, diabetes, no telangiectasias, normal AFP",
+      "Cerebral palsy — static motor deficit from perinatal injury, not progressive telangiectasias",
+      "Wiskott-Aldrich — eczema + small-platelet thrombocytopenia triad, not cerebellar ataxia",
+      "X-linked agammaglobulinemia — isolated B-cell defect without ataxia or telangiectasias",
+      "Hepatocellular carcinoma — ↑ AFP with liver mass, not childhood ataxia",
+    ],
+    treatment: [
+      "Supportive — physical therapy, speech therapy",
+      "Aggressive treatment of infections; IVIG if hypogammaglobulinemia",
+      "Avoid ionizing radiation (including diagnostic radiation when alternatives exist)",
+      "No curative therapy; malignancy requires standard oncology care with radiation caution",
+    ],
+    boardsPearls: [
+      "Ataxia + telangiectasias + ↑ AFP + IgA deficiency → ataxia telangiectasia",
+      "ATM = ataxia telangiectasia mutated — DNA double-strand break repair kinase",
+      "Autosomal recessive; progressive cerebellar ataxia in early childhood",
+      "Radiation hypersensitivity — defective DSB repair",
+      "↑ risk of lymphoma/leukemia",
+      "vs Friedreich ataxia — no telangiectasias, cardiomyopathy, ↓ AFP",
+      "AFP mildly elevated — also seen on maternal screening and in liver tumors (different context)",
+    ],
+    pediatrics:
+      "Ataxia usually noted when child begins walking; telangiectasias appear later. Sinopulmonary infections common from combined immunodeficiency. Avoid live vaccines if severely immunocompromised. Screen for malignancy if lymphadenopathy or cytopenias develop.",
+  },
+  {
     id: "asplenic-sepsis",
     name: "Asplenic Sepsis",
     etymology:
@@ -4329,6 +4485,79 @@ export const CONDITIONS: ConditionEntry[] = [
     ],
     pediatrics:
       "Children with sickle cell disease are functionally asplenic early and need penicillin prophylaxis plus pneumococcal/Hib/meningococcal vaccination. Any fever in a sickle/asplenic child needs urgent evaluation and empiric antibiotics.",
+  },
+  {
+    id: "abetalipoproteinemia",
+    name: "Abetalipoproteinemia",
+    etymology:
+      "Greek a = without + beta (β-lipoprotein class) + lipoprotein + -emia = blood condition — absent ApoB-containing lipoproteins in plasma",
+    aliases: [
+      "abetalipoproteinemia",
+      "abetalipoproteinemias",
+      "abl",
+      "basd",
+      "bassen-kornzweig syndrome",
+      "bassen kornzweig syndrome",
+      "microsomal triglyceride transfer protein deficiency",
+      "mtp deficiency",
+      "mtp deficiencies",
+    ],
+    definition:
+      "Rare autosomal recessive disorder from microsomal triglyceride transfer protein (MTP) deficiency — enterocytes and hepatocytes cannot assemble ApoB-containing lipoproteins (chylomicrons, VLDL) → severe fat malabsorption, very low plasma cholesterol and ApoB, acanthocytes, and progressive neurologic disease from vitamin E deficiency.",
+    pathophysiology:
+      "MTP normally loads triglycerides onto nascent ApoB in ER of enterocytes and hepatocytes → chylomicron (ApoB-48) and VLDL (ApoB-100) formation. MTP loss → dietary fat and fat-soluble vitamins not packaged for lymphatic/blood transport → steatorrhea, failure to thrive, and deficient vitamin E delivery to CNS → spinocerebellar degeneration.",
+    classicPresentation: [
+      "Infancy — steatorrhea, greasy/foul stools, failure to thrive",
+      "Fat-soluble vitamin deficiencies (especially vitamin E)",
+      "Progressive ataxia, proprioceptive loss, and retinopathy in childhood/adolescence",
+      "Acanthocytes (spur cells) on peripheral smear",
+      "Very low total cholesterol, LDL, and ApoB",
+    ],
+    keyFindings: [
+      "Acanthocytes on blood smear",
+      "Absent or very low chylomicrons and VLDL on lipoprotein electrophoresis",
+      "Steatorrhea with Sudan stain–positive stool fat",
+    ],
+    keyLabs: [
+      "Very low total cholesterol, LDL-C, and ApoB",
+      "Lipoprotein electrophoresis — no chylomicron/VLDL bands",
+      "Low fat-soluble vitamins (A, D, E, K)",
+      "MTP gene mutation confirms diagnosis",
+    ],
+    associations: [
+      "MTP gene (4q24) — autosomal recessive inheritance",
+      "Acanthocytosis — deformed RBCs from membrane lipid abnormalities",
+      "Spinocerebellar degeneration from vitamin E deficiency",
+      "Retinitis pigmentosa–like retinopathy",
+    ],
+    complications: [
+      "Progressive neurologic disability without vitamin E supplementation",
+      "Visual loss from retinopathy",
+      "Growth failure and malnutrition in infancy",
+    ],
+    distinguishFrom: [
+      "Hypobetalipoproteinemia — truncated ApoB; low LDL but usually benign, mild or no steatorrhea",
+      "Celiac disease — villous atrophy; normal ApoB; anti-tTG positive",
+      "Cystic fibrosis — pancreatic insufficiency steatorrhea; normal lipoprotein assembly; sweat chloride ↑",
+      "Chronic pancreatitis — enzyme deficiency; ApoB and chylomicrons present",
+      "Familial hypercholesterolemia — opposite lipid phenotype (↑ LDL, xanthomas)",
+    ],
+    treatment: [
+      "High-dose oral vitamin E supplementation (lifelong) — prevents neurologic decline",
+      "Fat-soluble vitamins A, D, K as needed",
+      "Low-fat diet with medium-chain triglycerides (absorbed without chylomicrons)",
+      "Dietary counseling and growth monitoring",
+    ],
+    boardsPearls: [
+      "MTP mutation → cannot make chylomicrons or VLDL → fat malabsorption + very low ApoB",
+      "Triad: steatorrhea + acanthocytes + very low cholesterol/ApoB",
+      "Vitamin E deficiency → ataxia and retinopathy — prevent with high-dose supplementation",
+      "vs CF/celiac — both cause steatorrhea but abetalipoproteinemia has absent lipoproteins and acanthocytes",
+      "vs hypobetalipoproteinemia — low ApoB but MTP intact; usually asymptomatic",
+      "Medium-chain triglycerides bypass chylomicron requirement for absorption",
+    ],
+    pediatrics:
+      "Presents in infancy with steatorrhea and failure to thrive; early high-dose vitamin E prevents irreversible neurologic damage. Lifelong supplementation required.",
   },
   {
     id: "hyperlipidemia",
@@ -5181,6 +5410,80 @@ export const CONDITIONS: ConditionEntry[] = [
       "tPA window: within 4.5 h of symptom onset if eligible",
       "AF → cardioembolic stroke → anticoagulation",
     ],
+  },
+  {
+    id: "wallenberg-syndrome",
+    name: "Wallenberg Syndrome",
+    etymology:
+      "Eponym: Adolf Wallenberg + syndrome = concurrent sign cluster — lateral medullary infarction syndrome from PICA territory ischemia",
+    aliases: [
+      "wallenberg syndrome",
+      "wallenberg syndromes",
+      "wallenburg syndrome",
+      "wallenburg syndromes",
+      "lateral medullary syndrome",
+      "lateral medullary syndromes",
+      "lateral medullary infarction",
+      "lateral medullary infarctions",
+      "pica syndrome",
+      "pica syndromes",
+      "posterior inferior cerebellar artery syndrome",
+    ],
+    definition:
+      "Lateral medullary (Wallenberg) syndrome — ischemic infarction of the lateral medulla, classically from posterior inferior cerebellar artery (PICA) occlusion — producing crossed sensory findings, ipsilateral cerebellar signs, and lower cranial nerve dysfunction.",
+    pathophysiology:
+      "Vertebral or PICA occlusion → infarction of lateral medulla damaging spinal trigeminal nucleus/tract (ipsilateral face pain/temperature loss), spinothalamic tract (contralateral body pain/temperature loss), nucleus ambiguus (dysphagia, hoarseness, ↓ gag), vestibular nuclei (vertigo, nystagmus), inferior cerebellar peduncle (ipsilateral ataxia), and descending sympathetic fibers (ipsilateral Horner syndrome).",
+    classicPresentation: [
+      "Vertigo, nausea, vomiting, gait ataxia",
+      "Dysphagia, hoarseness, hiccups (CN IX/X — nucleus ambiguus)",
+      "Ipsilateral Horner syndrome (ptosis, miosis, anhidrosis)",
+      "Ipsilateral ↓ facial pain/temperature; contralateral ↓ body pain/temperature",
+      "Ipsilateral limb ataxia (inferior cerebellar peduncle)",
+      "Usually no significant hemiparesis (pyramidal tract spared medially)",
+    ],
+    keyFindings: [
+      "Crossed sensory deficit — ipsilateral face, contralateral body pain/temperature loss",
+      "Ipsilateral Horner syndrome",
+      "Dysphagia with diminished gag reflex",
+      "MRI DWI — lateral medullary infarct; may see PICA territory involvement",
+    ],
+    keyLabs: [
+      "MRI brain with DWI — confirms lateral medullary infarction",
+      "Vascular imaging — vertebral/PICA occlusion or dissection",
+      "ECG and cardiac workup if embolic source suspected",
+    ],
+    associations: [
+      "Vertebral artery dissection — especially in young patients with neck trauma",
+      "Atherosclerosis of vertebral or PICA",
+      "Cardioembolism (less common)",
+    ],
+    complications: [
+      "Aspiration pneumonia from dysphagia",
+      "Persistent ataxia and vestibular symptoms",
+      "Extension of infarct or cerebellar edema (rare)",
+    ],
+    distinguishFrom: [
+      "Medial medullary (Dejerine) syndrome — contralateral hemiparesis with ipsilateral tongue weakness; different vascular territory",
+      "Lateral pontine syndrome (AICA) — facial paralysis, deafness, CN VII/VIII findings",
+      "Cerebellar stroke without brainstem signs — isolated ataxia without crossed sensory pattern",
+      "Guillain-Barré — ascending weakness, not focal lateral medullary pattern",
+    ],
+    treatment: [
+      "Acute ischemic stroke protocols if within window — supportive care common for posterior circulation",
+      "Swallow evaluation — aspiration precautions",
+      "Treat underlying cause (dissection, antiplatelet/anticoagulation per etiology)",
+      "Vestibular rehabilitation for persistent vertigo/ataxia",
+    ],
+    boardsPearls: [
+      "Wallenberg = lateral medullary syndrome = PICA infarct",
+      "Ipsilateral face ↓ pain/temp + contralateral body ↓ pain/temp — classic crossed pattern",
+      "Nucleus ambiguus → dysphagia, hoarseness, ↓ gag, hiccups",
+      "Ipsilateral Horner + ataxia + vertigo",
+      "vs medial medullary syndrome — hemiparesis prominent; Wallenberg usually no major weakness",
+      "Vertebral artery dissection in young patient with neck pain + Wallenberg signs",
+    ],
+    pediatrics:
+      "Rare in children but vertebral artery dissection after trauma or arteriopathy can cause lateral medullary stroke. Dysphagia and aspiration risk require swallow precautions in all ages.",
   },
   {
     id: "normal-pressure-hydrocephalus",
@@ -7445,6 +7748,76 @@ export const CONDITIONS: ConditionEntry[] = [
     ],
     pediatrics:
       "Less common than Hashimoto in children; weight loss and behavioral changes may be presenting features.",
+  },
+  {
+    id: "graft-versus-host-disease",
+    name: "Graft-Versus-Host Disease",
+    etymology:
+      "Old English græf = planted cutting + Latin versus = against + host = recipient + Latin morbus = disease — donor immune cells attack recipient tissues after allogeneic transplant",
+    aliases: [
+      "graft-versus-host disease",
+      "graft versus host disease",
+      "graft-vs-host disease",
+      "graft vs host disease",
+      "gvhd",
+      "acute gvhd",
+      "chronic gvhd",
+      "acute graft-versus-host disease",
+      "chronic graft-versus-host disease",
+      "graft versus host reaction",
+      "graft-versus-host reaction",
+    ],
+    definition:
+      "Immunologic complication of allogeneic hematopoietic stem cell transplantation in which donor T lymphocytes recognize recipient tissues as foreign (MHC mismatch) and mount a type IV–mediated attack — classically affecting skin, gastrointestinal tract, and liver.",
+    pathophysiology:
+      "Conditioning regimen damages recipient tissues → inflammatory cytokines upregulate host MHC → donor T cells activated against host antigens → CD4⁺/CD8⁺ cytotoxic and cytokine-mediated injury to epithelial tissues (skin, GI crypts, bile ducts); chronic GVHD resembles autoimmune scleroderma-like fibrosis with sicca symptoms and bronchiolitis obliterans; beneficial graft-versus-leukemia effect from same donor immunity can reduce relapse.",
+    classicPresentation: [
+      "Acute GVHD (usually within 100 days post-transplant) — maculopapular rash, diarrhea (often bloody), ↑ conjugated bilirubin/cholestasis",
+      "Chronic GVHD (>100 days) — hyperpigmentation, sclerodermatous skin, oral lichenoid changes, dry eyes/mouth, obstructive lung disease",
+      "History of allogeneic bone marrow or stem cell transplant (not routine solid organ transplant)",
+      "Fever and weight loss with GI and skin involvement",
+    ],
+    keyFindings: [
+      "Skin biopsy — epidermal apoptosis, dyskeratosis (acute)",
+      "Elevated liver enzymes — cholestatic pattern",
+      "Persistent diarrhea with crypt apoptosis on GI biopsy",
+      "Clinical staging by skin, liver, gut involvement (Grade I–IV acute)",
+    ],
+    associations: [
+      "Allogeneic hematopoietic stem cell transplant",
+      "HLA mismatch — ↑ GVHD risk despite prophylaxis",
+      "Type IV hypersensitivity — donor T-cell mediated (see dedicated entry)",
+      "Graft-versus-leukemia effect — donor immunity against residual malignancy",
+      "Immunosuppressive prophylaxis — cyclosporine/tacrolimus, methotrexate, antithymocyte globulin",
+    ],
+    complications: [
+      "Severe acute GVHD — multiorgan failure, infection from immunosuppression",
+      "Chronic disability from scleroderma-like skin and lung fibrosis",
+      "Secondary infections and reactivation (CMV, fungal) during treatment",
+      "Malnutrition from chronic GI GVHD",
+    ],
+    distinguishFrom: [
+      "Transplant rejection — recipient immune system rejects donor graft (solid organ); opposite direction of immunity",
+      "Drug rash or regimen-related toxicity — timing and biopsy distinguish from GVHD",
+      "Viral exanthem or CMV colitis — PCR and histology in immunocompromised transplant patient",
+      "Acute radiation syndrome — pretransplant conditioning overlap; GVHD persists beyond engraftment with donor T cells",
+      "Contact dermatitis — type IV but no transplant history",
+    ],
+    treatment: [
+      "Prophylaxis — calcineurin inhibitors + methotrexate or mycophenolate",
+      "Acute GVHD — high-dose corticosteroids first-line; second-line agents if refractory",
+      "Chronic GVHD — prolonged immunosuppression, topical steroids, supportive care for sicca and lung disease",
+    ],
+    boardsPearls: [
+      "GVHD = donor T cells attack host — classic after allogeneic bone marrow transplant",
+      "Triad: rash + diarrhea + liver dysfunction (acute)",
+      "Type IV T-cell–mediated hypersensitivity — not antibody mediated",
+      "vs transplant rejection — host vs graft, not graft vs host",
+      "Even 6/6 HLA match can develop GVHD — donor T cells vs minor antigens",
+      "Chronic GVHD resembles scleroderma + Sjögren-like sicca + bronchiolitis obliterans",
+    ],
+    pediatrics:
+      "Pediatric allogeneic transplant for leukemia, immunodeficiency, and metabolic disease carries GVHD risk; acute GVHD may be harder to distinguish from infection in neutropenic children — biopsy and close monitoring essential.",
   },
   {
     id: "medullary-thyroid-carcinoma",
@@ -9881,15 +10254,95 @@ export const CONDITIONS: ConditionEntry[] = [
       "Rare in children; familial forms (e.g., glucocorticoid-remediable aldosteronism) should be considered in pediatric hypertension workup.",
   },
   {
+    id: "gastrinoma",
+    name: "Gastrinoma",
+    etymology:
+      "Gastrin + -oma = tumor — neuroendocrine tumor (NET) that autonomously secretes gastrin, most often in the pancreas or duodenal wall",
+    aliases: [
+      "gastrinoma",
+      "gastrinomas",
+      "gastrin-secreting tumor",
+      "gastrin secreting tumor",
+      "gastrin-producing tumor",
+      "gastrin producing tumor",
+      "gastrin cell tumor",
+      "pancreatic gastrinoma",
+      "duodenal gastrinoma",
+    ],
+    definition:
+      "Functional gastroenteropancreatic neuroendocrine tumor that ectopically or autonomously secretes gastrin — causing Zollinger-Ellison syndrome with massive acid hypersecretion, refractory peptic ulcer disease, and diarrhea; commonly associated with MEN1.",
+    pathophysiology:
+      "Gastrinoma cells secrete gastrin independent of gastric pH feedback → chronic hypergastrinemia → parietal cell and ECL hyperplasia → extreme gastric acid output → multiple/refractory ulcers (including jejunum) and diarrhea from acid load and malabsorption.",
+    classicPresentation: [
+      "Multiple or recurrent peptic ulcers despite PPI therapy",
+      "Ulcers in atypical locations — jejunum, distal duodenum",
+      "Chronic watery diarrhea",
+      "Abdominal pain, reflux, weight loss",
+      "MEN1 kindred with hypercalcemia (parathyroid) or pituitary disease",
+    ],
+    keyFindings: [
+      "Markedly elevated fasting serum gastrin",
+      "↑ Basal gastric acid secretion",
+      "Secretin stimulation test — paradoxical ↑ gastrin (diagnostic)",
+      "Pancreatic or duodenal mass on CT/MRI/endoscopic ultrasound",
+      "Somatostatin receptor imaging (DOTATATE PET) for localization",
+    ],
+    keyLabs: [
+      "↑ Fasting serum gastrin (>1000 pg/mL highly suggestive when off PPI)",
+      "Secretin stimulation test — gastrin rises >120 pg/mL above baseline",
+      "↑ Gastric acid output",
+      "Screen MEN1 — calcium, PTH, prolactin, fasting glucose",
+    ],
+    associations: [
+      "Zollinger-Ellison syndrome — clinical syndrome caused by gastrinoma",
+      "MEN1 — gastrinoma in ~50% of MEN1 patients; parathyroid hyperplasia usually presents first",
+      "Gastrinoma triangle — duodenum, pancreatic head, common bile duct junction (common sites)",
+      "Peptic ulcer disease — refractory, multiple, atypical location",
+      "Retained antrum syndrome — mimics hypergastrinemia after gastric surgery",
+    ],
+    complications: [
+      "Perforation or bleeding from refractory ulcers",
+      "Malabsorption and weight loss from acid-related diarrhea",
+      "Metastatic neuroendocrine carcinoma — liver metastases",
+      "MEN1-related morbidity from parathyroid, pituitary, or other NETs",
+    ],
+    distinguishFrom: [
+      "Zollinger-Ellison syndrome — clinical syndrome; gastrinoma is the tumor cause",
+      "Autoimmune gastritis — ↑ gastrin from achlorhydria, not autonomous gastrin secretion; secretin test ↓ gastrin",
+      "Chronic PPI use — ↑ gastrin from acid suppression; stop PPI before testing when possible",
+      "Retained antrum syndrome — post-gastrectomy G-cell hyperplasia",
+      "Antral G-cell hyperplasia — non-neoplastic gastrin excess",
+      "Routine PUD — H. pylori or NSAID-related; responds to standard PPI",
+    ],
+    treatment: [
+      "High-dose PPI to control acid until tumor addressed",
+      "Surgical resection when localized; debulking for metastatic disease",
+      "Somatostatin analogs (octreotide) for symptom control",
+      "Screen and manage MEN1-associated disease",
+      "Peptide receptor radionuclide therapy for advanced NETs",
+    ],
+    boardsPearls: [
+      "Gastrinoma → Zollinger-Ellison: refractory ulcers + diarrhea + ↑ fasting gastrin",
+      "Ulcers in jejunum — classic atypical location for gastrinoma",
+      "Secretin test: normal ↓ gastrin; gastrinoma paradoxically ↑ gastrin",
+      "MEN1: parathyroid hyperplasia most common; also pituitary and pancreatic NETs",
+      "Gastrinoma triangle — duodenum most common site (not always pancreas)",
+      "Stop PPIs ~2 weeks before gastrin testing when feasible — PPIs cause false ↑ gastrin",
+      "vs autoimmune gastritis — both ↑ gastrin but gastrinoma has high acid output; atrophic gastritis has achlorhydria",
+    ],
+    pediatrics:
+      "Rare in children but occurs in MEN1 families — suspect with refractory PUD and diarrhea in adolescents. Screen kindreds for MEN1 mutations.",
+  },
+  {
     id: "zollinger-ellison-syndrome",
     name: "Zollinger-Ellison Syndrome",
     etymology:
       "eponyms: Zollinger + Ellison + syndrome = running together of findings",
-    aliases: ["zollinger-ellison syndrome", "zes", "gastrinoma"],
+    aliases: ["zollinger-ellison syndrome", "zes"],
     definition:
-      "Gastrin-secreting neuroendocrine tumor (gastrinoma) causing refractory peptic ulcer disease and diarrhea.",
+      "Clinical syndrome of massive gastric acid hypersecretion from a gastrinoma — causing refractory peptic ulcer disease and diarrhea.",
     pathophysiology:
-      "Gastrinoma → ↑ gastrin → parietal cell hyperstimulation → massive acid secretion → multiple/refractory ulcers and diarrhea.",
+      "Gastrinoma autonomously secretes gastrin → parietal cell hyperstimulation → massive acid secretion → multiple/refractory ulcers and diarrhea.",
     classicPresentation: [
       "Multiple or refractory peptic ulcers",
       "Diarrhea",
@@ -9906,6 +10359,7 @@ export const CONDITIONS: ConditionEntry[] = [
       "Duodenal/jejunal ulcers",
     ],
     distinguishFrom: [
+      "Gastrinoma — neuroendocrine tumor causing ZES; ZES is the clinical syndrome",
       "Routine PUD — H. pylori, NSAIDs; responds to PPI",
       "Retained antrum syndrome",
     ],
@@ -9918,6 +10372,150 @@ export const CONDITIONS: ConditionEntry[] = [
       "MEN 1: parathyroid hyperplasia most common manifestation",
       "Secretin normally ↓ gastrin; gastrinoma paradoxically ↑ gastrin",
     ],
+  },
+  {
+    id: "vipoma",
+    name: "VIPoma",
+    etymology:
+      "VIP + -oma = tumor — pancreatic or duodenal neuroendocrine tumor that autonomously secretes vasoactive intestinal peptide (VIP)",
+    aliases: [
+      "vipoma",
+      "vipomas",
+      "vip-secreting tumor",
+      "vip secreting tumor",
+      "vip producing tumor",
+      "vip-producing tumor",
+      "pancreatic vipoma",
+      "duodenal vipoma",
+      "verner-morrison syndrome tumor",
+    ],
+    definition:
+      "Functional gastroenteropancreatic neuroendocrine tumor secreting excess VIP — causing WDHA syndrome with massive secretory diarrhea, hypokalemia, and achlorhydria/hypochlorhydria.",
+    pathophysiology:
+      "VIPoma cells secrete VIP → ↑ cAMP in intestinal epithelium → chloride and water secretion → profuse watery diarrhea with volume depletion and hypokalemia; VIP also inhibits gastric acid secretion → achlorhydria/hypochlorhydria.",
+    classicPresentation: [
+      "Profuse watery diarrhea (>3 L/day) — secretory, persists with fasting",
+      "Hypokalemia — muscle weakness, cramps, arrhythmias",
+      "Dehydration and metabolic acidosis from bicarbonate loss",
+      "Flushing (less prominent than carcinoid)",
+      "Weight loss from chronic secretory losses",
+    ],
+    keyFindings: [
+      "Markedly elevated serum VIP",
+      "Secretory watery diarrhea with normal or low stool osmotic gap",
+      "Hypokalemia and metabolic acidosis",
+      "Achlorhydria or hypochlorhydria",
+      "Pancreatic or duodenal mass on imaging",
+    ],
+    keyLabs: [
+      "↑ Serum VIP (diagnostic when markedly elevated with compatible syndrome)",
+      "Hypokalemia, metabolic acidosis, ↑ bicarbonate loss in stool",
+      "Low gastric acid output",
+      "Somatostatin receptor imaging for localization",
+    ],
+    associations: [
+      "WDHA syndrome — clinical syndrome from VIPoma",
+      "MEN1 — VIPoma in pancreatic NET spectrum",
+      "Verner-Morrison syndrome — historical name for WDHA from VIPoma",
+      "Secretory diarrhea differential — cholera toxin, carcinoid (different mediator)",
+    ],
+    complications: [
+      "Severe dehydration, renal failure, electrolyte arrhythmias",
+      "Metastatic neuroendocrine carcinoma",
+      "Cachexia from chronic diarrhea",
+    ],
+    distinguishFrom: [
+      "WDHA syndrome — clinical syndrome; VIPoma is the tumor cause",
+      "Gastrinoma — peptic ulcers and acid hypersecretion, not secretory WDHA pattern",
+      "Carcinoid syndrome — flushing, ↑ 5-HIAA; diarrhea from serotonin not VIP",
+      "Cholera — infectious secretory diarrhea; no VIP elevation",
+      "Laxative abuse — osmotic or stimulant pattern; VIP normal",
+    ],
+    treatment: [
+      "Aggressive IV fluids and potassium repletion",
+      "Octreotide/lanreotide — somatostatin analog suppresses VIP secretion",
+      "Surgical resection when localized",
+      "Screen for MEN1",
+    ],
+    boardsPearls: [
+      "VIPoma → WDHA: Watery Diarrhea, Hypokalemia, Achlorhydria",
+      "Secretory diarrhea — high volume, persists with fasting; low stool osmotic gap",
+      "Octreotide treats VIPoma diarrhea",
+      "vs gastrinoma — ulcers and ↑ acid, not WDHA secretory pattern",
+      "vs carcinoid — 5-HIAA elevation and flushing predominant",
+      "MEN1 association — screen parathyroid and pituitary disease",
+    ],
+    pediatrics:
+      "Rare in children; occurs in MEN1 kindreds. Secretory diarrhea with hypokalemia requires aggressive rehydration and electrolyte monitoring.",
+  },
+  {
+    id: "wdha-syndrome",
+    name: "WDHA Syndrome",
+    etymology:
+      "W = Watery + D = Diarrhea + H = Hypokalemia + A = Achlorhydria — clinical syndrome from excess vasoactive intestinal peptide (VIP), classically due to VIPoma",
+    aliases: [
+      "wdha syndrome",
+      "wdha",
+      "watery diarrhea hypokalemia achlorhydria syndrome",
+      "watery diarrhea hypokalemia achlorhydria",
+      "verner-morrison syndrome",
+      "verner morrison syndrome",
+      "pancreatic cholera",
+      "wdh syndrome",
+    ],
+    definition:
+      "Clinical syndrome of massive secretory watery diarrhea, hypokalemia, and achlorhydria (or hypochlorhydria) from pathologically elevated VIP — most commonly caused by a VIPoma.",
+    pathophysiology:
+      "Excess VIP → intestinal chloride and water secretion (secretory diarrhea) + renal potassium wasting and GI potassium loss → hypokalemia; VIP inhibits gastric acid secretion → achlorhydria.",
+    classicPresentation: [
+      "Profuse watery diarrhea — often >3 L/day",
+      "Weakness, tetany, arrhythmias from hypokalemia",
+      "Dehydration, weight loss, metabolic acidosis",
+      "Minimal or absent peptic ulcer symptoms (achlorhydria)",
+    ],
+    keyFindings: [
+      "Secretory diarrhea persisting with fasting",
+      "Hypokalemia and metabolic acidosis",
+      "Achlorhydria or low basal acid output",
+      "Elevated serum VIP with VIPoma",
+    ],
+    keyLabs: [
+      "↑ Serum VIP",
+      "Hypokalemia, metabolic acidosis",
+      "Low gastric acid secretion",
+      "Normal or low stool osmotic gap (secretory pattern)",
+    ],
+    associations: [
+      "VIPoma — most common cause",
+      "MEN1 — pancreatic NET spectrum",
+      "Verner-Morrison syndrome — eponym for WDHA from VIPoma",
+    ],
+    complications: [
+      "Severe hypokalemia — cardiac arrhythmias, muscle paralysis",
+      "Dehydration and acute kidney injury",
+      "Chronic cachexia",
+    ],
+    distinguishFrom: [
+      "VIPoma — neuroendocrine tumor causing WDHA; WDHA is the clinical syndrome",
+      "Gastrinoma/Zollinger-Ellison — hyperacidity and ulcers, not achlorhydria",
+      "Carcinoid syndrome — flushing and ↑ 5-HIAA",
+      "Cholera — infectious secretory diarrhea without VIP elevation",
+      "Osmotic diarrhea — lactose, laxatives; high stool osmotic gap",
+    ],
+    treatment: [
+      "IV fluids and potassium replacement",
+      "Octreotide/lanreotide for VIP-mediated secretion",
+      "Treat underlying VIPoma surgically when resectable",
+    ],
+    boardsPearls: [
+      "WDHA = Watery Diarrhea, Hypokalemia, Achlorhydria",
+      "Mnemonic letters match syndrome components — think VIPoma",
+      "Secretory diarrhea persists with fasting — vs osmotic diarrhea",
+      "Octreotide = somatostatin analog treats VIP-driven diarrhea",
+      "Achlorhydria distinguishes from gastrinoma (excess acid)",
+    ],
+    pediatrics:
+      "Rare pediatric presentation; consider VIPoma in MEN1 families with secretory diarrhea and hypokalemia.",
   },
   {
     id: "celiac-disease",
@@ -11547,7 +12145,7 @@ export const CONDITIONS: ConditionEntry[] = [
       "Extraintestinal manifestations",
     ],
     complications: [
-      "Fistulae",
+      "Fistulae (including colovesical — see dedicated entry)",
       "Strictures",
       "Abscesses",
       "Colorectal cancer (long-standing)",
@@ -11561,12 +12159,79 @@ export const CONDITIONS: ConditionEntry[] = [
       "Immunomodulators (azathioprine) or anti-TNF (infliximab) for moderate-severe disease",
     ],
     boardsPearls: [
-      "Transmural + skip lesions + fistulae = Crohn",
+      "Transmural + skip lesions + fistulae (colovesical — see dedicated entry) = Crohn",
       "Smoking worsens Crohn but may be protective in UC",
       "Vitamin B12 deficiency with terminal ileum disease",
     ],
     pediatrics:
       "May present with growth failure and delayed puberty before GI symptoms; perianal disease common.",
+  },
+  {
+    id: "colovesical-fistula",
+    name: "Colovesical Fistula",
+    etymology:
+      "Greek kolon = colon + Latin vesica = bladder + Latin fistula = pipe/tube — abnormal connection between colon and urinary bladder",
+    aliases: [
+      "colovesical fistula",
+      "colovesical fistulas",
+      "colovesical fistulae",
+      "vesicocolic fistula",
+      "vesicocolic fistulas",
+      "vesicocolic fistulae",
+      "vesico-colic fistula",
+      "vesico colic fistula",
+      "colonic bladder fistula",
+      "colon bladder fistula",
+      "bladder colon fistula",
+    ],
+    definition:
+      "Abnormal tract connecting the colon (often sigmoid) to the urinary bladder — allows passage of gas and feculent material into urine, causing pneumaturia, fecaluria, and recurrent polymicrobial urinary tract infections.",
+    pathophysiology:
+      "Transmural inflammation or malignancy erodes through adjacent colon and bladder walls — Crohn disease, diverticulitis, colorectal cancer, and prior pelvic radiation/surgery are common causes; pressure necrosis and abscess formation can mature into an epithelialized fistulous tract.",
+    classicPresentation: [
+      "Pneumaturia — passage of air bubbles in urine",
+      "Fecaluria or foul-smelling, cloudy urine",
+      "Recurrent UTIs with polymicrobial organisms (E. coli, anaerobes)",
+      "Dysuria, suprapubic discomfort, hematuria",
+      "History of Crohn disease, diverticulitis, or colorectal surgery/malignancy",
+    ],
+    keyFindings: [
+      "Pneumaturia on history — highly suggestive",
+      "CT cystography or CT enterography showing air/fluid tract between colon and bladder",
+      "Cystoscopy may show fistula opening on bladder dome/posterior wall",
+      "Colonoscopy to exclude malignancy as cause",
+    ],
+    associations: [
+      "Crohn disease — transmural inflammation and fistula formation",
+      "Diverticulitis — sigmoid-bladder fistula in elderly",
+      "Colorectal adenocarcinoma",
+      "Pelvic radiation or prior colonic surgery",
+    ],
+    complications: [
+      "Recurrent complicated urinary tract infections and pyelonephritis",
+      "Sepsis from urosepsis",
+      "Progressive malnutrition if underlying Crohn",
+    ],
+    distinguishFrom: [
+      "Vesicovaginal fistula — continuous urinary leakage from vagina; obstetric/surgical cause",
+      "Enterovesical fistula from small bowel — similar pneumaturia but different origin on imaging",
+      "Simple UTI — no pneumaturia or fecaluria",
+      "Emphysematous cystitis — gas in bladder wall on imaging without colonic connection",
+    ],
+    treatment: [
+      "Treat underlying disease — antibiotics for UTI; immunomodulators/biologics for Crohn",
+      "Surgical repair (colon resection with bladder closure) when symptomatic or malignancy excluded",
+      "Temporary urinary diversion in complex or inflamed cases",
+    ],
+    boardsPearls: [
+      "Pneumaturia + fecaluria + recurrent UTI → colovesical fistula until proven otherwise",
+      "Crohn and diverticulitis are top causes on Step 1",
+      "Rule out colorectal cancer with colonoscopy",
+      "vs vesicovaginal fistula — vaginal not bladder-colon connection",
+      "Polymicrobial urine cultures (aerobic + anaerobic) suggest enteric source",
+    ],
+    pediatrics:
+      "Uncommon in children; consider complicated Crohn disease or post-surgical fistula. Pneumaturia in any age warrants imaging to exclude enterovesical/colovesical fistula.",
   },
   {
     id: "ischemic-colitis",
@@ -12558,6 +13223,166 @@ export const CONDITIONS: ConditionEntry[] = [
       "Common inherited hemolytic anemia in children of northern European ancestry; neonatal jaundice, anemia, splenomegaly, and parvovirus B19 aplastic crisis are high-yield presentations.",
   },
   {
+    id: "autoimmune-gastritis",
+    name: "Autoimmune Gastritis",
+    etymology:
+      "Greek autos = self + Latin immunitas = exemption + gaster = stomach + -itis = inflammation — chronic immune-mediated destruction of gastric oxyntic (fundic/body) mucosa",
+    aliases: [
+      "autoimmune gastritis",
+      "autoimmune gastritides",
+      "autoimmune atrophic gastritis",
+      "type a gastritis",
+      "type a chronic gastritis",
+      "fundic gastritis",
+      "corpus gastritis",
+      "chronic autoimmune gastritis",
+      "autoimmune fundic gastritis",
+    ],
+    definition:
+      "Chronic autoimmune inflammation targeting parietal and chief cells in the gastric fundus and body (type A gastritis) — leading to oxyntic mucosal atrophy, achlorhydria, intrinsic factor loss, hypergastrinemia, and risk of pernicious anemia and gastric neoplasia.",
+    pathophysiology:
+      "CD4+ T-cell–mediated autoimmunity with anti-parietal cell and anti-intrinsic factor antibodies → destruction of oxyntic mucosa → ↓ acid and intrinsic factor → ↑ gastrin (loss of acid feedback) → ECL hyperplasia and carcinoid risk; B12 malabsorption in terminal ileum without intrinsic factor.",
+    classicPresentation: [
+      "Often asymptomatic until B12 deficiency or anemia develops",
+      "Fatigue, pallor, glossitis from pernicious anemia",
+      "Neurologic signs — paresthesias, ataxia, subacute combined degeneration",
+      "Dyspepsia or early satiety in advanced atrophy",
+      "Associated autoimmune diseases — thyroiditis, type 1 diabetes",
+    ],
+    keyFindings: [
+      "Atrophic fundic/body mucosa with loss of rugal folds on endoscopy",
+      "Achlorhydria or severe hypochlorhydria",
+      "Anti-parietal cell antibodies (sensitive) and anti-intrinsic factor antibodies (specific for pernicious anemia)",
+      "Hypergastrinemia from loss of acid negative feedback",
+      "Intestinal metaplasia on biopsy — precancerous",
+    ],
+    keyLabs: [
+      "↑ Fasting serum gastrin (secondary hypergastrinemia)",
+      "↓ Vitamin B12 with ↑ methylmalonic acid and homocysteine",
+      "Macrocytic anemia with hypersegmented neutrophils",
+      "Anti-intrinsic factor antibody — highly specific for pernicious anemia",
+      "Anti-parietal cell antibodies — sensitive but less specific",
+    ],
+    associations: [
+      "Pernicious anemia — clinical B12 deficiency syndrome from autoimmune gastritis",
+      "Atrophic gastritis — mucosal end result of chronic autoimmune fundic destruction",
+      "Other autoimmune diseases — Hashimoto thyroiditis, type 1 diabetes, vitiligo",
+      "Gastric carcinoid tumors — from chronic gastrin-driven ECL hyperplasia",
+      "Gastric adenocarcinoma risk in severe atrophy",
+    ],
+    complications: [
+      "Vitamin B12 deficiency → megaloblastic anemia and neurologic injury",
+      "Gastric neuroendocrine (carcinoid) tumors",
+      "Gastric adenocarcinoma",
+      "Iron deficiency anemia from achlorhydria",
+    ],
+    distinguishFrom: [
+      "H. pylori antral gastritis (type B) — antral-predominant; not autoimmune fundic destruction",
+      "Atrophic gastritis — broader mucosal atrophy term including H. pylori type B",
+      "Pernicious anemia — B12 deficiency syndrome; autoimmune gastritis is underlying cause",
+      "Gastrinoma — primary hypergastrinemia with high acid output, not achlorhydria",
+      "Chronic PPI use — achlorhydria and ↑ gastrin without autoimmune antibodies",
+      "Acute gastritis — self-limited, no chronic parietal cell destruction",
+    ],
+    treatment: [
+      "Lifelong vitamin B12 replacement when intrinsic factor deficient",
+      "Iron supplementation if iron deficiency anemia",
+      "Endoscopic surveillance for dysplasia and NETs in high-risk atrophic mucosa",
+      "Treat associated autoimmune conditions",
+      "No specific immunotherapy — management is replacement and surveillance",
+    ],
+    boardsPearls: [
+      "Type A = autoimmune = fundus/body = achlorhydria + ↑ gastrin + B12 deficiency",
+      "Anti-IF antibody highly specific for pernicious anemia",
+      "Anti-parietal cell antibody sensitive but seen in other autoimmune disease",
+      "↑ Gastrin here is secondary to achlorhydria — vs gastrinoma (autonomous secretion + high acid)",
+      "Secretin test: autoimmune gastritis ↓ gastrin; gastrinoma ↑ gastrin",
+      "Associated with other autoimmune diseases — thyroid, diabetes",
+      "Carcinoid risk from ECL hyperplasia driven by hypergastrinemia",
+    ],
+    pediatrics:
+      "Primarily adult disease. Juvenile pernicious anemia is rare. Congenital intrinsic factor deficiency causes infantile B12 deficiency without autoimmune gastritis.",
+  },
+  {
+    id: "atrophic-gastritis",
+    name: "Atrophic Gastritis",
+    etymology:
+      "Greek a- = without + trophē = nourishment + gaster = stomach + -itis = inflammation — chronic gastric mucosal atrophy with loss of glandular tissue and achlorhydria",
+    aliases: [
+      "atrophic gastritis",
+      "atrophic gastritides",
+      "chronic atrophic gastritis",
+      "type b gastritis",
+      "antral atrophic gastritis",
+      "h pylori atrophic gastritis",
+      "h. pylori atrophic gastritis",
+      "gastric atrophy",
+      "gastric mucosal atrophy",
+    ],
+    definition:
+      "Chronic inflammation leading to loss of gastric glands (chief and parietal cells), mucosal atrophy, and achlorhydria — autoimmune (type A, fundic) or H. pylori–associated (often antral, type B) — predisposing to hypergastrinemia, B12 deficiency, and gastric neoplasia.",
+    pathophysiology:
+      "Autoimmune type — anti-parietal cell and anti-intrinsic factor antibodies destroy oxyntic mucosa → achlorhydria, loss of intrinsic factor, ↑ gastrin from loss of acid feedback → intestinal metaplasia and ↑ gastric cancer/carcinoid risk. H. pylori–associated type — chronic antral inflammation → atrophy and intestinal metaplasia → intestinal-type adenocarcinoma risk.",
+    classicPresentation: [
+      "Often asymptomatic until complications (B12 deficiency, anemia, cancer)",
+      "Dyspepsia, early satiety, or weight loss in advanced disease",
+      "Pernicious anemia presentation — fatigue, glossitis, neurologic signs from B12 deficiency (autoimmune type)",
+      "Iron deficiency anemia possible from achlorhydria impairing iron absorption",
+    ],
+    keyFindings: [
+      "Achlorhydria or markedly reduced acid secretion",
+      "Loss of rugal folds in fundus/body on endoscopy (autoimmune type)",
+      "Intestinal metaplasia on biopsy — precancerous change",
+      "Hypergastrinemia from acid feedback loss",
+      "Anti-parietal cell and anti-intrinsic factor antibodies (autoimmune type)",
+    ],
+    keyLabs: [
+      "↑ Serum gastrin (secondary hypergastrinemia from achlorhydria)",
+      "↓ Vitamin B12 with ↑ MMA and homocysteine in autoimmune type with intrinsic factor loss",
+      "Macrocytic anemia with hypersegmented neutrophils if B12 deficient",
+      "Anti-intrinsic factor antibody (highly specific for pernicious anemia)",
+      "H. pylori testing in non-autoimmune/atrophic antral disease",
+    ],
+    associations: [
+      "Pernicious anemia — autoimmune atrophic gastritis with intrinsic factor loss",
+      "H. pylori chronic gastritis — antral atrophy and intestinal-type gastric cancer risk",
+      "Gastric adenocarcinoma and gastric neuroendocrine (carcinoid) tumors",
+      "Other autoimmune diseases — Hashimoto thyroiditis, type 1 diabetes",
+      "Ménétrier disease — distinct hypertrophic gastropathy, not primary atrophy",
+    ],
+    complications: [
+      "Vitamin B12 deficiency → megaloblastic anemia and subacute combined degeneration",
+      "Gastric adenocarcinoma (especially intestinal type with H. pylori pathway)",
+      "Gastric carcinoid tumors from ECL hyperplasia driven by hypergastrinemia",
+      "Iron deficiency anemia from impaired absorption",
+    ],
+    distinguishFrom: [
+      "Autoimmune gastritis — type A fundic autoimmune destruction; see dedicated entry",
+      "Pernicious anemia — B12 deficiency syndrome from autoimmune atrophic gastritis; atrophic gastritis is the mucosal disease",
+      "Acute gastritis — sudden inflammation without chronic glandular loss",
+      "H. pylori gastritis without atrophy — may precede atrophic gastritis but not yet atrophic",
+      "Zollinger-Ellison syndrome — hypergastrinemia from gastrinoma, not achlorhydric atrophy",
+      "Chronic PPI use — achlorhydria and ↑ gastrin without autoimmune destruction",
+    ],
+    treatment: [
+      "H. pylori eradication when infection present",
+      "Lifelong vitamin B12 replacement for intrinsic factor deficiency (pernicious anemia)",
+      "Iron supplementation if iron deficiency anemia",
+      "Endoscopic surveillance for dysplasia/cancer in high-risk atrophic mucosa",
+      "Treat associated autoimmune conditions",
+    ],
+    boardsPearls: [
+      "Autoimmune atrophic gastritis (type A) — fundus/body, achlorhydria, ↑ gastrin, B12 deficiency, cancer risk",
+      "H. pylori atrophic gastritis (type B) — antral, intestinal metaplasia → intestinal-type gastric cancer",
+      "Achlorhydria → loss of acid feedback → hypergastrinemia",
+      "Pernicious anemia = autoimmune atrophic gastritis + anti-IF antibodies + B12 malabsorption",
+      "↑ Gastrin + atrophic fundic mucosa + macrocytic anemia → think pernicious anemia",
+      "Carcinoid risk from chronic gastrin-driven ECL hyperplasia",
+    ],
+    pediatrics:
+      "Autoimmune atrophic gastritis and pernicious anemia are primarily adult diseases. Congenital intrinsic factor deficiency causes infantile B12 deficiency without autoimmune gastritis. H. pylori–associated atrophy is uncommon in young children.",
+  },
+  {
     id: "pernicious-anemia",
     name: "Pernicious Anemia",
     etymology:
@@ -12616,6 +13441,7 @@ export const CONDITIONS: ConditionEntry[] = [
     boardsPearls: [
       "Autoimmune destruction of parietal cells → no intrinsic factor → B12 not absorbed in terminal ileum",
       "Anti-intrinsic factor antibody is highly specific for pernicious anemia",
+      "Atrophic gastritis is underlying mucosal disease — see dedicated entry",
       "B12 deficiency → ↑ MMA + ↑ homocysteine; folate deficiency → ↑ homocysteine only",
       "Subacute combined degeneration: dorsal columns (↓ vibration/proprioception) + lateral corticospinal tracts",
       "Give B12 before folate — folate alone can fix anemia but worsen neurologic damage",
@@ -15581,6 +16407,89 @@ export const CONDITIONS: ConditionEntry[] = [
     ],
     pediatrics:
       "Mycoplasma pneumoniae is a common trigger in children in addition to anticonvulsants and antibiotics. Same mucosal involvement and detachment principles apply; ophthalmologic follow-up critical for long-term vision.",
+  },
+  {
+    id: "hemolytic-disease-of-fetus-and-newborn",
+    name: "Hemolytic Disease of the Fetus and Newborn",
+    etymology:
+      "Greek haima = blood + Greek lysis = loosening + Latin fetus = offspring + Latin natus = born — maternal alloantibodies cross placenta and destroy fetal/neonatal red blood cells",
+    aliases: [
+      "hemolytic disease of the fetus and newborn",
+      "hemolytic disease of fetus and newborn",
+      "hdfn",
+      "hdn",
+      "hemolytic disease of the newborn",
+      "hemolytic disease of newborn",
+      "erythroblastosis fetalis",
+      "erythroblastosis foetalis",
+      "rh hemolytic disease",
+      "rh hemolytic disease of newborn",
+      "rh incompatibility disease",
+      "abo hemolytic disease of newborn",
+      "isoimmunization hemolytic disease",
+    ],
+    definition:
+      "Maternal IgG alloantibodies against fetal RBC antigens (classically Rh/D, also ABO/Kell) cross the placenta → fetal/neonatal hemolysis → anemia, hyperbilirubinemia, and hydrops fetalis in severe cases.",
+    pathophysiology:
+      "Sensitized mother produces IgG alloantibodies (e.g., anti-D) → transplacental crossing → bind fetal RBC antigens → hemolysis via splenic macrophages and complement → ↓ hemoglobin, ↑ unconjugated bilirubin, ↑ reticulocytes; severe anemia → extramedullary hematopoiesis (erythroblastosis) and high-output cardiac failure (hydrops).",
+    classicPresentation: [
+      "Neonatal jaundice within first 24 hours of life (pathologic timing)",
+      "Anemia, pallor, hepatosplenomegaly",
+      "Hydrops fetalis in utero — ascites, edema, pleural/pericardial effusions",
+      "Kernicterus risk from severe unconjugated hyperbilirubinemia",
+      "History of prior sensitized pregnancy or untreated Rh-negative mother with Rh-positive fetus",
+    ],
+    keyFindings: [
+      "Positive direct Coombs test on neonatal RBCs",
+      "↑ Reticulocytes, nucleated RBCs, ↓ haptoglobin",
+      "Indirect hyperbilirubinemia",
+      "Hydrops on prenatal ultrasound if severe",
+      "Maternal antibody screen positive (indirect Coombs)",
+    ],
+    keyLabs: [
+      "Neonatal direct antiglobulin (Coombs) test positive",
+      "↑ Indirect bilirubin, ↑ reticulocyte count",
+      "Maternal anti-D titer (Rh disease) — rising titer predicts severity",
+      "Middle cerebral artery peak systolic velocity (MCA-PSV) on ultrasound — fetal anemia surveillance",
+      "ABO/Rh typing of mother and newborn",
+    ],
+    associations: [
+      "Rh (D) incompatibility — classic severe HDFN (type II hypersensitivity)",
+      "ABO incompatibility — usually milder (type O mother, type A/B baby)",
+      "Kell, Duffy, Kidd antigens — other alloantibody causes",
+      "Type II hypersensitivity — IgG-mediated RBC destruction",
+    ],
+    complications: [
+      "Kernicterus — unconjugated bilirubin neurotoxicity",
+      "Hydrops fetalis and fetal demise",
+      "Late anemia of HDFN (persistent hemolysis weeks after birth)",
+      "Need for exchange transfusion or intrauterine transfusion",
+    ],
+    distinguishFrom: [
+      "Physiologic neonatal jaundice — appears after 24 h, mild, self-limited",
+      "Breast milk jaundice — late-onset unconjugated hyperbilirubinemia",
+      "G6PD deficiency — enzyme defect hemolysis; Coombs negative",
+      "Biliary atresia — conjugated hyperbilirubinemia, acholic stools",
+      "Autoimmune hemolytic anemia — maternal autoantibody less common; still Coombs positive",
+    ],
+    treatment: [
+      "Prevention: Rho(D) immune globulin (RhoGAM) to Rh-negative unsensitized mothers at 28 weeks and within 72 h postpartum if baby Rh-positive",
+      "Phototherapy for hyperbilirubinemia",
+      "Exchange transfusion if severe bilirubin or anemia",
+      "Intrauterine transfusion for severe fetal anemia",
+      "IVIG may reduce hemolysis in ABO HDFN (selected cases)",
+    ],
+    boardsPearls: [
+      "HDFN = maternal IgG alloantibody vs fetal RBC antigen — type II hypersensitivity",
+      "Rh disease: Rh-negative mother sensitized by prior Rh-positive pregnancy/fetomaternal bleed",
+      "RhoGAM prevents anti-D formation — give to unsensitized Rh-negative mothers",
+      "Jaundice in first 24 h = pathologic → think hemolysis (HDFN, sepsis, cephalohematoma)",
+      "Direct Coombs positive on baby confirms antibody on RBCs",
+      "ABO HDFN usually milder than Rh HDFN",
+      "Hydrops fetalis — severe anemia, high-output failure, erythroblastosis fetalis",
+    ],
+    pediatrics:
+      "Universal neonatal bilirubin screening; pathologic jaundice in first 24 h requires hemolysis workup. All pregnant patients screened for blood type and antibody status. RhoGAM prevents Rh HDFN — boards staple.",
   },
   {
     id: "neonatal-respiratory-distress-syndrome",
@@ -20275,7 +21184,7 @@ export const CONDITIONS: ConditionEntry[] = [
       "schizophrenic disorder",
     ],
     definition:
-      "Chronic psychotic disorder with positive symptoms (hallucinations, delusions), negative symptoms, and cognitive dysfunction lasting ≥6 months.",
+      "Chronic psychotic disorder with positive symptoms (see dedicated entry — hallucinations, delusions), negative symptoms, and cognitive dysfunction lasting ≥6 months.",
     pathophysiology:
       "Dopamine hypothesis: ↑ mesolimbic dopamine (positive symptoms); ↓ mesocortical dopamine (negative/cognitive symptoms); structural brain changes and genetic predisposition.",
     classicPresentation: [
@@ -20305,7 +21214,7 @@ export const CONDITIONS: ConditionEntry[] = [
     ],
     boardsPearls: [
       "Diagnosis requires ≥6 months of symptoms including ≥1 month active phase",
-      "Positive symptoms respond better to antipsychotics than negative",
+      "Positive symptoms respond better to antipsychotics than negative (see positive symptoms entry)",
       "Typical antipsychotics: D2 blockade → extrapyramidal symptoms",
     ],
   },
@@ -26930,7 +27839,7 @@ export const CONDITIONS: ConditionEntry[] = [
       "Native American populations — high cholesterol stone prevalence",
     ],
     complications: [
-      "Acute cholecystitis — sustained cystic duct obstruction",
+      "Acute cholecystitis — sustained cystic duct obstruction (see cholecystitis entry)",
       "Choledocholithiasis and cholangitis",
       "Acute biliary pancreatitis",
       "Gallstone ileus (cholecystoenteric fistula with obstructing gallstone in small bowel)",
@@ -26958,6 +27867,79 @@ export const CONDITIONS: ConditionEntry[] = [
     ],
     pediatrics:
       "Gallstones uncommon in children; consider hemolytic disease, total parenteral nutrition, fibrate therapy, or ileal disease. Pigment stones predominate in pediatric hemolysis.",
+  },
+  {
+    id: "cholecystitis",
+    name: "Cholecystitis",
+    etymology:
+      "Greek chole = bile + kystis = bladder + -itis = inflammation — acute inflammation of the gallbladder, usually from cystic duct obstruction",
+    aliases: [
+      "cholecystitis",
+      "cholecystitides",
+      "acute cholecystitis",
+      "acute cholecystitides",
+      "gallbladder inflammation",
+      "gallbladder inflammations",
+      "inflamed gallbladder",
+      "inflamed gallbladders",
+    ],
+    definition:
+      "Acute inflammation of the gallbladder — most often calculous (gallstone obstructing cystic duct) causing sustained RUQ pain, fever, and gallbladder wall inflammation; acalculous cholecystitis occurs in critically ill patients without stones.",
+    pathophysiology:
+      "Gallstone impacts cystic duct → bile stasis and distension → mucosal ischemia and inflammation with neutrophil infiltration; bacterial superinfection (E. coli, Klebsiella, Enterococcus) common; prolonged obstruction risks gangrene and perforation.",
+    classicPresentation: [
+      "RUQ or epigastric pain lasting >6 hours (vs biliary colic <6 h)",
+      "Fever and leukocytosis",
+      "Nausea and vomiting",
+      "Murphy sign — inspiratory arrest with deep RUQ palpation",
+      "Postprandial fatty meal trigger (like biliary colic)",
+      "Acalculous variant in ICU — fever, RUQ pain without stones on imaging",
+    ],
+    keyFindings: [
+      "Ultrasound — gallstones, gallbladder wall thickening (>3 mm), pericholecystic fluid, sonographic Murphy sign",
+      "HIDA scan — non-visualization of gallbladder if cystic duct obstructed (when US equivocal)",
+      "Normal bilirubin in uncomplicated cholecystitis (jaundice suggests CBD stone/cholangitis)",
+    ],
+    keyLabs: [
+      "Leukocytosis with left shift",
+      "Mild ↑ alkaline phosphatase or transaminases possible; marked ↑ suggests choledocholithiasis",
+      "Blood cultures if septic or emphysematous cholecystitis suspected",
+    ],
+    associations: [
+      "Cholelithiasis — prerequisite for calculous cholecystitis",
+      "Diabetes — emphysematous cholecystitis (gas-forming organisms)",
+      "Critical illness, trauma, burns — acalculous cholecystitis",
+      "Porcelain gallbladder — chronic inflammation, cancer risk",
+    ],
+    complications: [
+      "Gangrenous cholecystitis and perforation",
+      "Emphysematous cholecystitis",
+      "Gallstone pancreatitis if stone passes to ampulla",
+      "Choledocholithiasis and ascending cholangitis",
+      "Gallstone ileus (fistula complication)",
+    ],
+    distinguishFrom: [
+      "Biliary colic — transient cystic duct obstruction, pain <6 h, no fever or sustained inflammation",
+      "Choledocholithiasis/cholangitis — jaundice, Charcot triad (fever, jaundice, RUQ pain), dilated CBD",
+      "Acute hepatitis — transaminase-predominant jaundice, no gallbladder wall thickening pattern",
+      "Peptic ulcer disease — epigastric pain, not Murphy sign or gallbladder findings",
+      "Appendicitis — RLQ pain; cholecystitis is RUQ",
+    ],
+    treatment: [
+      "NPO, IV fluids, analgesia, IV antibiotics (ceftriaxone + metronidazole or piperacillin-tazobactam)",
+      "Laparoscopic cholecystectomy — early (within 72 h) preferred when feasible",
+      "Percutaneous cholecystostomy if too ill for surgery (acalculous or high surgical risk)",
+    ],
+    boardsPearls: [
+      "Calculous cholecystitis = stone in cystic duct + RUQ pain >6 h + fever + Murphy sign",
+      "vs biliary colic — colic <6 h, afebrile, no persistent wall inflammation",
+      "Ultrasound first-line — stones + wall thickening + pericholecystic fluid",
+      "Charcot triad = cholangitis, not uncomplicated cholecystitis",
+      "Acalculous cholecystitis in ICU — high mortality; low threshold for cholecystostomy",
+      "Emphysematous cholecystitis — gas in wall/lumen on imaging; diabetics; surgical emergency",
+    ],
+    pediatrics:
+      "Acute cholecystitis is uncommon in children but occurs with hemolytic anemia pigment stones, obesity, or cystic fibrosis-related liver disease. Management mirrors adults — antibiotics and cholecystectomy when stable.",
   },
   {
     id: "choledocholithiasis",
@@ -27135,7 +28117,7 @@ export const CONDITIONS: ConditionEntry[] = [
     distinguishFrom: [
       "Pyloric stenosis — 2–8 weeks old, non-bilious projectile vomiting, no double bubble",
       "Malrotation/volvulus — bilious vomiting, may have distal gas; surgical emergency with ischemia risk",
-      "Jejunal/ileal atresia — more distal obstruction; different X-ray pattern",
+      "Jejunal/ileal atresia — more distal obstruction; different X-ray pattern (see small intestine atresia entry)",
       "Hirschsprung disease — delayed meconium, megacolon; not double bubble",
     ],
     treatment: [
@@ -27152,6 +28134,82 @@ export const CONDITIONS: ConditionEntry[] = [
     ],
     pediatrics:
       "Core neonatal surgical diagnosis. Down syndrome association is high-yield on boards. Differentiate from malrotation/volvulus — volvulus is vascular emergency; duodenal atresia is obstructive without immediate midgut ischemia unless malrotation coexists.",
+  },
+  {
+    id: "small-intestine-atresia",
+    name: "Small Intestine Atresia",
+    etymology:
+      "Latin intestinum = gut + parvus = small + Greek a- = without + tresis = perforation/opening — congenital discontinuity of jejunal or ileal lumen",
+    aliases: [
+      "small intestine atresia",
+      "small intestine atresias",
+      "small intestinal atresia",
+      "small intestinal atresias",
+      "jejunal atresia",
+      "jejunal atresias",
+      "ileal atresia",
+      "ileal atresias",
+      "jejunoileal atresia",
+      "jejunoileal atresias",
+      "jejuno-ileal atresia",
+      "jejuno-ileal atresias",
+      "midgut atresia",
+      "midgut atresias",
+    ],
+    definition:
+      "Congenital obstruction from complete discontinuity or severe stenosis of the jejunum or ileum — a common neonatal surgical emergency presenting with bilious vomiting, abdominal distension, and failure to pass meconium.",
+    pathophysiology:
+      "Unlike duodenal atresia (failed recanalization), jejunoileal atresia usually results from in utero mesenteric vascular accident (segmental intestinal infarction) → segmental resorption and blind-ending bowel segments; may be single or multiple atresias with dilated proximal loops and collapsed distal bowel.",
+    classicPresentation: [
+      "Neonate with bilious vomiting within first 24–48 hours",
+      "Abdominal distension (more pronounced than duodenal atresia)",
+      "Failure to pass meconium or scant meconium",
+      "Polyhydramnios on prenatal ultrasound (decreased fetal absorption)",
+    ],
+    keyFindings: [
+      "Abdominal X-ray — multiple dilated bowel loops with air-fluid levels; no rectal gas in distal atresia",
+      "Contrast enema — microcolon (unused distal colon) in ileal atresia",
+      "Apple-peel (Christmas tree) deformity — jejunal atresia with spiraled mesentery around marginal artery (surgical finding)",
+    ],
+    keyLabs: [
+      "Electrolytes and acid-base status for dehydration",
+      "Evaluate for cystic fibrosis (sweat chloride) — associated with meconium ileus and atresia",
+    ],
+    associations: [
+      "Cystic fibrosis — meconium ileus and small bowel atresia",
+      "Gastroschisis — intestinal atresia from exposure/vascular injury",
+      "Intestinal malrotation (may coexist)",
+      "Prematurity",
+    ],
+    complications: [
+      "Dehydration, electrolyte derangements from vomiting",
+      "Short bowel syndrome after extensive resection",
+      "Necrotizing enterocolitis risk in prematurity",
+      "Aspiration pneumonitis",
+    ],
+    distinguishFrom: [
+      "Duodenal atresia — double bubble, proximal obstruction only; recanalization failure mechanism",
+      "Meconium ileus — CF, inspissated meconium; may have ground-glass appearance, not blind-ending atresia",
+      "Hirschsprung disease — delayed meconium, megacolon; rectal biopsy diagnostic",
+      "Malrotation with volvulus — surgical emergency with ischemia; may have distal gas early",
+      "Pyloric stenosis — 2–8 weeks, non-bilious vomiting",
+    ],
+    treatment: [
+      "NPO, NG decompression, IV fluids and electrolyte correction",
+      "Surgical resection of atretic segment with end-to-end anastomosis",
+      "Inspect for multiple atresias and malrotation intraoperatively",
+      "CF workup if meconium ileus or family history",
+    ],
+    boardsPearls: [
+      "Jejunoileal atresia — vascular accident in utero, not recanalization failure (duodenal atresia)",
+      "Bilious vomiting + distension + failure to pass meconium → distal small bowel obstruction",
+      "Microcolon on enema — unused distal colon in ileal atresia",
+      "vs duodenal atresia — double bubble, Down syndrome association; jejunoileal has multiple dilated loops",
+      "Apple-peel atresia — type III jejunal atresia with marginal artery wrap",
+      "Associated with cystic fibrosis — sweat chloride testing",
+    ],
+    pediatrics:
+      "Core neonatal surgical diagnosis. Any neonate with bilious vomiting needs urgent surgical evaluation. Differentiate volvulus (ischemic emergency) from atresia (obstructive) on imaging and exam.",
   },
   {
     id: "pyloric-stenosis",
@@ -35669,7 +36727,7 @@ export const CONDITIONS: ConditionEntry[] = [
       "Rocky Mountain spotted fever — centripetal rash history, tick exposure, Rickettsia",
       "Viral exanthem — blanching maculopapular rash, less toxic course",
       "ITP — isolated thrombocytopenia without sepsis or gram-negative bacteremia",
-      "Staphylococcal toxic shock — diffuse erythroderma/desquamation, different organism",
+      "Staphylococcal toxic shock — diffuse erythroderma/desquamation, different organism (see toxic shock syndrome entry)",
     ],
     treatment: [
       "Immediate IV ceftriaxone or cefotaxime — do not delay for LP if unstable",
@@ -36573,7 +37631,7 @@ export const CONDITIONS: ConditionEntry[] = [
     keyFindings: [
       "Markedly elevated ALT/AST (often >1000 in acute hepatitis)",
       "Hyperbilirubinemia",
-      "Anti-HAV IgM (acute A); HBsAg/anti-HBc pattern (HBV); anti-HCV with HCV RNA (HCV)",
+      "Anti-HAV IgM (acute A — see hepatitis A virus entry); HBsAg/anti-HBc pattern (HBV); anti-HCV with HCV RNA (HCV)",
     ],
     keyLabs: [
       "Viral serologies and PCR as indicated",
@@ -36582,7 +37640,7 @@ export const CONDITIONS: ConditionEntry[] = [
       "HCV: anti-HCV → confirm with HCV RNA",
     ],
     associations: [
-      "HAV/HEV — fecal-oral transmission; usually self-limited (HEV severe in pregnancy)",
+      "HAV/HEV — fecal-oral transmission; usually self-limited (HEV severe in pregnancy); HAV — see dedicated virus entry",
       "HBV/HCV — blood, sexual, perinatal transmission; chronic infection risk",
       "HDV — requires HBV coinfection or superinfection",
       "HBV + aflatoxin exposure — synergistic HCC risk",
@@ -36613,6 +37671,86 @@ export const CONDITIONS: ConditionEntry[] = [
     ],
     pediatrics:
       "Neonatal HBV infection → 90% chronicity risk; prevent with birth dose vaccine and HBIG. Vertical HCV transmission ~5%.",
+  },
+  {
+    id: "fulminant-hepatic-failure",
+    name: "Fulminant Hepatic Failure",
+    etymology:
+      "Latin fulmen = lightning + -ant = characterized by + Greek hēpar = liver + Latin fallere = to fail — rapid catastrophic loss of hepatic function",
+    aliases: [
+      "fulminant hepatic failure",
+      "fulminant hepatic failures",
+      "fulminant liver failure",
+      "fulminant liver failures",
+      "acute liver failure",
+      "acute hepatic failure",
+      "acute hepatic failures",
+      "alf",
+      "fhf",
+      "fulminant hepatitis",
+      "fulminant hepatic necrosis",
+    ],
+    definition:
+      "Rapid development of severe liver dysfunction with coagulopathy (INR elevation) and hepatic encephalopathy in a patient without pre-existing chronic liver disease — medical emergency often requiring transplant evaluation.",
+    pathophysiology:
+      "Massive hepatocyte necrosis from toxin, virus, or metabolic insult → ↓ synthetic function (clotting factors, glucose) and ↓ detoxification (ammonia) → coagulopathy and encephalopathy; cerebral edema and multiorgan failure in severe cases; may evolve over days to weeks depending on etiology.",
+    classicPresentation: [
+      "Jaundice, nausea, vomiting, and altered mental status developing over days",
+      "Coagulopathy — bleeding, prolonged PT/INR despite vitamin K",
+      "Hepatic encephalopathy — confusion, asterixis, coma",
+      "Acetaminophen overdose history or acute viral hepatitis serology",
+      "Young patient with Wilson disease or autoimmune hepatitis presentation",
+    ],
+    keyFindings: [
+      "INR ≥1.5 (often much higher) with encephalopathy",
+      "Markedly elevated transaminases then may fall as hepatocytes die (\"less enzyme, more damage\")",
+      "Hyperammonemia and cerebral edema on imaging in severe encephalopathy",
+      "Hypoglycemia from impaired gluconeogenesis",
+    ],
+    keyLabs: [
+      "INR/PT, bilirubin, ALT/AST, ammonia",
+      "Acetaminophen level and Rumack-Matthew nomogram if overdose suspected",
+      "Viral hepatitis serologies (HAV IgM, HBsAg, anti-HCV)",
+      "Wilson disease workup in young patient (ceruloplasmin, copper, slit lamp)",
+      "Autoimmune hepatitis antibodies and biopsy if indicated",
+    ],
+    associations: [
+      "Acetaminophen toxicity — most common cause of ALF in US adults",
+      "Acute viral hepatitis (HAV, HBV, HEV; HEV severe in pregnancy)",
+      "Wilson disease — acute presentation in adolescents",
+      "Autoimmune hepatitis, ischemic hepatitis (shock liver)",
+      "Drug-induced liver injury (isoniazid, valproate, halothane)",
+      "Acute fatty liver of pregnancy / HELLP overlap",
+    ],
+    complications: [
+      "Cerebral edema and herniation",
+      "Sepsis, renal failure (hepatorenal syndrome pattern)",
+      "Hypoglycemia, bleeding diathesis",
+      "Death without transplant or recovery",
+    ],
+    distinguishFrom: [
+      "Chronic liver disease decompensation — known cirrhosis with ascites/varices history",
+      "Hepatic encephalopathy alone in cirrhosis — chronic substrate, not acute fulminant necrosis",
+      "Isolated transaminitis without encephalopathy/coagulopathy — not fulminant failure",
+      "Reye syndrome — pediatric aspirin + viral illness; fatty liver with encephalopathy",
+    ],
+    treatment: [
+      "N-acetylcysteine for acetaminophen toxicity (even late if indicated)",
+      "Supportive ICU care — glucose, coagulation support, ICP monitoring if severe encephalopathy",
+      "Lactulose/rifaximin for encephalopathy; avoid sedatives",
+      "Urgent liver transplant evaluation at specialized center",
+      "Treat specific cause — antivirals rarely for fulminant HBV; plasmapheresis/copper chelation in Wilson crisis",
+    ],
+    boardsPearls: [
+      "ALF = coagulopathy + encephalopathy in patient without chronic liver disease",
+      "Acetaminophen overdose → NAC; check level and nomogram",
+      "Wilson disease in adolescent with hemolytic anemia + ALF — chelation + transplant",
+      "AST/ALT may decline late as hepatocytes die — do not misread as improvement",
+      "HEV fulminant in pregnancy — high mortality",
+      "vs cirrhosis — fulminant is acute necrosis without established chronic liver disease",
+    ],
+    pediatrics:
+      "Reye syndrome, Wilson disease, and metabolic liver disorders are key pediatric differentials. Valproate and viral hepatitis can cause ALF in children. NAC dosing is weight-based for acetaminophen toxicity.",
   },
   {
     id: "autoimmune-hepatitis",
@@ -36936,6 +38074,78 @@ export const CONDITIONS: ConditionEntry[] = [
       "Diagnosis often made in childhood with developmental delay and characteristic facies; early developmental services improve outcomes but CNS injury is permanent.",
   },
   {
+    id: "fragile-x-syndrome",
+    name: "Fragile X Syndrome",
+    etymology:
+      "Latin fragilis = brittle + X = X chromosome + Greek syn = together + dromos = course — X-linked disorder named for fragile site on X chromosome visible under folate-deficient culture",
+    aliases: [
+      "fragile x",
+      "fragile x syndrome",
+      "fragile x syndromes",
+      "fragile x disorder",
+      "fragile x disorders",
+      "fxs",
+      "fmr1 syndrome",
+      "martin-bell syndrome",
+      "martin bell syndrome",
+      "x-linked intellectual disability fragile x",
+    ],
+    definition:
+      "X-linked disorder from CGG trinucleotide repeat expansion (>200 repeats) in the 5′ UTR of FMR1 on Xq27.3 → hypermethylation and silencing of FMR1 → absent fragile X mental retardation protein (FMRP) → intellectual disability, characteristic facies, macroorchidism, and autism spectrum features.",
+    pathophysiology:
+      "Expanded CGG repeats trigger abnormal methylation of FMR1 promoter → transcriptional silencing → loss of FMRP (RNA-binding protein regulating synaptic protein translation) → abnormal dendritic spine morphology and synaptic plasticity; premutation (55–200 repeats) causes FXTAS and FXPOI without full childhood syndrome; anticipation with increasing repeat size especially on maternal transmission (see CGG trinucleotide repeat entry).",
+    classicPresentation: [
+      "Intellectual disability and learning problems — more severe in males (hemizygous)",
+      "Macroorchidism after puberty in affected males",
+      "Long face, large everted ears, prominent jaw",
+      "Autism spectrum behaviors — social anxiety, poor eye contact, hand flapping",
+      "Joint hypermobility and mitral valve prolapse",
+      "Family history X-linked pattern — carrier females may have milder findings",
+    ],
+    keyFindings: [
+      "DNA testing — CGG repeat number and methylation status of FMR1",
+      "Full mutation >200 CGG repeats with methylation",
+      "Premutation 55–200 repeats — carrier; FXTAS or FXPOI risk later in life",
+      "Normal/high-functioning females with full mutation possible (X-inactivation lyonization)",
+    ],
+    associations: [
+      "FMR1 gene on X chromosome — X-linked inheritance",
+      "FXTAS (fragile X–associated tremor/ataxia syndrome) — premutation in aging carriers",
+      "FXPOI (fragile X–associated primary ovarian insufficiency) — premutation in women",
+      "CGG trinucleotide repeat — molecular mechanism (see dedicated entry)",
+    ],
+    complications: [
+      "Autism spectrum disorder and psychiatric comorbidity",
+      "Seizures in some affected individuals",
+      "Mitral valve prolapse",
+      "Premature ovarian failure in premutation carrier women",
+    ],
+    distinguishFrom: [
+      "Down syndrome — trisomy 21, single transverse palmar crease, different facies",
+      "Autism without fragile X — FMR1 testing distinguishes",
+      "Klinefelter syndrome (XXY) — macroorchidism but tall stature, gynecomastia, different genetics",
+      "Prader-Willi syndrome — hypotonia, hyperphagia, obesity, different genetic imprinting",
+      "Huntington disease — CAG repeat in HTT, adult chorea, not intellectual disability in childhood",
+    ],
+    treatment: [
+      "Supportive — special education, speech/occupational/behavioral therapy",
+      "Treat comorbid ADHD, anxiety, seizures as indicated",
+      "Genetic counseling for carriers and family planning",
+      "No disease-modifying therapy on Step 1 level",
+    ],
+    boardsPearls: [
+      "Most common inherited cause of intellectual disability — X-linked; CGG repeat in FMR1",
+      "Macroorchidism + long face + large ears + developmental delay in boy → fragile X",
+      "Full mutation >200 repeats → methylation silencing → no FMRP",
+      "Premutation carriers — FXTAS (tremor/ataxia) or FXPOI, not classic childhood phenotype",
+      "Anticipation — more repeats in offspring, especially maternal transmission",
+      "vs Down syndrome — trisomy 21 facies and hypotonia, not macroorchidism",
+      "CGG trinucleotide repeat — see dedicated molecular entry",
+    ],
+    pediatrics:
+      "Often identified in childhood with speech delay and hyperactivity before macroorchidism appears at puberty. Early intervention improves adaptive function; males with full mutation typically have moderate intellectual disability. Test siblings and counsel carrier mothers about recurrence risk and anticipation.",
+  },
+  {
     id: "alcoholic-cardiomyopathy",
     name: "Alcoholic Cardiomyopathy",
     etymology:
@@ -37031,7 +38241,7 @@ export const CONDITIONS: ConditionEntry[] = [
       "Pancreatic mass on CT/MRI/endoscopic ultrasound",
     ],
     keyLabs: [
-      "72-hour supervised fast with serial glucose, insulin, C-peptide",
+      "72-hour supervised fast with serial glucose, insulin, C-peptide — see fasting trial procedure",
       "Low glucose + high insulin + high C-peptide during symptomatic episode",
       "Proinsulin may be elevated",
       "Exclude sulfonylurea/meglitinide on toxicology screen",
@@ -42269,6 +43479,78 @@ export const CONDITIONS: ConditionEntry[] = [
     ],
     pediatrics:
       "Serotonin syndrome reported in children on SSRIs with drug interactions; tramadol is not routine in pediatrics. Cyproheptadine dosing is weight-based in severe pediatric cases.",
+  },
+  {
+    id: "neuroleptic-malignant-syndrome",
+    name: "Neuroleptic Malignant Syndrome",
+    etymology:
+      "neuroleptic = nerve-seizing (antipsychotic) + malignant = dangerous + syndrome = running together of symptoms",
+    aliases: [
+      "neuroleptic malignant syndrome",
+      "neuroleptic malignant syndromes",
+      "nms",
+      "neuroleptic syndrome",
+      "neuroleptic syndromes",
+      "antipsychotic malignant syndrome",
+      "antipsychotic malignant syndromes",
+    ],
+    definition:
+      "Rare, life-threatening reaction to dopamine D₂-blocking drugs (antipsychotics, metoclopramide) — characterized by severe rigidity, hyperthermia, autonomic instability, and altered mental status with markedly elevated creatine kinase.",
+    pathophysiology:
+      "Acute D₂ receptor blockade in nigrostriatal and hypothalamic pathways → extreme muscle rigidity (lead-pipe), ↑ metabolic heat production, sympathetic overdrive, and rhabdomyolysis; onset typically days to weeks after drug initiation or dose increase (slower than serotonin syndrome).",
+    classicPresentation: [
+      "High fever and diaphoresis",
+      "Severe generalized muscle rigidity (lead-pipe, not clonic)",
+      "Altered mental status — confusion, mutism, or stupor",
+      "Autonomic instability — tachycardia, labile BP, tachypnea",
+      "Elevated CK and risk of rhabdomyolysis",
+      "Onset days after starting or increasing antipsychotic or metoclopramide",
+    ],
+    keyFindings: [
+      "Markedly elevated serum CK (often >1000 U/L)",
+      "Lead-pipe rigidity without clonus or hyperreflexia",
+      "Recent dopamine-blocking drug exposure",
+      "Leukocytosis and metabolic acidosis in severe cases",
+    ],
+    associations: [
+      "Typical high-potency antipsychotics (haloperidol, fluphenazine)",
+      "Atypical antipsychotics (less common but possible)",
+      "Metoclopramide and prochlorperazine — antiemetic D₂ blockers",
+      "Rapid dose escalation or parenteral administration",
+      "Dehydration, agitation, or iron deficiency (risk modifiers)",
+    ],
+    complications: [
+      "Rhabdomyolysis and acute kidney injury",
+      "Respiratory failure from rigidity and aspiration",
+      "DIC, arrhythmias, and death if untreated",
+    ],
+    distinguishFrom: [
+      "Serotonin syndrome — serotonergic drugs, clonus, hyperreflexia, onset hours; rigidity less lead-pipe",
+      "Malignant hyperthermia — volatile anesthetics/succinylcholine in OR; RYR1 mutation",
+      "Anticholinergic toxidrome — dry skin, mydriasis, urinary retention, no rigidity or ↑ CK",
+      "Infection/sepsis — fever without antipsychotic trigger or extreme rigidity",
+      "Catatonia — waxy flexibility, negativism; may overlap but different treatment context",
+      "Extrapyramidal parkinsonism — bradykinesia without fever or autonomic crisis",
+    ],
+    treatment: [
+      "Stop offending dopamine-blocking drug immediately",
+      "Supportive care — cooling, IV fluids, ICU monitoring",
+      "Dantrolene — muscle relaxant reducing rigidity and hyperthermia",
+      "Bromocriptine or amantadine — dopamine agonists to restore D₂ signaling",
+      "Benzodiazepines for agitation and muscle relaxation adjunct",
+      "Avoid rechallenge with same agent; use lowest-EPS-risk antipsychotic if psychosis requires treatment",
+    ],
+    boardsPearls: [
+      "Tetrad: rigidity + hyperthermia + autonomic instability + altered mental status + ↑ CK",
+      "Antipsychotic or metoclopramide exposure — key historical clue",
+      "vs serotonin syndrome — NMS has lead-pipe rigidity, slow onset (days), no clonus; serotonin syndrome has clonus/hyperreflexia, hours onset",
+      "vs malignant hyperthermia — anesthesia trigger, OR setting, dantrolene treats both",
+      "Dantrolene and bromocriptine are high-yield NMS treatments",
+      "Metoclopramide can cause NMS — not only antipsychotics",
+      "Clozapine has lowest EPS/NMS risk among antipsychotics (not zero)",
+    ],
+    pediatrics:
+      "NMS reported in children and adolescents on antipsychotics or metoclopramide; presentation mirrors adults. Metoclopramide use in pediatrics requires lowest effective dose and shortest duration given EPS and NMS risk.",
   },
   {
     id: "delirium-tremens",
@@ -47919,6 +49201,150 @@ export const CONDITIONS: ConditionEntry[] = [
     ],
     pediatrics:
       "Anencephaly is diagnosed prenatally in most cases via ultrasound and MSAFP screening. Liveborn infants are not viable; care focuses on family support. All women of childbearing age should receive adequate folate; women with prior NTD-affected pregnancies need high-dose folate prophylaxis before conception.",
+  },
+  {
+    id: "aplasia-cutis",
+    name: "Aplasia Cutis",
+    etymology:
+      "Greek a- = without + plasis = formation + Latin cutis = skin — localized failure of skin development",
+    aliases: [
+      "aplasia cutis",
+      "aplasia cutis congenita",
+      "aplasia cutis congenitas",
+      "congenital absence of skin",
+      "congenital skin defect",
+      "congenital skin defects",
+      "scalp aplasia cutis",
+      "scalp skin defect",
+      "cutis aplasia",
+      "cutis aplasias",
+    ],
+    definition:
+      "Congenital localized absence of skin — most often a well-demarcated scalp defect at birth that may expose underlying tissue or bone; may be isolated or part of a syndrome or teratogen exposure.",
+    pathophysiology:
+      "Failed development or disruption of embryonic skin formation in a focal area — etiologies include intrauterine vascular compromise, amniotic bands, teratogens (especially methimazole in first trimester), chromosomal syndromes, and genetic syndromes (e.g., Adams-Oliver); bullous variants reflect epidermolysis or membrane defects.",
+    classicPresentation: [
+      "Well-circumscribed scalp ulcer or absence of skin noted at birth (vertex common)",
+      "Non-bullous defect with exposed dermis, subcutaneous tissue, or skull",
+      "Bullous variant with translucent membrane over defect",
+      "May heal with scarring alopecia if small and superficial",
+    ],
+    keyFindings: [
+      "Localized skin absence on exam — classically scalp",
+      "Underlying skull defect or sagittal sinus exposure in severe cases (hemorrhage risk)",
+      "Associated limb, cardiac, or CNS anomalies when syndromic",
+    ],
+    keyLabs: [
+      "Karyotype if syndromic features (e.g., trisomy 13)",
+      "Maternal medication history — methimazole/PTU in first trimester",
+      "Genetic testing when Adams-Oliver or other syndromes suspected",
+    ],
+    associations: [
+      "Methimazole exposure in first trimester — classic teratogen association",
+      "Trisomy 13 (Patau syndrome) — midline defects with cutis aplasia",
+      "Adams-Oliver syndrome — aplasia cutis with terminal limb defects",
+      "Fetal scalp electrode or monitoring trauma (acquired, not true aplasia cutis congenita)",
+      "Epidermolysis bullosa — bullous aplasia cutis variant",
+    ],
+    complications: [
+      "Scalp hemorrhage or meningitis if deep defect with sagittal sinus involvement",
+      "Infection of exposed tissue",
+      "Permanent alopecia at healed site",
+    ],
+    distinguishFrom: [
+      "Omphalocele — midline abdominal wall defect with herniated viscera covered by membrane",
+      "Encephalocele — skull defect with herniated neural tissue",
+      "Caput succedaneum — edema of scalp from delivery, intact skin",
+      "Cephalohematoma — subperiosteal blood, skin intact",
+      "Epidermolysis bullosa — widespread blistering, not isolated focal aplasia only",
+    ],
+    treatment: [
+      "Small superficial defects — conservative wound care; often heal with scarring",
+      "Large or deep defects — surgical repair, skin grafting, or tissue expansion",
+      "Avoid methimazole in first trimester; use PTU if antithyroid drug required early in pregnancy",
+    ],
+    boardsPearls: [
+      "Aplasia cutis congenita = localized congenital absence of skin, often scalp",
+      "Methimazole first-trimester exposure → aplasia cutis, choanal atresia — switch to PTU in 1st trimester if antithyroid needed",
+      "Trisomy 13 — cutis aplasia with holoprosencephaly and polydactyly",
+      "Deep scalp defects may expose sagittal sinus — hemorrhage and infection risk",
+      "vs caput/cephalohematoma — delivery-related lesions with intact overlying skin",
+    ],
+    pediatrics:
+      "Aplasia cutis congenita presents at birth; neonatal management focuses on preventing infection and hemorrhage from deep scalp defects. Methimazole teratogenicity is a key Step 1 pregnancy pearl — PTU preferred in first trimester hyperthyroidism.",
+  },
+  {
+    id: "amniotic-band-constriction",
+    name: "Amniotic Band Constriction",
+    etymology:
+      "Latin amnion = membrane + band = strip + constriction = tightening — fibrous amniotic bands entangling and compressing fetal parts",
+    aliases: [
+      "amniotic band constriction",
+      "amniotic band constrictions",
+      "amniotic band syndrome",
+      "amniotic band syndromes",
+      "amniotic band sequence",
+      "amniotic band sequences",
+      "abs",
+      "amniotic band",
+      "amniotic bands",
+      "constriction band syndrome",
+      "constriction band syndromes",
+      "streeter bands",
+    ],
+    definition:
+      "Amniotic band sequence (ABS) — sporadic congenital malformation from fibrous strands of ruptured amnion that encircle and constrict fetal limbs, digits, or face, causing grooves, amputations, syndactyly, or craniofacial defects.",
+    pathophysiology:
+      "Early amnion rupture releases free strands into the amniotic cavity that adhere to the fetus → circumferential constriction → distal edema, ischemia, autoamputation, or fusion of adjacent digits; timing and band location determine asymmetric severity.",
+    classicPresentation: [
+      "Asymmetric limb defects at birth — constriction rings, distal amputations, or limb-length discrepancy",
+      "Syndactyly or amputated digits",
+      "Facial clefts, encephalocele, or abdominal wall defects in severe cases",
+      "Normal karyotype; not inherited Mendelian pattern",
+      "Often isolated without other syndromic features",
+    ],
+    keyFindings: [
+      "Characteristic circumferential constriction grooves on limbs or digits",
+      "Asymmetric defects (unlike symmetric syndromic limb anomalies)",
+      "Prenatal ultrasound may show bands or limb deformity",
+      "Normal chromosomes unless coexisting aneuploidy",
+    ],
+    keyLabs: [
+      "Karyotype if syndromic features suggest trisomy (e.g., trisomy 13 has different pattern)",
+      "Prenatal MRI or detailed ultrasound for band visualization",
+    ],
+    associations: [
+      "Spontaneous amnion rupture — not teratogenic drug exposure",
+      "Occasional coexisting gastroschisis or body wall defects",
+      "Distinct from genetic limb reduction syndromes",
+    ],
+    complications: [
+      "Distal limb ischemia or autoamputation",
+      "Functional impairment from digit loss or limb shortening",
+      "Cosmetic craniofacial defects",
+    ],
+    distinguishFrom: [
+      "Adams-Oliver syndrome — scalp defect + limb anomalies + vascular defects; genetic",
+      "Holoprosencephaly with limb defects — trisomy 13, midline facial anomalies",
+      "Limb-body wall complex — severe body wall defect with limb fusion",
+      "Congenital tourniquet — rare intrauterine umbilical cord or vessel constriction",
+      "Symmetrical teratogenic limb defects — thalidomide-like pattern, not band constriction",
+    ],
+    treatment: [
+      "Postnatal release of constricting bands if threatening circulation (surgical decompression)",
+      "Reconstructive surgery for syndactyly or limb deformity",
+      "Prosthetics and occupational therapy for amputations",
+      "Prenatal counseling — sporadic recurrence risk low",
+    ],
+    boardsPearls: [
+      "Amniotic band sequence = fibrous bands → asymmetric constriction/amputation",
+      "Sporadic, not genetic — normal karyotype in classic cases",
+      "vs trisomy 13 — midline defects, holoprosencephaly, symmetric findings",
+      "Constriction rings on digits/limbs pathognomonic pattern",
+      "Early amnion rupture releases bands into amniotic fluid",
+    ],
+    pediatrics:
+      "Present at birth with asymmetric limb or digit defects; evaluate circulation distal to tight bands urgently. Physical therapy and prosthetics support function. Distinguish from symmetric syndromic limb anomalies on exam and genetics.",
   },
 ];
 

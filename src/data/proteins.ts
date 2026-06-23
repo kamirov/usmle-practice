@@ -1958,7 +1958,7 @@ export const PROTEINS: ProteinEntry[] = [
     ],
     boardsPearls: [
       "TCR signal → PLCγ → IP3 → ↑ cytosolic Ca²⁺ → calmodulin → calcineurin → dephosphorylate NFAT → IL-2 gene transcription",
-      "Tacrolimus + FKBP-12 and cyclosporine + cyclophilin both inhibit calcineurin — different binding proteins, same target enzyme",
+      "Tacrolimus + FKBP-12 and cyclosporine + cyclophilin both inhibit calcineurin — see FKBP entry for tacrolimus binding protein",
       "Calcineurin inhibitors block T-cell activation early (signal 1 downstream), not antibody production directly",
       "vs sirolimus (rapamycin) — inhibits mTOR, not calcineurin",
     ],
@@ -1966,7 +1966,56 @@ export const PROTEINS: ProteinEntry[] = [
       "Tacrolimus / cyclosporine — drugs that inhibit calcineurin, not the enzyme itself",
       "NFAT — transcription factor substrate of calcineurin; calcineurin is the phosphatase",
       "mTOR — target of sirolimus; downstream of IL-2 receptor, not Ca²⁺/calmodulin pathway",
+      "FKBP — immunophilin that binds tacrolimus before calcineurin inhibition",
     ],
+  },
+  {
+    id: "fkbp",
+    name: "FKBP",
+    etymology:
+      "FK506-binding protein — immunophilin family named for binding the macrolide immunosuppressant FK506 (tacrolimus); FKBP12 is the primary isoform in calcineurin inhibitor pathway",
+    aliases: [
+      "fkbp",
+      "fkbps",
+      "fk506 binding protein",
+      "fk506-binding protein",
+      "fk506 binding proteins",
+      "fk506-binding proteins",
+      "fkbp12",
+      "fkbp-12",
+      "fkbp 12",
+      "fk506 binding protein 12",
+      "fk506-binding protein 12",
+      "immunophilin fkbp",
+      "peptidyl-prolyl cis-trans isomerase fkbp",
+    ],
+    gene: "FKBP1A (FKBP12); related family members FKBP1B, FKBP52, etc.",
+    location:
+      "Cytosol of T lymphocytes and widely expressed in other cells — FKBP12 is the tacrolimus/sirolimus-binding isoform on boards",
+    function:
+      "Immunophilin with peptidyl-prolyl cis-trans isomerase (PPIase) activity — binds tacrolimus (FK506) or sirolimus (rapamycin) to form drug–protein complexes that then inhibit calcineurin (tacrolimus) or mTOR (sirolimus), blocking T-cell activation and proliferation.",
+    mutationCauses: [
+      "No common germline disease — pharmacologic targeting is clinically relevant",
+      "FKBP12-tacrolimus complex inhibits calcineurin → transplant immunosuppression",
+      "FKBP12-sirolimus complex inhibits mTOR → antiproliferative immunosuppression",
+    ],
+    boardsPearls: [
+      "FKBP12 binds tacrolimus (FK506) → complex inhibits calcineurin → ↓ IL-2",
+      "FKBP12 binds sirolimus (rapamycin) → complex inhibits mTOR (different target than calcineurin)",
+      "vs cyclophilin — binds cyclosporine, not tacrolimus; also inhibits calcineurin",
+      "Tacrolimus mechanism: tacrolimus + FKBP12 → calcineurin block → ↓ NFAT → ↓ IL-2",
+      "Immunophilin = protein that binds immunosuppressive drugs (FKBP or cyclophilin)",
+      "Topical tacrolimus uses same FKBP-calcineurin pathway locally in atopic dermatitis",
+    ],
+    distinguishFrom: [
+      "Cyclophilin — immunophilin binding cyclosporine, not FK506/tacrolimus",
+      "Calcineurin — enzyme inhibited by FKBP12-tacrolimus complex",
+      "mTOR — target of FKBP12-sirolimus complex, not calcineurin",
+      "Tacrolimus — drug that binds FKBP12; not the binding protein itself",
+      "Sirolimus (rapamycin) — mTOR inhibitor via FKBP12, not calcineurin inhibitor",
+    ],
+    pediatrics:
+      "Tacrolimus and sirolimus used in pediatric transplant via same FKBP12 pathways; therapeutic drug monitoring essential for nephrotoxicity and infection risk.",
   },
   {
     id: "mhc",
@@ -2007,6 +2056,7 @@ export const PROTEINS: ProteinEntry[] = [
       "Class I (HLA-A/B/C) → CD8⁺ T cells; endogenous/viral/tumor peptides",
       "Class II (HLA-DR/DP/DQ) → CD4⁺ T cells; exogenous antigen on APCs",
       "Transplant rejection — direct (donor APC presents donor MHC) and indirect (recipient APC presents processed donor peptide)",
+      "HLA antigen match graded 6/6, 8/8, or 10/10 — see dedicated clinical strategy entry",
       "NK cells kill cells with ↓ MHC I (missing-self hypothesis)",
       "Bare lymphocyte syndrome — absent MHC II → severe immunodeficiency",
     ],
@@ -4797,6 +4847,57 @@ export const PROTEINS: ProteinEntry[] = [
     ],
     pediatrics:
       "Carbonic anhydrase II deficiency causes infantile malignant osteopetrosis with renal tubular acidosis, anemia, and cranial nerve compression from dense bone.",
+  },
+  {
+    id: "h-k-atpase",
+    name: "H⁺/K⁺-ATPase",
+    etymology:
+      "H⁺ = hydrogen ion + K⁺ = potassium ion + ATP + -ase = enzyme — P-type ATPase exchanging intracellular protons for luminal potassium to secrete gastric acid",
+    aliases: [
+      "h+/k+-atpase",
+      "h+/k+ atpase",
+      "h/k atpase",
+      "hk atpase",
+      "h-k-atpase",
+      "hydrogen potassium atpase",
+      "hydrogen-potassium atpase",
+      "hydrogen potassium adenosine triphosphatase",
+      "gastric proton pump",
+      "gastric h+/k+-atpase",
+      "proton pump",
+      "proton pumps",
+      "parietal cell proton pump",
+      "h+k+ atpase",
+      "atp4a",
+    ],
+    gene: "ATP4A (gastric α subunit); ATP4B (β subunit)",
+    location:
+      "Apical (canalicular) membrane of gastric parietal cells — also H⁺/K⁺-ATPase isoforms in renal collecting duct intercalated cells",
+    function:
+      "P-type ATPase that actively transports H⁺ into the gastric lumen in exchange for K⁺ — final common pathway for gastric acid (HCl) secretion; stimulated by histamine (H₂/cAMP), gastrin, and acetylcholine (M3) on parietal cells.",
+    mutationCauses: [
+      "No common germline disease — pharmacologic blockade is clinically relevant",
+      "Autoimmune destruction of parietal cells (pernicious anemia) eliminates functional pumps",
+    ],
+    boardsPearls: [
+      "H⁺/K⁺-ATPase = gastric proton pump — final step of acid secretion on parietal cell canalicular membrane",
+      "PPIs (omeprazole, pantoprazole) irreversibly inhibit this pump — acid suppression until new pumps synthesized",
+      "H₂ blockers (famotidine) ↓ cAMP upstream — less potent than direct pump blockade",
+      "Triple stimulation: histamine (H₂) + gastrin + ACh (M3) converge on parietal cell → ↑ pump activity",
+      "PPI prodrug activated in acidic parietal cell canaliculus — take before meals",
+      "vs Na⁺/K⁺-ATPase — basolateral housekeeping pump on most cells; different target (digoxin, ouabain)",
+      "vs renal H⁺-ATPase — collecting duct α-intercalated cells secrete H⁺ without K⁺ exchange in same stoichiometry; PPIs target gastric isoform",
+    ],
+    distinguishFrom: [
+      "Proton pump inhibitor — drug class blocking H⁺/K⁺-ATPase, not the enzyme itself",
+      "Na⁺/K⁺-ATPase — digoxin target on myocardium; maintains Na⁺/K⁺ gradients",
+      "H⁺-ATPase (vacuolar/V-ATPase) — lysosomal and collecting duct proton pumps; different structure",
+      "Histamine H₂ receptor — upstream receptor stimulating pump via cAMP",
+      "Hydrogen ion (H⁺) — substrate transported, not the transporter protein",
+      "Carbonic anhydrase — generates H⁺ from CO₂/H₂O in parietal cells upstream of pump",
+    ],
+    pediatrics:
+      "Same gastric proton pump physiology in children; PPIs used for erosive GERD and eosinophilic esophagitis with attention to infection and nutrient absorption risks with chronic use.",
   },
   {
     id: "guanylyl-cyclase",
