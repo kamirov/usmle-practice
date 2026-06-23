@@ -798,6 +798,9 @@ export const MICROBIOLOGY: MicrobiologyEntry[] = [
       "clostridioides difficile colitis",
       "cdi",
       "c diff infection",
+      "pseudomembranous colitis",
+      "antibiotic-associated colitis",
+      "antibiotic associated diarrhea c diff",
     ],
     type: "anaerobe",
     definition:
@@ -1906,6 +1909,83 @@ export const MICROBIOLOGY: MicrobiologyEntry[] = [
     ],
     pediatrics:
       "Congenital CMV common; most asymptomatic at birth but sensorineural hearing loss may develop; screen failed newborn hearing tests.",
+  },
+  {
+    id: "human-herpesvirus-8",
+    name: "Human Herpesvirus 8",
+    etymology:
+      "Latin humanus = human + Greek herpein = creep + Latin virus = poison/viral agent + Greek 8 = eighth HHV — Kaposi sarcoma–associated herpesvirus",
+    aliases: [
+      "human herpesvirus 8",
+      "human herpesvirus-8",
+      "human herpes virus 8",
+      "hhv-8",
+      "hhv 8",
+      "hhv8",
+      "kaposi sarcoma-associated herpesvirus",
+      "kaposi sarcoma associated herpesvirus",
+      "kshv",
+      "kaposi sarcoma herpesvirus",
+    ],
+    type: "virus",
+    definition:
+      "Oncogenic herpesvirus (HHV-8) that infects endothelial and B cells — latent in immunocompetent hosts but drives Kaposi sarcoma, primary effusion lymphoma, and multicentric Castleman disease in immunosuppression (especially HIV/AIDS).",
+    mnemonic:
+      "DNA · ds · enveloped — Herpesviridae: all HHV are dsDNA enveloped (sense N/A for DNA)",
+    morphology: [
+      "Enveloped dsDNA gammaherpesvirus (lymphotropic)",
+      "Latent episomal genome in spindle/endothelial cells",
+      "Lytic replication in immunosuppressed states",
+    ],
+    virulenceFactors: [
+      "vFLIP, vBCL-2, vIL-6 — inhibit apoptosis and drive proliferation",
+      "Latency-associated nuclear antigen (LANA) — maintains episomal latency",
+      "Kaposi sarcoma — violaceous vascular skin/mucosal lesions",
+      "Primary effusion lymphoma — body cavity lymphoma without mass",
+      "Multicentric Castleman disease — HHV-8–driven lymphoproliferation",
+    ],
+    transmission: [
+      "Saliva and close contact (sexual transmission common)",
+      "Organ transplant and blood (rare)",
+      "Vertical transmission uncommon",
+    ],
+    diseases: [
+      "Kaposi sarcoma — classic (elderly Mediterranean), endemic (Africa), epidemic (AIDS)",
+      "Primary effusion lymphoma (body cavity–based lymphoma)",
+      "Multicentric Castleman disease",
+    ],
+    classicPresentation: [
+      "HIV/AIDS with multiple violaceous/purple cutaneous or oral macules, papules, or nodules",
+      "Pulmonary or GI Kaposi lesions with bleeding or obstruction",
+      "Effusion lymphoma — lymphomatous pleural/pericardial/peritoneal fluid without mass",
+    ],
+    diagnosis: [
+      "Biopsy with HHV-8 (LANA) immunohistochemistry for Kaposi sarcoma",
+      "PCR for HHV-8 DNA in tissue or effusion fluid",
+      "Clinical diagnosis in AIDS with characteristic skin lesions",
+    ],
+    treatment: [
+      "ART for HIV-associated Kaposi — often regression with immune reconstitution",
+      "Localized Kaposi — radiation, intralesional chemotherapy, or excision",
+      "Systemic chemotherapy (liposomal doxorubicin) for extensive or visceral disease",
+      "Rituximab and antivirals (ganciclovir) considered in Castleman disease",
+    ],
+    distinguishFrom: [
+      "Bacillary angiomatosis (Bartonella) — Warthin-Starry stain positive; treat with erythromycin",
+      "Pyogenic granuloma — solitary friable vascular nodule, not multifocal in AIDS",
+      "Melanoma or angiosarcoma — different histology and HHV-8 negative",
+      "EBV-driven lymphomas — different HHV; Burkitt, PTLD",
+    ],
+    boardsPearls: [
+      "HHV-8 = Kaposi sarcoma in AIDS — violaceous skin/oral lesions",
+      "Bacillary angiomatosis mimics Kaposi — Bartonella henselae/quintana; Warthin-Starry silver stain",
+      "Gammaherpesvirus like EBV — oncogenic lymphoproliferative potential",
+      "Epidemic Kaposi regresses with effective ART (immune reconstitution)",
+      "Primary effusion lymphoma — HHV-8 + often EBV in effusion without mass",
+      "All herpesviruses: dsDNA, enveloped, latency",
+    ],
+    pediatrics:
+      "Pediatric Kaposi is rare outside endemic regions or vertical HIV; transplant-associated HHV-8 disease can occur in immunosuppressed children.",
   },
   {
     id: "dengue-virus",
@@ -3240,6 +3320,88 @@ export const MICROBIOLOGY: MicrobiologyEntry[] = [
       "HAV often milder in young children but still contagious; routine childhood vaccination prevents infection. Neonates are protected by maternal anti-HAV IgG if mother immune. Fulminant HAV is uncommon in healthy children.",
   },
   {
+    id: "coxsackievirus-a",
+    name: "Coxsackievirus A",
+    etymology:
+      "Coxsackie, New York (first isolation site) + virus + A = group A serotypes (distinct from group B coxsackieviruses)",
+    aliases: [
+      "coxsackievirus a",
+      "coxsackie virus a",
+      "coxsackievirus group a",
+      "coxsackie a virus",
+      "coxsackie a viruses",
+      "coxsackie a",
+      "enterovirus group a",
+      "cva",
+      "coxsackievirus a16",
+      "coxsackie a16",
+      "coxsackievirus a6",
+    ],
+    type: "virus",
+    definition:
+      "Group A coxsackievirus serotypes within the enterovirus genus (Picornaviridae) — non-enveloped positive-sense ssRNA viruses causing mucocutaneous disease (hand-foot-mouth disease, herpangina) and contributing to aseptic meningitis; distinct from group B coxsackieviruses, which more often affect heart and pleura.",
+    mnemonic:
+      "RNA · ss · naked · (+) sense — Picornavirus/enterovirus: (+) ssRNA, no envelope; acid-stable",
+    morphology: [
+      "Icosahedral non-enveloped virion (~30 nm)",
+      "Positive-sense ssRNA picornavirus (enterovirus genus)",
+      "Acid-stable — fecal-oral transmission",
+      "Numerous group A serotypes (e.g., A6, A16, A10)",
+    ],
+    virulenceFactors: [
+      "Acid stability — survives gastric passage; fecal-oral spread",
+      "Tropism for oral mucosa and skin — vesicular eruptions",
+      "Summer/fall seasonality in temperate climates",
+      "Multiple serotypes — repeat infections possible",
+    ],
+    transmission: [
+      "Fecal-oral — daycare, contaminated hands, swimming pools",
+      "Respiratory droplets — pharyngeal shedding",
+      "Highly contagious in closed child settings",
+    ],
+    diseases: [
+      "Hand-foot-mouth disease (HFMD) — oral ulcers plus vesicles on palms and soles (A16, A6, EV-A71 overlap)",
+      "Herpangina — painful posterior oropharyngeal vesicles without hand/foot rash",
+      "Aseptic (viral) meningitis — part of broader enteroviral CNS disease",
+      "Onychomadesis (nail shedding) — occasional post-HFMD finding",
+    ],
+    classicPresentation: [
+      "Toddler with low-grade fever, oral ulcers, and vesicles on hands and feet — HFMD",
+      "Child with fever and posterior pharyngeal vesicles only — herpangina",
+      "Summer outbreak in daycare with mucocutaneous vesicles",
+      "Aseptic meningitis with CSF lymphocytosis and normal glucose",
+    ],
+    diagnosis: [
+      "Clinical diagnosis for classic HFMD/herpangina during outbreaks",
+      "PCR from throat, stool, rectal swab, or CSF for CNS disease",
+      "Viral culture less commonly used",
+      "Distinguish from HSV gingivostomatitis — anterior mouth, not just posterior",
+    ],
+    treatment: [
+      "Supportive care — hydration, analgesics",
+      "No routine antiviral therapy for uncomplicated HFMD or herpangina",
+      "Monitor for dehydration from painful oral lesions",
+      "Severe EV-A71 CNS disease (Asia) may require ICU support — not typical Coxsackie A alone",
+    ],
+    distinguishFrom: [
+      "Coxsackievirus B — myocarditis, pericarditis, pleurodynia; less prominent HFMD",
+      "Herpes simplex virus — gingivostomatitis; anterior oral ulcers; acyclovir if severe",
+      "Aphthous ulcers — isolated oral ulcers without vesicles on hands/feet",
+      "Varicella — diffuse vesicular rash in different stages; VZV not enterovirus",
+      "General enterovirus — umbrella genus; Coxsackie A specifies mucocutaneous group A serotypes",
+    ],
+    boardsPearls: [
+      "Coxsackie A → HFMD and herpangina; Coxsackie B → myocarditis and pleurodynia",
+      "HFMD = oral ulcers + vesicles on palms and soles (A16 classic serotype)",
+      "Herpangina = posterior oropharyngeal vesicles without hand/foot rash",
+      "Picornavirus: RNA, ss, naked, (+) sense — acid-stable enterovirus",
+      "vs HSV — HFMD has characteristic hand/foot distribution; herpangina is posterior oral",
+      "Aseptic meningitis CSF: lymphocytes, normal glucose (enterovirus family)",
+    ],
+    pediatrics:
+      "HFMD and herpangina peak in young children; daycare fecal-oral spread is classic. EV-A71 can cause severe brainstem encephalitis in Asian outbreaks — overlapping with HFMD presentation. Coxsackie A is usually self-limited; ensure oral hydration.",
+  },
+  {
     id: "enterovirus",
     name: "Enterovirus",
     etymology: "Greek enteron = intestine + virus = viral agent",
@@ -3328,6 +3490,85 @@ export const MICROBIOLOGY: MicrobiologyEntry[] = [
     ],
     pediatrics:
       "Aseptic meningitis and HFMD peak in young children; daycare fecal-oral spread is classic. Neonatal enteroviral infection can cause severe hepatitis, myocarditis, and meningoencephalitis — higher morbidity than in older children. EV-A71 HFMD can cause brainstem encephalitis in outbreaks (Asia). Polio eradication via IPV/OPV — know Salk (killed) vs Sabin (live attenuated oral).",
+  },
+  {
+    id: "jc-virus",
+    name: "JC Virus",
+    etymology:
+      "Named for John Cunningham (initials J.C.), patient from whom the virus was first isolated + Latin virus = viral agent",
+    aliases: [
+      "jc virus",
+      "jc viruses",
+      "jcv",
+      "john cunningham virus",
+      "human polyomavirus 2",
+      "hpv2 polyomavirus",
+      "progressive multifocal leukoencephalopathy virus",
+      "pml virus",
+    ],
+    type: "virus",
+    definition:
+      "Non-enveloped double-stranded DNA polyomavirus that latently infects most adults (renal tubular cells, lymphoid tissue) — reactivates in severe immunosuppression to infect oligodendrocytes and cause progressive multifocal leukoencephalopathy (PML), a fatal demyelinating CNS disease.",
+    mnemonic:
+      "DNA · ds · naked · circular — Polyomavirus: dsDNA, no envelope; latent reactivation in immunosuppression",
+    morphology: [
+      "Icosahedral non-enveloped virion (~45 nm)",
+      "Circular double-stranded DNA genome",
+      "T antigen drives lytic replication in permissive oligodendrocytes",
+    ],
+    virulenceFactors: [
+      "Latency in immunocompetent hosts — asymptomatic renal and lymphoid carriage",
+      "Reactivation when cell-mediated immunity fails (HIV, natalizumab, transplant)",
+      "Tropism for oligodendrocytes → demyelination without neuronal destruction initially",
+      "No inflammatory response early — indolent progressive deficits",
+    ],
+    transmission: [
+      "Ubiquitous — primary infection usually asymptomatic in childhood",
+      "Latent persistence lifelong; reactivation is endogenous, not new acquisition",
+      "Not classic person-to-person acute transmission in PML setting",
+    ],
+    diseases: [
+      "Progressive multifocal leukoencephalopathy (PML) — demyelinating leukoencephalopathy in immunosuppressed",
+      "Asymptomatic latent infection in immunocompetent majority",
+    ],
+    classicPresentation: [
+      "HIV/AIDS with CD4 <100 or natalizumab-treated MS patient with subacute focal neurologic deficits",
+      "Progressive hemiparesis, visual field cut, aphasia, or ataxia over weeks",
+      "Cognitive decline and personality change",
+      "No fever or headache prominent — unlike abscess or lymphoma",
+      "MRI: multifocal nonenhancing white matter lesions without mass effect",
+    ],
+    diagnosis: [
+      "MRI brain — multifocal asymmetric white matter hyperintensities; typically no mass effect or enhancement",
+      "CSF JC virus PCR — high specificity when positive",
+      "Brain biopsy if PCR negative and diagnosis uncertain — demyelinated oligodendrocytes with enlarged infected nuclei",
+      "Exclude CNS lymphoma, toxoplasmosis, and stroke mimics",
+    ],
+    treatment: [
+      "Restore immune function — optimize ART in HIV (immune reconstitution inflammatory syndrome risk)",
+      "Discontinue offending immunosuppressant (e.g., natalizumab) when possible",
+      "No established antiviral cure — cidofovir and other agents limited evidence",
+      "Supportive care; PML often fatal if immunity cannot be restored",
+    ],
+    distinguishFrom: [
+      "BK virus — related polyomavirus; hemorrhagic cystitis and nephropathy in transplant, not PML",
+      "HIV-associated dementia — diffuse cognitive decline; different MRI pattern",
+      "CNS lymphoma — enhancing periventricular mass in AIDS",
+      "Multiple sclerosis — relapsing-remitting course; enhancing lesions; immunocompetent patient",
+      "Cerebral toxoplasmosis — ring-enhancing lesions, usually basal ganglia",
+      "Subacute sclerosing panencephalitis — measles-related; children/adolescents",
+    ],
+    boardsPearls: [
+      "JC virus → PML in severe immunosuppression (AIDS, natalizumab, transplant)",
+      "Destroys oligodendrocytes → demyelination without destroying neurons initially",
+      "MRI: multifocal white matter lesions, no mass effect, typically no enhancement",
+      "CSF JC virus PCR confirms diagnosis",
+      "vs BK virus — BK affects kidney/bladder in transplant; JC affects brain",
+      "Polyomavirus: dsDNA, naked, latent — reactivation when T-cell immunity impaired",
+      "Natalizumab (MS) + PML risk — test for anti-JC virus antibodies before and during therapy",
+    ],
+    pediatrics:
+      "PML is rare in children except with congenital immunodeficiency or prolonged severe immunosuppression. Primary JC infection is usually asymptomatic in childhood. PML is a boards concern mainly in AIDS and iatrogenic immunosuppression vignettes.",
   },
   {
     id: "norovirus",

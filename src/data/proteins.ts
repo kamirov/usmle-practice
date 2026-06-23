@@ -668,6 +668,89 @@ export const PROTEINS: ProteinEntry[] = [
     ],
   },
   {
+    id: "pepsin",
+    name: "Pepsin",
+    etymology:
+      "Greek pepsis = digestion + -in = enzyme suffix — active gastric protease converted from pepsinogen by acid",
+    aliases: [
+      "pepsin",
+      "pepsins",
+      "gastric pepsin",
+      "pepsin enzyme",
+      "pepsin enzymes",
+      "pepsinogen product",
+      "active pepsin",
+    ],
+    gene: "PGA3, PGA4, PGA5 (pepsinogen genes); pepsin A/B/C isoforms from autocatalytic cleavage",
+    location:
+      "Secreted as pepsinogen by gastric chief (zymogenic) cells into gastric lumen; activated to pepsin by gastric HCl (pH <3) in stomach; inactivated when chyme enters duodenum and pH rises above ~4",
+    function:
+      "Aspartic protease that cleaves dietary proteins into peptides at aromatic amino acid residues — requires acidic pH (optimal ~1.5–2) for activity; works with gastric acid to initiate protein digestion before pancreatic proteases in the small intestine.",
+    mutationCauses: [
+      "Pernicious anemia / atrophic gastritis — loss of parietal cells → achlorhydria → impaired pepsinogen activation",
+      "Zollinger-Ellison syndrome — excess acid may increase pepsin activity contributing to peptic ulceration",
+      "Chief cell pathology uncommon; peptic ulcer disease relates to acid + pepsin + mucosal defense imbalance",
+    ],
+    boardsPearls: [
+      "Chief cells → pepsinogen; parietal cells → HCl activates pepsinogen → pepsin",
+      "Optimal activity at pH 1.5–2; denatured/inactivated at neutral pH in duodenum",
+      "Pepsin + acid digest protein in stomach; trypsin/chymotrypsin continue in small intestine",
+      "PPIs ↓ acid → ↓ pepsin activation — ulcer healing mechanism",
+      "vs trypsin — gastric vs pancreatic protease; pepsin needs acid, trypsin needs alkaline duodenal pH",
+      "Pepsin cleaves IgG into F(ab′)₂ + pFc′ fragments (immunology lab technique)",
+    ],
+    distinguishFrom: [
+      "Pepsinogen — inactive zymogen secreted by chief cells",
+      "Trypsin — pancreatic serine protease activated in duodenum",
+      "HCl — parietal cell acid activates pepsinogen; not a protease itself",
+      "Pepsinogen C (progastricsin) — different pepsinogen isoform; also activated by acid",
+      "Rennin (chymosin) — milk-clotting enzyme in infants, not primary adult gastric protease",
+    ],
+  },
+  {
+    id: "trypsin",
+    name: "Trypsin",
+    etymology:
+      "Greek tripsis = rubbing/friction + -in = enzyme — pancreatic serine protease named for its ability to 'rub' (digest) proteins",
+    aliases: [
+      "trypsin",
+      "trypsins",
+      "pancreatic trypsin",
+      "trypsin enzyme",
+      "trypsin enzymes",
+      "active trypsin",
+      "trypsinogen product",
+    ],
+    gene: "PRSS1 (cationic trypsinogen); PRSS2 (anionic trypsinogen)",
+    location:
+      "Synthesized as trypsinogen in pancreatic acinar cells → secreted into pancreatic duct → activated to trypsin by enterokinase (enteropeptidase) on duodenal brush border → active in alkaline duodenal lumen",
+    function:
+      "Serine protease cleaving proteins and peptides at lysine/arginine residues — activates other pancreatic zymogens (chymotrypsinogen, procarboxypeptidase, proelastase) creating a proteolytic cascade; continues protein digestion begun by pepsin in the stomach.",
+    mutationCauses: [
+      "PRSS1 mutations — hereditary pancreatitis (gain-of-function trypsinogen)",
+      "Premature intrapancreatic trypsinogen activation — acute pancreatitis autodigestion",
+      "Cystic fibrosis — neonatal elevated immunoreactive trypsinogen (IRT) on newborn screen from pancreatic injury",
+      "Pancreatic insufficiency — ↓ trypsin delivery → protein malabsorption",
+    ],
+    boardsPearls: [
+      "Trypsinogen → trypsin via enterokinase on duodenal brush border",
+      "Trypsin activates other pancreatic zymogens — master switch of pancreatic digestion",
+      "Acute pancreatitis — premature trypsin activation inside pancreas → autodigestion",
+      "CF newborn screen — ↑ immunoreactive trypsinogen (IRT), not active trypsin in blood",
+      "vs pepsin — gastric acid-activated; trypsin needs alkaline duodenum",
+      "vs enterokinase — brush-border activator of trypsinogen, not the digestive protease itself",
+      "Trypsin inhibitor (soy) and α1-antitrypsin are different — latter inhibits neutrophil elastase",
+    ],
+    distinguishFrom: [
+      "Trypsinogen — inactive pancreatic zymogen; elevated in CF newborn screen",
+      "Enterokinase (enteropeptidase) — duodenal brush-border enzyme activating trypsinogen",
+      "Chymotrypsin — pancreatic protease activated by trypsin",
+      "Pepsin — gastric protease active in acid",
+      "Elastase — pancreatic protease activated downstream of trypsin",
+      "Immunoreactive trypsinogen (IRT) — newborn screening analyte, not active enzyme",
+    ],
+  },
+  {
     id: "elastin",
     name: "Elastin",
     etymology: "Greek elastos = ductile/stretchable + -in protein",

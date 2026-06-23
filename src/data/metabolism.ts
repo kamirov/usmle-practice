@@ -187,6 +187,51 @@ export const METABOLISM: MetabolismEntry[] = [
       "PDH deficiency presents in infancy with lactic acidosis and neurologic decline; ketogenic diet provides acetyl-CoA-derived ketones as alternative fuel for the brain.",
   },
   {
+    id: "cholesterol-7-alpha-hydroxylase",
+    name: "Cholesterol 7α-Hydroxylase",
+    etymology:
+      "cholesterol + 7α (alpha hydroxylation at carbon 7) + -ylase = enzyme — CYP7A1 cytochrome P450 catalyzing first committed step of bile acid synthesis",
+    aliases: [
+      "cholesterol 7a-hydroxylase",
+      "cholesterol 7α-hydroxylase",
+      "cholesterol 7 alpha hydroxylase",
+      "cholesterol 7α hydroxylase",
+      "cyp7a1",
+      "cyp 7a1",
+      "7-alpha-hydroxylase",
+      "7α-hydroxylase cholesterol",
+      "cholesterol 7alpha hydroxylase",
+      "rate limiting enzyme bile acid synthesis",
+    ],
+    definition:
+      "Mitochondrial cytochrome P450 enzyme (CYP7A1) catalyzing rate-limiting hydroxylation of cholesterol to 7α-hydroxycholesterol — first committed step in classic (neutral) bile acid synthesis pathway; major route for cholesterol elimination from the body.",
+    pathway: [
+      "Cholesterol → 7α-hydroxycholesterol (CYP7A1, rate-limiting) → bile acids (cholic acid, chenodeoxycholic acid)",
+      "Bile acids conjugated with glycine/taurine → secreted in bile → emulsify dietary fat",
+      "Enterohepatic circulation — ~95% bile acids reabsorbed in terminal ileum",
+      "Negative feedback: bile acids return to liver → ↓ CYP7A1 via FXR nuclear receptor",
+      "Cholesterol excess or bile acid sequestrants (cholestyramine) → ↑ CYP7A1 activity",
+      "Distinct from HMG-CoA reductase pathway (cholesterol synthesis, not degradation to bile acids)",
+    ],
+    boardsPearls: [
+      "CYP7A1 = rate-limiting step in bile acid synthesis from cholesterol",
+      "Major pathway for cholesterol catabolism/elimination — converts cholesterol to bile acids",
+      "vs HMG-CoA reductase — statins inhibit cholesterol synthesis; CYP7A1 drives cholesterol → bile acid disposal",
+      "Bile acid feedback inhibits CYP7A1 (FXR pathway)",
+      "Cholestyramine binds bile acids → interrupts enterohepatic circulation → ↑ hepatic cholesterol 7α-hydroxylase",
+      "vs 27-hydroxylase (CYP27A1) — alternative (acidic) bile acid pathway; cerebrotendinous xanthomatosis if deficient",
+    ],
+    distinguishFrom: [
+      "HMG-CoA reductase — rate-limiting cholesterol synthesis (mevalonate pathway); statin target",
+      "21-hydroxylase / 17α-hydroxylase — adrenal steroid synthesis enzymes",
+      "1α-hydroxylase — renal vitamin D activation (calcitriol synthesis)",
+      "CYP27A1 (sterol 27-hydroxylase) — side-chain oxidation bile acid pathway; CTX deficiency",
+      "Cholesterol esterase — hydrolyzes cholesterol esters in gut, not bile acid synthesis",
+    ],
+    pediatrics:
+      "Bile acid synthesis defects (rare) can cause cholestatic liver disease in infancy. Familial hypercholesterolemia reflects LDL receptor defects, not primary CYP7A1 deficiency on boards — but bile acid metabolism is relevant to neonatal jaundice and fat malabsorption.",
+  },
+  {
     id: "phenylalanine",
     name: "Phenylalanine",
     etymology: "phenyl = benzene ring + alanine = amino acid",
@@ -1161,6 +1206,136 @@ export const METABOLISM: MetabolismEntry[] = [
       "Infantile beriberi from thiamine-deficient breast milk (maternal deficiency); MSUD neonates may respond to thiamine in thiamine-responsive BCKDH subtypes.",
   },
   {
+    id: "biotin",
+    name: "Biotin",
+    etymology:
+      "Greek bios = life + -in = substance — vitamin B₇; also called vitamin H (German Haar und Haut = hair and skin)",
+    aliases: [
+      "biotin",
+      "biotins",
+      "vitamin b7",
+      "vitamin b-7",
+      "vitamin b 7",
+      "vitamin h",
+      "vitamin h7",
+      "coenzyme r",
+      "d-biotin",
+    ],
+    definition:
+      "Water-soluble vitamin B₇ — essential prosthetic-group cofactor covalently bound to biotin-dependent carboxylase enzymes that add CO₂ to substrates in gluconeogenesis, fatty acid synthesis, and amino acid catabolism.",
+    pathway: [
+      "Dietary biotin from eggs, liver, nuts, and gut microbiota → absorbed in jejunum via sodium-dependent multivitamin transporter (SMVT)",
+      "Biotin ligase attaches biotin to ε-amino group of lysine on apocarboxylases → holocarboxylases",
+      "Biotin-dependent carboxylases: pyruvate carboxylase (pyruvate → oxaloacetate), acetyl-CoA carboxylase (fatty acid synthesis), propionyl-CoA carboxylase, 3-methylcrotonyl-CoA carboxylase",
+      "Biotinidase recycles biotin from biocytin and dietary protein-bound biotin",
+      "Avidin in raw egg whites binds biotin tightly → deficiency with excessive raw egg consumption",
+    ],
+    boardsPearls: [
+      "Biotin = cofactor for carboxylase enzymes (add CO₂)",
+      "Mnemonic carboxylases: PAP — Pyruvate carboxylase, Acetyl-CoA carboxylase, Propionyl-CoA carboxylase (+ 3-methylcrotonyl-CoA carboxylase)",
+      "Biotinidase deficiency — AR; newborn screen; alopecia, dermatitis, seizures; treat with biotin",
+      "Multiple carboxylase deficiency — holocarboxylase synthetase defect; similar presentation",
+      "Raw egg whites (avidin) → biotin deficiency",
+      "High-dose biotin supplements interfere with streptavidin-based lab immunoassays (false thyroid/troponin results)",
+      "vs pantothenic acid — B₅ is CoA component; biotin is separate carboxylase cofactor",
+    ],
+    distinguishFrom: [
+      "Pantothenic acid (B₅) — builds coenzyme A, not biotin carboxylase cofactor",
+      "Thiamine (B₁) — TPP for decarboxylation/transketolase, not carboxylation",
+      "Biotinidase — recycling enzyme; deficiency causes functional biotin deficiency",
+      "Avidin — egg white protein that binds biotin, not the vitamin itself",
+      "Streptavidin — lab reagent; biotin supplement interference in assays",
+    ],
+    pediatrics:
+      "Biotinidase deficiency detected on newborn screen — lifelong biotin prevents neurologic injury and alopecia. Holocarboxylase synthetase deficiency presents in infancy with metabolic acidosis and skin findings. Do not rely on biotin-containing hair/nail supplements before lab testing in pediatrics.",
+  },
+  {
+    id: "beta-glucuronidase",
+    name: "β-Glucuronidase",
+    etymology:
+      "Greek beta = second letter + glucuron = glucose + uronic acid + -ase = enzyme — hydrolase cleaving β-glucuronide linkages",
+    aliases: [
+      "beta-glucuronidase",
+      "β-glucuronidase",
+      "b-glucuronidase",
+      "b glucuronidase",
+      "beta glucuronidase",
+      "glucuronidase",
+      "glucuronidases",
+      "lysosomal beta-glucuronidase",
+      "bacterial beta-glucuronidase",
+    ],
+    definition:
+      "Enzyme that hydrolyzes β-glucuronide conjugates → releases aglycone (bilirubin, estrogen, drugs) plus glucuronic acid — bacterial β-glucuronidase in the gut and biliary tree deconjugates enterohepatic metabolites; lysosomal β-glucuronidase degrades glycosaminoglycans.",
+    pathway: [
+      "Phase II conjugation: UDP-glucuronosyltransferase (UGT) attaches glucuronic acid to bilirubin, estrogens, drugs → water-soluble glucuronides excreted in bile/urine",
+      "Bacterial β-glucuronidase in colon and infected bile ducts cleaves conjugates → reabsorption (enterohepatic circulation)",
+      "Brown pigment gallstones — ascending cholangitis with E. coli β-glucuronidase → unconjugated bilirubin precipitates",
+      "Oral contraceptive estrogen — deconjugation and reabsorption may ↑ estrogen exposure",
+      "Lysosomal β-glucuronidase (GUSB) — degrades dermatan and heparan sulfate; deficiency → mucopolysaccharidosis type VII (Sly syndrome)",
+    ],
+    boardsPearls: [
+      "β-glucuronidase deconjugates glucuronides — reverses UGT phase II conjugation",
+      "Brown pigment stones — bacterial infection + β-glucuronidase in bile ducts",
+      "Enterohepatic circulation of estrogen and bilirubin involves bacterial deconjugation",
+      "vs UDP-glucuronosyltransferase (UGT) — UGT conjugates; glucuronidase deconjugates",
+      "Gilbert/Crigler-Najjar — impaired conjugation upstream; glucuronidase acts downstream on conjugates",
+      "MPS VII (Sly) — lysosomal β-glucuronidase deficiency",
+    ],
+    distinguishFrom: [
+      "UDP-glucuronosyltransferase (UGT) — conjugates bilirubin and drugs with glucuronic acid",
+      "Sulfatase — removes sulfate groups from GAGs; different lysosomal enzyme class",
+      "β-galactosidase — cleaves galactose residues; GM1 gangliosidosis enzyme",
+      "Glucuronidation — metabolic process; β-glucuronidase is the degradative hydrolase",
+      "Bilirubin diglucuronide — conjugated product, not the enzyme",
+    ],
+    pediatrics:
+      "Neonatal hyperbilirubinemia reflects immature UGT conjugation; bacterial glucuronidase in gut can increase enterohepatic bilirubin circulation. MPS VII presents with coarse facies, hepatosplenomegaly, and developmental delay from lysosomal β-glucuronidase deficiency.",
+  },
+  {
+    id: "pantothenic-acid",
+    name: "Pantothenic Acid",
+    etymology:
+      "Greek pantos = everywhere + -ol + -ic acid — vitamin B₅ found widely in foods; essential precursor of coenzyme A",
+    aliases: [
+      "pantothenic acid",
+      "pantothenic acids",
+      "pantothenate",
+      "pantothenates",
+      "vitamin b5",
+      "vitamin b-5",
+      "vitamin b 5",
+      "b5 vitamin",
+    ],
+    definition:
+      "Water-soluble vitamin B₅ — universal component of coenzyme A (CoA) and acyl carrier protein (ACP) — essential for acetyl-CoA formation, TCA cycle, fatty acid synthesis, and steroid/heme biosynthesis; deficiency is rare because it is present in most foods.",
+    pathway: [
+      "Dietary pantothenate → phosphorylation to 4′-phosphopantetheine → adenylation forms dephospho-CoA → phosphorylation yields coenzyme A",
+      "CoA carries acyl groups as thioesters — acetyl-CoA, succinyl-CoA, fatty acyl-CoA",
+      "ACP prosthetic group on fatty acid synthase carries growing fatty acid chain during synthesis",
+      "CoA required for PDH, α-ketoglutarate dehydrogenase, branched-chain ketoacid dehydrogenase (lipoamide + CoA acceptors)",
+      "Pantothenate kinase (PANK) is rate-limiting step in CoA biosynthesis",
+    ],
+    boardsPearls: [
+      "Pantothenic acid (B₅) → coenzyme A and ACP",
+      "CoA = central acyl-group carrier (acetyl-CoA, TCA intermediates, fatty acid synthesis)",
+      "Deficiency rare — 'pantothen' = everywhere in diet; seen in severe malnutrition",
+      "Burning feet syndrome — historical association with pantothenate deficiency",
+      "PANK mutations → pantothenate kinase-associated neurodegeneration (PKAN) — iron accumulation in globus pallidus ('eye of the tiger' MRI)",
+      "vs biotin — biotin cofactor for carboxylases; pantothenate builds CoA",
+      "vs lipoic acid — PDH cofactor; different from CoA pantothenate moiety",
+    ],
+    distinguishFrom: [
+      "Coenzyme A — active cofactor derived from pantothenic acid",
+      "Biotin (B₇) — separate carboxylase cofactor",
+      "Pantoprazole — PPI drug name unrelated to pantothenate physiology despite 'panto-' prefix in naming",
+      "Pantothenate kinase-associated neurodegeneration — enzyme defect in CoA synthesis, not dietary deficiency alone",
+      "Thiamine — PDH needs TPP + lipoic acid + CoA; pantothenate is only the CoA component",
+    ],
+    pediatrics:
+      "Dietary pantothenate deficiency is exceedingly rare in children. PKAN (NBIA type 1) presents in childhood with dystonia, spasticity, and progressive neurodegeneration — not simply corrected by oral vitamin supplementation.",
+  },
+  {
     id: "ascorbic-acid",
     name: "Ascorbic Acid",
     etymology:
@@ -1660,6 +1835,50 @@ export const METABOLISM: MetabolismEntry[] = [
     ],
     pediatrics:
       "ADA deficiency presents in infancy with severe combined immunodeficiency — ↑ dATP inhibits ribonucleotide reductase and lymphocyte proliferation. Hydroxyurea is used in pediatric sickle cell to induce HbF via RNR inhibition.",
+  },
+  {
+    id: "thiolase",
+    name: "Thiolase",
+    etymology:
+      "thiol = sulfur-containing (CoA thioester) + -ase = enzyme — acyl-CoA thioesterase cleaving 3-ketoacyl-CoA in β-oxidation and acetyl-CoA acetyltransferase in ketone body metabolism",
+    aliases: [
+      "thiolase",
+      "thiolases",
+      "beta-ketothiolase",
+      "β-ketothiolase",
+      "b-ketothiolase",
+      "acetyl-coa acetyltransferase",
+      "acetoacetyl-coa thiolase",
+      "3-ketoacyl-coa thiolase",
+      "mitochondrial thiolase",
+      "t2 deficiency enzyme",
+    ],
+    definition:
+      "Family of enzymes cleaving thioester bonds in acyl-CoA intermediates — β-ketothiolase (acetyl-CoA acetyltransferase) condenses/cleaves acetyl-CoA in ketogenesis and ketolysis; thiolase in fatty acid β-oxidation cleaves 3-ketoacyl-CoA → acetyl-CoA + shortened acyl-CoA.",
+    pathway: [
+      "Fatty acid β-oxidation — last step of each cycle: 3-ketoacyl-CoA thiolase → acetyl-CoA + acyl-CoA (two carbons shorter)",
+      "Ketogenesis — acetyl-CoA + acetoacetyl-CoA ↔ 2 acetyl-CoA via mitochondrial acetyl-CoA acetyltransferase (thiolase)",
+      "Ketolysis (extrahepatic) — succinyl-CoA:3-oxoacid CoA transferase activates acetoacetate; thiolase processes acetoacetyl-CoA → acetyl-CoA for TCA cycle",
+      "β-ketothiolase deficiency (T2) — impaired ketolysis and isoleucine catabolism → accumulation of 2-methyl-3-hydroxybutyrate and tiglylglycine",
+    ],
+    boardsPearls: [
+      "Thiolase cleaves 3-ketoacyl-CoA in each round of β-oxidation → releases acetyl-CoA",
+      "β-ketothiolase deficiency — organic acidemia; ketoacidosis with fasting; ↑ 2-methyl-3-hydroxybutyrate",
+      "T2 deficiency — impaired metabolism of ketone bodies and isoleucine",
+      "vs HMG-CoA synthase/lyase — those form acetoacetate; thiolase handles acetyl-CoA/acetoacetyl-CoA interconversion",
+      "vs acyl-CoA dehydrogenase — earlier β-oxidation step; thiolase is final cleavage per cycle",
+      "Do not confuse with ACAT (acyl-CoA cholesterol acyltransferase) — cholesterol esterification enzyme",
+    ],
+    distinguishFrom: [
+      "HMG-CoA synthase — condenses acetyl-CoA for ketogenesis (HMG-CoA formation)",
+      "HMG-CoA lyase — cleaves HMG-CoA to acetoacetate",
+      "Acyl-CoA dehydrogenase — first oxidation step in β-oxidation spiral",
+      "Carnitine palmitoyltransferase — transports fatty acids into mitochondria",
+      "ACAT (SOAT) — cholesterol esterification, not β-oxidation thiolase",
+      "β-ketothiolase deficiency — clinical disease from mitochondrial acetyl-CoA acetyltransferase defect",
+    ],
+    pediatrics:
+      "β-ketothiolase deficiency presents in infancy or early childhood with vomiting, ketosis, and acidosis triggered by fasting or illness — organic acidemia on newborn screen or metabolic workup. Treat with avoidance of prolonged fasting and carnitine supplementation.",
   },
   {
     id: "thymidylate-synthase",

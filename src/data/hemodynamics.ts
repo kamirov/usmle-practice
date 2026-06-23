@@ -14,6 +14,7 @@ export const HEMODYNAMICS: HemodynamicEntry[] = [
     etymology: "Greek haima = blood + dynamis = power/force",
     aliases: [
       "hemodynamics",
+      "hemodynamic",
       "haemodynamics",
       "cardiovascular hemodynamics",
       "cardiac hemodynamics",

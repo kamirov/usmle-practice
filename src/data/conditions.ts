@@ -905,6 +905,79 @@ export const CONDITIONS: ConditionEntry[] = [
       "Incidental click common in adolescents; evaluate for Marfan features. Most pediatric MVP is benign; sports restriction only with significant MR, arrhythmia, or aortic root disease.",
   },
   {
+    id: "hemopericardium",
+    name: "Hemopericardium",
+    etymology:
+      "Greek haima = blood + peri = around + Greek kardia = heart — accumulation of blood within the pericardial sac",
+    aliases: [
+      "hemopericardium",
+      "hemopericardiums",
+      "hemopericardia",
+      "bloody pericardial effusion",
+      "pericardial hemorrhage",
+      "blood in pericardium",
+      "pericardial blood",
+    ],
+    definition:
+      "Presence of blood within the pericardial space — may be localized clot or free fluid — that can rapidly raise intrapericardial pressure and precipitate cardiac tamponade when accumulation outpaces pericardial stretch capacity.",
+    pathophysiology:
+      "Disruption of pericardial vessels, myocardium, or great vessels → blood enters the relatively noncompliant pericardial sac → rapid ↑ intrapericardial pressure impairs venous return and ventricular diastolic filling → ↓ stroke volume and cardiac output; small slow bleeds may be tolerated longer than sudden large hemorrhage.",
+    classicPresentation: [
+      "Hypotension, tachycardia, dyspnea — especially with rapid accumulation",
+      "Chest pain after trauma, MI, or dissection",
+      "Muffled heart sounds, distended neck veins",
+      "Sudden cardiovascular collapse (post-MI free wall rupture, aortic rupture into pericardium)",
+      "May be subacute if bleeding is slow",
+    ],
+    keyFindings: [
+      "Beck triad if tamponade physiology — hypotension, JVD, muffled heart sounds",
+      "Pulsus paradoxus >10 mmHg",
+      "Echo — pericardial effusion, often echogenic or with clot; RA/RV diastolic collapse if tamponade",
+      "ECG — low voltage, electrical alternans; pseudo-STEMI pattern post-MI rupture",
+    ],
+    keyLabs: [
+      "Echocardiography — first-line; distinguishes effusion from tamponade physiology",
+      "Pericardiocentesis — bloody nonclotting fluid confirms hemopericardium",
+      "ECG and troponin if post-MI complication suspected",
+    ],
+    associations: [
+      "Blunt or penetrating cardiac trauma (stab, MVC)",
+      "Post-MI left ventricular free wall rupture (3–7 days)",
+      "Aortic dissection rupture into pericardium",
+      "Iatrogenic — catheter perforation, post-cardiac surgery",
+      "Anticoagulation with pericarditis or malignancy",
+      "Cardiac rupture after CPR or resuscitation (rare)",
+    ],
+    complications: [
+      "Cardiac tamponade and obstructive shock",
+      "Electromechanical dissociation and death",
+      "Recurrent bleeding after pericardiocentesis if source not controlled",
+    ],
+    distinguishFrom: [
+      "Serous pericardial effusion — transudate/exudate without hemorrhage; viral, uremic, malignant causes",
+      "Cardiac tamponade — hemodynamic syndrome that may result from hemopericardium or any large effusion",
+      "Hemothorax — blood in pleural space, not pericardium",
+      "Myocardial contusion without pericardial rupture — troponin rise without tamponade",
+    ],
+    treatment: [
+      "Emergent pericardiocentesis for tamponade physiology",
+      "Surgical repair — free wall rupture, aortic injury, penetrating trauma",
+      "IV fluids as temporizing measure (↑ preload)",
+      "Avoid anticoagulation until bleeding controlled",
+      "Pericardial window or sternotomy for definitive hemostasis when indicated",
+    ],
+    boardsPearls: [
+      "Hemopericardium = blood in pericardial sac — rapid fill → tamponade",
+      "Post-MI free wall rupture (3–7 days) — hemopericardium + sudden collapse",
+      "Aortic dissection into pericardium — tearing chest pain + tamponade",
+      "Trauma — muffled heart sounds + JVD + hypotension → cardiac tamponade until proven otherwise",
+      "vs effusion — hemopericardium is hemorrhagic; causes differ (trauma, rupture, not just viral pericarditis)",
+      "Pericardiocentesis is temporizing; definitive surgery for structural rupture",
+    ],
+    pediatrics:
+      "Blunt chest trauma in children can cause hemopericardium and tamponade; infants may present with irritability and hepatomegaly rather than classic Beck triad. Post-operative cardiac surgery patients need urgent echo for sudden hypotension.",
+  },
+  {
     id: "cardiac-tamponade",
     name: "Cardiac Tamponade",
     etymology: "Greek kardia = heart + French tampon = plug/stopper",
@@ -12275,6 +12348,84 @@ export const CONDITIONS: ConditionEntry[] = [
       "Indirect inguinal hernia is among the most common surgical conditions in infants, especially premature males; repair is recommended promptly because incarceration risk is high. Do not confuse with hydrocele (transilluminates) or retractile testis. Bilateral indirect hernias occur in a significant minority.",
   },
   {
+    id: "incarcerated-hernia",
+    name: "Incarcerated Hernia",
+    etymology:
+      "Latin in = in + Latin carcer = prison + hernia = protrusion — hernia contents trapped in the sac and no longer reducible",
+    aliases: [
+      "incarcerated hernia",
+      "incarcerated hernias",
+      "incarceration of hernia",
+      "irreducible hernia",
+      "irreducible hernias",
+      "trapped hernia",
+      "trapped hernias",
+      "obstructed incarcerated hernia",
+    ],
+    definition:
+      "Hernia in which the protruding viscera cannot be returned to the abdominal cavity by gentle manual reduction — an irreducible hernia that may progress to strangulation if vascular supply to the trapped bowel becomes compromised.",
+    pathophysiology:
+      "Narrow neck of hernia sac or adhesions trap bowel or omentum → contents fixed in sac → bowel obstruction may develop at neck; if mesenteric blood flow is impaired, incarceration progresses to strangulation with ischemia, necrosis, and peritonitis.",
+    classicPresentation: [
+      "Previously reducible groin or abdominal bulge now fixed and painful",
+      "Tender, firm hernia mass that cannot be pushed back",
+      "Nausea, vomiting, abdominal distension if bowel obstruction",
+      "No overlying skin changes early; fever and erythema suggest strangulation",
+      "Sudden onset pain after lifting, coughing, or straining",
+      "Femoral and infant inguinal hernias at highest risk",
+    ],
+    keyFindings: [
+      "Irreducible hernia mass on exam — no cough impulse or reduction with supine positioning",
+      "Tenderness at hernia site",
+      "Signs of bowel obstruction — distension, hyperactive then absent bowel sounds",
+      "Ultrasound — trapped bowel loops, fluid in sac; assess wall thickness and perfusion if strangulation suspected",
+      "Overlying skin warmth, discoloration, peritonitis — suggests strangulation (emergency)",
+    ],
+    keyLabs: [
+      "CBC — leukocytosis if strangulation/peritonitis evolving",
+      "Lactate ↑ if bowel ischemia",
+      "CT abdomen/pelvis if diagnosis uncertain — shows trapped bowel, obstruction, ischemia",
+    ],
+    associations: [
+      "Inguinal hernia (especially indirect in infants)",
+      "Femoral hernia — highest incarceration/strangulation rate",
+      "Umbilical hernia (less common to incarcerate unless large)",
+      "Incisional and ventral hernias",
+      "Chronic constipation, cough, ascites (↑ intra-abdominal pressure)",
+    ],
+    complications: [
+      "Strangulation — bowel ischemia and necrosis",
+      "Bowel obstruction",
+      "Peritonitis and sepsis",
+      "Need for bowel resection if strangulated",
+    ],
+    distinguishFrom: [
+      "Reducible hernia — returns to abdomen with gentle pressure or supine rest",
+      "Strangulated hernia — incarcerated plus vascular compromise; systemic toxicity, peritonitis, ischemic bowel",
+      "Lymphadenopathy or abscess — no connection to peritoneal cavity through fascial defect",
+      "Hydrocele — scrotal, transilluminates, not tender irreducible bowel",
+      "Testicular torsion — acute scrotal pain, high-riding testis, absent cremasteric reflex — surgical emergency without hernia sac",
+    ],
+    treatment: [
+      "Urgent surgical evaluation — do not delay for attempted reduction if strangulation suspected",
+      "Gentle manual reduction (taxe) only if no signs of strangulation, by experienced clinician, with analgesia",
+      "Emergent herniorrhaphy if reduction fails, obstruction present, or strangulation suspected",
+      "Bowel resection if ischemic/necrotic contents at laparotomy",
+      "NPO, IV fluids, nasogastric decompression if obstructed",
+    ],
+    boardsPearls: [
+      "Incarcerated = irreducible hernia contents trapped in sac",
+      "Strangulated = incarcerated + compromised blood supply — surgical emergency",
+      "Femoral hernia — highest risk of incarceration/strangulation (especially women)",
+      "Infant inguinal hernia — high incarceration risk → early elective repair",
+      "Painful irreducible groin mass → incarcerated hernia until proven otherwise",
+      "Manual reduction contraindicated if peritonitis, overlying skin changes, or systemic toxicity",
+      "vs reducible hernia — soft, returns with supine positioning or gentle pressure",
+    ],
+    pediatrics:
+      "Incarcerated indirect inguinal hernia is a common pediatric surgical emergency — infant with painful nonreducible groin mass needs urgent evaluation. Manual reduction may be attempted only without strangulation signs and with surgical backup. Umbilical hernias rarely incarcerate in children unless very large.",
+  },
+  {
     id: "umbilical-hernia",
     name: "Umbilical Hernia",
     etymology:
@@ -12703,6 +12854,83 @@ export const CONDITIONS: ConditionEntry[] = [
     ],
     pediatrics:
       "Uncommon in children; consider complicated Crohn disease or post-surgical fistula. Pneumaturia in any age warrants imaging to exclude enterovesical/colovesical fistula.",
+  },
+  {
+    id: "angiodysplasia",
+    name: "Angiodysplasia",
+    etymology:
+      "Greek angeion = vessel + dys = abnormal + plasis = formation — degenerative vascular ectasias of the GI mucosa and submucosa",
+    aliases: [
+      "angiodysplasia",
+      "angiodysplasias",
+      "angioectasia",
+      "angioectasias",
+      "vascular ectasia",
+      "vascular ectasias",
+      "arteriovenous malformation of colon",
+      "avm of colon",
+      "gi angiodysplasia",
+      "colonic angiodysplasia",
+    ],
+    definition:
+      "Acquired degenerative dilatation of mucosal and submucosal vessels in the GI tract — most often right colon and cecum in elderly — causing intermittent painless lower gastrointestinal bleeding and iron deficiency anemia.",
+    pathophysiology:
+      "Chronic low-grade obstruction of submucosal veins → capillary and arteriolar dilatation → fragile thin-walled vascular channels prone to intermittent bleeding; often multiple lesions; associated with age, chronic kidney disease, and aortic stenosis (Heyde syndrome).",
+    classicPresentation: [
+      "Painless maroon or bright red blood per rectum (hematochezia)",
+      "Occult GI bleeding with iron deficiency anemia in elderly",
+      "Intermittent bleeding — may be recurrent and obscure on single colonoscopy",
+      "No abdominal pain unless massive bleed",
+      "Often discovered during evaluation of anemia or positive fecal occult blood test",
+    ],
+    keyFindings: [
+      "Colonoscopy — flat, cherry-red, spider-like vascular lesions (cecum/right colon classic)",
+      "Capsule endoscopy or angiography if colonoscopy nondiagnostic",
+      "Iron deficiency anemia — low ferritin, microcytic indices",
+      "Stool heme positive between overt bleeding episodes",
+    ],
+    keyLabs: [
+      "CBC — anemia with low MCV if chronic",
+      "Iron studies — ↓ ferritin, ↓ serum iron",
+      "Coagulation studies normal unless concomitant coagulopathy",
+      "Evaluate for aortic stenosis and vWD if recurrent bleeding",
+    ],
+    associations: [
+      "Heyde syndrome — aortic stenosis + GI angiodysplasia bleeding (acquired vWF multimer loss)",
+      "von Willebrand disease",
+      "End-stage renal disease",
+      "Aortic stenosis",
+      "Anticoagulation and antiplatelet therapy worsen bleeding",
+    ],
+    complications: [
+      "Recurrent GI hemorrhage requiring transfusion",
+      "Severe acute anemia",
+      "Obscure-overt GI bleeding requiring multiple endoscopic procedures",
+    ],
+    distinguishFrom: [
+      "Diverticulosis — painless hematochezia but colonic diverticular outpouchings, not flat vascular ectasias",
+      "Colorectal cancer — mass lesion, weight loss, may cause occult or overt bleeding",
+      "Ischemic colitis — painful crampy abdomen with bloody diarrhea",
+      "Hemorrhoids — bright red blood coating stool, anal pain/itching",
+      "Meckel diverticulum — pediatric painless bleeding with ectopic gastric mucosa",
+    ],
+    treatment: [
+      "Endoscopic thermal coagulation (argon plasma coagulation, bipolar cautery)",
+      "Medical — octreotide, thalidomide (selected cases), treat underlying AS/vWD",
+      "Aortic valve replacement may reduce bleeding in Heyde syndrome",
+      "Iron repletion and transfusion as needed",
+      "Angiographic embolization if endoscopy fails",
+    ],
+    boardsPearls: [
+      "Angiodysplasia — painless lower GI bleed in elderly; right colon/cecum common",
+      "Flat vascular lesions on colonoscopy — not diverticula or polyps",
+      "Heyde syndrome — aortic stenosis + GI bleeding from angiodysplasia (vWF high-molecular-weight multimer loss)",
+      "Intermittent occult bleeding → iron deficiency anemia",
+      "vs diverticulosis — another common painless lower GI bleed cause in elderly",
+      "Anticoagulants exacerbate bleeding from fragile ectatic vessels",
+    ],
+    pediatrics:
+      "Angiodysplasia is primarily a disease of older adults; painless lower GI bleeding in children more often suggests Meckel diverticulum, juvenile polyps, or IBD. Consider vWD in adolescents with mucosal bleeding.",
   },
   {
     id: "ischemic-colitis",
@@ -36281,6 +36509,84 @@ export const CONDITIONS: ConditionEntry[] = [
       "Extrahepatic portal vein obstruction can cause portal hypertension in children without cirrhosis; variceal bleeding remains a major complication.",
   },
   {
+    id: "portal-vein-thrombosis",
+    name: "Portal Vein Thrombosis",
+    etymology:
+      "Latin porta = gate + Latin vena = vein + Greek thrombos = clot + -osis = condition — thrombotic occlusion of the portal vein",
+    aliases: [
+      "portal vein thrombosis",
+      "portal venous thrombosis",
+      "pvt",
+      "portal vein clot",
+      "extrahepatic portal vein obstruction",
+      "epvo",
+      "portal vein obstruction",
+      "cavernous transformation of portal vein",
+    ],
+    definition:
+      "Thrombosis of the portal vein (or its major branches) causing presinusoidal portal hypertension — may be acute with abdominal pain or chronic with cavernous transformation and portosystemic collaterals — with or without underlying cirrhosis.",
+    pathophysiology:
+      "Portal venous thrombus → obstruction of portal inflow → ↑ portal pressure proximal to block (presinusoidal portal hypertension) → opening of portosystemic collaterals (esophageal varices, caput medusae, splenomegaly); chronic thrombosis may recanalize or form cavernous transformation (periportal collateral network); liver parenchyma may remain normal if thrombosis is isolated.",
+    classicPresentation: [
+      "Acute — abdominal pain, fever, nausea; may have underlying prothrombotic state or pancreatitis",
+      "Chronic — asymptomatic until variceal bleed or splenomegaly discovered",
+      "Portal hypertension signs without advanced cirrhosis (varices, ascites, hypersplenism)",
+      "History of umbilical catheter, abdominal sepsis, malignancy, or myeloproliferative disorder",
+    ],
+    keyFindings: [
+      "Doppler ultrasound or CT/MRI — portal vein filling defect, cavernous transformation if chronic",
+      "Splenomegaly and thrombocytopenia from hypersplenism",
+      "Esophageal varices on endoscopy",
+      "Ascites possible even with preserved liver synthetic function",
+      "Normal or near-normal liver enzymes in isolated PVT",
+    ],
+    keyLabs: [
+      "Hypercoagulability workup — factor V Leiden, prothrombin G20210A, antiphospholipid syndrome",
+      "JAK2 V617F mutation — myeloproliferative neoplasm (polycythemia vera, essential thrombocythemia)",
+      "D-dimer elevated in acute thrombosis",
+      "Liver function tests — may be normal unless concurrent cirrhosis or ischemia",
+    ],
+    associations: [
+      "Cirrhosis (portal flow stasis)",
+      "Myeloproliferative neoplasms — JAK2+",
+      "Malignancy (hepatic, pancreatic)",
+      "Acute pancreatitis and abdominal sepsis",
+      "Hypercoagulable states, oral contraceptives, pregnancy",
+      "Neonatal umbilical vein catheterization",
+      "Post-liver transplant or splenectomy",
+    ],
+    complications: [
+      "Esophageal variceal hemorrhage",
+      "Mesenteric ischemia if extension to superior mesenteric vein (acute)",
+      "Portal biliopathy — bile duct compression from cavernoma",
+      "Ascites and hepatic encephalopathy (if extensive shunting)",
+    ],
+    distinguishFrom: [
+      "Cirrhotic portal hypertension — intrasinusoidal resistance with cirrhotic morphology",
+      "Budd-Chiari syndrome — hepatic vein thrombosis; painful hepatomegaly, rapid ascites",
+      "Splenic vein thrombosis — left-sided portal hypertension with gastric varices, normal portal pressure",
+      "Nodular regenerative hyperplasia — microvascular liver disease with portal HTN",
+      "Portal vein tumor thrombus — hepatocellular carcinoma invasion",
+    ],
+    treatment: [
+      "Anticoagulation for acute PVT and many chronic cases (unless high bleed risk)",
+      "Treat underlying cause (malignancy, infection, myeloproliferative disorder)",
+      "Endoscopic variceal band ligation and β-blockers for portal hypertension complications",
+      "TIPS in selected refractory portal hypertension",
+      "Surgical portosystemic shunt in pediatric extrahepatic portal vein obstruction",
+    ],
+    boardsPearls: [
+      "PVT = presinusoidal portal hypertension — varices/splenomegaly possible with normal LFTs",
+      "Cavernous transformation — chronic collateral channels replacing thrombosed portal vein",
+      "JAK2 mutation workup in unexplained PVT — occult myeloproliferative neoplasm",
+      "vs Budd-Chiari — hepatic veins, not portal vein; painful liver",
+      "vs cirrhosis — PVT can cause portal HTN without cirrhotic liver",
+      "Neonatal umbilical catheter → extrahepatic portal vein obstruction in children",
+    ],
+    pediatrics:
+      "Extrahepatic portal vein obstruction from neonatal umbilical sepsis or catheterization is a leading cause of pediatric portal hypertension without cirrhosis; variceal bleeding is the major complication. Mesenteric extension of acute PVT is a surgical emergency.",
+  },
+  {
     id: "hepatocellular-carcinoma",
     name: "Hepatocellular Carcinoma",
     etymology:
@@ -37031,6 +37337,206 @@ export const CONDITIONS: ConditionEntry[] = [
     ],
     pediatrics:
       "Peak incidence ~3–8 years; presents with ataxia and hydrocephalus rather than focal cortical signs. Posterior fossa 'dawn sign' (headache worse in morning) reflects ↑ ICP overnight.",
+  },
+  {
+    id: "ependymoma",
+    name: "Ependymoma",
+    etymology:
+      "Greek ependyma = wrapping (ventricular lining) + -oma = tumor",
+    aliases: [
+      "ependymoma",
+      "ependymomas",
+      "ependymoma tumor",
+      "ependymoma tumors",
+      "ependymal tumor",
+      "ependymal tumors",
+      "intracranial ependymoma",
+      "spinal ependymoma",
+      "fourth ventricle ependymoma",
+    ],
+    definition:
+      "Glial tumor arising from ependymal cells lining the ventricular system — in children typically arises from the fourth ventricle floor (posterior fossa); in adults more often intracranial supratentorial or spinal canal; histology shows perivascular pseudorosettes.",
+    pathophysiology:
+      "Neoplastic proliferation of ependymal cells → intraventricular or paraventricular mass → obstructs CSF flow at fourth ventricle (children) or grows along filum terminale/spinal cord (adults) → obstructive hydrocephalus or progressive myelopathy; can seed CSF with drop metastases.",
+    classicPresentation: [
+      "Child with headache, vomiting, and ataxia from posterior fossa fourth ventricle mass",
+      "Signs of ↑ ICP — papilledema, morning headache",
+      "Adult with slowly progressive spinal cord compression — weakness, sensory level",
+      "Cranial nerve deficits from brainstem compression in posterior fossa tumors",
+    ],
+    keyFindings: [
+      "Fourth ventricular mass extending through foramina (children) on MRI",
+      "Perivascular pseudorosettes on histology — tumor cells arranged around blood vessels",
+      "True ependymal rosettes (less common) — cells around lumen",
+      "GFAP-positive glial tumor cells",
+      "Spinal ependymoma — central cord location; may show cap sign on MRI",
+    ],
+    associations: [
+      "Neurofibromatosis type 2 — spinal ependymomas",
+      "Posterior fossa ependymoma — common pediatric location",
+      "Myxopapillary ependymoma — conus medullaris/filum terminale in adults",
+    ],
+    complications: [
+      "Obstructive hydrocephalus",
+      "CSF drop metastases along neuraxis",
+      "Brainstem compression",
+      "Spinal cord dysfunction from intramedullary or extramedullary growth",
+    ],
+    distinguishFrom: [
+      "Medulloblastoma — midline cerebellar vermis; Homer Wright rosettes; small blue cells",
+      "Pilocytic astrocytoma — cystic cerebellar mass with mural nodule; Rosenthal fibers",
+      "Choroid plexus papilloma — hypervascular intraventricular mass in lateral ventricle of young child",
+      "Astrocytoma (diffuse) — infiltrative; less discrete ventricular origin",
+    ],
+    treatment: [
+      "Maximal safe surgical resection",
+      "Radiation therapy — especially for residual or anaplastic disease",
+      "Chemotherapy for young children to delay radiation when appropriate",
+    ],
+    boardsPearls: [
+      "Pediatric posterior fossa tumor triad: medulloblastoma, pilocytic astrocytoma, ependymoma",
+      "Ependymoma — fourth ventricle floor; perivascular pseudorosettes",
+      "vs medulloblastoma — ependymoma from ventricular lining; medulloblastoma from cerebellar vermis",
+      "Spinal ependymoma in adults — slow myelopathy; NF2 association",
+      "Can seed CSF — evaluate spine for drop metastases",
+    ],
+    pediatrics:
+      "Fourth ventricle ependymoma is a classic posterior fossa tumor in children presenting with hydrocephalus and ataxia. Distinguish from more benign pilocytic astrocytoma (cyst + mural nodule) and malignant medulloblastoma (midline vermis, drop mets).",
+  },
+  {
+    id: "oligodendroglioma",
+    name: "Oligodendroglioma",
+    etymology:
+      "Greek oligos = few + dendron = tree + glia = glue + -oma = tumor — tumor resembling oligodendrocytes",
+    aliases: [
+      "oligodendroglioma",
+      "oligodendrogliomas",
+      "oligodendroglial tumor",
+      "oligodendroglial tumors",
+      "oligodendroglial glioma",
+      "oligodendroglial gliomas",
+      "1p19q codeleted oligodendroglioma",
+    ],
+    definition:
+      "Slow-growing diffusely infiltrating glioma of cerebral hemispheres composed of cells resembling oligodendrocytes — classically frontal lobe in adults; hallmark 1p/19q codeletion confers chemosensitivity; histology shows fried-egg cells and chicken-wire capillaries.",
+    pathophysiology:
+      "Neoplastic oligodendroglial cells infiltrate cerebral cortex and white matter → mass effect and irritation of cortex → seizures are common presenting symptom; IDH mutation and 1p/19q codeletion define molecular subtype with better prognosis and response to PCV (procarbazine, lomustine, vincristine) chemotherapy.",
+    classicPresentation: [
+      "Middle-aged adult with new-onset focal seizures",
+      "Frontal or temporal lobe mass — headache, personality change, or focal deficits",
+      "Chronic course over months — unlike acute stroke",
+      "Calcifications common on CT",
+    ],
+    keyFindings: [
+      "Cortical/subcortical hemispheric mass — often frontal lobe",
+      "Fried-egg appearance — round nuclei with clear perinuclear halo on histology",
+      "Chicken-wire capillary pattern",
+      "Calcifications on CT (common)",
+      "1p/19q codeletion — favorable prognosis and chemosensitivity",
+      "IDH1/IDH2 mutation frequently present",
+    ],
+    associations: [
+      "1p/19q codeletion — defining molecular feature; PCV chemotherapy responsive",
+      "IDH-mutant gliomas — better prognosis than IDH-wildtype",
+      "Adult cerebral hemispheric gliomas — seizures as sentinel presentation",
+    ],
+    complications: [
+      "Intractable epilepsy",
+      "Malignant transformation to anaplastic oligodendroglioma",
+      "Neurologic deficits from tumor growth",
+    ],
+    distinguishFrom: [
+      "Astrocytoma (diffuse) — GFAP-rich fibrillary cells; no fried-egg pattern; 1p/19q intact",
+      "Glioblastoma — necrosis, microvascular proliferation, rapid progression; older adults",
+      "Meningioma — extra-axial dural-based mass; meningothelial cells",
+      "Dysembryoplastic neuroepithelial tumor (DNET) — cortical lesion in young patients with seizures",
+      "Oligodendroglial component of mixed oligoastrocytoma — now classified by molecular markers",
+    ],
+    treatment: [
+      "Surgical resection when feasible",
+      "PCV or temozolomide chemotherapy — especially with 1p/19q codeletion",
+      "Radiation therapy for residual or higher-grade disease",
+      "Antiepileptic drugs for seizure control",
+    ],
+    boardsPearls: [
+      "Adult with seizures + frontal lobe mass → oligodendroglioma in differential",
+      "Fried-egg cells + chicken-wire capillaries = oligodendroglioma histology",
+      "1p/19q codeletion — chemosensitive; better prognosis",
+      "vs astrocytoma — oligodendroglioma has clear halos and calcifications",
+      "vs glioblastoma — oligodendroglioma slower growing; no necrosis/microvascular proliferation in low grade",
+      "IDH mutation common in lower-grade infiltrating gliomas",
+    ],
+    pediatrics:
+      "Oligodendroglioma is primarily an adult tumor; pediatric cortical tumors causing seizures include DNET and ganglioglioma. Do not confuse with oligodendrocyte biology in normal CNS myelination.",
+  },
+  {
+    id: "pilocytic-astrocytoma",
+    name: "Pilocytic Astrocytoma",
+    etymology:
+      "Latin pilum = hair + Greek kytos = cell + astrocyte + -oma = tumor — astrocytic tumor with hair-like (pilocytic) processes",
+    aliases: [
+      "pilocytic astrocytoma",
+      "pilocytic astrocytomas",
+      "pilocytic astrocytoma tumor",
+      "juvenile pilocytic astrocytoma",
+      "jpa",
+      "cerebellar pilocytic astrocytoma",
+      "pilocytic glioma",
+      "pilocytic gliomas",
+      "grade 1 astrocytoma",
+      "who grade i astrocytoma",
+    ],
+    definition:
+      "WHO grade I benign astrocytoma — the most common brain tumor in children — classically cystic cerebellar mass with enhancing mural nodule; histology shows bipolar cells with hair-like processes, Rosenthal fibers, and eosinophilic granular bodies; often harbors BRAF-KIAA1549 fusion.",
+    pathophysiology:
+      "Low-grade neoplastic astrocytes (often BRAF pathway activation) form a cystic lesion with solid mural nodule in cerebellum or optic pathway → posterior fossa mass obstructs fourth ventricle → hydrocephalus; slow growth with excellent prognosis after complete resection in most cerebellar cases.",
+    classicPresentation: [
+      "Child with gait ataxia, headache, and morning vomiting",
+      "Posterior fossa signs — truncal ataxia, dysmetria",
+      "Papilledema and signs of ↑ ICP",
+      "Optic pathway pilocytic astrocytoma — vision loss (NF1 association)",
+    ],
+    keyFindings: [
+      "Cystic cerebellar mass with enhancing mural nodule on MRI — classic appearance",
+      "Rosenthal fibers and eosinophilic granular bodies on histology",
+      "GFAP-positive astrocytic tumor with pilocytic (hair-like) processes",
+      "BRAF-KIAA1549 fusion or BRAF V600E mutation common",
+      "WHO grade I — most benign astrocytoma",
+    ],
+    associations: [
+      "Neurofibromatosis type 1 — optic pathway gliomas are often pilocytic astrocytomas",
+      "Cerebellum — most common site in children",
+      "Hypothalamic/optic chiasm location in NF1",
+      "BRAF fusion — targetable pathway abnormality",
+    ],
+    complications: [
+      "Obstructive hydrocephalus",
+      "Visual loss with optic pathway involvement",
+      "Recurrence if subtotal resection (uncommon in cerebellum after gross total resection)",
+    ],
+    distinguishFrom: [
+      "Medulloblastoma — solid midline cerebellar mass; Homer Wright rosettes; malignant",
+      "Ependymoma — fourth ventricular floor origin; perivascular pseudorosettes",
+      "Diffuse astrocytoma — infiltrative; no cyst-mural nodule pattern; higher grade",
+      "Glioblastoma — necrosis, enhancement, rapid progression; adults",
+      "Brainstem glioma — diffuse intrinsic pontine glioma — infiltrative, poor prognosis",
+    ],
+    treatment: [
+      "Surgical resection — often curative for cerebellar lesions",
+      "Observation or chemotherapy for unresectable optic pathway tumors in NF1",
+      "Radiation avoided in young children when possible",
+    ],
+    boardsPearls: [
+      "Most common pediatric brain tumor — pilocytic astrocytoma",
+      "Cyst + mural nodule in cerebellum = pilocytic astrocytoma until proven otherwise",
+      "Rosenthal fibers = eosinophilic corkscrew inclusions — classic histology",
+      "WHO grade I — benign; gross total resection often curative",
+      "BRAF fusion common — distinguish from malignant posterior fossa tumors",
+      "vs medulloblastoma — pilocytic is benign cystic cerebellar; medulloblastoma is malignant midline",
+      "NF1 + optic glioma → pilocytic astrocytoma",
+    ],
+    pediatrics:
+      "Posterior fossa pilocytic astrocytoma presents with ataxia and hydrocephalus — most common pediatric brain tumor overall. Prognosis excellent after resection. NF1-associated optic pathway gliomas may be observed if asymptomatic.",
   },
   {
     id: "mca-stroke",

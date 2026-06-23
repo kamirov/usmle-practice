@@ -6243,6 +6243,55 @@ export const SYMPTOMS: SymptomEntry[] = [
       "Constrictive pericarditis is uncommon in children but may follow TB pericarditis or cardiac surgery; prominent y descent with elevated JVP warrants echocardiography and hemodynamic assessment. Do not confuse Friedreich sign with Friedreich ataxia (gait ataxia, cardiomyopathy, diabetes in adolescents).",
   },
   {
+    id: "kussmaul-sign",
+    name: "Kussmaul Sign",
+    etymology:
+      "Eponym Adolf Kussmaul + Latin signum = mark — jugular venous finding distinct from Kussmaul respirations",
+    aliases: [
+      "kussmaul sign",
+      "kussmaul signs",
+      "kussmaul's sign",
+      "kussmaul jugular sign",
+      "kussmaul jvp sign",
+      "inspiratory rise in jvp",
+      "inspiratory jvp rise",
+      "jvp rises with inspiration",
+      "jugular venous pressure rise with inspiration",
+      "paradoxical jvp rise",
+      "paradoxical rise in jvp",
+    ],
+    definition:
+      "Paradoxical rise in jugular venous pressure during inspiration — instead of the normal fall in JVP with inspiration, the neck veins distend further as the patient breathes in.",
+    mechanism:
+      "Normally inspiration increases negative intrathoracic pressure → ↑ venous return to the right heart → JVP falls. In constrictive pericarditis the rigid pericardium and impaired RV compliance prevent the RV from accommodating increased venous return during inspiration → RA pressure rises and JVP increases. Similar physiology may occur with severe RV failure or massive pulmonary embolism.",
+    thinkOf: [
+      "Constrictive pericarditis — boards classic with elevated JVP and Friedreich sign",
+      "Restrictive cardiomyopathy — overlapping hemodynamics; pericardial knock favors constriction",
+      "Severe right ventricular failure",
+      "Massive pulmonary embolism with acute RV strain (less specific)",
+      "Post-pericardiotomy syndrome evolving to constriction",
+      "Tuberculous or uremic pericarditis with chronic fibrosis",
+    ],
+    pairWith: [
+      "Kussmaul sign + elevated JVP + pericardial knock → constrictive pericarditis",
+      "Kussmaul sign + Friedreich sign (prominent y descent) → constriction",
+      "Kussmaul sign + preserved EF + peripheral edema → constriction vs restriction",
+      "Kussmaul sign + pulsus paradoxus → not classic for pure tamponade (JVP usually rises with expiration in tamponade)",
+      "Elevated JVP + loud P2 → pulmonary hypertension (different mechanism than Kussmaul sign)",
+      "Pericardial calcification on CT + Kussmaul sign → chronic constriction",
+    ],
+    distinguishFrom: [
+      "Kussmaul breathing — deep rapid respirations compensating for metabolic acidosis (DKA), not a JVP finding",
+      "Normal inspiratory JVP fall — healthy physiology; Kussmaul sign is paradoxical rise",
+      "Friedreich sign — prominent y descent morphology, not inspiratory JVP rise",
+      "Hepatojugular reflux — sustained JVP elevation after abdominal pressure, not respiratory paradox",
+      "Pulsus paradoxus — exaggerated inspiratory drop in systolic BP (>10 mmHg), often tamponade",
+      "Tamponade — elevated JVP but Kussmaul sign classically favors constriction over tamponade",
+    ],
+    pediatrics:
+      "Constrictive pericarditis is rare in children but may follow TB pericarditis or cardiac surgery; Kussmaul sign with elevated JVP warrants echocardiography. Do not confuse with Kussmaul respirations of pediatric DKA.",
+  },
+  {
     id: "raynaud-phenomenon",
     name: "Raynaud Phenomenon",
     etymology: "eponym: Maurice Raynaud + Greek phainomenon = thing appearing",
@@ -15392,6 +15441,57 @@ export const SYMPTOMS: SymptomEntry[] = [
       "Fourth nerve palsy is a common congenital cause of head tilt and vertical diplopia; cranial nerve palsy after otitis media or trauma warrants imaging; myasthenia can present at any age with fatigable diplopia.",
   },
   {
+    id: "parasternal-lift",
+    name: "Parasternal Lift",
+    etymology:
+      "Greek para = beside + Greek sternon = chest/breast + Old English lyft = raise — palpable outward thrust at the left parasternal border",
+    aliases: [
+      "parasternal lift",
+      "parasternal lifts",
+      "parasternal heave",
+      "parasternal heaves",
+      "left parasternal lift",
+      "left parasternal heave",
+      "right ventricular heave",
+      "right ventricular lift",
+      "rv heave",
+      "rv lift",
+      "sustained parasternal impulse",
+      "parasternal impulse",
+    ],
+    definition:
+      "Palpable sustained outward thrust felt along the left parasternal border during systole — a physical sign of right ventricular hypertrophy or dilation from chronic pressure or volume overload.",
+    mechanism:
+      "RV hypertrophy or dilation increases forceful anterior systolic expansion of the right ventricle against the sternum → sustained palpable lift at the parasternal area (often left 3rd–4th intercostal space); pressure overload (pulmonary hypertension, pulmonary stenosis) produces classic sustained heave; volume overload (ASD, severe TR) may also displace impulse.",
+    thinkOf: [
+      "Pulmonary hypertension — primary or secondary (COPD, left heart disease, chronic PE)",
+      "Pulmonary valve stenosis",
+      "Tetralogy of Fallot — RV hypertrophy (fourth component)",
+      "Atrial septal defect with large left-to-right shunt and RV volume overload",
+      "Severe tricuspid regurgitation with RV dilation",
+      "Chronic cor pulmonale",
+      "Pulmonary embolism with acute RV strain (less often a sustained chronic heave)",
+    ],
+    pairWith: [
+      "Parasternal heave + loud P2 → pulmonary hypertension",
+      "Parasternal heave + systolic murmur at LUSB → pulmonary stenosis",
+      "Parasternal heave + fixed split S2 + flow murmur → ASD",
+      "Parasternal heave + cyanosis + boot-shaped heart → tetralogy of Fallot",
+      "Parasternal heave + elevated JVP + peripheral edema → right heart failure / cor pulmonale",
+      "Parasternal heave + displaced apical impulse → biventricular enlargement",
+      "Echo — RV hypertrophy, septal flattening (D-sign), elevated RVSP",
+    ],
+    distinguishFrom: [
+      "Displaced apical impulse — LV apex lateral/inferior at PMI; volume overload of left ventricle",
+      "Sustained apical impulse — pressure overload of LV (aortic stenosis, HOCM) at apex, not parasternal",
+      "Normal brief tap at apex — non-sustained, non-displaced PMI",
+      "Pectus excavatum — altered chest wall without true RV hypertrophy",
+      "Epigastric pulsation — abdominal aortic aneurysm or thin habitus, not parasternal RV impulse",
+    ],
+    pediatrics:
+      "RV heave is a key sign in congenital heart disease — pulmonary stenosis, large ASD, and tetralogy of Fallot; neonatal pulmonary hypertension (PPHN, congenital diaphragmatic hernia) may show prominent precordial activity. Distinguish from normal hyperdynamic precordium in infants.",
+  },
+  {
     id: "displaced-apical-impulse",
     name: "Displaced Apical Impulse",
     etymology:
@@ -16811,6 +16911,57 @@ export const SYMPTOMS: SymptomEntry[] = [
     ],
     pediatrics:
       "Allergic rhinitis is a common cause of chronic cough and throat clearing in school-age children. Adenoid hypertrophy can worsen posterior drainage. Distinguish from asthma and foreign body aspiration in persistent cough.",
+  },
+  {
+    id: "sinus-drainage",
+    name: "Sinus Drainage",
+    etymology:
+      "Latin sinus = curve/bay (paranasal cavity) + Latin dranare = to flow off — passage of mucus from paranasal sinuses into nasal cavity or posterior pharynx",
+    aliases: [
+      "sinus drainage",
+      "sinus drainages",
+      "sinus secretions",
+      "sinus secretion",
+      "paranasal sinus drainage",
+      "nasal sinus drainage",
+      "sinus mucus drainage",
+      "sinus mucus",
+      "drainage from sinuses",
+      "sinus discharge",
+      "sinus discharges",
+    ],
+    definition:
+      "Flow of mucus from the paranasal sinuses into the nasal cavity (anterior drainage) or along the posterior nasopharynx (posterior drainage) — normal mucociliary clearance becomes clinically apparent when volume increases or drainage is impaired in rhinosinusitis.",
+    mechanism:
+      "Respiratory epithelium with mucus-secreting goblet cells and ciliated columnar cells moves secretions toward the osteomeatal complex and nasopharynx; inflammation, edema, polyps, or anatomic obstruction impairs drainage → stagnant secretions → bacterial overgrowth in acute bacterial sinusitis; allergic or viral rhinitis increases mucus production and vascular engorgement.",
+    thinkOf: [
+      "Acute bacterial sinusitis — purulent drainage with facial pain/pressure >10 days or worsening after URI",
+      "Chronic rhinosinusitis — persistent drainage, nasal obstruction, polyps",
+      "Allergic rhinitis — clear or mucoid drainage with sneezing and pruritus",
+      "Viral URI — acute increased drainage, usually self-limited",
+      "Cystic fibrosis — thick tenacious sinus drainage, chronic sinusitis",
+      "Foreign body or adenoid hypertrophy — unilateral or obstructive drainage pattern in children",
+      "CSF leak — clear unilateral drainage after trauma (not true sinus mucus)",
+    ],
+    pairWith: [
+      "Purulent sinus drainage + facial pain/pressure + maxillary tenderness → bacterial sinusitis",
+      "Sinus drainage + URI symptoms >10 days or biphasic worsening → bacterial superinfection",
+      "Thick purulent drainage + chronic cough/throat clearing → postnasal drip from sinusitis",
+      "Bilateral drainage + sneezing + itchy eyes → allergic rhinitis",
+      "Impaired sinus drainage on CT + polyps → chronic rhinosinusitis",
+      "Unilateral foul drainage in child → foreign body, not simple sinusitis",
+      "Clear unilateral drainage after head trauma → CSF rhinorrhea, not sinus secretions",
+    ],
+    distinguishFrom: [
+      "Rhinorrhea — anterior nasal discharge; may originate from nasal mucosa alone without sinus involvement",
+      "Postnasal drip — sensation of posterior drainage; symptom descriptor overlapping with posterior sinus drainage",
+      "Epistaxis — blood from nasal mucosa, not mucus from sinuses",
+      "Sputum expectoration — lower airway phlegm cleared by cough, not nasal/sinus drainage",
+      "CSF rhinorrhea — clear watery fluid from skull base defect; β2-transferrin positive",
+      "Cholera secretory diarrhea — GI fluid loss, not paranasal sinus drainage",
+    ],
+    pediatrics:
+      "Acute bacterial sinusitis in children often follows viral URI with persistent or worsening nasal discharge. CF causes thick sinus secretions from infancy. Orbital cellulitis complicates ethmoid sinusitis — red flag in febrile child with periorbital swelling.",
   },
   {
     id: "rhinorrhea",

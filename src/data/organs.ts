@@ -1472,6 +1472,51 @@ export const ORGANS: OrganEntry[] = [
     ],
   },
   {
+    id: "midgut-rotation",
+    name: "Midgut Rotation",
+    etymology:
+      "Old English mid = middle + gut = intestine + Latin rotatio = turning — embryonic 270° counterclockwise rotation of the midgut around the superior mesenteric artery axis",
+    aliases: [
+      "midgut rotation",
+      "midgut rotations",
+      "intestinal rotation",
+      "intestinal rotations",
+      "embryonic midgut rotation",
+      "270 degree midgut rotation",
+      "counterclockwise midgut rotation",
+      "midgut loop rotation",
+      "physiologic midgut rotation",
+    ],
+    germLayer:
+      "Endoderm (gut tube) with splanchnic mesoderm (mesentery, dorsal mesentery fixation)",
+    origin:
+      "During weeks 6–10 the midgut elongates faster than the abdominal cavity, herniates through the umbilical ring, rotates 270° counterclockwise (viewed anteriorly) around the superior mesenteric artery, then returns to the abdominal cavity with fixation of the mesentery to the posterior body wall — positions jejunum/ileum left and central, cecum in right lower quadrant.",
+    derivatives: [
+      "Normal anatomic relationships of distal duodenum, jejunum, ileum, cecum, appendix, ascending colon, and proximal transverse colon",
+      "Ligament of Treitz (duodenojejunal junction) at left of spine",
+      "Broad mesenteric base after fixation — prevents volvulus",
+    ],
+    functionSummary:
+      "Embryologic repositioning that establishes normal intestinal anatomy and a wide mesenteric attachment to the posterior abdominal wall — failure causes malrotation with narrow mesentery predisposing to midgut volvulus.",
+    commonPathologies: [
+      "Malrotation — incomplete or abnormal rotation/fixation",
+      "Midgut volvulus — twisting on narrow mesentery → SMA ischemia",
+      "Ladd bands — peritoneal bands from malpositioned cecum compressing duodenum",
+      "Internal herniation through mesenteric defects",
+    ],
+    step1Pearls: [
+      "270° counterclockwise rotation around SMA axis during weeks 6–10",
+      "Physiologic herniation into umbilical cord → reduction into abdomen with rotation",
+      "Cecum descends from right upper quadrant to right lower quadrant last",
+      "Malrotation → narrow mesenteric pedicle → midgut volvulus (bilious vomiting in neonate)",
+      "Upper GI: ligament of Treitz right of midline suggests malrotation",
+      "vs physiologic herniation — normal temporary umbilical herniation resolves with rotation",
+      "SMA supplies midgut — volvulus compromises entire midgut vascular territory",
+    ],
+    pediatrics:
+      "Malrotation with volvulus is a neonatal surgical emergency — bilious vomiting demands urgent evaluation. Ladd procedure broadens mesentery and repositions bowel. Differentiate from pyloric stenosis (nonbilious, 2–8 weeks).",
+  },
+  {
     id: "hindgut",
     name: "Hindgut",
     etymology: "Old English hind = rear + gut = intestine",
@@ -4200,6 +4245,53 @@ export const ORGANS: OrganEntry[] = [
     germLayer: "Endoderm / Mesoderm",
     origin:
       "Endoderm-lined diverticulum from the yolk sac that extends into the connecting stalk; mesoderm surrounds the allantoic vessels; early waste exchange and later contributes to the urachus and umbilical cord vessels.",
+  },
+  {
+    id: "omphalomesenteric-duct",
+    name: "Omphalomesenteric Duct",
+    etymology:
+      "Greek omphalos = navel + mesenterion = middle intestine + Latin ductus = channel — embryonic vitelline duct connecting yolk sac to midgut",
+    aliases: [
+      "omphalomesenteric duct",
+      "omphalomesenteric ducts",
+      "vitelline duct",
+      "vitelline ducts",
+      "omphalomesenteric duct remnant",
+      "vitelline duct remnant",
+      "yolk stalk",
+      "yolk stalks",
+      "vitelloumbilical duct",
+      "omphalomesenteric vitelline duct",
+    ],
+    germLayer: "Endoderm (duct lining) with splanchnic mesoderm",
+    origin:
+      "Temporary embryonic connection between the yolk sac and midgut lumen during early development — normally obliterates completely by ~week 7; persistence or partial obliteration leaves vitelline duct remnants.",
+    derivatives: [
+      "Normally obliterates — no adult structure",
+      "Meckel diverticulum — ileal outpouching from persistent duct (most common remnant)",
+      "Vitelline fistula — patent duct from umbilicus to ileum",
+      "Vitelline cyst — remnant between ileum and umbilicus on fibrous band",
+      "Omphalomesenteric sinus — umbilical end persistence draining mucus",
+    ],
+    functionSummary:
+      "Early embryonic channel allowing yolk sac communication with the developing midgut; obliteration after intestinal incorporation makes it a source of congenital anomalies when remnants persist.",
+    commonPathologies: [
+      "Meckel diverticulum — true diverticulum (rule of 2s)",
+      "Vitelline fistula — meconium from umbilicus",
+      "Vitelline cyst or sinus — umbilical discharge or infection",
+      "Fibrous band — volvulus or internal hernia risk",
+      "Ectopic gastric mucosa in Meckel — painless lower GI bleeding in child",
+    ],
+    step1Pearls: [
+      "Omphalomesenteric duct = vitelline duct = yolk stalk",
+      "Normally obliterates by week 7 — persistence → Meckel diverticulum (most common congenital GI anomaly)",
+      "Meckel rule of 2s: 2% population, 2 feet from ileocecal valve, 2 inches, 2 types ectopic tissue, often <2 years at presentation",
+      "Technetium-99m pertechnetate scan detects ectopic gastric mucosa in Meckel",
+      "vs urachus — allantoic remnant between bladder and umbilicus, not midgut connection",
+      "vs false diverticulum — Meckel is true diverticulum (all bowel wall layers)",
+    ],
+    pediatrics:
+      "Meckel diverticulum is the classic vitelline duct remnant — painless rectal bleeding from ectopic gastric mucosa in toddler most common presentation. Patent vitelline fistula presents with meconium at umbilicus in neonate.",
   },
   {
     id: "urachus",
