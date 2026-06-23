@@ -3379,6 +3379,54 @@ export const CELLS: CellEntry[] = [
       "Neonatal liver macrophage function immature — ↑ susceptibility to certain disseminated infections; same Kupffer cell identity as adults.",
   },
   {
+    id: "cholangiocyte",
+    name: "Cholangiocyte",
+    etymology:
+      "Greek chole = bile + angeion = vessel + kytos = cell — epithelial cell lining bile ducts",
+    aliases: [
+      "cholangiocyte",
+      "cholangiocytes",
+      "bile duct epithelial cell",
+      "bile duct epithelial cells",
+      "biliary epithelial cell",
+      "biliary epithelial cells",
+      "intrahepatic cholangiocyte",
+      "interlobular bile duct cell",
+    ],
+    definition:
+      "Cuboidal to columnar epithelial cell lining intrahepatic and extrahepatic bile ducts — modifies and secretes bicarbonate-rich fluid into bile, maintains ductal barrier, and participates in cholestatic liver injury and cholangiocarcinoma pathogenesis.",
+    characteristics: [
+      "Lines bile canaliculi (via cholangiocyte continuity at canal of Hering), interlobular ducts, and larger bile ducts",
+      "Secretes bicarbonate and water in response to secretin — dilutes and alkalinizes bile after canalicular secretion",
+      "Expresses aquaporins, CFTR, and AE2 (anion exchanger) for ductal fluid transport",
+      "Activated and proliferates in cholestatic injury (primary biliary cholangitis, primary sclerosing cholangitis)",
+      "Not a hepatocyte — does not perform bulk metabolic detoxification or albumin synthesis",
+    ],
+    clinicalRelevance: [
+      "Primary biliary cholangitis — autoimmune destruction of small interlobular bile ducts (cholangiocyte injury)",
+      "Primary sclerosing cholangitis — inflammation and fibrosis of bile ducts",
+      "Cholangiocarcinoma — malignant transformation of biliary epithelium",
+      "Caroli disease — cystic dilation of intrahepatic bile ducts lined by cholangiocytes",
+      "Biliary atresia — neonatal obliteration of extrahepatic bile ducts",
+    ],
+    boardsPearls: [
+      "Cholangiocyte = bile duct lining epithelial cell",
+      "vs hepatocyte — hepatocyte secretes bile into canaliculi; cholangiocyte lines ducts and modifies bile",
+      "PBC — antimitochondrial antibodies (anti-M2) against pyruvate dehydrogenase complex in cholangiocytes",
+      "Secretin stimulates cholangiocyte bicarbonate secretion into bile",
+      "vs Kupffer cell — macrophage in sinusoid, not biliary epithelium",
+    ],
+    distinguishFrom: [
+      "Hepatocyte — parenchymal liver cell; secretes bile at canalicular pole",
+      "Hepatic stellate (Ito) cell — perisinusoidal stromal cell, not duct epithelium",
+      "Sinusoidal endothelial cell — fenestrated endothelium of hepatic sinusoids",
+      "Gallbladder epithelium — similar biliary-type epithelium but distinct organ",
+      "Pancreatic duct cell — also secretes bicarbonate-rich fluid but different duct system",
+    ],
+    pediatrics:
+      "Biliary atresia destroys extrahepatic bile ducts in neonates — cholangiocyte-lined ducts fail to remain patent; presents with persistent neonatal cholestasis. Alagille syndrome affects intrahepatic bile duct number (paucity).",
+  },
+  {
     id: "merkel-cell",
     name: "Merkel Cell",
     etymology: "eponym: Friedrich Merkel + small biological unit",
@@ -4326,6 +4374,108 @@ export const CELLS: CellEntry[] = [
     ],
     pediatrics:
       "Neonatal hepatocytes have immature UGT1A1 → physiologic indirect hyperbilirubinemia; kernicterus if unconjugated bilirubin exceeds binding capacity.",
+  },
+  {
+    id: "hepatic-stellate-cell",
+    name: "Hepatic Stellate (Ito) Cell",
+    etymology:
+      "Latin stella = star + kytos = cell; eponym Ito — perisinusoidal cell with cytoplasmic lipid droplets giving stellate (star-shaped) appearance on microscopy",
+    aliases: [
+      "hepatic stellate cell",
+      "hepatic stellate cells",
+      "stellate cell",
+      "stellate cells",
+      "ito cell",
+      "ito cells",
+      "hepatic ito cell",
+      "hepatic ito cells",
+      "perisinusoidal stellate cell",
+      "fat-storing cell liver",
+      "lipocyte liver",
+      "hepatic lipocyte",
+    ],
+    definition:
+      "Perisinusoidal stellate cell in the Space of Disse between fenestrated endothelium and hepatocytes — stores vitamin A as retinyl esters in quiescent state; upon chronic liver injury activates to myofibroblast-like phenotype → collagen deposition and hepatic fibrosis/cirrhosis.",
+    characteristics: [
+      "Resides in Space of Disse — between sinusoidal endothelium and hepatocyte plate",
+      "Quiescent state — lipid droplets with vitamin A (retinyl esters); desmin and glial fibrillary acidic protein (GFAP) positive",
+      "Activation by TGF-β, oxidative stress, and chronic inflammation → myofibroblast phenotype",
+      "Produces extracellular matrix (collagen type I and III) → fibrosis and cirrhosis",
+      "Contractile properties contribute to increased intrahepatic vascular resistance in cirrhosis",
+    ],
+    clinicalRelevance: [
+      "Cirrhosis — hepatic stellate cell activation is central to fibrogenesis",
+      "Alcoholic and nonalcoholic steatohepatitis — stellate activation drives fibrosis progression",
+      "Schistosoma mansoni hepatic fibrosis — granulomatous perioval fibrosis (distinct mechanism but stellate involvement in liver fibrosis generally)",
+      "Vitamin A toxicity — excessive stores in stellate cells (chronic hypervitaminosis A)",
+      "Hepatic fibrosis regression possible if underlying injury removed early",
+    ],
+    boardsPearls: [
+      "Hepatic stellate (Ito) cell — vitamin A storage in quiescent state; activates in fibrosis",
+      "Space of Disse location — between endothelium and hepatocytes",
+      "Activation → myofibroblast → collagen → cirrhosis",
+      "vs Kupffer cell — macrophage, phagocytic, not vitamin A storage",
+      "vs sinusoidal endothelial cell — fenestrated vessel lining, not stromal fibrogenic cell",
+      "TGF-β key activator of stellate cells in chronic liver disease",
+    ],
+    distinguishFrom: [
+      "Kupffer cell — sinusoidal macrophage; phagocytosis, not matrix production",
+      "Sinusoidal endothelial cell — endothelium lining sinusoid lumen",
+      "Hepatocyte — parenchymal metabolic cell, not perisinusoidal stromal cell",
+      "Portal myofibroblast — different fibrogenic population at portal tract",
+      "Ito cell name — same as hepatic stellate cell (eponym)",
+    ],
+    pediatrics:
+      "Neonatal liver fibrosis from biliary atresia or metabolic disease involves stellate cell activation over time; vitamin A stored in stellate cells supports hepatic retinoid reserves in development.",
+  },
+  {
+    id: "sinusoidal-endothelial-cell",
+    name: "Sinusoidal Endothelial Cell",
+    etymology:
+      "Latin sinus = hollow channel + -oid = resembling + endothelial = inner lining + kytos = cell — specialized fenestrated endothelial cell lining hepatic sinusoids",
+    aliases: [
+      "sinusoidal endothelial cell",
+      "sinusoidal endothelial cells",
+      "hepatic sinusoidal endothelial cell",
+      "hepatic sinusoidal endothelial cells",
+      "liver sinusoidal endothelial cell",
+      "liver sinusoidal endothelial cells",
+      "lsec",
+      "fenestrated endothelial cell liver",
+      "hepatic endothelial cell",
+    ],
+    definition:
+      "Specialized fenestrated endothelial cell lining hepatic sinusoids — forms discontinuous capillaries with large pores (fenestrae) and gaps lacking a continuous basement membrane, permitting plasma and macromolecules to reach the Space of Disse and hepatocytes.",
+    characteristics: [
+      "Discontinuous (sinusoidal) endothelium — fenestrae ~100–200 nm, no diaphragm (unlike renal fenestrated capillaries)",
+      "No continuous basement membrane — high permeability to plasma proteins and chylomicron remnants",
+      "Separates sinusoidal blood from Space of Disse and hepatocyte plates",
+      "Kupffer cells adhere to luminal surface on endothelial lining",
+      "Capillarization in cirrhosis — formation of basement membrane and loss of fenestrae → impaired exchange and ↑ intrahepatic resistance",
+    ],
+    clinicalRelevance: [
+      "Cirrhosis — sinusoidal capillarization contributes to portal hypertension and impaired hepatocyte perfusion",
+      "Liver regeneration — endothelial VEGF signaling supports hepatocyte proliferation",
+      "Sinusoidal obstruction syndrome (veno-occlusive disease) — endothelial injury post-chemotherapy",
+      "Clearance of blood-borne proteins and lipoprotein remnants via fenestrated exchange",
+    ],
+    boardsPearls: [
+      "Hepatic sinusoidal endothelium = discontinuous capillary type — fenestrated, no basement membrane",
+      "Three capillary types: continuous, fenestrated (kidney), discontinuous/sinusoidal (liver, spleen, marrow)",
+      "Fenestrae allow plasma to reach Space of Disse — hepatocyte nutrient uptake",
+      "vs Kupffer cell — macrophage on luminal side, not endothelial lining",
+      "vs hepatic stellate cell — in Space of Disse beneath endothelium, not luminal lining",
+      "Capillarization in cirrhosis — pathologic loss of fenestrations",
+    ],
+    distinguishFrom: [
+      "Kupffer cell — macrophage in sinusoid lumen, not endothelial lining",
+      "Hepatic stellate (Ito) cell — perisinusoidal in Space of Disse, stores vitamin A",
+      "Hepatocyte — parenchymal cell beyond Space of Disse",
+      "Continuous capillary endothelium — tight junctions, no fenestrae (muscle, lung)",
+      "Fenestrated capillary (kidney) — fenestrae with diaphragm and basement membrane",
+    ],
+    pediatrics:
+      "Neonatal hepatic sinusoidal clearance function is immature — contributes to prolonged jaundice when conjugation also impaired; same fenestrated architecture as adult liver.",
   },
   {
     id: "hepatic-sinusoids",

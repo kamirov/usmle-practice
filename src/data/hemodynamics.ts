@@ -154,6 +154,40 @@ export const HEMODYNAMICS: HemodynamicEntry[] = [
     ],
   },
   {
+    id: "compliance",
+    name: "Compliance",
+    etymology:
+      "Latin complire = to fill + -ance = capacity to yield — change in volume per unit change in distending pressure (ΔV/ΔP)",
+    aliases: [
+      "compliance",
+      "compliances",
+      "lung compliance",
+      "lung compliances",
+      "pulmonary compliance",
+      "pulmonary compliances",
+      "chest wall compliance",
+      "respiratory compliance",
+      "static compliance",
+      "dynamic compliance",
+      "specific compliance",
+    ],
+    definition:
+      "Measure of distensibility — the change in volume produced by a unit change in distending pressure (C = ΔV/ΔP); higher compliance means the structure stretches more easily for a given pressure change. In lungs: ↑ compliance in emphysema (easy inflation, loss of elastic recoil); ↓ compliance in pulmonary fibrosis and ARDS (stiff lungs requiring higher pressure per tidal volume).",
+    factors: [
+      "Lung compliance (C_L) — determined by tissue elasticity and alveolar surface tension; surfactant ↓ surface tension → ↑ compliance in neonates",
+      "Chest wall compliance — obesity, kyphoscoliosis, and abdominal distension ↓ total respiratory system compliance",
+      "Restrictive lung disease (pulmonary fibrosis, ARDS) — ↓ lung compliance → stiff lungs, ↓ TLC, ↑ work of breathing",
+      "Emphysema — ↑ compliance from destroyed elastic fibers but impaired elastic recoil and air trapping",
+      "Pulmonary edema and pneumonia — ↓ compliance from alveolar flooding/consolidation",
+      "Pressure-volume curves: inspiratory limb shows hysteresis; static compliance measured at zero airflow",
+      "Ventilator physiology: ↓ compliance → ↑ plateau pressure at given tidal volume (ARDS lung-protective ventilation)",
+      "Pulmonary compliance (C_L) = ΔV/ΔP of lungs alone; total respiratory system compliance includes chest wall — both ↓ in restrictive disease",
+      "High pulmonary compliance + loss of elastic recoil in emphysema → hyperinflation despite ↑ ease of inflation",
+      "Cardiovascular context: venous compliance (capacitance) and arterial compliance (pulse pressure) — see venous compliance entry",
+      "Bladder/rectal compliance — urologic/GI context (overactive bladder, megacolon) — separate organ-specific usage",
+    ],
+  },
+  {
     id: "frank-starling-mechanism",
     name: "Frank-Starling Mechanism",
     etymology:

@@ -2574,6 +2574,99 @@ export const METABOLISM: MetabolismEntry[] = [
     pediatrics:
       "Neonatal galactosemia presents with jaundice, vomiting, and E. coli sepsis after milk feeds — detect on newborn screening; requires lactose-free/galactose-free formula. Transient lactase deficiency after viral gastroenteritis causes temporary dairy intolerance in infants.",
   },
+  {
+    id: "n-acetylglucosamine",
+    name: "N-Acetylglucosamine",
+    etymology:
+      "N-acetyl = acetyl group on nitrogen + glucosamine = glucose-derived amino sugar — acetylated amino monosaccharide",
+    aliases: [
+      "n-acetylglucosamine",
+      "n acetylglucosamine",
+      "n-acetyl glucosamine",
+      "n acetyl glucosamine",
+      "nacetylglucosamine",
+      "glucosamine n-acetyl",
+      "nag",
+      "nags",
+      "n-acetyl-d-glucosamine",
+      "n-acetylglucosamine monomer",
+      "n-acetylglucosamine monomers",
+    ],
+    definition:
+      "Acetylated amino sugar monomer — one of the two alternating sugar subunits of bacterial peptidoglycan (paired with N-acetylmuramic acid) and a building block of glycosaminoglycans (hyaluronic acid, heparan sulfate, chondroitin sulfate).",
+    pathway: [
+      "Peptidoglycan backbone — repeating disaccharide units: β-1,4-linked NAG–NAM polymers cross-linked by pentapeptide bridges",
+      "Synthesized from UDP-N-acetylglucosamine in bacterial cell wall assembly (MurA/MurB, glycosyltransferases)",
+      "Lysozyme hydrolyzes β-1,4 glycosidic bond between NAG and NAM → bacterial cell wall lysis",
+      "Glycosaminoglycans — repeating disaccharides of uronic acid + NAG (or N-acetylgalactosamine) with sulfation",
+      "Mannose-6-phosphate tagging of lysosomal enzymes derives from N-acetylglucosamine-1-phosphotransferase pathway (I-cell disease if defective)",
+    ],
+    boardsPearls: [
+      "NAG + NAM = peptidoglycan disaccharide backbone — Gram-positive thick, Gram-negative thin layer",
+      "Lysozyme cleaves β-1,4 bond between NAG and NAM — innate defense in tears and neutrophils",
+      "β-lactams and vancomycin target peptidoglycan cross-linking (peptide side chains on NAM), not NAG alone",
+      "NAG also in GAGs — hyaluronic acid, heparin/heparan sulfate (not unique to bacteria)",
+      "vs N-acetylmuramic acid — NAM has lactyl side chain for peptide attachment; unique to bacterial peptidoglycan",
+      "I-cell disease — defective GlcNAc-1-phosphotransferase → lysosomal enzymes lack M6P tag",
+    ],
+    distinguishFrom: [
+      "N-acetylmuramic acid (NAM) — muramic acid unique to peptidoglycan; carries pentapeptide chain",
+      "Glucosamine — deacetylated precursor; NAG is acetylated form",
+      "N-acetylgalactosamine — GalNAc in some GAGs and blood group antigens, not peptidoglycan",
+      "Chitin — polymer of β-1,4 NAG (fungal/arthropod cell walls), no NAM or peptide cross-links",
+      "Lactose — dietary disaccharide glucose + galactose, unrelated to cell wall",
+    ],
+    pediatrics:
+      "I-cell disease (mucolipidosis II) from defective N-acetylglucosaminyl-1-phosphotransferase presents in infancy with coarse facies, developmental delay, and high plasma lysosomal enzymes.",
+  },
+  {
+    id: "n-acetylmuramic-acid",
+    name: "N-Acetylmuramic Acid",
+    etymology:
+      "N-acetyl + muramic (Latin murus = wall) + acid — acetylated amino sugar unique to bacterial cell wall peptidoglycan (murein)",
+    aliases: [
+      "n-acetylmuramic acid",
+      "n acetylmuramic acid",
+      "n-acetyl muramic acid",
+      "n acetyl muramic acid",
+      "nacetylmuramic acid",
+      "muramic acid n-acetyl",
+      "nam",
+      "nams",
+      "n-acetylmuramate",
+      "n-acetylmuramic acid monomer",
+      "n-acetylmuramic acid monomers",
+      "muramic acid",
+      "murein monomer",
+    ],
+    definition:
+      "Amino sugar found only in bacterial peptidoglycan — alternates with N-acetylglucosamine in glycan chains; bears an L-lactyl ether substituent at C3 that links the pentapeptide cross-bridge targeted by transpeptidases and vancomycin.",
+    pathway: [
+      "Formed from UDP-N-acetylmuramic acid by condensation of phosphoenolpyruvate onto UDP-GlcNAc (MurA/MurB — target of fosfomycin)",
+      "Pentapeptide (L-Ala-D-Glu-meso-DAP-D-Ala-D-Ala) attached to lactyl group on NAM",
+      "Transpeptidation cross-links adjacent glycan chains — penicillin-binding proteins (PBPs) inhibit this step",
+      "Vancomycin binds terminal D-Ala-D-Ala on NAM pentapeptide → blocks polymerization (Gram-positive)",
+      "Lysozyme cleaves β-1,4 bond between NAM and NAG — exposes glycan backbone",
+    ],
+    boardsPearls: [
+      "NAM is unique to bacterial peptidoglycan — not found in human cells (selective antibiotic target)",
+      "Pentapeptide on NAM ends in D-Ala-D-Ala — vancomycin binding site",
+      "β-lactams inhibit transpeptidase cross-linking of NAM pentapeptides (PBPs)",
+      "Fosfomycin inhibits MurA — early step forming UDP-NAM from UDP-NAG",
+      "Alternates with NAG in glycan strands — peptide bridges cross-link strands into mesh",
+      "vs NAG — NAM has lactyl side chain for peptide attachment; both form disaccharide backbone",
+      "Gram stain reflects thickness of NAG–NAM peptidoglycan layer",
+    ],
+    distinguishFrom: [
+      "N-acetylglucosamine — lacks lactyl side chain; also in GAGs and chitin",
+      "D-alanine — terminal amino acid of pentapeptide, not the sugar itself",
+      "Teichoic acid — Gram-positive wall polymer separate from NAG–NAM backbone",
+      "LPS — Gram-negative outer membrane endotoxin, not peptidoglycan sugar",
+      "Mycolic acids — waxy layer on mycobacteria atop peptidoglycan-arabinogalactan",
+    ],
+    pediatrics:
+      "Cell wall synthesis inhibitors (β-lactams, vancomycin) exploit bacterial NAM–NAG peptidoglycan — same mechanisms in pediatric infections; dosing is weight-based.",
+  },
 ];
 
 const metabolismById = new Map(METABOLISM.map((entry) => [entry.id, entry]));

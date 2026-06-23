@@ -2447,6 +2447,48 @@ export const CLINICAL_STRATEGIES: ClinicalStrategyEntry[] = [
     pediatrics:
       "Rehabilitation after cerebral palsy, congenital heart disease surgery follow-up, and tight glycemic control in established type 1 diabetes to prevent retinopathy/nephropathy exemplify tertiary prevention in children.",
   },
+  {
+    id: "chemoprophylaxis",
+    name: "Chemoprophylaxis",
+    etymology:
+      "Greek chemeia = chemistry/drug + Greek prophylaxis = guard in advance — use of medications to prevent disease in at-risk individuals before or after exposure",
+    aliases: [
+      "chemoprophylaxis",
+      "chemoprophylaxes",
+      "chemical prophylaxis",
+      "drug prophylaxis",
+      "drug prophylaxes",
+      "pharmacologic prophylaxis",
+      "pharmacological prophylaxis",
+      "medical prophylaxis",
+      "antimicrobial prophylaxis",
+      "antibiotic prophylaxis",
+    ],
+    definition:
+      "Preventive use of drugs — especially antimicrobials or antiparasitics — to block infection, disease progression, or complications in exposed or high-risk persons, distinct from treating active established disease.",
+    details: [
+      "Primary infectious prevention: malaria prophylaxis (atovaquone-proguanil, doxycycline) for travelers; antiretroviral PrEP/PEP for HIV exposure",
+      "Opportunistic infection prophylaxis in immunosuppression: TMP-SMX for PCP when HIV CD4 <200; MAC prophylaxis when CD4 <50",
+      "TB chemoprophylaxis — isoniazid (or rifampin-based regimens) for latent TB infection to prevent active disease",
+      "Perioperative antibiotic prophylaxis — single pre-incision dose (e.g., cefazolin for clean-contaminated surgery) to prevent surgical site infection",
+      "DVT chemoprophylaxis — LMWH, fondaparinux, or aspirin post-orthopedic surgery and in hospitalized patients",
+      "Neonatal/ocular prophylaxis — erythromycin ophthalmic ointment after birth to prevent gonococcal/chlamydial ophthalmia neonatorum",
+      "Intrapartum GBS prophylaxis — penicillin/ampicillin for colonized mothers during labor",
+      "Rheumatic fever secondary prevention — long-term penicillin to prevent recurrent strep and carditis",
+      "Meningococcal chemoprophylaxis — rifampin, ciprofloxacin, or ceftriaxone for close contacts",
+    ],
+    boardsPearls: [
+      "Chemoprophylaxis = drugs to prevent disease, not treat active infection",
+      "HIV CD4 <200 → TMP-SMX PCP prophylaxis; CD4 <50 → MAC prophylaxis (azithromycin)",
+      "Latent TB → isoniazid chemoprophylaxis prevents reactivation",
+      "vs chemotherapy — cancer cytotoxic treatment; different meaning of 'chemo'",
+      "Perioperative antibiotics — given before incision, not prolonged course unless infection present",
+      "PrEP = pre-exposure HIV chemoprophylaxis; PEP = post-exposure",
+      "Rheumatic fever — penicillin prophylaxis prevents recurrence",
+    ],
+    pediatrics:
+      "Neonatal eye prophylaxis, GBS intrapartum antibiotics, and vitamin K at birth are classic pediatric chemoprophylaxis examples. HIV-exposed infants receive antiretroviral prophylaxis; children with sickle cell disease may receive penicillin to prevent pneumococcal sepsis.",
+  },
 ];
 
 const strategyById = new Map(

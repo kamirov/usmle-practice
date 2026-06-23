@@ -777,6 +777,80 @@ export const MICROBIOLOGY: MicrobiologyEntry[] = [
       "Pediatric gas gangrene rare; consider necrotizing fasciitis overlap in toxic-appearing child with extremity pain.",
   },
   {
+    id: "bacillus-cereus",
+    name: "Bacillus cereus",
+    etymology:
+      "Latin bacillus = small rod + Latin cereus = wax-colored — spore-forming Gram-positive rod named for waxy colony appearance",
+    aliases: [
+      "bacillus cereus",
+      "b. cereus",
+      "b cereus",
+      "bacillus cereus food poisoning",
+      "bacillus cereus emetic toxin",
+      "bacillus cereus diarrheal toxin",
+      "fried rice syndrome",
+      "reheated rice syndrome",
+    ],
+    type: "gram-positive-rod",
+    definition:
+      "Spore-forming Gram-positive rod widespread in soil and food — causes two distinct foodborne syndromes (emetic preformed toxin vs diarrheal enterotoxin) and, rarely, severe eye infections or bacteremia in immunocompromised hosts.",
+    morphology: [
+      "Gram-positive rod with central/subterminal spores (spores not seen in routine Gram stain of vegetative cells)",
+      "Motile (peritrichous flagella) — distinguishes from B. anthracis (nonmotile)",
+      "Beta-hemolytic colonies on blood agar",
+      "Facultative anaerobe — grows aerobically",
+    ],
+    virulenceFactors: [
+      "Cereulide — preformed emetic toxin (heat-stable, plasmid-encoded) in reheated rice and pasta",
+      "Enterotoxins (hemolysin BL, nonhemolytic enterotoxin) — secreted in small intestine → diarrheal syndrome",
+      "Phospholipase C and other tissue-destructive enzymes — eye trauma infections",
+      "Beta-lactamase — penicillin resistance",
+    ],
+    transmission: [
+      "Ingestion of contaminated food — especially fried/reheated rice, pasta, sauces held at warm temperature",
+      "Spores survive cooking; vegetative growth and toxin production if food held improperly",
+      "Eye trauma with soil-contaminated foreign body (keratitis, endophthalmitis)",
+    ],
+    diseases: [
+      "Emetic food poisoning — rapid vomiting after reheated rice (fried rice syndrome)",
+      "Diarrheal food poisoning — watery diarrhea and cramps (longer incubation)",
+      "Ocular infections — post-traumatic endophthalmitis",
+      "Bacteremia and catheter-related infection (rare, immunocompromised)",
+    ],
+    classicPresentation: [
+      "Emetic: vomiting within 1–6 hours after fried/reheated rice; often afebrile, short course",
+      "Diarrheal: abdominal cramps and watery diarrhea 8–16 hours after meal; self-limited",
+      "Eye infection after trauma with soil exposure — severe pain, rapid vision loss",
+    ],
+    diagnosis: [
+      "Clinical diagnosis in foodborne outbreak with appropriate incubation period",
+      "Stool or food culture — aerobic Gram-positive rod; not usually needed for mild cases",
+      "Distinguish emetic (short incubation, vomiting predominant) from diarrheal (longer, diarrhea predominant)",
+    ],
+    treatment: [
+      "Food poisoning — supportive care only (fluids); self-limited",
+      "Severe ocular infection — urgent vancomycin + fluoroquinolone or clindamycin; surgical intervention",
+      "Bacteremia — vancomycin or clindamycin (avoid penicillin due to β-lactamase)",
+    ],
+    distinguishFrom: [
+      "Staphylococcus aureus food poisoning — preformed enterotoxin, rapid vomiting, short incubation (similar emetic picture)",
+      "Clostridium perfringens — reheated meat, watery diarrhea 8–16 h, no prominent vomiting",
+      "C. botulinum — preformed toxin, flaccid paralysis, not vomiting-predominant gastroenteritis",
+      "B. anthracis — nonmotile, cutaneous anthrax eschar or inhalational disease, not fried rice syndrome",
+      "Norovirus — viral gastroenteritis outbreak, longer vomiting/diarrhea course",
+    ],
+    boardsPearls: [
+      "B. cereus fried rice syndrome — reheated rice, preformed emetic toxin (cereulide), vomiting in 1–6 h",
+      "Two toxins: emetic (preformed, heat-stable cereulide) vs diarrheal (heat-labile enterotoxin in gut)",
+      "Spores survive cooking — improper holding temperature allows toxin production",
+      "vs S. aureus food poisoning — also preformed toxin rapid vomiting; both boards rapid-onset emetic vignettes",
+      "Motile Gram-positive rod with spores — vs B. anthracis nonmotile",
+      "Penicillin ineffective — produces β-lactamase",
+    ],
+    pediatrics:
+      "Food poisoning affects children as in adults — supportive hydration. Post-traumatic B. cereus endophthalmitis is aggressive in any age; ophthalmologic emergency.",
+  },
+  {
     id: "clostridioides-difficile",
     name: "Clostridioides difficile",
     etymology:
@@ -1227,6 +1301,87 @@ export const MICROBIOLOGY: MicrobiologyEntry[] = [
     ],
     pediatrics:
       "Vertical transmission reduced by maternal ART and zidovudine prophylaxis; breast-feeding counseling in resource-limited settings.",
+  },
+  {
+    id: "human-t-lymphotropic-virus-type-1",
+    name: "Human T-Lymphotropic Virus Type 1",
+    etymology:
+      "Latin humanus = human + Greek t = T (cell) + Greek lymphe = lymph + Greek tropos = turning + Latin virus = poison/viral agent + type 1",
+    aliases: [
+      "human t-lymphotropic virus type 1",
+      "human t lymphotropic virus type 1",
+      "human t-lymphotropic virus 1",
+      "human t lymphotropic virus 1",
+      "htlv-1",
+      "htlv 1",
+      "htlv1",
+      "htlv-i",
+      "htlv i",
+      "human t-cell lymphotropic virus type 1",
+      "human t cell lymphotropic virus type 1",
+      "human t-cell leukemia virus type 1",
+      "human t cell leukemia virus type 1",
+      "htlv-1 virus",
+    ],
+    type: "virus",
+    definition:
+      "Human retrovirus (distinct from HIV) that preferentially infects CD4⁺ T cells — causes adult T-cell leukemia/lymphoma (ATLL) and tropical spastic paraparesis (HAM/TSP) after decades-long latency in endemic regions.",
+    mnemonic:
+      "RNA · ss · enveloped · (+) sense — Retrovirus: (+) ssRNA genome reverse-transcribed to DNA provirus (like HIV)",
+    morphology: [
+      "Enveloped retrovirus with diploid (+)ssRNA genome",
+      "Integrates as provirus in host DNA (long latency)",
+      "Tax and HBZ viral proteins drive T-cell proliferation and leukemogenesis",
+    ],
+    virulenceFactors: [
+      "Tax protein — activates NF-κB and cell cycle; oncogenic in ATLL",
+      "HBZ — antisense transcript sustaining infected cell survival",
+      "Infection of CD4⁺ T lymphocytes — flower-shaped lymphocytes (ATLL)",
+      "Chronic spinal cord inflammation in HAM/TSP — spastic paraparesis",
+    ],
+    transmission: [
+      "Breastfeeding (mother to child — major route in endemic areas)",
+      "Sexual contact",
+      "Blood transfusion and needle sharing",
+      "Vertical transmission in utero less common than breastfeeding",
+    ],
+    diseases: [
+      "Adult T-cell leukemia/lymphoma (ATLL) — acute, lymphomatous, chronic, smoldering forms",
+      "HTLV-1–associated myelopathy / tropical spastic paraparesis (HAM/TSP)",
+      "HTLV-1 uveitis and infective dermatitis (children in endemic areas)",
+    ],
+    classicPresentation: [
+      "Middle-aged adult from endemic region (Japan, Caribbean, South America, West Africa) with hypercalcemia, lytic bone lesions, skin lesions — ATLL",
+      "Chronic progressive spastic weakness of lower extremities with urinary dysfunction — HAM/TSP",
+      "Flower-shaped (cloverleaf) lymphocytes on peripheral smear",
+    ],
+    diagnosis: [
+      "HTLV-1/2 antibody screen (blood donor and clinical testing)",
+      "PCR for HTLV-1 proviral DNA",
+      "ATLL — flow cytometry and biopsy; hypercalcemia, elevated LDH",
+      "HAM/TSP — clinical myelopathy + HTLV-1 serology; MRI spinal cord changes",
+    ],
+    treatment: [
+      "ATLL — chemotherapy, antiretroviral-style regimens (zidovudine + interferon-α), allogeneic stem cell transplant in selected cases",
+      "HAM/TSP — corticosteroids, interferon-α; no cure",
+      "No vaccine — prevention via safe sex, screened blood products, limiting breastfeeding when mother HTLV-1+ in endemic settings",
+    ],
+    distinguishFrom: [
+      "HIV — also retrovirus but causes AIDS/opportunistic infections, not ATLL",
+      "Multiple sclerosis — demyelinating CNS disease; HTLV serology negative",
+      "HTLV-2 — associated with hairy cell leukemia (rare); different serology",
+      "Spinal cord compression — acute/subacute; HAM/TSP is chronic progressive myelopathy",
+    ],
+    boardsPearls: [
+      "HTLV-1 ≠ HIV — both retroviruses but HTLV-1 → ATLL and tropical spastic paraparesis",
+      "Endemic Japan, Caribbean, parts of South America and Africa",
+      "ATLL — adult T-cell leukemia, hypercalcemia, flower cells, poor prognosis",
+      "HAM/TSP — chronic spastic paraparesis, urinary incontinence, HTLV-1+",
+      "Transmission: breastfeeding, sex, blood — screen blood donors",
+      "vs HIV — HIV causes immunodeficiency; HTLV-1 causes leukemia and myelopathy",
+    ],
+    pediatrics:
+      "HTLV-1 infective dermatitis and uveitis occur in children in endemic regions; breastfeeding is major vertical transmission route — counseling in endemic Japan/Caribbean settings.",
   },
   {
     id: "candida-albicans",
@@ -6445,6 +6600,87 @@ export const MICROBIOLOGY: MicrobiologyEntry[] = [
     ],
     pediatrics:
       "BCG vaccine given in endemic countries — causes PPD positivity without latent TB. Nontuberculous mycobacterial cervical lymphadenitis is common in children 1–5 years. Neonatal TB and congenital infection are rare but severe.",
+  },
+  {
+    id: "actinomyces",
+    name: "Actinomyces",
+    etymology:
+      "Greek aktis = ray + Greek mykes = fungus — ray-like branching filaments; historically mistaken for fungi",
+    aliases: [
+      "actinomyces",
+      "actinomyces species",
+      "actinomyces israelii",
+      "actinomycosis",
+      "actinomycoses",
+      "actinomycotic infection",
+      "actinomycotic infections",
+      "sulfur granule bacteria",
+    ],
+    type: "gram-positive-rod",
+    definition:
+      "Gram-positive facultative anaerobic filamentous branching rod — normal commensal of oral cavity, GI tract, and female genital tract — that causes chronic granulomatous actinomycosis with draining sinus tracts when mucosal barriers are breached.",
+    mnemonic:
+      "Actinomyces = branching G+ rods that are NOT acid-fast (Nocardia IS weakly acid-fast); think sulfur granules and long penicillin",
+    morphology: [
+      "Gram-positive branching filamentous rods (beaded appearance)",
+      "NOT acid-fast (distinguishes from Nocardia)",
+      "Facultative anaerobe",
+      "Slow-growing; may be mistaken for fungi on histology",
+    ],
+    virulenceFactors: [
+      "Endogenous flora — infection requires disruption of mucosa (trauma, surgery, IUD)",
+      "Chronic granulomatous inflammation with fibrosis",
+      "Sulfur granules — colonies of bacteria with peripheral radiating filaments (yellow granules in pus)",
+      "Forms sinus tracts that drain to skin surface",
+    ],
+    transmission: [
+      "Not communicable person-to-person — endogenous spread from own flora",
+      "Aspiration of oral contents, dental procedures, facial trauma",
+      "Postoperative abdominal contamination; prolonged IUD use (pelvic actinomycosis)",
+    ],
+    diseases: [
+      "Cervicofacial actinomycosis — lumpy jaw; dental disease, mandibular abscess",
+      "Pulmonary actinomycosis — aspiration of oral flora; may mimic TB or malignancy",
+      "Abdominal actinomycosis — appendicitis, perforated viscus, post-surgical",
+      "Pelvic actinomycosis — IUD-associated; tubo-ovarian abscess",
+      "Cutaneous actinomycosis — extension from deeper focus via sinus tracts",
+    ],
+    classicPresentation: [
+      "Indolent firm swelling of jaw/neck with draining sinus tracts (cervicofacial)",
+      "Poor dental hygiene or recent extraction precedes cervicofacial disease",
+      "Chronic pulmonary mass with hemoptysis mimicking TB or cancer",
+      "Pelvic pain and mass in woman with long-standing IUD",
+      "Pus contains yellow sulfur granules",
+    ],
+    diagnosis: [
+      "Gram stain and anaerobic culture of pus/tissue — branching G+ rods",
+      "Histology — sulfur granules with peripheral Splendore-Hoeppli material",
+      "Culture may require prolonged incubation",
+      "Imaging — infiltrative mass with sinus tracts to skin",
+    ],
+    treatment: [
+      "Prolonged high-dose penicillin G or IV amoxicillin (weeks to months)",
+      "Alternative: doxycycline or clindamycin if penicillin allergy",
+      "Surgical debridement of necrotic tissue and sinus tracts",
+      "Remove IUD in pelvic actinomycosis",
+    ],
+    distinguishFrom: [
+      "Nocardia — aerobic, weakly acid-fast branching filaments; sulfonamide treatment; pulmonary/CNS in immunocompromised",
+      "Fungal mycosis — true fungi on KOH/GMS; different treatment (antifungals)",
+      "TB — acid-fast bacilli, caseating granulomas; not sulfur granules",
+      "Malignancy — chronic mass; biopsy shows neoplasm not sulfur granules",
+    ],
+    boardsPearls: [
+      "Actinomyces — G+ branching filaments, NOT acid-fast",
+      "Sulfur granules in draining pus — pathognomonic",
+      "Cervicofacial 'lumpy jaw' after dental disease",
+      "Pelvic actinomycosis associated with IUD",
+      "Long-course penicillin/amoxicillin — months of therapy",
+      "vs Nocardia — weakly acid-fast, aerobic, sulfonamides",
+      "Endogenous oral/GI flora — not contagious",
+    ],
+    pediatrics:
+      "Cervicofacial actinomycosis can occur in children after dental caries or orofacial trauma; presentation is subacute jaw swelling rather than acute bacterial cellulitis. Pelvic disease is an adolescent/adult IUD-associated concern.",
   },
   {
     id: "bacteroides-fragilis",

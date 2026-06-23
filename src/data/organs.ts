@@ -3755,6 +3755,53 @@ export const ORGANS: OrganEntry[] = [
       "Enamel from ameloblasts (oral ectoderm); dentin and pulp from neural crest-derived mesenchyme.",
   },
   {
+    id: "dentition",
+    name: "Dentition",
+    etymology:
+      "Latin dens = tooth + -ition = state/condition — the number, arrangement, and developmental stage of teeth in the jaws",
+    aliases: [
+      "dentition",
+      "dentitions",
+      "dental dentition",
+      "primary dentition",
+      "permanent dentition",
+      "deciduous dentition",
+      "adult dentition",
+      "tooth eruption",
+      "tooth eruptions",
+      "dental formula",
+    ],
+    germLayer: "Ectoderm (enamel) / Neural crest mesenchyme (dentin, pulp, cementum, periodontal ligament)",
+    origin:
+      "Teeth develop from oral ectoderm (enamel organ) and neural crest–derived ectomesenchyme (dental papilla, follicle); primary (deciduous) teeth erupt ~6 months–3 years; permanent teeth replace them from ~6 years with third molars (wisdom teeth) erupting in late adolescence or early adulthood.",
+    derivatives: [
+      "Primary (deciduous) teeth — 20 total (2:1:2:3 per quadrant mnemonic)",
+      "Permanent teeth — 32 total (2:1:2:3 including molars; third molars may be absent)",
+      "Enamel, dentin, pulp, cementum, periodontal ligament",
+    ],
+    functionSummary:
+      "Mastication, speech articulation, and facial structure support; healthy dentition reduces aspiration risk from oral bacterial colonization.",
+    commonPathologies: [
+      "Dental caries — acidogenic bacteria (S. mutans) demineralize enamel",
+      "Periodontal disease — gingivitis progressing to periodontitis and tooth loss",
+      "Malocclusion and crowding",
+      "Delayed or absent tooth eruption",
+      "Anodontia/hypodontia — selective tooth agenesis (e.g., ectodermal dysplasia)",
+      "Poor dentition predisposing to anaerobic aspiration pneumonia",
+    ],
+    step1Pearls: [
+      "Primary dentition — 20 teeth erupt ~6 mo–3 yr; exfoliate ~6–12 yr",
+      "Permanent dentition — 32 teeth; first molars erupt ~6 yr (6-year molars)",
+      "Dental formula adult per quadrant: 2 incisors, 1 canine, 2 premolars, 3 molars (2:1:2:3)",
+      "Enamel = ectoderm; dentin/pulp/cementum = neural crest mesenchyme",
+      "Fluoride strengthens enamel; caries from Streptococcus mutans acid production",
+      "Poor dentition + aspiration risk → anaerobic lung abscess (Actinomyces, oral flora)",
+      "Cleidocranial dysplasia — delayed eruption, supernumerary teeth",
+    ],
+    pediatrics:
+      "Primary teeth begin erupting ~6 months; complete by ~3 years. Early childhood caries from bottle-feeding at night is preventable. Delayed permanent eruption or multiple missing teeth suggests ectodermal dysplasia or cleidocranial dysplasia. Fluoride varnish and dental sealants reduce caries in children.",
+  },
+  {
     id: "tongue",
     name: "Tongue",
     etymology: "Old English tunge = tongue",

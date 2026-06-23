@@ -8478,6 +8478,45 @@ export const MEDICATIONS: MedicationEntry[] = [
       "EPS/dystonia risk in children — use lowest effective dose and shortest duration; diphenhydramine treats acute dystonic reaction.",
   },
   {
+    id: "dextromethorphan",
+    name: "Dextromethorphan",
+    etymology:
+      "dextro- = right-handed stereoisomer + meth- = methyl + morphinan = morphine-related ring scaffold — synthetic antitussive without classic opioid analgesic activity at standard doses",
+    aliases: [
+      "dextromethorphan",
+      "dextromethorphans",
+      "dxm",
+      "robitussin dm",
+      "delsym",
+      "antitussive dextromethorphan",
+      "over-the-counter cough suppressant",
+    ],
+    drugClass: "Antitussive (non-opioid at therapeutic doses; NMDA receptor antagonist at high doses)",
+    mechanism:
+      "Suppresses cough reflex at brainstem level — low-affinity NMDA receptor antagonist and sigma-1 receptor agonist; lacks significant μ-opioid receptor activity at antitussive doses (less analgesia, constipation, and respiratory depression than morphine/codeine).",
+    indications: [
+      "Nonproductive (dry) cough suppression (OTC)",
+      "Boards focus: drug interactions and serotonin syndrome risk",
+    ],
+    adverseEffects: [
+      "Dizziness, nausea, mild sedation at therapeutic doses",
+      "Serotonin syndrome — with SSRIs, SNRIs, MAOIs, tramadol, linezolid",
+      "Abuse at high doses ('robotripping') — dissociative effects, euphoria, psychosis",
+      "Hypertension and tachycardia in overdose",
+    ],
+    boardsPearls: [
+      "DXM — OTC antitussive; NMDA antagonist (like ketamine at high dose)",
+      "Minimal opioid μ effects at cough doses — safer respiratory profile than codeine",
+      "Serotonin syndrome risk with SSRIs/SNRIs/MAOIs — boards interaction pearl",
+      "MAOI + dextromethorphan — avoid (serotonin syndrome)",
+      "vs codeine — codeine is opioid prodrug with abuse and respiratory depression risk",
+      "vs guaifenesin — expectorant thins mucus; does not suppress cough reflex centrally",
+      "High-dose abuse causes dissociation — NMDA antagonism",
+    ],
+    pediatrics:
+      "Avoid in children <4 years per many guidelines; accidental overdose causes sedation and ataxia. Serotonin syndrome risk applies if child on SSRIs. Codeine contraindicated post-tonsillectomy in children; dextromethorphan preferred for cough suppression when indicated.",
+  },
+  {
     id: "prochlorperazine",
     name: "Prochlorperazine",
     etymology:

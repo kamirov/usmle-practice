@@ -1747,6 +1747,8 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
     aliases: [
       "transudate",
       "transudative",
+      "transudation",
+      "transudations",
       "transudative effusion",
       "transudative fluid",
       "transudative pleural effusion",
@@ -1785,6 +1787,8 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
     aliases: [
       "exudate",
       "exudative",
+      "exudation",
+      "exudations",
       "exudative effusion",
       "exudative fluid",
       "exudative pleural effusion",
@@ -1804,6 +1808,7 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
     ],
     boardsPearls: [
       "Exudate = permeability/lymphatic problem: inflammation, infection, malignancy, PE, TB",
+      "Exudation — process of protein-rich fluid extravasation through inflamed capillaries (histamine, VEGF, cytokines ↑ permeability)",
       "Light criteria: any one positive → exudate (pleural/serum protein >0.5, pleural/serum LDH >0.6, or pleural LDH >⅔ serum LDH ULN)",
       "Complicated parapneumonic effusion: pH <7.2, glucose <60, or LDH >1000 → chest tube drainage",
       "Neutrophil-predominant exudate suggests acute bacterial infection; lymphocyte-predominant suggests TB or malignancy",
@@ -10247,6 +10252,95 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
       "Congenital anomalies from teratogens present at birth; long-term neurodevelopmental follow-up for alcohol, valproate, and intrauterine infection exposures. Adolescent females on teratogenic drugs (isotretinoin, valproate, methotrexate) need reliable contraception counseling.",
   },
   {
+    id: "hypoventilation",
+    name: "Hypoventilation",
+    etymology:
+      "Greek hypo = under/below + Latin ventilare = to fan/breathe — inadequate alveolar ventilation relative to metabolic CO₂ production",
+    aliases: [
+      "hypoventilation",
+      "hypoventilations",
+      "alveolar hypoventilation",
+      "ventilatory failure",
+      "inadequate ventilation",
+      "decreased alveolar ventilation",
+      "low minute ventilation",
+    ],
+    definition:
+      "Reduction in alveolar ventilation (V̇A) such that CO₂ elimination cannot keep pace with production — arterial PaCO₂ rises (hypercapnia) and hypoxemia may occur if supplemental O₂ is not given, especially when the A–a gradient is normal.",
+    examples: [
+      "Opioid or sedative overdose — ↓ medullary respiratory drive",
+      "Obesity hypoventilation syndrome (Pickwickian) — chest wall restriction + sleep-disordered breathing",
+      "Neuromuscular weakness — myasthenia gravis, Guillain-Barré, ALS, botulism",
+      "Severe COPD with fatigue — CO₂ retention (blue bloater)",
+      "Chest wall restriction — kyphoscoliosis, massive obesity",
+      "Inadequate mechanical ventilation settings",
+      "Central hypoventilation — stroke, congenital central hypoventilation syndrome",
+    ],
+    boardsPearls: [
+      "Hypoventilation → ↑ PaCO₂ (hypercapnia) + respiratory acidosis",
+      "Hypoxemia with normal A–a gradient → think hypoventilation or low FiO₂",
+      "vs V/Q mismatch — hypoventilation is global ↓ V̇A, not regional inequality",
+      "Opioid overdose — pinpoint pupils + hypercapnia + somnolence",
+      "Chronic hypoventilation — renal ↑ HCO₃⁻ compensates → near-normal pH",
+      "Obesity hypoventilation — BMI ≥30 + daytime hypercapnia + somnolence",
+      "Capnography detects hypoventilation earlier than pulse oximetry in procedural sedation",
+    ],
+    distinguishFrom: [
+      "Hyperventilation — ↓ PaCO₂ from excessive alveolar ventilation",
+      "V/Q mismatch — hypoxemia with ↑ A–a gradient; PaCO₂ may be normal or low early",
+      "Diffusion limitation — hypoxemia on exertion with exercise",
+      "Shunt — refractory hypoxemia not fully corrected by supplemental O₂",
+      "Metabolic acidosis — compensatory hyperventilation lowers PaCO₂",
+    ],
+    pediatrics:
+      "Congenital central hypoventilation (Ondine curse) presents in neonates with absent ventilatory response to hypercapnia during sleep. Neuromuscular disorders and severe bronchiolitis can cause hypoventilation — monitor capnography in sedated children.",
+  },
+  {
+    id: "hyperventilation",
+    name: "Hyperventilation",
+    etymology:
+      "Greek hyper = excess + Latin ventilare = to fan/breathe — increased alveolar ventilation exceeding metabolic CO₂ production",
+    aliases: [
+      "hyperventilation",
+      "hyperventilations",
+      "alveolar hyperventilation",
+      "hyperventilation syndrome",
+      "overbreathing",
+      "overbreathings",
+      "increased alveolar ventilation",
+      "excessive ventilation",
+    ],
+    definition:
+      "Increase in alveolar ventilation that exceeds CO₂ production — arterial PaCO₂ falls (hypocapnia) causing respiratory alkalosis; may be appropriate (compensation or response to hypoxemia) or pathologic (anxiety, CNS lesion).",
+    examples: [
+      "Anxiety and panic disorder — hyperventilation syndrome with perioral tingling",
+      "Compensatory response to metabolic acidosis (DKA, lactic acidosis, salicylate toxicity)",
+      "Hypoxemia-driven — pulmonary embolism, pneumonia, high altitude, interstitial lung disease",
+      "Pregnancy — physiologic mild respiratory alkalosis",
+      "Hepatic encephalopathy — ammonia-stimulated hyperventilation",
+      "Intentional hyperventilation to ↓ ICP (brief neurosurgical maneuver)",
+      "Fever and sepsis early — ↑ CO₂ production with matched or excessive ventilation",
+    ],
+    boardsPearls: [
+      "Hyperventilation → ↓ PaCO₂ (hypocapnia) + respiratory alkalosis",
+      "Anxiety hyperventilation — lightheadedness, perioral tingling, carpopedal spasm",
+      "Compensatory hyperventilation in metabolic acidosis — Winter formula predicts ↓ PaCO₂",
+      "Hypoxemia can drive appropriate hyperventilation (PE, altitude)",
+      "Acute ↓ PaCO₂ causes cerebral vasoconstriction — used briefly to ↓ ICP",
+      "vs hypoventilation — opposite PaCO₂ and pH direction",
+      "Paper bag rebreathing controversial; treat underlying cause (anxiety, PE, acidosis)",
+    ],
+    distinguishFrom: [
+      "Hypoventilation — ↑ PaCO₂, respiratory acidosis",
+      "Tachypnea without hyperventilation — rapid shallow breathing may not increase alveolar ventilation (restrictive disease)",
+      "Metabolic alkalosis primary — may have compensatory hypoventilation (↑ PaCO₂)",
+      "Hyperpnea — increased total ventilation appropriate for metabolic demand (exercise)",
+      "Respiratory alkalosis from pregnancy — physiologic, not pathologic anxiety",
+    ],
+    pediatrics:
+      "Children with anxiety may present with hyperventilation and carpopedal spasm; rule out organic causes (PE, DKA). Compensatory hyperventilation in pediatric metabolic acidosis (DKA, inborn errors) lowers PaCO₂ — do not mistake for primary respiratory alkalosis.",
+  },
+  {
     id: "ventilation-perfusion-matching",
     name: "Ventilation-Perfusion Matching",
     etymology:
@@ -10391,6 +10485,53 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
     ],
     pediatrics:
       "Neonatal atelectasis and surfactant deficiency create low V/Q regions; congenital heart disease with right-to-left shunt causes hypoxemia by true shunt, not V/Q mismatch alone — supplemental O₂ response helps distinguish mechanisms on boards.",
+  },
+  {
+    id: "a-a-gradient",
+    name: "A-a Gradient",
+    etymology:
+      "A = alveolar + a = arterial + gradient = difference — alveolar-to-arterial oxygen partial pressure difference",
+    aliases: [
+      "a-a gradient",
+      "a-a gradients",
+      "a a gradient",
+      "a–a gradient",
+      "alveolar-arterial gradient",
+      "alveolar arterial gradient",
+      "alveolar-arterial oxygen gradient",
+      "alveolar arterial oxygen gradient",
+      "aado2",
+      "a-a o2 gradient",
+      "pao2-pao2 gradient",
+    ],
+    definition:
+      "Difference between alveolar oxygen tension (PAO₂) and arterial oxygen tension (PaO₂) — quantifies efficiency of oxygen transfer from alveoli to blood; elevated when gas exchange is impaired at the alveolar-capillary interface.",
+    examples: [
+      "PAO₂ estimated by alveolar gas equation: PAO₂ = FiO₂(Patm − PH₂O) − PaCO₂/RQ (RQ ≈ 0.8)",
+      "A-a gradient = PAO₂ − PaO₂; normal ~ (age/4) + 4 mmHg (roughly <10–15 mmHg in young adult)",
+      "↑ A-a gradient: V/Q mismatch (PE, pneumonia, atelectasis), shunt, diffusion limitation (fibrosis, emphysema)",
+      "Normal A-a gradient: hypoventilation (opioid overdose, neuromuscular weakness), high altitude (low inspired PO₂)",
+      "Supplemental O₂ often improves hypoxemia when gradient elevated from V/Q mismatch; true shunt less responsive",
+    ],
+    boardsPearls: [
+      "A-a gradient = PAO₂ − PaO₂ — widened when alveolar-capillary gas exchange fails",
+      "Hypoxemia + normal A-a gradient → think hypoventilation or low FiO₂, not V/Q mismatch",
+      "Hypoxemia + ↑ A-a gradient → V/Q mismatch, shunt, or diffusion defect",
+      "PE and pneumonia classic for ↑ A-a gradient with hypoxemia",
+      "Use alveolar gas equation to calculate PAO₂ on ABG vignettes",
+      "vs oxygen saturation — SaO₂ does not directly give A-a gradient; need PaO₂",
+      "Age increases normal A-a gradient slightly",
+    ],
+    distinguishFrom: [
+      "PaO₂ alone — arterial oxygen; A-a gradient compares to predicted alveolar PO₂",
+      "Oxygen saturation (SaO₂) — hemoglobin binding; not gas exchange gradient",
+      "V/Q mismatch — mechanism causing ↑ A-a gradient, not the measurement itself",
+      "Hypoventilation — causes hypercapnia and hypoxemia with normal A-a gradient",
+      "P(A-a)O₂ vs a/A ratio — related indices; boards use A-a gradient most commonly",
+      "Dead space — high V/Q physiology; contributes to ↑ A-a gradient in PE",
+    ],
+    pediatrics:
+      "Neonatal hypoxemia from RDS reflects V/Q mismatch and shunt with widened A-a gradient; pure hypoventilation (apnea of prematurity, opioid exposure) may show hypercapnia with less gas exchange defect early. Calculate gradient when ABG provided on pediatric vignettes.",
   },
   {
     id: "dead-space",
@@ -15412,6 +15553,54 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
       "Fetal wound healing can produce less scarring; children may form hypertrophic scars/keloids more readily in some settings. Premature infants and malnourished children have slower repair.",
   },
   {
+    id: "embolic-occlusion",
+    name: "Embolic Occlusion",
+    etymology:
+      "Greek embolos = plug/thrust in + Latin occlusio = shutting up/blocking — intravascular material that traveled from a distant site and lodges in a vessel lumen",
+    aliases: [
+      "embolic occlusion",
+      "embolic occlusions",
+      "embolic vascular occlusion",
+      "embolic arterial occlusion",
+      "embolic venous occlusion",
+      "occlusion by embolus",
+      "occlusion by emboli",
+      "embolus occlusion",
+      "embolus occlusions",
+      "vascular embolism",
+      "arterial embolism occlusion",
+    ],
+    definition:
+      "Sudden blockage of a blood vessel by material that formed or detached elsewhere and traveled through the circulation — thromboembolus most common — abolishing distal perfusion (arterial) or venous outflow and causing acute ischemia or congestion at the lodging site.",
+    examples: [
+      "Pulmonary embolism — DVT thromboembolus lodges in pulmonary artery",
+      "Ischemic stroke — cardioembolic clot from atrial fibrillation or mural thrombus",
+      "Acute limb ischemia — arterial embolus from AF or proximal atherosclerotic plaque",
+      "Septic emboli — infective endocarditis vegetations to brain, spleen, kidneys",
+      "Cholesterol emboli — atherosclerotic plaque debris after vascular manipulation",
+      "Fat embolism syndrome — long-bone fracture → pulmonary and cerebral microemboli",
+      "Amniotic fluid embolism — obstetric catastrophe with DIC and respiratory failure",
+    ],
+    boardsPearls: [
+      "Embolic occlusion = traveled plug; thrombotic occlusion = forms in situ at blockage site",
+      "AF → left atrial thrombus → systemic arterial emboli (stroke, splenic/renal infarct)",
+      "DVT → PE is classic venous thromboembolic occlusion",
+      "Endocarditis vegetations → septic embolic occlusions with positive blood cultures",
+      "Acute arterial embolus — sudden painful pale pulseless limb; urgent embolectomy or anticoagulation",
+      "PE — sudden dyspnea, pleuritic chest pain, tachycardia; CT angiography or V/Q scan",
+      "vs thrombotic stroke on same artery — embolic often more sudden with known AF/source",
+    ],
+    distinguishFrom: [
+      "Thrombotic occlusion — clot forms at site of obstruction (in-situ coronary or venous thrombosis)",
+      "Stenosis — partial narrowing with residual flow; embolic occlusion is acute complete or near-complete blockage",
+      "Vasospasm — reversible functional narrowing without embolic material",
+      "Ischemia — tissue consequence; embolic occlusion is a common acute arterial cause",
+      "Thrombophlebitis — local venous inflammation with clot; PE is embolic complication of DVT",
+    ],
+    pediatrics:
+      "Neonatal stroke may follow embolism from congenital heart disease or umbilical catheter thrombus; sickle cell disease causes microvascular vaso-occlusion distinct from classic traveling embolus.",
+  },
+  {
     id: "thrombotic-occlusion",
     name: "Thrombotic Occlusion",
     etymology:
@@ -15637,6 +15826,49 @@ export const PATHOGENESIS: PathogenesisEntry[] = [
     ],
     pediatrics:
       "Pediatric asbestos-related disease is rare and usually environmental (older building materials, parental occupational bring-home exposure); mesothelioma in children is exceptional and warrants asbestos exposure history.",
+  },
+  {
+    id: "ferruginous-bodies",
+    name: "Ferruginous Bodies",
+    etymology:
+      "Latin ferrugo = rust + -ous = full of + bodies = microscopic structures — iron-coated (rust-colored) asbestos fibers within macrophages",
+    aliases: [
+      "ferruginous bodies",
+      "ferruginous body",
+      "asbestos bodies",
+      "asbestos body",
+      "iron-coated asbestos fibers",
+      "asbestos-coated fibers",
+      "siderotic bodies asbestos",
+    ],
+    definition:
+      "Beaded, golden-brown, iron-protein–coated asbestos fibers found in alveolar macrophages or extracellularly in lung tissue — histologic marker of prior asbestos inhalation; represent macrophage attempt to coat and sequester non-degradable fibers.",
+    examples: [
+      "Asbestosis lung biopsy or BAL — ferruginous bodies with interstitial fibrosis",
+      "Occupational exposure — shipyard, insulation, demolition workers",
+      "Seen on iron stain (Prussian blue) or H&E as dumbbell/beaded rods",
+      "Associated with pleural plaques, interstitial fibrosis, and increased mesothelioma/lung cancer risk",
+      "Synergistic lung cancer risk with concurrent tobacco smoking",
+    ],
+    boardsPearls: [
+      "Ferruginous bodies = asbestos bodies — iron-coated asbestos fibers in lung",
+      "Hallmark histologic finding of asbestos exposure (not acute finding)",
+      "Asbestos + smoking → multiplicative lung cancer risk",
+      "Mesothelioma — pleural malignancy decades after exposure; smoking less synergistic than for lung cancer",
+      "vs anthracotic pigment — carbon from air pollution/smoking; not beaded asbestos-coated fibers",
+      "vs silicotic nodules — silica crystals in macrophages; upper lobe fibrosis, eggshell hilar nodes",
+      "Pleural plaques — common asbestos marker; may coexist with ferruginous bodies",
+    ],
+    distinguishFrom: [
+      "Asbestos (mineral) — inhaled fiber; ferruginous body is tissue reaction/coating",
+      "Anthracotic macrophages — carbon pigment from smoke/pollution",
+      "Silica particles — birefringent crystals in silicosis",
+      "Hemosiderin-laden macrophogens — heart failure or hemorrhage; not asbestos fiber cores",
+      "Foreign body giant cells — nonspecific reaction to inhaled material",
+      "Mesothelioma cells — malignant; ferruginous bodies indicate exposure history not tumor itself",
+    ],
+    pediatrics:
+      "Ferruginous bodies in children imply environmental or household asbestos exposure rather than occupational disease; primary pulmonary malignancy from asbestos in pediatrics is exceptionally rare.",
   },
   {
     id: "beryllium",

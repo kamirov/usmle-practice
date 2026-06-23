@@ -297,6 +297,102 @@ export const SYMPTOMS: SymptomEntry[] = [
       "Bacterial lobar pneumonia in children can produce focal bronchial breath sounds with consolidation on exam and imaging; bronchiolitis more often has diffuse wheeze with preserved vesicular background.",
   },
   {
+    id: "lobar-consolidation",
+    name: "Lobar Consolidation",
+    etymology:
+      "Latin lobus = lobe + Latin consolidare = to make firm — replacement of alveolar air with fluid, cells, or tissue throughout an entire pulmonary lobe",
+    aliases: [
+      "lobar consolidation",
+      "lobar consolidations",
+      "lung lobar consolidation",
+      "pulmonary lobar consolidation",
+      "consolidated lobe",
+      "consolidated lobes",
+      "lobar pneumonia consolidation",
+      "single lobe consolidation",
+      "homogeneous lobar opacity",
+      "lobar infiltrate",
+      "lobar infiltrates",
+    ],
+    definition:
+      "Pathologic filling of alveolar spaces within an entire lung lobe — with inflammatory exudate, pus, blood, or cells — producing a dense airless region that conducts airway sounds and appears as homogeneous opacity on chest imaging.",
+    mechanism:
+      "Bacterial (classically Streptococcus pneumoniae) or other alveolar infection triggers neutrophilic exudate filling distal airspaces in a contiguous lobe → loss of aeration → solid lung transmits bronchial sounds; inflammatory exudate and fibrin create dull percussion and crackles; pleural inflammation may cause pleuritic pain.",
+    thinkOf: [
+      "Streptococcus pneumoniae — rust-colored sputum, abrupt fever, single lobe on CXR",
+      "Klebsiella pneumoniae — upper lobe, alcoholism/diabetes, currant-jelly sputum",
+      "Lobar pneumonia pattern on chest X-ray with air bronchograms",
+      "Aspiration pneumonia — dependent lobe consolidation",
+      "Pulmonary hemorrhage or infarction — less common lobar pattern",
+    ],
+    pairWith: [
+      "Lobar consolidation + rust-colored sputum + fever → S. pneumoniae",
+      "Dullness to percussion + bronchial breath sounds + crackles → lobar consolidation",
+      "Egophony + whispered pectoriloquy + consolidation → dense pneumonia",
+      "Homogeneous lobar opacity + air bronchograms on CXR → consolidation not effusion",
+      "Pleuritic chest pain + lobar consolidation → pneumonia with pleural inflammation",
+      "vs diffuse bilateral infiltrates → atypical or viral pneumonia, ARDS",
+    ],
+    distinguishFrom: [
+      "Bronchopneumonia — patchy peribronchial consolidations, not entire lobe",
+      "Pleural effusion — dullness with ↓ breath sounds and meniscus; not air bronchograms in lung",
+      "Atelectasis — volume loss, mediastinal shift toward lesion, not exudative filling pattern",
+      "Interstitial pneumonia — reticular/ground-glass pattern, not dense lobar airspace opacity",
+      "Pulmonary edema — bilateral perihilar bat-wing pattern, cardiogenic context",
+      "Lung abscess — cavitary lesion within consolidation",
+    ],
+    pediatrics:
+      "Bacterial pneumonia in children often shows lobar consolidation on CXR; pneumococcal vaccine reduces incidence. Round pneumonia can mimic mass in young children. Bronchiolitis causes hyperinflation, not dense lobar consolidation.",
+  },
+  {
+    id: "tactile-fremitus",
+    name: "Tactile Fremitus",
+    etymology:
+      "Latin tactilis = able to be touched + Latin fremitus = murmur/vibration — palpable chest wall vibration during phonation",
+    aliases: [
+      "tactile fremitus",
+      "tactile fremituses",
+      "palpable fremitus",
+      "vocal fremitus",
+      "vocal fremituses",
+      "tactile vocal fremitus",
+      "chest wall fremitus",
+      "fremitus",
+      "increased tactile fremitus",
+      "decreased tactile fremitus",
+    ],
+    definition:
+      "Palpable vibration felt on the chest wall when the patient speaks (classically says 'ninety-nine' or 'toy boat') — reflects transmission of sound through lung parenchyma to the examiner's hand; increased with dense consolidation, decreased when air or fluid separates lung from chest wall.",
+    mechanism:
+      "Phonation generates sound waves conducted through lung tissue to the chest wall — solid consolidated lung transmits vibration efficiently (↑ fremitus); pleural fluid, air (pneumothorax), or hyperinflated emphysematous lung impairs transmission (↓ fremitus). Assessed by placing ulnar aspect of hands symmetrically on posterior chest while patient speaks.",
+    thinkOf: [
+      "Lobar pneumonia — ↑ tactile fremitus over consolidated lung",
+      "Pleural effusion — ↓ tactile fremitus (fluid dampens transmission)",
+      "Pneumothorax — ↓ tactile fremitus on affected side",
+      "Atelectasis with patent airway — variable; may ↓ if collapsed",
+      "Emphysema — ↓ tactile fremitus (hyperinflated, poor conduction)",
+      "Large pulmonary mass or fibrosis — may alter focal transmission",
+    ],
+    pairWith: [
+      "↑ tactile fremitus + dullness + bronchial breath sounds + crackles → lobar pneumonia",
+      "↓ tactile fremitus + dullness + absent breath sounds → pleural effusion",
+      "↓ tactile fremitus + hyperresonance + absent breath sounds → pneumothorax",
+      "↓ tactile fremitus + hyperresonance + barrel chest → emphysema",
+      "Focal ↑ fremitus with egophony and whispered pectoriloquy → consolidation",
+      "Asymmetric ↓ fremitus after trauma → consider pneumothorax or hemothorax",
+    ],
+    distinguishFrom: [
+      "Percussion note — tapping assesses density (dull vs hyperresonant); fremitus assesses vibration transmission",
+      "Bronchial breath sounds — auscultatory finding; often coexist with ↑ fremitus in consolidation",
+      "Egophony — auscultatory 'E to A' change over consolidation; part of same exam cluster",
+      "Subcutaneous emphysema — palpable crepitus in soft tissues, not vocal vibration through lung",
+      "Pleural rub — friction sound on auscultation; inflammation, not fremitus",
+      "Tracheal tug or voice changes — laryngeal pathology, not parenchymal fremitus",
+    ],
+    pediatrics:
+      "Children with bacterial pneumonia may have focal ↑ tactile fremitus with consolidation. Pleural effusion and empyema ↓ fremitus — consider in febrile child with decreased breath sounds. Cooperation with phonation may be limited in young children; compare sides symmetrically.",
+  },
+  {
     id: "stridor",
     name: "Stridor",
     etymology: "Latin stridere = to make a harsh, creaking sound",
@@ -12162,6 +12258,56 @@ export const SYMPTOMS: SymptomEntry[] = [
       "Rigors with fever in infants and young children warrant careful evaluation for bacteremia and UTI; neonates may not mount rigors and instead present with lethargy or hypothermia during serious infection.",
   },
   {
+    id: "rugal-thickening",
+    name: "Rugal Thickening",
+    etymology:
+      "Latin ruga = fold/wrinkle + thickening = increased thickness — enlarged gastric mucosal folds seen on endoscopy or imaging",
+    aliases: [
+      "rugal thickening",
+      "rugal thickenings",
+      "thickened rugae",
+      "thickened gastric folds",
+      "thickened gastric fold",
+      "gastric fold thickening",
+      "gastric fold thickenings",
+      "giant rugal folds",
+      "giant gastric folds",
+      "hypertrophic gastric folds",
+      "enlarged gastric folds",
+      "enlarged gastric mucosal folds",
+    ],
+    definition:
+      "Endoscopic or radiographic finding of enlarged gastric mucosal folds (rugae) — reflects mucosal hyperplasia, edema, infiltration, or hypertrophy of the gastric wall; may be focal or diffuse.",
+    mechanism:
+      "Rugae are mucosal folds that flatten with distension — thickening results from ↑ mucosal cell proliferation (foveolar hyperplasia), submucosal edema, inflammatory infiltrate, or neoplastic infiltration expanding fold height on endoscopy and barium studies.",
+    thinkOf: [
+      "Ménétrier disease — giant rugal folds, foveolar hyperplasia, protein-losing gastropathy",
+      "Zollinger-Ellison syndrome / gastrinoma — acid-driven mucosal hypertrophy",
+      "H. pylori gastritis — mucosal inflammation and edema",
+      "Gastric lymphoma (MALT) — infiltrative thickening of folds",
+      "Eosinophilic gastroenteritis — mural edema and fold thickening",
+      "Cytomegalovirus gastritis in immunocompromised hosts",
+      "Contrast: atrophic gastritis — loss of rugae in fundus/body (autoimmune)",
+    ],
+    pairWith: [
+      "Giant rugal folds + hypoalbuminemia + edema → Ménétrier disease",
+      "Thickened folds + refractory peptic ulcers + diarrhea → Zollinger-Ellison (gastrinoma)",
+      "Fold thickening + H. pylori positivity → chronic gastritis",
+      "Diffuse fold thickening + B symptoms + lymphadenopathy → gastric lymphoma",
+      "Thickened rugae vs absent rugae — hypertrophy vs atrophic gastritis (opposite endoscopic patterns)",
+      "Barium study showing enlarged folds → proceed to endoscopy with biopsy",
+    ],
+    distinguishFrom: [
+      "Loss of rugal folds — atrophic gastritis, autoimmune metaplastic atrophy",
+      "Gastric outlet obstruction — distended stomach; folds may appear prominent but mechanism is retention",
+      "Submucosal mass (GIST, lipoma) — focal bulge with normal overlying folds, not diffuse rugal hypertrophy",
+      "Gastric varices — serpiginous submucosal vessels in portal hypertension",
+      "Normal rugae — flatten with insufflation; thickening persists when adequately distended",
+    ],
+    pediatrics:
+      "Ménétrier disease can present in children with protein-losing gastropathy, hypoalbuminemia, and giant rugal folds — distinguish from eosinophilic gastroenteritis and H. pylori. Autoimmune atrophic gastritis with loss of rugae is rare in pediatrics.",
+  },
+  {
     id: "hypothermia",
     name: "Hypothermia",
     etymology: "Greek hypo = under/below + Greek therme = heat",
@@ -17288,6 +17434,54 @@ export const SYMPTOMS: SymptomEntry[] = [
     ],
     pediatrics:
       "Tension pneumothorax is rare but life-threatening in children — hyperresonance with hemodynamic compromise requires immediate decompression. Bronchiolitis and asthma cause diffuse hyperresonance from air trapping; foreign body aspiration causes unilateral findings.",
+  },
+  {
+    id: "subcutaneous-emphysema",
+    name: "Subcutaneous Emphysema",
+    etymology:
+      "Latin sub = under + cutis = skin + Greek emphysema = inflation — free air trapped in subcutaneous tissues",
+    aliases: [
+      "subcutaneous emphysema",
+      "subcutaneous emphysemas",
+      "subcutaneous air",
+      "subcutaneous crepitus",
+      "crepitus subcutaneous",
+      "surgical emphysema",
+      "surgical emphysemas",
+      "subcutaneous emphysematous crepitus",
+      "subcutaneous gas",
+      "subcutaneous gas emphysema",
+      "skin crepitus",
+    ],
+    definition:
+      "Presence of free air in the subcutaneous tissues — palpable as crackling crepitus under the skin — usually tracking from ruptured airway, esophagus, pleural space, or gas-forming infection.",
+    mechanism:
+      "Air escapes from alveoli (pneumothorax/barotrauma), tracheobronchial tree, esophagus, or mediastinum into fascial planes and dissects along tissue planes into neck, chest wall, or face → palpable bubble-crunch sensation (crepitus); positive pressure ventilation and trauma are common precipitants.",
+    thinkOf: [
+      "Pneumothorax or pneumomediastinum with air tracking to chest wall/neck",
+      "Tracheobronchial or esophageal rupture after trauma, vomiting, or instrumentation",
+      "Mechanical ventilation barotrauma — pneumothorax with subcutaneous extension",
+      "Dental/oral surgery, facial trauma — periorbital or neck crepitus",
+      "Boerhaave syndrome — esophageal perforation with mediastinal and subcutaneous air",
+      "Necrotizing soft tissue infection (Fournier gangrene) — crepitus from gas-forming organisms",
+    ],
+    pairWith: [
+      "Subcutaneous emphysema + neck crepitus after vomiting/retching → Boerhaave esophageal rupture",
+      "Crepitus + pneumothorax on CXR + ventilated patient → barotrauma",
+      "Facial/neck swelling + crepitus after trauma → airway or esophageal injury",
+      "Crepitus + systemic toxicity + groin pain → Fournier gangrene (necrotizing infection)",
+      "Subcutaneous emphysema + Hamman crunch → pneumomediastinum",
+      "Palpable crackling over chest wall + ↓ breath sounds → pneumothorax with air leak",
+    ],
+    distinguishFrom: [
+      "Pneumothorax alone — pleural air without necessarily palpable subcutaneous crepitus",
+      "Crepitus from osteoarthritis or fracture — bony crepitus at joint/bone, not diffuse subcutaneous air",
+      "Emphysema (COPD) — pulmonary airspace destruction; subcutaneous emphysema is free air under skin",
+      "Cellulitis without gas — warmth and erythema without crepitus unless necrotizing infection",
+      "Pulmonary consolidation — dullness and crackles, not subcutaneous crepitus",
+    ],
+    pediatrics:
+      "Neonatal pneumothorax from mechanical ventilation or RDS may cause chest wall crepitus; foreign body or trauma-related airway injury can produce neck subcutaneous emphysema in children — evaluate for pneumomediastinum and esophageal injury.",
   },
   {
     id: "hyperinflated-lungs",
