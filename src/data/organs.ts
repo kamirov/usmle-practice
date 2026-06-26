@@ -35,6 +35,47 @@ export const ORGANS: OrganEntry[] = [
     derivatives: ["Ascending aorta", "Aortic arch", "Descending aorta"],
   },
   {
+    id: "aortic-bifurcation",
+    name: "Aortic Bifurcation",
+    etymology:
+      "Greek aorte = great artery + Latin bifurcatio = forking into two — point where the abdominal aorta divides into the right and left common iliac arteries",
+    aliases: [
+      "aortic bifurcation",
+      "aortic bifurcations",
+      "bifurcation of the aorta",
+      "aortoiliac bifurcation",
+      "aorto-iliac bifurcation",
+      "aortic trifurcation",
+    ],
+    germLayer: "Mesoderm",
+    origin:
+      "Terminal division of the descending (abdominal) aorta at approximately the L4 vertebral level (slightly left of midline) into the right and left common iliac arteries, which continue to the pelvic brim and divide into external and internal iliac arteries.",
+    derivatives: [
+      "Right common iliac artery",
+      "Left common iliac artery",
+      "Organ of Zuckerkandl (chromaffin tissue at bifurcation)",
+      "Superior hypogastric plexus (presynaptic sympathetic fibers near bifurcation)",
+    ],
+    functionSummary:
+      "Major vascular landmark separating infrarenal aorta from iliac arterial supply to pelvis and lower limbs; common site of atherosclerotic disease and surgical/anatomic reference.",
+    commonPathologies: [
+      "Aortoiliac occlusive disease — claudication, diminished femoral pulses, Leriche syndrome",
+      "Abdominal aortic aneurysm — may extend to or involve bifurcation",
+      "Organ of Zuckerkandl paraganglioma — extra-adrenal catecholamine source in children",
+      "May-Thurner syndrome — left common iliac vein compressed by right common iliac artery near confluence",
+    ],
+    step1Pearls: [
+      "Aortic bifurcation ≈ L4 — divides into right and left common iliac arteries",
+      "Organ of Zuckerkandl — chromaffin paraganglion at aortic bifurcation; pediatric pheochromocytoma source",
+      "Superior hypogastric plexus — presynaptic sympathetic fibers at bifurcation (pelvic autonomics)",
+      "Leriche syndrome — aortoiliac occlusion with claudication, ↓ femoral pulses, erectile dysfunction",
+      "vs carotid bifurcation — cervical baroreceptor/chemoreceptor landmark, not pelvic",
+      "Infrarenal AAA repair often involves clamping above bifurcation with iliac extension if needed",
+    ],
+    pediatrics:
+      "Organ of Zuckerkandl at the aortic bifurcation is the classic extra-adrenal site of catecholamine-secreting tumors in children — episodic hypertension, flushing, and diaphoresis before adrenal pheochromocytoma is considered.",
+  },
+  {
     id: "external-iliac-artery",
     name: "External Iliac Artery",
     etymology:
@@ -2461,6 +2502,35 @@ export const ORGANS: OrganEntry[] = [
     ],
   },
   {
+    id: "greater-vestibular-gland",
+    name: "Greater Vestibular (Bartholin) Gland",
+    etymology:
+      "Latin vestibulum = entrance hall + Latin glans = acorn/gland + Caspar Bartholin the Younger (Danish anatomist) — paired mucus-secreting glands of the vulvar vestibule",
+    aliases: [
+      "greater vestibular gland",
+      "greater vestibular glands",
+      "bartholin gland",
+      "bartholin glands",
+      "bartholin's gland",
+      "bartholin's glands",
+      "bartholins gland",
+      "bartholins glands",
+      "glands of bartholin",
+      "gland of bartholin",
+      "vestibular gland",
+      "vestibular glands",
+      "major vestibular gland",
+      "major vestibular glands",
+    ],
+    germLayer: "Endoderm",
+    origin:
+      "Develops from the urogenital sinus endoderm in the 46,XX fetus — paired glands embedded in the posterolateral vulvar vestibule (deep to labia minora) that secrete mucus for vaginal lubrication; homologous to the male bulbourethral (Cowper) glands.",
+    derivatives: [
+      "Bartholin duct opening at posterolateral vestibule (4 and 8 o'clock)",
+      "Mucus secretion for vulvar/vaginal lubrication",
+    ],
+  },
+  {
     id: "breast",
     name: "Breast",
     etymology: "Old English breost = breast + Latin mamma = breast",
@@ -2711,6 +2781,53 @@ export const ORGANS: OrganEntry[] = [
       "Metencephalon",
       "Myelencephalon",
     ],
+  },
+  {
+    id: "temporal-lobe",
+    name: "Temporal Lobe",
+    etymology:
+      "Latin temporalis = of the temple (side of head) + Latin lobus = lobe — lateral telencephalic lobe beneath the temporal bone housing auditory, memory, and limbic structures",
+    aliases: [
+      "temporal lobe",
+      "temporal lobes",
+      "temporal lobe cortex",
+      "temporal cortices",
+      "temporal cortex",
+      "temporal lobe brain",
+      "temporal lobe of brain",
+      "temporal lobe of the brain",
+    ],
+    germLayer: "Ectoderm",
+    origin:
+      "Develops from the lateral outpouching of the telencephalon (forebrain vesicle) — contains allocortex (hippocampus, amygdala) and neocortex with superior, middle, and inferior temporal gyri.",
+    derivatives: [
+      "Primary auditory cortex (A1) — transverse temporal (Heschl) gyri",
+      "Wernicke area — receptive language (posterior superior temporal gyrus, often left hemisphere)",
+      "Hippocampus and parahippocampal gyrus — memory encoding",
+      "Amygdala — fear, emotion, emotional memory",
+      "Uncus — anterior medial temporal lobe; olfactory and seizure focus",
+      "Meyer's loop (optic radiations) — temporal lobe white matter; visual field fibers",
+    ],
+    functionSummary:
+      "Auditory processing, language comprehension (Wernicke), declarative memory (hippocampus), emotional processing (amygdala), and olfaction (uncus); integrates auditory and visual association with limbic circuits.",
+    commonPathologies: [
+      "HSV-1 encephalitis — predilection for medial temporal lobes and hippocampus",
+      "Mesial temporal sclerosis — refractory temporal lobe epilepsy",
+      "Alzheimer disease — early hippocampal and entorhinal cortex atrophy",
+      "Pick disease (frontotemporal dementia) — temporal/frontal atrophy",
+      "Superior quadrantanopia — Meyer's loop lesion (temporal lobe)",
+      "Wernicke aphasia — fluent nonsensical speech with impaired comprehension",
+    ],
+    step1Pearls: [
+      "Temporal lobe — hearing (A1), memory (hippocampus), fear/emotion (amygdala), receptive language (Wernicke)",
+      "HSV encephalitis — fever, altered mental status, temporal lobe MRI hyperintensity; empiric IV acyclovir",
+      "Uncus herniation — CN III palsy, brainstem compression — surgical emergency",
+      "Meyer's loop in temporal lobe — contralateral superior quadrantanopia (pie in the sky)",
+      "vs frontal lobe — motor planning, Broca speech production; vs parietal — somatosensory integration",
+      "Dominant hemisphere temporal lesion → Wernicke aphasia; nondominant → prosody, spatial memory deficits",
+    ],
+    pediatrics:
+      "HSV encephalitis can present in children with fever and behavioral change — temporal lobe involvement on MRI. Febrile seizures in young children are usually benign; complex febrile seizures or mesial temporal sclerosis predispose to temporal lobe epilepsy later.",
   },
   {
     id: "communicating-arteries",
@@ -2972,6 +3089,95 @@ export const ORGANS: OrganEntry[] = [
       "Orbital/facial infections in children can seed cavernous sinus thrombosis through emissary pathways; treat aggressively and monitor cranial nerve function.",
   },
   {
+    id: "bridging-veins",
+    name: "Bridging Veins",
+    etymology:
+      "Old English brycg = span + Latin vena = vein — cortical veins that cross the subdural space to drain into dural venous sinuses",
+    aliases: [
+      "bridging veins",
+      "bridging vein",
+      "cerebral bridging veins",
+      "cerebral bridging vein",
+      "bridging cortical veins",
+      "bridging cortical vein",
+      "cortical bridging veins",
+      "cortical bridging vein",
+      "superficial cerebral vein",
+      "superficial cerebral veins",
+      "veins of the subdural space",
+      "subdural bridging veins",
+      "subdural bridging vein",
+    ],
+    germLayer: "Mesoderm (endothelium)",
+    origin:
+      "Superficial cerebral cortical veins pierce the arachnoid and traverse the subdural space (between dura mater and arachnoid) before emptying into dural venous sinuses — especially the superior sagittal sinus — acting as tethered conduits vulnerable to shear during head acceleration-deceleration.",
+    derivatives: [
+      "Connections from cortical surface to superior sagittal sinus",
+      "Tributaries to other dural sinuses (sphenoparietal, transverse) depending on location",
+    ],
+    functionSummary:
+      "Drain cerebral cortex venous blood into dural venous sinuses; because they span the subdural space, tearing produces subdural hematoma rather than epidural bleeding.",
+    commonPathologies: [
+      "Acute subdural hematoma — bridging vein rupture from acceleration-deceleration trauma",
+      "Chronic subdural hematoma — minor trauma in elderly with brain atrophy stretches bridging veins",
+      "Abusive head trauma (shaken baby) — bilateral subdural collections from bridging vein shear",
+      "Anticoagulation or coagulopathy — worsens subdural bleeding after minor trauma",
+    ],
+    step1Pearls: [
+      "Bridging veins cross subdural space → subdural hematoma when torn",
+      "Subdural hematoma — crescentic collection on CT; crosses suture lines",
+      "Elderly/alcoholic with brain atrophy — increased bridging vein tension → chronic SDH",
+      "vs middle meningeal artery — arterial epidural hematoma; biconvex; does not cross sutures",
+      "vs emissary veins — connect scalp to sinuses through skull; infection spread route",
+      "Shaken infant — bridging vein rupture + retinal hemorrhages + encephalopathy",
+    ],
+    pediatrics:
+      "Infants have large head-to-body ratio and weak neck support — acceleration-deceleration during abusive head trauma shears bridging veins causing subdural hematoma. Fontanelle may bulge with rising ICP before sutures fuse.",
+  },
+  {
+    id: "middle-meningeal-artery",
+    name: "Middle Meningeal Artery",
+    etymology:
+      "Latin medius = middle + Greek meninx = membrane + Latin arteria = airway/vessel — major meningeal branch supplying dura and skull",
+    aliases: [
+      "middle meningeal artery",
+      "middle meningeal arteries",
+      "middle meningial artery",
+      "middle meningial arteries",
+      "meningeal artery middle",
+      "middle meningeal arterial branch",
+      "middle meningeal arterial branches",
+      "mm artery",
+      "middle meningeal trunk",
+    ],
+    germLayer: "Mesoderm (endothelium from pharyngeal arch arteries)",
+    origin:
+      "Branch of the maxillary artery (third part of external carotid system) — enters cranial cavity through the foramen spinosum of the sphenoid bone and runs between the skull and dura mater in the epidural space, grooving the inner skull table (especially pterion region).",
+    derivatives: [
+      "Frontal and parietal branches supplying dura mater and calvaria",
+      "Accessory meningeal artery may accompany via foramen ovale region (variable anatomy)",
+    ],
+    functionSummary:
+      "Supplies dura mater, skull periosteum, and adjacent meninges; clinically important because temporal bone fracture can lacerate it causing rapid epidural hematoma with arterial bleeding.",
+    commonPathologies: [
+      "Epidural hematoma — middle meningeal artery tear after temporal skull fracture",
+      "Lucid interval — brief recovery after initial head injury then rapid decline from expanding hematoma",
+      "Pterion fracture — thin skull at frontotemporal junction overlying artery",
+      "Extradural hemorrhage with biconvex (lentiform) CT appearance",
+    ],
+    step1Pearls: [
+      "Middle meningeal artery — branch of maxillary artery; enters foramen spinosum",
+      "Epidural hematoma — arterial bleed; biconvex/lentiform on CT",
+      "Does NOT cross cranial suture lines (dura adherent at sutures)",
+      "Lucid interval classic before neurologic deterioration",
+      "vs bridging veins — venous subdural hematoma; crescentic; crosses sutures",
+      "Pterion — weakest skull point overlying middle meningeal artery",
+      "Temporal bone trauma vignette — think epidural hematoma",
+    ],
+    pediatrics:
+      "Epidural hematoma occurs in children after head trauma but abusive head trauma more often causes subdural hematoma from bridging veins. Teen athletes with temporal impact and lucid interval need emergent imaging.",
+  },
+  {
     id: "pia-mater",
     name: "Pia Mater",
     etymology:
@@ -3092,6 +3298,54 @@ export const ORGANS: OrganEntry[] = [
     ],
     pediatrics:
       "Neonatal subarachnoid hemorrhage (prematurity) fills subarachnoid trabecular spaces; post-hemorrhagic hydrocephalus may follow impaired CSF circulation/reabsorption.",
+  },
+  {
+    id: "subarachnoid-space",
+    name: "Subarachnoid Space",
+    etymology:
+      "Latin sub = under + Greek arachne = spider + -oid = like + Latin spatium = space — CSF-filled compartment between the arachnoid mater and pia mater surrounding the brain and spinal cord",
+    aliases: [
+      "subarachnoid space",
+      "subarachnoid spaces",
+      "subarachnoid cistern",
+      "subarachnoid cisterns",
+      "subarachnoid compartment",
+      "leptomeningeal space",
+      "leptomeningeal spaces",
+      "csf space",
+      "csf spaces",
+      "intrathecal space",
+      "intrathecal spaces",
+    ],
+    germLayer: "Neural crest (leptomeninges — arachnoid and pia)",
+    origin:
+      "Potential space between arachnoid mater (outer boundary) and pia mater (inner boundary adherent to CNS) — continuous with ventricular system via foramina of Luschka and Magendie; contains CSF, major cerebral arteries, arachnoid trabeculae, and spinal nerve roots in the thecal sac.",
+    derivatives: [
+      "Basal cisterns — expansions at skull base (interpeduncular, chiasmatic, ambient, cerebellopontine)",
+      "Lumbar cistern — cauda equina in lower spinal subarachnoid space (LP target)",
+      "Perivascular (Virchow-Robin) spaces — continuous with subarachnoid space at vessel entry",
+      "Arachnoid trabeculae — collagen strands crossing the space",
+    ],
+    functionSummary:
+      "Circulates CSF around brain and spinal cord; cushions CNS; houses major cerebral arteries (circle of Willis branches course in space); site of CSF sampling by lumbar puncture; blood-brain barrier interface at pial vessel entry.",
+    commonPathologies: [
+      "Subarachnoid hemorrhage — arterial blood in basal cisterns and sulci",
+      "Bacterial meningitis — purulent exudate in subarachnoid compartment",
+      "Communicating hydrocephalus — impaired CSF reabsorption at arachnoid villi after SAH/meningitis",
+      "Cerebral vasospasm — blood breakdown products irritate arteries in subarachnoid space",
+      "Benign enlargement of subarachnoid spaces in infants — widened space without hydrocephalus",
+    ],
+    step1Pearls: [
+      "Subarachnoid space = between arachnoid and pia — contains CSF and cerebral arteries",
+      "LP needle enters subarachnoid space (L3–L4/L4–L5) — below termination of spinal cord",
+      "SAH — blood in subarachnoid space; thunderclap headache; xanthochromia on LP",
+      "Epidural space is outside dura; subdural between dura and arachnoid; subarachnoid inside dura",
+      "Major cerebral arteries (MCA, ACA, basilar) run in subarachnoid space — aneurysm rupture → SAH",
+      "Cisterns are expansions of subarachnoid space at skull base",
+      "vs epidural hematoma — blood above dura, not in subarachnoid space",
+    ],
+    pediatrics:
+      "Benign enlargement of subarachnoid spaces in infants causes macrocephaly with normal development — distinguish from hydrocephalus. Neonatal SAH from prematurity or birth trauma may lead to post-hemorrhagic hydrocephalus. LP in children uses same anatomic landmarks with weight-based sedation considerations.",
   },
   {
     id: "choroid-plexus",
@@ -3872,6 +4126,49 @@ export const ORGANS: OrganEntry[] = [
       "Neonatal hydrocephalus often presents with enlarging head circumference and bulging fontanelle; congenital aqueductal stenosis dilates lateral and third ventricles.",
   },
   {
+    id: "corpus-callosum",
+    name: "Corpus Callosum",
+    etymology:
+      "Latin corpus = body + Latin callosum = hard/tough — dense commissural white matter band connecting the cerebral hemispheres",
+    aliases: [
+      "corpus callosum",
+      "corpus callosa",
+      "callosal body",
+      "cerebral commissure",
+      "interhemispheric commissure",
+      "cc",
+    ],
+    germLayer: "Ectoderm",
+    origin:
+      "Develops from commissural plate of the telencephalon (forebrain) — pioneer axons cross the midline around 11–20 weeks gestation to link homotopic cortical regions; subdivides into rostrum, genu (anterior), body (trunk), and splenium (posterior).",
+    derivatives: [
+      "Rostrum — connects orbitofrontal regions",
+      "Genu — prefrontal and premotor fibers",
+      "Body — parietal and motor association fibers",
+      "Splenium — occipital and temporal visual/auditory association fibers",
+    ],
+    functionSummary:
+      "Major commissural pathway integrating sensory, motor, and cognitive processing between left and right cerebral hemispheres — enables bimanual coordination, transfer of learned information, and unified perceptual experience.",
+    commonPathologies: [
+      "Agenesis or dysgenesis of corpus callosum — congenital forebrain malformation",
+      "Multiple sclerosis — ovoid periventricular/callosal lesions",
+      "Marchiafava-Bignami disease — alcohol-related callosal demyelination",
+      "Diffuse axonal injury — corpus callosum shear injury in traumatic brain injury",
+      "Lipoma of corpus callosum — midline congenital mass",
+    ],
+    step1Pearls: [
+      "Largest cerebral commissure — connects homologous cortical areas across hemispheres",
+      "Rostrum → genu → body → splenium (anterior to posterior)",
+      "Agenesis → parallel lateral ventricles (colpocephaly) on coronal MRI",
+      "MS plaques often involve periventricular white matter and corpus callosum",
+      "Callosal lesion — left-hand apraxia with right-hand sparing (disconnection)",
+      "Lies superior to septum pellucidum and lateral ventricles",
+      "vs anterior commissure — smaller; olfactory and temporal connections",
+    ],
+    pediatrics:
+      "Agenesis of corpus callosum may be isolated or syndromic (Aicardi syndrome in females, fetal alcohol spectrum, trisomies). Prenatal MRI can detect callosal absence; developmental delay and seizures are common when part of a syndrome.",
+  },
+  {
     id: "septum-pellucidum",
     name: "Septum Pellucidum",
     etymology: "Latin septum = partition + Latin pellucidum = transparent",
@@ -4173,6 +4470,50 @@ export const ORGANS: OrganEntry[] = [
     derivatives: ["Iris", "Ciliary body", "Choroid"],
   },
   {
+    id: "iris",
+    name: "Iris",
+    etymology:
+      "Greek iris = rainbow — pigmented muscular diaphragm of the eye regulating light entry through the pupil",
+    aliases: [
+      "iris",
+      "irises",
+      "irides",
+      "ocular iris",
+      "uveal iris",
+      "iris diaphragm",
+    ],
+    germLayer: "Mesoderm / Neural crest",
+    origin:
+      "Anterior uveal structure derived from periocular mesenchyme (neural crest predominant) at the anterior rim of the optic cup — forms a circular diaphragm with central pupillary aperture between anterior and posterior chambers.",
+    derivatives: [
+      "Sphincter pupillae — circular smooth muscle (parasympathetic) for miosis",
+      "Dilator pupillae — radial smooth muscle (sympathetic α1) for mydriasis",
+      "Iris stroma — pigmented melanocytes determine eye color",
+      "Anterior iris surface — crypts and collarette landmarks",
+    ],
+    functionSummary:
+      "Regulates quantity of light reaching the retina by changing pupillary diameter — sphincter pupillae constricts pupil (miosis) in bright light; dilator pupillae widens pupil (mydriasis) in dim light or sympathetic activation; pupillary aperture also affects depth of field.",
+    commonPathologies: [
+      "Iritis/uveitis — painful photophobia with ciliary flush",
+      "Adie tonic pupil — iris sphincter denervation",
+      "Horner syndrome — miosis from loss of sympathetic dilator tone",
+      "Anticholinergic or sympathomimetic drug effects on iris muscles",
+      "Iris neovascularization (rubeosis) in diabetic retinopathy or CRVO",
+      "Traumatic iridodialysis — iris root detachment",
+    ],
+    step1Pearls: [
+      "Iris = anterior uvea; pigmented muscular diaphragm with central pupil",
+      "Sphincter pupillae (parasympathetic M3) → miosis; dilator pupillae (sympathetic α1) → mydriasis",
+      "Parasympathetic via CN III → ciliary ganglion → short ciliary nerves",
+      "Sympathetic dilator: hypothalamus → T1 → superior cervical ganglion → long ciliary nerves",
+      "Pupillary light reflex — CN II afferent, CN III efferent to sphincter",
+      "Blue irides have less stromal pigment — not different sphincter anatomy",
+      "vs ciliary body — posterior uvea with ciliary muscle; vs pupil — aperture not tissue",
+    ],
+    pediatrics:
+      "Congenital aniridia (PAX6) causes iris hypoplasia and glaucoma risk. Leukocoria suggests retinoblastoma, not primary iris disease. Neonatal pupils react to light; fixed pupils suggest anoxia or drug exposure.",
+  },
+  {
     id: "lens",
     name: "Lens",
     etymology: "Latin lens = lentil-shaped glass",
@@ -4220,6 +4561,59 @@ export const ORGANS: OrganEntry[] = [
       "Otic placode (surface ectoderm) invaginates to form otic vesicle; gives rise to membranous labyrinth.",
   },
   {
+    id: "tympanic-membrane",
+    name: "Tympanic Membrane",
+    etymology:
+      "Greek tympanon = drum + Latin membrana = skin — thin semitransparent membrane separating the external auditory canal from the middle ear; also called the eardrum",
+    aliases: [
+      "tympanic membrane",
+      "tympanic membranes",
+      "eardrum",
+      "eardrums",
+      "ear drum",
+      "ear drums",
+      "tympanum",
+      "myringa",
+      "myringae",
+      "pars tensa",
+      "pars flaccida",
+      "tympanic membrane perforation",
+      "ruptured tympanic membrane",
+      "bulging tympanic membrane",
+    ],
+    germLayer: "Ectoderm / Endoderm / Mesoderm",
+    origin:
+      "Three-layered structure: outer cutaneous layer from first pharyngeal pouch ectoderm (external canal lining), inner mucosal layer from endoderm of tubotympanic recess (middle ear), and fibrous middle layer from mesoderm — forms the boundary between external auditory canal and middle ear cavity.",
+    derivatives: [
+      "Pars tensa — main vibrating portion attached to malleus handle",
+      "Pars flaccida (Shrapnell membrane) — superior slack portion",
+      "Cone of light (light reflex) from anterior-inferior quadrant",
+      "Handle of malleus visible through membrane on otoscopy",
+    ],
+    functionSummary:
+      "Transduces airborne sound pressure waves from the external canal into mechanical vibration of the ossicular chain (malleus → incus → stapes → oval window); maintains sealed middle ear space for efficient sound conduction.",
+    commonPathologies: [
+      "Acute otitis media — bulging, erythematous, immobile membrane",
+      "Otitis media with effusion — retracted or amber membrane with air-fluid level",
+      "Tympanic membrane perforation — traumatic or from AOM/barotrauma",
+      "Cholesteatoma — retraction pocket in pars flaccida or pars tensa",
+      "Otitis externa — membrane may appear normal; pain on tragal pressure instead",
+      "Barotrauma — hemotympanum or rupture after pressure change",
+    ],
+    step1Pearls: [
+      "Tympanic membrane = eardrum — separates external canal from middle ear",
+      "Bulging erythematous immobile TM → acute otitis media (AOM)",
+      "Pneumatic otoscopy — impaired mobility supports middle ear effusion",
+      "Cone of light normally anterior-inferior; distorted in effusion or retraction",
+      "1st pharyngeal pouch → middle ear cavity and TM inner layer",
+      "Chorda tympani (CN VII taste) crosses medial surface of TM",
+      "Perforation → conductive hearing loss until healing; chronic perforation risks cholesteatoma",
+      "Red TM alone nonspecific — crying infant also has flushed TM",
+    ],
+    pediatrics:
+      "AOM is most common in children 6–24 months after URI — Eustachian tube anatomy (shorter, more horizontal) predisposes. Bulging TM with fever and ear pain supports antibiotics. Neonatal hearing screening (otoacoustic emissions/ABR) does not visualize TM but follow-up otoscopy important in recurrent OM. Tympanostomy tubes bypass dysfunctional Eustachian tube in recurrent AOM/effusion.",
+  },
+  {
     id: "skin",
     name: "Skin",
     etymology: "Old Norse skinn = hide",
@@ -4258,6 +4652,44 @@ export const ORGANS: OrganEntry[] = [
     ],
     pediatrics:
       "Infant epidermis is thinner with immature barrier — ↑ transepidermal water loss and atopic dermatitis risk; sunscreen and emollients important.",
+  },
+  {
+    id: "sweat-gland",
+    name: "Sweat Gland",
+    etymology:
+      "Old English swætan = to perspire + Latin glans = acorn/gland — cutaneous exocrine gland secreting sweat for thermoregulation or scent",
+    aliases: [
+      "sweat gland",
+      "sweat glands",
+      "sudoriferous gland",
+      "sudoriferous glands",
+      "cutaneous sweat gland",
+      "cutaneous sweat glands",
+    ],
+    germLayer: "Ectoderm",
+    origin:
+      "Epidermal downgrowth forming coiled tubular glands in dermis — eccrine glands widely distributed; apocrine glands in axilla, areola, and anogenital region.",
+    derivatives: [
+      "Eccrine sweat gland — thermoregulatory watery sweat to skin surface",
+      "Apocrine sweat gland — thicker secretion into hair follicle; odor after bacterial breakdown",
+    ],
+    functionSummary:
+      "Thermoregulation (eccrine), emotional diaphoresis, and apocrine scent signaling; duct modifies sweat electrolyte content.",
+    commonPathologies: [
+      "Cystic fibrosis — ↑ eccrine sweat chloride (diagnostic sweat test)",
+      "Anhidrotic ectodermal dysplasia — absent/reduced eccrine glands",
+      "Primary focal hyperhidrosis",
+      "Horner syndrome — ipsilateral anhidrosis",
+    ],
+    step1Pearls: [
+      "Eccrine = watery sweat everywhere; apocrine = axilla/areola, puberty-activated, odor after bacteria",
+      "Sympathetic innervation to eccrine glands uses ACh (muscarinic), not NE — major sympathetic cholinergic exception",
+      "CF sweat test — pilocarpine iontophoresis stimulates eccrine sweating; ↑ chloride diagnostic",
+      "Eccrine duct reabsorbs NaCl — aldosterone ↑ duct Na⁺ reabsorption during volume depletion",
+      "Mammary gland = modified apocrine sweat gland",
+    ],
+    pediatrics:
+      "Infants have immature thermoregulation and rely heavily on eccrine sweating; anhidrotic ectodermal dysplasia causes heat intolerance. CF newborn screen is followed by quantitative sweat chloride testing.",
   },
   {
     id: "dermis",
@@ -4786,6 +5218,47 @@ export const ORGANS: OrganEntry[] = [
       "Palatine tonsils from second pharyngeal pouch endoderm invading surrounding mesenchyme.",
   },
   {
+    id: "salivary-gland",
+    name: "Salivary Gland",
+    etymology:
+      "Latin saliva = spittle + glans = acorn/gland — exocrine gland secreting saliva into the oral cavity for lubrication, digestion, and antimicrobial defense",
+    aliases: [
+      "salivary gland",
+      "salivary glands",
+      "major salivary gland",
+      "major salivary glands",
+      "salivary glandular",
+    ],
+    germLayer: "Ectoderm / Endoderm",
+    origin:
+      "Major glands — parotid from stomodeum ectoderm; submandibular and sublingual from floor-of-mouth endoderm; numerous minor glands scattered in oral mucosa.",
+    derivatives: [
+      "Parotid gland — serous, amylase-rich (Stensen duct)",
+      "Submandibular gland — mixed serous/mucous (Wharton duct)",
+      "Sublingual gland — predominantly mucous (Bartholin/ducts of Rivinus)",
+      "Minor salivary glands — labial, buccal, palatal mucosa",
+    ],
+    functionSummary:
+      "Produces saliva (water, mucins, amylase, lysozyme, bicarbonate) for lubrication, starch digestion initiation, antimicrobial defense, and enamel buffering.",
+    commonPathologies: [
+      "Mumps parotitis",
+      "Sjögren syndrome — autoimmune destruction of lacrimal and salivary glands",
+      "Sialolithiasis and sialadenitis",
+      "Salivary gland tumors — pleomorphic adenoma, Warthin tumor",
+      "Xerostomia from anticholinergics or radiation",
+    ],
+    step1Pearls: [
+      "Three major pairs — parotid (serous), submandibular (mixed), sublingual (mucous)",
+      "Parotid secretomotor — CN IX → otic ganglion → auriculotemporal nerve (not CN VII, which only traverses parotid)",
+      "Submandibular/sublingual secretomotor — CN VII chorda tympani → submandibular ganglion",
+      "Mumps — painful bilateral parotitis; prevented by MMR",
+      "Sjögren — dry eyes + dry mouth + anti-Ro/SSA, anti-La/SSB",
+      "Amylase elevated in mumps and pancreatitis",
+    ],
+    pediatrics:
+      "Mumps classically causes parotitis in children; MMR vaccination has greatly reduced incidence. Congenital absence or hypoplasia of salivary glands is rare but worsens oral hygiene and caries risk.",
+  },
+  {
     id: "parotid",
     name: "Parotid Gland",
     etymology: "Greek para = beside + ous = ear + Latin glans = acorn/gland",
@@ -5011,6 +5484,30 @@ export const ORGANS: OrganEntry[] = [
     germLayer: "Endoderm / Mesoderm",
     origin:
       "Intraembryonic remnant of the allantois between the fetal bladder dome and umbilicus; normally obliterates to form the median umbilical ligament; failure of closure → patent urachus, urachal cyst, sinus, or diverticulum.",
+  },
+  {
+    id: "buccal-mucosa",
+    name: "Buccal Mucosa",
+    etymology: "Latin bucca = cheek + Latin mucosa = mucous membrane",
+    aliases: [
+      "buccal mucosa",
+      "buccal mucosae",
+      "buccal mucous membrane",
+      "buccal mucous membranes",
+      "inner cheek mucosa",
+      "cheek mucosa",
+      "oral buccal mucosa",
+      "mucosa of the cheek",
+      "mucosa of cheek",
+    ],
+    germLayer: "Ectoderm",
+    origin:
+      "Non-keratinized stratified squamous epithelium lining the inner surface of the cheeks (between the lips and alveolar ridges), derived from stomodeum (primitive oral cavity) ectoderm; continuous with labial and gingival mucosa; contains minor salivary glands and rich vascular supply.",
+    derivatives: [
+      "Minor buccal salivary glands",
+      "Stensen (parotid) duct papilla opening opposite upper second molar",
+      "Fordyce granules (ectopic sebaceous glands)",
+    ],
   },
   {
     id: "gingiva-oral",
@@ -6420,6 +6917,25 @@ const ORGAN_DETAILS: Record<
     pediatrics:
       "Imperforate hymen may present at menarche with hematocolpos. Labial adhesions in prepubertal girls involve labia minora near the vestibule. CAH virilization can alter vestibular and labial anatomy — evaluate with karyotype and 17-OH progesterone.",
   },
+  "greater-vestibular-gland": {
+    functionSummary:
+      "Paired mucus-secreting glands in the posterolateral vulvar vestibule (Bartholin glands) that lubricate the vaginal introitus during sexual arousal; duct opens at 4 and 8 o'clock positions.",
+    commonPathologies: [
+      "Bartholin gland cyst — mucus retention when duct obstructed",
+      "Bartholin gland abscess — usually polymicrobial (E. coli, anaerobes, Staphylococcus, Neisseria gonorrhoeae)",
+      "Bartholin gland carcinoma — rare; consider in postmenopausal woman with solid fixed mass",
+    ],
+    step1Pearls: [
+      "Greater vestibular = Bartholin gland — homolog of male Cowper (bulbourethral) gland",
+      "Location: posterolateral vestibule deep to labia minora; duct at 4 and 8 o'clock",
+      "Cyst = painless fluctuant swelling; abscess = acute painful erythematous mass",
+      "Skene (paraurethral) glands — homolog of male prostate; open near urethral meatus",
+      "vs sublingual Bartholin ducts — salivary Rivinus ducts are unrelated homonym",
+      "Marsupialization or Word catheter for recurrent cyst/abscess; exclude carcinoma if atypical in older patient",
+    ],
+    pediatrics:
+      "Bartholin cyst/abscess uncommon before menarche; painful unilateral labial swelling in adolescent may still occur. Solid mass in older woman — biopsy to exclude adenocarcinoma.",
+  },
   breast: {
     functionSummary:
       "Modified sweat gland producing milk; hormonally responsive ductal-lobular tissue in superficial fascia of anterior chest.",
@@ -7024,6 +7540,42 @@ const ORGAN_DETAILS: Record<
     pediatrics:
       "Recurrent tonsillitis and tonsillar hypertrophy are common pediatric ENT problems.",
   },
+  "salivary-gland": {
+    functionSummary:
+      "Exocrine oral glands producing saliva for lubrication, initial starch digestion (amylase), and mucosal defense.",
+    commonPathologies: [
+      "Mumps parotitis",
+      "Sjögren syndrome",
+      "Sialolithiasis",
+      "Sialadenitis",
+      "Pleomorphic adenoma",
+    ],
+    step1Pearls: [
+      "Major glands — parotid (serous), submandibular (mixed), sublingual (mucous)",
+      "Parotid innervation — CN IX secretomotor; CN VII passes through but does not innervate parotid",
+      "Submandibular/sublingual — CN VII chorda tympani parasympathetic secretomotor",
+      "Amylase from parotid; also elevated in acute pancreatitis",
+    ],
+    pediatrics:
+      "Mumps parotitis is classic pediatric presentation; MMR prevents disease. Reduced salivary flow from medications or dehydration increases pediatric dental caries risk.",
+  },
+  "sweat-gland": {
+    functionSummary:
+      "Cutaneous exocrine glands secreting sweat — eccrine for thermoregulation; apocrine for scent in specific regions.",
+    commonPathologies: [
+      "Cystic fibrosis (↑ sweat chloride)",
+      "Anhidrotic ectodermal dysplasia",
+      "Hyperhidrosis",
+      "Horner syndrome anhidrosis",
+    ],
+    step1Pearls: [
+      "Eccrine everywhere; apocrine in axilla/areola/anogenital — activated at puberty",
+      "Sympathetic cholinergic (ACh) innervation of eccrine glands — classic sympathetic exception",
+      "CF sweat test quantifies eccrine sweat chloride after pilocarpine iontophoresis",
+    ],
+    pediatrics:
+      "Neonates depend on eccrine sweating for heat loss; CF diagnosis confirmed by sweat chloride after positive newborn screen.",
+  },
   parotid: {
     functionSummary:
       "Serous salivary gland secreting amylase-rich saliva into oral cavity via Stensen duct.",
@@ -7193,6 +7745,30 @@ const ORGAN_DETAILS: Record<
     ],
     pediatrics:
       "Single umbilical artery is associated with renal/cardiac anomalies and warrants careful newborn evaluation.",
+  },
+  "buccal-mucosa": {
+    functionSummary:
+      "Non-keratinized stratified squamous mucous membrane lining the inner cheeks — site of minor salivary glands, parotid duct opening, and common oral pathology on exam.",
+    commonPathologies: [
+      "Oral candidiasis (thrush) — scrapable white plaques",
+      "Aphthous ulcers (canker sores)",
+      "Koplik spots in measles",
+      "Leukoplakia and oral squamous cell carcinoma",
+      "Nicotine stomatitis / smokeless tobacco pouch keratosis",
+      "Mucosal lichen planus — Wickham striae",
+      "Fordyce spots — benign ectopic sebaceous glands",
+    ],
+    step1Pearls: [
+      "Non-keratinized stratified squamous epithelium — vs keratinized gingiva and hard palate",
+      "Koplik spots — bluish-white specks on erythematous buccal mucosa opposite molars (measles)",
+      "Stensen duct opens on buccal mucosa opposite upper second molar — parotid saliva",
+      "Thrush — Candida white plaques scrape off, erythematous base; pseudomembranous candidiasis",
+      "Leukoplakia — white patch that cannot be scraped off; premalignant; biopsy if dysplasia suspected",
+      "Buccal route — sublingual/buccal drug absorption (e.g., nitroglycerin SL, some hormones)",
+      "vs tongue dorsum — different keratinization and pathology distribution",
+    ],
+    pediatrics:
+      "Thrush common in neonates and after antibiotics. Koplik spots appear in measles prodrome before rash — examine buccal mucosa in febrile unvaccinated child. Aphthous ulcers frequent in children; HSV gingivostomatitis causes painful grouped vesicles on buccal mucosa and gums.",
   },
   "gingiva-oral": {
     functionSummary:

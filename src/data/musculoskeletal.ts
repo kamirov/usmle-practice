@@ -392,6 +392,169 @@ export const MUSCULOSKELETAL: MusculoskeletalEntry[] = [
       "Winged scapula from long thoracic nerve injury is rare in children; consider Parsonage-Turner syndrome after viral illness if acute painful medial winging. Facioscapulohumeral dystrophy causes bilateral scapular winging with facial weakness.",
   },
   {
+    id: "latissimus-dorsi",
+    name: "Latissimus Dorsi",
+    etymology:
+      "Latin latissimus = broadest + dorsum = back — broad superficial muscle of the posterior thorax",
+    aliases: [
+      "latissimus dorsi",
+      "latissimus dorsi muscle",
+      "latissimus dorsi muscles",
+      "latissimus",
+      "lats",
+      "lat muscle",
+      "lat muscles",
+      "latissimus dorsi muscle group",
+      "broadest back muscle",
+      "broadest back muscles",
+    ],
+    definition:
+      "Large, fan-shaped superficial muscle of the posterior trunk arising from the thoracolumbar fascia, spinous processes, iliac crest, and inferior ribs — inserting on the floor of the intertubercular (bicipital) groove of the humerus — powerful adductor, extensor, and internal rotator of the arm.",
+    anatomy:
+      "Origin: spinous processes T7–L5, thoracolumbar fascia, posterior iliac crest, inferior 3–4 ribs (variable), inferior angle of scapula (variable). Insertion: floor of intertubercular groove of humerus (between pectoralis major and teres major insertions). Courses over inferior angle of scapula; forms posterior axillary fold with teres major.",
+    action: [
+      "Adducts, extends, and internally rotates the humerus",
+      "Depresses the shoulder girdle when humerus is fixed",
+      "Assists forced expiration and deep inspiration (accessory respiratory muscle)",
+      "Climbing and pulling motions (chin-up, swimming)",
+    ],
+    innervation: "Thoracodorsal nerve (C6–C8, branch of posterior cord of brachial plexus)",
+    clinicalRelevance: [
+      "Thoracodorsal nerve injury → weakness of adduction, extension, and internal rotation",
+      "Myocutaneous latissimus dorsi flap in breast reconstruction and head/neck surgery",
+      "Posterior axillary fold landmark — latissimus dorsi anterior border with teres major",
+      "Safe triangle for chest tube — anterior border of latissimus dorsi is lateral boundary",
+      "Overuse strain in swimmers and climbers",
+    ],
+    boardsPearls: [
+      "Thoracodorsal nerve (C6–C8) → latissimus dorsi",
+      "Actions: adduction, extension, internal rotation of arm",
+      "Inserts on floor of intertubercular groove — with teres major as 'LAT' companion",
+      "Posterior axillary fold — latissimus dorsi + teres major",
+      "Chest tube safe triangle — anterior border latissimus dorsi, lateral border pectoralis major",
+      "vs teres major — same actions/nerve territory; teres major from scapula, smaller",
+      "vs pectoralis major — anterior chest adductor; medial and lateral pectoral nerves",
+    ],
+    distinguishFrom: [
+      "Teres major — scapular origin; adduction/internal rotation; lower subscapular nerve",
+      "Pectoralis major — anterior chest; adduction/internal rotation; pectoral nerves",
+      "Rhomboids — retract scapula; dorsal scapular nerve; do not insert on humerus",
+      "Thoracodorsal nerve — innervates latissimus dorsi; nerve vs muscle",
+      "Trapezius — scapular elevation/retraction; accessory nerve (CN XI)",
+      "Serratus anterior — protraction; long thoracic nerve",
+    ],
+    pediatrics:
+      "Latissimus dorsi strength develops with age and overhead sports; thoracodorsal nerve injury is uncommon in children except after trauma or iatrogenic axillary surgery.",
+  },
+  {
+    id: "pectoralis-minor",
+    name: "Pectoralis Minor",
+    etymology:
+      "Latin pectus = chest + minor = smaller — thin triangular muscle deep to pectoralis major attaching ribs to coracoid process",
+    aliases: [
+      "pectoralis minor",
+      "pectoralis minor muscle",
+      "pectoralis minor muscles",
+      "pec minor",
+      "pec minors",
+      "pectoralis minor muscle group",
+      "smaller pectoral muscle",
+      "smaller pectoral muscles",
+    ],
+    definition:
+      "Thin, triangular muscle deep to pectoralis major — arising from the anterior surfaces of ribs 3–5 and inserting on the coracoid process of the scapula — protracting, depressing, and downwardly rotating the scapula and stabilizing the scapulothoracic articulation.",
+    anatomy:
+      "Origin: anterior surfaces and costal cartilages of ribs 3–5 (sometimes 2–4 or 2–5). Insertion: medial surface of coracoid process of scapula. Lies deep to pectoralis major; overlies ribs and can contribute to thoracic outlet anatomy anterior to subclavian vessels and brachial plexus.",
+    action: [
+      "Protracts scapula (draws scapula anteriorly around chest wall)",
+      "Depresses shoulder girdle",
+      "Downwardly rotates scapula",
+      "Elevates ribs when scapula is fixed (accessory inspiratory muscle)",
+      "Stabilizes scapula against thoracic wall during arm motion",
+    ],
+    innervation: "Medial pectoral nerve (C8–T1, from medial cord of brachial plexus)",
+    clinicalRelevance: [
+      "Pectoralis minor tightness contributes to rounded-shoulder posture and thoracic outlet symptoms",
+      "Landmark deep to pectoralis major at coracoid — surgical approach to shoulder",
+      "Medial pectoral nerve injury rare; weakness of protraction/depression",
+      "Anterior to neurovascular bundle at thoracic outlet — hypertrophy/tightness may compress structures (controversial on boards)",
+      "Distinguish from serratus anterior for medial winging — serratus is long thoracic nerve",
+    ],
+    boardsPearls: [
+      "Medial pectoral nerve (C8–T1) → pectoralis minor",
+      "Inserts on coracoid process — protraction and depression of scapula",
+      "Deep to pectoralis major — do not confuse with pec major (clavicular/sternocostal heads)",
+      "vs serratus anterior — rib origin to scapular border; long thoracic nerve; medial winging if injured",
+      "vs pectoralis major — powerful humeral adductor; lateral + medial pectoral nerves",
+      "Thoracic outlet — pectoralis minor lies anterior to brachial plexus/subclavian vessels",
+    ],
+    distinguishFrom: [
+      "Pectoralis major — larger superficial chest muscle to humerus; clavicular and sternocostal heads",
+      "Serratus anterior — protraction/upward rotation; long thoracic nerve; medial winging",
+      "Subclavius — elevates first rib; subclavian groove; nerve to subclavius",
+      "Coracobrachialis — coracoid to humerus; musculocutaneous nerve; elbow flexion assist",
+      "Medial pectoral nerve — innervates pec minor; nerve vs muscle",
+      "Latissimus dorsi — posterior adduction; thoracodorsal nerve",
+    ],
+    pediatrics:
+      "Pectoralis minor is fully developed by adolescence; postural rounding common in teens with prolonged desk use but distinct from structural scoliosis or neuromuscular winging.",
+  },
+  {
+    id: "trapezius",
+    name: "Trapezius",
+    etymology:
+      "Greek trapezoeides = table-shaped (trapezoid) — large superficial muscle spanning neck and upper back with upper, middle, and lower fiber groups",
+    aliases: [
+      "trapezius",
+      "trapezius muscle",
+      "trapezius muscles",
+      "trapezius muscle group",
+      "traps",
+      "trap muscle",
+      "trap muscles",
+      "upper trapezius",
+      "middle trapezius",
+      "lower trapezius",
+    ],
+    definition:
+      "Broad, superficial muscle of the posterior neck and upper thorax with upper, middle, and lower fiber groups — elevating, retracting, and depressing the scapula and rotating the glenoid upward for overhead arm motion — classic innervation by the spinal accessory nerve (CN XI).",
+    anatomy:
+      "Origin: medial third of superior nuchal line, external occipital protuberance, nuchal ligament, spinous processes C7–T12. Insertion: posterior border of lateral third of clavicle (upper fibers), acromion and spine of scapula (middle fibers), tubercle of spine of scapula (lower fibers). Superficial to rhomboids and levator scapulae; forms posterior triangle boundary with SCM.",
+    action: [
+      "Upper fibers — elevate scapula (shoulder shrug) and extend head/neck",
+      "Middle fibers — retract (adduct) scapula toward spine",
+      "Lower fibers — depress scapula and assist upward rotation for overhead elevation",
+      "Combined action — rotates glenoid upward during arm abduction past ~90°",
+    ],
+    innervation: "Spinal accessory nerve (CN XI) — motor to trapezius (cranial root joins vagus briefly; spinal root from C1–C5)",
+    clinicalRelevance: [
+      "Accessory nerve (CN XI) injury → trapezius paralysis → lateral winging, drooped shoulder, weak shrug",
+      "Iatrogenic injury during cervical lymph node biopsy or neck dissection",
+      "Jugular foramen syndrome (Vernet) — CN IX, X, XI palsy with SCM/trapezius weakness",
+      "Chronic upper trapezius strain from stress and poor posture",
+      "Alternative painful stimulus for consciousness assessment (trapezius squeeze) when sternal rub contraindicated",
+    ],
+    boardsPearls: [
+      "CN XI (accessory nerve) → sternocleidomastoid + trapezius",
+      "Trapezius injury → lateral winging (vs medial winging from serratus anterior)",
+      "Cannot shrug shoulder against resistance; drooped shoulder on affected side",
+      "Upper/middle/lower fibers — elevate, retract, depress scapula",
+      "Jugular foramen lesion — hoarseness (X), gag loss (IX), SCM/trapezius weakness (XI)",
+      "vs long thoracic nerve — serratus anterior; medial winging",
+      "vs dorsal scapular nerve — rhomboids; retraction without broad trapezius atrophy",
+    ],
+    distinguishFrom: [
+      "Sternocleidomastoid — also CN XI; anterior neck; head rotation, not scapular motion",
+      "Rhomboid major/minor — retraction only; dorsal scapular nerve",
+      "Levator scapulae — elevates scapula; dorsal scapular nerve (C3–C4); deep to trapezius",
+      "Serratus anterior — protraction; long thoracic nerve; medial winging",
+      "Latissimus dorsi — humeral adduction/extension; thoracodorsal nerve",
+      "Accessory nerve — innervates trapezius; nerve vs muscle",
+    ],
+    pediatrics:
+      "Accessory nerve injury is uncommon in children except after neck surgery or trauma. Congenital torticollis involves SCM, not trapezius. Bilateral trapezius weakness suggests brainstem or high cervical cord pathology rather than isolated peripheral nerve injury.",
+  },
+  {
     id: "axillary-nerve",
     name: "Axillary Nerve",
     etymology: "Latin axilla = armpit + Greek neuron = sinew/nerve",
@@ -956,6 +1119,56 @@ export const MUSCULOSKELETAL: MusculoskeletalEntry[] = [
       "Supracondylar humerus fracture is the classic pediatric median nerve (or anterior interosseous) injury — assess radial pulse and distal motor function after reduction. Carpal tunnel syndrome is uncommon in children; consider metabolic or inherited neuropathy if bilateral hand numbness.",
   },
   {
+    id: "ulnar-nerve",
+    name: "Ulnar Nerve",
+    etymology: "Latin ulna = elbow bone + Greek neuron = sinew/nerve — nerve coursing along the medial forearm with the ulna",
+    aliases: [
+      "ulnar nerve",
+      "ulnar nerves",
+      "nervus ulnaris",
+      "ulnar n",
+      "cubital tunnel nerve",
+    ],
+    definition:
+      "Major mixed nerve of the upper limb derived mainly from the medial cord of the brachial plexus — supplying intrinsic hand muscles (interossei, medial lumbricals, hypothenar), selected forearm flexors, and sensation to the medial palm and ulnar one and a half digits.",
+    anatomy:
+      "C8–T1 roots → medial cord (C8–T1) ± contribution from lateral cord (C7) → ulnar nerve. No motor branches in arm. Passes posterior to medial epicondyle at cubital tunnel (between Osborne ligament and medial epicondyle). Descends medial forearm with ulnar artery. Enters hand via Guyon canal (superficial to flexor retinaculum, between pisiform and hook of hamate) — divides into superficial (sensory) and deep (motor) branches.",
+    action: [
+      "Motor — flexor carpi ulnaris, medial half of flexor digitorum profundus (ring/little), hypothenar muscles (ADM, FDM, ODM), interossei (palmar/dorsal), medial two lumbricals, adductor pollicis, palmaris brevis",
+      "Sensory — medial palm, palmar and dorsal little finger, and ulnar half of ring finger",
+      "Intrinsic hand function — finger abduction/adduction (interossei), fine grip (adductor pollicis), lateral finger flexion at MCP (lumbricals)",
+    ],
+    innervation: "Medial cord (C8–T1) of brachial plexus; occasional C7 contribution",
+    clinicalRelevance: [
+      "Cubital tunnel syndrome — compression at medial epicondyle; numbness ring/little finger, positive Tinel at elbow",
+      "Guyon canal syndrome — compression at wrist (cycling, ganglion, hypothenar hammer); motor and/or sensory deficits depending on fascicle",
+      "Ulnar claw hand — hyperextension at MCP and flexion at IP of ring/little fingers from interossei/lumbrical paralysis",
+      "Froment sign — thumb IP flexion during pinch (adductor pollicis weak, FPL compensates)",
+      "Ulnar nerve laceration at wrist or elbow — intrinsic hand weakness and sensory loss",
+      "Fracture of hook of hamate — Guyon canal injury in golfers/baseball batters",
+      "Tardy ulnar palsy — delayed neuropathy after childhood medial epicondyle fracture",
+    ],
+    boardsPearls: [
+      "Ulnar nerve — medial cord C8–T1; passes behind medial epicondyle (cubital tunnel)",
+      "Claw hand — ulnar intrinsic paralysis; more pronounced with distal lesion (ulnar paradox)",
+      "Froment sign — weak adductor pollicis → thumb IP flexes during key pinch",
+      "Guyon canal — ulnar nerve at wrist superficial to flexor retinaculum (vs carpal tunnel for median)",
+      "vs median nerve — thenar muscles, lateral 3½ digits, carpal tunnel",
+      "vs C8/T1 radiculopathy — neck pain, may involve multiple nerves, reflex changes",
+      "Interossei + medial lumbricals = ulnar intrinsic hand muscles",
+    ],
+    distinguishFrom: [
+      "Median nerve — thenar muscles, lateral palm and radial 3½ digits, carpal tunnel",
+      "Radial nerve — wrist/finger extension, posterior arm/forearm sensation",
+      "Ulnar artery — travels with ulnar nerve in forearm; vascular not neural structure",
+      "C8 or T1 radiculopathy — dermatomal/myotomal pattern with neck symptoms",
+      "Cubital tunnel syndrome — entrapment at elbow, not the nerve anatomy itself",
+      "Guyon canal — anatomic tunnel housing ulnar nerve and artery at wrist",
+    ],
+    pediatrics:
+      "Tardy ulnar palsy may present years after nonunion of medial epicondyle fracture in children. Klumpke palsy (lower trunk C8–T1) can mimic ulnar nerve distribution but is a brachial plexus injury from birth trauma. Assess hand intrinsics after supracondylar or elbow fractures.",
+  },
+  {
     id: "thenar-eminence",
     name: "Thenar Eminence",
     etymology:
@@ -1347,6 +1560,112 @@ export const MUSCULOSKELETAL: MusculoskeletalEntry[] = [
     ],
     pediatrics:
       "Congenital CN III palsy rare; ophthalmoplegic migraine in children can mimic transient III palsy.",
+  },
+  {
+    id: "iris-sphincter",
+    name: "Iris Sphincter",
+    etymology:
+      "Greek iris = rainbow + Latin sphincter = that which binds tight — circular smooth muscle of the iris (sphincter pupillae) constricting the pupil",
+    aliases: [
+      "iris sphincter",
+      "iris sphincters",
+      "sphincter pupillae",
+      "sphincter pupillaes",
+      "pupillary sphincter",
+      "pupillary sphincters",
+      "iris sphincter muscle",
+      "iris sphincter muscles",
+      "pupil sphincter",
+      "pupil sphincters",
+    ],
+    definition:
+      "Circular smooth muscle encircling the pupillary margin of the iris — contraction reduces pupillary diameter (miosis) to limit light entry and sharpen near vision depth of field.",
+    anatomy:
+      "Located at the pupillary border of the iris stroma; oriented circumferentially around the pupil; innervated by parasympathetic postganglionic fibers from the ciliary ganglion (CN III preganglionic via Edinger-Westphal nucleus).",
+    action: [
+      "Contraction → miosis (pupil constriction)",
+      "Mediates pupillary light reflex — afferent CN II, efferent CN III parasympathetic",
+      "Mediates near reflex (accommodation reflex) — constriction with convergence and accommodation",
+      "Opposed by sympathetic dilator pupillae muscle",
+    ],
+    innervation:
+      "Parasympathetic — CN III (Edinger-Westphal) → ciliary ganglion → short ciliary nerves → muscarinic M3 receptors on sphincter pupillae",
+    clinicalRelevance: [
+      "Pilocarpine — muscarinic agonist → miosis; used in glaucoma and Adie pupil test",
+      "Atropine/scopolamine — muscarinic antagonist → mydriasis and cycloplegia",
+      "Adie tonic pupil — postganglionic parasympathetic denervation → light-near dissociation",
+      "Organophosphate poisoning — excess ACh → miosis",
+      "Opioids — miosis via central parasympathetic activation",
+      "CN III palsy with compressive lesion — parasympathetic fibers vulnerable → mydriasis",
+    ],
+    boardsPearls: [
+      "Sphincter pupillae = parasympathetic M3 → miosis",
+      "Light reflex: CN II in, CN III parasympathetic out to sphincter",
+      "Pilocarpine constricts; atropine dilates by blocking sphincter",
+      "vs dilator pupillae — sympathetic α1 → mydriasis",
+      "Argyll Robertson pupil — sphincter light reaction impaired, near response preserved",
+      "Pinpoint pupils — sphincter over-constriction (opioids, organophosphates, pontine lesion)",
+    ],
+    distinguishFrom: [
+      "Dilator pupillae — radial iris muscle; sympathetic α1 → mydriasis",
+      "Ciliary muscle — accommodation; also parasympathetic but changes lens shape not pupil size",
+      "Iris — entire diaphragm including stroma and both muscles",
+      "Pupil — aperture, not the muscle",
+      "Orbicularis oculi — eyelid closure (CN VII), not pupillary sphincter",
+    ],
+    pediatrics:
+      "Neonatal opioids cause miosis via sphincter constriction. Congenital syphilis (Argyll Robertson) rare in modern era; Adie pupil can present in young adults.",
+  },
+  {
+    id: "ciliary-muscle",
+    name: "Ciliary Muscle",
+    etymology:
+      "Latin ciliaris = pertaining to eyelashes/hairlike processes + musculus = little mouse (muscle) — smooth muscle of the ciliary body controlling lens accommodation",
+    aliases: [
+      "ciliary muscle",
+      "ciliary muscles",
+      "musculus ciliaris",
+      "ciliary body muscle",
+      "ciliary body muscles",
+      "accommodation muscle",
+      "accommodation muscles",
+    ],
+    definition:
+      "Ring of smooth muscle within the ciliary body — contraction relaxes zonular fibers suspending the lens, allowing the lens to become more convex for near vision (accommodation); also influences trabecular meshwork tone and aqueous outflow.",
+    anatomy:
+      "Forms the muscular portion of the ciliary body anterior to the choroid; oriented meridionally; connected to lens via zonule of Zinn (suspensory ligament); receives parasympathetic innervation from ciliary ganglion (CN III preganglionic).",
+    action: [
+      "Contraction → zonule relaxation → lens thickens (increased curvature) → near accommodation",
+      "Relaxation → zonule tension → lens flattens → distant vision",
+      "Contraction also pulls scleral spur → opens trabecular meshwork → ↑ aqueous humor outflow (glaucoma therapy)",
+      "Part of near triad with pupillary constriction and convergence",
+    ],
+    innervation:
+      "Parasympathetic — CN III (Edinger-Westphal) → ciliary ganglion → short ciliary nerves → muscarinic M3 receptors",
+    clinicalRelevance: [
+      "Cycloplegia — paralysis of accommodation from anticholinergic drops (atropine, cyclopentolate, tropicamide)",
+      "Presbyopia — age-related lens stiffening reduces accommodation despite intact ciliary muscle",
+      "Pilocarpine — muscarinic agonist contracts ciliary muscle → accommodation spasm and ↑ aqueous outflow in glaucoma",
+      "Uveitis — cycloplegia relieves ciliary spasm pain",
+      "CN III palsy — loss of parasympathetic input → impaired accommodation",
+    ],
+    boardsPearls: [
+      "Ciliary muscle contraction → zonule relax → lens rounds for near vision",
+      "Cycloplegia = ciliary muscle paralysis → loss of accommodation (cannot focus near)",
+      "Cycloplegic drops: atropine, homatropine, cyclopentolate, tropicamide",
+      "Pilocarpine contracts ciliary muscle → ↑ trabecular outflow in open-angle glaucoma",
+      "vs sphincter pupillae — both parasympathetic M3; sphincter changes pupil, ciliary muscle changes lens shape",
+      "Presbyopia = lens problem with aging, not primary ciliary muscle denervation",
+    ],
+    distinguishFrom: [
+      "Iris sphincter — pupillary constriction, not accommodation",
+      "Zonule of Zinn — suspensory ligament to lens; passive tension, not contractile muscle",
+      "Ciliary body — includes muscle plus ciliary processes (aqueous production)",
+      "Extraocular muscles — skeletal muscles moving globe; not accommodation",
+      "Dilator pupillae — sympathetic iris muscle; no role in accommodation",
+    ],
+    pediatrics:
+      "Cycloplegic refraction standard in pediatric eye exams. Congenital accommodation deficits are rare; most childhood blur is refractive error. Atropine drops for amblyopia penalization cause prolonged cycloplegia.",
   },
   {
     id: "cn-iv",
@@ -2055,6 +2374,111 @@ export const MUSCULOSKELETAL: MusculoskeletalEntry[] = [
       "Superior orbital fissure and orbital apex syndromes are rare in children but may follow skull base trauma, orbital cellulitis with cavernous sinus spread, or sphenoid wing meningioma; same cranial nerve anatomy applies.",
   },
   {
+    id: "broad-ligament",
+    name: "Broad Ligament",
+    etymology:
+      "Old English brād = wide + Latin ligamentum = band — wide double fold of peritoneum extending from the lateral uterus to the pelvic sidewalls, suspending the uterus, fallopian tubes, and ovaries",
+    aliases: [
+      "broad ligament",
+      "broad ligaments",
+      "broad ligament of uterus",
+      "broad ligament of the uterus",
+      "broad ligaments of uterus",
+      "ligamentum latum uteri",
+      "uterine broad ligament",
+      "uterine broad ligaments",
+    ],
+    definition:
+      "Paired peritoneal folds that extend from the lateral margins of the uterus to the pelvic sidewalls — a mesentery-like structure that encloses the uterus, fallopian tubes, and ovaries and transmits the uterine vessels, ureter, and ligamentous supports of the female reproductive tract.",
+    anatomy:
+      "Double layer of peritoneum continuous with pelvic peritoneum. Subdivided into mesometrium (uterine body/cervix), mesosalpinx (fallopian tube), and mesovarium (ovary). Contains uterine artery and vein, ureter ('water under the bridge' at cardinal ligament base), round ligament of uterus, ovarian ligament, suspensory ligament of ovary (infundibulopelvic ligament) at lateral edge, and fallopian tube within its superior border.",
+    action: [
+      "Suspends uterus, fallopian tubes, and ovaries within the pelvis",
+      "Conduit for uterine and ovarian vessels, ureter, and autonomic nerves",
+      "Cardinal (transverse cervical) ligament at base provides major cervical support",
+      "Surgical dissection plane during hysterectomy and adnexal surgery",
+    ],
+    innervation:
+      "Autonomic fibers from inferior hypogastric (pelvic) plexus accompany vessels within the ligament",
+    clinicalRelevance: [
+      "Hysterectomy — ureter and uterine artery course within broad ligament; iatrogenic ureteral injury risk",
+      "Ectopic pregnancy — tubal pregnancy within mesosalpinx portion",
+      "Broad ligament fibroid or cyst — extrauterine mass within ligament",
+      "Endometriosis implants along peritoneal surfaces of broad ligament",
+    ],
+    boardsPearls: [
+      "Broad ligament = peritoneal fold uterus → pelvic wall; contains tube, round ligament, uterine artery, ureter",
+      "Three parts — mesometrium (uterus), mesosalpinx (tube), mesovarium (ovary)",
+      "Uterine artery crosses ureter superiorly in cardinal ligament — 'water under the bridge'",
+      "Suspensory ligament of ovary (infundibulopelvic ligament) at lateral edge — ovarian vessels",
+      "Ovarian ligament connects ovary to uterine horn — within broad ligament, not to pelvic wall",
+      "Round ligament traverses broad ligament to inguinal canal → labia majora",
+      "vs round ligament — structure within broad ligament, not the ligament itself",
+      "vs cardinal ligament — transverse cervical/cardinal ligament at base supports cervix",
+    ],
+    distinguishFrom: [
+      "Round ligament of uterus — fibromuscular band within broad ligament to inguinal canal",
+      "Ovarian ligament — ovary to uterine horn; does not contain major vessels to pelvic wall",
+      "Suspensory ligament of ovary (infundibulopelvic ligament) — lateral edge; ovarian artery/vein",
+      "Cardinal ligament (transverse cervical ligament) — cervical support at base of broad ligament",
+      "Uterosacral ligament — posterior cervical support to sacrum; not the broad ligament",
+      "Mesentery — intestinal suspensory peritoneum; broad ligament is pelvic equivalent for uterus/adnexa",
+    ],
+    pediatrics:
+      "Same anatomy from birth; broad ligament is the surgical field for adnexal torsion and ovarian cyst surgery in adolescents. Mesonephric (Gartner duct) cysts can arise in the broad ligament.",
+  },
+  {
+    id: "gubernaculum",
+    name: "Gubernaculum",
+    etymology:
+      "Latin gubernare = to steer/pilot + -culum = diminutive tool — embryonic mesenchymal cord that guides gonadal descent and gives rise to adult ligamentous structures",
+    aliases: [
+      "gubernaculum",
+      "gubernacula",
+      "gubernaculum testis",
+      "gubernaculum ovarii",
+      "gubernacular ligament",
+      "gubernacular ligaments",
+    ],
+    definition:
+      "Embryonic mesenchymal band connecting the developing gonad to the future scrotum or labia majora region — guides testicular descent in males and ovarian positioning in females, then differentiates into distinct adult ligaments in each sex.",
+    anatomy:
+      "Male — extends from testis through inguinal canal toward scrotum; shortens and guides testicular descent (hormonally influenced by androgens and INSL3); becomes gubernaculum testis and scrotal ligament anchoring testis in scrotum. Female — extends from ovary to uterine horn and labia majora region; upper portion becomes ovarian ligament (ovary → uterine horn); lower portion becomes round ligament of uterus (uterine horn → inguinal canal → labia majora). Ovaries do not descend to scrotum — gubernaculum positions ovary in pelvis.",
+    action: [
+      "Guides testicular descent through inguinal canal during fetal development (males)",
+      "Positions ovary in pelvis and establishes uterine-adnexal ligamentous connections (females)",
+      "Differentiates into scrotal ligament (male) or ovarian ligament + round ligament (female)",
+      "Failure of descent → cryptorchidism (undescended testis)",
+    ],
+    innervation:
+      "Embryonic mesenchyme with associated genitofemoral nerve influence on testicular descent (androgens + INSL3)",
+    clinicalRelevance: [
+      "Cryptorchidism — impaired gubernacular function or hormonal signaling in testicular descent",
+      "Inguinal hernia — patent processus vaginalis along gubernacular pathway",
+      "Round ligament pain in pregnancy — remnant of female gubernaculum stretches",
+      "Ovarian and round ligaments — surgical landmarks derived from gubernacular remnants",
+    ],
+    boardsPearls: [
+      "Gubernaculum = embryonic cord guiding gonadal descent",
+      "Male remnant — scrotal ligament; guides testis to scrotum",
+      "Female remnant — ovarian ligament (ovary → uterine horn) + round ligament (uterine horn → labia majora)",
+      "Round ligament of uterus = female gubernaculum remnant — NOT round ligament of liver",
+      "INSL3 (insulin-like factor 3) from Leydig cells + androgens mediate gubernacular swelling and testicular descent",
+      "Cryptorchidism — failure of testicular descent along gubernacular path",
+      "vs genital ridge — gonad forms on ridge; gubernaculum guides its position",
+      "vs processus vaginalis — peritoneal outpouching; gubernaculum is mesenchymal cord",
+    ],
+    distinguishFrom: [
+      "Round ligament of uterus — adult female remnant of gubernaculum; not the embryonic structure itself",
+      "Ovarian ligament — another female gubernacular remnant; ovary to uterine horn only",
+      "Scrotal ligament — male gubernacular remnant anchoring testis in scrotum",
+      "Gubernaculum testis vs ovarii — same embryologic structure, sex-specific differentiation",
+      "Inguinal ligament (Poupart) — superficial abdominal wall structure; unrelated to gubernaculum",
+    ],
+    pediatrics:
+      "Cryptorchidism is the key pediatric disorder of gubernacular/testicular descent — undescended testis increases infertility and germ cell tumor risk; orchiopexy typically by 6–18 months. Patent processus vaginalis along the descent pathway causes indirect inguinal hernia and hydrocele in infants.",
+  },
+  {
     id: "round-ligament",
     name: "Round Ligament of the Uterus",
     etymology:
@@ -2103,6 +2527,63 @@ export const MUSCULOSKELETAL: MusculoskeletalEntry[] = [
     ],
     pediatrics:
       "Same anatomy from birth; round ligament pain is a pregnancy phenomenon. Inguinal endometriosis along the round ligament is rare in adolescents but may present as cyclic groin pain after menarche.",
+  },
+  {
+    id: "suspensory-ligament-of-ovary",
+    name: "Suspensory Ligament of the Ovary",
+    etymology:
+      "Latin suspensus = hung up + ligamentum = band + Latin ovarium = egg/ovary — lateral peritoneal fold (infundibulopelvic ligament) anchoring the ovary to the pelvic sidewall and containing the ovarian vessels",
+    aliases: [
+      "suspensory ligament of the ovary",
+      "suspensory ligament of ovary",
+      "suspensory ligaments of the ovary",
+      "suspensory ligaments of ovary",
+      "infundibulopelvic ligament",
+      "infundibulopelvic ligaments",
+      "ip ligament",
+      "ip ligaments",
+      "ovarian suspensory ligament",
+      "ovarian suspensory ligaments",
+      "ligamentum suspensorium ovarii",
+    ],
+    definition:
+      "Lateral portion of the broad ligament extending from the ovary and fallopian tube infundibulum to the pelvic sidewall — contains the ovarian artery and vein, lymphatics, and autonomic nerves; the primary vascular pedicle of the ovary and the axis of ovarian torsion.",
+    anatomy:
+      "Extends from pelvic brim/sidewall to ovary and tubal infundibulum at the lateral edge of the broad ligament (mesovarium). Ovarian artery (branch of abdominal aorta below renal arteries) and ovarian vein (right → IVC; left → left renal vein) course within. Must be ligated during oophorectomy after identifying ureter inferior to uterine artery. Distinct from ovarian ligament, which connects ovary to uterine horn without major vessels to pelvic wall.",
+    action: [
+      "Suspends ovary to pelvic sidewall",
+      "Transmits ovarian arterial supply and venous drainage",
+      "Axis of rotation in ovarian torsion — torsion of this pedicle compromises blood flow",
+      "Surgical ligation point during salpingo-oophorectomy",
+    ],
+    innervation:
+      "Autonomic fibers accompany ovarian vessels from aortic and renal plexus",
+    clinicalRelevance: [
+      "Ovarian torsion — twisting of suspensory ligament pedicle → acute pelvic pain, adnexal mass, ↓ Doppler flow",
+      "Oophorectomy — IP ligament clamped/ligated after ureter identified",
+      "Ovarian artery aneurysm or aberrant course — rare vascular pathology",
+      "Metastatic disease along ovarian lymphatics within ligament",
+    ],
+    boardsPearls: [
+      "Suspensory ligament of ovary = infundibulopelvic (IP) ligament — ovary to pelvic wall",
+      "Contains ovarian artery (from aorta) and ovarian vein — NOT the ovarian ligament",
+      "Ovarian ligament — ovary to uterine horn; no major vessels to sidewall",
+      "Ovarian torsion — twists vascular pedicle in suspensory ligament → surgical emergency",
+      "Right ovarian vein → IVC; left ovarian vein → left renal vein",
+      "Ligate IP ligament during oophorectomy; identify ureter below uterine artery first",
+      "vs round ligament — uterine horn to inguinal canal; no ovarian vessels",
+      "vs mesovarium — peritoneal fold around ovary; suspensory ligament is lateral mesovarium/IP component",
+    ],
+    distinguishFrom: [
+      "Ovarian ligament — ovary to uterine horn within broad ligament; no vessels to pelvic sidewall",
+      "Round ligament of uterus — uterine horn to labia majora via inguinal canal",
+      "Broad ligament — entire peritoneal fold; suspensory ligament is its lateral edge",
+      "Cardinal ligament — cervical support base; uterine artery crosses ureter here",
+      "Infundibulum of fallopian tube — funnel opening near ovary; name shares 'infundibulo-' but is tubal structure",
+      "Suspensory ligament of penis — completely unrelated penile fascial structure",
+    ],
+    pediatrics:
+      "Ovarian torsion in adolescents and children presents with acute abdominal/pelvic pain — Doppler ultrasound of the suspensory ligament pedicle shows ↓ or absent flow. Detorsion with ovarian preservation is preferred when tissue viable.",
   },
   {
     id: "falciform-ligament",
@@ -3286,6 +3767,71 @@ export const MUSCULOSKELETAL: MusculoskeletalEntry[] = [
       "Anterior shoulder dislocation in adolescents can injure the axillary nerve — assess deltoid contour, abduction strength, and lateral shoulder sensation after reduction. Physeal injuries (Little League shoulder) and proximal humerus fractures can mimic shoulder trauma; obtain appropriate imaging.",
   },
   {
+    id: "patellar-dislocation",
+    name: "Patellar Dislocation",
+    etymology:
+      "Latin patella = small pan/shield + dislocare = displace from place — complete loss of patellofemoral articulation with patella displaced from the trochlear groove, usually laterally",
+    aliases: [
+      "patellar dislocation",
+      "patellar dislocations",
+      "patella dislocation",
+      "patella dislocations",
+      "dislocation of patella",
+      "dislocation of the patella",
+      "lateral patellar dislocation",
+      "lateral patellar dislocations",
+      "lateral patella dislocation",
+      "lateral patella dislocations",
+      "patellofemoral dislocation",
+      "patellofemoral dislocations",
+      "kneecap dislocation",
+      "kneecap dislocations",
+      "dislocated patella",
+      "dislocated kneecap",
+    ],
+    definition:
+      "Complete displacement of the patella out of the femoral trochlear groove — overwhelmingly lateral in direction — producing acute knee pain, deformity, and inability to extend the knee until reduced.",
+    anatomy:
+      "Patella sits in the trochlear groove of the distal femur; stability from medial patellofemoral ligament (MPFL), vastus medialis obliquus (VMO), lateral retinaculum balance, and trochlear depth. Lateral dislocation occurs when valgus force and/or femoral internal rotation with tibia external rotation and knee extension forces patella over the lateral trochlear ridge.",
+    action: [
+      "Acute lateral patellar displacement with obvious deformity ('off to the side' kneecap)",
+      "Severe pain and inability to actively extend knee while dislocated",
+      "Spontaneous reduction common when knee flexed or with gentle manipulation",
+      "Hemarthrosis or effusion after reduction from osteochondral injury or MPFL tear",
+      "Apprehension test positive when patella pushed laterally after reduction",
+    ],
+    innervation:
+      "Knee pain and effusion; no single named nerve injury classic — peroneal nerve injury rare unless associated high-energy trauma",
+    clinicalRelevance: [
+      "Most common direction — lateral patellar dislocation",
+      "Adolescent females and athletes with patellofemoral malalignment or trochlear dysplasia",
+      "Non-contact twisting injury with foot planted or direct blow to medial patella",
+      "Osteochondral fracture of patella or lateral femoral condyle after reduction — MRI if loose body suspected",
+      "Recurrent instability after first dislocation — especially young patients with MPFL injury",
+      "Associated with Ehlers-Danlos and generalized ligamentous laxity",
+    ],
+    boardsPearls: [
+      "Patellar dislocation — usually lateral; adolescent female athlete classic vignette",
+      "Reduce by gentle knee extension with medial patellar pressure",
+      "MPFL tear — primary restraint injured in first-time lateral dislocation",
+      "Apprehension test — lateral patellar push reproduces fear of redislocation",
+      "vs patellar subluxation — partial maltracking without complete dislocation",
+      "vs ACL tear — hemarthrosis and instability but no patellar deformity",
+      "Osteochondral defect on MRI after first dislocation — surgical consideration",
+      "Q-angle and VMO weakness — biomechanical risk factors",
+    ],
+    distinguishFrom: [
+      "Patellar subluxation — transient partial lateral maltracking without fixed dislocation",
+      "Knee dislocation — tibiofemoral dislocation; vascular emergency; not isolated patella",
+      "ACL injury — pivot shift instability without patellar displacement",
+      "Patellar fracture — bony injury; may coexist with dislocation",
+      "Prepatellar bursitis — anterior swelling without patellofemoral malalignment",
+      "Osgood-Schlatter disease — tibial tubercle apophysitis, not patellar dislocation",
+    ],
+    pediatrics:
+      "Lateral patellar dislocation is common in adolescent athletes especially females with valgus alignment. Reduce gently and immobilize; MRI if recurrent or osteochondral injury suspected. Patellar subluxation without full dislocation also common in teens. Rule out osteochondral fragment in pediatric first-time dislocators.",
+  },
+  {
     id: "atlantoaxial",
     name: "Atlantoaxial Joint (C1–C2)",
     etymology: "Atlas = C1 vertebra + axis = C2 vertebra + joint = articulation",
@@ -3377,6 +3923,67 @@ export const MUSCULOSKELETAL: MusculoskeletalEntry[] = [
     ],
     pediatrics:
       "Same sarcomere band anatomy in pediatric skeletal and cardiac muscle. Sarcomere gene mutations (e.g., MYH7, MYBPC3) cause familial hypertrophic cardiomyopathy that may present in adolescents with syncope or sudden death.",
+  },
+  {
+    id: "motor-end-plate",
+    name: "Motor End Plate",
+    etymology:
+      "Latin motor = mover + end + plate = flat structure — specialized postsynaptic region of the skeletal muscle fiber membrane at the neuromuscular junction where acetylcholine receptors cluster",
+    aliases: [
+      "motor end plate",
+      "motor end plates",
+      "motor endplate",
+      "motor endplates",
+      "motor end-plate",
+      "motor end-plates",
+      "myoneural junction end plate",
+      "postsynaptic motor end plate",
+      "postsynaptic motor end plates",
+      "muscle end plate",
+      "muscle end plates",
+      "end plate region",
+      "end-plate region",
+      "nmj postsynaptic membrane",
+    ],
+    definition:
+      "Highly specialized segment of the skeletal muscle fiber (sarcolemma) directly apposed to the motor neuron terminal at the neuromuscular junction — densely packed with nicotinic acetylcholine receptors (Nm subtype) in junctional folds, rich acetylcholinesterase in basal lamina, and high Na⁺ channel density — site where ACh binding generates the end-plate potential triggering muscle action potential and excitation-contraction coupling.",
+    anatomy:
+      "Presynaptic motor neuron terminal (ACh vesicles, voltage-gated Ca²⁺ channels) ↔ synaptic cleft ↔ postsynaptic motor end plate with junctional folds, nicotinic ACh receptors, and acetylcholinesterase in synaptic basal lamina; entire structure = neuromuscular junction (NMJ).",
+    action: [
+      "Motor neuron AP → Ca²⁺ influx at nerve terminal → ACh release into synaptic cleft",
+      "ACh diffuses across cleft and binds nicotinic receptors on motor end plate",
+      "Ligand-gated Na⁺ influx → local depolarization (end-plate potential)",
+      "End-plate potential spreads along sarcolemma and T-tubules → excitation-contraction coupling",
+      "Acetylcholinesterase in basal lamina rapidly hydrolyzes ACh → termination of signal",
+    ],
+    clinicalRelevance: [
+      "Myasthenia gravis — autoantibodies reduce nicotinic ACh receptors on motor end plate → fatigable weakness",
+      "Neonatal myasthenia — transplacental anti-AChR antibodies",
+      "Organophosphate poisoning — AChE inhibition → sustained ACh at end plate → fasciculations, weakness, paralysis",
+      "Nondepolarizing neuromuscular blockers (rocuronium) — competitive antagonism at end-plate nicotinic receptors",
+      "Succinylcholine — persistent depolarization of end plate → initial fasciculations then flaccid paralysis",
+      "Lambert-Eaton — presynaptic ↓ ACh release; fewer quanta reach end plate",
+      "Botulinum toxin — blocks presynaptic ACh release (indirect effect on end-plate activation)",
+    ],
+    boardsPearls: [
+      "Motor end plate = postsynaptic NMJ membrane with clustered nicotinic ACh receptors",
+      "End-plate potential → muscle action potential → Ca²⁺ release from SR → contraction",
+      "Myasthenia gravis — antibodies attack nicotinic receptor on motor end plate",
+      "Acetylcholinesterase in synaptic basal lamina clears ACh — organophosphates block this enzyme",
+      "vs motor neuron terminal — presynaptic site releasing ACh; end plate is postsynaptic",
+      "vs muscarinic receptors — on target organs (heart, glands, smooth muscle), not skeletal motor end plate",
+      "Neostigmine ↑ ACh at end plate — treats myasthenia; reverses competitive NMJ blockade when safe",
+    ],
+    distinguishFrom: [
+      "Neuromuscular junction — entire synapse including presynaptic terminal, cleft, and motor end plate",
+      "Motor neuron terminal — presynaptic nerve ending; releases ACh",
+      "Nicotinic acetylcholine receptor — receptor protein concentrated on motor end plate",
+      "Muscarinic receptor — GPCR on organ effectors, not skeletal muscle end plate",
+      "Sarcolemma (general) — entire muscle fiber membrane; end plate is specialized NMJ region",
+      "Motor unit — one motor neuron plus all muscle fibers it innervates",
+    ],
+    pediatrics:
+      "Neonatal myasthenia gravis from maternal anti-AChR antibodies causes hypotonia and weak suck at motor end plates. Congenital myasthenic syndromes include nicotinic receptor subunit mutations affecting end-plate function. Undiagnosed pseudocholinesterase deficiency prolongs succinylcholine block at NMJ.",
   },
   {
     id: "muscle-contraction",
@@ -3554,7 +4161,7 @@ export const MUSCULOSKELETAL: MusculoskeletalEntry[] = [
     definition:
       "Dual-layered fibrous membrane covering the outer surface of bones (except at articular cartilage and sesamoid surfaces) — providing blood supply, nociception, attachment for tendons/ligaments via Sharpey fibers, and osteoprogenitor cells in its inner cambium layer for fracture healing and appositional growth.",
     anatomy:
-      "Outer fibrous layer — dense collagen with blood vessels and nerves. Inner cambium layer — osteogenic cells (osteoprogenitors, osteoblasts). Continuous with joint capsule at metaphyses; absent over articular cartilage. Sharpey fibers anchor periosteum and tendons into underlying bone.",
+      "Outer fibrous layer — dense collagen with perforating periosteal blood vessels and nerves forming a subperiosteal vascular plexus along the cortical surface. Inner cambium layer — osteogenic cells (osteoprogenitors, osteoblasts). Continuous with joint capsule at metaphyses; absent over articular cartilage. Sharpey fibers anchor periosteum and tendons into underlying bone.",
     action: [
       "Supplies blood and sensory innervation to outer cortex",
       "Provides osteoprogenitor cells for fracture callus and appositional bone growth",
@@ -3572,6 +4179,7 @@ export const MUSCULOSKELETAL: MusculoskeletalEntry[] = [
     boardsPearls: [
       "Periosteum absent on articular cartilage surfaces",
       "Inner cambium layer — osteoprogenitor source for fracture healing",
+      "Subperiosteal blood vessels — periosteal capillary plexus; bleed when periosteum stripped (see dedicated entry)",
       "Subperiosteal abscess — classic for osteomyelitis in children",
       "Onion-skin periosteal reaction — Ewing sarcoma; sunburst — osteosarcoma",
       "Subperiosteal resorption — hyperparathyroidism (salt-and-pepper skull, phalangeal tufts)",
@@ -3583,9 +4191,118 @@ export const MUSCULOSKELETAL: MusculoskeletalEntry[] = [
       "Synovium — joint lining membrane; not the same as periosteum",
       "Periostitis — inflammation of periosteum; clinical condition not the membrane itself",
       "Cortical bone — mineralized bone tissue beneath periosteum",
+      "Subperiosteal blood vessels — vascular plexus at periosteum–bone interface; not the membrane itself",
     ],
     pediatrics:
       "Acute hematogenous osteomyelitis in children often produces subperiosteal abscess before cortical breakthrough — fever, localized bone pain, and periosteal elevation on imaging. Periosteum contributes to fracture callus in pediatric greenstick and buckle fractures.",
+  },
+  {
+    id: "fascia",
+    name: "Fascia",
+    etymology:
+      "Latin fascia = band, sash, or bundle — connective tissue sheets enveloping muscles, vessels, and organs",
+    aliases: [
+      "fascia",
+      "fasciae",
+      "fascial",
+      "fascial tissue",
+      "fascial tissues",
+      "deep fascia",
+      "deep fasciae",
+      "superficial fascia",
+      "superficial fasciae",
+      "muscle fascia",
+      "fascial plane",
+      "fascial planes",
+    ],
+    definition:
+      "Continuous network of collagen-rich connective tissue that separates and binds muscles, vessels, nerves, and organs into functional compartments — superficial fascia (subcutaneous adipose and loose connective tissue) lies beneath skin; deep fascia (dense irregular connective tissue) invests muscles and forms intermuscular septa and aponeuroses.",
+    anatomy:
+      "Superficial fascia — adipose and loose connective tissue between skin and deep fascia (Camper/Scarpa in anterior abdominal wall). Deep fascia — dense collagen investing muscle groups, forming osteofascial compartments bounded by bone and intermuscular septa (e.g., anterior/lateral/posterior leg compartments). Specialized examples: thoracolumbar fascia (latissimus/origin), transversalis fascia, Gerota fascia (perirenal), Scarpa's fascia, plantar fascia, Buck fascia (penis).",
+    action: [
+      "Defines fascial compartments that contain muscles, nerves, and vessels",
+      "Transmits force between muscle and bone via aponeuroses and retinacula",
+      "Provides sliding planes for muscle movement and neurovascular passage",
+      "Limits spread of some infections while directing spread along fascial planes (necrotizing fasciitis along deep fascia)",
+    ],
+    clinicalRelevance: [
+      "Compartment syndrome — ↑ pressure within osteofascial compartment compromises perfusion (anterior leg, forearm volar)",
+      "Necrotizing fasciitis — rapid spread along deep fascial planes; surgical emergency",
+      "Fasciotomy — incision of deep fascia to decompress compartment",
+      "Hernia — fascial defect (linea alba, inguinal canal) allows organ protrusion",
+      "Plantar fasciitis — microtears at calcaneal origin of plantar aponeurosis",
+      "Dupuytren contracture — palmar fascial fibromatosis",
+    ],
+    boardsPearls: [
+      "Deep fascia forms osteofascial compartments — compartment syndrome = fascial-bound ↑ pressure",
+      "Anterior leg compartment — tibialis anterior, EDL, EHL, fibularis tertius; deep fibular nerve",
+      "Necrotizing fasciitis spreads along deep fascia — pain out of proportion, crepitus, skin necrosis",
+      "Thoracolumbar fascia — latissimus dorsi and erector spinae attachments",
+      "Gerota fascia — encloses kidney and adrenal; radical nephrectomy includes Gerota fascia",
+      "vs periosteum — fascia invests soft tissue compartments; periosteum covers bone",
+      "vs aponeurosis — flat tendon-like fascia; both are dense connective tissue",
+    ],
+    distinguishFrom: [
+      "Periosteum — fibrous membrane on bone surface; not intermuscular compartment boundary",
+      "Tendon — cord-like collagen connecting muscle to bone; fascia is sheet-like envelope",
+      "Synovium — joint lining secreting synovial fluid; intra-articular not fascial compartment",
+      "Subcutaneous fat — component of superficial fascia but not synonymous with deep fascia",
+      "Retinaculum — thickened fascial band retaining tendons; specialized deep fascia",
+    ],
+    pediatrics:
+      "Supracondylar humerus fracture can injure brachial artery and cause volar forearm compartment syndrome in children. Necrotizing fasciitis, though rare, is catastrophic in pediatric patients — urgent surgical debridement and antibiotics.",
+  },
+  {
+    id: "subperiosteal-blood-vessels",
+    name: "Subperiosteal Blood Vessels",
+    etymology:
+      "Latin sub = under + Greek peri = around + osteon = bone + Latin vas = vessel — vascular plexus between periosteum and cortical bone surface",
+    aliases: [
+      "subperiosteal blood vessels",
+      "subperiosteal blood vessel",
+      "subperiosteal vessels",
+      "subperiosteal vessel",
+      "subperiosteal vascular plexus",
+      "periosteal blood vessels",
+      "periosteal vessels",
+      "periosteal capillaries",
+      "subperiosteal hemorrhage vessels",
+    ],
+    definition:
+      "Rich capillary network in the outer fibrous layer of the periosteum and along the bone surface beneath it — primary blood supply to outer cortex and source of subperiosteal hemorrhage or abscess when periosteum is stripped, infected, or fragile.",
+    anatomy:
+      "Perforating branches from nutrient artery, periosteal arteries, and muscular periosteal branches anastomose in the fibrous periosteal layer; vessels run between periosteum and cortical bone. In infants, calvarial diploic and periosteal vessels contribute to cephalohematoma when periosteum is separated from skull.",
+    action: [
+      "Supply outer third of cortex and periosteal osteoprogenitors",
+      "Participate in fracture callus vascularization when periosteum is elevated",
+      "Bleed into subperiosteal space when periosteum is stripped (trauma, infection, scurvy)",
+    ],
+    clinicalRelevance: [
+      "Acute osteomyelitis — pus elevates periosteum; subperiosteal abscess in children",
+      "Cephalohematoma — neonatal subperiosteal hemorrhage limited by cranial sutures",
+      "Scurvy — fragile subperiosteal vessels → hemorrhage, Pelkan spurs, Frankel line on X-ray",
+      "Child abuse — subperiosteal hemorrhage on skeletal survey",
+      "Periosteal elevation on X-ray — infection, tumor, fracture healing, scurvy",
+      "Hyperparathyroidism — osteoclast resorption at subperiosteal surface (radial phalanges)",
+    ],
+    boardsPearls: [
+      "Subperiosteal space — between periosteum and bone; site of abscess and hemorrhage",
+      "Osteomyelitis in children — subperiosteal abscess before cortical perforation",
+      "Cephalohematoma = subperiosteal bleed; does not cross suture lines (vs caput succedaneum)",
+      "Scurvy — defective collagen → subperiosteal hemorrhage and bone pain in infants",
+      "Subperiosteal resorption — hyperparathyroidism (different mechanism: bone loss, not hemorrhage)",
+      "Periosteal reaction — new bone from cambium layer stimulation after vessel/periosteum injury",
+    ],
+    distinguishFrom: [
+      "Nutrient artery — enters medullary cavity through nutrient foramen; endosteal supply",
+      "Haversian canals — intracortical vascular channels within bone matrix",
+      "Caput succedaneum — subcutaneous scalp edema/hemorrhage; crosses sutures",
+      "Epidural hematoma — arterial bleed between skull and dura; not subperiosteal",
+      "Subperiosteal abscess — pus collection in subperiosteal space; infectious complication",
+      "Periosteum — membrane containing vessels; subperiosteal vessels are the vascular plexus at bone interface",
+    ],
+    pediatrics:
+      "Pediatric osteomyelitis classically forms subperiosteal abscess because periosteum is loosely attached in children. Cephalohematoma and infantile scurvy are neonatal/infant subperiosteal hemorrhage vignettes. Non-accidental trauma may show subperiosteal hemorrhage on bone scan or X-ray.",
   },
   {
     id: "synovium",
@@ -4461,6 +5178,66 @@ export const MUSCULOSKELETAL: MusculoskeletalEntry[] = [
       "Pediatric enuresis and voiding dysfunction may involve pelvic floor dyssynergia; congenital anomalies (epispadias, cloaca) disrupt normal pelvic floor anatomy.",
   },
   {
+    id: "sphincter",
+    name: "Sphincter",
+    etymology:
+      "Greek sphinktēr = that which binds tight — circular muscle (smooth or skeletal) forming a ring that maintains closure of a tubular lumen or regulates passage of contents",
+    aliases: [
+      "sphincter",
+      "sphincters",
+      "anatomical sphincter",
+      "anatomical sphincters",
+      "smooth muscle sphincter",
+      "smooth muscle sphincters",
+      "skeletal muscle sphincter",
+      "skeletal muscle sphincters",
+      "muscular sphincter",
+      "muscular sphincters",
+      "sphincter muscle",
+      "sphincter muscles",
+    ],
+    definition:
+      "Ring-like arrangement of muscle fibers encircling an orifice or tubular organ — maintains tonic closure during storage and relaxes coordinately during passage of contents; may be smooth muscle (autonomic/involuntary) or skeletal muscle (somatic/voluntary) depending on location.",
+    anatomy:
+      "Smooth sphincters — internal urethral sphincter (bladder neck, sympathetic α1), internal anal sphincter (continence), lower esophageal sphincter (GERD when incompetent), pyloric sphincter (gastric emptying), sphincter of Oddi (bile/pancreatic flow), iris sphincter pupillae (miosis, parasympathetic CN III). Skeletal sphincters — external urethral sphincter (pudendal S2–S4), external anal sphincter (pudendal S2–S4, anal wink reflex).",
+    action: [
+      "Tonic contraction maintains continence or compartmental separation",
+      "Coordinated relaxation permits micturition, defecation, swallowing, or pupillary responses",
+      "LES relaxation is transient (TLESR) — excessive relaxation causes GERD",
+      "Pyloric sphincter regulates gastric emptying — fat and hyperosmolarity slow rate",
+      "Sphincter of Oddi relaxes with CCK during fat digestion",
+      "Internal anal sphincter relaxes reflexively; external anal sphincter under voluntary control",
+    ],
+    clinicalRelevance: [
+      "GERD — incompetent lower esophageal sphincter and hiatal hernia",
+      "Achalasia — failure of LES relaxation",
+      "Stress urinary incontinence — external urethral sphincter and pelvic floor weakness",
+      "Detrusor-sphincter dyssynergia — spinal cord injury with simultaneous contraction",
+      "Anal incontinence — obstetric sphincter tear or pudendal nerve injury",
+      "Biliary colic and post-cholecystectomy pain — sphincter of Oddi dysfunction",
+      "Miosis — iris sphincter contraction (opioids, pilocarpine, CN III)",
+    ],
+    boardsPearls: [
+      "Sphincter = circular muscle ring controlling opening/closing of a lumen",
+      "Smooth sphincters — autonomic (sympathetic/parasympathetic); skeletal sphincters — pudendal somatic",
+      "Storage vs voiding — sympathetic maintains bladder neck tone; parasympathetic voids with sphincter relaxation",
+      "External urethral/anal sphincters — skeletal muscle, S2–S4 pudendal nerve",
+      "LES incompetence → GERD; achalasia → LES fails to relax",
+      "Sphincter of Oddi — CCK relaxes during digestion; ERCP sphincterotomy for stones",
+      "vs valve — heart valves are connective tissue cusps, not muscular sphincter rings",
+    ],
+    distinguishFrom: [
+      "External urethral sphincter — specific skeletal urethral rhabdosphincter; see dedicated entry",
+      "Sphincter of Oddi — biliary/pancreatic ampullary smooth muscle; see dedicated organ entry",
+      "Valve — cardiac or venous valve cusps, not circumferential muscular sphincter",
+      "Detrusor — bladder wall muscle that contracts to void; not a closure ring",
+      "Pelvic floor — broader muscular sling; includes but is not synonymous with sphincter",
+      "Pylorus — anatomical region; pyloric sphincter is the muscular component regulating gastric outflow",
+    ],
+    pediatrics:
+      "Toilet training reflects maturation of voluntary external sphincter control. Hirschsprung disease involves aganglionic rectum with internal sphincter dysfunction. Pyloric stenosis is hypertrophy of pyloric muscle (not classic sphincter incompetence). Congenital LES immaturity contributes to infant GER.",
+  },
+  {
     id: "external-urethral-sphincter",
     name: "External Urethral Sphincter",
     etymology: "Latin externus = outward + Greek ouron = urine + thraúō = to rub/wear + Greek sphinktēr = that which binds tight",
@@ -4990,6 +5767,70 @@ export const MUSCULOSKELETAL: MusculoskeletalEntry[] = [
     ],
     pediatrics:
       "Fontanelle examination is central to neonatal and infant assessment; bulging fontanelle with meningitis signs warrants urgent lumbar puncture and antibiotics. Congenital hypothyroidism screening is separate but delayed fontanelle closure is a classic physical clue.",
+  },
+  {
+    id: "nare",
+    name: "Nare",
+    etymology:
+      "Latin naris = nostril — external opening of the nasal cavity through which air enters and exits the respiratory tract",
+    aliases: [
+      "nare",
+      "nares",
+      "nostril",
+      "nostrils",
+      "anterior nare",
+      "anterior nares",
+      "external nare",
+      "external nares",
+      "nasal nare",
+      "nasal nares",
+      "nostril opening",
+      "nostril openings",
+      "nasal opening",
+      "nasal openings",
+      "naris",
+      "narises",
+    ],
+    definition:
+      "Paired anterior openings of the nose (nostrils) leading into the nasal vestibule — bordered by the ala nasi laterally and columella medially — first segment of the upper airway and portal for nasal oxygen delivery, swab sampling, and topical drug administration.",
+    anatomy:
+      "Each nare opens into the hair-bearing skin-lined nasal vestibule before the mucosal nasal cavity proper; inferior turbinate and nasal septum lie posteriorly; right and left nares separated by the columella and nasal septum anteriorly.",
+    action: [
+      "Primary nasal route for air entry during quiet breathing",
+      "Site of nasal cannula prong placement for supplemental oxygen",
+      "Anterior portal for nasal swab and nasopharyngeal sampling",
+      "Entry for topical nasal sprays and decongestant application",
+      "Nasal cycle — alternating turbinate engorgement may affect unilateral airflow",
+    ],
+    clinicalRelevance: [
+      "Nasal cannula oxygen — prongs seated in nares for low-flow O₂ delivery",
+      "Anterior nares swabbing — rapid antigen tests; nasopharyngeal swab passes through nare deeper",
+      "Nasal vestibulitis — infection of vestibule just inside nare",
+      "Unilateral nasal obstruction in child — foreign body in nare",
+      "Flaring nares — sign of increased work of breathing in infants",
+      "Cocaine insufflation — drug applied through nares",
+    ],
+    boardsPearls: [
+      "Nares = nostrils; open into nasal vestibule then nasal cavity",
+      "Nasal cannula — twin prongs in nares deliver 1–6 L/min O₂",
+      "Nasopharyngeal swab inserted through nare to posterior nasopharynx",
+      "Unilateral foul discharge in child → foreign body in nare until proven otherwise",
+      "Nasal flaring in infant — respiratory distress sign",
+      "vs nasal cavity — nare is external opening; cavity is internal passage",
+      "vs choana — posterior nasal aperture opening into nasopharynx",
+      "Anterior nares vs posterior nasopharynx — different swab sites for respiratory pathogens",
+    ],
+    distinguishFrom: [
+      "Nasal vestibule — skin-lined chamber just inside nare",
+      "Nasal cavity — mucosal airway posterior to vestibule with turbinates",
+      "Choana — posterior nasal opening into nasopharynx",
+      "Nasal septum — midline partition; not the lateral opening itself",
+      "Ala nasi — lateral cartilage defining nare shape",
+      "Mouth — alternative oral airway entry",
+      "Nasopharynx — posterior to choanae; deep swab target not synonymous with nare",
+    ],
+    pediatrics:
+      "Toddlers commonly insert foreign bodies into nares — unilateral foul-smelling rhinorrhea is classic. Nasal flaring with retractions signals respiratory distress in infants. Nasal cannula is standard gentle oxygen interface in pediatrics; measure insertion depth from nare in NG tube placement.",
   },
   {
     id: "l1-l2-spinal-level",

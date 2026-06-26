@@ -434,6 +434,56 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
       "X-linked hypophosphatemic rickets presents in childhood with bowing legs, short stature, and renal phosphate wasting with inappropriately normal/low calcitriol.",
   },
   {
+    id: "peptide-growth-factors",
+    name: "Peptide Growth Factors",
+    etymology:
+      "Greek peptos = digested + Latin factor = agent — secreted polypeptide signaling molecules that bind cell-surface receptors (often receptor tyrosine kinases) to regulate proliferation, differentiation, migration, and survival",
+    aliases: [
+      "peptide growth factor",
+      "peptide growth factors",
+      "peptide growth factor family",
+      "peptide growth factor families",
+      "polypeptide growth factor",
+      "polypeptide growth factors",
+      "growth factor peptide",
+      "growth factor peptides",
+    ],
+    type: "Growth factor",
+    source:
+      "Paracrine, autocrine, and endocrine secretion from epithelial cells, fibroblasts, platelets, endothelial cells, stromal cells, and tumors — examples include EGF, FGF, PDGF, VEGF, and TGF-β family ligands",
+    receptor:
+      "Most bind receptor tyrosine kinases (RTKs) — ligand-induced dimerization → autophosphorylation → Ras-MAPK, PI3K-Akt, and PLCγ cascades; some (TGF-β) use serine/threonine kinase receptors with Smad signaling",
+    function:
+      "Coordinate tissue repair, angiogenesis, embryonic patterning, hematopoiesis, and organ homeostasis — aberrant autocrine or constitutive signaling drives oncogenesis and fibrosis.",
+    clinicalRelevance: [
+      "Cancer — EGF/EGFR, VEGF, and FGF pathway hyperactivation in many carcinomas; targeted therapies (erlotinib, bevacizumab)",
+      "Wound healing and angiogenesis — PDGF and VEGF recruit fibroblasts and endothelial cells",
+      "Achondroplasia — constitutive FGFR3 signaling (FGF receptor) inhibits endochondral growth",
+      "Pulmonary fibrosis — TGF-β drives fibroblast activation and collagen deposition",
+      "Tumor-induced osteomalacia — FGF23 (endocrine FGF subset) causes renal phosphate wasting",
+      "Growth hormone axis — GH is a peptide hormone; IGF-1 is downstream growth factor mediating many effects",
+    ],
+    boardsPearls: [
+      "Peptide growth factors — secreted proteins binding mostly RTKs → MAPK and PI3K pathways",
+      "EGF → EGFR/ErbB; FGF → FGFR (heparan sulfate cofactor); VEGF → VEGFR; PDGF → PDGFR",
+      "Ligand binding → receptor dimerization → autophosphorylation → signal transduction",
+      "Oncogene activation — constitutive RTK signaling (BCR-ABL, EGFR mutations, RAS)",
+      "vs steroid hormones — lipophilic, intracellular/nuclear receptors, not peptide RTK ligands",
+      "vs cytokines — overlap in function; growth factors emphasize mitogenesis/tissue remodeling",
+      "TGF-β — peptide growth factor superfamily using Smad pathway, not classic RTK",
+    ],
+    distinguishFrom: [
+      "Fibroblast growth factor — specific FGF family entry",
+      "Vascular endothelial growth factor — angiogenesis-specialized growth factor",
+      "Cytokine — immune signaling peptides (ILs, IFNs); functional overlap but distinct context",
+      "Peptide hormone — endocrine signaling (insulin, GH); many growth factors act paracrine",
+      "Steroid hormone — lipophilic, nuclear receptor, not membrane RTK peptide ligand",
+      "Second messenger — intracellular signal (cAMP), not extracellular growth factor",
+    ],
+    pediatrics:
+      "FGFR3 mutations cause achondroplasia at birth. Pediatric cancers (neuroblastoma, medulloblastoma) may show growth factor pathway dysregulation. GH deficiency treated with recombinant GH works through IGF-1 growth factor axis.",
+  },
+  {
     id: "fibroblast-growth-factor",
     name: "Fibroblast Growth Factor",
     etymology:
@@ -703,6 +753,67 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
     ],
     pediatrics:
       "Hemophagocytic lymphohistiocytosis (HLH) — uncontrolled macrophage activation and cytokine storm in children; MIS-C post-COVID also cytokine-driven.",
+  },
+  {
+    id: "interleukins",
+    name: "Interleukins",
+    etymology:
+      "Latin inter = between + leukocytes = white cells — cytokine family historically named for signaling between leukocytes; numbered IL-1 through IL-38 with diverse immune, inflammatory, and hematopoietic roles",
+    aliases: [
+      "interleukins",
+      "interleukin",
+      "interleukin family",
+      "interleukin families",
+      "il cytokines",
+      "il cytokine",
+      "il family",
+      "il families",
+      "interleukin cytokines",
+      "interleukin cytokine",
+    ],
+    type: "Cytokine",
+    source:
+      "Secreted primarily by leukocytes and stromal cells — macrophages, dendritic cells, T helper subsets (Th1, Th2, Th17, Treg), B cells, NK cells, endothelial cells",
+    receptor:
+      "Interleukin receptors — often JAK-STAT coupled (type I/II cytokine receptors); some use common γ-chain (IL-2, IL-4, IL-7, IL-9, IL-15, IL-21)",
+    function:
+      "Major cytokine family coordinating innate and adaptive immunity — pro-inflammatory (IL-1, IL-6, TNF-α adjacent), T-cell growth (IL-2), Th1 polarization (IL-12), Th2/allergy (IL-4, IL-5, IL-13), Th17/autoimmunity (IL-17, IL-23), anti-inflammatory (IL-10), chemotaxis (IL-8/CXCL8), and hematopoiesis (IL-3, IL-7, IL-11).",
+    mnemonic:
+      "IL-1/6/TNF = fever trio; IL-2 = T-cell growth; IL-4/13 = IgE/Th2; IL-5 = eosinophils; IL-8 = neutrophils; IL-10 = brakes inflammation; IL-12 = Th1/IFN-γ; IL-17/23 = Th17/psoriasis drugs",
+    clinicalRelevance: [
+      "Endogenous pyrogens — IL-1, IL-6 (with TNF-α) drive fever via hypothalamic PGE₂",
+      "Anakinra — IL-1 receptor antagonist for autoinflammatory disease",
+      "Tocilizumab — IL-6 receptor blockade in RA and cytokine storm",
+      "Aldesleukin (IL-2) — renal cell carcinoma, melanoma immunotherapy",
+      "Omalizumab — anti-IgE (downstream of IL-4/IL-13 Th2 axis)",
+      "Secukinumab/ixekizumab — anti-IL-17A in psoriasis",
+      "Ustekinumab — anti-IL-12/IL-23 p40 in psoriasis and IBD",
+      "Dupilumab — IL-4Rα blockade (IL-4 and IL-13) in atopic dermatitis and asthma",
+    ],
+    boardsPearls: [
+      "Interleukins = IL-numbered cytokines between leukocytes — subset of broader cytokine family",
+      "IL-1 — fever, acute inflammation; anakinra blocks IL-1 receptor",
+      "IL-2 — T-cell proliferation; aldesleukin therapy; common γ-chain signaling",
+      "IL-4 & IL-13 — Th2, IgE class switching, allergy; dupilumab blocks IL-4Rα",
+      "IL-5 — eosinophil growth/activation; mepolizumab (anti-IL-5) in severe eosinophilic asthma",
+      "IL-6 — acute-phase response, fever; tocilizumab anti-IL-6R",
+      "IL-8 (CXCL8) — neutrophil chemotaxis (chemokine despite IL name)",
+      "IL-10 — anti-inflammatory Treg/Th2 cytokine",
+      "IL-12 & IL-23 — share p40 subunit; ustekinumab targets p40; IL-12 drives Th1, IL-23 maintains Th17",
+      "IL-17 — Th17 effector; secukinumab in psoriasis",
+      "vs interferons — antiviral IFNs separate family; vs TNF — not numbered IL but cytokine",
+      "JAK-STAT — dominant pathway for many interleukin receptors",
+    ],
+    distinguishFrom: [
+      "Cytokine — broader family including interleukins, interferons, TNF, chemokines",
+      "Chemokine — primarily chemotactic (IL-8/CXCL8 is both)",
+      "Interferons — IFN-α/β/γ antiviral/immunomodulatory; not IL-numbered",
+      "TNF-α — major inflammatory cytokine; TNF-family not interleukin despite overlap",
+      "Growth factors — EGF, PDGF emphasize mitogenesis; some overlap (IL-3 hematopoiesis)",
+      "Individual interleukin entries — IL-1, IL-2, etc. are specific members; interleukins is the family",
+    ],
+    pediatrics:
+      "HLH and MIS-C involve excessive IL-1/IL-6 signaling in children. JAK3 deficiency on common γ-chain IL receptors causes X-linked SCID. Severe eosinophilic asthma may use anti-IL-5 biologics in pediatrics.",
   },
   {
     id: "jak-stat",
@@ -1132,12 +1243,19 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
       "tumor necrosis factor",
       "tumor necrosis factor-alpha",
       "tumor necrosis factor alpha",
+      "tissue necrosis factor",
+      "tissue necrosis factor-alpha",
+      "tissue necrosis factor alpha",
+      "tissue necrosis factor-α",
+      "tissue necrosis factor α",
       "tnf",
       "tnf-alpha",
       "tnf alpha",
       "tnf-α",
       "tnf α",
       "tnfα",
+      "tnf-a",
+      "tnf a",
     ],
     type: "Cytokine",
     source:
@@ -1156,6 +1274,7 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
     ],
     boardsPearls: [
       "TNF-α → NF-κB activation → ↑ IL-1, IL-6, adhesion molecules, and other pro-inflammatory mediators",
+      "Correct name is tumor necrosis factor (TNF), not tissue necrosis factor — common boards misnomer",
       "Anti-TNF drugs: infliximab/adalimumab (mAbs), etanercept (decoy receptor) — treat before TB, avoid live vaccines",
       "Endogenous pyrogens: IL-1, IL-6, TNF-α — classic fever triad",
       "Named for tumor necrosis in mice; in humans drives inflammation more than direct tumor killing",
@@ -1412,6 +1531,51 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
       "Pediatric septic shock: fluids first; epinephrine favored in cold shock with low cardiac output, norepinephrine in warm vasodilatory shock per PALS guidance.",
   },
   {
+    id: "dopamine",
+    name: "Dopamine",
+    etymology:
+      "dopa = 3,4-dihydroxyphenylalanine (L-DOPA precursor) + amine = nitrogen-containing group — catecholamine named from its biosynthetic precursor",
+    aliases: [
+      "dopamine",
+      "dopaminergic",
+      "da",
+    ],
+    type: "Neurotransmitter",
+    source:
+      "Substantia nigra pars compacta (nigrostriatal motor pathway), ventral tegmental area (mesolimbic/mesocortical reward and cognition), hypothalamic tuberoinfundibular neurons (prolactin inhibition), renal vasculature, and adrenal medulla chromaffin cells (minor catecholamine fraction); also synthesized in postganglionic sympathetic neurons as immediate precursor to norepinephrine",
+    receptor:
+      "D1 and D5 (Gs → ↑ cAMP); D2, D3, and D4 (Gi → ↓ cAMP); at pharmacologic infusion doses dopamine also binds α and β adrenergic receptors dose-dependently",
+    function:
+      "Catecholamine neurotransmitter mediating voluntary movement (nigrostriatal), reward and motivation (mesolimbic), executive function (mesocortical), tonic prolactin inhibition (tuberoinfundibular), and renal/mesenteric vasodilation (D1). Biosynthetic intermediate: tyrosine → L-DOPA → dopamine → norepinephrine (dopamine β-hydroxylase).",
+    mnemonic:
+      "Dopamine pathways — TAN: Tuberoinfundibular (↓ prolactin), Area postrema/nucleus accumbens (reward), Nigrostriatal (movement)",
+    clinicalRelevance: [
+      "Parkinson disease — degeneration of substantia nigra dopaminergic neurons → bradykinesia, rigidity, resting tremor; treated with L-DOPA/carbidopa and dopamine agonists",
+      "Antipsychotics — D2 receptor blockade → hyperprolactinemia, galactorrhea, extrapyramidal symptoms",
+      "Dopamine agonists (cabergoline, pramipexole) — prolactinoma, Parkinson disease; impulse control disorders",
+      "IV dopamine infusion — low dose D1 renal vasodilation; higher doses α/β vasopressor effects",
+      "Cocaine and amphetamines — ↑ synaptic dopamine (DAT blockade or reverse transport)",
+      "Neuroleptic malignant syndrome — severe D2 blockade toxicity",
+    ],
+    boardsPearls: [
+      "Biosynthesis: tyrosine → L-DOPA (TH, rate-limiting) → dopamine (AADC) → NE (DBH) → Epi (PNMT)",
+      "Nigrostriatal ↓ DA = Parkinson; mesolimbic ↑ DA = addiction/reward; tuberoinfundibular DA tonically ↓ prolactin",
+      "D2 blockade (antipsychotics) → ↑ prolactin; stalk lesion also ↑ prolactin by interrupting hypothalamic dopamine",
+      "Low-dose IV dopamine → D1 renal vasodilation; mid/high dose loses receptor selectivity → α/β pressor effects",
+      "DAT on presynaptic terminals reuptakes dopamine — cocaine blocks DAT; amphetamines reverse transport",
+      "vs norepinephrine — dopamine is precursor and distinct receptor system (D1–D5); NE is primary postganglionic sympathetic transmitter",
+    ],
+    distinguishFrom: [
+      "Norepinephrine — downstream catecholamine product of dopamine β-hydroxylase; primary sympathetic neurotransmitter",
+      "L-DOPA — dopamine precursor that crosses BBB; dopamine itself does not cross BBB for oral replacement",
+      "Dopamine receptors — GPCRs that bind dopamine; distinct from adrenergic α/β receptors",
+      "Dopamine β-hydroxylase — enzyme converting dopamine to norepinephrine, not the transmitter",
+      "Dopamine agonist drugs — pharmacologic D2/D1 activators (cabergoline, bromocriptine), not endogenous dopamine",
+    ],
+    pediatrics:
+      "AADC deficiency in neonates impairs dopamine and serotonin synthesis → severe encephalopathy, hypotonia, oculogyric crises. Juvenile Parkinson disease is rare; dopamine deficiency mechanism same as adult disease.",
+  },
+  {
     id: "histamine",
     name: "Histamine",
     etymology: "Greek histos = tissue + amine = nitrogen group",
@@ -1494,6 +1658,66 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
     ],
     pediatrics:
       "Pediatric depression treated with SSRIs (serotonergic agents) — monitor for activation and suicidality. Serotonin syndrome risk with drug interactions is the same mechanism at any age; linezolid + SSRI is a classic boards trap.",
+  },
+  {
+    id: "cholinergic-pathways",
+    name: "Cholinergic Pathways",
+    etymology:
+      "Greek chole = bile + Latin -in = substance suffix (acetylcholine) + Greek ergon = work + Latin via = road — neural circuits using acetylcholine as the primary neurotransmitter",
+    aliases: [
+      "cholinergic pathway",
+      "cholinergic pathways",
+      "cholinergic system",
+      "cholinergic systems",
+      "cholinergic neuron",
+      "cholinergic neurons",
+      "cholinergic circuit",
+      "cholinergic circuits",
+      "cholinergic projection",
+      "cholinergic projections",
+      "cholinergic tract",
+      "cholinergic tracts",
+      "cholinergic signaling",
+      "cholinergic neurotransmission",
+    ],
+    type: "Signaling pathway",
+    source:
+      "Basal forebrain (nucleus basalis of Meynert) → cerebral cortex; brainstem pedunculopontine nucleus → thalamus/reticular formation; preganglionic sympathetic and parasympathetic fibers; postganglionic parasympathetic fibers; motor neurons at neuromuscular junction; sympathetic cholinergic sweat gland fibers",
+    receptor:
+      "Nicotinic receptors (ion channels) at autonomic ganglia and NMJ; muscarinic receptors (GPCRs M1–M5) at postganglionic parasympathetic effectors, sweat glands, and CNS targets",
+    function:
+      "Distributed acetylcholine-based neural circuits mediating cortical arousal and memory, REM sleep modulation, autonomic parasympathetic output, sympathetic sweat secretion, and skeletal muscle contraction.",
+    mnemonic:
+      "Nicotinic at ganglia and NMJ; Muscarinic at organ effectors — preganglionic fibers always cholinergic (both sympathetic and parasympathetic)",
+    clinicalRelevance: [
+      "Alzheimer disease — loss of basal forebrain cholinergic neurons → ↓ cortical ACh; donepezil/rivastigmine/galantamine inhibit AChE to ↑ synaptic ACh",
+      "Myasthenia gravis — autoantibodies to nicotinic ACh receptors at NMJ → fatigable weakness",
+      "Organophosphate poisoning — AChE inhibition → excess cholinergic signaling → SLUDGE (muscarinic) + fasciculations/weakness (nicotinic)",
+      "Anticholinergic toxidrome — blockade of muscarinic pathways → dry skin, mydriasis, urinary retention, delirium",
+      "Parkinson treatment — anticholinergics (benztropine) reduce relative cholinergic excess in striatum after dopamine loss",
+      "Botulinum toxin — blocks presynaptic ACh release at NMJ → flaccid paralysis",
+    ],
+    boardsPearls: [
+      "Cholinergic pathways = neurons/circuits using ACh — not the molecule alone (see acetylcholine entry)",
+      "Basal forebrain cholinergic projections → cortex (attention, memory); lost early in Alzheimer",
+      "Preganglionic autonomic fibers (sympathetic and parasympathetic) always release ACh onto nicotinic ganglionic receptors",
+      "Postganglionic parasympathetic fibers release ACh onto muscarinic receptors at target organs",
+      "Sympathetic postganglionic fibers are usually NE — exception: sweat glands are sympathetic cholinergic (M3)",
+      "NMJ = motor neuron ACh → nicotinic Nm receptor → muscle depolarization",
+      "vs adrenergic pathways — catecholamine (NE/Epi) sympathetic postganglionic signaling, not ACh (except sweat)",
+      "Donepezil targets cholinergic deficit in Alzheimer — does not reverse amyloid pathology",
+    ],
+    distinguishFrom: [
+      "Acetylcholine — neurotransmitter molecule itself, not the neural pathway descriptor",
+      "Anticholinergics — drugs that block muscarinic cholinergic receptors, not pathways",
+      "Cholinergic toxidrome — clinical excess cholinergic activity (SLUDGE), not anatomy",
+      "Noradrenergic pathways — locus ceruleus NE projections; sympathetic postganglionic NE",
+      "Dopaminergic pathways — substantia nigra → striatum; Parkinson, psychosis",
+      "Muscarinic cholinergic receptors — postsynaptic receptor subtype, not the full pathway",
+      "Nicotinic acetylcholine receptor — ligand-gated ion channel at NMJ/ganglia, not the pathway",
+    ],
+    pediatrics:
+      "Neonatal myasthenia gravis from transplacental anti-AChR antibodies — cholinergic NMJ pathway dysfunction with hypotonia and poor feeding. Organophosphate exposure in children causes cholinergic crisis (miosis, bronchorrhea, SLUDGE) — atropine after decontamination. Anticholinergic toxidrome from diphenhydramine ingestion is common in toddlers.",
   },
   {
     id: "serotonin",
@@ -1584,6 +1808,107 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
     ],
     pediatrics:
       "NK1 antagonists used for pediatric chemotherapy-induced nausea at weight-based dosing; substance P–mediated neurogenic inflammation follows same nociceptor biology in children.",
+  },
+  {
+    id: "cgrp",
+    name: "CGRP",
+    etymology:
+      "calcitonin gene-related peptide — peptide product of alternative splicing of the calcitonin (CALCA) gene; Greek peptos = digested",
+    aliases: [
+      "cgrp",
+      "calcitonin gene-related peptide",
+      "calcitonin gene related peptide",
+      "calcitonin-gene-related peptide",
+      "calcitonin gene-related peptides",
+      "alpha-cgrp",
+      "α-cgrp",
+      "beta-cgrp",
+      "β-cgrp",
+    ],
+    type: "Peptide hormone",
+    source:
+      "Sensory neurons (especially trigeminal ganglion C-fibers), enteric neurons, and vascular endothelium — co-released with substance P from activated nociceptive nerve terminals in the trigeminovascular system",
+    receptor:
+      "CGRP receptor — heterodimer of CLR (calcitonin receptor-like receptor) and RAMP1 (receptor activity-modifying protein 1); Gs-coupled → ↑ cAMP",
+    function:
+      "Potent vasodilator and mediator of neurogenic inflammation — promotes arterial dilation, plasma protein extravasation, and central nociceptive transmission; central to migraine pathophysiology when released from trigeminal afferents innervating meningeal vessels.",
+    clinicalRelevance: [
+      "Migraine attack — trigeminal activation → CGRP release → meningeal vasodilation and pain",
+      "Triptans (5-HT1B/1D agonists) — inhibit trigeminal CGRP release (abortive migraine mechanism)",
+      "CGRP monoclonal antibodies (erenumab — receptor; galcanezumab, fremanezumab — ligand) — migraine prophylaxis",
+      "Gepants (ubrogepant, rimegepant) — oral CGRP receptor antagonists for acute migraine",
+      "Pregabalin/gabapentin — ↓ CGRP release via calcium channel modulation in pain pathways",
+    ],
+    boardsPearls: [
+      "CGRP = calcitonin gene-related peptide; key migraine neuropeptide",
+      "Trigeminovascular system — trigeminal nerve releases CGRP onto meningeal vessels → vasodilation + headache",
+      "Triptans ↓ CGRP release; CGRP antagonists treat/prevent migraine",
+      "Co-released with substance P from sensory neurons — neurogenic inflammation",
+      "vs calcitonin — separate peptide from same gene family; calcitonin lowers Ca²⁺, CGRP vasodilates",
+      "vs substance P — tachykinin pain peptide; distinct NK1 receptor; often co-released",
+      "CLR + RAMP1 = functional CGRP receptor on boards",
+    ],
+    distinguishFrom: [
+      "Calcitonin — thyroid C-cell hormone lowering serum calcium; different physiologic role despite shared gene origin",
+      "Substance P — tachykinin neuropeptide; NK1 receptor; co-released but distinct signaling",
+      "VIP (vasoactive intestinal peptide) — different vasodilatory neuropeptide in gut and autonomic circuits",
+      "Serotonin — triptans act via 5-HT1 receptors upstream of CGRP release, not CGRP itself",
+      "Parathyroid hormone — calcium homeostasis hormone; unrelated to CGRP migraine pathway",
+      "Neuropeptide Y — appetite/vasoconstrictor peptide; not migraine mediator",
+    ],
+    pediatrics:
+      "Pediatric migraine involves same trigeminovascular CGRP biology; triptans and NSAIDs remain primary abortive agents in adolescents. CGRP monoclonal antibodies are used in adolescent migraine prophylaxis in specialist practice.",
+  },
+  {
+    id: "neuropeptide",
+    name: "Neuropeptide",
+    etymology:
+      "Greek neuron = nerve + peptos = digested (peptide) — short peptide neurotransmitters or neuromodulators synthesized in neurons and released from dense-core vesicles",
+    aliases: [
+      "neuropeptide",
+      "neuropeptides",
+      "neural peptide",
+      "neural peptides",
+      "neuropeptide transmitter",
+      "neuropeptide transmitters",
+      "peptide neurotransmitter",
+      "peptide neurotransmitters",
+      "peptide neuromodulator",
+      "peptide neuromodulators",
+    ],
+    type: "Neurotransmitter",
+    source:
+      "Synthesized in neuronal cell body, transported to axon terminals, packaged in dense-core secretory granules — released from sensory neurons, hypothalamic neurons, autonomic fibers, and enteric nervous system with sustained or high-frequency stimulation",
+    receptor:
+      "Metabotropic GPCRs (most neuropeptides) — NK1 (substance P), CGRP receptor (CLR/RAMP1), Y receptors (NPY), opioid receptors (endorphins/enkephalins), melanocortin receptors (α-MSH)",
+    function:
+      "Class of peptide signaling molecules mediating pain (substance P, CGRP), appetite (NPY, α-MSH), stress responses (CRH), and autonomic/enteric coordination (VIP) — slower onset and longer duration than small-molecule neurotransmitters due to peptidergic release kinetics.",
+    clinicalRelevance: [
+      "Migraine — trigeminal neuropeptides CGRP and substance P drive neurogenic inflammation",
+      "Chemotherapy nausea — NK1 antagonists (aprepitant) block substance P at CTZ",
+      "Obesity — hypothalamic neuropeptides NPY (orexigenic) vs α-MSH/POMC (anorexigenic)",
+      "Chronic pain — substance P and CGRP in central sensitization",
+      "Opioid analgesia — endogenous opioid neuropeptides (β-endorphin, enkephalins) at μ receptors",
+    ],
+    boardsPearls: [
+      "Neuropeptides = peptide neurotransmitters in dense-core vesicles — slower, longer-acting than classic small-molecule transmitters",
+      "Examples: substance P, CGRP, NPY, VIP, CRH, endorphins, oxytocin, ADH (some classify as hormones too)",
+      "vs biogenic amines — small monoamines (dopamine, serotonin, NE) in small synaptic vesicles",
+      "vs amino acid transmitters — glutamate, GABA, glycine — ionotropic/fast synaptic signaling",
+      "Substance P → NK1; CGRP → CLR/RAMP1; NPY → Y receptors — each neuropeptide has specific receptor",
+      "Triptans ↓ neuropeptide (CGRP) release from trigeminal neurons",
+      "Capsaicin depletes substance P from peripheral nociceptors",
+    ],
+    distinguishFrom: [
+      "Biogenic amines — dopamine, serotonin, NE, histamine; small molecules not peptide chains",
+      "Amino acid neurotransmitters — glutamate, GABA; fast ionotropic signaling",
+      "Peptide hormones — some overlap (oxytocin, ADH); neuropeptide emphasizes neural release context",
+      "Cytokines — immune peptides (IL-1, TNF); not primarily neuronal transmitters",
+      "Neuropeptide Y — specific neuropeptide, not the general class",
+      "Protein hormones — insulin, growth hormone; much larger circulating hormones",
+    ],
+    pediatrics:
+      "Neuropeptide signaling pathways are active from fetal development — hypothalamic NPY/α-MSH circuits regulate infant feeding. Substance P–mediated nociception is present in neonates; procedural pain requires analgesia.",
   },
   {
     id: "nitric-oxide",
@@ -1738,6 +2063,119 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
     ],
     pediatrics:
       "Montelukast approved for pediatric asthma and allergic rhinitis; same CysLT1 mechanism as in adults.",
+  },
+  {
+    id: "cysteinyl-leukotriene",
+    name: "Cysteinyl Leukotriene",
+    etymology:
+      "cysteinyl = cysteine-containing glutathione-derived peptide moiety + leukotriene = lipoxygenase eicosanoid — LTC₄, LTD₄, and LTE₄ subclass conjugated to cysteinyl peptides that act as slow-reacting mediators of anaphylaxis",
+    aliases: [
+      "cysteinyl leukotriene",
+      "cysteinyl leukotrienes",
+      "cysteinyl lt",
+      "cysteinyl lts",
+      "cysteinyl-leukotriene",
+      "cysteinyl-leukotrienes",
+      "cyslt",
+      "cyslts",
+      "cysteinyl leukotriene receptor ligand",
+      "cysteinyl leukotriene receptor ligands",
+      "peptidoleukotriene",
+      "peptidoleukotrienes",
+      "peptide leukotriene",
+      "peptide leukotrienes",
+      "ltc4 ltd4 lte4",
+      "slow reacting substance of anaphylaxis",
+      "srs-a",
+    ],
+    type: "Hormone",
+    source:
+      "Synthesized on demand from arachidonic acid via 5-lipoxygenase → LTA₄ → LTC₄ synthase (glutathione conjugation) in mast cells, eosinophils, basophils, and macrophages; LTC₄ converted to LTD₄ (γ-glutamyl transpeptidase) and LTE₄ (dipeptidase)",
+    receptor:
+      "CysLT1 and CysLT2 GPCRs — CysLT1 mediates most bronchoconstriction and vascular permeability; montelukast and zafirlukast are selective CysLT1 antagonists",
+    function:
+      "Potent inflammatory eicosanoids causing bronchoconstriction, increased microvascular permeability, mucus hypersecretion, and eosinophil recruitment — major mediators of asthma late-phase response and allergic rhinitis congestion hours after allergen exposure; collectively termed slow-reacting substance of anaphylaxis (SRS-A).",
+    clinicalRelevance: [
+      "Asthma late-phase bronchoconstriction — cysteinyl leukotrienes peak hours after allergen",
+      "Allergic rhinitis and seasonal allergies — nasal congestion and airway hyperreactivity",
+      "Aspirin-exacerbated respiratory disease — COX inhibition shunts arachidonate to ↑ cysteinyl leukotrienes",
+      "Anaphylaxis — contribute to bronchospasm and edema alongside histamine",
+      "Montelukast and zafirlukast — CysLT1 receptor antagonists",
+      "Zileuton — 5-lipoxygenase inhibitor reduces all leukotriene synthesis upstream",
+    ],
+    boardsPearls: [
+      "Cysteinyl leukotrienes = LTC₄, LTD₄, LTE₄ — SRS-A mediators",
+      "Arachidonic acid → 5-LOX → LTA₄ → LTC₄ → LTD₄ → LTE₄",
+      "Potent bronchoconstrictors — more sustained than histamine in asthma late phase",
+      "Montelukast blocks CysLT1 receptor — asthma and allergic rhinitis",
+      "vs LTB₄ — neutrophil chemoattractant; NOT cysteinyl (uses BLT receptors)",
+      "vs prostaglandins — COX pathway; leukotrienes are lipoxygenase pathway",
+      "Aspirin-exacerbated respiratory disease — ↑ cysteinyl leukotrienes when COX blocked",
+      "Corticosteroids ↓ PLA₂ upstream — ↓ leukotriene production",
+    ],
+    distinguishFrom: [
+      "Leukotriene B₄ (LTB₄) — chemotactic eicosanoid; BLT receptors, not cysteinyl",
+      "Leukotriene D₄ — specific cysteinyl member; montelukast target ligand",
+      "Histamine — preformed mast cell mediator; faster H1-mediated effects",
+      "Prostaglandin D₂ — COX pathway mast cell product",
+      "Montelukast — CysLT1 antagonist drug, not the leukotriene molecule",
+      "Chemokines — peptide mediators, not lipoxygenase eicosanoids",
+    ],
+    pediatrics:
+      "Montelukast approved for pediatric asthma and allergic rhinitis — blocks cysteinyl leukotriene effects at CysLT1. Same late-phase leukotriene biology drives childhood asthma exacerbations after viral or allergen triggers.",
+  },
+  {
+    id: "leukotriene-d4",
+    name: "Leukotriene D₄",
+    etymology:
+      "Greek leukos = white cell + tri- = three + -ene = double bond + D = fourth cysteinyl member + 4 = structural variant — cysteinyl leukotriene derived from LTC₄ by removal of glutamic acid",
+    aliases: [
+      "leukotriene d4",
+      "leukotriene d₄",
+      "leukotriene d-4",
+      "ltd4",
+      "ltd₄",
+      "ltd 4",
+      "leukotrine d4",
+      "leukotrine d₄",
+      "leukotrine d-4",
+      "cysteinyl leukotriene d4",
+      "cysteinyl leukotriene d₄",
+      "leukotriene d",
+      "leukotriene d four",
+    ],
+    type: "Hormone",
+    source:
+      "Synthesized on demand from arachidonic acid via 5-lipoxygenase → LTA₄ → LTC₄ (glutathione conjugation) → LTD₄ (γ-glutamyl transpeptidase removes glutamate) in mast cells, eosinophils, basophils, and macrophages",
+    receptor:
+      "CysLT1 and CysLT2 receptors — GPCR-mediated smooth muscle contraction and ↑ vascular permeability; montelukast and zafirlukast are selective CysLT1 antagonists",
+    function:
+      "Potent cysteinyl leukotriene mediator of bronchoconstriction, mucus secretion, and microvascular leakage — major component of slow-reacting substance of anaphylaxis (SRS-A) alongside LTC₄ and LTE₄; drives asthma late-phase response hours after allergen exposure.",
+    clinicalRelevance: [
+      "Asthma late-phase bronchoconstriction after allergen challenge",
+      "Anaphylaxis — synergizes with histamine for bronchospasm and angioedema",
+      "Aspirin-exacerbated respiratory disease — COX blockade shunts arachidonate to ↑ cysteinyl leukotrienes including LTD₄",
+      "Allergic rhinitis — increased nasal vascular permeability",
+    ],
+    boardsPearls: [
+      "LTD₄ = cysteinyl leukotriene; potent bronchoconstrictor via CysLT1",
+      "Pathway: arachidonic acid → 5-LOX → LTA₄ → LTC₄ → LTD₄ → LTE₄",
+      "Montelukast — CysLT1 receptor antagonist blocks LTD₄/LTE₄ effects",
+      "Zileuton — inhibits 5-LOX upstream, ↓ all leukotrienes including LTD₄",
+      "vs LTB₄ — chemotactic for neutrophils; not cysteinyl leukotriene",
+      "vs histamine — preformed, faster; LTD₄ synthesized de novo in late phase",
+      "SRS-A = LTC₄ + LTD₄ + LTE₄",
+    ],
+    distinguishFrom: [
+      "Leukotriene B₄ (LTB₄) — neutrophil chemoattractant; BLT receptors, not CysLT",
+      "Leukotriene C₄ (LTC₄) — precursor cysteinyl leukotriene before glutamate removal",
+      "Leukotriene E₄ (LTE₄) — downstream metabolite after glycine removal from LTD₄",
+      "Leukotrienes — general class entry; LTD₄ is specific cysteinyl member",
+      "Histamine — preformed mast cell mediator; H1 receptors",
+      "Prostaglandin D₂ — COX pathway mast cell product; not lipoxygenase leukotriene",
+    ],
+    pediatrics:
+      "Montelukast blocks CysLT1-mediated effects of LTD₄ in pediatric asthma and allergic rhinitis; same late-phase leukotriene biology as adults.",
   },
   {
     id: "thromboxane-a2",
@@ -2835,12 +3273,14 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
       "BTK deficiency — X-linked agammaglobulinemia; ibrutinib inhibits BTK in CLL/lymphoma",
       "ABL1 — BCR-ABL in CML/ALL; also targeted by dasatinib, nilotinib",
       "VEGF receptor TKIs — sorafenib, sunitinib in renal cell carcinoma",
+      "HER2/neu (ErbB2) amplification — breast and gastric cancer; trastuzumab (mAb), lapatinib (TKI)",
     ],
     boardsPearls: [
       "Tyrosine kinase phosphorylates tyrosine (not serine/threonine like many other kinases)",
       "RTK pathway: ligand → dimerization → autophosphorylation → Ras-MAPK and/or PI3K/Akt",
       "BCR-ABL = constitutively active tyrosine kinase in CML → imatinib (first-line TKI)",
       "Imatinib also hits c-KIT and PDGFR — GIST and some mast cell disorders",
+      "HER2/neu (ErbB2) — RTK with no ligand; amplified in breast cancer → trastuzumab, lapatinib",
       "vs JAK-STAT — JAKs are tyrosine kinases associated with cytokine receptors but signal via STATs, not classic RTK→Ras-MAPK alone",
       "vs TGF-β receptor — serine/threonine kinase phosphorylates Smads, not tyrosine substrates",
       "vs tyrosine hydroxylase — rate-limiting enzyme in catecholamine synthesis, not a signaling kinase",
@@ -2855,6 +3295,123 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
     ],
     pediatrics:
       "X-linked agammaglobulinemia (BTK deficiency) presents after maternal IgG wanes with recurrent encapsulated bacterial infections. Philadelphia-positive ALL in children may require TKI plus chemotherapy.",
+  },
+  {
+    id: "epidermal-growth-factor-receptor",
+    name: "Epidermal Growth Factor Receptor",
+    etymology:
+      "Greek epi = upon + derma = skin + growth + factor + receptor = binder — ErbB1/HER1 transmembrane tyrosine kinase for EGF-family ligands",
+    aliases: [
+      "epidermal growth factor receptor",
+      "epidermal growth factor receptors",
+      "egfr",
+      "egfrs",
+      "erbb1",
+      "erbb-1",
+      "her1",
+      "her-1",
+      "human epidermal growth factor receptor",
+      "human epidermal growth factor receptor 1",
+      "her1 receptor",
+      "egf receptor",
+      "egf receptors",
+      "c-erbb",
+      "c-erbb1",
+    ],
+    type: "Signaling pathway",
+    source:
+      "Expressed on epithelial cells, glia, and many tumors — activated by EGF-family ligands including EGF, TGF-α, amphiregulin, and epiregulin; overexpressed or mutated in multiple carcinomas",
+    receptor:
+      "Receptor tyrosine kinase (RTK) — ligand-induced dimerization (homodimer or heterodimer with other ErbB family members) → trans-autophosphorylation of tyrosine residues → recruitment of GRB2–SOS, PI3K, and PLCγ → Ras-MAPK and Akt pathways",
+    function:
+      "Mediates epithelial proliferation, migration, differentiation, and survival — physiologic roles in wound healing and organ development; pathologic constitutive signaling from amplification or activating mutations drives tumor growth.",
+    clinicalRelevance: [
+      "NSCLC adenocarcinoma — sensitizing EGFR mutations (exon 19 del, L858R) → erlotinib, gefitinib, osimertinib",
+      "EGFR overexpression/amplification — head and neck SCC, colorectal cancer (cetuximab/panitumumab with RAS wild-type)",
+      "EGFR inhibitor acneiform rash — papulopustular folliculitis from blocked follicular EGFR signaling",
+      "Glioblastoma — EGFR amplification and EGFRvIII mutant common",
+      "KRAS/NRAS/BRAF mutations — predict resistance to anti-EGFR mAbs in CRC",
+    ],
+    boardsPearls: [
+      "EGFR = ErbB1/HER1 — receptor tyrosine kinase",
+      "Ligand binding → dimerization → autophosphorylation → Ras-MAPK / PI3K-Akt",
+      "EGFR mutations in lung adenocarcinoma (especially nonsmokers) → TKI sensitivity",
+      "Cetuximab/panitumumab — anti-EGFR monoclonal antibodies in CRC (RAS wild-type required)",
+      "vs HER2 (ErbB2) — no ligand needed when amplified; trastuzumab target in breast cancer",
+      "vs eGFR — estimated glomerular filtration rate (renal function), unrelated acronym",
+      "EGFR inhibitor rash — classic adverse effect",
+    ],
+    distinguishFrom: [
+      "Epidermal growth factor (EGF) — peptide ligand, not the receptor",
+      "HER2/neu (ErbB2) — related ErbB family RTK; no known ligand; amplified in breast cancer",
+      "FGFR — fibroblast growth factor receptor; achondroplasia FGFR3",
+      "eGFR — kidney function estimate from creatinine; completely different term",
+      "VEGFR — endothelial growth factor receptor for angiogenesis",
+      "Tyrosine kinase inhibitor — drug class inhibiting EGFR and other kinases",
+    ],
+    pediatrics:
+      "EGFR pathway drives normal epithelial development; pediatric gliomas may show EGFR alterations. EGFR inhibitor rashes occur in adolescents on cancer therapy. Do not confuse EGFR with eGFR on renal labs.",
+  },
+  {
+    id: "her2",
+    name: "HER2",
+    etymology:
+      "Human Epidermal growth factor Receptor 2 + neu = rat neuroblastoma-derived oncogene name — ErbB2 transmembrane tyrosine kinase",
+    aliases: [
+      "her2",
+      "her-2",
+      "her2/neu",
+      "her-2/neu",
+      "her2 neu",
+      "neu protein",
+      "neu proteins",
+      "neu proto-oncogene",
+      "neu proto-oncogene protein",
+      "c-neu",
+      "c-erbb-2",
+      "c-erbb2",
+      "erbb2",
+      "erbb-2",
+      "human epidermal growth factor receptor 2",
+      "human epidermal growth factor receptor 2 protein",
+      "her2 receptor",
+      "her2 protein",
+      "her2 gene",
+      "erbb2 gene",
+    ],
+    type: "Signaling pathway",
+    source:
+      "Expressed on epithelial cells (breast, gastric, ovarian) — member of ErbB/HER receptor tyrosine kinase family; no high-affinity ligand identified; signals when overexpressed or heterodimerizes with ligand-bound ErbB1/ErbB3",
+    receptor:
+      "Receptor tyrosine kinase (ErbB2/HER2) — prefers heterodimerization with other ErbB family members (especially HER3) after their ligand binding → trans-autophosphorylation → PI3K/Akt and Ras-MAPK pathways; gene amplification drives constitutive signaling without ligand",
+    function:
+      "Physiologic role in epithelial proliferation, differentiation, and tissue repair via ErbB family cross-talk; pathologic amplification/overexpression in carcinomas drives uncontrolled growth and is a therapeutic target.",
+    clinicalRelevance: [
+      "HER2-positive breast cancer — ERBB2 gene amplification → IHC 3+ or FISH amplified → trastuzumab, pertuzumab, T-DM1, lapatinib",
+      "HER2-positive gastric/gastroesophageal adenocarcinoma — trastuzumab benefit",
+      "HER2-low breast cancer — newer antibody-drug conjugate strategies (boards evolving)",
+      "Cardiotoxicity — trastuzumab can cause reversible cardiomyopathy (monitor EF)",
+      "Lapatinib — dual EGFR/HER2 small-molecule TKI",
+    ],
+    boardsPearls: [
+      "HER2 = ErbB2 = neu protein — same receptor tyrosine kinase",
+      "No known ligand — signals via heterodimerization or when amplified",
+      "HER2+ breast cancer: trastuzumab (anti-HER2 mAb) — not a TKI itself but blocks receptor",
+      "IHC 0/1+ negative; 2+ equivocal → reflex FISH; 3+ positive",
+      "Triple-negative = ER−, PR−, HER2−; HER2+ is distinct subtype with targeted therapy",
+      "vs EGFR (ErbB1/HER1) — has ligands (EGF); different drug targets (cetuximab, erlotinib)",
+      "Gene amplification on chromosome 17q12 — not a translocation",
+    ],
+    distinguishFrom: [
+      "EGFR (ErbB1/HER1) — ligand-activated RTK; lung cancer TKI target",
+      "HER3 (ErbB3) — kinase-dead; pairs with HER2 as preferred signaling partner",
+      "Neurology/neu — HER2/neu is oncogene name, not neurologic term",
+      "Trastuzumab — monoclonal antibody drug, not the receptor protein",
+      "Tyrosine kinase — enzyme class; HER2 is a receptor tyrosine kinase substrate/target",
+      "BRCA1/2 — DNA repair genes; hereditary breast cancer, not HER2 receptor status",
+    ],
+    pediatrics:
+      "Breast cancer with HER2 amplification is rare in children/adolescents. Trastuzumab cardiotoxicity monitoring applies to young adults on therapy. Neuroblastoma has N-myc amplification — different oncogene from neu/HER2.",
   },
   {
     id: "cytoplasmic-kinase",
@@ -4017,6 +4574,62 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
       "Neonates rely on RAAS for renal perfusion and salt handling; ACE inhibitors/ARBs contraindicated in pregnancy and generally avoided in infants except specialist use.",
   },
   {
+    id: "angiotensin-ii-receptor-type-1",
+    name: "Angiotensin II Receptor Type 1 (AT1)",
+    etymology:
+      "Latin angio = vessel + tension = stretch + receptor = binder + type 1 = first characterized subtype — G protein–coupled receptor mediating most classic angiotensin II physiologic effects",
+    aliases: [
+      "angiotensin ii receptor type 1",
+      "angiotensin ii receptor type 1 at1",
+      "angiotensin 2 receptor type 1",
+      "angiotensin ii type 1 receptor",
+      "angiotensin ii type 1 receptors",
+      "angiotensin 2 type 1 receptor",
+      "at1 receptor",
+      "at1 receptors",
+      "at1",
+      "at1r",
+      "at1rs",
+      "agtr1",
+      "agtr1 receptor",
+      "ang ii receptor type 1",
+      "angiotensin ii receptor 1",
+    ],
+    type: "Signaling pathway",
+    source:
+      "Expressed on vascular smooth muscle, adrenal zona glomerulosa, proximal tubule, brain circumventricular organs, heart, and renal efferent arterioles — activated by angiotensin II generated via RAAS (ACE converts angiotensin I)",
+    receptor:
+      "Gq-coupled GPCR (gene AGTR1) — angiotensin II binding → phospholipase C → IP3/DAG → ↑ intracellular Ca²⁺ → vasoconstriction, aldosterone synthesis, proximal Na⁺ reabsorption, ADH release, and sympathetic activation",
+    function:
+      "Primary effector receptor for angiotensin II in cardiovascular and renal homeostasis — mediates systemic and renal vasoconstriction (especially efferent arteriole), stimulates adrenal aldosterone release, increases proximal tubule Na⁺ reabsorption, promotes thirst and ADH secretion, and supports normal fetal kidney development in utero.",
+    clinicalRelevance: [
+      "ARBs (losartan, valsartan) selectively block AT1 — ↓ vasoconstriction and ↓ efferent arteriole tone",
+      "ACE inhibitors ↓ angiotensin II synthesis upstream — similar hemodynamic effects with added bradykinin accumulation",
+      "AT1 blockade in bilateral renal artery stenosis → loss of efferent constriction → ↓ GFR",
+      "AT1 antagonism in pregnancy (2nd–3rd trimester) → fetal renal hypoplasia, oligohydramnios, Potter sequence, neonatal anuria",
+      "Chronic AT1 blockade — ↓ aldosterone, hyperkalemia risk",
+    ],
+    boardsPearls: [
+      "AT1 = main angiotensin II receptor (Gq) — vasoconstriction, aldosterone, Na⁺ retention",
+      "Ang II → AT1 constricts efferent arteriole → preserves GFR in hypovolemia/RAS",
+      "ARBs block AT1; no bradykinin effect (unlike ACE inhibitors)",
+      "ACE inhibitors and ARBs teratogenic — fetal renal dysgenesis/hypoplasia",
+      "vs AT2 receptor — AT2 often counter-regulatory (vasodilation, development, tissue repair)",
+      "Losartan/valsartan = AT1 antagonists",
+      "Stimulates zona glomerulosa aldosterone release downstream of Ang II binding",
+    ],
+    distinguishFrom: [
+      "AT2 receptor (angiotensin II receptor type 2) — vasodilation, fetal development, less classic pressor role",
+      "Angiotensin II — peptide ligand, not the receptor",
+      "ACE (angiotensin-converting enzyme) — generates Ang II upstream; not the receptor",
+      "Mineralocorticoid receptor — aldosterone target in collecting duct, downstream of AT1-mediated aldosterone release",
+      "α1-adrenergic receptor — catecholamine vasoconstriction, not RAAS peptide receptor",
+      "ARBs (drug class) — pharmacologic AT1 blockers, not the receptor molecule",
+    ],
+    pediatrics:
+      "Fetal kidneys depend on angiotensin II–AT1 signaling for normal development — ACE inhibitors and ARBs contraindicated in pregnancy (especially 2nd–3rd trimester) → renal hypoplasia, oligohydramnios, skull hypoplasia, neonatal renal failure.",
+  },
+  {
     id: "raas",
     name: "RAAS",
     etymology: "RAA = renin-angiotensin-aldosterone + S = system",
@@ -5103,6 +5716,194 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
       "Children in endemic areas exposed via contaminated food; HCC from aflatoxin + HBV typically manifests in adulthood but exposure begins in childhood.",
   },
   {
+    id: "tetrodotoxin",
+    name: "Tetrodotoxin",
+    etymology:
+      "Tetra- = four + odo- = tooth + toxin — named for pufferfish (Tetraodontidae) whose ovaries/liver concentrate this potent neurotoxin",
+    aliases: [
+      "tetrodotoxin",
+      "tetrodotoxins",
+      "ttx",
+      "pufferfish toxin",
+      "fugu toxin",
+      "tetraodontoxin",
+    ],
+    type: "Metabolite",
+    source:
+      "Marine neurotoxin concentrated in pufferfish (fugu) ovaries/liver; also produced by certain bacteria (Vibrio, Pseudomonas) symbiotic with marine animals; found in blue-ringed octopus salivary glands",
+    receptor:
+      "Voltage-gated Na⁺ channel (site 1) — binds extracellular pore from outside; physically blocks ion permeation",
+    function:
+      "No physiologic function — potent neurotoxin that prevents voltage-gated Na⁺ channel opening → abolishes action potential generation and propagation in nerves and muscle.",
+    mnemonic:
+      "TTX and Saxitoxin both block Na⁺ channels (close the pore) — vs Ciguatoxin/Batrachotoxin that force channels open",
+    clinicalRelevance: [
+      "Pufferfish (fugu) poisoning — perioral numbness, ascending paralysis, respiratory failure; no antidote — supportive care",
+      "Blue-ringed octopus envenomation — TTX in saliva causes rapid paralysis",
+      "Research tool to selectively block Na⁺ channels and study action potential physiology",
+      "Local anesthetics and antiarrhythmics also target voltage-gated Na⁺ channels (different binding site/mechanism)",
+    ],
+    boardsPearls: [
+      "TTX blocks voltage-gated Na⁺ channels → no action potentials → paralysis",
+      "Pufferfish poisoning — numbness, weakness, respiratory arrest; fugu prepared by licensed chefs in Japan",
+      "vs saxitoxin — both block Na⁺ channels; saxitoxin from shellfish/red tide",
+      "vs ciguatoxin/batrachotoxin — those open/persistently activate Na⁺ channels, TTX blocks them",
+      "vs local anesthetics — both inhibit Na⁺ channels; TTX binds site 1 externally",
+      "Tetrodotoxin is heat-stable — cooking does not reliably detoxify improperly prepared fugu",
+    ],
+    distinguishFrom: [
+      "Saxitoxin — dinoflagellate toxin; also blocks Na⁺ channels; paralytic shellfish poisoning",
+      "Ciguatoxin — opens Na⁺ channels; ciguatera fish poisoning from reef fish",
+      "Batrachotoxin — irreversibly opens Na⁺ channels; poison dart frog toxin",
+      "Local anesthetic — reversible Na⁺ channel block for analgesia",
+      "Tubocurarine — nicotinic ACh receptor blocker at NMJ, not Na⁺ channel toxin",
+      "Botulinum toxin — blocks ACh release presynaptically, not Na⁺ channel blockade",
+    ],
+    pediatrics:
+      "Pediatric fugu or seafood toxin exposure is rare outside endemic regions; TTX poisoning management is supportive ventilation regardless of age.",
+  },
+  {
+    id: "saxitoxin",
+    name: "Saxitoxin",
+    etymology:
+      "Named for Saxidomus giganteus (butter clam) + toxin — dinoflagellate-derived neurotoxin causing paralytic shellfish poisoning",
+    aliases: [
+      "saxitoxin",
+      "saxitoxins",
+      "stx",
+      "paralytic shellfish poison",
+      "paralytic shellfish poisoning toxin",
+      "red tide toxin",
+      "psp toxin",
+    ],
+    type: "Metabolite",
+    source:
+      "Neurotoxin produced by marine dinoflagellates (Alexandrium, Gymnodinium, Pyrodinium) during algal blooms (red tide) — accumulates in filter-feeding shellfish (mussels, clams, oysters)",
+    receptor:
+      "Voltage-gated Na⁺ channel (site 1) — binds extracellularly like tetrodotoxin; blocks Na⁺ permeation and action potential generation",
+    function:
+      "No physiologic function — blocks neuronal and muscle voltage-gated Na⁺ channels → prevents depolarization and causes flaccid paralysis at high doses.",
+    mnemonic:
+      "Saxitoxin + TTX = Na⁺ channel blockers (shellfish/red tide vs pufferfish)",
+    clinicalRelevance: [
+      "Paralytic shellfish poisoning (PSP) — ingestion of contaminated shellfish → perioral tingling, ataxia, ascending paralysis, respiratory failure",
+      "Red tide algal blooms — public health shellfish harvesting bans when saxitoxin detected",
+      "Rapid onset within hours of shellfish ingestion — severity dose-dependent",
+      "Supportive care — mechanical ventilation for respiratory paralysis; no specific antidote",
+    ],
+    boardsPearls: [
+      "Saxitoxin blocks voltage-gated Na⁺ channels — same general mechanism as tetrodotoxin (site 1)",
+      "Paralytic shellfish poisoning — dinoflagellate bloom → shellfish accumulate toxin",
+      "Red tide → avoid shellfish; tingling lips → ascending paralysis",
+      "vs ciguatoxin — ciguatoxin opens Na⁺ channels; saxitoxin blocks them",
+      "vs botulism — botulinum blocks ACh release; saxitoxin blocks Na⁺ channels",
+      "Heat-stable toxin — cooking shellfish does not reliably detoxify",
+    ],
+    distinguishFrom: [
+      "Tetrodotoxin — pufferfish toxin; also blocks Na⁺ channels at site 1",
+      "Ciguatoxin — reef fish toxin that opens Na⁺ channels; ciguatera not paralytic shellfish poisoning",
+      "Brevetoxin — different dinoflagellate toxin (Karenia); neurotoxic shellfish poisoning, not classic PSP saxitoxin",
+      "Botulinum toxin — presynaptic ACh release blockade, not Na⁺ channel pore block",
+      "Scombroid poisoning — histamine from spoiled fish, not saxitoxin Na⁺ channel blockade",
+    ],
+    pediatrics:
+      "Children are susceptible to paralytic shellfish poisoning from contaminated seafood; smaller body mass may worsen toxicity — supportive respiratory care is critical.",
+  },
+  {
+    id: "ciguatoxin",
+    name: "Ciguatoxin",
+    etymology:
+      "Spanish cigua = sea snail + toxin — marine toxin bioaccumulated in tropical reef carnivorous fish causing ciguatera poisoning",
+    aliases: [
+      "ciguatoxin",
+      "ciguatoxins",
+      "ctx",
+      "ciguatera toxin",
+      "ciguatera toxins",
+      "reef fish toxin",
+    ],
+    type: "Metabolite",
+    source:
+      "Lipophilic polyether neurotoxin produced by marine dinoflagellates (Gambierdiscus toxicus) growing on reef algae — bioaccumulates up the food chain in large tropical reef fish (barracuda, grouper, snapper, moray eel)",
+    receptor:
+      "Voltage-gated Na⁺ channel — binds and keeps channels open or shifts activation to more negative potentials → persistent Na⁺ influx and depolarization",
+    function:
+      "No physiologic function — causes sustained opening of voltage-gated Na⁺ channels → membrane depolarization, repetitive firing, and eventual inactivation exhaustion → neurologic and cardiovascular toxicity.",
+    mnemonic:
+      "Ciguatoxin + Batrachotoxin open Na⁺ channels — vs TTX/Saxitoxin that block (close) them",
+    clinicalRelevance: [
+      "Ciguatera fish poisoning — ingestion of large reef carnivorous fish in Caribbean/Indo-Pacific → GI symptoms plus neurologic toxicity",
+      "Classic symptoms — reversal of hot/cold sensation (temperature dysesthesia), perioral paresthesias, pruritus, bradycardia, hypotension",
+      "Chronic fatigue and neurologic symptoms may persist weeks to months",
+      "No antidote — supportive care; mannitol historically used but evidence mixed",
+      "Avoid large apex reef predators — toxin concentrates with fish size and trophic level",
+    ],
+    boardsPearls: [
+      "Ciguatoxin opens/activates voltage-gated Na⁺ channels — opposite of TTX/saxitoxin blockade",
+      "Ciguatera — reef fish (barracuda, grouper) → GI + neurologic; hot-cold reversal pathognomonic",
+      "Gambierdiscus dinoflagellate on algae → bioaccumulates in fish",
+      "vs saxitoxin — saxitoxin blocks Na⁺; ciguatoxin persistently opens Na⁺",
+      "vs scombroid — histamine fish poisoning, not Na⁺ channel toxin",
+      "Lipophilic toxin — not destroyed by cooking",
+    ],
+    distinguishFrom: [
+      "Tetrodotoxin — blocks Na⁺ channels; pufferfish not reef fish ciguatera",
+      "Saxitoxin — shellfish PSP toxin; blocks Na⁺ channels",
+      "Batrachotoxin — poison dart frog toxin; also opens Na⁺ channels irreversibly",
+      "Scombroid poisoning — histamine from improperly stored fish (tuna, mahi-mahi)",
+      "Mercury toxicity — metal bioaccumulation in fish; neurologic but different mechanism",
+      "Shellfish allergy — IgE-mediated, not ciguatoxin channel effect",
+    ],
+    pediatrics:
+      "Children traveling to tropical regions may be exposed via reef fish consumption; ciguatera causes similar temperature dysesthesia and GI-neurologic syndrome across ages.",
+  },
+  {
+    id: "batrachotoxin",
+    name: "Batrachotoxin",
+    etymology:
+      "Greek batrachos = frog + toxin — extremely potent steroidal alkaloid neurotoxin from poison dart frogs (Phyllobates genus)",
+    aliases: [
+      "batrachotoxin",
+      "batrachotoxins",
+      "btx",
+      "poison dart frog toxin",
+      "phyllobates toxin",
+    ],
+    type: "Metabolite",
+    source:
+      "Steroidal alkaloid neurotoxin found in skin of poison dart frogs (Phyllobates terribilis, P. aurotaenia); also in feathers of some New Guinea birds (Pitohui, Ifrita); frogs may sequester toxin from dietary arthropods (Choresine beetles)",
+    receptor:
+      "Voltage-gated Na⁺ channel — irreversibly binds and keeps channels open at resting membrane potential → persistent depolarization",
+    function:
+      "No physiologic function — one of the most potent natural Na⁺ channel activators; prevents channel inactivation → sustained depolarization, nerve/muscle inexcitability from inactivation block, and fatal arrhythmias or paralysis.",
+    mnemonic:
+      "Batrachotoxin (frog) + Ciguatoxin (fish) = Na⁺ channel openers; TTX + Saxitoxin = Na⁺ blockers",
+    clinicalRelevance: [
+      "Poison dart frog toxicity — indigenous use of frog secretions on blow darts; minute amounts lethal",
+      "Mechanism opposite to tetrodotoxin — opens rather than blocks Na⁺ channels",
+      "Research tool to study Na⁺ channel gating and inactivation",
+      "Cardiotoxic — ventricular arrhythmias from persistent cardiac Na⁺ current",
+    ],
+    boardsPearls: [
+      "Batrachotoxin irreversibly opens voltage-gated Na⁺ channels → persistent depolarization",
+      "Poison dart frogs (Phyllobates) — one of most toxic land animals",
+      "vs tetrodotoxin/saxitoxin — those block Na⁺ pores; batrachotoxin forces channels open",
+      "vs ciguatoxin — both activate Na⁺ channels; batrachotoxin from frogs, ciguatoxin from reef fish",
+      "Channel inactivation exhaustion → paralysis despite initial depolarization",
+      "Extremely potent — microgram quantities can be lethal",
+    ],
+    distinguishFrom: [
+      "Tetrodotoxin — blocks Na⁺ channels; pufferfish toxin",
+      "Saxitoxin — blocks Na⁺ channels; shellfish PSP",
+      "Ciguatoxin — reef fish toxin opening Na⁺ channels; ciguatera syndrome",
+      "Ouabain — blocks Na⁺/K⁺-ATPase, not voltage-gated Na⁺ channel gating",
+      "Veratridine — plant alkaloid that also activates Na⁺ channels; less potent research context",
+      "Botulinum toxin — presynaptic ACh blockade, unrelated Na⁺ channel mechanism",
+    ],
+    pediatrics:
+      "Accidental exposure outside endemic regions is exceedingly rare; Na⁺ channel opener toxicity would present with rapid neurologic and cardiac dysfunction requiring supportive care.",
+  },
+  {
     id: "glucagon",
     name: "Glucagon",
     etymology: "Greek glykys = sweet + agō = leading (toward glucose) + -in = protein suffix",
@@ -5736,6 +6537,61 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
     ],
     pediatrics:
       "Congenital peptide hormone deficiencies include GH deficiency (short stature), ACTH deficiency (adrenal crisis), and diabetes from insulin deficiency (type 1). Neonatal hypoglycemia workup includes insulin, GH, and cortisol levels.",
+  },
+  {
+    id: "signaling-peptide",
+    name: "Signaling Peptide",
+    etymology:
+      "Latin signum = sign/signal + Greek peptos = digested (peptide) — short chain of amino acids secreted as an extracellular messenger to bind cell-surface receptors",
+    aliases: [
+      "signaling peptide",
+      "signaling peptides",
+      "signalling peptide",
+      "signalling peptides",
+      "signal peptide",
+      "signal peptides",
+      "peptide signaling molecule",
+      "peptide signaling molecules",
+      "peptide signalling molecule",
+      "peptide signalling molecules",
+      "extracellular signaling peptide",
+      "extracellular signaling peptides",
+      "secreted peptide signal",
+      "secreted peptide signals",
+    ],
+    type: "Peptide hormone",
+    function:
+      "Water-soluble peptide chains secreted by endocrine, paracrine, or neuronal cells that act as extracellular signals — binding membrane receptors (GPCRs, receptor tyrosine kinases, or guanylyl cyclase–linked receptors) to activate second-messenger cascades; includes peptide hormones, cytokines, chemokines, growth factors, and many neuropeptides.",
+    clinicalRelevance: [
+      "Insulin and glucagon — metabolic peptide hormones",
+      "Angiotensin II, ADH, ANP — cardiovascular/volume peptide signals",
+      "ACTH, TSH, GH, LH/FSH — anterior pituitary peptide hormones",
+      "Cytokines (IL-1, IL-6, TNF) — immune signaling peptides",
+      "EGF, PDGF — growth factor peptide signals via RTKs",
+      "Gastrin, secretin, CCK — GI regulatory peptides",
+      "Substance P, orexin — neuropeptide signaling peptides",
+    ],
+    boardsPearls: [
+      "Signaling peptides = secreted amino acid chains acting on membrane receptors",
+      "Water-soluble → cannot cross membrane → need cell-surface receptor → second messengers (cAMP, IP3/DAG, Ca²⁺, RTK phosphorylation)",
+      "vs steroid hormones — lipophilic, intracellular/nuclear receptors",
+      "vs thyroid hormone (T3/T4) — amine-derived but intracellular receptor like steroids",
+      "Prohormone processing — proinsulin, POMC, angiotensinogen → active peptides",
+      "Peptide hormone is subset; cytokines and growth factors are also signaling peptides",
+      "vs signal peptide (ER targeting sequence) — N-terminal ER import sequence on nascent proteins, not extracellular hormone",
+    ],
+    distinguishFrom: [
+      "Peptide hormone — endocrine signaling peptide subset acting at distant targets",
+      "Cytokine — immune/inflammatory signaling peptide; often paracrine",
+      "Growth factor — peptide mitogen (EGF, VEGF); often acts via RTK",
+      "Neuropeptide — peptide signaling in nervous system (substance P, NPY)",
+      "Steroid hormone — lipid-soluble, nuclear receptor, not peptide",
+      "Signaling pathway — intracellular cascade (JAK-STAT, cAMP) downstream of peptide binding",
+      "Signal peptide (ER sequence) — N-terminal hydrophobic leader directing cotranslational ER entry; unrelated extracellular signaling role",
+      "Amino acid neurotransmitter — single amino acids (glutamate, GABA), not peptide chains",
+    ],
+    pediatrics:
+      "Congenital deficiencies of peptide signaling hormones present in infancy — congenital hypothyroidism (though T4 is amine), GH deficiency, and insulin deficiency (type 1 diabetes). Cytokine signaling peptides mediate neonatal sepsis inflammatory response.",
   },
   {
     id: "adenylyl-cyclase",
