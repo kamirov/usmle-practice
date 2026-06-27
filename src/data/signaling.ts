@@ -917,6 +917,56 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
       "NEMO (IKKγ) deficiency — X-linked combined immunodeficiency with ectodermal dysplasia and susceptibility to pyogenic and mycobacterial infection. MyD88/IRAK-4 deficiency impairs TLR/IL-1R→NF-κB signaling → recurrent bacterial infections in infancy without severe viral susceptibility. Neonatal gram-negative sepsis — excessive NF-κB-driven cytokine release.",
   },
   {
+    id: "growth-hormone",
+    name: "Growth Hormone",
+    etymology: "Latin growth = increase in size + hormone = messenger — anterior pituitary somatotropin (GH) stimulating hepatic IGF-1 and somatic growth",
+    aliases: [
+      "growth hormone",
+      "growth hormones",
+      "gh",
+      "somatotropin",
+      "somatotropins",
+      "human growth hormone",
+      "hgh",
+      "pituitary growth hormone",
+      "anterior pituitary gh",
+    ],
+    type: "Peptide hormone",
+    source:
+      "Anterior pituitary somatotrophs — pulsatile secretion stimulated by hypothalamic GHRH and inhibited by somatostatin; secretion also stimulated by ghrelin, exercise, sleep, and hypoglycemia",
+    receptor:
+      "Growth hormone receptor (GHR) on hepatocytes and peripheral tissues → JAK2/STAT5 signaling → induces IGF-1 production; direct GH effects on lipolysis and anti-insulin actions",
+    function:
+      "Promotes linear growth (via hepatic and local IGF-1), protein anabolism, lipolysis, and antagonism of insulin action — essential for childhood stature; excess after epiphyseal closure causes acromegaly; deficiency causes growth failure.",
+    clinicalRelevance: [
+      "Acromegaly — GH-secreting pituitary adenoma; ↑ IGF-1; oral glucose fails to suppress GH",
+      "Gigantism — GH excess before epiphyseal closure in children",
+      "GH deficiency — short stature, ↓ IGF-1, failed GH stimulation test (arginine, clonidine)",
+      "Laron syndrome — GH receptor defect → high GH, low IGF-1, short stature",
+      "Octreotide/lanreotide — somatostatin analogs suppress GH; pegvisomant blocks GH receptor",
+      "Recombinant GH — treats GH deficiency; contraindicated in active malignancy",
+    ],
+    boardsPearls: [
+      "GH axis: hypothalamus (GHRH + somatostatin) → pituitary GH → liver IGF-1 → growth",
+      "Screen acromegaly with IGF-1, not random GH (GH is pulsatile)",
+      "Oral glucose tolerance test — normal GH suppression; acromegaly fails to suppress",
+      "Gigantism (child, open physes) vs acromegaly (adult, closed physes) — same hormone excess",
+      "GH stimulates lipolysis and ↑ blood glucose (anti-insulin) — diabetogenic at excess levels",
+      "vs IGF-1 — GH pulsatile pituitary hormone; IGF-1 stable downstream marker",
+      "Somatostatin inhibits GH; ghrelin stimulates GH release",
+    ],
+    distinguishFrom: [
+      "IGF-1 — hepatic growth mediator downstream of GH; preferred screening test for acromegaly",
+      "GHRH — hypothalamic releasing hormone stimulating GH secretion",
+      "Somatostatin — hypothalamic inhibitor of GH; octreotide mimics",
+      "Ghrelin — gut hormone with GH secretagogue activity",
+      "Prolactin — separate anterior pituitary hormone; dopamine inhibits prolactin",
+      "Thyroid hormone — required for normal growth; distinct from GH axis",
+    ],
+    pediatrics:
+      "GH deficiency causes growth failure with delayed bone age and ↓ IGF-1 — treat with recombinant GH if confirmed. Gigantism from pituitary adenoma before epiphyseal closure. Craniopharyngioma and radiation can cause GH deficiency in children.",
+  },
+  {
     id: "insulin-like-growth-factor-1",
     name: "Insulin-like growth factor-1",
     etymology: "insulin-like = structurally homologous to insulin + growth factor = mitogenic signal + 1 = primary circulating isoform",
@@ -926,9 +976,14 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
       "insulin like growth factor 1",
       "insulin-like growth factor-i",
       "insulin-like growth factor i",
+      "insulin-like growth factor",
+      "insulin-like growth factors",
+      "insulin like growth factors",
       "igf-1",
       "igf1",
       "igf 1",
+      "igf",
+      "igfs",
       "somatomedin c",
       "somatomedin-c",
     ],
@@ -962,6 +1017,52 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
     ],
     pediatrics:
       "Low IGF-1 with growth failure suggests GH deficiency; congenital GH resistance (Laron syndrome) shows high GH with low IGF-1; before epiphyseal closure, GH excess causes gigantism with elevated IGF-1.",
+  },
+  {
+    id: "insulin-like-growth-factor-2",
+    name: "Insulin-like growth factor-2",
+    etymology: "insulin-like = homologous to insulin + growth factor = mitogenic signal + 2 = second IGF isoform — major fetal growth factor",
+    aliases: [
+      "insulin-like growth factor-2",
+      "insulin-like growth factor 2",
+      "insulin like growth factor 2",
+      "insulin-like growth factor-ii",
+      "insulin-like growth factor ii",
+      "igf-2",
+      "igf2",
+      "igf 2",
+      "somatomedin a",
+      "somatomedin-a",
+    ],
+    type: "Growth factor",
+    source:
+      "Fetal tissues, placenta, and adult liver — IGF2 gene imprinted (paternal allele expressed); major autocrine/paracrine growth signal in utero",
+    receptor:
+      "IGF-1 receptor (IGF-1R) and IGF-2R (mannose-6-phosphate receptor — primarily lysosomal routing, not classic mitogenic signaling)",
+    function:
+      "Dominant fetal growth factor promoting placental and somatic development; after birth IGF-1 largely supersedes IGF-2 for postnatal growth; IGF-2 also involved in insulin-like metabolic signaling in selected tissues.",
+    clinicalRelevance: [
+      "Beckwith-Wiedemann syndrome — IGF2 overexpression from imprinting defect → macrosomia, omphalocele, hemihyperplasia, Wilms tumor risk",
+      "Russell-Silver syndrome — IGF2 underexpression/hypomethylation → intrauterine and postnatal growth restriction, limb asymmetry",
+      "Wilms tumor and hepatoblastoma — associated with BWS IGF2 dysregulation",
+      "IGF-2 less used clinically than IGF-1 for acromegaly/GH deficiency monitoring",
+    ],
+    boardsPearls: [
+      "IGF-2 = major fetal growth factor; IGF-1 = major postnatal GH-dependent growth factor",
+      "IGF2 imprinting — paternal allele normally expressed; loss of imprinting → Beckwith-Wiedemann",
+      "Beckwith-Wiedemann — macrosomia, macroglossia, omphalocele, ↑ Wilms tumor risk",
+      "Russell-Silver — opposite growth restriction phenotype with IGF2 hypomethylation",
+      "vs IGF-1 — measure IGF-1 for acromegaly screening; IGF-2 boards focus is imprinting disorders",
+      "Somatomedin A = older name for IGF-2",
+    ],
+    distinguishFrom: [
+      "IGF-1 — primary postnatal GH-dependent growth factor; acromegaly screening marker",
+      "Growth hormone — pituitary hormone stimulating hepatic IGF-1, not IGF-2 directly on boards",
+      "Insulin — metabolic hormone; homologous structure but distinct receptors",
+      "EGF — epidermal growth factor; separate growth factor family",
+    ],
+    pediatrics:
+      "Beckwith-Wiedemann and Russell-Silver syndromes present in infancy with characteristic growth and imprinting findings — screen BWS patients for Wilms tumor and hepatoblastoma. IGF-2 drives fetal growth; postnatal stature primarily reflects GH→IGF-1 axis.",
   },
   {
     id: "il-1",
@@ -4195,6 +4296,55 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
       "Same Gs–adenylyl cyclase–cAMP logic in children; β-agonists for asthma and cholera dehydration risk are especially critical in infants.",
   },
   {
+    id: "diacylglycerol",
+    name: "Diacylglycerol (DAG)",
+    etymology:
+      "di- = two + acyl = fatty acid chain + glycerol = three-carbon alcohol backbone — glycerolipid second messenger with two esterified fatty acids, generated when phospholipase C cleaves PIP₂",
+    aliases: [
+      "dag",
+      "DAG",
+      "diacylglycerol",
+      "diacylglycerols",
+      "diglyceride",
+      "diglycerides",
+      "1,2-diacylglycerol",
+      "1,2-dag",
+      "dag substance",
+      "dag second messenger",
+      "diacylglycerol second messenger",
+    ],
+    type: "Second messenger",
+    source:
+      "Generated in the inner leaflet of the plasma membrane when phospholipase C (PLCβ via Gq, or PLCγ via RTKs) hydrolyzes phosphatidylinositol 4,5-bisphosphate (PIP₂) — released concurrently with IP₃ from the same cleavage reaction",
+    receptor:
+      "Protein kinase C (PKC) — classic and novel isoforms; DAG (with Ca²⁺ for conventional PKC) binds C1 domain and activates serine/threonine phosphorylation of downstream substrates",
+    function:
+      "Lipid second messenger that remains in the membrane after PIP₂ cleavage — recruits and activates PKC to phosphorylate targets controlling smooth muscle contraction, secretion, gene expression, and platelet activation; also serves as intermediate in triglyceride synthesis (not signaling role).",
+    clinicalRelevance: [
+      "α1-adrenergic, M3 muscarinic, H1, V1 vasopressin, AT1 angiotensin II — Gq → PLC → DAG + IP₃",
+      "Phorbol esters (TPA) mimic DAG and chronically activate PKC — tumor promoter in experimental models",
+      "α1-blockers reduce Gq-mediated DAG/PKC signaling in hypertension and BPH",
+    ],
+    boardsPearls: [
+      "PLC cleaves PIP₂ → IP₃ (Ca²⁺ release) + DAG (PKC activation) — twin second messengers",
+      "DAG activates PKC at the plasma membrane; IP₃ releases ER Ca²⁺",
+      "Gq-coupled receptors: α1, M1/M3, H1, V1, GnRH, oxytocin, AT1",
+      "Phorbol ester = DAG mimic → persistent PKC activation",
+      "vs triglyceride intermediate — metabolic DAG in lipid synthesis is not primarily a signaling molecule",
+      "Full cascade = diacylglycerol–PKC pathway entry; DAG is the lipid second messenger",
+    ],
+    distinguishFrom: [
+      "Diacylglycerol–PKC pathway — full Gq → PLC → DAG → PKC signaling cascade",
+      "IP₃ — soluble inositol second messenger from same PIP₂ cleavage; releases Ca²⁺",
+      "PIP₂ — membrane phospholipid substrate for PLC, not the active second messenger",
+      "cAMP — adenylyl cyclase second messenger from Gs/Gi pathways, not Gq PLC",
+      "Triacylglycerol — three fatty acids on glycerol; storage lipid, not PKC activator",
+      "Phosphatidic acid — precursor to DAG in lipid synthesis pathway",
+    ],
+    pediatrics:
+      "Same Gq–PLC–DAG–PKC physiology in children; M3-mediated bronchoconstriction in asthma uses this signaling axis.",
+  },
+  {
     id: "pka",
     name: "Protein Kinase A (PKA)",
     etymology:
@@ -6409,6 +6559,52 @@ export const SIGNALING_MOLECULES: SignalingEntry[] = [
     ],
     pediatrics:
       "Melatonin sometimes used in pediatric circadian rhythm disorders and autism-related insomnia under specialist guidance; pineal tumors are rare in children.",
+  },
+  {
+    id: "orexin",
+    name: "Orexin",
+    etymology: "Greek orexis = appetite + -in = peptide suffix (hypocretin neuropeptide system; dual naming with hypocretin)",
+    aliases: [
+      "orexin",
+      "orexins",
+      "prexin",
+      "prexins",
+      "hypocretin",
+      "hypocretins",
+      "prepro-orexin",
+      "prepro orexin",
+      "orexin neuropeptide",
+      "orexin neuropeptides",
+      "hypocretin orexin",
+    ],
+    type: "Neurotransmitter",
+    source: "Lateral hypothalamic neurons (project widely to wake-promoting brainstem and cortex)",
+    receptor: "Orexin-1 receptor (OX1R) and orexin-2 receptor (OX2R) — GPCRs",
+    function:
+      "Promotes and stabilizes wakefulness — activates monoaminergic and cholinergic arousal systems and inhibits inappropriate REM intrusion; co-regulates appetite and energy balance. Cleaved from prepro-orexin into orexin A (hypocretin-1) and orexin B (hypocretin-2).",
+    clinicalRelevance: [
+      "Narcolepsy type 1 — autoimmune loss of orexin neurons; low CSF hypocretin-1 (orexin A)",
+      "Cataplexy, sleep paralysis, hypnagogic hallucinations — REM intrusion from orexin deficiency",
+      "Suvorexant/daridorexant/lemborexant — dual orexin receptor antagonists (DORAs) for insomnia",
+      "Modafinil — wake-promoting therapy in narcolepsy (does not replace orexin)",
+    ],
+    boardsPearls: [
+      "Orexin = hypocretin — same lateral hypothalamic neuropeptide system, dual naming",
+      "Orexin A = hypocretin-1; orexin B = hypocretin-2 — from same prepro-orexin precursor",
+      "Narcolepsy type 1 = cataplexy + excessive daytime sleepiness + low CSF hypocretin-1",
+      "DORAs (suvorexant) block OX1R/OX2R → promote sleep without GABA-A activity",
+      "vs melatonin — pineal circadian hormone; orexin stabilizes wakefulness from lateral hypothalamus",
+      "vs histamine (H1) — separate tuberomammillary wake pathway blocked by sedating antihistamines",
+    ],
+    distinguishFrom: [
+      "Hypocretin-1 (orexin A) — specific peptide; CSF assay measures hypocretin-1",
+      "Hypocretin-2 (orexin B) — sibling peptide preferentially activating OX2R",
+      "Melatonin — pineal hormone promoting sleep timing, not orexin wake stability",
+      "Modafinil — wake-promoting drug; mechanism distinct from orexin peptide replacement",
+      "Suvorexant — synthetic orexin receptor antagonist drug, not endogenous orexin",
+    ],
+    pediatrics:
+      "Narcolepsy often begins in adolescence; excessive daytime sleepiness mistaken for laziness — low CSF hypocretin-1 confirms type 1.",
   },
   {
     id: "hypocretin-1",

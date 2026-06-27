@@ -959,6 +959,40 @@ export const HEMODYNAMICS: HemodynamicEntry[] = [
     ],
   },
   {
+    id: "hypotensive",
+    name: "Hypotensive",
+    etymology:
+      "Greek hypo = under/below + Latin tensio = stretching + -ive = having quality of — blood pressure below normal or inadequate for tissue perfusion",
+    aliases: [
+      "hypotensive",
+      "hypotension",
+      "low blood pressure",
+      "low bp",
+      "decreased blood pressure",
+      "decreased bp",
+      "hypotensive state",
+      "hypotensive states",
+      "arterial hypotension",
+    ],
+    definition:
+      "Clinical state of abnormally low arterial blood pressure — typically SBP <90 mmHg or MAP <65 mmHg in adults (context-dependent) — resulting in inadequate organ perfusion when severe or prolonged.",
+    factors: [
+      "Normal context varies — athletes and pregnancy may have lower baseline BP without pathology",
+      "Hypovolemic: hemorrhage, dehydration, burns, diuretics → ↓ preload → ↓ CO → hypotension",
+      "Cardiogenic: MI, severe heart failure, arrhythmia → pump failure → hypotension",
+      "Obstructive: PE, cardiac tamponade, tension pneumothorax → impaired filling/output",
+      "Distributive: sepsis, anaphylaxis, spinal anesthesia, adrenal insufficiency → vasodilation + relative hypovolemia",
+      "Medications: nitrates, ACE inhibitors, β-blockers, opioids, general anesthesia",
+      "Orthostatic hypotension — ↓ SBP ≥20 or ↓ DBP ≥10 within 3 min of standing",
+      "Clinical signs: dizziness, syncope, tachycardia (compensatory), cool clammy skin, oliguria, altered mental status",
+      "Beck triad in tamponade: hypotension + ↑ JVP + muffled heart sounds",
+      "Septic shock — hypotension despite adequate volume requiring vasopressors",
+      "Cerebral perfusion risk when MAP falls below autoregulatory range — watershed infarcts",
+      "Peds: children maintain BP longer via tachycardia — hypotension is late sign of shock",
+      "vs hypertensive — opposite hemodynamic state; chronic HTN shifts autoregulation curve",
+    ],
+  },
+  {
     id: "pulse-pressure",
     name: "Pulse Pressure",
     etymology:
@@ -1509,6 +1543,36 @@ export const HEMODYNAMICS: HemodynamicEntry[] = [
       "Continuous murmur — persistent gradient between two connected high- and low-pressure beds (PDA, AV fistula)",
       "Malignant hypertension — autoregulation fails in cerebral, cardiac, and renal beds → end-organ injury",
       "Pharmacology: nitrates dilate venous capacitance bed (↓ preload); hydralazine dilates arteriolar beds (↓ afterload)",
+    ],
+  },
+  {
+    id: "orthostasis",
+    name: "Orthostasis",
+    etymology:
+      "Greek orthos = straight/upright + stasis = standing — physiologic state and hemodynamic stress of assuming and maintaining upright posture",
+    aliases: [
+      "orthostasis",
+      "orthostatic",
+      "upright posture",
+      "standing posture",
+      "postural change",
+      "postural changes",
+      "positional change",
+      "positional changes",
+      "orthostatic stress",
+      "orthostatic challenge",
+    ],
+    definition:
+      "Assumption of upright body position — associated with gravitational pooling of blood in lower extremities and splanchnic capacitance vessels, requiring compensatory autonomic reflexes (baroreceptor-mediated ↑ sympathetic tone, venoconstriction, tachycardia) to maintain cerebral perfusion and blood pressure.",
+    factors: [
+      "~500–1000 mL blood pools in lower body on standing — transient ↓ venous return and cardiac output",
+      "Baroreceptor reflex — ↓ stretch → ↑ sympathetic outflow + ↓ vagal tone → vasoconstriction + tachycardia",
+      "Normal response restores BP within seconds; failure → orthostatic hypotension or presyncope",
+      "Volume depletion, autonomic neuropathy, medications, adrenal insufficiency impair compensation",
+      "Orthostatic vitals — supine vs standing BP and HR at 1 and 3 minutes screen for failure",
+      "Positive orthostasis — ≥20 mmHg ↓ systolic or ≥10 mmHg ↓ diastolic BP on standing (orthostatic hypotension)",
+      "POTS — orthostatic intolerance with ↑ HR ≥30 bpm (≥40 in adolescents) without required BP drop",
+      "vs supine hypotension — orthostasis specifically tests positional hemodynamic response",
     ],
   },
   {

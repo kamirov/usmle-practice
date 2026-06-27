@@ -1999,6 +1999,73 @@ export const ORGANS: OrganEntry[] = [
     ],
   },
   {
+    id: "nephrogenic-cord",
+    name: "Nephrogenic Cord",
+    etymology:
+      "Greek nephros = kidney + Latin gignere = to produce + Latin chorda = cord/rope — longitudinal strip of intermediate mesoderm that sequentially forms the embryonic kidneys",
+    aliases: [
+      "nephrogenic cord",
+      "nephrogenic cords",
+      "nephrogenic ridge",
+      "nephrogenic ridges",
+      "nephrogenic blastema cord",
+      "intermediate mesoderm nephrogenic cord",
+      "urogenital ridge",
+      "urogenital ridges",
+    ],
+    germLayer: "Mesoderm (intermediate mesoderm)",
+    origin:
+      "Longitudinal band of intermediate mesoderm flanking the dorsal aorta in the thoracic and lumbar regions — the common embryologic substrate from which pronephros, mesonephros, and metanephros arise in craniocaudal sequence.",
+    derivatives: [
+      "Pronephros — earliest nonfunctional kidney rudiment (regresses)",
+      "Mesonephros — transient intermediate kidney and mesonephric (Wolffian) duct",
+      "Metanephric mesenchyme (blastema) — caudal nephrogenic cord forms definitive nephron progenitors",
+      "Gonadal ridge — adjacent intermediate mesoderm lateral to nephrogenic cord",
+    ],
+    step1Pearls: [
+      "Nephrogenic cord = intermediate mesoderm kidney-forming column",
+      "Three kidneys in sequence: pronephros → mesonephros → metanephros (permanent)",
+      "Caudal nephrogenic cord → metanephric mesenchyme; ureteric bud invades from mesonephric duct",
+      "vs gonadal ridge — adjacent but gives ovaries/testes, not kidney tubules",
+      "Potter sequence when metanephric development fails despite earlier cord formation",
+    ],
+    pediatrics:
+      "Congenital renal agenesis and dysplasia reflect failure of metanephric development from caudal nephrogenic cord — presents with oligohydramnios and Potter facies in neonates when bilateral.",
+  },
+  {
+    id: "mesonephros",
+    name: "Mesonephros",
+    etymology:
+      "Greek mesos = middle + nephros = kidney — middle/transient embryonic kidney between pronephros and metanephros",
+    aliases: [
+      "mesonephros",
+      "mesonephric kidney",
+      "mesonephric kidneys",
+      "intermediate kidney",
+      "intermediate kidneys",
+      "wolffian body",
+      "wolffian bodies",
+    ],
+    germLayer: "Mesoderm (intermediate mesoderm / nephrogenic cord)",
+    origin:
+      "Develops from intermediate mesoderm of the nephrogenic cord during weeks 4–8 — functions briefly as an interim excretory organ before regressing as the metanephros becomes the permanent kidney.",
+    derivatives: [
+      "Mesonephric (Wolffian) duct — epididymis, vas deferens, seminal vesicles (male); ureteric bud origin",
+      "Mesonephric tubules — efferent ductules of testis; some regress in females",
+      "Gartner duct — female remnant of mesonephric duct (vaginal wall cyst)",
+    ],
+    step1Pearls: [
+      "Mesonephros = transient middle kidney; metanephros = permanent kidney",
+      "Mesonephric duct = Wolffian duct → male internal genitalia + ureteric bud source",
+      "Ureteric bud sprouts from caudal mesonephric duct → induces metanephros",
+      "Pronephros → mesonephros → metanephros (craniocaudal kidney sequence)",
+      "Gartner duct cyst — mesonephric duct remnant in female anterolateral vagina",
+      "vs metanephros — mesonephros regresses; metanephros forms adult kidney",
+    ],
+    pediatrics:
+      "Gartner duct cysts may present in adolescent girls as lateral vaginal wall masses. Understanding mesonephric duct embryology explains CBAVD and ureteric bud origin in congenital renal anomalies.",
+  },
+  {
     id: "metanephros",
     name: "Metanephros",
     etymology: "Greek meta = after/change + nephros = kidney",
@@ -2830,6 +2897,145 @@ export const ORGANS: OrganEntry[] = [
       "HSV encephalitis can present in children with fever and behavioral change — temporal lobe involvement on MRI. Febrile seizures in young children are usually benign; complex febrile seizures or mesial temporal sclerosis predispose to temporal lobe epilepsy later.",
   },
   {
+    id: "hippocampus",
+    name: "Hippocampus",
+    etymology:
+      "Greek hippokampos = seahorse — curved medial temporal lobe structure resembling a seahorse on coronal section (also called Ammon's horn)",
+    aliases: [
+      "hippocampus",
+      "hippocampi",
+      "hippocampal",
+      "hippocampal region",
+      "hippocampal regions",
+      "hippocampal formation",
+      "hippocampal formations",
+      "ammons horn",
+      "ammon's horn",
+      "cornu ammonis",
+      "medial temporal lobe hippocampus",
+    ],
+    germLayer: "Ectoderm",
+    origin:
+      "Develops from the medial pallium (archicortex/allocortex) of the telencephalon — folds into the hippocampal formation with dentate gyrus, CA fields (CA1–CA4), and subiculum; connected to entorhinal cortex and fornix.",
+    derivatives: [
+      "Dentate gyrus — granule cells; mossy fiber output to CA3",
+      "Cornu Ammonis (CA1–CA4 pyramidal fields) — Schaffer collaterals CA3→CA1 classic LTP site",
+      "Subiculum — output to entorhinal cortex and fornix",
+      "Fornix — major efferent pathway to mammillary bodies (Papez circuit)",
+      "Entorhinal cortex interface — grid cells and memory gateway to neocortex",
+    ],
+    functionSummary:
+      "Critical for declarative memory encoding, consolidation, and spatial navigation — integrates cortical input via entorhinal cortex and projects through Papez circuit to diencephalon; highly plastic synapses (LTP/LTD) underlie learning.",
+    commonPathologies: [
+      "Alzheimer disease — early hippocampal and entorhinal atrophy → memory loss",
+      "HSV-1 encephalitis — predilection for medial temporal lobes and hippocampus",
+      "Mesial temporal sclerosis — hippocampal sclerosis cause of temporal lobe epilepsy",
+      "Hypoxic-ischemic injury and status epilepticus — hippocampal pyramidal cell vulnerability",
+      "Rabies — Negri bodies in hippocampal (and Purkinje) neurons",
+      "Korsakoff syndrome — mammillary body/fornix–hippocampal circuit damage from thiamine deficiency",
+    ],
+    step1Pearls: [
+      "Hippocampus = medial temporal lobe; seahorse shape; memory and spatial navigation",
+      "Papez circuit — hippocampus → fornix → mammillary bodies → anterior thalamus → cingulate → hippocampus",
+      "Classic LTP — high-frequency Schaffer collateral (CA3) → CA1 synapses; requires NMDA receptor + Ca²⁺",
+      "HSV encephalitis — fever, altered mental status, temporal/hippocampal MRI changes; empiric acyclovir",
+      "Alzheimer — early hippocampal atrophy; memory impairment before other cortical deficits",
+      "vs amygdala — fear/emotion adjacent in medial temporal lobe; hippocampus = declarative memory",
+      "Fornix carries hippocampal output — bilateral damage → severe anterograde amnesia",
+    ],
+    pediatrics:
+      "Complex febrile seizures and prolonged status epilepticus can cause hippocampal injury and mesial temporal sclerosis. HSV encephalitis in children targets medial temporal structures — urgent acyclovir. Developmental hippocampal malformations associate with epilepsy.",
+  },
+  {
+    id: "cerebral-convexity",
+    name: "Cerebral Convexity",
+    etymology:
+      "Latin cerebrum = brain + Latin convexitas = curved outward surface — the domed superolateral outer surface of each cerebral hemisphere",
+    aliases: [
+      "cerebral convexity",
+      "cerebral convexities",
+      "convexity of the brain",
+      "convexity of brain",
+      "cerebral hemisphere convexity",
+      "cerebral hemisphere convexities",
+      "convexity meningioma site",
+      "cerebral surface convexity",
+    ],
+    germLayer: "Ectoderm",
+    origin:
+      "Forms as the telencephalic vesicles expand and fold outward — the convex (outer) surface of each cerebral hemisphere overlies the calvaria and is bounded medially by the interhemispheric fissure and inferiorly by the Sylvian (lateral) fissure.",
+    derivatives: [
+      "Superolateral cerebral cortex — frontal, parietal, and temporal convexity gyri",
+      "Pia-arachnoid and dura overlying cortex",
+      "Bridging veins draining cortex to superior sagittal sinus",
+      "Meningeal vessels supplying convexity dura and cortex",
+    ],
+    functionSummary:
+      "Large cortical surface area for motor, sensory, language, and association functions; overlying meninges and bridging veins link cortical venous drainage to dural sinuses — anatomic landmark for extra-axial lesions and subdural collections.",
+    commonPathologies: [
+      "Convexity meningioma — extra-axial dural-based mass on cerebral surface",
+      "Subdural hematoma — blood between dura and arachnoid over convexity from bridging vein tear",
+      "Contrecoup cortical contusion — coup-contrecoup injury opposite impact site on convexity",
+      "Cerebral abscess or empyema adjacent to convexity cortex",
+      "Normal pressure hydrocephalus — enlarged ventricles with effacement of high convexity sulci",
+    ],
+    step1Pearls: [
+      "Cerebral convexity = superolateral outer brain surface under skull",
+      "Convexity meningioma — extra-axial, dural tail, compresses brain without invading parenchyma early",
+      "Subdural hematoma — bridging vein rupture over convexity; crescent-shaped on CT",
+      "NPH — ventriculomegaly + tight high convexity sulci (classic imaging clue)",
+      "vs skull base — convexity is calvarial surface; skull base lesions affect cranial nerves and cavernous sinus",
+      "Epidural hematoma — lentiform/lens-shaped, usually temporal bone fracture, not classic convexity bridging vein mechanism",
+    ],
+    pediatrics:
+      "Non-accidental head trauma may cause convexity subdural hematomas in infants from bridging vein injury. Convexity meningiomas are rare in children compared with adults.",
+  },
+  {
+    id: "cerebral-fissure",
+    name: "Cerebral Fissure",
+    etymology:
+      "Latin cerebrum = brain + Latin fissura = cleft — deep anatomic clefts separating major parts of the cerebrum (distinct from smaller sulci)",
+    aliases: [
+      "cerebral fissure",
+      "cerebral fissures",
+      "brain fissure",
+      "brain fissures",
+      "cerebral fissure of brain",
+      "fissure of the brain",
+      "fissures of the cerebrum",
+      "major cerebral fissures",
+    ],
+    germLayer: "Ectoderm",
+    origin:
+      "Form during telencephalic development as cortical expansion creates deep grooves — major fissures define lobar boundaries and separate supratentorial cerebrum from infratentorial cerebellum (transverse fissure/tentorial notch region).",
+    derivatives: [
+      "Longitudinal (interhemispheric) fissure — separates cerebral hemispheres; falx cerebri runs within",
+      "Lateral fissure (Sylvian fissure) — separates temporal lobe from frontal and parietal opercula",
+      "Central sulcus (Rolandic fissure) — separates primary motor (precentral) from primary sensory (postcentral) cortex",
+      "Parieto-occipital and calcarine fissures — visual cortex landmarks",
+      "Transverse cerebral fissure — separates cerebrum from cerebellum at tentorium",
+    ],
+    functionSummary:
+      "Major anatomic boundaries that increase cortical surface area within the skull and define functional lobar borders — critical landmarks for localizing lesions, interpreting herniation, and understanding vascular/white matter anatomy.",
+    commonPathologies: [
+      "Middle cerebral artery territory infarct — lateral/Sylvian fissure region",
+      "Subarachnoid hemorrhage — blood in Sylvian fissure from ruptured MCA aneurysm",
+      "Subfalcine herniation — cingulate gyrus displaced under falx in longitudinal fissure",
+      "Holoprosencephaly — failure of interhemispheric fissure formation",
+      "Arachnoid cyst in Sylvian fissure",
+    ],
+    step1Pearls: [
+      "Cerebral fissure = deep cleft; sulcus = smaller groove — boards use both for landmarks",
+      "Sylvian (lateral) fissure — MCA branches run in sylvian cistern; MCA aneurysm SAH here",
+      "Longitudinal/interhemispheric fissure — falx cerebri; subfalcine herniation",
+      "Central sulcus (Rolandic) — motor cortex anterior, sensory posterior",
+      "vs skin fissure — cerebral fissure is intracranial neuroanatomy, not dermatology",
+      "Transverse fissure/tentorial notch — supratentorial vs infratentorial compartment boundary",
+    ],
+    pediatrics:
+      "Alobar holoprosencephaly — failed cleavage of interhemispheric fissure with fused hemispheres and monoventricle. Sylvian fissure arachnoid cysts may present in childhood with seizures or mass effect.",
+  },
+  {
     id: "communicating-arteries",
     name: "Communicating Arteries",
     etymology:
@@ -3445,6 +3651,54 @@ export const ORGANS: OrganEntry[] = [
       "Prosencephalon maldevelopment causes holoprosencephaly with midline facial defects; trisomy 13 and fetal alcohol are common associations in pediatrics.",
   },
   {
+    id: "basal-ganglia",
+    name: "Basal Ganglia",
+    etymology:
+      "Latin basis = base + Greek ganglion = knot/swelling — deep gray matter nuclei at the base of the forebrain modulating movement",
+    aliases: [
+      "basal ganglia",
+      "basal ganglion",
+      "basal ganglion nuclei",
+      "basal ganglia nuclei",
+      "deep gray nuclei",
+      "extrapyramidal system",
+      "extrapyramidal motor system",
+      "corpus striatum complex",
+    ],
+    germLayer: "Ectoderm",
+    origin:
+      "Telencephalic and diencephalic derivatives — caudate and putamen (striatum), globus pallidus (pallidum), subthalamic nucleus (diencephalon), and substantia nigra (midbrain) form interconnected motor loops with cortex and thalamus.",
+    derivatives: [
+      "Striatum — caudate nucleus + putamen (input nucleus)",
+      "Globus pallidus — internal (GPi) and external (GPe) segments (output/modulation)",
+      "Subthalamic nucleus — excitatory glutamatergic modulator (STN)",
+      "Substantia nigra — pars compacta (dopamine to striatum) and pars reticulata (GABA output)",
+      "Nucleus accumbens — ventral striatum (reward/motivation circuit)",
+    ],
+    functionSummary:
+      "Extrapyramidal motor system that modulates initiation, suppression, and smoothness of voluntary movement via direct and indirect pathways from striatum through pallidum/substantia nigra to thalamus — does not directly activate lower motor neurons (unlike pyramidal/corticospinal tract).",
+    commonPathologies: [
+      "Parkinson disease — ↓ nigrostriatal dopamine → bradykinesia, rigidity, resting tremor",
+      "Huntington disease — striatal neuron loss → chorea and dementia",
+      "Wilson disease — copper deposition in basal ganglia → movement/psychiatric disorder",
+      "Drug-induced parkinsonism — D2 receptor blockade in striatum (antipsychotics)",
+      "Hemiballismus — subthalamic nucleus lesion (lacunar stroke)",
+      "Kernicterus — unconjugated bilirubin toxicity to basal ganglia in neonates",
+      "Leigh syndrome — bilateral basal ganglia/brainstem lesions",
+    ],
+    step1Pearls: [
+      "Basal ganglia = caudate + putamen (striatum) + globus pallidus + STN + substantia nigra",
+      "Direct pathway (D1) → ↑ movement; indirect pathway (D2) → ↓ movement; dopamine from SNc favors direct",
+      "Parkinson = ↓ dopamine; Huntington loses indirect pathway MSNs → hyperkinetic chorea",
+      "vs cerebellum — basal ganglia: bradykinesia/rigidity/chorea; cerebellum: ataxia/hypotonia/intention tremor",
+      "vs pyramidal tract — UMN lesion causes spastic paresis; basal ganglia causes movement disorder without proportional weakness",
+      "Wilson disease — Kayser-Fleischer rings + basal ganglia changes + ↓ ceruloplasmin",
+      "STN lesion → contralateral hemiballismus",
+    ],
+    pediatrics:
+      "Kernicterus deposits bilirubin in basal ganglia of neonates with severe hyperbilirubinemia — choreoathetosis and hearing loss. Wilson disease and juvenile Huntington disease present in childhood/adolescence with movement and psychiatric symptoms.",
+  },
+  {
     id: "striatum",
     name: "Striatum",
     etymology:
@@ -3775,6 +4029,55 @@ export const ORGANS: OrganEntry[] = [
     ],
     pediatrics:
       "Congenital aqueductal stenosis causes pediatric hydrocephalus; pineal region tumors may compress dorsal midbrain causing Parinaud syndrome in children/adolescents.",
+  },
+  {
+    id: "pons",
+    name: "Pons",
+    etymology:
+      "Latin pons = bridge — metencephalic segment connecting cerebellum to midbrain and medulla; appears as a broad anterior bulge on brainstem",
+    aliases: [
+      "pons",
+      "pons varolii",
+      "pontine",
+      "pontine brainstem",
+      "pontine region",
+      "metencephalon pons",
+      "brainstem pons",
+    ],
+    germLayer: "Ectoderm",
+    origin:
+      "Develops from the metencephalon (hindbrain vesicle) anterior to the cerebellum — expands as pontine nuclei and transverse pontine fibers form the middle cerebellar peduncle bridge to the cerebellum.",
+    derivatives: [
+      "Pontine nuclei — relay cortex → cerebellum via middle cerebellar peduncle",
+      "Tegmentum — CN V, VI, VII, VIII nuclei; MLF; PPRF; spinothalamic and lemniscal tracts",
+      "Basilar portion — corticospinal and corticobulbar tracts; paramedian perforators from basilar artery",
+      "Fourth ventricle floor — facial colliculus (CN VI nucleus with CN VII loop)",
+      "Apneustic and pneumotaxic respiratory centers (pontine respiratory group)",
+      "Locus ceruleus (noradrenergic) and raphe nuclei (serotonergic) — partly in pons",
+    ],
+    functionSummary:
+      "Relay between cerebrum and cerebellum via pontine nuclei and middle cerebellar peduncle; houses CN V–VIII; integrates horizontal gaze (PPRF, MLF, CN VI); transmits sensory and motor tracts; modulates respiration and arousal.",
+    commonPathologies: [
+      "Lateral pontine syndrome — AICA infarction (ataxia, CN VII/VIII, Horner, contralateral pain/temp loss)",
+      "Medial pontine syndrome / locked-in syndrome — basilar artery occlusion → quadriplegia with preserved vertical eye movement and consciousness",
+      "Central pontine myelinolysis — osmotic demyelination after rapid sodium correction",
+      "Pontine hemorrhage — hypertensive deep bleed; coma, pinpoint pupils, respiratory failure",
+      "Internuclear ophthalmoplegia — MLF lesion (MS or lacunar stroke)",
+      "Cerebellopontine angle tumors — vestibular schwannoma at lateral pons",
+      "Brainstem glioma — may involve pons in children (diffuse intrinsic pontine glioma)",
+    ],
+    step1Pearls: [
+      "Pons = bridge between midbrain and medulla; connects to cerebellum via MCP",
+      "CN V, VI, VII, VIII nuclei in pons — lateral tegmentum and CPA region",
+      "MLF in pons — internuclear ophthalmoplegia (impaired adduction ipsilateral eye)",
+      "Locked-in syndrome — ventral pontine (basilar) infarction; aware but cannot move except vertical gaze",
+      "Central pontine myelinolysis — rapid hyponatremia correction → demyelination",
+      "vs medulla — medulla has CN IX/X/XII; pons has CN V–VIII",
+      "vs lateral medulla (Wallenberg) — PICA territory; pontine is AICA/lateral pontine pattern",
+      "Facial colliculus — CN VI nucleus with CN VII fibers wrapping around it on 4th ventricle floor",
+    ],
+    pediatrics:
+      "Diffuse intrinsic pontine glioma is a devastating pediatric brainstem tumor. CPA vestibular schwannoma is rare in children but bilateral tumors suggest NF2. Same locked-in and INO anatomy applies in adolescents with MS or stroke.",
   },
   {
     id: "inferior-colliculus",
@@ -6531,6 +6834,41 @@ const ORGAN_DETAILS: Record<
     ],
     pediatrics:
       "Congenital renal anomalies originate in metanephric development; Wilms tumor arises from persistent blastema.",
+  },
+  "nephrogenic-cord": {
+    functionSummary:
+      "Longitudinal intermediate mesoderm column that sequentially generates pronephros, mesonephros, and metanephric mesenchyme — the embryologic substrate of all kidney development.",
+    commonPathologies: [
+      "Renal agenesis from failed metanephric induction",
+      "Renal dysplasia / multicystic dysplastic kidney",
+      "Potter sequence from bilateral failure of nephrogenic development",
+    ],
+    step1Pearls: [
+      "Nephrogenic cord = intermediate mesoderm kidney-forming ridge",
+      "Pronephros → mesonephros → metanephros develop craniocaudally from cord",
+      "Caudal cord → metanephric mesenchyme; ureteric bud from mesonephric duct",
+      "vs gonadal ridge — adjacent intermediate mesoderm giving rise to gonads",
+    ],
+    pediatrics:
+      "Bilateral metanephric failure from nephrogenic cord derivatives causes oligohydramnios, pulmonary hypoplasia, and Potter facies in neonates.",
+  },
+  mesonephros: {
+    functionSummary:
+      "Transient intermediate embryonic kidney and source of the mesonephric (Wolffian) duct — excretory function is brief before metanephros assumes permanent renal role.",
+    commonPathologies: [
+      "Gartner duct cyst (mesonephric duct remnant in female)",
+      "CBAVD from failed Wolffian duct development (CFTR)",
+      "Abnormal ureteric bud origin affecting metanephric kidney formation",
+    ],
+    step1Pearls: [
+      "Mesonephros regresses; metanephros is permanent kidney",
+      "Mesonephric duct = Wolffian duct → male internal genitalia",
+      "Ureteric bud sprouts from caudal mesonephric duct",
+      "Efferent ductules from mesonephric tubules connect rete testis to epididymis",
+      "Gartner duct — lateral vaginal wall mesonephric remnant",
+    ],
+    pediatrics:
+      "Gartner duct cysts in girls; mesonephric duct embryology underlies CBAVD and congenital renal collecting-system anomalies.",
   },
   "metanephric-diverticulum": {
     functionSummary:

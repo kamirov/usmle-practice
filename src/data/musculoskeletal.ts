@@ -1119,6 +1119,54 @@ export const MUSCULOSKELETAL: MusculoskeletalEntry[] = [
       "Supracondylar humerus fracture is the classic pediatric median nerve (or anterior interosseous) injury — assess radial pulse and distal motor function after reduction. Carpal tunnel syndrome is uncommon in children; consider metabolic or inherited neuropathy if bilateral hand numbness.",
   },
   {
+    id: "musculocutaneous-nerve",
+    name: "Musculocutaneous Nerve",
+    etymology:
+      "Latin musculus = little mouse/muscle + Latin cutis = skin + Greek neuron = nerve — mixed nerve supplying anterior arm flexors and lateral forearm skin",
+    aliases: [
+      "musculocutaneous",
+      "musculocutaneous nerve",
+      "musculocutaneous nerves",
+      "musculocutaneous n",
+      "nervus musculocutaneus",
+      "lateral antebrachial cutaneous nerve origin",
+    ],
+    definition:
+      "Terminal branch of the lateral cord of the brachial plexus (C5–C7) that pierces the coracobrachialis, innervates the anterior arm flexors (biceps, brachialis, coracobrachialis), and continues as the purely sensory lateral antebrachial cutaneous nerve supplying the lateral forearm.",
+    anatomy:
+      "C5–C7 roots → lateral cord → musculocutaneous nerve. Passes lateral to axillary artery, pierces coracobrachialis, descends between biceps and brachialis in anterior arm. Terminates as lateral antebrachial cutaneous nerve lateral to biceps tendon at elbow — no motor branches in forearm.",
+    action: [
+      "Motor — coracobrachialis (shoulder flexion/adduction), biceps brachii (elbow flexion, supination), brachialis (primary elbow flexion)",
+      "Sensory — lateral forearm via lateral antebrachial cutaneous nerve (radial side of forearm, distal to elbow)",
+      "Reflex — biceps reflex (C5–C6) tests musculocutaneous arc through biceps",
+    ],
+    innervation: "C5–C7 fibers from lateral cord of brachial plexus",
+    clinicalRelevance: [
+      "Shoulder dislocation or coracobrachialis penetration — weak elbow flexion, ↓ biceps reflex",
+      "Iatrogenic injury during axillary surgery or strenuous weightlifting (coracobrachialis hypertrophy)",
+      "Lateral forearm numbness with preserved wrist flexion (median) and sensation (distinguishes from median/radial)",
+      "Erb palsy (upper trunk C5–C6) includes musculocutaneous function loss",
+    ],
+    boardsPearls: [
+      "Musculocutaneous = lateral cord C5–C7 — biceps, brachialis, coracobrachialis",
+      "Becomes lateral antebrachial cutaneous nerve — lateral forearm sensation only",
+      "Biceps reflex tests C5–C6 via musculocutaneous nerve",
+      "Pierces coracobrachialis — classic anatomic landmark",
+      "vs median nerve — forearm flexors and thenar; not biceps/brachialis",
+      "vs radial nerve — triceps and wrist extension; posterior arm sensation",
+      "No motor function below elbow — purely sensory lateral antebrachial cutaneous branch",
+    ],
+    distinguishFrom: [
+      "Median nerve — forearm flexors (except FCU/ulnar FDP), thenar muscles, lateral palm sensation",
+      "Radial nerve — triceps, wrist/finger extensors, posterior arm/forearm sensation",
+      "Axillary nerve — deltoid and lateral shoulder sensation, not elbow flexors",
+      "Lateral antebrachial cutaneous nerve — terminal sensory branch of musculocutaneous, not separate motor nerve",
+      "C5–C6 radiculopathy — neck pain, broader dermatomal findings, may affect multiple nerves",
+    ],
+    pediatrics:
+      "Erb-Duchenne palsy (upper brachial plexus birth injury) affects musculocutaneous-innervated muscles — waiter's tip posture with weak biceps. Supracondylar fracture more commonly injures median or radial nerve than isolated musculocutaneous.",
+  },
+  {
     id: "ulnar-nerve",
     name: "Ulnar Nerve",
     etymology: "Latin ulna = elbow bone + Greek neuron = sinew/nerve — nerve coursing along the medial forearm with the ulna",
@@ -4253,6 +4301,59 @@ export const MUSCULOSKELETAL: MusculoskeletalEntry[] = [
       "Supracondylar humerus fracture can injure brachial artery and cause volar forearm compartment syndrome in children. Necrotizing fasciitis, though rare, is catastrophic in pediatric patients — urgent surgical debridement and antibiotics.",
   },
   {
+    id: "fracture",
+    name: "Fracture",
+    etymology:
+      "Latin fractura = a breaking — disruption of bone continuity from mechanical force exceeding bone strength or from pathologic weakening of bone",
+    aliases: [
+      "fracture",
+      "fractures",
+      "bone fracture",
+      "bone fractures",
+      "broken bone",
+      "broken bones",
+      "fx",
+      "fxs",
+    ],
+    definition:
+      "Break in the structural continuity of bone — complete or incomplete — from trauma, repetitive stress, or pathologic processes (tumor, osteoporosis, infection) that weaken the skeleton.",
+    anatomy:
+      "Bone fails when applied load exceeds strength at a given site; cortex and trabeculae disrupt with hematoma formation in fracture gap; periosteum and endosteum osteoprogenitor cells initiate healing via callus formation (soft → hard callus → remodeling). Pediatric physis may fail in Salter-Harris patterns rather than pure diaphyseal break.",
+    action: [
+      "Mechanical failure of bone under tension, compression, torsion, or bending",
+      "Hematoma and inflammatory phase → soft callus (fibrocartilage) → hard callus (woven bone) → remodeling to lamellar bone",
+      "Periosteum in children contributes to rapid healing and buckle/greenstick patterns",
+    ],
+    clinicalRelevance: [
+      "Open (compound) fracture — skin breach; infection and osteomyelitis risk; emergent debridement",
+      "Closed fracture — skin intact; still risk of compartment syndrome (tibia, forearm)",
+      "Pathologic fracture — minimal trauma through bone weakened by metastasis, myeloma, osteoporosis, Paget disease",
+      "Stress fracture — repetitive loading (metatarsals, tibia in runners)",
+      "Neurovascular injury associations — supracondylar humerus (brachial artery, median nerve), humeral shaft (radial nerve), pelvic fracture (hemorrhage)",
+      "Nonunion/malunion — impaired healing (smoking, infection, poor fixation)",
+    ],
+    boardsPearls: [
+      "Fracture = broken bone; open vs closed; complete vs incomplete",
+      "Greenstick (incomplete, bent cortex) and buckle/torus — pediatric",
+      "Spiral fracture — torsion; consider non-accidental trauma in child without plausible mechanism",
+      "Pathologic fracture through lytic lesion → metastasis or myeloma workup",
+      "Colles fracture — distal radius dorsal angulation (fall on outstretched hand)",
+      "Supracondylar fracture — check radial pulse and anterior interosseous nerve in children",
+      "Open fracture — antibiotics + tetanus + urgent orthopedics; Gustilo classification",
+      "Stress fracture — MRI/bone scan when X-ray negative early",
+    ],
+    distinguishFrom: [
+      "Dislocation — joint surface separation without primary bone break (may have avulsion fracture)",
+      "Sprain — ligament injury without fracture",
+      "Contusion — soft tissue injury without cortical disruption on imaging",
+      "Physeal injury (Salter-Harris) — growth plate fracture pattern in children, not simple diaphyseal fracture",
+      "Avulsion fracture — tendon/ligament pulls off bone fragment; subset of fracture",
+      "Bone bruise — trabecular microinjury on MRI without cortical break",
+    ],
+    pediatrics:
+      "Greenstick and buckle fractures common in immature bone. Supracondylar humerus fracture is the classic pediatric elbow injury — mandatory vascular and nerve exam. Non-accidental trauma must be considered with inconsistent history, spiral/oblique fractures in non-ambulatory infants, or multiple fractures at different stages of healing.",
+  },
+  {
     id: "subperiosteal-blood-vessels",
     name: "Subperiosteal Blood Vessels",
     etymology:
@@ -5348,6 +5449,62 @@ export const MUSCULOSKELETAL: MusculoskeletalEntry[] = [
       "Sacral agenesis and tethered cord can impair S2–S4 function → neurogenic bladder and constipation; posterior urethral valves cause bladder outlet obstruction independent of sacral cord but chronic retention damages upper tracts.",
   },
   {
+    id: "pelvic-splanchnic-nerves",
+    name: "Pelvic Splanchnic Nerves",
+    etymology:
+      "Greek splanchnon = viscus + Greek neuron = nerve + Latin pelvis = basin — parasympathetic preganglionic fibers from S2–S4 sacral ventral rami to pelvic viscera",
+    aliases: [
+      "pelvic splanchnic",
+      "pelvic splanchnic nerve",
+      "pelvic splanchnic nerves",
+      "pelvic splanchnics",
+      "nervi erigentes",
+      "nervi erigentis",
+      "nervi erigentes",
+      "pelvic parasympathetic nerves",
+      "pelvic parasympathetic nerve",
+      "s2-s4 pelvic splanchnic nerves",
+      "sacral splanchnic nerves",
+      "parasympathetic pelvic nerves",
+    ],
+    definition:
+      "Parasympathetic preganglionic nerve fibers arising from S2–S4 sacral ventral rami that travel to the inferior hypogastric (pelvic) plexus — mediating micturition (detrusor contraction), erection, and hindgut colonic motility — distinct from sympathetic thoracic/lumbar splanchnic nerves.",
+    anatomy:
+      "Preganglionic parasympathetic cell bodies in sacral intermediolateral column (S2–S4); axons exit as pelvic splanchnic nerves from ventral rami; join inferior hypogastric plexus on pelvic sidewall; synapse in or near target organs (detrusor ganglia, erectile tissue, distal colon/rectum). Postganglionic fibers release acetylcholine on muscarinic receptors.",
+    action: [
+      "Parasympathetic micturition — detrusor contraction with internal urethral sphincter relaxation during voiding",
+      "Erection — vasodilation of erectile tissue via NO/cGMP after parasympathetic activation",
+      "Colonic motility — hindgut/distal colon and rectum (with vagus for proximal gut)",
+      "Defecation reflex facilitation — coordinated with pelvic floor and external sphincter (pudendal somatic)",
+    ],
+    innervation:
+      "Preganglionic parasympathetic outflow S2–S4; distinct from pudendal somatic nerve (S2–S4) controlling external sphincters",
+    clinicalRelevance: [
+      "Spinal cord injury above sacral center — spastic bladder with reflex voiding; sacral root/cauda equina injury — areflexic bladder with retention",
+      "Radical prostatectomy — risk to cavernous nerves traveling with pelvic plexus branches",
+      "Diabetic autonomic neuropathy — impaired detrusor contractility and erectile dysfunction",
+      "Anticholinergics block muscarinic effects of pelvic parasympathetic output on bladder",
+    ],
+    boardsPearls: [
+      "Pelvic splanchnic nerves = S2–S4 parasympathetic — micturition, erection, hindgut motility",
+      "vs thoracic splanchnic nerves — sympathetic T5–L2, not parasympathetic",
+      "Vagus — foregut/midgut parasympathetic; hindgult uses pelvic splanchnics",
+      "Pudendal nerve (S2–S4) — somatic external sphincter control, not autonomic detrusor drive",
+      "Voiding: parasympathetic ON (detrusor contract) + somatic external sphincter relax",
+      "Storage: sympathetic + somatic tone; parasympathetic suppressed",
+      "Cauda equina syndrome — bilateral S2–S4 damage → retention, saddle anesthesia",
+    ],
+    distinguishFrom: [
+      "Pudendal nerve — somatic S2–S4; external urethral/anal sphincters and perineal sensation",
+      "Thoracic/lumbar splanchnic nerves — sympathetic preganglionic to celiac/mesenteric ganglia",
+      "Vagus nerve — cranial parasympathetic to thoracoabdominal viscera above hindgut",
+      "Hypogastric (pelvic) plexus — mixed autonomic plexus receiving pelvic splanchnic parasympathetic and hypogastric sympathetic fibers",
+      "S2–S4 sacral segments — spinal cord level; pelvic splanchnic nerves are the peripheral parasympathetic axons from those segments",
+    ],
+    pediatrics:
+      "Neurogenic bladder in spina bifida and sacral agenesis reflects impaired S2–S4 parasympathetic and somatic outflow — clean intermittent catheterization often required. Posterior urethral valves cause obstructive uropathy independent of nerve injury but chronic retention damages bladder function.",
+  },
+  {
     id: "pudendal-nerve",
     name: "Pudendal Nerve",
     etymology: "Latin pudendum = external genitals + Latin nervus = nerve",
@@ -6048,12 +6205,150 @@ export const MUSCULOSKELETAL: MusculoskeletalEntry[] = [
       "Femoral nerve injury is rare in children; consider iatrogenic injury after hip surgery or compartment syndrome. Patellar reflex is obtainable in older children for L3–L4 testing.",
   },
   {
+    id: "ilioinguinal-nerve",
+    name: "Ilioinguinal Nerve",
+    etymology:
+      "Latin ilium = flank/hip bone + Latin inguen = groin + Greek neuron = nerve — lumbar plexus branch supplying groin and anterior genital skin",
+    aliases: [
+      "ilioinguinal",
+      "ilioinguinal nerve",
+      "ilioinguinal nerves",
+      "ilio-inguinal nerve",
+      "ilio-inguinal nerves",
+      "nervus ilioinguinalis",
+      "ilioinguinal n",
+    ],
+    definition:
+      "Terminal branch of the lumbar plexus (L1, with contribution from T12/L2 fibers) that supplies the lower abdominal wall musculature and sensation to the upper medial thigh, mons pubis, and anterior scrotum or labia majora after traversing the inguinal canal.",
+    anatomy:
+      "Arises from L1 ventral ramus; emerges at lateral border of psoas major; passes anterior to quadratus lumborum and iliac crest; pierces transversus abdominis and internal oblique; enters inguinal canal at deep ring (often alongside spermatic cord or round ligament of uterus); exits superficial inguinal ring to innervate skin of root of penis/mons pubis, anterior scrotum or labia majora, and superomedial thigh.",
+    action: [
+      "Motor — internal oblique and transversus abdominis (segmental contribution to lower anterolateral abdominal wall)",
+      "Sensory — superomedial thigh, mons pubis, anterior scrotum/labia majora, inguinal region",
+    ],
+    innervation: "Primarily L1 (lumbar plexus); iliohypogastric nerve shares similar origin",
+    clinicalRelevance: [
+      "Injury during inguinal hernia repair or appendectomy — groin numbness, dysesthesia",
+      "Local anesthetic supplementation for inguinal surgery",
+      "Distinct territory from femoral and genitofemoral nerves",
+    ],
+    boardsPearls: [
+      "Ilioinguinal = L1 — groin skin + anterior scrotum/labia + superomedial thigh",
+      "Travels through inguinal canal with spermatic cord or round ligament",
+      "vs iliohypogastric — more superior abdominal wall and lateral gluteal skin, less scrotal/labial",
+      "vs genitofemoral — cremaster motor + lateral scrotum/labia; different course",
+      "vs lateral femoral cutaneous — lateral thigh only, no groin/genital sensation",
+    ],
+    distinguishFrom: [
+      "Iliohypogastric nerve (L1) — suprapubic and lateral gluteal sensation; shares lower abdominal wall motor",
+      "Genitofemoral nerve (L1–L2) — cremaster reflex, lateral scrotum/labia via genital branch",
+      "Femoral nerve (L2–L4) — anterior thigh and knee extension, not groin skin",
+      "Obturator nerve (L2–L4) — medial thigh sensation and hip adduction",
+      "Round ligament of uterus — ligament in canal, not the nerve itself",
+    ],
+    pediatrics:
+      "Same anatomy from infancy; ilioinguinal nerve injury is an uncommon complication of pediatric inguinal hernia repair — presents as persistent groin numbness or pain.",
+  },
+  {
+    id: "lateral-femoral-cutaneous-nerve",
+    name: "Lateral Femoral Cutaneous Nerve",
+    etymology:
+      "Latin lateralis = side + Latin femur = thigh + Latin cutaneus = skin + Greek neuron = nerve — pure sensory nerve of the lateral thigh from the lumbar plexus",
+    aliases: [
+      "lateral femoral cutaneous",
+      "lateral femoral cutaneous nerve",
+      "lateral femoral cutaneous nerves",
+      "lateral femoral cutaneous n",
+      "lfc nerve",
+      "lfcn",
+      "lateral cutaneous nerve of thigh",
+      "lateral cutaneous nerve of the thigh",
+      "lateral femoral nerve",
+    ],
+    definition:
+      "Purely sensory branch of the lumbar plexus (L2–L3) supplying the skin of the anterolateral and lateral thigh — with no motor function — classically compressed at the inguinal ligament near the anterior superior iliac spine in meralgia paresthetica.",
+    anatomy:
+      "Formed from L2–L3 ventral rami; emerges at lateral border of psoas major; courses over iliacus toward ASIS; passes under or through inguinal ligament ~1–2 cm medial to ASIS; pierces fascia lata to supply skin of lateral and anterolateral thigh from hip to knee.",
+    action: [
+      "Sensory only — anterolateral and lateral thigh skin",
+      "No motor innervation",
+    ],
+    innervation: "L2–L3 spinal nerve fibers (lumbar plexus)",
+    clinicalRelevance: [
+      "Meralgia paresthetica — compression at inguinal ligament → burning numbness lateral thigh",
+      "Risk factors: obesity, pregnancy, diabetes, tight belts, prolonged hip flexion",
+      "Distinguish from L2–L3 radiculopathy (back pain, weakness) and femoral neuropathy (anterior thigh, knee extension loss)",
+    ],
+    boardsPearls: [
+      "Lateral femoral cutaneous = L2–L3 — sensory only, lateral thigh",
+      "Meralgia paresthetica = entrapment near ASIS under inguinal ligament",
+      "Burning/numbness without weakness — key distinguishing feature",
+      "vs femoral nerve — motor quads + anterior/medial leg via saphenous",
+      "vs obturator — medial thigh sensation and adductor weakness",
+      "No patellar reflex involvement — not femoral nerve",
+    ],
+    distinguishFrom: [
+      "Femoral nerve (L2–L4) — motor knee extension + anterior thigh/medial leg sensation",
+      "Obturator nerve (L2–L4) — medial thigh sensation and hip adduction",
+      "Ilioinguinal nerve (L1) — groin and superomedial thigh, not lateral thigh",
+      "L2–L3 radiculopathy — dermatomal pain with possible back pain and motor findings",
+      "Sciatic nerve — posterior thigh/leg distribution, not isolated lateral thigh patch",
+    ],
+    pediatrics:
+      "Meralgia paresthetica is uncommon in children but may occur with obesity or hip/spine surgery positioning; isolated lateral thigh numbness without weakness suggests this nerve, not radiculopathy.",
+  },
+  {
+    id: "obturator-nerve",
+    name: "Obturator Nerve",
+    etymology:
+      "Latin obturare = to close up + Greek neuron = nerve — nerve passing through the obturator canal to reach the medial thigh adductor compartment",
+    aliases: [
+      "obturator",
+      "obturator nerve",
+      "obturator nerves",
+      "obturator n",
+      "nervus obturatorius",
+    ],
+    definition:
+      "Branch of the lumbar plexus (L2–L4, anterior divisions) that innervates the hip adductor muscles and provides sensation to the medial thigh — clinically linked to the obturator sign in appendicitis and to postpartum or pelvic fracture neuropathy.",
+    anatomy:
+      "Formed from anterior divisions of L2–L4 in psoas major; descends along lateral pelvic wall on obturator internus; exits pelvis through obturator canal (obturator foramen); divides into anterior branch (adductor longus/brevis, gracilis, cutaneous medial thigh) and posterior branch (adductor magnus, obturator externus, occasionally knee joint).",
+    action: [
+      "Motor — thigh adduction (adductor longus, brevis, magnus, gracilis; obturator externus)",
+      "Sensory — small patch of medial thigh skin (anterior branch)",
+      "Stabilizes pelvis during single-limb stance via adductor contraction",
+    ],
+    innervation: "L2–L4 spinal nerve fibers (lumbar plexus, anterior divisions)",
+    clinicalRelevance: [
+      "Obturator sign — RLQ pain with internal rotation of flexed right hip (stretching obturator internus in pelvic appendicitis)",
+      "Pelvic surgery, obstetric injury, or obturator canal compression → weak adduction, medial thigh numbness",
+      "Pelvic fracture with hematoma in obturator canal",
+    ],
+    boardsPearls: [
+      "Obturator nerve = L2–L4 — hip adduction + medial thigh sensation",
+      "Obturator sign — pelvic appendicitis (not specific but classic)",
+      "vs femoral nerve — knee extension and anterior thigh, not adduction",
+      "vs sciatic nerve — posterior thigh/hamstrings, not primary adductors",
+      "Anterior vs posterior branch — adductor magnus (posterior) partially innervated by tibial nerve (dual innervation boards nuance)",
+    ],
+    distinguishFrom: [
+      "Femoral nerve (L2–L4) — knee extension, anterior thigh, patellar reflex",
+      "Lateral femoral cutaneous nerve (L2–L3) — lateral thigh sensation only",
+      "Sciatic nerve — posterior thigh and entire leg below knee",
+      "Obturator internus muscle — hip external rotator; obturator sign stretches it but nerve supplies adductors in thigh",
+      "Genitofemoral nerve — cremaster/scrotal sensation, not adduction",
+    ],
+    pediatrics:
+      "Obturator sign may be present in pediatric appendicitis but is less reliable than in adults; obturator nerve injury is rare in children except after major pelvic trauma or surgery.",
+  },
+  {
     id: "sciatic-nerve",
     name: "Sciatic Nerve",
     etymology: "Greek ischion = hip + Latin -aticus = pertaining to + Greek neuron = nerve",
     aliases: [
       "sciatic nerve",
       "sciatic nerves",
+      "sciatic",
       "nervus ischiadicus",
       "ischiadic nerve",
     ],

@@ -2748,6 +2748,150 @@ export const MICROBIOLOGY: MicrobiologyEntry[] = [
       "Amebic dysentery in endemic areas; treat children with same agents (weight-based dosing); liver abscess less common but occurs.",
   },
   {
+    id: "ameba",
+    name: "Ameba",
+    etymology:
+      "Greek amoibe = change — unicellular protozoan that moves by pseudopods (false feet); alternate spelling amoeba",
+    aliases: [
+      "ameba",
+      "amebas",
+      "amoeba",
+      "amoebas",
+      "amoebae",
+      "amebae",
+      "free-living ameba",
+      "free-living amoeba",
+      "pathogenic ameba",
+      "pathogenic amoeba",
+    ],
+    type: "parasite",
+    definition:
+      "Unicellular eukaryotic protozoan (Kingdom Protista) that locomotes via pseudopods — includes intestinal parasites (Entamoeba histolytica), free-living environmental species (Naegleria, Acanthamoeba), and nonpathogenic commensals (E. dispar).",
+    morphology: [
+      "Trophozoite — motile feeding form with pseudopods",
+      "Cyst — environmentally resistant form in many species (fecal-oral transmission)",
+      "Wet mount shows directional motility (Entamoeba) or ameboid movement",
+      "Not bacteria — eukaryotic nucleus, no cell wall",
+    ],
+    virulenceFactors: [
+      "Tissue invasion and lysis (Entamoeba histolytica — lectins, amoebapores, proteases)",
+      "CNS entry via olfactory neuroepithelium (Naegleria fowleri)",
+      "Corneal invasion in contact lens wearers (Acanthamoeba keratitis)",
+    ],
+    transmission: [
+      "Fecal-oral — Entamoeba histolytica cysts in contaminated food/water",
+      "Nasal inhalation of warm freshwater — Naegleria fowleri (primary amebic meningoencephalitis)",
+      "Contact lens + contaminated water — Acanthamoeba keratitis",
+    ],
+    diseases: [
+      "Amebic dysentery and liver abscess — Entamoeba histolytica",
+      "Primary amebic meningoencephalitis (PAM) — Naegleria fowleri",
+      "Acanthamoeba keratitis — contact lens–associated corneal infection",
+      "Granulomatous amebic encephalitis — Acanthamoeba/Balamuthia (immunocompromised)",
+    ],
+    classicPresentation: [
+      "Bloody diarrhea + trophozoites with ingested RBCs → E. histolytica",
+      "Healthy child/teen + freshwater diving/snorkeling + fulminant meningitis → Naegleria fowleri",
+      "Contact lens wearer + severe eye pain + ring infiltrate → Acanthamoeba",
+    ],
+    diagnosis: [
+      "Stool O&P or antigen/PCR — Entamoeba (distinguish histolytica from dispar)",
+      "CSF wet mount — motile Naegleria trophozoites (often low yield); PCR",
+      "Corneal scrape — Acanthamoeba cysts/trophozoites",
+    ],
+    treatment: [
+      "E. histolytica — metronidazole/tinidazole + luminal agent (paromomycin/iodoquinol)",
+      "Naegleria — amphotericin B ± miltefosine (often fatal despite therapy)",
+      "Acanthamoeba keratitis — topical chlorhexidine/biguanides + often debridement",
+    ],
+    distinguishFrom: [
+      "Giardia — flagellated protozoan; fatty diarrhea, pear-shaped trophozoite, no RBC ingestion",
+      "Bacteria — prokaryotic; no pseudopod motility or trophozoite/cyst cycle",
+      "Entamoeba histolytica — specific invasive ameba species; ameba is general term",
+      "Naegleria fowleri — specific free-living ameba causing PAM",
+    ],
+    boardsPearls: [
+      "Ameba/amoeba = pseudopod-motile protozoan — not a bacterium",
+      "Entamoeba histolytica — RBC-ingesting trophozoite; amebic liver abscess",
+      "Naegleria fowleri — warm freshwater, nasal route, primary amebic meningoencephalitis, nearly always fatal",
+      "Acanthamoeba — keratitis with contact lenses; pain out of proportion",
+      "vs helminth — worms are multicellular; amebae are unicellular protozoa",
+    ],
+    pediatrics:
+      "Naegleria PAM affects previously healthy children and adolescents after freshwater exposure. Entamoeba dysentery occurs in endemic areas; treat with weight-based metronidazole plus luminal agent.",
+  },
+  {
+    id: "naegleria-fowleri",
+    name: "Naegleria fowleri",
+    etymology:
+      "eponym: Kurt Nägler (Czech parasitologist) + Latin fowleri = of Fowler — free-living thermophilic ameba causing primary amebic meningoencephalitis",
+    aliases: [
+      "naegleria fowleri",
+      "n. fowleri",
+      "naegleria",
+      "brain-eating ameba",
+      "brain eating ameba",
+      "brain-eating amoeba",
+      "primary amebic meningoencephalitis",
+      "primary amebic meningoencephalitis organism",
+      "pam ameba",
+      "pam amoeba",
+    ],
+    type: "parasite",
+    mnemonic:
+      "Naegleria — Nose (nasal freshwater entry) → Near-fatal meningoencephalitis; Not a bacterium (ameba)",
+    definition:
+      "Free-living thermophilic ameba found in warm freshwater (lakes, hot springs, inadequately chlorinated pools) that causes primary amebic meningoencephalitis (PAM) after entering the CNS via olfactory neuroepithelium through the cribriform plate.",
+    morphology: [
+      "Trophozoite — motile ameboid form in CSF (wet mount)",
+      "Flagellated form in environment (does not infect via flagellated stage in classic teaching)",
+      "Grows optimally at elevated temperatures (~42°C) — summer outbreaks",
+    ],
+    virulenceFactors: [
+      "Direct CNS invasion via olfactory nerve route after nasal exposure",
+      "Amebapores and proteases — rapid neuronal destruction",
+      "Highly fulminant inflammatory response in brain parenchyma",
+    ],
+    transmission: [
+      "Nasal exposure to warm freshwater — diving, jumping, skiing, ritual nasal rinsing with contaminated water",
+      "Not transmitted person-to-person or by drinking water (must reach nasal mucosa)",
+    ],
+    diseases: ["Primary amebic meningoencephalitis (PAM) — fulminant purulent meningitis–like illness"],
+    classicPresentation: [
+      "Previously healthy child or young adult after freshwater exposure (days before onset)",
+      "Sudden severe headache, fever, nausea, vomiting, altered mental status — rapid progression to coma and death within ~1–2 weeks",
+      "Meningismus with CSF that may resemble bacterial meningitis (elevated protein, low glucose, neutrophilic pleocytosis)",
+      "Seasonal/summer association in warm climates",
+    ],
+    diagnosis: [
+      "Clinical history of recent freshwater nasal exposure is critical clue",
+      "CSF wet mount — motile trophozoites (often low sensitivity)",
+      "CSF PCR for Naegleria",
+      "Brain biopsy if needed — amebic trophozoites",
+    ],
+    treatment: [
+      "Amphotericin B (intravenous and intrathecal) — mainstay though outcomes poor",
+      "Miltefosine — adjunct with increasing use",
+      "Aggressive supportive care; mortality >97% historically",
+    ],
+    distinguishFrom: [
+      "Bacterial meningitis — no freshwater exposure; treat empiric antibiotics; no amebae on wet mount",
+      "Entamoeba histolytica — intestinal/liver disease, not acute primary meningoencephalitis in healthy swimmer",
+      "Acanthamoeba encephalitis — usually immunocompromised; subacute granulomatous course",
+      "Herpes simplex encephalitis — temporal lobe predilection; PCR HSV in CSF",
+    ],
+    boardsPearls: [
+      "Naegleria fowleri — warm freshwater + nasal exposure → primary amebic meningoencephalitis (PAM)",
+      "Route: olfactory neuroepithelium → cribriform plate → CNS (not from drinking water)",
+      "CSF may mimic bacterial meningitis — ask about freshwater diving/swimming",
+      "Motile trophozoites on CSF wet mount — pathognomonic when seen",
+      "Nearly always fatal — amphotericin B + miltefosine attempted",
+      "vs bacterial meningitis — same acute presentation but freshwater history and amebae in CSF",
+    ],
+    pediatrics:
+      "PAM disproportionately affects healthy children and adolescents in warm freshwater outbreaks. Emergency CSF wet mount and PCR when history fits; prevention emphasizes nose clips or avoiding nasal water entry in warm lakes.",
+  },
+  {
     id: "salmonella-enterica",
     name: "Salmonella enterica",
     etymology: "eponym: Daniel Salmon + -ella diminutive + Greek enteron = intestine",
